@@ -21,7 +21,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
@@ -39,7 +39,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
@@ -78,7 +78,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
@@ -96,7 +96,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
@@ -114,7 +114,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
@@ -257,7 +257,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    *  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
+    * @param string $operator **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=，in:表示在指定值中匹配和between:表示数值区间。
     *
     * @return $this
     */

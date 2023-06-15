@@ -40,6 +40,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'protectStatus' => 'int',
             'accessStatus' => 'int',
-            'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage'
+            'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
+            'forwardHeaderMap' => 'map[string,string]'
     ];
 
     /**
@@ -86,6 +88,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -108,7 +111,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'protectStatus' => null,
         'accessStatus' => null,
-        'blockPage' => null
+        'blockPage' => null,
+        'forwardHeaderMap' => null
     ];
 
     /**
@@ -153,6 +157,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -175,7 +180,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'protectStatus' => 'protect_status',
             'accessStatus' => 'access_status',
-            'blockPage' => 'block_page'
+            'blockPage' => 'block_page',
+            'forwardHeaderMap' => 'forward_header_map'
     ];
 
     /**
@@ -199,6 +205,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -221,7 +228,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'protectStatus' => 'setProtectStatus',
             'accessStatus' => 'setAccessStatus',
-            'blockPage' => 'setBlockPage'
+            'blockPage' => 'setBlockPage',
+            'forwardHeaderMap' => 'setForwardHeaderMap'
     ];
 
     /**
@@ -245,6 +253,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -267,7 +276,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'protectStatus' => 'getProtectStatus',
             'accessStatus' => 'getAccessStatus',
-            'blockPage' => 'getBlockPage'
+            'blockPage' => 'getBlockPage',
+            'forwardHeaderMap' => 'getForwardHeaderMap'
     ];
 
     /**
@@ -402,6 +412,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['accessStatus'] = isset($data['accessStatus']) ? $data['accessStatus'] : null;
         $this->container['blockPage'] = isset($data['blockPage']) ? $data['blockPage'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
     }
 
     /**
@@ -903,6 +914,30 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     public function setBlockPage($blockPage)
     {
         $this->container['blockPage'] = $blockPage;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

@@ -51,6 +51,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -84,7 +85,8 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'http2Enable' => 'bool',
             'exclusiveIp' => 'bool',
-            'accessProgress' => '\HuaweiCloud\SDK\Waf\V1\Model\AccessProgress[]'
+            'accessProgress' => '\HuaweiCloud\SDK\Waf\V1\Model\AccessProgress[]',
+            'forwardHeaderMap' => 'map[string,string]'
     ];
 
     /**
@@ -119,6 +121,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -152,7 +155,8 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'http2Enable' => null,
         'exclusiveIp' => null,
-        'accessProgress' => null
+        'accessProgress' => null,
+        'forwardHeaderMap' => null
     ];
 
     /**
@@ -208,6 +212,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -241,7 +246,8 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'http2Enable' => 'http2_enable',
             'exclusiveIp' => 'exclusive_ip',
-            'accessProgress' => 'access_progress'
+            'accessProgress' => 'access_progress',
+            'forwardHeaderMap' => 'forward_header_map'
     ];
 
     /**
@@ -276,6 +282,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -309,7 +316,8 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'http2Enable' => 'setHttp2Enable',
             'exclusiveIp' => 'setExclusiveIp',
-            'accessProgress' => 'setAccessProgress'
+            'accessProgress' => 'setAccessProgress',
+            'forwardHeaderMap' => 'setForwardHeaderMap'
     ];
 
     /**
@@ -344,6 +352,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -377,7 +386,8 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'http2Enable' => 'getHttp2Enable',
             'exclusiveIp' => 'getExclusiveIp',
-            'accessProgress' => 'getAccessProgress'
+            'accessProgress' => 'getAccessProgress',
+            'forwardHeaderMap' => 'getForwardHeaderMap'
     ];
 
     /**
@@ -523,6 +533,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
         $this->container['http2Enable'] = isset($data['http2Enable']) ? $data['http2Enable'] : null;
         $this->container['exclusiveIp'] = isset($data['exclusiveIp']) ? $data['exclusiveIp'] : null;
         $this->container['accessProgress'] = isset($data['accessProgress']) ? $data['accessProgress'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
     }
 
     /**
@@ -1288,6 +1299,30 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     public function setAccessProgress($accessProgress)
     {
         $this->container['accessProgress'] = $accessProgress;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

@@ -253,8 +253,8 @@ class CreateBatchTask implements ModelInterface, ArrayAccess
         if ($this->container['taskType'] === null) {
             $invalidProperties[] = "'taskType' can't be null";
         }
-            if (!preg_match("/softwareUpgrade|firmwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices/", $this->container['taskType'])) {
-                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /softwareUpgrade|firmwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices/.";
+            if (!preg_match("/softwareUpgrade|firmwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices|deviceJob/", $this->container['taskType'])) {
+                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /softwareUpgrade|firmwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices|deviceJob/.";
             }
         return $invalidProperties;
     }

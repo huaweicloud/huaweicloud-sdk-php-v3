@@ -21,54 +21,22 @@ class ShowDisasterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
-    * primaryCluster  primaryCluster
-    * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * disasterRecovery  disasterRecovery
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'name' => 'string',
-            'drType' => 'string',
-            'status' => 'string',
-            'primaryCluster' => '\HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster',
-            'standbyCluster' => '\HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster',
-            'drSyncPeriod' => 'string',
-            'startTime' => 'string',
-            'createTime' => 'string'
+            'disasterRecovery' => '\HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryQueryResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
-    * primaryCluster  primaryCluster
-    * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * disasterRecovery  disasterRecovery
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'drType' => null,
-        'status' => null,
-        'primaryCluster' => null,
-        'standbyCluster' => null,
-        'drSyncPeriod' => null,
-        'startTime' => null,
-        'createTime' => null
+        'disasterRecovery' => null
     ];
 
     /**
@@ -94,80 +62,32 @@ class ShowDisasterDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
-    * primaryCluster  primaryCluster
-    * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * disasterRecovery  disasterRecovery
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'name' => 'name',
-            'drType' => 'dr_type',
-            'status' => 'status',
-            'primaryCluster' => 'primary_cluster',
-            'standbyCluster' => 'standby_cluster',
-            'drSyncPeriod' => 'dr_sync_period',
-            'startTime' => 'start_time',
-            'createTime' => 'create_time'
+            'disasterRecovery' => 'disaster_recovery'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
-    * primaryCluster  primaryCluster
-    * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * disasterRecovery  disasterRecovery
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'name' => 'setName',
-            'drType' => 'setDrType',
-            'status' => 'setStatus',
-            'primaryCluster' => 'setPrimaryCluster',
-            'standbyCluster' => 'setStandbyCluster',
-            'drSyncPeriod' => 'setDrSyncPeriod',
-            'startTime' => 'setStartTime',
-            'createTime' => 'setCreateTime'
+            'disasterRecovery' => 'setDisasterRecovery'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  容灾ID
-    * name  容灾名称
-    * drType  容灾类型
-    * status  容灾状态
-    * primaryCluster  primaryCluster
-    * standbyCluster  standbyCluster
-    * drSyncPeriod  容灾同步周期
-    * startTime  容灾启动时间
-    * createTime  容灾创建时间
+    * disasterRecovery  disasterRecovery
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'name' => 'getName',
-            'drType' => 'getDrType',
-            'status' => 'getStatus',
-            'primaryCluster' => 'getPrimaryCluster',
-            'standbyCluster' => 'getStandbyCluster',
-            'drSyncPeriod' => 'getDrSyncPeriod',
-            'startTime' => 'getStartTime',
-            'createTime' => 'getCreateTime'
+            'disasterRecovery' => 'getDisasterRecovery'
     ];
 
     /**
@@ -228,15 +148,7 @@ class ShowDisasterDetailResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['drType'] = isset($data['drType']) ? $data['drType'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['primaryCluster'] = isset($data['primaryCluster']) ? $data['primaryCluster'] : null;
-        $this->container['standbyCluster'] = isset($data['standbyCluster']) ? $data['standbyCluster'] : null;
-        $this->container['drSyncPeriod'] = isset($data['drSyncPeriod']) ? $data['drSyncPeriod'] : null;
-        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['disasterRecovery'] = isset($data['disasterRecovery']) ? $data['disasterRecovery'] : null;
     }
 
     /**
@@ -262,218 +174,26 @@ class ShowDisasterDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  容灾ID
+    * Gets disasterRecovery
+    *  disasterRecovery
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryQueryResp|null
     */
-    public function getId()
+    public function getDisasterRecovery()
     {
-        return $this->container['id'];
+        return $this->container['disasterRecovery'];
     }
 
     /**
-    * Sets id
+    * Sets disasterRecovery
     *
-    * @param string|null $id 容灾ID
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryQueryResp|null $disasterRecovery disasterRecovery
     *
     * @return $this
     */
-    public function setId($id)
+    public function setDisasterRecovery($disasterRecovery)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  容灾名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 容灾名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets drType
-    *  容灾类型
-    *
-    * @return string|null
-    */
-    public function getDrType()
-    {
-        return $this->container['drType'];
-    }
-
-    /**
-    * Sets drType
-    *
-    * @param string|null $drType 容灾类型
-    *
-    * @return $this
-    */
-    public function setDrType($drType)
-    {
-        $this->container['drType'] = $drType;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  容灾状态
-    *
-    * @return string|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string|null $status 容灾状态
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets primaryCluster
-    *  primaryCluster
-    *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster|null
-    */
-    public function getPrimaryCluster()
-    {
-        return $this->container['primaryCluster'];
-    }
-
-    /**
-    * Sets primaryCluster
-    *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster|null $primaryCluster primaryCluster
-    *
-    * @return $this
-    */
-    public function setPrimaryCluster($primaryCluster)
-    {
-        $this->container['primaryCluster'] = $primaryCluster;
-        return $this;
-    }
-
-    /**
-    * Gets standbyCluster
-    *  standbyCluster
-    *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster|null
-    */
-    public function getStandbyCluster()
-    {
-        return $this->container['standbyCluster'];
-    }
-
-    /**
-    * Sets standbyCluster
-    *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\DisasterRecoveryCluster|null $standbyCluster standbyCluster
-    *
-    * @return $this
-    */
-    public function setStandbyCluster($standbyCluster)
-    {
-        $this->container['standbyCluster'] = $standbyCluster;
-        return $this;
-    }
-
-    /**
-    * Gets drSyncPeriod
-    *  容灾同步周期
-    *
-    * @return string|null
-    */
-    public function getDrSyncPeriod()
-    {
-        return $this->container['drSyncPeriod'];
-    }
-
-    /**
-    * Sets drSyncPeriod
-    *
-    * @param string|null $drSyncPeriod 容灾同步周期
-    *
-    * @return $this
-    */
-    public function setDrSyncPeriod($drSyncPeriod)
-    {
-        $this->container['drSyncPeriod'] = $drSyncPeriod;
-        return $this;
-    }
-
-    /**
-    * Gets startTime
-    *  容灾启动时间
-    *
-    * @return string|null
-    */
-    public function getStartTime()
-    {
-        return $this->container['startTime'];
-    }
-
-    /**
-    * Sets startTime
-    *
-    * @param string|null $startTime 容灾启动时间
-    *
-    * @return $this
-    */
-    public function setStartTime($startTime)
-    {
-        $this->container['startTime'] = $startTime;
-        return $this;
-    }
-
-    /**
-    * Gets createTime
-    *  容灾创建时间
-    *
-    * @return string|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param string|null $createTime 容灾创建时间
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
+        $this->container['disasterRecovery'] = $disasterRecovery;
         return $this;
     }
 

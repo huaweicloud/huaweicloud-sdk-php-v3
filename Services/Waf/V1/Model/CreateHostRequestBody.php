@@ -31,6 +31,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
             'paidType' => 'string',
             'proxy' => 'bool',
             'lbAlgorithm' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'forwardHeaderMap' => 'map[string,string]'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
         'paidType' => null,
         'proxy' => null,
         'lbAlgorithm' => null,
-        'description' => null
+        'description' => null,
+        'forwardHeaderMap' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
             'paidType' => 'paid_type',
             'proxy' => 'proxy',
             'lbAlgorithm' => 'lb_algorithm',
-            'description' => 'description'
+            'description' => 'description',
+            'forwardHeaderMap' => 'forward_header_map'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
             'paidType' => 'setPaidType',
             'proxy' => 'setProxy',
             'lbAlgorithm' => 'setLbAlgorithm',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'forwardHeaderMap' => 'setForwardHeaderMap'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版（原企业版）和铂金版（原旗舰版）支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
             'paidType' => 'getPaidType',
             'proxy' => 'getProxy',
             'lbAlgorithm' => 'getLbAlgorithm',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'forwardHeaderMap' => 'getForwardHeaderMap'
     ];
 
     /**
@@ -275,6 +285,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['proxy'] = isset($data['proxy']) ? $data['proxy'] : null;
         $this->container['lbAlgorithm'] = isset($data['lbAlgorithm']) ? $data['lbAlgorithm'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
     }
 
     /**
@@ -577,6 +588,30 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

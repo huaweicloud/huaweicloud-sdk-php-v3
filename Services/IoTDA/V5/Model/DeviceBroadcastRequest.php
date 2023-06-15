@@ -211,8 +211,8 @@ class DeviceBroadcastRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['topicFullName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'topicFullName', the character length must be smaller than or equal to 128.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_?=$#+\/-]{0,128}$/", $this->container['topicFullName'])) {
-                $invalidProperties[] = "invalid value for 'topicFullName', must be conform to the pattern /^[a-zA-Z0-9_?=$#+\/-]{0,128}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_?=$#:+\/-]{0,128}$/", $this->container['topicFullName'])) {
+                $invalidProperties[] = "invalid value for 'topicFullName', must be conform to the pattern /^[a-zA-Z0-9_?=$#:+\/-]{0,128}$/.";
             }
         if ($this->container['message'] === null) {
             $invalidProperties[] = "'message' can't be null";
@@ -223,8 +223,8 @@ class DeviceBroadcastRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/^([A-Za-z0-9+\/]{4})*([A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{2}==)?$/", $this->container['message'])) {
                 $invalidProperties[] = "invalid value for 'message', must be conform to the pattern /^([A-Za-z0-9+\/]{4})*([A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{2}==)?$/.";
             }
-            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 1440)) {
-                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 1440.";
+            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 10080)) {
+                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 10080.";
             }
             if (!is_null($this->container['ttl']) && ($this->container['ttl'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ttl', must be bigger than or equal to 0.";

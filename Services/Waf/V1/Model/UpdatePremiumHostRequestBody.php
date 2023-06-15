@@ -36,6 +36,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
     * flag  flag
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'trafficMark' => '\HuaweiCloud\SDK\Waf\V1\Model\TrafficMark',
             'circuitBreaker' => '\HuaweiCloud\SDK\Waf\V1\Model\CircuitBreaker',
             'timeoutConfig' => '\HuaweiCloud\SDK\Waf\V1\Model\TimeoutConfig',
-            'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\HostFlag'
+            'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\HostFlag',
+            'forwardHeaderMap' => 'map[string,string]'
     ];
 
     /**
@@ -76,6 +78,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
     * flag  flag
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         'trafficMark' => null,
         'circuitBreaker' => null,
         'timeoutConfig' => null,
-        'flag' => null
+        'flag' => null,
+        'forwardHeaderMap' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
     * flag  flag
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'trafficMark' => 'traffic_mark',
             'circuitBreaker' => 'circuit_breaker',
             'timeoutConfig' => 'timeout_config',
-            'flag' => 'flag'
+            'flag' => 'flag',
+            'forwardHeaderMap' => 'forward_header_map'
     ];
 
     /**
@@ -177,6 +183,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
     * flag  flag
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'trafficMark' => 'setTrafficMark',
             'circuitBreaker' => 'setCircuitBreaker',
             'timeoutConfig' => 'setTimeoutConfig',
-            'flag' => 'setFlag'
+            'flag' => 'setFlag',
+            'forwardHeaderMap' => 'setForwardHeaderMap'
     ];
 
     /**
@@ -217,6 +225,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
     * flag  flag
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'trafficMark' => 'getTrafficMark',
             'circuitBreaker' => 'getCircuitBreaker',
             'timeoutConfig' => 'getTimeoutConfig',
-            'flag' => 'getFlag'
+            'flag' => 'getFlag',
+            'forwardHeaderMap' => 'getForwardHeaderMap'
     ];
 
     /**
@@ -351,6 +361,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['circuitBreaker'] = isset($data['circuitBreaker']) ? $data['circuitBreaker'] : null;
         $this->container['timeoutConfig'] = isset($data['timeoutConfig']) ? $data['timeoutConfig'] : null;
         $this->container['flag'] = isset($data['flag']) ? $data['flag'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
     }
 
     /**
@@ -772,6 +783,30 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     public function setFlag($flag)
     {
         $this->container['flag'] = $flag;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

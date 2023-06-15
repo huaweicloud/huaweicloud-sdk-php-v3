@@ -40,6 +40,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * flag  flag
     * extend  扩展字段，用于保存防护域名的一些配置信息。
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
             'http2Enable' => 'bool',
             'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
             'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\Flag',
-            'extend' => 'map[string,string]'
+            'extend' => 'map[string,string]',
+            'forwardHeaderMap' => 'map[string,string]'
     ];
 
     /**
@@ -86,6 +88,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * flag  flag
     * extend  扩展字段，用于保存防护域名的一些配置信息。
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -108,7 +111,8 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
         'http2Enable' => null,
         'blockPage' => null,
         'flag' => null,
-        'extend' => null
+        'extend' => null,
+        'forwardHeaderMap' => null
     ];
 
     /**
@@ -153,6 +157,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * flag  flag
     * extend  扩展字段，用于保存防护域名的一些配置信息。
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -175,7 +180,8 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
             'http2Enable' => 'http2_enable',
             'blockPage' => 'block_page',
             'flag' => 'flag',
-            'extend' => 'extend'
+            'extend' => 'extend',
+            'forwardHeaderMap' => 'forward_header_map'
     ];
 
     /**
@@ -199,6 +205,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * flag  flag
     * extend  扩展字段，用于保存防护域名的一些配置信息。
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -221,7 +228,8 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
             'http2Enable' => 'setHttp2Enable',
             'blockPage' => 'setBlockPage',
             'flag' => 'setFlag',
-            'extend' => 'setExtend'
+            'extend' => 'setExtend',
+            'forwardHeaderMap' => 'setForwardHeaderMap'
     ];
 
     /**
@@ -245,6 +253,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * flag  flag
     * extend  扩展字段，用于保存防护域名的一些配置信息。
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
     * @var string[]
     */
@@ -267,7 +276,8 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
             'http2Enable' => 'getHttp2Enable',
             'blockPage' => 'getBlockPage',
             'flag' => 'getFlag',
-            'extend' => 'getExtend'
+            'extend' => 'getExtend',
+            'forwardHeaderMap' => 'getForwardHeaderMap'
     ];
 
     /**
@@ -364,6 +374,7 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
         $this->container['blockPage'] = isset($data['blockPage']) ? $data['blockPage'] : null;
         $this->container['flag'] = isset($data['flag']) ? $data['flag'] : null;
         $this->container['extend'] = isset($data['extend']) ? $data['extend'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
     }
 
     /**
@@ -849,6 +860,30 @@ class CreateHostResponse implements ModelInterface, ArrayAccess
     public function setExtend($extend)
     {
         $this->container['extend'] = $extend;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

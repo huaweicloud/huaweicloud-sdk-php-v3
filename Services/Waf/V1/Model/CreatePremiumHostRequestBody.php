@@ -27,6 +27,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * description  防护域名备注
     *
     * @var string[]
@@ -39,6 +40,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'policyid' => 'string',
             'server' => '\HuaweiCloud\SDK\Waf\V1\Model\PremiumWafServer[]',
             'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
+            'forwardHeaderMap' => 'map[string,string]',
             'description' => 'string'
     ];
 
@@ -51,6 +53,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * description  防护域名备注
     *
     * @var string[]
@@ -63,6 +66,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         'policyid' => null,
         'server' => null,
         'blockPage' => null,
+        'forwardHeaderMap' => null,
         'description' => null
     ];
 
@@ -96,6 +100,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * description  防护域名备注
     *
     * @var string[]
@@ -108,6 +113,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'policyid' => 'policyid',
             'server' => 'server',
             'blockPage' => 'block_page',
+            'forwardHeaderMap' => 'forward_header_map',
             'description' => 'description'
     ];
 
@@ -120,6 +126,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * description  防护域名备注
     *
     * @var string[]
@@ -132,6 +139,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'policyid' => 'setPolicyid',
             'server' => 'setServer',
             'blockPage' => 'setBlockPage',
+            'forwardHeaderMap' => 'setForwardHeaderMap',
             'description' => 'setDescription'
     ];
 
@@ -144,6 +152,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * description  防护域名备注
     *
     * @var string[]
@@ -156,6 +165,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'policyid' => 'getPolicyid',
             'server' => 'getServer',
             'blockPage' => 'getBlockPage',
+            'forwardHeaderMap' => 'getForwardHeaderMap',
             'description' => 'getDescription'
     ];
 
@@ -224,6 +234,7 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['server'] = isset($data['server']) ? $data['server'] : null;
         $this->container['blockPage'] = isset($data['blockPage']) ? $data['blockPage'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -423,6 +434,30 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     public function setBlockPage($blockPage)
     {
         $this->container['blockPage'] = $blockPage;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

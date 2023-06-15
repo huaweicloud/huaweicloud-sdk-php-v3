@@ -3386,6 +3386,68 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询所有数据库用户/角色
+     *
+     * 查询所有数据库用户/角色
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabaseUsers($request)
+    {
+        return $this->listDatabaseUsersWithHttpInfo($request);
+    }
+
+    public function listDatabaseUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseUsersResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListDatabaseUsersRequest');
+    }
+
+    /**
      * 查询容灾列表
      *
      * 查询容灾列表
@@ -5117,6 +5179,148 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询数据库对象权限
+     *
+     * 查询数据库对象权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDatabaseAuthority($request)
+    {
+        return $this->showDatabaseAuthorityWithHttpInfo($request);
+    }
+
+    public function showDatabaseAuthorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/authority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['database'] !== null) {
+            $queryParams['database'] = $localVarParams['database'];
+        }
+        if ($localVarParams['schema'] !== null) {
+            $queryParams['schema'] = $localVarParams['schema'];
+        }
+        if ($localVarParams['table'] !== null) {
+            $queryParams['table'] = $localVarParams['table'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDatabaseAuthorityResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDatabaseAuthorityRequest');
+    }
+
+    /**
+     * 查询指定用户信息
+     *
+     * 查询指定用户信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDatabaseUser($request)
+    {
+        return $this->showDatabaseUserWithHttpInfo($request);
+    }
+
+    public function showDatabaseUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDatabaseUserResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDatabaseUserRequest');
+    }
+
+    /**
      * 查询容灾详情
      *
      * 查询容灾详情。
@@ -5176,6 +5380,68 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterDetailResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterDetailRequest');
+    }
+
+    /**
+     * 容灾-查询容灾进度详情
+     *
+     * 容灾-查询容灾进度详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDisasterProgress($request)
+    {
+        return $this->showDisasterProgressWithHttpInfo($request);
+    }
+
+    public function showDisasterProgressWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/disaster-recovery/{disaster_recovery_id}/show-progress';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['disasterRecoveryId'] !== null) {
+            $pathParams['disaster_recovery_id'] = $localVarParams['disasterRecoveryId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterProgressResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterProgressRequest');
     }
 
     /**
@@ -5494,6 +5760,68 @@ class DwsClient extends Client
     }
 
     /**
+     * 同步IAM用户到数据库
+     *
+     * 同步IAM用户到数据库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncIamUsers($request)
+    {
+        return $this->syncIamUsersWithHttpInfo($request);
+    }
+
+    public function syncIamUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/sync-iam-user';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\SyncIamUsersResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\SyncIamUsersRequest');
+    }
+
+    /**
      * 更新告警订阅
      *
      * 更新订阅的告警
@@ -5757,6 +6085,139 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDataSourceResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDataSourceRequest');
+    }
+
+    /**
+     * 修改数据库对象权限
+     *
+     * 修改数据库对象权限
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDatabaseAuthority($request)
+    {
+        return $this->updateDatabaseAuthorityWithHttpInfo($request);
+    }
+
+    public function updateDatabaseAuthorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/authority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDatabaseAuthorityResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDatabaseAuthorityRequest');
+    }
+
+    /**
+     * 修改指定用户信息
+     *
+     * 修改指定用户信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDatabaseUserInfo($request)
+    {
+        return $this->updateDatabaseUserInfoWithHttpInfo($request);
+    }
+
+    public function updateDatabaseUserInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/db-manager/users/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDatabaseUserInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDatabaseUserInfoRequest');
     }
 
     /**

@@ -20,7 +20,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     * status  状态，0：未完成这个步骤；1：已完成这个状态”
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     * status  状态，0：未完成这个步骤；1：已完成这个状态”
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     * status  状态，0：未完成这个步骤；1：已完成这个状态”
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     * status  状态，0：未完成这个步骤；1：已完成这个状态”
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * step  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     * status  状态，0：未完成这个步骤；1：已完成这个状态”
     *
     * @var string[]
@@ -185,7 +185,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    *  步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     *
     * @return int|null
     */
@@ -197,7 +197,7 @@ class AccessProgress implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param int|null $step 步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
+    * @param int|null $step 步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
     *
     * @return $this
     */

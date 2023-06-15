@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class IoTDARegion {
 
-    public static $REGION = array("https://iotda.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://iotda.cn-south-4.myhuaweicloud.com"=>"cn-south-4","https://iotda.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://iotda.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://iotda.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://iotda.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://iotda.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1",);
+    public static $REGION = array("https://iotda.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://iotda.cn-south-4.myhuaweicloud.com"=>"cn-south-4","https://iotda.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://iotda.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://iotda.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://iotda.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://iotda.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://iotda.af-south-1.myhuaweicloud.com"=>"af-south-1",);
 
     public static function valueOf($regionId)
     {

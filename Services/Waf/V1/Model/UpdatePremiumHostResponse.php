@@ -46,6 +46,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * trafficMark  trafficMark
     * timeoutConfig  timeoutConfig
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * accessProgress  接入进度，仅用于新版console(前端)使用
     *
     * @var string[]
@@ -76,6 +77,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
             'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
             'trafficMark' => '\HuaweiCloud\SDK\Waf\V1\Model\TrafficMark',
             'timeoutConfig' => '\HuaweiCloud\SDK\Waf\V1\Model\TimeoutConfig',
+            'forwardHeaderMap' => 'map[string,string]',
             'accessProgress' => '\HuaweiCloud\SDK\Waf\V1\Model\AccessProgress[]'
     ];
 
@@ -106,6 +108,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * trafficMark  trafficMark
     * timeoutConfig  timeoutConfig
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * accessProgress  接入进度，仅用于新版console(前端)使用
     *
     * @var string[]
@@ -136,6 +139,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
         'blockPage' => null,
         'trafficMark' => null,
         'timeoutConfig' => null,
+        'forwardHeaderMap' => null,
         'accessProgress' => null
     ];
 
@@ -187,6 +191,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * trafficMark  trafficMark
     * timeoutConfig  timeoutConfig
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * accessProgress  接入进度，仅用于新版console(前端)使用
     *
     * @var string[]
@@ -217,6 +222,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
             'blockPage' => 'block_page',
             'trafficMark' => 'traffic_mark',
             'timeoutConfig' => 'timeout_config',
+            'forwardHeaderMap' => 'forward_header_map',
             'accessProgress' => 'access_progress'
     ];
 
@@ -247,6 +253,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * trafficMark  trafficMark
     * timeoutConfig  timeoutConfig
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * accessProgress  接入进度，仅用于新版console(前端)使用
     *
     * @var string[]
@@ -277,6 +284,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
             'blockPage' => 'setBlockPage',
             'trafficMark' => 'setTrafficMark',
             'timeoutConfig' => 'setTimeoutConfig',
+            'forwardHeaderMap' => 'setForwardHeaderMap',
             'accessProgress' => 'setAccessProgress'
     ];
 
@@ -307,6 +315,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * blockPage  blockPage
     * trafficMark  trafficMark
     * timeoutConfig  timeoutConfig
+    * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     * accessProgress  接入进度，仅用于新版console(前端)使用
     *
     * @var string[]
@@ -337,6 +346,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
             'blockPage' => 'getBlockPage',
             'trafficMark' => 'getTrafficMark',
             'timeoutConfig' => 'getTimeoutConfig',
+            'forwardHeaderMap' => 'getForwardHeaderMap',
             'accessProgress' => 'getAccessProgress'
     ];
 
@@ -461,6 +471,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
         $this->container['blockPage'] = isset($data['blockPage']) ? $data['blockPage'] : null;
         $this->container['trafficMark'] = isset($data['trafficMark']) ? $data['trafficMark'] : null;
         $this->container['timeoutConfig'] = isset($data['timeoutConfig']) ? $data['timeoutConfig'] : null;
+        $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
         $this->container['accessProgress'] = isset($data['accessProgress']) ? $data['accessProgress'] : null;
     }
 
@@ -1099,6 +1110,30 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     public function setTimeoutConfig($timeoutConfig)
     {
         $this->container['timeoutConfig'] = $timeoutConfig;
+        return $this;
+    }
+
+    /**
+    * Gets forwardHeaderMap
+    *  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return map[string,string]|null
+    */
+    public function getForwardHeaderMap()
+    {
+        return $this->container['forwardHeaderMap'];
+    }
+
+    /**
+    * Sets forwardHeaderMap
+    *
+    * @param map[string,string]|null $forwardHeaderMap 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    *
+    * @return $this
+    */
+    public function setForwardHeaderMap($forwardHeaderMap)
+    {
+        $this->container['forwardHeaderMap'] = $forwardHeaderMap;
         return $this;
     }
 

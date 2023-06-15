@@ -20,21 +20,29 @@ class ShowVocabulariesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * offset  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    * limit  每页显示的条目数量。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'offset' => 'int',
+            'limit' => 'int',
             'body' => '\HuaweiCloud\SDK\Sis\V1\Model\ShowVocabulariesParams'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * offset  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    * limit  每页显示的条目数量。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'offset' => 'int32',
+        'limit' => 'int32',
         'body' => null
     ];
 
@@ -61,31 +69,43 @@ class ShowVocabulariesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * offset  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    * limit  每页显示的条目数量。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'offset' => 'offset',
+            'limit' => 'limit',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * offset  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    * limit  每页显示的条目数量。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * offset  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    * limit  每页显示的条目数量。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'body' => 'getBody'
     ];
 
@@ -147,6 +167,8 @@ class ShowVocabulariesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -170,6 +192,54 @@ class ShowVocabulariesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets offset
+    *  页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
     }
 
     /**

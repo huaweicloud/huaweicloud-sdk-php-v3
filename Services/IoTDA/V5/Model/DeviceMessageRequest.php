@@ -235,7 +235,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : 'standard';
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['topicFullName'] = isset($data['topicFullName']) ? $data['topicFullName'] : null;
-        $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 1440;
+        $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;
     }
 
     /**
@@ -276,8 +276,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['topicFullName']) && !preg_match("/^([$\/]?[a-zA-Z0-9(),\\-.:=@;_!*'%?+]*)([a-zA-Z0-9(),\\-.:=@;_!*'%?+]+\/)*([a-zA-Z0-9(),\\-.:=@;_!*'%?+]*|#)$/", $this->container['topicFullName'])) {
                 $invalidProperties[] = "invalid value for 'topicFullName', must be conform to the pattern /^([$\/]?[a-zA-Z0-9(),\\-.:=@;_!*'%?+]*)([a-zA-Z0-9(),\\-.:=@;_!*'%?+]+\/)*([a-zA-Z0-9(),\\-.:=@;_!*'%?+]*|#)$/.";
             }
-            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 1440)) {
-                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 1440.";
+            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 10080)) {
+                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 10080.";
             }
             if (!is_null($this->container['ttl']) && ($this->container['ttl'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ttl', must be bigger than or equal to 0.";

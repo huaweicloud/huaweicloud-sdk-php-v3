@@ -271,9 +271,6 @@ class EventSubRequest implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['enable'] === null) {
-            $invalidProperties[] = "'enable' can't be null";
-        }
         if ($this->container['notificationTarget'] === null) {
             $invalidProperties[] = "'notificationTarget' can't be null";
         }
@@ -445,7 +442,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * Gets enable
     *  是否开启订阅 1为开启，0为关闭
     *
-    * @return int
+    * @return int|null
     */
     public function getEnable()
     {
@@ -455,7 +452,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param int $enable 是否开启订阅 1为开启，0为关闭
+    * @param int|null $enable 是否开启订阅 1为开启，0为关闭
     *
     * @return $this
     */

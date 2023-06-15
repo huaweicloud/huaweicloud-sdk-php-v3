@@ -239,7 +239,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     {
         $this->container['paraName'] = isset($data['paraName']) ? $data['paraName'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
-        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : false;
         $this->container['enumList'] = isset($data['enumList']) ? $data['enumList'] : null;
         $this->container['min'] = isset($data['min']) ? $data['min'] : null;
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;

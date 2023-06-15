@@ -20,7 +20,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
         if ($this->container['text'] === null) {
             $invalidProperties[] = "'text' can't be null";
         }
-            if ((mb_strlen($this->container['text']) > 2000)) {
-                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 2000.";
+            if ((mb_strlen($this->container['text']) > 1500)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 1500.";
             }
             if ((mb_strlen($this->container['text']) < 1)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 1.";
@@ -183,7 +183,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets text
-    *  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    *  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     /**
     * Sets text
     *
-    * @param string $text 待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过2000个字符时，只检测前2000个字符。
+    * @param string $text 待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
     *
     * @return $this
     */

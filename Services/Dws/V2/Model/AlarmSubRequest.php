@@ -32,7 +32,7 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'enable' => 'string',
+            'enable' => 'int',
             'alarmLevel' => 'string',
             'notificationTarget' => 'string',
             'notificationTargetName' => 'string',
@@ -227,9 +227,6 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['enable'] === null) {
-            $invalidProperties[] = "'enable' can't be null";
-        }
         if ($this->container['notificationTarget'] === null) {
             $invalidProperties[] = "'notificationTarget' can't be null";
         }
@@ -284,7 +281,7 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * Gets enable
     *  是否开启订阅
     *
-    * @return string
+    * @return int|null
     */
     public function getEnable()
     {
@@ -294,7 +291,7 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param string $enable 是否开启订阅
+    * @param int|null $enable 是否开启订阅
     *
     * @return $this
     */

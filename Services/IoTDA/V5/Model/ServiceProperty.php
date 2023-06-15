@@ -257,16 +257,16 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['propertyName'] = isset($data['propertyName']) ? $data['propertyName'] : 'Luminance';
-        $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : 'int';
+        $this->container['propertyName'] = isset($data['propertyName']) ? $data['propertyName'] : null;
+        $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : false;
         $this->container['enumList'] = isset($data['enumList']) ? $data['enumList'] : null;
-        $this->container['min'] = isset($data['min']) ? $data['min'] : '0';
-        $this->container['max'] = isset($data['max']) ? $data['max'] : '65535';
+        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
         $this->container['maxLength'] = isset($data['maxLength']) ? $data['maxLength'] : null;
         $this->container['step'] = isset($data['step']) ? $data['step'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
-        $this->container['method'] = isset($data['method']) ? $data['method'] : 'RW';
+        $this->container['method'] = isset($data['method']) ? $data['method'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
     }

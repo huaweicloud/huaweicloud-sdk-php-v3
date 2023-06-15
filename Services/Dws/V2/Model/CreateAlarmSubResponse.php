@@ -38,7 +38,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'enable' => 'string',
+            'enable' => 'int',
             'alarmLevel' => 'string',
             'projectId' => 'string',
             'nameSpace' => 'string',
@@ -335,7 +335,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * Gets enable
     *  是否开启订阅
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEnable()
     {
@@ -345,7 +345,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param string|null $enable 是否开启订阅
+    * @param int|null $enable 是否开启订阅
     *
     * @return $this
     */
