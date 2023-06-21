@@ -39,6 +39,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * weight  解析记录的权重。
     * healthCheckId  健康检查ID。
     * aliasTarget  aliasTarget
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -60,7 +61,8 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
             'line' => 'string',
             'weight' => 'int',
             'healthCheckId' => 'string',
-            'aliasTarget' => '\HuaweiCloud\SDK\Dns\V2\Model\AliasTarget'
+            'aliasTarget' => '\HuaweiCloud\SDK\Dns\V2\Model\AliasTarget',
+            'bundle' => 'string'
     ];
 
     /**
@@ -83,6 +85,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * weight  解析记录的权重。
     * healthCheckId  健康检查ID。
     * aliasTarget  aliasTarget
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -104,7 +107,8 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
         'line' => null,
         'weight' => 'int32',
         'healthCheckId' => null,
-        'aliasTarget' => null
+        'aliasTarget' => null,
+        'bundle' => null
     ];
 
     /**
@@ -148,6 +152,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * weight  解析记录的权重。
     * healthCheckId  健康检查ID。
     * aliasTarget  aliasTarget
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -169,7 +174,8 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
             'line' => 'line',
             'weight' => 'weight',
             'healthCheckId' => 'health_check_id',
-            'aliasTarget' => 'alias_target'
+            'aliasTarget' => 'alias_target',
+            'bundle' => 'bundle'
     ];
 
     /**
@@ -192,6 +198,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * weight  解析记录的权重。
     * healthCheckId  健康检查ID。
     * aliasTarget  aliasTarget
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -213,7 +220,8 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
             'line' => 'setLine',
             'weight' => 'setWeight',
             'healthCheckId' => 'setHealthCheckId',
-            'aliasTarget' => 'setAliasTarget'
+            'aliasTarget' => 'setAliasTarget',
+            'bundle' => 'setBundle'
     ];
 
     /**
@@ -236,6 +244,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * weight  解析记录的权重。
     * healthCheckId  健康检查ID。
     * aliasTarget  aliasTarget
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -257,7 +266,8 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
             'line' => 'getLine',
             'weight' => 'getWeight',
             'healthCheckId' => 'getHealthCheckId',
-            'aliasTarget' => 'getAliasTarget'
+            'aliasTarget' => 'getAliasTarget',
+            'bundle' => 'getBundle'
     ];
 
     /**
@@ -336,6 +346,7 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
         $this->container['healthCheckId'] = isset($data['healthCheckId']) ? $data['healthCheckId'] : null;
         $this->container['aliasTarget'] = isset($data['aliasTarget']) ? $data['aliasTarget'] : null;
+        $this->container['bundle'] = isset($data['bundle']) ? $data['bundle'] : null;
     }
 
     /**
@@ -789,6 +800,30 @@ class SetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     public function setAliasTarget($aliasTarget)
     {
         $this->container['aliasTarget'] = $aliasTarget;
+        return $this;
+    }
+
+    /**
+    * Gets bundle
+    *  规格，默认规格，保留字段。
+    *
+    * @return string|null
+    */
+    public function getBundle()
+    {
+        return $this->container['bundle'];
+    }
+
+    /**
+    * Sets bundle
+    *
+    * @param string|null $bundle 规格，默认规格，保留字段。
+    *
+    * @return $this
+    */
+    public function setBundle($bundle)
+    {
+        $this->container['bundle'] = $bundle;
         return $this;
     }
 

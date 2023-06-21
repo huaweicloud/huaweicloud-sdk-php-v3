@@ -21,6 +21,25 @@ class MeetingCredentials extends Credentials
     private static $EXPIRE_HOUR_HALF = 12;
     private static $CLIENT_TYPE_API = 72;
 
+    protected static $setters = [
+        'userName' => 'setUserName',
+        'userPassword' => 'setUserPassword'
+    ];
+
+    protected static $getters = [
+        'userName' => 'getUserName',
+        'userPassword' => 'getUserPassword',
+    ];
+
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    public static function getters()
+    {
+        return self::$getters;
+    }
 
     public function processAuthRequest(SdkRequest $request)
     {

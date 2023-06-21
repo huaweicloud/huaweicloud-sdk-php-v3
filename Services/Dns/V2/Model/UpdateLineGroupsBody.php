@@ -22,7 +22,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * lines  线路列表。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * lines  线路列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * lines  线路列表。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * lines  线路列表。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * description  线路分组的描述信息。长度不超过255个字符。默认值为空。
-    * lines  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * lines  线路列表。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets lines
-    *  线路分组的描述信息。长度不超过255个字符。默认值为空。
+    *  线路列表。
     *
     * @return string[]
     */
@@ -262,7 +262,7 @@ class UpdateLineGroupsBody implements ModelInterface, ArrayAccess
     /**
     * Sets lines
     *
-    * @param string[] $lines 线路分组的描述信息。长度不超过255个字符。默认值为空。
+    * @param string[] $lines 线路列表。
     *
     * @return $this
     */

@@ -246,6 +246,12 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['primaryClusterId'] === null) {
+            $invalidProperties[] = "'primaryClusterId' can't be null";
+        }
+        if ($this->container['standbyAzCode'] === null) {
+            $invalidProperties[] = "'standbyAzCode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -264,7 +270,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * Gets primaryClusterId
     *  主集群ID
     *
-    * @return string|null
+    * @return string
     */
     public function getPrimaryClusterId()
     {
@@ -274,7 +280,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets primaryClusterId
     *
-    * @param string|null $primaryClusterId 主集群ID
+    * @param string $primaryClusterId 主集群ID
     *
     * @return $this
     */
@@ -384,7 +390,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * Gets standbyAzCode
     *  备集群所在AZ
     *
-    * @return string|null
+    * @return string
     */
     public function getStandbyAzCode()
     {
@@ -394,7 +400,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets standbyAzCode
     *
-    * @param string|null $standbyAzCode 备集群所在AZ
+    * @param string $standbyAzCode 备集群所在AZ
     *
     * @return $this
     */
