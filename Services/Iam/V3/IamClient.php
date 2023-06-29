@@ -6766,25 +6766,25 @@ class IamClient extends Client
             $queryParams['subject'] = $localVarParams['subject'];
         }
         if ($localVarParams['subjectUserId'] !== null) {
-            $queryParams['subject_user_id'] = $localVarParams['subjectUserId'];
+            $queryParams['subject.user_id'] = $localVarParams['subjectUserId'];
         }
         if ($localVarParams['subjectGroupId'] !== null) {
-            $queryParams['subject_group_id'] = $localVarParams['subjectGroupId'];
+            $queryParams['subject.group_id'] = $localVarParams['subjectGroupId'];
         }
         if ($localVarParams['subjectAgencyId'] !== null) {
-            $queryParams['subject_agency_id'] = $localVarParams['subjectAgencyId'];
+            $queryParams['subject.agency_id'] = $localVarParams['subjectAgencyId'];
         }
         if ($localVarParams['scope'] !== null) {
             $queryParams['scope'] = $localVarParams['scope'];
         }
         if ($localVarParams['scopeProjectId'] !== null) {
-            $queryParams['scope_project_id'] = $localVarParams['scopeProjectId'];
+            $queryParams['scope.project_id'] = $localVarParams['scopeProjectId'];
         }
         if ($localVarParams['scopeDomainId'] !== null) {
-            $queryParams['scope_domain_id'] = $localVarParams['scopeDomainId'];
+            $queryParams['scope.domain_id'] = $localVarParams['scopeDomainId'];
         }
         if ($localVarParams['scopeEnterpriseProjectsId'] !== null) {
-            $queryParams['scope_enterprise_projects_id'] = $localVarParams['scopeEnterpriseProjectsId'];
+            $queryParams['scope.enterprise_projects_id'] = $localVarParams['scopeEnterpriseProjectsId'];
         }
         if ($localVarParams['isInherited'] !== null) {
             $queryParams['is_inherited'] = $localVarParams['isInherited'];

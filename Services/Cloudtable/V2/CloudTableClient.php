@@ -186,7 +186,7 @@ class CloudTableClient extends Client
 
     public function enableComponentWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/components/{componentName}';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/components/{component_name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -260,7 +260,7 @@ class CloudTableClient extends Client
 
     public function expandClusterComponentWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/nodes';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/nodes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -399,7 +399,7 @@ class CloudTableClient extends Client
 
     public function rebootCloudTableClusterWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/restart';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/restart';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -538,7 +538,7 @@ class CloudTableClient extends Client
 
     public function showClusterSettingWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/setting';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/setting';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -606,7 +606,7 @@ class CloudTableClient extends Client
 
     public function updateClusterSettingWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/setting';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/setting';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

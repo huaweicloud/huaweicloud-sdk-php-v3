@@ -224,19 +224,26 @@ class HttpClient
                 $sdkError = new SdkErrorMessage($requestId,
                     $responseBodyArr['code'], $responseBodyArr['message']);
             } else {
+                // should parse response body to find error code and error message
                 foreach ($responseBodyArr as $key => $value) {
                     if (!is_array($responseBodyArr[$key])) {
-                        return;
+                        continue;
                     }
                     if (isset($responseBodyArr[$key]['code']) and
                         isset($responseBodyArr[$key]['message'])) {
                         $sdkError = new SdkErrorMessage($requestId,
                             $responseBodyArr[$key]['code'],
                             $responseBodyArr[$key]['message']);
-                    } else {
+                    } else if (isset($responseBodyArr[$key]['error_code']) and
+                        isset($responseBodyArr[$key]['error_msg'])) {
                         $sdkError = new SdkErrorMessage($requestId,
                             $responseBodyArr[$key]['error_code'],
                             $responseBodyArr[$key]['error_msg']);
+                    } else if (sizeof($responseBodyArr[$key]) >= 1) {
+                        // if there are many errors, use the first error to generate sdk error which will published to user
+                        $sdkError = new SdkErrorMessage($requestId,
+                            $responseBodyArr[$key][0]['error_code'],
+                            $responseBodyArr[$key][0]['error_msg']);
                     }
                 }
             }

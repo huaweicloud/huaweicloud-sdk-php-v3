@@ -26,7 +26,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
@@ -58,7 +58,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
@@ -111,7 +111,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
@@ -143,7 +143,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
@@ -175,7 +175,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
-    * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * status  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
@@ -448,7 +448,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    *  待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+    * @param string|null $status 待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
     *
     * @return $this
     */

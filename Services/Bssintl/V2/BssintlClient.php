@@ -1555,7 +1555,7 @@ class BssintlClient extends Client
             $queryParams['type'] = $localVarParams['type'];
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+            $queryParams['enterpriseProjectId'] = $localVarParams['enterpriseProjectId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

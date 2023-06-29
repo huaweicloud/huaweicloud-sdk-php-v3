@@ -47,6 +47,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * enablePublicip  Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
+    * templateId  参数模板ID
     *
     * @var string[]
     */
@@ -77,7 +78,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'accessUser' => 'string',
             'enablePublicip' => 'bool',
             'port' => 'int',
-            'renameCommands' => 'object'
+            'renameCommands' => 'object',
+            'templateId' => 'string'
     ];
 
     /**
@@ -109,6 +111,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * enablePublicip  Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
+    * templateId  参数模板ID
     *
     * @var string[]
     */
@@ -139,7 +142,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
         'accessUser' => null,
         'enablePublicip' => null,
         'port' => null,
-        'renameCommands' => null
+        'renameCommands' => null,
+        'templateId' => null
     ];
 
     /**
@@ -192,6 +196,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * enablePublicip  Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
+    * templateId  参数模板ID
     *
     * @var string[]
     */
@@ -222,7 +227,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'accessUser' => 'access_user',
             'enablePublicip' => 'enable_publicip',
             'port' => 'port',
-            'renameCommands' => 'rename_commands'
+            'renameCommands' => 'rename_commands',
+            'templateId' => 'template_id'
     ];
 
     /**
@@ -254,6 +260,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * enablePublicip  Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
+    * templateId  参数模板ID
     *
     * @var string[]
     */
@@ -284,7 +291,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'accessUser' => 'setAccessUser',
             'enablePublicip' => 'setEnablePublicip',
             'port' => 'setPort',
-            'renameCommands' => 'setRenameCommands'
+            'renameCommands' => 'setRenameCommands',
+            'templateId' => 'setTemplateId'
     ];
 
     /**
@@ -316,6 +324,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * enablePublicip  Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
     * port  实例自定义端口。只有创建Redis4.0和Redis5.0实例才支持自定义端口，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示实例使用默认端口6379。如果自定义端口，端口范围为1~65535的任意数字。
     * renameCommands  支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
+    * templateId  参数模板ID
     *
     * @var string[]
     */
@@ -346,7 +355,8 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
             'accessUser' => 'getAccessUser',
             'enablePublicip' => 'getEnablePublicip',
             'port' => 'getPort',
-            'renameCommands' => 'getRenameCommands'
+            'renameCommands' => 'getRenameCommands',
+            'templateId' => 'getTemplateId'
     ];
 
     /**
@@ -434,6 +444,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : false;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['renameCommands'] = isset($data['renameCommands']) ? $data['renameCommands'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
     }
 
     /**
@@ -1124,6 +1135,30 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     public function setRenameCommands($renameCommands)
     {
         $this->container['renameCommands'] = $renameCommands;
+        return $this;
+    }
+
+    /**
+    * Gets templateId
+    *  参数模板ID
+    *
+    * @return string|null
+    */
+    public function getTemplateId()
+    {
+        return $this->container['templateId'];
+    }
+
+    /**
+    * Sets templateId
+    *
+    * @param string|null $templateId 参数模板ID
+    *
+    * @return $this
+    */
+    public function setTemplateId($templateId)
+    {
+        $this->container['templateId'] = $templateId;
         return $this;
     }
 

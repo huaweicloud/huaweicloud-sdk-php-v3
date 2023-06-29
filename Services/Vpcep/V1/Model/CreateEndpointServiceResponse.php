@@ -33,7 +33,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
-    * cidrType  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * tags  资源标签列表
@@ -55,7 +54,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'projectId' => 'string',
-            'cidrType' => 'string',
             'ports' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PortList[]',
             'tcpProxy' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
@@ -77,7 +75,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
-    * cidrType  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * tags  资源标签列表
@@ -99,7 +96,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'projectId' => null,
-        'cidrType' => null,
         'ports' => null,
         'tcpProxy' => null,
         'tags' => null,
@@ -142,7 +138,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
-    * cidrType  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * tags  资源标签列表
@@ -164,7 +159,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'projectId' => 'project_id',
-            'cidrType' => 'cidr_type',
             'ports' => 'ports',
             'tcpProxy' => 'tcp_proxy',
             'tags' => 'tags',
@@ -186,7 +180,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
-    * cidrType  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * tags  资源标签列表
@@ -208,7 +201,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'projectId' => 'setProjectId',
-            'cidrType' => 'setCidrType',
             'ports' => 'setPorts',
             'tcpProxy' => 'setTcpProxy',
             'tags' => 'setTags',
@@ -230,7 +222,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
-    * cidrType  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * tags  资源标签列表
@@ -252,7 +243,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'projectId' => 'getProjectId',
-            'cidrType' => 'getCidrType',
             'ports' => 'getPorts',
             'tcpProxy' => 'getTcpProxy',
             'tags' => 'getTags',
@@ -306,8 +296,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     const STATUS_CREATING = 'creating';
     const STATUS_AVAILABLE = 'available';
     const STATUS_FAILED = 'failed';
-    const CIDR_TYPE__PUBLIC = 'public';
-    const CIDR_TYPE_INTERNAL = 'internal';
     const TCP_PROXY_CLOSE = 'close';
     const TCP_PROXY_TOA_OPEN = 'toa_open';
     const TCP_PROXY_PROXY_OPEN = 'proxy_open';
@@ -340,19 +328,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             self::STATUS_CREATING,
             self::STATUS_AVAILABLE,
             self::STATUS_FAILED,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getCidrTypeAllowableValues()
-    {
-        return [
-            self::CIDR_TYPE__PUBLIC,
-            self::CIDR_TYPE_INTERNAL,
         ];
     }
 
@@ -400,7 +375,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['cidrType'] = isset($data['cidrType']) ? $data['cidrType'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
         $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -428,14 +402,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getCidrTypeAllowableValues();
-                if (!is_null($this->container['cidrType']) && !in_array($this->container['cidrType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'cidrType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -747,30 +713,6 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets cidrType
-    *  网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
-    *
-    * @return string|null
-    */
-    public function getCidrType()
-    {
-        return $this->container['cidrType'];
-    }
-
-    /**
-    * Sets cidrType
-    *
-    * @param string|null $cidrType 网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
-    *
-    * @return $this
-    */
-    public function setCidrType($cidrType)
-    {
-        $this->container['cidrType'] = $cidrType;
         return $this;
     }
 

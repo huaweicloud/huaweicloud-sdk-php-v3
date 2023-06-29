@@ -2363,10 +2363,10 @@ class VodClient extends Client
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['transcodeStatus'] !== null) {
-            $queryParams['transcode_status'] = $localVarParams['transcodeStatus'];
+            $queryParams['transcodeStatus'] = $localVarParams['transcodeStatus'];
         }
         if ($localVarParams['assetStatus'] !== null) {
-            $queryParams['asset_status'] = $localVarParams['assetStatus'];
+            $queryParams['assetStatus'] = $localVarParams['assetStatus'];
         }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];

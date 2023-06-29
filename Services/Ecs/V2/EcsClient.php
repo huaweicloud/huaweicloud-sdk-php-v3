@@ -2343,7 +2343,7 @@ class EcsClient extends Client
             $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['notTags'] !== null) {
-            $queryParams['not_tags'] = $localVarParams['notTags'];
+            $queryParams['not-tags'] = $localVarParams['notTags'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -3136,7 +3136,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['changesSince'] !== null) {
-            $queryParams['changes_since'] = $localVarParams['changesSince'];
+            $queryParams['changes-since'] = $localVarParams['changesSince'];
         }
         if ($localVarParams['flavor'] !== null) {
             $queryParams['flavor'] = $localVarParams['flavor'];
@@ -3157,7 +3157,7 @@ class EcsClient extends Client
             $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['notTags'] !== null) {
-            $queryParams['not_tags'] = $localVarParams['notTags'];
+            $queryParams['not-tags'] = $localVarParams['notTags'];
         }
         if ($localVarParams['reservationId'] !== null) {
             $queryParams['reservation_id'] = $localVarParams['reservationId'];

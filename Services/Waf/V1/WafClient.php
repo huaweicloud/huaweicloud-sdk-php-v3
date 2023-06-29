@@ -2432,7 +2432,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['keepPolicy'] !== null) {
-            $queryParams['keep_policy'] = $localVarParams['keepPolicy'];
+            $queryParams['keepPolicy'] = $localVarParams['keepPolicy'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];

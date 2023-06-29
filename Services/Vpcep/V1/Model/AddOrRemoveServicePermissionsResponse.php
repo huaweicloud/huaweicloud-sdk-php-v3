@@ -21,22 +21,26 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permissions  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * permissions  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'permissions' => 'string[]'
+            'permissions' => 'string[]',
+            'permissionType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permissions  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * permissions  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'permissions' => null
+        'permissions' => null,
+        'permissionType' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permissions  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * permissions  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'permissions' => 'permissions'
+            'permissions' => 'permissions',
+            'permissionType' => 'permission_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permissions  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * permissions  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     *
     * @var string[]
     */
     protected static $setters = [
-            'permissions' => 'setPermissions'
+            'permissions' => 'setPermissions',
+            'permissionType' => 'setPermissionType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permissions  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * permissions  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     *
     * @var string[]
     */
     protected static $getters = [
-            'permissions' => 'getPermissions'
+            'permissions' => 'getPermissions',
+            'permissionType' => 'getPermissionType'
     ];
 
     /**
@@ -130,7 +140,22 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
     {
         return self::$openAPIModelName;
     }
+    const PERMISSION_TYPE_DOMAIN_ID = 'domainId';
+    const PERMISSION_TYPE_ORG_PATH = 'orgPath';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPermissionTypeAllowableValues()
+    {
+        return [
+            self::PERMISSION_TYPE_DOMAIN_ID,
+            self::PERMISSION_TYPE_ORG_PATH,
+        ];
+    }
 
 
     /**
@@ -149,6 +174,7 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+        $this->container['permissionType'] = isset($data['permissionType']) ? $data['permissionType'] : null;
     }
 
     /**
@@ -159,6 +185,14 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getPermissionTypeAllowableValues();
+                if (!is_null($this->container['permissionType']) && !in_array($this->container['permissionType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'permissionType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -175,7 +209,7 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets permissions
-    *  permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    *  permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
     *
     * @return string[]|null
     */
@@ -187,13 +221,37 @@ class AddOrRemoveServicePermissionsResponse implements ModelInterface, ArrayAcce
     /**
     * Sets permissions
     *
-    * @param string[]|null $permissions permission列表。 权限格式为iam:domain::6e9dfd51d1124e8d8498dce894923a0d或“*”， “*”表示所有用户的终端节点可连接。 其中6e9dfd51d1124e8d8498dce894923a0d为可连接的用户domian_id。
+    * @param string[]|null $permissions permission列表。 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
     *
     * @return $this
     */
     public function setPermissions($permissions)
     {
         $this->container['permissions'] = $permissions;
+        return $this;
+    }
+
+    /**
+    * Gets permissionType
+    *  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    *
+    * @return string|null
+    */
+    public function getPermissionType()
+    {
+        return $this->container['permissionType'];
+    }
+
+    /**
+    * Sets permissionType
+    *
+    * @param string|null $permissionType 终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    *
+    * @return $this
+    */
+    public function setPermissionType($permissionType)
+    {
+        $this->container['permissionType'] = $permissionType;
         return $this;
     }
 

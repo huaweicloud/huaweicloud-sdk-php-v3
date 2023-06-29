@@ -22,21 +22,29 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  属性更新异常错误码。
+    * errorMsg  属性更新异常错误信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'response' => 'object'
+            'response' => 'object',
+            'errorCode' => 'string',
+            'errorMsg' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  属性更新异常错误码。
+    * errorMsg  属性更新异常错误信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'response' => null
+        'response' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -63,31 +71,43 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  属性更新异常错误码。
+    * errorMsg  属性更新异常错误信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'response' => 'response'
+            'response' => 'response',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  属性更新异常错误码。
+    * errorMsg  属性更新异常错误信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'response' => 'setResponse'
+            'response' => 'setResponse',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  属性更新异常错误码。
+    * errorMsg  属性更新异常错误信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'response' => 'getResponse'
+            'response' => 'getResponse',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -149,6 +169,8 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -194,6 +216,54 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  属性更新异常错误码。
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 属性更新异常错误码。
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  属性更新异常错误信息。
+    *
+    * @return object|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param object|null $errorMsg 属性更新异常错误信息。
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

@@ -23,24 +23,32 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  命令下发异常错误码。
+    * errorMsg  命令下发异常错误信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'commandId' => 'string',
-            'response' => 'object'
+            'response' => 'object',
+            'errorCode' => 'string',
+            'errorMsg' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  命令下发异常错误码。
+    * errorMsg  命令下发异常错误信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'commandId' => null,
-        'response' => null
+        'response' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -68,36 +76,48 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  命令下发异常错误码。
+    * errorMsg  命令下发异常错误信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'commandId' => 'command_id',
-            'response' => 'response'
+            'response' => 'response',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  命令下发异常错误码。
+    * errorMsg  命令下发异常错误信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'commandId' => 'setCommandId',
-            'response' => 'setResponse'
+            'response' => 'setResponse',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
+    * errorCode  命令下发异常错误码。
+    * errorMsg  命令下发异常错误信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'commandId' => 'getCommandId',
-            'response' => 'getResponse'
+            'response' => 'getResponse',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -160,6 +180,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
     {
         $this->container['commandId'] = isset($data['commandId']) ? $data['commandId'] : null;
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -229,6 +251,54 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  命令下发异常错误码。
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 命令下发异常错误码。
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  命令下发异常错误信息。
+    *
+    * @return object|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param object|null $errorMsg 命令下发异常错误信息。
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

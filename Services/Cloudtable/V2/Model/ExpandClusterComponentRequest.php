@@ -81,8 +81,8 @@ class ExpandClusterComponentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'projectId',
-            'clusterId' => 'clusterId',
+            'projectId' => 'project_id',
+            'clusterId' => 'cluster_id',
             'xLanguage' => 'X-Language',
             'body' => 'body'
     ];

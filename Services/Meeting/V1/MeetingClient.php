@@ -125,7 +125,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -749,10 +749,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -820,7 +820,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -888,7 +888,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -956,7 +956,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -1030,7 +1030,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -1374,7 +1374,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -1445,7 +1445,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -1513,7 +1513,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['idType'] !== null) {
-            $queryParams['id_type'] = $localVarParams['idType'];
+            $queryParams['idType'] = $localVarParams['idType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -1655,7 +1655,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -1729,10 +1729,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -1797,7 +1797,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -1862,10 +1862,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
@@ -1936,10 +1936,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
@@ -2010,10 +2010,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
@@ -2359,7 +2359,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xPassword'] !== null) {
             $headerParams[$arr['xPassword']] = $localVarParams['xPassword'];
@@ -2424,7 +2424,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -2498,7 +2498,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -2634,7 +2634,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -2773,7 +2773,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -2906,7 +2906,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3178,10 +3178,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['uuId'] !== null) {
-            $queryParams['uu_id'] = $localVarParams['uuId'];
+            $queryParams['uuID'] = $localVarParams['uuId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3246,10 +3246,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuiDs'] !== null) {
-            $queryParams['conf_uui_ds'] = $localVarParams['confUuiDs'];
+            $queryParams['confUUIDs'] = $localVarParams['confUuiDs'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -3586,7 +3586,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -3660,10 +3660,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3731,7 +3731,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3799,10 +3799,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3870,7 +3870,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -3938,10 +3938,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4082,7 +4082,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4153,16 +4153,16 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
+            $queryParams['startTime'] = $localVarParams['startTime'];
         }
         if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
+            $queryParams['endTime'] = $localVarParams['endTime'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -4236,10 +4236,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -4313,10 +4313,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -4384,7 +4384,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4452,7 +4452,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4520,10 +4520,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4591,7 +4591,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4659,7 +4659,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4727,10 +4727,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4798,7 +4798,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4866,7 +4866,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -4934,7 +4934,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -5280,10 +5280,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -5348,7 +5348,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -5416,7 +5416,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -5425,10 +5425,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -5505,7 +5505,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -5579,7 +5579,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -5653,16 +5653,16 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['deptCode'] !== null) {
-            $queryParams['dept_code'] = $localVarParams['deptCode'];
+            $queryParams['deptCode'] = $localVarParams['deptCode'];
         }
         if ($localVarParams['querySubDept'] !== null) {
-            $queryParams['query_sub_dept'] = $localVarParams['querySubDept'];
+            $queryParams['querySubDept'] = $localVarParams['querySubDept'];
         }
         if ($localVarParams['searchScope'] !== null) {
-            $queryParams['search_scope'] = $localVarParams['searchScope'];
+            $queryParams['searchScope'] = $localVarParams['searchScope'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -5736,10 +5736,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['searchScope'] !== null) {
-            $queryParams['search_scope'] = $localVarParams['searchScope'];
+            $queryParams['searchScope'] = $localVarParams['searchScope'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -5813,25 +5813,25 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['startExpireDate'] !== null) {
-            $queryParams['start_expire_date'] = $localVarParams['startExpireDate'];
+            $queryParams['startExpireDate'] = $localVarParams['startExpireDate'];
         }
         if ($localVarParams['endExpireDate'] !== null) {
-            $queryParams['end_expire_date'] = $localVarParams['endExpireDate'];
+            $queryParams['endExpireDate'] = $localVarParams['endExpireDate'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
         if ($localVarParams['vmrMode'] !== null) {
-            $queryParams['vmr_mode'] = $localVarParams['vmrMode'];
+            $queryParams['vmrMode'] = $localVarParams['vmrMode'];
         }
         if ($localVarParams['typeId'] !== null) {
-            $queryParams['type_id'] = $localVarParams['typeId'];
+            $queryParams['typeId'] = $localVarParams['typeId'];
         }
         if ($localVarParams['orderId'] !== null) {
-            $queryParams['order_id'] = $localVarParams['orderId'];
+            $queryParams['orderId'] = $localVarParams['orderId'];
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
@@ -5908,10 +5908,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['vmrMode'] !== null) {
-            $queryParams['vmr_mode'] = $localVarParams['vmrMode'];
+            $queryParams['vmrMode'] = $localVarParams['vmrMode'];
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
@@ -5982,7 +5982,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -5991,7 +5991,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -6062,7 +6062,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['deptName'] !== null) {
-            $queryParams['dept_name'] = $localVarParams['deptName'];
+            $queryParams['deptName'] = $localVarParams['deptName'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6137,16 +6137,16 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['model'] !== null) {
             $queryParams['model'] = $localVarParams['model'];
         }
         if ($localVarParams['deptCode'] !== null) {
-            $queryParams['dept_code'] = $localVarParams['deptCode'];
+            $queryParams['deptCode'] = $localVarParams['deptCode'];
         }
         if ($localVarParams['enableSubDept'] !== null) {
-            $queryParams['enable_sub_dept'] = $localVarParams['enableSubDept'];
+            $queryParams['enableSubDept'] = $localVarParams['enableSubDept'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6217,7 +6217,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -6226,19 +6226,19 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['queryAll'] !== null) {
-            $queryParams['query_all'] = $localVarParams['queryAll'];
+            $queryParams['queryAll'] = $localVarParams['queryAll'];
         }
         if ($localVarParams['startDate'] !== null) {
-            $queryParams['start_date'] = $localVarParams['startDate'];
+            $queryParams['startDate'] = $localVarParams['startDate'];
         }
         if ($localVarParams['endDate'] !== null) {
-            $queryParams['end_date'] = $localVarParams['endDate'];
+            $queryParams['endDate'] = $localVarParams['endDate'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -6312,7 +6312,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6386,7 +6386,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6456,7 +6456,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -6465,16 +6465,16 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['queryAll'] !== null) {
-            $queryParams['query_all'] = $localVarParams['queryAll'];
+            $queryParams['queryAll'] = $localVarParams['queryAll'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['queryConfMode'] !== null) {
-            $queryParams['query_conf_mode'] = $localVarParams['queryConfMode'];
+            $queryParams['queryConfMode'] = $localVarParams['queryConfMode'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -6548,10 +6548,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['specialVmr'] !== null) {
-            $queryParams['special_vmr'] = $localVarParams['specialVmr'];
+            $queryParams['specialVmr'] = $localVarParams['specialVmr'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6619,7 +6619,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -6628,10 +6628,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['queryAll'] !== null) {
-            $queryParams['query_all'] = $localVarParams['queryAll'];
+            $queryParams['queryAll'] = $localVarParams['queryAll'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -6705,7 +6705,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6779,7 +6779,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -6847,7 +6847,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -6856,19 +6856,19 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['queryAll'] !== null) {
-            $queryParams['query_all'] = $localVarParams['queryAll'];
+            $queryParams['queryAll'] = $localVarParams['queryAll'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['startDate'] !== null) {
-            $queryParams['start_date'] = $localVarParams['startDate'];
+            $queryParams['startDate'] = $localVarParams['startDate'];
         }
         if ($localVarParams['endDate'] !== null) {
-            $queryParams['end_date'] = $localVarParams['endDate'];
+            $queryParams['endDate'] = $localVarParams['endDate'];
         }
         if ($localVarParams['sortType'] !== null) {
-            $queryParams['sort_type'] = $localVarParams['sortType'];
+            $queryParams['sortType'] = $localVarParams['sortType'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -6942,19 +6942,19 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['startExpireDate'] !== null) {
-            $queryParams['start_expire_date'] = $localVarParams['startExpireDate'];
+            $queryParams['startExpireDate'] = $localVarParams['startExpireDate'];
         }
         if ($localVarParams['endExpireDate'] !== null) {
-            $queryParams['end_expire_date'] = $localVarParams['endExpireDate'];
+            $queryParams['endExpireDate'] = $localVarParams['endExpireDate'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
         if ($localVarParams['typeId'] !== null) {
-            $queryParams['type_id'] = $localVarParams['typeId'];
+            $queryParams['typeId'] = $localVarParams['typeId'];
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
@@ -7034,28 +7034,28 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['startExpireDate'] !== null) {
-            $queryParams['start_expire_date'] = $localVarParams['startExpireDate'];
+            $queryParams['startExpireDate'] = $localVarParams['startExpireDate'];
         }
         if ($localVarParams['endExpireDate'] !== null) {
-            $queryParams['end_expire_date'] = $localVarParams['endExpireDate'];
+            $queryParams['endExpireDate'] = $localVarParams['endExpireDate'];
         }
         if ($localVarParams['startOperateDate'] !== null) {
-            $queryParams['start_operate_date'] = $localVarParams['startOperateDate'];
+            $queryParams['startOperateDate'] = $localVarParams['startOperateDate'];
         }
         if ($localVarParams['endOperateDate'] !== null) {
-            $queryParams['end_operate_date'] = $localVarParams['endOperateDate'];
+            $queryParams['endOperateDate'] = $localVarParams['endOperateDate'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
         if ($localVarParams['typeId'] !== null) {
-            $queryParams['type_id'] = $localVarParams['typeId'];
+            $queryParams['typeId'] = $localVarParams['typeId'];
         }
         if ($localVarParams['operateType'] !== null) {
-            $queryParams['operate_type'] = $localVarParams['operateType'];
+            $queryParams['operateType'] = $localVarParams['operateType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -7132,34 +7132,34 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['sortField'] !== null) {
-            $queryParams['sort_field'] = $localVarParams['sortField'];
+            $queryParams['sortField'] = $localVarParams['sortField'];
         }
         if ($localVarParams['isAsc'] !== null) {
-            $queryParams['is_asc'] = $localVarParams['isAsc'];
+            $queryParams['isAsc'] = $localVarParams['isAsc'];
         }
         if ($localVarParams['deptCode'] !== null) {
-            $queryParams['dept_code'] = $localVarParams['deptCode'];
+            $queryParams['deptCode'] = $localVarParams['deptCode'];
         }
         if ($localVarParams['enableSubDept'] !== null) {
-            $queryParams['enable_sub_dept'] = $localVarParams['enableSubDept'];
+            $queryParams['enableSubDept'] = $localVarParams['enableSubDept'];
         }
         if ($localVarParams['adminType'] !== null) {
-            $queryParams['admin_type'] = $localVarParams['adminType'];
+            $queryParams['adminType'] = $localVarParams['adminType'];
         }
         if ($localVarParams['enableRoom'] !== null) {
-            $queryParams['enable_room'] = $localVarParams['enableRoom'];
+            $queryParams['enableRoom'] = $localVarParams['enableRoom'];
         }
         if ($localVarParams['userType'] !== null) {
-            $queryParams['user_type'] = $localVarParams['userType'];
+            $queryParams['userType'] = $localVarParams['userType'];
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['containsUnActive'] !== null) {
-            $queryParams['contains_un_active'] = $localVarParams['containsUnActive'];
+            $queryParams['containsUnActive'] = $localVarParams['containsUnActive'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -7233,10 +7233,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['devType'] !== null) {
-            $queryParams['dev_type'] = $localVarParams['devType'];
+            $queryParams['devType'] = $localVarParams['devType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -7508,10 +7508,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -7579,7 +7579,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -7647,7 +7647,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -7715,7 +7715,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -7783,10 +7783,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -7854,10 +7854,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -8055,7 +8055,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -8185,7 +8185,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -8725,7 +8725,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -8734,10 +8734,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xType'] !== null) {
             $headerParams[$arr['xType']] = $localVarParams['xType'];
@@ -8811,7 +8811,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -8878,7 +8878,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -8887,10 +8887,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xType'] !== null) {
             $headerParams[$arr['xType']] = $localVarParams['xType'];
@@ -9165,7 +9165,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -9174,10 +9174,10 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xType'] !== null) {
             $headerParams[$arr['xType']] = $localVarParams['xType'];
@@ -9446,7 +9446,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -9511,10 +9511,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -9584,7 +9584,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -9658,7 +9658,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -9847,7 +9847,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['queryGroup'] !== null) {
-            $queryParams['query_group'] = $localVarParams['queryGroup'];
+            $queryParams['queryGroup'] = $localVarParams['queryGroup'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -9980,7 +9980,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -10051,10 +10051,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['corpId'] !== null) {
-            $queryParams['corp_id'] = $localVarParams['corpId'];
+            $queryParams['corpId'] = $localVarParams['corpId'];
         }
         if ($localVarParams['spId'] !== null) {
-            $queryParams['sp_id'] = $localVarParams['spId'];
+            $queryParams['spId'] = $localVarParams['spId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -10249,7 +10249,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -10314,7 +10314,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -10803,10 +10803,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -11226,10 +11226,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -11300,10 +11300,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['userUuid'] !== null) {
-            $queryParams['user_uuid'] = $localVarParams['userUuid'];
+            $queryParams['userUUID'] = $localVarParams['userUuid'];
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xAuthorizationType'] !== null) {
             $headerParams[$arr['xAuthorizationType']] = $localVarParams['xAuthorizationType'];
@@ -11516,7 +11516,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['conferenceId'] !== null) {
-            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+            $queryParams['conferenceID'] = $localVarParams['conferenceId'];
         }
         if ($localVarParams['xConferenceAuthorization'] !== null) {
             $headerParams[$arr['xConferenceAuthorization']] = $localVarParams['xConferenceAuthorization'];
@@ -11649,7 +11649,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['accountType'] !== null) {
-            $queryParams['account_type'] = $localVarParams['accountType'];
+            $queryParams['accountType'] = $localVarParams['accountType'];
         }
         if ($localVarParams['xRequestId'] !== null) {
             $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
@@ -11930,10 +11930,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['startDate'] !== null) {
-            $queryParams['start_date'] = $localVarParams['startDate'];
+            $queryParams['startDate'] = $localVarParams['startDate'];
         }
         if ($localVarParams['endDate'] !== null) {
-            $queryParams['end_date'] = $localVarParams['endDate'];
+            $queryParams['endDate'] = $localVarParams['endDate'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -11942,7 +11942,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -12011,7 +12011,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -12074,16 +12074,16 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['confType'] !== null) {
-            $queryParams['conf_type'] = $localVarParams['confType'];
+            $queryParams['confType'] = $localVarParams['confType'];
         }
         if ($localVarParams['participantId'] !== null) {
-            $queryParams['participant_id'] = $localVarParams['participantId'];
+            $queryParams['participantID'] = $localVarParams['participantId'];
         }
         if ($localVarParams['qosType'] !== null) {
-            $queryParams['qos_type'] = $localVarParams['qosType'];
+            $queryParams['qosType'] = $localVarParams['qosType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -12146,10 +12146,10 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['confUuid'] !== null) {
-            $queryParams['conf_uuid'] = $localVarParams['confUuid'];
+            $queryParams['confUUID'] = $localVarParams['confUuid'];
         }
         if ($localVarParams['confType'] !== null) {
-            $queryParams['conf_type'] = $localVarParams['confType'];
+            $queryParams['confType'] = $localVarParams['confType'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -12158,7 +12158,7 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['searchKey'] !== null) {
-            $queryParams['search_key'] = $localVarParams['searchKey'];
+            $queryParams['searchKey'] = $localVarParams['searchKey'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -12221,7 +12221,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['thresholdType'] !== null) {
-            $queryParams['threshold_type'] = $localVarParams['thresholdType'];
+            $queryParams['thresholdType'] = $localVarParams['thresholdType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -12287,7 +12287,7 @@ class MeetingClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['thresholdType'] !== null) {
-            $queryParams['threshold_type'] = $localVarParams['thresholdType'];
+            $queryParams['thresholdType'] = $localVarParams['thresholdType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -12358,13 +12358,13 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['timeUnit'] !== null) {
-            $queryParams['time_unit'] = $localVarParams['timeUnit'];
+            $queryParams['timeUnit'] = $localVarParams['timeUnit'];
         }
         if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
+            $queryParams['startTime'] = $localVarParams['startTime'];
         }
         if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
+            $queryParams['endTime'] = $localVarParams['endTime'];
         }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
@@ -12439,13 +12439,13 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['timeUnit'] !== null) {
-            $queryParams['time_unit'] = $localVarParams['timeUnit'];
+            $queryParams['timeUnit'] = $localVarParams['timeUnit'];
         }
         if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
+            $queryParams['startTime'] = $localVarParams['startTime'];
         }
         if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
+            $queryParams['endTime'] = $localVarParams['endTime'];
         }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
@@ -12518,13 +12518,13 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['timeUnit'] !== null) {
-            $queryParams['time_unit'] = $localVarParams['timeUnit'];
+            $queryParams['timeUnit'] = $localVarParams['timeUnit'];
         }
         if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
+            $queryParams['startTime'] = $localVarParams['startTime'];
         }
         if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
+            $queryParams['endTime'] = $localVarParams['endTime'];
         }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];
@@ -12599,13 +12599,13 @@ class MeetingClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['timeUnit'] !== null) {
-            $queryParams['time_unit'] = $localVarParams['timeUnit'];
+            $queryParams['timeUnit'] = $localVarParams['timeUnit'];
         }
         if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
+            $queryParams['startTime'] = $localVarParams['startTime'];
         }
         if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
+            $queryParams['endTime'] = $localVarParams['endTime'];
         }
         if ($localVarParams['category'] !== null) {
             $queryParams['category'] = $localVarParams['category'];

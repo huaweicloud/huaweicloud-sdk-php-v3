@@ -20,8 +20,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
-    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
     * approvalEnabled  是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
     * serviceType  终端节点服务类型。 仅支持将用户私有服务创建为interface类型的终端节点服务。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”： ● gateway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建， 用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
@@ -50,8 +50,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
-    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
     * approvalEnabled  是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
     * serviceType  终端节点服务类型。 仅支持将用户私有服务创建为interface类型的终端节点服务。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”： ● gateway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建， 用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
@@ -101,8 +101,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
-    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
     * approvalEnabled  是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
     * serviceType  终端节点服务类型。 仅支持将用户私有服务创建为interface类型的终端节点服务。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”： ● gateway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建， 用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
@@ -131,8 +131,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
-    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
     * approvalEnabled  是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
     * serviceType  终端节点服务类型。 仅支持将用户私有服务创建为interface类型的终端节点服务。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”： ● gateway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建， 用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
@@ -161,8 +161,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
-    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * serviceName  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
     * approvalEnabled  是否需要审批。 ● false：不需要审批，创建的终端节点连接直接为accepted状态。 ● true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
     * serviceType  终端节点服务类型。 仅支持将用户私有服务创建为interface类型的终端节点服务。 终端节点服务类型包括“网关（gateway）型”和“接口（interface）型”： ● gateway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建， 用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
@@ -350,7 +350,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
-    *  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    *  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
     *
     * @return string
     */
@@ -362,7 +362,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string $portId 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 ● VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： ● 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
+    * @param string $portId 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。 取值为： - LB类型：负载均衡器内网IP对应的端口ID。 详细内容请参考《弹性负载均衡API参考》中的“查询负载均衡详情”。 - VM类型：弹性云服务器IP地址对应的网卡ID。 详细内容请参考《弹性云服务器API参考》中的“查询云服务器网卡信息”， 详见响应消息中的“port_id”字段。 - VIP类型：虚拟IP所在虚拟机的网卡ID（VIP类型业务已不支持，该取值类型已废弃） 说明： - 创建终端节点服务时，VPC的子网网段不能与198.19.128.0/17重叠。 - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceName
-    *  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    *  终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serviceName
     *
-    * @param string|null $serviceName 终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 ● 传入为空，存入值为regionName+.+serviceId ● 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
+    * @param string|null $serviceName 终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
     *
     * @return $this
     */

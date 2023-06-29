@@ -21,7 +21,8 @@ class EpsPermission implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  白名单表主键ID
-    * permission  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * permission  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     * description  终端节点服务白名单描述
     * createdAt  白名单创建时间
     *
@@ -30,6 +31,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'permission' => 'string',
+            'permissionType' => 'string',
             'description' => 'string',
             'createdAt' => 'string'
     ];
@@ -37,7 +39,8 @@ class EpsPermission implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  白名单表主键ID
-    * permission  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * permission  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     * description  终端节点服务白名单描述
     * createdAt  白名单创建时间
     *
@@ -46,6 +49,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'permission' => null,
+        'permissionType' => null,
         'description' => null,
         'createdAt' => null
     ];
@@ -74,7 +78,8 @@ class EpsPermission implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  白名单表主键ID
-    * permission  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * permission  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     * description  终端节点服务白名单描述
     * createdAt  白名单创建时间
     *
@@ -83,6 +88,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'permission' => 'permission',
+            'permissionType' => 'permission_type',
             'description' => 'description',
             'createdAt' => 'created_at'
     ];
@@ -90,7 +96,8 @@ class EpsPermission implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  白名单表主键ID
-    * permission  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * permission  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     * description  终端节点服务白名单描述
     * createdAt  白名单创建时间
     *
@@ -99,6 +106,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'permission' => 'setPermission',
+            'permissionType' => 'setPermissionType',
             'description' => 'setDescription',
             'createdAt' => 'setCreatedAt'
     ];
@@ -106,7 +114,8 @@ class EpsPermission implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  白名单表主键ID
-    * permission  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * permission  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
+    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
     * description  终端节点服务白名单描述
     * createdAt  白名单创建时间
     *
@@ -115,6 +124,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'permission' => 'getPermission',
+            'permissionType' => 'getPermissionType',
             'description' => 'getDescription',
             'createdAt' => 'getCreatedAt'
     ];
@@ -159,7 +169,22 @@ class EpsPermission implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PERMISSION_TYPE_DOMAIN_ID = 'domainId';
+    const PERMISSION_TYPE_ORG_PATH = 'orgPath';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPermissionTypeAllowableValues()
+    {
+        return [
+            self::PERMISSION_TYPE_DOMAIN_ID,
+            self::PERMISSION_TYPE_ORG_PATH,
+        ];
+    }
 
 
     /**
@@ -179,6 +204,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['permissionType'] = isset($data['permissionType']) ? $data['permissionType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
@@ -191,12 +217,20 @@ class EpsPermission implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['permission']) && (mb_strlen($this->container['permission']) > 64)) {
-                $invalidProperties[] = "invalid value for 'permission', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['permission']) && (mb_strlen($this->container['permission']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'permission', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['permission']) && (mb_strlen($this->container['permission']) < 1)) {
                 $invalidProperties[] = "invalid value for 'permission', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getPermissionTypeAllowableValues();
+                if (!is_null($this->container['permissionType']) && !in_array($this->container['permissionType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'permissionType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -237,7 +271,7 @@ class EpsPermission implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    *  权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
     *
     * @return string|null
     */
@@ -249,13 +283,37 @@ class EpsPermission implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限格式为：iam:domain::domain_id其中， ● “iam:domain::”为固定格式。 ● “domain_id”为可连接用户的帐号ID。 支持输入1~64个字符，包括“a~z”、“A~Z”、“0~9”或者“”。 “”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd
+    * @param string|null $permission 权限格式为：iam:domain::domain_id或者organizations:orgPath::org_path其中， ● “iam:domain::”和“organizations:orgPath::”为固定格式。 ● “domain_id”为可连接用户的帐号ID，org_path可连接用户的组织路径 domain_id类型支持输入包括“a~z”、“A~Z”、“0~9”或者“*”，org_path类型支持“a~z”、“A~Z”、“0~9”、“/-*?”或者“*”。 “*”表示所有终端节点可连接。 例如：iam:domain::6e9dfd51d1124e8d8498dce894923a0dd或者organizations:orgPath::o-3j59d1231uprgk9yuvlidra7zbzfi578/r-rldbu1vmxdw5ahdkknxnvd5rgag77m2z/ou-7tuddd8nh99rebxltawsm6qct5z7rklv/_*
     *
     * @return $this
     */
     public function setPermission($permission)
     {
         $this->container['permission'] = $permission;
+        return $this;
+    }
+
+    /**
+    * Gets permissionType
+    *  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    *
+    * @return string|null
+    */
+    public function getPermissionType()
+    {
+        return $this->container['permissionType'];
+    }
+
+    /**
+    * Sets permissionType
+    *
+    * @param string|null $permissionType 终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    *
+    * @return $this
+    */
+    public function setPermissionType($permissionType)
+    {
+        $this->container['permissionType'] = $permissionType;
         return $this;
     }
 

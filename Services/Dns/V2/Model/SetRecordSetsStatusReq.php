@@ -20,7 +20,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * status  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    *  解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class SetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * @param string $status 解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
     *
     * @return $this
     */

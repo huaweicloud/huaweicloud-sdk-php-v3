@@ -30,6 +30,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -46,6 +47,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'updatedAt' => '\DateTime',
             'tenantId' => 'string',
             'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'status' => 'string',
             'statusMessage' => 'string'
     ];
@@ -62,6 +64,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -78,6 +81,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
         'updatedAt' => 'date-time',
         'tenantId' => null,
         'enterpriseProjectId' => null,
+        'tags' => null,
         'status' => null,
         'statusMessage' => null
     ];
@@ -115,6 +119,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -131,6 +136,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'tenantId' => 'tenant_id',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags',
             'status' => 'status',
             'statusMessage' => 'status_message'
     ];
@@ -147,6 +153,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -163,6 +170,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'tenantId' => 'setTenantId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags',
             'status' => 'setStatus',
             'statusMessage' => 'setStatusMessage'
     ];
@@ -179,6 +187,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -195,6 +204,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'tenantId' => 'getTenantId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags',
             'status' => 'getStatus',
             'statusMessage' => 'getStatusMessage'
     ];
@@ -267,6 +277,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
     }
@@ -324,6 +335,9 @@ class AddressGroup implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -581,6 +595,30 @@ class AddressGroup implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  IP地址组资源标签
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags IP地址组资源标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

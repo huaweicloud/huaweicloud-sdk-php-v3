@@ -29,6 +29,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     * productType  产品类型。 取值范围如下： - generic：普通版 - enterprise：企业版
     * storageType  存储类型。 取值范围如下： - DRAM - SSD
     * type  模板类型
+    * createdAt  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
             'name' => 'string',
             'productType' => 'string',
             'storageType' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'createdAt' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     * productType  产品类型。 取值范围如下： - generic：普通版 - enterprise：企业版
     * storageType  存储类型。 取值范围如下： - DRAM - SSD
     * type  模板类型
+    * createdAt  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
         'name' => null,
         'productType' => null,
         'storageType' => null,
-        'type' => null
+        'type' => null,
+        'createdAt' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     * productType  产品类型。 取值范围如下： - generic：普通版 - enterprise：企业版
     * storageType  存储类型。 取值范围如下： - DRAM - SSD
     * type  模板类型
+    * createdAt  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
             'name' => 'name',
             'productType' => 'product_type',
             'storageType' => 'storage_type',
-            'type' => 'type'
+            'type' => 'type',
+            'createdAt' => 'created_at'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     * productType  产品类型。 取值范围如下： - generic：普通版 - enterprise：企业版
     * storageType  存储类型。 取值范围如下： - DRAM - SSD
     * type  模板类型
+    * createdAt  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'productType' => 'setProductType',
             'storageType' => 'setStorageType',
-            'type' => 'setType'
+            'type' => 'setType',
+            'createdAt' => 'setCreatedAt'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     * productType  产品类型。 取值范围如下： - generic：普通版 - enterprise：企业版
     * storageType  存储类型。 取值范围如下： - DRAM - SSD
     * type  模板类型
+    * createdAt  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'productType' => 'getProductType',
             'storageType' => 'getStorageType',
-            'type' => 'getType'
+            'type' => 'getType',
+            'createdAt' => 'getCreatedAt'
     ];
 
     /**
@@ -266,6 +276,7 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
         $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['storageType'] = isset($data['storageType']) ? $data['storageType'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
 
     /**
@@ -519,6 +530,30 @@ class ConfigTemplatesListInfo implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
+    *
+    * @return string|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string|null $createdAt 模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
         return $this;
     }
 

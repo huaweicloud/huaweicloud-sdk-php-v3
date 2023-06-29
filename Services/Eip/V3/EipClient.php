@@ -691,49 +691,49 @@ class EipClient extends Client
             $queryParams['description'] = $localVarParams['description'];
         }
         if ($localVarParams['vnicPrivateIpAddress'] !== null) {
-            $queryParams['vnic_private_ip_address'] = $localVarParams['vnicPrivateIpAddress'];
+            $queryParams['vnic.private_ip_address'] = $localVarParams['vnicPrivateIpAddress'];
         }
         if ($localVarParams['vnicPrivateIpAddressLike'] !== null) {
-            $queryParams['vnic_private_ip_address_like'] = $localVarParams['vnicPrivateIpAddressLike'];
+            $queryParams['vnic.private_ip_address_like'] = $localVarParams['vnicPrivateIpAddressLike'];
         }
         if ($localVarParams['vnicDeviceId'] !== null) {
-            $queryParams['vnic_device_id'] = $localVarParams['vnicDeviceId'];
+            $queryParams['vnic.device_id'] = $localVarParams['vnicDeviceId'];
         }
         if ($localVarParams['vnicDeviceOwner'] !== null) {
-            $queryParams['vnic_device_owner'] = $localVarParams['vnicDeviceOwner'];
+            $queryParams['vnic.device_owner'] = $localVarParams['vnicDeviceOwner'];
         }
         if ($localVarParams['vnicVpcId'] !== null) {
-            $queryParams['vnic_vpc_id'] = $localVarParams['vnicVpcId'];
+            $queryParams['vnic.vpc_id'] = $localVarParams['vnicVpcId'];
         }
         if ($localVarParams['vnicPortId'] !== null) {
-            $queryParams['vnic_port_id'] = $localVarParams['vnicPortId'];
+            $queryParams['vnic.port_id'] = $localVarParams['vnicPortId'];
         }
         if ($localVarParams['vnicDeviceOwnerPrefixlike'] !== null) {
-            $queryParams['vnic_device_owner_prefixlike'] = $localVarParams['vnicDeviceOwnerPrefixlike'];
+            $queryParams['vnic.device_owner_prefixlike'] = $localVarParams['vnicDeviceOwnerPrefixlike'];
         }
         if ($localVarParams['vnicInstanceType'] !== null) {
-            $queryParams['vnic_instance_type'] = $localVarParams['vnicInstanceType'];
+            $queryParams['vnic.instance_type'] = $localVarParams['vnicInstanceType'];
         }
         if ($localVarParams['vnicInstanceId'] !== null) {
-            $queryParams['vnic_instance_id'] = $localVarParams['vnicInstanceId'];
+            $queryParams['vnic.instance_id'] = $localVarParams['vnicInstanceId'];
         }
         if ($localVarParams['bandwidthId'] !== null) {
-            $queryParams['bandwidth_id'] = $localVarParams['bandwidthId'];
+            $queryParams['bandwidth.id'] = $localVarParams['bandwidthId'];
         }
         if ($localVarParams['bandwidthName'] !== null) {
-            $queryParams['bandwidth_name'] = $localVarParams['bandwidthName'];
+            $queryParams['bandwidth.name'] = $localVarParams['bandwidthName'];
         }
         if ($localVarParams['bandwidthNameLike'] !== null) {
-            $queryParams['bandwidth_name_like'] = $localVarParams['bandwidthNameLike'];
+            $queryParams['bandwidth.name_like'] = $localVarParams['bandwidthNameLike'];
         }
         if ($localVarParams['bandwidthSize'] !== null) {
-            $queryParams['bandwidth_size'] = $localVarParams['bandwidthSize'];
+            $queryParams['bandwidth.size'] = $localVarParams['bandwidthSize'];
         }
         if ($localVarParams['bandwidthShareType'] !== null) {
-            $queryParams['bandwidth_share_type'] = $localVarParams['bandwidthShareType'];
+            $queryParams['bandwidth.share_type'] = $localVarParams['bandwidthShareType'];
         }
         if ($localVarParams['bandwidthChargeMode'] !== null) {
-            $queryParams['bandwidth_charge_mode'] = $localVarParams['bandwidthChargeMode'];
+            $queryParams['bandwidth.charge_mode'] = $localVarParams['bandwidthChargeMode'];
         }
         if ($localVarParams['billingInfo'] !== null) {
             $queryParams['billing_info'] = $localVarParams['billingInfo'];

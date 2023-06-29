@@ -1506,6 +1506,74 @@ class DcsClient extends Client
     }
 
     /**
+     * 集群分片倒换
+     *
+     * 集群分片倒换，适用于proxy和cluster实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeClusterSwitchover($request)
+    {
+        return $this->executeClusterSwitchoverWithHttpInfo($request);
+    }
+
+    public function executeClusterSwitchoverWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instance/{instance_id}/groups/{group_id}/replications/{node_id}/async-switchover';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['nodeId'] !== null) {
+            $pathParams['node_id'] = $localVarParams['nodeId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteClusterSwitchoverResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteClusterSwitchoverRequest');
+    }
+
+    /**
      * 查询可用区信息
      *
      * 查询所在局点的可用区信息
@@ -3805,6 +3873,68 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowInstanceRequest');
+    }
+
+    /**
+     * 查询租户Job执行结果
+     *
+     * 查询租户Job执行结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showJobInfo($request)
+    {
+        return $this->showJobInfoWithHttpInfo($request);
+    }
+
+    public function showJobInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowJobInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowJobInfoRequest');
     }
 
     /**

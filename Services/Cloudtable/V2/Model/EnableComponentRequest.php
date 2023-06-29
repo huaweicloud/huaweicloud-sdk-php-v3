@@ -86,9 +86,9 @@ class EnableComponentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'projectId',
-            'clusterId' => 'clusterId',
-            'componentName' => 'componentName',
+            'projectId' => 'project_id',
+            'clusterId' => 'cluster_id',
+            'componentName' => 'component_name',
             'xLanguage' => 'X-Language',
             'body' => 'body'
     ];

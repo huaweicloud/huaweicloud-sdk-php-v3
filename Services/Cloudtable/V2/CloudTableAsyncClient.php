@@ -191,7 +191,7 @@ class CloudTableAsyncClient extends Client
     
     public function enableComponentAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/components/{componentName}';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/components/{component_name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -268,7 +268,7 @@ class CloudTableAsyncClient extends Client
     
     public function expandClusterComponentAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/nodes';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/nodes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -413,7 +413,7 @@ class CloudTableAsyncClient extends Client
     
     public function rebootCloudTableClusterAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/restart';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/restart';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -558,7 +558,7 @@ class CloudTableAsyncClient extends Client
     
     public function showClusterSettingAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/setting';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/setting';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -629,7 +629,7 @@ class CloudTableAsyncClient extends Client
     
     public function updateClusterSettingAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{projectId}/clusters/{clusterId}/setting';
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/setting';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
