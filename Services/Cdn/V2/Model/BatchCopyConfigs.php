@@ -21,7 +21,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * targetDomain  目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。
-    * sourceDomain  原域名
+    * sourceDomain  原域名。
     * configList  需要复制的域名配置项,多个配置项以逗号（半角）分隔，支持复制的配置项： - originRequestHeader（回源请求头） - httpResponseHeader（HTTP header配置） - cacheUrlParamsConfig（URL参数） - urlAuth（URL鉴权配置） - userAgentBlackAndWhiteList（User-Agent黑白名单） - ipv6Accelerate（IPv6开关） - rangeStatus（Range回源） - cacheRules（缓存规则） - followOrigin（缓存遵循源站） - privateBucketRetrieval（私有桶回源） - follow302Status（回源跟随） - sources（源站配置） - compress（智能压缩） - referer（防盗链） - ipBlackAndWhiteList（IP黑白名单）
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * targetDomain  目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。
-    * sourceDomain  原域名
+    * sourceDomain  原域名。
     * configList  需要复制的域名配置项,多个配置项以逗号（半角）分隔，支持复制的配置项： - originRequestHeader（回源请求头） - httpResponseHeader（HTTP header配置） - cacheUrlParamsConfig（URL参数） - urlAuth（URL鉴权配置） - userAgentBlackAndWhiteList（User-Agent黑白名单） - ipv6Accelerate（IPv6开关） - rangeStatus（Range回源） - cacheRules（缓存规则） - followOrigin（缓存遵循源站） - privateBucketRetrieval（私有桶回源） - follow302Status（回源跟随） - sources（源站配置） - compress（智能压缩） - referer（防盗链） - ipBlackAndWhiteList（IP黑白名单）
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * targetDomain  目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。
-    * sourceDomain  原域名
+    * sourceDomain  原域名。
     * configList  需要复制的域名配置项,多个配置项以逗号（半角）分隔，支持复制的配置项： - originRequestHeader（回源请求头） - httpResponseHeader（HTTP header配置） - cacheUrlParamsConfig（URL参数） - urlAuth（URL鉴权配置） - userAgentBlackAndWhiteList（User-Agent黑白名单） - ipv6Accelerate（IPv6开关） - rangeStatus（Range回源） - cacheRules（缓存规则） - followOrigin（缓存遵循源站） - privateBucketRetrieval（私有桶回源） - follow302Status（回源跟随） - sources（源站配置） - compress（智能压缩） - referer（防盗链） - ipBlackAndWhiteList（IP黑白名单）
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * targetDomain  目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。
-    * sourceDomain  原域名
+    * sourceDomain  原域名。
     * configList  需要复制的域名配置项,多个配置项以逗号（半角）分隔，支持复制的配置项： - originRequestHeader（回源请求头） - httpResponseHeader（HTTP header配置） - cacheUrlParamsConfig（URL参数） - urlAuth（URL鉴权配置） - userAgentBlackAndWhiteList（User-Agent黑白名单） - ipv6Accelerate（IPv6开关） - rangeStatus（Range回源） - cacheRules（缓存规则） - followOrigin（缓存遵循源站） - privateBucketRetrieval（私有桶回源） - follow302Status（回源跟随） - sources（源站配置） - compress（智能压缩） - referer（防盗链） - ipBlackAndWhiteList（IP黑白名单）
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * targetDomain  目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。
-    * sourceDomain  原域名
+    * sourceDomain  原域名。
     * configList  需要复制的域名配置项,多个配置项以逗号（半角）分隔，支持复制的配置项： - originRequestHeader（回源请求头） - httpResponseHeader（HTTP header配置） - cacheUrlParamsConfig（URL参数） - urlAuth（URL鉴权配置） - userAgentBlackAndWhiteList（User-Agent黑白名单） - ipv6Accelerate（IPv6开关） - rangeStatus（Range回源） - cacheRules（缓存规则） - followOrigin（缓存遵循源站） - privateBucketRetrieval（私有桶回源） - follow302Status（回源跟随） - sources（源站配置） - compress（智能压缩） - referer（防盗链） - ipBlackAndWhiteList（IP黑白名单）
     *
     * @var string[]
@@ -241,7 +241,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceDomain
-    *  原域名
+    *  原域名。
     *
     * @return string
     */
@@ -253,7 +253,7 @@ class BatchCopyConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets sourceDomain
     *
-    * @param string $sourceDomain 原域名
+    * @param string $sourceDomain 原域名。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotas  配额数组
+    * quotas  配额数组。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotas  配额数组
+    * quotas  配额数组。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotas  配额数组
+    * quotas  配额数组。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotas  配额数组
+    * quotas  配额数组。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotas  配额数组
+    * quotas  配额数组。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotas
-    *  配额数组
+    *  配额数组。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\Quotas[]|null
     */
@@ -187,7 +187,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Quotas[]|null $quotas 配额数组
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Quotas[]|null $quotas 配额数组。
     *
     * @return $this
     */

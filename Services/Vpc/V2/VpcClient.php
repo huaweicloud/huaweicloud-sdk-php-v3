@@ -1728,6 +1728,9 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupId'] !== null) {
             $queryParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
+        if ($localVarParams['remoteIpPrefix'] !== null) {
+            $queryParams['remote_ip_prefix'] = $localVarParams['remoteIpPrefix'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

@@ -20,7 +20,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  是否开启URL鉴权(\"off\"/\"on\")。
+    * status  是否开启URL鉴权，off：开启,on：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
@@ -46,7 +46,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  是否开启URL鉴权(\"off\"/\"on\")。
+    * status  是否开启URL鉴权，off：开启,on：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
@@ -93,7 +93,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  是否开启URL鉴权(\"off\"/\"on\")。
+    * status  是否开启URL鉴权，off：开启,on：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
@@ -119,7 +119,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  是否开启URL鉴权(\"off\"/\"on\")。
+    * status  是否开启URL鉴权，off：开启,on：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
@@ -145,7 +145,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  是否开启URL鉴权(\"off\"/\"on\")。
+    * status  是否开启URL鉴权，off：开启,on：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
@@ -274,7 +274,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  是否开启URL鉴权(\"off\"/\"on\")。
+    *  是否开启URL鉴权，off：开启,on：关闭。
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 是否开启URL鉴权(\"off\"/\"on\")。
+    * @param string $status 是否开启URL鉴权，off：开启,on：关闭。
     *
     * @return $this
     */

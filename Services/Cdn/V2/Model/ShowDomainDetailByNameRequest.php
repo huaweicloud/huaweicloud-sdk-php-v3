@@ -20,7 +20,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  加速域名名称,获取方法请参见查询加速域名。
+    * domainName  加速域名名称。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  加速域名名称,获取方法请参见查询加速域名。
+    * domainName  加速域名名称。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  加速域名名称,获取方法请参见查询加速域名。
+    * domainName  加速域名名称。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  加速域名名称,获取方法请参见查询加速域名。
+    * domainName  加速域名名称。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  加速域名名称,获取方法请参见查询加速域名。
+    * domainName  加速域名名称。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -194,7 +194,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  加速域名名称,获取方法请参见查询加速域名。
+    *  加速域名名称。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class ShowDomainDetailByNameRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string $domainName 加速域名名称,获取方法请参见查询加速域名。
+    * @param string $domainName 加速域名名称。
     *
     * @return $this
     */

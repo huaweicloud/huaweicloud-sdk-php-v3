@@ -22,8 +22,8 @@ class Sources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class Sources implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class Sources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class Sources implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class Sources implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
@@ -300,7 +300,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Gets originType
-    *  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
+    *  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Sets originType
     *
-    * @param string $originType 源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
+    * @param string $originType 源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStandby
-    *  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    *  主备状态，1代表主源站，0代表备源站。
     *
     * @return int
     */
@@ -336,7 +336,7 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Sets activeStandby
     *
-    * @param int $activeStandby 主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * @param int $activeStandby 主备状态，1代表主源站，0代表备源站。
     *
     * @return $this
     */

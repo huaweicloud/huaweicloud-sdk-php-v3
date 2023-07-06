@@ -20,7 +20,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * compressSwitch  GZIP压缩开关。0关闭。1打开
+    * compressSwitch  GZIP压缩开关。0关闭。1打开。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * compressSwitch  GZIP压缩开关。0关闭。1打开
+    * compressSwitch  GZIP压缩开关。0关闭。1打开。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * compressSwitch  GZIP压缩开关。0关闭。1打开
+    * compressSwitch  GZIP压缩开关。0关闭。1打开。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * compressSwitch  GZIP压缩开关。0关闭。1打开
+    * compressSwitch  GZIP压缩开关。0关闭。1打开。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * compressSwitch  GZIP压缩开关。0关闭。1打开
+    * compressSwitch  GZIP压缩开关。0关闭。1打开。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets compressSwitch
-    *  GZIP压缩开关。0关闭。1打开
+    *  GZIP压缩开关。0关闭。1打开。
     *
     * @return int|null
     */
@@ -186,7 +186,7 @@ class CompressRequest implements ModelInterface, ArrayAccess
     /**
     * Sets compressSwitch
     *
-    * @param int|null $compressSwitch GZIP压缩开关。0关闭。1打开
+    * @param int|null $compressSwitch GZIP压缩开关。0关闭。1打开。
     *
     * @return $this
     */

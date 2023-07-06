@@ -21,13 +21,13 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  urlid
-    * url  url具体值
-    * status  url状态
-    * type  任务类型
-    * taskId  任务id
-    * modifyTime  修改时间戳（毫秒）
-    * createTime  创建时间戳（毫秒）
-    * fileType  文件类型，目录还是文件
+    * url  url具体值。
+    * status  url状态。
+    * type  任务类型。
+    * taskId  任务id。
+    * modifyTime  修改时间戳（毫秒）。
+    * createTime  创建时间戳（毫秒）。
+    * fileType  文件类型，目录还是文件。
     *
     * @var string[]
     */
@@ -45,13 +45,13 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  urlid
-    * url  url具体值
-    * status  url状态
-    * type  任务类型
-    * taskId  任务id
-    * modifyTime  修改时间戳（毫秒）
-    * createTime  创建时间戳（毫秒）
-    * fileType  文件类型，目录还是文件
+    * url  url具体值。
+    * status  url状态。
+    * type  任务类型。
+    * taskId  任务id。
+    * modifyTime  修改时间戳（毫秒）。
+    * createTime  创建时间戳（毫秒）。
+    * fileType  文件类型，目录还是文件。
     *
     * @var string[]
     */
@@ -90,13 +90,13 @@ class Urls implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  urlid
-    * url  url具体值
-    * status  url状态
-    * type  任务类型
-    * taskId  任务id
-    * modifyTime  修改时间戳（毫秒）
-    * createTime  创建时间戳（毫秒）
-    * fileType  文件类型，目录还是文件
+    * url  url具体值。
+    * status  url状态。
+    * type  任务类型。
+    * taskId  任务id。
+    * modifyTime  修改时间戳（毫秒）。
+    * createTime  创建时间戳（毫秒）。
+    * fileType  文件类型，目录还是文件。
     *
     * @var string[]
     */
@@ -114,13 +114,13 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  urlid
-    * url  url具体值
-    * status  url状态
-    * type  任务类型
-    * taskId  任务id
-    * modifyTime  修改时间戳（毫秒）
-    * createTime  创建时间戳（毫秒）
-    * fileType  文件类型，目录还是文件
+    * url  url具体值。
+    * status  url状态。
+    * type  任务类型。
+    * taskId  任务id。
+    * modifyTime  修改时间戳（毫秒）。
+    * createTime  创建时间戳（毫秒）。
+    * fileType  文件类型，目录还是文件。
     *
     * @var string[]
     */
@@ -138,13 +138,13 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  urlid
-    * url  url具体值
-    * status  url状态
-    * type  任务类型
-    * taskId  任务id
-    * modifyTime  修改时间戳（毫秒）
-    * createTime  创建时间戳（毫秒）
-    * fileType  文件类型，目录还是文件
+    * url  url具体值。
+    * status  url状态。
+    * type  任务类型。
+    * taskId  任务id。
+    * modifyTime  修改时间戳（毫秒）。
+    * createTime  创建时间戳（毫秒）。
+    * fileType  文件类型，目录还是文件。
     *
     * @var string[]
     */
@@ -275,7 +275,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  url具体值
+    *  url具体值。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url url具体值
+    * @param string|null $url url具体值。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  url状态
+    *  url状态。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status url状态
+    * @param string|null $status url状态。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务类型
+    *  任务类型。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 任务类型
+    * @param string|null $type 任务类型。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  任务id。
     *
     * @return int|null
     */
@@ -359,7 +359,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param int|null $taskId 任务id
+    * @param int|null $taskId 任务id。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifyTime
-    *  修改时间戳（毫秒）
+    *  修改时间戳（毫秒）。
     *
     * @return int|null
     */
@@ -383,7 +383,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets modifyTime
     *
-    * @param int|null $modifyTime 修改时间戳（毫秒）
+    * @param int|null $modifyTime 修改时间戳（毫秒）。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间戳（毫秒）
+    *  创建时间戳（毫秒）。
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间戳（毫秒）
+    * @param int|null $createTime 创建时间戳（毫秒）。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  文件类型，目录还是文件
+    *  文件类型，目录还是文件。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType 文件类型，目录还是文件
+    * @param string|null $fileType 文件类型，目录还是文件。
     *
     * @return $this
     */

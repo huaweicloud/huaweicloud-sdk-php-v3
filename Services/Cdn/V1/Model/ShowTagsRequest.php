@@ -20,7 +20,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源id
+    * resourceId  资源id。  > 域名ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源id
+    * resourceId  资源id。  > 域名ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源id
+    * resourceId  资源id。  > 域名ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源id
+    * resourceId  资源id。  > 域名ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源id
+    * resourceId  资源id。  > 域名ID
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id
+    *  资源id。  > 域名ID
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源id
+    * @param string $resourceId 资源id。  > 域名ID
     *
     * @return $this
     */

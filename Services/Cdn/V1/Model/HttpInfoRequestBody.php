@@ -20,13 +20,13 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * certName  证书名字。（长度限制为3-32字符）。
+    * certName  证书名字。（长度限制为3-64字符）。
     * httpsStatus  HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，首次配置证书需要传递证书及私钥，如已有证书可不用传证书及私钥。
-    * certificate  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
-    * privateKey  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * http2  是否使用HTTP2.0。（1：是，0：否。）
     * certificateType  证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     * forceRedirectConfig  forceRedirectConfig
     *
     * @var string[]
@@ -44,13 +44,13 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * certName  证书名字。（长度限制为3-32字符）。
+    * certName  证书名字。（长度限制为3-64字符）。
     * httpsStatus  HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，首次配置证书需要传递证书及私钥，如已有证书可不用传证书及私钥。
-    * certificate  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
-    * privateKey  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * http2  是否使用HTTP2.0。（1：是，0：否。）
     * certificateType  证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     * forceRedirectConfig  forceRedirectConfig
     *
     * @var string[]
@@ -89,13 +89,13 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * certName  证书名字。（长度限制为3-32字符）。
+    * certName  证书名字。（长度限制为3-64字符）。
     * httpsStatus  HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，首次配置证书需要传递证书及私钥，如已有证书可不用传证书及私钥。
-    * certificate  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
-    * privateKey  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * http2  是否使用HTTP2.0。（1：是，0：否。）
     * certificateType  证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     * forceRedirectConfig  forceRedirectConfig
     *
     * @var string[]
@@ -113,13 +113,13 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * certName  证书名字。（长度限制为3-32字符）。
+    * certName  证书名字。（长度限制为3-64字符）。
     * httpsStatus  HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，首次配置证书需要传递证书及私钥，如已有证书可不用传证书及私钥。
-    * certificate  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
-    * privateKey  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * http2  是否使用HTTP2.0。（1：是，0：否。）
     * certificateType  证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     * forceRedirectConfig  forceRedirectConfig
     *
     * @var string[]
@@ -137,13 +137,13 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * certName  证书名字。（长度限制为3-32字符）。
+    * certName  证书名字。（长度限制为3-64字符）。
     * httpsStatus  HTTPS证书是否启用。0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源；3：启用HTTPS加速并HTTPS回源，首次配置证书需要传递证书及私钥，如已有证书可不用传证书及私钥。
-    * certificate  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
-    * privateKey  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * http2  是否使用HTTP2.0。（1：是，0：否。）
     * certificateType  证书类型。1：代表华为云托管证书；0：表示自有证书。 默认值0。
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     * forceRedirectConfig  forceRedirectConfig
     *
     * @var string[]
@@ -257,7 +257,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certName
-    *  证书名字。（长度限制为3-32字符）。
+    *  证书名字。（长度限制为3-64字符）。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets certName
     *
-    * @param string $certName 证书名字。（长度限制为3-32字符）。
+    * @param string $certName 证书名字。（长度限制为3-64字符）。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificate
-    *  功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    *  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return string|null
     */
@@ -317,7 +317,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 功能说明：HTTPS协议使用的证书内容，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * @param string|null $certificate HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    *  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 功能说明： HTTPS协议使用的私钥，不启用证书则无需输入。取值范围：PEM编码格式。初次配置证书时必传。
+    * @param string|null $privateKey HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets forceRedirectHttps
-    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     *
     * @return int|null
     */
@@ -413,7 +413,7 @@ class HttpInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets forceRedirectHttps
     *
-    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线,建议使用force_redirect_config修改配置）
     *
     * @return $this
     */

@@ -21,14 +21,14 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-32字符）。
-    * certificate  证书内容（设置证书必填）
-    * privateKey  私钥内容（设置证书必填）
+    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
     *
     * @var string[]
@@ -49,14 +49,14 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-32字符）。
-    * certificate  证书内容（设置证书必填）
-    * privateKey  私钥内容（设置证书必填）
+    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
     *
     * @var string[]
@@ -98,14 +98,14 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-32字符）。
-    * certificate  证书内容（设置证书必填）
-    * privateKey  私钥内容（设置证书必填）
+    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
     *
     * @var string[]
@@ -126,14 +126,14 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-32字符）。
-    * certificate  证书内容（设置证书必填）
-    * privateKey  私钥内容（设置证书必填）
+    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
     *
     * @var string[]
@@ -154,14 +154,14 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-32字符）。
-    * certificate  证书内容（设置证书必填）
-    * privateKey  私钥内容（设置证书必填）
+    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
+    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
     *
     * @var string[]
@@ -303,7 +303,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets httpsSwitch
-    *  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
+    *  https开关(0：\"关闭\"；1：\"设置证书\")。
     *
     * @return int
     */
@@ -315,7 +315,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets httpsSwitch
     *
-    * @param int $httpsSwitch https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
+    * @param int $httpsSwitch https开关(0：\"关闭\"；1：\"设置证书\")。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets accessOriginWay
-    *  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
+    *  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     *
     * @return int|null
     */
@@ -339,7 +339,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets accessOriginWay
     *
-    * @param int|null $accessOriginWay 回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
+    * @param int|null $accessOriginWay 回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets forceRedirectHttps
-    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     *
     * @return int|null
     */
@@ -363,7 +363,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets forceRedirectHttps
     *
-    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）.
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certName
-    *  证书名称（设置证书必填）（长度限制为3-32字符）。
+    *  证书名称（设置证书必填）（长度限制为3-64字符）。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名称（设置证书必填）（长度限制为3-32字符）。
+    * @param string|null $certName 证书名称（设置证书必填）（长度限制为3-64字符）。
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certificate
-    *  证书内容（设置证书必填）
+    *  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 证书内容（设置证书必填）
+    * @param string|null $certificate HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets privateKey
-    *  私钥内容（设置证书必填）
+    *  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return string|null
     */
@@ -483,7 +483,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 私钥内容（设置证书必填）
+    * @param string|null $privateKey HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     *
     * @return $this
     */

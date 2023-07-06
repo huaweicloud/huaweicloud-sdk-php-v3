@@ -558,6 +558,9 @@ class VpcAsyncClient extends Client
         if ($localVarParams['action'] !== null) {
             $queryParams['action'] = $localVarParams['action'];
         }
+        if ($localVarParams['remoteIpPrefix'] !== null) {
+            $queryParams['remote_ip_prefix'] = $localVarParams['remoteIpPrefix'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

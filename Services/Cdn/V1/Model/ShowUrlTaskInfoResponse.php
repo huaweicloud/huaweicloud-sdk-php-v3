@@ -21,9 +21,9 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  查询结果总数
-    * count  查询当前页总数
-    * result  url信息
+    * total  查询结果总数。
+    * count  查询当前页总数。
+    * result  url信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -37,9 +37,9 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  查询结果总数
-    * count  查询当前页总数
-    * result  url信息
+    * total  查询结果总数。
+    * count  查询当前页总数。
+    * result  url信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -74,9 +74,9 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  查询结果总数
-    * count  查询当前页总数
-    * result  url信息
+    * total  查询结果总数。
+    * count  查询当前页总数。
+    * result  url信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,9 +90,9 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  查询结果总数
-    * count  查询当前页总数
-    * result  url信息
+    * total  查询结果总数。
+    * count  查询当前页总数。
+    * result  url信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -106,9 +106,9 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  查询结果总数
-    * count  查询当前页总数
-    * result  url信息
+    * total  查询结果总数。
+    * count  查询当前页总数。
+    * result  url信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -208,7 +208,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  查询结果总数
+    *  查询结果总数。
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 查询结果总数
+    * @param int|null $total 查询结果总数。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  查询当前页总数
+    *  查询当前页总数。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 查询当前页总数
+    * @param int|null $count 查询当前页总数。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  url信息
+    *  url信息。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null
     */
@@ -268,7 +268,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null $result url信息
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null $result url信息。
     *
     * @return $this
     */

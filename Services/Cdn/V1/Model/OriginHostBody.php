@@ -20,7 +20,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originHostType  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * originHostType  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     * customizeDomain  自定义回源域名，origin_host_type为 customize时传入该参数。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originHostType  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * originHostType  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     * customizeDomain  自定义回源域名，origin_host_type为 customize时传入该参数。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originHostType  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * originHostType  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     * customizeDomain  自定义回源域名，origin_host_type为 customize时传入该参数。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originHostType  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * originHostType  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     * customizeDomain  自定义回源域名，origin_host_type为 customize时传入该参数。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originHostType  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * originHostType  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     * customizeDomain  自定义回源域名，origin_host_type为 customize时传入该参数。
     *
     * @var string[]
@@ -211,7 +211,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originHostType
-    *  accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    *  accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class OriginHostBody implements ModelInterface, ArrayAccess
     /**
     * Sets originHostType
     *
-    * @param string $originHostType accelerate：选择加速域名作为回源地址；  customize：使用自定义的域名作为回源host域名；
+    * @param string $originHostType accelerate：选择加速域名作为回源host域名； customize：使用自定义的域名作为回源host域名；
     *
     * @return $this
     */

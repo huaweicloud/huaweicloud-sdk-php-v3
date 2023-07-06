@@ -21,7 +21,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    * domainId  加速域名ID。获取方法请参见查询加速域名。
+    * domainId  加速域名ID。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    * domainId  加速域名ID。获取方法请参见查询加速域名。
+    * domainId  加速域名ID。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    * domainId  加速域名ID。获取方法请参见查询加速域名。
+    * domainId  加速域名ID。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    * domainId  加速域名ID。获取方法请参见查询加速域名。
+    * domainId  加速域名ID。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    * domainId  加速域名ID。获取方法请参见查询加速域名。
+    * domainId  加速域名ID。
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  加速域名ID。获取方法请参见查询加速域名。
+    *  加速域名ID。
     *
     * @return string
     */
@@ -224,7 +224,7 @@ class ShowReferRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 加速域名ID。获取方法请参见查询加速域名。
+    * @param string $domainId 加速域名ID。
     *
     * @return $this
     */

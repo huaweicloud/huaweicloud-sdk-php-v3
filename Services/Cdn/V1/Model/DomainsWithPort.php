@@ -26,14 +26,14 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * sources  源站配置。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
     * rangeStatus  Range回源状态（off代表关闭 on代表开启）。
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
@@ -76,14 +76,14 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * sources  源站配置。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
     * rangeStatus  Range回源状态（off代表关闭 on代表开启）。
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
@@ -147,14 +147,14 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * sources  源站配置。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
     * rangeStatus  Range回源状态（off代表关闭 on代表开启）。
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
@@ -197,14 +197,14 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * sources  源站配置。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
     * rangeStatus  Range回源状态（off代表关闭 on代表开启）。
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
@@ -247,14 +247,14 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * sources  源站配置。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
     * rangeStatus  Range回源状态（off代表关闭 on代表开启）。
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
@@ -563,7 +563,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    *  源站配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\SourceWithPort[]|null
     */
@@ -575,7 +575,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\SourceWithPort[]|null $sources 源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\SourceWithPort[]|null $sources 源站配置。
     *
     * @return $this
     */
@@ -731,7 +731,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoRefreshPreheat
-    *  自动刷新预热（0代表关闭；1代表打开）
+    *  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @return int|null
     */
@@ -743,7 +743,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets autoRefreshPreheat
     *
-    * @param int|null $autoRefreshPreheat 自动刷新预热（0代表关闭；1代表打开）
+    * @param int|null $autoRefreshPreheat 自动刷新预热（0代表关闭；1代表打开）。
     *
     * @return $this
     */

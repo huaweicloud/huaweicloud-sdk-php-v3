@@ -20,10 +20,10 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bandwidthName  带宽名称
-    * bandwidthNumber  带宽大小
-    * bandwidthType  带宽类型
-    * bandwidthId  带宽id
+    * bandwidthName  - 功能说明：带宽名称
+    * bandwidthNumber  - 功能说明：带宽大小
+    * bandwidthType  - 功能说明：带宽类型
+    * bandwidthId  - 功能说明：带宽id
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bandwidthName  带宽名称
-    * bandwidthNumber  带宽大小
-    * bandwidthType  带宽类型
-    * bandwidthId  带宽id
+    * bandwidthName  - 功能说明：带宽名称
+    * bandwidthNumber  - 功能说明：带宽大小
+    * bandwidthType  - 功能说明：带宽类型
+    * bandwidthId  - 功能说明：带宽id
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bandwidthName  带宽名称
-    * bandwidthNumber  带宽大小
-    * bandwidthType  带宽类型
-    * bandwidthId  带宽id
+    * bandwidthName  - 功能说明：带宽名称
+    * bandwidthNumber  - 功能说明：带宽大小
+    * bandwidthType  - 功能说明：带宽类型
+    * bandwidthId  - 功能说明：带宽id
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bandwidthName  带宽名称
-    * bandwidthNumber  带宽大小
-    * bandwidthType  带宽类型
-    * bandwidthId  带宽id
+    * bandwidthName  - 功能说明：带宽名称
+    * bandwidthNumber  - 功能说明：带宽大小
+    * bandwidthType  - 功能说明：带宽类型
+    * bandwidthId  - 功能说明：带宽id
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bandwidthName  带宽名称
-    * bandwidthNumber  带宽大小
-    * bandwidthType  带宽类型
-    * bandwidthId  带宽id
+    * bandwidthName  - 功能说明：带宽名称
+    * bandwidthNumber  - 功能说明：带宽大小
+    * bandwidthType  - 功能说明：带宽类型
+    * bandwidthId  - 功能说明：带宽id
     *
     * @var string[]
     */
@@ -206,14 +206,14 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['bandwidthName']) && (mb_strlen($this->container['bandwidthName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'bandwidthName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['bandwidthName']) && (mb_strlen($this->container['bandwidthName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'bandwidthName', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['bandwidthName']) && (mb_strlen($this->container['bandwidthName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'bandwidthName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['bandwidthNumber']) && ($this->container['bandwidthNumber'] > 99999)) {
-                $invalidProperties[] = "invalid value for 'bandwidthNumber', must be smaller than or equal to 99999.";
+            if (!is_null($this->container['bandwidthNumber']) && ($this->container['bandwidthNumber'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'bandwidthNumber', must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['bandwidthNumber']) && ($this->container['bandwidthNumber'] < 0)) {
                 $invalidProperties[] = "invalid value for 'bandwidthNumber', must be bigger than or equal to 0.";
@@ -226,11 +226,20 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['bandwidthType']) && (mb_strlen($this->container['bandwidthType']) > 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthType', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['bandwidthType']) && (mb_strlen($this->container['bandwidthType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'bandwidthType', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['bandwidthId']) && (mb_strlen($this->container['bandwidthId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'bandwidthId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['bandwidthId']) && (mb_strlen($this->container['bandwidthId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'bandwidthId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['bandwidthId']) && (mb_strlen($this->container['bandwidthId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['bandwidthId']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['bandwidthId'])) {
+                $invalidProperties[] = "invalid value for 'bandwidthId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -248,7 +257,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthName
-    *  带宽名称
+    *  - 功能说明：带宽名称
     *
     * @return string|null
     */
@@ -260,7 +269,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthName
     *
-    * @param string|null $bandwidthName 带宽名称
+    * @param string|null $bandwidthName - 功能说明：带宽名称
     *
     * @return $this
     */
@@ -272,7 +281,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthNumber
-    *  带宽大小
+    *  - 功能说明：带宽大小
     *
     * @return int|null
     */
@@ -284,7 +293,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthNumber
     *
-    * @param int|null $bandwidthNumber 带宽大小
+    * @param int|null $bandwidthNumber - 功能说明：带宽大小
     *
     * @return $this
     */
@@ -296,7 +305,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthType
-    *  带宽类型
+    *  - 功能说明：带宽类型
     *
     * @return string|null
     */
@@ -308,7 +317,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthType
     *
-    * @param string|null $bandwidthType 带宽类型
+    * @param string|null $bandwidthType - 功能说明：带宽类型
     *
     * @return $this
     */
@@ -320,7 +329,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthId
-    *  带宽id
+    *  - 功能说明：带宽id
     *
     * @return string|null
     */
@@ -332,7 +341,7 @@ class BandwidthInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthId
     *
-    * @param string|null $bandwidthId 带宽id
+    * @param string|null $bandwidthId - 功能说明：带宽id
     *
     * @return $this
     */

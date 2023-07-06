@@ -20,8 +20,8 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-    * ipList  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
+    * ipList  IP黑白名单列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-    * ipList  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
+    * ipList  IP黑白名单列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-    * ipList  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
+    * ipList  IP黑白名单列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-    * ipList  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
+    * ipList  IP黑白名单列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-    * ipList  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
+    * ipList  IP黑白名单列表。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
+    *  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     *
     * @return int
     */
@@ -200,7 +200,7 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
+    * @param int $type IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    *  IP黑白名单列表。
     *
     * @return string[]|null
     */
@@ -224,7 +224,7 @@ class BlackWhiteListBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param string[]|null $ipList IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
+    * @param string[]|null $ipList IP黑白名单列表。
     *
     * @return $this
     */

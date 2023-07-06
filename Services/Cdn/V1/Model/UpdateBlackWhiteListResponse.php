@@ -21,9 +21,9 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  编码
-    * result  结果
-    * data  数据
+    * code  响应码，200：成功，400，失败。
+    * result  响应结果。
+    * data  响应体返回内容。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  编码
-    * result  结果
-    * data  数据
+    * code  响应码，200：成功，400，失败。
+    * result  响应结果。
+    * data  响应体返回内容。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  编码
-    * result  结果
-    * data  数据
+    * code  响应码，200：成功，400，失败。
+    * result  响应结果。
+    * data  响应体返回内容。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  编码
-    * result  结果
-    * data  数据
+    * code  响应码，200：成功，400，失败。
+    * result  响应结果。
+    * data  响应体返回内容。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  编码
-    * result  结果
-    * data  数据
+    * code  响应码，200：成功，400，失败。
+    * result  响应结果。
+    * data  响应体返回内容。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  编码
+    *  响应码，200：成功，400，失败。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code 编码
+    * @param string|null $code 响应码，200：成功，400，失败。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  结果
+    *  响应结果。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 结果
+    * @param string|null $result 响应结果。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  数据
+    *  响应体返回内容。
     *
     * @return object|null
     */
@@ -257,7 +257,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 数据
+    * @param object|null $data 响应体返回内容。
     *
     * @return $this
     */

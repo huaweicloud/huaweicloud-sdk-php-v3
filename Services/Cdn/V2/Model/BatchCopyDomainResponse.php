@@ -21,7 +21,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  成功响应体
+    * result  复制配置结果。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  成功响应体
+    * result  复制配置结果。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  成功响应体
+    * result  复制配置结果。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  成功响应体
+    * result  复制配置结果。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  成功响应体
+    * result  复制配置结果。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  成功响应体
+    *  复制配置结果。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\BatchCopyResultVo[]|null
     */
@@ -187,7 +187,7 @@ class BatchCopyDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BatchCopyResultVo[]|null $result 成功响应体
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BatchCopyResultVo[]|null $result 复制配置结果。
     *
     * @return $this
     */

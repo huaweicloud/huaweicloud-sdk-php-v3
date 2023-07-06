@@ -22,7 +22,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  总条数。
-    * domains  域名信息
+    * domains  域名信息。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  总条数。
-    * domains  域名信息
+    * domains  域名信息。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  总条数。
-    * domains  域名信息
+    * domains  域名信息。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  总条数。
-    * domains  域名信息
+    * domains  域名信息。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  总条数。
-    * domains  域名信息
+    * domains  域名信息。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domains
-    *  域名信息
+    *  域名信息。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\Domains[]|null
     */
@@ -222,7 +222,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domains
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Domains[]|null $domains 域名信息
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Domains[]|null $domains 域名信息。
     *
     * @return $this
     */

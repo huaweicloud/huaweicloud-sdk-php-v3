@@ -21,17 +21,17 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainId  加速域名id。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domainId' => 'string',
-            'ipOrDomain' => 'string',
             'originType' => 'string',
+            'ipOrDomain' => 'string',
             'activeStandby' => 'int',
             'enableObsWebHosting' => 'int'
     ];
@@ -39,17 +39,17 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainId  加速域名id。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domainId' => null,
-        'ipOrDomain' => null,
         'originType' => null,
+        'ipOrDomain' => null,
         'activeStandby' => null,
         'enableObsWebHosting' => 'int32'
     ];
@@ -78,17 +78,17 @@ class Sources implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainId  加速域名id。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domainId' => 'domain_id',
-            'ipOrDomain' => 'ip_or_domain',
             'originType' => 'origin_type',
+            'ipOrDomain' => 'ip_or_domain',
             'activeStandby' => 'active_standby',
             'enableObsWebHosting' => 'enable_obs_web_hosting'
     ];
@@ -96,17 +96,17 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  加速域名id。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
     */
     protected static $setters = [
             'domainId' => 'setDomainId',
-            'ipOrDomain' => 'setIpOrDomain',
             'originType' => 'setOriginType',
+            'ipOrDomain' => 'setIpOrDomain',
             'activeStandby' => 'setActiveStandby',
             'enableObsWebHosting' => 'setEnableObsWebHosting'
     ];
@@ -114,17 +114,17 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  加速域名id。
+    * originType  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     *
     * @var string[]
     */
     protected static $getters = [
             'domainId' => 'getDomainId',
-            'ipOrDomain' => 'getIpOrDomain',
             'originType' => 'getOriginType',
+            'ipOrDomain' => 'getIpOrDomain',
             'activeStandby' => 'getActiveStandby',
             'enableObsWebHosting' => 'getEnableObsWebHosting'
     ];
@@ -205,8 +205,8 @@ class Sources implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['ipOrDomain'] = isset($data['ipOrDomain']) ? $data['ipOrDomain'] : null;
         $this->container['originType'] = isset($data['originType']) ? $data['originType'] : null;
+        $this->container['ipOrDomain'] = isset($data['ipOrDomain']) ? $data['ipOrDomain'] : null;
         $this->container['activeStandby'] = isset($data['activeStandby']) ? $data['activeStandby'] : null;
         $this->container['enableObsWebHosting'] = isset($data['enableObsWebHosting']) ? $data['enableObsWebHosting'] : null;
     }
@@ -219,9 +219,6 @@ class Sources implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['ipOrDomain'] === null) {
-            $invalidProperties[] = "'ipOrDomain' can't be null";
-        }
         if ($this->container['originType'] === null) {
             $invalidProperties[] = "'originType' can't be null";
         }
@@ -233,6 +230,9 @@ class Sources implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['ipOrDomain'] === null) {
+            $invalidProperties[] = "'ipOrDomain' can't be null";
+        }
         if ($this->container['activeStandby'] === null) {
             $invalidProperties[] = "'activeStandby' can't be null";
         }
@@ -275,6 +275,30 @@ class Sources implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets originType
+    *  源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
+    *
+    * @return string
+    */
+    public function getOriginType()
+    {
+        return $this->container['originType'];
+    }
+
+    /**
+    * Sets originType
+    *
+    * @param string $originType 源站类型取值：ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。源站为ipaddr时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持50个源站IP对象，备源站最多支持50个源站IP对象；源站为domain时，仅支持1个源站对象。不支持IP源站和域名源站混用。
+    *
+    * @return $this
+    */
+    public function setOriginType($originType)
+    {
+        $this->container['originType'] = $originType;
+        return $this;
+    }
+
+    /**
     * Gets ipOrDomain
     *  源站IP（非内网IP）或者域名。
     *
@@ -299,32 +323,8 @@ class Sources implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets originType
-    *  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    *
-    * @return string
-    */
-    public function getOriginType()
-    {
-        return $this->container['originType'];
-    }
-
-    /**
-    * Sets originType
-    *
-    * @param string $originType 源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-    *
-    * @return $this
-    */
-    public function setOriginType($originType)
-    {
-        $this->container['originType'] = $originType;
-        return $this;
-    }
-
-    /**
     * Gets activeStandby
-    *  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    *  主备状态，1代表主源站，0代表备源站。
     *
     * @return int
     */
@@ -336,7 +336,7 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Sets activeStandby
     *
-    * @param int $activeStandby 主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
+    * @param int $activeStandby 主备状态，1代表主源站，0代表备源站。
     *
     * @return $this
     */

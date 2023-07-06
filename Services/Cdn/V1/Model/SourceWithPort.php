@@ -22,8 +22,8 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-    * activeStandby  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
     * httpsPort  HTTPS端口，默认443
@@ -44,8 +44,8 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-    * activeStandby  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
     * httpsPort  HTTPS端口，默认443
@@ -87,8 +87,8 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-    * activeStandby  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
     * httpsPort  HTTPS端口，默认443
@@ -109,8 +109,8 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-    * activeStandby  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
     * httpsPort  HTTPS端口，默认443
@@ -131,8 +131,8 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
-    * originType  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-    * activeStandby  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
     * httpsPort  HTTPS端口，默认443
@@ -322,7 +322,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets originType
-    *  源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
+    *  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
     *
     * @return string
     */
@@ -334,7 +334,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets originType
     *
-    * @param string $originType 源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
+    * @param string $originType 源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStandby
-    *  主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    *  主备状态（1代表主源站；0代表备源站）。
     *
     * @return int
     */
@@ -358,7 +358,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets activeStandby
     *
-    * @param int $activeStandby 主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+    * @param int $activeStandby 主备状态（1代表主源站；0代表备源站）。
     *
     * @return $this
     */

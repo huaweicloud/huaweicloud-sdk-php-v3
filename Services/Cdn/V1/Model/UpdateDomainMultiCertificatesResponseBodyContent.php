@@ -20,16 +20,16 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  域名列表
-    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")
-    * accessOriginWay  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * domainName  域名列表。
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）
-    * expirationTime  证书过期时间
+    * http2  http2.0（0：关闭；1：开启）。
+    * certName  证书名称。
+    * certificate  证书内容。
+    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * expirationTime  证书过期时间。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  域名列表
-    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")
-    * accessOriginWay  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * domainName  域名列表。
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）
-    * expirationTime  证书过期时间
+    * http2  http2.0（0：关闭；1：开启）。
+    * certName  证书名称。
+    * certificate  证书内容。
+    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * expirationTime  证书过期时间。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  域名列表
-    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")
-    * accessOriginWay  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * domainName  域名列表。
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）
-    * expirationTime  证书过期时间
+    * http2  http2.0（0：关闭；1：开启）。
+    * certName  证书名称。
+    * certificate  证书内容。
+    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * expirationTime  证书过期时间。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  域名列表
-    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")
-    * accessOriginWay  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * domainName  域名列表。
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）
-    * expirationTime  证书过期时间
+    * http2  http2.0（0：关闭；1：开启）。
+    * certName  证书名称。
+    * certificate  证书内容。
+    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * expirationTime  证书过期时间。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  域名列表
-    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")
-    * accessOriginWay  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * domainName  域名列表。
+    * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
+    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
+    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）
-    * expirationTime  证书过期时间
+    * http2  http2.0（0：关闭；1：开启）。
+    * certName  证书名称。
+    * certificate  证书内容。
+    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * expirationTime  证书过期时间。
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets domainName
-    *  域名列表
+    *  域名列表。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets domainName
     *
-    * @param string $domainName 域名列表
+    * @param string $domainName 域名列表。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets httpsSwitch
-    *  https开关(0：\"关闭\"；1：\"设置证书\")
+    *  https开关(0：\"关闭\"；1：\"设置证书\")。
     *
     * @return int|null
     */
@@ -312,7 +312,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets httpsSwitch
     *
-    * @param int|null $httpsSwitch https开关(0：\"关闭\"；1：\"设置证书\")
+    * @param int|null $httpsSwitch https开关(0：\"关闭\"；1：\"设置证书\")。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets accessOriginWay
-    *  回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
+    *  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     *
     * @return int|null
     */
@@ -336,7 +336,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets accessOriginWay
     *
-    * @param int|null $accessOriginWay 回源方式:1：\"PROTOCOL_FOLLOW\"；2：\"HTTP\"(默认)，3：\"https\"
+    * @param int|null $accessOriginWay 回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets forceRedirectHttps
-    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    *  强制跳转HTTPS（0：不强制；1：强制） 。
     *
     * @return int|null
     */
@@ -360,7 +360,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets forceRedirectHttps
     *
-    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（建议使用force_redirect_config修改配置）
+    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets http2
-    *  http2.0（0：关闭；1：开启）
+    *  http2.0（0：关闭；1：开启）。
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets http2
     *
-    * @param int|null $http2 http2.0（0：关闭；1：开启）
+    * @param int|null $http2 http2.0（0：关闭；1：开启）。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certName
-    *  证书名称。（长度限制为3-32字符）。
+    *  证书名称。
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名称。（长度限制为3-32字符）。
+    * @param string|null $certName 证书名称。
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certificate
-    *  证书内容
+    *  证书内容。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 证书内容
+    * @param string|null $certificate 证书内容。
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certificateType
-    *  证书类型（0为自有证书 ， 1为托管证书）
+    *  证书类型（0为自有证书 ， 1为托管证书）。
     *
     * @return int|null
     */
@@ -480,7 +480,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 证书类型（0为自有证书 ， 1为托管证书）
+    * @param int|null $certificateType 证书类型（0为自有证书 ， 1为托管证书）。
     *
     * @return $this
     */
@@ -492,7 +492,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets expirationTime
-    *  证书过期时间
+    *  证书过期时间。
     *
     * @return int|null
     */
@@ -504,7 +504,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets expirationTime
     *
-    * @param int|null $expirationTime 证书过期时间
+    * @param int|null $expirationTime 证书过期时间。
     *
     * @return $this
     */

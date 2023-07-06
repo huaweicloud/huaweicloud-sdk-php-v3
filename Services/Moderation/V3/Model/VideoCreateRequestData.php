@@ -22,24 +22,28 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * url  视频url地址
     * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+    * language  支持的语言，默认为zh zh：中文
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'url' => 'string',
-            'frameInterval' => 'int'
+            'frameInterval' => 'int',
+            'language' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  视频url地址
     * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+    * language  支持的语言，默认为zh zh：中文
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'url' => null,
-        'frameInterval' => 'int32'
+        'frameInterval' => 'int32',
+        'language' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * url  视频url地址
     * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+    * language  支持的语言，默认为zh zh：中文
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'url' => 'url',
-            'frameInterval' => 'frame_interval'
+            'frameInterval' => 'frame_interval',
+            'language' => 'language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  视频url地址
     * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+    * language  支持的语言，默认为zh zh：中文
     *
     * @var string[]
     */
     protected static $setters = [
             'url' => 'setUrl',
-            'frameInterval' => 'setFrameInterval'
+            'frameInterval' => 'setFrameInterval',
+            'language' => 'setLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  视频url地址
     * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+    * language  支持的语言，默认为zh zh：中文
     *
     * @var string[]
     */
     protected static $getters = [
             'url' => 'getUrl',
-            'frameInterval' => 'getFrameInterval'
+            'frameInterval' => 'getFrameInterval',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -139,7 +149,20 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_ZH = 'zh';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_ZH,
+        ];
+    }
 
 
     /**
@@ -159,6 +182,7 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     {
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['frameInterval'] = isset($data['frameInterval']) ? $data['frameInterval'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -172,6 +196,14 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -231,6 +263,30 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     public function setFrameInterval($frameInterval)
     {
         $this->container['frameInterval'] = $frameInterval;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  支持的语言，默认为zh zh：中文
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 支持的语言，默认为zh zh：中文
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

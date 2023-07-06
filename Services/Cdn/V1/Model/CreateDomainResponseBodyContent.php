@@ -27,17 +27,17 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站信息
+    * sources  源站信息。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态（\"off\"/\"on\"）。
-    * followStatus  follow302状态（\"off\"/\"on\"）。
-    * originStatus  是否暂停源站回源。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * rangeStatus  range状态，off：关闭，on：开启。
+    * followStatus  follow302状态，off：关闭，on：开启。
+    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
     */
@@ -71,17 +71,17 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站信息
+    * sources  源站信息。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态（\"off\"/\"on\"）。
-    * followStatus  follow302状态（\"off\"/\"on\"）。
-    * originStatus  是否暂停源站回源。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * rangeStatus  range状态，off：关闭，on：开启。
+    * followStatus  follow302状态，off：关闭，on：开启。
+    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
     */
@@ -136,17 +136,17 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站信息
+    * sources  源站信息。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态（\"off\"/\"on\"）。
-    * followStatus  follow302状态（\"off\"/\"on\"）。
-    * originStatus  是否暂停源站回源。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * rangeStatus  range状态，off：关闭，on：开启。
+    * followStatus  follow302状态，off：关闭，on：开启。
+    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
     */
@@ -180,17 +180,17 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站信息
+    * sources  源站信息。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态（\"off\"/\"on\"）。
-    * followStatus  follow302状态（\"off\"/\"on\"）。
-    * originStatus  是否暂停源站回源。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * rangeStatus  range状态，off：关闭，on：开启。
+    * followStatus  follow302状态，off：关闭，on：开启。
+    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
     */
@@ -224,17 +224,17 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
-    * sources  源站信息
+    * sources  源站信息。
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态（\"off\"/\"on\"）。
-    * followStatus  follow302状态（\"off\"/\"on\"）。
-    * originStatus  是否暂停源站回源。
-    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）
+    * rangeStatus  range状态，off：关闭，on：开启。
+    * followStatus  follow302状态，off：关闭，on：开启。
+    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
     */
@@ -529,7 +529,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  源站信息
+    *  源站信息。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\Sources[]|null
     */
@@ -541,7 +541,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Sources[]|null $sources 源站信息
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Sources[]|null $sources 源站信息。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets rangeStatus
-    *  range状态（\"off\"/\"on\"）。
+    *  range状态，off：关闭，on：开启。
     *
     * @return string|null
     */
@@ -709,7 +709,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets rangeStatus
     *
-    * @param string|null $rangeStatus range状态（\"off\"/\"on\"）。
+    * @param string|null $rangeStatus range状态，off：关闭，on：开启。
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets followStatus
-    *  follow302状态（\"off\"/\"on\"）。
+    *  follow302状态，off：关闭，on：开启。
     *
     * @return string|null
     */
@@ -733,7 +733,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets followStatus
     *
-    * @param string|null $followStatus follow302状态（\"off\"/\"on\"）。
+    * @param string|null $followStatus follow302状态，off：关闭，on：开启。
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets originStatus
-    *  是否暂停源站回源。
+    *  是否暂停源站回源（off代表关闭 on代表开启）。
     *
     * @return string|null
     */
@@ -757,7 +757,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets originStatus
     *
-    * @param string|null $originStatus 是否暂停源站回源。
+    * @param string|null $originStatus 是否暂停源站回源（off代表关闭 on代表开启）。
     *
     * @return $this
     */
@@ -769,7 +769,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoRefreshPreheat
-    *  自动刷新预热（0代表关闭；1代表打开）
+    *  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @return int|null
     */
@@ -781,7 +781,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets autoRefreshPreheat
     *
-    * @param int|null $autoRefreshPreheat 自动刷新预热（0代表关闭；1代表打开）
+    * @param int|null $autoRefreshPreheat 自动刷新预热（0代表关闭；1代表打开）。
     *
     * @return $this
     */

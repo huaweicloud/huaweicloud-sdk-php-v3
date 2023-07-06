@@ -20,7 +20,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * follow302Status  follow302状态（\"off\"/\"on\"）
+    * follow302Status  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * follow302Status  follow302状态（\"off\"/\"on\"）
+    * follow302Status  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * follow302Status  follow302状态（\"off\"/\"on\"）
+    * follow302Status  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * follow302Status  follow302状态（\"off\"/\"on\"）
+    * follow302Status  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * follow302Status  follow302状态（\"off\"/\"on\"）
+    * follow302Status  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets follow302Status
-    *  follow302状态（\"off\"/\"on\"）
+    *  follow302状态，off：关闭，on：开启。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class Follow302StatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets follow302Status
     *
-    * @param string $follow302Status follow302状态（\"off\"/\"on\"）
+    * @param string $follow302Status follow302状态，off：关闭，on：开启。
     *
     * @return $this
     */

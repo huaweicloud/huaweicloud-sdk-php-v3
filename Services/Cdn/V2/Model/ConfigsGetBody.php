@@ -20,6 +20,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -50,6 +52,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'businessType' => 'string',
+            'serviceArea' => 'string',
             'originRequestHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]',
             'httpResponseHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]',
             'urlAuth' => '\HuaweiCloud\SDK\Cdn\V2\Model\UrlAuthGetBody',
@@ -80,6 +84,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -110,6 +116,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'businessType' => null,
+        'serviceArea' => null,
         'originRequestHeader' => null,
         'httpResponseHeader' => null,
         'urlAuth' => null,
@@ -161,6 +169,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -191,6 +201,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'businessType' => 'business_type',
+            'serviceArea' => 'service_area',
             'originRequestHeader' => 'origin_request_header',
             'httpResponseHeader' => 'http_response_header',
             'urlAuth' => 'url_auth',
@@ -221,6 +233,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -251,6 +265,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'businessType' => 'setBusinessType',
+            'serviceArea' => 'setServiceArea',
             'originRequestHeader' => 'setOriginRequestHeader',
             'httpResponseHeader' => 'setHttpResponseHeader',
             'urlAuth' => 'setUrlAuth',
@@ -281,6 +297,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -311,6 +329,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'businessType' => 'getBusinessType',
+            'serviceArea' => 'getServiceArea',
             'originRequestHeader' => 'getOriginRequestHeader',
             'httpResponseHeader' => 'getHttpResponseHeader',
             'urlAuth' => 'getUrlAuth',
@@ -397,6 +417,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
+        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
         $this->container['originRequestHeader'] = isset($data['originRequestHeader']) ? $data['originRequestHeader'] : null;
         $this->container['httpResponseHeader'] = isset($data['httpResponseHeader']) ? $data['httpResponseHeader'] : null;
         $this->container['urlAuth'] = isset($data['urlAuth']) ? $data['urlAuth'] : null;
@@ -445,6 +467,54 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets businessType
+    *  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    *
+    * @return string|null
+    */
+    public function getBusinessType()
+    {
+        return $this->container['businessType'];
+    }
+
+    /**
+    * Sets businessType
+    *
+    * @param string|null $businessType 业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    *
+    * @return $this
+    */
+    public function setBusinessType($businessType)
+    {
+        $this->container['businessType'] = $businessType;
+        return $this;
+    }
+
+    /**
+    * Gets serviceArea
+    *  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    *
+    * @return string|null
+    */
+    public function getServiceArea()
+    {
+        return $this->container['serviceArea'];
+    }
+
+    /**
+    * Sets serviceArea
+    *
+    * @param string|null $serviceArea 服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    *
+    * @return $this
+    */
+    public function setServiceArea($serviceArea)
+    {
+        $this->container['serviceArea'] = $serviceArea;
+        return $this;
     }
 
     /**

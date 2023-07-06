@@ -20,8 +20,8 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  域名ID。获取方法请参见查询加速域名。
-    * originHostType  回源host的类型。
+    * domainId  域名ID。
+    * originHostType  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     * customizeDomain  自定义回源host域名。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  域名ID。获取方法请参见查询加速域名。
-    * originHostType  回源host的类型。
+    * domainId  域名ID。
+    * originHostType  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     * customizeDomain  自定义回源host域名。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  域名ID。获取方法请参见查询加速域名。
-    * originHostType  回源host的类型。
+    * domainId  域名ID。
+    * originHostType  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     * customizeDomain  自定义回源host域名。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  域名ID。获取方法请参见查询加速域名。
-    * originHostType  回源host的类型。
+    * domainId  域名ID。
+    * originHostType  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     * customizeDomain  自定义回源host域名。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  域名ID。获取方法请参见查询加速域名。
-    * originHostType  回源host的类型。
+    * domainId  域名ID。
+    * originHostType  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     * customizeDomain  自定义回源host域名。
     *
     * @var string[]
@@ -199,7 +199,7 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  域名ID。获取方法请参见查询加速域名。
+    *  域名ID。
     *
     * @return string|null
     */
@@ -211,7 +211,7 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 域名ID。获取方法请参见查询加速域名。
+    * @param string|null $domainId 域名ID。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
 
     /**
     * Gets originHostType
-    *  回源host的类型。
+    *  回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class DomainOriginHost implements ModelInterface, ArrayAccess
     /**
     * Sets originHostType
     *
-    * @param string $originHostType 回源host的类型。
+    * @param string $originHostType 回源host的类型,accelerate：选择加速域名作为回源host域名， customize：使用自定义的域名作为回源host域名。
     *
     * @return $this
     */

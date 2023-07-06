@@ -20,8 +20,8 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源id
-    * tags  标签列表
+    * resourceId  资源id。  > 域名ID
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源id
-    * tags  标签列表
+    * resourceId  资源id。  > 域名ID
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源id
-    * tags  标签列表
+    * resourceId  资源id。  > 域名ID
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源id
-    * tags  标签列表
+    * resourceId  资源id。  > 域名ID
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源id
-    * tags  标签列表
+    * resourceId  资源id。  > 域名ID
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id
+    *  资源id。  > 域名ID
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源id
+    * @param string $resourceId 资源id。  > 域名ID
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表
+    *  标签列表。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\Map[]
     */
@@ -227,7 +227,7 @@ class CreateTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Map[] $tags 标签列表
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Map[] $tags 标签列表。
     *
     * @return $this
     */

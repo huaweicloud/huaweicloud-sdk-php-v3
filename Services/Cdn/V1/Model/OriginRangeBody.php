@@ -21,7 +21,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * rangeStatus  range状态（\"off\"/\"on\"）
-    * domainId  加速域名id。获取方法请参见查询加速域名。
+    * domainId  加速域名id。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * rangeStatus  range状态（\"off\"/\"on\"）
-    * domainId  加速域名id。获取方法请参见查询加速域名。
+    * domainId  加速域名id。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * rangeStatus  range状态（\"off\"/\"on\"）
-    * domainId  加速域名id。获取方法请参见查询加速域名。
+    * domainId  加速域名id。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * rangeStatus  range状态（\"off\"/\"on\"）
-    * domainId  加速域名id。获取方法请参见查询加速域名。
+    * domainId  加速域名id。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * rangeStatus  range状态（\"off\"/\"on\"）
-    * domainId  加速域名id。获取方法请参见查询加速域名。
+    * domainId  加速域名id。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  加速域名id。获取方法请参见查询加速域名。
+    *  加速域名id。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class OriginRangeBody implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 加速域名id。获取方法请参见查询加速域名。
+    * @param string|null $domainId 加速域名id。
     *
     * @return $this
     */

@@ -20,9 +20,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originAddr  源站IP或者域名。
     * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
+    * weight  权重，取值范围1-100。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
@@ -32,9 +33,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'originAddr' => 'string',
             'originType' => 'string',
+            'originAddr' => 'string',
             'priority' => 'int',
+            'weight' => 'int',
             'obsWebHostingStatus' => 'string',
             'httpPort' => 'int',
             'httpsPort' => 'int',
@@ -44,9 +46,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originAddr  源站IP或者域名。
     * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
+    * weight  权重，取值范围1-100。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
@@ -56,9 +59,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'originAddr' => null,
         'originType' => null,
+        'originAddr' => null,
         'priority' => null,
+        'weight' => null,
         'obsWebHostingStatus' => null,
         'httpPort' => null,
         'httpsPort' => null,
@@ -89,9 +93,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originAddr  源站IP或者域名。
     * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
+    * weight  权重，取值范围1-100。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
@@ -101,9 +106,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'originAddr' => 'origin_addr',
             'originType' => 'origin_type',
+            'originAddr' => 'origin_addr',
             'priority' => 'priority',
+            'weight' => 'weight',
             'obsWebHostingStatus' => 'obs_web_hosting_status',
             'httpPort' => 'http_port',
             'httpsPort' => 'https_port',
@@ -113,9 +119,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originAddr  源站IP或者域名。
     * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
+    * weight  权重，取值范围1-100。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
@@ -125,9 +132,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'originAddr' => 'setOriginAddr',
             'originType' => 'setOriginType',
+            'originAddr' => 'setOriginAddr',
             'priority' => 'setPriority',
+            'weight' => 'setWeight',
             'obsWebHostingStatus' => 'setObsWebHostingStatus',
             'httpPort' => 'setHttpPort',
             'httpsPort' => 'setHttpsPort',
@@ -137,9 +145,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originAddr  源站IP或者域名。
     * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
+    * weight  权重，取值范围1-100。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
@@ -149,9 +158,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'originAddr' => 'getOriginAddr',
             'originType' => 'getOriginType',
+            'originAddr' => 'getOriginAddr',
             'priority' => 'getPriority',
+            'weight' => 'getWeight',
             'obsWebHostingStatus' => 'getObsWebHostingStatus',
             'httpPort' => 'getHttpPort',
             'httpsPort' => 'getHttpsPort',
@@ -217,9 +227,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['originAddr'] = isset($data['originAddr']) ? $data['originAddr'] : null;
         $this->container['originType'] = isset($data['originType']) ? $data['originType'] : null;
+        $this->container['originAddr'] = isset($data['originAddr']) ? $data['originAddr'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
         $this->container['obsWebHostingStatus'] = isset($data['obsWebHostingStatus']) ? $data['obsWebHostingStatus'] : null;
         $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
         $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
@@ -235,11 +246,11 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['originAddr'] === null) {
-            $invalidProperties[] = "'originAddr' can't be null";
-        }
         if ($this->container['originType'] === null) {
             $invalidProperties[] = "'originType' can't be null";
+        }
+        if ($this->container['originAddr'] === null) {
+            $invalidProperties[] = "'originAddr' can't be null";
         }
         if ($this->container['priority'] === null) {
             $invalidProperties[] = "'priority' can't be null";
@@ -256,30 +267,6 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets originAddr
-    *  源站IP或者域名。
-    *
-    * @return string
-    */
-    public function getOriginAddr()
-    {
-        return $this->container['originAddr'];
-    }
-
-    /**
-    * Sets originAddr
-    *
-    * @param string $originAddr 源站IP或者域名。
-    *
-    * @return $this
-    */
-    public function setOriginAddr($originAddr)
-    {
-        $this->container['originAddr'] = $originAddr;
-        return $this;
     }
 
     /**
@@ -307,6 +294,30 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets originAddr
+    *  源站IP或者域名。
+    *
+    * @return string
+    */
+    public function getOriginAddr()
+    {
+        return $this->container['originAddr'];
+    }
+
+    /**
+    * Sets originAddr
+    *
+    * @param string $originAddr 源站IP或者域名。
+    *
+    * @return $this
+    */
+    public function setOriginAddr($originAddr)
+    {
+        $this->container['originAddr'] = $originAddr;
+        return $this;
+    }
+
+    /**
     * Gets priority
     *  源站优先级，70：主，30：备。
     *
@@ -327,6 +338,30 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets weight
+    *  权重，取值范围1-100。
+    *
+    * @return int|null
+    */
+    public function getWeight()
+    {
+        return $this->container['weight'];
+    }
+
+    /**
+    * Sets weight
+    *
+    * @param int|null $weight 权重，取值范围1-100。
+    *
+    * @return $this
+    */
+    public function setWeight($weight)
+    {
+        $this->container['weight'] = $weight;
         return $this;
     }
 

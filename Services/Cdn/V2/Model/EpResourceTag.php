@@ -20,8 +20,8 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
-    * value  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * key  资源标签key。
+    * value  资源标签value值。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
-    * value  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * key  资源标签key。
+    * value  资源标签value值。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class EpResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
-    * value  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * key  资源标签key。
+    * value  资源标签value值。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
-    * value  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * key  资源标签key。
+    * value  资源标签value值。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
-    * value  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * key  资源标签key。
+    * value  资源标签value值。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
+    *  资源标签key。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class EpResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)
+    * @param string $key 资源标签key。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class EpResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    *  资源标签value值。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class EpResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value tms资源标签value值，每个值最大长度43个unicode字符，删除时如果value有值按照key/value删除，如果value没值，则按照key删除，可以为空字符串
+    * @param string $value 资源标签value值。
     *
     * @return $this
     */

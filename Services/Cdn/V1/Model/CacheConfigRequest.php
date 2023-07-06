@@ -21,7 +21,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ignoreUrlParameter  是否忽略url中的参数。
-    * followOrigin  缓存规则是否遵循源站
+    * followOrigin  缓存规则是否遵循源站。
     * compress  compress
     * rules  缓存规则，将覆盖之前的规则配置。规则为空重置为默认规则。
     *
@@ -37,7 +37,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ignoreUrlParameter  是否忽略url中的参数。
-    * followOrigin  缓存规则是否遵循源站
+    * followOrigin  缓存规则是否遵循源站。
     * compress  compress
     * rules  缓存规则，将覆盖之前的规则配置。规则为空重置为默认规则。
     *
@@ -74,7 +74,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ignoreUrlParameter  是否忽略url中的参数。
-    * followOrigin  缓存规则是否遵循源站
+    * followOrigin  缓存规则是否遵循源站。
     * compress  compress
     * rules  缓存规则，将覆盖之前的规则配置。规则为空重置为默认规则。
     *
@@ -90,7 +90,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ignoreUrlParameter  是否忽略url中的参数。
-    * followOrigin  缓存规则是否遵循源站
+    * followOrigin  缓存规则是否遵循源站。
     * compress  compress
     * rules  缓存规则，将覆盖之前的规则配置。规则为空重置为默认规则。
     *
@@ -106,7 +106,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ignoreUrlParameter  是否忽略url中的参数。
-    * followOrigin  缓存规则是否遵循源站
+    * followOrigin  缓存规则是否遵循源站。
     * compress  compress
     * rules  缓存规则，将覆盖之前的规则配置。规则为空重置为默认规则。
     *
@@ -231,7 +231,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets followOrigin
-    *  缓存规则是否遵循源站
+    *  缓存规则是否遵循源站。
     *
     * @return bool|null
     */
@@ -243,7 +243,7 @@ class CacheConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Sets followOrigin
     *
-    * @param bool|null $followOrigin 缓存规则是否遵循源站
+    * @param bool|null $followOrigin 缓存规则是否遵循源站。
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
     * limit  每页返回的个数
     * securityGroupId  安全组ID
+    * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'marker' => 'string',
             'limit' => 'int',
-            'securityGroupId' => 'string'
+            'securityGroupId' => 'string',
+            'remoteIpPrefix' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
     * limit  每页返回的个数
     * securityGroupId  安全组ID
+    * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'marker' => null,
         'limit' => 'int32',
-        'securityGroupId' => null
+        'securityGroupId' => null,
+        'remoteIpPrefix' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
     * limit  每页返回的个数
     * securityGroupId  安全组ID
+    * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'marker' => 'marker',
             'limit' => 'limit',
-            'securityGroupId' => 'security_group_id'
+            'securityGroupId' => 'security_group_id',
+            'remoteIpPrefix' => 'remote_ip_prefix'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
     * limit  每页返回的个数
     * securityGroupId  安全组ID
+    * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'marker' => 'setMarker',
             'limit' => 'setLimit',
-            'securityGroupId' => 'setSecurityGroupId'
+            'securityGroupId' => 'setSecurityGroupId',
+            'remoteIpPrefix' => 'setRemoteIpPrefix'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
     * limit  每页返回的个数
     * securityGroupId  安全组ID
+    * remoteIpPrefix  功能说明：远端IP地址 取值范围：cidr格式
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'marker' => 'getMarker',
             'limit' => 'getLimit',
-            'securityGroupId' => 'getSecurityGroupId'
+            'securityGroupId' => 'getSecurityGroupId',
+            'remoteIpPrefix' => 'getRemoteIpPrefix'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
+        $this->container['remoteIpPrefix'] = isset($data['remoteIpPrefix']) ? $data['remoteIpPrefix'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     public function setSecurityGroupId($securityGroupId)
     {
         $this->container['securityGroupId'] = $securityGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets remoteIpPrefix
+    *  功能说明：远端IP地址 取值范围：cidr格式
+    *
+    * @return string|null
+    */
+    public function getRemoteIpPrefix()
+    {
+        return $this->container['remoteIpPrefix'];
+    }
+
+    /**
+    * Sets remoteIpPrefix
+    *
+    * @param string|null $remoteIpPrefix 功能说明：远端IP地址 取值范围：cidr格式
+    *
+    * @return $this
+    */
+    public function setRemoteIpPrefix($remoteIpPrefix)
+    {
+        $this->container['remoteIpPrefix'] = $remoteIpPrefix;
         return $this;
     }
 

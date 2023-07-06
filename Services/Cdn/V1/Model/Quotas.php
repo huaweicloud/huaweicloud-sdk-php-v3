@@ -20,9 +20,9 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaLimit  配额上限
-    * type  配额类型
-    * used  已使用配额数
+    * quotaLimit  配额上限。
+    * type  配额类型。
+    * used  已使用配额数。
     * userDomainId  域名所属用户的domain_id。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaLimit  配额上限
-    * type  配额类型
-    * used  已使用配额数
+    * quotaLimit  配额上限。
+    * type  配额类型。
+    * used  已使用配额数。
     * userDomainId  域名所属用户的domain_id。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaLimit  配额上限
-    * type  配额类型
-    * used  已使用配额数
+    * quotaLimit  配额上限。
+    * type  配额类型。
+    * used  已使用配额数。
     * userDomainId  域名所属用户的domain_id。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaLimit  配额上限
-    * type  配额类型
-    * used  已使用配额数
+    * quotaLimit  配额上限。
+    * type  配额类型。
+    * used  已使用配额数。
     * userDomainId  域名所属用户的domain_id。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaLimit  配额上限
-    * type  配额类型
-    * used  已使用配额数
+    * quotaLimit  配额上限。
+    * type  配额类型。
+    * used  已使用配额数。
     * userDomainId  域名所属用户的domain_id。
     *
     * @var string[]
@@ -207,7 +207,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaLimit
-    *  配额上限
+    *  配额上限。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets quotaLimit
     *
-    * @param int|null $quotaLimit 配额上限
+    * @param int|null $quotaLimit 配额上限。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  配额类型
+    *  配额类型。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 配额类型
+    * @param string|null $type 配额类型。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已使用配额数
+    *  已使用配额数。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int|null $used 已使用配额数
+    * @param int|null $used 已使用配额数。
     *
     * @return $this
     */

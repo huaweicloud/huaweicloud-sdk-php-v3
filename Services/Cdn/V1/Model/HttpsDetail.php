@@ -20,14 +20,14 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  域名id
-    * domainName  绑定该证书的域名
-    * certName  证书名字。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * privateKey  私钥内容
-    * certificateType  0：自有证书  1：云托管证书
-    * expirationTime  证书过期时间
-    * httpsStatus  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * domainId  域名id。
+    * domainName  绑定该证书的域名。
+    * certName  证书名字。
+    * certificate  证书内容。
+    * privateKey  私钥内容。
+    * certificateType  0：自有证书  1：云托管证书。
+    * expirationTime  证书过期时间。
+    * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
@@ -50,14 +50,14 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  域名id
-    * domainName  绑定该证书的域名
-    * certName  证书名字。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * privateKey  私钥内容
-    * certificateType  0：自有证书  1：云托管证书
-    * expirationTime  证书过期时间
-    * httpsStatus  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * domainId  域名id。
+    * domainName  绑定该证书的域名。
+    * certName  证书名字。
+    * certificate  证书内容。
+    * privateKey  私钥内容。
+    * certificateType  0：自有证书  1：云托管证书。
+    * expirationTime  证书过期时间。
+    * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
@@ -101,14 +101,14 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  域名id
-    * domainName  绑定该证书的域名
-    * certName  证书名字。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * privateKey  私钥内容
-    * certificateType  0：自有证书  1：云托管证书
-    * expirationTime  证书过期时间
-    * httpsStatus  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * domainId  域名id。
+    * domainName  绑定该证书的域名。
+    * certName  证书名字。
+    * certificate  证书内容。
+    * privateKey  私钥内容。
+    * certificateType  0：自有证书  1：云托管证书。
+    * expirationTime  证书过期时间。
+    * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
@@ -131,14 +131,14 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  域名id
-    * domainName  绑定该证书的域名
-    * certName  证书名字。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * privateKey  私钥内容
-    * certificateType  0：自有证书  1：云托管证书
-    * expirationTime  证书过期时间
-    * httpsStatus  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * domainId  域名id。
+    * domainName  绑定该证书的域名。
+    * certName  证书名字。
+    * certificate  证书内容。
+    * privateKey  私钥内容。
+    * certificateType  0：自有证书  1：云托管证书。
+    * expirationTime  证书过期时间。
+    * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
@@ -161,14 +161,14 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  域名id
-    * domainName  绑定该证书的域名
-    * certName  证书名字。（长度限制为3-32字符）。
-    * certificate  证书内容
-    * privateKey  私钥内容
-    * certificateType  0：自有证书  1：云托管证书
-    * expirationTime  证书过期时间
-    * httpsStatus  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * domainId  域名id。
+    * domainName  绑定该证书的域名。
+    * certName  证书名字。
+    * certificate  证书内容。
+    * privateKey  私钥内容。
+    * certificateType  0：自有证书  1：云托管证书。
+    * expirationTime  证书过期时间。
+    * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
@@ -284,7 +284,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  域名id
+    *  域名id。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 域名id
+    * @param string|null $domainId 域名id。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  绑定该证书的域名
+    *  绑定该证书的域名。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 绑定该证书的域名
+    * @param string|null $domainName 绑定该证书的域名。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certName
-    *  证书名字。（长度限制为3-32字符）。
+    *  证书名字。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名字。（长度限制为3-32字符）。
+    * @param string|null $certName 证书名字。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificate
-    *  证书内容
+    *  证书内容。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 证书内容
+    * @param string|null $certificate 证书内容。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  私钥内容
+    *  私钥内容。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 私钥内容
+    * @param string|null $privateKey 私钥内容。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateType
-    *  0：自有证书  1：云托管证书
+    *  0：自有证书  1：云托管证书。
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 0：自有证书  1：云托管证书
+    * @param int|null $certificateType 0：自有证书  1：云托管证书。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets expirationTime
-    *  证书过期时间
+    *  证书过期时间。
     *
     * @return int|null
     */
@@ -440,7 +440,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets expirationTime
     *
-    * @param int|null $expirationTime 证书过期时间
+    * @param int|null $expirationTime 证书过期时间。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsStatus
-    *  HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    *  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     *
     * @return int|null
     */
@@ -464,7 +464,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets httpsStatus
     *
-    * @param int|null $httpsStatus HTTPS证书是否启用，取值0：不启用，此时无需填写证书及私钥参数；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源，开启时需要传递证书及私钥。
+    * @param int|null $httpsStatus HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     *
     * @return $this
     */

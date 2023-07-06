@@ -20,8 +20,8 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  加速域名id。获取方法请参见查询加速域名。
-    * followStatus  follow302状态（\"off\"/\"on\"）
+    * domainId  加速域名id。
+    * followStatus  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  加速域名id。获取方法请参见查询加速域名。
-    * followStatus  follow302状态（\"off\"/\"on\"）
+    * domainId  加速域名id。
+    * followStatus  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  加速域名id。获取方法请参见查询加速域名。
-    * followStatus  follow302状态（\"off\"/\"on\"）
+    * domainId  加速域名id。
+    * followStatus  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  加速域名id。获取方法请参见查询加速域名。
-    * followStatus  follow302状态（\"off\"/\"on\"）
+    * domainId  加速域名id。
+    * followStatus  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  加速域名id。获取方法请参见查询加速域名。
-    * followStatus  follow302状态（\"off\"/\"on\"）
+    * domainId  加速域名id。
+    * followStatus  follow302状态，off：关闭，on：开启。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  加速域名id。获取方法请参见查询加速域名。
+    *  加速域名id。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 加速域名id。获取方法请参见查询加速域名。
+    * @param string|null $domainId 加速域名id。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets followStatus
-    *  follow302状态（\"off\"/\"on\"）
+    *  follow302状态，off：关闭，on：开启。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class Follow302StatusBody implements ModelInterface, ArrayAccess
     /**
     * Sets followStatus
     *
-    * @param string|null $followStatus follow302状态（\"off\"/\"on\"）
+    * @param string|null $followStatus follow302状态，off：关闭，on：开启。
     *
     * @return $this
     */
