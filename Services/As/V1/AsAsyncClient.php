@@ -95,15 +95,7 @@ class AsAsyncClient extends Client
     /**
      * 批量添加实例
      *
-     * 批量移出伸缩组中的实例或批量添加伸缩组外的实例。批量对伸缩组中的实例设置或取消其实例保护属性。批量将伸缩组中的实例转入或移出备用状态。
-     * 说明：
-     * - 单次最多批量操作实例个数为10。批量添加后实例数不能大于伸缩组的最大实例数，批量移出后实例数不能小于伸缩组的最小实例数。
-     * - 当伸缩组处于INSERVICE状态且没有伸缩活动时，才能添加实例。
-     * - 当伸缩组没有伸缩活动时，才能移出实例。
-     * - 向伸缩组中添加实例时，必须保证实例所在的可用区包含于伸缩组的可用区内。
-     * - 实例处于INSERVICE状态时才可以进行移出、设置或取消实例保护属性等操作。
-     * - 当伸缩组发生自动缩容活动时，设置了实例保护的实例不会被移出伸缩组。
-     * - 批量移出弹性伸缩组中的实例时，若该实例加入伸缩组时绑定的监听器和伸缩组本身的监听器相同，会解绑定实例和监听器。若该实例加入伸缩组时绑定的监听器和伸缩组本身的监听器不同，会保留实例和监听器的绑定关系。
+     * 批量移出伸缩组中的实例或批量添加伸缩组外的实例。批量对伸缩组中的实例设置或取消其实例保护属性。批量将伸缩组中的实例转入或移出备用状态。说明：- 单次最多批量操作实例个数为10。批量添加后实例数不能大于伸缩组的最大实例数，批量移出后实例数不能小于伸缩组的最小实例数。- 当伸缩组处于INSERVICE状态且没有伸缩活动时，才能添加实例。- 当伸缩组没有伸缩活动时，才能移出实例。- 向伸缩组中添加实例时，必须保证实例所在的可用区包含于伸缩组的可用区内。- 实例处于INSERVICE状态时才可以进行移出、设置或取消实例保护属性等操作。- 当伸缩组发生自动缩容活动时，设置了实例保护的实例不会被移出伸缩组。- 批量移出弹性伸缩组中的实例时，若该实例加入伸缩组时绑定的监听器和伸缩组本身的监听器相同，会解绑定实例和监听器。若该实例加入伸缩组时绑定的监听器和伸缩组本身的监听器不同，会保留实例和监听器的绑定关系。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -769,6 +761,74 @@ class AsAsyncClient extends Client
     }
 
     /**
+     * 创建计划任务
+     *
+     * 创建计划任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createGroupScheduledTaskAsync($request)
+    {
+        return $this->createGroupScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function createGroupScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autoscaling-api/v1/{project_id}/scaling-groups/{scaling_group_id}/scheduled-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\CreateGroupScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\CreateGroupScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建生命周期挂钩
      *
      * 创建生命周期挂钩，可为伸缩组添加一个或多个生命周期挂钩，最多添加5个。添加生命周期挂钩后，当伸缩组进行伸缩活动时，实例将被生命周期挂钩挂起并置于等待状态（正在加入伸缩组或正在移出伸缩组），实例将保持此状态直至超时时间结束或者用户手动回调。用户能够在实例保持等待状态的时间段内执行自定义操作，例如，用户可以在新启动的实例上安装或配置软件，也可以在实例终止前从实例中下载日志文件。
@@ -1167,6 +1227,74 @@ class AsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\_As\V1\Model\CreateScalingTagInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\_As\V1\Model\CreateScalingTagInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除计划任务
+     *
+     * 删除计划任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteGroupScheduledTaskAsync($request)
+    {
+        return $this->deleteGroupScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteGroupScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autoscaling-api/v1/{project_id}/scaling-groups/{scaling_group_id}/scheduled-tasks/{scheduled_task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['scheduledTaskId'] !== null) {
+            $pathParams['scheduled_task_id'] = $localVarParams['scheduledTaskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\DeleteGroupScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\DeleteGroupScheduledTaskRequest',
             $asyncRequest = true);
     }
 
@@ -1708,6 +1836,77 @@ class AsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\_As\V1\Model\ExecuteScalingPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\_As\V1\Model\ExecuteScalingPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询计划任务列表
+     *
+     * 查询计划任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGroupScheduledTasksAsync($request)
+    {
+        return $this->listGroupScheduledTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listGroupScheduledTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autoscaling-api/v1/{project_id}/scaling-groups/{scaling_group_id}/scheduled-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\ListGroupScheduledTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\ListGroupScheduledTasksRequest',
             $asyncRequest = true);
     }
 
@@ -3335,6 +3534,77 @@ class AsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\_As\V1\Model\ShowScalingPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\_As\V1\Model\ShowScalingPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新计划任务
+     *
+     * 更新计划任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGroupScheduledTaskAsync($request)
+    {
+        return $this->updateGroupScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function updateGroupScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autoscaling-api/v1/{project_id}/scaling-groups/{scaling_group_id}/scheduled-tasks/{scheduled_task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scalingGroupId'] !== null) {
+            $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
+        }
+        if ($localVarParams['scheduledTaskId'] !== null) {
+            $pathParams['scheduled_task_id'] = $localVarParams['scheduledTaskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\_As\V1\Model\UpdateGroupScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\_As\V1\Model\UpdateGroupScheduledTaskRequest',
             $asyncRequest = true);
     }
 

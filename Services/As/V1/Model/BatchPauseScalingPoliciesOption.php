@@ -23,7 +23,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     * scalingPolicyId  伸缩策略ID。
     * forceDelete  是否强制删除伸缩策略。默认为no，可选值为yes或no。只有action为delete时，该字段才生效。
     * action  批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
-    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     * scalingPolicyId  伸缩策略ID。
     * forceDelete  是否强制删除伸缩策略。默认为no，可选值为yes或no。只有action为delete时，该字段才生效。
     * action  批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
-    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     * scalingPolicyId  伸缩策略ID。
     * forceDelete  是否强制删除伸缩策略。默认为no，可选值为yes或no。只有action为delete时，该字段才生效。
     * action  批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
-    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     * scalingPolicyId  伸缩策略ID。
     * forceDelete  是否强制删除伸缩策略。默认为no，可选值为yes或no。只有action为delete时，该字段才生效。
     * action  批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
-    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     * scalingPolicyId  伸缩策略ID。
     * forceDelete  是否强制删除伸缩策略。默认为no，可选值为yes或no。只有action为delete时，该字段才生效。
     * action  批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
-    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * deleteAlarm  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @var string[]
     */
@@ -329,7 +329,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteAlarm
-    *  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    *  是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class BatchPauseScalingPoliciesOption implements ModelInterface, ArrayAccess
     /**
     * Sets deleteAlarm
     *
-    * @param string|null $deleteAlarm 是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+    * @param string|null $deleteAlarm 是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
     *
     * @return $this
     */

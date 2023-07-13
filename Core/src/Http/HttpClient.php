@@ -215,6 +215,11 @@ class HttpClient
         $sdkError = new SdkErrorMessage();
         try {
             $responseBodyArr = json_decode((string) $responseBody, true);
+            if ($responseBodyArr == null) {
+                // 响应体不是json格式数据的情况，经过json_decode解析出来的$responseBodyArr是null,
+                // 此时取状态码作为错误码, 响应body直接作为错误信息返回
+                return new SdkErrorMessage($requestId, $responseStatusCode, $responseBody);
+            }
             if (isset($responseBodyArr['error_code']) and
                 isset($responseBodyArr['error_msg'])) {
                 $sdkError = new SdkErrorMessage($requestId,
@@ -224,28 +229,7 @@ class HttpClient
                 $sdkError = new SdkErrorMessage($requestId,
                     $responseBodyArr['code'], $responseBodyArr['message']);
             } else {
-                // should parse response body to find error code and error message
-                foreach ($responseBodyArr as $key => $value) {
-                    if (!is_array($responseBodyArr[$key])) {
-                        continue;
-                    }
-                    if (isset($responseBodyArr[$key]['code']) and
-                        isset($responseBodyArr[$key]['message'])) {
-                        $sdkError = new SdkErrorMessage($requestId,
-                            $responseBodyArr[$key]['code'],
-                            $responseBodyArr[$key]['message']);
-                    } else if (isset($responseBodyArr[$key]['error_code']) and
-                        isset($responseBodyArr[$key]['error_msg'])) {
-                        $sdkError = new SdkErrorMessage($requestId,
-                            $responseBodyArr[$key]['error_code'],
-                            $responseBodyArr[$key]['error_msg']);
-                    } else if (sizeof($responseBodyArr[$key]) >= 1) {
-                        // if there are many errors, use the first error to generate sdk error which will published to user
-                        $sdkError = new SdkErrorMessage($requestId,
-                            $responseBodyArr[$key][0]['error_code'],
-                            $responseBodyArr[$key][0]['error_msg']);
-                    }
-                }
+                $sdkError = $this->handleSdkErrorForArryBody($responseBodyArr);
             }
         } catch (\Exception $e) {
             throw new ServerResponseException($responseStatusCode, new
@@ -255,7 +239,41 @@ class HttpClient
         if (!isset($sdkErrorMsg)) {
             $sdkError = new SdkErrorMessage((string) $responseBody);
         }
+        return $sdkError;
+    }
 
+    private function handleSdkErrorForArryBody($responseBodyArr) {
+        // should parse response body to find error code and error message
+        foreach ($responseBodyArr as $key => $value) {
+            if (!is_array($responseBodyArr[$key])) {
+                continue;
+            }
+            if (isset($responseBodyArr[$key]['code']) and
+                isset($responseBodyArr[$key]['message'])) {
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr[$key]['code'],
+                    $responseBodyArr[$key]['message']);
+            } elseif (isset($responseBodyArr[$key]['code']) and
+                isset($responseBodyArr[$key]['details'])) {
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr[$key]['code'],
+                    $responseBodyArr[$key]['details']);
+            } else if (isset($responseBodyArr[$key]['error_code']) and
+                isset($responseBodyArr[$key]['error_msg'])) {
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr[$key]['error_code'],
+                    $responseBodyArr[$key]['error_msg']);
+            } else if (sizeof($responseBodyArr[$key]) >= 1) {
+                // if there are many errors, use the first error to generate sdk error which will published to user
+                $firstError = $responseBodyArr[$key][0];
+                if (!isset($firstError["error_code"]) || !isset($firstError['error_msg'])) {
+                    continue;
+                }
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr[$key][0]['error_code'],
+                    $responseBodyArr[$key][0]['error_msg']);
+            }
+        }
         return $sdkError;
     }
 

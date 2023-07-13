@@ -259,6 +259,9 @@ class SisAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }

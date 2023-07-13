@@ -251,6 +251,9 @@ class SisClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }

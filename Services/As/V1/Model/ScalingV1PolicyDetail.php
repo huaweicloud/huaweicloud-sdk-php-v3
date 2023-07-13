@@ -23,7 +23,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     * scalingGroupId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyId  伸缩策略ID。
-    * policyStatus  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * policyStatus  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     * scalingPolicyType  伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
@@ -51,7 +51,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     * scalingGroupId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyId  伸缩策略ID。
-    * policyStatus  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * policyStatus  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     * scalingPolicyType  伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
@@ -100,7 +100,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     * scalingGroupId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyId  伸缩策略ID。
-    * policyStatus  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * policyStatus  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     * scalingPolicyType  伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
@@ -128,7 +128,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     * scalingGroupId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyId  伸缩策略ID。
-    * policyStatus  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * policyStatus  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     * scalingPolicyType  伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
@@ -156,7 +156,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     * scalingGroupId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyId  伸缩策略ID。
-    * policyStatus  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * policyStatus  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     * scalingPolicyType  伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
@@ -391,7 +391,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatus
-    *  伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    *  伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class ScalingV1PolicyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatus
     *
-    * @param string|null $policyStatus 伸缩策略状态  INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
+    * @param string|null $policyStatus 伸缩策略状态 INSERVICE：已启用 PAUSED：已停用 EXECUTING：执行中
     *
     * @return $this
     */

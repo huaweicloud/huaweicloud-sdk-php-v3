@@ -292,7 +292,7 @@ class Client
         $httpBody = null;
         if (isset($body)&&!$multipart) {
             // $_tempBody is the method argument, if present
-            if ('application/json' === $headerParams['Content-Type']) {
+            if ('application/json' === $headerParams['Content-Type'] && !is_string($body)) {
                 $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
             } else {
                 $httpBody = $body;

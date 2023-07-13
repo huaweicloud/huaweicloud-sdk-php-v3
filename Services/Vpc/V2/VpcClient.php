@@ -3434,6 +3434,257 @@ class VpcClient extends Client
     }
 
     /**
+     * 路由器添加接口
+     *
+     * 添加路由器接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronAddRouterInterface($request)
+    {
+        return $this->neutronAddRouterInterfaceWithHttpInfo($request);
+    }
+
+    public function neutronAddRouterInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers/{router_id}/add_router_interface';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $pathParams['router_id'] = $localVarParams['routerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronAddRouterInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronAddRouterInterfaceRequest');
+    }
+
+    /**
+     * 创建网络
+     *
+     * 创建网络
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronCreateNetwork($request)
+    {
+        return $this->neutronCreateNetworkWithHttpInfo($request);
+    }
+
+    public function neutronCreateNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateNetworkRequest');
+    }
+
+    /**
+     * 创建端口
+     *
+     * 创建端口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronCreatePort($request)
+    {
+        return $this->neutronCreatePortWithHttpInfo($request);
+    }
+
+    public function neutronCreatePortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreatePortResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreatePortRequest');
+    }
+
+    /**
+     * 创建路由器
+     *
+     * 创建路由器。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronCreateRouter($request)
+    {
+        return $this->neutronCreateRouterWithHttpInfo($request);
+    }
+
+    public function neutronCreateRouterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateRouterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateRouterRequest');
+    }
+
+    /**
      * 创建安全组
      *
      * 创建安全组
@@ -3558,6 +3809,254 @@ class VpcClient extends Client
     }
 
     /**
+     * 创建子网
+     *
+     * 创建子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronCreateSubnet($request)
+    {
+        return $this->neutronCreateSubnetWithHttpInfo($request);
+    }
+
+    public function neutronCreateSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateSubnetRequest');
+    }
+
+    /**
+     * 删除网络
+     *
+     * 删除网络
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronDeleteNetwork($request)
+    {
+        return $this->neutronDeleteNetworkWithHttpInfo($request);
+    }
+
+    public function neutronDeleteNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/networks/{network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['networkId'] !== null) {
+            $pathParams['network_id'] = $localVarParams['networkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteNetworkRequest');
+    }
+
+    /**
+     * 删除端口
+     *
+     * 删除端口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronDeletePort($request)
+    {
+        return $this->neutronDeletePortWithHttpInfo($request);
+    }
+
+    public function neutronDeletePortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ports/{port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeletePortResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeletePortRequest');
+    }
+
+    /**
+     * 删除路由器
+     *
+     * 删除路由器
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronDeleteRouter($request)
+    {
+        return $this->neutronDeleteRouterWithHttpInfo($request);
+    }
+
+    public function neutronDeleteRouterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers/{router_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $pathParams['router_id'] = $localVarParams['routerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteRouterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteRouterRequest');
+    }
+
+    /**
      * 删除安全组
      *
      * 删除安全组
@@ -3679,6 +4178,332 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteSecurityGroupRuleResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteSecurityGroupRuleRequest');
+    }
+
+    /**
+     * 删除子网
+     *
+     * 删除子网
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronDeleteSubnet($request)
+    {
+        return $this->neutronDeleteSubnetWithHttpInfo($request);
+    }
+
+    public function neutronDeleteSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/subnets/{subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subnetId'] !== null) {
+            $pathParams['subnet_id'] = $localVarParams['subnetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteSubnetRequest');
+    }
+
+    /**
+     * 查询网络列表
+     *
+     * 查询提交请求的租户的所有网络，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronListNetworks($request)
+    {
+        return $this->neutronListNetworksWithHttpInfo($request);
+    }
+
+    public function neutronListNetworksWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['shared'] !== null) {
+            $queryParams['shared'] = $localVarParams['shared'];
+        }
+        if ($localVarParams['routerexternal'] !== null) {
+            $queryParams['router:external'] = $localVarParams['routerexternal'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['providernetworkType'] !== null) {
+            $queryParams['provider:network_type'] = $localVarParams['providernetworkType'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListNetworksResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListNetworksRequest');
+    }
+
+    /**
+     * 查询端口列表
+     *
+     * 查询提交请求的租户的所有端口，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronListPorts($request)
+    {
+        return $this->neutronListPortsWithHttpInfo($request);
+    }
+
+    public function neutronListPortsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['networkId'] !== null) {
+            $queryParams['network_id'] = $localVarParams['networkId'];
+        }
+        if ($localVarParams['macAddress'] !== null) {
+            $queryParams['mac_address'] = $localVarParams['macAddress'];
+        }
+        if ($localVarParams['deviceId'] !== null) {
+            $queryParams['device_id'] = $localVarParams['deviceId'];
+        }
+        if ($localVarParams['deviceOwner'] !== null) {
+            $queryParams['device_owner'] = $localVarParams['deviceOwner'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['securityGroups'] !== null) {
+            $queryParams['security_groups'] = $localVarParams['securityGroups'];
+        }
+        if ($localVarParams['fixedIps'] !== null) {
+            $queryParams['fixed_ips'] = $localVarParams['fixedIps'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListPortsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListPortsRequest');
+    }
+
+    /**
+     * 查询路由器列表
+     *
+     * 查询提交请求的租户有权限操作的所有路由器信息，单次查询最多返回2000条数据，超过2000后会返回分页标记。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronListRouters($request)
+    {
+        return $this->neutronListRoutersWithHttpInfo($request);
+    }
+
+    public function neutronListRoutersWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListRoutersResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListRoutersRequest');
     }
 
     /**
@@ -3857,6 +4682,346 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询子网列表
+     *
+     * 查询提交请求租户的所有子网，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronListSubnets($request)
+    {
+        return $this->neutronListSubnetsWithHttpInfo($request);
+    }
+
+    public function neutronListSubnetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['cidr'] !== null) {
+            $queryParams['cidr'] = $localVarParams['cidr'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['enableDhcp'] !== null) {
+            $queryParams['enable_dhcp'] = $localVarParams['enableDhcp'];
+        }
+        if ($localVarParams['networkId'] !== null) {
+            $queryParams['network_id'] = $localVarParams['networkId'];
+        }
+        if ($localVarParams['ipVersion'] !== null) {
+            $queryParams['ip_version'] = $localVarParams['ipVersion'];
+        }
+        if ($localVarParams['gatewayIp'] !== null) {
+            $queryParams['gateway_ip'] = $localVarParams['gatewayIp'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListSubnetsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListSubnetsRequest');
+    }
+
+    /**
+     * 路由器删除接口
+     *
+     * 删除路由器接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronRemoveRouterInterface($request)
+    {
+        return $this->neutronRemoveRouterInterfaceWithHttpInfo($request);
+    }
+
+    public function neutronRemoveRouterInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers/{router_id}/remove_router_interface';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $pathParams['router_id'] = $localVarParams['routerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronRemoveRouterInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronRemoveRouterInterfaceRequest');
+    }
+
+    /**
+     * 查询网络
+     *
+     * 查询指定的网络详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronShowNetwork($request)
+    {
+        return $this->neutronShowNetworkWithHttpInfo($request);
+    }
+
+    public function neutronShowNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/networks/{network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['networkId'] !== null) {
+            $pathParams['network_id'] = $localVarParams['networkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowNetworkRequest');
+    }
+
+    /**
+     * 查询端口
+     *
+     * 查询端口详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronShowPort($request)
+    {
+        return $this->neutronShowPortWithHttpInfo($request);
+    }
+
+    public function neutronShowPortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ports/{port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowPortResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowPortRequest');
+    }
+
+    /**
+     * 查询路由器
+     *
+     * 查询路由器详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronShowRouter($request)
+    {
+        return $this->neutronShowRouterWithHttpInfo($request);
+    }
+
+    public function neutronShowRouterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers/{router_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $pathParams['router_id'] = $localVarParams['routerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowRouterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowRouterRequest');
+    }
+
+    /**
      * 查询安全组
      *
      * 查询安全组详情
@@ -3981,6 +5146,263 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询子网
+     *
+     * 查询子网详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronShowSubnet($request)
+    {
+        return $this->neutronShowSubnetWithHttpInfo($request);
+    }
+
+    public function neutronShowSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/subnets/{subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subnetId'] !== null) {
+            $pathParams['subnet_id'] = $localVarParams['subnetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowSubnetRequest');
+    }
+
+    /**
+     * 更新网络
+     *
+     * 更新网络
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronUpdateNetwork($request)
+    {
+        return $this->neutronUpdateNetworkWithHttpInfo($request);
+    }
+
+    public function neutronUpdateNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/networks/{network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['networkId'] !== null) {
+            $pathParams['network_id'] = $localVarParams['networkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateNetworkRequest');
+    }
+
+    /**
+     * 更新端口
+     *
+     * 更新端口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronUpdatePort($request)
+    {
+        return $this->neutronUpdatePortWithHttpInfo($request);
+    }
+
+    public function neutronUpdatePortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ports/{port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdatePortResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdatePortRequest');
+    }
+
+    /**
+     * 更新路由器
+     *
+     * 更新路由器。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronUpdateRouter($request)
+    {
+        return $this->neutronUpdateRouterWithHttpInfo($request);
+    }
+
+    public function neutronUpdateRouterWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/routers/{router_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['routerId'] !== null) {
+            $pathParams['router_id'] = $localVarParams['routerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateRouterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateRouterRequest');
+    }
+
+    /**
      * 更新安全组
      *
      * 更新安全组
@@ -4043,6 +5465,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSecurityGroupResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSecurityGroupRequest');
+    }
+
+    /**
+     * 更新子网
+     *
+     * 更新子网
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function neutronUpdateSubnet($request)
+    {
+        return $this->neutronUpdateSubnetWithHttpInfo($request);
+    }
+
+    public function neutronUpdateSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/subnets/{subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subnetId'] !== null) {
+            $pathParams['subnet_id'] = $localVarParams['subnetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSubnetRequest');
     }
 
     /**
@@ -5163,6 +6650,65 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateFirewallRuleResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateFirewallRuleRequest');
+    }
+
+    /**
+     * 查询API版本信息列表
+     *
+     * 返回当前API所有可用的版本（仅针对OpenStack原生接口）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listApiVersion($request)
+    {
+        return $this->listApiVersionWithHttpInfo($request);
+    }
+
+    public function listApiVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListApiVersionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListApiVersionRequest');
     }
 
     /**
