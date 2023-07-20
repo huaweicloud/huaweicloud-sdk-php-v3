@@ -26,6 +26,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
     * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm)[1-720](tag:ocb,otc)，单位小时。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
             'syncMessageFlush' => 'bool',
             'partition' => 'int',
             'syncReplication' => 'bool',
-            'retentionTime' => 'int'
+            'retentionTime' => 'int',
+            'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]',
+            'topicDesc' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
     * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm)[1-720](tag:ocb,otc)，单位小时。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
         'syncMessageFlush' => null,
         'partition' => null,
         'syncReplication' => null,
-        'retentionTime' => null
+        'retentionTime' => null,
+        'topicOtherConfigs' => null,
+        'topicDesc' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
     * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm)[1-720](tag:ocb,otc)，单位小时。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
             'syncMessageFlush' => 'sync_message_flush',
             'partition' => 'partition',
             'syncReplication' => 'sync_replication',
-            'retentionTime' => 'retention_time'
+            'retentionTime' => 'retention_time',
+            'topicOtherConfigs' => 'topic_other_configs',
+            'topicDesc' => 'topic_desc'
     ];
 
     /**
@@ -107,6 +119,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
     * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm)[1-720](tag:ocb,otc)，单位小时。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
             'syncMessageFlush' => 'setSyncMessageFlush',
             'partition' => 'setPartition',
             'syncReplication' => 'setSyncReplication',
-            'retentionTime' => 'setRetentionTime'
+            'retentionTime' => 'setRetentionTime',
+            'topicOtherConfigs' => 'setTopicOtherConfigs',
+            'topicDesc' => 'setTopicDesc'
     ];
 
     /**
@@ -127,6 +143,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
     * syncReplication  是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
     * retentionTime  消息老化时间。默认值为72。 取值范围[1~168](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,hws_eu,g42,tm,hk_g42,hk_tm)[1-720](tag:ocb,otc)，单位小时。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
             'syncMessageFlush' => 'getSyncMessageFlush',
             'partition' => 'getPartition',
             'syncReplication' => 'getSyncReplication',
-            'retentionTime' => 'getRetentionTime'
+            'retentionTime' => 'getRetentionTime',
+            'topicOtherConfigs' => 'getTopicOtherConfigs',
+            'topicDesc' => 'getTopicDesc'
     ];
 
     /**
@@ -203,6 +223,8 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
         $this->container['syncReplication'] = isset($data['syncReplication']) ? $data['syncReplication'] : null;
         $this->container['retentionTime'] = isset($data['retentionTime']) ? $data['retentionTime'] : null;
+        $this->container['topicOtherConfigs'] = isset($data['topicOtherConfigs']) ? $data['topicOtherConfigs'] : null;
+        $this->container['topicDesc'] = isset($data['topicDesc']) ? $data['topicDesc'] : null;
     }
 
     /**
@@ -216,6 +238,30 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+            if ((mb_strlen($this->container['id']) > 200)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 200.";
+            }
+            if ((mb_strlen($this->container['id']) < 3)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['replication']) && ($this->container['replication'] > 3)) {
+                $invalidProperties[] = "invalid value for 'replication', must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['replication']) && ($this->container['replication'] < 1)) {
+                $invalidProperties[] = "invalid value for 'replication', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['partition']) && ($this->container['partition'] > 100)) {
+                $invalidProperties[] = "invalid value for 'partition', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['partition']) && ($this->container['partition'] < 1)) {
+                $invalidProperties[] = "invalid value for 'partition', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['topicDesc']) && (mb_strlen($this->container['topicDesc']) > 200)) {
+                $invalidProperties[] = "invalid value for 'topicDesc', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['topicDesc']) && (mb_strlen($this->container['topicDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'topicDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -371,6 +417,54 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     public function setRetentionTime($retentionTime)
     {
         $this->container['retentionTime'] = $retentionTime;
+        return $this;
+    }
+
+    /**
+    * Gets topicOtherConfigs
+    *  topic配置
+    *
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null
+    */
+    public function getTopicOtherConfigs()
+    {
+        return $this->container['topicOtherConfigs'];
+    }
+
+    /**
+    * Sets topicOtherConfigs
+    *
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs topic配置
+    *
+    * @return $this
+    */
+    public function setTopicOtherConfigs($topicOtherConfigs)
+    {
+        $this->container['topicOtherConfigs'] = $topicOtherConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets topicDesc
+    *  topic描述
+    *
+    * @return string|null
+    */
+    public function getTopicDesc()
+    {
+        return $this->container['topicDesc'];
+    }
+
+    /**
+    * Sets topicDesc
+    *
+    * @param string|null $topicDesc topic描述
+    *
+    * @return $this
+    */
+    public function setTopicDesc($topicDesc)
+    {
+        $this->container['topicDesc'] = $topicDesc;
         return $this;
     }
 

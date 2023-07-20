@@ -25,6 +25,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'retentionTime' => 'int',
             'syncReplication' => 'bool',
             'syncMessageFlush' => 'bool',
-            'newPartitionNumbers' => 'int'
+            'newPartitionNumbers' => 'int',
+            'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]',
+            'topicDesc' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
         'retentionTime' => null,
         'syncReplication' => null,
         'syncMessageFlush' => null,
-        'newPartitionNumbers' => 'int32'
+        'newPartitionNumbers' => 'int32',
+        'topicOtherConfigs' => null,
+        'topicDesc' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'retentionTime' => 'retention_time',
             'syncReplication' => 'sync_replication',
             'syncMessageFlush' => 'sync_message_flush',
-            'newPartitionNumbers' => 'new_partition_numbers'
+            'newPartitionNumbers' => 'new_partition_numbers',
+            'topicOtherConfigs' => 'topic_other_configs',
+            'topicDesc' => 'topic_desc'
     ];
 
     /**
@@ -100,6 +112,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'retentionTime' => 'setRetentionTime',
             'syncReplication' => 'setSyncReplication',
             'syncMessageFlush' => 'setSyncMessageFlush',
-            'newPartitionNumbers' => 'setNewPartitionNumbers'
+            'newPartitionNumbers' => 'setNewPartitionNumbers',
+            'topicOtherConfigs' => 'setTopicOtherConfigs',
+            'topicDesc' => 'setTopicDesc'
     ];
 
     /**
@@ -118,6 +134,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * topicOtherConfigs  topic配置
+    * topicDesc  topic描述
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'retentionTime' => 'getRetentionTime',
             'syncReplication' => 'getSyncReplication',
             'syncMessageFlush' => 'getSyncMessageFlush',
-            'newPartitionNumbers' => 'getNewPartitionNumbers'
+            'newPartitionNumbers' => 'getNewPartitionNumbers',
+            'topicOtherConfigs' => 'getTopicOtherConfigs',
+            'topicDesc' => 'getTopicDesc'
     ];
 
     /**
@@ -192,6 +212,8 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
         $this->container['syncReplication'] = isset($data['syncReplication']) ? $data['syncReplication'] : null;
         $this->container['syncMessageFlush'] = isset($data['syncMessageFlush']) ? $data['syncMessageFlush'] : null;
         $this->container['newPartitionNumbers'] = isset($data['newPartitionNumbers']) ? $data['newPartitionNumbers'] : null;
+        $this->container['topicOtherConfigs'] = isset($data['topicOtherConfigs']) ? $data['topicOtherConfigs'] : null;
+        $this->container['topicDesc'] = isset($data['topicDesc']) ? $data['topicDesc'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     public function setNewPartitionNumbers($newPartitionNumbers)
     {
         $this->container['newPartitionNumbers'] = $newPartitionNumbers;
+        return $this;
+    }
+
+    /**
+    * Gets topicOtherConfigs
+    *  topic配置
+    *
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null
+    */
+    public function getTopicOtherConfigs()
+    {
+        return $this->container['topicOtherConfigs'];
+    }
+
+    /**
+    * Sets topicOtherConfigs
+    *
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs topic配置
+    *
+    * @return $this
+    */
+    public function setTopicOtherConfigs($topicOtherConfigs)
+    {
+        $this->container['topicOtherConfigs'] = $topicOtherConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets topicDesc
+    *  topic描述
+    *
+    * @return string|null
+    */
+    public function getTopicDesc()
+    {
+        return $this->container['topicDesc'];
+    }
+
+    /**
+    * Sets topicDesc
+    *
+    * @param string|null $topicDesc topic描述
+    *
+    * @return $this
+    */
+    public function setTopicDesc($topicDesc)
+    {
+        $this->container['topicDesc'] = $topicDesc;
         return $this;
     }
 

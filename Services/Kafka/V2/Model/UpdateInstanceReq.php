@@ -24,8 +24,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
-    * securityGroupId  安全组ID。
-    * retentionPolicy  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
     * @var string[]
@@ -46,8 +46,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
-    * securityGroupId  安全组ID。
-    * retentionPolicy  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
     * @var string[]
@@ -89,8 +89,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
-    * securityGroupId  安全组ID。
-    * retentionPolicy  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
     * @var string[]
@@ -111,8 +111,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
-    * securityGroupId  安全组ID。
-    * retentionPolicy  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
     * @var string[]
@@ -133,8 +133,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
-    * securityGroupId  安全组ID。
-    * retentionPolicy  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
     * @var string[]
@@ -359,7 +359,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。
+    *  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组ID。
+    * @param string|null $securityGroupId 安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionPolicy
-    *  容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    *  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets retentionPolicy
     *
-    * @param string|null $retentionPolicy 容量阈值策略。 支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
+    * @param string|null $retentionPolicy 容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     *
     * @return $this
     */

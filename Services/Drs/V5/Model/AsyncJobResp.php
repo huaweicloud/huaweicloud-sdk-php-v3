@@ -21,7 +21,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     * domainName  批量异步创建的任务的租户名。
     * userName  批量异步创建的任务的用户名。
     * createTime  批量异步创建的任务的创建时间。
@@ -39,7 +39,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     * domainName  批量异步创建的任务的租户名。
     * userName  批量异步创建的任务的用户名。
     * createTime  批量异步创建的任务的创建时间。
@@ -78,7 +78,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     * domainName  批量异步创建的任务的租户名。
     * userName  批量异步创建的任务的用户名。
     * createTime  批量异步创建的任务的创建时间。
@@ -96,7 +96,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     * domainName  批量异步创建的任务的租户名。
     * userName  批量异步创建的任务的用户名。
     * createTime  批量异步创建的任务的创建时间。
@@ -114,7 +114,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     * domainName  批量异步创建的任务的租户名。
     * userName  批量异步创建的任务的用户名。
     * createTime  批量异步创建的任务的创建时间。
@@ -171,9 +171,8 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     }
     const STATUS_ASYNC_JOB_VALIDATING = 'ASYNC_JOB_VALIDATING';
     const STATUS_ASYNC_JOB_VALIDATE_FAILED = 'ASYNC_JOB_VALIDATE_FAILED';
-    const STATUS_ASYNC_JOB_CREATING = 'ASYNC_JOB_CREATING';
-    const STATUS_ASYNC_JOB_CREATE_FAILED = 'ASYNC_JOB_CREATE_FAILED';
-    const STATUS_ASYNC_JOB_COMPLETED = 'ASYNC_JOB_COMPLETED';
+    const STATUS_AUTO_PARAM_VALIDATE_SUCCESS = 'AUTO_PARAM_VALIDATE_SUCCESS';
+    const STATUS_COMMIT_SUCCESS = 'COMMIT_SUCCESS';
     
 
     /**
@@ -186,9 +185,8 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
         return [
             self::STATUS_ASYNC_JOB_VALIDATING,
             self::STATUS_ASYNC_JOB_VALIDATE_FAILED,
-            self::STATUS_ASYNC_JOB_CREATING,
-            self::STATUS_ASYNC_JOB_CREATE_FAILED,
-            self::STATUS_ASYNC_JOB_COMPLETED,
+            self::STATUS_AUTO_PARAM_VALIDATE_SUCCESS,
+            self::STATUS_COMMIT_SUCCESS,
         ];
     }
 
@@ -286,7 +284,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    *  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     *
     * @return string
     */
@@ -298,7 +296,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+    * @param string $status 批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
     *
     * @return $this
     */

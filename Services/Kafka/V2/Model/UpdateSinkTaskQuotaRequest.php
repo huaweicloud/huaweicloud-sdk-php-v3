@@ -20,7 +20,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectorId  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectorId  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectorId  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectorId  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectorId  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorId
-    *  实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    *  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateSinkTaskQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets connectorId
     *
-    * @param string $connectorId 实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
+    * @param string $connectorId 实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
     *
     * @return $this
     */

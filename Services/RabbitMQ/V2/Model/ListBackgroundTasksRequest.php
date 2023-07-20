@@ -23,8 +23,8 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * start  开启查询的任务编号。
     * limit  查询的任务个数。
-    * beginTime  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
-    * endTime  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
+    * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * start  开启查询的任务编号。
     * limit  查询的任务个数。
-    * beginTime  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
-    * endTime  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
+    * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @var string[]
     */
@@ -80,8 +80,8 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * start  开启查询的任务编号。
     * limit  查询的任务个数。
-    * beginTime  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
-    * endTime  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
+    * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * start  开启查询的任务编号。
     * limit  查询的任务个数。
-    * beginTime  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
-    * endTime  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
+    * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * start  开启查询的任务编号。
     * limit  查询的任务个数。
-    * beginTime  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
-    * endTime  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
+    * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @var string[]
     */
@@ -293,7 +293,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  查询任务的最小时间，格式为 YYYYMMDDHHmmss。
+    *  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 查询任务的最小时间，格式为 YYYYMMDDHHmmss。
+    * @param string|null $beginTime 查询任务的最小时间，格式为YYYYMMDDHHmmss。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    *  查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+    * @param string|null $endTime 查询任务的最大时间，格式为YYYYMMDDHHmmss。
     *
     * @return $this
     */

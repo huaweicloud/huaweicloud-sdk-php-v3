@@ -22,24 +22,28 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'xLanguage' => 'string'
+            'xLanguage' => 'string',
+            'fileImportDbLevel' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
-        'xLanguage' => null
+        'xLanguage' => null,
+        'fileImportDbLevel' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
-            'xLanguage' => 'X-Language'
+            'xLanguage' => 'X-Language',
+            'fileImportDbLevel' => 'file_import_db_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
-            'xLanguage' => 'setXLanguage'
+            'xLanguage' => 'setXLanguage',
+            'fileImportDbLevel' => 'setFileImportDbLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
-            'xLanguage' => 'getXLanguage'
+            'xLanguage' => 'getXLanguage',
+            'fileImportDbLevel' => 'getFileImportDbLevel'
     ];
 
     /**
@@ -141,6 +151,8 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     }
     const X_LANGUAGE_EN_US = 'en-us';
     const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const FILE_IMPORT_DB_LEVEL_DATABASE = 'database';
+    const FILE_IMPORT_DB_LEVEL_TABLE = 'table';
     
 
     /**
@@ -153,6 +165,19 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
         return [
             self::X_LANGUAGE_EN_US,
             self::X_LANGUAGE_ZH_CN,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getFileImportDbLevelAllowableValues()
+    {
+        return [
+            self::FILE_IMPORT_DB_LEVEL_DATABASE,
+            self::FILE_IMPORT_DB_LEVEL_TABLE,
         ];
     }
 
@@ -174,6 +199,7 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['fileImportDbLevel'] = isset($data['fileImportDbLevel']) ? $data['fileImportDbLevel'] : 'table';
     }
 
     /**
@@ -191,6 +217,14 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getFileImportDbLevelAllowableValues();
+                if (!is_null($this->container['fileImportDbLevel']) && !in_array($this->container['fileImportDbLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'fileImportDbLevel', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -254,6 +288,30 @@ class DownloadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     public function setXLanguage($xLanguage)
     {
         $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets fileImportDbLevel
+    *  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    *
+    * @return string|null
+    */
+    public function getFileImportDbLevel()
+    {
+        return $this->container['fileImportDbLevel'];
+    }
+
+    /**
+    * Sets fileImportDbLevel
+    *
+    * @param string|null $fileImportDbLevel 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    *
+    * @return $this
+    */
+    public function setFileImportDbLevel($fileImportDbLevel)
+    {
+        $this->container['fileImportDbLevel'] = $fileImportDbLevel;
         return $this;
     }
 

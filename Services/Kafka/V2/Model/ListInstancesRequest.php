@@ -23,7 +23,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎：kafka。
     * name  实例名称。
     * instanceId  实例ID。
-    * status  实例状态。
+    * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
@@ -49,7 +49,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎：kafka。
     * name  实例名称。
     * instanceId  实例ID。
-    * status  实例状态。
+    * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
@@ -96,7 +96,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎：kafka。
     * name  实例名称。
     * instanceId  实例ID。
-    * status  实例状态。
+    * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
@@ -122,7 +122,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎：kafka。
     * name  实例名称。
     * instanceId  实例ID。
-    * status  实例状态。
+    * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
@@ -148,7 +148,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * engine  消息引擎：kafka。
     * name  实例名称。
     * instanceId  实例ID。
-    * status  实例状态。
+    * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
@@ -209,6 +209,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_KAFKA = 'kafka';
     const STATUS_CREATING = 'CREATING';
     const STATUS_RUNNING = 'RUNNING';
     const STATUS_FAULTY = 'FAULTY';
@@ -221,6 +222,18 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const EXACT_MATCH_NAME_TRUE = 'true';
     const EXACT_MATCH_NAME_FALSE = 'false';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_KAFKA,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -282,7 +295,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'kafka';
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -301,6 +314,14 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -413,7 +434,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态。
+    *  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     *
     * @return string|null
     */
@@ -425,7 +446,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态。
+    * @param string|null $status 实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     *
     * @return $this
     */

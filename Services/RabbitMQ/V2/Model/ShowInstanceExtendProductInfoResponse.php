@@ -21,26 +21,30 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * engine  消息引擎类型。
+    * versions  消息引擎支持的版本
+    * products  规格变更的产品信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'hourly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]',
-            'monthly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]'
+            'engine' => 'string',
+            'versions' => 'string[]',
+            'products' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQExtendProductInfoEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * engine  消息引擎类型。
+    * versions  消息引擎支持的版本
+    * products  规格变更的产品信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'hourly' => null,
-        'monthly' => null
+        'engine' => null,
+        'versions' => null,
+        'products' => null
     ];
 
     /**
@@ -66,38 +70,44 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * engine  消息引擎类型。
+    * versions  消息引擎支持的版本
+    * products  规格变更的产品信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'hourly' => 'hourly',
-            'monthly' => 'monthly'
+            'engine' => 'engine',
+            'versions' => 'versions',
+            'products' => 'products'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * engine  消息引擎类型。
+    * versions  消息引擎支持的版本
+    * products  规格变更的产品信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'hourly' => 'setHourly',
-            'monthly' => 'setMonthly'
+            'engine' => 'setEngine',
+            'versions' => 'setVersions',
+            'products' => 'setProducts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * engine  消息引擎类型。
+    * versions  消息引擎支持的版本
+    * products  规格变更的产品信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'hourly' => 'getHourly',
-            'monthly' => 'getMonthly'
+            'engine' => 'getEngine',
+            'versions' => 'getVersions',
+            'products' => 'getProducts'
     ];
 
     /**
@@ -158,8 +168,9 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
-        $this->container['hourly'] = isset($data['hourly']) ? $data['hourly'] : null;
-        $this->container['monthly'] = isset($data['monthly']) ? $data['monthly'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
     }
 
     /**
@@ -185,50 +196,74 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     }
 
     /**
-    * Gets hourly
-    *  表示按需付费的产品列表。
+    * Gets engine
+    *  消息引擎类型。
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null
+    * @return string|null
     */
-    public function getHourly()
+    public function getEngine()
     {
-        return $this->container['hourly'];
+        return $this->container['engine'];
     }
 
     /**
-    * Sets hourly
+    * Sets engine
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null $hourly 表示按需付费的产品列表。
+    * @param string|null $engine 消息引擎类型。
     *
     * @return $this
     */
-    public function setHourly($hourly)
+    public function setEngine($engine)
     {
-        $this->container['hourly'] = $hourly;
+        $this->container['engine'] = $engine;
         return $this;
     }
 
     /**
-    * Gets monthly
-    *  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * Gets versions
+    *  消息引擎支持的版本
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null
+    * @return string[]|null
     */
-    public function getMonthly()
+    public function getVersions()
     {
-        return $this->container['monthly'];
+        return $this->container['versions'];
     }
 
     /**
-    * Sets monthly
+    * Sets versions
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * @param string[]|null $versions 消息引擎支持的版本
     *
     * @return $this
     */
-    public function setMonthly($monthly)
+    public function setVersions($versions)
     {
-        $this->container['monthly'] = $monthly;
+        $this->container['versions'] = $versions;
+        return $this;
+    }
+
+    /**
+    * Gets products
+    *  规格变更的产品信息。
+    *
+    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQExtendProductInfoEntity[]|null
+    */
+    public function getProducts()
+    {
+        return $this->container['products'];
+    }
+
+    /**
+    * Sets products
+    *
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQExtendProductInfoEntity[]|null $products 规格变更的产品信息。
+    *
+    * @return $this
+    */
+    public function setProducts($products)
+    {
+        $this->container['products'] = $products;
         return $this;
     }
 

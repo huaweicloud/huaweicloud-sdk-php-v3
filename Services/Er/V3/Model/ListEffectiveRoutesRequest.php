@@ -24,7 +24,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @var string[]
     */
@@ -175,7 +175,10 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     const RESOURCE_TYPE_VGW = 'vgw';
     const RESOURCE_TYPE_PEERING = 'peering';
     const RESOURCE_TYPE_CAN = 'can';
+    const RESOURCE_TYPE_ECN = 'ecn';
     const RESOURCE_TYPE_GDGW = 'gdgw';
+    const RESOURCE_TYPE_CONNECT = 'connect';
+    const RESOURCE_TYPE_CFW = 'cfw';
     
 
     /**
@@ -192,7 +195,10 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
             self::RESOURCE_TYPE_VGW,
             self::RESOURCE_TYPE_PEERING,
             self::RESOURCE_TYPE_CAN,
+            self::RESOURCE_TYPE_ECN,
             self::RESOURCE_TYPE_GDGW,
+            self::RESOURCE_TYPE_CONNECT,
+            self::RESOURCE_TYPE_CFW,
         ];
     }
 
@@ -357,7 +363,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  连接资源类型:vpc|vpn|vgw|peering
+    *  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @return string[]|null
     */
@@ -369,7 +375,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string[]|null $resourceType 连接资源类型:vpc|vpn|vgw|peering
+    * @param string[]|null $resourceType - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
     *
     * @return $this
     */

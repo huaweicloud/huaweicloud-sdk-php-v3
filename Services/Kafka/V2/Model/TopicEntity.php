@@ -29,6 +29,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * externalConfigs  扩展配置。
     * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * topicOtherConfigs  topic其他配置
+    * topicDesc  topic描述
+    * createdAt  topic创建时间
     *
     * @var string[]
     */
@@ -41,7 +44,10 @@ class TopicEntity implements ModelInterface, ArrayAccess
             'syncReplication' => 'bool',
             'syncMessageFlush' => 'bool',
             'externalConfigs' => 'object',
-            'topicType' => 'int'
+            'topicType' => 'int',
+            'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]',
+            'topicDesc' => 'string',
+            'createdAt' => 'int'
     ];
 
     /**
@@ -55,6 +61,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * externalConfigs  扩展配置。
     * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * topicOtherConfigs  topic其他配置
+    * topicDesc  topic描述
+    * createdAt  topic创建时间
     *
     * @var string[]
     */
@@ -67,7 +76,10 @@ class TopicEntity implements ModelInterface, ArrayAccess
         'syncReplication' => null,
         'syncMessageFlush' => null,
         'externalConfigs' => null,
-        'topicType' => null
+        'topicType' => null,
+        'topicOtherConfigs' => null,
+        'topicDesc' => null,
+        'createdAt' => 'int64'
     ];
 
     /**
@@ -102,6 +114,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * externalConfigs  扩展配置。
     * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * topicOtherConfigs  topic其他配置
+    * topicDesc  topic描述
+    * createdAt  topic创建时间
     *
     * @var string[]
     */
@@ -114,7 +129,10 @@ class TopicEntity implements ModelInterface, ArrayAccess
             'syncReplication' => 'sync_replication',
             'syncMessageFlush' => 'sync_message_flush',
             'externalConfigs' => 'external_configs',
-            'topicType' => 'topic_type'
+            'topicType' => 'topic_type',
+            'topicOtherConfigs' => 'topic_other_configs',
+            'topicDesc' => 'topic_desc',
+            'createdAt' => 'created_at'
     ];
 
     /**
@@ -128,6 +146,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * externalConfigs  扩展配置。
     * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * topicOtherConfigs  topic其他配置
+    * topicDesc  topic描述
+    * createdAt  topic创建时间
     *
     * @var string[]
     */
@@ -140,7 +161,10 @@ class TopicEntity implements ModelInterface, ArrayAccess
             'syncReplication' => 'setSyncReplication',
             'syncMessageFlush' => 'setSyncMessageFlush',
             'externalConfigs' => 'setExternalConfigs',
-            'topicType' => 'setTopicType'
+            'topicType' => 'setTopicType',
+            'topicOtherConfigs' => 'setTopicOtherConfigs',
+            'topicDesc' => 'setTopicDesc',
+            'createdAt' => 'setCreatedAt'
     ];
 
     /**
@@ -154,6 +178,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * externalConfigs  扩展配置。
     * topicType  topic类型(0:普通Topic 1:系统(内部)Topic)。
+    * topicOtherConfigs  topic其他配置
+    * topicDesc  topic描述
+    * createdAt  topic创建时间
     *
     * @var string[]
     */
@@ -166,7 +193,10 @@ class TopicEntity implements ModelInterface, ArrayAccess
             'syncReplication' => 'getSyncReplication',
             'syncMessageFlush' => 'getSyncMessageFlush',
             'externalConfigs' => 'getExternalConfigs',
-            'topicType' => 'getTopicType'
+            'topicType' => 'getTopicType',
+            'topicOtherConfigs' => 'getTopicOtherConfigs',
+            'topicDesc' => 'getTopicDesc',
+            'createdAt' => 'getCreatedAt'
     ];
 
     /**
@@ -236,6 +266,9 @@ class TopicEntity implements ModelInterface, ArrayAccess
         $this->container['syncMessageFlush'] = isset($data['syncMessageFlush']) ? $data['syncMessageFlush'] : null;
         $this->container['externalConfigs'] = isset($data['externalConfigs']) ? $data['externalConfigs'] : null;
         $this->container['topicType'] = isset($data['topicType']) ? $data['topicType'] : null;
+        $this->container['topicOtherConfigs'] = isset($data['topicOtherConfigs']) ? $data['topicOtherConfigs'] : null;
+        $this->container['topicDesc'] = isset($data['topicDesc']) ? $data['topicDesc'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
 
     /**
@@ -473,6 +506,78 @@ class TopicEntity implements ModelInterface, ArrayAccess
     public function setTopicType($topicType)
     {
         $this->container['topicType'] = $topicType;
+        return $this;
+    }
+
+    /**
+    * Gets topicOtherConfigs
+    *  topic其他配置
+    *
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]|null
+    */
+    public function getTopicOtherConfigs()
+    {
+        return $this->container['topicOtherConfigs'];
+    }
+
+    /**
+    * Sets topicOtherConfigs
+    *
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TopicEntityTopicOtherConfigs[]|null $topicOtherConfigs topic其他配置
+    *
+    * @return $this
+    */
+    public function setTopicOtherConfigs($topicOtherConfigs)
+    {
+        $this->container['topicOtherConfigs'] = $topicOtherConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets topicDesc
+    *  topic描述
+    *
+    * @return string|null
+    */
+    public function getTopicDesc()
+    {
+        return $this->container['topicDesc'];
+    }
+
+    /**
+    * Sets topicDesc
+    *
+    * @param string|null $topicDesc topic描述
+    *
+    * @return $this
+    */
+    public function setTopicDesc($topicDesc)
+    {
+        $this->container['topicDesc'] = $topicDesc;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  topic创建时间
+    *
+    * @return int|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param int|null $createdAt topic创建时间
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
         return $this;
     }
 

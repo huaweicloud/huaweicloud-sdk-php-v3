@@ -21,7 +21,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isMigrateUser  是否迁移用户。
-    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     * password  重置后的统一密码。统一重置密码为true时必填。 约束：密码不能为空。
     * userList  userList
     * roleList  roleList
@@ -39,7 +39,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isMigrateUser  是否迁移用户。
-    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     * password  重置后的统一密码。统一重置密码为true时必填。 约束：密码不能为空。
     * userList  userList
     * roleList  roleList
@@ -78,7 +78,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isMigrateUser  是否迁移用户。
-    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     * password  重置后的统一密码。统一重置密码为true时必填。 约束：密码不能为空。
     * userList  userList
     * roleList  roleList
@@ -96,7 +96,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isMigrateUser  是否迁移用户。
-    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     * password  重置后的统一密码。统一重置密码为true时必填。 约束：密码不能为空。
     * userList  userList
     * roleList  roleList
@@ -114,7 +114,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isMigrateUser  是否迁移用户。
-    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * isSetPassword  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     * password  重置后的统一密码。统一重置密码为true时必填。 约束：密码不能为空。
     * userList  userList
     * roleList  roleList
@@ -248,7 +248,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSetPassword
-    *  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    *  是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     *
     * @return bool
     */
@@ -260,7 +260,7 @@ class UserMigrationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isSetPassword
     *
-    * @param bool $isSetPassword 是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景：  - 实时迁移场景：MySQL迁移。
+    * @param bool $isSetPassword 是否统一重置密码。取值： - true：重置密码为统一密码。 - false：不统一重置密码。 当前支持的场景： - 实时迁移场景：MySQL迁移。
     *
     * @return $this
     */

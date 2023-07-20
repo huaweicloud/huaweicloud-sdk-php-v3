@@ -769,6 +769,9 @@ class ErClient extends Client
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
         }
+        if ($localVarParams['ownedBySelf'] !== null) {
+            $queryParams['owned_by_self'] = $localVarParams['ownedBySelf'];
+        }
         if ($localVarParams['sortKey'] !== null) {
             $queryParams['sort_key'] = $localVarParams['sortKey'];
         }
@@ -928,6 +931,482 @@ class ErClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateEnterpriseRouterResponse',
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateEnterpriseRouterRequest');
+    }
+
+    /**
+     * 创建流日志
+     *
+     * 给ER实例创建流日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFlowLog($request)
+    {
+        return $this->createFlowLogWithHttpInfo($request);
+    }
+
+    public function createFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateFlowLogRequest');
+    }
+
+    /**
+     * 删除流日志
+     *
+     * 删除流日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteFlowLog($request)
+    {
+        return $this->deleteFlowLogWithHttpInfo($request);
+    }
+
+    public function deleteFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs/{flow_log_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['flowLogId'] !== null) {
+            $pathParams['flow_log_id'] = $localVarParams['flowLogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteFlowLogRequest');
+    }
+
+    /**
+     * 关闭流日志
+     *
+     * 关闭流日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableFlowLog($request)
+    {
+        return $this->disableFlowLogWithHttpInfo($request);
+    }
+
+    public function disableFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs/{flow_log_id}/disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['flowLogId'] !== null) {
+            $pathParams['flow_log_id'] = $localVarParams['flowLogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\DisableFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\DisableFlowLogRequest');
+    }
+
+    /**
+     * 开启流日志
+     *
+     * 开启流日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableFlowLog($request)
+    {
+        return $this->enableFlowLogWithHttpInfo($request);
+    }
+
+    public function enableFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs/{flow_log_id}/enable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['flowLogId'] !== null) {
+            $pathParams['flow_log_id'] = $localVarParams['flowLogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\EnableFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\EnableFlowLogRequest');
+    }
+
+    /**
+     * 查询流日志列表
+     *
+     * 查询企业路由器实例下的流日志列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFlowLogs($request)
+    {
+        return $this->listFlowLogsWithHttpInfo($request);
+    }
+
+    public function listFlowLogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListFlowLogsResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListFlowLogsRequest');
+    }
+
+    /**
+     * 查询流日志详情
+     *
+     * 查询流日志详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlowLog($request)
+    {
+        return $this->showFlowLogWithHttpInfo($request);
+    }
+
+    public function showFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs/{flow_log_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['flowLogId'] !== null) {
+            $pathParams['flow_log_id'] = $localVarParams['flowLogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowFlowLogRequest');
+    }
+
+    /**
+     * 更新流日志基本信息
+     *
+     * 更新流日志基本信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFlowLog($request)
+    {
+        return $this->updateFlowLogWithHttpInfo($request);
+    }
+
+    public function updateFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/flow-logs/{flow_log_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['flowLogId'] !== null) {
+            $pathParams['flow_log_id'] = $localVarParams['flowLogId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateFlowLogRequest');
     }
 
     /**
@@ -1153,6 +1632,77 @@ class ErClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsResponse',
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsRequest');
+    }
+
+    /**
+     * 查询配额
+     *
+     * 查询租户各类资源的使用情况，如企业路由器的使用量，VPC连接的使用量等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQuotas($request)
+    {
+        return $this->showQuotasWithHttpInfo($request);
+    }
+
+    public function showQuotasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['erId'] !== null) {
+            $queryParams['erId'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['routeTableId'] !== null) {
+            $queryParams['routeTableId'] = $localVarParams['routeTableId'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpcId'] = $localVarParams['vpcId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowQuotasResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowQuotasRequest');
     }
 
     /**
@@ -1928,6 +2478,76 @@ class ErClient extends Client
     }
 
     /**
+     * 批量添加删除资源标签
+     *
+     * - 为指定实例批量添加或删除标签
+     * - 标签管理服务需要使用该接口批量管理实例的标签。
+     * - 一个资源上最多有10个标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateResourceTags($request)
+    {
+        return $this->batchCreateResourceTagsWithHttpInfo($request);
+    }
+
+    public function batchCreateResourceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\BatchCreateResourceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\BatchCreateResourceTagsRequest');
+    }
+
+    /**
      * 创建资源标签
      *
      * 为特定类型的资源创建标签。
@@ -2099,11 +2719,11 @@ class ErClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -2164,11 +2784,11 @@ class ErClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }

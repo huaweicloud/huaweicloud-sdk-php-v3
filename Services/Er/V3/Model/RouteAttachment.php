@@ -21,29 +21,33 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
+    * resourceType  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     * attachmentId  连接ID
+    * priority  路由优先级，普通路由固定值为1
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
             'resourceType' => 'string',
-            'attachmentId' => 'string'
+            'attachmentId' => 'string',
+            'priority' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
+    * resourceType  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     * attachmentId  连接ID
+    * priority  路由优先级，普通路由固定值为1
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceId' => null,
         'resourceType' => null,
-        'attachmentId' => null
+        'attachmentId' => null,
+        'priority' => null
     ];
 
     /**
@@ -70,43 +74,49 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
+    * resourceType  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     * attachmentId  连接ID
+    * priority  路由优先级，普通路由固定值为1
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceId' => 'resource_id',
             'resourceType' => 'resource_type',
-            'attachmentId' => 'attachment_id'
+            'attachmentId' => 'attachment_id',
+            'priority' => 'priority'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
+    * resourceType  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     * attachmentId  连接ID
+    * priority  路由优先级，普通路由固定值为1
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceId' => 'setResourceId',
             'resourceType' => 'setResourceType',
-            'attachmentId' => 'setAttachmentId'
+            'attachmentId' => 'setAttachmentId',
+            'priority' => 'setPriority'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
+    * resourceType  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     * attachmentId  连接ID
+    * priority  路由优先级，普通路由固定值为1
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceId' => 'getResourceId',
             'resourceType' => 'getResourceType',
-            'attachmentId' => 'getAttachmentId'
+            'attachmentId' => 'getAttachmentId',
+            'priority' => 'getPriority'
     ];
 
     /**
@@ -170,6 +180,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
     }
 
     /**
@@ -229,7 +240,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  连接关联的资源类型：vpc|vgw|vpn|peering
+    *  连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     *
     * @return string
     */
@@ -241,7 +252,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 连接关联的资源类型：vpc|vgw|vpn|peering
+    * @param string $resourceType 连接关联的资源类型: - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -
     *
     * @return $this
     */
@@ -272,6 +283,30 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     public function setAttachmentId($attachmentId)
     {
         $this->container['attachmentId'] = $attachmentId;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  路由优先级，普通路由固定值为1
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 路由优先级，普通路由固定值为1
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
         return $this;
     }
 

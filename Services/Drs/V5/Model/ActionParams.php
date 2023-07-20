@@ -27,7 +27,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
-    * forceDelete  强制结束任务时取值true。
+    * forceDelete  强制结束时取值为true。
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
-    * forceDelete  强制结束任务时取值true。
+    * forceDelete  强制结束时取值为true。
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
-    * forceDelete  强制结束任务时取值true。
+    * forceDelete  强制结束时取值为true。
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
-    * forceDelete  强制结束任务时取值true。
+    * forceDelete  强制结束时取值为true。
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
-    * forceDelete  强制结束任务时取值true。
+    * forceDelete  强制结束时取值为true。
     *
     * @var string[]
     */
@@ -419,7 +419,7 @@ class ActionParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets forceDelete
-    *  强制结束任务时取值true。
+    *  强制结束时取值为true。
     *
     * @return bool|null
     */
@@ -431,7 +431,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     /**
     * Sets forceDelete
     *
-    * @param bool|null $forceDelete 强制结束任务时取值true。
+    * @param bool|null $forceDelete 强制结束时取值为true。
     *
     * @return $this
     */

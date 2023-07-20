@@ -25,7 +25,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     * code  可用区编码。
     * name  可用区名称。
     * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
+    * resourceAvailability  可用区上是否还有可用资源。
     * defaultAz  是否为默认可用区。
     * remainTime  剩余时间。
     * ipv6Enable  是否支持IPv6。
@@ -51,7 +51,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     * code  可用区编码。
     * name  可用区名称。
     * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
+    * resourceAvailability  可用区上是否还有可用资源。
     * defaultAz  是否为默认可用区。
     * remainTime  剩余时间。
     * ipv6Enable  是否支持IPv6。
@@ -98,7 +98,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     * code  可用区编码。
     * name  可用区名称。
     * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
+    * resourceAvailability  可用区上是否还有可用资源。
     * defaultAz  是否为默认可用区。
     * remainTime  剩余时间。
     * ipv6Enable  是否支持IPv6。
@@ -124,7 +124,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     * code  可用区编码。
     * name  可用区名称。
     * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
+    * resourceAvailability  可用区上是否还有可用资源。
     * defaultAz  是否为默认可用区。
     * remainTime  剩余时间。
     * ipv6Enable  是否支持IPv6。
@@ -150,7 +150,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     * code  可用区编码。
     * name  可用区名称。
     * port  可用区端口号。
-    * resourceAvailability  分区上是否还有可用资源。
+    * resourceAvailability  可用区上是否还有可用资源。
     * defaultAz  是否为默认可用区。
     * remainTime  剩余时间。
     * ipv6Enable  是否支持IPv6。
@@ -382,7 +382,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
 
     /**
     * Gets resourceAvailability
-    *  分区上是否还有可用资源。
+    *  可用区上是否还有可用资源。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ListAvailableZonesRespAvailableZones implements ModelInterface, ArrayAcces
     /**
     * Sets resourceAvailability
     *
-    * @param string|null $resourceAvailability 分区上是否还有可用资源。
+    * @param string|null $resourceAvailability 可用区上是否还有可用资源。
     *
     * @return $this
     */

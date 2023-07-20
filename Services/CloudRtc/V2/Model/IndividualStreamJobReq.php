@@ -26,7 +26,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     * videoType  标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
     * selectStreamType  指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
     * maxIdleTime  最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
@@ -38,7 +37,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
             'videoType' => 'string',
             'selectStreamType' => 'string',
             'maxIdleTime' => 'int',
-            'publishParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam',
             'recordParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\RecordParam'
     ];
 
@@ -50,7 +48,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     * videoType  标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
     * selectStreamType  指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
     * maxIdleTime  最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
@@ -62,7 +59,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
         'videoType' => null,
         'selectStreamType' => null,
         'maxIdleTime' => null,
-        'publishParam' => null,
         'recordParam' => null
     ];
 
@@ -95,7 +91,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     * videoType  标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
     * selectStreamType  指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
     * maxIdleTime  最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
@@ -107,7 +102,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
             'videoType' => 'video_type',
             'selectStreamType' => 'select_stream_type',
             'maxIdleTime' => 'max_idle_time',
-            'publishParam' => 'publish_param',
             'recordParam' => 'record_param'
     ];
 
@@ -119,7 +113,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     * videoType  标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
     * selectStreamType  指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
     * maxIdleTime  最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
@@ -131,7 +124,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
             'videoType' => 'setVideoType',
             'selectStreamType' => 'setSelectStreamType',
             'maxIdleTime' => 'setMaxIdleTime',
-            'publishParam' => 'setPublishParam',
             'recordParam' => 'setRecordParam'
     ];
 
@@ -143,7 +135,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     * videoType  标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
     * selectStreamType  指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
     * maxIdleTime  最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
@@ -155,7 +146,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
             'videoType' => 'getVideoType',
             'selectStreamType' => 'getSelectStreamType',
             'maxIdleTime' => 'getMaxIdleTime',
-            'publishParam' => 'getPublishParam',
             'recordParam' => 'getRecordParam'
     ];
 
@@ -257,7 +247,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
         $this->container['videoType'] = isset($data['videoType']) ? $data['videoType'] : 'CAMERASTREAM';
         $this->container['selectStreamType'] = isset($data['selectStreamType']) ? $data['selectStreamType'] : 'FHD';
         $this->container['maxIdleTime'] = isset($data['maxIdleTime']) ? $data['maxIdleTime'] : null;
-        $this->container['publishParam'] = isset($data['publishParam']) ? $data['publishParam'] : null;
         $this->container['recordParam'] = isset($data['recordParam']) ? $data['recordParam'] : null;
     }
 
@@ -476,30 +465,6 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     public function setMaxIdleTime($maxIdleTime)
     {
         $this->container['maxIdleTime'] = $maxIdleTime;
-        return $this;
-    }
-
-    /**
-    * Gets publishParam
-    *  publishParam
-    *
-    * @return \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null
-    */
-    public function getPublishParam()
-    {
-        return $this->container['publishParam'];
-    }
-
-    /**
-    * Sets publishParam
-    *
-    * @param \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null $publishParam publishParam
-    *
-    * @return $this
-    */
-    public function setPublishParam($publishParam)
-    {
-        $this->container['publishParam'] = $publishParam;
         return $this;
     }
 

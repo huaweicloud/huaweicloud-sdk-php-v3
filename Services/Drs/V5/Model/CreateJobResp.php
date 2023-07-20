@@ -24,6 +24,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateJobResp implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'status' => 'string',
-            'createTime' => 'string'
+            'createTime' => 'string',
+            'isCloneJob' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateJobResp implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'status' => null,
-        'createTime' => null
+        'createTime' => null,
+        'isCloneJob' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateJobResp implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'status' => 'status',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'isCloneJob' => 'is_clone_job'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateJobResp implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'status' => 'setStatus',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'isCloneJob' => 'setIsCloneJob'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateJobResp implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'status' => 'getStatus',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'isCloneJob' => 'getIsCloneJob'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['isCloneJob'] = isset($data['isCloneJob']) ? $data['isCloneJob'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets isCloneJob
+    *  是否为克隆任务。
+    *
+    * @return string|null
+    */
+    public function getIsCloneJob()
+    {
+        return $this->container['isCloneJob'];
+    }
+
+    /**
+    * Sets isCloneJob
+    *
+    * @param string|null $isCloneJob 是否为克隆任务。
+    *
+    * @return $this
+    */
+    public function setIsCloneJob($isCloneJob)
+    {
+        $this->container['isCloneJob'] = $isCloneJob;
         return $this;
     }
 

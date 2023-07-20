@@ -20,8 +20,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * values  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    *  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * @param string|null $key 键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    *  值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class TagMultyValueEntity implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values 值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用 UTF-8 格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
+    * @param string[]|null $values 值列表。  值长度0~255个字符（中文也可以输入255个字符）。  值可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @。  值可以为空字符串。
     *
     * @return $this
     */

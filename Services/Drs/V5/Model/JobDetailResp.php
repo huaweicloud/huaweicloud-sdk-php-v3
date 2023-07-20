@@ -29,7 +29,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * sourceEndpoint  任务源数据库信息体。
     * targetEndpoint  任务目标数据库信息体。
     * alarmNotify  alarmNotify
-    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
     * policyConfig  policyConfig
     * dbParam  dbParam
@@ -43,6 +43,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
+    * supportImportFileResp  supportImportFileResp
+    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
+    * taskVersion  任务版本。
     *
     * @var string[]
     */
@@ -69,7 +72,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'progressInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobProgressInfo',
             'migrationObjectProgressInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryMigrationObjectProgressInfo',
             'metrics' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryMetricResult',
-            'compareResult' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareResultInfo'
+            'compareResult' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareResultInfo',
+            'supportImportFileResp' => '\HuaweiCloud\SDK\Drs\V5\Model\SupportImportFileResult',
+            'instanceFeatures' => 'map[string,string]',
+            'taskVersion' => 'string'
     ];
 
     /**
@@ -83,7 +89,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * sourceEndpoint  任务源数据库信息体。
     * targetEndpoint  任务目标数据库信息体。
     * alarmNotify  alarmNotify
-    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
     * policyConfig  policyConfig
     * dbParam  dbParam
@@ -97,6 +103,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
+    * supportImportFileResp  supportImportFileResp
+    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
+    * taskVersion  任务版本。
     *
     * @var string[]
     */
@@ -123,7 +132,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'progressInfo' => null,
         'migrationObjectProgressInfo' => null,
         'metrics' => null,
-        'compareResult' => null
+        'compareResult' => null,
+        'supportImportFileResp' => null,
+        'instanceFeatures' => null,
+        'taskVersion' => null
     ];
 
     /**
@@ -158,7 +170,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * sourceEndpoint  任务源数据库信息体。
     * targetEndpoint  任务目标数据库信息体。
     * alarmNotify  alarmNotify
-    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
     * policyConfig  policyConfig
     * dbParam  dbParam
@@ -172,6 +184,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
+    * supportImportFileResp  supportImportFileResp
+    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
+    * taskVersion  任务版本。
     *
     * @var string[]
     */
@@ -198,7 +213,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'progressInfo' => 'progress_info',
             'migrationObjectProgressInfo' => 'migration_object_progress_info',
             'metrics' => 'metrics',
-            'compareResult' => 'compare_result'
+            'compareResult' => 'compare_result',
+            'supportImportFileResp' => 'support_import_file_resp',
+            'instanceFeatures' => 'instance_features',
+            'taskVersion' => 'task_version'
     ];
 
     /**
@@ -212,7 +230,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * sourceEndpoint  任务源数据库信息体。
     * targetEndpoint  任务目标数据库信息体。
     * alarmNotify  alarmNotify
-    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
     * policyConfig  policyConfig
     * dbParam  dbParam
@@ -226,6 +244,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
+    * supportImportFileResp  supportImportFileResp
+    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
+    * taskVersion  任务版本。
     *
     * @var string[]
     */
@@ -252,7 +273,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'progressInfo' => 'setProgressInfo',
             'migrationObjectProgressInfo' => 'setMigrationObjectProgressInfo',
             'metrics' => 'setMetrics',
-            'compareResult' => 'setCompareResult'
+            'compareResult' => 'setCompareResult',
+            'supportImportFileResp' => 'setSupportImportFileResp',
+            'instanceFeatures' => 'setInstanceFeatures',
+            'taskVersion' => 'setTaskVersion'
     ];
 
     /**
@@ -266,7 +290,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * sourceEndpoint  任务源数据库信息体。
     * targetEndpoint  任务目标数据库信息体。
     * alarmNotify  alarmNotify
-    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
     * policyConfig  policyConfig
     * dbParam  dbParam
@@ -280,6 +304,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
+    * supportImportFileResp  supportImportFileResp
+    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
+    * taskVersion  任务版本。
     *
     * @var string[]
     */
@@ -306,7 +333,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'progressInfo' => 'getProgressInfo',
             'migrationObjectProgressInfo' => 'getMigrationObjectProgressInfo',
             'metrics' => 'getMetrics',
-            'compareResult' => 'getCompareResult'
+            'compareResult' => 'getCompareResult',
+            'supportImportFileResp' => 'getSupportImportFileResp',
+            'instanceFeatures' => 'getInstanceFeatures',
+            'taskVersion' => 'getTaskVersion'
     ];
 
     /**
@@ -390,6 +420,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['migrationObjectProgressInfo'] = isset($data['migrationObjectProgressInfo']) ? $data['migrationObjectProgressInfo'] : null;
         $this->container['metrics'] = isset($data['metrics']) ? $data['metrics'] : null;
         $this->container['compareResult'] = isset($data['compareResult']) ? $data['compareResult'] : null;
+        $this->container['supportImportFileResp'] = isset($data['supportImportFileResp']) ? $data['supportImportFileResp'] : null;
+        $this->container['instanceFeatures'] = isset($data['instanceFeatures']) ? $data['instanceFeatures'] : null;
+        $this->container['taskVersion'] = isset($data['taskVersion']) ? $data['taskVersion'] : null;
     }
 
     /**
@@ -632,7 +665,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets speedLimit
-    *  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    *  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\SpeedLimitInfo[]|null
     */
@@ -644,7 +677,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets speedLimit
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\SpeedLimitInfo[]|null $speedLimit 限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\SpeedLimitInfo[]|null $speedLimit 限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。 - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     *
     * @return $this
     */
@@ -963,6 +996,78 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function setCompareResult($compareResult)
     {
         $this->container['compareResult'] = $compareResult;
+        return $this;
+    }
+
+    /**
+    * Gets supportImportFileResp
+    *  supportImportFileResp
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\SupportImportFileResult|null
+    */
+    public function getSupportImportFileResp()
+    {
+        return $this->container['supportImportFileResp'];
+    }
+
+    /**
+    * Sets supportImportFileResp
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\SupportImportFileResult|null $supportImportFileResp supportImportFileResp
+    *
+    * @return $this
+    */
+    public function setSupportImportFileResp($supportImportFileResp)
+    {
+        $this->container['supportImportFileResp'] = $supportImportFileResp;
+        return $this;
+    }
+
+    /**
+    * Gets instanceFeatures
+    *  由开关和版本共同控制的任务级别的功能列表。
+    *
+    * @return map[string,string]|null
+    */
+    public function getInstanceFeatures()
+    {
+        return $this->container['instanceFeatures'];
+    }
+
+    /**
+    * Sets instanceFeatures
+    *
+    * @param map[string,string]|null $instanceFeatures 由开关和版本共同控制的任务级别的功能列表。
+    *
+    * @return $this
+    */
+    public function setInstanceFeatures($instanceFeatures)
+    {
+        $this->container['instanceFeatures'] = $instanceFeatures;
+        return $this;
+    }
+
+    /**
+    * Gets taskVersion
+    *  任务版本。
+    *
+    * @return string|null
+    */
+    public function getTaskVersion()
+    {
+        return $this->container['taskVersion'];
+    }
+
+    /**
+    * Sets taskVersion
+    *
+    * @param string|null $taskVersion 任务版本。
+    *
+    * @return $this
+    */
+    public function setTaskVersion($taskVersion)
+    {
+        $this->container['taskVersion'] = $taskVersion;
         return $this;
     }
 

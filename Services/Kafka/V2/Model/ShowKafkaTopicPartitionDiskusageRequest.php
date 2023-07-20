@@ -21,7 +21,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * minSize  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
     * top  占用磁盘大小，查询top N。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
@@ -37,7 +37,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * minSize  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
     * top  占用磁盘大小，查询top N。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
@@ -74,7 +74,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * minSize  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
     * top  占用磁盘大小，查询top N。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
@@ -90,7 +90,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * minSize  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
     * top  占用磁盘大小，查询top N。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
@@ -106,7 +106,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * minSize  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * minSize  占用磁盘大小，默认值1G (1K，1M，1G)。
     * top  占用磁盘大小，查询top N。
     * percentage  占用磁盘大小，查询大于占比的分区。
     *
@@ -234,7 +234,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets minSize
-    *  占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    *  占用磁盘大小，默认值1G (1K，1M，1G)。
     *
     * @return string|null
     */
@@ -246,7 +246,7 @@ class ShowKafkaTopicPartitionDiskusageRequest implements ModelInterface, ArrayAc
     /**
     * Sets minSize
     *
-    * @param string|null $minSize 占用磁盘大小，默认值1G (1K ,1M , 1G)。
+    * @param string|null $minSize 占用磁盘大小，默认值1G (1K，1M，1G)。
     *
     * @return $this
     */

@@ -291,8 +291,8 @@ class UpdateLifeCycleHookResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['defaultTimeout']) && ($this->container['defaultTimeout'] > 86400)) {
                 $invalidProperties[] = "invalid value for 'defaultTimeout', must be smaller than or equal to 86400.";
             }
-            if (!is_null($this->container['defaultTimeout']) && ($this->container['defaultTimeout'] < 300)) {
-                $invalidProperties[] = "invalid value for 'defaultTimeout', must be bigger than or equal to 300.";
+            if (!is_null($this->container['defaultTimeout']) && ($this->container['defaultTimeout'] < 60)) {
+                $invalidProperties[] = "invalid value for 'defaultTimeout', must be bigger than or equal to 60.";
             }
             if (!is_null($this->container['notificationTopicName']) && (mb_strlen($this->container['notificationTopicName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'notificationTopicName', the character length must be smaller than or equal to 64.";

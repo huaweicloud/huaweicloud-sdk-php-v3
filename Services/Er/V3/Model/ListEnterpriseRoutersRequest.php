@@ -26,6 +26,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     * state  企业路由器实例状态
     * id  根据资源ID查询，可同时查询多个。
     * resourceId  连接对应的资源ID列表
+    * ownedBySelf  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -38,6 +39,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
             'state' => 'string[]',
             'id' => 'string[]',
             'resourceId' => 'string[]',
+            'ownedBySelf' => 'bool',
             'sortKey' => 'string[]',
             'sortDir' => 'string[]'
     ];
@@ -50,6 +52,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     * state  企业路由器实例状态
     * id  根据资源ID查询，可同时查询多个。
     * resourceId  连接对应的资源ID列表
+    * ownedBySelf  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -62,6 +65,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
         'state' => null,
         'id' => null,
         'resourceId' => null,
+        'ownedBySelf' => null,
         'sortKey' => null,
         'sortDir' => null
     ];
@@ -95,6 +99,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     * state  企业路由器实例状态
     * id  根据资源ID查询，可同时查询多个。
     * resourceId  连接对应的资源ID列表
+    * ownedBySelf  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -107,6 +112,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
             'state' => 'state',
             'id' => 'id',
             'resourceId' => 'resource_id',
+            'ownedBySelf' => 'owned_by_self',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir'
     ];
@@ -119,6 +125,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     * state  企业路由器实例状态
     * id  根据资源ID查询，可同时查询多个。
     * resourceId  连接对应的资源ID列表
+    * ownedBySelf  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -131,6 +138,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'id' => 'setId',
             'resourceId' => 'setResourceId',
+            'ownedBySelf' => 'setOwnedBySelf',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir'
     ];
@@ -143,6 +151,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     * state  企业路由器实例状态
     * id  根据资源ID查询，可同时查询多个。
     * resourceId  连接对应的资源ID列表
+    * ownedBySelf  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -155,6 +164,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'id' => 'getId',
             'resourceId' => 'getResourceId',
+            'ownedBySelf' => 'getOwnedBySelf',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir'
     ];
@@ -261,6 +271,7 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['ownedBySelf'] = isset($data['ownedBySelf']) ? $data['ownedBySelf'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
@@ -440,6 +451,30 @@ class ListEnterpriseRoutersRequest implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets ownedBySelf
+    *  过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
+    *
+    * @return bool|null
+    */
+    public function getOwnedBySelf()
+    {
+        return $this->container['ownedBySelf'];
+    }
+
+    /**
+    * Sets ownedBySelf
+    *
+    * @param bool|null $ownedBySelf 过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
+    *
+    * @return $this
+    */
+    public function setOwnedBySelf($ownedBySelf)
+    {
+        $this->container['ownedBySelf'] = $ownedBySelf;
         return $this;
     }
 

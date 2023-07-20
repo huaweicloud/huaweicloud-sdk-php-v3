@@ -20,25 +20,21 @@ class UpdateIndividualJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'publishParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam',
             'recordParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\RecordParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'publishParam' => null,
         'recordParam' => null
     ];
 
@@ -65,37 +61,31 @@ class UpdateIndividualJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'publishParam' => 'publish_param',
             'recordParam' => 'record_param'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $setters = [
-            'publishParam' => 'setPublishParam',
             'recordParam' => 'setRecordParam'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $getters = [
-            'publishParam' => 'getPublishParam',
             'recordParam' => 'getRecordParam'
     ];
 
@@ -157,7 +147,6 @@ class UpdateIndividualJobReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['publishParam'] = isset($data['publishParam']) ? $data['publishParam'] : null;
         $this->container['recordParam'] = isset($data['recordParam']) ? $data['recordParam'] : null;
     }
 
@@ -181,30 +170,6 @@ class UpdateIndividualJobReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets publishParam
-    *  publishParam
-    *
-    * @return \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null
-    */
-    public function getPublishParam()
-    {
-        return $this->container['publishParam'];
-    }
-
-    /**
-    * Sets publishParam
-    *
-    * @param \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null $publishParam publishParam
-    *
-    * @return $this
-    */
-    public function setPublishParam($publishParam)
-    {
-        $this->container['publishParam'] = $publishParam;
-        return $this;
     }
 
     /**

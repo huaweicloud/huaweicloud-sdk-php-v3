@@ -21,7 +21,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     * engine  消息引擎的类型。当前支持的类型为kafka。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     * engine  消息引擎的类型。当前支持的类型为kafka。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     * engine  消息引擎的类型。当前支持的类型为kafka。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     * engine  消息引擎的类型。当前支持的类型为kafka。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * type  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     * engine  消息引擎的类型。当前支持的类型为kafka。
     *
     * @var string[]
@@ -201,7 +201,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'kafka';
     }
 
     /**
@@ -277,7 +277,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets type
-    *  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    *  [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     *
     * @return string
     */
@@ -289,7 +289,7 @@ class ShowInstanceExtendProductInfoRequest implements ModelInterface, ArrayAcces
     /**
     * Sets type
     *
-    * @param string $type [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
+    * @param string $type [产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)
     *
     * @return $this
     */

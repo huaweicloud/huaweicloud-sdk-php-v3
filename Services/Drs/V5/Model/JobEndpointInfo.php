@@ -20,8 +20,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * dbType  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * endpointType  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
     * cloud  cloud
@@ -44,8 +44,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * dbType  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * endpointType  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
     * cloud  cloud
@@ -89,8 +89,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * dbType  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * endpointType  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
     * cloud  cloud
@@ -113,8 +113,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * dbType  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * endpointType  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
     * cloud  cloud
@@ -137,8 +137,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * dbType  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * endpointType  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
     * cloud  cloud
@@ -334,7 +334,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    *  数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
     *
     * @return string
     */
@@ -346,7 +346,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * @param string $dbType 数据库类型。取值： - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointType
-    *  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    *  数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpointType
     *
-    * @param string $endpointType 数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * @param string $endpointType 数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     *
     * @return $this
     */

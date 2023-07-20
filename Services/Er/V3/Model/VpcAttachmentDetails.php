@@ -25,7 +25,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     * vpcId  VPC id
     * virsubnetId  VPC子网id
     * autoCreateVpcRoutes  默认为false,当设置true时，会自动为VPC配置10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16三条路由，下一跳指向企业路由器。
-    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  标签信息
@@ -57,7 +57,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     * vpcId  VPC id
     * virsubnetId  VPC子网id
     * autoCreateVpcRoutes  默认为false,当设置true时，会自动为VPC配置10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16三条路由，下一跳指向企业路由器。
-    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  标签信息
@@ -110,7 +110,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     * vpcId  VPC id
     * virsubnetId  VPC子网id
     * autoCreateVpcRoutes  默认为false,当设置true时，会自动为VPC配置10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16三条路由，下一跳指向企业路由器。
-    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  标签信息
@@ -142,7 +142,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     * vpcId  VPC id
     * virsubnetId  VPC子网id
     * autoCreateVpcRoutes  默认为false,当设置true时，会自动为VPC配置10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16三条路由，下一跳指向企业路由器。
-    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  标签信息
@@ -174,7 +174,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     * vpcId  VPC id
     * virsubnetId  VPC子网id
     * autoCreateVpcRoutes  默认为false,当设置true时，会自动为VPC配置10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16三条路由，下一跳指向企业路由器。
-    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * state  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  标签信息
@@ -436,7 +436,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    *  VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     *
     * @return string
     */
@@ -448,7 +448,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance
+    * @param string $state VPC连接状态:pending|available|modifying|deleting|deleted|failed|initiating_request|rejected|pending_acceptance|freezed
     *
     * @return $this
     */

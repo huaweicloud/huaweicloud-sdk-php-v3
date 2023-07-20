@@ -149,11 +149,24 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_RABBITMQ = 'rabbitmq';
     const TYPE_ADVANCED = 'advanced';
     const TYPE_PLATINUM = 'platinum';
     const TYPE_DEC = 'dec';
     const TYPE_EXP = 'exp';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_RABBITMQ,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -186,7 +199,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'rabbitmq';
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
@@ -202,6 +215,14 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
         }
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }

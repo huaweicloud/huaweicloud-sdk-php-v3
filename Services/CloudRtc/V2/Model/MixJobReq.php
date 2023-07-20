@@ -21,28 +21,24 @@ class MixJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * mixParam  mixParam
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'mixParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\MixParam',
-            'publishParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam',
             'recordParam' => '\HuaweiCloud\SDK\CloudRTC\V2\Model\RecordParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * mixParam  mixParam
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'mixParam' => null,
-        'publishParam' => null,
         'recordParam' => null
     ];
 
@@ -70,42 +66,36 @@ class MixJobReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * mixParam  mixParam
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'mixParam' => 'mix_param',
-            'publishParam' => 'publish_param',
             'recordParam' => 'record_param'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * mixParam  mixParam
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $setters = [
             'mixParam' => 'setMixParam',
-            'publishParam' => 'setPublishParam',
             'recordParam' => 'setRecordParam'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * mixParam  mixParam
-    * publishParam  publishParam
     * recordParam  recordParam
     *
     * @var string[]
     */
     protected static $getters = [
             'mixParam' => 'getMixParam',
-            'publishParam' => 'getPublishParam',
             'recordParam' => 'getRecordParam'
     ];
 
@@ -168,7 +158,6 @@ class MixJobReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['mixParam'] = isset($data['mixParam']) ? $data['mixParam'] : null;
-        $this->container['publishParam'] = isset($data['publishParam']) ? $data['publishParam'] : null;
         $this->container['recordParam'] = isset($data['recordParam']) ? $data['recordParam'] : null;
     }
 
@@ -218,30 +207,6 @@ class MixJobReq implements ModelInterface, ArrayAccess
     public function setMixParam($mixParam)
     {
         $this->container['mixParam'] = $mixParam;
-        return $this;
-    }
-
-    /**
-    * Gets publishParam
-    *  publishParam
-    *
-    * @return \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null
-    */
-    public function getPublishParam()
-    {
-        return $this->container['publishParam'];
-    }
-
-    /**
-    * Sets publishParam
-    *
-    * @param \HuaweiCloud\SDK\CloudRTC\V2\Model\PublishParam|null $publishParam publishParam
-    *
-    * @return $this
-    */
-    public function setPublishParam($publishParam)
-    {
-        $this->container['publishParam'] = $publishParam;
         return $this;
     }
 

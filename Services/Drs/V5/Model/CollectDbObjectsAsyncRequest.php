@@ -25,7 +25,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     * type  查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
-    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     * dbNames  查询指定库的信息。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     * type  查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
-    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     * dbNames  查询指定库的信息。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     * type  查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
-    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     * dbNames  查询指定库的信息。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     * type  查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
-    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     * dbNames  查询指定库的信息。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     * type  查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
-    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * isRefresh  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     * dbNames  查询指定库的信息。
     *
     * @var string[]
@@ -414,7 +414,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRefresh
-    *  是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    *  是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     *
     * @return bool|null
     */
@@ -426,7 +426,7 @@ class CollectDbObjectsAsyncRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isRefresh
     *
-    * @param bool|null $isRefresh 是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
+    * @param bool|null $isRefresh 是否强制刷新。取值： - true：是，表示从源库重新查询。 - false：否，表示从已缓存中数据查询。
     *
     * @return $this
     */

@@ -27,11 +27,11 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
     * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-    * vpcId  租户VPC ID。
-    * securityGroupId  租户安全组ID。
-    * subnetId  子网ID。
-    * availableZones  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
-    * productId  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+    * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * subnetId  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+    * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
+    * productId  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     * brokerNum  代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
@@ -79,11 +79,11 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
     * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-    * vpcId  租户VPC ID。
-    * securityGroupId  租户安全组ID。
-    * subnetId  子网ID。
-    * availableZones  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
-    * productId  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+    * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * subnetId  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+    * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
+    * productId  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     * brokerNum  代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
@@ -152,11 +152,11 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
     * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-    * vpcId  租户VPC ID。
-    * securityGroupId  租户安全组ID。
-    * subnetId  子网ID。
-    * availableZones  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
-    * productId  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+    * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * subnetId  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+    * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
+    * productId  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     * brokerNum  代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
@@ -204,11 +204,11 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
     * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-    * vpcId  租户VPC ID。
-    * securityGroupId  租户安全组ID。
-    * subnetId  子网ID。
-    * availableZones  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
-    * productId  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+    * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * subnetId  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+    * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
+    * productId  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     * brokerNum  代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
@@ -256,11 +256,11 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
     * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-    * vpcId  租户VPC ID。
-    * securityGroupId  租户安全组ID。
-    * subnetId  子网ID。
-    * availableZones  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
-    * productId  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+    * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * subnetId  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+    * availableZones  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
+    * productId  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     * brokerNum  代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
     * maintainBegin  维护时间窗开始时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 开始时间必须为22:00、02:00、06:00、10:00、14:00和18:00。 - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm。 - 维护时间窗开始和结束时间必须为指定的时间段。 - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00时，结束时间为02:00。 - 该参数不能单独为空，若该值为空，则开始时间也为空，系统分配一个默认结束时间06:00。
@@ -707,7 +707,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  租户VPC ID。
+    *  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     *
     * @return string
     */
@@ -719,7 +719,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 租户VPC ID。
+    * @param string $vpcId 租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     *
     * @return $this
     */
@@ -731,7 +731,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  租户安全组ID。
+    *  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     *
     * @return string
     */
@@ -743,7 +743,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 租户安全组ID。
+    * @param string $securityGroupId 租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     *
     * @return $this
     */
@@ -755,7 +755,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID。
+    *  子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     *
     * @return string
     */
@@ -767,7 +767,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 子网ID。
+    * @param string $subnetId 子网ID。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
     *
     * @return $this
     */
@@ -779,7 +779,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
+    *  创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
     *
     * @return string[]
     */
@@ -791,7 +791,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[] $availableZones 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空。
+    * @param string[] $availableZones 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
     *
     * @return $this
     */
@@ -803,7 +803,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    *  产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     *
     * @return string
     */
@@ -815,7 +815,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string $productId 产品标识。  产品ID可以从**查询产品规格列表**接口查询。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+    * @param string $productId 产品标识。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
     *
     * @return $this
     */

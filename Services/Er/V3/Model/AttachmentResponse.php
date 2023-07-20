@@ -23,13 +23,13 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     * name  连接名字
     * id  连接ID
     * description  描述信息
-    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  企业路由器关联tag
     * projectId  项目ID
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * resourceType  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     * resourceProjectId  资源所属项目ID
     *
     * @var string[]
@@ -53,13 +53,13 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     * name  连接名字
     * id  连接ID
     * description  描述信息
-    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  企业路由器关联tag
     * projectId  项目ID
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * resourceType  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     * resourceProjectId  资源所属项目ID
     *
     * @var string[]
@@ -104,13 +104,13 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     * name  连接名字
     * id  连接ID
     * description  描述信息
-    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  企业路由器关联tag
     * projectId  项目ID
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * resourceType  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     * resourceProjectId  资源所属项目ID
     *
     * @var string[]
@@ -134,13 +134,13 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     * name  连接名字
     * id  连接ID
     * description  描述信息
-    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  企业路由器关联tag
     * projectId  项目ID
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * resourceType  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     * resourceProjectId  资源所属项目ID
     *
     * @var string[]
@@ -164,13 +164,13 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     * name  连接名字
     * id  连接ID
     * description  描述信息
-    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * state  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     * createdAt  创建时间
     * updatedAt  更新时间
     * tags  企业路由器关联tag
     * projectId  项目ID
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * resourceType  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     * resourceProjectId  资源所属项目ID
     *
     * @var string[]
@@ -380,7 +380,7 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    *  连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     *
     * @return string
     */
@@ -392,7 +392,7 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+    * @param string $state 连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    *  内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     *
     * @return string
     */
@@ -536,7 +536,7 @@ class AttachmentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+    * @param string $resourceType 内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
     *
     * @return $this
     */

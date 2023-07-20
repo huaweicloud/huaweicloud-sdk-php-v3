@@ -21,29 +21,21 @@ class ListInstanceTopicsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'offset' => 'string',
-            'limit' => 'string'
+            'instanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'offset' => null,
-        'limit' => null
+        'instanceId' => null
     ];
 
     /**
@@ -70,43 +62,31 @@ class ListInstanceTopicsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
-            'offset' => 'offset',
-            'limit' => 'limit'
+            'instanceId' => 'instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -168,8 +148,6 @@ class ListInstanceTopicsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -218,54 +196,6 @@ class ListInstanceTopicsRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    *
-    * @return string|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param string|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
-    *
-    * @return string|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param string|null $limit 当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
         return $this;
     }
 

@@ -170,7 +170,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'rabbitmq';
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

@@ -22,24 +22,28 @@ class JobNodeInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * spec  spec
     * vpc  vpc
+    * baseInfo  baseInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'spec' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeSpecInfo',
-            'vpc' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeVpcInfo'
+            'vpc' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeVpcInfo',
+            'baseInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeBaseInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * spec  spec
     * vpc  vpc
+    * baseInfo  baseInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'spec' => null,
-        'vpc' => null
+        'vpc' => null,
+        'baseInfo' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class JobNodeInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * spec  spec
     * vpc  vpc
+    * baseInfo  baseInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'spec' => 'spec',
-            'vpc' => 'vpc'
+            'vpc' => 'vpc',
+            'baseInfo' => 'base_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * spec  spec
     * vpc  vpc
+    * baseInfo  baseInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'spec' => 'setSpec',
-            'vpc' => 'setVpc'
+            'vpc' => 'setVpc',
+            'baseInfo' => 'setBaseInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * spec  spec
     * vpc  vpc
+    * baseInfo  baseInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'spec' => 'getSpec',
-            'vpc' => 'getVpc'
+            'vpc' => 'getVpc',
+            'baseInfo' => 'getBaseInfo'
     ];
 
     /**
@@ -159,6 +169,7 @@ class JobNodeInfo implements ModelInterface, ArrayAccess
     {
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
         $this->container['vpc'] = isset($data['vpc']) ? $data['vpc'] : null;
+        $this->container['baseInfo'] = isset($data['baseInfo']) ? $data['baseInfo'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class JobNodeInfo implements ModelInterface, ArrayAccess
     public function setVpc($vpc)
     {
         $this->container['vpc'] = $vpc;
+        return $this;
+    }
+
+    /**
+    * Gets baseInfo
+    *  baseInfo
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\JobNodeBaseInfo|null
+    */
+    public function getBaseInfo()
+    {
+        return $this->container['baseInfo'];
+    }
+
+    /**
+    * Sets baseInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobNodeBaseInfo|null $baseInfo baseInfo
+    *
+    * @return $this
+    */
+    public function setBaseInfo($baseInfo)
+    {
+        $this->container['baseInfo'] = $baseInfo;
         return $this;
     }
 

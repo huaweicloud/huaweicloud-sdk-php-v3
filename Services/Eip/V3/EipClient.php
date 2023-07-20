@@ -26,6 +26,113 @@ class EipClient extends Client
 
 
     /**
+     * 查询带宽列表
+     *
+     * 查询带宽列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidth($request)
+    {
+        return $this->listBandwidthWithHttpInfo($request);
+    }
+
+    public function listBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/bandwidths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['bandwidthType'] !== null) {
+            $queryParams['bandwidth_type'] = $localVarParams['bandwidthType'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['nameLike'] !== null) {
+            $queryParams['name_like'] = $localVarParams['nameLike'];
+        }
+        if ($localVarParams['ingressSize'] !== null) {
+            $queryParams['ingress_size'] = $localVarParams['ingressSize'];
+        }
+        if ($localVarParams['adminState'] !== null) {
+            $queryParams['admin_state'] = $localVarParams['adminState'];
+        }
+        if ($localVarParams['billingInfo'] !== null) {
+            $queryParams['billing_info'] = $localVarParams['billingInfo'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['enableBandwidthRules'] !== null) {
+            $queryParams['enable_bandwidth_rules'] = $localVarParams['enableBandwidthRules'];
+        }
+        if ($localVarParams['ruleQuota'] !== null) {
+            $queryParams['rule_quota'] = $localVarParams['ruleQuota'];
+        }
+        if ($localVarParams['publicBorderGroup'] !== null) {
+            $queryParams['public_border_group'] = $localVarParams['publicBorderGroup'];
+        }
+        if ($localVarParams['chargeMode'] !== null) {
+            $queryParams['charge_mode'] = $localVarParams['chargeMode'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListBandwidthRequest');
+    }
+
+    /**
      * 查询公共池列表
      *
      * 查询公共池列表
@@ -479,6 +586,133 @@ class EipClient extends Client
     }
 
     /**
+     * 共享带宽批量加入弹性公网IP
+     *
+     * 共享带宽批量加入弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function attachBatchPublicIp($request)
+    {
+        return $this->attachBatchPublicIpWithHttpInfo($request);
+    }
+
+    public function attachBatchPublicIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/attach-share-bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\AttachBatchPublicIpResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\AttachBatchPublicIpRequest');
+    }
+
+    /**
+     * 共享带宽加入弹性公网IP
+     *
+     * 共享带宽加入弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function attachShareBandwidth($request)
+    {
+        return $this->attachShareBandwidthWithHttpInfo($request);
+    }
+
+    public function attachShareBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/attach-share-bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\AttachShareBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\AttachShareBandwidthRequest');
+    }
+
+    /**
      * 查询弹性公网IP可用数
      *
      * IP池用于查询公网可用ip个数
@@ -541,6 +775,195 @@ class EipClient extends Client
     }
 
     /**
+     * 共享带宽批量移出弹性公网IP
+     *
+     * 共享带宽批量移出弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detachBatchPublicIp($request)
+    {
+        return $this->detachBatchPublicIpWithHttpInfo($request);
+    }
+
+    public function detachBatchPublicIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/detach-share-bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DetachBatchPublicIpResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DetachBatchPublicIpRequest');
+    }
+
+    /**
+     * 共享带宽移出弹性公网IP
+     *
+     * 共享带宽移出弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detachShareBandwidth($request)
+    {
+        return $this->detachShareBandwidthWithHttpInfo($request);
+    }
+
+    public function detachShareBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/detach-share-bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DetachShareBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DetachShareBandwidthRequest');
+    }
+
+    /**
+     * 弹性公网IP关闭NAT64
+     *
+     * 弹性公网IP关闭NAT64
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableNat64($request)
+    {
+        return $this->disableNat64WithHttpInfo($request);
+    }
+
+    public function disableNat64WithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/disable-nat64';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DisableNat64Response',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DisableNat64Request');
+    }
+
+    /**
      * 解绑弹性公网IP
      *
      * 解绑弹性公网IP
@@ -600,6 +1023,68 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsRequest');
+    }
+
+    /**
+     * 弹性公网IP开启NAT64
+     *
+     * 弹性公网IP开启NAT64
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableNat64($request)
+    {
+        return $this->enableNat64WithHttpInfo($request);
+    }
+
+    public function enableNat64WithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/enable-nat64';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\EnableNat64Response',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\EnableNat64Request');
     }
 
     /**
