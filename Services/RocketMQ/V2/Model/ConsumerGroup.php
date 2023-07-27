@@ -23,7 +23,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * enabled  是否可以消费。
     * broadcast  是否广播。
     * brokers  关联的代理列表。
-    * name  消费组名称。
+    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -43,7 +43,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * enabled  是否可以消费。
     * broadcast  是否广播。
     * brokers  关联的代理列表。
-    * name  消费组名称。
+    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -84,7 +84,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * enabled  是否可以消费。
     * broadcast  是否广播。
     * brokers  关联的代理列表。
-    * name  消费组名称。
+    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -104,7 +104,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * enabled  是否可以消费。
     * broadcast  是否广播。
     * brokers  关联的代理列表。
-    * name  消费组名称。
+    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -124,7 +124,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * enabled  是否可以消费。
     * broadcast  是否广播。
     * brokers  关联的代理列表。
-    * name  消费组名称。
+    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -301,7 +301,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消费组名称。
+    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称。
+    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
     * @return $this
     */

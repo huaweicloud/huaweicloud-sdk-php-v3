@@ -20,7 +20,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页
+    * nextMarker  下一页的marker，为空时表示最后一页
     * currentCount  当前列表中资源数量
     *
     * @var string[]
@@ -32,7 +32,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页
+    * nextMarker  下一页的marker，为空时表示最后一页
     * currentCount  当前列表中资源数量
     *
     * @var string[]
@@ -65,7 +65,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页
+    * nextMarker  下一页的marker，为空时表示最后一页
     * currentCount  当前列表中资源数量
     *
     * @var string[]
@@ -77,7 +77,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页
+    * nextMarker  下一页的marker，为空时表示最后一页
     * currentCount  当前列表中资源数量
     *
     * @var string[]
@@ -89,7 +89,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页
+    * nextMarker  下一页的marker，为空时表示最后一页
     * currentCount  当前列表中资源数量
     *
     * @var string[]
@@ -188,7 +188,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  下一页的marker，值为资源的uuid，为空时表示最后一页
+    *  下一页的marker，为空时表示最后一页
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker 下一页的marker，值为资源的uuid，为空时表示最后一页
+    * @param string|null $nextMarker 下一页的marker，为空时表示最后一页
     *
     * @return $this
     */

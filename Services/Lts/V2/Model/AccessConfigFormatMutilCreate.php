@@ -184,6 +184,9 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['mode'] === null) {
+            $invalidProperties[] = "'mode' can't be null";
+        }
             $allowedValues = $this->getModeAllowableValues();
                 if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -192,10 +195,13 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 64)) {
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
+            if ((mb_strlen($this->container['value']) > 64)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
+            if ((mb_strlen($this->container['value']) < 1)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -216,7 +222,7 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
     * Gets mode
     *  单行日志。time：日志时间，regular：正则模式。
     *
-    * @return string|null
+    * @return string
     */
     public function getMode()
     {
@@ -226,7 +232,7 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 单行日志。time：日志时间，regular：正则模式。
+    * @param string $mode 单行日志。time：日志时间，regular：正则模式。
     *
     * @return $this
     */
@@ -240,7 +246,7 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
     * Gets value
     *  日志时间。 当mode为\"regular\"，则输入正则表达式 当mode为\"time\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -250,7 +256,7 @@ class AccessConfigFormatMutilCreate implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 日志时间。 当mode为\"regular\"，则输入正则表达式 当mode为\"time\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
+    * @param string $value 日志时间。 当mode为\"regular\"，则输入正则表达式 当mode为\"time\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
     *
     * @return $this
     */

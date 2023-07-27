@@ -240,16 +240,13 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/[\\w-]+/", $this->container['aggregatorId'])) {
                 $invalidProperties[] = "invalid value for 'aggregatorId', must be conform to the pattern /[\\w-]+/.";
             }
-        if ($this->container['accountId'] === null) {
-            $invalidProperties[] = "'accountId' can't be null";
-        }
-            if ((mb_strlen($this->container['accountId']) > 36)) {
+            if (!is_null($this->container['accountId']) && (mb_strlen($this->container['accountId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['accountId']) < 1)) {
+            if (!is_null($this->container['accountId']) && (mb_strlen($this->container['accountId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'accountId', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/[\\w-]+/", $this->container['accountId'])) {
+            if (!is_null($this->container['accountId']) && !preg_match("/[\\w-]+/", $this->container['accountId'])) {
                 $invalidProperties[] = "invalid value for 'accountId', must be conform to the pattern /[\\w-]+/.";
             }
             $allowedValues = $this->getComplianceStateAllowableValues();
@@ -260,13 +257,10 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['policyAssignmentName'] === null) {
-            $invalidProperties[] = "'policyAssignmentName' can't be null";
-        }
-            if ((mb_strlen($this->container['policyAssignmentName']) > 64)) {
+            if (!is_null($this->container['policyAssignmentName']) && (mb_strlen($this->container['policyAssignmentName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'policyAssignmentName', the character length must be smaller than or equal to 64.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['policyAssignmentName'])) {
+            if (!is_null($this->container['policyAssignmentName']) && !preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['policyAssignmentName'])) {
                 $invalidProperties[] = "invalid value for 'policyAssignmentName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
             }
             if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 256)) {
@@ -329,7 +323,7 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
     * Gets accountId
     *  源帐号ID
     *
-    * @return string
+    * @return string|null
     */
     public function getAccountId()
     {
@@ -339,7 +333,7 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string $accountId 源帐号ID
+    * @param string|null $accountId 源帐号ID
     *
     * @return $this
     */
@@ -377,7 +371,7 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
     * Gets policyAssignmentName
     *  合规规则名称
     *
-    * @return string
+    * @return string|null
     */
     public function getPolicyAssignmentName()
     {
@@ -387,7 +381,7 @@ class AggregateComplianceDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyAssignmentName
     *
-    * @param string $policyAssignmentName 合规规则名称
+    * @param string|null $policyAssignmentName 合规规则名称
     *
     * @return $this
     */

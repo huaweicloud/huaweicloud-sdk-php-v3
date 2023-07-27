@@ -3971,6 +3971,77 @@ class LtsAsyncClient extends Client
     }
 
     /**
+     * 修改日志流
+     *
+     * 该接口用于修改指定日志流下的日志存储时长。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogStreamAsync($request)
+    {
+        return $this->updateLogStreamAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLogStreamAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/groups/{log_group_id}/streams_ttl/{log_stream_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['logGroupId'] !== null) {
+            $pathParams['log_group_id'] = $localVarParams['logGroupId'];
+        }
+        if ($localVarParams['logStreamId'] !== null) {
+            $pathParams['log_stream_id'] = $localVarParams['logStreamId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogStreamResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogStreamRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改消息模板
      *
      * 该接口用于修改通知模板,根据名称进行修改。

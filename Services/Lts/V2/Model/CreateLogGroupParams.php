@@ -22,24 +22,28 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logGroupName' => 'string',
-            'ttlInDays' => 'int'
+            'ttlInDays' => 'int',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logGroupName' => null,
-        'ttlInDays' => 'int32'
+        'ttlInDays' => 'int32',
+        'tags' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     * and the value is the original name
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logGroupName' => 'log_group_name',
-            'ttlInDays' => 'ttl_in_days'
+            'ttlInDays' => 'ttl_in_days',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $setters = [
             'logGroupName' => 'setLogGroupName',
-            'ttlInDays' => 'setTtlInDays'
+            'ttlInDays' => 'setTtlInDays',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logGroupName  需要创建的日志组名称。
     * ttlInDays  日志存储时间（天），取值范围：1-30。
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $getters = [
             'logGroupName' => 'getLogGroupName',
-            'ttlInDays' => 'getTtlInDays'
+            'ttlInDays' => 'getTtlInDays',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     {
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -246,6 +257,30 @@ class CreateLogGroupParams implements ModelInterface, ArrayAccess
     public function setTtlInDays($ttlInDays)
     {
         $this->container['ttlInDays'] = $ttlInDays;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签字段信息
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null $tags 标签字段信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -23,7 +23,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     * userName  数据库用户名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。
     * userPwd  数据库用户密码。 - 长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 - 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
     * dbName  新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
-    * roles  新用户所拥有的角色。
+    * roles  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     * userName  数据库用户名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。
     * userPwd  数据库用户密码。 - 长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 - 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
     * dbName  新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
-    * roles  新用户所拥有的角色。
+    * roles  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     * userName  数据库用户名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。
     * userPwd  数据库用户密码。 - 长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 - 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
     * dbName  新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
-    * roles  新用户所拥有的角色。
+    * roles  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     * userName  数据库用户名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。
     * userPwd  数据库用户密码。 - 长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 - 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
     * dbName  新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
-    * roles  新用户所拥有的角色。
+    * roles  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     * userName  数据库用户名称。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、中划线、下划线和点。
     * userPwd  数据库用户密码。 - 长度为8~32位，必须是大写字母（A~Z）、小写字母（a~z）、数字（0~9）、特殊字符~!@#%^*-_=+?的组合。 - 建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
     * dbName  新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
-    * roles  新用户所拥有的角色。
+    * roles  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
-    *  新用户所拥有的角色。
+    *  新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\RolesOption[]
     */
@@ -300,7 +300,7 @@ class CreateDatabaseUserRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets roles
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\RolesOption[] $roles 新用户所拥有的角色。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\RolesOption[] $roles 新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
     *
     * @return $this
     */

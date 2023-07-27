@@ -21,21 +21,25 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ttlInDays' => 'int'
+            'ttlInDays' => 'int',
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ttlInDays' => 'int32'
+        'ttlInDays' => 'int32',
+        'tags' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ttlInDays' => 'ttl_in_days'
+            'ttlInDays' => 'ttl_in_days',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'ttlInDays' => 'setTtlInDays'
+            'ttlInDays' => 'setTtlInDays',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'ttlInDays' => 'getTtlInDays'
+            'ttlInDays' => 'getTtlInDays',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -202,6 +213,30 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     public function setTtlInDays($ttlInDays)
     {
         $this->container['ttlInDays'] = $ttlInDays;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签字段信息
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null $tags 标签字段信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ga\V1\Model;
+namespace HuaweiCloud\SDK\Bms\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AreaRegion implements ModelInterface, ArrayAccess
+class ServerNics implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class AreaRegion implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AreaRegion';
+    protected static $openAPIModelName = 'ServerNics';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * area  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
-    * regions  区域ID列表。
+    * id  id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'area' => 'string',
-            'regions' => 'string[]'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * area  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
-    * regions  区域ID列表。
+    * id  id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'area' => null,
-        'regions' => null
+        'id' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class AreaRegion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * area  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
-    * regions  区域ID列表。
+    * id  id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'area' => 'area',
-            'regions' => 'regions'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * area  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
-    * regions  区域ID列表。
+    * id  id
     *
     * @var string[]
     */
     protected static $setters = [
-            'area' => 'setArea',
-            'regions' => 'setRegions'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * area  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
-    * regions  区域ID列表。
+    * id  id
     *
     * @var string[]
     */
     protected static $getters = [
-            'area' => 'getArea',
-            'regions' => 'getRegions'
+            'id' => 'getId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class AreaRegion implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['area'] = isset($data['area']) ? $data['area'] : null;
-        $this->container['regions'] = isset($data['regions']) ? $data['regions'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class AreaRegion implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class AreaRegion implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets area
-    *  区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
+    * Gets id
+    *  id
     *
-    * @return string|null
+    * @return string
     */
-    public function getArea()
+    public function getId()
     {
-        return $this->container['area'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets area
+    * Sets id
     *
-    * @param string|null $area 区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆
+    * @param string $id id
     *
     * @return $this
     */
-    public function setArea($area)
+    public function setId($id)
     {
-        $this->container['area'] = $area;
-        return $this;
-    }
-
-    /**
-    * Gets regions
-    *  区域ID列表。
-    *
-    * @return string[]|null
-    */
-    public function getRegions()
-    {
-        return $this->container['regions'];
-    }
-
-    /**
-    * Sets regions
-    *
-    * @param string[]|null $regions 区域ID列表。
-    *
-    * @return $this
-    */
-    public function setRegions($regions)
-    {
-        $this->container['regions'] = $regions;
+        $this->container['id'] = $id;
         return $this;
     }
 

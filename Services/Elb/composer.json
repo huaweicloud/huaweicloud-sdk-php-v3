@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-elb",
+  "description": "HUAWEICLOUD SDK ELB",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "elb"
+  ],
+  "version": "3.1.47",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HUAWEICloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://github.com/huaweicloud-sdk/huaweicloud-sdk-php"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.47"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Elb\\V3\\": "V3/"
+    }
+  }
+}

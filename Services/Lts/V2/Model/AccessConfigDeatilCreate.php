@@ -373,12 +373,6 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['paths'] === null) {
-            $invalidProperties[] = "'paths' can't be null";
-        }
-        if ($this->container['format'] === null) {
-            $invalidProperties[] = "'format' can't be null";
-        }
             $allowedValues = $this->getPathTypeAllowableValues();
                 if (!is_null($this->container['pathType']) && !in_array($this->container['pathType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -405,7 +399,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * Gets paths
     *  采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getPaths()
     {
@@ -415,7 +409,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     /**
     * Sets paths
     *
-    * @param string[] $paths 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用
+    * @param string[]|null $paths 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用
     *
     * @return $this
     */
@@ -453,7 +447,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * Gets format
     *  format
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigFormatCreate
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigFormatCreate|null
     */
     public function getFormat()
     {
@@ -463,7 +457,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigFormatCreate $format format
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigFormatCreate|null $format format
     *
     * @return $this
     */

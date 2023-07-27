@@ -21,25 +21,25 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * areaRegions  区域列表。
+    * regions  区域列表。
     * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'areaRegions' => '\HuaweiCloud\SDK\Ga\V1\Model\AreaRegion[]',
+            'regions' => '\HuaweiCloud\SDK\Ga\V1\Model\Region[]',
             'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * areaRegions  区域列表。
+    * regions  区域列表。
     * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'areaRegions' => null,
+        'regions' => null,
         'requestId' => null
     ];
 
@@ -66,37 +66,37 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * areaRegions  区域列表。
+    * regions  区域列表。
     * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'areaRegions' => 'area_regions',
+            'regions' => 'regions',
             'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * areaRegions  区域列表。
+    * regions  区域列表。
     * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'areaRegions' => 'setAreaRegions',
+            'regions' => 'setRegions',
             'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * areaRegions  区域列表。
+    * regions  区域列表。
     * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'areaRegions' => 'getAreaRegions',
+            'regions' => 'getRegions',
             'requestId' => 'getRequestId'
     ];
 
@@ -158,7 +158,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['areaRegions'] = isset($data['areaRegions']) ? $data['areaRegions'] : null;
+        $this->container['regions'] = isset($data['regions']) ? $data['regions'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
@@ -185,26 +185,26 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets areaRegions
+    * Gets regions
     *  区域列表。
     *
-    * @return \HuaweiCloud\SDK\Ga\V1\Model\AreaRegion[]|null
+    * @return \HuaweiCloud\SDK\Ga\V1\Model\Region[]|null
     */
-    public function getAreaRegions()
+    public function getRegions()
     {
-        return $this->container['areaRegions'];
+        return $this->container['regions'];
     }
 
     /**
-    * Sets areaRegions
+    * Sets regions
     *
-    * @param \HuaweiCloud\SDK\Ga\V1\Model\AreaRegion[]|null $areaRegions 区域列表。
+    * @param \HuaweiCloud\SDK\Ga\V1\Model\Region[]|null $regions 区域列表。
     *
     * @return $this
     */
-    public function setAreaRegions($areaRegions)
+    public function setRegions($regions)
     {
-        $this->container['areaRegions'] = $areaRegions;
+        $this->container['regions'] = $regions;
         return $this;
     }
 

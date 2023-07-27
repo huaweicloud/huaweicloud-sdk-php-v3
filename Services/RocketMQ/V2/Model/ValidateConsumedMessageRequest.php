@@ -20,7 +20,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  engine
+    * engine  消息引擎。
     * instanceId  实例ID。
     * body  body
     *
@@ -34,7 +34,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  engine
+    * engine  消息引擎。
     * instanceId  实例ID。
     * body  body
     *
@@ -69,7 +69,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  engine
+    * engine  消息引擎。
     * instanceId  实例ID。
     * body  body
     *
@@ -83,7 +83,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  engine
+    * engine  消息引擎。
     * instanceId  实例ID。
     * body  body
     *
@@ -97,7 +97,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  engine
+    * engine  消息引擎。
     * instanceId  实例ID。
     * body  body
     *
@@ -149,7 +149,20 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_RELIABILITY = 'reliability';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_RELIABILITY,
+        ];
+    }
 
 
     /**
@@ -167,7 +180,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'reliability';
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -183,6 +196,14 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
         }
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -202,7 +223,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  engine
+    *  消息引擎。
     *
     * @return string
     */
@@ -214,7 +235,7 @@ class ValidateConsumedMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine engine
+    * @param string $engine 消息引擎。
     *
     * @return $this
     */

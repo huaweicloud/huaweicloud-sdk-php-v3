@@ -30,7 +30,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'taskId' => 'string',
             'migrateType' => 'string',
-            'configurations' => 'string'
+            'configurations' => '\HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]'
     ];
 
     /**
@@ -193,12 +193,6 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['migrateType']) && (mb_strlen($this->container['migrateType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'migrateType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['configurations']) && (mb_strlen($this->container['configurations']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'configurations', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['configurations']) && (mb_strlen($this->container['configurations']) < 0)) {
-                $invalidProperties[] = "invalid value for 'configurations', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -265,7 +259,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     * Gets configurations
     *  配置项的具体配置信息
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]|null
     */
     public function getConfigurations()
     {
@@ -275,7 +269,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configurations
     *
-    * @param string|null $configurations 配置项的具体配置信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]|null $configurations 配置项的具体配置信息
     *
     * @return $this
     */

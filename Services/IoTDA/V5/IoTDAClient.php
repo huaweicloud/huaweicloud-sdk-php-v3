@@ -5481,6 +5481,331 @@ class IoTDAClient extends Client
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UntagDeviceRequest');
     }
 
+    /**
+     * 创建设备隧道
+     *
+     * 创建设备隧道接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addTunnel($request)
+    {
+        return $this->addTunnelWithHttpInfo($request);
+    }
+
+    public function addTunnelWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/tunnels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddTunnelResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddTunnelRequest');
+    }
+
+    /**
+     * 关闭设备隧道
+     *
+     * 关闭设备隧道接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function closeDeviceTunnel($request)
+    {
+        return $this->closeDeviceTunnelWithHttpInfo($request);
+    }
+
+    public function closeDeviceTunnelWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/tunnels/{tunnel_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['tunnelId'] !== null) {
+            $pathParams['tunnel_id'] = $localVarParams['tunnelId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CloseDeviceTunnelResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CloseDeviceTunnelRequest');
+    }
+
+    /**
+     * 删除设备隧道
+     *
+     * 删除设备隧道接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDeviceTunnel($request)
+    {
+        return $this->deleteDeviceTunnelWithHttpInfo($request);
+    }
+
+    public function deleteDeviceTunnelWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/tunnels/{tunnel_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['tunnelId'] !== null) {
+            $pathParams['tunnel_id'] = $localVarParams['tunnelId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceTunnelResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceTunnelRequest');
+    }
+
+    /**
+     * 查询设备所有隧道
+     *
+     * 查询设备所有隧道接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDeviceTunnels($request)
+    {
+        return $this->listDeviceTunnelsWithHttpInfo($request);
+    }
+
+    public function listDeviceTunnelsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/tunnels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['deviceId'] !== null) {
+            $queryParams['device_id'] = $localVarParams['deviceId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceTunnelsResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceTunnelsRequest');
+    }
+
+    /**
+     * 查询设备隧道
+     *
+     * 查询设备隧道信息接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDeviceTunnel($request)
+    {
+        return $this->showDeviceTunnelWithHttpInfo($request);
+    }
+
+    public function showDeviceTunnelWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/iot/{project_id}/tunnels/{tunnel_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['tunnelId'] !== null) {
+            $pathParams['tunnel_id'] = $localVarParams['tunnelId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceTunnelResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceTunnelRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

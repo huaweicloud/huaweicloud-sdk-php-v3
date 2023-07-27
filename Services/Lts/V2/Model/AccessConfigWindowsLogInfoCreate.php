@@ -220,15 +220,6 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['categorys'] === null) {
-            $invalidProperties[] = "'categorys' can't be null";
-        }
-        if ($this->container['timeOffset'] === null) {
-            $invalidProperties[] = "'timeOffset' can't be null";
-        }
-        if ($this->container['eventLevel'] === null) {
-            $invalidProperties[] = "'eventLevel' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -247,7 +238,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     * Gets categorys
     *  采集Windows事件日志类型。Application：应用系统，System：系统，Security：安全，Setup：启动
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getCategorys()
     {
@@ -257,7 +248,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     /**
     * Sets categorys
     *
-    * @param string[] $categorys 采集Windows事件日志类型。Application：应用系统，System：系统，Security：安全，Setup：启动
+    * @param string[]|null $categorys 采集Windows事件日志类型。Application：应用系统，System：系统，Security：安全，Setup：启动
     *
     * @return $this
     */
@@ -271,7 +262,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     * Gets timeOffset
     *  timeOffset
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTimeOffsetCreate
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTimeOffsetCreate|null
     */
     public function getTimeOffset()
     {
@@ -281,7 +272,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     /**
     * Sets timeOffset
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTimeOffsetCreate $timeOffset timeOffset
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTimeOffsetCreate|null $timeOffset timeOffset
     *
     * @return $this
     */
@@ -295,7 +286,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     * Gets eventLevel
     *  事件等级。information：info，warning：告警，error：错误，critical：关键，verbose：冗长
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getEventLevel()
     {
@@ -305,7 +296,7 @@ class AccessConfigWindowsLogInfoCreate implements ModelInterface, ArrayAccess
     /**
     * Sets eventLevel
     *
-    * @param string[] $eventLevel 事件等级。information：info，warning：告警，error：错误，critical：关键，verbose：冗长
+    * @param string[]|null $eventLevel 事件等级。information：info，warning：告警，error：错误，critical：关键，verbose：冗长
     *
     * @return $this
     */

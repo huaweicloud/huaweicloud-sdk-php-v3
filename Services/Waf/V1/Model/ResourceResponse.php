@@ -22,7 +22,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源id
     * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * resourceType  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     * resourceSpecCode  云服务产品的资源规格
     * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
     * expireTime  资源到期时间
@@ -44,7 +44,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源id
     * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * resourceType  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     * resourceSpecCode  云服务产品的资源规格
     * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
     * expireTime  资源到期时间
@@ -87,7 +87,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resourceId  资源id
     * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * resourceType  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     * resourceSpecCode  云服务产品的资源规格
     * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
     * expireTime  资源到期时间
@@ -109,7 +109,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源id
     * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * resourceType  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     * resourceSpecCode  云服务产品的资源规格
     * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
     * expireTime  资源到期时间
@@ -131,7 +131,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源id
     * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * resourceType  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     * resourceSpecCode  云服务产品的资源规格
     * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
     * expireTime  资源到期时间
@@ -288,7 +288,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    *  云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 云服务产品的资源类型   - hws.resource.type.waf: 云模式waf   - hws.resource.type.waf.domain: 域名扩展包   - hws.resource.type.waf.bandwidth：带宽扩展包   - hws.resource.type.waf.rule：规则扩展包
+    * @param string|null $resourceType 云服务产品的资源类型   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
     *
     * @return $this
     */

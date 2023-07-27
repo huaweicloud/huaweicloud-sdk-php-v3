@@ -22,8 +22,8 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  规则名称
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     * description  规则描述
     * conditions  匹配条件列表
     * action  action
@@ -46,8 +46,8 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  规则名称
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     * description  规则描述
     * conditions  匹配条件列表
     * action  action
@@ -91,8 +91,8 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  规则名称
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     * description  规则描述
     * conditions  匹配条件列表
     * action  action
@@ -115,8 +115,8 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  规则名称
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     * description  规则描述
     * conditions  匹配条件列表
     * action  action
@@ -139,8 +139,8 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  规则名称
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     * description  规则描述
     * conditions  匹配条件列表
     * action  action
@@ -314,7 +314,7 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
+    *  精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 精准防护规则生效的起始时间戳（毫秒）。当time=true，才需要填写该参数。
+    * @param int|null $start 精准防护规则生效的起始时间戳（秒）。当time=true，才需要填写该参数。
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets terminal
-    *  精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    *  精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     *
     * @return int|null
     */
@@ -350,7 +350,7 @@ class UpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets terminal
     *
-    * @param int|null $terminal 精准防护规则生效的终止时间戳（毫秒）。当time=true，才需要填写该参数。
+    * @param int|null $terminal 精准防护规则生效的终止时间戳（秒）。当time=true，才需要填写该参数。
     *
     * @return $this
     */

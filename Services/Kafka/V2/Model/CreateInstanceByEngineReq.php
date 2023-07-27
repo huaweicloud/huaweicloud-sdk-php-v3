@@ -23,7 +23,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -43,6 +43,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
+    * diskEncryptedEnable  是否开启磁盘加密。
+    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
     * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
@@ -78,6 +80,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'string',
             'saslEnabledMechanisms' => 'string[]',
             'retentionPolicy' => 'string',
+            'diskEncryptedEnable' => 'bool',
+            'diskEncryptedKey' => 'string',
             'connectorEnable' => 'bool',
             'enableAutoTopic' => 'bool',
             'storageSpecCode' => 'string',
@@ -93,7 +97,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -113,6 +117,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
+    * diskEncryptedEnable  是否开启磁盘加密。
+    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
     * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
@@ -148,6 +154,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         'kafkaSecurityProtocol' => null,
         'saslEnabledMechanisms' => null,
         'retentionPolicy' => null,
+        'diskEncryptedEnable' => null,
+        'diskEncryptedKey' => null,
         'connectorEnable' => null,
         'enableAutoTopic' => null,
         'storageSpecCode' => null,
@@ -184,7 +192,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -204,6 +212,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
+    * diskEncryptedEnable  是否开启磁盘加密。
+    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
     * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
@@ -239,6 +249,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'kafka_security_protocol',
             'saslEnabledMechanisms' => 'sasl_enabled_mechanisms',
             'retentionPolicy' => 'retention_policy',
+            'diskEncryptedEnable' => 'disk_encrypted_enable',
+            'diskEncryptedKey' => 'disk_encrypted_key',
             'connectorEnable' => 'connector_enable',
             'enableAutoTopic' => 'enable_auto_topic',
             'storageSpecCode' => 'storage_spec_code',
@@ -254,7 +266,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -274,6 +286,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
+    * diskEncryptedEnable  是否开启磁盘加密。
+    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
     * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
@@ -309,6 +323,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'setKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'setSaslEnabledMechanisms',
             'retentionPolicy' => 'setRetentionPolicy',
+            'diskEncryptedEnable' => 'setDiskEncryptedEnable',
+            'diskEncryptedKey' => 'setDiskEncryptedKey',
             'connectorEnable' => 'setConnectorEnable',
             'enableAutoTopic' => 'setEnableAutoTopic',
             'storageSpecCode' => 'setStorageSpecCode',
@@ -324,7 +340,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
-    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -344,6 +360,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
+    * diskEncryptedEnable  是否开启磁盘加密。
+    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
     * enableAutoTopic  是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
@@ -379,6 +397,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'getKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'getSaslEnabledMechanisms',
             'retentionPolicy' => 'getRetentionPolicy',
+            'diskEncryptedEnable' => 'getDiskEncryptedEnable',
+            'diskEncryptedKey' => 'getDiskEncryptedKey',
             'connectorEnable' => 'getConnectorEnable',
             'enableAutoTopic' => 'getEnableAutoTopic',
             'storageSpecCode' => 'getStorageSpecCode',
@@ -545,6 +565,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         $this->container['kafkaSecurityProtocol'] = isset($data['kafkaSecurityProtocol']) ? $data['kafkaSecurityProtocol'] : null;
         $this->container['saslEnabledMechanisms'] = isset($data['saslEnabledMechanisms']) ? $data['saslEnabledMechanisms'] : null;
         $this->container['retentionPolicy'] = isset($data['retentionPolicy']) ? $data['retentionPolicy'] : null;
+        $this->container['diskEncryptedEnable'] = isset($data['diskEncryptedEnable']) ? $data['diskEncryptedEnable'] : null;
+        $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
         $this->container['connectorEnable'] = isset($data['connectorEnable']) ? $data['connectorEnable'] : null;
         $this->container['enableAutoTopic'] = isset($data['enableAutoTopic']) ? $data['enableAutoTopic'] : null;
         $this->container['storageSpecCode'] = isset($data['storageSpecCode']) ? $data['storageSpecCode'] : null;
@@ -716,7 +738,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    *  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     *
     * @return string
     */
@@ -728,7 +750,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+    * @param string $engineVersion 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     *
     * @return $this
     */
@@ -1191,6 +1213,54 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     public function setRetentionPolicy($retentionPolicy)
     {
         $this->container['retentionPolicy'] = $retentionPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedEnable
+    *  是否开启磁盘加密。
+    *
+    * @return bool|null
+    */
+    public function getDiskEncryptedEnable()
+    {
+        return $this->container['diskEncryptedEnable'];
+    }
+
+    /**
+    * Sets diskEncryptedEnable
+    *
+    * @param bool|null $diskEncryptedEnable 是否开启磁盘加密。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedEnable($diskEncryptedEnable)
+    {
+        $this->container['diskEncryptedEnable'] = $diskEncryptedEnable;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedKey
+    *  磁盘加密key，未开启磁盘加密时为空
+    *
+    * @return string|null
+    */
+    public function getDiskEncryptedKey()
+    {
+        return $this->container['diskEncryptedKey'];
+    }
+
+    /**
+    * Sets diskEncryptedKey
+    *
+    * @param string|null $diskEncryptedKey 磁盘加密key，未开启磁盘加密时为空
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedKey($diskEncryptedKey)
+    {
+        $this->container['diskEncryptedKey'] = $diskEncryptedKey;
         return $this;
     }
 

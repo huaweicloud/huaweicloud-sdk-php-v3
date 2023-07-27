@@ -30,8 +30,8 @@ class CustomRule implements ModelInterface, ArrayAccess
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * name  规则名称
     *
@@ -66,8 +66,8 @@ class CustomRule implements ModelInterface, ArrayAccess
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * name  规则名称
     *
@@ -123,8 +123,8 @@ class CustomRule implements ModelInterface, ArrayAccess
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * name  规则名称
     *
@@ -159,8 +159,8 @@ class CustomRule implements ModelInterface, ArrayAccess
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * name  规则名称
     *
@@ -195,8 +195,8 @@ class CustomRule implements ModelInterface, ArrayAccess
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的时间戳
     * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
-    * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
-    * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * start  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
+    * terminal  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * name  规则名称
     *
@@ -557,7 +557,7 @@ class CustomRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
+    *  精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
     *
     * @return int|null
     */
@@ -569,7 +569,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
+    * @param int|null $start 精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class CustomRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets terminal
-    *  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    *  精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     *
     * @return int|null
     */
@@ -593,7 +593,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     /**
     * Sets terminal
     *
-    * @param int|null $terminal 精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+    * @param int|null $terminal 精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
     *
     * @return $this
     */

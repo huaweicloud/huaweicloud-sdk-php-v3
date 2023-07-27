@@ -20,9 +20,9 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  主题名称。
+    * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理。
-    * queueNum  队列数。
+    * queueNum  队列数，范围1~50。
     * permission  权限。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  主题名称。
+    * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理。
-    * queueNum  队列数。
+    * queueNum  队列数，范围1~50。
     * permission  权限。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  主题名称。
+    * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理。
-    * queueNum  队列数。
+    * queueNum  队列数，范围1~50。
     * permission  权限。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  主题名称。
+    * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理。
-    * queueNum  队列数。
+    * queueNum  队列数，范围1~50。
     * permission  权限。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  主题名称。
+    * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * brokers  关联的代理。
-    * queueNum  队列数。
+    * queueNum  队列数，范围1~50。
     * permission  权限。
     *
     * @var string[]
@@ -232,7 +232,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  主题名称。
+    *  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 主题名称。
+    * @param string|null $name 主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueNum
-    *  队列数。
+    *  队列数，范围1~50。
     *
     * @return float|null
     */
@@ -292,7 +292,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets queueNum
     *
-    * @param float|null $queueNum 队列数。
+    * @param float|null $queueNum 队列数，范围1~50。
     *
     * @return $this
     */

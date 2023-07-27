@@ -23,8 +23,11 @@ class VnicResp implements ModelInterface, ArrayAccess
     * privateIpAddress  - 功能说明：PORT的内网地址
     * deviceId  - 功能说明：PORT的device_id - 约束：存在PORT时，此字段associate_instance_id相同，都为实例ID
     * deviceOwner  - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
+    * vtep  - 功能说明：VTEP IP
+    * vni  - 功能说明：VXLAN ID
     * vpcId  - 功能说明：PORT所在VPC的ID
     * portId  - 功能说明：PORT的唯一标识
+    * portProfile  - 功能说明：端口profile信息
     * mac  - 功能说明：PORT的MAC信息
     * instanceId  - 功能说明：PORT的使用者，不同于device_id的归属者。举例：vip port的device_owner为vip，但是这个port实际使用者可能是虚机或其他
     * instanceType  - 功能说明：标记PORT使用者，与instance_id组合使用
@@ -35,8 +38,11 @@ class VnicResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'string',
             'deviceId' => 'string',
             'deviceOwner' => 'string',
+            'vtep' => 'string',
+            'vni' => 'string',
             'vpcId' => 'string',
             'portId' => 'string',
+            'portProfile' => 'string',
             'mac' => 'string',
             'instanceId' => 'string',
             'instanceType' => 'string'
@@ -47,8 +53,11 @@ class VnicResp implements ModelInterface, ArrayAccess
     * privateIpAddress  - 功能说明：PORT的内网地址
     * deviceId  - 功能说明：PORT的device_id - 约束：存在PORT时，此字段associate_instance_id相同，都为实例ID
     * deviceOwner  - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
+    * vtep  - 功能说明：VTEP IP
+    * vni  - 功能说明：VXLAN ID
     * vpcId  - 功能说明：PORT所在VPC的ID
     * portId  - 功能说明：PORT的唯一标识
+    * portProfile  - 功能说明：端口profile信息
     * mac  - 功能说明：PORT的MAC信息
     * instanceId  - 功能说明：PORT的使用者，不同于device_id的归属者。举例：vip port的device_owner为vip，但是这个port实际使用者可能是虚机或其他
     * instanceType  - 功能说明：标记PORT使用者，与instance_id组合使用
@@ -59,8 +68,11 @@ class VnicResp implements ModelInterface, ArrayAccess
         'privateIpAddress' => null,
         'deviceId' => null,
         'deviceOwner' => null,
+        'vtep' => null,
+        'vni' => null,
         'vpcId' => null,
         'portId' => null,
+        'portProfile' => null,
         'mac' => null,
         'instanceId' => null,
         'instanceType' => null
@@ -92,8 +104,11 @@ class VnicResp implements ModelInterface, ArrayAccess
     * privateIpAddress  - 功能说明：PORT的内网地址
     * deviceId  - 功能说明：PORT的device_id - 约束：存在PORT时，此字段associate_instance_id相同，都为实例ID
     * deviceOwner  - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
+    * vtep  - 功能说明：VTEP IP
+    * vni  - 功能说明：VXLAN ID
     * vpcId  - 功能说明：PORT所在VPC的ID
     * portId  - 功能说明：PORT的唯一标识
+    * portProfile  - 功能说明：端口profile信息
     * mac  - 功能说明：PORT的MAC信息
     * instanceId  - 功能说明：PORT的使用者，不同于device_id的归属者。举例：vip port的device_owner为vip，但是这个port实际使用者可能是虚机或其他
     * instanceType  - 功能说明：标记PORT使用者，与instance_id组合使用
@@ -104,8 +119,11 @@ class VnicResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'private_ip_address',
             'deviceId' => 'device_id',
             'deviceOwner' => 'device_owner',
+            'vtep' => 'vtep',
+            'vni' => 'vni',
             'vpcId' => 'vpc_id',
             'portId' => 'port_id',
+            'portProfile' => 'port_profile',
             'mac' => 'mac',
             'instanceId' => 'instance_id',
             'instanceType' => 'instance_type'
@@ -116,8 +134,11 @@ class VnicResp implements ModelInterface, ArrayAccess
     * privateIpAddress  - 功能说明：PORT的内网地址
     * deviceId  - 功能说明：PORT的device_id - 约束：存在PORT时，此字段associate_instance_id相同，都为实例ID
     * deviceOwner  - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
+    * vtep  - 功能说明：VTEP IP
+    * vni  - 功能说明：VXLAN ID
     * vpcId  - 功能说明：PORT所在VPC的ID
     * portId  - 功能说明：PORT的唯一标识
+    * portProfile  - 功能说明：端口profile信息
     * mac  - 功能说明：PORT的MAC信息
     * instanceId  - 功能说明：PORT的使用者，不同于device_id的归属者。举例：vip port的device_owner为vip，但是这个port实际使用者可能是虚机或其他
     * instanceType  - 功能说明：标记PORT使用者，与instance_id组合使用
@@ -128,8 +149,11 @@ class VnicResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'setPrivateIpAddress',
             'deviceId' => 'setDeviceId',
             'deviceOwner' => 'setDeviceOwner',
+            'vtep' => 'setVtep',
+            'vni' => 'setVni',
             'vpcId' => 'setVpcId',
             'portId' => 'setPortId',
+            'portProfile' => 'setPortProfile',
             'mac' => 'setMac',
             'instanceId' => 'setInstanceId',
             'instanceType' => 'setInstanceType'
@@ -140,8 +164,11 @@ class VnicResp implements ModelInterface, ArrayAccess
     * privateIpAddress  - 功能说明：PORT的内网地址
     * deviceId  - 功能说明：PORT的device_id - 约束：存在PORT时，此字段associate_instance_id相同，都为实例ID
     * deviceOwner  - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
+    * vtep  - 功能说明：VTEP IP
+    * vni  - 功能说明：VXLAN ID
     * vpcId  - 功能说明：PORT所在VPC的ID
     * portId  - 功能说明：PORT的唯一标识
+    * portProfile  - 功能说明：端口profile信息
     * mac  - 功能说明：PORT的MAC信息
     * instanceId  - 功能说明：PORT的使用者，不同于device_id的归属者。举例：vip port的device_owner为vip，但是这个port实际使用者可能是虚机或其他
     * instanceType  - 功能说明：标记PORT使用者，与instance_id组合使用
@@ -152,8 +179,11 @@ class VnicResp implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'getPrivateIpAddress',
             'deviceId' => 'getDeviceId',
             'deviceOwner' => 'getDeviceOwner',
+            'vtep' => 'getVtep',
+            'vni' => 'getVni',
             'vpcId' => 'getVpcId',
             'portId' => 'getPortId',
+            'portProfile' => 'getPortProfile',
             'mac' => 'getMac',
             'instanceId' => 'getInstanceId',
             'instanceType' => 'getInstanceType'
@@ -220,8 +250,11 @@ class VnicResp implements ModelInterface, ArrayAccess
         $this->container['privateIpAddress'] = isset($data['privateIpAddress']) ? $data['privateIpAddress'] : null;
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
+        $this->container['vtep'] = isset($data['vtep']) ? $data['vtep'] : null;
+        $this->container['vni'] = isset($data['vni']) ? $data['vni'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
+        $this->container['portProfile'] = isset($data['portProfile']) ? $data['portProfile'] : null;
         $this->container['mac'] = isset($data['mac']) ? $data['mac'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
@@ -253,6 +286,18 @@ class VnicResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['deviceOwner']) && (mb_strlen($this->container['deviceOwner']) < 0)) {
                 $invalidProperties[] = "invalid value for 'deviceOwner', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['vtep']) && (mb_strlen($this->container['vtep']) > 36)) {
+                $invalidProperties[] = "invalid value for 'vtep', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['vtep']) && (mb_strlen($this->container['vtep']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vtep', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['vni']) && (mb_strlen($this->container['vni']) > 36)) {
+                $invalidProperties[] = "invalid value for 'vni', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['vni']) && (mb_strlen($this->container['vni']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vni', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 36.";
             }
@@ -270,6 +315,12 @@ class VnicResp implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['portId']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['portId'])) {
                 $invalidProperties[] = "invalid value for 'portId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
+            }
+            if (!is_null($this->container['portProfile']) && (mb_strlen($this->container['portProfile']) > 256)) {
+                $invalidProperties[] = "invalid value for 'portProfile', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['portProfile']) && (mb_strlen($this->container['portProfile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'portProfile', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['mac']) && (mb_strlen($this->container['mac']) > 36)) {
                 $invalidProperties[] = "invalid value for 'mac', the character length must be smaller than or equal to 36.";
@@ -376,6 +427,54 @@ class VnicResp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets vtep
+    *  - 功能说明：VTEP IP
+    *
+    * @return string|null
+    */
+    public function getVtep()
+    {
+        return $this->container['vtep'];
+    }
+
+    /**
+    * Sets vtep
+    *
+    * @param string|null $vtep - 功能说明：VTEP IP
+    *
+    * @return $this
+    */
+    public function setVtep($vtep)
+    {
+        $this->container['vtep'] = $vtep;
+        return $this;
+    }
+
+    /**
+    * Gets vni
+    *  - 功能说明：VXLAN ID
+    *
+    * @return string|null
+    */
+    public function getVni()
+    {
+        return $this->container['vni'];
+    }
+
+    /**
+    * Sets vni
+    *
+    * @param string|null $vni - 功能说明：VXLAN ID
+    *
+    * @return $this
+    */
+    public function setVni($vni)
+    {
+        $this->container['vni'] = $vni;
+        return $this;
+    }
+
+    /**
     * Gets vpcId
     *  - 功能说明：PORT所在VPC的ID
     *
@@ -420,6 +519,30 @@ class VnicResp implements ModelInterface, ArrayAccess
     public function setPortId($portId)
     {
         $this->container['portId'] = $portId;
+        return $this;
+    }
+
+    /**
+    * Gets portProfile
+    *  - 功能说明：端口profile信息
+    *
+    * @return string|null
+    */
+    public function getPortProfile()
+    {
+        return $this->container['portProfile'];
+    }
+
+    /**
+    * Sets portProfile
+    *
+    * @param string|null $portProfile - 功能说明：端口profile信息
+    *
+    * @return $this
+    */
+    public function setPortProfile($portProfile)
+    {
+        $this->container['portProfile'] = $portProfile;
         return $this;
     }
 

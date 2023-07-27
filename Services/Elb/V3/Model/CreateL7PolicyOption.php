@@ -1,0 +1,809 @@
+<?php
+
+namespace HuaweiCloud\SDK\Elb\V3\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class CreateL7PolicyOption implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'CreateL7PolicyOption';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * action  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * adminStateUp  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    * description  转发策略描述信息。
+    * listenerId  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * name  转发策略名称。
+    * position  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  转发策略所在的项目ID。
+    * redirectListenerId  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * redirectPoolId  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectUrl  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * redirectUrlConfig  redirectUrlConfig
+    * fixedResponseConfig  fixedResponseConfig
+    * redirectPoolsExtendConfig  redirectPoolsExtendConfig
+    * rules  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'action' => 'string',
+            'adminStateUp' => 'bool',
+            'description' => 'string',
+            'listenerId' => 'string',
+            'name' => 'string',
+            'position' => 'int',
+            'priority' => 'int',
+            'projectId' => 'string',
+            'redirectListenerId' => 'string',
+            'redirectPoolId' => 'string',
+            'redirectUrl' => 'string',
+            'redirectUrlConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectUrlConfig',
+            'fixedResponseConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateFixtedResponseConfig',
+            'redirectPoolsExtendConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsExtendConfig',
+            'rules' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * action  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * adminStateUp  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    * description  转发策略描述信息。
+    * listenerId  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * name  转发策略名称。
+    * position  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  转发策略所在的项目ID。
+    * redirectListenerId  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * redirectPoolId  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectUrl  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * redirectUrlConfig  redirectUrlConfig
+    * fixedResponseConfig  fixedResponseConfig
+    * redirectPoolsExtendConfig  redirectPoolsExtendConfig
+    * rules  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'action' => null,
+        'adminStateUp' => null,
+        'description' => null,
+        'listenerId' => null,
+        'name' => null,
+        'position' => 'int32',
+        'priority' => 'int32',
+        'projectId' => null,
+        'redirectListenerId' => null,
+        'redirectPoolId' => null,
+        'redirectUrl' => null,
+        'redirectUrlConfig' => null,
+        'fixedResponseConfig' => null,
+        'redirectPoolsExtendConfig' => null,
+        'rules' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * action  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * adminStateUp  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    * description  转发策略描述信息。
+    * listenerId  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * name  转发策略名称。
+    * position  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  转发策略所在的项目ID。
+    * redirectListenerId  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * redirectPoolId  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectUrl  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * redirectUrlConfig  redirectUrlConfig
+    * fixedResponseConfig  fixedResponseConfig
+    * redirectPoolsExtendConfig  redirectPoolsExtendConfig
+    * rules  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'action' => 'action',
+            'adminStateUp' => 'admin_state_up',
+            'description' => 'description',
+            'listenerId' => 'listener_id',
+            'name' => 'name',
+            'position' => 'position',
+            'priority' => 'priority',
+            'projectId' => 'project_id',
+            'redirectListenerId' => 'redirect_listener_id',
+            'redirectPoolId' => 'redirect_pool_id',
+            'redirectUrl' => 'redirect_url',
+            'redirectUrlConfig' => 'redirect_url_config',
+            'fixedResponseConfig' => 'fixed_response_config',
+            'redirectPoolsExtendConfig' => 'redirect_pools_extend_config',
+            'rules' => 'rules'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * action  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * adminStateUp  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    * description  转发策略描述信息。
+    * listenerId  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * name  转发策略名称。
+    * position  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  转发策略所在的项目ID。
+    * redirectListenerId  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * redirectPoolId  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectUrl  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * redirectUrlConfig  redirectUrlConfig
+    * fixedResponseConfig  fixedResponseConfig
+    * redirectPoolsExtendConfig  redirectPoolsExtendConfig
+    * rules  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'action' => 'setAction',
+            'adminStateUp' => 'setAdminStateUp',
+            'description' => 'setDescription',
+            'listenerId' => 'setListenerId',
+            'name' => 'setName',
+            'position' => 'setPosition',
+            'priority' => 'setPriority',
+            'projectId' => 'setProjectId',
+            'redirectListenerId' => 'setRedirectListenerId',
+            'redirectPoolId' => 'setRedirectPoolId',
+            'redirectUrl' => 'setRedirectUrl',
+            'redirectUrlConfig' => 'setRedirectUrlConfig',
+            'fixedResponseConfig' => 'setFixedResponseConfig',
+            'redirectPoolsExtendConfig' => 'setRedirectPoolsExtendConfig',
+            'rules' => 'setRules'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * action  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    * adminStateUp  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    * description  转发策略描述信息。
+    * listenerId  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    * name  转发策略名称。
+    * position  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * projectId  转发策略所在的项目ID。
+    * redirectListenerId  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * redirectPoolId  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectUrl  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    * redirectUrlConfig  redirectUrlConfig
+    * fixedResponseConfig  fixedResponseConfig
+    * redirectPoolsExtendConfig  redirectPoolsExtendConfig
+    * rules  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'action' => 'getAction',
+            'adminStateUp' => 'getAdminStateUp',
+            'description' => 'getDescription',
+            'listenerId' => 'getListenerId',
+            'name' => 'getName',
+            'position' => 'getPosition',
+            'priority' => 'getPriority',
+            'projectId' => 'getProjectId',
+            'redirectListenerId' => 'getRedirectListenerId',
+            'redirectPoolId' => 'getRedirectPoolId',
+            'redirectUrl' => 'getRedirectUrl',
+            'redirectUrlConfig' => 'getRedirectUrlConfig',
+            'fixedResponseConfig' => 'getFixedResponseConfig',
+            'redirectPoolsExtendConfig' => 'getRedirectPoolsExtendConfig',
+            'rules' => 'getRules'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['position'] = isset($data['position']) ? $data['position'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['redirectListenerId'] = isset($data['redirectListenerId']) ? $data['redirectListenerId'] : null;
+        $this->container['redirectPoolId'] = isset($data['redirectPoolId']) ? $data['redirectPoolId'] : null;
+        $this->container['redirectUrl'] = isset($data['redirectUrl']) ? $data['redirectUrl'] : null;
+        $this->container['redirectUrlConfig'] = isset($data['redirectUrlConfig']) ? $data['redirectUrlConfig'] : null;
+        $this->container['fixedResponseConfig'] = isset($data['fixedResponseConfig']) ? $data['fixedResponseConfig'] : null;
+        $this->container['redirectPoolsExtendConfig'] = isset($data['redirectPoolsExtendConfig']) ? $data['redirectPoolsExtendConfig'] : null;
+        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
+            if ((mb_strlen($this->container['action']) > 255)) {
+                $invalidProperties[] = "invalid value for 'action', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['action']) < 1)) {
+                $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['listenerId'] === null) {
+            $invalidProperties[] = "'listenerId' can't be null";
+        }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['position']) && ($this->container['position'] > 100)) {
+                $invalidProperties[] = "invalid value for 'position', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['position']) && ($this->container['position'] < 1)) {
+                $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
+                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['projectId']) && !preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+            if (!is_null($this->container['redirectUrl']) && (mb_strlen($this->container['redirectUrl']) > 255)) {
+                $invalidProperties[] = "invalid value for 'redirectUrl', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['redirectUrl']) && (mb_strlen($this->container['redirectUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'redirectUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['redirectUrl']) && !preg_match("/(https?|ftp|file):\/\/[-A-Za-z0-9+&amp;@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&amp;@#\/%=~_|]/", $this->container['redirectUrl'])) {
+                $invalidProperties[] = "invalid value for 'redirectUrl', must be conform to the pattern /(https?|ftp|file):\/\/[-A-Za-z0-9+&amp;@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&amp;@#\/%=~_|]/.";
+            }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets action
+    *  转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    *
+    * @return string
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string $action 转发策略的转发动作。  取值： - REDIRECT_TO_POOL：转发到后端云服务器组。 - REDIRECT_TO_LISTENER：重定向到监听器。 - REDIRECT_TO_URL：重定向到URL。 - FIXED_RESPONSE：返回固定响应体。  使用说明： - REDIRECT_TO_LISTENER的优先级最高，配置了以后，该监听器下的其他policy会失效。 - 当action为REDIRECT_TO_POOL时， 只支持创建在PROTOCOL为HTTP、HTTPS、TERMINATED_HTTPS的listener上。 - 当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。  [不支持REDIRECT_TO_URL和FIXED_RESPONSE](tag:hcso_dt)
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets adminStateUp
+    *  转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    *
+    * @return bool|null
+    */
+    public function getAdminStateUp()
+    {
+        return $this->container['adminStateUp'];
+    }
+
+    /**
+    * Sets adminStateUp
+    *
+    * @param bool|null $adminStateUp 转发策略的管理状态，默认为true。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setAdminStateUp($adminStateUp)
+    {
+        $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  转发策略描述信息。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 转发策略描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets listenerId
+    *  转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    *
+    * @return string
+    */
+    public function getListenerId()
+    {
+        return $this->container['listenerId'];
+    }
+
+    /**
+    * Sets listenerId
+    *
+    * @param string $listenerId 转发策略对应的监听器ID。 当action为REDIRECT_TO_POOL时，只支持创建在PROTOCOL为HTTP或HTTPS的listener上。  当action为REDIRECT_TO_LISTENER时，只支持创建在PROTOCOL为HTTP的listener上。
+    *
+    * @return $this
+    */
+    public function setListenerId($listenerId)
+    {
+        $this->container['listenerId'] = $listenerId;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  转发策略名称。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 转发策略名称。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets position
+    *  转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    *
+    * @return int|null
+    */
+    public function getPosition()
+    {
+        return $this->container['position'];
+    }
+
+    /**
+    * Sets position
+    *
+    * @param int|null $position 转发策略的优先级，不支持更新。  不支持该字段，请勿使用。
+    *
+    * @return $this
+    */
+    public function setPosition($position)
+    {
+        $this->container['position'] = $position;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  转发策略所在的项目ID。
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 转发策略所在的项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets redirectListenerId
+    *  转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    *
+    * @return string|null
+    */
+    public function getRedirectListenerId()
+    {
+        return $this->container['redirectListenerId'];
+    }
+
+    /**
+    * Sets redirectListenerId
+    *
+    * @param string|null $redirectListenerId 转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    *
+    * @return $this
+    */
+    public function setRedirectListenerId($redirectListenerId)
+    {
+        $this->container['redirectListenerId'] = $redirectListenerId;
+        return $this;
+    }
+
+    /**
+    * Gets redirectPoolId
+    *  转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    *
+    * @return string|null
+    */
+    public function getRedirectPoolId()
+    {
+        return $this->container['redirectPoolId'];
+    }
+
+    /**
+    * Sets redirectPoolId
+    *
+    * @param string|null $redirectPoolId 转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
+    *
+    * @return $this
+    */
+    public function setRedirectPoolId($redirectPoolId)
+    {
+        $this->container['redirectPoolId'] = $redirectPoolId;
+        return $this;
+    }
+
+    /**
+    * Gets redirectUrl
+    *  转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *
+    * @return string|null
+    */
+    public function getRedirectUrl()
+    {
+        return $this->container['redirectUrl'];
+    }
+
+    /**
+    * Sets redirectUrl
+    *
+    * @param string|null $redirectUrl 转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
+    *
+    * @return $this
+    */
+    public function setRedirectUrl($redirectUrl)
+    {
+        $this->container['redirectUrl'] = $redirectUrl;
+        return $this;
+    }
+
+    /**
+    * Gets redirectUrlConfig
+    *  redirectUrlConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectUrlConfig|null
+    */
+    public function getRedirectUrlConfig()
+    {
+        return $this->container['redirectUrlConfig'];
+    }
+
+    /**
+    * Sets redirectUrlConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectUrlConfig|null $redirectUrlConfig redirectUrlConfig
+    *
+    * @return $this
+    */
+    public function setRedirectUrlConfig($redirectUrlConfig)
+    {
+        $this->container['redirectUrlConfig'] = $redirectUrlConfig;
+        return $this;
+    }
+
+    /**
+    * Gets fixedResponseConfig
+    *  fixedResponseConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateFixtedResponseConfig|null
+    */
+    public function getFixedResponseConfig()
+    {
+        return $this->container['fixedResponseConfig'];
+    }
+
+    /**
+    * Sets fixedResponseConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateFixtedResponseConfig|null $fixedResponseConfig fixedResponseConfig
+    *
+    * @return $this
+    */
+    public function setFixedResponseConfig($fixedResponseConfig)
+    {
+        $this->container['fixedResponseConfig'] = $fixedResponseConfig;
+        return $this;
+    }
+
+    /**
+    * Gets redirectPoolsExtendConfig
+    *  redirectPoolsExtendConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsExtendConfig|null
+    */
+    public function getRedirectPoolsExtendConfig()
+    {
+        return $this->container['redirectPoolsExtendConfig'];
+    }
+
+    /**
+    * Sets redirectPoolsExtendConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRedirectPoolsExtendConfig|null $redirectPoolsExtendConfig redirectPoolsExtendConfig
+    *
+    * @return $this
+    */
+    public function setRedirectPoolsExtendConfig($redirectPoolsExtendConfig)
+    {
+        $this->container['redirectPoolsExtendConfig'] = $redirectPoolsExtendConfig;
+        return $this;
+    }
+
+    /**
+    * Gets rules
+    *  转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]|null
+    */
+    public function getRules()
+    {
+        return $this->container['rules'];
+    }
+
+    /**
+    * Sets rules
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateL7PolicyRuleOption[]|null $rules 转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
+    *
+    * @return $this
+    */
+    public function setRules($rules)
+    {
+        $this->container['rules'] = $rules;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+
