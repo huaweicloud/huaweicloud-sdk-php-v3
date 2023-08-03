@@ -1558,6 +1558,12 @@ class GaussDBforopenGaussClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['componentType'] !== null) {
+            $queryParams['component_type'] = $localVarParams['componentType'];
+        }
+        if ($localVarParams['availabilityZoneId'] !== null) {
+            $queryParams['availability_zone_id'] = $localVarParams['availabilityZoneId'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }

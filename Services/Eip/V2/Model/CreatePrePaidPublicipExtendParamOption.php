@@ -217,11 +217,11 @@ class CreatePrePaidPublicipExtendParamOption implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
-        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : 'postPaid';
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
-        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : false;
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : false;
+        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
     /**

@@ -22,28 +22,32 @@ class Components implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
-    * status  节点状态。
+    * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
+    * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'role' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'distributedId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
-    * status  节点状态。
+    * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
+    * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'role' => null,
-        'status' => null
+        'status' => null,
+        'distributedId' => null
     ];
 
     /**
@@ -71,42 +75,48 @@ class Components implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
-    * status  节点状态。
+    * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
+    * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'role' => 'role',
-            'status' => 'status'
+            'status' => 'status',
+            'distributedId' => 'distributed_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
-    * status  节点状态。
+    * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
+    * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'role' => 'setRole',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'distributedId' => 'setDistributedId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
-    * status  节点状态。
+    * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
+    * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'role' => 'getRole',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'distributedId' => 'getDistributedId'
     ];
 
     /**
@@ -170,6 +180,7 @@ class Components implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['distributedId'] = isset($data['distributedId']) ? $data['distributedId'] : null;
     }
 
     /**
@@ -244,7 +255,7 @@ class Components implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  节点状态。
+    *  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     *
     * @return string|null
     */
@@ -256,13 +267,37 @@ class Components implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 节点状态。
+    * @param string|null $status 组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     *
     * @return $this
     */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets distributedId
+    *  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    *
+    * @return string|null
+    */
+    public function getDistributedId()
+    {
+        return $this->container['distributedId'];
+    }
+
+    /**
+    * Sets distributedId
+    *
+    * @param string|null $distributedId 分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    *
+    * @return $this
+    */
+    public function setDistributedId($distributedId)
+    {
+        $this->container['distributedId'] = $distributedId;
         return $this;
     }
 

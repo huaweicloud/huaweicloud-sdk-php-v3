@@ -310,12 +310,12 @@ class TtsConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : 'wav';
-        $this->container['sampleRate'] = isset($data['sampleRate']) ? $data['sampleRate'] : '16000';
-        $this->container['property'] = isset($data['property']) ? $data['property'] : 'chinese_xiaoyan_common';
-        $this->container['speed'] = isset($data['speed']) ? $data['speed'] : 0;
-        $this->container['pitch'] = isset($data['pitch']) ? $data['pitch'] : 0;
-        $this->container['volume'] = isset($data['volume']) ? $data['volume'] : 50;
+        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : null;
+        $this->container['sampleRate'] = isset($data['sampleRate']) ? $data['sampleRate'] : null;
+        $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
+        $this->container['pitch'] = isset($data['pitch']) ? $data['pitch'] : null;
+        $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
     }
 
     /**

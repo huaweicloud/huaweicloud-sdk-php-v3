@@ -187,7 +187,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : 4;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['networkType'] = isset($data['networkType']) ? $data['networkType'] : null;
         $this->container['billingInfo'] = isset($data['billingInfo']) ? $data['billingInfo'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

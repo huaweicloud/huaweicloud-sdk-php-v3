@@ -346,7 +346,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['returnReservationId'] = isset($data['returnReservationId']) ? $data['returnReservationId'] : null;
-        $this->container['minCount'] = isset($data['minCount']) ? $data['minCount'] : 1;
+        $this->container['minCount'] = isset($data['minCount']) ? $data['minCount'] : null;
         $this->container['maxCount'] = isset($data['maxCount']) ? $data['maxCount'] : null;
         $this->container['osDcFdiskConfig'] = isset($data['osDcFdiskConfig']) ? $data['osDcFdiskConfig'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

@@ -204,11 +204,11 @@ class VideoProcess implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['hlsInitCount'] = isset($data['hlsInitCount']) ? $data['hlsInitCount'] : 0;
-        $this->container['hlsInitInterval'] = isset($data['hlsInitInterval']) ? $data['hlsInitInterval'] : 5;
+        $this->container['hlsInitCount'] = isset($data['hlsInitCount']) ? $data['hlsInitCount'] : null;
+        $this->container['hlsInitInterval'] = isset($data['hlsInitInterval']) ? $data['hlsInitInterval'] : null;
         $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
-        $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : 'SHORT';
-        $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : 0;
+        $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
+        $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
     }
 
     /**

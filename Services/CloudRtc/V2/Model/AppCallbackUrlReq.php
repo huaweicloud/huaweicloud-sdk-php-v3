@@ -157,8 +157,8 @@ class AppCallbackUrlReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['url'] = isset($data['url']) ? $data['url'] : 'http://127.0.0.1';
-        $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : '01234567890123456789012345678912';
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : null;
     }
 
     /**

@@ -180,7 +180,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
         $this->container['publicip'] = isset($data['publicip']) ? $data['publicip'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**

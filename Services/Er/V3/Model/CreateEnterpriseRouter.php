@@ -256,12 +256,12 @@ class CreateEnterpriseRouter implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['asn'] = isset($data['asn']) ? $data['asn'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : 'postPaid';
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['enableDefaultPropagation'] = isset($data['enableDefaultPropagation']) ? $data['enableDefaultPropagation'] : false;
-        $this->container['enableDefaultAssociation'] = isset($data['enableDefaultAssociation']) ? $data['enableDefaultAssociation'] : false;
+        $this->container['enableDefaultPropagation'] = isset($data['enableDefaultPropagation']) ? $data['enableDefaultPropagation'] : null;
+        $this->container['enableDefaultAssociation'] = isset($data['enableDefaultAssociation']) ? $data['enableDefaultAssociation'] : null;
         $this->container['availabilityZoneIds'] = isset($data['availabilityZoneIds']) ? $data['availabilityZoneIds'] : null;
-        $this->container['autoAcceptSharedAttachments'] = isset($data['autoAcceptSharedAttachments']) ? $data['autoAcceptSharedAttachments'] : false;
+        $this->container['autoAcceptSharedAttachments'] = isset($data['autoAcceptSharedAttachments']) ? $data['autoAcceptSharedAttachments'] : null;
     }
 
     /**

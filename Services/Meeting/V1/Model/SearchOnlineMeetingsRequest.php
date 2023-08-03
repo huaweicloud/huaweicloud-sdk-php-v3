@@ -208,9 +208,9 @@ class SearchOnlineMeetingsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
-        $this->container['queryAll'] = isset($data['queryAll']) ? $data['queryAll'] : false;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['queryAll'] = isset($data['queryAll']) ? $data['queryAll'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
         $this->container['xAuthorizationType'] = isset($data['xAuthorizationType']) ? $data['xAuthorizationType'] : null;
         $this->container['xSiteId'] = isset($data['xSiteId']) ? $data['xSiteId'] : null;

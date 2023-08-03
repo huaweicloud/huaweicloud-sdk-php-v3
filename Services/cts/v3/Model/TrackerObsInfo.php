@@ -216,8 +216,8 @@ class TrackerObsInfo implements ModelInterface, ArrayAccess
         $this->container['filePrefixName'] = isset($data['filePrefixName']) ? $data['filePrefixName'] : null;
         $this->container['isObsCreated'] = isset($data['isObsCreated']) ? $data['isObsCreated'] : null;
         $this->container['bucketLifecycle'] = isset($data['bucketLifecycle']) ? $data['bucketLifecycle'] : null;
-        $this->container['compressType'] = isset($data['compressType']) ? $data['compressType'] : 'gzip';
-        $this->container['isSortByService'] = isset($data['isSortByService']) ? $data['isSortByService'] : true;
+        $this->container['compressType'] = isset($data['compressType']) ? $data['compressType'] : null;
+        $this->container['isSortByService'] = isset($data['isSortByService']) ? $data['isSortByService'] : null;
     }
 
     /**

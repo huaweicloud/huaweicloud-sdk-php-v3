@@ -182,7 +182,7 @@ class SmnConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['language'] = isset($data['language']) ? $data['language'] : 'en-us';
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['triggerConditions'] = isset($data['triggerConditions']) ? $data['triggerConditions'] : null;
     }

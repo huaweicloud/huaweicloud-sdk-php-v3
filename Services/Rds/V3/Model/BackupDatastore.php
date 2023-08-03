@@ -20,7 +20,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * type  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     * version  数据库版本。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * type  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     * version  数据库版本。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * type  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     * version  数据库版本。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * type  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     * version  数据库版本。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * type  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     * version  数据库版本。
     *
     * @var string[]
@@ -142,6 +142,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
     const TYPE_MY_SQL = 'MySQL';
     const TYPE_POSTGRE_SQL = 'PostgreSQL';
     const TYPE_SQL_SERVER = 'SQLServer';
+    const TYPE_MARIA_DB = 'MariaDB';
     
 
     /**
@@ -155,6 +156,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
             self::TYPE_MY_SQL,
             self::TYPE_POSTGRE_SQL,
             self::TYPE_SQL_SERVER,
+            self::TYPE_MARIA_DB,
         ];
     }
 
@@ -216,7 +218,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    *  数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     *
     * @return string
     */
@@ -228,7 +230,7 @@ class BackupDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
+    * @param string $type 数据库引擎，不区分大小写： - MySQL - PostgreSQL - SQLServer - MariaDB
     *
     * @return $this
     */

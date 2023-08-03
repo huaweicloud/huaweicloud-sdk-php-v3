@@ -168,8 +168,8 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
-        $this->container['eipTotal'] = isset($data['eipTotal']) ? $data['eipTotal'] : 0;
-        $this->container['eipProtected'] = isset($data['eipProtected']) ? $data['eipProtected'] : 0;
+        $this->container['eipTotal'] = isset($data['eipTotal']) ? $data['eipTotal'] : null;
+        $this->container['eipProtected'] = isset($data['eipProtected']) ? $data['eipProtected'] : null;
     }
 
     /**

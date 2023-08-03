@@ -291,14 +291,14 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
-        $this->container['disk'] = isset($data['disk']) ? $data['disk'] : '0';
+        $this->container['disk'] = isset($data['disk']) ? $data['disk'] : null;
         $this->container['swap'] = isset($data['swap']) ? $data['swap'] : null;
         $this->container['osFlvExtDatAephemeral'] = isset($data['osFlvExtDatAephemeral']) ? $data['osFlvExtDatAephemeral'] : null;
-        $this->container['osFlvDisableDdisabled'] = isset($data['osFlvDisableDdisabled']) ? $data['osFlvDisableDdisabled'] : false;
+        $this->container['osFlvDisableDdisabled'] = isset($data['osFlvDisableDdisabled']) ? $data['osFlvDisableDdisabled'] : null;
         $this->container['rxtxFactor'] = isset($data['rxtxFactor']) ? $data['rxtxFactor'] : null;
         $this->container['rxtxQuota'] = isset($data['rxtxQuota']) ? $data['rxtxQuota'] : null;
         $this->container['rxtxCap'] = isset($data['rxtxCap']) ? $data['rxtxCap'] : null;
-        $this->container['osFlavorAccessisPublic'] = isset($data['osFlavorAccessisPublic']) ? $data['osFlavorAccessisPublic'] : true;
+        $this->container['osFlavorAccessisPublic'] = isset($data['osFlavorAccessisPublic']) ? $data['osFlavorAccessisPublic'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['extraSpecs'] = isset($data['extraSpecs']) ? $data['extraSpecs'] : null;
         $this->container['instanceQuota'] = isset($data['instanceQuota']) ? $data['instanceQuota'] : null;

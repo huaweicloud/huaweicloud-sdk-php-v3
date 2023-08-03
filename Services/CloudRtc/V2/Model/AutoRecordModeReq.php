@@ -172,8 +172,8 @@ class AutoRecordModeReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : 'AUTO_RECORD_OFF';
-        $this->container['recordRuleId'] = isset($data['recordRuleId']) ? $data['recordRuleId'] : '';
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['recordRuleId'] = isset($data['recordRuleId']) ? $data['recordRuleId'] : null;
     }
 
     /**

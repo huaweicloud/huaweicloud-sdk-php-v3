@@ -189,8 +189,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 

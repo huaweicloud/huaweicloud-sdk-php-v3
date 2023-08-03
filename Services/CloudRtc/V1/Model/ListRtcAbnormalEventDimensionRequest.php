@@ -204,7 +204,7 @@ class ListRtcAbnormalEventDimensionRequest implements ModelInterface, ArrayAcces
     {
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
-        $this->container['dimension'] = isset($data['dimension']) ? $data['dimension'] : 'abnormal_factor';
+        $this->container['dimension'] = isset($data['dimension']) ? $data['dimension'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }

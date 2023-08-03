@@ -567,7 +567,7 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
         $this->container['srcNode'] = isset($data['srcNode']) ? $data['srcNode'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['dstNode'] = isset($data['dstNode']) ? $data['dstNode'] : null;
-        $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : false;
+        $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
         $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
@@ -575,7 +575,7 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
         $this->container['bandwidthPolicy'] = isset($data['bandwidthPolicy']) ? $data['bandwidthPolicy'] : null;
         $this->container['smnConfig'] = isset($data['smnConfig']) ? $data['smnConfig'] : null;
         $this->container['sourceCdn'] = isset($data['sourceCdn']) ? $data['sourceCdn'] : null;
-        $this->container['migrateSince'] = isset($data['migrateSince']) ? $data['migrateSince'] : 0;
+        $this->container['migrateSince'] = isset($data['migrateSince']) ? $data['migrateSince'] : null;
         $this->container['migrateSpeed'] = isset($data['migrateSpeed']) ? $data['migrateSpeed'] : null;
         $this->container['totalTime'] = isset($data['totalTime']) ? $data['totalTime'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;

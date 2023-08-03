@@ -147,7 +147,7 @@ class RestSetLiveReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isLive'] = isset($data['isLive']) ? $data['isLive'] : 0;
+        $this->container['isLive'] = isset($data['isLive']) ? $data['isLive'] : null;
     }
 
     /**

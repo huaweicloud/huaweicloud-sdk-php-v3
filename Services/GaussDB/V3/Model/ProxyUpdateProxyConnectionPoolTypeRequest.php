@@ -20,7 +20,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectionPoolType  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * connectionPoolType  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectionPoolType  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * connectionPoolType  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectionPoolType  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * connectionPoolType  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectionPoolType  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * connectionPoolType  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectionPoolType  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * connectionPoolType  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
 
     /**
     * Gets connectionPoolType
-    *  连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    *  连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ProxyUpdateProxyConnectionPoolTypeRequest implements ModelInterface, Array
     /**
     * Sets connectionPoolType
     *
-    * @param string $connectionPoolType 连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池
+    * @param string $connectionPoolType 连接池类型。 - CLOSED：关闭连接池。 - SESSION：开启会话级连接池
     *
     * @return $this
     */

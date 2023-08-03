@@ -238,12 +238,12 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'create_at';
-        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : 'desc';
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
 
     /**

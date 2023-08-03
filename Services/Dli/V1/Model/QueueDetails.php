@@ -376,7 +376,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
         $this->container['cuCount'] = isset($data['cuCount']) ? $data['cuCount'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['cidrInVpc'] = isset($data['cidrInVpc']) ? $data['cidrInVpc'] : null;
         $this->container['cidrInMgntsubnet'] = isset($data['cidrInMgntsubnet']) ? $data['cidrInMgntsubnet'] : null;
         $this->container['cidrInSubnet'] = isset($data['cidrInSubnet']) ? $data['cidrInSubnet'] : null;

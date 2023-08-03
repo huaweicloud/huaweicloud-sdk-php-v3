@@ -193,8 +193,8 @@ class DisassociateServerVirtualIpOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : '';
-        $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : '';
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['reverseBinding'] = isset($data['reverseBinding']) ? $data['reverseBinding'] : null;
     }
 

@@ -660,7 +660,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
         $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
         $this->container['masterDataVolumeType'] = isset($data['masterDataVolumeType']) ? $data['masterDataVolumeType'] : null;
         $this->container['masterDataVolumeSize'] = isset($data['masterDataVolumeSize']) ? $data['masterDataVolumeSize'] : null;
-        $this->container['masterDataVolumeCount'] = isset($data['masterDataVolumeCount']) ? $data['masterDataVolumeCount'] : self::MASTER_DATA_VOLUME_COUNT_1;
+        $this->container['masterDataVolumeCount'] = isset($data['masterDataVolumeCount']) ? $data['masterDataVolumeCount'] : null;
         $this->container['coreDataVolumeType'] = isset($data['coreDataVolumeType']) ? $data['coreDataVolumeType'] : null;
         $this->container['coreDataVolumeSize'] = isset($data['coreDataVolumeSize']) ? $data['coreDataVolumeSize'] : null;
         $this->container['coreDataVolumeCount'] = isset($data['coreDataVolumeCount']) ? $data['coreDataVolumeCount'] : null;

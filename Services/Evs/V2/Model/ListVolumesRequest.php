@@ -319,7 +319,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;

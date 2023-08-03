@@ -167,7 +167,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['tar'] = isset($data['tar']) ? $data['tar'] : 1;
+        $this->container['tar'] = isset($data['tar']) ? $data['tar'] : null;
         $this->container['out'] = isset($data['out']) ? $data['out'] : null;
         $this->container['params'] = isset($data['params']) ? $data['params'] : null;
     }

@@ -180,8 +180,8 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     {
         $this->container['vaults'] = isset($data['vaults']) ? $data['vaults'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

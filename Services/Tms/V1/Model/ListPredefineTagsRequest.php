@@ -214,10 +214,10 @@ class ListPredefineTagsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['orderField'] = isset($data['orderField']) ? $data['orderField'] : 'update_time';
-        $this->container['orderMethod'] = isset($data['orderMethod']) ? $data['orderMethod'] : 'desc';
+        $this->container['orderField'] = isset($data['orderField']) ? $data['orderField'] : null;
+        $this->container['orderMethod'] = isset($data['orderMethod']) ? $data['orderMethod'] : null;
     }
 
     /**

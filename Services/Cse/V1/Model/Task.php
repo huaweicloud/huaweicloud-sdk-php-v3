@@ -351,7 +351,7 @@ class Task implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['log'] = isset($data['log']) ? $data['log'] : null;
-        $this->container['output'] = isset($data['output']) ? $data['output'] : '{}';
+        $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['taskExecutorBrief'] = isset($data['taskExecutorBrief']) ? $data['taskExecutorBrief'] : null;
     }
 

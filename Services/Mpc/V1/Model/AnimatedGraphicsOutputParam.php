@@ -215,7 +215,7 @@ class AnimatedGraphicsOutputParam implements ModelInterface, ArrayAccess
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
-        $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : 15;
+        $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
     }
 
     /**

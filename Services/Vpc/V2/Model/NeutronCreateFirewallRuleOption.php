@@ -255,13 +255,13 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : 'DENY';
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : 4;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['destinationIpAddress'] = isset($data['destinationIpAddress']) ? $data['destinationIpAddress'] : null;
         $this->container['destinationPort'] = isset($data['destinationPort']) ? $data['destinationPort'] : null;
         $this->container['sourceIpAddress'] = isset($data['sourceIpAddress']) ? $data['sourceIpAddress'] : null;
         $this->container['sourcePort'] = isset($data['sourcePort']) ? $data['sourcePort'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : true;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**

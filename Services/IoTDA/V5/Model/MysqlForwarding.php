@@ -211,7 +211,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
         $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : true;
+        $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['columnMappings'] = isset($data['columnMappings']) ? $data['columnMappings'] : null;
     }

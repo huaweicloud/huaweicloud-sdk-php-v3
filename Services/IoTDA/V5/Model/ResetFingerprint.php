@@ -158,7 +158,7 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
-        $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : false;
+        $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : null;
     }
 
     /**

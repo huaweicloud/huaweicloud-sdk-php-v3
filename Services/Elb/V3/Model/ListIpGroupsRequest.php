@@ -208,7 +208,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;

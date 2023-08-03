@@ -148,7 +148,7 @@ class CreateLogDumpObsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logDumpObsId'] = isset($data['logDumpObsId']) ? $data['logDumpObsId'] : 'None';
+        $this->container['logDumpObsId'] = isset($data['logDumpObsId']) ? $data['logDumpObsId'] : null;
     }
 
     /**

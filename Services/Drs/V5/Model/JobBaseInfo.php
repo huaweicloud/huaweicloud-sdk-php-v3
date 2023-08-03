@@ -371,10 +371,10 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['netType'] = isset($data['netType']) ? $data['netType'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['expiredDays'] = isset($data['expiredDays']) ? $data['expiredDays'] : '14';
+        $this->container['expiredDays'] = isset($data['expiredDays']) ? $data['expiredDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 

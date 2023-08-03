@@ -25,8 +25,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
-    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
-    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
+    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -99,8 +99,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
-    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
-    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
+    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -194,8 +194,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
-    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
-    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
+    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -268,8 +268,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
-    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
-    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
+    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -342,8 +342,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
     * brokerNum  代理个数。
-    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
-    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
+    * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -786,7 +786,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
+    *  消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
     *
     * @return int
     */
@@ -798,7 +798,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int $storageSpace 消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。
+    * @param int $storageSpace 消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb)[900000](tag:g42,tm,hk_g42,ctc,hk_tm,hws_eu)GB。
     *
     * @return $this
     */
@@ -810,7 +810,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessUser
-    *  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    *  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return string|null
     */
@@ -822,7 +822,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string|null $accessUser 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * @param string|null $accessUser 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return $this
     */

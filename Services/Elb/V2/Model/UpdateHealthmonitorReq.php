@@ -248,7 +248,7 @@ class UpdateHealthmonitorReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['monitorPort'] = isset($data['monitorPort']) ? $data['monitorPort'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['expectedCodes'] = isset($data['expectedCodes']) ? $data['expectedCodes'] : null;

@@ -472,7 +472,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
         $this->container['deletionProtectionEnable'] = isset($data['deletionProtectionEnable']) ? $data['deletionProtectionEnable'] : null;
         $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
-        $this->container['wafFailureAction'] = isset($data['wafFailureAction']) ? $data['wafFailureAction'] : 'discard';
+        $this->container['wafFailureAction'] = isset($data['wafFailureAction']) ? $data['wafFailureAction'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }

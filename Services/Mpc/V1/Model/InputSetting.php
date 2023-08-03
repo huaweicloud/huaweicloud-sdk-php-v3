@@ -184,7 +184,7 @@ class InputSetting implements ModelInterface, ArrayAccess
     {
         $this->container['input'] = isset($data['input']) ? $data['input'] : null;
         $this->container['paneId'] = isset($data['paneId']) ? $data['paneId'] : null;
-        $this->container['audioPolicy'] = isset($data['audioPolicy']) ? $data['audioPolicy'] : 'DISCARD';
+        $this->container['audioPolicy'] = isset($data['audioPolicy']) ? $data['audioPolicy'] : null;
     }
 
     /**

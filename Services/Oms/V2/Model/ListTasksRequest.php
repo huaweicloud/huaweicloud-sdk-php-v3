@@ -178,8 +178,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 

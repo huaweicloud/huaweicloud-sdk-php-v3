@@ -240,10 +240,10 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['vpcEndpointServiceId'] = isset($data['vpcEndpointServiceId']) ? $data['vpcEndpointServiceId'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'create_at';
-        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : 'desc';
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
 
     /**

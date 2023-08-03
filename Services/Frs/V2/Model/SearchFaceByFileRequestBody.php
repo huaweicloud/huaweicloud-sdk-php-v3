@@ -198,8 +198,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['imageFile'] = isset($data['imageFile']) ? $data['imageFile'] : null;
-        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : 10;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 0.0;
+        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['returnFields'] = isset($data['returnFields']) ? $data['returnFields'] : null;

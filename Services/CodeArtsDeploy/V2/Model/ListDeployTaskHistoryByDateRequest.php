@@ -217,7 +217,7 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
         $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf-8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
     /**

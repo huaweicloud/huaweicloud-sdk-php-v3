@@ -274,13 +274,13 @@ class Video implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : 'transcode';
+        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
-        $this->container['level'] = isset($data['level']) ? $data['level'] : 15;
-        $this->container['preset'] = isset($data['preset']) ? $data['preset'] : 3;
-        $this->container['maxIframesInterval'] = isset($data['maxIframesInterval']) ? $data['maxIframesInterval'] : 5;
+        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
+        $this->container['preset'] = isset($data['preset']) ? $data['preset'] : null;
+        $this->container['maxIframesInterval'] = isset($data['maxIframesInterval']) ? $data['maxIframesInterval'] : null;
         $this->container['bframesCount'] = isset($data['bframesCount']) ? $data['bframesCount'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;

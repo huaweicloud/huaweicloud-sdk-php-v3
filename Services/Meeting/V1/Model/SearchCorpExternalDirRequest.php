@@ -199,10 +199,10 @@ class SearchCorpExternalDirRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
         $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
-        $this->container['searchScope'] = isset($data['searchScope']) ? $data['searchScope'] : 'ALL';
+        $this->container['searchScope'] = isset($data['searchScope']) ? $data['searchScope'] : null;
     }
 
     /**

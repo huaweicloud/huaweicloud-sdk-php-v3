@@ -331,8 +331,8 @@ class VaultGet implements ModelInterface, ArrayAccess
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
-        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : true;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 80;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }

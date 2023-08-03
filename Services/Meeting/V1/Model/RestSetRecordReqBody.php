@@ -147,7 +147,7 @@ class RestSetRecordReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isRecord'] = isset($data['isRecord']) ? $data['isRecord'] : 0;
+        $this->container['isRecord'] = isset($data['isRecord']) ? $data['isRecord'] : null;
     }
 
     /**

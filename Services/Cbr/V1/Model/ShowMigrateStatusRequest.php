@@ -147,7 +147,7 @@ class ShowMigrateStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['allRegions'] = isset($data['allRegions']) ? $data['allRegions'] : true;
+        $this->container['allRegions'] = isset($data['allRegions']) ? $data['allRegions'] : null;
     }
 
     /**

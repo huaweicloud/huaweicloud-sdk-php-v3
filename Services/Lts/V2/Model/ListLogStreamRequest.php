@@ -157,7 +157,7 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : 'None';
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 

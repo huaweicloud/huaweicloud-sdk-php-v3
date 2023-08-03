@@ -306,12 +306,12 @@ class Config implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : 'pcm16k16bit';
-        $this->container['property'] = isset($data['property']) ? $data['property'] : 'chinese_16k_common';
-        $this->container['addPunc'] = isset($data['addPunc']) ? $data['addPunc'] : 'no';
+        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : null;
+        $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['addPunc'] = isset($data['addPunc']) ? $data['addPunc'] : null;
         $this->container['vocabularyId'] = isset($data['vocabularyId']) ? $data['vocabularyId'] : null;
-        $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : 'yes';
-        $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : 'no';
+        $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : null;
+        $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : null;
     }
 
     /**

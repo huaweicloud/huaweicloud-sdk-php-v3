@@ -260,7 +260,7 @@ class Attendee implements ModelInterface, ArrayAccess
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : 0;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['phone2'] = isset($data['phone2']) ? $data['phone2'] : null;
         $this->container['phone3'] = isset($data['phone3']) ? $data['phone3'] : null;

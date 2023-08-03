@@ -198,11 +198,11 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['key'] = isset($data['key']) ? $data['key'] : '$random(6)-$date(yyyy-MM-dd-HH-mm-ss)';
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : '$random(20)';
-        $this->container['valueType'] = isset($data['valueType']) ? $data['valueType'] : 'text';
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'enabled';
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['valueType'] = isset($data['valueType']) ? $data['valueType'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**

@@ -22,7 +22,7 @@ class BackSources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     * httpPort  HTTP端口，取值范围：1-65535。
     * httpsPort  HTTPS端口，取值范围：1-65535。
     *
@@ -40,7 +40,7 @@ class BackSources implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     * httpPort  HTTP端口，取值范围：1-65535。
     * httpsPort  HTTPS端口，取值范围：1-65535。
     *
@@ -79,7 +79,7 @@ class BackSources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     * httpPort  HTTP端口，取值范围：1-65535。
     * httpsPort  HTTPS端口，取值范围：1-65535。
     *
@@ -97,7 +97,7 @@ class BackSources implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     * httpPort  HTTP端口，取值范围：1-65535。
     * httpsPort  HTTPS端口，取值范围：1-65535。
     *
@@ -115,7 +115,7 @@ class BackSources implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     * httpPort  HTTP端口，取值范围：1-65535。
     * httpsPort  HTTPS端口，取值范围：1-65535。
     *
@@ -272,7 +272,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    *  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * @param string|null $obsBucketType OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
     *
     * @return $this
     */

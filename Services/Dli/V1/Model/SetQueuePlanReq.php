@@ -249,7 +249,7 @@ class SetQueuePlanReq implements ModelInterface, ArrayAccess
         $this->container['repeatDay'] = isset($data['repeatDay']) ? $data['repeatDay'] : null;
         $this->container['validDateBegin'] = isset($data['validDateBegin']) ? $data['validDateBegin'] : null;
         $this->container['validDateEnd'] = isset($data['validDateEnd']) ? $data['validDateEnd'] : null;
-        $this->container['activate'] = isset($data['activate']) ? $data['activate'] : true;
+        $this->container['activate'] = isset($data['activate']) ? $data['activate'] : null;
     }
 
     /**

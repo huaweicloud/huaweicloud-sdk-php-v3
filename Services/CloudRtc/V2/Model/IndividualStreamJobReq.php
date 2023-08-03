@@ -243,9 +243,9 @@ class IndividualStreamJobReq implements ModelInterface, ArrayAccess
     {
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
-        $this->container['isRecordAudio'] = isset($data['isRecordAudio']) ? $data['isRecordAudio'] : true;
-        $this->container['videoType'] = isset($data['videoType']) ? $data['videoType'] : 'CAMERASTREAM';
-        $this->container['selectStreamType'] = isset($data['selectStreamType']) ? $data['selectStreamType'] : 'FHD';
+        $this->container['isRecordAudio'] = isset($data['isRecordAudio']) ? $data['isRecordAudio'] : null;
+        $this->container['videoType'] = isset($data['videoType']) ? $data['videoType'] : null;
+        $this->container['selectStreamType'] = isset($data['selectStreamType']) ? $data['selectStreamType'] : null;
         $this->container['maxIdleTime'] = isset($data['maxIdleTime']) ? $data['maxIdleTime'] : null;
         $this->container['recordParam'] = isset($data['recordParam']) ? $data['recordParam'] : null;
     }

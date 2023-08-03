@@ -488,7 +488,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
         $this->container['engineAdditionalActions'] = isset($data['engineAdditionalActions']) ? $data['engineAdditionalActions'] : null;
-        $this->container['specType'] = isset($data['specType']) ? $data['specType'] : 'CSE';
+        $this->container['specType'] = isset($data['specType']) ? $data['specType'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['vmIds'] = isset($data['vmIds']) ? $data['vmIds'] : null;

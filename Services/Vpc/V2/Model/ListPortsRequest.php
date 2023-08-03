@@ -34,6 +34,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'securityGroups' => 'string[]',
             'marker' => 'string',
             'fixedIps' => 'string[]',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'enableEfi' => 'bool'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'securityGroups' => null,
         'marker' => null,
         'fixedIps' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'enableEfi' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'securityGroups' => 'security_groups',
             'marker' => 'marker',
             'fixedIps' => 'fixed_ips',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'enableEfi' => 'enable_efi'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'securityGroups' => 'setSecurityGroups',
             'marker' => 'setMarker',
             'fixedIps' => 'setFixedIps',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'enableEfi' => 'setEnableEfi'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'securityGroups' => 'getSecurityGroups',
             'marker' => 'getMarker',
             'fixedIps' => 'getFixedIps',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'enableEfi' => 'getEnableEfi'
     ];
 
     /**
@@ -316,7 +326,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
         $this->container['macAddress'] = isset($data['macAddress']) ? $data['macAddress'] : null;
@@ -327,6 +337,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['fixedIps'] = isset($data['fixedIps']) ? $data['fixedIps'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['enableEfi'] = isset($data['enableEfi']) ? $data['enableEfi'] : null;
     }
 
     /**
@@ -724,6 +735,30 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enableEfi
+    *  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    *
+    * @return bool|null
+    */
+    public function getEnableEfi()
+    {
+        return $this->container['enableEfi'];
+    }
+
+    /**
+    * Sets enableEfi
+    *
+    * @param bool|null $enableEfi 功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    *
+    * @return $this
+    */
+    public function setEnableEfi($enableEfi)
+    {
+        $this->container['enableEfi'] = $enableEfi;
         return $this;
     }
 

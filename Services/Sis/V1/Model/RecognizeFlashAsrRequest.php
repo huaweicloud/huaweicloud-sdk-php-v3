@@ -323,15 +323,15 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['property'] = isset($data['property']) ? $data['property'] : 'chinese_8k_common';
-        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : 'wav';
-        $this->container['addPunc'] = isset($data['addPunc']) ? $data['addPunc'] : 'no';
-        $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : 'yes';
-        $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : 'no';
+        $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : null;
+        $this->container['addPunc'] = isset($data['addPunc']) ? $data['addPunc'] : null;
+        $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : null;
+        $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : null;
         $this->container['vocabularyId'] = isset($data['vocabularyId']) ? $data['vocabularyId'] : null;
         $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
         $this->container['obsObjectKey'] = isset($data['obsObjectKey']) ? $data['obsObjectKey'] : null;
-        $this->container['firstChannelOnly'] = isset($data['firstChannelOnly']) ? $data['firstChannelOnly'] : 'no';
+        $this->container['firstChannelOnly'] = isset($data['firstChannelOnly']) ? $data['firstChannelOnly'] : null;
     }
 
     /**

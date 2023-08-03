@@ -168,7 +168,7 @@ class RunQueueActionReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
-        $this->container['force'] = isset($data['force']) ? $data['force'] : false;
+        $this->container['force'] = isset($data['force']) ? $data['force'] : null;
         $this->container['cuCount'] = isset($data['cuCount']) ? $data['cuCount'] : null;
     }
 

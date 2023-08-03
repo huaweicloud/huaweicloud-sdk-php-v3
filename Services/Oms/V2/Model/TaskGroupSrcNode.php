@@ -223,7 +223,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['objectKey'] = isset($data['objectKey']) ? $data['objectKey'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
-        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : 'Aliyun';
+        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['listFile'] = isset($data['listFile']) ? $data['listFile'] : null;
     }
 

@@ -237,7 +237,7 @@ class NeutronListNetworksRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -245,7 +245,7 @@ class NeutronListNetworksRequest implements ModelInterface, ArrayAccess
         $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['routerexternal'] = isset($data['routerexternal']) ? $data['routerexternal'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
-        $this->container['providernetworkType'] = isset($data['providernetworkType']) ? $data['providernetworkType'] : 'N/A';
+        $this->container['providernetworkType'] = isset($data['providernetworkType']) ? $data['providernetworkType'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
     }
 

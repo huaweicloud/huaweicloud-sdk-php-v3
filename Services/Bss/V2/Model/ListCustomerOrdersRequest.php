@@ -274,8 +274,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
         $this->container['paymentTimeBegin'] = isset($data['paymentTimeBegin']) ? $data['paymentTimeBegin'] : null;
         $this->container['paymentTimeEnd'] = isset($data['paymentTimeEnd']) ? $data['paymentTimeEnd'] : null;

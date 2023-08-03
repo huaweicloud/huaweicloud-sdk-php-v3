@@ -305,7 +305,7 @@ class ListFlavorSellPoliciesRequest implements ModelInterface, ArrayAccess
         $this->container['longestSpotDurationHours'] = isset($data['longestSpotDurationHours']) ? $data['longestSpotDurationHours'] : null;
         $this->container['largestSpotDurationCount'] = isset($data['largestSpotDurationCount']) ? $data['largestSpotDurationCount'] : null;
         $this->container['interruptionPolicy'] = isset($data['interruptionPolicy']) ? $data['interruptionPolicy'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

@@ -198,8 +198,8 @@ class ListInstanceParamHistoriesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['paramName'] = isset($data['paramName']) ? $data['paramName'] : null;

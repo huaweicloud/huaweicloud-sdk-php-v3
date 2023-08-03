@@ -1333,6 +1333,9 @@ class RocketMQClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['key'] !== null) {
+            $queryParams['key'] = $localVarParams['key'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }

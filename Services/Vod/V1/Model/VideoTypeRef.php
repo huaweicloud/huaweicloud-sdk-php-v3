@@ -335,9 +335,9 @@ class VideoTypeRef implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['categoryId'] = isset($data['categoryId']) ? $data['categoryId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['autoPublish'] = isset($data['autoPublish']) ? $data['autoPublish'] : 1;
+        $this->container['autoPublish'] = isset($data['autoPublish']) ? $data['autoPublish'] : null;
         $this->container['templateGroupName'] = isset($data['templateGroupName']) ? $data['templateGroupName'] : null;
-        $this->container['autoEncrypt'] = isset($data['autoEncrypt']) ? $data['autoEncrypt'] : 0;
+        $this->container['autoEncrypt'] = isset($data['autoEncrypt']) ? $data['autoEncrypt'] : null;
         $this->container['autoPreheat'] = isset($data['autoPreheat']) ? $data['autoPreheat'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['review'] = isset($data['review']) ? $data['review'] : null;

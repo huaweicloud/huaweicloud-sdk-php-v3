@@ -184,7 +184,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
     {
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
-        $this->container['deleteFlag'] = isset($data['deleteFlag']) ? $data['deleteFlag'] : '0';
+        $this->container['deleteFlag'] = isset($data['deleteFlag']) ? $data['deleteFlag'] : null;
     }
 
     /**

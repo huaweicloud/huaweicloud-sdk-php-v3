@@ -190,8 +190,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 50;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

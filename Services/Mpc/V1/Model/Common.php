@@ -177,9 +177,9 @@ class Common implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : false;
-        $this->container['hlsInterval'] = isset($data['hlsInterval']) ? $data['hlsInterval'] : 5;
-        $this->container['dashInterval'] = isset($data['dashInterval']) ? $data['dashInterval'] : 5;
+        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : null;
+        $this->container['hlsInterval'] = isset($data['hlsInterval']) ? $data['hlsInterval'] : null;
+        $this->container['dashInterval'] = isset($data['dashInterval']) ? $data['dashInterval'] : null;
         $this->container['packType'] = isset($data['packType']) ? $data['packType'] : null;
     }
 

@@ -157,8 +157,8 @@ class RestProlongDurReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['auto'] = isset($data['auto']) ? $data['auto'] : 1;
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : 15;
+        $this->container['auto'] = isset($data['auto']) ? $data['auto'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
     }
 
     /**

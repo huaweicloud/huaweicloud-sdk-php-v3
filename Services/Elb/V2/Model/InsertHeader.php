@@ -158,7 +158,7 @@ class InsertHeader implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['xForwardedElbIp'] = isset($data['xForwardedElbIp']) ? $data['xForwardedElbIp'] : null;
-        $this->container['xForwardedHost'] = isset($data['xForwardedHost']) ? $data['xForwardedHost'] : true;
+        $this->container['xForwardedHost'] = isset($data['xForwardedHost']) ? $data['xForwardedHost'] : null;
     }
 
     /**

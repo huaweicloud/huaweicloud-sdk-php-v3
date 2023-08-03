@@ -210,7 +210,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['accountType'] = isset($data['accountType']) ? $data['accountType'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : 'CNY';
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['designatedAmount'] = isset($data['designatedAmount']) ? $data['designatedAmount'] : null;
         $this->container['creditAmount'] = isset($data['creditAmount']) ? $data['creditAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;

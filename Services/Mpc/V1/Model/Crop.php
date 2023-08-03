@@ -147,7 +147,7 @@ class Crop implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : 0;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
     }
 
     /**

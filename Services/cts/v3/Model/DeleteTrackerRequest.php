@@ -21,7 +21,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * trackerName  标识追踪器名称。 在不传入该字段的情况下，将删除当前租户所有的数据类追踪器。
-    * trackerType  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * trackerType  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * trackerName  标识追踪器名称。 在不传入该字段的情况下，将删除当前租户所有的数据类追踪器。
-    * trackerType  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * trackerType  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * trackerName  标识追踪器名称。 在不传入该字段的情况下，将删除当前租户所有的数据类追踪器。
-    * trackerType  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * trackerType  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * trackerName  标识追踪器名称。 在不传入该字段的情况下，将删除当前租户所有的数据类追踪器。
-    * trackerType  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * trackerType  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * trackerName  标识追踪器名称。 在不传入该字段的情况下，将删除当前租户所有的数据类追踪器。
-    * trackerType  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * trackerType  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @var string[]
     */
@@ -140,6 +140,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TRACKER_TYPE_DATA = 'data';
+    const TRACKER_TYPE_SYSTEM = 'system';
     
 
     /**
@@ -151,6 +152,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::TRACKER_TYPE_DATA,
+            self::TRACKER_TYPE_SYSTEM,
         ];
     }
 
@@ -242,7 +244,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets trackerType
-    *  标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    *  标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @return string|null
     */
@@ -254,7 +256,7 @@ class DeleteTrackerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets trackerType
     *
-    * @param string|null $trackerType 标识追踪器类型。 目前仅支持数据类追踪器（data）的删除，默认值为\"data\"。
+    * @param string|null $trackerType 标识追踪器类型。 默认值为\"data\"。传入\"system\"时，配合tracker_name参数可删除管理类追踪器。
     *
     * @return $this
     */

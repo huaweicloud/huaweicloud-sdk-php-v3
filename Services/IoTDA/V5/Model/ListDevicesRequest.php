@@ -260,12 +260,12 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
-        $this->container['isCascadeQuery'] = isset($data['isCascadeQuery']) ? $data['isCascadeQuery'] : false;
+        $this->container['isCascadeQuery'] = isset($data['isCascadeQuery']) ? $data['isCascadeQuery'] : null;
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
         $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : 'ffffffffffffffffffffffff';
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;

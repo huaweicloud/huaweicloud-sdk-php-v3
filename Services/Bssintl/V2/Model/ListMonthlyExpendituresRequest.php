@@ -179,7 +179,7 @@ class ListMonthlyExpendituresRequest implements ModelInterface, ArrayAccess
     {
         $this->container['cycle'] = isset($data['cycle']) ? $data['cycle'] : null;
         $this->container['cloudServiceTypeCode'] = isset($data['cloudServiceTypeCode']) ? $data['cloudServiceTypeCode'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : '0';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 

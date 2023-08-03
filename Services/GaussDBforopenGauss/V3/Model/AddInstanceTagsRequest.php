@@ -182,7 +182,7 @@ class AddInstanceTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }

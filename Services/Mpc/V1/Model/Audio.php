@@ -204,9 +204,9 @@ class Audio implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : 'transcode';
-        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : 1;
-        $this->container['sampleRate'] = isset($data['sampleRate']) ? $data['sampleRate'] : 1;
+        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : null;
+        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
+        $this->container['sampleRate'] = isset($data['sampleRate']) ? $data['sampleRate'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
     }

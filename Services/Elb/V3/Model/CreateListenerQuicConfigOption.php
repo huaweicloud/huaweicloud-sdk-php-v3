@@ -158,7 +158,7 @@ class CreateListenerQuicConfigOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['quicListenerId'] = isset($data['quicListenerId']) ? $data['quicListenerId'] : null;
-        $this->container['enableQuicUpgrade'] = isset($data['enableQuicUpgrade']) ? $data['enableQuicUpgrade'] : false;
+        $this->container['enableQuicUpgrade'] = isset($data['enableQuicUpgrade']) ? $data['enableQuicUpgrade'] : null;
     }
 
     /**

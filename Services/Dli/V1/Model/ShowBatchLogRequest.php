@@ -189,7 +189,7 @@ class ShowBatchLogRequest implements ModelInterface, ArrayAccess
     {
         $this->container['batchId'] = isset($data['batchId']) ? $data['batchId'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
-        $this->container['index'] = isset($data['index']) ? $data['index'] : 0;
+        $this->container['index'] = isset($data['index']) ? $data['index'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }

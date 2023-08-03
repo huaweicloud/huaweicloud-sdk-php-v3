@@ -190,7 +190,7 @@ class ListPolicyStatesByDomainIdRequest implements ModelInterface, ArrayAccess
         $this->container['complianceState'] = isset($data['complianceState']) ? $data['complianceState'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

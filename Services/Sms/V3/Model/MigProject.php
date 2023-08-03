@@ -295,16 +295,16 @@ class MigProject implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['isdefault'] = isset($data['isdefault']) ? $data['isdefault'] : false;
+        $this->container['isdefault'] = isset($data['isdefault']) ? $data['isdefault'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : true;
+        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
-        $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : true;
-        $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : true;
+        $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
+        $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : 'default';
-        $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : false;
+        $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : null;
+        $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
         $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
     }
 

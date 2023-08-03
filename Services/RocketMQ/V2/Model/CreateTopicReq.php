@@ -197,7 +197,7 @@ class CreateTopicReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['queueNum'] = isset($data['queueNum']) ? $data['queueNum'] : null;
-        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : 'all';
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
     }
 
     /**

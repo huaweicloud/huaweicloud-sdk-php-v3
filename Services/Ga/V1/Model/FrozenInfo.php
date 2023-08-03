@@ -168,7 +168,7 @@ class FrozenInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['effect'] = isset($data['effect']) ? $data['effect'] : 1;
+        $this->container['effect'] = isset($data['effect']) ? $data['effect'] : null;
         $this->container['scene'] = isset($data['scene']) ? $data['scene'] : null;
     }
 

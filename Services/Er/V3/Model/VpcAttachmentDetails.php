@@ -261,7 +261,7 @@ class VpcAttachmentDetails implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['virsubnetId'] = isset($data['virsubnetId']) ? $data['virsubnetId'] : null;
-        $this->container['autoCreateVpcRoutes'] = isset($data['autoCreateVpcRoutes']) ? $data['autoCreateVpcRoutes'] : false;
+        $this->container['autoCreateVpcRoutes'] = isset($data['autoCreateVpcRoutes']) ? $data['autoCreateVpcRoutes'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;

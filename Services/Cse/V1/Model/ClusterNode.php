@@ -191,7 +191,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
         $this->container['az'] = isset($data['az']) ? $data['az'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'Active';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**

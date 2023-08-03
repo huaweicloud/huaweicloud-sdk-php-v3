@@ -257,9 +257,9 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['description'] = isset($data['description']) ? $data['description'] : '""';
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
-        $this->container['ethertype'] = isset($data['ethertype']) ? $data['ethertype'] : 'IPv4';
+        $this->container['ethertype'] = isset($data['ethertype']) ? $data['ethertype'] : null;
         $this->container['portRangeMax'] = isset($data['portRangeMax']) ? $data['portRangeMax'] : null;
         $this->container['portRangeMin'] = isset($data['portRangeMin']) ? $data['portRangeMin'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;

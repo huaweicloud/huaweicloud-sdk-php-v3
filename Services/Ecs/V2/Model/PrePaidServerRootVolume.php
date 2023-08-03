@@ -251,7 +251,7 @@ class PrePaidServerRootVolume implements ModelInterface, ArrayAccess
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : false;
+        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : null;
     }
 
     /**

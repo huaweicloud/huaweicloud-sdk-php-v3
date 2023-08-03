@@ -189,7 +189,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['remoteIpPrefix'] = isset($data['remoteIpPrefix']) ? $data['remoteIpPrefix'] : null;
     }

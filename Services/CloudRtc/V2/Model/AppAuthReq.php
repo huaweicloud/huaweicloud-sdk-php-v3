@@ -157,7 +157,7 @@ class AppAuthReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : true;
+        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
         $this->container['expire'] = isset($data['expire']) ? $data['expire'] : null;
     }
 

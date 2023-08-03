@@ -284,14 +284,14 @@ class MixLayoutPane implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
-        $this->container['videoType'] = isset($data['videoType']) ? $data['videoType'] : 'CAMERASTREAM';
+        $this->container['videoType'] = isset($data['videoType']) ? $data['videoType'] : null;
         $this->container['x'] = isset($data['x']) ? $data['x'] : null;
         $this->container['y'] = isset($data['y']) ? $data['y'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['zorder'] = isset($data['zorder']) ? $data['zorder'] : null;
-        $this->container['cropMode'] = isset($data['cropMode']) ? $data['cropMode'] : 'KEEP_RATIO_PADDING';
-        $this->container['fillingPolicy'] = isset($data['fillingPolicy']) ? $data['fillingPolicy'] : 'SHARED_SCREEN';
+        $this->container['cropMode'] = isset($data['cropMode']) ? $data['cropMode'] : null;
+        $this->container['fillingPolicy'] = isset($data['fillingPolicy']) ? $data['fillingPolicy'] : null;
     }
 
     /**

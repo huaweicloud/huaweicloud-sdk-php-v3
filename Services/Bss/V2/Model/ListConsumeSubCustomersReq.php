@@ -168,8 +168,8 @@ class ListConsumeSubCustomersReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

@@ -192,7 +192,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : 'zh-cn';
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;

@@ -197,10 +197,10 @@ class MosaicInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : '0';
-        $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : 'ToEND';
-        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : '0';
-        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : '0';
+        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
+        $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
+        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
+        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
     }

@@ -179,8 +179,8 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     {
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

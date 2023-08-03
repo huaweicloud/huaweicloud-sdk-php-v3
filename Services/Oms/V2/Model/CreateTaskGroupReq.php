@@ -343,18 +343,18 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
         $this->container['srcNode'] = isset($data['srcNode']) ? $data['srcNode'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['dstNode'] = isset($data['dstNode']) ? $data['dstNode'] : null;
-        $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : false;
-        $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : false;
+        $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
+        $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : false;
+        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['bandwidthPolicy'] = isset($data['bandwidthPolicy']) ? $data['bandwidthPolicy'] : null;
         $this->container['smnConfig'] = isset($data['smnConfig']) ? $data['smnConfig'] : null;
         $this->container['sourceCdn'] = isset($data['sourceCdn']) ? $data['sourceCdn'] : null;
-        $this->container['migrateSince'] = isset($data['migrateSince']) ? $data['migrateSince'] : 0;
+        $this->container['migrateSince'] = isset($data['migrateSince']) ? $data['migrateSince'] : null;
         $this->container['objectOverwriteMode'] = isset($data['objectOverwriteMode']) ? $data['objectOverwriteMode'] : null;
-        $this->container['consistencyCheck'] = isset($data['consistencyCheck']) ? $data['consistencyCheck'] : 'size_last_modified';
-        $this->container['enableRequesterPays'] = isset($data['enableRequesterPays']) ? $data['enableRequesterPays'] : false;
+        $this->container['consistencyCheck'] = isset($data['consistencyCheck']) ? $data['consistencyCheck'] : null;
+        $this->container['enableRequesterPays'] = isset($data['enableRequesterPays']) ? $data['enableRequesterPays'] : null;
     }
 
     /**

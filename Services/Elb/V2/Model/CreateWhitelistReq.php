@@ -179,7 +179,7 @@ class CreateWhitelistReq implements ModelInterface, ArrayAccess
     {
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
-        $this->container['enableWhitelist'] = isset($data['enableWhitelist']) ? $data['enableWhitelist'] : true;
+        $this->container['enableWhitelist'] = isset($data['enableWhitelist']) ? $data['enableWhitelist'] : null;
         $this->container['whitelist'] = isset($data['whitelist']) ? $data['whitelist'] : null;
     }
 

@@ -213,7 +213,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
         $this->container['commands'] = isset($data['commands']) ? $data['commands'] : null;
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['option'] = isset($data['option']) ? $data['option'] : 'Optional';
+        $this->container['option'] = isset($data['option']) ? $data['option'] : null;
     }
 
     /**

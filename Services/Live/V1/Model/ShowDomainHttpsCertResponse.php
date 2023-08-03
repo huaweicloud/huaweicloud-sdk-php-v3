@@ -191,7 +191,7 @@ class ShowDomainHttpsCertResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['certificateFormat'] = isset($data['certificateFormat']) ? $data['certificateFormat'] : 'PEM';
+        $this->container['certificateFormat'] = isset($data['certificateFormat']) ? $data['certificateFormat'] : null;
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['certificateKey'] = isset($data['certificateKey']) ? $data['certificateKey'] : null;
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;

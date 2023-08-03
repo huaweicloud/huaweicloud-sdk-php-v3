@@ -179,8 +179,8 @@ class ListTemplateGroupRequest implements ModelInterface, ArrayAccess
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

@@ -192,7 +192,7 @@ class PutUpdateVocabReq implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : 'chinese_mandarin';
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
     }
 

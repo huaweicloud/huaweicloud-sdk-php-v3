@@ -184,7 +184,7 @@ class DeleteDeploymentHostRequest implements ModelInterface, ArrayAccess
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf-8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
     /**

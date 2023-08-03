@@ -194,7 +194,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['transType'] = isset($data['transType']) ? $data['transType'] : 'play';
+        $this->container['transType'] = isset($data['transType']) ? $data['transType'] : null;
         $this->container['qualityInfo'] = isset($data['qualityInfo']) ? $data['qualityInfo'] : null;
     }
 

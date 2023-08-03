@@ -147,7 +147,7 @@ class EditHlsInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : 5;
+        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
     }
 
     /**

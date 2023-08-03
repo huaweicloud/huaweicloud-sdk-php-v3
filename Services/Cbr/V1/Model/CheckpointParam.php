@@ -207,9 +207,9 @@ class CheckpointParam implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['autoTrigger'] = isset($data['autoTrigger']) ? $data['autoTrigger'] : false;
+        $this->container['autoTrigger'] = isset($data['autoTrigger']) ? $data['autoTrigger'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : true;
+        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['resourceDetails'] = isset($data['resourceDetails']) ? $data['resourceDetails'] : null;

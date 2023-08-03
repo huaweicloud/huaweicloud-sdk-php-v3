@@ -169,7 +169,7 @@ class VerificationCodeDTO implements ModelInterface, ArrayAccess
     {
         $this->container['contact'] = isset($data['contact']) ? $data['contact'] : null;
         $this->container['verificationCode'] = isset($data['verificationCode']) ? $data['verificationCode'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
     }
 
     /**

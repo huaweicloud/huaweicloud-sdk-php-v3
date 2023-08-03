@@ -170,7 +170,7 @@ class CreateInstanceByEngineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'reliability';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

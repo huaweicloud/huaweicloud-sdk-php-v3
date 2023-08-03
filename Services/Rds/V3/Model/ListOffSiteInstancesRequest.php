@@ -192,7 +192,7 @@ class ListOffSiteInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;

@@ -157,7 +157,7 @@ class ListSchemasRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

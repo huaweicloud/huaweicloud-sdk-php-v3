@@ -295,7 +295,7 @@ class SearchUsersRequest implements ModelInterface, ArrayAccess
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
         $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
         $this->container['sortField'] = isset($data['sortField']) ? $data['sortField'] : null;
         $this->container['isAsc'] = isset($data['isAsc']) ? $data['isAsc'] : null;
@@ -305,7 +305,7 @@ class SearchUsersRequest implements ModelInterface, ArrayAccess
         $this->container['enableRoom'] = isset($data['enableRoom']) ? $data['enableRoom'] : null;
         $this->container['userType'] = isset($data['userType']) ? $data['userType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['containsUnActive'] = isset($data['containsUnActive']) ? $data['containsUnActive'] : false;
+        $this->container['containsUnActive'] = isset($data['containsUnActive']) ? $data['containsUnActive'] : null;
     }
 
     /**

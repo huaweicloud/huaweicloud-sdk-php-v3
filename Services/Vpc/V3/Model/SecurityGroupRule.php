@@ -292,7 +292,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
-        $this->container['ethertype'] = isset($data['ethertype']) ? $data['ethertype'] : 'IPv4';
+        $this->container['ethertype'] = isset($data['ethertype']) ? $data['ethertype'] : null;
         $this->container['multiport'] = isset($data['multiport']) ? $data['multiport'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;

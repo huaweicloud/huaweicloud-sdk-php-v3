@@ -157,7 +157,7 @@ class CreateAomMappingRulesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isBatch'] = isset($data['isBatch']) ? $data['isBatch'] : false;
+        $this->container['isBatch'] = isset($data['isBatch']) ? $data['isBatch'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

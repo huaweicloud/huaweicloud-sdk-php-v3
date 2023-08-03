@@ -269,8 +269,8 @@ class SearchResourceOpRecordRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
         $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
         $this->container['corpId'] = isset($data['corpId']) ? $data['corpId'] : null;
         $this->container['startExpireDate'] = isset($data['startExpireDate']) ? $data['startExpireDate'] : null;

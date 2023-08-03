@@ -243,7 +243,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
         $this->container['revokeList'] = isset($data['revokeList']) ? $data['revokeList'] : null;
         $this->container['roleList'] = isset($data['roleList']) ? $data['roleList'] : null;
         $this->container['objectList'] = isset($data['objectList']) ? $data['objectList'] : null;
-        $this->container['cascade'] = isset($data['cascade']) ? $data['cascade'] : true;
+        $this->container['cascade'] = isset($data['cascade']) ? $data['cascade'] : null;
         $this->container['database'] = isset($data['database']) ? $data['database'] : null;
         $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
         $this->container['table'] = isset($data['table']) ? $data['table'] : null;

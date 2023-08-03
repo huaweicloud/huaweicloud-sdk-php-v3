@@ -147,7 +147,7 @@ class UserFunctionDTO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enableRoom'] = isset($data['enableRoom']) ? $data['enableRoom'] : false;
+        $this->container['enableRoom'] = isset($data['enableRoom']) ? $data['enableRoom'] : null;
     }
 
     /**

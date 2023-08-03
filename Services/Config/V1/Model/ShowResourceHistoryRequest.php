@@ -214,7 +214,7 @@ class ShowResourceHistoryRequest implements ModelInterface, ArrayAccess
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['earlierTime'] = isset($data['earlierTime']) ? $data['earlierTime'] : null;
         $this->container['laterTime'] = isset($data['laterTime']) ? $data['laterTime'] : null;
         $this->container['chronologicalOrder'] = isset($data['chronologicalOrder']) ? $data['chronologicalOrder'] : null;

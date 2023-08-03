@@ -169,7 +169,7 @@ class ShowSpResourceRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
         $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
-        $this->container['queryGroup'] = isset($data['queryGroup']) ? $data['queryGroup'] : false;
+        $this->container['queryGroup'] = isset($data['queryGroup']) ? $data['queryGroup'] : null;
     }
 
     /**

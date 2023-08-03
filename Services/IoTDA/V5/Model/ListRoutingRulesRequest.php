@@ -244,9 +244,9 @@ class ListRoutingRulesRequest implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : 'ffffffffffffffffffffffff';
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

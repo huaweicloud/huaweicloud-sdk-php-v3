@@ -422,7 +422,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['sourceEndpoint'] = isset($data['sourceEndpoint']) ? $data['sourceEndpoint'] : null;
         $this->container['targetEndpoint'] = isset($data['targetEndpoint']) ? $data['targetEndpoint'] : null;
-        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : 'high';
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['netType'] = isset($data['netType']) ? $data['netType'] : null;
         $this->container['storeDbInfo'] = isset($data['storeDbInfo']) ? $data['storeDbInfo'] : null;

@@ -27,8 +27,8 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $openAPITypes = [
-            'hourly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]',
-            'monthly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]'
+            'hourly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]',
+            'monthly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]'
     ];
 
     /**
@@ -188,7 +188,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     * Gets hourly
     *  表示按需付费的产品列表。
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null
+    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null
     */
     public function getHourly()
     {
@@ -198,7 +198,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Sets hourly
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null $hourly 表示按需付费的产品列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null $hourly 表示按需付费的产品列表。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     * Gets monthly
     *  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null
+    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null
     */
     public function getMonthly()
     {
@@ -222,7 +222,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Sets monthly
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespHourly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
     *
     * @return $this
     */

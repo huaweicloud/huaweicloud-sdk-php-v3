@@ -157,7 +157,7 @@ class CreateVpcRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : false;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
         $this->container['vpc'] = isset($data['vpc']) ? $data['vpc'] : null;
     }
 

@@ -25,6 +25,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * key  消息的key
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -37,6 +38,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'topic' => 'string',
             'limit' => 'string',
             'offset' => 'string',
+            'key' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
             'msgId' => 'string'
@@ -49,6 +51,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * key  消息的key
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -61,6 +64,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
         'topic' => null,
         'limit' => null,
         'offset' => null,
+        'key' => null,
         'startTime' => null,
         'endTime' => null,
         'msgId' => null
@@ -94,6 +98,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * key  消息的key
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -106,6 +111,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'topic' => 'topic',
             'limit' => 'limit',
             'offset' => 'offset',
+            'key' => 'key',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'msgId' => 'msg_id'
@@ -118,6 +124,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * key  消息的key
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -130,6 +137,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'topic' => 'setTopic',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'key' => 'setKey',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'msgId' => 'setMsgId'
@@ -142,6 +150,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * key  消息的key
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -154,6 +163,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
             'topic' => 'getTopic',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'key' => 'getKey',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'msgId' => 'getMsgId'
@@ -230,11 +240,12 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'reliability';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['msgId'] = isset($data['msgId']) ? $data['msgId'] : null;
@@ -396,6 +407,30 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets key
+    *  消息的key
+    *
+    * @return string|null
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string|null $key 消息的key
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
         return $this;
     }
 

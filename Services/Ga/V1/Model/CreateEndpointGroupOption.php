@@ -189,7 +189,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['trafficDialPercentage'] = isset($data['trafficDialPercentage']) ? $data['trafficDialPercentage'] : 100;
+        $this->container['trafficDialPercentage'] = isset($data['trafficDialPercentage']) ? $data['trafficDialPercentage'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['listeners'] = isset($data['listeners']) ? $data['listeners'] : null;
     }

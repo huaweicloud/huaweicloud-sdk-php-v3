@@ -177,8 +177,8 @@ class ListChartsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : 'None';
-        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : 'None';
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
+        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }

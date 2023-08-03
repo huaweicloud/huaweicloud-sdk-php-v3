@@ -290,7 +290,7 @@ class CreateHealthMonitorOption implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['urlPath'] = isset($data['urlPath']) ? $data['urlPath'] : '/';
+        $this->container['urlPath'] = isset($data['urlPath']) ? $data['urlPath'] : null;
     }
 
     /**

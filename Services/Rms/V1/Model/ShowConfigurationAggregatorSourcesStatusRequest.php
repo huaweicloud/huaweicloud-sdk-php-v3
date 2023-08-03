@@ -196,7 +196,7 @@ class ShowConfigurationAggregatorSourcesStatusRequest implements ModelInterface,
     {
         $this->container['aggregatorId'] = isset($data['aggregatorId']) ? $data['aggregatorId'] : null;
         $this->container['updateStatus'] = isset($data['updateStatus']) ? $data['updateStatus'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

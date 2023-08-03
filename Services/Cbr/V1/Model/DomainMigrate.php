@@ -157,8 +157,8 @@ class DomainMigrate implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['allRegions'] = isset($data['allRegions']) ? $data['allRegions'] : true;
-        $this->container['reservation'] = isset($data['reservation']) ? $data['reservation'] : 0.2;
+        $this->container['allRegions'] = isset($data['allRegions']) ? $data['allRegions'] : null;
+        $this->container['reservation'] = isset($data['reservation']) ? $data['reservation'] : null;
     }
 
     /**

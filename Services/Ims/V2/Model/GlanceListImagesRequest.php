@@ -601,7 +601,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['imagetype'] = isset($data['imagetype']) ? $data['imagetype'] : null;
-        $this->container['isregistered'] = isset($data['isregistered']) ? $data['isregistered'] : true;
+        $this->container['isregistered'] = isset($data['isregistered']) ? $data['isregistered'] : null;
         $this->container['osBit'] = isset($data['osBit']) ? $data['osBit'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
@@ -614,10 +614,10 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
         $this->container['supportXen'] = isset($data['supportXen']) ? $data['supportXen'] : null;
         $this->container['supportXenGpuType'] = isset($data['supportXenGpuType']) ? $data['supportXenGpuType'] : null;
         $this->container['supportXenHana'] = isset($data['supportXenHana']) ? $data['supportXenHana'] : null;
-        $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : 'bare';
+        $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : null;
         $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 25;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['memberStatus'] = isset($data['memberStatus']) ? $data['memberStatus'] : null;
         $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : null;

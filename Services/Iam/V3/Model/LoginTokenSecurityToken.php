@@ -180,7 +180,7 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : 600;
+        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : null;
     }
 
     /**

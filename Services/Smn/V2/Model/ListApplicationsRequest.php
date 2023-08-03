@@ -177,8 +177,8 @@ class ListApplicationsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
     }

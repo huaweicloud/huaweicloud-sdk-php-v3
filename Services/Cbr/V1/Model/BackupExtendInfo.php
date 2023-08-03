@@ -269,12 +269,12 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
         $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
         $this->container['snapshotId'] = isset($data['snapshotId']) ? $data['snapshotId'] : null;
         $this->container['supportLld'] = isset($data['supportLld']) ? $data['supportLld'] : null;
-        $this->container['supportedRestoreMode'] = isset($data['supportedRestoreMode']) ? $data['supportedRestoreMode'] : 'na';
+        $this->container['supportedRestoreMode'] = isset($data['supportedRestoreMode']) ? $data['supportedRestoreMode'] : null;
         $this->container['osImagesData'] = isset($data['osImagesData']) ? $data['osImagesData'] : null;
         $this->container['containSystemDisk'] = isset($data['containSystemDisk']) ? $data['containSystemDisk'] : null;
         $this->container['encrypted'] = isset($data['encrypted']) ? $data['encrypted'] : null;
         $this->container['systemDisk'] = isset($data['systemDisk']) ? $data['systemDisk'] : null;
-        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : false;
+        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : null;
     }
 
     /**

@@ -209,11 +209,11 @@ class CreateMemberReq implements ModelInterface, ArrayAccess
     {
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : 1;
+        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
     }
 
     /**

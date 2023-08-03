@@ -285,9 +285,9 @@ class CreateTableReq implements ModelInterface, ArrayAccess
         $this->container['dataPath'] = isset($data['dataPath']) ? $data['dataPath'] : null;
         $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : null;
         $this->container['delimiter'] = isset($data['delimiter']) ? $data['delimiter'] : null;
-        $this->container['quoteChar'] = isset($data['quoteChar']) ? $data['quoteChar'] : '\"';
-        $this->container['escapeChar'] = isset($data['escapeChar']) ? $data['escapeChar'] : '\\';
-        $this->container['dateFormat'] = isset($data['dateFormat']) ? $data['dateFormat'] : 'yyyy/MM/dd';
+        $this->container['quoteChar'] = isset($data['quoteChar']) ? $data['quoteChar'] : null;
+        $this->container['escapeChar'] = isset($data['escapeChar']) ? $data['escapeChar'] : null;
+        $this->container['dateFormat'] = isset($data['dateFormat']) ? $data['dateFormat'] : null;
         $this->container['timestampFormat'] = isset($data['timestampFormat']) ? $data['timestampFormat'] : null;
         $this->container['selectStatement'] = isset($data['selectStatement']) ? $data['selectStatement'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

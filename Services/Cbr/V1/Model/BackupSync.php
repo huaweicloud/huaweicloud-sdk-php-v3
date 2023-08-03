@@ -223,7 +223,7 @@ class BackupSync implements ModelInterface, ArrayAccess
         $this->container['imagePath'] = isset($data['imagePath']) ? $data['imagePath'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : 'OS::Native::Server';
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
 

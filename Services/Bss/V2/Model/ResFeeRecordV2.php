@@ -41,6 +41,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
@@ -100,6 +101,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'specSize' => 'double',
             'specSizeMeasureId' => 'int',
             'tradeId' => 'string',
+            'id' => 'string',
             'tradeTime' => 'string',
             'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string',
@@ -159,6 +161,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
@@ -218,6 +221,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'specSize' => 'double',
         'specSizeMeasureId' => 'int32',
         'tradeId' => null,
+        'id' => null,
         'tradeTime' => null,
         'enterpriseProjectId' => null,
         'enterpriseProjectName' => null,
@@ -298,6 +302,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
@@ -357,6 +362,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'specSize' => 'spec_size',
             'specSizeMeasureId' => 'spec_size_measure_id',
             'tradeId' => 'trade_id',
+            'id' => 'id',
             'tradeTime' => 'trade_time',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enterpriseProjectName' => 'enterprise_project_name',
@@ -416,6 +422,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
@@ -475,6 +482,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'specSize' => 'setSpecSize',
             'specSizeMeasureId' => 'setSpecSizeMeasureId',
             'tradeId' => 'setTradeId',
+            'id' => 'setId',
             'tradeTime' => 'setTradeTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enterpriseProjectName' => 'setEnterpriseProjectName',
@@ -534,6 +542,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
@@ -593,6 +602,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'specSize' => 'getSpecSize',
             'specSizeMeasureId' => 'getSpecSizeMeasureId',
             'tradeId' => 'getTradeId',
+            'id' => 'getId',
             'tradeTime' => 'getTradeTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enterpriseProjectName' => 'getEnterpriseProjectName',
@@ -708,6 +718,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['specSize'] = isset($data['specSize']) ? $data['specSize'] : null;
         $this->container['specSizeMeasureId'] = isset($data['specSizeMeasureId']) ? $data['specSizeMeasureId'] : null;
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['tradeTime'] = isset($data['tradeTime']) ? $data['tradeTime'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
@@ -1267,6 +1278,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setTradeId($tradeId)
     {
         $this->container['tradeId'] = $tradeId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  唯一标识。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 唯一标识。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

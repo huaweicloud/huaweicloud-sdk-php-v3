@@ -182,7 +182,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf-8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }

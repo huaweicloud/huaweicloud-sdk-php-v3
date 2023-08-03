@@ -246,7 +246,7 @@ class ShowBackupPolicy implements ModelInterface, ArrayAccess
         $this->container['prefetchBlock'] = isset($data['prefetchBlock']) ? $data['prefetchBlock'] : null;
         $this->container['filesplitSize'] = isset($data['filesplitSize']) ? $data['filesplitSize'] : null;
         $this->container['fileSplitSize'] = isset($data['fileSplitSize']) ? $data['fileSplitSize'] : null;
-        $this->container['enableStandbyBackup'] = isset($data['enableStandbyBackup']) ? $data['enableStandbyBackup'] : false;
+        $this->container['enableStandbyBackup'] = isset($data['enableStandbyBackup']) ? $data['enableStandbyBackup'] : null;
     }
 
     /**

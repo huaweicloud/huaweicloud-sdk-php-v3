@@ -179,8 +179,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['publishDomain'] = isset($data['publishDomain']) ? $data['publishDomain'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

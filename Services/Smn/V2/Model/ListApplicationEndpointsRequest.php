@@ -198,8 +198,8 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['applicationUrn'] = isset($data['applicationUrn']) ? $data['applicationUrn'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;

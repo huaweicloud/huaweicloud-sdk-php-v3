@@ -187,10 +187,10 @@ class BasicWatermark implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : '0';
-        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : '0';
+        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
+        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
         $this->container['referpos'] = isset($data['referpos']) ? $data['referpos'] : null;
-        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : '0';
+        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
         $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
     }
 

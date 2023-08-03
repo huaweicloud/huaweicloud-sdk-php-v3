@@ -180,8 +180,8 @@ class ListOpLogsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['operationLogs'] = isset($data['operationLogs']) ? $data['operationLogs'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

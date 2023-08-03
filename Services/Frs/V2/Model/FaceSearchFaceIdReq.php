@@ -198,7 +198,7 @@ class FaceSearchFaceIdReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
-        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : 10;
+        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : null;
         $this->container['faceId'] = isset($data['faceId']) ? $data['faceId'] : null;
         $this->container['returnFields'] = isset($data['returnFields']) ? $data['returnFields'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;

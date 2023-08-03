@@ -204,9 +204,9 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xEnterpriseProjectId'] = isset($data['xEnterpriseProjectId']) ? $data['xEnterpriseProjectId'] : '0';
+        $this->container['xEnterpriseProjectId'] = isset($data['xEnterpriseProjectId']) ? $data['xEnterpriseProjectId'] : null;
         $this->container['xEngineId'] = isset($data['xEngineId']) ? $data['xEngineId'] : null;
-        $this->container['override'] = isset($data['override']) ? $data['override'] : 'force';
+        $this->container['override'] = isset($data['override']) ? $data['override'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }

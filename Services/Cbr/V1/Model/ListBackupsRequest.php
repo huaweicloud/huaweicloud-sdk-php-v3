@@ -477,12 +477,12 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['ownType'] = isset($data['ownType']) ? $data['ownType'] : 'private';
+        $this->container['ownType'] = isset($data['ownType']) ? $data['ownType'] : null;
         $this->container['memberStatus'] = isset($data['memberStatus']) ? $data['memberStatus'] : null;
         $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
         $this->container['usedPercent'] = isset($data['usedPercent']) ? $data['usedPercent'] : null;
-        $this->container['showReplication'] = isset($data['showReplication']) ? $data['showReplication'] : false;
-        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : false;
+        $this->container['showReplication'] = isset($data['showReplication']) ? $data['showReplication'] : null;
+        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
     }
 
     /**

@@ -191,7 +191,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['expirePolicy'] = isset($data['expirePolicy']) ? $data['expirePolicy'] : null;
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : 0;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
     /**

@@ -318,7 +318,7 @@ class ShowQueueDetailResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : true;
+        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['queueId'] = isset($data['queueId']) ? $data['queueId'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
@@ -330,7 +330,7 @@ class ShowQueueDetailResponse implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceMode'] = isset($data['resourceMode']) ? $data['resourceMode'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['cuSpec'] = isset($data['cuSpec']) ? $data['cuSpec'] : null;
         $this->container['cuScaleOutLimit'] = isset($data['cuScaleOutLimit']) ? $data['cuScaleOutLimit'] : null;

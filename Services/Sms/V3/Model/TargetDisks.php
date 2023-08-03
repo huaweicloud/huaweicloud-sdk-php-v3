@@ -214,7 +214,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : 'NORMAL';
+        $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : null;
         $this->container['diskId'] = isset($data['diskId']) ? $data['diskId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['physicalVolumes'] = isset($data['physicalVolumes']) ? $data['physicalVolumes'] : null;

@@ -220,8 +220,8 @@ class RestScheduleCycleConfDTO implements ModelInterface, ArrayAccess
         $this->container['cycleSubConfId'] = isset($data['cycleSubConfId']) ? $data['cycleSubConfId'] : null;
         $this->container['mediaTypes'] = isset($data['mediaTypes']) ? $data['mediaTypes'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['length'] = isset($data['length']) ? $data['length'] : 30;
-        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : 0;
+        $this->container['length'] = isset($data['length']) ? $data['length'] : null;
+        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : null;
         $this->container['confConfigInfo'] = isset($data['confConfigInfo']) ? $data['confConfigInfo'] : null;
         $this->container['recordAuthType'] = isset($data['recordAuthType']) ? $data['recordAuthType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

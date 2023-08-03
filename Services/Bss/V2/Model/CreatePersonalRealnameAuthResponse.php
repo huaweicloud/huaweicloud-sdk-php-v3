@@ -148,7 +148,7 @@ class CreatePersonalRealnameAuthResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isReview'] = isset($data['isReview']) ? $data['isReview'] : 1;
+        $this->container['isReview'] = isset($data['isReview']) ? $data['isReview'] : null;
     }
 
     /**

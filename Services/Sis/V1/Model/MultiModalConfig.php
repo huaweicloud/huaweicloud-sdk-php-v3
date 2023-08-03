@@ -218,9 +218,9 @@ class MultiModalConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['videoFormat'] = isset($data['videoFormat']) ? $data['videoFormat'] : 'auto';
-        $this->container['language'] = isset($data['language']) ? $data['language'] : 'en_gb';
-        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : 'sentence';
+        $this->container['videoFormat'] = isset($data['videoFormat']) ? $data['videoFormat'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
     }
 
     /**

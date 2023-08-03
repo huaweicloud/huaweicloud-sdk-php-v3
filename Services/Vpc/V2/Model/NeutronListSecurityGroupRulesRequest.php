@@ -267,7 +267,7 @@ class NeutronListSecurityGroupRulesRequest implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;

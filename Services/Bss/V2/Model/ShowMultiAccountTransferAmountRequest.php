@@ -168,8 +168,8 @@ class ShowMultiAccountTransferAmountRequest implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['balanceType'] = isset($data['balanceType']) ? $data['balanceType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

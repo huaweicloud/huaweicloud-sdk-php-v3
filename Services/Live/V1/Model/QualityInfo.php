@@ -321,16 +321,16 @@ class QualityInfo implements ModelInterface, ArrayAccess
     {
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['quality'] = isset($data['quality']) ? $data['quality'] : null;
-        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : 'on';
-        $this->container['hdlb'] = isset($data['hdlb']) ? $data['hdlb'] : 'off';
-        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : 'H264';
+        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : null;
+        $this->container['hdlb'] = isset($data['hdlb']) ? $data['hdlb'] : null;
+        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
-        $this->container['videoFrameRate'] = isset($data['videoFrameRate']) ? $data['videoFrameRate'] : 0;
-        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : 'RTMP';
-        $this->container['iFrameInterval'] = isset($data['iFrameInterval']) ? $data['iFrameInterval'] : 0;
-        $this->container['gop'] = isset($data['gop']) ? $data['gop'] : 0;
+        $this->container['videoFrameRate'] = isset($data['videoFrameRate']) ? $data['videoFrameRate'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['iFrameInterval'] = isset($data['iFrameInterval']) ? $data['iFrameInterval'] : null;
+        $this->container['gop'] = isset($data['gop']) ? $data['gop'] : null;
     }
 
     /**

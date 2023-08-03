@@ -179,8 +179,8 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

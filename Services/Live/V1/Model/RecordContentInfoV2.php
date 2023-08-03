@@ -298,7 +298,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['recordFormat'] = isset($data['recordFormat']) ? $data['recordFormat'] : null;
-        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : 'CONTINUOUS_RECORD';
+        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : null;
         $this->container['obsAddr'] = isset($data['obsAddr']) ? $data['obsAddr'] : null;
         $this->container['vodInfo'] = isset($data['vodInfo']) ? $data['vodInfo'] : null;
         $this->container['downloadUrl'] = isset($data['downloadUrl']) ? $data['downloadUrl'] : null;

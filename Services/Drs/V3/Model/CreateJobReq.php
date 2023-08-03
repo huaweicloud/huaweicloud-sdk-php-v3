@@ -491,10 +491,10 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['isTargetReadonly'] = isset($data['isTargetReadonly']) ? $data['isTargetReadonly'] : null;
         $this->container['jobDirection'] = isset($data['jobDirection']) ? $data['jobDirection'] : null;
-        $this->container['multiWrite'] = isset($data['multiWrite']) ? $data['multiWrite'] : false;
+        $this->container['multiWrite'] = isset($data['multiWrite']) ? $data['multiWrite'] : null;
         $this->container['netType'] = isset($data['netType']) ? $data['netType'] : null;
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
-        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : 'high';
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['sourceEndpoint'] = isset($data['sourceEndpoint']) ? $data['sourceEndpoint'] : null;
         $this->container['targetEndpoint'] = isset($data['targetEndpoint']) ? $data['targetEndpoint'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

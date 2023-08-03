@@ -229,8 +229,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     {
         $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
         $this->container['associatedOnBegin'] = isset($data['associatedOnBegin']) ? $data['associatedOnBegin'] : null;

@@ -187,10 +187,10 @@ class ListFlinkTemplatesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['order'] = isset($data['order']) ? $data['order'] : 'desc';
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 

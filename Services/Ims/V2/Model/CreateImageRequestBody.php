@@ -365,11 +365,11 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
         $this->container['osVersion'] = isset($data['osVersion']) ? $data['osVersion'] : null;
         $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : null;
-        $this->container['isConfig'] = isset($data['isConfig']) ? $data['isConfig'] : false;
+        $this->container['isConfig'] = isset($data['isConfig']) ? $data['isConfig'] : null;
         $this->container['cmkId'] = isset($data['cmkId']) ? $data['cmkId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'ECS';
-        $this->container['isQuickImport'] = isset($data['isQuickImport']) ? $data['isQuickImport'] : false;
-        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : 'x86';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['isQuickImport'] = isset($data['isQuickImport']) ? $data['isQuickImport'] : null;
+        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
         $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
     }
 

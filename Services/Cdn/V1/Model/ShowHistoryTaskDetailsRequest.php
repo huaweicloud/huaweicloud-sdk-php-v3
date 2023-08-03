@@ -209,8 +209,8 @@ class ShowHistoryTaskDetailsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['historyTasksId'] = isset($data['historyTasksId']) ? $data['historyTasksId'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : 30;
-        $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : 1;
+        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
+        $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;

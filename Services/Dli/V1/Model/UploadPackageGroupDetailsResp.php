@@ -210,7 +210,7 @@ class UploadPackageGroupDetailsResp implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : false;
+        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['underlyingName'] = isset($data['underlyingName']) ? $data['underlyingName'] : null;

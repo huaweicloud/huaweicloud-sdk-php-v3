@@ -314,7 +314,7 @@ class PostTask implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : true;
+        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['sourceServer'] = isset($data['sourceServer']) ? $data['sourceServer'] : null;
         $this->container['targetServer'] = isset($data['targetServer']) ? $data['targetServer'] : null;
@@ -324,8 +324,8 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['vmTemplateId'] = isset($data['vmTemplateId']) ? $data['vmTemplateId'] : null;
-        $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : true;
-        $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : false;
+        $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
+        $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
     }

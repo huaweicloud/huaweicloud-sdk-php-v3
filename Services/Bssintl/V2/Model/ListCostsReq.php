@@ -211,8 +211,8 @@ class ListCostsReq implements ModelInterface, ArrayAccess
         $this->container['groupby'] = isset($data['groupby']) ? $data['groupby'] : null;
         $this->container['costType'] = isset($data['costType']) ? $data['costType'] : null;
         $this->container['amountType'] = isset($data['amountType']) ? $data['amountType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
     }
 

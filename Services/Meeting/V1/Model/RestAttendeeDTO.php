@@ -300,14 +300,14 @@ class RestAttendeeDTO implements ModelInterface, ArrayAccess
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : 0;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['phone2'] = isset($data['phone2']) ? $data['phone2'] : null;
         $this->container['phone3'] = isset($data['phone3']) ? $data['phone3'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['sms'] = isset($data['sms']) ? $data['sms'] : null;
-        $this->container['isMute'] = isset($data['isMute']) ? $data['isMute'] : 0;
-        $this->container['isAutoInvite'] = isset($data['isAutoInvite']) ? $data['isAutoInvite'] : 1;
+        $this->container['isMute'] = isset($data['isMute']) ? $data['isMute'] : null;
+        $this->container['isAutoInvite'] = isset($data['isAutoInvite']) ? $data['isAutoInvite'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['deptUuid'] = isset($data['deptUuid']) ? $data['deptUuid'] : null;

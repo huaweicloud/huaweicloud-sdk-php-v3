@@ -283,12 +283,12 @@ class AlertNoticeConfigResponse implements ModelInterface, ArrayAccess
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['sendfreq'] = isset($data['sendfreq']) ? $data['sendfreq'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['times'] = isset($data['times']) ? $data['times'] : 1;
+        $this->container['times'] = isset($data['times']) ? $data['times'] : null;
         $this->container['threat'] = isset($data['threat']) ? $data['threat'] : null;
-        $this->container['preferHtml'] = isset($data['preferHtml']) ? $data['preferHtml'] : false;
+        $this->container['preferHtml'] = isset($data['preferHtml']) ? $data['preferHtml'] : null;
         $this->container['noticeClass'] = isset($data['noticeClass']) ? $data['noticeClass'] : null;
         $this->container['nearlyExpiredTime'] = isset($data['nearlyExpiredTime']) ? $data['nearlyExpiredTime'] : null;
-        $this->container['isAllEnterpriseProject'] = isset($data['isAllEnterpriseProject']) ? $data['isAllEnterpriseProject'] : true;
+        $this->container['isAllEnterpriseProject'] = isset($data['isAllEnterpriseProject']) ? $data['isAllEnterpriseProject'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }

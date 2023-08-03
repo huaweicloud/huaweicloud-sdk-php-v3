@@ -20,7 +20,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * type  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     * value  参数值，多个参数使用分号分隔。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * type  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     * value  参数值，多个参数使用分号分隔。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * type  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     * value  参数值，多个参数使用分号分隔。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * type  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     * value  参数值，多个参数使用分号分隔。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * type  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     * value  参数值，多个参数使用分号分隔。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    *  缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CacheUrlParameterFilter implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 缓存URL参数操作类型, full_url：缓存所有参数，ignore_url_params：忽略所有参数，del_params：忽略指定URL参数，reserve_params：保留指定URL参数。  >   本接口参数有调整，参数替换如下： >   - del_params替代del_args。 >   - reserve_params替代reserve_args。
+    * @param string|null $type 缓存URL参数操作类型： - full_url：缓存所有参数； - ignore_url_params：忽略所有参数； - del_params：忽略指定URL参数； - reserve_params：保留指定URL参数。   > 本接口参数有调整，参数替换如下：   > - del_params替代del_args。   > - reserve_params替代reserve_args。
     *
     * @return $this
     */

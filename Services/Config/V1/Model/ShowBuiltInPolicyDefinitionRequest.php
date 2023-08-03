@@ -158,7 +158,7 @@ class ShowBuiltInPolicyDefinitionRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['policyDefinitionId'] = isset($data['policyDefinitionId']) ? $data['policyDefinitionId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh-cn';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
     }
 
     /**

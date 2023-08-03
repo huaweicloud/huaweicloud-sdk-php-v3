@@ -190,8 +190,8 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

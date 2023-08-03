@@ -246,7 +246,7 @@ class ModDeptDTO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['deptName'] = isset($data['deptName']) ? $data['deptName'] : null;
-        $this->container['parentDeptCode'] = isset($data['parentDeptCode']) ? $data['parentDeptCode'] : '1';
+        $this->container['parentDeptCode'] = isset($data['parentDeptCode']) ? $data['parentDeptCode'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['inPermission'] = isset($data['inPermission']) ? $data['inPermission'] : null;
         $this->container['outPermission'] = isset($data['outPermission']) ? $data['outPermission'] : null;

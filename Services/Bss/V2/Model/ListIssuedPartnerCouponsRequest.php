@@ -288,8 +288,8 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
         $this->container['effectiveTimeEnd'] = isset($data['effectiveTimeEnd']) ? $data['effectiveTimeEnd'] : null;
         $this->container['expireTimeBegin'] = isset($data['expireTimeBegin']) ? $data['expireTimeBegin'] : null;
         $this->container['expireTimeEnd'] = isset($data['expireTimeEnd']) ? $data['expireTimeEnd'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 

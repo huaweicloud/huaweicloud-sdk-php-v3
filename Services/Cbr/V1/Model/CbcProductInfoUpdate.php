@@ -179,7 +179,7 @@ class CbcProductInfoUpdate implements ModelInterface, ArrayAccess
     {
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['resourceSize'] = isset($data['resourceSize']) ? $data['resourceSize'] : null;
-        $this->container['resourceSizeMeasureId'] = isset($data['resourceSizeMeasureId']) ? $data['resourceSizeMeasureId'] : 17;
+        $this->container['resourceSizeMeasureId'] = isset($data['resourceSizeMeasureId']) ? $data['resourceSizeMeasureId'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
     }
 

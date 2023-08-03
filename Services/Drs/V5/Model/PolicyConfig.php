@@ -293,9 +293,9 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     {
         $this->container['filterDdlPolicy'] = isset($data['filterDdlPolicy']) ? $data['filterDdlPolicy'] : null;
         $this->container['conflictPolicy'] = isset($data['conflictPolicy']) ? $data['conflictPolicy'] : null;
-        $this->container['indexTrans'] = isset($data['indexTrans']) ? $data['indexTrans'] : true;
-        $this->container['ddlTrans'] = isset($data['ddlTrans']) ? $data['ddlTrans'] : true;
-        $this->container['dataSyncTopologyType'] = isset($data['dataSyncTopologyType']) ? $data['dataSyncTopologyType'] : 'one2one';
+        $this->container['indexTrans'] = isset($data['indexTrans']) ? $data['indexTrans'] : null;
+        $this->container['ddlTrans'] = isset($data['ddlTrans']) ? $data['ddlTrans'] : null;
+        $this->container['dataSyncTopologyType'] = isset($data['dataSyncTopologyType']) ? $data['dataSyncTopologyType'] : null;
         $this->container['supportDdlInfo'] = isset($data['supportDdlInfo']) ? $data['supportDdlInfo'] : null;
         $this->container['syncTypePolicy'] = isset($data['syncTypePolicy']) ? $data['syncTypePolicy'] : null;
         $this->container['incrementReadMode'] = isset($data['incrementReadMode']) ? $data['incrementReadMode'] : null;

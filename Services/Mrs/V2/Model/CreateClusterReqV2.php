@@ -462,7 +462,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isDecProject'] = isset($data['isDecProject']) ? $data['isDecProject'] : false;
+        $this->container['isDecProject'] = isset($data['isDecProject']) ? $data['isDecProject'] : null;
         $this->container['clusterVersion'] = isset($data['clusterVersion']) ? $data['clusterVersion'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;

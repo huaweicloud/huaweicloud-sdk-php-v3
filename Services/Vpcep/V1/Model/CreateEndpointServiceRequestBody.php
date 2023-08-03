@@ -288,14 +288,14 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
-        $this->container['approvalEnabled'] = isset($data['approvalEnabled']) ? $data['approvalEnabled'] : true;
-        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'interface';
+        $this->container['approvalEnabled'] = isset($data['approvalEnabled']) ? $data['approvalEnabled'] : null;
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['serverType'] = isset($data['serverType']) ? $data['serverType'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
-        $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : 'close';
+        $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['enablePolicy'] = isset($data['enablePolicy']) ? $data['enablePolicy'] : false;
+        $this->container['enablePolicy'] = isset($data['enablePolicy']) ? $data['enablePolicy'] : null;
     }
 
     /**

@@ -148,7 +148,7 @@ class CancelBatchJobResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['msg'] = isset($data['msg']) ? $data['msg'] : 'deleted';
+        $this->container['msg'] = isset($data['msg']) ? $data['msg'] : null;
     }
 
     /**

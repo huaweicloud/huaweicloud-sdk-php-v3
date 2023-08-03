@@ -258,13 +258,13 @@ class ListFlinkJobsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['order'] = isset($data['order']) ? $data['order'] : 'desc';
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['rootJobId'] = isset($data['rootJobId']) ? $data['rootJobId'] : null;
-        $this->container['showDetail'] = isset($data['showDetail']) ? $data['showDetail'] : false;
+        $this->container['showDetail'] = isset($data['showDetail']) ? $data['showDetail'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['sysEnterpriseProjectName'] = isset($data['sysEnterpriseProjectName']) ? $data['sysEnterpriseProjectName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

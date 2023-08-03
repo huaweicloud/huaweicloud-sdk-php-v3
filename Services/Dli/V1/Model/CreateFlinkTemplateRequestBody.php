@@ -206,7 +206,7 @@ class CreateFlinkTemplateRequestBody implements ModelInterface, ArrayAccess
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
         $this->container['sqlBody'] = isset($data['sqlBody']) ? $data['sqlBody'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : 'flink_sql_job';
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
     }
 
     /**

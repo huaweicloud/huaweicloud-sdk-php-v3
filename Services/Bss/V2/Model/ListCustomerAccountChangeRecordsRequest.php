@@ -245,8 +245,8 @@ class ListCustomerAccountChangeRecordsRequest implements ModelInterface, ArrayAc
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
         $this->container['paymentChannelId'] = isset($data['paymentChannelId']) ? $data['paymentChannelId'] : null;
         $this->container['paymentChannelNo'] = isset($data['paymentChannelNo']) ? $data['paymentChannelNo'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

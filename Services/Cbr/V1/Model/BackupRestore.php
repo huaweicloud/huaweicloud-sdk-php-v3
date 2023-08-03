@@ -188,7 +188,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['mappings'] = isset($data['mappings']) ? $data['mappings'] : null;
-        $this->container['powerOn'] = isset($data['powerOn']) ? $data['powerOn'] : true;
+        $this->container['powerOn'] = isset($data['powerOn']) ? $data['powerOn'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;

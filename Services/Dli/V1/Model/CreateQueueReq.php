@@ -258,11 +258,11 @@ class CreateQueueReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
-        $this->container['queueType'] = isset($data['queueType']) ? $data['queueType'] : 'sql';
+        $this->container['queueType'] = isset($data['queueType']) ? $data['queueType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['cuCount'] = isset($data['cuCount']) ? $data['cuCount'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
         $this->container['resourceMode'] = isset($data['resourceMode']) ? $data['resourceMode'] : null;
         $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;

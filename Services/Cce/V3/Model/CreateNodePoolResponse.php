@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\Cce\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class EnlargeVolume implements ModelInterface, ArrayAccess
+class CreateNodePoolResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,42 @@ class EnlargeVolume implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'EnlargeVolume';
+    protected static $openAPIModelName = 'CreateNodePoolResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enlargeVolume  enlargeVolume
+    * kind  API类型，固定值“NodePool”。
+    * apiVersion  API版本，固定值“v3”。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'enlargeVolume' => '\HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeObject'
+            'kind' => 'string',
+            'apiVersion' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadata',
+            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpec',
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enlargeVolume  enlargeVolume
+    * kind  API类型，固定值“NodePool”。
+    * apiVersion  API版本，固定值“v3”。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'enlargeVolume' => null
+        'kind' => null,
+        'apiVersion' => null,
+        'metadata' => null,
+        'spec' => null,
+        'status' => null
     ];
 
     /**
@@ -61,32 +78,56 @@ class EnlargeVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enlargeVolume  enlargeVolume
+    * kind  API类型，固定值“NodePool”。
+    * apiVersion  API版本，固定值“v3”。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'enlargeVolume' => 'enlarge_volume'
+            'kind' => 'kind',
+            'apiVersion' => 'apiVersion',
+            'metadata' => 'metadata',
+            'spec' => 'spec',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enlargeVolume  enlargeVolume
+    * kind  API类型，固定值“NodePool”。
+    * apiVersion  API版本，固定值“v3”。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $setters = [
-            'enlargeVolume' => 'setEnlargeVolume'
+            'kind' => 'setKind',
+            'apiVersion' => 'setApiVersion',
+            'metadata' => 'setMetadata',
+            'spec' => 'setSpec',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enlargeVolume  enlargeVolume
+    * kind  API类型，固定值“NodePool”。
+    * apiVersion  API版本，固定值“v3”。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $getters = [
-            'enlargeVolume' => 'getEnlargeVolume'
+            'kind' => 'getKind',
+            'apiVersion' => 'getApiVersion',
+            'metadata' => 'getMetadata',
+            'spec' => 'getSpec',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -147,7 +188,11 @@ class EnlargeVolume implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enlargeVolume'] = isset($data['enlargeVolume']) ? $data['enlargeVolume'] : null;
+        $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
+        $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -158,9 +203,6 @@ class EnlargeVolume implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['enlargeVolume'] === null) {
-            $invalidProperties[] = "'enlargeVolume' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +218,122 @@ class EnlargeVolume implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets enlargeVolume
-    *  enlargeVolume
+    * Gets kind
+    *  API类型，固定值“NodePool”。
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeObject
+    * @return string|null
     */
-    public function getEnlargeVolume()
+    public function getKind()
     {
-        return $this->container['enlargeVolume'];
+        return $this->container['kind'];
     }
 
     /**
-    * Sets enlargeVolume
+    * Sets kind
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeObject $enlargeVolume enlargeVolume
+    * @param string|null $kind API类型，固定值“NodePool”。
     *
     * @return $this
     */
-    public function setEnlargeVolume($enlargeVolume)
+    public function setKind($kind)
     {
-        $this->container['enlargeVolume'] = $enlargeVolume;
+        $this->container['kind'] = $kind;
+        return $this;
+    }
+
+    /**
+    * Gets apiVersion
+    *  API版本，固定值“v3”。
+    *
+    * @return string|null
+    */
+    public function getApiVersion()
+    {
+        return $this->container['apiVersion'];
+    }
+
+    /**
+    * Sets apiVersion
+    *
+    * @param string|null $apiVersion API版本，固定值“v3”。
+    *
+    * @return $this
+    */
+    public function setApiVersion($apiVersion)
+    {
+        $this->container['apiVersion'] = $apiVersion;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
+        return $this;
+    }
+
+    /**
+    * Gets spec
+    *  spec
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpec|null
+    */
+    public function getSpec()
+    {
+        return $this->container['spec'];
+    }
+
+    /**
+    * Sets spec
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpec|null $spec spec
+    *
+    * @return $this
+    */
+    public function setSpec($spec)
+    {
+        $this->container['spec'] = $spec;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

@@ -180,7 +180,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
         $this->container['input'] = isset($data['input']) ? $data['input'] : null;
         $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
-        $this->container['sync'] = isset($data['sync']) ? $data['sync'] : 0;
+        $this->container['sync'] = isset($data['sync']) ? $data['sync'] : null;
     }
 
     /**

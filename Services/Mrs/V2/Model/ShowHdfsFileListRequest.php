@@ -233,7 +233,7 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'path_suffix';
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
     }
 

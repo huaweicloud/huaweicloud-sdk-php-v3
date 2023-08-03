@@ -168,8 +168,8 @@ class ListAuthInfoRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['authInfoName'] = isset($data['authInfoName']) ? $data['authInfoName'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

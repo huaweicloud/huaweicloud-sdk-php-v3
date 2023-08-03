@@ -255,9 +255,9 @@ class NeutronCreateSubnetOption implements ModelInterface, ArrayAccess
         $this->container['allocationPools'] = isset($data['allocationPools']) ? $data['allocationPools'] : null;
         $this->container['dnsNameservers'] = isset($data['dnsNameservers']) ? $data['dnsNameservers'] : null;
         $this->container['hostRoutes'] = isset($data['hostRoutes']) ? $data['hostRoutes'] : null;
-        $this->container['enableDhcp'] = isset($data['enableDhcp']) ? $data['enableDhcp'] : true;
-        $this->container['ipv6AddressMode'] = isset($data['ipv6AddressMode']) ? $data['ipv6AddressMode'] : 'dhcpv6-stateful';
-        $this->container['ipv6RaMode'] = isset($data['ipv6RaMode']) ? $data['ipv6RaMode'] : 'dhcpv6-stateful';
+        $this->container['enableDhcp'] = isset($data['enableDhcp']) ? $data['enableDhcp'] : null;
+        $this->container['ipv6AddressMode'] = isset($data['ipv6AddressMode']) ? $data['ipv6AddressMode'] : null;
+        $this->container['ipv6RaMode'] = isset($data['ipv6RaMode']) ? $data['ipv6RaMode'] : null;
     }
 
     /**

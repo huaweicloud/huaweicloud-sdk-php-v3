@@ -187,11 +187,11 @@ class AlarmNotifyConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['alarmToUser'] = isset($data['alarmToUser']) ? $data['alarmToUser'] : false;
+        $this->container['alarmToUser'] = isset($data['alarmToUser']) ? $data['alarmToUser'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
-        $this->container['delayTime'] = isset($data['delayTime']) ? $data['delayTime'] : 0;
-        $this->container['rpoDelay'] = isset($data['rpoDelay']) ? $data['rpoDelay'] : 0;
-        $this->container['rtoDelay'] = isset($data['rtoDelay']) ? $data['rtoDelay'] : 0;
+        $this->container['delayTime'] = isset($data['delayTime']) ? $data['delayTime'] : null;
+        $this->container['rpoDelay'] = isset($data['rpoDelay']) ? $data['rpoDelay'] : null;
+        $this->container['rtoDelay'] = isset($data['rtoDelay']) ? $data['rtoDelay'] : null;
     }
 
     /**

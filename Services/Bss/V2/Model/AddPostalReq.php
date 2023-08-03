@@ -224,7 +224,7 @@ class AddPostalReq implements ModelInterface, ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
-        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : 0;
+        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
     }
 
     /**

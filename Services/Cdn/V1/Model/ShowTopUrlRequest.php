@@ -231,7 +231,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
-        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : 'mainland_china';
+        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
         $this->container['statType'] = isset($data['statType']) ? $data['statType'] : null;
     }
 

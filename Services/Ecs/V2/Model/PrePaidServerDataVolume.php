@@ -287,15 +287,15 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     {
         $this->container['volumetype'] = isset($data['volumetype']) ? $data['volumetype'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['shareable'] = isset($data['shareable']) ? $data['shareable'] : false;
-        $this->container['multiattach'] = isset($data['multiattach']) ? $data['multiattach'] : false;
-        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : false;
+        $this->container['shareable'] = isset($data['shareable']) ? $data['shareable'] : null;
+        $this->container['multiattach'] = isset($data['multiattach']) ? $data['multiattach'] : null;
+        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['dataImageId'] = isset($data['dataImageId']) ? $data['dataImageId'] : null;
-        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : false;
+        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : null;
     }
 
     /**

@@ -147,7 +147,7 @@ class InviteShareDTO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['share'] = isset($data['share']) ? $data['share'] : 0;
+        $this->container['share'] = isset($data['share']) ? $data['share'] : null;
     }
 
     /**

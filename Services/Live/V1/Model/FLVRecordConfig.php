@@ -168,7 +168,7 @@ class FLVRecordConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['recordCycle'] = isset($data['recordCycle']) ? $data['recordCycle'] : null;
-        $this->container['recordPrefix'] = isset($data['recordPrefix']) ? $data['recordPrefix'] : 'Record/{publish_domain}/{app}/{record_type}/{record_format}/{stream}_{file_start_time}/{file_start_time}';
+        $this->container['recordPrefix'] = isset($data['recordPrefix']) ? $data['recordPrefix'] : null;
         $this->container['recordMaxDurationToMergeFile'] = isset($data['recordMaxDurationToMergeFile']) ? $data['recordMaxDurationToMergeFile'] : null;
     }
 

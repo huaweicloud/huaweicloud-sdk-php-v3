@@ -157,7 +157,7 @@ class UpdateLogGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : 'None';
+        $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

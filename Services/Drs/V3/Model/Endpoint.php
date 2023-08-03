@@ -425,7 +425,7 @@ class Endpoint implements ModelInterface, ArrayAccess
         $this->container['sslCertName'] = isset($data['sslCertName']) ? $data['sslCertName'] : null;
         $this->container['sslLink'] = isset($data['sslLink']) ? $data['sslLink'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['clusterMode'] = isset($data['clusterMode']) ? $data['clusterMode'] : 'Sharding4.0+';
+        $this->container['clusterMode'] = isset($data['clusterMode']) ? $data['clusterMode'] : null;
     }
 
     /**

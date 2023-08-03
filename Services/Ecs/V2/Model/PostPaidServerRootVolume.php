@@ -247,7 +247,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     {
         $this->container['volumetype'] = isset($data['volumetype']) ? $data['volumetype'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : false;
+        $this->container['hwpassthrough'] = isset($data['hwpassthrough']) ? $data['hwpassthrough'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;

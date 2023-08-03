@@ -160,7 +160,7 @@ class RegisterServerMonitorRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['monitorMetrics'] = isset($data['monitorMetrics']) ? $data['monitorMetrics'] : '';
+        $this->container['monitorMetrics'] = isset($data['monitorMetrics']) ? $data['monitorMetrics'] : null;
     }
 
     /**

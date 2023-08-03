@@ -42,6 +42,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'instanceType' => 'string',
             'portSecurityEnabled' => 'bool',
-            'zoneId' => 'string'
+            'zoneId' => 'string',
+            'enableEfi' => 'bool'
     ];
 
     /**
@@ -94,6 +96,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class Port implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'instanceType' => null,
         'portSecurityEnabled' => null,
-        'zoneId' => null
+        'zoneId' => null,
+        'enableEfi' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'instanceType' => 'instance_type',
             'portSecurityEnabled' => 'port_security_enabled',
-            'zoneId' => 'zone_id'
+            'zoneId' => 'zone_id',
+            'enableEfi' => 'enable_efi'
     ];
 
     /**
@@ -219,6 +225,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'instanceType' => 'setInstanceType',
             'portSecurityEnabled' => 'setPortSecurityEnabled',
-            'zoneId' => 'setZoneId'
+            'zoneId' => 'setZoneId',
+            'enableEfi' => 'setEnableEfi'
     ];
 
     /**
@@ -271,6 +279,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
+    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'instanceType' => 'getInstanceType',
             'portSecurityEnabled' => 'getPortSecurityEnabled',
-            'zoneId' => 'getZoneId'
+            'zoneId' => 'getZoneId',
+            'enableEfi' => 'getEnableEfi'
     ];
 
     /**
@@ -415,6 +425,7 @@ class Port implements ModelInterface, ArrayAccess
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
         $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
+        $this->container['enableEfi'] = isset($data['enableEfi']) ? $data['enableEfi'] : null;
     }
 
     /**
@@ -512,6 +523,9 @@ class Port implements ModelInterface, ArrayAccess
         }
         if ($this->container['zoneId'] === null) {
             $invalidProperties[] = "'zoneId' can't be null";
+        }
+        if ($this->container['enableEfi'] === null) {
+            $invalidProperties[] = "'enableEfi' can't be null";
         }
         return $invalidProperties;
     }
@@ -1052,6 +1066,30 @@ class Port implements ModelInterface, ArrayAccess
     public function setZoneId($zoneId)
     {
         $this->container['zoneId'] = $zoneId;
+        return $this;
+    }
+
+    /**
+    * Gets enableEfi
+    *  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    *
+    * @return bool
+    */
+    public function getEnableEfi()
+    {
+        return $this->container['enableEfi'];
+    }
+
+    /**
+    * Sets enableEfi
+    *
+    * @param bool $enableEfi 功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    *
+    * @return $this
+    */
+    public function setEnableEfi($enableEfi)
+    {
+        $this->container['enableEfi'] = $enableEfi;
         return $this;
     }
 

@@ -260,10 +260,10 @@ class PostPaidServerExtendParam implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : 0;
+        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : false;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['marketType'] = isset($data['marketType']) ? $data['marketType'] : null;
         $this->container['spotPrice'] = isset($data['spotPrice']) ? $data['spotPrice'] : null;
         $this->container['diskPrior'] = isset($data['diskPrior']) ? $data['diskPrior'] : null;

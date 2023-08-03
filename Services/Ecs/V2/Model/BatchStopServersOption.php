@@ -173,7 +173,7 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['servers'] = isset($data['servers']) ? $data['servers'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'SOFT';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**

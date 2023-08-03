@@ -178,7 +178,7 @@ class NeutronUpdateRouterOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['externalGatewayInfo'] = isset($data['externalGatewayInfo']) ? $data['externalGatewayInfo'] : null;
         $this->container['routes'] = isset($data['routes']) ? $data['routes'] : null;
     }

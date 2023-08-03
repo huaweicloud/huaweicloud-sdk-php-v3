@@ -237,8 +237,8 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['blockCount'] = isset($data['blockCount']) ? $data['blockCount'] : 0;
-        $this->container['blockSize'] = isset($data['blockSize']) ? $data['blockSize'] : 0;
+        $this->container['blockCount'] = isset($data['blockCount']) ? $data['blockCount'] : null;
+        $this->container['blockSize'] = isset($data['blockSize']) ? $data['blockSize'] : null;
         $this->container['fileSystem'] = isset($data['fileSystem']) ? $data['fileSystem'] : null;
         $this->container['inodeSize'] = isset($data['inodeSize']) ? $data['inodeSize'] : null;
         $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : null;

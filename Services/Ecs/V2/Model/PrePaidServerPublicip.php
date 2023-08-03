@@ -169,7 +169,7 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['eip'] = isset($data['eip']) ? $data['eip'] : null;
-        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : false;
+        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : null;
     }
 
     /**

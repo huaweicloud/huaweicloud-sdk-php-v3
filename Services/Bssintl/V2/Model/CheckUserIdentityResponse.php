@@ -168,8 +168,8 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : 'CBC.0000';
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : 'success';
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['checkResult'] = isset($data['checkResult']) ? $data['checkResult'] : null;
     }
 

@@ -265,14 +265,14 @@ class CorpBasicDTO implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['fax'] = isset($data['fax']) ? $data['fax'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['spId'] = isset($data['spId']) ? $data['spId'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : 'zh-CN';
-        $this->container['timeZoneId'] = isset($data['timeZoneId']) ? $data['timeZoneId'] : '56';
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['timeZoneId'] = isset($data['timeZoneId']) ? $data['timeZoneId'] : null;
     }
 
     /**

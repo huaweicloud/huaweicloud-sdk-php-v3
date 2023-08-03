@@ -179,8 +179,8 @@ class RestChairViewReqBody implements ModelInterface, ArrayAccess
     {
         $this->container['viewType'] = isset($data['viewType']) ? $data['viewType'] : null;
         $this->container['participantId'] = isset($data['participantId']) ? $data['participantId'] : null;
-        $this->container['switchTime'] = isset($data['switchTime']) ? $data['switchTime'] : 10;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 0;
+        $this->container['switchTime'] = isset($data['switchTime']) ? $data['switchTime'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**

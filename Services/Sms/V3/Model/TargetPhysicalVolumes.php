@@ -265,7 +265,7 @@ class TargetPhysicalVolumes implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : 'NORMAL';
+        $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : null;
         $this->container['fileSystem'] = isset($data['fileSystem']) ? $data['fileSystem'] : null;
         $this->container['index'] = isset($data['index']) ? $data['index'] : null;
         $this->container['mountPoint'] = isset($data['mountPoint']) ? $data['mountPoint'] : null;

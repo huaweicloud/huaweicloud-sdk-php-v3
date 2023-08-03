@@ -179,7 +179,7 @@ class CreateEndpointOption implements ModelInterface, ArrayAccess
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : 1;
+        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
     }
 

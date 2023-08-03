@@ -332,7 +332,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
-        $this->container['connectionLimit'] = isset($data['connectionLimit']) ? $data['connectionLimit'] : -1;
+        $this->container['connectionLimit'] = isset($data['connectionLimit']) ? $data['connectionLimit'] : null;
         $this->container['http2Enable'] = isset($data['http2Enable']) ? $data['http2Enable'] : null;
         $this->container['defaultPoolId'] = isset($data['defaultPoolId']) ? $data['defaultPoolId'] : null;
         $this->container['defaultTlsContainerRef'] = isset($data['defaultTlsContainerRef']) ? $data['defaultTlsContainerRef'] : null;

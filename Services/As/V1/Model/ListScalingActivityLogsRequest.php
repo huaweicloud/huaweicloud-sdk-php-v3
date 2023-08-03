@@ -190,8 +190,8 @@ class ListScalingActivityLogsRequest implements ModelInterface, ArrayAccess
         $this->container['scalingGroupId'] = isset($data['scalingGroupId']) ? $data['scalingGroupId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

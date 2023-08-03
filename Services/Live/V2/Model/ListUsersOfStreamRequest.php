@@ -301,10 +301,10 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
-        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : self::INTERVAL_60;
+        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'ALL';
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
     }
 
     /**

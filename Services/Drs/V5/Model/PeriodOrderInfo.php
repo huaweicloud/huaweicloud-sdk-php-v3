@@ -197,9 +197,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : self::PERIOD_TYPE_3;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
-        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : self::IS_AUTO_RENEW_0;
+        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
     }
 
     /**

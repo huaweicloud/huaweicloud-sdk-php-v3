@@ -179,8 +179,8 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['cardId'] = isset($data['cardId']) ? $data['cardId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

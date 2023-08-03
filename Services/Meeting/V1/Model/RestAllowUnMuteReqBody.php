@@ -147,7 +147,7 @@ class RestAllowUnMuteReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['allowUnmuteByOneself'] = isset($data['allowUnmuteByOneself']) ? $data['allowUnmuteByOneself'] : 1;
+        $this->container['allowUnmuteByOneself'] = isset($data['allowUnmuteByOneself']) ? $data['allowUnmuteByOneself'] : null;
     }
 
     /**

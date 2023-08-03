@@ -240,9 +240,9 @@ class UpdateAlertNoticeConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
-        $this->container['sendfreq'] = isset($data['sendfreq']) ? $data['sendfreq'] : 5;
+        $this->container['sendfreq'] = isset($data['sendfreq']) ? $data['sendfreq'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['times'] = isset($data['times']) ? $data['times'] : 1;
+        $this->container['times'] = isset($data['times']) ? $data['times'] : null;
         $this->container['threat'] = isset($data['threat']) ? $data['threat'] : null;
         $this->container['noticeClass'] = isset($data['noticeClass']) ? $data['noticeClass'] : null;
         $this->container['nearlyExpiredTime'] = isset($data['nearlyExpiredTime']) ? $data['nearlyExpiredTime'] : null;

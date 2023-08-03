@@ -199,7 +199,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'rabbitmq';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }

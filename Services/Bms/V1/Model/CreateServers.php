@@ -329,7 +329,7 @@ class CreateServers implements ModelInterface, ArrayAccess
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['vpcid'] = isset($data['vpcid']) ? $data['vpcid'] : null;
         $this->container['publicip'] = isset($data['publicip']) ? $data['publicip'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : 1;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['rootVolume'] = isset($data['rootVolume']) ? $data['rootVolume'] : null;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;

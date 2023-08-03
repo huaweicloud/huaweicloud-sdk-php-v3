@@ -212,8 +212,8 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
-        $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : 1;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

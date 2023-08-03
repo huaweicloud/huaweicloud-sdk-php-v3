@@ -202,7 +202,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
         $this->container['dstAk'] = isset($data['dstAk']) ? $data['dstAk'] : null;
         $this->container['dstSk'] = isset($data['dstSk']) ? $data['dstSk'] : null;
         $this->container['sourceCdnAuthenticationKey'] = isset($data['sourceCdnAuthenticationKey']) ? $data['sourceCdnAuthenticationKey'] : null;
-        $this->container['migrateFailedObject'] = isset($data['migrateFailedObject']) ? $data['migrateFailedObject'] : false;
+        $this->container['migrateFailedObject'] = isset($data['migrateFailedObject']) ? $data['migrateFailedObject'] : null;
     }
 
     /**

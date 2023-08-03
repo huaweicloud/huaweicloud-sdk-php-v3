@@ -466,7 +466,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
         $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
         $this->container['migrateSpeed'] = isset($data['migrateSpeed']) ? $data['migrateSpeed'] : null;
         $this->container['compressRate'] = isset($data['compressRate']) ? $data['compressRate'] : null;
-        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : false;
+        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['errorJson'] = isset($data['errorJson']) ? $data['errorJson'] : null;
         $this->container['totalTime'] = isset($data['totalTime']) ? $data['totalTime'] : null;
         $this->container['migrationIp'] = isset($data['migrationIp']) ? $data['migrationIp'] : null;

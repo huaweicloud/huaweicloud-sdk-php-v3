@@ -212,7 +212,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;

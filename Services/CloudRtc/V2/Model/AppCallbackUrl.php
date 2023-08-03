@@ -192,8 +192,8 @@ class AppCallbackUrl implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['url'] = isset($data['url']) ? $data['url'] : '';
-        $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : '';
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : null;
         $this->container['notifyEventSubscription'] = isset($data['notifyEventSubscription']) ? $data['notifyEventSubscription'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }

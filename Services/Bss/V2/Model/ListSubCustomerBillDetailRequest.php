@@ -307,7 +307,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
@@ -319,8 +319,8 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
         $this->container['accountManagerId'] = isset($data['accountManagerId']) ? $data['accountManagerId'] : null;
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
         $this->container['billDateBegin'] = isset($data['billDateBegin']) ? $data['billDateBegin'] : null;
         $this->container['billDateEnd'] = isset($data['billDateEnd']) ? $data['billDateEnd'] : null;

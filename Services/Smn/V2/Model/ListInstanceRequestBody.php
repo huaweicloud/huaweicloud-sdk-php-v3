@@ -221,8 +221,8 @@ class ListInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['tagsAny'] = isset($data['tagsAny']) ? $data['tagsAny'] : null;
         $this->container['notTags'] = isset($data['notTags']) ? $data['notTags'] : null;
         $this->container['notTagsAny'] = isset($data['notTagsAny']) ? $data['notTagsAny'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : '0';
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : '1000';
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
     }

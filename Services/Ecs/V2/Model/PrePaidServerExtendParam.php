@@ -356,8 +356,8 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
-        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : false;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : null;
         $this->container['marketType'] = isset($data['marketType']) ? $data['marketType'] : null;
         $this->container['spotPrice'] = isset($data['spotPrice']) ? $data['spotPrice'] : null;
         $this->container['diskPrior'] = isset($data['diskPrior']) ? $data['diskPrior'] : null;

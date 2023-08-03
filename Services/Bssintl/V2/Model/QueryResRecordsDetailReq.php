@@ -286,11 +286,11 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['includeZeroRecord'] = isset($data['includeZeroRecord']) ? $data['includeZeroRecord'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['method'] = isset($data['method']) ? $data['method'] : null;
         $this->container['subCustomerId'] = isset($data['subCustomerId']) ? $data['subCustomerId'] : null;
-        $this->container['statisticType'] = isset($data['statisticType']) ? $data['statisticType'] : 1;
+        $this->container['statisticType'] = isset($data['statisticType']) ? $data['statisticType'] : null;
     }
 
     /**

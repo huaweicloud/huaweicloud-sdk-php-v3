@@ -370,13 +370,13 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
         $this->container['adminPass'] = isset($data['adminPass']) ? $data['adminPass'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
-        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : false;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : 1;
+        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['imageRef'] = isset($data['imageRef']) ? $data['imageRef'] : null;
-        $this->container['isAutoRename'] = isset($data['isAutoRename']) ? $data['isAutoRename'] : true;
+        $this->container['isAutoRename'] = isset($data['isAutoRename']) ? $data['isAutoRename'] : null;
         $this->container['keyName'] = isset($data['keyName']) ? $data['keyName'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;

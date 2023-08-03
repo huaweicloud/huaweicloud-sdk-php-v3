@@ -20,8 +20,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
-    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
+    * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
+    * remark  域名备注。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -47,6 +48,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * websocket  websocket
     * videoSeek  videoSeek
     * requestLimitRules  请求限速。
+    * ipFrequencyLimit  ipFrequencyLimit
+    * hsts  hsts
+    * quic  quic
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -54,6 +58,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'businessType' => 'string',
             'serviceArea' => 'string',
+            'remark' => 'string',
             'originRequestHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]',
             'httpResponseHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]',
             'urlAuth' => '\HuaweiCloud\SDK\Cdn\V2\Model\UrlAuthGetBody',
@@ -66,7 +71,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'referer' => '\HuaweiCloud\SDK\Cdn\V2\Model\RefererConfig',
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V2\Model\ForceRedirectConfig',
             'compress' => '\HuaweiCloud\SDK\Cdn\V2\Model\Compress',
-            'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilter',
+            'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilterGetBody',
             'ipv6Accelerate' => 'int',
             'errorCodeCache' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]',
             'originRangeStatus' => 'string',
@@ -79,13 +84,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'websocket' => '\HuaweiCloud\SDK\Cdn\V2\Model\WebSocketSeek',
             'videoSeek' => '\HuaweiCloud\SDK\Cdn\V2\Model\VideoSeek',
             'requestLimitRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]',
+            'ipFrequencyLimit' => '\HuaweiCloud\SDK\Cdn\V2\Model\IpFrequencyLimitQuery',
+            'hsts' => '\HuaweiCloud\SDK\Cdn\V2\Model\HstsQuery',
+            'quic' => '\HuaweiCloud\SDK\Cdn\V2\Model\Quic',
             'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
-    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
+    * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
+    * remark  域名备注。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -111,6 +120,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * websocket  websocket
     * videoSeek  videoSeek
     * requestLimitRules  请求限速。
+    * ipFrequencyLimit  ipFrequencyLimit
+    * hsts  hsts
+    * quic  quic
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -118,6 +130,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'businessType' => null,
         'serviceArea' => null,
+        'remark' => null,
         'originRequestHeader' => null,
         'httpResponseHeader' => null,
         'urlAuth' => null,
@@ -143,6 +156,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'websocket' => null,
         'videoSeek' => null,
         'requestLimitRules' => null,
+        'ipFrequencyLimit' => null,
+        'hsts' => null,
+        'quic' => null,
         'errorCodeRedirectRules' => null
     ];
 
@@ -169,8 +185,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
-    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
+    * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
+    * remark  域名备注。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -196,6 +213,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * websocket  websocket
     * videoSeek  videoSeek
     * requestLimitRules  请求限速。
+    * ipFrequencyLimit  ipFrequencyLimit
+    * hsts  hsts
+    * quic  quic
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -203,6 +223,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'businessType' => 'business_type',
             'serviceArea' => 'service_area',
+            'remark' => 'remark',
             'originRequestHeader' => 'origin_request_header',
             'httpResponseHeader' => 'http_response_header',
             'urlAuth' => 'url_auth',
@@ -228,13 +249,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'websocket' => 'websocket',
             'videoSeek' => 'video_seek',
             'requestLimitRules' => 'request_limit_rules',
+            'ipFrequencyLimit' => 'ip_frequency_limit',
+            'hsts' => 'hsts',
+            'quic' => 'quic',
             'errorCodeRedirectRules' => 'error_code_redirect_rules'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
-    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
+    * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
+    * remark  域名备注。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -260,6 +285,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * websocket  websocket
     * videoSeek  videoSeek
     * requestLimitRules  请求限速。
+    * ipFrequencyLimit  ipFrequencyLimit
+    * hsts  hsts
+    * quic  quic
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -267,6 +295,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'businessType' => 'setBusinessType',
             'serviceArea' => 'setServiceArea',
+            'remark' => 'setRemark',
             'originRequestHeader' => 'setOriginRequestHeader',
             'httpResponseHeader' => 'setHttpResponseHeader',
             'urlAuth' => 'setUrlAuth',
@@ -292,13 +321,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'websocket' => 'setWebsocket',
             'videoSeek' => 'setVideoSeek',
             'requestLimitRules' => 'setRequestLimitRules',
+            'ipFrequencyLimit' => 'setIpFrequencyLimit',
+            'hsts' => 'setHsts',
+            'quic' => 'setQuic',
             'errorCodeRedirectRules' => 'setErrorCodeRedirectRules'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * businessType  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
-    * serviceArea  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
+    * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
+    * remark  域名备注。
     * originRequestHeader  回源请求头配置
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
@@ -324,6 +357,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * websocket  websocket
     * videoSeek  videoSeek
     * requestLimitRules  请求限速。
+    * ipFrequencyLimit  ipFrequencyLimit
+    * hsts  hsts
+    * quic  quic
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -331,6 +367,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'businessType' => 'getBusinessType',
             'serviceArea' => 'getServiceArea',
+            'remark' => 'getRemark',
             'originRequestHeader' => 'getOriginRequestHeader',
             'httpResponseHeader' => 'getHttpResponseHeader',
             'urlAuth' => 'getUrlAuth',
@@ -356,6 +393,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'websocket' => 'getWebsocket',
             'videoSeek' => 'getVideoSeek',
             'requestLimitRules' => 'getRequestLimitRules',
+            'ipFrequencyLimit' => 'getIpFrequencyLimit',
+            'hsts' => 'getHsts',
+            'quic' => 'getQuic',
             'errorCodeRedirectRules' => 'getErrorCodeRedirectRules'
     ];
 
@@ -419,6 +459,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     {
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
+        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['originRequestHeader'] = isset($data['originRequestHeader']) ? $data['originRequestHeader'] : null;
         $this->container['httpResponseHeader'] = isset($data['httpResponseHeader']) ? $data['httpResponseHeader'] : null;
         $this->container['urlAuth'] = isset($data['urlAuth']) ? $data['urlAuth'] : null;
@@ -444,6 +485,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['websocket'] = isset($data['websocket']) ? $data['websocket'] : null;
         $this->container['videoSeek'] = isset($data['videoSeek']) ? $data['videoSeek'] : null;
         $this->container['requestLimitRules'] = isset($data['requestLimitRules']) ? $data['requestLimitRules'] : null;
+        $this->container['ipFrequencyLimit'] = isset($data['ipFrequencyLimit']) ? $data['ipFrequencyLimit'] : null;
+        $this->container['hsts'] = isset($data['hsts']) ? $data['hsts'] : null;
+        $this->container['quic'] = isset($data['quic']) ? $data['quic'] : null;
         $this->container['errorCodeRedirectRules'] = isset($data['errorCodeRedirectRules']) ? $data['errorCodeRedirectRules'] : null;
     }
 
@@ -471,7 +515,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    *  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     *
     * @return string|null
     */
@@ -483,7 +527,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+    * @param string|null $businessType 业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     *
     * @return $this
     */
@@ -495,7 +539,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    *  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
     *
     * @return string|null
     */
@@ -507,13 +551,37 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+    * @param string|null $serviceArea 服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
     *
     * @return $this
     */
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
+        return $this;
+    }
+
+    /**
+    * Gets remark
+    *  域名备注。
+    *
+    * @return string|null
+    */
+    public function getRemark()
+    {
+        return $this->container['remark'];
+    }
+
+    /**
+    * Sets remark
+    *
+    * @param string|null $remark 域名备注。
+    *
+    * @return $this
+    */
+    public function setRemark($remark)
+    {
+        $this->container['remark'] = $remark;
         return $this;
     }
 
@@ -809,7 +877,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * Gets cacheUrlParameterFilter
     *  cacheUrlParameterFilter
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilter|null
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilterGetBody|null
     */
     public function getCacheUrlParameterFilter()
     {
@@ -819,7 +887,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets cacheUrlParameterFilter
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilter|null $cacheUrlParameterFilter cacheUrlParameterFilter
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilterGetBody|null $cacheUrlParameterFilter cacheUrlParameterFilter
     *
     * @return $this
     */
@@ -1114,6 +1182,78 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setRequestLimitRules($requestLimitRules)
     {
         $this->container['requestLimitRules'] = $requestLimitRules;
+        return $this;
+    }
+
+    /**
+    * Gets ipFrequencyLimit
+    *  ipFrequencyLimit
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\IpFrequencyLimitQuery|null
+    */
+    public function getIpFrequencyLimit()
+    {
+        return $this->container['ipFrequencyLimit'];
+    }
+
+    /**
+    * Sets ipFrequencyLimit
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\IpFrequencyLimitQuery|null $ipFrequencyLimit ipFrequencyLimit
+    *
+    * @return $this
+    */
+    public function setIpFrequencyLimit($ipFrequencyLimit)
+    {
+        $this->container['ipFrequencyLimit'] = $ipFrequencyLimit;
+        return $this;
+    }
+
+    /**
+    * Gets hsts
+    *  hsts
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\HstsQuery|null
+    */
+    public function getHsts()
+    {
+        return $this->container['hsts'];
+    }
+
+    /**
+    * Sets hsts
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\HstsQuery|null $hsts hsts
+    *
+    * @return $this
+    */
+    public function setHsts($hsts)
+    {
+        $this->container['hsts'] = $hsts;
+        return $this;
+    }
+
+    /**
+    * Gets quic
+    *  quic
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\Quic|null
+    */
+    public function getQuic()
+    {
+        return $this->container['quic'];
+    }
+
+    /**
+    * Sets quic
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Quic|null $quic quic
+    *
+    * @return $this
+    */
+    public function setQuic($quic)
+    {
+        $this->container['quic'] = $quic;
         return $this;
     }
 

@@ -147,7 +147,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
     */
     public function __construct(array $data = null)
     {
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : false;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
     /**

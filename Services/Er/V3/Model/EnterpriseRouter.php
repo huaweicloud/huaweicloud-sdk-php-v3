@@ -312,7 +312,7 @@ class EnterpriseRouter implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : 'postPaid';
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;

@@ -286,7 +286,7 @@ class CreateHealthmonitorReq implements ModelInterface, ArrayAccess
     {
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['monitorPort'] = isset($data['monitorPort']) ? $data['monitorPort'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;

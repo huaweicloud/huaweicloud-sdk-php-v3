@@ -157,8 +157,8 @@ class VaultBatchUpdate implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : true;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 80;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
     }
 
     /**

@@ -1645,6 +1645,9 @@ class VpcAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['enableEfi'] !== null) {
+            $queryParams['enable_efi'] = $localVarParams['enableEfi'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

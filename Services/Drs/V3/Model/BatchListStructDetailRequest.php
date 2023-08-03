@@ -211,8 +211,8 @@ class BatchListStructDetailRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'database';
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

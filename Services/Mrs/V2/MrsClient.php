@@ -841,6 +841,272 @@ class MrsClient extends Client
     }
 
     /**
+     * 创建数据连接
+     *
+     * 创建数据连接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDataConnector($request)
+    {
+        return $this->createDataConnectorWithHttpInfo($request);
+    }
+
+    public function createDataConnectorWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/data-connectors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateDataConnectorResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateDataConnectorRequest');
+    }
+
+    /**
+     * 删除数据连接
+     *
+     * 删除数据连接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDataConnector($request)
+    {
+        return $this->deleteDataConnectorWithHttpInfo($request);
+    }
+
+    public function deleteDataConnectorWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/data-connectors/{connector_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectorId'] !== null) {
+            $pathParams['connector_id'] = $localVarParams['connectorId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\DeleteDataConnectorResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\DeleteDataConnectorRequest');
+    }
+
+    /**
+     * 查询数据连接列表
+     *
+     * 查询数据连接列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataConnector($request)
+    {
+        return $this->listDataConnectorWithHttpInfo($request);
+    }
+
+    public function listDataConnectorWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/data-connectors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectorId'] !== null) {
+            $queryParams['connector_id'] = $localVarParams['connectorId'];
+        }
+        if ($localVarParams['sourceType'] !== null) {
+            $queryParams['source_type'] = $localVarParams['sourceType'];
+        }
+        if ($localVarParams['connectorName'] !== null) {
+            $queryParams['connector_name'] = $localVarParams['connectorName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['available'] !== null) {
+            $queryParams['available'] = $localVarParams['available'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListDataConnectorResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListDataConnectorRequest');
+    }
+
+    /**
+     * 更新数据连接
+     *
+     * 更新数据连接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDataConnector($request)
+    {
+        return $this->updateDataConnectorWithHttpInfo($request);
+    }
+
+    public function updateDataConnectorWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/data-connectors/{connector_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectorId'] !== null) {
+            $pathParams['connector_id'] = $localVarParams['connectorId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateDataConnectorResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateDataConnectorRequest');
+    }
+
+    /**
      * 获取指定目录文件列表
      *
      * 在MRS集群中获取指定目录文件列表。

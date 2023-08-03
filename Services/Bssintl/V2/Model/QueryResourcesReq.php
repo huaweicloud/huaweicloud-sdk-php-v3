@@ -219,7 +219,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     {
         $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
-        $this->container['onlyMainResource'] = isset($data['onlyMainResource']) ? $data['onlyMainResource'] : 0;
+        $this->container['onlyMainResource'] = isset($data['onlyMainResource']) ? $data['onlyMainResource'] : null;
         $this->container['statusList'] = isset($data['statusList']) ? $data['statusList'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;

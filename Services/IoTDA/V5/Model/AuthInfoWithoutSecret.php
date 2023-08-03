@@ -157,8 +157,8 @@ class AuthInfoWithoutSecret implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['secureAccess'] = isset($data['secureAccess']) ? $data['secureAccess'] : true;
-        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : 0;
+        $this->container['secureAccess'] = isset($data['secureAccess']) ? $data['secureAccess'] : null;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
     }
 
     /**

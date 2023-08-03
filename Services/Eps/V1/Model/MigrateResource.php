@@ -191,7 +191,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['associated'] = isset($data['associated']) ? $data['associated'] : false;
+        $this->container['associated'] = isset($data['associated']) ? $data['associated'] : null;
     }
 
     /**

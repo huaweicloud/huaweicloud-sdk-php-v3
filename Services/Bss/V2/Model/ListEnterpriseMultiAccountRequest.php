@@ -179,8 +179,8 @@ class ListEnterpriseMultiAccountRequest implements ModelInterface, ArrayAccess
     {
         $this->container['subCustomerId'] = isset($data['subCustomerId']) ? $data['subCustomerId'] : null;
         $this->container['balanceType'] = isset($data['balanceType']) ? $data['balanceType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

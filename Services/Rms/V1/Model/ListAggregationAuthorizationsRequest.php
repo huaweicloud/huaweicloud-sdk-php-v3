@@ -168,7 +168,7 @@ class ListAggregationAuthorizationsRequest implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

@@ -323,7 +323,7 @@ class PublicipPoolShowResp implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : '';
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

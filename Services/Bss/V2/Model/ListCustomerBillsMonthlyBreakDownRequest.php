@@ -277,15 +277,15 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['sharedMonth'] = isset($data['sharedMonth']) ? $data['sharedMonth'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;

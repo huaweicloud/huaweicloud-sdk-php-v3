@@ -197,7 +197,7 @@ class NeutronUpdateFirewallGroupOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['egressFirewallPolicyId'] = isset($data['egressFirewallPolicyId']) ? $data['egressFirewallPolicyId'] : null;
         $this->container['ingressFirewallPolicyId'] = isset($data['ingressFirewallPolicyId']) ? $data['ingressFirewallPolicyId'] : null;

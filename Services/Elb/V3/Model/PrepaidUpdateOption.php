@@ -207,10 +207,10 @@ class PrepaidUpdateOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['autoPay'] = isset($data['autoPay']) ? $data['autoPay'] : false;
-        $this->container['changeMode'] = isset($data['changeMode']) ? $data['changeMode'] : 'immediate';
-        $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : 1;
-        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : 'month';
+        $this->container['autoPay'] = isset($data['autoPay']) ? $data['autoPay'] : null;
+        $this->container['changeMode'] = isset($data['changeMode']) ? $data['changeMode'] : null;
+        $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
     }
 
     /**

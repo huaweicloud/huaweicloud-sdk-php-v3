@@ -191,7 +191,7 @@ class DmsRocketMQForwarding implements ModelInterface, ArrayAccess
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : true;
+        $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : null;
     }
 
     /**

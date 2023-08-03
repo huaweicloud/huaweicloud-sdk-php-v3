@@ -258,11 +258,11 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : 30;
-        $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : 1;
+        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
+        $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
-        $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : 1;
+        $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
         $this->container['orderField'] = isset($data['orderField']) ? $data['orderField'] : null;
         $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;

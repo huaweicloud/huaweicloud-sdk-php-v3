@@ -422,7 +422,7 @@ class Billing implements ModelInterface, ArrayAccess
         $this->container['storageUnit'] = isset($data['storageUnit']) ? $data['storageUnit'] : null;
         $this->container['used'] = isset($data['used']) ? $data['used'] : null;
         $this->container['frozenScene'] = isset($data['frozenScene']) ? $data['frozenScene'] : null;
-        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : false;
+        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : null;
     }
 
     /**

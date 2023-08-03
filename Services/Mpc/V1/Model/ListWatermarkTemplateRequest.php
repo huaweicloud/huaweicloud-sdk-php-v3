@@ -168,8 +168,8 @@ class ListWatermarkTemplateRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

@@ -229,9 +229,9 @@ class TransTemplateRsp implements ModelInterface, ArrayAccess
     {
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : false;
+        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : false;
+        $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : null;
         $this->container['qualityInfoList'] = isset($data['qualityInfoList']) ? $data['qualityInfoList'] : null;
         $this->container['watermarkTemplateIds'] = isset($data['watermarkTemplateIds']) ? $data['watermarkTemplateIds'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

@@ -247,9 +247,9 @@ class BssParamForCreateVolume implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : 'postPaid';
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : 'false';
-        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : 'false';
+        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
     }

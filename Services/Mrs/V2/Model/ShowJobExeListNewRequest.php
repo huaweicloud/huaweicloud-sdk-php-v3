@@ -321,8 +321,8 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
         $this->container['jobState'] = isset($data['jobState']) ? $data['jobState'] : null;
         $this->container['jobResult'] = isset($data['jobResult']) ? $data['jobResult'] : null;
         $this->container['queue'] = isset($data['queue']) ? $data['queue'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : '10';
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : '1';
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sortBy'] = isset($data['sortBy']) ? $data['sortBy'] : null;
         $this->container['submittedTimeBegin'] = isset($data['submittedTimeBegin']) ? $data['submittedTimeBegin'] : null;
         $this->container['submittedTimeEnd'] = isset($data['submittedTimeEnd']) ? $data['submittedTimeEnd'] : null;

@@ -210,10 +210,10 @@ class OpenRoomSettingReq implements ModelInterface, ArrayAccess
         $this->container['roomIntroduce'] = isset($data['roomIntroduce']) ? $data['roomIntroduce'] : null;
         $this->container['cropLogoId'] = isset($data['cropLogoId']) ? $data['cropLogoId'] : null;
         $this->container['coverPictureId'] = isset($data['coverPictureId']) ? $data['coverPictureId'] : null;
-        $this->container['showAudienceMode'] = isset($data['showAudienceMode']) ? $data['showAudienceMode'] : 'real_time';
-        $this->container['isRedoubleOpen'] = isset($data['isRedoubleOpen']) ? $data['isRedoubleOpen'] : 'Y';
-        $this->container['baseAudienceCount'] = isset($data['baseAudienceCount']) ? $data['baseAudienceCount'] : 0;
-        $this->container['multiple'] = isset($data['multiple']) ? $data['multiple'] : 1.0;
+        $this->container['showAudienceMode'] = isset($data['showAudienceMode']) ? $data['showAudienceMode'] : null;
+        $this->container['isRedoubleOpen'] = isset($data['isRedoubleOpen']) ? $data['isRedoubleOpen'] : null;
+        $this->container['baseAudienceCount'] = isset($data['baseAudienceCount']) ? $data['baseAudienceCount'] : null;
+        $this->container['multiple'] = isset($data['multiple']) ? $data['multiple'] : null;
     }
 
     /**

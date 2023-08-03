@@ -377,13 +377,13 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         $this->container['vpcid'] = isset($data['vpcid']) ? $data['vpcid'] : null;
         $this->container['nics'] = isset($data['nics']) ? $data['nics'] : null;
         $this->container['publicip'] = isset($data['publicip']) ? $data['publicip'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : 1;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['isAutoRename'] = isset($data['isAutoRename']) ? $data['isAutoRename'] : null;
         $this->container['rootVolume'] = isset($data['rootVolume']) ? $data['rootVolume'] : null;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
-        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : false;
+        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['osschedulerHints'] = isset($data['osschedulerHints']) ? $data['osschedulerHints'] : null;

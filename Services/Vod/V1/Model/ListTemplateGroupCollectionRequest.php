@@ -179,8 +179,8 @@ class ListTemplateGroupCollectionRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['groupCollectionId'] = isset($data['groupCollectionId']) ? $data['groupCollectionId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

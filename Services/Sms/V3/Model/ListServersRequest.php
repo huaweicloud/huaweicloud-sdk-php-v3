@@ -300,8 +300,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['migproject'] = isset($data['migproject']) ? $data['migproject'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['migrationCycle'] = isset($data['migrationCycle']) ? $data['migrationCycle'] : null;
         $this->container['connected'] = isset($data['connected']) ? $data['connected'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;

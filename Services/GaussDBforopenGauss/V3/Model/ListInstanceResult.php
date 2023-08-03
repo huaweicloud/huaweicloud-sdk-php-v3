@@ -51,6 +51,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
     * diskUsage  实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussChargeInfoListResponse',
             'timeZone' => 'string',
             'tags' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\TagResult[]',
-            'diskUsage' => 'string'
+            'diskUsage' => 'string',
+            'backupUsedSpace' => 'string'
     ];
 
     /**
@@ -121,6 +123,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
     * diskUsage  实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
         'chargeInfo' => null,
         'timeZone' => null,
         'tags' => null,
-        'diskUsage' => null
+        'diskUsage' => null,
+        'backupUsedSpace' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
     * diskUsage  实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
             'chargeInfo' => 'charge_info',
             'timeZone' => 'time_zone',
             'tags' => 'tags',
-            'diskUsage' => 'disk_usage'
+            'diskUsage' => 'disk_usage',
+            'backupUsedSpace' => 'backup_used_space'
     ];
 
     /**
@@ -282,6 +288,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
     * diskUsage  实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
             'chargeInfo' => 'setChargeInfo',
             'timeZone' => 'setTimeZone',
             'tags' => 'setTags',
-            'diskUsage' => 'setDiskUsage'
+            'diskUsage' => 'setDiskUsage',
+            'backupUsedSpace' => 'setBackupUsedSpace'
     ];
 
     /**
@@ -352,6 +360,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
     * diskUsage  实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
             'chargeInfo' => 'getChargeInfo',
             'timeZone' => 'getTimeZone',
             'tags' => 'getTags',
-            'diskUsage' => 'getDiskUsage'
+            'diskUsage' => 'getDiskUsage',
+            'backupUsedSpace' => 'getBackupUsedSpace'
     ];
 
     /**
@@ -478,6 +488,7 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['diskUsage'] = isset($data['diskUsage']) ? $data['diskUsage'] : null;
+        $this->container['backupUsedSpace'] = isset($data['backupUsedSpace']) ? $data['backupUsedSpace'] : null;
     }
 
     /**
@@ -1330,6 +1341,30 @@ class ListInstanceResult implements ModelInterface, ArrayAccess
     public function setDiskUsage($diskUsage)
     {
         $this->container['diskUsage'] = $diskUsage;
+        return $this;
+    }
+
+    /**
+    * Gets backupUsedSpace
+    *  备份空间使用量，单位KB。
+    *
+    * @return string|null
+    */
+    public function getBackupUsedSpace()
+    {
+        return $this->container['backupUsedSpace'];
+    }
+
+    /**
+    * Sets backupUsedSpace
+    *
+    * @param string|null $backupUsedSpace 备份空间使用量，单位KB。
+    *
+    * @return $this
+    */
+    public function setBackupUsedSpace($backupUsedSpace)
+    {
+        $this->container['backupUsedSpace'] = $backupUsedSpace;
         return $this;
     }
 

@@ -381,15 +381,15 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
-        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : true;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 80;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['errText'] = isset($data['errText']) ? $data['errText'] : null;
         $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
         $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
         $this->container['backupNamePrefix'] = isset($data['backupNamePrefix']) ? $data['backupNamePrefix'] : null;
-        $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : false;
-        $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : 0;
-        $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : false;
+        $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : null;
+        $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : null;
+        $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
     }
 
     /**

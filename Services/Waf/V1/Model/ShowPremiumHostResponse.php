@@ -441,7 +441,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['server'] = isset($data['server']) ? $data['server'] : null;
         $this->container['proxy'] = isset($data['proxy']) ? $data['proxy'] : null;
-        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : 0;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
         $this->container['tls'] = isset($data['tls']) ? $data['tls'] : null;
         $this->container['cipher'] = isset($data['cipher']) ? $data['cipher'] : null;

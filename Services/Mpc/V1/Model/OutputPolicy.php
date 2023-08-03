@@ -164,7 +164,7 @@ class OutputPolicy implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : 'transcode';
+        $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : null;
     }
 
     /**

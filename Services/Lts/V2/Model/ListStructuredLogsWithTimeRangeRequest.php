@@ -157,7 +157,7 @@ class ListStructuredLogsWithTimeRangeRequest implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
-        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : 'None';
+        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

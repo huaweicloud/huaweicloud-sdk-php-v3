@@ -254,16 +254,16 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'TIME';
-        $this->container['time'] = isset($data['time']) ? $data['time'] : 12;
-        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : 0;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['dots'] = isset($data['dots']) ? $data['dots'] : null;
         $this->container['outputFilename'] = isset($data['outputFilename']) ? $data['outputFilename'] : null;
-        $this->container['format'] = isset($data['format']) ? $data['format'] : 1;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['maxLength'] = isset($data['maxLength']) ? $data['maxLength'] : 480;
+        $this->container['maxLength'] = isset($data['maxLength']) ? $data['maxLength'] : null;
     }
 
     /**

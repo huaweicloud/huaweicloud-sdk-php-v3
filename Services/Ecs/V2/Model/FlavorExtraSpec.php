@@ -488,7 +488,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['quotaminRate'] = isset($data['quotaminRate']) ? $data['quotaminRate'] : null;
         $this->container['quotamaxPps'] = isset($data['quotamaxPps']) ? $data['quotamaxPps'] : null;
         $this->container['condoperationcharge'] = isset($data['condoperationcharge']) ? $data['condoperationcharge'] : null;
-        $this->container['condoperationchargestop'] = isset($data['condoperationchargestop']) ? $data['condoperationchargestop'] : 'free';
+        $this->container['condoperationchargestop'] = isset($data['condoperationchargestop']) ? $data['condoperationchargestop'] : null;
         $this->container['condspotoperationaz'] = isset($data['condspotoperationaz']) ? $data['condspotoperationaz'] : null;
         $this->container['condoperationroles'] = isset($data['condoperationroles']) ? $data['condoperationroles'] : null;
         $this->container['condspotoperationstatus'] = isset($data['condspotoperationstatus']) ? $data['condspotoperationstatus'] : null;

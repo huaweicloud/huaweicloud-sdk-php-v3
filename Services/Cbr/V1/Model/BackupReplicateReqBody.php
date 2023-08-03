@@ -201,7 +201,7 @@ class BackupReplicateReqBody implements ModelInterface, ArrayAccess
         $this->container['destinationProjectId'] = isset($data['destinationProjectId']) ? $data['destinationProjectId'] : null;
         $this->container['destinationRegion'] = isset($data['destinationRegion']) ? $data['destinationRegion'] : null;
         $this->container['destinationVaultId'] = isset($data['destinationVaultId']) ? $data['destinationVaultId'] : null;
-        $this->container['enableAcceleration'] = isset($data['enableAcceleration']) ? $data['enableAcceleration'] : false;
+        $this->container['enableAcceleration'] = isset($data['enableAcceleration']) ? $data['enableAcceleration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 

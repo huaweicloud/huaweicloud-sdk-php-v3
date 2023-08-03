@@ -158,7 +158,7 @@ class DatabaseWithPrivilegeObject implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['readonly'] = isset($data['readonly']) ? $data['readonly'] : false;
+        $this->container['readonly'] = isset($data['readonly']) ? $data['readonly'] : null;
     }
 
     /**

@@ -212,8 +212,8 @@ class ListFreeResourcesUsageRecordsRequest implements ModelInterface, ArrayAcces
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['deductTimeBegin'] = isset($data['deductTimeBegin']) ? $data['deductTimeBegin'] : null;
         $this->container['deductTimeEnd'] = isset($data['deductTimeEnd']) ? $data['deductTimeEnd'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

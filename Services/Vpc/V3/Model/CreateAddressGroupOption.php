@@ -202,7 +202,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
         $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**

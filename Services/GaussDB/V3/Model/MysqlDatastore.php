@@ -21,25 +21,29 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'kernelVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'version' => null
+        'version' => null,
+        'kernelVersion' => null
     ];
 
     /**
@@ -66,37 +70,43 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'version' => 'version'
+            'version' => 'version',
+            'kernelVersion' => 'kernel_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'kernelVersion' => 'setKernelVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'kernelVersion' => 'getKernelVersion'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['kernelVersion'] = isset($data['kernelVersion']) ? $data['kernelVersion'] : null;
     }
 
     /**
@@ -215,7 +226,7 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    *  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
     *
     * @return string
     */
@@ -227,13 +238,37 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+    * @param string $version 数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
     *
     * @return $this
     */
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets kernelVersion
+    *  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    *
+    * @return string|null
+    */
+    public function getKernelVersion()
+    {
+        return $this->container['kernelVersion'];
+    }
+
+    /**
+    * Sets kernelVersion
+    *
+    * @param string|null $kernelVersion 内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    *
+    * @return $this
+    */
+    public function setKernelVersion($kernelVersion)
+    {
+        $this->container['kernelVersion'] = $kernelVersion;
         return $this;
     }
 

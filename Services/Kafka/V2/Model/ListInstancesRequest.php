@@ -295,7 +295,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'kafka';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;

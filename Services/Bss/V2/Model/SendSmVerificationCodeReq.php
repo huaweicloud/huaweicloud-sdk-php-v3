@@ -178,7 +178,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
-        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : 10;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['smTemplateArgs'] = isset($data['smTemplateArgs']) ? $data['smTemplateArgs'] : null;
     }

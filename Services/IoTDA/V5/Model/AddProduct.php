@@ -241,7 +241,7 @@ class AddProduct implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['deviceType'] = isset($data['deviceType']) ? $data['deviceType'] : null;
         $this->container['protocolType'] = isset($data['protocolType']) ? $data['protocolType'] : null;
-        $this->container['dataFormat'] = isset($data['dataFormat']) ? $data['dataFormat'] : 'json';
+        $this->container['dataFormat'] = isset($data['dataFormat']) ? $data['dataFormat'] : null;
         $this->container['serviceCapabilities'] = isset($data['serviceCapabilities']) ? $data['serviceCapabilities'] : null;
         $this->container['manufacturerName'] = isset($data['manufacturerName']) ? $data['manufacturerName'] : null;
         $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;

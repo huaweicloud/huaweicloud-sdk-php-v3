@@ -177,7 +177,7 @@ class UpdateAlertNoticeConfigRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['alertId'] = isset($data['alertId']) ? $data['alertId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;

@@ -251,9 +251,9 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         $this->container['destinationProjectId'] = isset($data['destinationProjectId']) ? $data['destinationProjectId'] : null;
         $this->container['destinationRegion'] = isset($data['destinationRegion']) ? $data['destinationRegion'] : null;
         $this->container['enableAcceleration'] = isset($data['enableAcceleration']) ? $data['enableAcceleration'] : null;
-        $this->container['maxBackups'] = isset($data['maxBackups']) ? $data['maxBackups'] : -1;
+        $this->container['maxBackups'] = isset($data['maxBackups']) ? $data['maxBackups'] : null;
         $this->container['monthBackups'] = isset($data['monthBackups']) ? $data['monthBackups'] : null;
-        $this->container['retentionDurationDays'] = isset($data['retentionDurationDays']) ? $data['retentionDurationDays'] : -1;
+        $this->container['retentionDurationDays'] = isset($data['retentionDurationDays']) ? $data['retentionDurationDays'] : null;
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
         $this->container['weekBackups'] = isset($data['weekBackups']) ? $data['weekBackups'] : null;
         $this->container['yearBackups'] = isset($data['yearBackups']) ? $data['yearBackups'] : null;

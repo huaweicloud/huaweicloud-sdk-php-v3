@@ -158,7 +158,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
-        $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : false;
+        $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : null;
     }
 
     /**

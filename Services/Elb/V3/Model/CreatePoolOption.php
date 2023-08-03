@@ -327,7 +327,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
-        $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : false;
+        $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
     }
 
     /**

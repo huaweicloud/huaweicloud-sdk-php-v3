@@ -160,7 +160,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'rabbitmq';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
     }
 
     /**

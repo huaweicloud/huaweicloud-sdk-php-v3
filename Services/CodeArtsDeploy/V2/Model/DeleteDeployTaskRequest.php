@@ -173,7 +173,7 @@ class DeleteDeployTaskRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf-8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
     /**

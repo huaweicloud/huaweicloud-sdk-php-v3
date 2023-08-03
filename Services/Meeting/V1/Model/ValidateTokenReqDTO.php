@@ -168,8 +168,8 @@ class ValidateTokenReqDTO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['needGenNewToken'] = isset($data['needGenNewToken']) ? $data['needGenNewToken'] : false;
-        $this->container['needAccountInfo'] = isset($data['needAccountInfo']) ? $data['needAccountInfo'] : true;
+        $this->container['needGenNewToken'] = isset($data['needGenNewToken']) ? $data['needGenNewToken'] : null;
+        $this->container['needAccountInfo'] = isset($data['needAccountInfo']) ? $data['needAccountInfo'] : null;
     }
 
     /**

@@ -222,8 +222,8 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['firewallRules'] = isset($data['firewallRules']) ? $data['firewallRules'] : null;
-        $this->container['audited'] = isset($data['audited']) ? $data['audited'] : false;
-        $this->container['public'] = isset($data['public']) ? $data['public'] : false;
+        $this->container['audited'] = isset($data['audited']) ? $data['audited'] : null;
+        $this->container['public'] = isset($data['public']) ? $data['public'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
     }

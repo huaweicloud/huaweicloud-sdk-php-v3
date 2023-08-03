@@ -157,7 +157,7 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recursiveQuery'] = isset($data['recursiveQuery']) ? $data['recursiveQuery'] : 0;
+        $this->container['recursiveQuery'] = isset($data['recursiveQuery']) ? $data['recursiveQuery'] : null;
         $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
     }
 

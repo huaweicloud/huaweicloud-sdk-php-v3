@@ -50,6 +50,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -83,7 +84,8 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncryptionId' => 'string',
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussChargeInfoListResponse',
             'timeZone' => 'string',
-            'tags' => 'object[]'
+            'tags' => 'object[]',
+            'backupUsedSpace' => 'string'
     ];
 
     /**
@@ -118,6 +120,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
         'diskEncryptionId' => null,
         'chargeInfo' => null,
         'timeZone' => null,
-        'tags' => null
+        'tags' => null,
+        'backupUsedSpace' => null
     ];
 
     /**
@@ -207,6 +211,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -240,7 +245,8 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncryptionId' => 'disk_encryption_id',
             'chargeInfo' => 'charge_info',
             'timeZone' => 'time_zone',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'backupUsedSpace' => 'backup_used_space'
     ];
 
     /**
@@ -275,6 +281,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -308,7 +315,8 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncryptionId' => 'setDiskEncryptionId',
             'chargeInfo' => 'setChargeInfo',
             'timeZone' => 'setTimeZone',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'backupUsedSpace' => 'setBackupUsedSpace'
     ];
 
     /**
@@ -343,6 +351,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * timeZone  时区。
     * tags  标签列表，没有标签不返回该参数。
+    * backupUsedSpace  备份空间使用量，单位KB。
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
             'diskEncryptionId' => 'getDiskEncryptionId',
             'chargeInfo' => 'getChargeInfo',
             'timeZone' => 'getTimeZone',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'backupUsedSpace' => 'getBackupUsedSpace'
     ];
 
     /**
@@ -467,6 +477,7 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['backupUsedSpace'] = isset($data['backupUsedSpace']) ? $data['backupUsedSpace'] : null;
     }
 
     /**
@@ -1295,6 +1306,30 @@ class ListInstanceResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets backupUsedSpace
+    *  备份空间使用量，单位KB。
+    *
+    * @return string|null
+    */
+    public function getBackupUsedSpace()
+    {
+        return $this->container['backupUsedSpace'];
+    }
+
+    /**
+    * Sets backupUsedSpace
+    *
+    * @param string|null $backupUsedSpace 备份空间使用量，单位KB。
+    *
+    * @return $this
+    */
+    public function setBackupUsedSpace($backupUsedSpace)
+    {
+        $this->container['backupUsedSpace'] = $backupUsedSpace;
         return $this;
     }
 

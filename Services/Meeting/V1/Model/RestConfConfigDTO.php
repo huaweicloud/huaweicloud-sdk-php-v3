@@ -283,7 +283,7 @@ class RestConfConfigDTO implements ModelInterface, ArrayAccess
         $this->container['isAutoMute'] = isset($data['isAutoMute']) ? $data['isAutoMute'] : null;
         $this->container['isHardTerminalAutoMute'] = isset($data['isHardTerminalAutoMute']) ? $data['isHardTerminalAutoMute'] : null;
         $this->container['isGuestFreePwd'] = isset($data['isGuestFreePwd']) ? $data['isGuestFreePwd'] : null;
-        $this->container['callInRestriction'] = isset($data['callInRestriction']) ? $data['callInRestriction'] : 0;
+        $this->container['callInRestriction'] = isset($data['callInRestriction']) ? $data['callInRestriction'] : null;
         $this->container['allowGuestStartConf'] = isset($data['allowGuestStartConf']) ? $data['allowGuestStartConf'] : null;
         $this->container['guestPwd'] = isset($data['guestPwd']) ? $data['guestPwd'] : null;
         $this->container['vmrIdType'] = isset($data['vmrIdType']) ? $data['vmrIdType'] : null;

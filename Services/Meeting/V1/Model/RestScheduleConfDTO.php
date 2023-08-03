@@ -338,22 +338,22 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['length'] = isset($data['length']) ? $data['length'] : 30;
+        $this->container['length'] = isset($data['length']) ? $data['length'] : null;
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['mediaTypes'] = isset($data['mediaTypes']) ? $data['mediaTypes'] : null;
         $this->container['groupuri'] = isset($data['groupuri']) ? $data['groupuri'] : null;
         $this->container['attendees'] = isset($data['attendees']) ? $data['attendees'] : null;
-        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : 0;
+        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : null;
         $this->container['encryptMode'] = isset($data['encryptMode']) ? $data['encryptMode'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['timeZoneId'] = isset($data['timeZoneId']) ? $data['timeZoneId'] : null;
-        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : 0;
+        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : null;
         $this->container['liveAddress'] = isset($data['liveAddress']) ? $data['liveAddress'] : null;
         $this->container['auxAddress'] = isset($data['auxAddress']) ? $data['auxAddress'] : null;
         $this->container['recordAuxStream'] = isset($data['recordAuxStream']) ? $data['recordAuxStream'] : null;
         $this->container['confConfigInfo'] = isset($data['confConfigInfo']) ? $data['confConfigInfo'] : null;
         $this->container['recordAuthType'] = isset($data['recordAuthType']) ? $data['recordAuthType'] : null;
-        $this->container['vmrFlag'] = isset($data['vmrFlag']) ? $data['vmrFlag'] : 0;
+        $this->container['vmrFlag'] = isset($data['vmrFlag']) ? $data['vmrFlag'] : null;
         $this->container['cycleParams'] = isset($data['cycleParams']) ? $data['cycleParams'] : null;
         $this->container['vmrId'] = isset($data['vmrId']) ? $data['vmrId'] : null;
         $this->container['concurrentParticipants'] = isset($data['concurrentParticipants']) ? $data['concurrentParticipants'] : null;

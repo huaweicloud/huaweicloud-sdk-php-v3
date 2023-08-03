@@ -38,6 +38,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * transactionSplit  Proxy事务拆分开关状态【ON/OFF】。
     * connectionPoolType  连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
+    * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'name' => 'string',
             'transactionSplit' => 'string',
             'connectionPoolType' => 'string',
-            'switchConnectionPoolTypeEnabled' => 'bool'
+            'switchConnectionPoolTypeEnabled' => 'bool',
+            'routeMode' => 'int',
+            'balanceRouteModeEnabled' => 'bool'
     ];
 
     /**
@@ -82,6 +86,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * transactionSplit  Proxy事务拆分开关状态【ON/OFF】。
     * connectionPoolType  连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
+    * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'name' => null,
         'transactionSplit' => null,
         'connectionPoolType' => null,
-        'switchConnectionPoolTypeEnabled' => null
+        'switchConnectionPoolTypeEnabled' => null,
+        'routeMode' => 'int32',
+        'balanceRouteModeEnabled' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * transactionSplit  Proxy事务拆分开关状态【ON/OFF】。
     * connectionPoolType  连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
+    * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'name' => 'name',
             'transactionSplit' => 'transaction_split',
             'connectionPoolType' => 'connection_pool_type',
-            'switchConnectionPoolTypeEnabled' => 'switch_connection_pool_type_enabled'
+            'switchConnectionPoolTypeEnabled' => 'switch_connection_pool_type_enabled',
+            'routeMode' => 'route_mode',
+            'balanceRouteModeEnabled' => 'balance_route_mode_enabled'
     ];
 
     /**
@@ -191,6 +203,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * transactionSplit  Proxy事务拆分开关状态【ON/OFF】。
     * connectionPoolType  连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
+    * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'transactionSplit' => 'setTransactionSplit',
             'connectionPoolType' => 'setConnectionPoolType',
-            'switchConnectionPoolTypeEnabled' => 'setSwitchConnectionPoolTypeEnabled'
+            'switchConnectionPoolTypeEnabled' => 'setSwitchConnectionPoolTypeEnabled',
+            'routeMode' => 'setRouteMode',
+            'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled'
     ];
 
     /**
@@ -235,6 +251,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * transactionSplit  Proxy事务拆分开关状态【ON/OFF】。
     * connectionPoolType  连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
+    * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'transactionSplit' => 'getTransactionSplit',
             'connectionPoolType' => 'getConnectionPoolType',
-            'switchConnectionPoolTypeEnabled' => 'getSwitchConnectionPoolTypeEnabled'
+            'switchConnectionPoolTypeEnabled' => 'getSwitchConnectionPoolTypeEnabled',
+            'routeMode' => 'getRouteMode',
+            'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled'
     ];
 
     /**
@@ -335,6 +355,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['transactionSplit'] = isset($data['transactionSplit']) ? $data['transactionSplit'] : null;
         $this->container['connectionPoolType'] = isset($data['connectionPoolType']) ? $data['connectionPoolType'] : null;
         $this->container['switchConnectionPoolTypeEnabled'] = isset($data['switchConnectionPoolTypeEnabled']) ? $data['switchConnectionPoolTypeEnabled'] : null;
+        $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
+        $this->container['balanceRouteModeEnabled'] = isset($data['balanceRouteModeEnabled']) ? $data['balanceRouteModeEnabled'] : null;
     }
 
     /**
@@ -788,6 +810,54 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function setSwitchConnectionPoolTypeEnabled($switchConnectionPoolTypeEnabled)
     {
         $this->container['switchConnectionPoolTypeEnabled'] = $switchConnectionPoolTypeEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets routeMode
+    *  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    *
+    * @return int|null
+    */
+    public function getRouteMode()
+    {
+        return $this->container['routeMode'];
+    }
+
+    /**
+    * Sets routeMode
+    *
+    * @param int|null $routeMode 数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+    *
+    * @return $this
+    */
+    public function setRouteMode($routeMode)
+    {
+        $this->container['routeMode'] = $routeMode;
+        return $this;
+    }
+
+    /**
+    * Gets balanceRouteModeEnabled
+    *  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    *
+    * @return bool|null
+    */
+    public function getBalanceRouteModeEnabled()
+    {
+        return $this->container['balanceRouteModeEnabled'];
+    }
+
+    /**
+    * Sets balanceRouteModeEnabled
+    *
+    * @param bool|null $balanceRouteModeEnabled 数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    *
+    * @return $this
+    */
+    public function setBalanceRouteModeEnabled($balanceRouteModeEnabled)
+    {
+        $this->container['balanceRouteModeEnabled'] = $balanceRouteModeEnabled;
         return $this;
     }
 

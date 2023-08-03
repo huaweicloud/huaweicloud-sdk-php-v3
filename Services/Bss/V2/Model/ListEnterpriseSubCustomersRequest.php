@@ -200,8 +200,8 @@ class ListEnterpriseSubCustomersRequest implements ModelInterface, ArrayAccess
         $this->container['subCustomerAccountName'] = isset($data['subCustomerAccountName']) ? $data['subCustomerAccountName'] : null;
         $this->container['subCustomerDisplayName'] = isset($data['subCustomerDisplayName']) ? $data['subCustomerDisplayName'] : null;
         $this->container['fuzzyQuery'] = isset($data['fuzzyQuery']) ? $data['fuzzyQuery'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
     }
 

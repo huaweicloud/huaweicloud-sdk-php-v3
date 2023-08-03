@@ -195,7 +195,7 @@ class AnalysisInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['diarization'] = isset($data['diarization']) ? $data['diarization'] : null;
-        $this->container['channel'] = isset($data['channel']) ? $data['channel'] : 'MONO';
+        $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['emotion'] = isset($data['emotion']) ? $data['emotion'] : null;
         $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
     }

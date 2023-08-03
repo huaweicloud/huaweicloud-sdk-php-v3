@@ -509,11 +509,11 @@ class Listener implements ModelInterface, ArrayAccess
         $this->container['memberTimeout'] = isset($data['memberTimeout']) ? $data['memberTimeout'] : null;
         $this->container['ipgroup'] = isset($data['ipgroup']) ? $data['ipgroup'] : null;
         $this->container['transparentClientIpEnable'] = isset($data['transparentClientIpEnable']) ? $data['transparentClientIpEnable'] : null;
-        $this->container['enhanceL7policyEnable'] = isset($data['enhanceL7policyEnable']) ? $data['enhanceL7policyEnable'] : false;
+        $this->container['enhanceL7policyEnable'] = isset($data['enhanceL7policyEnable']) ? $data['enhanceL7policyEnable'] : null;
         $this->container['quicConfig'] = isset($data['quicConfig']) ? $data['quicConfig'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
-        $this->container['gzipEnable'] = isset($data['gzipEnable']) ? $data['gzipEnable'] : false;
+        $this->container['gzipEnable'] = isset($data['gzipEnable']) ? $data['gzipEnable'] : null;
         $this->container['portRanges'] = isset($data['portRanges']) ? $data['portRanges'] : null;
     }
 

@@ -188,9 +188,9 @@ class NeutronUpdateSubnetOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['dnsNameservers'] = isset($data['dnsNameservers']) ? $data['dnsNameservers'] : null;
-        $this->container['enableDhcp'] = isset($data['enableDhcp']) ? $data['enableDhcp'] : true;
+        $this->container['enableDhcp'] = isset($data['enableDhcp']) ? $data['enableDhcp'] : null;
         $this->container['hostRoutes'] = isset($data['hostRoutes']) ? $data['hostRoutes'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : '空';
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['allocationPools'] = isset($data['allocationPools']) ? $data['allocationPools'] : null;
     }
 

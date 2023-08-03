@@ -157,7 +157,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : false;
+        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
         $this->container['minL7FlavorId'] = isset($data['minL7FlavorId']) ? $data['minL7FlavorId'] : null;
     }
 

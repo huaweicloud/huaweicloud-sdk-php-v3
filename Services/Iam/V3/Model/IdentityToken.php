@@ -158,7 +158,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : 900;
+        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : null;
     }
 
     /**

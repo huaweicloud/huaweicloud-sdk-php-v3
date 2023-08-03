@@ -280,9 +280,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
         $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'create_at';
-        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : 'desc';
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }

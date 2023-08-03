@@ -182,7 +182,7 @@ class PortList implements ModelInterface, ArrayAccess
     {
         $this->container['clientPort'] = isset($data['clientPort']) ? $data['clientPort'] : null;
         $this->container['serverPort'] = isset($data['serverPort']) ? $data['serverPort'] : null;
-        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : 'TCP';
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
     }
 
     /**

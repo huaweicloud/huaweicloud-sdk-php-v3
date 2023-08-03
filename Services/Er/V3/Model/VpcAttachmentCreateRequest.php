@@ -201,7 +201,7 @@ class VpcAttachmentCreateRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['virsubnetId'] = isset($data['virsubnetId']) ? $data['virsubnetId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['autoCreateVpcRoutes'] = isset($data['autoCreateVpcRoutes']) ? $data['autoCreateVpcRoutes'] : false;
+        $this->container['autoCreateVpcRoutes'] = isset($data['autoCreateVpcRoutes']) ? $data['autoCreateVpcRoutes'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 

@@ -158,7 +158,7 @@ class CloudResource implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['resourceCount'] = isset($data['resourceCount']) ? $data['resourceCount'] : 0;
+        $this->container['resourceCount'] = isset($data['resourceCount']) ? $data['resourceCount'] : null;
     }
 
     /**

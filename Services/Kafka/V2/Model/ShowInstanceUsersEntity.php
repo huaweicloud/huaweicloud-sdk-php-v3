@@ -20,7 +20,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  用户名称。
+    * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -36,7 +36,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  用户名称。
+    * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -73,7 +73,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  用户名称。
+    * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -89,7 +89,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  用户名称。
+    * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -105,7 +105,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  用户名称。
+    * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -207,7 +207,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名称。
+    *  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名称。
+    * @param string|null $userName 用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return $this
     */

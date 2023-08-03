@@ -172,7 +172,7 @@ class DeleteConfigurationRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
     }
 

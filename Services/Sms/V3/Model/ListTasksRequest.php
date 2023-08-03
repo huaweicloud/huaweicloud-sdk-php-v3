@@ -242,8 +242,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['sourceServerId'] = isset($data['sourceServerId']) ? $data['sourceServerId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 

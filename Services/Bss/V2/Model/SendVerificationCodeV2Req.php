@@ -201,7 +201,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
         $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
-        $this->container['scene'] = isset($data['scene']) ? $data['scene'] : 29;
+        $this->container['scene'] = isset($data['scene']) ? $data['scene'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
     }
 

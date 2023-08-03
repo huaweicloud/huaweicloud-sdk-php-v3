@@ -217,7 +217,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : 'bandwidth';
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['shareType'] = isset($data['shareType']) ? $data['shareType'] : null;

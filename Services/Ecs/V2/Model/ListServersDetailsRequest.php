@@ -260,10 +260,10 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 25;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['notTags'] = isset($data['notTags']) ? $data['notTags'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 1;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['reservationId'] = isset($data['reservationId']) ? $data['reservationId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

@@ -216,7 +216,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['authenticationKey'] = isset($data['authenticationKey']) ? $data['authenticationKey'] : null;
-        $this->container['authenticationType'] = isset($data['authenticationType']) ? $data['authenticationType'] : 'NONE';
+        $this->container['authenticationType'] = isset($data['authenticationType']) ? $data['authenticationType'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
     }

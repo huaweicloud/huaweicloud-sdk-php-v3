@@ -162,6 +162,7 @@ class ListStorageTypesRequest implements ModelInterface, ArrayAccess
     const DATABASE_NAME_MY_SQL = 'MySQL';
     const DATABASE_NAME_POSTGRE_SQL = 'PostgreSQL';
     const DATABASE_NAME_SQL_SERVER = 'SQLServer';
+    const DATABASE_NAME_MARIA_DB = 'MariaDB';
     const HA_MODE_HA = 'ha';
     const HA_MODE_SINGLE = 'single';
     const HA_MODE_REPLICA = 'replica';
@@ -178,6 +179,7 @@ class ListStorageTypesRequest implements ModelInterface, ArrayAccess
             self::DATABASE_NAME_MY_SQL,
             self::DATABASE_NAME_POSTGRE_SQL,
             self::DATABASE_NAME_SQL_SERVER,
+            self::DATABASE_NAME_MARIA_DB,
         ];
     }
 

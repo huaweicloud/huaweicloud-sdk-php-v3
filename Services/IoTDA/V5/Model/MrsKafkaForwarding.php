@@ -169,7 +169,7 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
     {
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['kerberosAuthentication'] = isset($data['kerberosAuthentication']) ? $data['kerberosAuthentication'] : false;
+        $this->container['kerberosAuthentication'] = isset($data['kerberosAuthentication']) ? $data['kerberosAuthentication'] : null;
     }
 
     /**

@@ -233,13 +233,13 @@ class ExportSqlResultRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['dataPath'] = isset($data['dataPath']) ? $data['dataPath'] : null;
-        $this->container['compress'] = isset($data['compress']) ? $data['compress'] : 'none';
+        $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
-        $this->container['exportMode'] = isset($data['exportMode']) ? $data['exportMode'] : 'ErrorIfExists';
-        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : false;
-        $this->container['limitNum'] = isset($data['limitNum']) ? $data['limitNum'] : 0;
-        $this->container['encodingType'] = isset($data['encodingType']) ? $data['encodingType'] : 'false';
+        $this->container['exportMode'] = isset($data['exportMode']) ? $data['exportMode'] : null;
+        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : null;
+        $this->container['limitNum'] = isset($data['limitNum']) ? $data['limitNum'] : null;
+        $this->container['encodingType'] = isset($data['encodingType']) ? $data['encodingType'] : null;
     }
 
     /**

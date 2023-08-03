@@ -180,7 +180,7 @@ class ModAdminDTO implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
     }
 
     /**

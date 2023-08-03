@@ -305,7 +305,7 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['watermarks'] = isset($data['watermarks']) ? $data['watermarks'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : 6;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['subtitle'] = isset($data['subtitle']) ? $data['subtitle'] : null;
         $this->container['encryption'] = isset($data['encryption']) ? $data['encryption'] : null;
         $this->container['crop'] = isset($data['crop']) ? $data['crop'] : null;

@@ -190,7 +190,7 @@ class UploadPackageGroupReq implements ModelInterface, ArrayAccess
         $this->container['paths'] = isset($data['paths']) ? $data['paths'] : null;
         $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
-        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : false;
+        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 

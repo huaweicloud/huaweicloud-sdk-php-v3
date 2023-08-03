@@ -201,7 +201,7 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
-        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : 'HEC';
+        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['savePrefix'] = isset($data['savePrefix']) ? $data['savePrefix'] : null;
     }
 

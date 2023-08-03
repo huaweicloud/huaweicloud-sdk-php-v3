@@ -268,11 +268,11 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         $this->container['isCount'] = isset($data['isCount']) ? $data['isCount'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
         $this->container['lineNum'] = isset($data['lineNum']) ? $data['lineNum'] : null;
-        $this->container['isDesc'] = isset($data['isDesc']) ? $data['isDesc'] : false;
+        $this->container['isDesc'] = isset($data['isDesc']) ? $data['isDesc'] : null;
         $this->container['searchType'] = isset($data['searchType']) ? $data['searchType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['highlight'] = isset($data['highlight']) ? $data['highlight'] : true;
-        $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : false;
+        $this->container['highlight'] = isset($data['highlight']) ? $data['highlight'] : null;
+        $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : null;
     }
 
     /**

@@ -167,7 +167,7 @@ class ListAggregateComplianceByPolicyAssignmentRequest implements ModelInterface
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }

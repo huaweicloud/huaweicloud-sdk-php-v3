@@ -179,8 +179,8 @@ class ListWatermarkTemplateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

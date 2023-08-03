@@ -209,10 +209,10 @@ class SearchCorpVmrRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
         $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
-        $this->container['vmrMode'] = isset($data['vmrMode']) ? $data['vmrMode'] : 1;
+        $this->container['vmrMode'] = isset($data['vmrMode']) ? $data['vmrMode'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 

@@ -187,8 +187,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;

@@ -392,13 +392,13 @@ class BillingCreate implements ModelInterface, ArrayAccess
         $this->container['objectType'] = isset($data['objectType']) ? $data['objectType'] : null;
         $this->container['protectType'] = isset($data['protectType']) ? $data['protectType'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : 'post_paid';
+        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
-        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : false;
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : false;
+        $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : null;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
         $this->container['consoleUrl'] = isset($data['consoleUrl']) ? $data['consoleUrl'] : null;
-        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : false;
+        $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : null;
         $this->container['promotionInfo'] = isset($data['promotionInfo']) ? $data['promotionInfo'] : null;
         $this->container['purchaseMode'] = isset($data['purchaseMode']) ? $data['purchaseMode'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;

@@ -157,7 +157,7 @@ class ChangeSeversOsMetadataWithoutCloudInitOption implements ModelInterface, Ar
     */
     public function __construct(array $data = null)
     {
-        $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : '0';
+        $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : null;
         $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
     }
 

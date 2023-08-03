@@ -668,7 +668,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
         $this->container['liveUrl'] = isset($data['liveUrl']) ? $data['liveUrl'] : null;
         $this->container['confConfigInfo'] = isset($data['confConfigInfo']) ? $data['confConfigInfo'] : null;
         $this->container['vmrFlag'] = isset($data['vmrFlag']) ? $data['vmrFlag'] : null;
-        $this->container['isHasRecordFile'] = isset($data['isHasRecordFile']) ? $data['isHasRecordFile'] : false;
+        $this->container['isHasRecordFile'] = isset($data['isHasRecordFile']) ? $data['isHasRecordFile'] : null;
         $this->container['vmrConferenceId'] = isset($data['vmrConferenceId']) ? $data['vmrConferenceId'] : null;
         $this->container['confUuid'] = isset($data['confUuid']) ? $data['confUuid'] : null;
         $this->container['partAttendeeInfo'] = isset($data['partAttendeeInfo']) ? $data['partAttendeeInfo'] : null;
@@ -681,7 +681,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
         $this->container['onlineAttendeeAmount'] = isset($data['onlineAttendeeAmount']) ? $data['onlineAttendeeAmount'] : null;
         $this->container['multiStreamFlag'] = isset($data['multiStreamFlag']) ? $data['multiStreamFlag'] : null;
         $this->container['confMode'] = isset($data['confMode']) ? $data['confMode'] : null;
-        $this->container['scheduleVmr'] = isset($data['scheduleVmr']) ? $data['scheduleVmr'] : false;
+        $this->container['scheduleVmr'] = isset($data['scheduleVmr']) ? $data['scheduleVmr'] : null;
         $this->container['concurrentParticipants'] = isset($data['concurrentParticipants']) ? $data['concurrentParticipants'] : null;
         $this->container['picDisplay'] = isset($data['picDisplay']) ? $data['picDisplay'] : null;
         $this->container['subConfs'] = isset($data['subConfs']) ? $data['subConfs'] : null;

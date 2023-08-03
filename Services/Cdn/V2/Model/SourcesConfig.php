@@ -20,15 +20,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
     * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
     *
     * @var string[]
     */
@@ -41,20 +45,28 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'httpPort' => 'int',
             'httpsPort' => 'int',
             'hostName' => 'string',
-            'obsBucketType' => 'string'
+            'obsBucketType' => 'string',
+            'bucketAccessKey' => 'string',
+            'bucketSecretKey' => 'string',
+            'bucketRegion' => 'string',
+            'bucketName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
     * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
     *
     * @var string[]
     */
@@ -67,7 +79,11 @@ class SourcesConfig implements ModelInterface, ArrayAccess
         'httpPort' => null,
         'httpsPort' => null,
         'hostName' => null,
-        'obsBucketType' => null
+        'obsBucketType' => null,
+        'bucketAccessKey' => null,
+        'bucketSecretKey' => null,
+        'bucketRegion' => null,
+        'bucketName' => null
     ];
 
     /**
@@ -93,15 +109,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
     * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
     *
     * @var string[]
     */
@@ -114,20 +134,28 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'httpPort' => 'http_port',
             'httpsPort' => 'https_port',
             'hostName' => 'host_name',
-            'obsBucketType' => 'obs_bucket_type'
+            'obsBucketType' => 'obs_bucket_type',
+            'bucketAccessKey' => 'bucket_access_key',
+            'bucketSecretKey' => 'bucket_secret_key',
+            'bucketRegion' => 'bucket_region',
+            'bucketName' => 'bucket_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
     * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
     *
     * @var string[]
     */
@@ -140,20 +168,28 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'httpPort' => 'setHttpPort',
             'httpsPort' => 'setHttpsPort',
             'hostName' => 'setHostName',
-            'obsBucketType' => 'setObsBucketType'
+            'obsBucketType' => 'setObsBucketType',
+            'bucketAccessKey' => 'setBucketAccessKey',
+            'bucketSecretKey' => 'setBucketSecretKey',
+            'bucketRegion' => 'setBucketRegion',
+            'bucketName' => 'setBucketName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     * originAddr  源站IP或者域名。
     * priority  源站优先级，70：主，30：备。
     * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
     *
     * @var string[]
     */
@@ -166,7 +202,11 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'httpPort' => 'getHttpPort',
             'httpsPort' => 'getHttpsPort',
             'hostName' => 'getHostName',
-            'obsBucketType' => 'getObsBucketType'
+            'obsBucketType' => 'getObsBucketType',
+            'bucketAccessKey' => 'getBucketAccessKey',
+            'bucketSecretKey' => 'getBucketSecretKey',
+            'bucketRegion' => 'getBucketRegion',
+            'bucketName' => 'getBucketName'
     ];
 
     /**
@@ -236,6 +276,10 @@ class SourcesConfig implements ModelInterface, ArrayAccess
         $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
+        $this->container['bucketAccessKey'] = isset($data['bucketAccessKey']) ? $data['bucketAccessKey'] : null;
+        $this->container['bucketSecretKey'] = isset($data['bucketSecretKey']) ? $data['bucketSecretKey'] : null;
+        $this->container['bucketRegion'] = isset($data['bucketRegion']) ? $data['bucketRegion'] : null;
+        $this->container['bucketName'] = isset($data['bucketName']) ? $data['bucketName'] : null;
     }
 
     /**
@@ -271,7 +315,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets originType
-    *  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    *  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     *
     * @return string
     */
@@ -283,7 +327,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets originType
     *
-    * @param string $originType 源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * @param string $originType 源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
     *
     * @return $this
     */
@@ -367,7 +411,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsWebHostingStatus
-    *  是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    *  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     *
     * @return string|null
     */
@@ -379,7 +423,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsWebHostingStatus
     *
-    * @param string|null $obsWebHostingStatus 是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * @param string|null $obsWebHostingStatus 是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
     *
     * @return $this
     */
@@ -463,7 +507,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    *  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
     *
     * @return string|null
     */
@@ -475,13 +519,109 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    * @param string|null $obsBucketType OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
     *
     * @return $this
     */
     public function setObsBucketType($obsBucketType)
     {
         $this->container['obsBucketType'] = $obsBucketType;
+        return $this;
+    }
+
+    /**
+    * Gets bucketAccessKey
+    *  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    *
+    * @return string|null
+    */
+    public function getBucketAccessKey()
+    {
+        return $this->container['bucketAccessKey'];
+    }
+
+    /**
+    * Sets bucketAccessKey
+    *
+    * @param string|null $bucketAccessKey 第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    *
+    * @return $this
+    */
+    public function setBucketAccessKey($bucketAccessKey)
+    {
+        $this->container['bucketAccessKey'] = $bucketAccessKey;
+        return $this;
+    }
+
+    /**
+    * Gets bucketSecretKey
+    *  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    *
+    * @return string|null
+    */
+    public function getBucketSecretKey()
+    {
+        return $this->container['bucketSecretKey'];
+    }
+
+    /**
+    * Sets bucketSecretKey
+    *
+    * @param string|null $bucketSecretKey 第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    *
+    * @return $this
+    */
+    public function setBucketSecretKey($bucketSecretKey)
+    {
+        $this->container['bucketSecretKey'] = $bucketSecretKey;
+        return $this;
+    }
+
+    /**
+    * Gets bucketRegion
+    *  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    *
+    * @return string|null
+    */
+    public function getBucketRegion()
+    {
+        return $this->container['bucketRegion'];
+    }
+
+    /**
+    * Sets bucketRegion
+    *
+    * @param string|null $bucketRegion 第三方对象存储区域。  > 源站类型为第三方桶时必填
+    *
+    * @return $this
+    */
+    public function setBucketRegion($bucketRegion)
+    {
+        $this->container['bucketRegion'] = $bucketRegion;
+        return $this;
+    }
+
+    /**
+    * Gets bucketName
+    *  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    *
+    * @return string|null
+    */
+    public function getBucketName()
+    {
+        return $this->container['bucketName'];
+    }
+
+    /**
+    * Sets bucketName
+    *
+    * @param string|null $bucketName 第三方对象存储名称。  > 源站类型为第三方桶时必填
+    *
+    * @return $this
+    */
+    public function setBucketName($bucketName)
+    {
+        $this->container['bucketName'] = $bucketName;
         return $this;
     }
 

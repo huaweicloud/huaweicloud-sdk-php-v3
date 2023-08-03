@@ -249,14 +249,14 @@ class NeutronCreatePortOption implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['fixedIps'] = isset($data['fixedIps']) ? $data['fixedIps'] : null;
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
         $this->container['bindingprofile'] = isset($data['bindingprofile']) ? $data['bindingprofile'] : null;
-        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : true;
+        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
         $this->container['bindingvnicType'] = isset($data['bindingvnicType']) ? $data['bindingvnicType'] : null;
     }
 

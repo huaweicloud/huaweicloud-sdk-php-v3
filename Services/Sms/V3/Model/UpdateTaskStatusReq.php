@@ -194,7 +194,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     {
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
         $this->container['param'] = isset($data['param']) ? $data['param'] : null;
-        $this->container['switchHce'] = isset($data['switchHce']) ? $data['switchHce'] : false;
+        $this->container['switchHce'] = isset($data['switchHce']) ? $data['switchHce'] : null;
     }
 
     /**

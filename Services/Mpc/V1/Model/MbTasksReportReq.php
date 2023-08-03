@@ -190,7 +190,7 @@ class MbTasksReportReq implements ModelInterface, ArrayAccess
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['taskName'] = isset($data['taskName']) ? $data['taskName'] : null;
-        $this->container['retry'] = isset($data['retry']) ? $data['retry'] : false;
+        $this->container['retry'] = isset($data['retry']) ? $data['retry'] : null;
         $this->container['parameter'] = isset($data['parameter']) ? $data['parameter'] : null;
     }
 

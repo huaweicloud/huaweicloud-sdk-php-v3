@@ -289,7 +289,7 @@ class ExternalContactDTO implements ModelInterface, ArrayAccess
     {
         $this->container['otherNumber'] = isset($data['otherNumber']) ? $data['otherNumber'] : null;
         $this->container['otherNumberCountry'] = isset($data['otherNumberCountry']) ? $data['otherNumberCountry'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['corpName'] = isset($data['corpName']) ? $data['corpName'] : null;

@@ -179,7 +179,7 @@ class RebootCloudTableClusterRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

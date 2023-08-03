@@ -338,8 +338,8 @@ class ShowAssetMetaRequest implements ModelInterface, ArrayAccess
         $this->container['categoryId'] = isset($data['categoryId']) ? $data['categoryId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['queryString'] = isset($data['queryString']) ? $data['queryString'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

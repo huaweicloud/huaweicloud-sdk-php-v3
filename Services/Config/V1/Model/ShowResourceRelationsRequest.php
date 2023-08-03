@@ -194,7 +194,7 @@ class ShowResourceRelationsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

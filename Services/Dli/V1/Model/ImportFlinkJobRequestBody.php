@@ -158,7 +158,7 @@ class ImportFlinkJobRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['zipFile'] = isset($data['zipFile']) ? $data['zipFile'] : null;
-        $this->container['isCover'] = isset($data['isCover']) ? $data['isCover'] : false;
+        $this->container['isCover'] = isset($data['isCover']) ? $data['isCover'] : null;
     }
 
     /**

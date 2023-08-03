@@ -179,8 +179,8 @@ class PutVolumeGroups implements ModelInterface, ArrayAccess
     {
         $this->container['logicalVolumes'] = isset($data['logicalVolumes']) ? $data['logicalVolumes'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['needMigration'] = isset($data['needMigration']) ? $data['needMigration'] : true;
-        $this->container['adjustSize'] = isset($data['adjustSize']) ? $data['adjustSize'] : 0;
+        $this->container['needMigration'] = isset($data['needMigration']) ? $data['needMigration'] : null;
+        $this->container['adjustSize'] = isset($data['adjustSize']) ? $data['adjustSize'] : null;
     }
 
     /**

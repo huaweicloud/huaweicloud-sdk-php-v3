@@ -199,9 +199,9 @@ class ListFlavorSellPoliciesResult implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
-        $this->container['sellStatus'] = isset($data['sellStatus']) ? $data['sellStatus'] : '0';
+        $this->container['sellStatus'] = isset($data['sellStatus']) ? $data['sellStatus'] : null;
         $this->container['availabilityZoneId'] = isset($data['availabilityZoneId']) ? $data['availabilityZoneId'] : null;
-        $this->container['sellMode'] = isset($data['sellMode']) ? $data['sellMode'] : '0';
+        $this->container['sellMode'] = isset($data['sellMode']) ? $data['sellMode'] : null;
         $this->container['spotOptions'] = isset($data['spotOptions']) ? $data['spotOptions'] : null;
     }
 

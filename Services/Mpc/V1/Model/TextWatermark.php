@@ -242,15 +242,15 @@ class TextWatermark implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : '0';
-        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : '0';
+        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
+        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
         $this->container['referpos'] = isset($data['referpos']) ? $data['referpos'] : null;
-        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : '0';
+        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
         $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
-        $this->container['fontName'] = isset($data['fontName']) ? $data['fontName'] : 'msyh';
-        $this->container['fontSize'] = isset($data['fontSize']) ? $data['fontSize'] : 16;
-        $this->container['fontColor'] = isset($data['fontColor']) ? $data['fontColor'] : 'white';
-        $this->container['base'] = isset($data['base']) ? $data['base'] : 'input';
+        $this->container['fontName'] = isset($data['fontName']) ? $data['fontName'] : null;
+        $this->container['fontSize'] = isset($data['fontSize']) ? $data['fontSize'] : null;
+        $this->container['fontColor'] = isset($data['fontColor']) ? $data['fontColor'] : null;
+        $this->container['base'] = isset($data['base']) ? $data['base'] : null;
     }
 
     /**

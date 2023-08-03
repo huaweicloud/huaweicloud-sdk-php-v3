@@ -20,11 +20,12 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
     * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -38,6 +39,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'int',
             'signMethod' => 'string',
             'matchType' => 'string',
+            'inheritConfig' => '\HuaweiCloud\SDK\Cdn\V2\Model\InheritConfig',
             'key' => 'string',
             'backupKey' => 'string',
             'signArg' => 'string',
@@ -46,11 +48,12 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
     * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -64,6 +67,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
         'expireTime' => 'int32',
         'signMethod' => null,
         'matchType' => null,
+        'inheritConfig' => null,
         'key' => null,
         'backupKey' => null,
         'signArg' => null,
@@ -93,11 +97,12 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
     * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -111,6 +116,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'expire_time',
             'signMethod' => 'sign_method',
             'matchType' => 'match_type',
+            'inheritConfig' => 'inherit_config',
             'key' => 'key',
             'backupKey' => 'backup_key',
             'signArg' => 'sign_arg',
@@ -119,11 +125,12 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
     * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -137,6 +144,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'setExpireTime',
             'signMethod' => 'setSignMethod',
             'matchType' => 'setMatchType',
+            'inheritConfig' => 'setInheritConfig',
             'key' => 'setKey',
             'backupKey' => 'setBackupKey',
             'signArg' => 'setSignArg',
@@ -145,11 +153,12 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
     * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
+    * inheritConfig  inheritConfig
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -163,6 +172,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'expireTime' => 'getExpireTime',
             'signMethod' => 'getSignMethod',
             'matchType' => 'getMatchType',
+            'inheritConfig' => 'getInheritConfig',
             'key' => 'getKey',
             'backupKey' => 'getBackupKey',
             'signArg' => 'getSignArg',
@@ -232,6 +242,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['signMethod'] = isset($data['signMethod']) ? $data['signMethod'] : null;
         $this->container['matchType'] = isset($data['matchType']) ? $data['matchType'] : null;
+        $this->container['inheritConfig'] = isset($data['inheritConfig']) ? $data['inheritConfig'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['backupKey'] = isset($data['backupKey']) ? $data['backupKey'] : null;
         $this->container['signArg'] = isset($data['signArg']) ? $data['signArg'] : null;
@@ -274,7 +285,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  是否开启URL鉴权，off：开启,on：关闭。
+    *  是否开启URL鉴权，on：开启,off：关闭。
     *
     * @return string
     */
@@ -286,7 +297,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 是否开启URL鉴权，off：开启,on：关闭。
+    * @param string $status 是否开启URL鉴权，on：开启,off：关闭。
     *
     * @return $this
     */
@@ -389,6 +400,30 @@ class UrlAuth implements ModelInterface, ArrayAccess
     public function setMatchType($matchType)
     {
         $this->container['matchType'] = $matchType;
+        return $this;
+    }
+
+    /**
+    * Gets inheritConfig
+    *  inheritConfig
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\InheritConfig|null
+    */
+    public function getInheritConfig()
+    {
+        return $this->container['inheritConfig'];
+    }
+
+    /**
+    * Sets inheritConfig
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\InheritConfig|null $inheritConfig inheritConfig
+    *
+    * @return $this
+    */
+    public function setInheritConfig($inheritConfig)
+    {
+        $this->container['inheritConfig'] = $inheritConfig;
         return $this;
     }
 

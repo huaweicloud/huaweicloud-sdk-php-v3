@@ -147,7 +147,7 @@ class ShowVersionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : 'v1.0';
+        $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : null;
     }
 
     /**

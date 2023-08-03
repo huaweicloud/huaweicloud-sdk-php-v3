@@ -183,7 +183,7 @@ class UpdateBatchAsyncJobsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['asyncJobId'] = isset($data['asyncJobId']) ? $data['asyncJobId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

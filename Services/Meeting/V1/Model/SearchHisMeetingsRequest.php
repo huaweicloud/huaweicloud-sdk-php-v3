@@ -238,10 +238,10 @@ class SearchHisMeetingsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
-        $this->container['queryAll'] = isset($data['queryAll']) ? $data['queryAll'] : false;
+        $this->container['queryAll'] = isset($data['queryAll']) ? $data['queryAll'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
         $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
         $this->container['sortType'] = isset($data['sortType']) ? $data['sortType'] : null;

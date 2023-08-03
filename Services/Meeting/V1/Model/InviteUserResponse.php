@@ -148,7 +148,7 @@ class InviteUserResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['userExist'] = isset($data['userExist']) ? $data['userExist'] : false;
+        $this->container['userExist'] = isset($data['userExist']) ? $data['userExist'] : null;
     }
 
     /**

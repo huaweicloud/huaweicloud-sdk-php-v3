@@ -29,7 +29,7 @@ class StartInstanceEnlargeVolumeActionRequest implements ModelInterface, ArrayAc
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolume'
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeRequestBody'
     ];
 
     /**
@@ -272,7 +272,7 @@ class StartInstanceEnlargeVolumeActionRequest implements ModelInterface, ArrayAc
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolume|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeRequestBody|null
     */
     public function getBody()
     {
@@ -282,7 +282,7 @@ class StartInstanceEnlargeVolumeActionRequest implements ModelInterface, ArrayAc
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolume|null $body body
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\EnlargeVolumeRequestBody|null $body body
     *
     * @return $this
     */

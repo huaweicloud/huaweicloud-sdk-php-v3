@@ -169,7 +169,7 @@ class ListAllTagsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

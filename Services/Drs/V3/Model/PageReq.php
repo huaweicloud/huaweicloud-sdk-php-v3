@@ -157,8 +157,8 @@ class PageReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['curPage'] = isset($data['curPage']) ? $data['curPage'] : 1;
-        $this->container['perPage'] = isset($data['perPage']) ? $data['perPage'] : 5;
+        $this->container['curPage'] = isset($data['curPage']) ? $data['curPage'] : null;
+        $this->container['perPage'] = isset($data['perPage']) ? $data['perPage'] : null;
     }
 
     /**

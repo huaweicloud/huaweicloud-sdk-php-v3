@@ -179,7 +179,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

@@ -204,8 +204,8 @@ class SearchQosParticipantsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['confUuid'] = isset($data['confUuid']) ? $data['confUuid'] : null;
         $this->container['confType'] = isset($data['confType']) ? $data['confType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['searchKey'] = isset($data['searchKey']) ? $data['searchKey'] : null;
     }
 

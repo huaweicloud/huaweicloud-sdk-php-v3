@@ -168,7 +168,7 @@ class ExportFlinkJobRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['obsDir'] = isset($data['obsDir']) ? $data['obsDir'] : null;
-        $this->container['isSelected'] = isset($data['isSelected']) ? $data['isSelected'] : false;
+        $this->container['isSelected'] = isset($data['isSelected']) ? $data['isSelected'] : null;
         $this->container['jobSelected'] = isset($data['jobSelected']) ? $data['jobSelected'] : null;
     }
 

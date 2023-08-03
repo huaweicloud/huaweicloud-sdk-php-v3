@@ -213,7 +213,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
         $this->container['numberOfRecentPasswordsDisallowed'] = isset($data['numberOfRecentPasswordsDisallowed']) ? $data['numberOfRecentPasswordsDisallowed'] : null;
         $this->container['passwordNotUsernameOrInvert'] = isset($data['passwordNotUsernameOrInvert']) ? $data['passwordNotUsernameOrInvert'] : null;
         $this->container['passwordValidityPeriod'] = isset($data['passwordValidityPeriod']) ? $data['passwordValidityPeriod'] : null;
-        $this->container['passwordCharCombination'] = isset($data['passwordCharCombination']) ? $data['passwordCharCombination'] : 2;
+        $this->container['passwordCharCombination'] = isset($data['passwordCharCombination']) ? $data['passwordCharCombination'] : null;
     }
 
     /**

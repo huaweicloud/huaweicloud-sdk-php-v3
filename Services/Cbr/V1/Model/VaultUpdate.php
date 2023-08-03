@@ -212,8 +212,8 @@ class VaultUpdate implements ModelInterface, ArrayAccess
         $this->container['autoBind'] = isset($data['autoBind']) ? $data['autoBind'] : null;
         $this->container['bindRules'] = isset($data['bindRules']) ? $data['bindRules'] : null;
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
-        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : true;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 80;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
     }
 
     /**

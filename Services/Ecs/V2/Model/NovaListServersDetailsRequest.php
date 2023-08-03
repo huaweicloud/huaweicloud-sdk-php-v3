@@ -343,12 +343,12 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 25;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['notTags'] = isset($data['notTags']) ? $data['notTags'] : null;
         $this->container['reservationId'] = isset($data['reservationId']) ? $data['reservationId'] : null;
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'created_at';
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['openStackApiVersion'] = isset($data['openStackApiVersion']) ? $data['openStackApiVersion'] : null;

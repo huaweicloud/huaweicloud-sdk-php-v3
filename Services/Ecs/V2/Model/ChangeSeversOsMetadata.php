@@ -167,7 +167,7 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : '0';
+        $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : null;
         $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
     }

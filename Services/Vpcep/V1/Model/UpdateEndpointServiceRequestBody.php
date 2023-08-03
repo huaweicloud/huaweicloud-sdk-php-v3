@@ -218,7 +218,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['approvalEnabled'] = isset($data['approvalEnabled']) ? $data['approvalEnabled'] : true;
+        $this->container['approvalEnabled'] = isset($data['approvalEnabled']) ? $data['approvalEnabled'] : null;
         $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;

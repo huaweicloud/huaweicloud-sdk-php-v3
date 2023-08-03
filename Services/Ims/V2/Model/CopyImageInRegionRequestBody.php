@@ -179,7 +179,7 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['cmkId'] = isset($data['cmkId']) ? $data['cmkId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 

@@ -172,7 +172,7 @@ class CreateDeployTaskByTemplateRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf-8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

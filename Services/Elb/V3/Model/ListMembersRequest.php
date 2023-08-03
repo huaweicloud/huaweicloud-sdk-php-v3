@@ -299,7 +299,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     {
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;

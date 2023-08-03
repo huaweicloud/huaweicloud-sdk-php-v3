@@ -190,8 +190,8 @@ class TimeRange implements ModelInterface, ArrayAccess
         $this->container['sqlTimeZone'] = isset($data['sqlTimeZone']) ? $data['sqlTimeZone'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['startTimeGt'] = isset($data['startTimeGt']) ? $data['startTimeGt'] : false;
-        $this->container['endTimeLt'] = isset($data['endTimeLt']) ? $data['endTimeLt'] : false;
+        $this->container['startTimeGt'] = isset($data['startTimeGt']) ? $data['startTimeGt'] : null;
+        $this->container['endTimeLt'] = isset($data['endTimeLt']) ? $data['endTimeLt'] : null;
     }
 
     /**

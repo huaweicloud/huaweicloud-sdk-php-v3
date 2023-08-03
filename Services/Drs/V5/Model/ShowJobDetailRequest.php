@@ -378,7 +378,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'en-us';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['queryId'] = isset($data['queryId']) ? $data['queryId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;

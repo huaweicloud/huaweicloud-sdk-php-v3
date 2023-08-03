@@ -167,9 +167,9 @@ class RemuxOutputParam implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['format'] = isset($data['format']) ? $data['format'] : 'MP4';
-        $this->container['segmentDuration'] = isset($data['segmentDuration']) ? $data['segmentDuration'] : 5;
-        $this->container['removeMeta'] = isset($data['removeMeta']) ? $data['removeMeta'] : false;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
+        $this->container['segmentDuration'] = isset($data['segmentDuration']) ? $data['segmentDuration'] : null;
+        $this->container['removeMeta'] = isset($data['removeMeta']) ? $data['removeMeta'] : null;
     }
 
     /**

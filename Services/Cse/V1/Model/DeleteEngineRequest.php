@@ -157,7 +157,7 @@ class DeleteEngineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xEnterpriseProjectId'] = isset($data['xEnterpriseProjectId']) ? $data['xEnterpriseProjectId'] : '0';
+        $this->container['xEnterpriseProjectId'] = isset($data['xEnterpriseProjectId']) ? $data['xEnterpriseProjectId'] : null;
         $this->container['engineId'] = isset($data['engineId']) ? $data['engineId'] : null;
     }
 

@@ -472,7 +472,7 @@ class RunJobFlowCommand implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isDecProject'] = isset($data['isDecProject']) ? $data['isDecProject'] : false;
+        $this->container['isDecProject'] = isset($data['isDecProject']) ? $data['isDecProject'] : null;
         $this->container['clusterVersion'] = isset($data['clusterVersion']) ? $data['clusterVersion'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
@@ -502,7 +502,7 @@ class RunJobFlowCommand implements ModelInterface, ArrayAccess
         $this->container['bootstrapScripts'] = isset($data['bootstrapScripts']) ? $data['bootstrapScripts'] : null;
         $this->container['logUri'] = isset($data['logUri']) ? $data['logUri'] : null;
         $this->container['componentConfigs'] = isset($data['componentConfigs']) ? $data['componentConfigs'] : null;
-        $this->container['deleteWhenNoSteps'] = isset($data['deleteWhenNoSteps']) ? $data['deleteWhenNoSteps'] : false;
+        $this->container['deleteWhenNoSteps'] = isset($data['deleteWhenNoSteps']) ? $data['deleteWhenNoSteps'] : null;
         $this->container['steps'] = isset($data['steps']) ? $data['steps'] : null;
     }
 

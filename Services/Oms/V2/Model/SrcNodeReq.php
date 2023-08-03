@@ -227,7 +227,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : 'Aliyun';
+        $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;

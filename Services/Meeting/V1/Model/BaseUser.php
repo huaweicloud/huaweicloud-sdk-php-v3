@@ -209,8 +209,8 @@ class BaseUser implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['contact'] = isset($data['contact']) ? $data['contact'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
-        $this->container['deptCode'] = isset($data['deptCode']) ? $data['deptCode'] : '1';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['deptCode'] = isset($data['deptCode']) ? $data['deptCode'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['sortLevel'] = isset($data['sortLevel']) ? $data['sortLevel'] : null;
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;

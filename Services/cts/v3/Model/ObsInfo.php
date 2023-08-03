@@ -227,8 +227,8 @@ class ObsInfo implements ModelInterface, ArrayAccess
         $this->container['isObsCreated'] = isset($data['isObsCreated']) ? $data['isObsCreated'] : null;
         $this->container['isAuthorizedBucket'] = isset($data['isAuthorizedBucket']) ? $data['isAuthorizedBucket'] : null;
         $this->container['bucketLifecycle'] = isset($data['bucketLifecycle']) ? $data['bucketLifecycle'] : null;
-        $this->container['compressType'] = isset($data['compressType']) ? $data['compressType'] : 'gzip';
-        $this->container['isSortByService'] = isset($data['isSortByService']) ? $data['isSortByService'] : true;
+        $this->container['compressType'] = isset($data['compressType']) ? $data['compressType'] : null;
+        $this->container['isSortByService'] = isset($data['isSortByService']) ? $data['isSortByService'] : null;
     }
 
     /**

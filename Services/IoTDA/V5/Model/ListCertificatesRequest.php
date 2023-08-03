@@ -211,9 +211,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['stageAuthToken'] = isset($data['stageAuthToken']) ? $data['stageAuthToken'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : 'ffffffffffffffffffffffffffffffffffff';
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

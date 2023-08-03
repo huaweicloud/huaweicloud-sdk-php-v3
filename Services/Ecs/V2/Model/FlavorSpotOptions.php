@@ -169,7 +169,7 @@ class FlavorSpotOptions implements ModelInterface, ArrayAccess
     {
         $this->container['longestSpotDurationHours'] = isset($data['longestSpotDurationHours']) ? $data['longestSpotDurationHours'] : null;
         $this->container['largestSpotDurationCount'] = isset($data['largestSpotDurationCount']) ? $data['largestSpotDurationCount'] : null;
-        $this->container['interruptionPolicy'] = isset($data['interruptionPolicy']) ? $data['interruptionPolicy'] : '0';
+        $this->container['interruptionPolicy'] = isset($data['interruptionPolicy']) ? $data['interruptionPolicy'] : null;
     }
 
     /**

@@ -231,8 +231,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['encoding'] = isset($data['encoding']) ? $data['encoding'] : 'none';
-        $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : 'standard';
+        $this->container['encoding'] = isset($data['encoding']) ? $data['encoding'] : null;
+        $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['topicFullName'] = isset($data['topicFullName']) ? $data['topicFullName'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;

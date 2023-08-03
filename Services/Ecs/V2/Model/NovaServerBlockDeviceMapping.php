@@ -263,7 +263,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
         $this->container['destinationType'] = isset($data['destinationType']) ? $data['destinationType'] : null;
         $this->container['guestFormat'] = isset($data['guestFormat']) ? $data['guestFormat'] : null;
         $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
-        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : false;
+        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : null;
         $this->container['bootIndex'] = isset($data['bootIndex']) ? $data['bootIndex'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['volumeSize'] = isset($data['volumeSize']) ? $data['volumeSize'] : null;

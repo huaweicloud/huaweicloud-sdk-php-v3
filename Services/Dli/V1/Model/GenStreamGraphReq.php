@@ -254,9 +254,9 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
         $this->container['tmCus'] = isset($data['tmCus']) ? $data['tmCus'] : null;
         $this->container['tmSlotNum'] = isset($data['tmSlotNum']) ? $data['tmSlotNum'] : null;
         $this->container['operatorConfig'] = isset($data['operatorConfig']) ? $data['operatorConfig'] : null;
-        $this->container['staticEstimator'] = isset($data['staticEstimator']) ? $data['staticEstimator'] : false;
+        $this->container['staticEstimator'] = isset($data['staticEstimator']) ? $data['staticEstimator'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
-        $this->container['graphType'] = isset($data['graphType']) ? $data['graphType'] : 'simple_graph';
+        $this->container['graphType'] = isset($data['graphType']) ? $data['graphType'] : null;
         $this->container['staticEstimatorConfig'] = isset($data['staticEstimatorConfig']) ? $data['staticEstimatorConfig'] : null;
     }
 

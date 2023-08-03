@@ -180,7 +180,7 @@ class QueryLtsStructLogParams implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['sqlExpression'] = isset($data['sqlExpression']) ? $data['sqlExpression'] : null;
-        $this->container['originalContent'] = isset($data['originalContent']) ? $data['originalContent'] : false;
+        $this->container['originalContent'] = isset($data['originalContent']) ? $data['originalContent'] : null;
     }
 
     /**

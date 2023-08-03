@@ -222,8 +222,8 @@ class ListMergeChannelsTaskRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

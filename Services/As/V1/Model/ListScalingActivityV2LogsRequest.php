@@ -263,8 +263,8 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }

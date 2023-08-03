@@ -180,7 +180,7 @@ class DeviceLinkageStatusCondition implements ModelInterface, ArrayAccess
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['statusList'] = isset($data['statusList']) ? $data['statusList'] : null;
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : 0;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
     }
 
     /**

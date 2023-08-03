@@ -193,7 +193,7 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : self::IP_VERSION_4;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
     }

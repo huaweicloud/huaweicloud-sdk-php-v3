@@ -169,7 +169,7 @@ class EnterpriseProject implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'prod';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**

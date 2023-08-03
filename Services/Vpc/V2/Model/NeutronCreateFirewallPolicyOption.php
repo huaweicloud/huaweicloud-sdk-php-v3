@@ -177,7 +177,7 @@ class NeutronCreateFirewallPolicyOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['audited'] = isset($data['audited']) ? $data['audited'] : false;
+        $this->container['audited'] = isset($data['audited']) ? $data['audited'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['firewallRules'] = isset($data['firewallRules']) ? $data['firewallRules'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;

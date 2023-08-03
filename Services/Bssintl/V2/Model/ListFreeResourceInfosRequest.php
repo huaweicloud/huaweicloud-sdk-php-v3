@@ -157,7 +157,7 @@ class ListFreeResourceInfosRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_CN';
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

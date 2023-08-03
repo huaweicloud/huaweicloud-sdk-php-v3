@@ -222,8 +222,8 @@ class ListPartnerAdjustRecordsRequest implements ModelInterface, ArrayAccess
         $this->container['operationTimeBegin'] = isset($data['operationTimeBegin']) ? $data['operationTimeBegin'] : null;
         $this->container['operationTimeEnd'] = isset($data['operationTimeEnd']) ? $data['operationTimeEnd'] : null;
         $this->container['transId'] = isset($data['transId']) ? $data['transId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 

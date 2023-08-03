@@ -453,7 +453,7 @@ class ClusterDetail implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['port'] = isset($data['port']) ? $data['port'] : 8000;
+        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['endpoints'] = isset($data['endpoints']) ? $data['endpoints'] : null;
         $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

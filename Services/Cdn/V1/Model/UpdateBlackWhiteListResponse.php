@@ -168,8 +168,8 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : 'success';
-        $this->container['result'] = isset($data['result']) ? $data['result'] : 'operate success!';
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 

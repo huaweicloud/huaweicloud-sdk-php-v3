@@ -199,9 +199,9 @@ class ListTranscodeTemplateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : false;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['queryString'] = isset($data['queryString']) ? $data['queryString'] : null;
     }
 

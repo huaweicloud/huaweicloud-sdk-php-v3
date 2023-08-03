@@ -224,7 +224,7 @@ class ExportTableRequestBody implements ModelInterface, ArrayAccess
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['exportMode'] = isset($data['exportMode']) ? $data['exportMode'] : null;
-        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : false;
+        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : null;
     }
 
     /**

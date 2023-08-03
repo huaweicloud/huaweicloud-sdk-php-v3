@@ -157,7 +157,7 @@ class ServicePolicy implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['version'] = isset($data['version']) ? $data['version'] : '1.1';
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['statement'] = isset($data['statement']) ? $data['statement'] : null;
     }
 

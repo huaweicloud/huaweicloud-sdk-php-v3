@@ -246,7 +246,7 @@ class TransTemplateGroup implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : '0';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['autoEncrypt'] = isset($data['autoEncrypt']) ? $data['autoEncrypt'] : null;
         $this->container['qualityInfoList'] = isset($data['qualityInfoList']) ? $data['qualityInfoList'] : null;

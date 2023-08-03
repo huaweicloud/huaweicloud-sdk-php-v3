@@ -291,11 +291,11 @@ class ImportTableRequestBody implements ModelInterface, ArrayAccess
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
-        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : false;
+        $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : null;
         $this->container['delimiter'] = isset($data['delimiter']) ? $data['delimiter'] : null;
         $this->container['quoteChar'] = isset($data['quoteChar']) ? $data['quoteChar'] : null;
         $this->container['escapeChar'] = isset($data['escapeChar']) ? $data['escapeChar'] : null;
-        $this->container['dateFormat'] = isset($data['dateFormat']) ? $data['dateFormat'] : 'yyyy-MM-dd';
+        $this->container['dateFormat'] = isset($data['dateFormat']) ? $data['dateFormat'] : null;
         $this->container['badRecordsPath'] = isset($data['badRecordsPath']) ? $data['badRecordsPath'] : null;
         $this->container['timestampFormat'] = isset($data['timestampFormat']) ? $data['timestampFormat'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;

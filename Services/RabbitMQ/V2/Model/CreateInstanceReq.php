@@ -23,9 +23,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -75,9 +75,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -148,9 +148,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -200,9 +200,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -252,9 +252,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     * storageSpace  消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
-    * accessUser  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * securityGroupId  租户安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
@@ -611,7 +611,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    *  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     *
     * @return string
     */
@@ -623,7 +623,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+    * @param string $engineVersion 消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessUser
-    *  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    *  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return string
     */
@@ -671,7 +671,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string $accessUser 认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * @param string $accessUser 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return $this
     */

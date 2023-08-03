@@ -230,7 +230,7 @@ class RouteTable implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['isDefaultAssociation'] = isset($data['isDefaultAssociation']) ? $data['isDefaultAssociation'] : false;
+        $this->container['isDefaultAssociation'] = isset($data['isDefaultAssociation']) ? $data['isDefaultAssociation'] : null;
         $this->container['isDefaultPropagation'] = isset($data['isDefaultPropagation']) ? $data['isDefaultPropagation'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;

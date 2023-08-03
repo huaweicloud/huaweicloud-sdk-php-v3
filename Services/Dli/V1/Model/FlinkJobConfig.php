@@ -477,17 +477,17 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['checkpointEnabled'] = isset($data['checkpointEnabled']) ? $data['checkpointEnabled'] : false;
+        $this->container['checkpointEnabled'] = isset($data['checkpointEnabled']) ? $data['checkpointEnabled'] : null;
         $this->container['checkpointMode'] = isset($data['checkpointMode']) ? $data['checkpointMode'] : null;
-        $this->container['checkpointInterval'] = isset($data['checkpointInterval']) ? $data['checkpointInterval'] : 10;
-        $this->container['logEnabled'] = isset($data['logEnabled']) ? $data['logEnabled'] : false;
+        $this->container['checkpointInterval'] = isset($data['checkpointInterval']) ? $data['checkpointInterval'] : null;
+        $this->container['logEnabled'] = isset($data['logEnabled']) ? $data['logEnabled'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
         $this->container['smnTopic'] = isset($data['smnTopic']) ? $data['smnTopic'] : null;
         $this->container['edgeGroupIds'] = isset($data['edgeGroupIds']) ? $data['edgeGroupIds'] : null;
         $this->container['rootId'] = isset($data['rootId']) ? $data['rootId'] : null;
         $this->container['managerCuNumber'] = isset($data['managerCuNumber']) ? $data['managerCuNumber'] : null;
-        $this->container['cuNumber'] = isset($data['cuNumber']) ? $data['cuNumber'] : 2;
-        $this->container['parallelNumber'] = isset($data['parallelNumber']) ? $data['parallelNumber'] : 1;
+        $this->container['cuNumber'] = isset($data['cuNumber']) ? $data['cuNumber'] : null;
+        $this->container['parallelNumber'] = isset($data['parallelNumber']) ? $data['parallelNumber'] : null;
         $this->container['restartWhenException'] = isset($data['restartWhenException']) ? $data['restartWhenException'] : null;
         $this->container['idleStateRetention'] = isset($data['idleStateRetention']) ? $data['idleStateRetention'] : null;
         $this->container['udfJarUrl'] = isset($data['udfJarUrl']) ? $data['udfJarUrl'] : null;
@@ -497,7 +497,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         $this->container['dependencyFiles'] = isset($data['dependencyFiles']) ? $data['dependencyFiles'] : null;
         $this->container['executorNumber'] = isset($data['executorNumber']) ? $data['executorNumber'] : null;
         $this->container['executorCuNumber'] = isset($data['executorCuNumber']) ? $data['executorCuNumber'] : null;
-        $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : false;
+        $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
         $this->container['graphEditorEnabled'] = isset($data['graphEditorEnabled']) ? $data['graphEditorEnabled'] : null;
         $this->container['graphEditorData'] = isset($data['graphEditorData']) ? $data['graphEditorData'] : null;

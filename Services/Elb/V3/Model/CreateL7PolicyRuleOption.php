@@ -207,10 +207,10 @@ class CreateL7PolicyRuleOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['compareType'] = isset($data['compareType']) ? $data['compareType'] : null;
-        $this->container['invert'] = isset($data['invert']) ? $data['invert'] : false;
+        $this->container['invert'] = isset($data['invert']) ? $data['invert'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;

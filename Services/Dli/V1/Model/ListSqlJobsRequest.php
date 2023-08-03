@@ -319,15 +319,15 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['currentPage'] = isset($data['currentPage']) ? $data['currentPage'] : 1;
+        $this->container['currentPage'] = isset($data['currentPage']) ? $data['currentPage'] : null;
         $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['jobStatus'] = isset($data['jobStatus']) ? $data['jobStatus'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
-        $this->container['order'] = isset($data['order']) ? $data['order'] : 'start_time_desc';
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : 50;
+        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['sqlPattern'] = isset($data['sqlPattern']) ? $data['sqlPattern'] : null;
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;

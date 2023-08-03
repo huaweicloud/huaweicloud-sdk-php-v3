@@ -157,8 +157,8 @@ class SlowStart implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : false;
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : 30;
+        $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
     }
 
     /**

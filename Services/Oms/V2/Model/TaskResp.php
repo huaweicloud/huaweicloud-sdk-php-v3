@@ -604,8 +604,8 @@ class TaskResp implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['successfulNum'] = isset($data['successfulNum']) ? $data['successfulNum'] : null;
-        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : 'object';
-        $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : 'NORMAL_TASK';
+        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
+        $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
         $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
         $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
         $this->container['totalTime'] = isset($data['totalTime']) ? $data['totalTime'] : null;

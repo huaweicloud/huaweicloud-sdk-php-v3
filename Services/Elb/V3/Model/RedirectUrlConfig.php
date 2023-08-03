@@ -236,10 +236,10 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
-        $this->container['host'] = isset($data['host']) ? $data['host'] : '${host}';
-        $this->container['port'] = isset($data['port']) ? $data['port'] : '${port}';
-        $this->container['path'] = isset($data['path']) ? $data['path'] : '${path}';
-        $this->container['query'] = isset($data['query']) ? $data['query'] : '${query}';
+        $this->container['host'] = isset($data['host']) ? $data['host'] : null;
+        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
+        $this->container['path'] = isset($data['path']) ? $data['path'] : null;
+        $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['statusCode'] = isset($data['statusCode']) ? $data['statusCode'] : null;
     }
 

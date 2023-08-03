@@ -249,14 +249,14 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['osVersion'] = isset($data['osVersion']) ? $data['osVersion'] : null;
-        $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : 'bare';
+        $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : null;
         $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : null;
-        $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : 40;
-        $this->container['minRam'] = isset($data['minRam']) ? $data['minRam'] : 0;
+        $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : null;
+        $this->container['minRam'] = isset($data['minRam']) ? $data['minRam'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['protected'] = isset($data['protected']) ? $data['protected'] : false;
+        $this->container['protected'] = isset($data['protected']) ? $data['protected'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : 'private';
+        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
     }
 
     /**

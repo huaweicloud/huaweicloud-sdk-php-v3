@@ -147,7 +147,7 @@ class ShowSubscriptionInfoRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
     /**

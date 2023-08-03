@@ -200,8 +200,8 @@ class Cmd implements ModelInterface, ArrayAccess
         $this->container['commandName'] = isset($data['commandName']) ? $data['commandName'] : null;
         $this->container['commandBody'] = isset($data['commandBody']) ? $data['commandBody'] : null;
         $this->container['serviceId'] = isset($data['serviceId']) ? $data['serviceId'] : null;
-        $this->container['bufferTimeout'] = isset($data['bufferTimeout']) ? $data['bufferTimeout'] : 172800;
-        $this->container['responseTimeout'] = isset($data['responseTimeout']) ? $data['responseTimeout'] : 1800;
+        $this->container['bufferTimeout'] = isset($data['bufferTimeout']) ? $data['bufferTimeout'] : null;
+        $this->container['responseTimeout'] = isset($data['responseTimeout']) ? $data['responseTimeout'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
     }
 

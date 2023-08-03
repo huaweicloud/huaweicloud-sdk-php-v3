@@ -200,7 +200,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'reliability';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;

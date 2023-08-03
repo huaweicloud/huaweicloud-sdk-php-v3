@@ -258,8 +258,8 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['lifeCycleState'] = isset($data['lifeCycleState']) ? $data['lifeCycleState'] : null;
         $this->container['healthStatus'] = isset($data['healthStatus']) ? $data['healthStatus'] : null;
         $this->container['protectFromScalingDown'] = isset($data['protectFromScalingDown']) ? $data['protectFromScalingDown'] : null;
-        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

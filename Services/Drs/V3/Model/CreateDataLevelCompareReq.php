@@ -242,7 +242,7 @@ class CreateDataLevelCompareReq implements ModelInterface, ArrayAccess
     {
         $this->container['conflictPolicy'] = isset($data['conflictPolicy']) ? $data['conflictPolicy'] : null;
         $this->container['compareType'] = isset($data['compareType']) ? $data['compareType'] : null;
-        $this->container['compareMode'] = isset($data['compareMode']) ? $data['compareMode'] : 'quick_comparison';
+        $this->container['compareMode'] = isset($data['compareMode']) ? $data['compareMode'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['compareObjectInfos'] = isset($data['compareObjectInfos']) ? $data['compareObjectInfos'] : null;
         $this->container['compareObjectInfosWithToken'] = isset($data['compareObjectInfosWithToken']) ? $data['compareObjectInfosWithToken'] : null;

@@ -241,7 +241,7 @@ class ShowRecordRuleResponse implements ModelInterface, ArrayAccess
         $this->container['publishDomain'] = isset($data['publishDomain']) ? $data['publishDomain'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
-        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : 'CONTINUOUS_RECORD';
+        $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : null;
         $this->container['defaultRecordConfig'] = isset($data['defaultRecordConfig']) ? $data['defaultRecordConfig'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;

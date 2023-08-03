@@ -177,7 +177,7 @@ class ListQueuesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['queueType'] = isset($data['queueType']) ? $data['queueType'] : 'sql';
+        $this->container['queueType'] = isset($data['queueType']) ? $data['queueType'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['withChargeInfo'] = isset($data['withChargeInfo']) ? $data['withChargeInfo'] : null;
         $this->container['withPriv'] = isset($data['withPriv']) ? $data['withPriv'] : null;

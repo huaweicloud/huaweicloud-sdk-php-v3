@@ -173,7 +173,7 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['instanceDelete'] = isset($data['instanceDelete']) ? $data['instanceDelete'] : 'no';
+        $this->container['instanceDelete'] = isset($data['instanceDelete']) ? $data['instanceDelete'] : null;
     }
 
     /**

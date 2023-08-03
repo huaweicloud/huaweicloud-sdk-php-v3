@@ -208,12 +208,12 @@ class SearchCtlRecordsOfHisMeetingRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['confUuid'] = isset($data['confUuid']) ? $data['confUuid'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 20;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
         $this->container['xAuthorizationType'] = isset($data['xAuthorizationType']) ? $data['xAuthorizationType'] : null;
         $this->container['xSiteId'] = isset($data['xSiteId']) ? $data['xSiteId'] : null;
-        $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : 'zh-CN';
+        $this->container['acceptLanguage'] = isset($data['acceptLanguage']) ? $data['acceptLanguage'] : null;
     }
 
     /**

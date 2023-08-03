@@ -208,11 +208,11 @@ class VisionActiveCodeDTO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['devType'] = isset($data['devType']) ? $data['devType'] : null;
-        $this->container['deptCode'] = isset($data['deptCode']) ? $data['deptCode'] : '1';
+        $this->container['deptCode'] = isset($data['deptCode']) ? $data['deptCode'] : null;
         $this->container['devName'] = isset($data['devName']) ? $data['devName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['smsNumber'] = isset($data['smsNumber']) ? $data['smsNumber'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : 'chinaPR';
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['emailAddr'] = isset($data['emailAddr']) ? $data['emailAddr'] : null;
     }
 

@@ -202,7 +202,7 @@ class CycleParams implements ModelInterface, ArrayAccess
         $this->container['cycle'] = isset($data['cycle']) ? $data['cycle'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
-        $this->container['preRemindDays'] = isset($data['preRemindDays']) ? $data['preRemindDays'] : 1;
+        $this->container['preRemindDays'] = isset($data['preRemindDays']) ? $data['preRemindDays'] : null;
     }
 
     /**

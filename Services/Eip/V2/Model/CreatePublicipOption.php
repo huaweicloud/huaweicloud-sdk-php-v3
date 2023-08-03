@@ -204,7 +204,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     {
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : self::IP_VERSION_4;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
     }

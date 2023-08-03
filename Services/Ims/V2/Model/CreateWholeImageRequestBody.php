@@ -248,7 +248,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['imageTags'] = isset($data['imageTags']) ? $data['imageTags'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -256,7 +256,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
         $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
         $this->container['wholeImageType'] = isset($data['wholeImageType']) ? $data['wholeImageType'] : null;
         $this->container['maxRam'] = isset($data['maxRam']) ? $data['maxRam'] : null;
-        $this->container['minRam'] = isset($data['minRam']) ? $data['minRam'] : 0;
+        $this->container['minRam'] = isset($data['minRam']) ? $data['minRam'] : null;
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
     }
 

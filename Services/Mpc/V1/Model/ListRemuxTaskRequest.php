@@ -246,8 +246,8 @@ class ListRemuxTaskRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['inputBucket'] = isset($data['inputBucket']) ? $data['inputBucket'] : null;
         $this->container['inputObject'] = isset($data['inputObject']) ? $data['inputObject'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

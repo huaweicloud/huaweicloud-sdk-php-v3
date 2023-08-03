@@ -41,7 +41,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'businessType' => 'string',
             'domainStatus' => 'string',
             'cname' => 'string',
-            'sources' => '\HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]',
+            'sources' => '\HuaweiCloud\SDK\Cdn\V2\Model\SourcesDomainConfig[]',
             'httpsStatus' => 'int',
             'createTime' => 'int',
             'updateTime' => 'int',
@@ -442,7 +442,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * Gets sources
     *  源站配置。
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]|null
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\SourcesDomainConfig[]|null
     */
     public function getSources()
     {
@@ -452,7 +452,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]|null $sources 源站配置。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourcesDomainConfig[]|null $sources 源站配置。
     *
     * @return $this
     */

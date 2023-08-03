@@ -169,7 +169,7 @@ class PublishAppMessageRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['messageStructure'] = isset($data['messageStructure']) ? $data['messageStructure'] : null;
-        $this->container['timeToLive'] = isset($data['timeToLive']) ? $data['timeToLive'] : '3600';
+        $this->container['timeToLive'] = isset($data['timeToLive']) ? $data['timeToLive'] : null;
     }
 
     /**

@@ -2650,6 +2650,77 @@ class GaussDBClient extends Client
     }
 
     /**
+     * 设置读写分离路由模式
+     *
+     * 设置读写分离路由模式。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyGaussMySqlProxyRouteMode($request)
+    {
+        return $this->modifyGaussMySqlProxyRouteModeWithHttpInfo($request);
+    }
+
+    public function modifyGaussMySqlProxyRouteModeWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/proxy/{proxy_id}/route-mode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['proxyId'] !== null) {
+            $pathParams['proxy_id'] = $localVarParams['proxyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyGaussMySqlProxyRouteModeResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyGaussMySqlProxyRouteModeRequest');
+    }
+
+    /**
      * 修改数据库用户密码
      *
      * 修改云数据库 GaussDB(for MySQL)实例数据库用户密码。
@@ -5230,7 +5301,7 @@ class GaussDBClient extends Client
     /**
      * 更改数据库代理连接池类型
      *
-     * 更改数据库代理连接池类型
+     * 更改数据库代理连接池类型。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

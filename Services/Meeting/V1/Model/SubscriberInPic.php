@@ -169,7 +169,7 @@ class SubscriberInPic implements ModelInterface, ArrayAccess
     {
         $this->container['index'] = isset($data['index']) ? $data['index'] : null;
         $this->container['subscriber'] = isset($data['subscriber']) ? $data['subscriber'] : null;
-        $this->container['isAssistStream'] = isset($data['isAssistStream']) ? $data['isAssistStream'] : 0;
+        $this->container['isAssistStream'] = isset($data['isAssistStream']) ? $data['isAssistStream'] : null;
     }
 
     /**

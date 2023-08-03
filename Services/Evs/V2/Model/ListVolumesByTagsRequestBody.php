@@ -200,10 +200,10 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : 'filter';
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 

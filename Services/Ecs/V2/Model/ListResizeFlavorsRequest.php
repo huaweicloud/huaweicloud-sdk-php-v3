@@ -246,10 +246,10 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceUuid'] = isset($data['instanceUuid']) ? $data['instanceUuid'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 1000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : 'asc';
-        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : 'flavorid';
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sourceFlavorId'] = isset($data['sourceFlavorId']) ? $data['sourceFlavorId'] : null;
         $this->container['sourceFlavorName'] = isset($data['sourceFlavorName']) ? $data['sourceFlavorName'] : null;
     }

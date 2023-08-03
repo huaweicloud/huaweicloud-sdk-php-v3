@@ -179,8 +179,8 @@ class ShowTranscodingsTemplateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**

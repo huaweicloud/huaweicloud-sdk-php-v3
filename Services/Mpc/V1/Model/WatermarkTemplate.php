@@ -272,15 +272,15 @@ class WatermarkTemplate implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : '0';
-        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : '0';
+        $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
+        $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
         $this->container['referpos'] = isset($data['referpos']) ? $data['referpos'] : null;
-        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : '0';
+        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
         $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
         $this->container['imageProcess'] = isset($data['imageProcess']) ? $data['imageProcess'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['base'] = isset($data['base']) ? $data['base'] : 'input';
+        $this->container['base'] = isset($data['base']) ? $data['base'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;

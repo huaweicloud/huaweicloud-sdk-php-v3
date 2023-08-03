@@ -157,7 +157,7 @@ class DetachBatchSharedbwReqPublicips implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : '{}';
+        $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
     }
 

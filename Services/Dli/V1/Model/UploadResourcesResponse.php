@@ -223,7 +223,7 @@ class UploadResourcesResponse implements ModelInterface, ArrayAccess
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : false;
+        $this->container['isAsync'] = isset($data['isAsync']) ? $data['isAsync'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }

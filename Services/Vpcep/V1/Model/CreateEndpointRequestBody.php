@@ -240,7 +240,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['endpointServiceId'] = isset($data['endpointServiceId']) ? $data['endpointServiceId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
-        $this->container['enableDns'] = isset($data['enableDns']) ? $data['enableDns'] : false;
+        $this->container['enableDns'] = isset($data['enableDns']) ? $data['enableDns'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['routetables'] = isset($data['routetables']) ? $data['routetables'] : null;
         $this->container['portIp'] = isset($data['portIp']) ? $data['portIp'] : null;

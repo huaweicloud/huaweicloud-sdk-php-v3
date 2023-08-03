@@ -213,7 +213,7 @@ class QueryLogKeyWordCountRequestBody implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['streamId'] = isset($data['streamId']) ? $data['streamId'] : null;
         $this->container['keyWord'] = isset($data['keyWord']) ? $data['keyWord'] : null;
-        $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : false;
+        $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : null;
     }
 
     /**

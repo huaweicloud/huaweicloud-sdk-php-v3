@@ -490,7 +490,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : true;
+        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['migrationIp'] = isset($data['migrationIp']) ? $data['migrationIp'] : null;
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;

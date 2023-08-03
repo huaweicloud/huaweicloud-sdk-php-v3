@@ -231,10 +231,10 @@ class EditVideoInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : 'MAX';
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : 'H264';
+        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
     }

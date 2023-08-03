@@ -177,10 +177,10 @@ class EditAudioInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : 'AAC';
+        $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
-        $this->container['sample'] = isset($data['sample']) ? $data['sample'] : 48000;
-        $this->container['channels'] = isset($data['channels']) ? $data['channels'] : '2';
+        $this->container['sample'] = isset($data['sample']) ? $data['sample'] : null;
+        $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
     }
 
     /**

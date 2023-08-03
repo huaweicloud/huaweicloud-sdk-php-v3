@@ -244,7 +244,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['cmkId'] = isset($data['cmkId']) ? $data['cmkId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['imageTags'] = isset($data['imageTags']) ? $data['imageTags'] : null;
         $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : null;

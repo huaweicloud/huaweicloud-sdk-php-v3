@@ -190,7 +190,7 @@ class DeviceBroadcastRequest implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['topicFullName'] = isset($data['topicFullName']) ? $data['topicFullName'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 0;
+        $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;
         $this->container['messageId'] = isset($data['messageId']) ? $data['messageId'] : null;
     }
 

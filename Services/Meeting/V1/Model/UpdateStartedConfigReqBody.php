@@ -157,8 +157,8 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['lockSharing'] = isset($data['lockSharing']) ? $data['lockSharing'] : 0;
-        $this->container['callInRestriction'] = isset($data['callInRestriction']) ? $data['callInRestriction'] : 0;
+        $this->container['lockSharing'] = isset($data['lockSharing']) ? $data['lockSharing'] : null;
+        $this->container['callInRestriction'] = isset($data['callInRestriction']) ? $data['callInRestriction'] : null;
     }
 
     /**

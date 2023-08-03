@@ -393,12 +393,12 @@ class CreateFlinkJarRequestBody implements ModelInterface, ArrayAccess
         $this->container['cuNumber'] = isset($data['cuNumber']) ? $data['cuNumber'] : null;
         $this->container['managerCuNumber'] = isset($data['managerCuNumber']) ? $data['managerCuNumber'] : null;
         $this->container['parallelNumber'] = isset($data['parallelNumber']) ? $data['parallelNumber'] : null;
-        $this->container['logEnabled'] = isset($data['logEnabled']) ? $data['logEnabled'] : false;
+        $this->container['logEnabled'] = isset($data['logEnabled']) ? $data['logEnabled'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
         $this->container['smnTopic'] = isset($data['smnTopic']) ? $data['smnTopic'] : null;
         $this->container['mainClass'] = isset($data['mainClass']) ? $data['mainClass'] : null;
         $this->container['entrypointArgs'] = isset($data['entrypointArgs']) ? $data['entrypointArgs'] : null;
-        $this->container['restartWhenException'] = isset($data['restartWhenException']) ? $data['restartWhenException'] : false;
+        $this->container['restartWhenException'] = isset($data['restartWhenException']) ? $data['restartWhenException'] : null;
         $this->container['entrypoint'] = isset($data['entrypoint']) ? $data['entrypoint'] : null;
         $this->container['dependencyJars'] = isset($data['dependencyJars']) ? $data['dependencyJars'] : null;
         $this->container['dependencyFiles'] = isset($data['dependencyFiles']) ? $data['dependencyFiles'] : null;

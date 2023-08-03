@@ -157,7 +157,7 @@ class ListKmsByTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceInstances'] = isset($data['resourceInstances']) ? $data['resourceInstances'] : 'resource_instances';
+        $this->container['resourceInstances'] = isset($data['resourceInstances']) ? $data['resourceInstances'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

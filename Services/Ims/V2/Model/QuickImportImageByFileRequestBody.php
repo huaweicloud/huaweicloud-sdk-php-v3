@@ -300,9 +300,9 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
         $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['minDisk'] = isset($data['minDisk']) ? $data['minDisk'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'ECS';
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
-        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : 'x86';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['imageTags'] = isset($data['imageTags']) ? $data['imageTags'] : null;
     }

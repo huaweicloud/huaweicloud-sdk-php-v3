@@ -246,7 +246,7 @@ class ConfigInfoDO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
-        $this->container['staticStatus'] = isset($data['staticStatus']) ? $data['staticStatus'] : self::STATIC_STATUS_1;
+        $this->container['staticStatus'] = isset($data['staticStatus']) ? $data['staticStatus'] : null;
         $this->container['limits'] = isset($data['limits']) ? $data['limits'] : null;
     }
 

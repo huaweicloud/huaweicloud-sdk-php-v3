@@ -177,7 +177,7 @@ class PolicyUpdate implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : true;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['operationDefinition'] = isset($data['operationDefinition']) ? $data['operationDefinition'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;

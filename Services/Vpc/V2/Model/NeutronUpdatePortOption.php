@@ -211,7 +211,7 @@ class NeutronUpdatePortOption implements ModelInterface, ArrayAccess
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
-        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : true;
+        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
         $this->container['bindingvnicType'] = isset($data['bindingvnicType']) ? $data['bindingvnicType'] : null;
         $this->container['bindingprofile'] = isset($data['bindingprofile']) ? $data['bindingprofile'] : null;
     }

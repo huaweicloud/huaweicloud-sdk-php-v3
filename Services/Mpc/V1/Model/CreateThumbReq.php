@@ -211,9 +211,9 @@ class CreateThumbReq implements ModelInterface, ArrayAccess
         $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['thumbnailPara'] = isset($data['thumbnailPara']) ? $data['thumbnailPara'] : null;
-        $this->container['tar'] = isset($data['tar']) ? $data['tar'] : 1;
-        $this->container['sync'] = isset($data['sync']) ? $data['sync'] : 0;
-        $this->container['originalDir'] = isset($data['originalDir']) ? $data['originalDir'] : 0;
+        $this->container['tar'] = isset($data['tar']) ? $data['tar'] : null;
+        $this->container['sync'] = isset($data['sync']) ? $data['sync'] : null;
+        $this->container['originalDir'] = isset($data['originalDir']) ? $data['originalDir'] : null;
     }
 
     /**

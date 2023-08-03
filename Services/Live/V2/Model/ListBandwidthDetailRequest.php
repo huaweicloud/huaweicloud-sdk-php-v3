@@ -306,7 +306,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'ALL';
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
     }
 
     /**

@@ -167,7 +167,7 @@ class Iops implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['frozened'] = isset($data['frozened']) ? $data['frozened'] : false;
+        $this->container['frozened'] = isset($data['frozened']) ? $data['frozened'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['totalVal'] = isset($data['totalVal']) ? $data['totalVal'] : null;
     }

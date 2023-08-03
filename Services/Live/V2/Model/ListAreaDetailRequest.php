@@ -259,7 +259,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
         $this->container['playDomains'] = isset($data['playDomains']) ? $data['playDomains'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
-        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : self::INTERVAL_300;
+        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['isp'] = isset($data['isp']) ? $data['isp'] : null;
         $this->container['area'] = isset($data['area']) ? $data['area'] : null;
         $this->container['metric'] = isset($data['metric']) ? $data['metric'] : null;

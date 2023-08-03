@@ -188,10 +188,10 @@ class NeutronCreateNetworkOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : true;
-        $this->container['shared'] = isset($data['shared']) ? $data['shared'] : false;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['shared'] = isset($data['shared']) ? $data['shared'] : null;
         $this->container['providernetworkType'] = isset($data['providernetworkType']) ? $data['providernetworkType'] : null;
-        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : true;
+        $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
     }
 
     /**

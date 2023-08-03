@@ -180,7 +180,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : 'reliability';
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['msgId'] = isset($data['msgId']) ? $data['msgId'] : null;
     }
@@ -206,6 +206,9 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['msgId'] === null) {
+            $invalidProperties[] = "'msgId' can't be null";
         }
         return $invalidProperties;
     }
@@ -273,7 +276,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     * Gets msgId
     *  消息ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getMsgId()
     {
@@ -283,7 +286,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets msgId
     *
-    * @param string|null $msgId 消息ID。
+    * @param string $msgId 消息ID。
     *
     * @return $this
     */

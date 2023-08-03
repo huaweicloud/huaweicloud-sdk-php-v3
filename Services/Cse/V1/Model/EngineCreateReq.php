@@ -340,7 +340,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         $this->container['subnetCidr'] = isset($data['subnetCidr']) ? $data['subnetCidr'] : null;
         $this->container['publicIpId'] = isset($data['publicIpId']) ? $data['publicIpId'] : null;
         $this->container['authCred'] = isset($data['authCred']) ? $data['authCred'] : null;
-        $this->container['specType'] = isset($data['specType']) ? $data['specType'] : 'CSE';
+        $this->container['specType'] = isset($data['specType']) ? $data['specType'] : null;
         $this->container['inputs'] = isset($data['inputs']) ? $data['inputs'] : null;
     }
 

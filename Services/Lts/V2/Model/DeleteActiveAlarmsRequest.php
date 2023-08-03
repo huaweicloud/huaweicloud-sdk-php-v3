@@ -157,7 +157,7 @@ class DeleteActiveAlarmsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : 'None';
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 

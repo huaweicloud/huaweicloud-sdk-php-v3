@@ -192,6 +192,7 @@ class ConfigurationSummaryForCreate implements ModelInterface, ArrayAccess
     const DATASTORE_NAME_MYSQL = 'mysql';
     const DATASTORE_NAME_POSTGRESQL = 'postgresql';
     const DATASTORE_NAME_SQLSERVER = 'sqlserver';
+    const DATASTORE_NAME_MARIADB = 'mariadb';
     
 
     /**
@@ -205,6 +206,7 @@ class ConfigurationSummaryForCreate implements ModelInterface, ArrayAccess
             self::DATASTORE_NAME_MYSQL,
             self::DATASTORE_NAME_POSTGRESQL,
             self::DATASTORE_NAME_SQLSERVER,
+            self::DATASTORE_NAME_MARIADB,
         ];
     }
 

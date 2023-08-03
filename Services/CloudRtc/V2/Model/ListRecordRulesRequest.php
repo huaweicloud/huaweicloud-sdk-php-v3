@@ -201,8 +201,8 @@ class ListRecordRulesRequest implements ModelInterface, ArrayAccess
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**

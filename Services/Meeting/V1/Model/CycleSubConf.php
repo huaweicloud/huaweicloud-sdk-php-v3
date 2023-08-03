@@ -232,7 +232,7 @@ class CycleSubConf implements ModelInterface, ArrayAccess
         $this->container['mediaType'] = isset($data['mediaType']) ? $data['mediaType'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : 0;
+        $this->container['isAutoRecord'] = isset($data['isAutoRecord']) ? $data['isAutoRecord'] : null;
         $this->container['confConfigInfo'] = isset($data['confConfigInfo']) ? $data['confConfigInfo'] : null;
         $this->container['recordAuthType'] = isset($data['recordAuthType']) ? $data['recordAuthType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;

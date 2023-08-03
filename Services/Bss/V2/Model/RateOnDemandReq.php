@@ -168,7 +168,7 @@ class RateOnDemandReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['inquiryPrecision'] = isset($data['inquiryPrecision']) ? $data['inquiryPrecision'] : 0;
+        $this->container['inquiryPrecision'] = isset($data['inquiryPrecision']) ? $data['inquiryPrecision'] : null;
         $this->container['productInfos'] = isset($data['productInfos']) ? $data['productInfos'] : null;
     }
 

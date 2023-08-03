@@ -208,8 +208,8 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : false;
-        $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : false;
+        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
+        $this->container['isAutoEncrypt'] = isset($data['isAutoEncrypt']) ? $data['isAutoEncrypt'] : null;
         $this->container['qualityInfoList'] = isset($data['qualityInfoList']) ? $data['qualityInfoList'] : null;
         $this->container['common'] = isset($data['common']) ? $data['common'] : null;
         $this->container['watermarkTemplateIds'] = isset($data['watermarkTemplateIds']) ? $data['watermarkTemplateIds'] : null;

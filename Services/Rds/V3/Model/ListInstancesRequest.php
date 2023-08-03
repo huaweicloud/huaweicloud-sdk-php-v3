@@ -25,7 +25,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * id  实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
-    * datastoreType  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -55,7 +55,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * id  实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
-    * datastoreType  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -106,7 +106,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * id  实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
-    * datastoreType  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -136,7 +136,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * id  实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
-    * datastoreType  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -166,7 +166,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * id  实例ID。  “\\*”为系统保留字符，如果id是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照id精确匹配查询。不能只传入“\\*”。
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
-    * datastoreType  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -237,6 +237,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const DATASTORE_TYPE_MY_SQL = 'MySQL';
     const DATASTORE_TYPE_POSTGRE_SQL = 'PostgreSQL';
     const DATASTORE_TYPE_SQL_SERVER = 'SQLServer';
+    const DATASTORE_TYPE_MARIA_DB = 'MariaDB';
     
 
     /**
@@ -277,6 +278,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             self::DATASTORE_TYPE_MY_SQL,
             self::DATASTORE_TYPE_POSTGRE_SQL,
             self::DATASTORE_TYPE_SQL_SERVER,
+            self::DATASTORE_TYPE_MARIA_DB,
         ];
     }
 
@@ -296,7 +298,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -477,7 +479,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreType
-    *  数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    *  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     *
     * @return string|null
     */
@@ -489,7 +491,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreType
     *
-    * @param string|null $datastoreType 数据库类型，区分大小写。  - MySQL - PostgreSQL - SQLServer
+    * @param string|null $datastoreType 数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
     *
     * @return $this
     */

@@ -211,9 +211,9 @@ class ShowBatchTaskRequest implements ModelInterface, ArrayAccess
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['taskDetailStatus'] = isset($data['taskDetailStatus']) ? $data['taskDetailStatus'] : null;
         $this->container['target'] = isset($data['target']) ? $data['target'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : 'ffffffffffffffffffffffff';
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**

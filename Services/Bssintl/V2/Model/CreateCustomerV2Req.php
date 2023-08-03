@@ -244,7 +244,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
         $this->container['xaccountId'] = isset($data['xaccountId']) ? $data['xaccountId'] : null;
         $this->container['xaccountType'] = isset($data['xaccountType']) ? $data['xaccountType'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['isCloseMarketMs'] = isset($data['isCloseMarketMs']) ? $data['isCloseMarketMs'] : 'false';
+        $this->container['isCloseMarketMs'] = isset($data['isCloseMarketMs']) ? $data['isCloseMarketMs'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
         $this->container['includeAssociationResult'] = isset($data['includeAssociationResult']) ? $data['includeAssociationResult'] : null;
     }

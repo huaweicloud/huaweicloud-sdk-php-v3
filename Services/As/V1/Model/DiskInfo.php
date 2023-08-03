@@ -246,8 +246,8 @@ class DiskInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : 'SATA';
-        $this->container['diskType'] = isset($data['diskType']) ? $data['diskType'] : 'SYS';
+        $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
+        $this->container['diskType'] = isset($data['diskType']) ? $data['diskType'] : null;
         $this->container['dedicatedStorageId'] = isset($data['dedicatedStorageId']) ? $data['dedicatedStorageId'] : null;
         $this->container['dataDiskImageId'] = isset($data['dataDiskImageId']) ? $data['dataDiskImageId'] : null;
         $this->container['snapshotId'] = isset($data['snapshotId']) ? $data['snapshotId'] : null;

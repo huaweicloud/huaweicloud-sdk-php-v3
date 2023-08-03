@@ -279,7 +279,7 @@ class MpeMetaData implements ModelInterface, ArrayAccess
         $this->container['audioCodecName'] = isset($data['audioCodecName']) ? $data['audioCodecName'] : null;
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
         $this->container['sample'] = isset($data['sample']) ? $data['sample'] : null;
-        $this->container['isAudio'] = isset($data['isAudio']) ? $data['isAudio'] : false;
+        $this->container['isAudio'] = isset($data['isAudio']) ? $data['isAudio'] : null;
     }
 
     /**

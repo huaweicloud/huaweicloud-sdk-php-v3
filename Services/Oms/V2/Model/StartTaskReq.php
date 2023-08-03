@@ -224,7 +224,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
         $this->container['dstSk'] = isset($data['dstSk']) ? $data['dstSk'] : null;
         $this->container['dstSecurityToken'] = isset($data['dstSecurityToken']) ? $data['dstSecurityToken'] : null;
         $this->container['sourceCdnAuthenticationKey'] = isset($data['sourceCdnAuthenticationKey']) ? $data['sourceCdnAuthenticationKey'] : null;
-        $this->container['migrateFailedObject'] = isset($data['migrateFailedObject']) ? $data['migrateFailedObject'] : false;
+        $this->container['migrateFailedObject'] = isset($data['migrateFailedObject']) ? $data['migrateFailedObject'] : null;
     }
 
     /**

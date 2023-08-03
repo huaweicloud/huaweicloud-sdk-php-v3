@@ -197,11 +197,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : 'application/json;charset=utf8';
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 1;
-        $this->container['pagesize'] = isset($data['pagesize']) ? $data['pagesize'] : 10;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['pagesize'] = isset($data['pagesize']) ? $data['pagesize'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 

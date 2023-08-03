@@ -394,7 +394,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 1;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['imagetype'] = isset($data['imagetype']) ? $data['imagetype'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;

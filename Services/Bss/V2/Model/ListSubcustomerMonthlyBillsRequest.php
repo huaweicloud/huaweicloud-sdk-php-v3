@@ -221,8 +221,8 @@ class ListSubcustomerMonthlyBillsRequest implements ModelInterface, ArrayAccess
         $this->container['cycle'] = isset($data['cycle']) ? $data['cycle'] : null;
         $this->container['cloudServiceType'] = isset($data['cloudServiceType']) ? $data['cloudServiceType'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }

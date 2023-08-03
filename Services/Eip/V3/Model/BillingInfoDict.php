@@ -157,8 +157,8 @@ class BillingInfoDict implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : '';
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : '';
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
     }
 
     /**

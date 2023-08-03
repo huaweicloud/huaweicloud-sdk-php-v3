@@ -24,6 +24,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
+    * componentType  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    * availabilityZoneId  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'instanceId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'componentType' => 'string',
+            'availabilityZoneId' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
+    * componentType  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    * availabilityZoneId  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'instanceId' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'componentType' => null,
+        'availabilityZoneId' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
+    * componentType  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    * availabilityZoneId  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'componentType' => 'component_type',
+            'availabilityZoneId' => 'availability_zone_id'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
+    * componentType  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    * availabilityZoneId  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'componentType' => 'setComponentType',
+            'availabilityZoneId' => 'setAvailabilityZoneId'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
+    * componentType  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    * availabilityZoneId  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'componentType' => 'getComponentType',
+            'availabilityZoneId' => 'getAvailabilityZoneId'
     ];
 
     /**
@@ -159,7 +179,30 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const COMPONENT_TYPE_ALL = 'ALL';
+    const COMPONENT_TYPE_CN = 'CN';
+    const COMPONENT_TYPE_DN = 'DN';
+    const COMPONENT_TYPE_CM = 'CM';
+    const COMPONENT_TYPE_GTM = 'GTM';
+    const COMPONENT_TYPE_ETCD = 'ETCD';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getComponentTypeAllowableValues()
+    {
+        return [
+            self::COMPONENT_TYPE_ALL,
+            self::COMPONENT_TYPE_CN,
+            self::COMPONENT_TYPE_DN,
+            self::COMPONENT_TYPE_CM,
+            self::COMPONENT_TYPE_GTM,
+            self::COMPONENT_TYPE_ETCD,
+        ];
+    }
 
 
     /**
@@ -181,6 +224,8 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['componentType'] = isset($data['componentType']) ? $data['componentType'] : null;
+        $this->container['availabilityZoneId'] = isset($data['availabilityZoneId']) ? $data['availabilityZoneId'] : null;
     }
 
     /**
@@ -194,6 +239,14 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getComponentTypeAllowableValues();
+                if (!is_null($this->container['componentType']) && !in_array($this->container['componentType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'componentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -301,6 +354,54 @@ class ListComponentInfosRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets componentType
+    *  组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    *
+    * @return string|null
+    */
+    public function getComponentType()
+    {
+        return $this->container['componentType'];
+    }
+
+    /**
+    * Sets componentType
+    *
+    * @param string|null $componentType 组件类型，过滤拿到需要的组件类型的组件信息，默认为ALL，传参数会查询对应组件信息。 枚举值：   \"ALL\": 查询所有组件类型。   \"CN\": 查询CN组件类型。   \"DN\": 查询DN组件类型。   \"CM\": 查询CMS组件类型。   \"GTM\": 查询GTM组件类型。   \"ETCD\": 查询ETCD组件类型。
+    *
+    * @return $this
+    */
+    public function setComponentType($componentType)
+    {
+        $this->container['componentType'] = $componentType;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZoneId
+    *  主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZoneId()
+    {
+        return $this->container['availabilityZoneId'];
+    }
+
+    /**
+    * Sets availabilityZoneId
+    *
+    * @param string|null $availabilityZoneId 主组件所在可用区编号，筛选符合条件的组件，默认为ALL，查询实例所有可用区上的节点的组件信息。 当调用接口传入可用区编号时：   相对于DN组件，会查询出的DN分片中的主组件在该可用区上的这个分片的所有副本的组件信息。   相对于CN组件，CN组件没有主备关系，会查询出该可用区上的CN组件信息。   相对于其他组件，会查询该可用区上有没有某个组件类型的主组件，有则会返回该组件类型的所有组件信息，没有则不返回该组件类型的信息。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZoneId($availabilityZoneId)
+    {
+        $this->container['availabilityZoneId'] = $availabilityZoneId;
         return $this;
     }
 

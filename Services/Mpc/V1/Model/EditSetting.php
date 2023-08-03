@@ -227,8 +227,8 @@ class EditSetting implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : '0';
-        $this->container['timelineEnd'] = isset($data['timelineEnd']) ? $data['timelineEnd'] : '0';
+        $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
+        $this->container['timelineEnd'] = isset($data['timelineEnd']) ? $data['timelineEnd'] : null;
         $this->container['transTemplateId'] = isset($data['transTemplateId']) ? $data['transTemplateId'] : null;
         $this->container['avParameter'] = isset($data['avParameter']) ? $data['avParameter'] : null;
         $this->container['mosaics'] = isset($data['mosaics']) ? $data['mosaics'] : null;

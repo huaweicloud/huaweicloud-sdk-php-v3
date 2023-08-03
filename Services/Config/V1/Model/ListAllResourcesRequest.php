@@ -220,7 +220,7 @@ class ListAllResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['epId'] = isset($data['epId']) ? $data['epId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;

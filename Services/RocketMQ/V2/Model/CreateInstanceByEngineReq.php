@@ -403,8 +403,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         $this->container['storageSpecCode'] = isset($data['storageSpecCode']) ? $data['storageSpecCode'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
-        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : false;
-        $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : false;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
         $this->container['brokerNum'] = isset($data['brokerNum']) ? $data['brokerNum'] : null;
         $this->container['bssParam'] = isset($data['bssParam']) ? $data['bssParam'] : null;

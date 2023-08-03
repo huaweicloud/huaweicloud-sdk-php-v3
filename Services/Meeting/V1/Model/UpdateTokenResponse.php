@@ -326,11 +326,11 @@ class UpdateTokenResponse implements ModelInterface, ArrayAccess
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['clientType'] = isset($data['clientType']) ? $data['clientType'] : null;
         $this->container['forceLoginInd'] = isset($data['forceLoginInd']) ? $data['forceLoginInd'] : null;
-        $this->container['firstLogin'] = isset($data['firstLogin']) ? $data['firstLogin'] : false;
-        $this->container['pwdExpired'] = isset($data['pwdExpired']) ? $data['pwdExpired'] : false;
+        $this->container['firstLogin'] = isset($data['firstLogin']) ? $data['firstLogin'] : null;
+        $this->container['pwdExpired'] = isset($data['pwdExpired']) ? $data['pwdExpired'] : null;
         $this->container['daysPwdAvailable'] = isset($data['daysPwdAvailable']) ? $data['daysPwdAvailable'] : null;
         $this->container['proxyToken'] = isset($data['proxyToken']) ? $data['proxyToken'] : null;
-        $this->container['delayDelete'] = isset($data['delayDelete']) ? $data['delayDelete'] : false;
+        $this->container['delayDelete'] = isset($data['delayDelete']) ? $data['delayDelete'] : null;
         $this->container['tokenType'] = isset($data['tokenType']) ? $data['tokenType'] : null;
         $this->container['refreshToken'] = isset($data['refreshToken']) ? $data['refreshToken'] : null;
         $this->container['refreshValidPeriod'] = isset($data['refreshValidPeriod']) ? $data['refreshValidPeriod'] : null;

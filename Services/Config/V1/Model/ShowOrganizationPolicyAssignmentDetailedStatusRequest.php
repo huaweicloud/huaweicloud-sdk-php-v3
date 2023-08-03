@@ -219,7 +219,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['organizationPolicyAssignmentName'] = isset($data['organizationPolicyAssignmentName']) ? $data['organizationPolicyAssignmentName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 200;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 

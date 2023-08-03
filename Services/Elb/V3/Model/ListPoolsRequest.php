@@ -348,7 +348,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;

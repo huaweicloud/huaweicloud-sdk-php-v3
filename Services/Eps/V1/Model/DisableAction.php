@@ -160,7 +160,7 @@ class DisableAction implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : 'disable';
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**

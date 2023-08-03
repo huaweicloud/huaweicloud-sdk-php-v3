@@ -190,7 +190,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
-        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : 900;
+        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : null;
         $this->container['sessionUser'] = isset($data['sessionUser']) ? $data['sessionUser'] : null;
     }
 

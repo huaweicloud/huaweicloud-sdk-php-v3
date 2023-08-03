@@ -252,12 +252,12 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : 'DENY';
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['destinationIpAddress'] = isset($data['destinationIpAddress']) ? $data['destinationIpAddress'] : null;
         $this->container['destinationPort'] = isset($data['destinationPort']) ? $data['destinationPort'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : true;
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : 4;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['sourceIpAddress'] = isset($data['sourceIpAddress']) ? $data['sourceIpAddress'] : null;

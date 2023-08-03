@@ -200,8 +200,8 @@ class QueryIndirectPartnersReq implements ModelInterface, ArrayAccess
         $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
         $this->container['associatedOnBegin'] = isset($data['associatedOnBegin']) ? $data['associatedOnBegin'] : null;
         $this->container['associatedOnEnd'] = isset($data['associatedOnEnd']) ? $data['associatedOnEnd'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 

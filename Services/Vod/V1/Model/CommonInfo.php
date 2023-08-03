@@ -293,14 +293,14 @@ class CommonInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : false;
+        $this->container['pvc'] = isset($data['pvc']) ? $data['pvc'] : null;
         $this->container['videoCodec'] = isset($data['videoCodec']) ? $data['videoCodec'] : null;
         $this->container['audioCodec'] = isset($data['audioCodec']) ? $data['audioCodec'] : null;
-        $this->container['isBlackCut'] = isset($data['isBlackCut']) ? $data['isBlackCut'] : false;
+        $this->container['isBlackCut'] = isset($data['isBlackCut']) ? $data['isBlackCut'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['hlsInterval'] = isset($data['hlsInterval']) ? $data['hlsInterval'] : null;
-        $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : false;
-        $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : 'NONE';
+        $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
+        $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
     }
 
     /**

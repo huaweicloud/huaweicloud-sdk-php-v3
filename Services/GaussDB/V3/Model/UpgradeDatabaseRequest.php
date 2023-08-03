@@ -147,7 +147,7 @@ class UpgradeDatabaseRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['delay'] = isset($data['delay']) ? $data['delay'] : false;
+        $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
     }
 
     /**

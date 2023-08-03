@@ -211,8 +211,8 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
         $this->container['tradeType'] = isset($data['tradeType']) ? $data['tradeType'] : null;
         $this->container['tradeTimeBegin'] = isset($data['tradeTimeBegin']) ? $data['tradeTimeBegin'] : null;
         $this->container['tradeTimeEnd'] = isset($data['tradeTimeEnd']) ? $data['tradeTimeEnd'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 

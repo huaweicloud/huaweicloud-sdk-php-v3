@@ -177,9 +177,9 @@ class PutDisk implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['needMigration'] = isset($data['needMigration']) ? $data['needMigration'] : true;
+        $this->container['needMigration'] = isset($data['needMigration']) ? $data['needMigration'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['adjustSize'] = isset($data['adjustSize']) ? $data['adjustSize'] : 0;
+        $this->container['adjustSize'] = isset($data['adjustSize']) ? $data['adjustSize'] : null;
         $this->container['physicalVolumes'] = isset($data['physicalVolumes']) ? $data['physicalVolumes'] : null;
     }
 

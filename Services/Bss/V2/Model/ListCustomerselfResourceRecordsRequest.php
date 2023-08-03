@@ -303,8 +303,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['includeZeroRecord'] = isset($data['includeZeroRecord']) ? $data['includeZeroRecord'] : null;

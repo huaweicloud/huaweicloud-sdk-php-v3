@@ -202,7 +202,7 @@ class ListActiveOrHistoryAlarmsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : 'None';
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
