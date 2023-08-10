@@ -27,7 +27,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -53,7 +53,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -100,7 +100,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -152,7 +152,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -246,6 +246,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -264,7 +267,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * Gets type
     *  待查询的zone的类型。  取值范围：private。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -274,7 +277,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 待查询的zone的类型。  取值范围：private。
+    * @param string $type 待查询的zone的类型。  取值范围：private。
     *
     * @return $this
     */
@@ -430,7 +433,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -442,7 +445,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */

@@ -20,6 +20,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -27,6 +28,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'contentType' => 'string',
             'page' => 'int',
             'size' => 'int'
@@ -34,6 +36,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -41,6 +44,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'contentType' => null,
         'page' => 'int32',
         'size' => 'int32'
@@ -69,6 +73,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -76,6 +81,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'contentType' => 'Content-Type',
             'page' => 'page',
             'size' => 'size'
@@ -83,6 +89,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -90,6 +97,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'contentType' => 'setContentType',
             'page' => 'setPage',
             'size' => 'setSize'
@@ -97,6 +105,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -104,6 +113,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'contentType' => 'getContentType',
             'page' => 'getPage',
             'size' => 'getSize'
@@ -182,6 +192,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
@@ -195,6 +206,18 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/^[A-Za-z0-9]{32}$/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[A-Za-z0-9]{32}$/.";
+            }
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
@@ -224,6 +247,30 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

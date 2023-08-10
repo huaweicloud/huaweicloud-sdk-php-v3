@@ -24,6 +24,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
+    * messageType  消息类型。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'brokers' => 'string[]',
             'queueNum' => 'float',
             'permission' => 'string',
+            'messageType' => 'string',
             'topics' => 'string[]'
     ];
 
@@ -42,6 +44,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
+    * messageType  消息类型。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
         'brokers' => null,
         'queueNum' => null,
         'permission' => null,
+        'messageType' => null,
         'topics' => null
     ];
 
@@ -81,6 +85,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
+    * messageType  消息类型。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'brokers' => 'brokers',
             'queueNum' => 'queue_num',
             'permission' => 'permission',
+            'messageType' => 'message_type',
             'topics' => 'topics'
     ];
 
@@ -99,6 +105,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
+    * messageType  消息类型。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'brokers' => 'setBrokers',
             'queueNum' => 'setQueueNum',
             'permission' => 'setPermission',
+            'messageType' => 'setMessageType',
             'topics' => 'setTopics'
     ];
 
@@ -117,6 +125,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
+    * messageType  消息类型。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'brokers' => 'getBrokers',
             'queueNum' => 'getQueueNum',
             'permission' => 'getPermission',
+            'messageType' => 'getMessageType',
             'topics' => 'getTopics'
     ];
 
@@ -172,6 +182,10 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     const PERMISSION_SUB = 'sub';
     const PERMISSION_PUB = 'pub';
     const PERMISSION_ALL = 'all';
+    const MESSAGE_TYPE_NORMAL = 'NORMAL';
+    const MESSAGE_TYPE_FIFO = 'FIFO';
+    const MESSAGE_TYPE_DELAY = 'DELAY';
+    const MESSAGE_TYPE_TRANSACTION = 'TRANSACTION';
     
 
     /**
@@ -185,6 +199,21 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             self::PERMISSION_SUB,
             self::PERMISSION_PUB,
             self::PERMISSION_ALL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMessageTypeAllowableValues()
+    {
+        return [
+            self::MESSAGE_TYPE_NORMAL,
+            self::MESSAGE_TYPE_FIFO,
+            self::MESSAGE_TYPE_DELAY,
+            self::MESSAGE_TYPE_TRANSACTION,
         ];
     }
 
@@ -208,6 +237,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['queueNum'] = isset($data['queueNum']) ? $data['queueNum'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['messageType'] = isset($data['messageType']) ? $data['messageType'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
     }
 
@@ -223,6 +253,14 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['permission']) && !in_array($this->container['permission'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'permission', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getMessageTypeAllowableValues();
+                if (!is_null($this->container['messageType']) && !in_array($this->container['messageType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'messageType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -334,6 +372,30 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     public function setPermission($permission)
     {
         $this->container['permission'] = $permission;
+        return $this;
+    }
+
+    /**
+    * Gets messageType
+    *  消息类型。
+    *
+    * @return string|null
+    */
+    public function getMessageType()
+    {
+        return $this->container['messageType'];
+    }
+
+    /**
+    * Sets messageType
+    *
+    * @param string|null $messageType 消息类型。
+    *
+    * @return $this
+    */
+    public function setMessageType($messageType)
+    {
+        $this->container['messageType'] = $messageType;
         return $this;
     }
 

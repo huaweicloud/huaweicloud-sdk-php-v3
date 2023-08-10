@@ -44,7 +44,7 @@ class Backups implements ModelInterface, ArrayAccess
             'takeUpTime' => 'int',
             'type' => 'string',
             'size' => 'int',
-            'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore',
+            'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInBackup',
             'instanceId' => 'string',
             'backupLevel' => 'string',
             'description' => 'string'
@@ -564,7 +564,7 @@ class Backups implements ModelInterface, ArrayAccess
     * Gets datastore
     *  datastore
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInBackup|null
     */
     public function getDatastore()
     {
@@ -574,7 +574,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore|null $datastore datastore
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInBackup|null $datastore datastore
     *
     * @return $this
     */

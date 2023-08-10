@@ -27,7 +27,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以*开头时，则按照*后面的值全模糊匹配。  默认值为空。
     * name  zone名称。  搜索模式默认为模糊搜索。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -53,7 +53,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以*开头时，则按照*后面的值全模糊匹配。  默认值为空。
     * name  zone名称。  搜索模式默认为模糊搜索。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -100,7 +100,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以*开头时，则按照*后面的值全模糊匹配。  默认值为空。
     * name  zone名称。  搜索模式默认为模糊搜索。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以*开头时，则按照*后面的值全模糊匹配。  默认值为空。
     * name  zone名称。  搜索模式默认为模糊搜索。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -152,7 +152,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。  多个标签之间为“与”的关系。  关于资源标签，请参见添加资源标签。  搜索模式为精确搜索。如果资源标签值value是以*开头时，则按照*后面的值全模糊匹配。  默认值为空。
     * name  zone名称。  搜索模式默认为模糊搜索。
     * status  资源状态。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -430,7 +430,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class ListPublicZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */

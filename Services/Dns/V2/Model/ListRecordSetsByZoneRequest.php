@@ -21,7 +21,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * zoneId  所属zone id。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -53,7 +53,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * zoneId  所属zone id。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -106,7 +106,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * zoneId  所属zone id。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -138,7 +138,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneId  所属zone id。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -170,7 +170,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * zoneId  所属zone id。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -328,7 +328,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */

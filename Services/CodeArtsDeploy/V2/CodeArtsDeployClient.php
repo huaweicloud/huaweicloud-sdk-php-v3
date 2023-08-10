@@ -201,6 +201,9 @@ class CodeArtsDeployClient extends Client
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -271,6 +274,9 @@ class CodeArtsDeployClient extends Client
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -946,6 +952,9 @@ class CodeArtsDeployClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['regionName'] !== null) {
             $queryParams['region_name'] = $localVarParams['regionName'];
         }
@@ -1156,6 +1165,9 @@ class CodeArtsDeployClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1223,6 +1235,9 @@ class CodeArtsDeployClient extends Client
         }
         if ($localVarParams['endDate'] !== null) {
             $queryParams['end_date'] = $localVarParams['endDate'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

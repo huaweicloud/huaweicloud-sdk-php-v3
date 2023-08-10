@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDB\V3\Model;
+namespace HuaweiCloud\SDK\Ces\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class MysqlDatastore implements ModelInterface, ArrayAccess
+class Resource implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'MysqlDatastore';
+    protected static $openAPIModelName = 'Resource';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
-    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * type  配额类型。  枚举值说明：  alarm，告警规则
+    * used  已使用配额数。
+    * unit  单位。
+    * quota  配额总数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'version' => 'string',
-            'kernelVersion' => 'string'
+            'used' => 'int',
+            'unit' => 'string',
+            'quota' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
-    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * type  配额类型。  枚举值说明：  alarm，告警规则
+    * used  已使用配额数。
+    * unit  单位。
+    * quota  配额总数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'version' => null,
-        'kernelVersion' => null
+        'used' => 'int32',
+        'unit' => null,
+        'quota' => 'int32'
     ];
 
     /**
@@ -69,44 +73,50 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
-    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * type  配额类型。  枚举值说明：  alarm，告警规则
+    * used  已使用配额数。
+    * unit  单位。
+    * quota  配额总数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'version' => 'version',
-            'kernelVersion' => 'kernel_version'
+            'used' => 'used',
+            'unit' => 'unit',
+            'quota' => 'quota'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
-    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * type  配额类型。  枚举值说明：  alarm，告警规则
+    * used  已使用配额数。
+    * unit  单位。
+    * quota  配额总数。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'version' => 'setVersion',
-            'kernelVersion' => 'setKernelVersion'
+            'used' => 'setUsed',
+            'unit' => 'setUnit',
+            'quota' => 'setQuota'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据库引擎，现在只支持gaussdb-mysql
-    * version  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
-    * kernelVersion  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * type  配额类型。  枚举值说明：  alarm，告警规则
+    * used  已使用配额数。
+    * unit  单位。
+    * quota  配额总数。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'version' => 'getVersion',
-            'kernelVersion' => 'getKernelVersion'
+            'used' => 'getUsed',
+            'unit' => 'getUnit',
+            'quota' => 'getQuota'
     ];
 
     /**
@@ -168,8 +178,9 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['kernelVersion'] = isset($data['kernelVersion']) ? $data['kernelVersion'] : null;
+        $this->container['used'] = isset($data['used']) ? $data['used'] : null;
+        $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
+        $this->container['quota'] = isset($data['quota']) ? $data['quota'] : null;
     }
 
     /**
@@ -183,8 +194,14 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
+        if ($this->container['used'] === null) {
+            $invalidProperties[] = "'used' can't be null";
+        }
+        if ($this->container['unit'] === null) {
+            $invalidProperties[] = "'unit' can't be null";
+        }
+        if ($this->container['quota'] === null) {
+            $invalidProperties[] = "'quota' can't be null";
         }
         return $invalidProperties;
     }
@@ -202,7 +219,7 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库引擎，现在只支持gaussdb-mysql
+    *  配额类型。  枚举值说明：  alarm，告警规则
     *
     * @return string
     */
@@ -214,7 +231,7 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库引擎，现在只支持gaussdb-mysql
+    * @param string $type 配额类型。  枚举值说明：  alarm，告警规则
     *
     * @return $this
     */
@@ -225,50 +242,74 @@ class MysqlDatastore implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets version
-    *  数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * Gets used
+    *  已使用配额数。
     *
-    * @return string
+    * @return int
     */
-    public function getVersion()
+    public function getUsed()
     {
-        return $this->container['version'];
+        return $this->container['used'];
     }
 
     /**
-    * Sets version
+    * Sets used
     *
-    * @param string $version 数据库版本。  两位数的大版本号，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的name字段。
+    * @param int $used 已使用配额数。
     *
     * @return $this
     */
-    public function setVersion($version)
+    public function setUsed($used)
     {
-        $this->container['version'] = $version;
+        $this->container['used'] = $used;
         return $this;
     }
 
     /**
-    * Gets kernelVersion
-    *  内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * Gets unit
+    *  单位。
     *
-    * @return string|null
+    * @return string
     */
-    public function getKernelVersion()
+    public function getUnit()
     {
-        return $this->container['kernelVersion'];
+        return $this->container['unit'];
     }
 
     /**
-    * Sets kernelVersion
+    * Sets unit
     *
-    * @param string|null $kernelVersion 内核数据库版本。  完整的四位内核数据库版本，获取方法请参见[查询数据库引擎的版本](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlEngineVersion.html)返回的kernel_version字段。
+    * @param string $unit 单位。
     *
     * @return $this
     */
-    public function setKernelVersion($kernelVersion)
+    public function setUnit($unit)
     {
-        $this->container['kernelVersion'] = $kernelVersion;
+        $this->container['unit'] = $unit;
+        return $this;
+    }
+
+    /**
+    * Gets quota
+    *  配额总数。
+    *
+    * @return int
+    */
+    public function getQuota()
+    {
+        return $this->container['quota'];
+    }
+
+    /**
+    * Sets quota
+    *
+    * @param int $quota 配额总数。
+    *
+    * @return $this
+    */
+    public function setQuota($quota)
+    {
+        $this->container['quota'] = $quota;
         return $this;
     }
 

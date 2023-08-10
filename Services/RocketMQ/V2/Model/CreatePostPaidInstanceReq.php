@@ -23,7 +23,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：reliability。
-    * engineVersion  消息引擎的版本。取值填写为：4.8.0。
+    * engineVersion  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     * storageSpace  存储空间。
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
@@ -67,7 +67,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：reliability。
-    * engineVersion  消息引擎的版本。取值填写为：4.8.0。
+    * engineVersion  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     * storageSpace  存储空间。
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
@@ -132,7 +132,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：reliability。
-    * engineVersion  消息引擎的版本。取值填写为：4.8.0。
+    * engineVersion  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     * storageSpace  存储空间。
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
@@ -176,7 +176,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：reliability。
-    * engineVersion  消息引擎的版本。取值填写为：4.8.0。
+    * engineVersion  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     * storageSpace  存储空间。
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
@@ -220,7 +220,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：reliability。
-    * engineVersion  消息引擎的版本。取值填写为：4.8.0。
+    * engineVersion  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     * storageSpace  存储空间。
     * vpcId  虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
     * subnetId  子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
@@ -301,6 +301,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     }
     const ENGINE_RELIABILITY = 'reliability';
     const ENGINE_VERSION__4_8_0 = '4.8.0';
+    const ENGINE_VERSION__5_X = '5.x';
     const PRODUCT_ID_C6_4U8G_CLUSTER = 'c6.4u8g.cluster';
     const PRODUCT_ID_C6_8U16G_CLUSTER = 'c6.8u16g.cluster';
     const PRODUCT_ID_C6_12U24G_CLUSTER = 'c6.12u24g.cluster';
@@ -330,6 +331,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_VERSION__4_8_0,
+            self::ENGINE_VERSION__5_X,
         ];
     }
 
@@ -558,7 +560,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎的版本。取值填写为：4.8.0。
+    *  消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     *
     * @return string
     */
@@ -570,7 +572,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 消息引擎的版本。取值填写为：4.8.0。
+    * @param string $engineVersion 消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
     *
     * @return $this
     */

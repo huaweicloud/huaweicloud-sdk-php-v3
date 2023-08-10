@@ -40,6 +40,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'connectionPoolType' => 'string',
             'switchConnectionPoolTypeEnabled' => 'bool',
             'routeMode' => 'int',
-            'balanceRouteModeEnabled' => 'bool'
+            'balanceRouteModeEnabled' => 'bool',
+            'consistenceMode' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'connectionPoolType' => null,
         'switchConnectionPoolTypeEnabled' => null,
         'routeMode' => 'int32',
-        'balanceRouteModeEnabled' => null
+        'balanceRouteModeEnabled' => null,
+        'consistenceMode' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'connectionPoolType' => 'connection_pool_type',
             'switchConnectionPoolTypeEnabled' => 'switch_connection_pool_type_enabled',
             'routeMode' => 'route_mode',
-            'balanceRouteModeEnabled' => 'balance_route_mode_enabled'
+            'balanceRouteModeEnabled' => 'balance_route_mode_enabled',
+            'consistenceMode' => 'consistence_mode'
     ];
 
     /**
@@ -205,6 +211,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'connectionPoolType' => 'setConnectionPoolType',
             'switchConnectionPoolTypeEnabled' => 'setSwitchConnectionPoolTypeEnabled',
             'routeMode' => 'setRouteMode',
-            'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled'
+            'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled',
+            'consistenceMode' => 'setConsistenceMode'
     ];
 
     /**
@@ -253,6 +261,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'connectionPoolType' => 'getConnectionPoolType',
             'switchConnectionPoolTypeEnabled' => 'getSwitchConnectionPoolTypeEnabled',
             'routeMode' => 'getRouteMode',
-            'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled'
+            'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled',
+            'consistenceMode' => 'getConsistenceMode'
     ];
 
     /**
@@ -357,6 +367,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['switchConnectionPoolTypeEnabled'] = isset($data['switchConnectionPoolTypeEnabled']) ? $data['switchConnectionPoolTypeEnabled'] : null;
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['balanceRouteModeEnabled'] = isset($data['balanceRouteModeEnabled']) ? $data['balanceRouteModeEnabled'] : null;
+        $this->container['consistenceMode'] = isset($data['consistenceMode']) ? $data['consistenceMode'] : null;
     }
 
     /**
@@ -858,6 +869,30 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function setBalanceRouteModeEnabled($balanceRouteModeEnabled)
     {
         $this->container['balanceRouteModeEnabled'] = $balanceRouteModeEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets consistenceMode
+    *  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    *
+    * @return string|null
+    */
+    public function getConsistenceMode()
+    {
+        return $this->container['consistenceMode'];
+    }
+
+    /**
+    * Sets consistenceMode
+    *
+    * @param string|null $consistenceMode 一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    *
+    * @return $this
+    */
+    public function setConsistenceMode($consistenceMode)
+    {
+        $this->container['consistenceMode'] = $consistenceMode;
         return $this;
     }
 

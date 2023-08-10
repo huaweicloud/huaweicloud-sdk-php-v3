@@ -206,6 +206,9 @@ class CodeArtsDeployAsyncClient extends Client
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -279,6 +282,9 @@ class CodeArtsDeployAsyncClient extends Client
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
 
         if ($multipart) {
@@ -984,6 +990,9 @@ class CodeArtsDeployAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['regionName'] !== null) {
             $queryParams['region_name'] = $localVarParams['regionName'];
         }
@@ -1203,6 +1212,9 @@ class CodeArtsDeployAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1273,6 +1285,9 @@ class CodeArtsDeployAsyncClient extends Client
         }
         if ($localVarParams['endDate'] !== null) {
             $queryParams['end_date'] = $localVarParams['endDate'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
 
         if ($multipart) {

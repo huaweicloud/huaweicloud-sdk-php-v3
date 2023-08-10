@@ -49,7 +49,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo',
             'region' => 'string',
             'name' => 'string',
-            'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore',
+            'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInReq',
             'mode' => 'string',
             'flavorRef' => 'string',
             'vpcId' => 'string',
@@ -509,7 +509,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * Gets datastore
     *  datastore
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInReq
     */
     public function getDatastore()
     {
@@ -519,7 +519,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastore $datastore datastore
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInReq $datastore datastore
     *
     * @return $this
     */

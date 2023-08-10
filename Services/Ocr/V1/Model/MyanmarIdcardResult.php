@@ -38,6 +38,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * translationInfo  translationInfo
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => '\HuaweiCloud\SDK\Ocr\V1\Model\MyanmarIdcardConfidence',
             'portraitImage' => 'string',
             'portraitLocation' => 'int[][]',
-            'idcardType' => 'string'
+            'idcardType' => 'string',
+            'translationInfo' => '\HuaweiCloud\SDK\Ocr\V1\Model\MyanmarIdcardTranslationInfo'
     ];
 
     /**
@@ -82,6 +84,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * translationInfo  translationInfo
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
         'confidence' => null,
         'portraitImage' => null,
         'portraitLocation' => 'int32',
-        'idcardType' => null
+        'idcardType' => null,
+        'translationInfo' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * translationInfo  translationInfo
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'confidence',
             'portraitImage' => 'portrait_image',
             'portraitLocation' => 'portrait_location',
-            'idcardType' => 'idcard_type'
+            'idcardType' => 'idcard_type',
+            'translationInfo' => 'translation_info'
     ];
 
     /**
@@ -191,6 +197,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * translationInfo  translationInfo
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'setConfidence',
             'portraitImage' => 'setPortraitImage',
             'portraitLocation' => 'setPortraitLocation',
-            'idcardType' => 'setIdcardType'
+            'idcardType' => 'setIdcardType',
+            'translationInfo' => 'setTranslationInfo'
     ];
 
     /**
@@ -235,6 +243,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * translationInfo  translationInfo
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'getConfidence',
             'portraitImage' => 'getPortraitImage',
             'portraitLocation' => 'getPortraitLocation',
-            'idcardType' => 'getIdcardType'
+            'idcardType' => 'getIdcardType',
+            'translationInfo' => 'getTranslationInfo'
     ];
 
     /**
@@ -335,6 +345,7 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
         $this->container['portraitImage'] = isset($data['portraitImage']) ? $data['portraitImage'] : null;
         $this->container['portraitLocation'] = isset($data['portraitLocation']) ? $data['portraitLocation'] : null;
         $this->container['idcardType'] = isset($data['idcardType']) ? $data['idcardType'] : null;
+        $this->container['translationInfo'] = isset($data['translationInfo']) ? $data['translationInfo'] : null;
     }
 
     /**
@@ -788,6 +799,30 @@ class MyanmarIdcardResult implements ModelInterface, ArrayAccess
     public function setIdcardType($idcardType)
     {
         $this->container['idcardType'] = $idcardType;
+        return $this;
+    }
+
+    /**
+    * Gets translationInfo
+    *  translationInfo
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\MyanmarIdcardTranslationInfo|null
+    */
+    public function getTranslationInfo()
+    {
+        return $this->container['translationInfo'];
+    }
+
+    /**
+    * Sets translationInfo
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\MyanmarIdcardTranslationInfo|null $translationInfo translationInfo
+    *
+    * @return $this
+    */
+    public function setTranslationInfo($translationInfo)
+    {
+        $this->container['translationInfo'] = $translationInfo;
         return $this;
     }
 

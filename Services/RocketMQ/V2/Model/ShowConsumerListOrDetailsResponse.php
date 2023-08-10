@@ -23,6 +23,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
     * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
@@ -30,6 +33,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'topics' => 'string[]',
             'total' => 'int',
+            'lag' => 'int',
+            'maxOffset' => 'int',
+            'consumerOffset' => 'int',
             'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]'
     ];
 
@@ -37,6 +43,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
     * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
@@ -44,6 +53,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'topics' => null,
         'total' => 'int32',
+        'lag' => 'int64',
+        'maxOffset' => 'int64',
+        'consumerOffset' => 'int64',
         'brokers' => null
     ];
 
@@ -72,6 +84,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
     * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
@@ -79,6 +94,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'topics' => 'topics',
             'total' => 'total',
+            'lag' => 'lag',
+            'maxOffset' => 'max_offset',
+            'consumerOffset' => 'consumer_offset',
             'brokers' => 'brokers'
     ];
 
@@ -86,6 +104,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
     * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
@@ -93,6 +114,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'topics' => 'setTopics',
             'total' => 'setTotal',
+            'lag' => 'setLag',
+            'maxOffset' => 'setMaxOffset',
+            'consumerOffset' => 'setConsumerOffset',
             'brokers' => 'setBrokers'
     ];
 
@@ -100,6 +124,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
     * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
@@ -107,6 +134,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'topics' => 'getTopics',
             'total' => 'getTotal',
+            'lag' => 'getLag',
+            'maxOffset' => 'getMaxOffset',
+            'consumerOffset' => 'getConsumerOffset',
             'brokers' => 'getBrokers'
     ];
 
@@ -170,6 +200,9 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['lag'] = isset($data['lag']) ? $data['lag'] : null;
+        $this->container['maxOffset'] = isset($data['maxOffset']) ? $data['maxOffset'] : null;
+        $this->container['consumerOffset'] = isset($data['consumerOffset']) ? $data['consumerOffset'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
     }
 
@@ -240,6 +273,78 @@ class ShowConsumerListOrDetailsResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets lag
+    *  消费堆积总数
+    *
+    * @return int|null
+    */
+    public function getLag()
+    {
+        return $this->container['lag'];
+    }
+
+    /**
+    * Sets lag
+    *
+    * @param int|null $lag 消费堆积总数
+    *
+    * @return $this
+    */
+    public function setLag($lag)
+    {
+        $this->container['lag'] = $lag;
+        return $this;
+    }
+
+    /**
+    * Gets maxOffset
+    *  消息总数
+    *
+    * @return int|null
+    */
+    public function getMaxOffset()
+    {
+        return $this->container['maxOffset'];
+    }
+
+    /**
+    * Sets maxOffset
+    *
+    * @param int|null $maxOffset 消息总数
+    *
+    * @return $this
+    */
+    public function setMaxOffset($maxOffset)
+    {
+        $this->container['maxOffset'] = $maxOffset;
+        return $this;
+    }
+
+    /**
+    * Gets consumerOffset
+    *  已消费消息数
+    *
+    * @return int|null
+    */
+    public function getConsumerOffset()
+    {
+        return $this->container['consumerOffset'];
+    }
+
+    /**
+    * Sets consumerOffset
+    *
+    * @param int|null $consumerOffset 已消费消息数
+    *
+    * @return $this
+    */
+    public function setConsumerOffset($consumerOffset)
+    {
+        $this->container['consumerOffset'] = $consumerOffset;
         return $this;
     }
 

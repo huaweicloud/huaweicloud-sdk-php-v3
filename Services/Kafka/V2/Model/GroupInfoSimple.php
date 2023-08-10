@@ -20,30 +20,42 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * createdAt  创建时间。
     * groupId  消费组ID。
     * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     * coordinatorId  协调器编号。
+    * groupDesc  消费组描述。
+    * lag  堆积数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'createdAt' => 'int',
             'groupId' => 'string',
             'state' => 'string',
-            'coordinatorId' => 'int'
+            'coordinatorId' => 'int',
+            'groupDesc' => 'string',
+            'lag' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * createdAt  创建时间。
     * groupId  消费组ID。
     * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     * coordinatorId  协调器编号。
+    * groupDesc  消费组描述。
+    * lag  堆积数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'createdAt' => null,
         'groupId' => null,
         'state' => null,
-        'coordinatorId' => null
+        'coordinatorId' => null,
+        'groupDesc' => null,
+        'lag' => null
     ];
 
     /**
@@ -69,44 +81,62 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * createdAt  创建时间。
     * groupId  消费组ID。
     * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     * coordinatorId  协调器编号。
+    * groupDesc  消费组描述。
+    * lag  堆积数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'createdAt' => 'createdAt',
             'groupId' => 'group_id',
             'state' => 'state',
-            'coordinatorId' => 'coordinator_id'
+            'coordinatorId' => 'coordinator_id',
+            'groupDesc' => 'group_desc',
+            'lag' => 'lag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * createdAt  创建时间。
     * groupId  消费组ID。
     * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     * coordinatorId  协调器编号。
+    * groupDesc  消费组描述。
+    * lag  堆积数。
     *
     * @var string[]
     */
     protected static $setters = [
+            'createdAt' => 'setCreatedAt',
             'groupId' => 'setGroupId',
             'state' => 'setState',
-            'coordinatorId' => 'setCoordinatorId'
+            'coordinatorId' => 'setCoordinatorId',
+            'groupDesc' => 'setGroupDesc',
+            'lag' => 'setLag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * createdAt  创建时间。
     * groupId  消费组ID。
     * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     * coordinatorId  协调器编号。
+    * groupDesc  消费组描述。
+    * lag  堆积数。
     *
     * @var string[]
     */
     protected static $getters = [
+            'createdAt' => 'getCreatedAt',
             'groupId' => 'getGroupId',
             'state' => 'getState',
-            'coordinatorId' => 'getCoordinatorId'
+            'coordinatorId' => 'getCoordinatorId',
+            'groupDesc' => 'getGroupDesc',
+            'lag' => 'getLag'
     ];
 
     /**
@@ -167,9 +197,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['coordinatorId'] = isset($data['coordinatorId']) ? $data['coordinatorId'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
+        $this->container['lag'] = isset($data['lag']) ? $data['lag'] : null;
     }
 
     /**
@@ -192,6 +225,30 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets createdAt
+    *  创建时间。
+    *
+    * @return int|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param int|null $createdAt 创建时间。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
     }
 
     /**
@@ -263,6 +320,54 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     public function setCoordinatorId($coordinatorId)
     {
         $this->container['coordinatorId'] = $coordinatorId;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  消费组描述。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc 消费组描述。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
+        return $this;
+    }
+
+    /**
+    * Gets lag
+    *  堆积数。
+    *
+    * @return int|null
+    */
+    public function getLag()
+    {
+        return $this->container['lag'];
+    }
+
+    /**
+    * Sets lag
+    *
+    * @param int|null $lag 堆积数。
+    *
+    * @return $this
+    */
+    public function setLag($lag)
+    {
+        $this->container['lag'] = $lag;
         return $this;
     }
 

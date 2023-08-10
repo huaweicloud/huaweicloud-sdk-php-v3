@@ -21,21 +21,29 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * maxOffset  最大偏移量。
+    * minOffset  最小偏移量。
     * brokers  代理。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'maxOffset' => 'int',
+            'minOffset' => 'int',
             'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowTopicStatusRespBrokers[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * maxOffset  最大偏移量。
+    * minOffset  最小偏移量。
     * brokers  代理。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'maxOffset' => 'int32',
+        'minOffset' => 'int32',
         'brokers' => null
     ];
 
@@ -62,31 +70,43 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * maxOffset  最大偏移量。
+    * minOffset  最小偏移量。
     * brokers  代理。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'maxOffset' => 'max_offset',
+            'minOffset' => 'min_offset',
             'brokers' => 'brokers'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * maxOffset  最大偏移量。
+    * minOffset  最小偏移量。
     * brokers  代理。
     *
     * @var string[]
     */
     protected static $setters = [
+            'maxOffset' => 'setMaxOffset',
+            'minOffset' => 'setMinOffset',
             'brokers' => 'setBrokers'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * maxOffset  最大偏移量。
+    * minOffset  最小偏移量。
     * brokers  代理。
     *
     * @var string[]
     */
     protected static $getters = [
+            'maxOffset' => 'getMaxOffset',
+            'minOffset' => 'getMinOffset',
             'brokers' => 'getBrokers'
     ];
 
@@ -148,6 +168,8 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['maxOffset'] = isset($data['maxOffset']) ? $data['maxOffset'] : null;
+        $this->container['minOffset'] = isset($data['minOffset']) ? $data['minOffset'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
     }
 
@@ -171,6 +193,54 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets maxOffset
+    *  最大偏移量。
+    *
+    * @return int|null
+    */
+    public function getMaxOffset()
+    {
+        return $this->container['maxOffset'];
+    }
+
+    /**
+    * Sets maxOffset
+    *
+    * @param int|null $maxOffset 最大偏移量。
+    *
+    * @return $this
+    */
+    public function setMaxOffset($maxOffset)
+    {
+        $this->container['maxOffset'] = $maxOffset;
+        return $this;
+    }
+
+    /**
+    * Gets minOffset
+    *  最小偏移量。
+    *
+    * @return int|null
+    */
+    public function getMinOffset()
+    {
+        return $this->container['minOffset'];
+    }
+
+    /**
+    * Sets minOffset
+    *
+    * @param int|null $minOffset 最小偏移量。
+    *
+    * @return $this
+    */
+    public function setMinOffset($minOffset)
+    {
+        $this->container['minOffset'] = $minOffset;
+        return $this;
     }
 
     /**

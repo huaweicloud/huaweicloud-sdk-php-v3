@@ -21,21 +21,25 @@ class ModifyProxyConsistRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sessionConsistence  会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'sessionConsistence' => 'string'
+            'sessionConsistence' => 'string',
+            'consistenceMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sessionConsistence  会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'sessionConsistence' => null
+        'sessionConsistence' => null,
+        'consistenceMode' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ModifyProxyConsistRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sessionConsistence  会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'sessionConsistence' => 'session_consistence'
+            'sessionConsistence' => 'session_consistence',
+            'consistenceMode' => 'consistence_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sessionConsistence  会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
     protected static $setters = [
-            'sessionConsistence' => 'setSessionConsistence'
+            'sessionConsistence' => 'setSessionConsistence',
+            'consistenceMode' => 'setConsistenceMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sessionConsistence  会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
     *
     * @var string[]
     */
     protected static $getters = [
-            'sessionConsistence' => 'getSessionConsistence'
+            'sessionConsistence' => 'getSessionConsistence',
+            'consistenceMode' => 'getConsistenceMode'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ModifyProxyConsistRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sessionConsistence'] = isset($data['sessionConsistence']) ? $data['sessionConsistence'] : null;
+        $this->container['consistenceMode'] = isset($data['consistenceMode']) ? $data['consistenceMode'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ModifyProxyConsistRequest implements ModelInterface, ArrayAccess
     public function setSessionConsistence($sessionConsistence)
     {
         $this->container['sessionConsistence'] = $sessionConsistence;
+        return $this;
+    }
+
+    /**
+    * Gets consistenceMode
+    *  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    *
+    * @return string|null
+    */
+    public function getConsistenceMode()
+    {
+        return $this->container['consistenceMode'];
+    }
+
+    /**
+    * Sets consistenceMode
+    *
+    * @param string|null $consistenceMode 一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    *
+    * @return $this
+    */
+    public function setConsistenceMode($consistenceMode)
+    {
+        $this->container['consistenceMode'] = $consistenceMode;
         return $this;
     }
 

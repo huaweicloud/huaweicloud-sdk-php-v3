@@ -25,6 +25,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
+    * messageType  消息类型。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class Topic implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'float',
             'totalWriteQueueNum' => 'float',
             'permission' => 'string',
-            'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]'
+            'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]',
+            'messageType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
+    * messageType  消息类型。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class Topic implements ModelInterface, ArrayAccess
         'totalReadQueueNum' => null,
         'totalWriteQueueNum' => null,
         'permission' => null,
-        'brokers' => null
+        'brokers' => null,
+        'messageType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
+    * messageType  消息类型。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class Topic implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'total_read_queue_num',
             'totalWriteQueueNum' => 'total_write_queue_num',
             'permission' => 'permission',
-            'brokers' => 'brokers'
+            'brokers' => 'brokers',
+            'messageType' => 'message_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
+    * messageType  消息类型。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class Topic implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'setTotalReadQueueNum',
             'totalWriteQueueNum' => 'setTotalWriteQueueNum',
             'permission' => 'setPermission',
-            'brokers' => 'setBrokers'
+            'brokers' => 'setBrokers',
+            'messageType' => 'setMessageType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
+    * messageType  消息类型。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class Topic implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'getTotalReadQueueNum',
             'totalWriteQueueNum' => 'getTotalWriteQueueNum',
             'permission' => 'getPermission',
-            'brokers' => 'getBrokers'
+            'brokers' => 'getBrokers',
+            'messageType' => 'getMessageType'
     ];
 
     /**
@@ -172,6 +182,10 @@ class Topic implements ModelInterface, ArrayAccess
     const PERMISSION_SUB = 'sub';
     const PERMISSION_PUB = 'pub';
     const PERMISSION_ALL = 'all';
+    const MESSAGE_TYPE_NORMAL = 'NORMAL';
+    const MESSAGE_TYPE_FIFO = 'FIFO';
+    const MESSAGE_TYPE_DELAY = 'DELAY';
+    const MESSAGE_TYPE_TRANSACTION = 'TRANSACTION';
     
 
     /**
@@ -185,6 +199,21 @@ class Topic implements ModelInterface, ArrayAccess
             self::PERMISSION_SUB,
             self::PERMISSION_PUB,
             self::PERMISSION_ALL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMessageTypeAllowableValues()
+    {
+        return [
+            self::MESSAGE_TYPE_NORMAL,
+            self::MESSAGE_TYPE_FIFO,
+            self::MESSAGE_TYPE_DELAY,
+            self::MESSAGE_TYPE_TRANSACTION,
         ];
     }
 
@@ -209,6 +238,7 @@ class Topic implements ModelInterface, ArrayAccess
         $this->container['totalWriteQueueNum'] = isset($data['totalWriteQueueNum']) ? $data['totalWriteQueueNum'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
+        $this->container['messageType'] = isset($data['messageType']) ? $data['messageType'] : null;
     }
 
     /**
@@ -223,6 +253,14 @@ class Topic implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['permission']) && !in_array($this->container['permission'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'permission', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getMessageTypeAllowableValues();
+                if (!is_null($this->container['messageType']) && !in_array($this->container['messageType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'messageType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -358,6 +396,30 @@ class Topic implements ModelInterface, ArrayAccess
     public function setBrokers($brokers)
     {
         $this->container['brokers'] = $brokers;
+        return $this;
+    }
+
+    /**
+    * Gets messageType
+    *  消息类型。
+    *
+    * @return string|null
+    */
+    public function getMessageType()
+    {
+        return $this->container['messageType'];
+    }
+
+    /**
+    * Sets messageType
+    *
+    * @param string|null $messageType 消息类型。
+    *
+    * @return $this
+    */
+    public function setMessageType($messageType)
+    {
+        $this->container['messageType'] = $messageType;
         return $this;
     }
 

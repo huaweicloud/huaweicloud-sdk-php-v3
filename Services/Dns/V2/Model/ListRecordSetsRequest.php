@@ -22,7 +22,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
@@ -56,7 +56,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
@@ -111,7 +111,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
@@ -145,7 +145,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
@@ -179,7 +179,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
@@ -354,7 +354,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */

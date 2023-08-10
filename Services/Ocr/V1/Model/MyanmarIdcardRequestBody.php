@@ -27,6 +27,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
+    * returnTranslation  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'bool',
             'returnPortraitImage' => 'bool',
             'returnPortraitLocation' => 'bool',
-            'returnIdcardType' => 'bool'
+            'returnIdcardType' => 'bool',
+            'returnTranslation' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
+    * returnTranslation  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
         'returnConfidence' => null,
         'returnPortraitImage' => null,
         'returnPortraitLocation' => null,
-        'returnIdcardType' => null
+        'returnIdcardType' => null,
+        'returnTranslation' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
+    * returnTranslation  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'return_confidence',
             'returnPortraitImage' => 'return_portrait_image',
             'returnPortraitLocation' => 'return_portrait_location',
-            'returnIdcardType' => 'return_idcard_type'
+            'returnIdcardType' => 'return_idcard_type',
+            'returnTranslation' => 'return_translation'
     ];
 
     /**
@@ -114,6 +120,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
+    * returnTranslation  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'setReturnConfidence',
             'returnPortraitImage' => 'setReturnPortraitImage',
             'returnPortraitLocation' => 'setReturnPortraitLocation',
-            'returnIdcardType' => 'setReturnIdcardType'
+            'returnIdcardType' => 'setReturnIdcardType',
+            'returnTranslation' => 'setReturnTranslation'
     ];
 
     /**
@@ -136,6 +144,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
+    * returnTranslation  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'getReturnConfidence',
             'returnPortraitImage' => 'getReturnPortraitImage',
             'returnPortraitLocation' => 'getReturnPortraitLocation',
-            'returnIdcardType' => 'getReturnIdcardType'
+            'returnIdcardType' => 'getReturnIdcardType',
+            'returnTranslation' => 'getReturnTranslation'
     ];
 
     /**
@@ -214,6 +224,7 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnPortraitImage'] = isset($data['returnPortraitImage']) ? $data['returnPortraitImage'] : null;
         $this->container['returnPortraitLocation'] = isset($data['returnPortraitLocation']) ? $data['returnPortraitLocation'] : null;
         $this->container['returnIdcardType'] = isset($data['returnIdcardType']) ? $data['returnIdcardType'] : null;
+        $this->container['returnTranslation'] = isset($data['returnTranslation']) ? $data['returnTranslation'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class MyanmarIdcardRequestBody implements ModelInterface, ArrayAccess
     public function setReturnIdcardType($returnIdcardType)
     {
         $this->container['returnIdcardType'] = $returnIdcardType;
+        return $this;
+    }
+
+    /**
+    * Gets returnTranslation
+    *  是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
+    *
+    * @return bool|null
+    */
+    public function getReturnTranslation()
+    {
+        return $this->container['returnTranslation'];
+    }
+
+    /**
+    * Sets returnTranslation
+    *
+    * @param bool|null $returnTranslation 是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
+    *
+    * @return $this
+    */
+    public function setReturnTranslation($returnTranslation)
+    {
+        $this->container['returnTranslation'] = $returnTranslation;
         return $this;
     }
 

@@ -43,15 +43,15 @@ class Message implements ModelInterface, ArrayAccess
             'topic' => 'string',
             'storeTimestamp' => 'float',
             'bornTimestamp' => 'float',
-            'reconsumeTimes' => 'string',
+            'reconsumeTimes' => 'int',
             'body' => 'string',
             'bodyCrc' => 'float',
             'storeSize' => 'float',
             'propertyList' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\MessagePropertyList[]',
             'bornHost' => 'string',
             'storeHost' => 'string',
-            'queueId' => 'string',
-            'queueOffset' => 'string'
+            'queueId' => 'int',
+            'queueOffset' => 'int'
     ];
 
     /**
@@ -439,7 +439,7 @@ class Message implements ModelInterface, ArrayAccess
     * Gets reconsumeTimes
     *  重试次数。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getReconsumeTimes()
     {
@@ -449,7 +449,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets reconsumeTimes
     *
-    * @param string|null $reconsumeTimes 重试次数。
+    * @param int|null $reconsumeTimes 重试次数。
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class Message implements ModelInterface, ArrayAccess
     * Gets queueId
     *  队列ID。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getQueueId()
     {
@@ -617,7 +617,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets queueId
     *
-    * @param string|null $queueId 队列ID。
+    * @param int|null $queueId 队列ID。
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class Message implements ModelInterface, ArrayAccess
     * Gets queueOffset
     *  在队列中的偏移量。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getQueueOffset()
     {
@@ -641,7 +641,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets queueOffset
     *
-    * @param string|null $queueOffset 在队列中的偏移量。
+    * @param int|null $queueOffset 在队列中的偏移量。
     *
     * @return $this
     */

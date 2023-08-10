@@ -20,21 +20,33 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'lag' => 'int',
+            'maxOffset' => 'int',
+            'consumerOffset' => 'int',
             'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'lag' => 'int64',
+        'maxOffset' => 'int64',
+        'consumerOffset' => 'int64',
         'brokers' => null
     ];
 
@@ -61,31 +73,49 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'lag' => 'lag',
+            'maxOffset' => 'max_offset',
+            'consumerOffset' => 'consumer_offset',
             'brokers' => 'brokers'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
     protected static $setters = [
+            'lag' => 'setLag',
+            'maxOffset' => 'setMaxOffset',
+            'consumerOffset' => 'setConsumerOffset',
             'brokers' => 'setBrokers'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * lag  消费堆积总数
+    * maxOffset  消息总数
+    * consumerOffset  已消费消息数
     * brokers  Topic关联代理（当查询topic消费“详情”才显示此参数）。
     *
     * @var string[]
     */
     protected static $getters = [
+            'lag' => 'getLag',
+            'maxOffset' => 'getMaxOffset',
+            'consumerOffset' => 'getConsumerOffset',
             'brokers' => 'getBrokers'
     ];
 
@@ -147,6 +177,9 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['lag'] = isset($data['lag']) ? $data['lag'] : null;
+        $this->container['maxOffset'] = isset($data['maxOffset']) ? $data['maxOffset'] : null;
+        $this->container['consumerOffset'] = isset($data['consumerOffset']) ? $data['consumerOffset'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
     }
 
@@ -170,6 +203,78 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets lag
+    *  消费堆积总数
+    *
+    * @return int|null
+    */
+    public function getLag()
+    {
+        return $this->container['lag'];
+    }
+
+    /**
+    * Sets lag
+    *
+    * @param int|null $lag 消费堆积总数
+    *
+    * @return $this
+    */
+    public function setLag($lag)
+    {
+        $this->container['lag'] = $lag;
+        return $this;
+    }
+
+    /**
+    * Gets maxOffset
+    *  消息总数
+    *
+    * @return int|null
+    */
+    public function getMaxOffset()
+    {
+        return $this->container['maxOffset'];
+    }
+
+    /**
+    * Sets maxOffset
+    *
+    * @param int|null $maxOffset 消息总数
+    *
+    * @return $this
+    */
+    public function setMaxOffset($maxOffset)
+    {
+        $this->container['maxOffset'] = $maxOffset;
+        return $this;
+    }
+
+    /**
+    * Gets consumerOffset
+    *  已消费消息数
+    *
+    * @return int|null
+    */
+    public function getConsumerOffset()
+    {
+        return $this->container['consumerOffset'];
+    }
+
+    /**
+    * Sets consumerOffset
+    *
+    * @param int|null $consumerOffset 已消费消息数
+    *
+    * @return $this
+    */
+    public function setConsumerOffset($consumerOffset)
+    {
+        $this->container['consumerOffset'] = $consumerOffset;
+        return $this;
     }
 
     /**

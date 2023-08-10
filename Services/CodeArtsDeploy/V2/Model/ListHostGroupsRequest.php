@@ -20,6 +20,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -31,6 +32,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'regionName' => 'string',
             'os' => 'string',
             'offset' => 'int',
@@ -42,6 +44,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -53,6 +56,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'regionName' => null,
         'os' => null,
         'offset' => 'int32',
@@ -85,6 +89,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -96,6 +101,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'regionName' => 'region_name',
             'os' => 'os',
             'offset' => 'offset',
@@ -107,6 +113,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -118,6 +125,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'regionName' => 'setRegionName',
             'os' => 'setOs',
             'offset' => 'setOffset',
@@ -129,6 +137,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -140,6 +149,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'regionName' => 'getRegionName',
             'os' => 'getOs',
             'offset' => 'getOffset',
@@ -237,6 +247,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['os'] = isset($data['os']) ? $data['os'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -254,6 +265,12 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
         if ($this->container['regionName'] === null) {
             $invalidProperties[] = "'regionName' can't be null";
         }
@@ -309,6 +326,30 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

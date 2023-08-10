@@ -1004,6 +1004,77 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 获取扩展日志下载信息
+     *
+     * 获取扩展日志下载信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createXelLogDownloadAsync($request)
+    {
+        return $this->createXelLogDownloadAsyncWithHttpInfo($request);
+    }
+    
+    public function createXelLogDownloadAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/xellog-download';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\CreateXelLogDownloadResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\CreateXelLogDownloadRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除参数模板
      *
      * 删除参数模板。
@@ -3875,6 +3946,81 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListStorageTypesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListStorageTypesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询扩展日志文件列表
+     *
+     * 查询扩展日志文件列表。
+     * 查询扩展日志文件列表，可以调用接口/v3/{project_id}/instances/{instance_id}/xellog-download 获取扩展日志下载链接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listXellogFilesAsync($request)
+    {
+        return $this->listXellogFilesAsyncWithHttpInfo($request);
+    }
+    
+    public function listXellogFilesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/xellog-files';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListXellogFilesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListXellogFilesRequest',
             $asyncRequest = true);
     }
 

@@ -20,7 +20,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据库引擎，现在只支持gaussdb-mysql
+    * type  数据库引擎，现在只支持gaussdb-mysql。
     * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
     * kernelVersion  数据库内核版本
     *
@@ -34,7 +34,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据库引擎，现在只支持gaussdb-mysql
+    * type  数据库引擎，现在只支持gaussdb-mysql。
     * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
     * kernelVersion  数据库内核版本
     *
@@ -69,7 +69,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据库引擎，现在只支持gaussdb-mysql
+    * type  数据库引擎，现在只支持gaussdb-mysql。
     * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
     * kernelVersion  数据库内核版本
     *
@@ -83,7 +83,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据库引擎，现在只支持gaussdb-mysql
+    * type  数据库引擎，现在只支持gaussdb-mysql。
     * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
     * kernelVersion  数据库内核版本
     *
@@ -97,7 +97,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据库引擎，现在只支持gaussdb-mysql
+    * type  数据库引擎，现在只支持gaussdb-mysql。
     * version  数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
     * kernelVersion  数据库内核版本
     *
@@ -205,7 +205,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库引擎，现在只支持gaussdb-mysql
+    *  数据库引擎，现在只支持gaussdb-mysql。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class MysqlDatastoreWithKernelVersion implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库引擎，现在只支持gaussdb-mysql
+    * @param string $type 数据库引擎，现在只支持gaussdb-mysql。
     *
     * @return $this
     */

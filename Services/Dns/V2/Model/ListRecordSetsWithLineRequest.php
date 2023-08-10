@@ -34,7 +34,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
     * healthCheckId  健康检查ID。  搜索模式默认为模糊搜索。  默认值为空。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -664,7 +664,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ListRecordSetsWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为like。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */

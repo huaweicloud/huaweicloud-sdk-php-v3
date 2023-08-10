@@ -20,24 +20,28 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'startDate' => 'string',
             'endDate' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'startDate' => null,
         'endDate' => null
     ];
@@ -65,36 +69,42 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'startDate' => 'start_date',
             'endDate' => 'end_date'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'startDate' => 'setStartDate',
             'endDate' => 'setEndDate'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'startDate' => 'getStartDate',
             'endDate' => 'getEndDate'
     ];
@@ -157,6 +167,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
         $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
     }
@@ -169,6 +180,9 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['startDate'] === null) {
             $invalidProperties[] = "'startDate' can't be null";
         }
@@ -187,6 +201,30 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

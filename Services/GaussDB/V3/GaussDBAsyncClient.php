@@ -1563,6 +1563,74 @@ class GaussDBAsyncClient extends Client
     }
 
     /**
+     * 查询实例是否开启备份加密功能
+     *
+     * 查询实例是否开启备份加密功能。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function describeBackupEncryptStatusAsync($request)
+    {
+        return $this->describeBackupEncryptStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function describeBackupEncryptStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/backups/encryption';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\DescribeBackupEncryptStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\DescribeBackupEncryptStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 包周期存储扩容
      *
      * 包周期存储扩容。
@@ -2759,6 +2827,77 @@ class GaussDBAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ListScheduleJobsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ListScheduleJobsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 打开或关闭备份加密
+     *
+     * 打开或关闭备份加密。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyBackupEncryptStatusAsync($request)
+    {
+        return $this->modifyBackupEncryptStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyBackupEncryptStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/backups/encryption';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyBackupEncryptStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyBackupEncryptStatusRequest',
             $asyncRequest = true);
     }
 
@@ -5599,6 +5738,80 @@ class GaussDBAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateProxyConnectionPoolTypeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateProxyConnectionPoolTypeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改读写分离端口号
+     *
+     * 修改读写分离端口号。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateProxyPortAsync($request)
+    {
+        return $this->updateProxyPortAsyncWithHttpInfo($request);
+    }
+    
+    public function updateProxyPortAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/proxy/{proxy_id}/port';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['proxyId'] !== null) {
+            $pathParams['proxy_id'] = $localVarParams['proxyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateProxyPortResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateProxyPortRequest',
             $asyncRequest = true);
     }
 

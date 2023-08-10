@@ -68,6 +68,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
+    * grpcAddress  grpc连接地址。
+    * publicGrpcAddress  公网grpc连接地址。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -123,6 +125,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'brokerAddress' => 'string',
             'publicNamesrvAddress' => 'string',
             'publicBrokerAddress' => 'string',
+            'grpcAddress' => 'string',
+            'publicGrpcAddress' => 'string',
             'tags' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]',
             'totalStorageSpace' => 'int',
             'resourceSpecCode' => 'string'
@@ -178,6 +182,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
+    * grpcAddress  grpc连接地址。
+    * publicGrpcAddress  公网grpc连接地址。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -233,6 +239,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
         'brokerAddress' => null,
         'publicNamesrvAddress' => null,
         'publicBrokerAddress' => null,
+        'grpcAddress' => null,
+        'publicGrpcAddress' => null,
         'tags' => null,
         'totalStorageSpace' => 'int32',
         'resourceSpecCode' => null
@@ -309,6 +317,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
+    * grpcAddress  grpc连接地址。
+    * publicGrpcAddress  公网grpc连接地址。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -364,6 +374,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'brokerAddress' => 'broker_address',
             'publicNamesrvAddress' => 'public_namesrv_address',
             'publicBrokerAddress' => 'public_broker_address',
+            'grpcAddress' => 'grpc_address',
+            'publicGrpcAddress' => 'public_grpc_address',
             'tags' => 'tags',
             'totalStorageSpace' => 'total_storage_space',
             'resourceSpecCode' => 'resource_spec_code'
@@ -419,6 +431,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
+    * grpcAddress  grpc连接地址。
+    * publicGrpcAddress  公网grpc连接地址。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -474,6 +488,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'brokerAddress' => 'setBrokerAddress',
             'publicNamesrvAddress' => 'setPublicNamesrvAddress',
             'publicBrokerAddress' => 'setPublicBrokerAddress',
+            'grpcAddress' => 'setGrpcAddress',
+            'publicGrpcAddress' => 'setPublicGrpcAddress',
             'tags' => 'setTags',
             'totalStorageSpace' => 'setTotalStorageSpace',
             'resourceSpecCode' => 'setResourceSpecCode'
@@ -529,6 +545,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
+    * grpcAddress  grpc连接地址。
+    * publicGrpcAddress  公网grpc连接地址。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -584,6 +602,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'brokerAddress' => 'getBrokerAddress',
             'publicNamesrvAddress' => 'getPublicNamesrvAddress',
             'publicBrokerAddress' => 'getPublicBrokerAddress',
+            'grpcAddress' => 'getGrpcAddress',
+            'publicGrpcAddress' => 'getPublicGrpcAddress',
             'tags' => 'getTags',
             'totalStorageSpace' => 'getTotalStorageSpace',
             'resourceSpecCode' => 'getResourceSpecCode'
@@ -710,6 +730,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
         $this->container['brokerAddress'] = isset($data['brokerAddress']) ? $data['brokerAddress'] : null;
         $this->container['publicNamesrvAddress'] = isset($data['publicNamesrvAddress']) ? $data['publicNamesrvAddress'] : null;
         $this->container['publicBrokerAddress'] = isset($data['publicBrokerAddress']) ? $data['publicBrokerAddress'] : null;
+        $this->container['grpcAddress'] = isset($data['grpcAddress']) ? $data['grpcAddress'] : null;
+        $this->container['publicGrpcAddress'] = isset($data['publicGrpcAddress']) ? $data['publicGrpcAddress'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['totalStorageSpace'] = isset($data['totalStorageSpace']) ? $data['totalStorageSpace'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
@@ -1894,6 +1916,54 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     public function setPublicBrokerAddress($publicBrokerAddress)
     {
         $this->container['publicBrokerAddress'] = $publicBrokerAddress;
+        return $this;
+    }
+
+    /**
+    * Gets grpcAddress
+    *  grpc连接地址。
+    *
+    * @return string|null
+    */
+    public function getGrpcAddress()
+    {
+        return $this->container['grpcAddress'];
+    }
+
+    /**
+    * Sets grpcAddress
+    *
+    * @param string|null $grpcAddress grpc连接地址。
+    *
+    * @return $this
+    */
+    public function setGrpcAddress($grpcAddress)
+    {
+        $this->container['grpcAddress'] = $grpcAddress;
+        return $this;
+    }
+
+    /**
+    * Gets publicGrpcAddress
+    *  公网grpc连接地址。
+    *
+    * @return string|null
+    */
+    public function getPublicGrpcAddress()
+    {
+        return $this->container['publicGrpcAddress'];
+    }
+
+    /**
+    * Sets publicGrpcAddress
+    *
+    * @param string|null $publicGrpcAddress 公网grpc连接地址。
+    *
+    * @return $this
+    */
+    public function setPublicGrpcAddress($publicGrpcAddress)
+    {
+        $this->container['publicGrpcAddress'] = $publicGrpcAddress;
         return $this;
     }
 

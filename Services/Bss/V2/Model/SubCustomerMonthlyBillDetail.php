@@ -30,6 +30,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * id  唯一标识。
     * billDetailType  账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * resourceId  资源ID。
     * resourceName  资源名称。
@@ -80,6 +81,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'chargingMode' => 'int',
             'tradeTime' => 'string',
             'tradeId' => 'string',
+            'id' => 'string',
             'billDetailType' => 'int',
             'resourceId' => 'string',
             'resourceName' => 'string',
@@ -130,6 +132,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * id  唯一标识。
     * billDetailType  账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * resourceId  资源ID。
     * resourceName  资源名称。
@@ -180,6 +183,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'chargingMode' => 'int32',
         'tradeTime' => null,
         'tradeId' => null,
+        'id' => null,
         'billDetailType' => 'int32',
         'resourceId' => null,
         'resourceName' => null,
@@ -251,6 +255,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * id  唯一标识。
     * billDetailType  账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * resourceId  资源ID。
     * resourceName  资源名称。
@@ -301,6 +306,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'chargingMode' => 'charging_mode',
             'tradeTime' => 'trade_time',
             'tradeId' => 'trade_id',
+            'id' => 'id',
             'billDetailType' => 'bill_detail_type',
             'resourceId' => 'resource_id',
             'resourceName' => 'resource_name',
@@ -351,6 +357,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * id  唯一标识。
     * billDetailType  账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * resourceId  资源ID。
     * resourceName  资源名称。
@@ -401,6 +408,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'chargingMode' => 'setChargingMode',
             'tradeTime' => 'setTradeTime',
             'tradeId' => 'setTradeId',
+            'id' => 'setId',
             'billDetailType' => 'setBillDetailType',
             'resourceId' => 'setResourceId',
             'resourceName' => 'setResourceName',
@@ -451,6 +459,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * id  唯一标识。
     * billDetailType  账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * resourceId  资源ID。
     * resourceName  资源名称。
@@ -501,6 +510,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'chargingMode' => 'getChargingMode',
             'tradeTime' => 'getTradeTime',
             'tradeId' => 'getTradeId',
+            'id' => 'getId',
             'billDetailType' => 'getBillDetailType',
             'resourceId' => 'getResourceId',
             'resourceName' => 'getResourceName',
@@ -607,6 +617,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['tradeTime'] = isset($data['tradeTime']) ? $data['tradeTime'] : null;
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['billDetailType'] = isset($data['billDetailType']) ? $data['billDetailType'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
@@ -904,6 +915,30 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function setTradeId($tradeId)
     {
         $this->container['tradeId'] = $tradeId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  唯一标识。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 唯一标识。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

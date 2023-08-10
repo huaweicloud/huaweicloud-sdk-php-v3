@@ -32,7 +32,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -121,7 +121,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -155,7 +155,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -189,7 +189,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * sortKey  查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
     * sortDir  查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
-    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @var string[]
     */
@@ -597,7 +597,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchMode
-    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return string|null
     */
@@ -609,7 +609,7 @@ class ShowRecordSetByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Sets searchMode
     *
-    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
     *
     * @return $this
     */
