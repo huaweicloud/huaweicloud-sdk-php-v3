@@ -34,7 +34,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * enableEfi  按照是否使能efi过滤查询
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * enableEfi  按照是否使能efi过滤查询
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * enableEfi  按照是否使能efi过滤查询
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * enableEfi  按照是否使能efi过滤查询
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-    * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * enableEfi  按照是否使能efi过滤查询
     *
     * @var string[]
     */
@@ -740,7 +740,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableEfi
-    *  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    *  按照是否使能efi过滤查询
     *
     * @return bool|null
     */
@@ -752,7 +752,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enableEfi
     *
-    * @param bool|null $enableEfi 功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * @param bool|null $enableEfi 按照是否使能efi过滤查询
     *
     * @return $this
     */

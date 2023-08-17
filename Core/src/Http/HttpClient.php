@@ -25,6 +25,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Request;
 use HuaweiCloud\SDK\Core\Exceptions\CallTimeoutException;
 use HuaweiCloud\SDK\Core\Exceptions\ClientRequestException;
+use HuaweiCloud\SDK\Core\Exceptions\ConnectionException;
 use HuaweiCloud\SDK\Core\Exceptions\HostUnreachableException;
 use HuaweiCloud\SDK\Core\Exceptions\RetryOutageException;
 use HuaweiCloud\SDK\Core\Exceptions\SdkErrorMessage;
@@ -111,38 +112,17 @@ class HttpClient
                 $responseBody = $response->getBody();
                 $sdkError = $this->getSdkErrorMessage($requestId,
                     $responseBody, $responseStatusCode);
-                if (isset($response->getHeaders()['Content-Length'])) {
-                    $contentLength = $response->getHeaders()['Content-Length'][0];
-                } else {
-                    $contentLength = 0;
-                }
-                if (isset($this->logger)) {
-                    $this->logger->addInfo(' "'.$sdkRequest->method.' '.
-                        $sdkRequest->url.'" '
-                        .' '.$response->getStatusCode().' '.$contentLength
-                        .' '.$response->getHeaders()['X-Request-Id'][0]);
-                }
+                $this->recordRequestIdToLog($sdkRequest, $response);
                 if (400 <= $responseStatusCode and $responseStatusCode < 500) {
                     throw new ClientRequestException($responseStatusCode, $sdkError);
                 } else {
                     throw new ServerResponseException($responseStatusCode, $sdkError);
                 }
             } else {
-                $this->getExceptionType($e->getMessage());
+                $this->parseExceptionType($e->getMessage());
             }
         }
-        if (isset($response->getHeaders()['Content-Length'])) {
-            $contentLength = $response->getHeaders()['Content-Length'][0];
-        } else {
-            $contentLength = 0;
-        }
-        if (isset($this->logger)) {
-            $this->logger->addInfo(' "'.$sdkRequest->method.' '.
-                $sdkRequest->url.'" '
-                .' '.$response->getStatusCode().' '.$contentLength
-                .' '.$response->getHeaders()['X-Request-Id'][0]);
-        }
-
+        $this->recordRequestIdToLog($sdkRequest, $response);
         return $response;
     }
 
@@ -157,18 +137,7 @@ class HttpClient
             $httpOption = $this->createHttpClientOption($this->httpConfig);
             $promise = $this->client->sendAsync($request, $httpOption)->then(
                 function ($response) use ($sdkRequest) {
-                    if (isset($response->getHeaders()['Content-Length'])) {
-                        $contentLength = $response->getHeaders()['Content-Length'][0];
-                    } else {
-                        $contentLength = 0;
-                    }
-                    if (isset($this->logger)) {
-                        $this->logger->addInfo(' "'.$sdkRequest->method.' '.
-                            $sdkRequest->url.'" '
-                            .' '.$response->getStatusCode().' '.$contentLength
-                            .' '.$response->getHeaders()['X-Request-Id'][0]);
-                    }
-
+                    $this->recordRequestIdToLog($sdkRequest, $response);
                     return $response;
                 },
                 function (RequestException $e) use ($sdkRequest) {
@@ -179,17 +148,7 @@ class HttpClient
                         $responseBody = $response->getBody();
                         $sdkError = $this->getSdkErrorMessage($requestId,
                             $responseBody, $responseStatusCode);
-                        if (isset($response->getHeaders()['Content-Length'])) {
-                            $contentLength = $response->getHeaders()['Content-Length'][0];
-                        } else {
-                            $contentLength = 0;
-                        }
-                        if (isset($this->logger)) {
-                            $this->logger->addInfo(' "'.$sdkRequest->method.' '.
-                                $sdkRequest->url.'" '
-                                .' '.$response->getStatusCode().' '.$contentLength
-                                .' '.$response->getHeaders()['X-Request-Id'][0]);
-                        }
+                        $this->recordRequestIdToLog($sdkRequest, $response);
                         if (400 <= $responseStatusCode and
                             $responseStatusCode < 500) {
                             throw new ClientRequestException($responseStatusCode, $sdkError);
@@ -197,14 +156,13 @@ class HttpClient
                             throw new ServerResponseException($responseStatusCode, $sdkError);
                         }
                     } else {
-                        $this->getExceptionType($e->getMessage());
+                        $this->parseExceptionType($e->getMessage());
                     }
                 }
             );
         } catch (\Exception $e) {
             throw new SdkException($e->getMessage());
         }
-
         return $promise;
     }
 
@@ -212,7 +170,6 @@ class HttpClient
                                         $responseBody,
                                         $responseStatusCode
     ) {
-        $sdkError = new SdkErrorMessage();
         try {
             $responseBodyArr = json_decode((string) $responseBody, true);
             if ($responseBodyArr == null) {
@@ -228,13 +185,18 @@ class HttpClient
                 isset($responseBodyArr['message'])) {
                 $sdkError = new SdkErrorMessage($requestId,
                     $responseBodyArr['code'], $responseBodyArr['message']);
+            } elseif (isset($responseBodyArr['errorCode']) and
+                isset($responseBodyArr['message'])) {
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr['errorCode'], $responseBodyArr['message']);
             } else {
-                $sdkError = $this->handleSdkErrorForArryBody($responseBodyArr);
+                $sdkError = $this->handleSdkErrorForArrayBody($requestId, $responseBodyArr);
             }
         } catch (\Exception $e) {
             throw new ServerResponseException($responseStatusCode, new
             SdkErrorMessage((string) $responseBody));
         }
+        // if can not get error code and error msg from body, should set the whole response body to error message
         $sdkErrorMsg = $sdkError->getErrorMsg();
         if (!isset($sdkErrorMsg)) {
             $sdkError = new SdkErrorMessage((string) $responseBody);
@@ -242,8 +204,9 @@ class HttpClient
         return $sdkError;
     }
 
-    private function handleSdkErrorForArryBody($responseBodyArr) {
+    private function handleSdkErrorForArrayBody($requestId, $responseBodyArr) {
         // should parse response body to find error code and error message
+        $sdkError = new SdkErrorMessage();
         foreach ($responseBodyArr as $key => $value) {
             if (!is_array($responseBodyArr[$key])) {
                 continue;
@@ -263,21 +226,21 @@ class HttpClient
                 $sdkError = new SdkErrorMessage($requestId,
                     $responseBodyArr[$key]['error_code'],
                     $responseBodyArr[$key]['error_msg']);
+            } else if (isset($responseBodyArr[$key]['errorCode']) and
+                isset($responseBodyArr[$key]['message'])) {
+                // the 400 response for mrs should return errorCode and message
+                $sdkError = new SdkErrorMessage($requestId,
+                    $responseBodyArr[$key]['errorCode'],
+                    $responseBodyArr[$key]['message']);
             } else if (sizeof($responseBodyArr[$key]) >= 1) {
                 // if there are many errors, use the first error to generate sdk error which will published to user
-                $firstError = $responseBodyArr[$key][0];
-                if (!isset($firstError["error_code"]) || !isset($firstError['error_msg'])) {
-                    continue;
-                }
-                $sdkError = new SdkErrorMessage($requestId,
-                    $responseBodyArr[$key][0]['error_code'],
-                    $responseBodyArr[$key][0]['error_msg']);
+                $sdkError = $this->parseErrorCodeAndMessageFromFirstArrayElem($responseBodyArr, $key, $requestId);
             }
         }
         return $sdkError;
     }
 
-    private function getExceptionType($errorMessage)
+    private function parseExceptionType($errorMessage)
     {
         $errorKey = explode(':', $errorMessage, 2)[0];
         $msg = explode(':', $errorMessage, 2)[1];
@@ -289,34 +252,83 @@ class HttpClient
                         .$msg);
                 }
                 throw new HostUnreachableException($msg);
-                break;
             case 'cURL error 60':
                 if (isset($this->logger)) {
                     $this->logger->addError('SslHandShakeException occurred.'
                         .$msg);
                 }
                 throw new SslHandShakeException($msg);
-                break;
             case 'cURL error 28':
                 if (isset($this->logger)) {
                     $this->logger->addError('CallTimeoutException occurred.'
                         .$msg);
                 }
                 throw new CallTimeoutException($msg);
-                break;
             case 'cURL error 47':
                 if (isset($this->logger)) {
                     $this->logger->addError('RetryOutageException occurred.'
                         .$msg);
                 }
                 throw new RetryOutageException($msg);
-                break;
+            case 'CURL error 55':
+                // should handle error for reset by peer, throw connection exception
+                if (isset($this->logger)) {
+                    $this->logger->addError('reset by server error occurred.'
+                        .$msg);
+                }
+                throw new ConnectionException($msg, 504, null);
             default:
                 if (isset($this->logger)) {
                     $this->logger->addError('SdkException occurred.'
                         .$msg);
                 }
                 throw new SdkException($errorMessage);
+        }
+    }
+
+    /**
+     * @param $response the http response
+     * @return int|mixed content length of the response body
+     */
+    public function getContentLength($response)
+    {
+        if (!isset($response->getHeaders()['Content-Length'])) {
+            return 0;
+        }
+        return $response->getHeaders()['Content-Length'][0];
+    }
+
+    /**
+     * @param $responseBodyArr the response body
+     * @param $requestId the request id in the response header
+     * @return SdkErrorMessage sdk error message object
+     */
+    private function parseErrorCodeAndMessageFromFirstArrayElem($responseBodyArr, $key, $requestId)
+    {
+        $firstError = $responseBodyArr[$key][0];
+        $sdkError = new SdkErrorMessage();
+        if (isset($firstError["error_code"]) && isset($firstError['error_msg'])) {
+            $sdkError = new SdkErrorMessage($requestId,
+                $firstError['error_code'], $firstError['error_msg']);
+        } else if (isset($firstError["errorCode"]) && isset($firstError['message'])) {
+            $sdkError = new SdkErrorMessage($requestId,
+                $firstError['error_code'], $firstError['error_msg']);
+        }
+        return $sdkError;
+    }
+
+    /**
+     * @param $response the http response
+     * @param $sdkRequest the http request
+     */
+    private function recordRequestIdToLog($sdkRequest, $response)
+    {
+        $contentLength = $this->getContentLength($response);
+        if (isset($this->logger)) {
+            $this->logger->addInfo(' "'.$sdkRequest->method.' '.
+                $sdkRequest->url.'" '
+                .' '.$response->getStatusCode().' '.$contentLength
+                .' '.$response->getHeaders()['X-Request-Id'][0]);
         }
     }
 }

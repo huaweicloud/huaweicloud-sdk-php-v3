@@ -341,7 +341,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     }
     const ENGINE_RABBITMQ = 'rabbitmq';
     const ENGINE_VERSION__3_8_35 = '3.8.35';
-    const ENGINE_VERSION__3_7_17 = '3.7.17';
     const BROKER_NUM_1 = 1;
     const BROKER_NUM_3 = 3;
     const BROKER_NUM_5 = 5;
@@ -373,7 +372,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_VERSION__3_8_35,
-            self::ENGINE_VERSION__3_7_17,
         ];
     }
 

@@ -1305,7 +1305,7 @@ class LiveAsyncClient extends Client
     }
 
     /**
-     * 查询流监控数据接口
+     * 查询推流监控数据接口
      *
      * 查询流监控数据接口，包括帧率码率断流情况。
      * 

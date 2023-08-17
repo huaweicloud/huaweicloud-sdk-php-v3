@@ -78,7 +78,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'all_failure'
+            'allFailure' => 'allFailure'
     ];
 
     /**

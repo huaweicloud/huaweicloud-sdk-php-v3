@@ -28,6 +28,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  功能说明：目的安全组的ID
     * remoteIpPrefix  功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
+    * remoteAddressGroupId  功能说明：远端地址组的ID
     * securityGroupId  所属安全组ID
     *
     * @var string[]
@@ -41,6 +42,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
             'protocol' => 'string',
             'remoteGroupId' => 'string',
             'remoteIpPrefix' => 'string',
+            'remoteAddressGroupId' => 'string',
             'securityGroupId' => 'string'
     ];
 
@@ -54,6 +56,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  功能说明：目的安全组的ID
     * remoteIpPrefix  功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
+    * remoteAddressGroupId  功能说明：远端地址组的ID
     * securityGroupId  所属安全组ID
     *
     * @var string[]
@@ -67,6 +70,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
         'protocol' => null,
         'remoteGroupId' => null,
         'remoteIpPrefix' => null,
+        'remoteAddressGroupId' => null,
         'securityGroupId' => null
     ];
 
@@ -101,6 +105,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  功能说明：目的安全组的ID
     * remoteIpPrefix  功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
+    * remoteAddressGroupId  功能说明：远端地址组的ID
     * securityGroupId  所属安全组ID
     *
     * @var string[]
@@ -114,6 +119,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
             'protocol' => 'protocol',
             'remoteGroupId' => 'remote_group_id',
             'remoteIpPrefix' => 'remote_ip_prefix',
+            'remoteAddressGroupId' => 'remote_address_group_id',
             'securityGroupId' => 'security_group_id'
     ];
 
@@ -127,6 +133,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  功能说明：目的安全组的ID
     * remoteIpPrefix  功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
+    * remoteAddressGroupId  功能说明：远端地址组的ID
     * securityGroupId  所属安全组ID
     *
     * @var string[]
@@ -140,6 +147,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
             'protocol' => 'setProtocol',
             'remoteGroupId' => 'setRemoteGroupId',
             'remoteIpPrefix' => 'setRemoteIpPrefix',
+            'remoteAddressGroupId' => 'setRemoteAddressGroupId',
             'securityGroupId' => 'setSecurityGroupId'
     ];
 
@@ -153,6 +161,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  功能说明：目的安全组的ID
     * remoteIpPrefix  功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
+    * remoteAddressGroupId  功能说明：远端地址组的ID
     * securityGroupId  所属安全组ID
     *
     * @var string[]
@@ -166,6 +175,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
             'protocol' => 'getProtocol',
             'remoteGroupId' => 'getRemoteGroupId',
             'remoteIpPrefix' => 'getRemoteIpPrefix',
+            'remoteAddressGroupId' => 'getRemoteAddressGroupId',
             'securityGroupId' => 'getSecurityGroupId'
     ];
 
@@ -265,6 +275,7 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['remoteGroupId'] = isset($data['remoteGroupId']) ? $data['remoteGroupId'] : null;
         $this->container['remoteIpPrefix'] = isset($data['remoteIpPrefix']) ? $data['remoteIpPrefix'] : null;
+        $this->container['remoteAddressGroupId'] = isset($data['remoteAddressGroupId']) ? $data['remoteAddressGroupId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
     }
 
@@ -306,6 +317,9 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['remoteIpPrefix']) && (mb_strlen($this->container['remoteIpPrefix']) > 255)) {
                 $invalidProperties[] = "invalid value for 'remoteIpPrefix', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['remoteAddressGroupId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['remoteAddressGroupId'])) {
+                $invalidProperties[] = "invalid value for 'remoteAddressGroupId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
             }
         if ($this->container['securityGroupId'] === null) {
             $invalidProperties[] = "'securityGroupId' can't be null";
@@ -522,6 +536,30 @@ class NeutronCreateSecurityGroupRuleOption implements ModelInterface, ArrayAcces
     public function setRemoteIpPrefix($remoteIpPrefix)
     {
         $this->container['remoteIpPrefix'] = $remoteIpPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets remoteAddressGroupId
+    *  功能说明：远端地址组的ID
+    *
+    * @return string|null
+    */
+    public function getRemoteAddressGroupId()
+    {
+        return $this->container['remoteAddressGroupId'];
+    }
+
+    /**
+    * Sets remoteAddressGroupId
+    *
+    * @param string|null $remoteAddressGroupId 功能说明：远端地址组的ID
+    *
+    * @return $this
+    */
+    public function setRemoteAddressGroupId($remoteAddressGroupId)
+    {
+        $this->container['remoteAddressGroupId'] = $remoteAddressGroupId;
         return $this;
     }
 

@@ -20,11 +20,12 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
     * dots  指定时间截图时的时间点数组，最多支持10个。
+    * dotsMs  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
     * outputFilename  截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
     * format  截图文件格式。  取值如下：  1：表示jpg格式
     * width  图片宽度  取值范围：(96,3840]  单位：px
@@ -39,6 +40,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
             'startTime' => 'int',
             'duration' => 'int',
             'dots' => 'int[]',
+            'dotsMs' => 'int[]',
             'outputFilename' => 'string',
             'format' => 'int',
             'width' => 'int',
@@ -48,11 +50,12 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
     * dots  指定时间截图时的时间点数组，最多支持10个。
+    * dotsMs  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
     * outputFilename  截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
     * format  截图文件格式。  取值如下：  1：表示jpg格式
     * width  图片宽度  取值范围：(96,3840]  单位：px
@@ -67,6 +70,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
         'startTime' => 'int32',
         'duration' => 'int32',
         'dots' => null,
+        'dotsMs' => null,
         'outputFilename' => null,
         'format' => 'int32',
         'width' => null,
@@ -97,11 +101,12 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
     * dots  指定时间截图时的时间点数组，最多支持10个。
+    * dotsMs  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
     * outputFilename  截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
     * format  截图文件格式。  取值如下：  1：表示jpg格式
     * width  图片宽度  取值范围：(96,3840]  单位：px
@@ -116,6 +121,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'duration' => 'duration',
             'dots' => 'dots',
+            'dotsMs' => 'dots_ms',
             'outputFilename' => 'output_filename',
             'format' => 'format',
             'width' => 'width',
@@ -125,11 +131,12 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
     * dots  指定时间截图时的时间点数组，最多支持10个。
+    * dotsMs  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
     * outputFilename  截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
     * format  截图文件格式。  取值如下：  1：表示jpg格式
     * width  图片宽度  取值范围：(96,3840]  单位：px
@@ -144,6 +151,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'duration' => 'setDuration',
             'dots' => 'setDots',
+            'dotsMs' => 'setDotsMs',
             'outputFilename' => 'setOutputFilename',
             'format' => 'setFormat',
             'width' => 'setWidth',
@@ -153,11 +161,12 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
     * dots  指定时间截图时的时间点数组，最多支持10个。
+    * dotsMs  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
     * outputFilename  截图输出文件名。  - 如果只抽一张图（即：按DOTS方式，指定1个时间点）则按该指定文件名输出图片。  - 如果抽多张图（即：按DOTS方式指定多个时间点或按TIME间隔截图）则输出图片名在该指定文件名基础上在增加时间点（示例：output_filename_10.jpg）。  - 如果指定了压缩抽帧图片生成tar包，则tar包按该指定文件名输出。
     * format  截图文件格式。  取值如下：  1：表示jpg格式
     * width  图片宽度  取值范围：(96,3840]  单位：px
@@ -172,6 +181,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'duration' => 'getDuration',
             'dots' => 'getDots',
+            'dotsMs' => 'getDotsMs',
             'outputFilename' => 'getOutputFilename',
             'format' => 'getFormat',
             'width' => 'getWidth',
@@ -222,6 +232,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     const TYPE_PERCENT = 'PERCENT';
     const TYPE_TIME = 'TIME';
     const TYPE_DOTS = 'DOTS';
+    const TYPE_DOTS_MS = 'DOTS_MS';
     
 
     /**
@@ -235,6 +246,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
             self::TYPE_PERCENT,
             self::TYPE_TIME,
             self::TYPE_DOTS,
+            self::TYPE_DOTS_MS,
         ];
     }
 
@@ -259,6 +271,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['dots'] = isset($data['dots']) ? $data['dots'] : null;
+        $this->container['dotsMs'] = isset($data['dotsMs']) ? $data['dotsMs'] : null;
         $this->container['outputFilename'] = isset($data['outputFilename']) ? $data['outputFilename'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
@@ -346,7 +359,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    *  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     *
     * @return string|null
     */
@@ -358,7 +371,7 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。  默认值：\"TIME\"
+    * @param string|null $type 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
     *
     * @return $this
     */
@@ -461,6 +474,30 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     public function setDots($dots)
     {
         $this->container['dots'] = $dots;
+        return $this;
+    }
+
+    /**
+    * Gets dotsMs
+    *  同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
+    *
+    * @return int[]|null
+    */
+    public function getDotsMs()
+    {
+        return $this->container['dotsMs'];
+    }
+
+    /**
+    * Sets dotsMs
+    *
+    * @param int[]|null $dotsMs 同步截图下，指定时间截图的时间点数组，单位毫秒  例如输入[1000]，截取视频第1000毫秒位置的图像帧，仅支持一个时间点
+    *
+    * @return $this
+    */
+    public function setDotsMs($dotsMs)
+    {
+        $this->container['dotsMs'] = $dotsMs;
         return $this;
     }
 

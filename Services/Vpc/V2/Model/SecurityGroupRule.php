@@ -28,8 +28,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：协议类型 取值范围：tcp、udp、icmp或IP协议编号（0~255） 约束：为空表示支持所有协议
     * portRangeMin  功能说明：起始端口值 取值范围：1~65535 约束：不能大于port_range_max的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
     * portRangeMax  功能说明：结束端口值 取值范围：1~65535 约束：取值不能小于port_range_min的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
-    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
-    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
+    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * tenantId  安全组所属项目ID
     *
@@ -60,8 +60,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：协议类型 取值范围：tcp、udp、icmp或IP协议编号（0~255） 约束：为空表示支持所有协议
     * portRangeMin  功能说明：起始端口值 取值范围：1~65535 约束：不能大于port_range_max的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
     * portRangeMax  功能说明：结束端口值 取值范围：1~65535 约束：取值不能小于port_range_min的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
-    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
-    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
+    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * tenantId  安全组所属项目ID
     *
@@ -113,8 +113,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：协议类型 取值范围：tcp、udp、icmp或IP协议编号（0~255） 约束：为空表示支持所有协议
     * portRangeMin  功能说明：起始端口值 取值范围：1~65535 约束：不能大于port_range_max的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
     * portRangeMax  功能说明：结束端口值 取值范围：1~65535 约束：取值不能小于port_range_min的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
-    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
-    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
+    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * tenantId  安全组所属项目ID
     *
@@ -145,8 +145,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：协议类型 取值范围：tcp、udp、icmp或IP协议编号（0~255） 约束：为空表示支持所有协议
     * portRangeMin  功能说明：起始端口值 取值范围：1~65535 约束：不能大于port_range_max的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
     * portRangeMax  功能说明：结束端口值 取值范围：1~65535 约束：取值不能小于port_range_min的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
-    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
-    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
+    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * tenantId  安全组所属项目ID
     *
@@ -177,8 +177,8 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：协议类型 取值范围：tcp、udp、icmp或IP协议编号（0~255） 约束：为空表示支持所有协议
     * portRangeMin  功能说明：起始端口值 取值范围：1~65535 约束：不能大于port_range_max的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
     * portRangeMax  功能说明：结束端口值 取值范围：1~65535 约束：取值不能小于port_range_min的值，为空表示所有端口，如果协议是icmp类型，取值范围请参见 [安全组规则icmp协议名称对应关系表](https://support.huaweicloud.com/api-vpc/vpc_api_0009.html)
-    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
-    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
+    * remoteGroupId  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * tenantId  安全组所属项目ID
     *
@@ -308,6 +308,9 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
         }
         if ($this->container['remoteGroupId'] === null) {
             $invalidProperties[] = "'remoteGroupId' can't be null";
+        }
+        if ($this->container['remoteAddressGroupId'] === null) {
+            $invalidProperties[] = "'remoteAddressGroupId' can't be null";
         }
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
@@ -520,7 +523,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteIpPrefix
-    *  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
+    *  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
     *
     * @return string
     */
@@ -532,7 +535,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     /**
     * Sets remoteIpPrefix
     *
-    * @param string $remoteIpPrefix 功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id互斥
+    * @param string $remoteIpPrefix 功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：和remote_group_id，remote_address_group_id互斥
     *
     * @return $this
     */
@@ -544,7 +547,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteGroupId
-    *  功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    *  功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     *
     * @return string
     */
@@ -556,7 +559,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     /**
     * Sets remoteGroupId
     *
-    * @param string $remoteGroupId 功能说明：对端安全组ID 约束：和remote_ip_prefix互斥
+    * @param string $remoteGroupId 功能说明：对端安全组ID 约束：和remote_ip_prefix，remote_address_group_id互斥
     *
     * @return $this
     */
@@ -570,7 +573,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     * Gets remoteAddressGroupId
     *  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     *
-    * @return string|null
+    * @return string
     */
     public function getRemoteAddressGroupId()
     {
@@ -580,7 +583,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAddressGroupId
     *
-    * @param string|null $remoteAddressGroupId 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+    * @param string $remoteAddressGroupId 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     *
     * @return $this
     */

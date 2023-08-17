@@ -451,7 +451,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     }
     const ENGINE_KAFKA = 'kafka';
     const ENGINE_VERSION__1_1_0 = '1.1.0';
-    const ENGINE_VERSION__2_3_0 = '2.3.0';
     const ENGINE_VERSION__2_7 = '2.7';
     const SPECIFICATION__100_MB = '100MB';
     const SPECIFICATION__300_MB = '300MB';
@@ -502,7 +501,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_VERSION__1_1_0,
-            self::ENGINE_VERSION__2_3_0,
             self::ENGINE_VERSION__2_7,
         ];
     }

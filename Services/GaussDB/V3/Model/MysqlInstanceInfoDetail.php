@@ -34,6 +34,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * updated  更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * privateWriteIps  实例的写内网IP。
+    * privateDnsNames  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
     * publicIps  实例的公网IP。
     * dbUserName  默认用户名。
     * vpcId  虚拟私有云ID。
@@ -68,6 +69,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
             'created' => 'string',
             'updated' => 'string',
             'privateWriteIps' => 'string[]',
+            'privateDnsNames' => 'string[]',
             'publicIps' => 'string',
             'dbUserName' => 'string',
             'vpcId' => 'string',
@@ -102,6 +104,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * updated  更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * privateWriteIps  实例的写内网IP。
+    * privateDnsNames  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
     * publicIps  实例的公网IP。
     * dbUserName  默认用户名。
     * vpcId  虚拟私有云ID。
@@ -136,6 +139,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
         'created' => null,
         'updated' => null,
         'privateWriteIps' => null,
+        'privateDnsNames' => null,
         'publicIps' => null,
         'dbUserName' => null,
         'vpcId' => null,
@@ -191,6 +195,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * updated  更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * privateWriteIps  实例的写内网IP。
+    * privateDnsNames  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
     * publicIps  实例的公网IP。
     * dbUserName  默认用户名。
     * vpcId  虚拟私有云ID。
@@ -225,6 +230,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
             'created' => 'created',
             'updated' => 'updated',
             'privateWriteIps' => 'private_write_ips',
+            'privateDnsNames' => 'private_dns_names',
             'publicIps' => 'public_ips',
             'dbUserName' => 'db_user_name',
             'vpcId' => 'vpc_id',
@@ -259,6 +265,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * updated  更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * privateWriteIps  实例的写内网IP。
+    * privateDnsNames  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
     * publicIps  实例的公网IP。
     * dbUserName  默认用户名。
     * vpcId  虚拟私有云ID。
@@ -293,6 +300,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
             'created' => 'setCreated',
             'updated' => 'setUpdated',
             'privateWriteIps' => 'setPrivateWriteIps',
+            'privateDnsNames' => 'setPrivateDnsNames',
             'publicIps' => 'setPublicIps',
             'dbUserName' => 'setDbUserName',
             'vpcId' => 'setVpcId',
@@ -327,6 +335,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * updated  更新时间，格式与\"created\"字段对应格式完全相同。说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * privateWriteIps  实例的写内网IP。
+    * privateDnsNames  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
     * publicIps  实例的公网IP。
     * dbUserName  默认用户名。
     * vpcId  虚拟私有云ID。
@@ -361,6 +370,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
             'created' => 'getCreated',
             'updated' => 'getUpdated',
             'privateWriteIps' => 'getPrivateWriteIps',
+            'privateDnsNames' => 'getPrivateDnsNames',
             'publicIps' => 'getPublicIps',
             'dbUserName' => 'getDbUserName',
             'vpcId' => 'getVpcId',
@@ -451,6 +461,7 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['privateWriteIps'] = isset($data['privateWriteIps']) ? $data['privateWriteIps'] : null;
+        $this->container['privateDnsNames'] = isset($data['privateDnsNames']) ? $data['privateDnsNames'] : null;
         $this->container['publicIps'] = isset($data['publicIps']) ? $data['publicIps'] : null;
         $this->container['dbUserName'] = isset($data['dbUserName']) ? $data['dbUserName'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
@@ -833,6 +844,30 @@ class MysqlInstanceInfoDetail implements ModelInterface, ArrayAccess
     public function setPrivateWriteIps($privateWriteIps)
     {
         $this->container['privateWriteIps'] = $privateWriteIps;
+        return $this;
+    }
+
+    /**
+    * Gets privateDnsNames
+    *  实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
+    *
+    * @return string[]|null
+    */
+    public function getPrivateDnsNames()
+    {
+        return $this->container['privateDnsNames'];
+    }
+
+    /**
+    * Sets privateDnsNames
+    *
+    * @param string[]|null $privateDnsNames 实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
+    *
+    * @return $this
+    */
+    public function setPrivateDnsNames($privateDnsNames)
+    {
+        $this->container['privateDnsNames'] = $privateDnsNames;
         return $this;
     }
 

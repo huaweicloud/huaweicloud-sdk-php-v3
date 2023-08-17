@@ -451,7 +451,6 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     }
     const ENGINE_KAFKA = 'kafka';
     const ENGINE_VERSION__1_1_0 = '1.1.0';
-    const ENGINE_VERSION__2_3_0 = '2.3.0';
     const ENGINE_VERSION__2_7 = '2.7';
     const SASL_ENABLED_MECHANISMS_PLAIN = 'PLAIN';
     const SASL_ENABLED_MECHANISMS_SCRAM_SHA_512 = 'SCRAM-SHA-512';
@@ -482,7 +481,6 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_VERSION__1_1_0,
-            self::ENGINE_VERSION__2_3_0,
             self::ENGINE_VERSION__2_7,
         ];
     }

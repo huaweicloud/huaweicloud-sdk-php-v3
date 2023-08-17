@@ -371,6 +371,9 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['remoteIpPrefix']) > 255)) {
                 $invalidProperties[] = "invalid value for 'remoteIpPrefix', the character length must be smaller than or equal to 255.";
             }
+        if ($this->container['remoteAddressGroupId'] === null) {
+            $invalidProperties[] = "'remoteAddressGroupId' can't be null";
+        }
         if ($this->container['securityGroupId'] === null) {
             $invalidProperties[] = "'securityGroupId' can't be null";
         }
@@ -626,7 +629,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * Gets remoteAddressGroupId
     *  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     *
-    * @return string|null
+    * @return string
     */
     public function getRemoteAddressGroupId()
     {
@@ -636,7 +639,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAddressGroupId
     *
-    * @param string|null $remoteAddressGroupId 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+    * @param string $remoteAddressGroupId 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     *
     * @return $this
     */

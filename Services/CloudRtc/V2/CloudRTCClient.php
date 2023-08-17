@@ -2050,6 +2050,198 @@ class CloudRTCClient extends Client
             $requestType='\HuaweiCloud\SDK\CloudRTC\V2\Model\UpdateUrlAuthRequest');
     }
 
+    /**
+     * 查询OBS桶下对象列表
+     *
+     * 查询OBS桶下对象列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listObsBucketObjects($request)
+    {
+        return $this->listObsBucketObjectsWithHttpInfo($request);
+    }
+
+    public function listObsBucketObjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rtc-ops/buckets/objects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['bucket'] !== null) {
+            $queryParams['bucket'] = $localVarParams['bucket'];
+        }
+        if ($localVarParams['prefix'] !== null) {
+            $queryParams['prefix'] = $localVarParams['prefix'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['location'] !== null) {
+            $queryParams['location'] = $localVarParams['location'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CloudRTC\V2\Model\ListObsBucketObjectsResponse',
+            $requestType='\HuaweiCloud\SDK\CloudRTC\V2\Model\ListObsBucketObjectsRequest');
+    }
+
+    /**
+     * 查询OBS桶列表
+     *
+     * 查询OBS桶列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listObsBuckets($request)
+    {
+        return $this->listObsBucketsWithHttpInfo($request);
+    }
+
+    public function listObsBucketsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rtc-ops/buckets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CloudRTC\V2\Model\ListObsBucketsResponse',
+            $requestType='\HuaweiCloud\SDK\CloudRTC\V2\Model\ListObsBucketsRequest');
+    }
+
+    /**
+     * OBS桶授权及取消授权
+     *
+     * OBS桶授权及取消授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateObsBucketAuthority($request)
+    {
+        return $this->updateObsBucketAuthorityWithHttpInfo($request);
+    }
+
+    public function updateObsBucketAuthorityWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rtc-ops/buckets/authentication';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CloudRTC\V2\Model\UpdateObsBucketAuthorityResponse',
+            $requestType='\HuaweiCloud\SDK\CloudRTC\V2\Model\UpdateObsBucketAuthorityRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

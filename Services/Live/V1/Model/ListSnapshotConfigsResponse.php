@@ -22,7 +22,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  总条目数
-    * snapshotConfigList  snapshotConfigList
+    * snapshotConfigList  截图配置
     * limit  每页记录数
     * offset  偏移量
     *
@@ -30,7 +30,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'snapshotConfigList' => '\HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig',
+            'snapshotConfigList' => '\HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig[]',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -38,7 +38,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  总条目数
-    * snapshotConfigList  snapshotConfigList
+    * snapshotConfigList  截图配置
     * limit  每页记录数
     * offset  偏移量
     *
@@ -75,7 +75,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  总条目数
-    * snapshotConfigList  snapshotConfigList
+    * snapshotConfigList  截图配置
     * limit  每页记录数
     * offset  偏移量
     *
@@ -91,7 +91,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  总条目数
-    * snapshotConfigList  snapshotConfigList
+    * snapshotConfigList  截图配置
     * limit  每页记录数
     * offset  偏移量
     *
@@ -107,7 +107,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  总条目数
-    * snapshotConfigList  snapshotConfigList
+    * snapshotConfigList  截图配置
     * limit  每页记录数
     * offset  偏移量
     *
@@ -232,9 +232,9 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotConfigList
-    *  snapshotConfigList
+    *  截图配置
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig|null
+    * @return \HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig[]|null
     */
     public function getSnapshotConfigList()
     {
@@ -244,7 +244,7 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotConfigList
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig|null $snapshotConfigList snapshotConfigList
+    * @param \HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig[]|null $snapshotConfigList 截图配置
     *
     * @return $this
     */

@@ -26,6 +26,148 @@ class CloudRTCClient extends Client
 
 
     /**
+     * 查询用户异常体验事件接口
+     *
+     * 查询指定APP下通话的异常明细数据。可查询5天内的数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRtcAbnormalEvent($request)
+    {
+        return $this->listRtcAbnormalEventWithHttpInfo($request);
+    }
+
+    public function listRtcAbnormalEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/rtc/client/abnormalevent';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['roomId'] !== null) {
+            $queryParams['room_id'] = $localVarParams['roomId'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CloudRTC\V1\Model\ListRtcAbnormalEventResponse',
+            $requestType='\HuaweiCloud\SDK\CloudRTC\V1\Model\ListRtcAbnormalEventRequest');
+    }
+
+    /**
+     * 查询详情事件接口
+     *
+     * 查询指定APP下通话的异常明细数据。可查询5天内的数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRtcEvent($request)
+    {
+        return $this->listRtcEventWithHttpInfo($request);
+    }
+
+    public function listRtcEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/rtc/client/event';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['roomId'] !== null) {
+            $queryParams['room_id'] = $localVarParams['roomId'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CloudRTC\V1\Model\ListRtcEventResponse',
+            $requestType='\HuaweiCloud\SDK\CloudRTC\V1\Model\ListRtcEventRequest');
+    }
+
+    /**
      * 查询异常事件用户分布
      *
      * 查询指定APP下指定时间内的通话异常明细数据分布情况。

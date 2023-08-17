@@ -78,7 +78,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'all_failure'
+            'allFailure' => 'allFailure'
     ];
 
     /**
@@ -151,8 +151,6 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     }
     const ACTION_RESTART = 'restart';
     const ACTION_DELETE = 'delete';
-    const ALL_FAILURE_TRUE = 'true';
-    const ALL_FAILURE_FALSE = 'false';
     const ALL_FAILURE_KAFKA = 'kafka';
     
 
@@ -177,8 +175,6 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     public function getAllFailureAllowableValues()
     {
         return [
-            self::ALL_FAILURE_TRUE,
-            self::ALL_FAILURE_FALSE,
             self::ALL_FAILURE_KAFKA,
         ];
     }

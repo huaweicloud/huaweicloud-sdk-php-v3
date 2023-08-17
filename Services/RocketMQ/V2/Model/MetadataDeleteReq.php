@@ -158,6 +158,9 @@ class MetadataDeleteReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['taskIds'] === null) {
+            $invalidProperties[] = "'taskIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class MetadataDeleteReq implements ModelInterface, ArrayAccess
     * Gets taskIds
     *  需要删除的任务列表。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getTaskIds()
     {
@@ -186,7 +189,7 @@ class MetadataDeleteReq implements ModelInterface, ArrayAccess
     /**
     * Sets taskIds
     *
-    * @param string[]|null $taskIds 需要删除的任务列表。
+    * @param string[] $taskIds 需要删除的任务列表。
     *
     * @return $this
     */

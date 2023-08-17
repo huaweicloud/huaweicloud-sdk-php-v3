@@ -79,6 +79,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * replicaCount  副本数
     * shardingCount  集群实例分片个数
     * bandwidthInfo  bandwidthInfo
+    * cloudServiceTypeCode  云服务类型编码。
+    * cloudResourceTypeCode  云资源类型编码。
+    * inquerySpecCode  运营系统中的规格编码
     *
     * @var string[]
     */
@@ -140,7 +143,10 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'dbNumber' => 'int',
             'replicaCount' => 'int',
             'shardingCount' => 'int',
-            'bandwidthInfo' => '\HuaweiCloud\SDK\Dcs\V2\Model\BandwidthInfo'
+            'bandwidthInfo' => '\HuaweiCloud\SDK\Dcs\V2\Model\BandwidthInfo',
+            'cloudServiceTypeCode' => 'string',
+            'cloudResourceTypeCode' => 'string',
+            'inquerySpecCode' => 'string'
     ];
 
     /**
@@ -203,6 +209,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * replicaCount  副本数
     * shardingCount  集群实例分片个数
     * bandwidthInfo  bandwidthInfo
+    * cloudServiceTypeCode  云服务类型编码。
+    * cloudResourceTypeCode  云资源类型编码。
+    * inquerySpecCode  运营系统中的规格编码
     *
     * @var string[]
     */
@@ -264,7 +273,10 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'dbNumber' => 'int32',
         'replicaCount' => 'int32',
         'shardingCount' => 'int32',
-        'bandwidthInfo' => null
+        'bandwidthInfo' => null,
+        'cloudServiceTypeCode' => null,
+        'cloudResourceTypeCode' => null,
+        'inquerySpecCode' => null
     ];
 
     /**
@@ -348,6 +360,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * replicaCount  副本数
     * shardingCount  集群实例分片个数
     * bandwidthInfo  bandwidthInfo
+    * cloudServiceTypeCode  云服务类型编码。
+    * cloudResourceTypeCode  云资源类型编码。
+    * inquerySpecCode  运营系统中的规格编码
     *
     * @var string[]
     */
@@ -409,7 +424,10 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'dbNumber' => 'db_number',
             'replicaCount' => 'replica_count',
             'shardingCount' => 'sharding_count',
-            'bandwidthInfo' => 'bandwidth_info'
+            'bandwidthInfo' => 'bandwidth_info',
+            'cloudServiceTypeCode' => 'cloud_service_type_code',
+            'cloudResourceTypeCode' => 'cloud_resource_type_code',
+            'inquerySpecCode' => 'inquery_spec_code'
     ];
 
     /**
@@ -472,6 +490,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * replicaCount  副本数
     * shardingCount  集群实例分片个数
     * bandwidthInfo  bandwidthInfo
+    * cloudServiceTypeCode  云服务类型编码。
+    * cloudResourceTypeCode  云资源类型编码。
+    * inquerySpecCode  运营系统中的规格编码
     *
     * @var string[]
     */
@@ -533,7 +554,10 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'dbNumber' => 'setDbNumber',
             'replicaCount' => 'setReplicaCount',
             'shardingCount' => 'setShardingCount',
-            'bandwidthInfo' => 'setBandwidthInfo'
+            'bandwidthInfo' => 'setBandwidthInfo',
+            'cloudServiceTypeCode' => 'setCloudServiceTypeCode',
+            'cloudResourceTypeCode' => 'setCloudResourceTypeCode',
+            'inquerySpecCode' => 'setInquerySpecCode'
     ];
 
     /**
@@ -596,6 +620,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * replicaCount  副本数
     * shardingCount  集群实例分片个数
     * bandwidthInfo  bandwidthInfo
+    * cloudServiceTypeCode  云服务类型编码。
+    * cloudResourceTypeCode  云资源类型编码。
+    * inquerySpecCode  运营系统中的规格编码
     *
     * @var string[]
     */
@@ -657,7 +684,10 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'dbNumber' => 'getDbNumber',
             'replicaCount' => 'getReplicaCount',
             'shardingCount' => 'getShardingCount',
-            'bandwidthInfo' => 'getBandwidthInfo'
+            'bandwidthInfo' => 'getBandwidthInfo',
+            'cloudServiceTypeCode' => 'getCloudServiceTypeCode',
+            'cloudResourceTypeCode' => 'getCloudResourceTypeCode',
+            'inquerySpecCode' => 'getInquerySpecCode'
     ];
 
     /**
@@ -825,6 +855,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['replicaCount'] = isset($data['replicaCount']) ? $data['replicaCount'] : null;
         $this->container['shardingCount'] = isset($data['shardingCount']) ? $data['shardingCount'] : null;
         $this->container['bandwidthInfo'] = isset($data['bandwidthInfo']) ? $data['bandwidthInfo'] : null;
+        $this->container['cloudServiceTypeCode'] = isset($data['cloudServiceTypeCode']) ? $data['cloudServiceTypeCode'] : null;
+        $this->container['cloudResourceTypeCode'] = isset($data['cloudResourceTypeCode']) ? $data['cloudResourceTypeCode'] : null;
+        $this->container['inquerySpecCode'] = isset($data['inquerySpecCode']) ? $data['inquerySpecCode'] : null;
     }
 
     /**
@@ -2262,6 +2295,78 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setBandwidthInfo($bandwidthInfo)
     {
         $this->container['bandwidthInfo'] = $bandwidthInfo;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeCode
+    *  云服务类型编码。
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeCode()
+    {
+        return $this->container['cloudServiceTypeCode'];
+    }
+
+    /**
+    * Sets cloudServiceTypeCode
+    *
+    * @param string|null $cloudServiceTypeCode 云服务类型编码。
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeCode($cloudServiceTypeCode)
+    {
+        $this->container['cloudServiceTypeCode'] = $cloudServiceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets cloudResourceTypeCode
+    *  云资源类型编码。
+    *
+    * @return string|null
+    */
+    public function getCloudResourceTypeCode()
+    {
+        return $this->container['cloudResourceTypeCode'];
+    }
+
+    /**
+    * Sets cloudResourceTypeCode
+    *
+    * @param string|null $cloudResourceTypeCode 云资源类型编码。
+    *
+    * @return $this
+    */
+    public function setCloudResourceTypeCode($cloudResourceTypeCode)
+    {
+        $this->container['cloudResourceTypeCode'] = $cloudResourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets inquerySpecCode
+    *  运营系统中的规格编码
+    *
+    * @return string|null
+    */
+    public function getInquerySpecCode()
+    {
+        return $this->container['inquerySpecCode'];
+    }
+
+    /**
+    * Sets inquerySpecCode
+    *
+    * @param string|null $inquerySpecCode 运营系统中的规格编码
+    *
+    * @return $this
+    */
+    public function setInquerySpecCode($inquerySpecCode)
+    {
+        $this->container['inquerySpecCode'] = $inquerySpecCode;
         return $this;
     }
 
