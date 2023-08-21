@@ -8,7 +8,7 @@
     "api",
     "ces"
   ],
-  "version": "3.1.50",
+  "version": "3.1.51",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.1.50"
+    "huaweicloud/huaweicloud-sdk-core": "3.1.51"
   },
   "autoload": {
     "psr-4": {

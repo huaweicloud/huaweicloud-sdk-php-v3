@@ -37,10 +37,10 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
             'filters' => 'string[]',
             'groupName' => 'string',
             'id' => 'string',
-            'lastUpdateTime' => 'string',
+            'lastUpdateTime' => 'int',
             'projectId' => 'string',
             'title' => 'string',
-            'useSystemTemplate' => 'string'
+            'useSystemTemplate' => 'bool'
     ];
 
     /**
@@ -61,7 +61,7 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
         'filters' => null,
         'groupName' => null,
         'id' => null,
-        'lastUpdateTime' => null,
+        'lastUpdateTime' => 'int64',
         'projectId' => null,
         'title' => null,
         'useSystemTemplate' => null
@@ -350,7 +350,7 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * Gets lastUpdateTime
     *  最近修改时间
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLastUpdateTime()
     {
@@ -360,7 +360,7 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastUpdateTime
     *
-    * @param string|null $lastUpdateTime 最近修改时间
+    * @param int|null $lastUpdateTime 最近修改时间
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     * Gets useSystemTemplate
     *  是否使用模板
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getUseSystemTemplate()
     {
@@ -432,7 +432,7 @@ class CreateDashBoardResponse implements ModelInterface, ArrayAccess
     /**
     * Sets useSystemTemplate
     *
-    * @param string|null $useSystemTemplate 是否使用模板
+    * @param bool|null $useSystemTemplate 是否使用模板
     *
     * @return $this
     */

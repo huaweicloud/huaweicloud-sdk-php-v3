@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateLogStreamParams implements ModelInterface, ArrayAccess
+class DeleteDashboardResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,26 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateLogStreamParams';
+    protected static $openAPIModelName = 'DeleteDashboardResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logStreamName  需要创建的日志流名称。
-    * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * result  删除仪表盘结果
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logStreamName' => 'string',
-            'ttlInDays' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody'
+            'result' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logStreamName  需要创建的日志流名称。
-    * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * result  删除仪表盘结果
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logStreamName' => null,
-        'ttlInDays' => null,
-        'tags' => null
+        'result' => null
     ];
 
     /**
@@ -69,44 +62,32 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logStreamName  需要创建的日志流名称。
-    * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * result  删除仪表盘结果
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logStreamName' => 'log_stream_name',
-            'ttlInDays' => 'ttl_in_days',
-            'tags' => 'tags'
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logStreamName  需要创建的日志流名称。
-    * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * result  删除仪表盘结果
     *
     * @var string[]
     */
     protected static $setters = [
-            'logStreamName' => 'setLogStreamName',
-            'ttlInDays' => 'setTtlInDays',
-            'tags' => 'setTags'
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logStreamName  需要创建的日志流名称。
-    * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * result  删除仪表盘结果
     *
     * @var string[]
     */
     protected static $getters = [
-            'logStreamName' => 'getLogStreamName',
-            'ttlInDays' => 'getTtlInDays',
-            'tags' => 'getTags'
+            'result' => 'getResult'
     ];
 
     /**
@@ -167,9 +148,7 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
-        $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -180,21 +159,6 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['logStreamName'] === null) {
-            $invalidProperties[] = "'logStreamName' can't be null";
-        }
-            if ((mb_strlen($this->container['logStreamName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'logStreamName', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['logStreamName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'logStreamName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] > 365)) {
-                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 365.";
-            }
-            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] < 1)) {
-                $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -210,74 +174,26 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets logStreamName
-    *  需要创建的日志流名称。
+    * Gets result
+    *  删除仪表盘结果
     *
-    * @return string
+    * @return string|null
     */
-    public function getLogStreamName()
+    public function getResult()
     {
-        return $this->container['logStreamName'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets logStreamName
+    * Sets result
     *
-    * @param string $logStreamName 需要创建的日志流名称。
+    * @param string|null $result 删除仪表盘结果
     *
     * @return $this
     */
-    public function setLogStreamName($logStreamName)
+    public function setResult($result)
     {
-        $this->container['logStreamName'] = $logStreamName;
-        return $this;
-    }
-
-    /**
-    * Gets ttlInDays
-    *  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    *
-    * @return int|null
-    */
-    public function getTtlInDays()
-    {
-        return $this->container['ttlInDays'];
-    }
-
-    /**
-    * Sets ttlInDays
-    *
-    * @param int|null $ttlInDays 日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    *
-    * @return $this
-    */
-    public function setTtlInDays($ttlInDays)
-    {
-        $this->container['ttlInDays'] = $ttlInDays;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  tags
-    *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsBody|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsBody|null $tags tags
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
+        $this->container['result'] = $result;
         return $this;
     }
 

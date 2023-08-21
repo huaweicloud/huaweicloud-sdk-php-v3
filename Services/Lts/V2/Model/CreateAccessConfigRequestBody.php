@@ -28,6 +28,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
     * binaryCollect  二进制采集
     * logSplit  日志拆分
+    * clusterId  CCE集群ID，当CCE类型时，为必填
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'hostGroupInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigHostGroupIdListCreate',
             'accessConfigTag' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTag[]',
             'binaryCollect' => 'bool',
-            'logSplit' => 'bool'
+            'logSplit' => 'bool',
+            'clusterId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
     * binaryCollect  二进制采集
     * logSplit  日志拆分
+    * clusterId  CCE集群ID，当CCE类型时，为必填
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         'hostGroupInfo' => null,
         'accessConfigTag' => null,
         'binaryCollect' => null,
-        'logSplit' => null
+        'logSplit' => null,
+        'clusterId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
     * binaryCollect  二进制采集
     * logSplit  日志拆分
+    * clusterId  CCE集群ID，当CCE类型时，为必填
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'hostGroupInfo' => 'host_group_info',
             'accessConfigTag' => 'access_config_tag',
             'binaryCollect' => 'binary_collect',
-            'logSplit' => 'log_split'
+            'logSplit' => 'log_split',
+            'clusterId' => 'cluster_id'
     ];
 
     /**
@@ -121,6 +127,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
     * binaryCollect  二进制采集
     * logSplit  日志拆分
+    * clusterId  CCE集群ID，当CCE类型时，为必填
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'hostGroupInfo' => 'setHostGroupInfo',
             'accessConfigTag' => 'setAccessConfigTag',
             'binaryCollect' => 'setBinaryCollect',
-            'logSplit' => 'setLogSplit'
+            'logSplit' => 'setLogSplit',
+            'clusterId' => 'setClusterId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * accessConfigTag  标签信息。KEY不能重复,最多20个标签
     * binaryCollect  二进制采集
     * logSplit  日志拆分
+    * clusterId  CCE集群ID，当CCE类型时，为必填
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'hostGroupInfo' => 'getHostGroupInfo',
             'accessConfigTag' => 'getAccessConfigTag',
             'binaryCollect' => 'getBinaryCollect',
-            'logSplit' => 'getLogSplit'
+            'logSplit' => 'getLogSplit',
+            'clusterId' => 'getClusterId'
     ];
 
     /**
@@ -240,6 +250,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['accessConfigTag'] = isset($data['accessConfigTag']) ? $data['accessConfigTag'] : null;
         $this->container['binaryCollect'] = isset($data['binaryCollect']) ? $data['binaryCollect'] : null;
         $this->container['logSplit'] = isset($data['logSplit']) ? $data['logSplit'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
     }
 
     /**
@@ -482,6 +493,30 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function setLogSplit($logSplit)
     {
         $this->container['logSplit'] = $logSplit;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  CCE集群ID，当CCE类型时，为必填
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId CCE集群ID，当CCE类型时，为必填
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

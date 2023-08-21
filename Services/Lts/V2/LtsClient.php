@@ -1101,6 +1101,71 @@ class LtsClient extends Client
     }
 
     /**
+     * 删除仪表盘
+     *
+     * 删除仪表盘
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDashboard($request)
+    {
+        return $this->deleteDashboardWithHttpInfo($request);
+    }
+
+    public function deleteDashboardWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboard';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['isDeleteCharts'] !== null) {
+            $queryParams['is_delete_charts'] = $localVarParams['isDeleteCharts'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\DeleteDashboardResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\DeleteDashboardRequest');
+    }
+
+    /**
      * 删除主机组
      *
      * 删除主机组
