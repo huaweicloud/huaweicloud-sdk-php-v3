@@ -25,6 +25,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     * serverId  恢复的目标虚拟机ID（整机恢复时必填）
     * volumeId  恢复的目标卷ID（卷恢复时必填）
     * resourceId  待恢复的目标资源ID
+    * details  details
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class BackupRestore implements ModelInterface, ArrayAccess
             'powerOn' => 'bool',
             'serverId' => 'string',
             'volumeId' => 'string',
-            'resourceId' => 'string'
+            'resourceId' => 'string',
+            'details' => '\HuaweiCloud\SDK\Cbr\V1\Model\RestoreDetails'
     ];
 
     /**
@@ -43,6 +45,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     * serverId  恢复的目标虚拟机ID（整机恢复时必填）
     * volumeId  恢复的目标卷ID（卷恢复时必填）
     * resourceId  待恢复的目标资源ID
+    * details  details
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class BackupRestore implements ModelInterface, ArrayAccess
         'powerOn' => null,
         'serverId' => null,
         'volumeId' => null,
-        'resourceId' => null
+        'resourceId' => null,
+        'details' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     * serverId  恢复的目标虚拟机ID（整机恢复时必填）
     * volumeId  恢复的目标卷ID（卷恢复时必填）
     * resourceId  待恢复的目标资源ID
+    * details  details
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class BackupRestore implements ModelInterface, ArrayAccess
             'powerOn' => 'power_on',
             'serverId' => 'server_id',
             'volumeId' => 'volume_id',
-            'resourceId' => 'resource_id'
+            'resourceId' => 'resource_id',
+            'details' => 'details'
     ];
 
     /**
@@ -100,6 +106,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     * serverId  恢复的目标虚拟机ID（整机恢复时必填）
     * volumeId  恢复的目标卷ID（卷恢复时必填）
     * resourceId  待恢复的目标资源ID
+    * details  details
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class BackupRestore implements ModelInterface, ArrayAccess
             'powerOn' => 'setPowerOn',
             'serverId' => 'setServerId',
             'volumeId' => 'setVolumeId',
-            'resourceId' => 'setResourceId'
+            'resourceId' => 'setResourceId',
+            'details' => 'setDetails'
     ];
 
     /**
@@ -118,6 +126,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
     * serverId  恢复的目标虚拟机ID（整机恢复时必填）
     * volumeId  恢复的目标卷ID（卷恢复时必填）
     * resourceId  待恢复的目标资源ID
+    * details  details
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class BackupRestore implements ModelInterface, ArrayAccess
             'powerOn' => 'getPowerOn',
             'serverId' => 'getServerId',
             'volumeId' => 'getVolumeId',
-            'resourceId' => 'getResourceId'
+            'resourceId' => 'getResourceId',
+            'details' => 'getDetails'
     ];
 
     /**
@@ -192,6 +202,7 @@ class BackupRestore implements ModelInterface, ArrayAccess
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class BackupRestore implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets details
+    *  details
+    *
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\RestoreDetails|null
+    */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+    * Sets details
+    *
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\RestoreDetails|null $details details
+    *
+    * @return $this
+    */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
         return $this;
     }
 

@@ -95,7 +95,20 @@ class ObjectSerializer
     {
         if (null === $response) {
             return null;
-        } elseif ('map[' === substr($responseType, 0, 4)) {
+        } 
+        if ('map[' === substr($responseType, 0, 4) &&
+            0 === strcasecmp(substr($responseType, -2), '[]')) {
+            // 外部是数组类型，内部嵌套了map类型
+            $response = is_string($response) ? json_decode($response) : $response;
+            settype($response, 'array');
+            $subClassType = substr($responseType, 0, -2);
+            $returnValues = [];
+            foreach ($response as $key => $value) {
+                $returnValues[] = self::deserialize($value, $subClassType, null);
+            }
+            return $returnValues;
+        }
+        if ('map[' === substr($responseType, 0, 4)) {
             $response = is_string($response) ? json_decode($response) : $response;
             settype($response, 'array');
 
@@ -108,7 +121,6 @@ class ObjectSerializer
                     $deserialized[$key] = self::deserialize($value, $subClassType, null);
                 }
             }
-
             return $deserialized;
         } elseif (0 === strcasecmp(substr($responseType, -2), '[]')) {
             $response = is_string($response) ? json_decode($response) : $response;

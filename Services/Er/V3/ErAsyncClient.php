@@ -259,6 +259,74 @@ class ErAsyncClient extends Client
     }
 
     /**
+     * 接受共享连接创建
+     *
+     * 接受共享连接创建
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function acceptAttachmentAsync($request)
+    {
+        return $this->acceptAttachmentAsyncWithHttpInfo($request);
+    }
+    
+    public function acceptAttachmentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}/accept';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['attachmentId'] !== null) {
+            $pathParams['attachment_id'] = $localVarParams['attachmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\AcceptAttachmentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\AcceptAttachmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询连接列表
      *
      * 查询企业路由器实例下的连接列表。
@@ -341,6 +409,74 @@ class ErAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListAttachmentsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListAttachmentsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 拒绝共享连接创建
+     *
+     * 拒绝共享连接创建
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function rejectAttachmentAsync($request)
+    {
+        return $this->rejectAttachmentAsyncWithHttpInfo($request);
+    }
+    
+    public function rejectAttachmentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}/reject';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['attachmentId'] !== null) {
+            $pathParams['attachment_id'] = $localVarParams['attachmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\RejectAttachmentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\RejectAttachmentRequest',
             $asyncRequest = true);
     }
 

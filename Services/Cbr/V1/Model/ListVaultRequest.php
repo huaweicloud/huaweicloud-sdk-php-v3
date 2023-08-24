@@ -30,7 +30,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * id  存储库ID
     * policyId  策略ID
     * status  状态
-    * resourceIds  资源id
+    * resourceIds  资源id，支持多资源，以英文逗号分割
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * id  存储库ID
     * policyId  策略ID
     * status  状态
-    * resourceIds  资源id
+    * resourceIds  资源id，支持多资源，以英文逗号分割
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * id  存储库ID
     * policyId  策略ID
     * status  状态
-    * resourceIds  资源id
+    * resourceIds  资源id，支持多资源，以英文逗号分割
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * id  存储库ID
     * policyId  策略ID
     * status  状态
-    * resourceIds  资源id
+    * resourceIds  资源id，支持多资源，以英文逗号分割
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * id  存储库ID
     * policyId  策略ID
     * status  状态
-    * resourceIds  资源id
+    * resourceIds  资源id，支持多资源，以英文逗号分割
     *
     * @var string[]
     */
@@ -579,7 +579,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  资源id
+    *  资源id，支持多资源，以英文逗号分割
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string|null $resourceIds 资源id
+    * @param string|null $resourceIds 资源id，支持多资源，以英文逗号分割
     *
     * @return $this
     */

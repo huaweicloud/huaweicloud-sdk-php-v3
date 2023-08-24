@@ -28,7 +28,7 @@ class ShowConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'config' => 'map[string,string]',
-            'regions' => '\HuaweiCloud\SDK\Sms\V3\Model\map[]'
+            'regions' => 'map[string,string][]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ShowConfigResponse implements ModelInterface, ArrayAccess
     * Gets regions
     *  region数组
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\map[]|null
+    * @return map[string,string][]|null
     */
     public function getRegions()
     {
@@ -222,7 +222,7 @@ class ShowConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regions
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\map[]|null $regions region数组
+    * @param map[string,string][]|null $regions region数组
     *
     * @return $this
     */

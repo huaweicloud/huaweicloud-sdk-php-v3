@@ -22,21 +22,21 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * tags  标签字段信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logStreamName' => 'string',
             'ttlInDays' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * tags  标签字段信息
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * and the value is the original name
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * tags  标签字段信息
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * tags  标签字段信息
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
-    * tags  tags
+    * tags  标签字段信息
     *
     * @var string[]
     */
@@ -259,9 +259,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  标签字段信息
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsBody|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null
     */
     public function getTags()
     {
@@ -271,7 +271,7 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsBody|null $tags tags
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]|null $tags 标签字段信息
     *
     * @return $this
     */

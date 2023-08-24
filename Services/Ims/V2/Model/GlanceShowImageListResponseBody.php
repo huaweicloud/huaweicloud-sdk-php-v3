@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
+class GlanceShowImageListResponseBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GlanceShowImageResponseBody';
+    protected static $openAPIModelName = 'GlanceShowImageListResponseBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -64,6 +64,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * sysEnterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
@@ -128,6 +129,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'visibility' => 'string',
             'supportFcInject' => 'string',
             'enterpriseProjectId' => 'string',
+            'sysEnterpriseProjectId' => 'string',
             'hwFirmwareType' => 'string',
             'supportArm' => 'string',
             'isOffshelved' => 'string',
@@ -192,6 +194,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * sysEnterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
@@ -256,6 +259,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         'visibility' => null,
         'supportFcInject' => null,
         'enterpriseProjectId' => null,
+        'sysEnterpriseProjectId' => null,
         'hwFirmwareType' => null,
         'supportArm' => null,
         'isOffshelved' => null,
@@ -341,6 +345,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * sysEnterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
@@ -405,6 +410,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'visibility' => 'visibility',
             'supportFcInject' => '__support_fc_inject',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'sysEnterpriseProjectId' => '_sys_enterprise_project_id',
             'hwFirmwareType' => 'hw_firmware_type',
             'supportArm' => '__support_arm',
             'isOffshelved' => '__is_offshelved',
@@ -469,6 +475,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * sysEnterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
@@ -533,6 +540,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'visibility' => 'setVisibility',
             'supportFcInject' => 'setSupportFcInject',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'sysEnterpriseProjectId' => 'setSysEnterpriseProjectId',
             'hwFirmwareType' => 'setHwFirmwareType',
             'supportArm' => 'setSupportArm',
             'isOffshelved' => 'setIsOffshelved',
@@ -597,6 +605,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * sysEnterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
@@ -661,6 +670,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'visibility' => 'getVisibility',
             'supportFcInject' => 'getSupportFcInject',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'sysEnterpriseProjectId' => 'getSysEnterpriseProjectId',
             'hwFirmwareType' => 'getHwFirmwareType',
             'supportArm' => 'getSupportArm',
             'isOffshelved' => 'getIsOffshelved',
@@ -1033,6 +1043,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
         $this->container['supportFcInject'] = isset($data['supportFcInject']) ? $data['supportFcInject'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['sysEnterpriseProjectId'] = isset($data['sysEnterpriseProjectId']) ? $data['sysEnterpriseProjectId'] : null;
         $this->container['hwFirmwareType'] = isset($data['hwFirmwareType']) ? $data['hwFirmwareType'] : null;
         $this->container['supportArm'] = isset($data['supportArm']) ? $data['supportArm'] : null;
         $this->container['isOffshelved'] = isset($data['isOffshelved']) ? $data['isOffshelved'] : null;
@@ -2304,6 +2315,30 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets sysEnterpriseProjectId
+    *  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    *
+    * @return string|null
+    */
+    public function getSysEnterpriseProjectId()
+    {
+        return $this->container['sysEnterpriseProjectId'];
+    }
+
+    /**
+    * Sets sysEnterpriseProjectId
+    *
+    * @param string|null $sysEnterpriseProjectId 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    *
+    * @return $this
+    */
+    public function setSysEnterpriseProjectId($sysEnterpriseProjectId)
+    {
+        $this->container['sysEnterpriseProjectId'] = $sysEnterpriseProjectId;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class ListPredefinedTagsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\array[]'
+            'tags' => 'object[][]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListPredefinedTagsResponse implements ModelInterface, ArrayAccess
     * Gets tags
     *  tags
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\array[]|null
+    * @return object[][]|null
     */
     public function getTags()
     {
@@ -187,7 +187,7 @@ class ListPredefinedTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\array[]|null $tags tags
+    * @param object[][]|null $tags tags
     *
     * @return $this
     */

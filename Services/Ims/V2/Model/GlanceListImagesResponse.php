@@ -30,7 +30,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'first' => 'string',
-            'images' => '\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageResponseBody[]',
+            'images' => '\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageListResponseBody[]',
             'schema' => 'string',
             'next' => 'string'
     ];
@@ -234,7 +234,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
     * Gets images
     *  资源类型。
     *
-    * @return \HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageResponseBody[]|null
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageListResponseBody[]|null
     */
     public function getImages()
     {
@@ -244,7 +244,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets images
     *
-    * @param \HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageResponseBody[]|null $images 资源类型。
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageListResponseBody[]|null $images 资源类型。
     *
     * @return $this
     */

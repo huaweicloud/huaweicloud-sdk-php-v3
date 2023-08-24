@@ -24,6 +24,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'image' => 'string',
             'url' => 'string',
             'advancedMode' => 'bool',
-            'returnTextLocation' => 'bool'
+            'returnTextLocation' => 'bool',
+            'pageNum' => 'int'
     ];
 
     /**
@@ -40,6 +42,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
         'image' => null,
         'url' => null,
         'advancedMode' => null,
-        'returnTextLocation' => null
+        'returnTextLocation' => null,
+        'pageNum' => 'int32'
     ];
 
     /**
@@ -77,6 +81,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'image' => 'image',
             'url' => 'url',
             'advancedMode' => 'advanced_mode',
-            'returnTextLocation' => 'return_text_location'
+            'returnTextLocation' => 'return_text_location',
+            'pageNum' => 'page_num'
     ];
 
     /**
@@ -93,6 +99,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'image' => 'setImage',
             'url' => 'setUrl',
             'advancedMode' => 'setAdvancedMode',
-            'returnTextLocation' => 'setReturnTextLocation'
+            'returnTextLocation' => 'setReturnTextLocation',
+            'pageNum' => 'setPageNum'
     ];
 
     /**
@@ -109,6 +117,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * advancedMode  默认为false，如果传参为true，则返回更多字段
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    * pageNum  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
             'image' => 'getImage',
             'url' => 'getUrl',
             'advancedMode' => 'getAdvancedMode',
-            'returnTextLocation' => 'getReturnTextLocation'
+            'returnTextLocation' => 'getReturnTextLocation',
+            'pageNum' => 'getPageNum'
     ];
 
     /**
@@ -181,6 +191,7 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['advancedMode'] = isset($data['advancedMode']) ? $data['advancedMode'] : null;
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
+        $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class VatInvoiceRequestBody implements ModelInterface, ArrayAccess
     public function setReturnTextLocation($returnTextLocation)
     {
         $this->container['returnTextLocation'] = $returnTextLocation;
+        return $this;
+    }
+
+    /**
+    * Gets pageNum
+    *  页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    *
+    * @return int|null
+    */
+    public function getPageNum()
+    {
+        return $this->container['pageNum'];
+    }
+
+    /**
+    * Sets pageNum
+    *
+    * @param int|null $pageNum 页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+    *
+    * @return $this
+    */
+    public function setPageNum($pageNum)
+    {
+        $this->container['pageNum'] = $pageNum;
         return $this;
     }
 

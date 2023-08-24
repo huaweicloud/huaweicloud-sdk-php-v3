@@ -22,6 +22,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * title  增值税发票标题
     * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * sumAmount  小计金额，当传入多页PDF时返回此字段。
+    * sumTax  小计税额，当传入多页PDF时返回此字段。
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -59,6 +62,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'title' => 'string',
             'type' => 'string',
+            'invoiceTag' => 'string',
+            'sumAmount' => 'string',
+            'sumTax' => 'string',
             'serialNumber' => 'string',
             'attribution' => 'string',
             'supervisionSeal' => 'string[]',
@@ -96,6 +102,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * title  增值税发票标题
     * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * sumAmount  小计金额，当传入多页PDF时返回此字段。
+    * sumTax  小计税额，当传入多页PDF时返回此字段。
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -133,6 +142,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'title' => null,
         'type' => null,
+        'invoiceTag' => null,
+        'sumAmount' => null,
+        'sumTax' => null,
         'serialNumber' => null,
         'attribution' => null,
         'supervisionSeal' => null,
@@ -191,6 +203,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * title  增值税发票标题
     * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * sumAmount  小计金额，当传入多页PDF时返回此字段。
+    * sumTax  小计税额，当传入多页PDF时返回此字段。
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -228,6 +243,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'title' => 'title',
             'type' => 'type',
+            'invoiceTag' => 'invoice_tag',
+            'sumAmount' => 'sum_amount',
+            'sumTax' => 'sum_tax',
             'serialNumber' => 'serial_number',
             'attribution' => 'attribution',
             'supervisionSeal' => 'supervision_seal',
@@ -265,6 +283,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * title  增值税发票标题
     * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * sumAmount  小计金额，当传入多页PDF时返回此字段。
+    * sumTax  小计税额，当传入多页PDF时返回此字段。
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -302,6 +323,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     protected static $setters = [
             'title' => 'setTitle',
             'type' => 'setType',
+            'invoiceTag' => 'setInvoiceTag',
+            'sumAmount' => 'setSumAmount',
+            'sumTax' => 'setSumTax',
             'serialNumber' => 'setSerialNumber',
             'attribution' => 'setAttribution',
             'supervisionSeal' => 'setSupervisionSeal',
@@ -339,6 +363,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * title  增值税发票标题
     * type  增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+    * invoiceTag  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    * sumAmount  小计金额，当传入多页PDF时返回此字段。
+    * sumTax  小计税额，当传入多页PDF时返回此字段。
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -376,6 +403,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     protected static $getters = [
             'title' => 'getTitle',
             'type' => 'getType',
+            'invoiceTag' => 'getInvoiceTag',
+            'sumAmount' => 'getSumAmount',
+            'sumTax' => 'getSumTax',
             'serialNumber' => 'getSerialNumber',
             'attribution' => 'getAttribution',
             'supervisionSeal' => 'getSupervisionSeal',
@@ -469,6 +499,9 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     {
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['invoiceTag'] = isset($data['invoiceTag']) ? $data['invoiceTag'] : null;
+        $this->container['sumAmount'] = isset($data['sumAmount']) ? $data['sumAmount'] : null;
+        $this->container['sumTax'] = isset($data['sumTax']) ? $data['sumTax'] : null;
         $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
         $this->container['attribution'] = isset($data['attribution']) ? $data['attribution'] : null;
         $this->container['supervisionSeal'] = isset($data['supervisionSeal']) ? $data['supervisionSeal'] : null;
@@ -569,6 +602,78 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets invoiceTag
+    *  增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    *
+    * @return string|null
+    */
+    public function getInvoiceTag()
+    {
+        return $this->container['invoiceTag'];
+    }
+
+    /**
+    * Sets invoiceTag
+    *
+    * @param string|null $invoiceTag 增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+    *
+    * @return $this
+    */
+    public function setInvoiceTag($invoiceTag)
+    {
+        $this->container['invoiceTag'] = $invoiceTag;
+        return $this;
+    }
+
+    /**
+    * Gets sumAmount
+    *  小计金额，当传入多页PDF时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getSumAmount()
+    {
+        return $this->container['sumAmount'];
+    }
+
+    /**
+    * Sets sumAmount
+    *
+    * @param string|null $sumAmount 小计金额，当传入多页PDF时返回此字段。
+    *
+    * @return $this
+    */
+    public function setSumAmount($sumAmount)
+    {
+        $this->container['sumAmount'] = $sumAmount;
+        return $this;
+    }
+
+    /**
+    * Gets sumTax
+    *  小计税额，当传入多页PDF时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getSumTax()
+    {
+        return $this->container['sumTax'];
+    }
+
+    /**
+    * Sets sumTax
+    *
+    * @param string|null $sumTax 小计税额，当传入多页PDF时返回此字段。
+    *
+    * @return $this
+    */
+    public function setSumTax($sumTax)
+    {
+        $this->container['sumTax'] = $sumTax;
         return $this;
     }
 

@@ -25,8 +25,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  分页大小。取值范围为0~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * limit  每一页显示的message数量。
+    * offset  页数。
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
@@ -53,8 +53,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  分页大小。取值范围为0~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * limit  每一页显示的message数量。
+    * offset  页数。
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
@@ -102,8 +102,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  分页大小。取值范围为0~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * limit  每一页显示的message数量。
+    * offset  页数。
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
@@ -130,8 +130,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  分页大小。取值范围为0~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * limit  每一页显示的message数量。
+    * offset  页数。
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
@@ -158,8 +158,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  分页大小。取值范围为0~50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * limit  每一页显示的message数量。
+    * offset  页数。
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
@@ -399,7 +399,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小。取值范围为0~50。
+    *  每一页显示的message数量。
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 分页大小。取值范围为0~50。
+    * @param string|null $limit 每一页显示的message数量。
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    *  页数。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * @param string|null $offset 页数。
     *
     * @return $this
     */

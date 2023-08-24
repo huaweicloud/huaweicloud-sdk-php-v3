@@ -30,7 +30,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'action' => 'string[]',
             'effect' => 'string',
-            'condition' => 'map[string,map[string,\HuaweiCloud\SDK\Iam\V3\Model\array]]',
+            'condition' => 'map[string,map[string,string[]]]',
             'resource' => 'string[]'
     ];
 
@@ -286,7 +286,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     * Gets condition
     *  condition
     *
-    * @return map[string,map[string,\HuaweiCloud\SDK\Iam\V3\Model\array]]|null
+    * @return map[string,map[string,string[]]]|null
     */
     public function getCondition()
     {
@@ -296,7 +296,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param map[string,map[string,\HuaweiCloud\SDK\Iam\V3\Model\array]]|null $condition condition
+    * @param map[string,map[string,string[]]]|null $condition condition
     *
     * @return $this
     */
