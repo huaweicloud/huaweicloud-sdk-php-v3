@@ -23,6 +23,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     * projectId  项目ID，resource_type为region级别服务时为必选项。
     * resourceTypes  资源类型， 此参数为可输入的值（区分大小写）。例如：ecs,scaling_group, images, disk,vpcs,security-groups, shared_bandwidth,eip, cdn等，具体请参见“附录-标签支持的资源类型”章节。
     * tags  标签列表
+    * withoutAnyTag  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
     * offset  索引位置， 从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * limit  查询记录数，不传默认为200，limit最多为200, 最小值为1。
     *
@@ -32,6 +33,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'resourceTypes' => 'string[]',
             'tags' => '\HuaweiCloud\SDK\Tms\V1\Model\Tag[]',
+            'withoutAnyTag' => 'bool',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -41,6 +43,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     * projectId  项目ID，resource_type为region级别服务时为必选项。
     * resourceTypes  资源类型， 此参数为可输入的值（区分大小写）。例如：ecs,scaling_group, images, disk,vpcs,security-groups, shared_bandwidth,eip, cdn等，具体请参见“附录-标签支持的资源类型”章节。
     * tags  标签列表
+    * withoutAnyTag  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
     * offset  索引位置， 从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * limit  查询记录数，不传默认为200，limit最多为200, 最小值为1。
     *
@@ -50,6 +53,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
         'projectId' => null,
         'resourceTypes' => null,
         'tags' => null,
+        'withoutAnyTag' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -80,6 +84,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     * projectId  项目ID，resource_type为region级别服务时为必选项。
     * resourceTypes  资源类型， 此参数为可输入的值（区分大小写）。例如：ecs,scaling_group, images, disk,vpcs,security-groups, shared_bandwidth,eip, cdn等，具体请参见“附录-标签支持的资源类型”章节。
     * tags  标签列表
+    * withoutAnyTag  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
     * offset  索引位置， 从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * limit  查询记录数，不传默认为200，limit最多为200, 最小值为1。
     *
@@ -89,6 +94,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'resourceTypes' => 'resource_types',
             'tags' => 'tags',
+            'withoutAnyTag' => 'without_any_tag',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -98,6 +104,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     * projectId  项目ID，resource_type为region级别服务时为必选项。
     * resourceTypes  资源类型， 此参数为可输入的值（区分大小写）。例如：ecs,scaling_group, images, disk,vpcs,security-groups, shared_bandwidth,eip, cdn等，具体请参见“附录-标签支持的资源类型”章节。
     * tags  标签列表
+    * withoutAnyTag  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
     * offset  索引位置， 从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * limit  查询记录数，不传默认为200，limit最多为200, 最小值为1。
     *
@@ -107,6 +114,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'resourceTypes' => 'setResourceTypes',
             'tags' => 'setTags',
+            'withoutAnyTag' => 'setWithoutAnyTag',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -116,6 +124,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     * projectId  项目ID，resource_type为region级别服务时为必选项。
     * resourceTypes  资源类型， 此参数为可输入的值（区分大小写）。例如：ecs,scaling_group, images, disk,vpcs,security-groups, shared_bandwidth,eip, cdn等，具体请参见“附录-标签支持的资源类型”章节。
     * tags  标签列表
+    * withoutAnyTag  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
     * offset  索引位置， 从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * limit  查询记录数，不传默认为200，limit最多为200, 最小值为1。
     *
@@ -125,6 +134,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'resourceTypes' => 'getResourceTypes',
             'tags' => 'getTags',
+            'withoutAnyTag' => 'getWithoutAnyTag',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -190,6 +200,7 @@ class ResqTagResource implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceTypes'] = isset($data['resourceTypes']) ? $data['resourceTypes'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['withoutAnyTag'] = isset($data['withoutAnyTag']) ? $data['withoutAnyTag'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -291,6 +302,30 @@ class ResqTagResource implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets withoutAnyTag
+    *  是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
+    *
+    * @return bool|null
+    */
+    public function getWithoutAnyTag()
+    {
+        return $this->container['withoutAnyTag'];
+    }
+
+    /**
+    * Sets withoutAnyTag
+    *
+    * @param bool|null $withoutAnyTag 是否仅查询未带标签的资源。该字段为true时查询不带标签的资源。
+    *
+    * @return $this
+    */
+    public function setWithoutAnyTag($withoutAnyTag)
+    {
+        $this->container['withoutAnyTag'] = $withoutAnyTag;
         return $this;
     }
 

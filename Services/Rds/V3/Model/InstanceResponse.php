@@ -24,7 +24,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * status  实例状态。 - 值为“BUILD”，表示实例正在创建。 - 值为“ACTIVE”，表示实例正常。 - 值为“FAILED”，表示实例异常。 - 值为“FROZEN”，表示实例冻结。 - 值为“MODIFYING”，表示实例正在扩容。 - 值为“REBOOTING”，表示实例正在重启。 - 值为“RESTORING”，表示实例正在恢复。 - 值为“MODIFYING INSTANCE TYPE”，表示实例正在转主备。 - 值为“SWITCHOVER”，表示实例正在主备切换。 - 值为“MIGRATING”，表示实例正在迁移。 - 值为“BACKING UP”，表示实例正在进行备份。 - 值为“MODIFYING DATABASE PORT”，表示实例正在修改数据库端口。 - 值为“STORAGE FULL”，表示实例磁盘空间满。
     * enableSsl  实例是否开启SSL，取值为\"true\"表示实例开启了SSL，取值为\"false\"表示实例未开启SSL。
     * privateIps  实例内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
-    * privateDnsNames  privateDnsNames
+    * privateDnsNames  内网域名列表
+    * publicDnsNames  公网域名列表
     * publicIps  实例外网IP地址列表。
     * type  实例类型，取值为“Single”，“Ha”或“Replica”，分别对应于单机实例、主备实例、只读实例。
     * created  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
@@ -69,6 +70,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'enableSsl' => 'bool',
             'privateIps' => 'string[]',
             'privateDnsNames' => 'string[]',
+            'publicDnsNames' => 'string[]',
             'publicIps' => 'string[]',
             'type' => 'string',
             'created' => 'string',
@@ -112,7 +114,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * status  实例状态。 - 值为“BUILD”，表示实例正在创建。 - 值为“ACTIVE”，表示实例正常。 - 值为“FAILED”，表示实例异常。 - 值为“FROZEN”，表示实例冻结。 - 值为“MODIFYING”，表示实例正在扩容。 - 值为“REBOOTING”，表示实例正在重启。 - 值为“RESTORING”，表示实例正在恢复。 - 值为“MODIFYING INSTANCE TYPE”，表示实例正在转主备。 - 值为“SWITCHOVER”，表示实例正在主备切换。 - 值为“MIGRATING”，表示实例正在迁移。 - 值为“BACKING UP”，表示实例正在进行备份。 - 值为“MODIFYING DATABASE PORT”，表示实例正在修改数据库端口。 - 值为“STORAGE FULL”，表示实例磁盘空间满。
     * enableSsl  实例是否开启SSL，取值为\"true\"表示实例开启了SSL，取值为\"false\"表示实例未开启SSL。
     * privateIps  实例内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
-    * privateDnsNames  privateDnsNames
+    * privateDnsNames  内网域名列表
+    * publicDnsNames  公网域名列表
     * publicIps  实例外网IP地址列表。
     * type  实例类型，取值为“Single”，“Ha”或“Replica”，分别对应于单机实例、主备实例、只读实例。
     * created  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
@@ -157,6 +160,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
         'enableSsl' => null,
         'privateIps' => null,
         'privateDnsNames' => null,
+        'publicDnsNames' => null,
         'publicIps' => null,
         'type' => null,
         'created' => null,
@@ -221,7 +225,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * status  实例状态。 - 值为“BUILD”，表示实例正在创建。 - 值为“ACTIVE”，表示实例正常。 - 值为“FAILED”，表示实例异常。 - 值为“FROZEN”，表示实例冻结。 - 值为“MODIFYING”，表示实例正在扩容。 - 值为“REBOOTING”，表示实例正在重启。 - 值为“RESTORING”，表示实例正在恢复。 - 值为“MODIFYING INSTANCE TYPE”，表示实例正在转主备。 - 值为“SWITCHOVER”，表示实例正在主备切换。 - 值为“MIGRATING”，表示实例正在迁移。 - 值为“BACKING UP”，表示实例正在进行备份。 - 值为“MODIFYING DATABASE PORT”，表示实例正在修改数据库端口。 - 值为“STORAGE FULL”，表示实例磁盘空间满。
     * enableSsl  实例是否开启SSL，取值为\"true\"表示实例开启了SSL，取值为\"false\"表示实例未开启SSL。
     * privateIps  实例内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
-    * privateDnsNames  privateDnsNames
+    * privateDnsNames  内网域名列表
+    * publicDnsNames  公网域名列表
     * publicIps  实例外网IP地址列表。
     * type  实例类型，取值为“Single”，“Ha”或“Replica”，分别对应于单机实例、主备实例、只读实例。
     * created  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
@@ -266,6 +271,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'enableSsl' => 'enable_ssl',
             'privateIps' => 'private_ips',
             'privateDnsNames' => 'private_dns_names',
+            'publicDnsNames' => 'public_dns_names',
             'publicIps' => 'public_ips',
             'type' => 'type',
             'created' => 'created',
@@ -309,7 +315,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * status  实例状态。 - 值为“BUILD”，表示实例正在创建。 - 值为“ACTIVE”，表示实例正常。 - 值为“FAILED”，表示实例异常。 - 值为“FROZEN”，表示实例冻结。 - 值为“MODIFYING”，表示实例正在扩容。 - 值为“REBOOTING”，表示实例正在重启。 - 值为“RESTORING”，表示实例正在恢复。 - 值为“MODIFYING INSTANCE TYPE”，表示实例正在转主备。 - 值为“SWITCHOVER”，表示实例正在主备切换。 - 值为“MIGRATING”，表示实例正在迁移。 - 值为“BACKING UP”，表示实例正在进行备份。 - 值为“MODIFYING DATABASE PORT”，表示实例正在修改数据库端口。 - 值为“STORAGE FULL”，表示实例磁盘空间满。
     * enableSsl  实例是否开启SSL，取值为\"true\"表示实例开启了SSL，取值为\"false\"表示实例未开启SSL。
     * privateIps  实例内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
-    * privateDnsNames  privateDnsNames
+    * privateDnsNames  内网域名列表
+    * publicDnsNames  公网域名列表
     * publicIps  实例外网IP地址列表。
     * type  实例类型，取值为“Single”，“Ha”或“Replica”，分别对应于单机实例、主备实例、只读实例。
     * created  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
@@ -354,6 +361,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'enableSsl' => 'setEnableSsl',
             'privateIps' => 'setPrivateIps',
             'privateDnsNames' => 'setPrivateDnsNames',
+            'publicDnsNames' => 'setPublicDnsNames',
             'publicIps' => 'setPublicIps',
             'type' => 'setType',
             'created' => 'setCreated',
@@ -397,7 +405,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * status  实例状态。 - 值为“BUILD”，表示实例正在创建。 - 值为“ACTIVE”，表示实例正常。 - 值为“FAILED”，表示实例异常。 - 值为“FROZEN”，表示实例冻结。 - 值为“MODIFYING”，表示实例正在扩容。 - 值为“REBOOTING”，表示实例正在重启。 - 值为“RESTORING”，表示实例正在恢复。 - 值为“MODIFYING INSTANCE TYPE”，表示实例正在转主备。 - 值为“SWITCHOVER”，表示实例正在主备切换。 - 值为“MIGRATING”，表示实例正在迁移。 - 值为“BACKING UP”，表示实例正在进行备份。 - 值为“MODIFYING DATABASE PORT”，表示实例正在修改数据库端口。 - 值为“STORAGE FULL”，表示实例磁盘空间满。
     * enableSsl  实例是否开启SSL，取值为\"true\"表示实例开启了SSL，取值为\"false\"表示实例未开启SSL。
     * privateIps  实例内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
-    * privateDnsNames  privateDnsNames
+    * privateDnsNames  内网域名列表
+    * publicDnsNames  公网域名列表
     * publicIps  实例外网IP地址列表。
     * type  实例类型，取值为“Single”，“Ha”或“Replica”，分别对应于单机实例、主备实例、只读实例。
     * created  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
@@ -442,6 +451,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'enableSsl' => 'getEnableSsl',
             'privateIps' => 'getPrivateIps',
             'privateDnsNames' => 'getPrivateDnsNames',
+            'publicDnsNames' => 'getPublicDnsNames',
             'publicIps' => 'getPublicIps',
             'type' => 'getType',
             'created' => 'getCreated',
@@ -542,6 +552,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
         $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : null;
         $this->container['privateIps'] = isset($data['privateIps']) ? $data['privateIps'] : null;
         $this->container['privateDnsNames'] = isset($data['privateDnsNames']) ? $data['privateDnsNames'] : null;
+        $this->container['publicDnsNames'] = isset($data['publicDnsNames']) ? $data['publicDnsNames'] : null;
         $this->container['publicIps'] = isset($data['publicIps']) ? $data['publicIps'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
@@ -783,7 +794,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateDnsNames
-    *  privateDnsNames
+    *  内网域名列表
     *
     * @return string[]|null
     */
@@ -795,13 +806,37 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privateDnsNames
     *
-    * @param string[]|null $privateDnsNames privateDnsNames
+    * @param string[]|null $privateDnsNames 内网域名列表
     *
     * @return $this
     */
     public function setPrivateDnsNames($privateDnsNames)
     {
         $this->container['privateDnsNames'] = $privateDnsNames;
+        return $this;
+    }
+
+    /**
+    * Gets publicDnsNames
+    *  公网域名列表
+    *
+    * @return string[]|null
+    */
+    public function getPublicDnsNames()
+    {
+        return $this->container['publicDnsNames'];
+    }
+
+    /**
+    * Sets publicDnsNames
+    *
+    * @param string[]|null $publicDnsNames 公网域名列表
+    *
+    * @return $this
+    */
+    public function setPublicDnsNames($publicDnsNames)
+    {
+        $this->container['publicDnsNames'] = $publicDnsNames;
         return $this;
     }
 

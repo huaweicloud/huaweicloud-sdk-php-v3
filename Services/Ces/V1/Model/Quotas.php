@@ -25,7 +25,7 @@ class Quotas implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resources' => '\HuaweiCloud\SDK\Ces\V1\Model\Resource[]'
+            'resources' => '\HuaweiCloud\SDK\Ces\V1\Model\ResourceQuotas[]'
     ];
 
     /**
@@ -179,7 +179,7 @@ class Quotas implements ModelInterface, ArrayAccess
     * Gets resources
     *  资源配额列表。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\Resource[]
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\ResourceQuotas[]
     */
     public function getResources()
     {
@@ -189,7 +189,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Resource[] $resources 资源配额列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\ResourceQuotas[] $resources 资源配额列表。
     *
     * @return $this
     */

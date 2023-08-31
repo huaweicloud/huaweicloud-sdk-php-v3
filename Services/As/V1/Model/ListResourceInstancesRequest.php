@@ -20,24 +20,28 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：SCALING_GROUP_TAG。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'resourceType' => 'string',
             'body' => '\HuaweiCloud\SDK\_As\V1\Model\QueryTagsOption'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：SCALING_GROUP_TAG。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'resourceType' => null,
         'body' => null
     ];
@@ -65,36 +69,42 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：SCALING_GROUP_TAG。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'resourceType' => 'resource_type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：SCALING_GROUP_TAG。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'resourceType' => 'setResourceType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：SCALING_GROUP_TAG。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'resourceType' => 'getResourceType',
             'body' => 'getBody'
     ];
@@ -170,6 +180,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -182,6 +193,9 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
@@ -205,6 +219,30 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

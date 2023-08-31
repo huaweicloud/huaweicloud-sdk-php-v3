@@ -172,6 +172,9 @@ class Tag implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -214,7 +217,7 @@ class Tag implements ModelInterface, ArrayAccess
     * Gets value
     *  值。  添加标签时value值必选，删除标签时value值可选。  value最大长度为43个字符。  value可以为空字符串。  value前后的空格会被丢弃。  value不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。 value只能由中文，字母，数字，“-”，“_”，“.”组成。
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -224,7 +227,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值。  添加标签时value值必选，删除标签时value值可选。  value最大长度为43个字符。  value可以为空字符串。  value前后的空格会被丢弃。  value不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。 value只能由中文，字母，数字，“-”，“_”，“.”组成。
+    * @param string $value 值。  添加标签时value值必选，删除标签时value值可选。  value最大长度为43个字符。  value可以为空字符串。  value前后的空格会被丢弃。  value不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。 value只能由中文，字母，数字，“-”，“_”，“.”组成。
     *
     * @return $this
     */

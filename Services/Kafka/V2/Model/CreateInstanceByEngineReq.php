@@ -450,8 +450,6 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const ENGINE_KAFKA = 'kafka';
-    const ENGINE_VERSION__1_1_0 = '1.1.0';
-    const ENGINE_VERSION__2_7 = '2.7';
     const SASL_ENABLED_MECHANISMS_PLAIN = 'PLAIN';
     const SASL_ENABLED_MECHANISMS_SCRAM_SHA_512 = 'SCRAM-SHA-512';
     const RETENTION_POLICY_TIME_BASE = 'time_base';
@@ -469,19 +467,6 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_KAFKA,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineVersionAllowableValues()
-    {
-        return [
-            self::ENGINE_VERSION__1_1_0,
-            self::ENGINE_VERSION__2_7,
         ];
     }
 
@@ -600,14 +585,6 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         if ($this->container['engineVersion'] === null) {
             $invalidProperties[] = "'engineVersion' can't be null";
         }
-            $allowedValues = $this->getEngineVersionAllowableValues();
-                if (!is_null($this->container['engineVersion']) && !in_array($this->container['engineVersion'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engineVersion', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['brokerNum'] === null) {
             $invalidProperties[] = "'brokerNum' can't be null";
         }

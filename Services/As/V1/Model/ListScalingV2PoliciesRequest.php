@@ -20,6 +20,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  租户标识。
     * scalingResourceId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyType  策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
@@ -30,6 +31,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingResourceId' => 'string',
             'scalingPolicyName' => 'string',
             'scalingPolicyType' => 'string',
@@ -40,6 +42,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  租户标识。
     * scalingResourceId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyType  策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
@@ -50,6 +53,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingResourceId' => null,
         'scalingPolicyName' => null,
         'scalingPolicyType' => null,
@@ -81,6 +85,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  租户标识。
     * scalingResourceId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyType  策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
@@ -91,6 +96,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingResourceId' => 'scaling_resource_id',
             'scalingPolicyName' => 'scaling_policy_name',
             'scalingPolicyType' => 'scaling_policy_type',
@@ -101,6 +107,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  租户标识。
     * scalingResourceId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyType  策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
@@ -111,6 +118,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingResourceId' => 'setScalingResourceId',
             'scalingPolicyName' => 'setScalingPolicyName',
             'scalingPolicyType' => 'setScalingPolicyType',
@@ -121,6 +129,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  租户标识。
     * scalingResourceId  伸缩组ID。
     * scalingPolicyName  伸缩策略名称。
     * scalingPolicyType  策略类型：  - 告警策略：ALARM - 定时策略：SCHEDULED - 周期策略：RECURRENCE
@@ -131,6 +140,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingResourceId' => 'getScalingResourceId',
             'scalingPolicyName' => 'getScalingPolicyName',
             'scalingPolicyType' => 'getScalingPolicyType',
@@ -197,6 +207,7 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingResourceId'] = isset($data['scalingResourceId']) ? $data['scalingResourceId'] : null;
         $this->container['scalingPolicyName'] = isset($data['scalingPolicyName']) ? $data['scalingPolicyName'] : null;
         $this->container['scalingPolicyType'] = isset($data['scalingPolicyType']) ? $data['scalingPolicyType'] : null;
@@ -213,6 +224,9 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingResourceId'] === null) {
             $invalidProperties[] = "'scalingResourceId' can't be null";
         }
@@ -246,6 +260,30 @@ class ListScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  租户标识。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 租户标识。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

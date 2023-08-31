@@ -23,13 +23,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * dimensions  一个或者多个资源维度。
     * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * eventType  事件类型，默认为0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'namespace' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]',
-            'status' => 'string'
+            'status' => 'string',
+            'eventType' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * dimensions  一个或者多个资源维度。
     * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * eventType  事件类型，默认为0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'namespace' => null,
         'dimensions' => null,
-        'status' => null
+        'status' => null,
+        'eventType' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * dimensions  一个或者多个资源维度。
     * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * eventType  事件类型，默认为0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'namespace' => 'namespace',
             'dimensions' => 'dimensions',
-            'status' => 'status'
+            'status' => 'status',
+            'eventType' => 'event_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * dimensions  一个或者多个资源维度。
     * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * eventType  事件类型，默认为0。
     *
     * @var string[]
     */
     protected static $setters = [
             'namespace' => 'setNamespace',
             'dimensions' => 'setDimensions',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'eventType' => 'setEventType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     * namespace  资源类型。即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * dimensions  一个或者多个资源维度。
     * status  资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
+    * eventType  事件类型，默认为0。
     *
     * @var string[]
     */
     protected static $getters = [
             'namespace' => 'getNamespace',
             'dimensions' => 'getDimensions',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'eventType' => 'getEventType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ResourceGroup implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['eventType']) && ($this->container['eventType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'eventType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['eventType']) && ($this->container['eventType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eventType', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -263,6 +280,30 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets eventType
+    *  事件类型，默认为0。
+    *
+    * @return int|null
+    */
+    public function getEventType()
+    {
+        return $this->container['eventType'];
+    }
+
+    /**
+    * Sets eventType
+    *
+    * @param int|null $eventType 事件类型，默认为0。
+    *
+    * @return $this
+    */
+    public function setEventType($eventType)
+    {
+        $this->container['eventType'] = $eventType;
         return $this;
     }
 

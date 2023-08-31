@@ -39,6 +39,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     * tags  作业标签
     * message  系统提示信息。
     * endTime  作业结束的时间。是单位为“毫秒”的时间戳。
+    * cpuCost  作业的CPU累计使用量
+    * outputByte  作业的输出字节数
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
             'statement' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]',
             'message' => 'string',
-            'endTime' => 'int'
+            'endTime' => 'int',
+            'cpuCost' => 'string',
+            'outputByte' => 'string'
     ];
 
     /**
@@ -85,6 +89,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     * tags  作业标签
     * message  系统提示信息。
     * endTime  作业结束的时间。是单位为“毫秒”的时间戳。
+    * cpuCost  作业的CPU累计使用量
+    * outputByte  作业的输出字节数
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
         'statement' => null,
         'tags' => null,
         'message' => null,
-        'endTime' => 'int64'
+        'endTime' => 'int64',
+        'cpuCost' => null,
+        'outputByte' => null
     ];
 
     /**
@@ -152,6 +160,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     * tags  作业标签
     * message  系统提示信息。
     * endTime  作业结束的时间。是单位为“毫秒”的时间戳。
+    * cpuCost  作业的CPU累计使用量
+    * outputByte  作业的输出字节数
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
             'statement' => 'statement',
             'tags' => 'tags',
             'message' => 'message',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'cpuCost' => 'cpu_cost',
+            'outputByte' => 'output_byte'
     ];
 
     /**
@@ -198,6 +210,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     * tags  作业标签
     * message  系统提示信息。
     * endTime  作业结束的时间。是单位为“毫秒”的时间戳。
+    * cpuCost  作业的CPU累计使用量
+    * outputByte  作业的输出字节数
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
             'statement' => 'setStatement',
             'tags' => 'setTags',
             'message' => 'setMessage',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'cpuCost' => 'setCpuCost',
+            'outputByte' => 'setOutputByte'
     ];
 
     /**
@@ -244,6 +260,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     * tags  作业标签
     * message  系统提示信息。
     * endTime  作业结束的时间。是单位为“毫秒”的时间戳。
+    * cpuCost  作业的CPU累计使用量
+    * outputByte  作业的输出字节数
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
             'statement' => 'getStatement',
             'tags' => 'getTags',
             'message' => 'getMessage',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'cpuCost' => 'getCpuCost',
+            'outputByte' => 'getOutputByte'
     ];
 
     /**
@@ -367,6 +387,8 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['cpuCost'] = isset($data['cpuCost']) ? $data['cpuCost'] : null;
+        $this->container['outputByte'] = isset($data['outputByte']) ? $data['outputByte'] : null;
     }
 
     /**
@@ -882,6 +904,54 @@ class ListJobsJobs implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets cpuCost
+    *  作业的CPU累计使用量
+    *
+    * @return string|null
+    */
+    public function getCpuCost()
+    {
+        return $this->container['cpuCost'];
+    }
+
+    /**
+    * Sets cpuCost
+    *
+    * @param string|null $cpuCost 作业的CPU累计使用量
+    *
+    * @return $this
+    */
+    public function setCpuCost($cpuCost)
+    {
+        $this->container['cpuCost'] = $cpuCost;
+        return $this;
+    }
+
+    /**
+    * Gets outputByte
+    *  作业的输出字节数
+    *
+    * @return string|null
+    */
+    public function getOutputByte()
+    {
+        return $this->container['outputByte'];
+    }
+
+    /**
+    * Sets outputByte
+    *
+    * @param string|null $outputByte 作业的输出字节数
+    *
+    * @return $this
+    */
+    public function setOutputByte($outputByte)
+    {
+        $this->container['outputByte'] = $outputByte;
         return $this;
     }
 

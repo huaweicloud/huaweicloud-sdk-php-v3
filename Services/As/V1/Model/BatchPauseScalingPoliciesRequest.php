@@ -20,21 +20,25 @@ class BatchPauseScalingPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  租户标识。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'body' => '\HuaweiCloud\SDK\_As\V1\Model\BatchPauseScalingPoliciesOption'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  租户标识。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class BatchPauseScalingPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  租户标识。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  租户标识。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  租户标识。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class BatchPauseScalingPoliciesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +169,9 @@ class BatchPauseScalingPoliciesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -170,6 +184,30 @@ class BatchPauseScalingPoliciesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  租户标识。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 租户标识。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

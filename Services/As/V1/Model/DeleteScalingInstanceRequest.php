@@ -20,24 +20,28 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * instanceId  实例ID，可参考[查询弹性伸缩组中的实例列表](https://support.huaweicloud.com/api-as/as_06_0301.html)获取。
     * instanceDelete  实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'instanceId' => 'string',
             'instanceDelete' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * instanceId  实例ID，可参考[查询弹性伸缩组中的实例列表](https://support.huaweicloud.com/api-as/as_06_0301.html)获取。
     * instanceDelete  实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'instanceId' => null,
         'instanceDelete' => null
     ];
@@ -65,36 +69,42 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * instanceId  实例ID，可参考[查询弹性伸缩组中的实例列表](https://support.huaweicloud.com/api-as/as_06_0301.html)获取。
     * instanceDelete  实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'instanceId' => 'instance_id',
             'instanceDelete' => 'instance_delete'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * instanceId  实例ID，可参考[查询弹性伸缩组中的实例列表](https://support.huaweicloud.com/api-as/as_06_0301.html)获取。
     * instanceDelete  实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'instanceId' => 'setInstanceId',
             'instanceDelete' => 'setInstanceDelete'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * instanceId  实例ID，可参考[查询弹性伸缩组中的实例列表](https://support.huaweicloud.com/api-as/as_06_0301.html)获取。
     * instanceDelete  实例移出伸缩组，是否删除云服务器实例。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'instanceId' => 'getInstanceId',
             'instanceDelete' => 'getInstanceDelete'
     ];
@@ -172,6 +182,7 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceDelete'] = isset($data['instanceDelete']) ? $data['instanceDelete'] : null;
     }
@@ -184,6 +195,9 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -207,6 +221,30 @@ class DeleteScalingInstanceRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

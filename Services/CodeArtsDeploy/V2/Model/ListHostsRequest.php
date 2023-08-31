@@ -22,7 +22,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  主机集群id
     * asProxy  是否为代理机
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     * limit  每页显示的条目数量，默认为1000
     * name  主机名，可输入中英文，数字和符号(-_.)
     * sortKey  排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
@@ -46,7 +46,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupId  主机集群id
     * asProxy  是否为代理机
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     * limit  每页显示的条目数量，默认为1000
     * name  主机名，可输入中英文，数字和符号(-_.)
     * sortKey  排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
@@ -91,7 +91,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  主机集群id
     * asProxy  是否为代理机
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     * limit  每页显示的条目数量，默认为1000
     * name  主机名，可输入中英文，数字和符号(-_.)
     * sortKey  排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
@@ -115,7 +115,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  主机集群id
     * asProxy  是否为代理机
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     * limit  每页显示的条目数量，默认为1000
     * name  主机名，可输入中英文，数字和符号(-_.)
     * sortKey  排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
@@ -139,7 +139,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  主机集群id
     * asProxy  是否为代理机
-    * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     * limit  每页显示的条目数量，默认为1000
     * name  主机名，可输入中英文，数字和符号(-_.)
     * sortKey  排序字段，支持：AS_PROXY|HOST_NAME|OS|OWNER_NAME|as_proxy|host_name|os|owner_name|nickName。不填默认为：as_proxy
@@ -346,7 +346,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量,表示从此偏移量开始查询,offset大于等于0
+    *  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @return int|null
     */
@@ -358,7 +358,7 @@ class ListHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量,表示从此偏移量开始查询,offset大于等于0
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @return $this
     */

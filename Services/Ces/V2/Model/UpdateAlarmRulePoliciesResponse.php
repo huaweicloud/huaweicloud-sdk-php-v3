@@ -26,7 +26,7 @@ class UpdateAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]'
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdateAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     * Gets policies
     *  策略信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[]|null
     */
     public function getPolicies()
     {
@@ -187,7 +187,7 @@ class UpdateAlarmRulePoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies 策略信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[]|null $policies 策略信息
     *
     * @return $this
     */

@@ -8,7 +8,7 @@
     "api",
     "waf"
   ],
-  "version": "3.1.52",
+  "version": "3.1.53",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.1.52"
+    "huaweicloud/huaweicloud-sdk-core": "3.1.53"
   },
   "autoload": {
     "psr-4": {

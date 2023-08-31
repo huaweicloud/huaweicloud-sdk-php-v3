@@ -469,6 +469,68 @@ class CesClient extends Client
     }
 
     /**
+     * 批量更新监控视图
+     *
+     * 批量更新监控视图
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateWidgets($request)
+    {
+        return $this->batchUpdateWidgetsWithHttpInfo($request);
+    }
+
+    public function batchUpdateWidgetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/widgets/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateWidgetsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateWidgetsRequest');
+    }
+
+    /**
      * 创建告警规则
      *
      * 创建告警规则
@@ -590,6 +652,133 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\CreateAlarmTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\CreateAlarmTemplateRequest');
+    }
+
+    /**
+     * 创建/复制/批量创建监控视图到指定的监控面板
+     *
+     * 创建/复制/批量创建监控视图到指定的监控面板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDashboardWidgets($request)
+    {
+        return $this->createDashboardWidgetsWithHttpInfo($request);
+    }
+
+    public function createDashboardWidgetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards/{dashboard_id}/widgets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\CreateDashboardWidgetsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\CreateDashboardWidgetsRequest');
+    }
+
+    /**
+     * 创建/复制监控面板
+     *
+     * 创建/复制监控面板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOneDashboard($request)
+    {
+        return $this->createOneDashboardWithHttpInfo($request);
+    }
+
+    public function createOneDashboardWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\CreateOneDashboardResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\CreateOneDashboardRequest');
     }
 
     /**
@@ -717,6 +906,130 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteAlarmRuleResourcesResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteAlarmRuleResourcesRequest');
+    }
+
+    /**
+     * 批量删除监控面板
+     *
+     * 批量删除监控面板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDashboards($request)
+    {
+        return $this->deleteDashboardsWithHttpInfo($request);
+    }
+
+    public function deleteDashboardsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteDashboardsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteDashboardsRequest');
+    }
+
+    /**
+     * 删除指定监控视图
+     *
+     * 删除指定监控视图
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteOneWidget($request)
+    {
+        return $this->deleteOneWidgetWithHttpInfo($request);
+    }
+
+    public function deleteOneWidgetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/widgets/{widget_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['widgetId'] !== null) {
+            $pathParams['widget_id'] = $localVarParams['widgetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteOneWidgetResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\DeleteOneWidgetRequest');
     }
 
     /**
@@ -1244,6 +1557,139 @@ class CesClient extends Client
     }
 
     /**
+     * 查询监控面板列表
+     *
+     * 查询监控面板列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDashboardInfos($request)
+    {
+        return $this->listDashboardInfosWithHttpInfo($request);
+    }
+
+    public function listDashboardInfosWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseId'] !== null) {
+            $queryParams['enterprise_id'] = $localVarParams['enterpriseId'];
+        }
+        if ($localVarParams['isFavorite'] !== null) {
+            $queryParams['is_favorite'] = $localVarParams['isFavorite'];
+        }
+        if ($localVarParams['dashboardName'] !== null) {
+            $queryParams['dashboard_name'] = $localVarParams['dashboardName'];
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $queryParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardInfosResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardInfosRequest');
+    }
+
+    /**
+     * 查询指定监控面板下的监控视图列表
+     *
+     * 查询指定监控面板下的监控视图列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDashboardWidgets($request)
+    {
+        return $this->listDashboardWidgetsWithHttpInfo($request);
+    }
+
+    public function listDashboardWidgetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards/{dashboard_id}/widgets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardWidgetsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardWidgetsRequest');
+    }
+
+    /**
      * 查询资源分组列表
      *
      * 查询资源分组列表
@@ -1525,6 +1971,68 @@ class CesClient extends Client
     }
 
     /**
+     * 查询指定监控视图信息
+     *
+     * 查询指定监控视图信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showWidget($request)
+    {
+        return $this->showWidgetWithHttpInfo($request);
+    }
+
+    public function showWidgetWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/widgets/{widget_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['widgetId'] !== null) {
+            $pathParams['widget_id'] = $localVarParams['widgetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ShowWidgetResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ShowWidgetRequest');
+    }
+
+    /**
      * 修改告警规则策略(全量修改)
      *
      * 修改告警规则策略(全量修改)
@@ -1652,6 +2160,71 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmTemplateRequest');
+    }
+
+    /**
+     * 修改监控面板
+     *
+     * 修改监控面板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDashboard($request)
+    {
+        return $this->updateDashboardWithHttpInfo($request);
+    }
+
+    public function updateDashboardWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/dashboards/{dashboard_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dashboardId'] !== null) {
+            $pathParams['dashboard_id'] = $localVarParams['dashboardId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateDashboardResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateDashboardRequest');
     }
 
     /**

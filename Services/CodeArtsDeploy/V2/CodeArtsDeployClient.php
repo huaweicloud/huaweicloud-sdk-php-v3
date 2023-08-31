@@ -26,9 +26,74 @@ class CodeArtsDeployClient extends Client
 
 
     /**
+     * 新建应用
+     *
+     * 新建应用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createApp($request)
+    {
+        return $this->createAppWithHttpInfo($request);
+    }
+
+    public function createAppWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateAppResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateAppRequest');
+    }
+
+    /**
      * 通过模板新建应用
      *
-     * 通过模板新建应用。
+     * 通过模板新建应用。该接口于2024年09月30日后不再维护，推荐使用新版CreateApp接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -93,7 +158,72 @@ class CodeArtsDeployClient extends Client
     /**
      * 删除应用
      *
-     * 根据部署任务id删除应用。
+     * 根据应用id删除应用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteApplication($request)
+    {
+        return $this->deleteApplicationWithHttpInfo($request);
+    }
+
+    public function deleteApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{app_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteApplicationRequest');
+    }
+
+    /**
+     * 删除应用
+     *
+     * 根据部署任务id删除应用。该接口于2024年09月30日后不再维护，推荐使用新版DeleteApplication接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -153,6 +283,71 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteDeployTaskResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteDeployTaskRequest');
+    }
+
+    /**
+     * 获取应用列表
+     *
+     * 查询项目下应用列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllApp($request)
+    {
+        return $this->listAllAppWithHttpInfo($request);
+    }
+
+    public function listAllAppWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListAllAppResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListAllAppRequest');
     }
 
     /**
@@ -238,7 +433,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 获取应用列表
      *
-     * 查询项目下应用列表
+     * 查询项目下应用列表。该接口于2024年09月30日后不再维护，推荐使用新版ListAllApp接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -309,7 +504,69 @@ class CodeArtsDeployClient extends Client
     /**
      * 获取应用详情
      *
-     * 根据部署任务id获取应用详情。
+     * 根据应用id获取应用详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAppDetailById($request)
+    {
+        return $this->showAppDetailByIdWithHttpInfo($request);
+    }
+
+    public function showAppDetailByIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{app_id}/info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowAppDetailByIdResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowAppDetailByIdRequest');
+    }
+
+    /**
+     * 获取应用详情
+     *
+     * 根据部署任务id获取应用详情。该接口于2024年09月30日后不再维护，推荐使用新版ShowAppDetailById接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -437,9 +694,432 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
+     * 应用下创建环境
+     *
+     * 应用下创建环境
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createEnvironment($request)
+    {
+        return $this->createEnvironmentWithHttpInfo($request);
+    }
+
+    public function createEnvironmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateEnvironmentResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateEnvironmentRequest');
+    }
+
+    /**
+     * 删除应用下的环境
+     *
+     * 删除应用下的环境
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteEnvironment($request)
+    {
+        return $this->deleteEnvironmentWithHttpInfo($request);
+    }
+
+    public function deleteEnvironmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments/{environment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['environmentId'] !== null) {
+            $pathParams['environment_id'] = $localVarParams['environmentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteEnvironmentResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteEnvironmentRequest');
+    }
+
+    /**
+     * 环境下删除主机
+     *
+     * 环境下删除主机
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHostFromEnvironment($request)
+    {
+        return $this->deleteHostFromEnvironmentWithHttpInfo($request);
+    }
+
+    public function deleteHostFromEnvironmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments/{environment_id}/{host_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['environmentId'] !== null) {
+            $pathParams['environment_id'] = $localVarParams['environmentId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteHostFromEnvironmentResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeleteHostFromEnvironmentRequest');
+    }
+
+    /**
+     * 环境下导入主机
+     *
+     * 环境下导入主机
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importHostToEnvironment($request)
+    {
+        return $this->importHostToEnvironmentWithHttpInfo($request);
+    }
+
+    public function importHostToEnvironmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments/{environment_id}/hosts/import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['environmentId'] !== null) {
+            $pathParams['environment_id'] = $localVarParams['environmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ImportHostToEnvironmentResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ImportHostToEnvironmentRequest');
+    }
+
+    /**
+     * 查询应用下环境列表
+     *
+     * 查询应用下环境列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEnvironments($request)
+    {
+        return $this->listEnvironmentsWithHttpInfo($request);
+    }
+
+    public function listEnvironmentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['pageIndex'] !== null) {
+            $queryParams['page_index'] = $localVarParams['pageIndex'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListEnvironmentsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListEnvironmentsRequest');
+    }
+
+    /**
+     * 查询环境详情
+     *
+     * 查询环境详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEnvironmentDetail($request)
+    {
+        return $this->showEnvironmentDetailWithHttpInfo($request);
+    }
+
+    public function showEnvironmentDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{application_id}/environments/{environment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['environmentId'] !== null) {
+            $pathParams['environment_id'] = $localVarParams['environmentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowEnvironmentDetailResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowEnvironmentDetailRequest');
+    }
+
+    /**
      * 新建主机
      *
-     * 在指定主机集群下新建主机。
+     * 在指定主机集群下新建主机。该接口于2024年09月30日后不再维护，推荐使用新版CreateHost接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -502,6 +1182,74 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateDeploymentHostResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateDeploymentHostRequest');
+    }
+
+    /**
+     * 新建主机
+     *
+     * 在指定主机集群下新建主机。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHost($request)
+    {
+        return $this->createHostWithHttpInfo($request);
+    }
+
+    public function createHostWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups/{group_id}/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateHostResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateHostRequest');
     }
 
     /**
@@ -575,7 +1323,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 查询主机列表
      *
-     * 根据主机集群id查询指定主机集群下的主机列表。
+     * 根据主机集群id查询指定主机集群下的主机列表。该接口于2024年09月30日后不再维护，推荐使用新版ListNewHosts接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -656,9 +1404,92 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
+     * 查询主机列表
+     *
+     * 根据主机集群id查询指定主机集群下的主机列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNewHosts($request)
+    {
+        return $this->listNewHostsWithHttpInfo($request);
+    }
+
+    public function listNewHostsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups/{group_id}/hosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyField'] !== null) {
+            $queryParams['key_field'] = $localVarParams['keyField'];
+        }
+        if ($localVarParams['environmentId'] !== null) {
+            $queryParams['environment_id'] = $localVarParams['environmentId'];
+        }
+        if ($localVarParams['pageIndex'] !== null) {
+            $queryParams['page_index'] = $localVarParams['pageIndex'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['asProxy'] !== null) {
+            $queryParams['as_proxy'] = $localVarParams['asProxy'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListNewHostsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListNewHostsRequest');
+    }
+
+    /**
      * 查询主机详情
      *
-     * 根据主机id查询主机详情。
+     * 根据主机id查询主机详情。该接口于2024年09月30日后不再维护，推荐使用新版ShowHostDetail接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -718,6 +1549,71 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowDeploymentHostDetailResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowDeploymentHostDetailRequest');
+    }
+
+    /**
+     * 查询主机详情
+     *
+     * 根据主机id查询主机详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHostDetail($request)
+    {
+        return $this->showHostDetailWithHttpInfo($request);
+    }
+
+    public function showHostDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups/{group_id}/hosts/{host_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowHostDetailResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowHostDetailRequest');
     }
 
     /**
@@ -794,7 +1690,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 新建主机集群
      *
-     * 在项目下新建主机集群。
+     * 在项目下新建主机集群。该接口于2024年09月30日后不再维护，推荐使用新版CreateHostCluster接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -854,6 +1750,71 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateDeploymentGroupResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateDeploymentGroupRequest');
+    }
+
+    /**
+     * 新建主机集群
+     *
+     * 在项目下新建主机集群。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHostCluster($request)
+    {
+        return $this->createHostClusterWithHttpInfo($request);
+    }
+
+    public function createHostClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateHostClusterResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\CreateHostClusterRequest');
     }
 
     /**
@@ -925,6 +1886,92 @@ class CodeArtsDeployClient extends Client
      * 查询主机集群列表
      *
      * 按条件查询主机集群列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHostClusters($request)
+    {
+        return $this->listHostClustersWithHttpInfo($request);
+    }
+
+    public function listHostClustersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['os'] !== null) {
+            $queryParams['os'] = $localVarParams['os'];
+        }
+        if ($localVarParams['pageIndex'] !== null) {
+            $queryParams['page_index'] = $localVarParams['pageIndex'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['sortField'] !== null) {
+            $queryParams['sort_field'] = $localVarParams['sortField'];
+        }
+        if ($localVarParams['sortType'] !== null) {
+            $queryParams['sort_type'] = $localVarParams['sortType'];
+        }
+        if ($localVarParams['isProxyMode'] !== null) {
+            $queryParams['is_proxy_mode'] = $localVarParams['isProxyMode'];
+        }
+        if ($localVarParams['slaveClusterId'] !== null) {
+            $queryParams['slave_cluster_id'] = $localVarParams['slaveClusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListHostClustersResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ListHostClustersRequest');
+    }
+
+    /**
+     * 查询主机集群列表
+     *
+     * 按条件查询主机集群列表。该接口于2024年09月30日后不再维护，推荐使用新版ListHostClusters接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1007,7 +2054,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 查询主机集群
      *
-     * 根据主机集群id查询主机集群详情。
+     * 根据主机集群id查询主机集群详情。该接口于2024年09月30日后不再维护，推荐使用新版ShowHostClusterDetail接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1064,6 +2111,68 @@ class CodeArtsDeployClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowDeploymentGroupDetailResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowDeploymentGroupDetailRequest');
+    }
+
+    /**
+     * 查询主机集群
+     *
+     * 根据主机集群id查询主机集群详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHostClusterDetail($request)
+    {
+        return $this->showHostClusterDetailWithHttpInfo($request);
+    }
+
+    public function showHostClusterDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resources/host-groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowHostClusterDetailResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowHostClusterDetailRequest');
     }
 
     /**

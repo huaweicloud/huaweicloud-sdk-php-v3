@@ -265,10 +265,13 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
+            if ((mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['regionName'] === null) {
@@ -332,7 +335,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * Gets projectId
     *  项目ID
     *
-    * @return string|null
+    * @return string
     */
     public function getProjectId()
     {
@@ -342,7 +345,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string $projectId 项目ID
     *
     * @return $this
     */

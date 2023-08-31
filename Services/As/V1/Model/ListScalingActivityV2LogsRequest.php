@@ -20,6 +20,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * logId  伸缩活动日志ID
     * startTime  查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
@@ -32,6 +33,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingGroupId' => 'string',
             'logId' => 'string',
             'startTime' => 'string',
@@ -44,6 +46,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * logId  伸缩活动日志ID
     * startTime  查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
@@ -56,6 +59,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingGroupId' => null,
         'logId' => null,
         'startTime' => null,
@@ -89,6 +93,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * logId  伸缩活动日志ID
     * startTime  查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
@@ -101,6 +106,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingGroupId' => 'scaling_group_id',
             'logId' => 'log_id',
             'startTime' => 'start_time',
@@ -113,6 +119,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * logId  伸缩活动日志ID
     * startTime  查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
@@ -125,6 +132,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingGroupId' => 'setScalingGroupId',
             'logId' => 'setLogId',
             'startTime' => 'setStartTime',
@@ -137,6 +145,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * logId  伸缩活动日志ID
     * startTime  查询的起始时间，格式是“yyyy-MM-ddThh:mm:ssZ”。
@@ -149,6 +158,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingGroupId' => 'getScalingGroupId',
             'logId' => 'getLogId',
             'startTime' => 'getStartTime',
@@ -259,6 +269,7 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingGroupId'] = isset($data['scalingGroupId']) ? $data['scalingGroupId'] : null;
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -277,6 +288,9 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingGroupId'] === null) {
             $invalidProperties[] = "'scalingGroupId' can't be null";
         }
@@ -314,6 +328,30 @@ class ListScalingActivityV2LogsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

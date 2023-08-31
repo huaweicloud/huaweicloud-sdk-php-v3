@@ -1,0 +1,750 @@
+<?php
+
+namespace HuaweiCloud\SDK\Nat\V2\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'CreateNatGatewaySnatRuleResponseBody';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * id  SNAT规则的ID。
+    * tenantId  项目的ID。
+    * natGatewayId  公网NAT网关实例的ID。
+    * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * description  SNAT规则的描述，长度限制为255。
+    * status  功能说明：SNAT规则的状态。
+    * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * networkId  规则使用的网络id。与cidr参数二选一。
+    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'id' => 'string',
+            'tenantId' => 'string',
+            'natGatewayId' => 'string',
+            'cidr' => 'string',
+            'sourceType' => 'int',
+            'floatingIpId' => 'string',
+            'description' => 'string',
+            'status' => 'string',
+            'createdAt' => 'string',
+            'networkId' => 'string',
+            'adminStateUp' => 'bool',
+            'floatingIpAddress' => 'string'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * id  SNAT规则的ID。
+    * tenantId  项目的ID。
+    * natGatewayId  公网NAT网关实例的ID。
+    * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * description  SNAT规则的描述，长度限制为255。
+    * status  功能说明：SNAT规则的状态。
+    * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * networkId  规则使用的网络id。与cidr参数二选一。
+    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'id' => null,
+        'tenantId' => null,
+        'natGatewayId' => null,
+        'cidr' => null,
+        'sourceType' => 'int32',
+        'floatingIpId' => null,
+        'description' => null,
+        'status' => null,
+        'createdAt' => null,
+        'networkId' => null,
+        'adminStateUp' => null,
+        'floatingIpAddress' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * id  SNAT规则的ID。
+    * tenantId  项目的ID。
+    * natGatewayId  公网NAT网关实例的ID。
+    * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * description  SNAT规则的描述，长度限制为255。
+    * status  功能说明：SNAT规则的状态。
+    * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * networkId  规则使用的网络id。与cidr参数二选一。
+    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'id' => 'id',
+            'tenantId' => 'tenant_id',
+            'natGatewayId' => 'nat_gateway_id',
+            'cidr' => 'cidr',
+            'sourceType' => 'source_type',
+            'floatingIpId' => 'floating_ip_id',
+            'description' => 'description',
+            'status' => 'status',
+            'createdAt' => 'created_at',
+            'networkId' => 'network_id',
+            'adminStateUp' => 'admin_state_up',
+            'floatingIpAddress' => 'floating_ip_address'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * id  SNAT规则的ID。
+    * tenantId  项目的ID。
+    * natGatewayId  公网NAT网关实例的ID。
+    * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * description  SNAT规则的描述，长度限制为255。
+    * status  功能说明：SNAT规则的状态。
+    * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * networkId  规则使用的网络id。与cidr参数二选一。
+    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'id' => 'setId',
+            'tenantId' => 'setTenantId',
+            'natGatewayId' => 'setNatGatewayId',
+            'cidr' => 'setCidr',
+            'sourceType' => 'setSourceType',
+            'floatingIpId' => 'setFloatingIpId',
+            'description' => 'setDescription',
+            'status' => 'setStatus',
+            'createdAt' => 'setCreatedAt',
+            'networkId' => 'setNetworkId',
+            'adminStateUp' => 'setAdminStateUp',
+            'floatingIpAddress' => 'setFloatingIpAddress'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * id  SNAT规则的ID。
+    * tenantId  项目的ID。
+    * natGatewayId  公网NAT网关实例的ID。
+    * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * description  SNAT规则的描述，长度限制为255。
+    * status  功能说明：SNAT规则的状态。
+    * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * networkId  规则使用的网络id。与cidr参数二选一。
+    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'id' => 'getId',
+            'tenantId' => 'getTenantId',
+            'natGatewayId' => 'getNatGatewayId',
+            'cidr' => 'getCidr',
+            'sourceType' => 'getSourceType',
+            'floatingIpId' => 'getFloatingIpId',
+            'description' => 'getDescription',
+            'status' => 'getStatus',
+            'createdAt' => 'getCreatedAt',
+            'networkId' => 'getNetworkId',
+            'adminStateUp' => 'getAdminStateUp',
+            'floatingIpAddress' => 'getFloatingIpAddress'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_PENDING_CREATE = 'PENDING_CREATE';
+    const STATUS_PENDING_UPDATE = 'PENDING_UPDATE';
+    const STATUS_PENDING_DELETE = 'PENDING_DELETE';
+    const STATUS_EIP_FREEZED = 'EIP_FREEZED';
+    const STATUS_INACTIVE = 'INACTIVE';
+    
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_PENDING_CREATE,
+            self::STATUS_PENDING_UPDATE,
+            self::STATUS_PENDING_DELETE,
+            self::STATUS_EIP_FREEZED,
+            self::STATUS_INACTIVE,
+        ];
+    }
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
+        $this->container['natGatewayId'] = isset($data['natGatewayId']) ? $data['natGatewayId'] : null;
+        $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
+        $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
+        $this->container['floatingIpId'] = isset($data['floatingIpId']) ? $data['floatingIpId'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['floatingIpAddress'] = isset($data['floatingIpAddress']) ? $data['floatingIpAddress'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['tenantId'] === null) {
+            $invalidProperties[] = "'tenantId' can't be null";
+        }
+        if ($this->container['natGatewayId'] === null) {
+            $invalidProperties[] = "'natGatewayId' can't be null";
+        }
+            if ((mb_strlen($this->container['natGatewayId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['natGatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['cidr'] === null) {
+            $invalidProperties[] = "'cidr' can't be null";
+        }
+            if ((mb_strlen($this->container['cidr']) > 39)) {
+                $invalidProperties[] = "invalid value for 'cidr', the character length must be smaller than or equal to 39.";
+            }
+            if ((mb_strlen($this->container['cidr']) < 9)) {
+                $invalidProperties[] = "invalid value for 'cidr', the character length must be bigger than or equal to 9.";
+            }
+        if ($this->container['sourceType'] === null) {
+            $invalidProperties[] = "'sourceType' can't be null";
+        }
+        if ($this->container['floatingIpId'] === null) {
+            $invalidProperties[] = "'floatingIpId' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+            if ((mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+            if ((mb_strlen($this->container['createdAt']) > 36)) {
+                $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['createdAt']) < 1)) {
+                $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['networkId'] === null) {
+            $invalidProperties[] = "'networkId' can't be null";
+        }
+            if ((mb_strlen($this->container['networkId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'networkId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['networkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'networkId', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['adminStateUp'] === null) {
+            $invalidProperties[] = "'adminStateUp' can't be null";
+        }
+        if ($this->container['floatingIpAddress'] === null) {
+            $invalidProperties[] = "'floatingIpAddress' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  SNAT规则的ID。
+    *
+    * @return string
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string $id SNAT规则的ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets tenantId
+    *  项目的ID。
+    *
+    * @return string
+    */
+    public function getTenantId()
+    {
+        return $this->container['tenantId'];
+    }
+
+    /**
+    * Sets tenantId
+    *
+    * @param string $tenantId 项目的ID。
+    *
+    * @return $this
+    */
+    public function setTenantId($tenantId)
+    {
+        $this->container['tenantId'] = $tenantId;
+        return $this;
+    }
+
+    /**
+    * Gets natGatewayId
+    *  公网NAT网关实例的ID。
+    *
+    * @return string
+    */
+    public function getNatGatewayId()
+    {
+        return $this->container['natGatewayId'];
+    }
+
+    /**
+    * Sets natGatewayId
+    *
+    * @param string $natGatewayId 公网NAT网关实例的ID。
+    *
+    * @return $this
+    */
+    public function setNatGatewayId($natGatewayId)
+    {
+        $this->container['natGatewayId'] = $natGatewayId;
+        return $this;
+    }
+
+    /**
+    * Gets cidr
+    *  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    *
+    * @return string
+    */
+    public function getCidr()
+    {
+        return $this->container['cidr'];
+    }
+
+    /**
+    * Sets cidr
+    *
+    * @param string $cidr cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
+    *
+    * @return $this
+    */
+    public function setCidr($cidr)
+    {
+        $this->container['cidr'] = $cidr;
+        return $this;
+    }
+
+    /**
+    * Gets sourceType
+    *  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    *
+    * @return int
+    */
+    public function getSourceType()
+    {
+        return $this->container['sourceType'];
+    }
+
+    /**
+    * Sets sourceType
+    *
+    * @param int $sourceType 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    *
+    * @return $this
+    */
+    public function setSourceType($sourceType)
+    {
+        $this->container['sourceType'] = $sourceType;
+        return $this;
+    }
+
+    /**
+    * Gets floatingIpId
+    *  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    *
+    * @return string
+    */
+    public function getFloatingIpId()
+    {
+        return $this->container['floatingIpId'];
+    }
+
+    /**
+    * Sets floatingIpId
+    *
+    * @param string $floatingIpId 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    *
+    * @return $this
+    */
+    public function setFloatingIpId($floatingIpId)
+    {
+        $this->container['floatingIpId'] = $floatingIpId;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  SNAT规则的描述，长度限制为255。
+    *
+    * @return string
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string $description SNAT规则的描述，长度限制为255。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  功能说明：SNAT规则的状态。
+    *
+    * @return string
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string $status 功能说明：SNAT规则的状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    *
+    * @return string
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string $createdAt SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets networkId
+    *  规则使用的网络id。与cidr参数二选一。
+    *
+    * @return string
+    */
+    public function getNetworkId()
+    {
+        return $this->container['networkId'];
+    }
+
+    /**
+    * Sets networkId
+    *
+    * @param string $networkId 规则使用的网络id。与cidr参数二选一。
+    *
+    * @return $this
+    */
+    public function setNetworkId($networkId)
+    {
+        $this->container['networkId'] = $networkId;
+        return $this;
+    }
+
+    /**
+    * Gets adminStateUp
+    *  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    *
+    * @return bool
+    */
+    public function getAdminStateUp()
+    {
+        return $this->container['adminStateUp'];
+    }
+
+    /**
+    * Sets adminStateUp
+    *
+    * @param bool $adminStateUp 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    *
+    * @return $this
+    */
+    public function setAdminStateUp($adminStateUp)
+    {
+        $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets floatingIpAddress
+    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @return string
+    */
+    public function getFloatingIpAddress()
+    {
+        return $this->container['floatingIpAddress'];
+    }
+
+    /**
+    * Sets floatingIpAddress
+    *
+    * @param string $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *
+    * @return $this
+    */
+    public function setFloatingIpAddress($floatingIpAddress)
+    {
+        $this->container['floatingIpAddress'] = $floatingIpAddress;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

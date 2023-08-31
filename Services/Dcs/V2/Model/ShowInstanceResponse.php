@@ -40,6 +40,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ip  连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
     * instanceBackupPolicy  instanceBackupPolicy
     * azCodes  实例所在的可用区。返回“可用区Code”
+    * availableZones  实例所在的可用区id。返回\"可用区ID\"
     * accessUser  通过密码认证访问缓存实例的认证用户名。
     * instanceId  实例ID。
     * port  缓存的端口。
@@ -105,6 +106,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ip' => 'string',
             'instanceBackupPolicy' => '\HuaweiCloud\SDK\Dcs\V2\Model\InstanceBackupPolicy',
             'azCodes' => 'string[]',
+            'availableZones' => 'string[]',
             'accessUser' => 'string',
             'instanceId' => 'string',
             'port' => 'int',
@@ -170,6 +172,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ip  连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
     * instanceBackupPolicy  instanceBackupPolicy
     * azCodes  实例所在的可用区。返回“可用区Code”
+    * availableZones  实例所在的可用区id。返回\"可用区ID\"
     * accessUser  通过密码认证访问缓存实例的认证用户名。
     * instanceId  实例ID。
     * port  缓存的端口。
@@ -235,6 +238,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'ip' => null,
         'instanceBackupPolicy' => null,
         'azCodes' => null,
+        'availableZones' => null,
         'accessUser' => null,
         'instanceId' => null,
         'port' => 'int32',
@@ -321,6 +325,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ip  连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
     * instanceBackupPolicy  instanceBackupPolicy
     * azCodes  实例所在的可用区。返回“可用区Code”
+    * availableZones  实例所在的可用区id。返回\"可用区ID\"
     * accessUser  通过密码认证访问缓存实例的认证用户名。
     * instanceId  实例ID。
     * port  缓存的端口。
@@ -386,6 +391,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ip' => 'ip',
             'instanceBackupPolicy' => 'instance_backup_policy',
             'azCodes' => 'az_codes',
+            'availableZones' => 'available_zones',
             'accessUser' => 'access_user',
             'instanceId' => 'instance_id',
             'port' => 'port',
@@ -451,6 +457,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ip  连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
     * instanceBackupPolicy  instanceBackupPolicy
     * azCodes  实例所在的可用区。返回“可用区Code”
+    * availableZones  实例所在的可用区id。返回\"可用区ID\"
     * accessUser  通过密码认证访问缓存实例的认证用户名。
     * instanceId  实例ID。
     * port  缓存的端口。
@@ -516,6 +523,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ip' => 'setIp',
             'instanceBackupPolicy' => 'setInstanceBackupPolicy',
             'azCodes' => 'setAzCodes',
+            'availableZones' => 'setAvailableZones',
             'accessUser' => 'setAccessUser',
             'instanceId' => 'setInstanceId',
             'port' => 'setPort',
@@ -581,6 +589,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ip  连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
     * instanceBackupPolicy  instanceBackupPolicy
     * azCodes  实例所在的可用区。返回“可用区Code”
+    * availableZones  实例所在的可用区id。返回\"可用区ID\"
     * accessUser  通过密码认证访问缓存实例的认证用户名。
     * instanceId  实例ID。
     * port  缓存的端口。
@@ -646,6 +655,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ip' => 'getIp',
             'instanceBackupPolicy' => 'getInstanceBackupPolicy',
             'azCodes' => 'getAzCodes',
+            'availableZones' => 'getAvailableZones',
             'accessUser' => 'getAccessUser',
             'instanceId' => 'getInstanceId',
             'port' => 'getPort',
@@ -816,6 +826,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['instanceBackupPolicy'] = isset($data['instanceBackupPolicy']) ? $data['instanceBackupPolicy'] : null;
         $this->container['azCodes'] = isset($data['azCodes']) ? $data['azCodes'] : null;
+        $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
         $this->container['accessUser'] = isset($data['accessUser']) ? $data['accessUser'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
@@ -1359,6 +1370,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setAzCodes($azCodes)
     {
         $this->container['azCodes'] = $azCodes;
+        return $this;
+    }
+
+    /**
+    * Gets availableZones
+    *  实例所在的可用区id。返回\"可用区ID\"
+    *
+    * @return string[]|null
+    */
+    public function getAvailableZones()
+    {
+        return $this->container['availableZones'];
+    }
+
+    /**
+    * Sets availableZones
+    *
+    * @param string[]|null $availableZones 实例所在的可用区id。返回\"可用区ID\"
+    *
+    * @return $this
+    */
+    public function setAvailableZones($availableZones)
+    {
+        $this->container['availableZones'] = $availableZones;
         return $this;
     }
 

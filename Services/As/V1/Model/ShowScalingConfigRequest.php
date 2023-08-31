@@ -20,21 +20,25 @@ class ShowScalingConfigRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingConfigurationId  伸缩配置ID，查询唯一配置。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingConfigurationId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingConfigurationId  伸缩配置ID，查询唯一配置。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingConfigurationId' => null
     ];
 
@@ -61,31 +65,37 @@ class ShowScalingConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingConfigurationId  伸缩配置ID，查询唯一配置。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingConfigurationId' => 'scaling_configuration_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingConfigurationId  伸缩配置ID，查询唯一配置。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingConfigurationId' => 'setScalingConfigurationId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingConfigurationId  伸缩配置ID，查询唯一配置。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingConfigurationId' => 'getScalingConfigurationId'
     ];
 
@@ -147,6 +157,7 @@ class ShowScalingConfigRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingConfigurationId'] = isset($data['scalingConfigurationId']) ? $data['scalingConfigurationId'] : null;
     }
 
@@ -158,6 +169,9 @@ class ShowScalingConfigRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingConfigurationId'] === null) {
             $invalidProperties[] = "'scalingConfigurationId' can't be null";
         }
@@ -173,6 +187,30 @@ class ShowScalingConfigRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

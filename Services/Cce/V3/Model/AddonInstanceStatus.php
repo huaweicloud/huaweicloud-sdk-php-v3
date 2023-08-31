@@ -25,6 +25,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     * message  安装错误详情
     * targetVersions  此插件版本，支持升级的集群版本
     * currentVersion  currentVersion
+    * isRollbackable  是否支持回滚到插件升级前的插件版本
+    * previousVersion  插件升级或回滚前的版本
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             'reason' => 'string',
             'message' => 'string',
             'targetVersions' => 'string[]',
-            'currentVersion' => '\HuaweiCloud\SDK\Cce\V3\Model\Versions'
+            'currentVersion' => '\HuaweiCloud\SDK\Cce\V3\Model\Versions',
+            'isRollbackable' => 'bool',
+            'previousVersion' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     * message  安装错误详情
     * targetVersions  此插件版本，支持升级的集群版本
     * currentVersion  currentVersion
+    * isRollbackable  是否支持回滚到插件升级前的插件版本
+    * previousVersion  插件升级或回滚前的版本
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
         'reason' => null,
         'message' => null,
         'targetVersions' => null,
-        'currentVersion' => null
+        'currentVersion' => null,
+        'isRollbackable' => null,
+        'previousVersion' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     * message  安装错误详情
     * targetVersions  此插件版本，支持升级的集群版本
     * currentVersion  currentVersion
+    * isRollbackable  是否支持回滚到插件升级前的插件版本
+    * previousVersion  插件升级或回滚前的版本
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             'reason' => 'Reason',
             'message' => 'message',
             'targetVersions' => 'targetVersions',
-            'currentVersion' => 'currentVersion'
+            'currentVersion' => 'currentVersion',
+            'isRollbackable' => 'isRollbackable',
+            'previousVersion' => 'previousVersion'
     ];
 
     /**
@@ -100,6 +112,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     * message  安装错误详情
     * targetVersions  此插件版本，支持升级的集群版本
     * currentVersion  currentVersion
+    * isRollbackable  是否支持回滚到插件升级前的插件版本
+    * previousVersion  插件升级或回滚前的版本
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             'reason' => 'setReason',
             'message' => 'setMessage',
             'targetVersions' => 'setTargetVersions',
-            'currentVersion' => 'setCurrentVersion'
+            'currentVersion' => 'setCurrentVersion',
+            'isRollbackable' => 'setIsRollbackable',
+            'previousVersion' => 'setPreviousVersion'
     ];
 
     /**
@@ -118,6 +134,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     * message  安装错误详情
     * targetVersions  此插件版本，支持升级的集群版本
     * currentVersion  currentVersion
+    * isRollbackable  是否支持回滚到插件升级前的插件版本
+    * previousVersion  插件升级或回滚前的版本
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             'reason' => 'getReason',
             'message' => 'getMessage',
             'targetVersions' => 'getTargetVersions',
-            'currentVersion' => 'getCurrentVersion'
+            'currentVersion' => 'getCurrentVersion',
+            'isRollbackable' => 'getIsRollbackable',
+            'previousVersion' => 'getPreviousVersion'
     ];
 
     /**
@@ -180,6 +200,7 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     const STATUS_DELETE_FAILED = 'deleteFailed';
     const STATUS_AVAILABLE = 'available';
     const STATUS_ROLLBACKING = 'rollbacking';
+    const STATUS_ROLLBACK_FAILED = 'rollbackFailed';
     
 
     /**
@@ -201,6 +222,7 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             self::STATUS_DELETE_FAILED,
             self::STATUS_AVAILABLE,
             self::STATUS_ROLLBACKING,
+            self::STATUS_ROLLBACK_FAILED,
         ];
     }
 
@@ -225,6 +247,8 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['targetVersions'] = isset($data['targetVersions']) ? $data['targetVersions'] : null;
         $this->container['currentVersion'] = isset($data['currentVersion']) ? $data['currentVersion'] : null;
+        $this->container['isRollbackable'] = isset($data['isRollbackable']) ? $data['isRollbackable'] : null;
+        $this->container['previousVersion'] = isset($data['previousVersion']) ? $data['previousVersion'] : null;
     }
 
     /**
@@ -386,6 +410,54 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     public function setCurrentVersion($currentVersion)
     {
         $this->container['currentVersion'] = $currentVersion;
+        return $this;
+    }
+
+    /**
+    * Gets isRollbackable
+    *  是否支持回滚到插件升级前的插件版本
+    *
+    * @return bool|null
+    */
+    public function getIsRollbackable()
+    {
+        return $this->container['isRollbackable'];
+    }
+
+    /**
+    * Sets isRollbackable
+    *
+    * @param bool|null $isRollbackable 是否支持回滚到插件升级前的插件版本
+    *
+    * @return $this
+    */
+    public function setIsRollbackable($isRollbackable)
+    {
+        $this->container['isRollbackable'] = $isRollbackable;
+        return $this;
+    }
+
+    /**
+    * Gets previousVersion
+    *  插件升级或回滚前的版本
+    *
+    * @return string|null
+    */
+    public function getPreviousVersion()
+    {
+        return $this->container['previousVersion'];
+    }
+
+    /**
+    * Sets previousVersion
+    *
+    * @param string|null $previousVersion 插件升级或回滚前的版本
+    *
+    * @return $this
+    */
+    public function setPreviousVersion($previousVersion)
+    {
+        $this->container['previousVersion'] = $previousVersion;
         return $this;
     }
 

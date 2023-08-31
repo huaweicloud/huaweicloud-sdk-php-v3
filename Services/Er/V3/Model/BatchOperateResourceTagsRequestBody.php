@@ -22,28 +22,24 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
     * tags  标签列表。
-    * sysTags  标签列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Er\V3\Model\Tag[]',
-            'sysTags' => '\HuaweiCloud\SDK\Er\V3\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Er\V3\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
     * tags  标签列表。
-    * sysTags  标签列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'tags' => null,
-        'sysTags' => null
+        'tags' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
     * tags  标签列表。
-    * sysTags  标签列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
     * tags  标签列表。
-    * sysTags  标签列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
     * tags  标签列表。
-    * sysTags  标签列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -184,7 +174,6 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -265,30 +254,6 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  标签列表。
-    *
-    * @return \HuaweiCloud\SDK\Er\V3\Model\Tag[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Er\V3\Model\Tag[]|null $sysTags 标签列表。
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

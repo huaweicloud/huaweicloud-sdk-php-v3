@@ -20,21 +20,25 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'resourceType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'resourceType' => null
     ];
 
@@ -61,31 +65,37 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'resourceType' => 'resource_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'resourceType' => 'setResourceType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'resourceType' => 'getResourceType'
     ];
 
@@ -160,6 +170,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
     }
 
@@ -171,6 +182,9 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
@@ -194,6 +208,30 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

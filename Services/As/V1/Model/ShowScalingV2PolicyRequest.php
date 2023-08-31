@@ -20,21 +20,25 @@ class ShowScalingV2PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  租户标识。
     * scalingPolicyId  伸缩组ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingPolicyId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  租户标识。
     * scalingPolicyId  伸缩组ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingPolicyId' => null
     ];
 
@@ -61,31 +65,37 @@ class ShowScalingV2PolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  租户标识。
     * scalingPolicyId  伸缩组ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingPolicyId' => 'scaling_policy_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  租户标识。
     * scalingPolicyId  伸缩组ID。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingPolicyId' => 'setScalingPolicyId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  租户标识。
     * scalingPolicyId  伸缩组ID。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingPolicyId' => 'getScalingPolicyId'
     ];
 
@@ -147,6 +157,7 @@ class ShowScalingV2PolicyRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingPolicyId'] = isset($data['scalingPolicyId']) ? $data['scalingPolicyId'] : null;
     }
 
@@ -158,6 +169,9 @@ class ShowScalingV2PolicyRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingPolicyId'] === null) {
             $invalidProperties[] = "'scalingPolicyId' can't be null";
         }
@@ -176,6 +190,30 @@ class ShowScalingV2PolicyRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  租户标识。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 租户标识。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

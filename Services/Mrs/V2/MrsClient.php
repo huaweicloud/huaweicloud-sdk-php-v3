@@ -1378,6 +1378,65 @@ class MrsClient extends Client
             $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ShowSqlResultRequest');
     }
 
+    /**
+     * 展示MRS版本列表
+     *
+     * 展示MRS版本列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMrsVersionList($request)
+    {
+        return $this->showMrsVersionListWithHttpInfo($request);
+    }
+
+    public function showMrsVersionListWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/metadata/versions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ShowMrsVersionListResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ShowMrsVersionListRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

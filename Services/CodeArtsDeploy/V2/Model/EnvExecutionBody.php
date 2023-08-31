@@ -22,7 +22,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * params  部署应用时传递的参数
     * recordId  应用的部署id，可通过record_id回滚至之前的部署状态。选中应用历史部署记录，在URL中获取
-    * triggerSource  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * triggerSource  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * params  部署应用时传递的参数
     * recordId  应用的部署id，可通过record_id回滚至之前的部署状态。选中应用历史部署记录，在URL中获取
-    * triggerSource  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * triggerSource  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * params  部署应用时传递的参数
     * recordId  应用的部署id，可通过record_id回滚至之前的部署状态。选中应用历史部署记录，在URL中获取
-    * triggerSource  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * triggerSource  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * params  部署应用时传递的参数
     * recordId  应用的部署id，可通过record_id回滚至之前的部署状态。选中应用历史部署记录，在URL中获取
-    * triggerSource  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * triggerSource  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * params  部署应用时传递的参数
     * recordId  应用的部署id，可通过record_id回滚至之前的部署状态。选中应用历史部署记录，在URL中获取
-    * triggerSource  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * triggerSource  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerSource
-    *  限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    *  限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class EnvExecutionBody implements ModelInterface, ArrayAccess
     /**
     * Sets triggerSource
     *
-    * @param string|null $triggerSource 限制触发来源,0不限制任何部署请求来源,1时只允许通过流水线触发部署
+    * @param string|null $triggerSource 限制触发来源，0不限制任何部署请求来源，1时只允许通过流水线触发部署
     *
     * @return $this
     */

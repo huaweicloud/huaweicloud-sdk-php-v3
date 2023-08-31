@@ -20,6 +20,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     * resourceId  资源ID。
     * body  body
@@ -27,6 +28,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'resourceType' => 'string',
             'resourceId' => 'string',
             'body' => '\HuaweiCloud\SDK\_As\V1\Model\DeleteTagsOption'
@@ -34,6 +36,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     * resourceId  资源ID。
     * body  body
@@ -41,6 +44,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'resourceType' => null,
         'resourceId' => null,
         'body' => null
@@ -69,6 +73,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     * resourceId  资源ID。
     * body  body
@@ -76,6 +81,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'resourceType' => 'resource_type',
             'resourceId' => 'resource_id',
             'body' => 'body'
@@ -83,6 +89,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     * resourceId  资源ID。
     * body  body
@@ -90,6 +97,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'resourceType' => 'setResourceType',
             'resourceId' => 'setResourceId',
             'body' => 'setBody'
@@ -97,6 +105,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
     * resourceId  资源ID。
     * body  body
@@ -104,6 +113,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'resourceType' => 'getResourceType',
             'resourceId' => 'getResourceId',
             'body' => 'getBody'
@@ -180,6 +190,7 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -193,6 +204,9 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
@@ -219,6 +233,30 @@ class DeleteScalingTagInfoRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

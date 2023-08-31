@@ -20,6 +20,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  租户ID
     * scalingGroupId  伸缩组ID
     * scheduledTaskId  计划任务ID
     * body  body
@@ -27,6 +28,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingGroupId' => 'string',
             'scheduledTaskId' => 'string',
             'body' => '\HuaweiCloud\SDK\_As\V1\Model\UpdateScheduledTaskOption'
@@ -34,6 +36,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  租户ID
     * scalingGroupId  伸缩组ID
     * scheduledTaskId  计划任务ID
     * body  body
@@ -41,6 +44,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingGroupId' => null,
         'scheduledTaskId' => null,
         'body' => null
@@ -69,6 +73,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  租户ID
     * scalingGroupId  伸缩组ID
     * scheduledTaskId  计划任务ID
     * body  body
@@ -76,6 +81,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingGroupId' => 'scaling_group_id',
             'scheduledTaskId' => 'scheduled_task_id',
             'body' => 'body'
@@ -83,6 +89,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  租户ID
     * scalingGroupId  伸缩组ID
     * scheduledTaskId  计划任务ID
     * body  body
@@ -90,6 +97,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingGroupId' => 'setScalingGroupId',
             'scheduledTaskId' => 'setScheduledTaskId',
             'body' => 'setBody'
@@ -97,6 +105,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  租户ID
     * scalingGroupId  伸缩组ID
     * scheduledTaskId  计划任务ID
     * body  body
@@ -104,6 +113,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingGroupId' => 'getScalingGroupId',
             'scheduledTaskId' => 'getScheduledTaskId',
             'body' => 'getBody'
@@ -167,6 +177,7 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingGroupId'] = isset($data['scalingGroupId']) ? $data['scalingGroupId'] : null;
         $this->container['scheduledTaskId'] = isset($data['scheduledTaskId']) ? $data['scheduledTaskId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -180,6 +191,9 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingGroupId'] === null) {
             $invalidProperties[] = "'scalingGroupId' can't be null";
         }
@@ -198,6 +212,30 @@ class UpdateGroupScheduledTaskRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  租户ID
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 租户ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

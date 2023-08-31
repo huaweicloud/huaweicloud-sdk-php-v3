@@ -20,6 +20,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingConfigurationName  伸缩配置名称。
     * imageId  镜像ID，同imageRef。
     * startNumber  查询的起始行号，默认为0。
@@ -28,6 +29,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingConfigurationName' => 'string',
             'imageId' => 'string',
             'startNumber' => 'int',
@@ -36,6 +38,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingConfigurationName  伸缩配置名称。
     * imageId  镜像ID，同imageRef。
     * startNumber  查询的起始行号，默认为0。
@@ -44,6 +47,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingConfigurationName' => null,
         'imageId' => null,
         'startNumber' => null,
@@ -73,6 +77,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingConfigurationName  伸缩配置名称。
     * imageId  镜像ID，同imageRef。
     * startNumber  查询的起始行号，默认为0。
@@ -81,6 +86,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingConfigurationName' => 'scaling_configuration_name',
             'imageId' => 'image_id',
             'startNumber' => 'start_number',
@@ -89,6 +95,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingConfigurationName  伸缩配置名称。
     * imageId  镜像ID，同imageRef。
     * startNumber  查询的起始行号，默认为0。
@@ -97,6 +104,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingConfigurationName' => 'setScalingConfigurationName',
             'imageId' => 'setImageId',
             'startNumber' => 'setStartNumber',
@@ -105,6 +113,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingConfigurationName  伸缩配置名称。
     * imageId  镜像ID，同imageRef。
     * startNumber  查询的起始行号，默认为0。
@@ -113,6 +122,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingConfigurationName' => 'getScalingConfigurationName',
             'imageId' => 'getImageId',
             'startNumber' => 'getStartNumber',
@@ -177,6 +187,7 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingConfigurationName'] = isset($data['scalingConfigurationName']) ? $data['scalingConfigurationName'] : null;
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['startNumber'] = isset($data['startNumber']) ? $data['startNumber'] : null;
@@ -191,6 +202,9 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,6 +217,30 @@ class ListScalingConfigsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

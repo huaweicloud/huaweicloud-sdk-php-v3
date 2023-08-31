@@ -26,7 +26,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -37,7 +36,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             'templateType' => '\HuaweiCloud\SDK\Ces\V2\Model\TemplateType',
             'createTime' => '\DateTime',
             'templateDescription' => 'string',
-            'associationAlarmTotal' => 'int',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmTemplatePolicies[]'
     ];
 
@@ -48,7 +46,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -59,7 +56,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
         'templateType' => null,
         'createTime' => 'date-time',
         'templateDescription' => null,
-        'associationAlarmTotal' => null,
         'policies' => null
     ];
 
@@ -91,7 +87,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -102,7 +97,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             'templateType' => 'template_type',
             'createTime' => 'create_time',
             'templateDescription' => 'template_description',
-            'associationAlarmTotal' => 'association_alarm_total',
             'policies' => 'policies'
     ];
 
@@ -113,7 +107,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -124,7 +117,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             'templateType' => 'setTemplateType',
             'createTime' => 'setCreateTime',
             'templateDescription' => 'setTemplateDescription',
-            'associationAlarmTotal' => 'setAssociationAlarmTotal',
             'policies' => 'setPolicies'
     ];
 
@@ -135,7 +127,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
     * policies  告警模板策略列表
     *
     * @var string[]
@@ -146,7 +137,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
             'templateType' => 'getTemplateType',
             'createTime' => 'getCreateTime',
             'templateDescription' => 'getTemplateDescription',
-            'associationAlarmTotal' => 'getAssociationAlarmTotal',
             'policies' => 'getPolicies'
     ];
 
@@ -213,7 +203,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
         $this->container['templateType'] = isset($data['templateType']) ? $data['templateType'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['templateDescription'] = isset($data['templateDescription']) ? $data['templateDescription'] : null;
-        $this->container['associationAlarmTotal'] = isset($data['associationAlarmTotal']) ? $data['associationAlarmTotal'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
     }
 
@@ -383,30 +372,6 @@ class ShowAlarmTemplateResponse implements ModelInterface, ArrayAccess
     public function setTemplateDescription($templateDescription)
     {
         $this->container['templateDescription'] = $templateDescription;
-        return $this;
-    }
-
-    /**
-    * Gets associationAlarmTotal
-    *  告警模板关联的告警规则数目
-    *
-    * @return int|null
-    */
-    public function getAssociationAlarmTotal()
-    {
-        return $this->container['associationAlarmTotal'];
-    }
-
-    /**
-    * Sets associationAlarmTotal
-    *
-    * @param int|null $associationAlarmTotal 告警模板关联的告警规则数目
-    *
-    * @return $this
-    */
-    public function setAssociationAlarmTotal($associationAlarmTotal)
-    {
-        $this->container['associationAlarmTotal'] = $associationAlarmTotal;
         return $this;
     }
 

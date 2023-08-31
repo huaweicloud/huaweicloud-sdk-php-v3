@@ -20,24 +20,32 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
     * subJobs  每个子任务的执行信息。
     * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'serverId' => 'string',
+            'nicId' => 'string',
             'subJobs' => '\HuaweiCloud\SDK\Ecs\V2\Model\SubJob[]',
             'subJobsTotal' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
     * subJobs  每个子任务的执行信息。
     * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'serverId' => null,
+        'nicId' => null,
         'subJobs' => null,
         'subJobsTotal' => 'int32'
     ];
@@ -65,36 +73,48 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
     * subJobs  每个子任务的执行信息。
     * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'serverId' => 'server_id',
+            'nicId' => 'nic_id',
             'subJobs' => 'sub_jobs',
             'subJobsTotal' => 'sub_jobs_total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
     * subJobs  每个子任务的执行信息。
     * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
     protected static $setters = [
+            'serverId' => 'setServerId',
+            'nicId' => 'setNicId',
             'subJobs' => 'setSubJobs',
             'subJobsTotal' => 'setSubJobsTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
     * subJobs  每个子任务的执行信息。
     * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
     protected static $getters = [
+            'serverId' => 'getServerId',
+            'nicId' => 'getNicId',
             'subJobs' => 'getSubJobs',
             'subJobsTotal' => 'getSubJobsTotal'
     ];
@@ -157,6 +177,8 @@ class JobEntities implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['nicId'] = isset($data['nicId']) ? $data['nicId'] : null;
         $this->container['subJobs'] = isset($data['subJobs']) ? $data['subJobs'] : null;
         $this->container['subJobsTotal'] = isset($data['subJobsTotal']) ? $data['subJobsTotal'] : null;
     }
@@ -181,6 +203,54 @@ class JobEntities implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets serverId
+    *  云服务器相关操作显示server_id。
+    *
+    * @return string|null
+    */
+    public function getServerId()
+    {
+        return $this->container['serverId'];
+    }
+
+    /**
+    * Sets serverId
+    *
+    * @param string|null $serverId 云服务器相关操作显示server_id。
+    *
+    * @return $this
+    */
+    public function setServerId($serverId)
+    {
+        $this->container['serverId'] = $serverId;
+        return $this;
+    }
+
+    /**
+    * Gets nicId
+    *  网卡相关操作显示nic_id。
+    *
+    * @return string|null
+    */
+    public function getNicId()
+    {
+        return $this->container['nicId'];
+    }
+
+    /**
+    * Sets nicId
+    *
+    * @param string|null $nicId 网卡相关操作显示nic_id。
+    *
+    * @return $this
+    */
+    public function setNicId($nicId)
+    {
+        $this->container['nicId'] = $nicId;
+        return $this;
     }
 
     /**

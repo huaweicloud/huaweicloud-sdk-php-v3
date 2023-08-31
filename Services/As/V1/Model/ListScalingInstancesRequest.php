@@ -20,6 +20,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * lifeCycleState  实例在伸缩组中的生命周期状态：INSERVICE： 正在使用。PENDING：正在加入伸缩组。REMOVING：正在移出伸缩组。PENDING_WAIT：正在加入伸缩组：等待。REMOVING_WAIT：正在移出伸缩组：等待。
     * healthStatus  实例健康状态：INITIALIZING：初始化。NORMAL：正常。ERROR：异常
@@ -30,6 +31,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingGroupId' => 'string',
             'lifeCycleState' => 'string',
             'healthStatus' => 'string',
@@ -40,6 +42,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * lifeCycleState  实例在伸缩组中的生命周期状态：INSERVICE： 正在使用。PENDING：正在加入伸缩组。REMOVING：正在移出伸缩组。PENDING_WAIT：正在加入伸缩组：等待。REMOVING_WAIT：正在移出伸缩组：等待。
     * healthStatus  实例健康状态：INITIALIZING：初始化。NORMAL：正常。ERROR：异常
@@ -50,6 +53,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingGroupId' => null,
         'lifeCycleState' => null,
         'healthStatus' => null,
@@ -81,6 +85,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * lifeCycleState  实例在伸缩组中的生命周期状态：INSERVICE： 正在使用。PENDING：正在加入伸缩组。REMOVING：正在移出伸缩组。PENDING_WAIT：正在加入伸缩组：等待。REMOVING_WAIT：正在移出伸缩组：等待。
     * healthStatus  实例健康状态：INITIALIZING：初始化。NORMAL：正常。ERROR：异常
@@ -91,6 +96,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingGroupId' => 'scaling_group_id',
             'lifeCycleState' => 'life_cycle_state',
             'healthStatus' => 'health_status',
@@ -101,6 +107,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * lifeCycleState  实例在伸缩组中的生命周期状态：INSERVICE： 正在使用。PENDING：正在加入伸缩组。REMOVING：正在移出伸缩组。PENDING_WAIT：正在加入伸缩组：等待。REMOVING_WAIT：正在移出伸缩组：等待。
     * healthStatus  实例健康状态：INITIALIZING：初始化。NORMAL：正常。ERROR：异常
@@ -111,6 +118,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingGroupId' => 'setScalingGroupId',
             'lifeCycleState' => 'setLifeCycleState',
             'healthStatus' => 'setHealthStatus',
@@ -121,6 +129,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * lifeCycleState  实例在伸缩组中的生命周期状态：INSERVICE： 正在使用。PENDING：正在加入伸缩组。REMOVING：正在移出伸缩组。PENDING_WAIT：正在加入伸缩组：等待。REMOVING_WAIT：正在移出伸缩组：等待。
     * healthStatus  实例健康状态：INITIALIZING：初始化。NORMAL：正常。ERROR：异常
@@ -131,6 +140,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingGroupId' => 'getScalingGroupId',
             'lifeCycleState' => 'getLifeCycleState',
             'healthStatus' => 'getHealthStatus',
@@ -254,6 +264,7 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingGroupId'] = isset($data['scalingGroupId']) ? $data['scalingGroupId'] : null;
         $this->container['lifeCycleState'] = isset($data['lifeCycleState']) ? $data['lifeCycleState'] : null;
         $this->container['healthStatus'] = isset($data['healthStatus']) ? $data['healthStatus'] : null;
@@ -270,6 +281,9 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingGroupId'] === null) {
             $invalidProperties[] = "'scalingGroupId' can't be null";
         }
@@ -309,6 +323,30 @@ class ListScalingInstancesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

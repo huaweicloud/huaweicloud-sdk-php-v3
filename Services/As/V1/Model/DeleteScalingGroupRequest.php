@@ -20,24 +20,28 @@ class DeleteScalingGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * forceDelete  是否强制删除伸缩组。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingGroupId' => 'string',
             'forceDelete' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * forceDelete  是否强制删除伸缩组。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingGroupId' => null,
         'forceDelete' => null
     ];
@@ -65,36 +69,42 @@ class DeleteScalingGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * forceDelete  是否强制删除伸缩组。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingGroupId' => 'scaling_group_id',
             'forceDelete' => 'force_delete'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * forceDelete  是否强制删除伸缩组。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingGroupId' => 'setScalingGroupId',
             'forceDelete' => 'setForceDelete'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingGroupId  伸缩组ID。
     * forceDelete  是否强制删除伸缩组。默认为no；可选值为yes或no。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingGroupId' => 'getScalingGroupId',
             'forceDelete' => 'getForceDelete'
     ];
@@ -172,6 +182,7 @@ class DeleteScalingGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingGroupId'] = isset($data['scalingGroupId']) ? $data['scalingGroupId'] : null;
         $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
     }
@@ -184,6 +195,9 @@ class DeleteScalingGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingGroupId'] === null) {
             $invalidProperties[] = "'scalingGroupId' can't be null";
         }
@@ -207,6 +221,30 @@ class DeleteScalingGroupRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

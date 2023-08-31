@@ -55,6 +55,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -122,6 +125,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -191,6 +197,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -255,6 +264,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -321,6 +333,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -385,6 +400,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -454,6 +472,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -522,6 +543,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -586,6 +610,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -655,6 +682,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -722,6 +752,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -791,6 +824,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -858,6 +894,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -927,6 +966,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -992,6 +1034,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1056,6 +1101,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -1125,6 +1173,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1189,6 +1240,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
@@ -1261,6 +1315,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -1328,6 +1385,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -1397,6 +1457,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingConfigurationId'] !== null) {
             $pathParams['scaling_configuration_id'] = $localVarParams['scalingConfigurationId'];
         }
@@ -1464,6 +1527,9 @@ class AsAsyncClient extends Client
         }
         if ($localVarParams['forceDelete'] !== null) {
             $queryParams['force_delete'] = $localVarParams['forceDelete'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -1533,6 +1599,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['instanceDelete'] !== null) {
             $queryParams['instance_delete'] = $localVarParams['instanceDelete'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -1597,6 +1666,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -1666,6 +1738,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -1730,6 +1805,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
@@ -1801,6 +1879,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
@@ -1876,6 +1957,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -1944,6 +2028,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -2009,6 +2096,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -2073,6 +2163,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
@@ -2153,6 +2246,9 @@ class AsAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -2240,6 +2336,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -2316,6 +2415,9 @@ class AsAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
 
         if ($multipart) {
@@ -2397,6 +2499,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2474,6 +2579,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -2538,6 +2646,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -2618,6 +2729,9 @@ class AsAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -2708,6 +2822,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -2772,6 +2889,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
@@ -2841,6 +2961,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['resourceType'] !== null) {
             $pathParams['resource_type'] = $localVarParams['resourceType'];
         }
@@ -2905,6 +3028,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -2974,6 +3100,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -3041,6 +3170,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -3110,6 +3242,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -3177,6 +3312,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -3246,6 +3384,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -3311,6 +3452,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3372,6 +3516,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingConfigurationId'] !== null) {
             $pathParams['scaling_configuration_id'] = $localVarParams['scalingConfigurationId'];
@@ -3438,6 +3585,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -3503,6 +3653,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -3567,6 +3720,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
@@ -3639,6 +3795,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -3710,6 +3869,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingGroupId'] !== null) {
             $pathParams['scaling_group_id'] = $localVarParams['scalingGroupId'];
         }
@@ -3777,6 +3939,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
@@ -3973,6 +4138,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4071,6 +4239,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['alarmId'] !== null) {
             $queryParams['alarm_id'] = $localVarParams['alarmId'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4148,6 +4319,9 @@ class AsAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingResourceId'] !== null) {
             $pathParams['scaling_resource_id'] = $localVarParams['scalingResourceId'];
         }
@@ -4213,6 +4387,9 @@ class AsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];
         }
@@ -4277,6 +4454,9 @@ class AsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['scalingPolicyId'] !== null) {
             $pathParams['scaling_policy_id'] = $localVarParams['scalingPolicyId'];

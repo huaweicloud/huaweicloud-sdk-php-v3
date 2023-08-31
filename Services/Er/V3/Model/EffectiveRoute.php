@@ -25,7 +25,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     * nextHops  路由下一跳列表
     * isBlackhole  是否黑洞路由
     * routeType  路由类型
-    * addressGroupId  IP地址组id
     *
     * @var string[]
     */
@@ -34,8 +33,7 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
             'destination' => 'string',
             'nextHops' => '\HuaweiCloud\SDK\Er\V3\Model\RouteAttachment[]',
             'isBlackhole' => 'bool',
-            'routeType' => 'string',
-            'addressGroupId' => 'string'
+            'routeType' => 'string'
     ];
 
     /**
@@ -45,7 +43,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     * nextHops  路由下一跳列表
     * isBlackhole  是否黑洞路由
     * routeType  路由类型
-    * addressGroupId  IP地址组id
     *
     * @var string[]
     */
@@ -54,8 +51,7 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
         'destination' => null,
         'nextHops' => null,
         'isBlackhole' => null,
-        'routeType' => null,
-        'addressGroupId' => null
+        'routeType' => null
     ];
 
     /**
@@ -86,7 +82,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     * nextHops  路由下一跳列表
     * isBlackhole  是否黑洞路由
     * routeType  路由类型
-    * addressGroupId  IP地址组id
     *
     * @var string[]
     */
@@ -95,8 +90,7 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
             'destination' => 'destination',
             'nextHops' => 'next_hops',
             'isBlackhole' => 'is_blackhole',
-            'routeType' => 'route_type',
-            'addressGroupId' => 'address_group_id'
+            'routeType' => 'route_type'
     ];
 
     /**
@@ -106,7 +100,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     * nextHops  路由下一跳列表
     * isBlackhole  是否黑洞路由
     * routeType  路由类型
-    * addressGroupId  IP地址组id
     *
     * @var string[]
     */
@@ -115,8 +108,7 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
             'destination' => 'setDestination',
             'nextHops' => 'setNextHops',
             'isBlackhole' => 'setIsBlackhole',
-            'routeType' => 'setRouteType',
-            'addressGroupId' => 'setAddressGroupId'
+            'routeType' => 'setRouteType'
     ];
 
     /**
@@ -126,7 +118,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     * nextHops  路由下一跳列表
     * isBlackhole  是否黑洞路由
     * routeType  路由类型
-    * addressGroupId  IP地址组id
     *
     * @var string[]
     */
@@ -135,8 +126,7 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
             'destination' => 'getDestination',
             'nextHops' => 'getNextHops',
             'isBlackhole' => 'getIsBlackhole',
-            'routeType' => 'getRouteType',
-            'addressGroupId' => 'getAddressGroupId'
+            'routeType' => 'getRouteType'
     ];
 
     /**
@@ -202,7 +192,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
         $this->container['nextHops'] = isset($data['nextHops']) ? $data['nextHops'] : null;
         $this->container['isBlackhole'] = isset($data['isBlackhole']) ? $data['isBlackhole'] : null;
         $this->container['routeType'] = isset($data['routeType']) ? $data['routeType'] : null;
-        $this->container['addressGroupId'] = isset($data['addressGroupId']) ? $data['addressGroupId'] : null;
     }
 
     /**
@@ -344,30 +333,6 @@ class EffectiveRoute implements ModelInterface, ArrayAccess
     public function setRouteType($routeType)
     {
         $this->container['routeType'] = $routeType;
-        return $this;
-    }
-
-    /**
-    * Gets addressGroupId
-    *  IP地址组id
-    *
-    * @return string|null
-    */
-    public function getAddressGroupId()
-    {
-        return $this->container['addressGroupId'];
-    }
-
-    /**
-    * Sets addressGroupId
-    *
-    * @param string|null $addressGroupId IP地址组id
-    *
-    * @return $this
-    */
-    public function setAddressGroupId($addressGroupId)
-    {
-        $this->container['addressGroupId'] = $addressGroupId;
         return $this;
     }
 

@@ -20,6 +20,7 @@ class Attributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * gender  性别： • male：男性 • female：女性
     * dress  dress
     * glass  是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
     * hat  是否戴帽子： • yes：戴帽子 • none：未戴帽子 • unknown：未知
@@ -35,6 +36,7 @@ class Attributes implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'gender' => 'string',
             'dress' => '\HuaweiCloud\SDK\Frs\V2\Model\Dress',
             'glass' => 'string',
             'hat' => 'string',
@@ -50,6 +52,7 @@ class Attributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * gender  性别： • male：男性 • female：女性
     * dress  dress
     * glass  是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
     * hat  是否戴帽子： • yes：戴帽子 • none：未戴帽子 • unknown：未知
@@ -65,6 +68,7 @@ class Attributes implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'gender' => null,
         'dress' => null,
         'glass' => null,
         'hat' => null,
@@ -101,6 +105,7 @@ class Attributes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * gender  性别： • male：男性 • female：女性
     * dress  dress
     * glass  是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
     * hat  是否戴帽子： • yes：戴帽子 • none：未戴帽子 • unknown：未知
@@ -116,6 +121,7 @@ class Attributes implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'gender' => 'gender',
             'dress' => 'dress',
             'glass' => 'glass',
             'hat' => 'hat',
@@ -131,6 +137,7 @@ class Attributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * gender  性别： • male：男性 • female：女性
     * dress  dress
     * glass  是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
     * hat  是否戴帽子： • yes：戴帽子 • none：未戴帽子 • unknown：未知
@@ -146,6 +153,7 @@ class Attributes implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'gender' => 'setGender',
             'dress' => 'setDress',
             'glass' => 'setGlass',
             'hat' => 'setHat',
@@ -161,6 +169,7 @@ class Attributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * gender  性别： • male：男性 • female：女性
     * dress  dress
     * glass  是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知
     * hat  是否戴帽子： • yes：戴帽子 • none：未戴帽子 • unknown：未知
@@ -176,6 +185,7 @@ class Attributes implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'gender' => 'getGender',
             'dress' => 'getDress',
             'glass' => 'getGlass',
             'hat' => 'getHat',
@@ -247,6 +257,7 @@ class Attributes implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
         $this->container['dress'] = isset($data['dress']) ? $data['dress'] : null;
         $this->container['glass'] = isset($data['glass']) ? $data['glass'] : null;
         $this->container['hat'] = isset($data['hat']) ? $data['hat'] : null;
@@ -268,6 +279,9 @@ class Attributes implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['gender'] === null) {
+            $invalidProperties[] = "'gender' can't be null";
+        }
         if ($this->container['dress'] === null) {
             $invalidProperties[] = "'dress' can't be null";
         }
@@ -313,6 +327,30 @@ class Attributes implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets gender
+    *  性别： • male：男性 • female：女性
+    *
+    * @return string
+    */
+    public function getGender()
+    {
+        return $this->container['gender'];
+    }
+
+    /**
+    * Sets gender
+    *
+    * @param string $gender 性别： • male：男性 • female：女性
+    *
+    * @return $this
+    */
+    public function setGender($gender)
+    {
+        $this->container['gender'] = $gender;
+        return $this;
     }
 
     /**

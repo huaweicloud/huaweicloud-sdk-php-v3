@@ -45,7 +45,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canView  是否有查看权限
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
-    * canManage  是否有管理权限，包含增删改查部署以及权限修改
+    * canManage  是否有编辑应用权限矩阵的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
@@ -121,7 +121,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canView  是否有查看权限
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
-    * canManage  是否有管理权限，包含增删改查部署以及权限修改
+    * canManage  是否有编辑应用权限矩阵的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
@@ -218,7 +218,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canView  是否有查看权限
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
-    * canManage  是否有管理权限，包含增删改查部署以及权限修改
+    * canManage  是否有编辑应用权限矩阵的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
@@ -294,7 +294,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canView  是否有查看权限
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
-    * canManage  是否有管理权限，包含增删改查部署以及权限修改
+    * canManage  是否有编辑应用权限矩阵的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
@@ -370,7 +370,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canView  是否有查看权限
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
-    * canManage  是否有管理权限，包含增删改查部署以及权限修改
+    * canManage  是否有编辑应用权限矩阵的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
@@ -1215,7 +1215,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets canManage
-    *  是否有管理权限，包含增删改查部署以及权限修改
+    *  是否有编辑应用权限矩阵的权限
     *
     * @return bool|null
     */
@@ -1227,7 +1227,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets canManage
     *
-    * @param bool|null $canManage 是否有管理权限，包含增删改查部署以及权限修改
+    * @param bool|null $canManage 是否有编辑应用权限矩阵的权限
     *
     * @return $this
     */

@@ -25,10 +25,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
-    * policyTotal  告警模板的告警策略总数
-    * policyStatistics  服务列表告警策略数目统计
-    * associationResourceGroups  关联的资源分组
     *
     * @var string[]
     */
@@ -37,11 +33,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
             'templateName' => 'string',
             'templateType' => '\HuaweiCloud\SDK\Ces\V2\Model\TemplateType',
             'createTime' => '\DateTime',
-            'templateDescription' => 'string',
-            'associationAlarmTotal' => 'int',
-            'policyTotal' => 'int',
-            'policyStatistics' => '\HuaweiCloud\SDK\Ces\V2\Model\PolicyStatistics[]',
-            'associationResourceGroups' => '\HuaweiCloud\SDK\Ces\V2\Model\AssociationResourceGroup[]'
+            'templateDescription' => 'string'
     ];
 
     /**
@@ -51,10 +43,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
-    * policyTotal  告警模板的告警策略总数
-    * policyStatistics  服务列表告警策略数目统计
-    * associationResourceGroups  关联的资源分组
     *
     * @var string[]
     */
@@ -63,11 +51,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
         'templateName' => null,
         'templateType' => null,
         'createTime' => 'date-time',
-        'templateDescription' => null,
-        'associationAlarmTotal' => null,
-        'policyTotal' => null,
-        'policyStatistics' => null,
-        'associationResourceGroups' => null
+        'templateDescription' => null
     ];
 
     /**
@@ -98,10 +82,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
-    * policyTotal  告警模板的告警策略总数
-    * policyStatistics  服务列表告警策略数目统计
-    * associationResourceGroups  关联的资源分组
     *
     * @var string[]
     */
@@ -110,11 +90,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
             'templateName' => 'template_name',
             'templateType' => 'template_type',
             'createTime' => 'create_time',
-            'templateDescription' => 'template_description',
-            'associationAlarmTotal' => 'association_alarm_total',
-            'policyTotal' => 'policy_total',
-            'policyStatistics' => 'policy_statistics',
-            'associationResourceGroups' => 'association_resource_groups'
+            'templateDescription' => 'template_description'
     ];
 
     /**
@@ -124,10 +100,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
-    * policyTotal  告警模板的告警策略总数
-    * policyStatistics  服务列表告警策略数目统计
-    * associationResourceGroups  关联的资源分组
     *
     * @var string[]
     */
@@ -136,11 +108,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
             'templateName' => 'setTemplateName',
             'templateType' => 'setTemplateType',
             'createTime' => 'setCreateTime',
-            'templateDescription' => 'setTemplateDescription',
-            'associationAlarmTotal' => 'setAssociationAlarmTotal',
-            'policyTotal' => 'setPolicyTotal',
-            'policyStatistics' => 'setPolicyStatistics',
-            'associationResourceGroups' => 'setAssociationResourceGroups'
+            'templateDescription' => 'setTemplateDescription'
     ];
 
     /**
@@ -150,10 +118,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * templateType  templateType
     * createTime  告警模板的创建时间
     * templateDescription  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-    * associationAlarmTotal  告警模板关联的告警规则数目
-    * policyTotal  告警模板的告警策略总数
-    * policyStatistics  服务列表告警策略数目统计
-    * associationResourceGroups  关联的资源分组
     *
     * @var string[]
     */
@@ -162,11 +126,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
             'templateName' => 'getTemplateName',
             'templateType' => 'getTemplateType',
             'createTime' => 'getCreateTime',
-            'templateDescription' => 'getTemplateDescription',
-            'associationAlarmTotal' => 'getAssociationAlarmTotal',
-            'policyTotal' => 'getPolicyTotal',
-            'policyStatistics' => 'getPolicyStatistics',
-            'associationResourceGroups' => 'getAssociationResourceGroups'
+            'templateDescription' => 'getTemplateDescription'
     ];
 
     /**
@@ -232,10 +192,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
         $this->container['templateType'] = isset($data['templateType']) ? $data['templateType'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['templateDescription'] = isset($data['templateDescription']) ? $data['templateDescription'] : null;
-        $this->container['associationAlarmTotal'] = isset($data['associationAlarmTotal']) ? $data['associationAlarmTotal'] : null;
-        $this->container['policyTotal'] = isset($data['policyTotal']) ? $data['policyTotal'] : null;
-        $this->container['policyStatistics'] = isset($data['policyStatistics']) ? $data['policyStatistics'] : null;
-        $this->container['associationResourceGroups'] = isset($data['associationResourceGroups']) ? $data['associationResourceGroups'] : null;
     }
 
     /**
@@ -276,24 +232,15 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
         }
-        if ($this->container['templateDescription'] === null) {
-            $invalidProperties[] = "'templateDescription' can't be null";
-        }
-            if ((mb_strlen($this->container['templateDescription']) > 256)) {
+            if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['templateDescription']) < 0)) {
+            if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/", $this->container['templateDescription'])) {
+            if (!is_null($this->container['templateDescription']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/", $this->container['templateDescription'])) {
                 $invalidProperties[] = "invalid value for 'templateDescription', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|| |_|-|\\.|。|,|，|:|：|;|；|\"|\"|“|”|'|'|‘|’)+$/.";
             }
-        if ($this->container['policyTotal'] === null) {
-            $invalidProperties[] = "'policyTotal' can't be null";
-        }
-        if ($this->container['policyStatistics'] === null) {
-            $invalidProperties[] = "'policyStatistics' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -408,7 +355,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     * Gets templateDescription
     *  告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     *
-    * @return string
+    * @return string|null
     */
     public function getTemplateDescription()
     {
@@ -418,109 +365,13 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     /**
     * Sets templateDescription
     *
-    * @param string $templateDescription 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+    * @param string|null $templateDescription 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
     *
     * @return $this
     */
     public function setTemplateDescription($templateDescription)
     {
         $this->container['templateDescription'] = $templateDescription;
-        return $this;
-    }
-
-    /**
-    * Gets associationAlarmTotal
-    *  告警模板关联的告警规则数目
-    *
-    * @return int|null
-    */
-    public function getAssociationAlarmTotal()
-    {
-        return $this->container['associationAlarmTotal'];
-    }
-
-    /**
-    * Sets associationAlarmTotal
-    *
-    * @param int|null $associationAlarmTotal 告警模板关联的告警规则数目
-    *
-    * @return $this
-    */
-    public function setAssociationAlarmTotal($associationAlarmTotal)
-    {
-        $this->container['associationAlarmTotal'] = $associationAlarmTotal;
-        return $this;
-    }
-
-    /**
-    * Gets policyTotal
-    *  告警模板的告警策略总数
-    *
-    * @return int
-    */
-    public function getPolicyTotal()
-    {
-        return $this->container['policyTotal'];
-    }
-
-    /**
-    * Sets policyTotal
-    *
-    * @param int $policyTotal 告警模板的告警策略总数
-    *
-    * @return $this
-    */
-    public function setPolicyTotal($policyTotal)
-    {
-        $this->container['policyTotal'] = $policyTotal;
-        return $this;
-    }
-
-    /**
-    * Gets policyStatistics
-    *  服务列表告警策略数目统计
-    *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\PolicyStatistics[]
-    */
-    public function getPolicyStatistics()
-    {
-        return $this->container['policyStatistics'];
-    }
-
-    /**
-    * Sets policyStatistics
-    *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\PolicyStatistics[] $policyStatistics 服务列表告警策略数目统计
-    *
-    * @return $this
-    */
-    public function setPolicyStatistics($policyStatistics)
-    {
-        $this->container['policyStatistics'] = $policyStatistics;
-        return $this;
-    }
-
-    /**
-    * Gets associationResourceGroups
-    *  关联的资源分组
-    *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\AssociationResourceGroup[]|null
-    */
-    public function getAssociationResourceGroups()
-    {
-        return $this->container['associationResourceGroups'];
-    }
-
-    /**
-    * Sets associationResourceGroups
-    *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AssociationResourceGroup[]|null $associationResourceGroups 关联的资源分组
-    *
-    * @return $this
-    */
-    public function setAssociationResourceGroups($associationResourceGroups)
-    {
-        $this->container['associationResourceGroups'] = $associationResourceGroups;
         return $this;
     }
 

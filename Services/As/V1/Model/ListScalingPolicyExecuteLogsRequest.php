@@ -20,6 +20,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingPolicyId  伸缩策略ID。
     * logId  日志ID。
     * scalingResourceType  伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
@@ -33,6 +34,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingPolicyId' => 'string',
             'logId' => 'string',
             'scalingResourceType' => 'string',
@@ -46,6 +48,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID。
     * scalingPolicyId  伸缩策略ID。
     * logId  日志ID。
     * scalingResourceType  伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
@@ -59,6 +62,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingPolicyId' => null,
         'logId' => null,
         'scalingResourceType' => null,
@@ -93,6 +97,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID。
     * scalingPolicyId  伸缩策略ID。
     * logId  日志ID。
     * scalingResourceType  伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
@@ -106,6 +111,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingPolicyId' => 'scaling_policy_id',
             'logId' => 'log_id',
             'scalingResourceType' => 'scaling_resource_type',
@@ -119,6 +125,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID。
     * scalingPolicyId  伸缩策略ID。
     * logId  日志ID。
     * scalingResourceType  伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
@@ -132,6 +139,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingPolicyId' => 'setScalingPolicyId',
             'logId' => 'setLogId',
             'scalingResourceType' => 'setScalingResourceType',
@@ -145,6 +153,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID。
     * scalingPolicyId  伸缩策略ID。
     * logId  日志ID。
     * scalingResourceType  伸缩资源类型：伸缩组：SCALING_GROUP。带宽：BANDWIDTH
@@ -158,6 +167,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingPolicyId' => 'getScalingPolicyId',
             'logId' => 'getLogId',
             'scalingResourceType' => 'getScalingResourceType',
@@ -261,6 +271,7 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingPolicyId'] = isset($data['scalingPolicyId']) ? $data['scalingPolicyId'] : null;
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['scalingResourceType'] = isset($data['scalingResourceType']) ? $data['scalingResourceType'] : null;
@@ -280,6 +291,9 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
         if ($this->container['scalingPolicyId'] === null) {
             $invalidProperties[] = "'scalingPolicyId' can't be null";
         }
@@ -320,6 +334,30 @@ class ListScalingPolicyExecuteLogsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

@@ -23,7 +23,7 @@ class Policy implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * period  指标周期，单位是秒； 0是默认值，例如事件类告警该字段就用0即可； 1代表指标的原始周期，比如RDS监控指标原始周期是60s，表示该RDS指标按60s周期为一个数据点参与告警计算；如想了解各个云服务的指标原始周期可以参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)， 300代表指标按5分钟聚合周期为一个数据点参与告警计算。
     * filter  聚合方式, 支持的值为(average|min|max|sum)
-    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
     * count  次数
@@ -49,7 +49,7 @@ class Policy implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * period  指标周期，单位是秒； 0是默认值，例如事件类告警该字段就用0即可； 1代表指标的原始周期，比如RDS监控指标原始周期是60s，表示该RDS指标按60s周期为一个数据点参与告警计算；如想了解各个云服务的指标原始周期可以参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)， 300代表指标按5分钟聚合周期为一个数据点参与告警计算。
     * filter  聚合方式, 支持的值为(average|min|max|sum)
-    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
     * count  次数
@@ -96,7 +96,7 @@ class Policy implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * period  指标周期，单位是秒； 0是默认值，例如事件类告警该字段就用0即可； 1代表指标的原始周期，比如RDS监控指标原始周期是60s，表示该RDS指标按60s周期为一个数据点参与告警计算；如想了解各个云服务的指标原始周期可以参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)， 300代表指标按5分钟聚合周期为一个数据点参与告警计算。
     * filter  聚合方式, 支持的值为(average|min|max|sum)
-    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
     * count  次数
@@ -122,7 +122,7 @@ class Policy implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * period  指标周期，单位是秒； 0是默认值，例如事件类告警该字段就用0即可； 1代表指标的原始周期，比如RDS监控指标原始周期是60s，表示该RDS指标按60s周期为一个数据点参与告警计算；如想了解各个云服务的指标原始周期可以参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)， 300代表指标按5分钟聚合周期为一个数据点参与告警计算。
     * filter  聚合方式, 支持的值为(average|min|max|sum)
-    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
     * count  次数
@@ -148,7 +148,7 @@ class Policy implements ModelInterface, ArrayAccess
     * metricName  资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
     * period  指标周期，单位是秒； 0是默认值，例如事件类告警该字段就用0即可； 1代表指标的原始周期，比如RDS监控指标原始周期是60s，表示该RDS指标按60s周期为一个数据点参与告警计算；如想了解各个云服务的指标原始周期可以参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)， 300代表指标按5分钟聚合周期为一个数据点参与告警计算。
     * filter  聚合方式, 支持的值为(average|min|max|sum)
-    * comparisonOperator  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
     * count  次数
@@ -276,8 +276,8 @@ class Policy implements ModelInterface, ArrayAccess
         if ($this->container['comparisonOperator'] === null) {
             $invalidProperties[] = "'comparisonOperator' can't be null";
         }
-            if (!preg_match("/^(>|<|>=|<=|=|><)$/", $this->container['comparisonOperator'])) {
-                $invalidProperties[] = "invalid value for 'comparisonOperator', must be conform to the pattern /^(>|<|>=|<=|=|><)$/.";
+            if (!preg_match("/^(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)$/", $this->container['comparisonOperator'])) {
+                $invalidProperties[] = "invalid value for 'comparisonOperator', must be conform to the pattern /^(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)$/.";
             }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
@@ -400,7 +400,7 @@ class Policy implements ModelInterface, ArrayAccess
 
     /**
     * Gets comparisonOperator
-    *  阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    *  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     *
     * @return string
     */
@@ -412,7 +412,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets comparisonOperator
     *
-    * @param string $comparisonOperator 阈值符号, 支持的值为(>|<|>=|<=|=|><)
+    * @param string $comparisonOperator 告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     *
     * @return $this
     */

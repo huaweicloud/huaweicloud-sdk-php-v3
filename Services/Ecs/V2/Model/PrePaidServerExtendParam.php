@@ -33,6 +33,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     * diskPrior  是否支持先创建卷，再创建虚拟机。  “true”：配置该功能 “false”：不配置该功能
     * spotDurationHours  购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - spot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
     * interruptionPolicy  竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
+    * cbCsbsBackup  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
     * spotDurationCount  表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
     *
     * @var string[]
@@ -51,6 +52,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
             'diskPrior' => 'string',
             'spotDurationHours' => 'int',
             'interruptionPolicy' => 'string',
+            'cbCsbsBackup' => 'string',
             'spotDurationCount' => 'int'
     ];
 
@@ -69,6 +71,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     * diskPrior  是否支持先创建卷，再创建虚拟机。  “true”：配置该功能 “false”：不配置该功能
     * spotDurationHours  购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - spot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
     * interruptionPolicy  竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
+    * cbCsbsBackup  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
     * spotDurationCount  表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
     *
     * @var string[]
@@ -87,6 +90,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
         'diskPrior' => null,
         'spotDurationHours' => 'int32',
         'interruptionPolicy' => null,
+        'cbCsbsBackup' => null,
         'spotDurationCount' => 'int32'
     ];
 
@@ -126,6 +130,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     * diskPrior  是否支持先创建卷，再创建虚拟机。  “true”：配置该功能 “false”：不配置该功能
     * spotDurationHours  购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - spot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
     * interruptionPolicy  竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
+    * cbCsbsBackup  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
     * spotDurationCount  表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
     *
     * @var string[]
@@ -144,6 +149,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
             'diskPrior' => 'diskPrior',
             'spotDurationHours' => 'spot_duration_hours',
             'interruptionPolicy' => 'interruption_policy',
+            'cbCsbsBackup' => 'CB_CSBS_BACKUP',
             'spotDurationCount' => 'spot_duration_count'
     ];
 
@@ -162,6 +168,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     * diskPrior  是否支持先创建卷，再创建虚拟机。  “true”：配置该功能 “false”：不配置该功能
     * spotDurationHours  购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - spot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
     * interruptionPolicy  竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
+    * cbCsbsBackup  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
     * spotDurationCount  表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
     *
     * @var string[]
@@ -180,6 +187,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
             'diskPrior' => 'setDiskPrior',
             'spotDurationHours' => 'setSpotDurationHours',
             'interruptionPolicy' => 'setInterruptionPolicy',
+            'cbCsbsBackup' => 'setCbCsbsBackup',
             'spotDurationCount' => 'setSpotDurationCount'
     ];
 
@@ -198,6 +206,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     * diskPrior  是否支持先创建卷，再创建虚拟机。  “true”：配置该功能 “false”：不配置该功能
     * spotDurationHours  购买的竞价实例时长。  - 仅interruption_policy=immediate 时该字段有效 。 - spot_duration_hours大于0。最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_hours字段中查询。
     * interruptionPolicy  竞价实例中断策略，当前支持immediate。  - 当interruption_policy=immediate时表示释放策略为立即释放。
+    * cbCsbsBackup  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
     * spotDurationCount  表示购买的“竞价实例时长”的个数。  - 仅spot_duration_hours>0 时该字段有效。 - spot_duration_hours小于6时，spot_duration_count值必须为1。 - spot_duration_hours等于6时，spot_duration_count大于等于1。  spot_duration_count的最大值由预测系统给出可以从flavor的extra_specs的cond:spot_block:operation:longest_duration_count字段中查询。
     *
     * @var string[]
@@ -216,6 +225,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
             'diskPrior' => 'getDiskPrior',
             'spotDurationHours' => 'getSpotDurationHours',
             'interruptionPolicy' => 'getInterruptionPolicy',
+            'cbCsbsBackup' => 'getCbCsbsBackup',
             'spotDurationCount' => 'getSpotDurationCount'
     ];
 
@@ -363,6 +373,7 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
         $this->container['diskPrior'] = isset($data['diskPrior']) ? $data['diskPrior'] : null;
         $this->container['spotDurationHours'] = isset($data['spotDurationHours']) ? $data['spotDurationHours'] : null;
         $this->container['interruptionPolicy'] = isset($data['interruptionPolicy']) ? $data['interruptionPolicy'] : null;
+        $this->container['cbCsbsBackup'] = isset($data['cbCsbsBackup']) ? $data['cbCsbsBackup'] : null;
         $this->container['spotDurationCount'] = isset($data['spotDurationCount']) ? $data['spotDurationCount'] : null;
     }
 
@@ -743,6 +754,30 @@ class PrePaidServerExtendParam implements ModelInterface, ArrayAccess
     public function setInterruptionPolicy($interruptionPolicy)
     {
         $this->container['interruptionPolicy'] = $interruptionPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets cbCsbsBackup
+    *  云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
+    *
+    * @return string|null
+    */
+    public function getCbCsbsBackup()
+    {
+        return $this->container['cbCsbsBackup'];
+    }
+
+    /**
+    * Sets cbCsbsBackup
+    *
+    * @param string|null $cbCsbsBackup 云备份策略和云备份存储库详情，取值包含：备份策略ID和云备份存储库ID。
+    *
+    * @return $this
+    */
+    public function setCbCsbsBackup($cbCsbsBackup)
+    {
+        $this->container['cbCsbsBackup'] = $cbCsbsBackup;
         return $this;
     }
 

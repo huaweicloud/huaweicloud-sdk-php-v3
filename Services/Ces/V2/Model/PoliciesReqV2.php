@@ -25,7 +25,7 @@ class PoliciesReqV2 implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]'
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[]'
     ];
 
     /**
@@ -179,7 +179,7 @@ class PoliciesReqV2 implements ModelInterface, ArrayAccess
     * Gets policies
     *  策略信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[]
     */
     public function getPolicies()
     {
@@ -189,7 +189,7 @@ class PoliciesReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[] $policies 策略信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicy[] $policies 策略信息
     *
     * @return $this
     */

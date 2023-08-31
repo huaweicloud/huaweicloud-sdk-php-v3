@@ -450,8 +450,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const ENGINE_KAFKA = 'kafka';
-    const ENGINE_VERSION__1_1_0 = '1.1.0';
-    const ENGINE_VERSION__2_7 = '2.7';
     const SPECIFICATION__100_MB = '100MB';
     const SPECIFICATION__300_MB = '300MB';
     const SPECIFICATION__600_MB = '600MB';
@@ -489,19 +487,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_KAFKA,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineVersionAllowableValues()
-    {
-        return [
-            self::ENGINE_VERSION__1_1_0,
-            self::ENGINE_VERSION__2_7,
         ];
     }
 
@@ -662,14 +647,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
         if ($this->container['engineVersion'] === null) {
             $invalidProperties[] = "'engineVersion' can't be null";
         }
-            $allowedValues = $this->getEngineVersionAllowableValues();
-                if (!is_null($this->container['engineVersion']) && !in_array($this->container['engineVersion'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engineVersion', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getSpecificationAllowableValues();
                 if (!is_null($this->container['specification']) && !in_array($this->container['specification'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

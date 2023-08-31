@@ -20,6 +20,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
     * scalingGroupName  伸缩组名称
     * scalingConfigurationId  伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见[查询弹性伸缩配置列表](https://support.huaweicloud.com/api-as/as_06_0202.html)。
     * scalingGroupStatus  伸缩组状态，取值如下：  - INSERVICE：正常状态 - PAUSED：停用状态 - ERROR：异常状态 - DELETING：删除中 - FREEZED：已冻结
@@ -30,6 +31,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'scalingGroupName' => 'string',
             'scalingConfigurationId' => 'string',
             'scalingGroupStatus' => 'string',
@@ -40,6 +42,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
     * scalingGroupName  伸缩组名称
     * scalingConfigurationId  伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见[查询弹性伸缩配置列表](https://support.huaweicloud.com/api-as/as_06_0202.html)。
     * scalingGroupStatus  伸缩组状态，取值如下：  - INSERVICE：正常状态 - PAUSED：停用状态 - ERROR：异常状态 - DELETING：删除中 - FREEZED：已冻结
@@ -50,6 +53,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'scalingGroupName' => null,
         'scalingConfigurationId' => null,
         'scalingGroupStatus' => null,
@@ -81,6 +85,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
     * scalingGroupName  伸缩组名称
     * scalingConfigurationId  伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见[查询弹性伸缩配置列表](https://support.huaweicloud.com/api-as/as_06_0202.html)。
     * scalingGroupStatus  伸缩组状态，取值如下：  - INSERVICE：正常状态 - PAUSED：停用状态 - ERROR：异常状态 - DELETING：删除中 - FREEZED：已冻结
@@ -91,6 +96,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'scalingGroupName' => 'scaling_group_name',
             'scalingConfigurationId' => 'scaling_configuration_id',
             'scalingGroupStatus' => 'scaling_group_status',
@@ -101,6 +107,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
     * scalingGroupName  伸缩组名称
     * scalingConfigurationId  伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见[查询弹性伸缩配置列表](https://support.huaweicloud.com/api-as/as_06_0202.html)。
     * scalingGroupStatus  伸缩组状态，取值如下：  - INSERVICE：正常状态 - PAUSED：停用状态 - ERROR：异常状态 - DELETING：删除中 - FREEZED：已冻结
@@ -111,6 +118,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'scalingGroupName' => 'setScalingGroupName',
             'scalingConfigurationId' => 'setScalingConfigurationId',
             'scalingGroupStatus' => 'setScalingGroupStatus',
@@ -121,6 +129,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
     * scalingGroupName  伸缩组名称
     * scalingConfigurationId  伸缩配置ID，通过查询弹性伸缩配置列表接口获取，详见[查询弹性伸缩配置列表](https://support.huaweicloud.com/api-as/as_06_0202.html)。
     * scalingGroupStatus  伸缩组状态，取值如下：  - INSERVICE：正常状态 - PAUSED：停用状态 - ERROR：异常状态 - DELETING：删除中 - FREEZED：已冻结
@@ -131,6 +140,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'scalingGroupName' => 'getScalingGroupName',
             'scalingConfigurationId' => 'getScalingConfigurationId',
             'scalingGroupStatus' => 'getScalingGroupStatus',
@@ -216,6 +226,7 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['scalingGroupName'] = isset($data['scalingGroupName']) ? $data['scalingGroupName'] : null;
         $this->container['scalingConfigurationId'] = isset($data['scalingConfigurationId']) ? $data['scalingConfigurationId'] : null;
         $this->container['scalingGroupStatus'] = isset($data['scalingGroupStatus']) ? $data['scalingGroupStatus'] : null;
@@ -232,6 +243,9 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
             if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be smaller than or equal to 64.";
             }
@@ -261,6 +275,30 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

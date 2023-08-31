@@ -24,6 +24,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     * edgeSetName  导出边文件名。
     * vertexSetName  导出点文件名。
     * schemaName  导出元数据文件名。
+    * paginate  paginate
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
             'graphExportPath' => 'string',
             'edgeSetName' => 'string',
             'vertexSetName' => 'string',
-            'schemaName' => 'string'
+            'schemaName' => 'string',
+            'paginate' => '\HuaweiCloud\SDK\Ges\V2\Model\ExportGraphReqPaginate'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     * edgeSetName  导出边文件名。
     * vertexSetName  导出点文件名。
     * schemaName  导出元数据文件名。
+    * paginate  paginate
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
         'graphExportPath' => null,
         'edgeSetName' => null,
         'vertexSetName' => null,
-        'schemaName' => null
+        'schemaName' => null,
+        'paginate' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     * edgeSetName  导出边文件名。
     * vertexSetName  导出点文件名。
     * schemaName  导出元数据文件名。
+    * paginate  paginate
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
             'graphExportPath' => 'graph_export_path',
             'edgeSetName' => 'edge_set_name',
             'vertexSetName' => 'vertex_set_name',
-            'schemaName' => 'schema_name'
+            'schemaName' => 'schema_name',
+            'paginate' => 'paginate'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     * edgeSetName  导出边文件名。
     * vertexSetName  导出点文件名。
     * schemaName  导出元数据文件名。
+    * paginate  paginate
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
             'graphExportPath' => 'setGraphExportPath',
             'edgeSetName' => 'setEdgeSetName',
             'vertexSetName' => 'setVertexSetName',
-            'schemaName' => 'setSchemaName'
+            'schemaName' => 'setSchemaName',
+            'paginate' => 'setPaginate'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     * edgeSetName  导出边文件名。
     * vertexSetName  导出点文件名。
     * schemaName  导出元数据文件名。
+    * paginate  paginate
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
             'graphExportPath' => 'getGraphExportPath',
             'edgeSetName' => 'getEdgeSetName',
             'vertexSetName' => 'getVertexSetName',
-            'schemaName' => 'getSchemaName'
+            'schemaName' => 'getSchemaName',
+            'paginate' => 'getPaginate'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
         $this->container['edgeSetName'] = isset($data['edgeSetName']) ? $data['edgeSetName'] : null;
         $this->container['vertexSetName'] = isset($data['vertexSetName']) ? $data['vertexSetName'] : null;
         $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
+        $this->container['paginate'] = isset($data['paginate']) ? $data['paginate'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class ExportGraphReq implements ModelInterface, ArrayAccess
     public function setSchemaName($schemaName)
     {
         $this->container['schemaName'] = $schemaName;
+        return $this;
+    }
+
+    /**
+    * Gets paginate
+    *  paginate
+    *
+    * @return \HuaweiCloud\SDK\Ges\V2\Model\ExportGraphReqPaginate|null
+    */
+    public function getPaginate()
+    {
+        return $this->container['paginate'];
+    }
+
+    /**
+    * Sets paginate
+    *
+    * @param \HuaweiCloud\SDK\Ges\V2\Model\ExportGraphReqPaginate|null $paginate paginate
+    *
+    * @return $this
+    */
+    public function setPaginate($paginate)
+    {
+        $this->container['paginate'] = $paginate;
         return $this;
     }
 

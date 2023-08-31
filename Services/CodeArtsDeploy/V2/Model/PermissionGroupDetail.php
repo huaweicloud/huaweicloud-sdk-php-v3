@@ -24,7 +24,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     * canEdit  是否有编辑权限
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
-    * canManage  是否有管理权限
+    * canManage  是否有编辑主机集群权限矩阵的权限
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     * canEdit  是否有编辑权限
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
-    * canManage  是否有管理权限
+    * canManage  是否有编辑主机集群权限矩阵的权限
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     * canEdit  是否有编辑权限
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
-    * canManage  是否有管理权限
+    * canManage  是否有编辑主机集群权限矩阵的权限
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     * canEdit  是否有编辑权限
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
-    * canManage  是否有管理权限
+    * canManage  是否有编辑主机集群权限矩阵的权限
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     * canEdit  是否有编辑权限
     * canDelete  是否有删除权限
     * canAddHost  是否有添加主机权限
-    * canManage  是否有管理权限
+    * canManage  是否有编辑主机集群权限矩阵的权限
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets canManage
-    *  是否有管理权限
+    *  是否有编辑主机集群权限矩阵的权限
     *
     * @return bool|null
     */
@@ -326,7 +326,7 @@ class PermissionGroupDetail implements ModelInterface, ArrayAccess
     /**
     * Sets canManage
     *
-    * @param bool|null $canManage 是否有管理权限
+    * @param bool|null $canManage 是否有编辑主机集群权限矩阵的权限
     *
     * @return $this
     */

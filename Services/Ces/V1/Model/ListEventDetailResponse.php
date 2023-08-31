@@ -27,6 +27,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
     * eventInfo  一条或者多条事件详细信息。
     * metaData  metaData
+    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
             'eventUsers' => 'string[]',
             'eventSources' => 'string[]',
             'eventInfo' => '\HuaweiCloud\SDK\Ces\V1\Model\EventInfoDetail[]',
-            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\TotalMetaData'
+            'metaData' => '\HuaweiCloud\SDK\Ces\V1\Model\TotalMetaData',
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension'
     ];
 
     /**
@@ -47,6 +49,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
     * eventInfo  一条或者多条事件详细信息。
     * metaData  metaData
+    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
         'eventUsers' => null,
         'eventSources' => null,
         'eventInfo' => null,
-        'metaData' => null
+        'metaData' => null,
+        'dimensions' => null
     ];
 
     /**
@@ -88,6 +92,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
     * eventInfo  一条或者多条事件详细信息。
     * metaData  metaData
+    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
             'eventUsers' => 'event_users',
             'eventSources' => 'event_sources',
             'eventInfo' => 'event_info',
-            'metaData' => 'meta_data'
+            'metaData' => 'meta_data',
+            'dimensions' => 'dimensions'
     ];
 
     /**
@@ -108,6 +114,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
     * eventInfo  一条或者多条事件详细信息。
     * metaData  metaData
+    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
             'eventUsers' => 'setEventUsers',
             'eventSources' => 'setEventSources',
             'eventInfo' => 'setEventInfo',
-            'metaData' => 'setMetaData'
+            'metaData' => 'setMetaData',
+            'dimensions' => 'setDimensions'
     ];
 
     /**
@@ -128,6 +136,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     * eventSources  事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
     * eventInfo  一条或者多条事件详细信息。
     * metaData  metaData
+    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
             'eventUsers' => 'getEventUsers',
             'eventSources' => 'getEventSources',
             'eventInfo' => 'getEventInfo',
-            'metaData' => 'getMetaData'
+            'metaData' => 'getMetaData',
+            'dimensions' => 'getDimensions'
     ];
 
     /**
@@ -219,6 +229,7 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
         $this->container['eventSources'] = isset($data['eventSources']) ? $data['eventSources'] : null;
         $this->container['eventInfo'] = isset($data['eventInfo']) ? $data['eventInfo'] : null;
         $this->container['metaData'] = isset($data['metaData']) ? $data['metaData'] : null;
+        $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
     }
 
     /**
@@ -392,6 +403,30 @@ class ListEventDetailResponse implements ModelInterface, ArrayAccess
     public function setMetaData($metaData)
     {
         $this->container['metaData'] = $metaData;
+        return $this;
+    }
+
+    /**
+    * Gets dimensions
+    *  dimensions
+    *
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension|null
+    */
+    public function getDimensions()
+    {
+        return $this->container['dimensions'];
+    }
+
+    /**
+    * Sets dimensions
+    *
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension|null $dimensions dimensions
+    *
+    * @return $this
+    */
+    public function setDimensions($dimensions)
+    {
+        $this->container['dimensions'] = $dimensions;
         return $this;
     }
 
