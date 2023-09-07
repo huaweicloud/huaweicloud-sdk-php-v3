@@ -22,7 +22,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @var string[]
     */
@@ -153,6 +153,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const TYPE_DETAIL = 'detail';
     const TYPE_SYNCHRONIZED = 'synchronized';
+    const TYPE_CHANGE = 'change';
     
 
     /**
@@ -178,6 +179,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
         return [
             self::TYPE_DETAIL,
             self::TYPE_SYNCHRONIZED,
+            self::TYPE_CHANGE,
         ];
     }
 
@@ -296,7 +298,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    *  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @return string
     */
@@ -308,7 +310,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+    * @param string $type 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
     *
     * @return $this
     */

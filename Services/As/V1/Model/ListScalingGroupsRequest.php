@@ -246,12 +246,6 @@ class ListScalingGroupsRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['scalingConfigurationId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['scalingConfigurationId'])) {
                 $invalidProperties[] = "invalid value for 'scalingConfigurationId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
             }

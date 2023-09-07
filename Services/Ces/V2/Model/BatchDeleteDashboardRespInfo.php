@@ -20,7 +20,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * retStatus  处理结果, successful: 成功, error: 失败
     * errorMsg  错误信息
     *
@@ -34,7 +34,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * retStatus  处理结果, successful: 成功, error: 失败
     * errorMsg  错误信息
     *
@@ -69,7 +69,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * retStatus  处理结果, successful: 成功, error: 失败
     * errorMsg  错误信息
     *
@@ -83,7 +83,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * retStatus  处理结果, successful: 成功, error: 失败
     * errorMsg  错误信息
     *
@@ -97,7 +97,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * retStatus  处理结果, successful: 成功, error: 失败
     * errorMsg  错误信息
     *
@@ -228,7 +228,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控面板id
+    *  监控看板id
     *
     * @return string|null
     */
@@ -240,7 +240,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控面板id
+    * @param string|null $dashboardId 监控看板id
     *
     * @return $this
     */

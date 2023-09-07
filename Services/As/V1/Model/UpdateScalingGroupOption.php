@@ -423,12 +423,6 @@ class UpdateScalingGroupOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['coolDownTime']) && ($this->container['coolDownTime'] > 86400)) {
                 $invalidProperties[] = "invalid value for 'coolDownTime', must be smaller than or equal to 86400.";
             }

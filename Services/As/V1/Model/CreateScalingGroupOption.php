@@ -452,12 +452,6 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
         if ($this->container['scalingGroupName'] === null) {
             $invalidProperties[] = "'scalingGroupName' can't be null";
         }
-            if ((mb_strlen($this->container['scalingGroupName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['scalingGroupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['scalingConfigurationId'] === null) {
             $invalidProperties[] = "'scalingConfigurationId' can't be null";
         }

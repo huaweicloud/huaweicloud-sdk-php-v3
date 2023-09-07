@@ -21,7 +21,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  服务区域
+    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     * topUrlSummary  详情数据对象。
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  服务区域
+    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     * topUrlSummary  详情数据对象。
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  服务区域
+    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     * topUrlSummary  详情数据对象。
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  服务区域
+    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     * topUrlSummary  详情数据对象。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  服务区域
+    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     * topUrlSummary  详情数据对象。
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  服务区域
+    *  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     *
     * @return string|null
     */
@@ -204,7 +204,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 服务区域
+    * @param string|null $serviceArea 服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
     *
     * @return $this
     */

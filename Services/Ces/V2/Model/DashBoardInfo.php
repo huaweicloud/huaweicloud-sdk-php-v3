@@ -20,13 +20,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  监控面板id
-    * dashboardName  自定义监控面板名称
+    * dashboardId  监控看板id
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控面板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控面板的创建用户名
-    * createTime  监控面板创建时间
+    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * creatorName  监控看板的创建用户名
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  监控面板id
-    * dashboardName  自定义监控面板名称
+    * dashboardId  监控看板id
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控面板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控面板的创建用户名
-    * createTime  监控面板创建时间
+    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * creatorName  监控看板的创建用户名
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  监控面板id
-    * dashboardName  自定义监控面板名称
+    * dashboardId  监控看板id
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控面板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控面板的创建用户名
-    * createTime  监控面板创建时间
+    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * creatorName  监控看板的创建用户名
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  监控面板id
-    * dashboardName  自定义监控面板名称
+    * dashboardId  监控看板id
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控面板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控面板的创建用户名
-    * createTime  监控面板创建时间
+    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * creatorName  监控看板的创建用户名
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  监控面板id
-    * dashboardName  自定义监控面板名称
+    * dashboardId  监控看板id
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
-    * isFavorite  监控面板是否标记收藏, true: 收藏, false: 未收藏
-    * creatorName  监控面板的创建用户名
-    * createTime  监控面板创建时间
+    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * creatorName  监控看板的创建用户名
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控面板id
+    *  监控看板id
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控面板id
+    * @param string|null $dashboardId 监控看板id
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  自定义监控面板名称
+    *  自定义监控看板名称
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 自定义监控面板名称
+    * @param string|null $dashboardName 自定义监控看板名称
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  监控面板是否标记收藏, true: 收藏, false: 未收藏
+    *  监控看板是否标记收藏, true: 收藏, false: 未收藏
     *
     * @return bool|null
     */
@@ -384,7 +384,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 监控面板是否标记收藏, true: 收藏, false: 未收藏
+    * @param bool|null $isFavorite 监控看板是否标记收藏, true: 收藏, false: 未收藏
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorName
-    *  监控面板的创建用户名
+    *  监控看板的创建用户名
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets creatorName
     *
-    * @param string|null $creatorName 监控面板的创建用户名
+    * @param string|null $creatorName 监控看板的创建用户名
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  监控面板创建时间
+    *  监控看板创建时间
     *
     * @return int|null
     */
@@ -432,7 +432,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 监控面板创建时间
+    * @param int|null $createTime 监控看板创建时间
     *
     * @return $this
     */

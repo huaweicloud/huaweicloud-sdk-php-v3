@@ -20,38 +20,38 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
-    * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * launchTime  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
+    * recurrenceType  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
+    * recurrenceValue  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
+    * startTime  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    * endTime  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'startTime' => 'string',
-            'endTime' => 'string',
             'launchTime' => 'string',
             'recurrenceType' => 'string',
-            'recurrenceValue' => 'string'
+            'recurrenceValue' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
-    * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * launchTime  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
+    * recurrenceType  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
+    * recurrenceValue  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
+    * startTime  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    * endTime  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'startTime' => null,
-        'endTime' => null,
         'launchTime' => null,
         'recurrenceType' => null,
-        'recurrenceValue' => null
+        'recurrenceValue' => null,
+        'startTime' => null,
+        'endTime' => null
     ];
 
     /**
@@ -77,56 +77,56 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
-    * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * launchTime  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
+    * recurrenceType  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
+    * recurrenceValue  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
+    * startTime  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    * endTime  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'startTime' => 'start_time',
-            'endTime' => 'end_time',
             'launchTime' => 'launch_time',
             'recurrenceType' => 'recurrence_type',
-            'recurrenceValue' => 'recurrence_value'
+            'recurrenceValue' => 'recurrence_value',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
-    * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * launchTime  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
+    * recurrenceType  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
+    * recurrenceValue  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
+    * startTime  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    * endTime  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
     *
     * @var string[]
     */
     protected static $setters = [
-            'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime',
             'launchTime' => 'setLaunchTime',
             'recurrenceType' => 'setRecurrenceType',
-            'recurrenceValue' => 'setRecurrenceValue'
+            'recurrenceValue' => 'setRecurrenceValue',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
-    * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * launchTime  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
+    * recurrenceType  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
+    * recurrenceValue  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
+    * startTime  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    * endTime  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
     *
     * @var string[]
     */
     protected static $getters = [
-            'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime',
             'launchTime' => 'getLaunchTime',
             'recurrenceType' => 'getRecurrenceType',
-            'recurrenceValue' => 'getRecurrenceValue'
+            'recurrenceValue' => 'getRecurrenceValue',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime'
     ];
 
     /**
@@ -169,9 +169,9 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RECURRENCE_TYPE_DAILY = 'DAILY';
-    const RECURRENCE_TYPE_WEEKLY = 'WEEKLY';
-    const RECURRENCE_TYPE_MONTHLY = 'MONTHLY';
+    const RECURRENCE_TYPE_DAILY = 'Daily';
+    const RECURRENCE_TYPE_WEEKLY = 'Weekly';
+    const RECURRENCE_TYPE_MONTHLY = 'Monthly';
     
 
     /**
@@ -204,11 +204,11 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['launchTime'] = isset($data['launchTime']) ? $data['launchTime'] : null;
         $this->container['recurrenceType'] = isset($data['recurrenceType']) ? $data['recurrenceType'] : null;
         $this->container['recurrenceValue'] = isset($data['recurrenceValue']) ? $data['recurrenceValue'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
 
     /**
@@ -251,56 +251,8 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets startTime
-    *  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    *
-    * @return string|null
-    */
-    public function getStartTime()
-    {
-        return $this->container['startTime'];
-    }
-
-    /**
-    * Sets startTime
-    *
-    * @param string|null $startTime 非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    *
-    * @return $this
-    */
-    public function setStartTime($startTime)
-    {
-        $this->container['startTime'] = $startTime;
-        return $this;
-    }
-
-    /**
-    * Gets endTime
-    *  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    *
-    * @return string|null
-    */
-    public function getEndTime()
-    {
-        return $this->container['endTime'];
-    }
-
-    /**
-    * Sets endTime
-    *
-    * @param string|null $endTime 仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    *
-    * @return $this
-    */
-    public function setEndTime($endTime)
-    {
-        $this->container['endTime'] = $endTime;
-        return $this;
-    }
-
-    /**
     * Gets launchTime
-    *  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    *  触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
     *
     * @return string
     */
@@ -312,7 +264,7 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets launchTime
     *
-    * @param string $launchTime 必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * @param string $launchTime 触发时间，遵循UTC时间。如果scaling_policy_type为SCHEDULED，则格式为：YYYY-MM-DDThh:mmZ。如果scaling_policy_type为RECURRENCE，则格式为：hh:mm。
     *
     * @return $this
     */
@@ -324,7 +276,7 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets recurrenceType
-    *  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
+    *  周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
     *
     * @return string|null
     */
@@ -336,7 +288,7 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets recurrenceType
     *
-    * @param string|null $recurrenceType 非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
+    * @param string|null $recurrenceType 周期触发类型，scaling_policy_type为RECURRENCE时该项必选。Daily：每天执行一次。Weekly：每周指定天执行一次。Monthly：每月指定天执行一次。
     *
     * @return $this
     */
@@ -348,7 +300,7 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets recurrenceValue
-    *  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    *  周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
     *
     * @return string|null
     */
@@ -360,13 +312,61 @@ class ScheduledPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets recurrenceValue
     *
-    * @param string|null $recurrenceValue 仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
+    * @param string|null $recurrenceValue 周期触发任务数值，scaling_policy_type为RECURRENCE时该项必选。类型为Daily时，该字段为null，表示每天执行类型为Weekly时，该字段取值范围为1-7，1表示星期日，以此类推，以”,”分割，例如：1,3,5。类型为Monthly时，该字段取值范围为1-31，分别表示每月的日期，以“,”分割，例如：1,10,13,28。说明：- 当recurrence_type类型为Daily时，recurrence_value参数不生效。
     *
     * @return $this
     */
     public function setRecurrenceValue($recurrenceValue)
     {
         $this->container['recurrenceValue'] = $recurrenceValue;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime 周期策略重复执行开始时间，遵循UTC时间。默认为当前时间，格式为：YYYY-MM-DDThh：mZ
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 周期策略重复执行结束时间，遵循UTC时间，scaling_policy_type为RECURRENCE时该项必选。当为周期类型策略时，不得早于当前时间和开始时间。格式为：YYYY-MM-DDThh：mmZ
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

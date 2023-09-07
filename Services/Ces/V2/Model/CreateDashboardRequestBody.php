@@ -20,9 +20,9 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
     *
     * @var string[]
@@ -36,9 +36,9 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
     *
     * @var string[]
@@ -73,9 +73,9 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
     *
     * @var string[]
@@ -89,9 +89,9 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
     *
     * @var string[]
@@ -105,9 +105,9 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     * enterpriseId  企业项目Id
-    * dashboardId  监控面板id
+    * dashboardId  监控看板id
     * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
     *
     * @var string[]
@@ -228,7 +228,7 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  自定义监控面板名称
+    *  自定义监控看板名称
     *
     * @return string|null
     */
@@ -240,7 +240,7 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 自定义监控面板名称
+    * @param string|null $dashboardName 自定义监控看板名称
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控面板id
+    *  监控看板id
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class CreateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控面板id
+    * @param string|null $dashboardId 监控看板id
     *
     * @return $this
     */

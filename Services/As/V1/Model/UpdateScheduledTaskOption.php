@@ -28,7 +28,7 @@ class UpdateScheduledTaskOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy',
+            'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy',
             'instanceNumber' => '\HuaweiCloud\SDK\_As\V1\Model\IntegerRange'
     ];
 
@@ -228,7 +228,7 @@ class UpdateScheduledTaskOption implements ModelInterface, ArrayAccess
     * Gets scheduledPolicy
     *  scheduledPolicy
     *
-    * @return \HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy|null
+    * @return \HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy|null
     */
     public function getScheduledPolicy()
     {
@@ -238,7 +238,7 @@ class UpdateScheduledTaskOption implements ModelInterface, ArrayAccess
     /**
     * Sets scheduledPolicy
     *
-    * @param \HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy|null $scheduledPolicy scheduledPolicy
+    * @param \HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy|null $scheduledPolicy scheduledPolicy
     *
     * @return $this
     */

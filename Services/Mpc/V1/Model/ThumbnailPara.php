@@ -229,7 +229,6 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_PERCENT = 'PERCENT';
     const TYPE_TIME = 'TIME';
     const TYPE_DOTS = 'DOTS';
     const TYPE_DOTS_MS = 'DOTS_MS';
@@ -243,7 +242,6 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_PERCENT,
             self::TYPE_TIME,
             self::TYPE_DOTS,
             self::TYPE_DOTS_MS,

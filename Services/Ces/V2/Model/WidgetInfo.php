@@ -29,7 +29,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * properties  properties
     * location  location
     * unit  单位
-    * createTime  监控面板创建时间
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * properties  properties
     * location  location
     * unit  单位
-    * createTime  监控面板创建时间
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * properties  properties
     * location  location
     * unit  单位
-    * createTime  监控面板创建时间
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * properties  properties
     * location  location
     * unit  单位
-    * createTime  监控面板创建时间
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     * properties  properties
     * location  location
     * unit  单位
-    * createTime  监控面板创建时间
+    * createTime  监控看板创建时间
     *
     * @var string[]
     */
@@ -562,7 +562,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  监控面板创建时间
+    *  监控看板创建时间
     *
     * @return int|null
     */
@@ -574,7 +574,7 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 监控面板创建时间
+    * @param int|null $createTime 监控看板创建时间
     *
     * @return $this
     */

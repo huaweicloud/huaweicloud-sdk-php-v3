@@ -149,7 +149,22 @@ class ShowDbObjectCollectionStatusRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_ZH_CN,
+        ];
+    }
 
 
     /**
@@ -183,6 +198,14 @@ class ShowDbObjectCollectionStatusRequest implements ModelInterface, ArrayAccess
         if ($this->container['jobId'] === null) {
             $invalidProperties[] = "'jobId' can't be null";
         }
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['queryId'] === null) {
             $invalidProperties[] = "'queryId' can't be null";
         }

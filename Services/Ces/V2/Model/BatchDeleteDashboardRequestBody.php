@@ -20,7 +20,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardIds  监控面板id列表
+    * dashboardIds  监控看板id列表
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardIds  监控面板id列表
+    * dashboardIds  监控看板id列表
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardIds  监控面板id列表
+    * dashboardIds  监控看板id列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardIds  监控面板id列表
+    * dashboardIds  监控看板id列表
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardIds  监控面板id列表
+    * dashboardIds  监控看板id列表
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardIds
-    *  监控面板id列表
+    *  监控看板id列表
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardIds
     *
-    * @param string[]|null $dashboardIds 监控面板id列表
+    * @param string[]|null $dashboardIds 监控看板id列表
     *
     * @return $this
     */

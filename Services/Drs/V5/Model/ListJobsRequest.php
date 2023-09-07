@@ -31,6 +31,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * limit  查询返回记录的数量限制。
     * sortKey  返回结果按该关键字排序，默认为“create_time”。
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  数据库实例IP
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'sortKey' => 'string',
-            'sortDir' => 'string'
+            'sortDir' => 'string',
+            'instanceIds' => 'string[]',
+            'instanceIp' => 'string'
     ];
 
     /**
@@ -61,6 +65,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * limit  查询返回记录的数量限制。
     * sortKey  返回结果按该关键字排序，默认为“create_time”。
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  数据库实例IP
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'sortKey' => null,
-        'sortDir' => null
+        'sortDir' => null,
+        'instanceIds' => null,
+        'instanceIp' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * limit  查询返回记录的数量限制。
     * sortKey  返回结果按该关键字排序，默认为“create_time”。
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  数据库实例IP
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir'
+            'sortDir' => 'sort_dir',
+            'instanceIds' => 'instance_ids',
+            'instanceIp' => 'instance_ip'
     ];
 
     /**
@@ -142,6 +154,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * limit  查询返回记录的数量限制。
     * sortKey  返回结果按该关键字排序，默认为“create_time”。
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  数据库实例IP
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir'
+            'sortDir' => 'setSortDir',
+            'instanceIds' => 'setInstanceIds',
+            'instanceIp' => 'setInstanceIp'
     ];
 
     /**
@@ -172,6 +188,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * limit  查询返回记录的数量限制。
     * sortKey  返回结果按该关键字排序，默认为“create_time”。
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  数据库实例IP
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir'
+            'sortDir' => 'getSortDir',
+            'instanceIds' => 'getInstanceIds',
+            'instanceIp' => 'getInstanceIp'
     ];
 
     /**
@@ -375,6 +395,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['instanceIds'] = isset($data['instanceIds']) ? $data['instanceIds'] : null;
+        $this->container['instanceIp'] = isset($data['instanceIp']) ? $data['instanceIp'] : null;
     }
 
     /**
@@ -703,6 +725,54 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIds
+    *  数据库实例ID列表，最多支持10个
+    *
+    * @return string[]|null
+    */
+    public function getInstanceIds()
+    {
+        return $this->container['instanceIds'];
+    }
+
+    /**
+    * Sets instanceIds
+    *
+    * @param string[]|null $instanceIds 数据库实例ID列表，最多支持10个
+    *
+    * @return $this
+    */
+    public function setInstanceIds($instanceIds)
+    {
+        $this->container['instanceIds'] = $instanceIds;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIp
+    *  数据库实例IP
+    *
+    * @return string|null
+    */
+    public function getInstanceIp()
+    {
+        return $this->container['instanceIp'];
+    }
+
+    /**
+    * Sets instanceIp
+    *
+    * @param string|null $instanceIp 数据库实例IP
+    *
+    * @return $this
+    */
+    public function setInstanceIp($instanceIp)
+    {
+        $this->container['instanceIp'] = $instanceIp;
         return $this;
     }
 

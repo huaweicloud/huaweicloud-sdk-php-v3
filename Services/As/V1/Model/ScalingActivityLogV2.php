@@ -51,7 +51,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
             'instanceAddedList' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingInstance[]',
             'instanceFailedList' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingInstance[]',
             'instanceStandbyList' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingInstance[]',
-            'scalingValue' => 'string',
+            'scalingValue' => 'int',
             'description' => 'string',
             'instanceValue' => 'int',
             'desireValue' => 'int',
@@ -95,7 +95,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
         'instanceAddedList' => null,
         'instanceFailedList' => null,
         'instanceStandbyList' => null,
-        'scalingValue' => null,
+        'scalingValue' => 'int32',
         'description' => null,
         'instanceValue' => 'int32',
         'desireValue' => 'int32',
@@ -607,7 +607,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
     * Gets scalingValue
     *  伸缩活动中变化（增加或减少）的云服务器数量。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getScalingValue()
     {
@@ -617,7 +617,7 @@ class ScalingActivityLogV2 implements ModelInterface, ArrayAccess
     /**
     * Sets scalingValue
     *
-    * @param string|null $scalingValue 伸缩活动中变化（增加或减少）的云服务器数量。
+    * @param int|null $scalingValue 伸缩活动中变化（增加或减少）的云服务器数量。
     *
     * @return $this
     */

@@ -36,7 +36,7 @@ class ScheduledTaskDetail implements ModelInterface, ArrayAccess
             'taskId' => 'string',
             'scalingGroupId' => 'string',
             'name' => 'string',
-            'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy',
+            'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy',
             'instanceNumber' => '\HuaweiCloud\SDK\_As\V1\Model\IntegerRange',
             'createTime' => 'string',
             'tenantId' => 'string',
@@ -348,7 +348,7 @@ class ScheduledTaskDetail implements ModelInterface, ArrayAccess
     * Gets scheduledPolicy
     *  scheduledPolicy
     *
-    * @return \HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy|null
+    * @return \HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy|null
     */
     public function getScheduledPolicy()
     {
@@ -358,7 +358,7 @@ class ScheduledTaskDetail implements ModelInterface, ArrayAccess
     /**
     * Sets scheduledPolicy
     *
-    * @param \HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy|null $scheduledPolicy scheduledPolicy
+    * @param \HuaweiCloud\SDK\_As\V1\Model\ScheduledTaskPolicy|null $scheduledPolicy scheduledPolicy
     *
     * @return $this
     */

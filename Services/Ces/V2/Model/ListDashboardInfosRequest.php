@@ -21,9 +21,9 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控面板名称
-    * dashboardId  监控面板id
+    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * dashboardName  监控看板名称
+    * dashboardId  监控看板id
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控面板名称
-    * dashboardId  监控面板id
+    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * dashboardName  监控看板名称
+    * dashboardId  监控看板id
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控面板名称
-    * dashboardId  监控面板id
+    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * dashboardName  监控看板名称
+    * dashboardId  监控看板id
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控面板名称
-    * dashboardId  监控面板id
+    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * dashboardName  监控看板名称
+    * dashboardId  监控看板id
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseId  企业项目Id
-    * isFavorite  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
-    * dashboardName  监控面板名称
-    * dashboardId  监控面板id
+    * isFavorite  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * dashboardName  监控看板名称
+    * dashboardId  监控看板id
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    *  指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     *
     * @return bool|null
     */
@@ -258,7 +258,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+    * @param bool|null $isFavorite 指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  监控面板名称
+    *  监控看板名称
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 监控面板名称
+    * @param string|null $dashboardName 监控看板名称
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控面板id
+    *  监控看板id
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class ListDashboardInfosRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 监控面板id
+    * @param string|null $dashboardId 监控看板id
     *
     * @return $this
     */

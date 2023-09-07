@@ -42,7 +42,7 @@ class ScalingActivityLogList implements ModelInterface, ArrayAccess
             'instanceRemovedList' => 'string',
             'instanceDeletedList' => 'string',
             'instanceAddedList' => 'string',
-            'scalingValue' => 'string',
+            'scalingValue' => 'int',
             'description' => 'string',
             'instanceValue' => 'int',
             'desireValue' => 'int'
@@ -72,7 +72,7 @@ class ScalingActivityLogList implements ModelInterface, ArrayAccess
         'instanceRemovedList' => null,
         'instanceDeletedList' => null,
         'instanceAddedList' => null,
-        'scalingValue' => null,
+        'scalingValue' => 'int32',
         'description' => null,
         'instanceValue' => 'int32',
         'desireValue' => 'int32'
@@ -482,7 +482,7 @@ class ScalingActivityLogList implements ModelInterface, ArrayAccess
     * Gets scalingValue
     *  伸缩活动中变化（增加或减少）的云服务器数量。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getScalingValue()
     {
@@ -492,7 +492,7 @@ class ScalingActivityLogList implements ModelInterface, ArrayAccess
     /**
     * Sets scalingValue
     *
-    * @param string|null $scalingValue 伸缩活动中变化（增加或减少）的云服务器数量。
+    * @param int|null $scalingValue 伸缩活动中变化（增加或减少）的云服务器数量。
     *
     * @return $this
     */

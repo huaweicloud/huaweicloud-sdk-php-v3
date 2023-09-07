@@ -20,7 +20,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardName  自定义监控面板名称
+    * dashboardName  自定义监控看板名称
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  自定义监控面板名称
+    *  自定义监控看板名称
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class DashBoardNameItem implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 自定义监控面板名称
+    * @param string|null $dashboardName 自定义监控看板名称
     *
     * @return $this
     */

@@ -189,8 +189,8 @@ class Agency implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['providerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'providerName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";

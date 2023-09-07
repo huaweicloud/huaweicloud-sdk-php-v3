@@ -20,7 +20,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * dashboardId  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    *  监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string $dashboardId 监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+    * @param string $dashboardId 监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
     *
     * @return $this
     */

@@ -23,13 +23,15 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     * poolId  后端云服务器组ID
     * protocolPort  后端协议号，指后端云服务器监听的端口，取值范围[1,65535]
     * weight  权重，指后端云服务器经分发得到的请求数量的比例，取值范围[0, 100]。
+    * protocolVersion  指定ip协议版本
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'poolId' => 'string',
             'protocolPort' => 'int',
-            'weight' => 'int'
+            'weight' => 'int',
+            'protocolVersion' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     * poolId  后端云服务器组ID
     * protocolPort  后端协议号，指后端云服务器监听的端口，取值范围[1,65535]
     * weight  权重，指后端云服务器经分发得到的请求数量的比例，取值范围[0, 100]。
+    * protocolVersion  指定ip协议版本
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'poolId' => null,
         'protocolPort' => 'int32',
-        'weight' => 'int32'
+        'weight' => 'int32',
+        'protocolVersion' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     * poolId  后端云服务器组ID
     * protocolPort  后端协议号，指后端云服务器监听的端口，取值范围[1,65535]
     * weight  权重，指后端云服务器经分发得到的请求数量的比例，取值范围[0, 100]。
+    * protocolVersion  指定ip协议版本
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'poolId' => 'pool_id',
             'protocolPort' => 'protocol_port',
-            'weight' => 'weight'
+            'weight' => 'weight',
+            'protocolVersion' => 'protocol_version'
     ];
 
     /**
@@ -86,13 +92,15 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     * poolId  后端云服务器组ID
     * protocolPort  后端协议号，指后端云服务器监听的端口，取值范围[1,65535]
     * weight  权重，指后端云服务器经分发得到的请求数量的比例，取值范围[0, 100]。
+    * protocolVersion  指定ip协议版本
     *
     * @var string[]
     */
     protected static $setters = [
             'poolId' => 'setPoolId',
             'protocolPort' => 'setProtocolPort',
-            'weight' => 'setWeight'
+            'weight' => 'setWeight',
+            'protocolVersion' => 'setProtocolVersion'
     ];
 
     /**
@@ -100,13 +108,15 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     * poolId  后端云服务器组ID
     * protocolPort  后端协议号，指后端云服务器监听的端口，取值范围[1,65535]
     * weight  权重，指后端云服务器经分发得到的请求数量的比例，取值范围[0, 100]。
+    * protocolVersion  指定ip协议版本
     *
     * @var string[]
     */
     protected static $getters = [
             'poolId' => 'getPoolId',
             'protocolPort' => 'getProtocolPort',
-            'weight' => 'getWeight'
+            'weight' => 'getWeight',
+            'protocolVersion' => 'getProtocolVersion'
     ];
 
     /**
@@ -149,7 +159,22 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTOCOL_VERSION_IPV4 = 'IPV4';
+    const PROTOCOL_VERSION_IPV6 = 'IPV6';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtocolVersionAllowableValues()
+    {
+        return [
+            self::PROTOCOL_VERSION_IPV4,
+            self::PROTOCOL_VERSION_IPV6,
+        ];
+    }
 
 
     /**
@@ -170,6 +195,7 @@ class LbaasListeners implements ModelInterface, ArrayAccess
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['protocolVersion'] = isset($data['protocolVersion']) ? $data['protocolVersion'] : null;
     }
 
     /**
@@ -198,6 +224,14 @@ class LbaasListeners implements ModelInterface, ArrayAccess
         if ($this->container['weight'] === null) {
             $invalidProperties[] = "'weight' can't be null";
         }
+            $allowedValues = $this->getProtocolVersionAllowableValues();
+                if (!is_null($this->container['protocolVersion']) && !in_array($this->container['protocolVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protocolVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -281,6 +315,30 @@ class LbaasListeners implements ModelInterface, ArrayAccess
     public function setWeight($weight)
     {
         $this->container['weight'] = $weight;
+        return $this;
+    }
+
+    /**
+    * Gets protocolVersion
+    *  指定ip协议版本
+    *
+    * @return string|null
+    */
+    public function getProtocolVersion()
+    {
+        return $this->container['protocolVersion'];
+    }
+
+    /**
+    * Sets protocolVersion
+    *
+    * @param string|null $protocolVersion 指定ip协议版本
+    *
+    * @return $this
+    */
+    public function setProtocolVersion($protocolVersion)
+    {
+        $this->container['protocolVersion'] = $protocolVersion;
         return $this;
     }
 

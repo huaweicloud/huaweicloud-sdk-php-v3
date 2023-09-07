@@ -22,7 +22,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  资源总数
-    * resources  资源分组资源列表
+    * resources  资源分组关联资源列表
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  资源总数
-    * resources  资源分组资源列表
+    * resources  资源分组关联资源列表
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  资源总数
-    * resources  资源分组资源列表
+    * resources  资源分组关联资源列表
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  资源总数
-    * resources  资源分组资源列表
+    * resources  资源分组关联资源列表
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  资源总数
-    * resources  资源分组资源列表
+    * resources  资源分组关联资源列表
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Gets resources
-    *  资源分组资源列表
+    *  资源分组关联资源列表
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\GetResourceGroupResources[]|null
     */
@@ -228,7 +228,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\GetResourceGroupResources[]|null $resources 资源分组资源列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\GetResourceGroupResources[]|null $resources 资源分组关联资源列表
     *
     * @return $this
     */

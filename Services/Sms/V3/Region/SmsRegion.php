@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class SmsRegion {
 
-    public static $REGION = array("https://sms.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1",);
+    public static $REGION = array("https://sms.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://sms.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3",);
 
     public static function valueOf($regionId)
     {

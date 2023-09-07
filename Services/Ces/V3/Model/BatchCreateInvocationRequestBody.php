@@ -277,9 +277,6 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['instanceIds'] === null) {
-            $invalidProperties[] = "'instanceIds' can't be null";
-        }
         if ($this->container['invocationType'] === null) {
             $invalidProperties[] = "'invocationType' can't be null";
         }
@@ -333,7 +330,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * Gets instanceIds
     *  主机id列表（INSTALL和UPDATE时必须）
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getInstanceIds()
     {
@@ -343,7 +340,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceIds
     *
-    * @param string[] $instanceIds 主机id列表（INSTALL和UPDATE时必须）
+    * @param string[]|null $instanceIds 主机id列表（INSTALL和UPDATE时必须）
     *
     * @return $this
     */

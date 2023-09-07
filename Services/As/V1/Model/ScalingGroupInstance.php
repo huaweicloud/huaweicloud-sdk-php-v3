@@ -307,12 +307,6 @@ class ScalingGroupInstance implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scalingGroupId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['scalingGroupId'])) {
                 $invalidProperties[] = "invalid value for 'scalingGroupId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
             }
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['scalingGroupName']) && (mb_strlen($this->container['scalingGroupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scalingGroupName', the character length must be bigger than or equal to 1.";
-            }
             $allowedValues = $this->getLifeCycleStateAllowableValues();
                 if (!is_null($this->container['lifeCycleState']) && !in_array($this->container['lifeCycleState'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
