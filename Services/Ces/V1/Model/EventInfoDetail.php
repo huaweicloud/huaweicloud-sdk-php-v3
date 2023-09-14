@@ -32,7 +32,7 @@ class EventInfoDetail implements ModelInterface, ArrayAccess
             'eventName' => 'string',
             'eventSource' => 'string',
             'time' => 'int',
-            'detail' => '\HuaweiCloud\SDK\Ces\V1\Model\EventItemDetail',
+            'detail' => '\HuaweiCloud\SDK\Ces\V1\Model\ShowEventItemDetail',
             'eventId' => 'string'
     ];
 
@@ -322,7 +322,7 @@ class EventInfoDetail implements ModelInterface, ArrayAccess
     * Gets detail
     *  detail
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\EventItemDetail
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\ShowEventItemDetail
     */
     public function getDetail()
     {
@@ -332,7 +332,7 @@ class EventInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets detail
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\EventItemDetail $detail detail
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\ShowEventItemDetail $detail detail
     *
     * @return $this
     */

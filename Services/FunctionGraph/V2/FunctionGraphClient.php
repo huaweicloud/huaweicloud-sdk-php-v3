@@ -669,6 +669,71 @@ class FunctionGraphClient extends Client
     }
 
     /**
+     * 创建函数URL
+     *
+     * 创建函数URL
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFunctionUrl($request)
+    {
+        return $this->createFunctionUrlWithHttpInfo($request);
+    }
+
+    public function createFunctionUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/function-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['functionUrn'] !== null) {
+            $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateFunctionUrlResponse',
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateFunctionUrlRequest');
+    }
+
+    /**
      * 发布函数版本
      *
      * 发布函数版本。
@@ -1375,6 +1440,68 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteFunctionTriggerResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteFunctionTriggerRequest');
+    }
+
+    /**
+     * 删除函数URL
+     *
+     * 删除函数URL
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteFunctionUrl($request)
+    {
+        return $this->deleteFunctionUrlWithHttpInfo($request);
+    }
+
+    public function deleteFunctionUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/function-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['functionUrn'] !== null) {
+            $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteFunctionUrlResponse',
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteFunctionUrlRequest');
     }
 
     /**
@@ -3282,7 +3409,7 @@ class FunctionGraphClient extends Client
 
     public function showFuncSnapshotStateWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/snapshots/state';
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/snapshots/{action}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3298,6 +3425,9 @@ class FunctionGraphClient extends Client
         }
         if ($localVarParams['functionUrn'] !== null) {
             $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($localVarParams['action'] !== null) {
+            $pathParams['action'] = $localVarParams['action'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3579,6 +3709,68 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionTriggerResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionTriggerRequest');
+    }
+
+    /**
+     * 获取指定函数的URL
+     *
+     * 获取指定函数的URL
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFunctionUrl($request)
+    {
+        return $this->showFunctionUrlWithHttpInfo($request);
+    }
+
+    public function showFunctionUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/function-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['functionUrn'] !== null) {
+            $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionUrlResponse',
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionUrlRequest');
     }
 
     /**
@@ -4971,6 +5163,71 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionReservedInstancesCountResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionReservedInstancesCountRequest');
+    }
+
+    /**
+     * 更新函数URL
+     *
+     * 更新函数URL
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFunctionUrl($request)
+    {
+        return $this->updateFunctionUrlWithHttpInfo($request);
+    }
+
+    public function updateFunctionUrlWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/function-url';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['functionUrn'] !== null) {
+            $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionUrlResponse',
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionUrlRequest');
     }
 
     /**

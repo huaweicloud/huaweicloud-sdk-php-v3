@@ -49,7 +49,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'frequency' => 'object',
             'conditionExpression' => 'string',
             'sqlAlarmLevel' => 'string',
             'sqlAlarmSend' => 'bool',
@@ -615,7 +615,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * Gets frequency
     *  告警统计周期
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null
+    * @return object|null
     */
     public function getFrequency()
     {
@@ -625,7 +625,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null $frequency 告警统计周期
+    * @param object|null $frequency 告警统计周期
     *
     * @return $this
     */

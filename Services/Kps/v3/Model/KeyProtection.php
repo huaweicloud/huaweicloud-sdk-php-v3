@@ -175,6 +175,9 @@ class KeyProtection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateKey']) && (mb_strlen($this->container['privateKey']) < 0)) {
                 $invalidProperties[] = "invalid value for 'privateKey', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['encryption'] === null) {
+            $invalidProperties[] = "'encryption' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -217,7 +220,7 @@ class KeyProtection implements ModelInterface, ArrayAccess
     * Gets encryption
     *  encryption
     *
-    * @return \HuaweiCloud\SDK\Kps\v3\Model\Encryption|null
+    * @return \HuaweiCloud\SDK\Kps\v3\Model\Encryption
     */
     public function getEncryption()
     {
@@ -227,7 +230,7 @@ class KeyProtection implements ModelInterface, ArrayAccess
     /**
     * Sets encryption
     *
-    * @param \HuaweiCloud\SDK\Kps\v3\Model\Encryption|null $encryption encryption
+    * @param \HuaweiCloud\SDK\Kps\v3\Model\Encryption $encryption encryption
     *
     * @return $this
     */

@@ -203,8 +203,8 @@ class Stage implements ModelInterface, ArrayAccess
             if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['secretName'])) {
-                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
+                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
             if (!is_null($this->container['versionId']) && !preg_match("/^v[0-9]{0,63}/", $this->container['versionId'])) {
                 $invalidProperties[] = "invalid value for 'versionId', must be conform to the pattern /^v[0-9]{0,63}/.";

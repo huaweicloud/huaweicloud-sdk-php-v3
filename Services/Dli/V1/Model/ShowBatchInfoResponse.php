@@ -34,6 +34,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * feature  作业特性。表示用户作业使用的Spark镜像类型。  basic：表示使用DLI提供的基础Spark镜像。 custom：表示使用用户自定义的Spark镜像。 ai：表示使用DLI提供的AI镜像。
     * sparkVersion  作业使用spark组件的版本号，在“feature”为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
@@ -54,6 +55,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
             'kind' => 'string',
             'queue' => 'string',
             'image' => 'string',
+            'reqBody' => 'string',
             'updateTime' => 'int',
             'feature' => 'string',
             'sparkVersion' => 'string'
@@ -74,6 +76,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * feature  作业特性。表示用户作业使用的Spark镜像类型。  basic：表示使用DLI提供的基础Spark镜像。 custom：表示使用用户自定义的Spark镜像。 ai：表示使用DLI提供的AI镜像。
     * sparkVersion  作业使用spark组件的版本号，在“feature”为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
@@ -94,6 +97,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
         'kind' => null,
         'queue' => null,
         'image' => null,
+        'reqBody' => null,
         'updateTime' => 'int64',
         'feature' => null,
         'sparkVersion' => null
@@ -135,6 +139,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * feature  作业特性。表示用户作业使用的Spark镜像类型。  basic：表示使用DLI提供的基础Spark镜像。 custom：表示使用用户自定义的Spark镜像。 ai：表示使用DLI提供的AI镜像。
     * sparkVersion  作业使用spark组件的版本号，在“feature”为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
@@ -155,6 +160,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
             'kind' => 'kind',
             'queue' => 'queue',
             'image' => 'image',
+            'reqBody' => 'req_body',
             'updateTime' => 'update_time',
             'feature' => 'feature',
             'sparkVersion' => 'spark_version'
@@ -175,6 +181,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * feature  作业特性。表示用户作业使用的Spark镜像类型。  basic：表示使用DLI提供的基础Spark镜像。 custom：表示使用用户自定义的Spark镜像。 ai：表示使用DLI提供的AI镜像。
     * sparkVersion  作业使用spark组件的版本号，在“feature”为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
@@ -195,6 +202,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
             'kind' => 'setKind',
             'queue' => 'setQueue',
             'image' => 'setImage',
+            'reqBody' => 'setReqBody',
             'updateTime' => 'setUpdateTime',
             'feature' => 'setFeature',
             'sparkVersion' => 'setSparkVersion'
@@ -215,6 +223,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * feature  作业特性。表示用户作业使用的Spark镜像类型。  basic：表示使用DLI提供的基础Spark镜像。 custom：表示使用用户自定义的Spark镜像。 ai：表示使用DLI提供的AI镜像。
     * sparkVersion  作业使用spark组件的版本号，在“feature”为“basic”或“ai”时填写，若不填写，则使用默认的spark组件版本号2.3.2。
@@ -235,6 +244,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
             'kind' => 'getKind',
             'queue' => 'getQueue',
             'image' => 'getImage',
+            'reqBody' => 'getReqBody',
             'updateTime' => 'getUpdateTime',
             'feature' => 'getFeature',
             'sparkVersion' => 'getSparkVersion'
@@ -311,6 +321,7 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
         $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['queue'] = isset($data['queue']) ? $data['queue'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['reqBody'] = isset($data['reqBody']) ? $data['reqBody'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['feature'] = isset($data['feature']) ? $data['feature'] : null;
         $this->container['sparkVersion'] = isset($data['sparkVersion']) ? $data['sparkVersion'] : null;
@@ -647,6 +658,30 @@ class ShowBatchInfoResponse implements ModelInterface, ArrayAccess
     public function setImage($image)
     {
         $this->container['image'] = $image;
+        return $this;
+    }
+
+    /**
+    * Gets reqBody
+    *  请求参数详情
+    *
+    * @return string|null
+    */
+    public function getReqBody()
+    {
+        return $this->container['reqBody'];
+    }
+
+    /**
+    * Sets reqBody
+    *
+    * @param string|null $reqBody 请求参数详情
+    *
+    * @return $this
+    */
+    public function setReqBody($reqBody)
+    {
+        $this->container['reqBody'] = $reqBody;
         return $this;
     }
 

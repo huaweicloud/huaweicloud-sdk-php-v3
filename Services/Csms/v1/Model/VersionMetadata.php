@@ -22,6 +22,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  凭据的版本号标识符，凭据对象下唯一。
     * createTime  凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
     * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
@@ -31,6 +32,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'createTime' => 'int',
+            'expireTime' => 'int',
             'kmsKeyId' => 'string',
             'secretName' => 'string',
             'versionStages' => 'string[]'
@@ -40,6 +42,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  凭据的版本号标识符，凭据对象下唯一。
     * createTime  凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
     * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
@@ -49,6 +52,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'createTime' => 'int64',
+        'expireTime' => 'int64',
         'kmsKeyId' => null,
         'secretName' => null,
         'versionStages' => null
@@ -79,6 +83,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  凭据的版本号标识符，凭据对象下唯一。
     * createTime  凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
     * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
@@ -88,6 +93,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'createTime' => 'create_time',
+            'expireTime' => 'expire_time',
             'kmsKeyId' => 'kms_key_id',
             'secretName' => 'secret_name',
             'versionStages' => 'version_stages'
@@ -97,6 +103,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  凭据的版本号标识符，凭据对象下唯一。
     * createTime  凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
     * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
@@ -106,6 +113,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'createTime' => 'setCreateTime',
+            'expireTime' => 'setExpireTime',
             'kmsKeyId' => 'setKmsKeyId',
             'secretName' => 'setSecretName',
             'versionStages' => 'setVersionStages'
@@ -115,6 +123,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  凭据的版本号标识符，凭据对象下唯一。
     * createTime  凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     * kmsKeyId  加密版本凭据值的KMS主密钥ID。
     * secretName  凭据名称。
     * versionStages  凭据版本被标记的状态列表。每个版本标签对于凭据对象下版本是唯一存在的，如果你创建版本时，指定的是同一凭据对象下的一个已经标记在其他版本上的状态，该标签将自动从其他版本上删除，并附加到此版本上。  如果未指定version_stage的值，则凭据管理服务会自动移动临时标签SYSCURRENT到此新版本。
@@ -124,6 +133,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'createTime' => 'getCreateTime',
+            'expireTime' => 'getExpireTime',
             'kmsKeyId' => 'getKmsKeyId',
             'secretName' => 'getSecretName',
             'versionStages' => 'getVersionStages'
@@ -189,6 +199,7 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
         $this->container['secretName'] = isset($data['secretName']) ? $data['secretName'] : null;
         $this->container['versionStages'] = isset($data['versionStages']) ? $data['versionStages'] : null;
@@ -202,8 +213,8 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            if (!is_null($this->container['id']) && !preg_match("/v[0-9]{1,10}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /v[0-9]{1,10}/.";
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 13)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
@@ -211,11 +222,17 @@ class VersionMetadata implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
                 $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
-            if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['secretName'])) {
-                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!is_null($this->container['secretName']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
+                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
         return $invalidProperties;
     }
@@ -276,6 +293,30 @@ class VersionMetadata implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets expireTime
+    *  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+    *
+    * @return int|null
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param int|null $expireTime 凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

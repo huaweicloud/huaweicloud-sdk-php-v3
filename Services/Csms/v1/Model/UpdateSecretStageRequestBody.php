@@ -161,8 +161,8 @@ class UpdateSecretStageRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['versionId'] === null) {
             $invalidProperties[] = "'versionId' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9][a-zA-Z0-9-_.]{0,63}/", $this->container['versionId'])) {
-                $invalidProperties[] = "invalid value for 'versionId', must be conform to the pattern /^[a-zA-Z0-9][a-zA-Z0-9-_.]{0,63}/.";
+            if (!preg_match("/^v[0-9]{0,63}/", $this->container['versionId'])) {
+                $invalidProperties[] = "invalid value for 'versionId', must be conform to the pattern /^v[0-9]{0,63}/.";
             }
         return $invalidProperties;
     }

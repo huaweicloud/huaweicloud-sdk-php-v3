@@ -32,9 +32,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
     * isMultiAz  存储库多az属性，默认为false
-    * promotionInfo  促销信息，包周期时可选参数
-    * purchaseMode  购买模式，包周期时可选参数
-    * orderId  订单 ID，包周期时可选参数
     *
     * @var string[]
     */
@@ -50,10 +47,7 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'bool',
             'isAutoPay' => 'bool',
             'consoleUrl' => 'string',
-            'isMultiAz' => 'bool',
-            'promotionInfo' => 'string',
-            'purchaseMode' => 'string',
-            'orderId' => 'string'
+            'isMultiAz' => 'bool'
     ];
 
     /**
@@ -70,9 +64,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
     * isMultiAz  存储库多az属性，默认为false
-    * promotionInfo  促销信息，包周期时可选参数
-    * purchaseMode  购买模式，包周期时可选参数
-    * orderId  订单 ID，包周期时可选参数
     *
     * @var string[]
     */
@@ -88,10 +79,7 @@ class BillingCreate implements ModelInterface, ArrayAccess
         'isAutoRenew' => null,
         'isAutoPay' => null,
         'consoleUrl' => null,
-        'isMultiAz' => null,
-        'promotionInfo' => null,
-        'purchaseMode' => null,
-        'orderId' => null
+        'isMultiAz' => null
     ];
 
     /**
@@ -129,9 +117,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
     * isMultiAz  存储库多az属性，默认为false
-    * promotionInfo  促销信息，包周期时可选参数
-    * purchaseMode  购买模式，包周期时可选参数
-    * orderId  订单 ID，包周期时可选参数
     *
     * @var string[]
     */
@@ -147,10 +132,7 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'is_auto_renew',
             'isAutoPay' => 'is_auto_pay',
             'consoleUrl' => 'console_url',
-            'isMultiAz' => 'is_multi_az',
-            'promotionInfo' => 'promotion_info',
-            'purchaseMode' => 'purchase_mode',
-            'orderId' => 'order_id'
+            'isMultiAz' => 'is_multi_az'
     ];
 
     /**
@@ -167,9 +149,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
     * isMultiAz  存储库多az属性，默认为false
-    * promotionInfo  促销信息，包周期时可选参数
-    * purchaseMode  购买模式，包周期时可选参数
-    * orderId  订单 ID，包周期时可选参数
     *
     * @var string[]
     */
@@ -185,10 +164,7 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'setIsAutoRenew',
             'isAutoPay' => 'setIsAutoPay',
             'consoleUrl' => 'setConsoleUrl',
-            'isMultiAz' => 'setIsMultiAz',
-            'promotionInfo' => 'setPromotionInfo',
-            'purchaseMode' => 'setPurchaseMode',
-            'orderId' => 'setOrderId'
+            'isMultiAz' => 'setIsMultiAz'
     ];
 
     /**
@@ -205,9 +181,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
     * isMultiAz  存储库多az属性，默认为false
-    * promotionInfo  促销信息，包周期时可选参数
-    * purchaseMode  购买模式，包周期时可选参数
-    * orderId  订单 ID，包周期时可选参数
     *
     * @var string[]
     */
@@ -223,10 +196,7 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'getIsAutoRenew',
             'isAutoPay' => 'getIsAutoPay',
             'consoleUrl' => 'getConsoleUrl',
-            'isMultiAz' => 'getIsMultiAz',
-            'promotionInfo' => 'getPromotionInfo',
-            'purchaseMode' => 'getPurchaseMode',
-            'orderId' => 'getOrderId'
+            'isMultiAz' => 'getIsMultiAz'
     ];
 
     /**
@@ -399,9 +369,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
         $this->container['consoleUrl'] = isset($data['consoleUrl']) ? $data['consoleUrl'] : null;
         $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : null;
-        $this->container['promotionInfo'] = isset($data['promotionInfo']) ? $data['promotionInfo'] : null;
-        $this->container['purchaseMode'] = isset($data['purchaseMode']) ? $data['purchaseMode'] : null;
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -783,78 +750,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     public function setIsMultiAz($isMultiAz)
     {
         $this->container['isMultiAz'] = $isMultiAz;
-        return $this;
-    }
-
-    /**
-    * Gets promotionInfo
-    *  促销信息，包周期时可选参数
-    *
-    * @return string|null
-    */
-    public function getPromotionInfo()
-    {
-        return $this->container['promotionInfo'];
-    }
-
-    /**
-    * Sets promotionInfo
-    *
-    * @param string|null $promotionInfo 促销信息，包周期时可选参数
-    *
-    * @return $this
-    */
-    public function setPromotionInfo($promotionInfo)
-    {
-        $this->container['promotionInfo'] = $promotionInfo;
-        return $this;
-    }
-
-    /**
-    * Gets purchaseMode
-    *  购买模式，包周期时可选参数
-    *
-    * @return string|null
-    */
-    public function getPurchaseMode()
-    {
-        return $this->container['purchaseMode'];
-    }
-
-    /**
-    * Sets purchaseMode
-    *
-    * @param string|null $purchaseMode 购买模式，包周期时可选参数
-    *
-    * @return $this
-    */
-    public function setPurchaseMode($purchaseMode)
-    {
-        $this->container['purchaseMode'] = $purchaseMode;
-        return $this;
-    }
-
-    /**
-    * Gets orderId
-    *  订单 ID，包周期时可选参数
-    *
-    * @return string|null
-    */
-    public function getOrderId()
-    {
-        return $this->container['orderId'];
-    }
-
-    /**
-    * Sets orderId
-    *
-    * @param string|null $orderId 订单 ID，包周期时可选参数
-    *
-    * @return $this
-    */
-    public function setOrderId($orderId)
-    {
-        $this->container['orderId'] = $orderId;
         return $this;
     }
 

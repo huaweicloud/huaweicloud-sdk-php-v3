@@ -37,6 +37,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID，与请求参数相同。
     * flavorRef  规格码，与请求参数相同。
     * chargeInfo  chargeInfo
+    * volume  volume
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupId' => 'string',
             'subnetId' => 'string',
             'flavorRef' => 'string',
-            'chargeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo'
+            'chargeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo',
+            'volume' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeResp'
     ];
 
     /**
@@ -79,6 +81,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID，与请求参数相同。
     * flavorRef  规格码，与请求参数相同。
     * chargeInfo  chargeInfo
+    * volume  volume
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
         'securityGroupId' => null,
         'subnetId' => null,
         'flavorRef' => null,
-        'chargeInfo' => null
+        'chargeInfo' => null,
+        'volume' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID，与请求参数相同。
     * flavorRef  规格码，与请求参数相同。
     * chargeInfo  chargeInfo
+    * volume  volume
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupId' => 'security_group_id',
             'subnetId' => 'subnet_id',
             'flavorRef' => 'flavor_ref',
-            'chargeInfo' => 'charge_info'
+            'chargeInfo' => 'charge_info',
+            'volume' => 'volume'
     ];
 
     /**
@@ -184,6 +190,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID，与请求参数相同。
     * flavorRef  规格码，与请求参数相同。
     * chargeInfo  chargeInfo
+    * volume  volume
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupId' => 'setSecurityGroupId',
             'subnetId' => 'setSubnetId',
             'flavorRef' => 'setFlavorRef',
-            'chargeInfo' => 'setChargeInfo'
+            'chargeInfo' => 'setChargeInfo',
+            'volume' => 'setVolume'
     ];
 
     /**
@@ -226,6 +234,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID，与请求参数相同。
     * flavorRef  规格码，与请求参数相同。
     * chargeInfo  chargeInfo
+    * volume  volume
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupId' => 'getSecurityGroupId',
             'subnetId' => 'getSubnetId',
             'flavorRef' => 'getFlavorRef',
-            'chargeInfo' => 'getChargeInfo'
+            'chargeInfo' => 'getChargeInfo',
+            'volume' => 'getVolume'
     ];
 
     /**
@@ -324,6 +334,7 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
+        $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
     }
 
     /**
@@ -759,6 +770,30 @@ class MysqlInstanceResponse implements ModelInterface, ArrayAccess
     public function setChargeInfo($chargeInfo)
     {
         $this->container['chargeInfo'] = $chargeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets volume
+    *  volume
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeResp|null
+    */
+    public function getVolume()
+    {
+        return $this->container['volume'];
+    }
+
+    /**
+    * Sets volume
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeResp|null $volume volume
+    *
+    * @return $this
+    */
+    public function setVolume($volume)
+    {
+        $this->container['volume'] = $volume;
         return $this;
     }
 

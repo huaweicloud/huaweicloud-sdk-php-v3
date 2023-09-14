@@ -23,7 +23,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数（“action”为“count”时，无需设置此参数），如果“action”为“filter”，默认为“10”。 limit的取值范围为“1-1000”。
     * offset  索引位置。从offset指定的下一条数据开始查询。查询第一页数据时，将查询前一页数据时响应体中的值带入此参数（“action”为“count”时，无需设置此参数）。如果“action”为“filter”，offset默认为“0”。 offset必须为数字，不能为负数。
     * action  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
-    * tags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * tags  标签列表，key和value键值对的集合。最多不超过10个。
     * matches  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
@@ -34,7 +34,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
             'offset' => 'string',
             'action' => 'string',
             'tags' => '\HuaweiCloud\SDK\Csms\v1\Model\Tag[]',
-            'matches' => '\HuaweiCloud\SDK\Csms\v1\Model\TagItem[]',
+            'matches' => '\HuaweiCloud\SDK\Csms\v1\Model\TagMatches[]',
             'sequence' => 'string'
     ];
 
@@ -43,7 +43,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数（“action”为“count”时，无需设置此参数），如果“action”为“filter”，默认为“10”。 limit的取值范围为“1-1000”。
     * offset  索引位置。从offset指定的下一条数据开始查询。查询第一页数据时，将查询前一页数据时响应体中的值带入此参数（“action”为“count”时，无需设置此参数）。如果“action”为“filter”，offset默认为“0”。 offset必须为数字，不能为负数。
     * action  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
-    * tags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * tags  标签列表，key和value键值对的集合。最多不超过10个。
     * matches  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
@@ -84,7 +84,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数（“action”为“count”时，无需设置此参数），如果“action”为“filter”，默认为“10”。 limit的取值范围为“1-1000”。
     * offset  索引位置。从offset指定的下一条数据开始查询。查询第一页数据时，将查询前一页数据时响应体中的值带入此参数（“action”为“count”时，无需设置此参数）。如果“action”为“filter”，offset默认为“0”。 offset必须为数字，不能为负数。
     * action  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
-    * tags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * tags  标签列表，key和value键值对的集合。最多不超过10个。
     * matches  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
@@ -104,7 +104,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数（“action”为“count”时，无需设置此参数），如果“action”为“filter”，默认为“10”。 limit的取值范围为“1-1000”。
     * offset  索引位置。从offset指定的下一条数据开始查询。查询第一页数据时，将查询前一页数据时响应体中的值带入此参数（“action”为“count”时，无需设置此参数）。如果“action”为“filter”，offset默认为“0”。 offset必须为数字，不能为负数。
     * action  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
-    * tags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * tags  标签列表，key和value键值对的集合。最多不超过10个。
     * matches  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
@@ -124,7 +124,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * limit  查询记录数（“action”为“count”时，无需设置此参数），如果“action”为“filter”，默认为“10”。 limit的取值范围为“1-1000”。
     * offset  索引位置。从offset指定的下一条数据开始查询。查询第一页数据时，将查询前一页数据时响应体中的值带入此参数（“action”为“count”时，无需设置此参数）。如果“action”为“filter”，offset默认为“0”。 offset必须为数字，不能为负数。
     * action  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
-    * tags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * tags  标签列表，key和value键值对的集合。最多不超过10个。
     * matches  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
@@ -225,10 +225,13 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) > 6)) {
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
+            if ((mb_strlen($this->container['action']) > 6)) {
                 $invalidProperties[] = "invalid value for 'action', the character length must be smaller than or equal to 6.";
             }
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) < 5)) {
+            if ((mb_strlen($this->container['action']) < 5)) {
                 $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 5.";
             }
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) > 36)) {
@@ -303,7 +306,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -313,7 +316,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
+    * @param string $action 操作标识（可设置为“filter”或者“count”）。  - filter：表示过滤。  - count：表示查询总条数。
     *
     * @return $this
     */
@@ -325,7 +328,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    *  标签列表，key和value键值对的集合。最多不超过10个。
     *
     * @return \HuaweiCloud\SDK\Csms\v1\Model\Tag[]|null
     */
@@ -337,7 +340,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Csms\v1\Model\Tag[]|null $tags 标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。key之间是“与”的关系  - value：表示标签值。每个值最大长度43个字符，value之间为“或”的关系。
+    * @param \HuaweiCloud\SDK\Csms\v1\Model\Tag[]|null $tags 标签列表，key和value键值对的集合。最多不超过10个。
     *
     * @return $this
     */
@@ -351,7 +354,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     * Gets matches
     *  搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     *
-    * @return \HuaweiCloud\SDK\Csms\v1\Model\TagItem[]|null
+    * @return \HuaweiCloud\SDK\Csms\v1\Model\TagMatches[]|null
     */
     public function getMatches()
     {
@@ -361,7 +364,7 @@ class ListResourceInstancesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets matches
     *
-    * @param \HuaweiCloud\SDK\Csms\v1\Model\TagItem[]|null $matches 搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
+    * @param \HuaweiCloud\SDK\Csms\v1\Model\TagMatches[]|null $matches 搜索字段。  - key为搜索的字段，目前仅支持搜索凭据名称，值为“resource_name”。  - value为模糊匹配的值，最大长度为255个字符。为空返回空值。
     *
     * @return $this
     */

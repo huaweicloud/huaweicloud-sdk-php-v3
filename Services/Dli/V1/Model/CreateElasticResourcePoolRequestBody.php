@@ -262,13 +262,10 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             if (($this->container['maxCu'] < 64)) {
                 $invalidProperties[] = "invalid value for 'maxCu', must be bigger than or equal to 64.";
             }
-        if ($this->container['chargingMode'] === null) {
-            $invalidProperties[] = "'chargingMode' can't be null";
-        }
-            if (($this->container['chargingMode'] > 1)) {
+            if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] > 1)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be smaller than or equal to 1.";
             }
-            if (($this->container['chargingMode'] < 1)) {
+            if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] < 1)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be bigger than or equal to 1.";
             }
         if ($this->container['minCu'] === null) {
@@ -400,7 +397,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * Gets chargingMode
     *  计费类型 1、按需计费
     *
-    * @return int
+    * @return int|null
     */
     public function getChargingMode()
     {
@@ -410,7 +407,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets chargingMode
     *
-    * @param int $chargingMode 计费类型 1、按需计费
+    * @param int|null $chargingMode 计费类型 1、按需计费
     *
     * @return $this
     */

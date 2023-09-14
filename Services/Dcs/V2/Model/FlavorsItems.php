@@ -36,6 +36,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     * isDec  是否支持专属云。
     * attrs  规格的其他信息。
     * flavorsAvailableZones  有资源的可用区。
+    * replicaCount  副本数
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class FlavorsItems implements ModelInterface, ArrayAccess
             'pricingType' => 'string',
             'isDec' => 'bool',
             'attrs' => '\HuaweiCloud\SDK\Dcs\V2\Model\AttrsObject[]',
-            'flavorsAvailableZones' => '\HuaweiCloud\SDK\Dcs\V2\Model\FlavorAzObject[]'
+            'flavorsAvailableZones' => '\HuaweiCloud\SDK\Dcs\V2\Model\FlavorAzObject[]',
+            'replicaCount' => 'int'
     ];
 
     /**
@@ -76,6 +78,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     * isDec  是否支持专属云。
     * attrs  规格的其他信息。
     * flavorsAvailableZones  有资源的可用区。
+    * replicaCount  副本数
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class FlavorsItems implements ModelInterface, ArrayAccess
         'pricingType' => null,
         'isDec' => null,
         'attrs' => null,
-        'flavorsAvailableZones' => null
+        'flavorsAvailableZones' => null,
+        'replicaCount' => 'int32'
     ];
 
     /**
@@ -137,6 +141,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     * isDec  是否支持专属云。
     * attrs  规格的其他信息。
     * flavorsAvailableZones  有资源的可用区。
+    * replicaCount  副本数
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class FlavorsItems implements ModelInterface, ArrayAccess
             'pricingType' => 'pricing_type',
             'isDec' => 'is_dec',
             'attrs' => 'attrs',
-            'flavorsAvailableZones' => 'flavors_available_zones'
+            'flavorsAvailableZones' => 'flavors_available_zones',
+            'replicaCount' => 'replica_count'
     ];
 
     /**
@@ -177,6 +183,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     * isDec  是否支持专属云。
     * attrs  规格的其他信息。
     * flavorsAvailableZones  有资源的可用区。
+    * replicaCount  副本数
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class FlavorsItems implements ModelInterface, ArrayAccess
             'pricingType' => 'setPricingType',
             'isDec' => 'setIsDec',
             'attrs' => 'setAttrs',
-            'flavorsAvailableZones' => 'setFlavorsAvailableZones'
+            'flavorsAvailableZones' => 'setFlavorsAvailableZones',
+            'replicaCount' => 'setReplicaCount'
     ];
 
     /**
@@ -217,6 +225,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     * isDec  是否支持专属云。
     * attrs  规格的其他信息。
     * flavorsAvailableZones  有资源的可用区。
+    * replicaCount  副本数
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class FlavorsItems implements ModelInterface, ArrayAccess
             'pricingType' => 'getPricingType',
             'isDec' => 'getIsDec',
             'attrs' => 'getAttrs',
-            'flavorsAvailableZones' => 'getFlavorsAvailableZones'
+            'flavorsAvailableZones' => 'getFlavorsAvailableZones',
+            'replicaCount' => 'getReplicaCount'
     ];
 
     /**
@@ -313,6 +323,7 @@ class FlavorsItems implements ModelInterface, ArrayAccess
         $this->container['isDec'] = isset($data['isDec']) ? $data['isDec'] : null;
         $this->container['attrs'] = isset($data['attrs']) ? $data['attrs'] : null;
         $this->container['flavorsAvailableZones'] = isset($data['flavorsAvailableZones']) ? $data['flavorsAvailableZones'] : null;
+        $this->container['replicaCount'] = isset($data['replicaCount']) ? $data['replicaCount'] : null;
     }
 
     /**
@@ -718,6 +729,30 @@ class FlavorsItems implements ModelInterface, ArrayAccess
     public function setFlavorsAvailableZones($flavorsAvailableZones)
     {
         $this->container['flavorsAvailableZones'] = $flavorsAvailableZones;
+        return $this;
+    }
+
+    /**
+    * Gets replicaCount
+    *  副本数
+    *
+    * @return int|null
+    */
+    public function getReplicaCount()
+    {
+        return $this->container['replicaCount'];
+    }
+
+    /**
+    * Sets replicaCount
+    *
+    * @param int|null $replicaCount 副本数
+    *
+    * @return $this
+    */
+    public function setReplicaCount($replicaCount)
+    {
+        $this->container['replicaCount'] = $replicaCount;
         return $this;
     }
 

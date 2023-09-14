@@ -183,8 +183,8 @@ class ListSecretVersionsRequest implements ModelInterface, ArrayAccess
         if ($this->container['secretName'] === null) {
             $invalidProperties[] = "'secretName' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['secretName'])) {
-                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
+                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
             if (!is_null($this->container['marker']) && !preg_match("/v[0-9]{1,10}|latest/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /v[0-9]{1,10}|latest/.";

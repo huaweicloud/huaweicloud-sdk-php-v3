@@ -139,7 +139,22 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACTION_ENABLE = 'enable';
+    const ACTION_DISABLE = 'disable';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_ENABLE,
+            self::ACTION_DISABLE,
+        ];
+    }
 
 
     /**
@@ -172,6 +187,14 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
+            $allowedValues = $this->getActionAllowableValues();
+                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'action', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['functionUrn'] === null) {
             $invalidProperties[] = "'functionUrn' can't be null";
         }

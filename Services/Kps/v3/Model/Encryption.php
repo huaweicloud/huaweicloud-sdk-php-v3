@@ -20,7 +20,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @var string[]
@@ -184,6 +184,9 @@ class Encryption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -192,8 +195,14 @@ class Encryption implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['kmsKeyName']) && !preg_match("/^[A-Za-z0-9_-]{1,255}$/", $this->container['kmsKeyName'])) {
-                $invalidProperties[] = "invalid value for 'kmsKeyName', must be conform to the pattern /^[A-Za-z0-9_-]{1,255}$/.";
+        if ($this->container['kmsKeyName'] === null) {
+            $invalidProperties[] = "'kmsKeyName' can't be null";
+        }
+            if ((mb_strlen($this->container['kmsKeyName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyName', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['kmsKeyName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -211,9 +220,9 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    *  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -223,7 +232,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。若局点没有kms服务，请填“default”。
+    * @param string $type 取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
     *
     * @return $this
     */
@@ -237,7 +246,7 @@ class Encryption implements ModelInterface, ArrayAccess
     * Gets kmsKeyName
     *  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getKmsKeyName()
     {
@@ -247,7 +256,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets kmsKeyName
     *
-    * @param string|null $kmsKeyName kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * @param string $kmsKeyName kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
     *
     * @return $this
     */

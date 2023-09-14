@@ -88,6 +88,130 @@ class KpsClient extends Client
     }
 
     /**
+     * 批量绑定SSH密钥对
+     *
+     * 给指定的虚拟机批量绑定新的SSH密钥对。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchAssociateKeypair($request)
+    {
+        return $this->batchAssociateKeypairWithHttpInfo($request);
+    }
+
+    public function batchAssociateKeypairWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/batch-associate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\v3\Model\BatchAssociateKeypairResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\v3\Model\BatchAssociateKeypairRequest');
+    }
+
+    /**
+     * 清除私钥
+     *
+     * 清除SSH密钥对私钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function clearPrivateKey($request)
+    {
+        return $this->clearPrivateKeyWithHttpInfo($request);
+    }
+
+    public function clearPrivateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/{keypair_name}/private-key';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keypairName'] !== null) {
+            $pathParams['keypair_name'] = $localVarParams['keypairName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\v3\Model\ClearPrivateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\v3\Model\ClearPrivateKeyRequest');
+    }
+
+    /**
      * 创建和导入SSH密钥对
      *
      * 创建和导入SSH密钥对
@@ -392,6 +516,130 @@ class KpsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kps\v3\Model\DisassociateKeypairResponse',
             $requestType='\HuaweiCloud\SDK\Kps\v3\Model\DisassociateKeypairRequest');
+    }
+
+    /**
+     * 导出私钥
+     *
+     * 导出指定密钥对的私钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportPrivateKey($request)
+    {
+        return $this->exportPrivateKeyWithHttpInfo($request);
+    }
+
+    public function exportPrivateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/private-key/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\v3\Model\ExportPrivateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\v3\Model\ExportPrivateKeyRequest');
+    }
+
+    /**
+     * 导入私钥
+     *
+     * 导入私钥到指定密钥对。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importPrivateKey($request)
+    {
+        return $this->importPrivateKeyWithHttpInfo($request);
+    }
+
+    public function importPrivateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/keypairs/private-key/import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kps\v3\Model\ImportPrivateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kps\v3\Model\ImportPrivateKeyRequest');
     }
 
     /**

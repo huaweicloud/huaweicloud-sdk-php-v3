@@ -21,21 +21,25 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  查询快照制作开关状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'functionUrn' => 'string'
+            'functionUrn' => 'string',
+            'action' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  查询快照制作开关状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'functionUrn' => null
+        'functionUrn' => null,
+        'action' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  查询快照制作开关状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'functionUrn' => 'function_urn'
+            'functionUrn' => 'function_urn',
+            'action' => 'action'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  查询快照制作开关状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'functionUrn' => 'setFunctionUrn'
+            'functionUrn' => 'setFunctionUrn',
+            'action' => 'setAction'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  查询快照制作开关状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'functionUrn' => 'getFunctionUrn'
+            'functionUrn' => 'getFunctionUrn',
+            'action' => 'getAction'
     ];
 
     /**
@@ -129,7 +139,22 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACTION_STATE = 'state';
+    const ACTION_ENABLE_SNAPSHOT = 'enableSnapshot';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_STATE,
+            self::ACTION_ENABLE_SNAPSHOT,
+        ];
+    }
 
 
     /**
@@ -148,6 +173,7 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['functionUrn'] = isset($data['functionUrn']) ? $data['functionUrn'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**
@@ -161,6 +187,17 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
         if ($this->container['functionUrn'] === null) {
             $invalidProperties[] = "'functionUrn' can't be null";
         }
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
+            $allowedValues = $this->getActionAllowableValues();
+                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'action', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -196,6 +233,30 @@ class ShowFuncSnapshotStateRequest implements ModelInterface, ArrayAccess
     public function setFunctionUrn($functionUrn)
     {
         $this->container['functionUrn'] = $functionUrn;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  查询快照制作开关状态
+    *
+    * @return string
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string $action 查询快照制作开关状态
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

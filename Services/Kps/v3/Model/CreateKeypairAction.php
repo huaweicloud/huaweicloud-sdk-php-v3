@@ -21,9 +21,9 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * userId  SSH密钥对所属的用户信息
     * keyProtection  keyProtection
     *
@@ -41,9 +41,9 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * userId  SSH密钥对所属的用户信息
     * keyProtection  keyProtection
     *
@@ -82,9 +82,9 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * userId  SSH密钥对所属的用户信息
     * keyProtection  keyProtection
     *
@@ -102,9 +102,9 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * userId  SSH密钥对所属的用户信息
     * keyProtection  keyProtection
     *
@@ -122,9 +122,9 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * userId  SSH密钥对所属的用户信息
     * keyProtection  keyProtection
     *
@@ -314,7 +314,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  SSH密钥对的类型
+    *  SSH密钥对的类型。ssh或x509。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type SSH密钥对的类型
+    * @param string|null $type SSH密钥对的类型。ssh或x509。
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  租户级或者用户级
+    *  租户级或者用户级。domain或user。
     *
     * @return string|null
     */
@@ -374,7 +374,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string|null $scope 租户级或者用户级
+    * @param string|null $scope 租户级或者用户级。domain或user。
     *
     * @return $this
     */

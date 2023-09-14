@@ -21,21 +21,25 @@ class CreateGroupReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupName  消费组名称
+    * groupDesc  消费组描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupName' => 'string'
+            'groupName' => 'string',
+            'groupDesc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupName  消费组名称
+    * groupDesc  消费组描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupName' => null
+        'groupName' => null,
+        'groupDesc' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class CreateGroupReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupName  消费组名称
+    * groupDesc  消费组描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupName' => 'group_name'
+            'groupName' => 'group_name',
+            'groupDesc' => 'group_desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  消费组名称
+    * groupDesc  消费组描述
     *
     * @var string[]
     */
     protected static $setters = [
-            'groupName' => 'setGroupName'
+            'groupName' => 'setGroupName',
+            'groupDesc' => 'setGroupDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  消费组名称
+    * groupDesc  消费组描述
     *
     * @var string[]
     */
     protected static $getters = [
-            'groupName' => 'getGroupName'
+            'groupName' => 'getGroupName',
+            'groupDesc' => 'getGroupDesc'
     ];
 
     /**
@@ -148,6 +158,7 @@ class CreateGroupReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
     }
 
     /**
@@ -161,6 +172,12 @@ class CreateGroupReq implements ModelInterface, ArrayAccess
         if ($this->container['groupName'] === null) {
             $invalidProperties[] = "'groupName' can't be null";
         }
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) > 200)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -196,6 +213,30 @@ class CreateGroupReq implements ModelInterface, ArrayAccess
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  消费组描述
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc 消费组描述
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

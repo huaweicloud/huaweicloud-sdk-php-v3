@@ -21,6 +21,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
@@ -30,6 +31,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\VideoCreateRequestData',
+            'bizType' => 'string',
             'eventType' => 'string',
             'imageCategories' => 'string[]',
             'audioCategories' => 'string[]',
@@ -39,6 +41,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
@@ -48,6 +51,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'data' => null,
+        'bizType' => null,
         'eventType' => null,
         'imageCategories' => null,
         'audioCategories' => null,
@@ -78,6 +82,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
@@ -87,6 +92,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'data' => 'data',
+            'bizType' => 'biz_type',
             'eventType' => 'event_type',
             'imageCategories' => 'image_categories',
             'audioCategories' => 'audio_categories',
@@ -96,6 +102,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
@@ -105,6 +112,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'data' => 'setData',
+            'bizType' => 'setBizType',
             'eventType' => 'setEventType',
             'imageCategories' => 'setImageCategories',
             'audioCategories' => 'setAudioCategories',
@@ -114,6 +122,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
@@ -123,6 +132,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'data' => 'getData',
+            'bizType' => 'getBizType',
             'eventType' => 'getEventType',
             'imageCategories' => 'getImageCategories',
             'audioCategories' => 'getAudioCategories',
@@ -241,6 +251,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['imageCategories'] = isset($data['imageCategories']) ? $data['imageCategories'] : null;
         $this->container['audioCategories'] = isset($data['audioCategories']) ? $data['audioCategories'] : null;
@@ -258,9 +269,6 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
         if ($this->container['data'] === null) {
             $invalidProperties[] = "'data' can't be null";
         }
-        if ($this->container['eventType'] === null) {
-            $invalidProperties[] = "'eventType' can't be null";
-        }
             $allowedValues = $this->getEventTypeAllowableValues();
                 if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -269,9 +277,6 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['imageCategories'] === null) {
-            $invalidProperties[] = "'imageCategories' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -311,10 +316,34 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets bizType
+    *  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
+    *
+    * @return string|null
+    */
+    public function getBizType()
+    {
+        return $this->container['bizType'];
+    }
+
+    /**
+    * Sets bizType
+    *
+    * @param string|null $bizType 用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
+    *
+    * @return $this
+    */
+    public function setBizType($bizType)
+    {
+        $this->container['bizType'] = $bizType;
+        return $this;
+    }
+
+    /**
     * Gets eventType
     *  事件类型，可选值如下： default：默认事件
     *
-    * @return string
+    * @return string|null
     */
     public function getEventType()
     {
@@ -324,7 +353,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 事件类型，可选值如下： default：默认事件
+    * @param string|null $eventType 事件类型，可选值如下： default：默认事件
     *
     * @return $this
     */
@@ -338,7 +367,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * Gets imageCategories
     *  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getImageCategories()
     {
@@ -348,7 +377,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageCategories
     *
-    * @param string[] $imageCategories 视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
+    * @param string[]|null $imageCategories 视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     *
     * @return $this
     */

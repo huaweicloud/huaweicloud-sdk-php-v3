@@ -42,12 +42,12 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsAlarmRuleName' => 'string',
             'keywordsAlarmRuleDescription' => 'string',
             'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'frequency' => 'object',
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'keywordsAlarmSendCode' => 'int',
             'domainId' => 'string',
-            'notificationSaveRule' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule',
+            'notificationSaveRule' => 'object',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
@@ -523,7 +523,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets frequency
     *  告警统计周期
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency
+    * @return object
     */
     public function getFrequency()
     {
@@ -533,7 +533,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency $frequency 告警统计周期
+    * @param object $frequency 告警统计周期
     *
     * @return $this
     */
@@ -643,7 +643,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets notificationSaveRule
     *  通知主题
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null
+    * @return object|null
     */
     public function getNotificationSaveRule()
     {
@@ -653,7 +653,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets notificationSaveRule
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null $notificationSaveRule 通知主题
+    * @param object|null $notificationSaveRule 通知主题
     *
     * @return $this
     */

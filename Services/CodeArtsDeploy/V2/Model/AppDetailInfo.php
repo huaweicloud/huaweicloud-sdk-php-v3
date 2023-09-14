@@ -69,7 +69,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'createTime' => 'string',
             'updateTime' => 'string',
             'permissionLevel' => 'string',
-            'arrangeInfos' => 'object'
+            'arrangeInfos' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskV2Info[]'
     ];
 
     /**
@@ -985,7 +985,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * Gets arrangeInfos
     *  部署任务信息
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskV2Info[]|null
     */
     public function getArrangeInfos()
     {
@@ -995,7 +995,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets arrangeInfos
     *
-    * @param object|null $arrangeInfos 部署任务信息
+    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskV2Info[]|null $arrangeInfos 部署任务信息
     *
     * @return $this
     */

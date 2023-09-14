@@ -33,6 +33,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * duration  作业运行时长，单位毫秒。
     *
@@ -52,6 +53,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
             'kind' => 'string',
             'queue' => 'string',
             'image' => 'string',
+            'reqBody' => 'string',
             'updateTime' => 'int',
             'duration' => 'int'
     ];
@@ -71,6 +73,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * duration  作业运行时长，单位毫秒。
     *
@@ -90,6 +93,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
         'kind' => null,
         'queue' => null,
         'image' => null,
+        'reqBody' => null,
         'updateTime' => 'int64',
         'duration' => 'int64'
     ];
@@ -130,6 +134,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * duration  作业运行时长，单位毫秒。
     *
@@ -149,6 +154,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
             'kind' => 'kind',
             'queue' => 'queue',
             'image' => 'image',
+            'reqBody' => 'req_body',
             'updateTime' => 'update_time',
             'duration' => 'duration'
     ];
@@ -168,6 +174,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * duration  作业运行时长，单位毫秒。
     *
@@ -187,6 +194,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
             'kind' => 'setKind',
             'queue' => 'setQueue',
             'image' => 'setImage',
+            'reqBody' => 'setReqBody',
             'updateTime' => 'setUpdateTime',
             'duration' => 'setDuration'
     ];
@@ -206,6 +214,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     * kind  批处理作业类型，只支持spark类型参数。
     * queue  用于指定队列，填写已创建DLI的队列名
     * image  自定义镜像。格式为：组织名/镜像名:镜像版本。
+    * reqBody  请求参数详情
     * updateTime  更新时间
     * duration  作业运行时长，单位毫秒。
     *
@@ -225,6 +234,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
             'kind' => 'getKind',
             'queue' => 'getQueue',
             'image' => 'getImage',
+            'reqBody' => 'getReqBody',
             'updateTime' => 'getUpdateTime',
             'duration' => 'getDuration'
     ];
@@ -300,6 +310,7 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
         $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['queue'] = isset($data['queue']) ? $data['queue'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['reqBody'] = isset($data['reqBody']) ? $data['reqBody'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
     }
@@ -635,6 +646,30 @@ class ShowBatchJobDetailResp implements ModelInterface, ArrayAccess
     public function setImage($image)
     {
         $this->container['image'] = $image;
+        return $this;
+    }
+
+    /**
+    * Gets reqBody
+    *  请求参数详情
+    *
+    * @return string|null
+    */
+    public function getReqBody()
+    {
+        return $this->container['reqBody'];
+    }
+
+    /**
+    * Sets reqBody
+    *
+    * @param string|null $reqBody 请求参数详情
+    *
+    * @return $this
+    */
+    public function setReqBody($reqBody)
+    {
+        $this->container['reqBody'] = $reqBody;
         return $this;
     }
 

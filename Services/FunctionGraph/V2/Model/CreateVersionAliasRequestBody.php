@@ -20,7 +20,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  要获取的别名名称。
+    * name  别名名称。
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
@@ -36,7 +36,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  要获取的别名名称。
+    * name  别名名称。
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
@@ -73,7 +73,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  要获取的别名名称。
+    * name  别名名称。
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
@@ -89,7 +89,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  要获取的别名名称。
+    * name  别名名称。
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
@@ -105,7 +105,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  要获取的别名名称。
+    * name  别名名称。
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
@@ -213,7 +213,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  要获取的别名名称。
+    *  别名名称。
     *
     * @return string
     */
@@ -225,7 +225,7 @@ class CreateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 要获取的别名名称。
+    * @param string $name 别名名称。
     *
     * @return $this
     */

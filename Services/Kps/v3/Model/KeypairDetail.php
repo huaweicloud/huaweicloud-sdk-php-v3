@@ -22,8 +22,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  SSH密钥对的名称
     * id  SSH密钥对的ID
-    * type  SSH密钥对的类型
-    * scope  租户级或者用户级
+    * type  SSH密钥对的类型。ssh或x509。
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -34,6 +34,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * deleteTime  SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
     * updateTime  SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
     * frozenState  冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
+    * keyId  密钥ID。
+    * algorithm  生成算法。
     *
     * @var string[]
     */
@@ -51,15 +53,17 @@ class KeypairDetail implements ModelInterface, ArrayAccess
             'createTime' => 'int',
             'deleteTime' => 'int',
             'updateTime' => 'int',
-            'frozenState' => 'int'
+            'frozenState' => 'int',
+            'keyId' => 'string',
+            'algorithm' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  SSH密钥对的名称
     * id  SSH密钥对的ID
-    * type  SSH密钥对的类型
-    * scope  租户级或者用户级
+    * type  SSH密钥对的类型。ssh或x509。
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -70,6 +74,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * deleteTime  SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
     * updateTime  SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
     * frozenState  冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
+    * keyId  密钥ID。
+    * algorithm  生成算法。
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class KeypairDetail implements ModelInterface, ArrayAccess
         'createTime' => 'int64',
         'deleteTime' => 'int64',
         'updateTime' => 'int64',
-        'frozenState' => 'int32'
+        'frozenState' => 'int32',
+        'keyId' => null,
+        'algorithm' => null
     ];
 
     /**
@@ -115,8 +123,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  SSH密钥对的名称
     * id  SSH密钥对的ID
-    * type  SSH密钥对的类型
-    * scope  租户级或者用户级
+    * type  SSH密钥对的类型。ssh或x509。
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -127,6 +135,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * deleteTime  SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
     * updateTime  SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
     * frozenState  冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
+    * keyId  密钥ID。
+    * algorithm  生成算法。
     *
     * @var string[]
     */
@@ -144,15 +154,17 @@ class KeypairDetail implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'deleteTime' => 'delete_time',
             'updateTime' => 'update_time',
-            'frozenState' => 'frozen_state'
+            'frozenState' => 'frozen_state',
+            'keyId' => 'key_id',
+            'algorithm' => 'algorithm'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  SSH密钥对的名称
     * id  SSH密钥对的ID
-    * type  SSH密钥对的类型
-    * scope  租户级或者用户级
+    * type  SSH密钥对的类型。ssh或x509。
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -163,6 +175,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * deleteTime  SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
     * updateTime  SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
     * frozenState  冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
+    * keyId  密钥ID。
+    * algorithm  生成算法。
     *
     * @var string[]
     */
@@ -180,15 +194,17 @@ class KeypairDetail implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'deleteTime' => 'setDeleteTime',
             'updateTime' => 'setUpdateTime',
-            'frozenState' => 'setFrozenState'
+            'frozenState' => 'setFrozenState',
+            'keyId' => 'setKeyId',
+            'algorithm' => 'setAlgorithm'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  SSH密钥对的名称
     * id  SSH密钥对的ID
-    * type  SSH密钥对的类型
-    * scope  租户级或者用户级
+    * type  SSH密钥对的类型。ssh或x509。
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -199,6 +215,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     * deleteTime  SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
     * updateTime  SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
     * frozenState  冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
+    * keyId  密钥ID。
+    * algorithm  生成算法。
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class KeypairDetail implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'deleteTime' => 'getDeleteTime',
             'updateTime' => 'getUpdateTime',
-            'frozenState' => 'getFrozenState'
+            'frozenState' => 'getFrozenState',
+            'keyId' => 'getKeyId',
+            'algorithm' => 'getAlgorithm'
     ];
 
     /**
@@ -321,6 +341,8 @@ class KeypairDetail implements ModelInterface, ArrayAccess
         $this->container['deleteTime'] = isset($data['deleteTime']) ? $data['deleteTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['frozenState'] = isset($data['frozenState']) ? $data['frozenState'] : null;
+        $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
+        $this->container['algorithm'] = isset($data['algorithm']) ? $data['algorithm'] : null;
     }
 
     /**
@@ -401,6 +423,18 @@ class KeypairDetail implements ModelInterface, ArrayAccess
             if (!is_null($this->container['frozenState']) && ($this->container['frozenState'] < 0)) {
                 $invalidProperties[] = "invalid value for 'frozenState', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['keyId']) && (mb_strlen($this->container['keyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'keyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['keyId']) && (mb_strlen($this->container['keyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'keyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['algorithm']) && (mb_strlen($this->container['algorithm']) > 32)) {
+                $invalidProperties[] = "invalid value for 'algorithm', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['algorithm']) && (mb_strlen($this->container['algorithm']) < 0)) {
+                $invalidProperties[] = "invalid value for 'algorithm', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -465,7 +499,7 @@ class KeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  SSH密钥对的类型
+    *  SSH密钥对的类型。ssh或x509。
     *
     * @return string|null
     */
@@ -477,7 +511,7 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type SSH密钥对的类型
+    * @param string|null $type SSH密钥对的类型。ssh或x509。
     *
     * @return $this
     */
@@ -489,7 +523,7 @@ class KeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  租户级或者用户级
+    *  租户级或者用户级。domain或user。
     *
     * @return string|null
     */
@@ -501,7 +535,7 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string|null $scope 租户级或者用户级
+    * @param string|null $scope 租户级或者用户级。domain或user。
     *
     * @return $this
     */
@@ -748,6 +782,54 @@ class KeypairDetail implements ModelInterface, ArrayAccess
     public function setFrozenState($frozenState)
     {
         $this->container['frozenState'] = $frozenState;
+        return $this;
+    }
+
+    /**
+    * Gets keyId
+    *  密钥ID。
+    *
+    * @return string|null
+    */
+    public function getKeyId()
+    {
+        return $this->container['keyId'];
+    }
+
+    /**
+    * Sets keyId
+    *
+    * @param string|null $keyId 密钥ID。
+    *
+    * @return $this
+    */
+    public function setKeyId($keyId)
+    {
+        $this->container['keyId'] = $keyId;
+        return $this;
+    }
+
+    /**
+    * Gets algorithm
+    *  生成算法。
+    *
+    * @return string|null
+    */
+    public function getAlgorithm()
+    {
+        return $this->container['algorithm'];
+    }
+
+    /**
+    * Sets algorithm
+    *
+    * @param string|null $algorithm 生成算法。
+    *
+    * @return $this
+    */
+    public function setAlgorithm($algorithm)
+    {
+        $this->container['algorithm'] = $algorithm;
         return $this;
     }
 

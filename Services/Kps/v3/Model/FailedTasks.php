@@ -266,6 +266,12 @@ class FailedTasks implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['taskTime']) && (mb_strlen($this->container['taskTime']) > 13)) {
+                $invalidProperties[] = "invalid value for 'taskTime', the character length must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['taskTime']) && (mb_strlen($this->container['taskTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'taskTime', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['taskErrorCode']) && (mb_strlen($this->container['taskErrorCode']) > 255)) {
                 $invalidProperties[] = "invalid value for 'taskErrorCode', the character length must be smaller than or equal to 255.";
             }

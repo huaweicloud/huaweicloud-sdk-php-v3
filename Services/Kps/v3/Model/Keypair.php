@@ -22,7 +22,7 @@ class Keypair implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  SSH密钥对的名称
     * type  SSH密钥对的类型，值为“ssh”或“x509”
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -44,7 +44,7 @@ class Keypair implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  SSH密钥对的名称
     * type  SSH密钥对的类型，值为“ssh”或“x509”
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -87,7 +87,7 @@ class Keypair implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  SSH密钥对的名称
     * type  SSH密钥对的类型，值为“ssh”或“x509”
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -109,7 +109,7 @@ class Keypair implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  SSH密钥对的名称
     * type  SSH密钥对的类型，值为“ssh”或“x509”
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -131,7 +131,7 @@ class Keypair implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  SSH密钥对的名称
     * type  SSH密钥对的类型，值为“ssh”或“x509”
-    * scope  租户级或者用户级
+    * scope  租户级或者用户级。domain或user。
     * publicKey  SSH密钥对对应的publicKey信息
     * fingerprint  SSH密钥对应指纹信息
     * isKeyProtection  是否托管密钥
@@ -285,6 +285,12 @@ class Keypair implements ModelInterface, ArrayAccess
             if (!is_null($this->container['fingerprint']) && (mb_strlen($this->container['fingerprint']) < 0)) {
                 $invalidProperties[] = "invalid value for 'fingerprint', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['frozenState']) && (mb_strlen($this->container['frozenState']) > 255)) {
+                $invalidProperties[] = "invalid value for 'frozenState', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['frozenState']) && (mb_strlen($this->container['frozenState']) < 0)) {
+                $invalidProperties[] = "invalid value for 'frozenState', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -349,7 +355,7 @@ class Keypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  租户级或者用户级
+    *  租户级或者用户级。domain或user。
     *
     * @return string|null
     */
@@ -361,7 +367,7 @@ class Keypair implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string|null $scope 租户级或者用户级
+    * @param string|null $scope 租户级或者用户级。domain或user。
     *
     * @return $this
     */

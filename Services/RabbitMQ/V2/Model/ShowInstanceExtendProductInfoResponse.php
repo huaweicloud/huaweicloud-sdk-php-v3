@@ -28,7 +28,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     */
     protected static $openAPITypes = [
             'hourly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]',
-            'monthly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]'
+            'monthly' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespMonthly[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     * Gets monthly
     *  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null
+    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespMonthly[]|null
     */
     public function getMonthly()
     {
@@ -222,7 +222,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Sets monthly
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespMonthly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
     *
     * @return $this
     */

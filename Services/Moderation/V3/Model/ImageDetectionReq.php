@@ -25,6 +25,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * imageTextConfig  imageTextConfig
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'categories' => 'string[]',
             'imageTextConfig' => '\HuaweiCloud\SDK\Moderation\V3\Model\ImgTextConfig',
             'url' => 'string',
-            'image' => 'string'
+            'image' => 'string',
+            'bizType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * imageTextConfig  imageTextConfig
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
         'categories' => null,
         'imageTextConfig' => null,
         'url' => null,
-        'image' => null
+        'image' => null,
+        'bizType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * imageTextConfig  imageTextConfig
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'categories' => 'categories',
             'imageTextConfig' => 'image_text_config',
             'url' => 'url',
-            'image' => 'image'
+            'image' => 'image',
+            'bizType' => 'biz_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * imageTextConfig  imageTextConfig
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'categories' => 'setCategories',
             'imageTextConfig' => 'setImageTextConfig',
             'url' => 'setUrl',
-            'image' => 'setImage'
+            'image' => 'setImage',
+            'bizType' => 'setBizType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * imageTextConfig  imageTextConfig
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'categories' => 'getCategories',
             'imageTextConfig' => 'getImageTextConfig',
             'url' => 'getUrl',
-            'image' => 'getImage'
+            'image' => 'getImage',
+            'bizType' => 'getBizType'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
         $this->container['imageTextConfig'] = isset($data['imageTextConfig']) ? $data['imageTextConfig'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
     }
 
     /**
@@ -202,12 +213,6 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['eventType'] === null) {
-            $invalidProperties[] = "'eventType' can't be null";
-        }
-        if ($this->container['categories'] === null) {
-            $invalidProperties[] = "'categories' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,7 +231,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * Gets eventType
     *  事件类型。 可选值如下： head_image：头像 album：相册 dynamic：动态 article：帖子 comment：评论 room_cover：房间封面 group_message：群聊图片 message：私聊图片 product：商品图片
     *
-    * @return string
+    * @return string|null
     */
     public function getEventType()
     {
@@ -236,7 +241,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 事件类型。 可选值如下： head_image：头像 album：相册 dynamic：动态 article：帖子 comment：评论 room_cover：房间封面 group_message：群聊图片 message：私聊图片 product：商品图片
+    * @param string|null $eventType 事件类型。 可选值如下： head_image：头像 album：相册 dynamic：动态 article：帖子 comment：评论 room_cover：房间封面 group_message：群聊图片 message：私聊图片 product：商品图片
     *
     * @return $this
     */
@@ -250,7 +255,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * Gets categories
     *  检测场景。可添加的检测场景如下： - terrorism：暴恐元素的检测。 - porn：涉黄元素的检测。 - image_text：广告图文的检测。 - 可通过配置上述场景，来完对应场景元素的检测。 > 每个检测场景的检测次数会分类统计。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getCategories()
     {
@@ -260,7 +265,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets categories
     *
-    * @param string[] $categories 检测场景。可添加的检测场景如下： - terrorism：暴恐元素的检测。 - porn：涉黄元素的检测。 - image_text：广告图文的检测。 - 可通过配置上述场景，来完对应场景元素的检测。 > 每个检测场景的检测次数会分类统计。
+    * @param string[]|null $categories 检测场景。可添加的检测场景如下： - terrorism：暴恐元素的检测。 - porn：涉黄元素的检测。 - image_text：广告图文的检测。 - 可通过配置上述场景，来完对应场景元素的检测。 > 每个检测场景的检测次数会分类统计。
     *
     * @return $this
     */
@@ -339,6 +344,30 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     public function setImage($image)
     {
         $this->container['image'] = $image;
+        return $this;
+    }
+
+    /**
+    * Gets bizType
+    *  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    *
+    * @return string|null
+    */
+    public function getBizType()
+    {
+        return $this->container['bizType'];
+    }
+
+    /**
+    * Sets bizType
+    *
+    * @param string|null $bizType 自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    *
+    * @return $this
+    */
+    public function setBizType($bizType)
+    {
+        $this->container['bizType'] = $bizType;
         return $this;
     }
 

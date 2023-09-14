@@ -21,22 +21,22 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  此参数在请求实体中，采用json字符串格式。
+    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'map[string,object[]]'
+            'context' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  此参数在请求实体中，采用json字符串格式。
+    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'context' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  此参数在请求实体中，采用json字符串格式。
+    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'context' => 'context'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  此参数在请求实体中，采用json字符串格式。
+    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'context' => 'setContext'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  此参数在请求实体中，采用json字符串格式。
+    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'context' => 'getContext'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets body
-    *  此参数在请求实体中，采用json字符串格式。
+    * Gets context
+    *  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
-    * @return map[string,object[]]|null
+    * @return string[]|null
     */
-    public function getBody()
+    public function getContext()
     {
-        return $this->container['body'];
+        return $this->container['context'];
     }
 
     /**
-    * Sets body
+    * Sets context
     *
-    * @param map[string,object[]]|null $body 此参数在请求实体中，采用json字符串格式。
+    * @param string[]|null $context 查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setContext($context)
     {
-        $this->container['body'] = $body;
+        $this->container['context'] = $context;
         return $this;
     }
 

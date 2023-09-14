@@ -31,7 +31,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * asProxy  是否为代理机
     * proxyHostId  代理机ID
     * ownerName  主机所属人名称
-    * proxyHost  代理机
+    * proxyHost  proxyHost
     * connectionStatus  连通性状态
     * createTime  创建时间
     * updateTime  更新时间
@@ -48,13 +48,13 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
             'os' => 'string',
             'port' => 'int',
             'authorization' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\HostAuthorizationBody',
-            'permission' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail',
+            'permission' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew',
             'groupId' => 'string',
             'hostName' => 'string',
             'asProxy' => 'bool',
             'proxyHostId' => 'string',
             'ownerName' => 'string',
-            'proxyHost' => 'string',
+            'proxyHost' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\HostInfoDetail',
             'connectionStatus' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -77,7 +77,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * asProxy  是否为代理机
     * proxyHostId  代理机ID
     * ownerName  主机所属人名称
-    * proxyHost  代理机
+    * proxyHost  proxyHost
     * connectionStatus  连通性状态
     * createTime  创建时间
     * updateTime  更新时间
@@ -144,7 +144,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * asProxy  是否为代理机
     * proxyHostId  代理机ID
     * ownerName  主机所属人名称
-    * proxyHost  代理机
+    * proxyHost  proxyHost
     * connectionStatus  连通性状态
     * createTime  创建时间
     * updateTime  更新时间
@@ -190,7 +190,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * asProxy  是否为代理机
     * proxyHostId  代理机ID
     * ownerName  主机所属人名称
-    * proxyHost  代理机
+    * proxyHost  proxyHost
     * connectionStatus  连通性状态
     * createTime  创建时间
     * updateTime  更新时间
@@ -236,7 +236,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * asProxy  是否为代理机
     * proxyHostId  代理机ID
     * ownerName  主机所属人名称
-    * proxyHost  代理机
+    * proxyHost  proxyHost
     * connectionStatus  连通性状态
     * createTime  创建时间
     * updateTime  更新时间
@@ -497,7 +497,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * Gets permission
     *  permission
     *
-    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail|null
+    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew|null
     */
     public function getPermission()
     {
@@ -507,7 +507,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail|null $permission permission
+    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew|null $permission permission
     *
     * @return $this
     */
@@ -639,9 +639,9 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyHost
-    *  代理机
+    *  proxyHost
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\HostInfoDetail|null
     */
     public function getProxyHost()
     {
@@ -651,7 +651,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets proxyHost
     *
-    * @param string|null $proxyHost 代理机
+    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\HostInfoDetail|null $proxyHost proxyHost
     *
     * @return $this
     */

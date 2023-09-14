@@ -43,7 +43,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
-            'notificationSaveRule' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule',
+            'notificationSaveRule' => 'object',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
@@ -531,7 +531,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets notificationSaveRule
     *  通知主题
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null
+    * @return object|null
     */
     public function getNotificationSaveRule()
     {
@@ -541,7 +541,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets notificationSaveRule
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null $notificationSaveRule 通知主题
+    * @param object|null $notificationSaveRule 通知主题
     *
     * @return $this
     */

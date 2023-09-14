@@ -21,25 +21,21 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * logGroupId  租户想查询的日志流所在的日志组的groupid，一般为36位字符串。
-    * tag  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logGroupId' => 'string',
-            'tag' => 'string'
+            'logGroupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * logGroupId  租户想查询的日志流所在的日志组的groupid，一般为36位字符串。
-    * tag  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logGroupId' => null,
-        'tag' => null
+        'logGroupId' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * logGroupId  租户想查询的日志流所在的日志组的groupid，一般为36位字符串。
-    * tag  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logGroupId' => 'log_group_id',
-            'tag' => 'tag'
+            'logGroupId' => 'log_group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * logGroupId  租户想查询的日志流所在的日志组的groupid，一般为36位字符串。
-    * tag  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
     *
     * @var string[]
     */
     protected static $setters = [
-            'logGroupId' => 'setLogGroupId',
-            'tag' => 'setTag'
+            'logGroupId' => 'setLogGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * logGroupId  租户想查询的日志流所在的日志组的groupid，一般为36位字符串。
-    * tag  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
     *
     * @var string[]
     */
     protected static $getters = [
-            'logGroupId' => 'getLogGroupId',
-            'tag' => 'getTag'
+            'logGroupId' => 'getLogGroupId'
     ];
 
     /**
@@ -158,7 +148,6 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
-        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
     /**
@@ -177,12 +166,6 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['logGroupId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'logGroupId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'tag', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) < 1)) {
-                $invalidProperties[] = "invalid value for 'tag', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -219,30 +202,6 @@ class ListLogStreamRequest implements ModelInterface, ArrayAccess
     public function setLogGroupId($logGroupId)
     {
         $this->container['logGroupId'] = $logGroupId;
-        return $this;
-    }
-
-    /**
-    * Gets tag
-    *  按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
-    *
-    * @return string|null
-    */
-    public function getTag()
-    {
-        return $this->container['tag'];
-    }
-
-    /**
-    * Sets tag
-    *
-    * @param string|null $tag 按条件搜索，内容设置为日志流的tag键值对，比如k1=v1；
-    *
-    * @return $this
-    */
-    public function setTag($tag)
-    {
-        $this->container['tag'] = $tag;
         return $this;
     }
 

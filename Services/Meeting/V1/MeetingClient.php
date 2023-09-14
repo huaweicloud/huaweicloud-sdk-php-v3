@@ -3357,6 +3357,71 @@ class MeetingClient extends Client
     }
 
     /**
+     * 注销登录
+     *
+     * 该接口提供注销功能。服务器收到请求后，删除该Token。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteToken($request)
+    {
+        return $this->deleteTokenWithHttpInfo($request);
+    }
+
+    public function deleteTokenWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/usg/acs/token';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams[$arr['xRequestId']] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['acceptLanguage'] !== null) {
+            $headerParams[$arr['acceptLanguage']] = $localVarParams['acceptLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\DeleteTokenResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\DeleteTokenRequest');
+    }
+
+    /**
      * 企业管理员删除激活码
      *
      * 企业管理员批量删除激活码。

@@ -21,7 +21,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  SSH密钥对的名称
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  SSH密钥对对应的publicKey信息
     * privateKey  SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
     * fingerprint  SSH密钥对应指纹信息
@@ -41,7 +41,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  SSH密钥对的名称
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  SSH密钥对对应的publicKey信息
     * privateKey  SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
     * fingerprint  SSH密钥对应指纹信息
@@ -82,7 +82,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  SSH密钥对的名称
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  SSH密钥对对应的publicKey信息
     * privateKey  SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
     * fingerprint  SSH密钥对应指纹信息
@@ -102,7 +102,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  SSH密钥对的名称
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  SSH密钥对对应的publicKey信息
     * privateKey  SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
     * fingerprint  SSH密钥对应指纹信息
@@ -122,7 +122,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  SSH密钥对的名称
-    * type  SSH密钥对的类型
+    * type  SSH密钥对的类型。ssh或x509。
     * publicKey  SSH密钥对对应的publicKey信息
     * privateKey  SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
     * fingerprint  SSH密钥对应指纹信息
@@ -300,7 +300,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  SSH密钥对的类型
+    *  SSH密钥对的类型。ssh或x509。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class CreateKeypairResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type SSH密钥对的类型
+    * @param string|null $type SSH密钥对的类型。ssh或x509。
     *
     * @return $this
     */

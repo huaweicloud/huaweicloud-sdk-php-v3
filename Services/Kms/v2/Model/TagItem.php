@@ -169,10 +169,13 @@ class TagItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 36)) {
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 36)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
+            if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
@@ -199,7 +202,7 @@ class TagItem implements ModelInterface, ArrayAccess
     * Gets key
     *  键。 最大长度36个unicode字符。 key不能为空。不能包含非打印字符“ASCII(0-31)”、“*”、“<”、“>”、“\\”、“=”。
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -209,7 +212,7 @@ class TagItem implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。 最大长度36个unicode字符。 key不能为空。不能包含非打印字符“ASCII(0-31)”、“*”、“<”、“>”、“\\”、“=”。
+    * @param string $key 键。 最大长度36个unicode字符。 key不能为空。不能包含非打印字符“ASCII(0-31)”、“*”、“<”、“>”、“\\”、“=”。
     *
     * @return $this
     */

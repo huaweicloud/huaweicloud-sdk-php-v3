@@ -24,6 +24,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
             'eventType' => 'string',
             'glossaryNames' => 'string[]',
             'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\TextDetectionDataReq',
-            'whiteGlossaryNames' => 'string[]'
+            'whiteGlossaryNames' => 'string[]',
+            'bizType' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
         'eventType' => null,
         'glossaryNames' => null,
         'data' => null,
-        'whiteGlossaryNames' => null
+        'whiteGlossaryNames' => null,
+        'bizType' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
             'eventType' => 'event_type',
             'glossaryNames' => 'glossary_names',
             'data' => 'data',
-            'whiteGlossaryNames' => 'white_glossary_names'
+            'whiteGlossaryNames' => 'white_glossary_names',
+            'bizType' => 'biz_type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
             'eventType' => 'setEventType',
             'glossaryNames' => 'setGlossaryNames',
             'data' => 'setData',
-            'whiteGlossaryNames' => 'setWhiteGlossaryNames'
+            'whiteGlossaryNames' => 'setWhiteGlossaryNames',
+            'bizType' => 'setBizType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
+    * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
             'eventType' => 'getEventType',
             'glossaryNames' => 'getGlossaryNames',
             'data' => 'getData',
-            'whiteGlossaryNames' => 'getWhiteGlossaryNames'
+            'whiteGlossaryNames' => 'getWhiteGlossaryNames',
+            'bizType' => 'getBizType'
     ];
 
     /**
@@ -181,6 +191,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
         $this->container['glossaryNames'] = isset($data['glossaryNames']) ? $data['glossaryNames'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['whiteGlossaryNames'] = isset($data['whiteGlossaryNames']) ? $data['whiteGlossaryNames'] : null;
+        $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
     }
 
     /**
@@ -191,9 +202,6 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['eventType'] === null) {
-            $invalidProperties[] = "'eventType' can't be null";
-        }
         if ($this->container['data'] === null) {
             $invalidProperties[] = "'data' can't be null";
         }
@@ -215,7 +223,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * Gets eventType
     *  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     *
-    * @return string
+    * @return string|null
     */
     public function getEventType()
     {
@@ -225,7 +233,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * @param string|null $eventType 事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     *
     * @return $this
     */
@@ -304,6 +312,30 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function setWhiteGlossaryNames($whiteGlossaryNames)
     {
         $this->container['whiteGlossaryNames'] = $whiteGlossaryNames;
+        return $this;
+    }
+
+    /**
+    * Gets bizType
+    *  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
+    *
+    * @return string|null
+    */
+    public function getBizType()
+    {
+        return $this->container['bizType'];
+    }
+
+    /**
+    * Sets bizType
+    *
+    * @param string|null $bizType 自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
+    *
+    * @return $this
+    */
+    public function setBizType($bizType)
+    {
+        $this->container['bizType'] = $bizType;
         return $this;
     }
 

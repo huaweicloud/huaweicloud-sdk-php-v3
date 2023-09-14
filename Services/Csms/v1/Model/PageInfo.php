@@ -180,11 +180,11 @@ class PageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['nextMarker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['nextMarker'])) {
-                $invalidProperties[] = "invalid value for 'nextMarker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!is_null($this->container['nextMarker']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['nextMarker'])) {
+                $invalidProperties[] = "invalid value for 'nextMarker', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
-            if (!is_null($this->container['previousMarker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['previousMarker'])) {
-                $invalidProperties[] = "invalid value for 'previousMarker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!is_null($this->container['previousMarker']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['previousMarker'])) {
+                $invalidProperties[] = "invalid value for 'previousMarker', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
             if (!is_null($this->container['currentCount']) && ($this->container['currentCount'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'currentCount', must be smaller than or equal to 1000.";

@@ -248,38 +248,38 @@ class HttpClient
         switch ($errorKey) {
             case 'cURL error 6':
                 if (isset($this->logger)) {
-                    $this->logger->addError('HostUnreachableException occurred.'
+                    $this->logger->error('HostUnreachableException occurred.'
                         .$msg);
                 }
                 throw new HostUnreachableException($msg);
             case 'cURL error 60':
                 if (isset($this->logger)) {
-                    $this->logger->addError('SslHandShakeException occurred.'
+                    $this->logger->error('SslHandShakeException occurred.'
                         .$msg);
                 }
                 throw new SslHandShakeException($msg);
             case 'cURL error 28':
                 if (isset($this->logger)) {
-                    $this->logger->addError('CallTimeoutException occurred.'
+                    $this->logger->error('CallTimeoutException occurred.'
                         .$msg);
                 }
                 throw new CallTimeoutException($msg);
             case 'cURL error 47':
                 if (isset($this->logger)) {
-                    $this->logger->addError('RetryOutageException occurred.'
+                    $this->logger->error('RetryOutageException occurred.'
                         .$msg);
                 }
                 throw new RetryOutageException($msg);
             case 'CURL error 55':
                 // should handle error for reset by peer, throw connection exception
                 if (isset($this->logger)) {
-                    $this->logger->addError('reset by server error occurred.'
+                    $this->logger->error('reset by server error occurred.'
                         .$msg);
                 }
                 throw new ConnectionException($msg, 504, null);
             default:
                 if (isset($this->logger)) {
-                    $this->logger->addError('SdkException occurred.'
+                    $this->logger->error('SdkException occurred.'
                         .$msg);
                 }
                 throw new SdkException($errorMessage);
@@ -325,7 +325,7 @@ class HttpClient
     {
         $contentLength = $this->getContentLength($response);
         if (isset($this->logger)) {
-            $this->logger->addInfo(' "'.$sdkRequest->method.' '.
+            $this->logger->info(' "'.$sdkRequest->method.' '.
                 $sdkRequest->url.'" '
                 .' '.$response->getStatusCode().' '.$contentLength
                 .' '.$response->getHeaders()['X-Request-Id'][0]);

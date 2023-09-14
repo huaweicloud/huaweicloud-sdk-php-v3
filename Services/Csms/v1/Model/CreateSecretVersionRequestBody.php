@@ -23,13 +23,15 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     * secretBinary  新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。
     * secretString  新创建凭据的凭据值，将其加密后，存入初始版本中。  约束：secret_binary和 secret_string必须且只能设置一个，最大32K。
     * versionStages  凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'secretBinary' => 'string',
             'secretString' => 'string',
-            'versionStages' => 'string[]'
+            'versionStages' => 'string[]',
+            'expireTime' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     * secretBinary  新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。
     * secretString  新创建凭据的凭据值，将其加密后，存入初始版本中。  约束：secret_binary和 secret_string必须且只能设置一个，最大32K。
     * versionStages  凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'secretBinary' => null,
         'secretString' => null,
-        'versionStages' => null
+        'versionStages' => null,
+        'expireTime' => 'int64'
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     * secretBinary  新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。
     * secretString  新创建凭据的凭据值，将其加密后，存入初始版本中。  约束：secret_binary和 secret_string必须且只能设置一个，最大32K。
     * versionStages  凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'secretBinary' => 'secret_binary',
             'secretString' => 'secret_string',
-            'versionStages' => 'version_stages'
+            'versionStages' => 'version_stages',
+            'expireTime' => 'expire_time'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     * secretBinary  新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。
     * secretString  新创建凭据的凭据值，将其加密后，存入初始版本中。  约束：secret_binary和 secret_string必须且只能设置一个，最大32K。
     * versionStages  凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     *
     * @var string[]
     */
     protected static $setters = [
             'secretBinary' => 'setSecretBinary',
             'secretString' => 'setSecretString',
-            'versionStages' => 'setVersionStages'
+            'versionStages' => 'setVersionStages',
+            'expireTime' => 'setExpireTime'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     * secretBinary  新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。
     * secretString  新创建凭据的凭据值，将其加密后，存入初始版本中。  约束：secret_binary和 secret_string必须且只能设置一个，最大32K。
     * versionStages  凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
+    * expireTime  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
     *
     * @var string[]
     */
     protected static $getters = [
             'secretBinary' => 'getSecretBinary',
             'secretString' => 'getSecretString',
-            'versionStages' => 'getVersionStages'
+            'versionStages' => 'getVersionStages',
+            'expireTime' => 'getExpireTime'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
         $this->container['secretBinary'] = isset($data['secretBinary']) ? $data['secretBinary'] : null;
         $this->container['secretString'] = isset($data['secretString']) ? $data['secretString'] : null;
         $this->container['versionStages'] = isset($data['versionStages']) ? $data['versionStages'] : null;
+        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
     }
 
     /**
@@ -191,6 +202,12 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['secretString']) && (mb_strlen($this->container['secretString']) < 0)) {
                 $invalidProperties[] = "invalid value for 'secretString', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 9999999999999)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 9999999999999.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -275,6 +292,30 @@ class CreateSecretVersionRequestBody implements ModelInterface, ArrayAccess
     public function setVersionStages($versionStages)
     {
         $this->container['versionStages'] = $versionStages;
+        return $this;
+    }
+
+    /**
+    * Gets expireTime
+    *  凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+    *
+    * @return int|null
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param int|null $expireTime 凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

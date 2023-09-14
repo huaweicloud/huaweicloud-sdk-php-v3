@@ -25,7 +25,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * retryMaxTime  最大重试次数,取值范围为1~16。
+    * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * retryMaxTime  最大重试次数,取值范围为1~16。
+    * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * retryMaxTime  最大重试次数,取值范围为1~16。
+    * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * retryMaxTime  最大重试次数,取值范围为1~16。
+    * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * retryMaxTime  最大重试次数,取值范围为1~16。
+    * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数,取值范围为1~16。
+    *  最大重试次数。
     *
     * @return float|null
     */
@@ -372,7 +372,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets retryMaxTime
     *
-    * @param float|null $retryMaxTime 最大重试次数,取值范围为1~16。
+    * @param float|null $retryMaxTime 最大重试次数。
     *
     * @return $this
     */

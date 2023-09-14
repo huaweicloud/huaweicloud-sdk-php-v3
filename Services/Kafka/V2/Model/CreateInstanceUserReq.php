@@ -21,24 +21,28 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userName  用户名称。
+    * userDesc  用户描述。
     * userPasswd  用户密码。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'userName' => 'string',
+            'userDesc' => 'string',
             'userPasswd' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userName  用户名称。
+    * userDesc  用户描述。
     * userPasswd  用户密码。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'userName' => null,
+        'userDesc' => null,
         'userPasswd' => null
     ];
 
@@ -66,36 +70,42 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userName  用户名称。
+    * userDesc  用户描述。
     * userPasswd  用户密码。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'userName' => 'user_name',
+            'userDesc' => 'user_desc',
             'userPasswd' => 'user_passwd'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  用户名称。
+    * userDesc  用户描述。
     * userPasswd  用户密码。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @var string[]
     */
     protected static $setters = [
             'userName' => 'setUserName',
+            'userDesc' => 'setUserDesc',
             'userPasswd' => 'setUserPasswd'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userName  用户名称。
+    * userDesc  用户描述。
     * userPasswd  用户密码。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @var string[]
     */
     protected static $getters = [
             'userName' => 'getUserName',
+            'userDesc' => 'getUserDesc',
             'userPasswd' => 'getUserPasswd'
     ];
 
@@ -158,6 +168,7 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['userDesc'] = isset($data['userDesc']) ? $data['userDesc'] : null;
         $this->container['userPasswd'] = isset($data['userPasswd']) ? $data['userPasswd'] : null;
     }
 
@@ -169,6 +180,12 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['userDesc']) && (mb_strlen($this->container['userDesc']) > 200)) {
+                $invalidProperties[] = "invalid value for 'userDesc', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['userDesc']) && (mb_strlen($this->container['userDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'userDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -204,6 +221,30 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets userDesc
+    *  用户描述。
+    *
+    * @return string|null
+    */
+    public function getUserDesc()
+    {
+        return $this->container['userDesc'];
+    }
+
+    /**
+    * Sets userDesc
+    *
+    * @param string|null $userDesc 用户描述。
+    *
+    * @return $this
+    */
+    public function setUserDesc($userDesc)
+    {
+        $this->container['userDesc'] = $userDesc;
         return $this;
     }
 

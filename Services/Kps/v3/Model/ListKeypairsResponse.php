@@ -21,7 +21,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keypairs  SSH密钥对信息详情
+    * keypairs  SSH密钥对信息列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keypairs  SSH密钥对信息详情
+    * keypairs  SSH密钥对信息列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keypairs  SSH密钥对信息详情
+    * keypairs  SSH密钥对信息列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keypairs  SSH密钥对信息详情
+    * keypairs  SSH密钥对信息列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keypairs  SSH密钥对信息详情
+    * keypairs  SSH密钥对信息列表
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets keypairs
-    *  SSH密钥对信息详情
+    *  SSH密钥对信息列表
     *
     * @return \HuaweiCloud\SDK\Kps\v3\Model\Keypairs[]|null
     */
@@ -198,7 +198,7 @@ class ListKeypairsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keypairs
     *
-    * @param \HuaweiCloud\SDK\Kps\v3\Model\Keypairs[]|null $keypairs SSH密钥对信息详情
+    * @param \HuaweiCloud\SDK\Kps\v3\Model\Keypairs[]|null $keypairs SSH密钥对信息列表
     *
     * @return $this
     */

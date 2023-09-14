@@ -21,8 +21,8 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * nextMarker  返回下一页的查询地址
-    * previousMarker  返回前一页查询地址
-    * currentCount  本页返回条目数量
+    * previousMarker  返回上一页的查询地址
+    * currentCount  返回条目数量
     *
     * @var string[]
     */
@@ -35,15 +35,15 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nextMarker  返回下一页的查询地址
-    * previousMarker  返回前一页查询地址
-    * currentCount  本页返回条目数量
+    * previousMarker  返回上一页的查询地址
+    * currentCount  返回条目数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'nextMarker' => null,
         'previousMarker' => null,
-        'currentCount' => null
+        'currentCount' => 'int32'
     ];
 
     /**
@@ -70,8 +70,8 @@ class PageInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * nextMarker  返回下一页的查询地址
-    * previousMarker  返回前一页查询地址
-    * currentCount  本页返回条目数量
+    * previousMarker  返回上一页的查询地址
+    * currentCount  返回条目数量
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nextMarker  返回下一页的查询地址
-    * previousMarker  返回前一页查询地址
-    * currentCount  本页返回条目数量
+    * previousMarker  返回上一页的查询地址
+    * currentCount  返回条目数量
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nextMarker  返回下一页的查询地址
-    * previousMarker  返回前一页查询地址
-    * currentCount  本页返回条目数量
+    * previousMarker  返回上一页的查询地址
+    * currentCount  返回条目数量
     *
     * @var string[]
     */
@@ -180,6 +180,18 @@ class PageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['nextMarker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['nextMarker'])) {
+                $invalidProperties[] = "invalid value for 'nextMarker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            }
+            if (!is_null($this->container['previousMarker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['previousMarker'])) {
+                $invalidProperties[] = "invalid value for 'previousMarker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            }
+            if (!is_null($this->container['currentCount']) && ($this->container['currentCount'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'currentCount', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['currentCount']) && ($this->container['currentCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'currentCount', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -220,7 +232,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousMarker
-    *  返回前一页查询地址
+    *  返回上一页的查询地址
     *
     * @return string|null
     */
@@ -232,7 +244,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets previousMarker
     *
-    * @param string|null $previousMarker 返回前一页查询地址
+    * @param string|null $previousMarker 返回上一页的查询地址
     *
     * @return $this
     */
@@ -244,7 +256,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentCount
-    *  本页返回条目数量
+    *  返回条目数量
     *
     * @return int|null
     */
@@ -256,7 +268,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentCount
     *
-    * @param int|null $currentCount 本页返回条目数量
+    * @param int|null $currentCount 返回条目数量
     *
     * @return $this
     */

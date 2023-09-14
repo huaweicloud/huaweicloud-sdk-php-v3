@@ -22,24 +22,28 @@ class ListSecretsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页返回的个数。  默认值：50。
     * marker  分页查询起始的凭据名称，为空时为查询第一页
+    * eventName  指定事件名称时，仅返回关联该事件的凭据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'limit' => 'string',
-            'marker' => 'string'
+            'marker' => 'string',
+            'eventName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页返回的个数。  默认值：50。
     * marker  分页查询起始的凭据名称，为空时为查询第一页
+    * eventName  指定事件名称时，仅返回关联该事件的凭据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'limit' => null,
-        'marker' => null
+        'marker' => null,
+        'eventName' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListSecretsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  每页返回的个数。  默认值：50。
     * marker  分页查询起始的凭据名称，为空时为查询第一页
+    * eventName  指定事件名称时，仅返回关联该事件的凭据
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'limit' => 'limit',
-            'marker' => 'marker'
+            'marker' => 'marker',
+            'eventName' => 'event_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页返回的个数。  默认值：50。
     * marker  分页查询起始的凭据名称，为空时为查询第一页
+    * eventName  指定事件名称时，仅返回关联该事件的凭据
     *
     * @var string[]
     */
     protected static $setters = [
             'limit' => 'setLimit',
-            'marker' => 'setMarker'
+            'marker' => 'setMarker',
+            'eventName' => 'setEventName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页返回的个数。  默认值：50。
     * marker  分页查询起始的凭据名称，为空时为查询第一页
+    * eventName  指定事件名称时，仅返回关联该事件的凭据
     *
     * @var string[]
     */
     protected static $getters = [
             'limit' => 'getLimit',
-            'marker' => 'getMarker'
+            'marker' => 'getMarker',
+            'eventName' => 'getEventName'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListSecretsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
     }
 
     /**
@@ -175,8 +186,14 @@ class ListSecretsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['marker']) && !preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['marker'])) {
-                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!is_null($this->container['marker']) && !preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -237,6 +254,30 @@ class ListSecretsRequest implements ModelInterface, ArrayAccess
     public function setMarker($marker)
     {
         $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets eventName
+    *  指定事件名称时，仅返回关联该事件的凭据
+    *
+    * @return string|null
+    */
+    public function getEventName()
+    {
+        return $this->container['eventName'];
+    }
+
+    /**
+    * Sets eventName
+    *
+    * @param string|null $eventName 指定事件名称时，仅返回关联该事件的凭据
+    *
+    * @return $this
+    */
+    public function setEventName($eventName)
+    {
+        $this->container['eventName'] = $eventName;
         return $this;
     }
 

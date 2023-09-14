@@ -158,6 +158,9 @@ class CreateSecretTagRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tag'] === null) {
+            $invalidProperties[] = "'tag' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class CreateSecretTagRequestBody implements ModelInterface, ArrayAccess
     * Gets tag
     *  tag
     *
-    * @return \HuaweiCloud\SDK\Csms\v1\Model\TagItem|null
+    * @return \HuaweiCloud\SDK\Csms\v1\Model\TagItem
     */
     public function getTag()
     {
@@ -186,7 +189,7 @@ class CreateSecretTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param \HuaweiCloud\SDK\Csms\v1\Model\TagItem|null $tag tag
+    * @param \HuaweiCloud\SDK\Csms\v1\Model\TagItem $tag tag
     *
     * @return $this
     */

@@ -2706,9 +2706,6 @@ class LtsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['tag'] !== null) {
-            $queryParams['tag'] = $localVarParams['tag'];
-        }
         if ($localVarParams['logGroupId'] !== null) {
             $pathParams['log_group_id'] = $localVarParams['logGroupId'];
         }

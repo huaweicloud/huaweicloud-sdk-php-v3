@@ -28,7 +28,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -40,8 +39,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventState' => 'string',
             'eventLevel' => 'string',
             'eventUser' => 'string',
-            'eventType' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension'
+            'eventType' => 'string'
     ];
 
     /**
@@ -54,7 +52,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -66,8 +63,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
         'eventState' => null,
         'eventLevel' => null,
         'eventUser' => null,
-        'eventType' => null,
-        'dimensions' => null
+        'eventType' => null
     ];
 
     /**
@@ -101,7 +97,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -113,8 +108,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventState' => 'event_state',
             'eventLevel' => 'event_level',
             'eventUser' => 'event_user',
-            'eventType' => 'event_type',
-            'dimensions' => 'dimensions'
+            'eventType' => 'event_type'
     ];
 
     /**
@@ -127,7 +121,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -139,8 +132,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventState' => 'setEventState',
             'eventLevel' => 'setEventLevel',
             'eventUser' => 'setEventUser',
-            'eventType' => 'setEventType',
-            'dimensions' => 'setDimensions'
+            'eventType' => 'setEventType'
     ];
 
     /**
@@ -153,7 +145,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     * eventLevel  事件级别。  枚举类型：Critical, Major, Minor, Info
     * eventUser  事件用户。  支持字母 数字_ -/空格 ，最大长度64。
     * eventType  事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-    * dimensions  dimensions
     *
     * @var string[]
     */
@@ -165,8 +156,7 @@ class EventItemDetail implements ModelInterface, ArrayAccess
             'eventState' => 'getEventState',
             'eventLevel' => 'getEventLevel',
             'eventUser' => 'getEventUser',
-            'eventType' => 'getEventType',
-            'dimensions' => 'getDimensions'
+            'eventType' => 'getEventType'
     ];
 
     /**
@@ -271,7 +261,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
         $this->container['eventLevel'] = isset($data['eventLevel']) ? $data['eventLevel'] : null;
         $this->container['eventUser'] = isset($data['eventUser']) ? $data['eventUser'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
-        $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
     }
 
     /**
@@ -528,30 +517,6 @@ class EventItemDetail implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
-        return $this;
-    }
-
-    /**
-    * Gets dimensions
-    *  dimensions
-    *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension|null
-    */
-    public function getDimensions()
-    {
-        return $this->container['dimensions'];
-    }
-
-    /**
-    * Sets dimensions
-    *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension|null $dimensions dimensions
-    *
-    * @return $this
-    */
-    public function setDimensions($dimensions)
-    {
-        $this->container['dimensions'] = $dimensions;
         return $this;
     }
 

@@ -21,17 +21,17 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logStreams  日志组数组。
+    * logStreams  logStreams
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logStreams' => '\HuaweiCloud\SDK\Lts\V2\Model\LogStream[]'
+            'logStreams' => '\HuaweiCloud\SDK\Lts\V2\Model\LogStreamResBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logStreams  日志组数组。
+    * logStreams  logStreams
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logStreams  日志组数组。
+    * logStreams  logStreams
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logStreams  日志组数组。
+    * logStreams  logStreams
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logStreams  日志组数组。
+    * logStreams  logStreams
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logStreams
-    *  日志组数组。
+    *  logStreams
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogStream[]|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogStreamResBody[]|null
     */
     public function getLogStreams()
     {
@@ -187,7 +187,7 @@ class ListLogStreamResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logStreams
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogStream[]|null $logStreams 日志组数组。
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogStreamResBody[]|null $logStreams logStreams
     *
     * @return $this
     */

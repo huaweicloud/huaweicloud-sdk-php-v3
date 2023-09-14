@@ -20,9 +20,9 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
+    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
+    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
     * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
     *
@@ -38,9 +38,9 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
+    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
+    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
     * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
     *
@@ -77,9 +77,9 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
+    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
+    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
     * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
     *
@@ -95,9 +95,9 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
+    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
+    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
     * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
     *
@@ -113,9 +113,9 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
-    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
-    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * startTime  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
+    * endTime  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
+    * launchTime  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     * recurrenceType  非必选，不填写时计划任务为定时执行， 填写时，为周期执行，且只能填写DAILY，WEEKLY，MONTHLY 中的一种，分别为按天，按周，按月周期执行
     * recurrenceValue  仅当recurrence_type为WEEKLY，MONTHLY时必选，表示周期执行的具体日期，多个日期用,分割。recurrence_type为WEEKLY时，可填入1-7， recurrence_type为MONTHLY时，可填入1-31
     *
@@ -252,7 +252,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
+    *  非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-dd'T'HH:mm'Z'，不填写时默认为任务创建成功的时间
+    * @param string|null $startTime 非必选，仅当recurrence_type不为空时生效，表示计划任务的生效开始时间，格式为yyyy-MM-ddTHH:mmZ，不填写时默认为任务创建成功的时间
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
+    *  仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * @param string|null $endTime 仅当recurrence_type不为空时生效且必选，表示计划任务的生效结束时间，格式为yyyy-MM-ddTHH:mmZ
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets launchTime
-    *  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    *  必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class ScheduledTaskPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets launchTime
     *
-    * @param string $launchTime 必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为HH:mm, recurrence_type不为空时，格式为yyyy-MM-dd'T'HH:mm'Z'
+    * @param string $launchTime 必选，执行时间，采用UTC时间，recurrence_type不填写或为空时，格式为yyyy-MM-ddTHH:mmZ, recurrence_type不为空时，格式为 HH:mm
     *
     * @return $this
     */

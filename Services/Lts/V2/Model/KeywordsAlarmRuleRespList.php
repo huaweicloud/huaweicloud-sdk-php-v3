@@ -49,7 +49,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsAlarmRuleDescription' => 'string',
             'conditionExpression' => 'string',
             'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'frequency' => 'object',
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
@@ -643,7 +643,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Gets frequency
     *  告警统计周期
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency
+    * @return object
     */
     public function getFrequency()
     {
@@ -653,7 +653,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency $frequency 告警统计周期
+    * @param object $frequency 告警统计周期
     *
     * @return $this
     */

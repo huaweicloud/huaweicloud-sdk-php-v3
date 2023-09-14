@@ -21,7 +21,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * secretName  凭据名称。
-    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * secretName  凭据名称。
-    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * secretName  凭据名称。
-    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * secretName  凭据名称。
-    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * secretName  凭据名称。
-    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * stageName  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     * body  body
     *
     * @var string[]
@@ -183,14 +183,14 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
         if ($this->container['secretName'] === null) {
             $invalidProperties[] = "'secretName' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['secretName'])) {
-                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
+                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
         if ($this->container['stageName'] === null) {
             $invalidProperties[] = "'stageName' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9._-]{1,64}$/", $this->container['stageName'])) {
-                $invalidProperties[] = "invalid value for 'stageName', must be conform to the pattern /^[a-zA-Z0-9._-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['stageName'])) {
+                $invalidProperties[] = "invalid value for 'stageName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
             }
         return $invalidProperties;
     }
@@ -232,7 +232,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageName
-    *  凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    *  凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class UpdateSecretStageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stageName
     *
-    * @param string $stageName 凭据版本状态的名称。满足 '^[a-zA-Z0-9._-]{1,64}$'
+    * @param string $stageName 凭据版本状态的名称。满足 '^[a-zA-Z0-9_-]{1,64}$'
     *
     * @return $this
     */

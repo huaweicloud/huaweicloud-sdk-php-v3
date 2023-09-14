@@ -20,8 +20,8 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * value  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
+    * value  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * value  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
+    * value  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * value  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
+    * value  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * value  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
+    * value  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
-    * value  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
+    * value  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    *  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。  key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : = + - @  key两头不能有空格字符。
+    * @param string|null $key 标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  [- 长度不超过36个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为1~128个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    *  标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值。  长度0~255个字符（中文也可以输入255个字符）。  可用UTF-8格式表示的字母、数字和空格，以及以下字符： _ . : / = + - @  value可以为空字符串。
+    * @param string|null $value 标签值。  [- 不能为空。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度不超过43个字符。](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 长度为0~255个字符（中文也可以输入128个字符）。](tag:hws,hws_hk)  [- 不能包含“=”，“*”，“<”，“>”，“\\”，“,”，“|”，“/”](tag:cmcc,ctc,g42,hk_g42,hk_tm,hws_eu,hws_ocb,ocb,tm,otc)  [- 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @](tag:hws,hws_hk)  - 首尾字符不能为空格。
     *
     * @return $this
     */

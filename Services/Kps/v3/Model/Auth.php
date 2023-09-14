@@ -20,7 +20,7 @@ class Auth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  取值为枚举类型。
+    * type  取值为枚举类型。password或keypair。
     * key  - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Auth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  取值为枚举类型。
+    * type  取值为枚举类型。password或keypair。
     * key  - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Auth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  取值为枚举类型。
+    * type  取值为枚举类型。password或keypair。
     * key  - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Auth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  取值为枚举类型。
+    * type  取值为枚举类型。password或keypair。
     * key  - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Auth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  取值为枚举类型。
+    * type  取值为枚举类型。password或keypair。
     * key  - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
     *
     * @var string[]
@@ -214,7 +214,7 @@ class Auth implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  取值为枚举类型。
+    *  取值为枚举类型。password或keypair。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class Auth implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 取值为枚举类型。
+    * @param string|null $type 取值为枚举类型。password或keypair。
     *
     * @return $this
     */

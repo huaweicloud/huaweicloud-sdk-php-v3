@@ -21,6 +21,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     * categories  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
@@ -29,6 +30,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\AudioInputBody',
+            'bizType' => 'string',
             'eventType' => 'string',
             'categories' => 'string[]',
             'callback' => 'string'
@@ -37,6 +39,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     * categories  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
@@ -45,6 +48,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'data' => null,
+        'bizType' => null,
         'eventType' => null,
         'categories' => null,
         'callback' => null
@@ -74,6 +78,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     * categories  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
@@ -82,6 +87,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'data' => 'data',
+            'bizType' => 'biz_type',
             'eventType' => 'event_type',
             'categories' => 'categories',
             'callback' => 'callback'
@@ -90,6 +96,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     * categories  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
@@ -98,6 +105,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'data' => 'setData',
+            'bizType' => 'setBizType',
             'eventType' => 'setEventType',
             'categories' => 'setCategories',
             'callback' => 'setCallback'
@@ -106,6 +114,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * data  data
+    * bizType  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
     * eventType  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     * categories  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
@@ -114,6 +123,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'data' => 'getData',
+            'bizType' => 'getBizType',
             'eventType' => 'getEventType',
             'categories' => 'getCategories',
             'callback' => 'getCallback'
@@ -226,6 +236,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
@@ -242,9 +253,6 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
         if ($this->container['data'] === null) {
             $invalidProperties[] = "'data' can't be null";
         }
-        if ($this->container['eventType'] === null) {
-            $invalidProperties[] = "'eventType' can't be null";
-        }
             $allowedValues = $this->getEventTypeAllowableValues();
                 if (!is_null($this->container['eventType']) && !in_array($this->container['eventType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -253,9 +261,6 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['categories'] === null) {
-            $invalidProperties[] = "'categories' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -295,10 +300,34 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets bizType
+    *  用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
+    *
+    * @return string|null
+    */
+    public function getBizType()
+    {
+        return $this->container['bizType'];
+    }
+
+    /**
+    * Sets bizType
+    *
+    * @param string|null $bizType 用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
+    *
+    * @return $this
+    */
+    public function setBizType($bizType)
+    {
+        $this->container['bizType'] = $bizType;
+        return $this;
+    }
+
+    /**
     * Gets eventType
     *  事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     *
-    * @return string
+    * @return string|null
     */
     public function getEventType()
     {
@@ -308,7 +337,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
+    * @param string|null $eventType 事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
     *
     * @return $this
     */
@@ -322,7 +351,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     * Gets categories
     *  需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getCategories()
     {
@@ -332,7 +361,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets categories
     *
-    * @param string[] $categories 需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
+    * @param string[]|null $categories 需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
     *
     * @return $this
     */

@@ -157,9 +157,71 @@ class CsmsClient extends Client
     }
 
     /**
+     * 创建事件
+     *
+     * 创建事件，事件可配置在一个或多个凭据对象上。当事件为启用状态且包含的基础事件类型在凭据对象上触发时，云服务会将对应的事件通知发送至事件指定的通知主题上。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSecretEvent($request)
+    {
+        return $this->createSecretEventWithHttpInfo($request);
+    }
+
+    public function createSecretEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/events';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\CreateSecretEventResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\CreateSecretEventRequest');
+    }
+
+    /**
      * 添加凭据标签
      *
-     * - 功能介绍：添加凭据标签。
+     * 添加凭据标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -349,6 +411,68 @@ class CsmsClient extends Client
     }
 
     /**
+     * 立即删除事件
+     *
+     * 立即删除指定的事件，且无法恢复。如事件存在凭据引用，则无法删除，请先解除关联。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSecretEvent($request)
+    {
+        return $this->deleteSecretEventWithHttpInfo($request);
+    }
+
+    public function deleteSecretEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/events/{event_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $pathParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\DeleteSecretEventResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\DeleteSecretEventRequest');
+    }
+
+    /**
      * 创建凭据的定时删除任务
      *
      * 指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
@@ -481,7 +605,7 @@ class CsmsClient extends Client
     /**
      * 删除凭据标签
      *
-     * - 功能介绍：删除凭据标签。
+     * 删除凭据标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -606,9 +730,68 @@ class CsmsClient extends Client
     }
 
     /**
+     * 查询已触发的事件通知记录
+     *
+     * 查询三个月内所有已触发的事件通知记录。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationRecords($request)
+    {
+        return $this->listNotificationRecordsWithHttpInfo($request);
+    }
+
+    public function listNotificationRecordsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/notification-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\ListNotificationRecordsResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\ListNotificationRecordsRequest');
+    }
+
+    /**
      * 查询项目标签
      *
-     * - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
+     * 查询用户在指定项目下的所有凭据标签集合。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -667,7 +850,7 @@ class CsmsClient extends Client
     /**
      * 查询凭据实例
      *
-     * - 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
+     * 查询凭据实例。通过标签过滤，筛选用户凭据，返回凭据列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -730,9 +913,74 @@ class CsmsClient extends Client
     }
 
     /**
+     * 查询事件列表
+     *
+     * 查询当前用户在本项目下创建的所有事件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecretEvents($request)
+    {
+        return $this->listSecretEventsWithHttpInfo($request);
+    }
+
+    public function listSecretEventsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/events';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\ListSecretEventsResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\ListSecretEventsRequest');
+    }
+
+    /**
      * 查询凭据标签
      *
-     * - 功能介绍：查询凭据标签。
+     * 查询凭据标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -896,6 +1144,9 @@ class CsmsClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['eventName'] !== null) {
+            $queryParams['event_name'] = $localVarParams['eventName'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1046,6 +1297,68 @@ class CsmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Csms\v1\Model\ShowSecretResponse',
             $requestType='\HuaweiCloud\SDK\Csms\v1\Model\ShowSecretRequest');
+    }
+
+    /**
+     * 查询事件
+     *
+     * 查询指定事件的信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecretEvent($request)
+    {
+        return $this->showSecretEventWithHttpInfo($request);
+    }
+
+    public function showSecretEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/events/{event_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $pathParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\ShowSecretEventResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\ShowSecretEventRequest');
     }
 
     /**
@@ -1245,6 +1558,71 @@ class CsmsClient extends Client
     }
 
     /**
+     * 更新事件
+     *
+     * 更新指定事件的元数据信息。支持更新的元数据包含事件启用状态、基础类型列表、通知主题。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecretEvent($request)
+    {
+        return $this->updateSecretEventWithHttpInfo($request);
+    }
+
+    public function updateSecretEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/csms/events/{event_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $pathParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateSecretEventResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateSecretEventRequest');
+    }
+
+    /**
      * 更新凭据的版本状态
      *
      * 更新凭据的版本状态。
@@ -1310,6 +1688,74 @@ class CsmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateSecretStageResponse',
             $requestType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateSecretStageRequest');
+    }
+
+    /**
+     * 更新凭据版本
+     *
+     * 当前支持更新指定凭据版本的有效期，只能更新ENABLED状态的凭据。在关联订阅的事件包含“版本过期”基础事件类型时，每次更新版本有效期后仅会触发一次事件通知。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVersion($request)
+    {
+        return $this->updateVersionWithHttpInfo($request);
+    }
+
+    public function updateVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/secrets/{secret_name}/versions/{version_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['secretName'] !== null) {
+            $pathParams['secret_name'] = $localVarParams['secretName'];
+        }
+        if ($localVarParams['versionId'] !== null) {
+            $pathParams['version_id'] = $localVarParams['versionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateVersionResponse',
+            $requestType='\HuaweiCloud\SDK\Csms\v1\Model\UpdateVersionRequest');
     }
 
     /**

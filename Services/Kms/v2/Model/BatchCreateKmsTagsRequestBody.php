@@ -180,10 +180,16 @@ class BatchCreateKmsTagsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) > 6)) {
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
+            if ((mb_strlen($this->container['action']) > 6)) {
                 $invalidProperties[] = "invalid value for 'action', the character length must be smaller than or equal to 6.";
             }
-            if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) < 6)) {
+            if ((mb_strlen($this->container['action']) < 6)) {
                 $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 6.";
             }
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) > 36)) {
@@ -210,7 +216,7 @@ class BatchCreateKmsTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表，key和value键值对的集合。
     *
-    * @return \HuaweiCloud\SDK\Kms\v2\Model\TagItem[]|null
+    * @return \HuaweiCloud\SDK\Kms\v2\Model\TagItem[]
     */
     public function getTags()
     {
@@ -220,7 +226,7 @@ class BatchCreateKmsTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Kms\v2\Model\TagItem[]|null $tags 标签列表，key和value键值对的集合。
+    * @param \HuaweiCloud\SDK\Kms\v2\Model\TagItem[] $tags 标签列表，key和value键值对的集合。
     *
     * @return $this
     */
@@ -234,7 +240,7 @@ class BatchCreateKmsTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  操作标识： 仅限于“create”和“delete”。
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -244,7 +250,7 @@ class BatchCreateKmsTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 操作标识： 仅限于“create”和“delete”。
+    * @param string $action 操作标识： 仅限于“create”和“delete”。
     *
     * @return $this
     */

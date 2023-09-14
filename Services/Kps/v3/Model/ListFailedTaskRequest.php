@@ -20,26 +20,26 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页返回的个数。 默认值：50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示的条目数量。默认值1000。
+    * offset  失败的任务信息列表的偏移量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'limit' => 'string',
-            'offset' => 'string'
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页返回的个数。 默认值：50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示的条目数量。默认值1000。
+    * offset  失败的任务信息列表的偏移量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'limit' => null,
-        'offset' => null
+        'offset' => 'int32'
     ];
 
     /**
@@ -65,8 +65,8 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页返回的个数。 默认值：50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示的条目数量。默认值1000。
+    * offset  失败的任务信息列表的偏移量
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页返回的个数。 默认值：50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示的条目数量。默认值1000。
+    * offset  失败的任务信息列表的偏移量
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页返回的个数。 默认值：50。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示的条目数量。默认值1000。
+    * offset  失败的任务信息列表的偏移量
     *
     * @var string[]
     */
@@ -169,11 +169,17 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 4)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 4.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 100000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -191,9 +197,9 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。 默认值：50。
+    *  每页显示的条目数量。默认值1000。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -203,7 +209,7 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 每页返回的个数。 默认值：50。
+    * @param int|null $limit 每页显示的条目数量。默认值1000。
     *
     * @return $this
     */
@@ -215,9 +221,9 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0
+    *  失败的任务信息列表的偏移量
     *
-    * @return string|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -227,7 +233,7 @@ class ListFailedTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0
+    * @param int|null $offset 失败的任务信息列表的偏移量
     *
     * @return $this
     */

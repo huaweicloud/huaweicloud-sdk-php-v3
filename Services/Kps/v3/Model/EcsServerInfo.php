@@ -22,28 +22,32 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  需要绑定(替换或重置)SSH密钥对的虚拟机id
     * auth  auth
-    * disablePassword  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * disablePassword  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
+    * port  SSH监听端口。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'auth' => '\HuaweiCloud\SDK\Kps\v3\Model\Auth',
-            'disablePassword' => 'bool'
+            'disablePassword' => 'bool',
+            'port' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  需要绑定(替换或重置)SSH密钥对的虚拟机id
     * auth  auth
-    * disablePassword  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * disablePassword  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
+    * port  SSH监听端口。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'auth' => null,
-        'disablePassword' => null
+        'disablePassword' => null,
+        'port' => 'int64'
     ];
 
     /**
@@ -71,42 +75,48 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  需要绑定(替换或重置)SSH密钥对的虚拟机id
     * auth  auth
-    * disablePassword  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * disablePassword  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
+    * port  SSH监听端口。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'auth' => 'auth',
-            'disablePassword' => 'disable_password'
+            'disablePassword' => 'disable_password',
+            'port' => 'port'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  需要绑定(替换或重置)SSH密钥对的虚拟机id
     * auth  auth
-    * disablePassword  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * disablePassword  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
+    * port  SSH监听端口。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'auth' => 'setAuth',
-            'disablePassword' => 'setDisablePassword'
+            'disablePassword' => 'setDisablePassword',
+            'port' => 'setPort'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  需要绑定(替换或重置)SSH密钥对的虚拟机id
     * auth  auth
-    * disablePassword  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * disablePassword  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
+    * port  SSH监听端口。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'auth' => 'getAuth',
-            'disablePassword' => 'getDisablePassword'
+            'disablePassword' => 'getDisablePassword',
+            'port' => 'getPort'
     ];
 
     /**
@@ -170,6 +180,7 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['auth'] = isset($data['auth']) ? $data['auth'] : null;
         $this->container['disablePassword'] = isset($data['disablePassword']) ? $data['disablePassword'] : null;
+        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
     }
 
     /**
@@ -188,6 +199,12 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['port']) && ($this->container['port'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'port', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['port']) && ($this->container['port'] < 1)) {
+                $invalidProperties[] = "invalid value for 'port', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -253,7 +270,7 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets disablePassword
-    *  - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    *  - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
     *
     * @return bool|null
     */
@@ -265,13 +282,37 @@ class EcsServerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets disablePassword
     *
-    * @param bool|null $disablePassword - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
+    * @param bool|null $disablePassword - true：禁用虚拟机的ssh登录。 - false：不禁用虚拟机的ssh登录。
     *
     * @return $this
     */
     public function setDisablePassword($disablePassword)
     {
         $this->container['disablePassword'] = $disablePassword;
+        return $this;
+    }
+
+    /**
+    * Gets port
+    *  SSH监听端口。
+    *
+    * @return int|null
+    */
+    public function getPort()
+    {
+        return $this->container['port'];
+    }
+
+    /**
+    * Sets port
+    *
+    * @param int|null $port SSH监听端口。
+    *
+    * @return $this
+    */
+    public function setPort($port)
+    {
+        $this->container['port'] = $port;
         return $this;
     }
 

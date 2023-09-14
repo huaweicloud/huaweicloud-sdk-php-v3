@@ -42,7 +42,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'string',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
-            'config' => '\HuaweiCloud\SDK\Lts\V2\Model\ChartConfig'
+            'config' => 'object'
     ];
 
     /**
@@ -528,7 +528,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * Gets config
     *  图表配置详情
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\ChartConfig|null
+    * @return object|null
     */
     public function getConfig()
     {
@@ -538,7 +538,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets config
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\ChartConfig|null $config 图表配置详情
+    * @param object|null $config 图表配置详情
     *
     * @return $this
     */

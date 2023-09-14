@@ -21,6 +21,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * userDesc  用户描述。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -29,6 +30,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'userName' => 'string',
+            'userDesc' => 'string',
             'role' => 'string',
             'defaultApp' => 'bool',
             'createdTime' => 'int'
@@ -37,6 +39,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * userDesc  用户描述。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -45,6 +48,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'userName' => null,
+        'userDesc' => null,
         'role' => null,
         'defaultApp' => null,
         'createdTime' => 'int64'
@@ -74,6 +78,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * userDesc  用户描述。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -82,6 +87,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'userName' => 'user_name',
+            'userDesc' => 'user_desc',
             'role' => 'role',
             'defaultApp' => 'default_app',
             'createdTime' => 'created_time'
@@ -90,6 +96,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * userDesc  用户描述。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -98,6 +105,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'userName' => 'setUserName',
+            'userDesc' => 'setUserDesc',
             'role' => 'setRole',
             'defaultApp' => 'setDefaultApp',
             'createdTime' => 'setCreatedTime'
@@ -106,6 +114,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userName  用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * userDesc  用户描述。
     * role  用户角色。
     * defaultApp  是否为默认应用。
     * createdTime  创建时间。
@@ -114,6 +123,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'userName' => 'getUserName',
+            'userDesc' => 'getUserDesc',
             'role' => 'getRole',
             'defaultApp' => 'getDefaultApp',
             'createdTime' => 'getCreatedTime'
@@ -178,6 +188,7 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['userDesc'] = isset($data['userDesc']) ? $data['userDesc'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['defaultApp'] = isset($data['defaultApp']) ? $data['defaultApp'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
@@ -226,6 +237,30 @@ class ShowInstanceUsersEntity implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets userDesc
+    *  用户描述。
+    *
+    * @return string|null
+    */
+    public function getUserDesc()
+    {
+        return $this->container['userDesc'];
+    }
+
+    /**
+    * Sets userDesc
+    *
+    * @param string|null $userDesc 用户描述。
+    *
+    * @return $this
+    */
+    public function setUserDesc($userDesc)
+    {
+        $this->container['userDesc'] = $userDesc;
         return $this;
     }
 

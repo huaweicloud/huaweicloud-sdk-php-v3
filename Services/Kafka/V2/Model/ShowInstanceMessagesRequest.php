@@ -30,6 +30,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * keyword  关键词。 取值范围为0~50。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'offset' => 'string',
             'download' => 'bool',
             'messageOffset' => 'string',
-            'partition' => 'string'
+            'partition' => 'string',
+            'keyword' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * keyword  关键词。 取值范围为0~50。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
         'offset' => null,
         'download' => null,
         'messageOffset' => null,
-        'partition' => null
+        'partition' => null,
+        'keyword' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * keyword  关键词。 取值范围为0~50。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'download' => 'download',
             'messageOffset' => 'message_offset',
-            'partition' => 'partition'
+            'partition' => 'partition',
+            'keyword' => 'keyword'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * keyword  关键词。 取值范围为0~50。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'download' => 'setDownload',
             'messageOffset' => 'setMessageOffset',
-            'partition' => 'setPartition'
+            'partition' => 'setPartition',
+            'keyword' => 'setKeyword'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * download  是否下载。
     * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
     * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * keyword  关键词。 取值范围为0~50。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'download' => 'getDownload',
             'messageOffset' => 'getMessageOffset',
-            'partition' => 'getPartition'
+            'partition' => 'getPartition',
+            'keyword' => 'getKeyword'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
         $this->container['download'] = isset($data['download']) ? $data['download'] : null;
         $this->container['messageOffset'] = isset($data['messageOffset']) ? $data['messageOffset'] : null;
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
+        $this->container['keyword'] = isset($data['keyword']) ? $data['keyword'] : null;
     }
 
     /**
@@ -263,6 +274,12 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
         if ($this->container['topic'] === null) {
             $invalidProperties[] = "'topic' can't be null";
         }
+            if (!is_null($this->container['keyword']) && (mb_strlen($this->container['keyword']) > 50)) {
+                $invalidProperties[] = "invalid value for 'keyword', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['keyword']) && (mb_strlen($this->container['keyword']) < 0)) {
+                $invalidProperties[] = "invalid value for 'keyword', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -514,6 +531,30 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     public function setPartition($partition)
     {
         $this->container['partition'] = $partition;
+        return $this;
+    }
+
+    /**
+    * Gets keyword
+    *  关键词。 取值范围为0~50。
+    *
+    * @return string|null
+    */
+    public function getKeyword()
+    {
+        return $this->container['keyword'];
+    }
+
+    /**
+    * Sets keyword
+    *
+    * @param string|null $keyword 关键词。 取值范围为0~50。
+    *
+    * @return $this
+    */
+    public function setKeyword($keyword)
+    {
+        $this->container['keyword'] = $keyword;
         return $this;
     }
 

@@ -49,7 +49,7 @@ class HostInfo implements ModelInterface, ArrayAccess
             'os' => 'string',
             'port' => 'int',
             'authorization' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\HostAuthorizationBody',
-            'permission' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail',
+            'permission' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew',
             'hostName' => 'string',
             'asProxy' => 'bool',
             'groupId' => 'string',
@@ -508,7 +508,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * Gets permission
     *  permission
     *
-    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail|null
+    * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew|null
     */
     public function getPermission()
     {
@@ -518,7 +518,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetail|null $permission permission
+    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\PermissionHostDetailNew|null $permission permission
     *
     * @return $this
     */
