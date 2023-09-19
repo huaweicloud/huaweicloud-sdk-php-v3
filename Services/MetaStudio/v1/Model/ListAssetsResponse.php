@@ -23,24 +23,28 @@ class ListAssetsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  资产总数。
     * assets  资产信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'assets' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\DigitalAssetInfo[]'
+            'assets' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\DigitalAssetInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  资产总数。
     * assets  资产信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => null,
-        'assets' => null
+        'assets' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListAssetsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  资产总数。
     * assets  资产信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
-            'assets' => 'assets'
+            'assets' => 'assets',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  资产总数。
     * assets  资产信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
-            'assets' => 'setAssets'
+            'assets' => 'setAssets',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  资产总数。
     * assets  资产信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
-            'assets' => 'getAssets'
+            'assets' => 'getAssets',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListAssetsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['assets'] = isset($data['assets']) ? $data['assets'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListAssetsResponse implements ModelInterface, ArrayAccess
     public function setAssets($assets)
     {
         $this->container['assets'] = $assets;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

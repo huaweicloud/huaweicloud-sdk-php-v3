@@ -20,18 +20,20 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateName  模板名称。
-    * quality  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
-    * pvc  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
-    * hdlb  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
-    * codec  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
-    * width  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
-    * height  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
-    * bitrate  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
-    * videoFrameRate  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-    * protocol  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
-    * iFrameInterval  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-    * gop  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * templateName  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
+    * quality  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
+    * pvc  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
+    * hdlb  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
+    * codec  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
+    * width  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * height  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * bitrate  转码视频的码率  单位：Kbps  取值范围：40-30000
+    * videoFrameRate  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
+    * protocol  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
+    * iFrameInterval  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
+    * gop  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
+    * bitrateAdaptive  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    * iFramePolicy  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
     *
     * @var string[]
     */
@@ -47,23 +49,27 @@ class QualityInfo implements ModelInterface, ArrayAccess
             'videoFrameRate' => 'int',
             'protocol' => 'string',
             'iFrameInterval' => 'int',
-            'gop' => 'int'
+            'gop' => 'int',
+            'bitrateAdaptive' => 'string',
+            'iFramePolicy' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateName  模板名称。
-    * quality  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
-    * pvc  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
-    * hdlb  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
-    * codec  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
-    * width  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
-    * height  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
-    * bitrate  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
-    * videoFrameRate  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-    * protocol  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
-    * iFrameInterval  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-    * gop  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * templateName  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
+    * quality  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
+    * pvc  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
+    * hdlb  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
+    * codec  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
+    * width  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * height  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * bitrate  转码视频的码率  单位：Kbps  取值范围：40-30000
+    * videoFrameRate  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
+    * protocol  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
+    * iFrameInterval  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
+    * gop  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
+    * bitrateAdaptive  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    * iFramePolicy  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class QualityInfo implements ModelInterface, ArrayAccess
         'videoFrameRate' => 'int32',
         'protocol' => null,
         'iFrameInterval' => 'int32',
-        'gop' => 'int32'
+        'gop' => 'int32',
+        'bitrateAdaptive' => null,
+        'iFramePolicy' => null
     ];
 
     /**
@@ -105,18 +113,20 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateName  模板名称。
-    * quality  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
-    * pvc  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
-    * hdlb  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
-    * codec  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
-    * width  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
-    * height  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
-    * bitrate  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
-    * videoFrameRate  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-    * protocol  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
-    * iFrameInterval  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-    * gop  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * templateName  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
+    * quality  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
+    * pvc  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
+    * hdlb  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
+    * codec  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
+    * width  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * height  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * bitrate  转码视频的码率  单位：Kbps  取值范围：40-30000
+    * videoFrameRate  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
+    * protocol  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
+    * iFrameInterval  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
+    * gop  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
+    * bitrateAdaptive  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    * iFramePolicy  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
     *
     * @var string[]
     */
@@ -132,23 +142,27 @@ class QualityInfo implements ModelInterface, ArrayAccess
             'videoFrameRate' => 'video_frame_rate',
             'protocol' => 'protocol',
             'iFrameInterval' => 'iFrameInterval',
-            'gop' => 'gop'
+            'gop' => 'gop',
+            'bitrateAdaptive' => 'bitrate_adaptive',
+            'iFramePolicy' => 'i_frame_policy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateName  模板名称。
-    * quality  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
-    * pvc  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
-    * hdlb  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
-    * codec  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
-    * width  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
-    * height  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
-    * bitrate  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
-    * videoFrameRate  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-    * protocol  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
-    * iFrameInterval  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-    * gop  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * templateName  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
+    * quality  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
+    * pvc  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
+    * hdlb  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
+    * codec  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
+    * width  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * height  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * bitrate  转码视频的码率  单位：Kbps  取值范围：40-30000
+    * videoFrameRate  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
+    * protocol  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
+    * iFrameInterval  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
+    * gop  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
+    * bitrateAdaptive  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    * iFramePolicy  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
     *
     * @var string[]
     */
@@ -164,23 +178,27 @@ class QualityInfo implements ModelInterface, ArrayAccess
             'videoFrameRate' => 'setVideoFrameRate',
             'protocol' => 'setProtocol',
             'iFrameInterval' => 'setIFrameInterval',
-            'gop' => 'setGop'
+            'gop' => 'setGop',
+            'bitrateAdaptive' => 'setBitrateAdaptive',
+            'iFramePolicy' => 'setIFramePolicy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateName  模板名称。
-    * quality  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
-    * pvc  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
-    * hdlb  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
-    * codec  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
-    * width  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
-    * height  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
-    * bitrate  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
-    * videoFrameRate  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
-    * protocol  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
-    * iFrameInterval  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
-    * gop  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * templateName  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
+    * quality  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
+    * pvc  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
+    * hdlb  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
+    * codec  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
+    * width  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * height  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
+    * bitrate  转码视频的码率  单位：Kbps  取值范围：40-30000
+    * videoFrameRate  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
+    * protocol  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
+    * iFrameInterval  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
+    * gop  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
+    * bitrateAdaptive  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    * iFramePolicy  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class QualityInfo implements ModelInterface, ArrayAccess
             'videoFrameRate' => 'getVideoFrameRate',
             'protocol' => 'getProtocol',
             'iFrameInterval' => 'getIFrameInterval',
-            'gop' => 'getGop'
+            'gop' => 'getGop',
+            'bitrateAdaptive' => 'getBitrateAdaptive',
+            'iFramePolicy' => 'getIFramePolicy'
     ];
 
     /**
@@ -248,6 +268,10 @@ class QualityInfo implements ModelInterface, ArrayAccess
     const PROTOCOL_RTMP = 'RTMP';
     const PROTOCOL_HLS = 'HLS';
     const PROTOCOL_DASH = 'DASH';
+    const BITRATE_ADAPTIVE_MINIMUM = 'minimum';
+    const BITRATE_ADAPTIVE_ADAPTIVE = 'adaptive';
+    const I_FRAME_POLICY_AUTO = 'auto';
+    const I_FRAME_POLICY_STRICT_SYNC = 'strictSync';
     
 
     /**
@@ -303,6 +327,32 @@ class QualityInfo implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBitrateAdaptiveAllowableValues()
+    {
+        return [
+            self::BITRATE_ADAPTIVE_MINIMUM,
+            self::BITRATE_ADAPTIVE_ADAPTIVE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIFramePolicyAllowableValues()
+    {
+        return [
+            self::I_FRAME_POLICY_AUTO,
+            self::I_FRAME_POLICY_STRICT_SYNC,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -331,6 +381,8 @@ class QualityInfo implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['iFrameInterval'] = isset($data['iFrameInterval']) ? $data['iFrameInterval'] : null;
         $this->container['gop'] = isset($data['gop']) ? $data['gop'] : null;
+        $this->container['bitrateAdaptive'] = isset($data['bitrateAdaptive']) ? $data['bitrateAdaptive'] : null;
+        $this->container['iFramePolicy'] = isset($data['iFramePolicy']) ? $data['iFramePolicy'] : null;
     }
 
     /**
@@ -421,6 +473,34 @@ class QualityInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['gop']) && ($this->container['gop'] < 0)) {
                 $invalidProperties[] = "invalid value for 'gop', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getBitrateAdaptiveAllowableValues();
+                if (!is_null($this->container['bitrateAdaptive']) && !in_array($this->container['bitrateAdaptive'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'bitrateAdaptive', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['bitrateAdaptive']) && (mb_strlen($this->container['bitrateAdaptive']) > 32)) {
+                $invalidProperties[] = "invalid value for 'bitrateAdaptive', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['bitrateAdaptive']) && (mb_strlen($this->container['bitrateAdaptive']) < 0)) {
+                $invalidProperties[] = "invalid value for 'bitrateAdaptive', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getIFramePolicyAllowableValues();
+                if (!is_null($this->container['iFramePolicy']) && !in_array($this->container['iFramePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'iFramePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['iFramePolicy']) && (mb_strlen($this->container['iFramePolicy']) > 32)) {
+                $invalidProperties[] = "invalid value for 'iFramePolicy', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['iFramePolicy']) && (mb_strlen($this->container['iFramePolicy']) < 0)) {
+                $invalidProperties[] = "invalid value for 'iFramePolicy', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -437,7 +517,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  模板名称。
+    *  自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
     *
     * @return string|null
     */
@@ -449,7 +529,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 模板名称。
+    * @param string|null $templateName 自定义模板名称。 - 若需要自定义模板名称，请将quality参数设置为userdefine； - 多个自定义模板名称之间不能重复； - 自定义模板名称不能与其他模板的quality参数重复； - 若quality不为userdefine，请勿填写此字段。
     *
     * @return $this
     */
@@ -461,7 +541,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quality
-    *  包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
+    *  包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
     *
     * @return string
     */
@@ -473,7 +553,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quality
     *
-    * @param string $quality 包含如下取值： - FHD： 超高清，系统缺省名称 - HD： 高清，系统缺省名称 - SD： 标清，系统缺省名称 - LD： 流畅，系统缺省名称 - XXX： 租户自定义名称。用户自定义名称不能与系统缺省名称冲突；多个自定义名称不能重复
+    * @param string $quality 包含如下取值： - lud： 超高清，系统缺省名称； - lhd： 高清，系统缺省名称； - lsd： 标清，系统缺省名称； - lld： 流畅，系统缺省名称； - userdefine： 视频质量自定义。填写userdefine时，templateName字段不能为空。
     *
     * @return $this
     */
@@ -485,7 +565,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pvc
-    *  是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
+    *  是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
     *
     * @return string|null
     */
@@ -497,7 +577,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pvc
     *
-    * @param string|null $pvc 是否使用窄带高清转码，模板组里不同模板的PVC选项必须相同。 - on：启用。 - off：不启用。 默认为off
+    * @param string|null $pvc 是否使用窄带高清转码。默认值：off。  注意：该字段已不再维护，建议使用hdlb。  包含如下取值： - off：不启用。 - on：启用。
     *
     * @return $this
     */
@@ -509,7 +589,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hdlb
-    *  是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
+    *  是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
     *
     * @return string|null
     */
@@ -521,7 +601,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hdlb
     *
-    * @param string|null $hdlb 是否启用高清低码，较PVC相比画质增强。 - on：启用。 - off：不启用。 默认为off。
+    * @param string|null $hdlb 是否启用高清低码，较PVC相比画质增强。默认值：off。  提示：使用hdlb字段开启高清低码时，PVC字段不生效。  包含如下取值： - off：不开启高清低码； - on：开启高清低码。
     *
     * @return $this
     */
@@ -533,7 +613,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets codec
-    *  视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
+    *  视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
     *
     * @return string|null
     */
@@ -545,7 +625,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets codec
     *
-    * @param string|null $codec 视频编码格式，模板组里不同模板的编码格式必须相同。 - H264：使用H.264。 - H265：使用H.265。 默认为H264。
+    * @param string|null $codec 视频编码格式。默认为H264。 - H264：使用H.264。 - H265：使用H.265。
     *
     * @return $this
     */
@@ -557,7 +637,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets width
-    *  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
+    *  视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
     *
     * @return int|null
     */
@@ -569,7 +649,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets width
     *
-    * @param int|null $width 视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
+    * @param int|null $width 视频长边（横屏的宽，竖屏的高）  单位：像素；默认值：0 - H264 建议取值范围：32-3840，必须为2的倍数 。 - H265 建议取值范围：320-3840 ，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
     *
     * @return $this
     */
@@ -581,7 +661,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets height
-    *  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
+    *  视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
     *
     * @return int|null
     */
@@ -593,7 +673,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets height
     *
-    * @param int|null $height 视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
+    * @param int|null $height 视频短边（横屏的高，竖屏的宽）  单位：像素；默认值：0 - H264 建议取值范围：32-2160，必须为2的倍数。 - H265 建议取值范围：240-2160，必须为2的倍数。  注意：width和height全为0，则输出分辨率和源一致；width和height只有一个为0， 则分辨率按非0项的比例缩放。
     *
     * @return $this
     */
@@ -605,7 +685,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bitrate
-    *  转码视频的码率（单位：Kbps）。 取值范围：40-30000。
+    *  转码视频的码率  单位：Kbps  取值范围：40-30000
     *
     * @return int
     */
@@ -617,7 +697,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bitrate
     *
-    * @param int $bitrate 转码视频的码率（单位：Kbps）。 取值范围：40-30000。
+    * @param int $bitrate 转码视频的码率  单位：Kbps  取值范围：40-30000
     *
     * @return $this
     */
@@ -629,7 +709,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets videoFrameRate
-    *  转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
+    *  转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
     *
     * @return int|null
     */
@@ -641,7 +721,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets videoFrameRate
     *
-    * @param int|null $videoFrameRate 转码视频帧率（单位：fps）。 取值范围：0-30，0表示保持帧率不变。
+    * @param int|null $videoFrameRate 转码视频帧率  单位：fps  默认值：0  取值范围：0-60，0表示保持帧率不变。
     *
     * @return $this
     */
@@ -653,7 +733,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
+    *  转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
     *
     * @return string|null
     */
@@ -665,7 +745,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 转码输出支持的协议类型。当前只支持RTMP和HLS，且模板组里不同模板的输出协议类型必须相同。 - RTMP - HLS - DASH  默认为RTMP。
+    * @param string|null $protocol 转码输出支持的协议类型。默认为RTMP。当前只支持RTMP。  包含如下取值： - RTMP
     *
     * @return $this
     */
@@ -677,7 +757,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets iFrameInterval
-    *  I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
+    *  最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
     *
     * @return int|null
     */
@@ -689,7 +769,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets iFrameInterval
     *
-    * @param int|null $iFrameInterval I帧间隔（单位：帧）。  取值范围：0-500。  默认为25。
+    * @param int|null $iFrameInterval 最大I帧间隔  单位：帧数  取值范围：[0, 500]，默认值：50  注意：若希望通过iFrameInterval设置i帧间隔，请将gop设为0，或不传gop参数。
     *
     * @return $this
     */
@@ -701,7 +781,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gop
-    *  按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    *  按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
     *
     * @return int|null
     */
@@ -713,13 +793,61 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gop
     *
-    * @param int|null $gop 按时间设置I帧间隔，与“iFrameInterval”选择一个设置即可。  取值范围：[0,10]  默认值：4
+    * @param int|null $gop 按时间设置I帧间隔  单位：秒  取值范围：[0,10]，默认值：2  注意：gop不为0时，则以gop设置i帧间隔，iFrameInterval字段不生效。
     *
     * @return $this
     */
     public function setGop($gop)
     {
         $this->container['gop'] = $gop;
+        return $this;
+    }
+
+    /**
+    * Gets bitrateAdaptive
+    *  自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    *
+    * @return string|null
+    */
+    public function getBitrateAdaptive()
+    {
+        return $this->container['bitrateAdaptive'];
+    }
+
+    /**
+    * Sets bitrateAdaptive
+    *
+    * @param string|null $bitrateAdaptive 自适应码率参数，默认值：off。  包含如下取值： - off：关闭码率自适应，目标码率按设定的码率输出； - minimum：目标码率按设定码率和源文件码率最小值输出（即码率不上扬）； - adaptive：目标码率按源文件码率自适应输出。
+    *
+    * @return $this
+    */
+    public function setBitrateAdaptive($bitrateAdaptive)
+    {
+        $this->container['bitrateAdaptive'] = $bitrateAdaptive;
+        return $this;
+    }
+
+    /**
+    * Gets iFramePolicy
+    *  编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
+    *
+    * @return string|null
+    */
+    public function getIFramePolicy()
+    {
+        return $this->container['iFramePolicy'];
+    }
+
+    /**
+    * Sets iFramePolicy
+    *
+    * @param string|null $iFramePolicy 编码输出I帧策略，默认值：auto。  包含如下取值： - auto：I帧按设置的gop时长输出； - strictSync：编码输出I帧完全和源保持一致（源是I帧则编码输出I帧，源不是I帧则编码非I帧），设置该参数后gop时长设置无效。
+    *
+    * @return $this
+    */
+    public function setIFramePolicy($iFramePolicy)
+    {
+        $this->container['iFramePolicy'] = $iFramePolicy;
         return $this;
     }
 

@@ -30,6 +30,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     * name  数字人模型名称。
     * styleId  风格ID。
     * modelCoverUrl  模型封面URL。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -42,7 +43,8 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
             'modelAssetId' => 'string',
             'name' => 'string',
             'styleId' => 'string',
-            'modelCoverUrl' => 'string'
+            'modelCoverUrl' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -56,6 +58,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     * name  数字人模型名称。
     * styleId  风格ID。
     * modelCoverUrl  模型封面URL。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -68,7 +71,8 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
         'modelAssetId' => null,
         'name' => null,
         'styleId' => null,
-        'modelCoverUrl' => null
+        'modelCoverUrl' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -103,6 +107,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     * name  数字人模型名称。
     * styleId  风格ID。
     * modelCoverUrl  模型封面URL。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -115,7 +120,8 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
             'modelAssetId' => 'model_asset_id',
             'name' => 'name',
             'styleId' => 'style_id',
-            'modelCoverUrl' => 'model_cover_url'
+            'modelCoverUrl' => 'model_cover_url',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -129,6 +135,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     * name  数字人模型名称。
     * styleId  风格ID。
     * modelCoverUrl  模型封面URL。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -141,7 +148,8 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
             'modelAssetId' => 'setModelAssetId',
             'name' => 'setName',
             'styleId' => 'setStyleId',
-            'modelCoverUrl' => 'setModelCoverUrl'
+            'modelCoverUrl' => 'setModelCoverUrl',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -155,6 +163,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     * name  数字人模型名称。
     * styleId  风格ID。
     * modelCoverUrl  模型封面URL。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -167,7 +176,8 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
             'modelAssetId' => 'getModelAssetId',
             'name' => 'getName',
             'styleId' => 'getStyleId',
-            'modelCoverUrl' => 'getModelCoverUrl'
+            'modelCoverUrl' => 'getModelCoverUrl',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -260,6 +270,7 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['styleId'] = isset($data['styleId']) ? $data['styleId'] : null;
         $this->container['modelCoverUrl'] = isset($data['modelCoverUrl']) ? $data['modelCoverUrl'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -559,6 +570,30 @@ class ShowPictureModelingJobResponse implements ModelInterface, ArrayAccess
     public function setModelCoverUrl($modelCoverUrl)
     {
         $this->container['modelCoverUrl'] = $modelCoverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

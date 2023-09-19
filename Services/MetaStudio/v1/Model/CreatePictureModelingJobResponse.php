@@ -23,24 +23,28 @@ class CreatePictureModelingJobResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * modelAssetId  数字人资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'modelAssetId' => 'string'
+            'modelAssetId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * modelAssetId  数字人资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
-        'modelAssetId' => null
+        'modelAssetId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class CreatePictureModelingJobResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * modelAssetId  数字人资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
-            'modelAssetId' => 'model_asset_id'
+            'modelAssetId' => 'model_asset_id',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * modelAssetId  数字人资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
-            'modelAssetId' => 'setModelAssetId'
+            'modelAssetId' => 'setModelAssetId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * modelAssetId  数字人资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
-            'modelAssetId' => 'getModelAssetId'
+            'modelAssetId' => 'getModelAssetId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class CreatePictureModelingJobResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -241,6 +252,30 @@ class CreatePictureModelingJobResponse implements ModelInterface, ArrayAccess
     public function setModelAssetId($modelAssetId)
     {
         $this->container['modelAssetId'] = $modelAssetId;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

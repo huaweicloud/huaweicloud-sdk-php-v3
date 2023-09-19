@@ -23,24 +23,28 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fileId  文件ID。
     * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'fileId' => 'string',
-            'uploadUrl' => 'string'
+            'uploadUrl' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fileId  文件ID。
     * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'fileId' => null,
-        'uploadUrl' => null
+        'uploadUrl' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fileId  文件ID。
     * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'fileId' => 'file_id',
-            'uploadUrl' => 'upload_url'
+            'uploadUrl' => 'upload_url',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fileId  文件ID。
     * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'fileId' => 'setFileId',
-            'uploadUrl' => 'setUploadUrl'
+            'uploadUrl' => 'setUploadUrl',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fileId  文件ID。
     * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'fileId' => 'getFileId',
-            'uploadUrl' => 'getUploadUrl'
+            'uploadUrl' => 'getUploadUrl',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     {
         $this->container['fileId'] = isset($data['fileId']) ? $data['fileId'] : null;
         $this->container['uploadUrl'] = isset($data['uploadUrl']) ? $data['uploadUrl'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -241,6 +252,30 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     public function setUploadUrl($uploadUrl)
     {
         $this->container['uploadUrl'] = $uploadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

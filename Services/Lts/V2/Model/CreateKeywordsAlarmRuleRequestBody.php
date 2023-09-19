@@ -27,7 +27,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -43,7 +43,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
-            'notificationSaveRule' => 'object',
+            'notificationSaveRule' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
@@ -59,7 +59,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -112,7 +112,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -144,7 +144,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -176,7 +176,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -529,9 +529,9 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationSaveRule
-    *  通知主题
+    *  notificationSaveRule
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null
     */
     public function getNotificationSaveRule()
     {
@@ -541,7 +541,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets notificationSaveRule
     *
-    * @param object|null $notificationSaveRule 通知主题
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null $notificationSaveRule notificationSaveRule
     *
     * @return $this
     */

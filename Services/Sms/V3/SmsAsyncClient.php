@@ -232,6 +232,68 @@ class SmsAsyncClient extends Client
     }
 
     /**
+     * 同意隐私协议
+     *
+     * 同意隐私协议接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPrivacyAgreementsAsync($request)
+    {
+        return $this->createPrivacyAgreementsAsyncWithHttpInfo($request);
+    }
+    
+    public function createPrivacyAgreementsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/privacy-agreements';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CreatePrivacyAgreementsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CreatePrivacyAgreementsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建迁移任务
      *
      * 根据源端服务器创建一个迁移任务。
@@ -1666,6 +1728,68 @@ class SmsAsyncClient extends Client
     }
 
     /**
+     * 查询用户是否同意隐私协议
+     *
+     * 查询用户是否同意隐私协议接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPrivacyAgreementsAsync($request)
+    {
+        return $this->showPrivacyAgreementsAsyncWithHttpInfo($request);
+    }
+    
+    public function showPrivacyAgreementsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/privacy-agreements';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowPrivacyAgreementsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowPrivacyAgreementsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询指定ID的源端服务器
      *
      * 迁移Agent将源端服务器信息上报到主机迁移服务后，主机迁移服务会对迁移的可行性进行检测，该接口返回源端服务器的基本信息和检查结果。
@@ -1733,7 +1857,7 @@ class SmsAsyncClient extends Client
     /**
      * 计算sha256
      *
-     * 计算sha256
+     * 计算sha256，加密字段值为uuid。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

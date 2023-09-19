@@ -22,21 +22,25 @@ class ListAssetSummaryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * assetList  资产列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'assetList' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\DigitalAssetSummary[]'
+            'assetList' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\DigitalAssetSummary[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * assetList  资产列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'assetList' => null
+        'assetList' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListAssetSummaryResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * assetList  资产列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'assetList' => 'asset_list'
+            'assetList' => 'asset_list',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * assetList  资产列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'assetList' => 'setAssetList'
+            'assetList' => 'setAssetList',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * assetList  资产列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'assetList' => 'getAssetList'
+            'assetList' => 'getAssetList',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListAssetSummaryResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['assetList'] = isset($data['assetList']) ? $data['assetList'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListAssetSummaryResponse implements ModelInterface, ArrayAccess
     public function setAssetList($assetList)
     {
         $this->container['assetList'] = $assetList;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

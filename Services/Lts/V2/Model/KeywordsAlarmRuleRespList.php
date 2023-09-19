@@ -26,7 +26,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * conditionExpression  条件
     * keywordsRequests  关键词详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
@@ -49,7 +49,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'keywordsAlarmRuleDescription' => 'string',
             'conditionExpression' => 'string',
             'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
-            'frequency' => 'object',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
@@ -72,7 +72,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * conditionExpression  条件
     * keywordsRequests  关键词详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
@@ -139,7 +139,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * conditionExpression  条件
     * keywordsRequests  关键词详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
@@ -185,7 +185,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * conditionExpression  条件
     * keywordsRequests  关键词详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
@@ -231,7 +231,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * conditionExpression  条件
     * keywordsRequests  关键词详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
@@ -641,9 +641,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequency
-    *  告警统计周期
+    *  frequency
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency
     */
     public function getFrequency()
     {
@@ -653,7 +653,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param object $frequency 告警统计周期
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency $frequency frequency
     *
     * @return $this
     */

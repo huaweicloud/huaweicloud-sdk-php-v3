@@ -63,11 +63,11 @@ class BmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*'],
                 ['application/json;charset=UTF-8']
             );
         }

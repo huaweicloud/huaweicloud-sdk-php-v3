@@ -23,6 +23,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
     * status  标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
     * obsInfo  obsInfo
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 当\"tracker_type\"参数值为\"system\"时该参数值有效。 该参数必须与kms_id参数同时使用。
@@ -36,6 +38,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
             'trackerType' => 'string',
             'trackerName' => 'string',
             'status' => 'string',
+            'isOrganizationTracker' => 'bool',
+            'managementEventSelector' => '\HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector',
             'isLtsEnabled' => 'bool',
             'obsInfo' => '\HuaweiCloud\SDK\Cts\v3\Model\TrackerObsInfo',
             'isSupportTraceFilesEncryption' => 'bool',
@@ -49,6 +53,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
     * status  标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
     * obsInfo  obsInfo
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 当\"tracker_type\"参数值为\"system\"时该参数值有效。 该参数必须与kms_id参数同时使用。
@@ -62,6 +68,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
         'trackerType' => null,
         'trackerName' => null,
         'status' => null,
+        'isOrganizationTracker' => null,
+        'managementEventSelector' => null,
         'isLtsEnabled' => null,
         'obsInfo' => null,
         'isSupportTraceFilesEncryption' => null,
@@ -96,6 +104,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
     * status  标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
     * obsInfo  obsInfo
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 当\"tracker_type\"参数值为\"system\"时该参数值有效。 该参数必须与kms_id参数同时使用。
@@ -109,6 +119,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
             'trackerType' => 'tracker_type',
             'trackerName' => 'tracker_name',
             'status' => 'status',
+            'isOrganizationTracker' => 'is_organization_tracker',
+            'managementEventSelector' => 'management_event_selector',
             'isLtsEnabled' => 'is_lts_enabled',
             'obsInfo' => 'obs_info',
             'isSupportTraceFilesEncryption' => 'is_support_trace_files_encryption',
@@ -122,6 +134,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
     * status  标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
     * obsInfo  obsInfo
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 当\"tracker_type\"参数值为\"system\"时该参数值有效。 该参数必须与kms_id参数同时使用。
@@ -135,6 +149,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
             'trackerType' => 'setTrackerType',
             'trackerName' => 'setTrackerName',
             'status' => 'setStatus',
+            'isOrganizationTracker' => 'setIsOrganizationTracker',
+            'managementEventSelector' => 'setManagementEventSelector',
             'isLtsEnabled' => 'setIsLtsEnabled',
             'obsInfo' => 'setObsInfo',
             'isSupportTraceFilesEncryption' => 'setIsSupportTraceFilesEncryption',
@@ -148,6 +164,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
     * status  标识追踪器状态，该接口中可修改的状态包括正常（enabled）和停止（disabled）。如果选择修改状态为停止，则修改成功后追踪器停止记录事件。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
     * obsInfo  obsInfo
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 当\"tracker_type\"参数值为\"system\"时该参数值有效。 该参数必须与kms_id参数同时使用。
@@ -161,6 +179,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
             'trackerType' => 'getTrackerType',
             'trackerName' => 'getTrackerName',
             'status' => 'getStatus',
+            'isOrganizationTracker' => 'getIsOrganizationTracker',
+            'managementEventSelector' => 'getManagementEventSelector',
             'isLtsEnabled' => 'getIsLtsEnabled',
             'obsInfo' => 'getObsInfo',
             'isSupportTraceFilesEncryption' => 'getIsSupportTraceFilesEncryption',
@@ -260,6 +280,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
         $this->container['trackerType'] = isset($data['trackerType']) ? $data['trackerType'] : null;
         $this->container['trackerName'] = isset($data['trackerName']) ? $data['trackerName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['isOrganizationTracker'] = isset($data['isOrganizationTracker']) ? $data['isOrganizationTracker'] : null;
+        $this->container['managementEventSelector'] = isset($data['managementEventSelector']) ? $data['managementEventSelector'] : null;
         $this->container['isLtsEnabled'] = isset($data['isLtsEnabled']) ? $data['isLtsEnabled'] : null;
         $this->container['obsInfo'] = isset($data['obsInfo']) ? $data['obsInfo'] : null;
         $this->container['isSupportTraceFilesEncryption'] = isset($data['isSupportTraceFilesEncryption']) ? $data['isSupportTraceFilesEncryption'] : null;
@@ -393,6 +415,54 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets isOrganizationTracker
+    *  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    *
+    * @return bool|null
+    */
+    public function getIsOrganizationTracker()
+    {
+        return $this->container['isOrganizationTracker'];
+    }
+
+    /**
+    * Sets isOrganizationTracker
+    *
+    * @param bool|null $isOrganizationTracker 是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    *
+    * @return $this
+    */
+    public function setIsOrganizationTracker($isOrganizationTracker)
+    {
+        $this->container['isOrganizationTracker'] = $isOrganizationTracker;
+        return $this;
+    }
+
+    /**
+    * Gets managementEventSelector
+    *  managementEventSelector
+    *
+    * @return \HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector|null
+    */
+    public function getManagementEventSelector()
+    {
+        return $this->container['managementEventSelector'];
+    }
+
+    /**
+    * Sets managementEventSelector
+    *
+    * @param \HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector|null $managementEventSelector managementEventSelector
+    *
+    * @return $this
+    */
+    public function setManagementEventSelector($managementEventSelector)
+    {
+        $this->container['managementEventSelector'] = $managementEventSelector;
         return $this;
     }
 

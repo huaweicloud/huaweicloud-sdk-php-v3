@@ -29,7 +29,7 @@ class UpdateConsumerGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'group' => 'string',
-            'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup'
+            'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateConsumerGroup'
     ];
 
     /**
@@ -252,7 +252,7 @@ class UpdateConsumerGroupRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateConsumerGroup|null
     */
     public function getBody()
     {
@@ -262,7 +262,7 @@ class UpdateConsumerGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup|null $body body
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateConsumerGroup|null $body body
     *
     * @return $this
     */

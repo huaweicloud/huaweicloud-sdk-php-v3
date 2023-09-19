@@ -172,9 +172,6 @@ class BaremetalServerTag implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class BaremetalServerTag implements ModelInterface, ArrayAccess
     * Gets value
     *  值列表。  - 最多20个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -227,7 +224,7 @@ class BaremetalServerTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值列表。  - 最多20个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * @param string|null $value 值列表。  - 最多20个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @return $this
     */

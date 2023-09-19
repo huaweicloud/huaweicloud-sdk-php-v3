@@ -32,6 +32,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -46,7 +47,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\SystemProperty[]',
-            'files' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\AssetFileInfo[]'
+            'files' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\AssetFileInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -62,6 +64,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -76,7 +79,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null,
-        'files' => null
+        'files' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -113,6 +117,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -127,7 +132,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
-            'files' => 'files'
+            'files' => 'files',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -143,6 +149,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -157,7 +164,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
-            'files' => 'setFiles'
+            'files' => 'setFiles',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -173,6 +181,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -187,7 +196,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
-            'files' => 'getFiles'
+            'files' => 'getFiles',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -321,6 +331,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -652,6 +663,30 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

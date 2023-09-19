@@ -23,24 +23,28 @@ class ListTtsaJobsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  语音驱动任务总数。
     * ttsaJobs  语音驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'ttsaJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\TTSAJob[]'
+            'ttsaJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\TTSAJob[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  语音驱动任务总数。
     * ttsaJobs  语音驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'ttsaJobs' => null
+        'ttsaJobs' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListTtsaJobsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  语音驱动任务总数。
     * ttsaJobs  语音驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'ttsaJobs' => 'ttsa_jobs'
+            'ttsaJobs' => 'ttsa_jobs',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  语音驱动任务总数。
     * ttsaJobs  语音驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'ttsaJobs' => 'setTtsaJobs'
+            'ttsaJobs' => 'setTtsaJobs',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  语音驱动任务总数。
     * ttsaJobs  语音驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'ttsaJobs' => 'getTtsaJobs'
+            'ttsaJobs' => 'getTtsaJobs',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListTtsaJobsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['ttsaJobs'] = isset($data['ttsaJobs']) ? $data['ttsaJobs'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListTtsaJobsResponse implements ModelInterface, ArrayAccess
     public function setTtsaJobs($ttsaJobs)
     {
         $this->container['ttsaJobs'] = $ttsaJobs;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

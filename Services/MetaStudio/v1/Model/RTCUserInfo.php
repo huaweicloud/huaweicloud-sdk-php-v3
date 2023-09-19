@@ -20,10 +20,10 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userType  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
-    * ctime  有效期。时间戳。  单位：秒。
+    * ctime  有效期。时间戳，单位：秒。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userType  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
-    * ctime  有效期。时间戳。  单位：秒。
+    * ctime  有效期。时间戳，单位：秒。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userType  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
-    * ctime  有效期。时间戳。  单位：秒。
+    * ctime  有效期。时间戳，单位：秒。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userType  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
-    * ctime  有效期。时间戳。  单位：秒。
+    * ctime  有效期。时间戳，单位：秒。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userType  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
-    * ctime  有效期。时间戳。  单位：秒。
+    * ctime  有效期。时间戳，单位：秒。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userType
-    *  接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    *  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType 接入RTC的用户类型。 * CAPTURE：直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION：VDS服务，从RTC房间拉视频流生成动作数据 * RENDER：渲染服务，将动作数据渲染成数字人动画 * PLAYER：普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * @param string|null $userType 用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ctime
-    *  有效期。时间戳。  单位：秒。
+    *  有效期。时间戳，单位：秒。
     *
     * @return int|null
     */
@@ -336,7 +336,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ctime
     *
-    * @param int|null $ctime 有效期。时间戳。  单位：秒。
+    * @param int|null $ctime 有效期。时间戳，单位：秒。
     *
     * @return $this
     */

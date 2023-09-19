@@ -22,7 +22,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * appId  RTC应用ID。
     * roomId  RTC房间ID。
-    * users  接入RTC的用户信息。
+    * users  加入RTC房间用户信息。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * appId  RTC应用ID。
     * roomId  RTC房间ID。
-    * users  接入RTC的用户信息。
+    * users  加入RTC房间用户信息。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * appId  RTC应用ID。
     * roomId  RTC房间ID。
-    * users  接入RTC的用户信息。
+    * users  加入RTC房间用户信息。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * appId  RTC应用ID。
     * roomId  RTC房间ID。
-    * users  接入RTC的用户信息。
+    * users  加入RTC房间用户信息。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * appId  RTC应用ID。
     * roomId  RTC房间ID。
-    * users  接入RTC的用户信息。
+    * users  加入RTC房间用户信息。
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  接入RTC的用户信息。
+    *  加入RTC房间用户信息。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\v1\Model\RTCUserInfo[]|null
     */
@@ -268,7 +268,7 @@ class RTCRoomInfoList implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\v1\Model\RTCUserInfo[]|null $users 接入RTC的用户信息。
+    * @param \HuaweiCloud\SDK\MetaStudio\v1\Model\RTCUserInfo[]|null $users 加入RTC房间用户信息。
     *
     * @return $this
     */

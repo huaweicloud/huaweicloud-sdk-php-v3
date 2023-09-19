@@ -22,21 +22,25 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * assetId  数字资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'assetId' => 'string'
+            'assetId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * assetId  数字资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'assetId' => null
+        'assetId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * assetId  数字资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'assetId' => 'asset_id'
+            'assetId' => 'asset_id',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  数字资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'assetId' => 'setAssetId'
+            'assetId' => 'setAssetId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  数字资产ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'assetId' => 'getAssetId'
+            'assetId' => 'getAssetId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -200,6 +211,30 @@ class CreateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

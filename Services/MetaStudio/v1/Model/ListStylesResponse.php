@@ -23,24 +23,28 @@ class ListStylesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  风格信息总数
     * styles  风格信息列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'styles' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\StyleInfo[]'
+            'styles' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\StyleInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  风格信息总数
     * styles  风格信息列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => 'int32',
-        'styles' => null
+        'styles' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListStylesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  风格信息总数
     * styles  风格信息列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
-            'styles' => 'styles'
+            'styles' => 'styles',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  风格信息总数
     * styles  风格信息列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
-            'styles' => 'setStyles'
+            'styles' => 'setStyles',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  风格信息总数
     * styles  风格信息列表
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
-            'styles' => 'getStyles'
+            'styles' => 'getStyles',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListStylesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['styles'] = isset($data['styles']) ? $data['styles'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListStylesResponse implements ModelInterface, ArrayAccess
     public function setStyles($styles)
     {
         $this->container['styles'] = $styles;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

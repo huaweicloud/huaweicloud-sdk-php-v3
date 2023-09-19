@@ -29,7 +29,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
@@ -49,7 +49,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
-            'frequency' => 'object',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
             'conditionExpression' => 'string',
             'sqlAlarmLevel' => 'string',
             'sqlAlarmSend' => 'bool',
@@ -69,7 +69,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
@@ -130,7 +130,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
@@ -170,7 +170,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
@@ -210,7 +210,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
@@ -613,9 +613,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequency
-    *  告警统计周期
+    *  frequency
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null
     */
     public function getFrequency()
     {
@@ -625,7 +625,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param object|null $frequency 告警统计周期
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null $frequency frequency
     *
     * @return $this
     */

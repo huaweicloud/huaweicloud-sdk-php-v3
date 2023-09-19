@@ -21,20 +21,22 @@ class AddServerNicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'jobId' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class AddServerNicsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
     *
     * @var string[]
     */
     protected static $setters = [
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
     *
     * @var string[]
     */
     protected static $getters = [
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -143,6 +148,7 @@ class AddServerNicsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class AddServerNicsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets jobId
+    *  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
     }
 
     /**

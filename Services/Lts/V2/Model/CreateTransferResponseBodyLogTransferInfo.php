@@ -23,7 +23,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     * logAgencyTransfer  logAgencyTransfer
     * logCreateTime  日志转储创建时间
     * logStorageFormat  日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-    * logTransferDetail  日志转储详细信息
+    * logTransferDetail  logTransferDetail
     * logTransferMode  日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
     * logTransferStatus  日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
@@ -34,7 +34,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
             'logAgencyTransfer' => '\HuaweiCloud\SDK\Lts\V2\Model\CreateTransferResponseBodyLogTransferInfoLogAgencyTransfer',
             'logCreateTime' => 'int',
             'logStorageFormat' => 'string',
-            'logTransferDetail' => 'object',
+            'logTransferDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\TransferDetail',
             'logTransferMode' => 'string',
             'logTransferStatus' => 'string',
             'logTransferType' => 'string'
@@ -45,7 +45,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     * logAgencyTransfer  logAgencyTransfer
     * logCreateTime  日志转储创建时间
     * logStorageFormat  日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-    * logTransferDetail  日志转储详细信息
+    * logTransferDetail  logTransferDetail
     * logTransferMode  日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
     * logTransferStatus  日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
@@ -88,7 +88,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     * logAgencyTransfer  logAgencyTransfer
     * logCreateTime  日志转储创建时间
     * logStorageFormat  日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-    * logTransferDetail  日志转储详细信息
+    * logTransferDetail  logTransferDetail
     * logTransferMode  日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
     * logTransferStatus  日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
@@ -110,7 +110,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     * logAgencyTransfer  logAgencyTransfer
     * logCreateTime  日志转储创建时间
     * logStorageFormat  日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-    * logTransferDetail  日志转储详细信息
+    * logTransferDetail  logTransferDetail
     * logTransferMode  日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
     * logTransferStatus  日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
@@ -132,7 +132,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     * logAgencyTransfer  logAgencyTransfer
     * logCreateTime  日志转储创建时间
     * logStorageFormat  日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-    * logTransferDetail  日志转储详细信息
+    * logTransferDetail  logTransferDetail
     * logTransferMode  日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
     * logTransferStatus  日志转储状态，ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
     * logTransferType  日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
@@ -432,9 +432,9 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
 
     /**
     * Gets logTransferDetail
-    *  日志转储详细信息
+    *  logTransferDetail
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail
     */
     public function getLogTransferDetail()
     {
@@ -444,7 +444,7 @@ class CreateTransferResponseBodyLogTransferInfo implements ModelInterface, Array
     /**
     * Sets logTransferDetail
     *
-    * @param object $logTransferDetail 日志转储详细信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TransferDetail $logTransferDetail logTransferDetail
     *
     * @return $this
     */

@@ -23,24 +23,28 @@ class ListPictureModelingJobsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  照片建模任务总数。
     * pictureModelingJobs  照片建模任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'pictureModelingJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\PictureModelingInfo[]'
+            'pictureModelingJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\PictureModelingInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  照片建模任务总数。
     * pictureModelingJobs  照片建模任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => 'int32',
-        'pictureModelingJobs' => null
+        'pictureModelingJobs' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListPictureModelingJobsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  照片建模任务总数。
     * pictureModelingJobs  照片建模任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
-            'pictureModelingJobs' => 'picture_modeling_jobs'
+            'pictureModelingJobs' => 'picture_modeling_jobs',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  照片建模任务总数。
     * pictureModelingJobs  照片建模任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
-            'pictureModelingJobs' => 'setPictureModelingJobs'
+            'pictureModelingJobs' => 'setPictureModelingJobs',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  照片建模任务总数。
     * pictureModelingJobs  照片建模任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
-            'pictureModelingJobs' => 'getPictureModelingJobs'
+            'pictureModelingJobs' => 'getPictureModelingJobs',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListPictureModelingJobsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['pictureModelingJobs'] = isset($data['pictureModelingJobs']) ? $data['pictureModelingJobs'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListPictureModelingJobsResponse implements ModelInterface, ArrayAccess
     public function setPictureModelingJobs($pictureModelingJobs)
     {
         $this->container['pictureModelingJobs'] = $pictureModelingJobs;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

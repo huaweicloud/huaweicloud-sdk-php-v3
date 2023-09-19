@@ -23,24 +23,28 @@ class ListVideoMotionCaptureJobsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  视频驱动任务总数。
     * videoMotionCaptureJobs  视频驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'videoMotionCaptureJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\VideoMotionCaptureInfo[]'
+            'videoMotionCaptureJobs' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\VideoMotionCaptureInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  视频驱动任务总数。
     * videoMotionCaptureJobs  视频驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'videoMotionCaptureJobs' => null
+        'videoMotionCaptureJobs' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListVideoMotionCaptureJobsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  视频驱动任务总数。
     * videoMotionCaptureJobs  视频驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'videoMotionCaptureJobs' => 'video_motion_capture_jobs'
+            'videoMotionCaptureJobs' => 'video_motion_capture_jobs',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  视频驱动任务总数。
     * videoMotionCaptureJobs  视频驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'videoMotionCaptureJobs' => 'setVideoMotionCaptureJobs'
+            'videoMotionCaptureJobs' => 'setVideoMotionCaptureJobs',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  视频驱动任务总数。
     * videoMotionCaptureJobs  视频驱动任务列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'videoMotionCaptureJobs' => 'getVideoMotionCaptureJobs'
+            'videoMotionCaptureJobs' => 'getVideoMotionCaptureJobs',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListVideoMotionCaptureJobsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['videoMotionCaptureJobs'] = isset($data['videoMotionCaptureJobs']) ? $data['videoMotionCaptureJobs'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListVideoMotionCaptureJobsResponse implements ModelInterface, ArrayAccess
     public function setVideoMotionCaptureJobs($videoMotionCaptureJobs)
     {
         $this->container['videoMotionCaptureJobs'] = $videoMotionCaptureJobs;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

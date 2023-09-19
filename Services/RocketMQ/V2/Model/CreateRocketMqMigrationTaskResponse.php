@@ -21,22 +21,22 @@ class CreateRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'taskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'taskId' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class CreateRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'taskId' => 'task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'taskId' => 'setTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * taskId  任务ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'taskId' => 'getTaskId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class CreateRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class CreateRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets taskId
+    *  任务ID
     *
     * @return string|null
     */
-    public function getBody()
+    public function getTaskId()
     {
-        return $this->container['body'];
+        return $this->container['taskId'];
     }
 
     /**
-    * Sets body
+    * Sets taskId
     *
-    * @param string|null $body body
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setTaskId($taskId)
     {
-        $this->container['body'] = $body;
+        $this->container['taskId'] = $taskId;
         return $this;
     }
 

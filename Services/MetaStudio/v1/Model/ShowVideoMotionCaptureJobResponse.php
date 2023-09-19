@@ -28,6 +28,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * state  任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'state' => 'string',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * state  任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
         'jobId' => null,
         'state' => null,
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * state  任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'state' => 'state',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * state  任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'state' => 'setState',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * state  任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'state' => 'getState',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -253,6 +263,7 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -488,6 +499,30 @@ class ShowVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

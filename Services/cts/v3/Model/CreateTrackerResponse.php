@@ -25,6 +25,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * createTime  追踪器创建时间戳。
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
@@ -43,6 +45,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'createTime' => 'int',
             'kmsId' => 'string',
             'isSupportValidate' => 'bool',
+            'isOrganizationTracker' => 'bool',
+            'managementEventSelector' => '\HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector',
             'lts' => '\HuaweiCloud\SDK\Cts\v3\Model\Lts',
             'trackerType' => 'string',
             'domainId' => 'string',
@@ -61,6 +65,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * createTime  追踪器创建时间戳。
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
@@ -79,6 +85,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
         'createTime' => 'int64',
         'kmsId' => null,
         'isSupportValidate' => null,
+        'isOrganizationTracker' => null,
+        'managementEventSelector' => null,
         'lts' => null,
         'trackerType' => null,
         'domainId' => null,
@@ -118,6 +126,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * createTime  追踪器创建时间戳。
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
@@ -136,6 +146,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'kmsId' => 'kms_id',
             'isSupportValidate' => 'is_support_validate',
+            'isOrganizationTracker' => 'is_organization_tracker',
+            'managementEventSelector' => 'management_event_selector',
             'lts' => 'lts',
             'trackerType' => 'tracker_type',
             'domainId' => 'domain_id',
@@ -154,6 +166,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * createTime  追踪器创建时间戳。
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
@@ -172,6 +186,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'kmsId' => 'setKmsId',
             'isSupportValidate' => 'setIsSupportValidate',
+            'isOrganizationTracker' => 'setIsOrganizationTracker',
+            'managementEventSelector' => 'setManagementEventSelector',
             'lts' => 'setLts',
             'trackerType' => 'setTrackerType',
             'domainId' => 'setDomainId',
@@ -190,6 +206,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * createTime  追踪器创建时间戳。
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
+    * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
@@ -208,6 +226,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'kmsId' => 'getKmsId',
             'isSupportValidate' => 'getIsSupportValidate',
+            'isOrganizationTracker' => 'getIsOrganizationTracker',
+            'managementEventSelector' => 'getManagementEventSelector',
             'lts' => 'getLts',
             'trackerType' => 'getTrackerType',
             'domainId' => 'getDomainId',
@@ -312,6 +332,8 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['kmsId'] = isset($data['kmsId']) ? $data['kmsId'] : null;
         $this->container['isSupportValidate'] = isset($data['isSupportValidate']) ? $data['isSupportValidate'] : null;
+        $this->container['isOrganizationTracker'] = isset($data['isOrganizationTracker']) ? $data['isOrganizationTracker'] : null;
+        $this->container['managementEventSelector'] = isset($data['managementEventSelector']) ? $data['managementEventSelector'] : null;
         $this->container['lts'] = isset($data['lts']) ? $data['lts'] : null;
         $this->container['trackerType'] = isset($data['trackerType']) ? $data['trackerType'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
@@ -497,6 +519,54 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     public function setIsSupportValidate($isSupportValidate)
     {
         $this->container['isSupportValidate'] = $isSupportValidate;
+        return $this;
+    }
+
+    /**
+    * Gets isOrganizationTracker
+    *  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    *
+    * @return bool|null
+    */
+    public function getIsOrganizationTracker()
+    {
+        return $this->container['isOrganizationTracker'];
+    }
+
+    /**
+    * Sets isOrganizationTracker
+    *
+    * @param bool|null $isOrganizationTracker 是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    *
+    * @return $this
+    */
+    public function setIsOrganizationTracker($isOrganizationTracker)
+    {
+        $this->container['isOrganizationTracker'] = $isOrganizationTracker;
+        return $this;
+    }
+
+    /**
+    * Gets managementEventSelector
+    *  managementEventSelector
+    *
+    * @return \HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector|null
+    */
+    public function getManagementEventSelector()
+    {
+        return $this->container['managementEventSelector'];
+    }
+
+    /**
+    * Sets managementEventSelector
+    *
+    * @param \HuaweiCloud\SDK\Cts\v3\Model\ManagementEventSelector|null $managementEventSelector managementEventSelector
+    *
+    * @return $this
+    */
+    public function setManagementEventSelector($managementEventSelector)
+    {
+        $this->container['managementEventSelector'] = $managementEventSelector;
         return $this;
     }
 

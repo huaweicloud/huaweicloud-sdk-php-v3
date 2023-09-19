@@ -26,6 +26,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
     * motions  语义驱动的智能动作数据。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -34,7 +35,8 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
             'audio' => 'string',
             'blendshapes' => 'string[]',
             'animations' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\AnimationItem[]',
-            'motions' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\MotionItem[]'
+            'motions' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\MotionItem[]',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -44,6 +46,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
     * motions  语义驱动的智能动作数据。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -52,7 +55,8 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
         'audio' => null,
         'blendshapes' => null,
         'animations' => null,
-        'motions' => null
+        'motions' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -83,6 +87,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
     * motions  语义驱动的智能动作数据。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -91,7 +96,8 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
             'audio' => 'audio',
             'blendshapes' => 'blendshapes',
             'animations' => 'animations',
-            'motions' => 'motions'
+            'motions' => 'motions',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -101,6 +107,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
     * motions  语义驱动的智能动作数据。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -109,7 +116,8 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
             'audio' => 'setAudio',
             'blendshapes' => 'setBlendshapes',
             'animations' => 'setAnimations',
-            'motions' => 'setMotions'
+            'motions' => 'setMotions',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -119,6 +127,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
     * motions  语义驱动的智能动作数据。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -127,7 +136,8 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
             'audio' => 'getAudio',
             'blendshapes' => 'getBlendshapes',
             'animations' => 'getAnimations',
-            'motions' => 'getMotions'
+            'motions' => 'getMotions',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -193,6 +203,7 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
         $this->container['blendshapes'] = isset($data['blendshapes']) ? $data['blendshapes'] : null;
         $this->container['animations'] = isset($data['animations']) ? $data['animations'] : null;
         $this->container['motions'] = isset($data['motions']) ? $data['motions'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -346,6 +357,30 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     public function setMotions($motions)
     {
         $this->container['motions'] = $motions;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

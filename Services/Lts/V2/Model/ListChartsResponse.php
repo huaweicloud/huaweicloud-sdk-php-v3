@@ -29,7 +29,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志组id
     * logStreamName  日志流名称
-    * config  图表配置详情
+    * config  config
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'string',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
-            'config' => 'object'
+            'config' => '\HuaweiCloud\SDK\Lts\V2\Model\ChartConfig'
     ];
 
     /**
@@ -55,7 +55,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志组id
     * logStreamName  日志流名称
-    * config  图表配置详情
+    * config  config
     *
     * @var string[]
     */
@@ -102,7 +102,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志组id
     * logStreamName  日志流名称
-    * config  图表配置详情
+    * config  config
     *
     * @var string[]
     */
@@ -128,7 +128,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志组id
     * logStreamName  日志流名称
-    * config  图表配置详情
+    * config  config
     *
     * @var string[]
     */
@@ -154,7 +154,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志组id
     * logStreamName  日志流名称
-    * config  图表配置详情
+    * config  config
     *
     * @var string[]
     */
@@ -526,9 +526,9 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets config
-    *  图表配置详情
+    *  config
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\ChartConfig|null
     */
     public function getConfig()
     {
@@ -538,7 +538,7 @@ class ListChartsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets config
     *
-    * @param object|null $config 图表配置详情
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\ChartConfig|null $config config
     *
     * @return $this
     */

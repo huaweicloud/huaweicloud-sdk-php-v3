@@ -22,7 +22,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -50,7 +50,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -99,7 +99,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -127,7 +127,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -155,7 +155,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
     * name  实例名称。
-    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * mode  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     * datastore  datastore
     * chargeMode  计费方式。 计费方式。   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
     * enterpriseProjectId  企业项目ID，取值为“0”，表示为default企业项目
@@ -321,7 +321,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    *  实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class RecycleInstance implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。
+    * @param string|null $mode 实例类型。   - 取值为“Cluster”，表示GaussDB(for Cassandra)、GaussDB(for Influx)、GaussDB(for Redis)集群实例类型。   - 取值为“ReplicaSet”，表示GaussDB(for Mongo)副本集实例类型。   - 取值为“InfluxdbSingle”，表示GaussDB(for Influx)单节点实例类型。   - 取值为“Replication”，表示GaussDB(for Redis)主备版实例类型。
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * size  分页查询的大小。
     * remainPartitions  剩余分区数。
     * maxPartitions  分区总数。
+    * topicMaxPartitions  单个topic最大占用分区数。
     * topics  topic列表。
     *
     * @var string[]
@@ -34,6 +35,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
             'size' => 'int',
             'remainPartitions' => 'int',
             'maxPartitions' => 'int',
+            'topicMaxPartitions' => 'int',
             'topics' => '\HuaweiCloud\SDK\Kafka\V2\Model\TopicEntity[]'
     ];
 
@@ -43,6 +45,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * size  分页查询的大小。
     * remainPartitions  剩余分区数。
     * maxPartitions  分区总数。
+    * topicMaxPartitions  单个topic最大占用分区数。
     * topics  topic列表。
     *
     * @var string[]
@@ -52,6 +55,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
         'size' => null,
         'remainPartitions' => null,
         'maxPartitions' => null,
+        'topicMaxPartitions' => null,
         'topics' => null
     ];
 
@@ -82,6 +86,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * size  分页查询的大小。
     * remainPartitions  剩余分区数。
     * maxPartitions  分区总数。
+    * topicMaxPartitions  单个topic最大占用分区数。
     * topics  topic列表。
     *
     * @var string[]
@@ -91,6 +96,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
             'size' => 'size',
             'remainPartitions' => 'remain_partitions',
             'maxPartitions' => 'max_partitions',
+            'topicMaxPartitions' => 'topic_max_partitions',
             'topics' => 'topics'
     ];
 
@@ -100,6 +106,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * size  分页查询的大小。
     * remainPartitions  剩余分区数。
     * maxPartitions  分区总数。
+    * topicMaxPartitions  单个topic最大占用分区数。
     * topics  topic列表。
     *
     * @var string[]
@@ -109,6 +116,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
             'size' => 'setSize',
             'remainPartitions' => 'setRemainPartitions',
             'maxPartitions' => 'setMaxPartitions',
+            'topicMaxPartitions' => 'setTopicMaxPartitions',
             'topics' => 'setTopics'
     ];
 
@@ -118,6 +126,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     * size  分页查询的大小。
     * remainPartitions  剩余分区数。
     * maxPartitions  分区总数。
+    * topicMaxPartitions  单个topic最大占用分区数。
     * topics  topic列表。
     *
     * @var string[]
@@ -127,6 +136,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
             'size' => 'getSize',
             'remainPartitions' => 'getRemainPartitions',
             'maxPartitions' => 'getMaxPartitions',
+            'topicMaxPartitions' => 'getTopicMaxPartitions',
             'topics' => 'getTopics'
     ];
 
@@ -192,6 +202,7 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['remainPartitions'] = isset($data['remainPartitions']) ? $data['remainPartitions'] : null;
         $this->container['maxPartitions'] = isset($data['maxPartitions']) ? $data['maxPartitions'] : null;
+        $this->container['topicMaxPartitions'] = isset($data['topicMaxPartitions']) ? $data['topicMaxPartitions'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
     }
 
@@ -310,6 +321,30 @@ class ListInstanceTopicsResponse implements ModelInterface, ArrayAccess
     public function setMaxPartitions($maxPartitions)
     {
         $this->container['maxPartitions'] = $maxPartitions;
+        return $this;
+    }
+
+    /**
+    * Gets topicMaxPartitions
+    *  单个topic最大占用分区数。
+    *
+    * @return int|null
+    */
+    public function getTopicMaxPartitions()
+    {
+        return $this->container['topicMaxPartitions'];
+    }
+
+    /**
+    * Sets topicMaxPartitions
+    *
+    * @param int|null $topicMaxPartitions 单个topic最大占用分区数。
+    *
+    * @return $this
+    */
+    public function setTopicMaxPartitions($topicMaxPartitions)
+    {
+        $this->container['topicMaxPartitions'] = $topicMaxPartitions;
         return $this;
     }
 

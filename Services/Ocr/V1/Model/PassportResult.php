@@ -29,7 +29,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     * sex  性别（英文）。
     * dateOfBirth  出生日期（英文）。
     * dateOfExpiry  护照有效期（英文）。
-    * dateOfIssue  护照签发日期（英文）。
+    * dateOfIssue  护照签发日期（英文）。只有中国护照才返回此字段。
     * placeOfBirth  出生地（英文）。
     * placeOfIssue  签发地（英文）。
     * issuingAuthority  签发机构（英文），其中对中国的英文简写统一输出为P.R.China。
@@ -67,7 +67,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     * sex  性别（英文）。
     * dateOfBirth  出生日期（英文）。
     * dateOfExpiry  护照有效期（英文）。
-    * dateOfIssue  护照签发日期（英文）。
+    * dateOfIssue  护照签发日期（英文）。只有中国护照才返回此字段。
     * placeOfBirth  出生地（英文）。
     * placeOfIssue  签发地（英文）。
     * issuingAuthority  签发机构（英文），其中对中国的英文简写统一输出为P.R.China。
@@ -126,7 +126,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     * sex  性别（英文）。
     * dateOfBirth  出生日期（英文）。
     * dateOfExpiry  护照有效期（英文）。
-    * dateOfIssue  护照签发日期（英文）。
+    * dateOfIssue  护照签发日期（英文）。只有中国护照才返回此字段。
     * placeOfBirth  出生地（英文）。
     * placeOfIssue  签发地（英文）。
     * issuingAuthority  签发机构（英文），其中对中国的英文简写统一输出为P.R.China。
@@ -164,7 +164,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     * sex  性别（英文）。
     * dateOfBirth  出生日期（英文）。
     * dateOfExpiry  护照有效期（英文）。
-    * dateOfIssue  护照签发日期（英文）。
+    * dateOfIssue  护照签发日期（英文）。只有中国护照才返回此字段。
     * placeOfBirth  出生地（英文）。
     * placeOfIssue  签发地（英文）。
     * issuingAuthority  签发机构（英文），其中对中国的英文简写统一输出为P.R.China。
@@ -202,7 +202,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     * sex  性别（英文）。
     * dateOfBirth  出生日期（英文）。
     * dateOfExpiry  护照有效期（英文）。
-    * dateOfIssue  护照签发日期（英文）。
+    * dateOfIssue  护照签发日期（英文）。只有中国护照才返回此字段。
     * placeOfBirth  出生地（英文）。
     * placeOfIssue  签发地（英文）。
     * issuingAuthority  签发机构（英文），其中对中国的英文简写统一输出为P.R.China。
@@ -544,7 +544,7 @@ class PassportResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets dateOfIssue
-    *  护照签发日期（英文）。
+    *  护照签发日期（英文）。只有中国护照才返回此字段。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class PassportResult implements ModelInterface, ArrayAccess
     /**
     * Sets dateOfIssue
     *
-    * @param string|null $dateOfIssue 护照签发日期（英文）。
+    * @param string|null $dateOfIssue 护照签发日期（英文）。只有中国护照才返回此字段。
     *
     * @return $this
     */

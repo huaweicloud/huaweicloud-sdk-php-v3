@@ -24,13 +24,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * sqlAlarmSendCode  发送主题 0:不变 1:新增 2:修改 3:删除
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -43,13 +43,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'sqlAlarmRuleName' => 'string',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
-            'frequency' => 'object',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
             'conditionExpression' => 'string',
             'sqlAlarmLevel' => 'string',
             'sqlAlarmSend' => 'bool',
             'sqlAlarmSendCode' => 'int',
             'domainId' => 'string',
-            'notificationSaveRule' => 'object',
+            'notificationSaveRule' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule',
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
@@ -62,13 +62,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * sqlAlarmSendCode  发送主题 0:不变 1:新增 2:修改 3:删除
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -121,13 +121,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * sqlAlarmSendCode  发送主题 0:不变 1:新增 2:修改 3:删除
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -159,13 +159,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * sqlAlarmSendCode  发送主题 0:不变 1:新增 2:修改 3:删除
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -197,13 +197,13 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * sqlAlarmRuleName  SQL告警名称
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
-    * frequency  告警统计周期
+    * frequency  frequency
     * conditionExpression  条件表达式
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * sqlAlarmSendCode  发送主题 0:不变 1:新增 2:修改 3:删除
     * domainId  domainId
-    * notificationSaveRule  通知主题
+    * notificationSaveRule  notificationSaveRule
     * triggerConditionCount  触发条件：触发次数;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
@@ -541,9 +541,9 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequency
-    *  告警统计周期
+    *  frequency
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency
     */
     public function getFrequency()
     {
@@ -553,7 +553,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param object $frequency 告警统计周期
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency $frequency frequency
     *
     * @return $this
     */
@@ -685,9 +685,9 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationSaveRule
-    *  通知主题
+    *  notificationSaveRule
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null
     */
     public function getNotificationSaveRule()
     {
@@ -697,7 +697,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets notificationSaveRule
     *
-    * @param object|null $notificationSaveRule 通知主题
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\SqlNotificationSaveRule|null $notificationSaveRule notificationSaveRule
     *
     * @return $this
     */

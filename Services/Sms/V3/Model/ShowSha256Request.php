@@ -20,7 +20,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  关键字
+    * key  关键字，加密字段值为uuid。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  关键字
+    * key  关键字，加密字段值为uuid。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  关键字
+    * key  关键字，加密字段值为uuid。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  关键字
+    * key  关键字，加密字段值为uuid。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  关键字
+    * key  关键字，加密字段值为uuid。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  关键字
+    *  关键字，加密字段值为uuid。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class ShowSha256Request implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 关键字
+    * @param string $key 关键字，加密字段值为uuid。
     *
     * @return $this
     */

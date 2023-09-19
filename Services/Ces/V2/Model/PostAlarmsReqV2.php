@@ -348,9 +348,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['resources'] === null) {
             $invalidProperties[] = "'resources' can't be null";
         }
-        if ($this->container['policies'] === null) {
-            $invalidProperties[] = "'policies' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -528,7 +525,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * Gets policies
     *  告警策略
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null
     */
     public function getPolicies()
     {
@@ -538,7 +535,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[] $policies 告警策略
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies 告警策略
     *
     * @return $this
     */

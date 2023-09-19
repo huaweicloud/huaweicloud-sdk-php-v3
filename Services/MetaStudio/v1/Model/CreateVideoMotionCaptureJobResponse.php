@@ -23,24 +23,28 @@ class CreateVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  视频驱动动作任务ID
     * rtcRoomInfo  rtcRoomInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\RTCRoomInfoList'
+            'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\v1\Model\RTCRoomInfoList',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  视频驱动动作任务ID
     * rtcRoomInfo  rtcRoomInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
-        'rtcRoomInfo' => null
+        'rtcRoomInfo' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class CreateVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  视频驱动动作任务ID
     * rtcRoomInfo  rtcRoomInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
-            'rtcRoomInfo' => 'rtc_room_info'
+            'rtcRoomInfo' => 'rtc_room_info',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  视频驱动动作任务ID
     * rtcRoomInfo  rtcRoomInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
-            'rtcRoomInfo' => 'setRtcRoomInfo'
+            'rtcRoomInfo' => 'setRtcRoomInfo',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  视频驱动动作任务ID
     * rtcRoomInfo  rtcRoomInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
-            'rtcRoomInfo' => 'getRtcRoomInfo'
+            'rtcRoomInfo' => 'getRtcRoomInfo',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class CreateVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class CreateVideoMotionCaptureJobResponse implements ModelInterface, ArrayAccess
     public function setRtcRoomInfo($rtcRoomInfo)
     {
         $this->container['rtcRoomInfo'] = $rtcRoomInfo;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 
