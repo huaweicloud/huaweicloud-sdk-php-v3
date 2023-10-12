@@ -22,21 +22,29 @@ class ListActiveAsyncInvocationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * invocations  异步调用记录列表。
+    * count  查询数据总条数
+    * nextMarker  查询下一页的起始位置
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'invocations' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionAsyncInvocationsResult[]'
+            'invocations' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionAsyncInvocationsResult[]',
+            'count' => 'int',
+            'nextMarker' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * invocations  异步调用记录列表。
+    * count  查询数据总条数
+    * nextMarker  查询下一页的起始位置
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'invocations' => null
+        'invocations' => null,
+        'count' => 'int32',
+        'nextMarker' => 'int32'
     ];
 
     /**
@@ -63,31 +71,43 @@ class ListActiveAsyncInvocationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * invocations  异步调用记录列表。
+    * count  查询数据总条数
+    * nextMarker  查询下一页的起始位置
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'invocations' => 'invocations'
+            'invocations' => 'invocations',
+            'count' => 'count',
+            'nextMarker' => 'next_marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * invocations  异步调用记录列表。
+    * count  查询数据总条数
+    * nextMarker  查询下一页的起始位置
     *
     * @var string[]
     */
     protected static $setters = [
-            'invocations' => 'setInvocations'
+            'invocations' => 'setInvocations',
+            'count' => 'setCount',
+            'nextMarker' => 'setNextMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * invocations  异步调用记录列表。
+    * count  查询数据总条数
+    * nextMarker  查询下一页的起始位置
     *
     * @var string[]
     */
     protected static $getters = [
-            'invocations' => 'getInvocations'
+            'invocations' => 'getInvocations',
+            'count' => 'getCount',
+            'nextMarker' => 'getNextMarker'
     ];
 
     /**
@@ -149,6 +169,8 @@ class ListActiveAsyncInvocationsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['invocations'] = isset($data['invocations']) ? $data['invocations'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
     }
 
     /**
@@ -194,6 +216,54 @@ class ListActiveAsyncInvocationsResponse implements ModelInterface, ArrayAccess
     public function setInvocations($invocations)
     {
         $this->container['invocations'] = $invocations;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  查询数据总条数
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count 查询数据总条数
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets nextMarker
+    *  查询下一页的起始位置
+    *
+    * @return int|null
+    */
+    public function getNextMarker()
+    {
+        return $this->container['nextMarker'];
+    }
+
+    /**
+    * Sets nextMarker
+    *
+    * @param int|null $nextMarker 查询下一页的起始位置
+    *
+    * @return $this
+    */
+    public function setNextMarker($nextMarker)
+    {
+        $this->container['nextMarker'] = $nextMarker;
         return $this;
     }
 

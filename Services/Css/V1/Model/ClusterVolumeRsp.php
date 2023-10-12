@@ -22,24 +22,28 @@ class ClusterVolumeRsp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  实例磁盘类型。
     * size  实例磁盘大小。
+    * resourceIds  该实例拥有的磁盘对应的资源Id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'size' => 'int'
+            'size' => 'int',
+            'resourceIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  实例磁盘类型。
     * size  实例磁盘大小。
+    * resourceIds  该实例拥有的磁盘对应的资源Id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'size' => null
+        'size' => null,
+        'resourceIds' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ClusterVolumeRsp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  实例磁盘类型。
     * size  实例磁盘大小。
+    * resourceIds  该实例拥有的磁盘对应的资源Id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'size' => 'size'
+            'size' => 'size',
+            'resourceIds' => 'resourceIds'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  实例磁盘类型。
     * size  实例磁盘大小。
+    * resourceIds  该实例拥有的磁盘对应的资源Id。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'size' => 'setSize'
+            'size' => 'setSize',
+            'resourceIds' => 'setResourceIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  实例磁盘类型。
     * size  实例磁盘大小。
+    * resourceIds  该实例拥有的磁盘对应的资源Id。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'size' => 'getSize'
+            'size' => 'getSize',
+            'resourceIds' => 'getResourceIds'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ClusterVolumeRsp implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ClusterVolumeRsp implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets resourceIds
+    *  该实例拥有的磁盘对应的资源Id。
+    *
+    * @return string[]|null
+    */
+    public function getResourceIds()
+    {
+        return $this->container['resourceIds'];
+    }
+
+    /**
+    * Sets resourceIds
+    *
+    * @param string[]|null $resourceIds 该实例拥有的磁盘对应的资源Id。
+    *
+    * @return $this
+    */
+    public function setResourceIds($resourceIds)
+    {
+        $this->container['resourceIds'] = $resourceIds;
         return $this;
     }
 

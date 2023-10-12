@@ -21,6 +21,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * primary  是否主网卡。  - true：是主网卡 - false：辅助网卡
     * addr  IP地址。
     * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     * osExtIpsMaCmacAddr  MAC地址。
@@ -30,6 +31,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'version' => 'string',
+            'primary' => 'bool',
             'addr' => 'string',
             'osExtIpStype' => 'string',
             'osExtIpsMaCmacAddr' => 'string',
@@ -39,6 +41,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * primary  是否主网卡。  - true：是主网卡 - false：辅助网卡
     * addr  IP地址。
     * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     * osExtIpsMaCmacAddr  MAC地址。
@@ -48,6 +51,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'version' => null,
+        'primary' => null,
         'addr' => null,
         'osExtIpStype' => null,
         'osExtIpsMaCmacAddr' => null,
@@ -78,6 +82,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * primary  是否主网卡。  - true：是主网卡 - false：辅助网卡
     * addr  IP地址。
     * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     * osExtIpsMaCmacAddr  MAC地址。
@@ -87,6 +92,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'version' => 'version',
+            'primary' => 'primary',
             'addr' => 'addr',
             'osExtIpStype' => 'OS-EXT-IPS:type',
             'osExtIpsMaCmacAddr' => 'OS-EXT-IPS-MAC:mac_addr',
@@ -96,6 +102,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * primary  是否主网卡。  - true：是主网卡 - false：辅助网卡
     * addr  IP地址。
     * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     * osExtIpsMaCmacAddr  MAC地址。
@@ -105,6 +112,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'version' => 'setVersion',
+            'primary' => 'setPrimary',
             'addr' => 'setAddr',
             'osExtIpStype' => 'setOsExtIpStype',
             'osExtIpsMaCmacAddr' => 'setOsExtIpsMaCmacAddr',
@@ -114,6 +122,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * primary  是否主网卡。  - true：是主网卡 - false：辅助网卡
     * addr  IP地址。
     * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     * osExtIpsMaCmacAddr  MAC地址。
@@ -123,6 +132,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'version' => 'getVersion',
+            'primary' => 'getPrimary',
             'addr' => 'getAddr',
             'osExtIpStype' => 'getOsExtIpStype',
             'osExtIpsMaCmacAddr' => 'getOsExtIpsMaCmacAddr',
@@ -203,6 +213,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['osExtIpStype'] = isset($data['osExtIpStype']) ? $data['osExtIpStype'] : null;
         $this->container['osExtIpsMaCmacAddr'] = isset($data['osExtIpsMaCmacAddr']) ? $data['osExtIpsMaCmacAddr'] : null;
@@ -266,6 +277,30 @@ class ServerAddress implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets primary
+    *  是否主网卡。  - true：是主网卡 - false：辅助网卡
+    *
+    * @return bool|null
+    */
+    public function getPrimary()
+    {
+        return $this->container['primary'];
+    }
+
+    /**
+    * Sets primary
+    *
+    * @param bool|null $primary 是否主网卡。  - true：是主网卡 - false：辅助网卡
+    *
+    * @return $this
+    */
+    public function setPrimary($primary)
+    {
+        $this->container['primary'] = $primary;
         return $this;
     }
 

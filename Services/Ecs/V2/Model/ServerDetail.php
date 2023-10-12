@@ -22,7 +22,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
     * osExtSrvAttRhost  弹性云服务器所在主机的主机名称。
     * addresses  弹性云服务器的网络属性。
@@ -124,7 +124,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
     * osExtSrvAttRhost  弹性云服务器所在主机的主机名称。
     * addresses  弹性云服务器的网络属性。
@@ -247,7 +247,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
     * osExtSrvAttRhost  弹性云服务器所在主机的主机名称。
     * addresses  弹性云服务器的网络属性。
@@ -349,7 +349,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
     * osExtSrvAttRhost  弹性云服务器所在主机的主机名称。
     * addresses  弹性云服务器的网络属性。
@@ -451,7 +451,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
     * osExtSrvAttRhost  弹性云服务器所在主机的主机名称。
     * addresses  弹性云服务器的网络属性。
@@ -833,7 +833,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoTerminateTime
-    *  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    *  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     *
     * @return string
     */
@@ -845,7 +845,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Sets autoTerminateTime
     *
-    * @param string $autoTerminateTime 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * @param string $autoTerminateTime 弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
     *
     * @return $this
     */

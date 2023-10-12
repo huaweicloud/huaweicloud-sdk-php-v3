@@ -20,22 +20,22 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * delay  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'delay' => 'bool'
+            'isDelayed' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * delay  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'delay' => null
+        'isDelayed' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * delay  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'delay' => 'delay'
+            'isDelayed' => 'is_delayed'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * delay  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @var string[]
     */
     protected static $setters = [
-            'delay' => 'setDelay'
+            'isDelayed' => 'setIsDelayed'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * delay  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @var string[]
     */
     protected static $getters = [
-            'delay' => 'getDelay'
+            'isDelayed' => 'getIsDelayed'
     ];
 
     /**
@@ -147,7 +147,7 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
+        $this->container['isDelayed'] = isset($data['isDelayed']) ? $data['isDelayed'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets delay
+    * Gets isDelayed
     *  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @return bool|null
     */
-    public function getDelay()
+    public function getIsDelayed()
     {
-        return $this->container['delay'];
+        return $this->container['isDelayed'];
     }
 
     /**
-    * Sets delay
+    * Sets isDelayed
     *
-    * @param bool|null $delay 是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
+    * @param bool|null $isDelayed 是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     *
     * @return $this
     */
-    public function setDelay($delay)
+    public function setIsDelayed($isDelayed)
     {
-        $this->container['delay'] = $delay;
+        $this->container['isDelayed'] = $isDelayed;
         return $this;
     }
 

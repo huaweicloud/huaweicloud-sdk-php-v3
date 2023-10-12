@@ -21,10 +21,9 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  主机id
-    * instanceName  主机名称
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     * invocationTarget  任务对象，目前仅支持telescope
     * offset  分页偏移量
     * limit  分页大小
@@ -33,7 +32,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'instanceName' => 'string',
             'instanceType' => 'string',
             'invocationId' => 'string',
             'invocationType' => 'string',
@@ -45,10 +43,9 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  主机id
-    * instanceName  主机名称
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     * invocationTarget  任务对象，目前仅支持telescope
     * offset  分页偏移量
     * limit  分页大小
@@ -57,7 +54,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'instanceName' => null,
         'instanceType' => null,
         'invocationId' => null,
         'invocationType' => null,
@@ -90,10 +86,9 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  主机id
-    * instanceName  主机名称
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     * invocationTarget  任务对象，目前仅支持telescope
     * offset  分页偏移量
     * limit  分页大小
@@ -102,7 +97,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'instanceName' => 'instance_name',
             'instanceType' => 'instance_type',
             'invocationId' => 'invocation_id',
             'invocationType' => 'invocation_type',
@@ -114,10 +108,9 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  主机id
-    * instanceName  主机名称
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     * invocationTarget  任务对象，目前仅支持telescope
     * offset  分页偏移量
     * limit  分页大小
@@ -126,7 +119,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'instanceName' => 'setInstanceName',
             'instanceType' => 'setInstanceType',
             'invocationId' => 'setInvocationId',
             'invocationType' => 'setInvocationType',
@@ -138,10 +130,9 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  主机id
-    * instanceName  主机名称
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * invocationId  任务id
-    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * invocationType  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     * invocationTarget  任务对象，目前仅支持telescope
     * offset  分页偏移量
     * limit  分页大小
@@ -150,7 +141,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'instanceName' => 'getInstanceName',
             'instanceType' => 'getInstanceType',
             'invocationId' => 'getInvocationId',
             'invocationType' => 'getInvocationType',
@@ -204,6 +194,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_INSTALL = 'INSTALL';
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
+    const INVOCATION_TYPE_RETRY = 'RETRY';
     const INVOCATION_TARGET_TELESCOPE = 'telescope';
     
 
@@ -231,6 +222,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_INSTALL,
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
+            self::INVOCATION_TYPE_RETRY,
         ];
     }
 
@@ -263,7 +255,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['invocationId'] = isset($data['invocationId']) ? $data['invocationId'] : null;
         $this->container['invocationType'] = isset($data['invocationType']) ? $data['invocationType'] : null;
@@ -282,12 +273,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['instanceId']) && !preg_match("/^[a-zA-Z0-9-]{1,64}$/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9-]{1,64}$/.";
-            }
-            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getInstanceTypeAllowableValues();
                 if (!is_null($this->container['instanceType']) && !in_array($this->container['instanceType'], $allowedValues, true)) {
@@ -367,30 +352,6 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceName
-    *  主机名称
-    *
-    * @return string|null
-    */
-    public function getInstanceName()
-    {
-        return $this->container['instanceName'];
-    }
-
-    /**
-    * Sets instanceName
-    *
-    * @param string|null $instanceName 主机名称
-    *
-    * @return $this
-    */
-    public function setInstanceName($instanceName)
-    {
-        $this->container['instanceName'] = $instanceName;
-        return $this;
-    }
-
-    /**
     * Gets instanceType
     *  主机类型，ECS弹性云服务器，BMS裸金属服务器
     *
@@ -440,7 +401,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    *  任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     *
     * @return string|null
     */
@@ -452,7 +413,7 @@ class ListAgentInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+    * @param string|null $invocationType 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
     *
     * @return $this
     */

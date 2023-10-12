@@ -22,24 +22,28 @@ class CreateScalingConfigOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scalingConfigurationName  伸缩配置名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线。
     * instanceConfig  instanceConfig
+    * sourceScalingConfigurationId  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'scalingConfigurationName' => 'string',
-            'instanceConfig' => '\HuaweiCloud\SDK\_As\V1\Model\InstanceConfig'
+            'instanceConfig' => '\HuaweiCloud\SDK\_As\V1\Model\InstanceConfig',
+            'sourceScalingConfigurationId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scalingConfigurationName  伸缩配置名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线。
     * instanceConfig  instanceConfig
+    * sourceScalingConfigurationId  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'scalingConfigurationName' => null,
-        'instanceConfig' => null
+        'instanceConfig' => null,
+        'sourceScalingConfigurationId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateScalingConfigOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scalingConfigurationName  伸缩配置名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线。
     * instanceConfig  instanceConfig
+    * sourceScalingConfigurationId  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'scalingConfigurationName' => 'scaling_configuration_name',
-            'instanceConfig' => 'instance_config'
+            'instanceConfig' => 'instance_config',
+            'sourceScalingConfigurationId' => 'source_scaling_configuration_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scalingConfigurationName  伸缩配置名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线。
     * instanceConfig  instanceConfig
+    * sourceScalingConfigurationId  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
     *
     * @var string[]
     */
     protected static $setters = [
             'scalingConfigurationName' => 'setScalingConfigurationName',
-            'instanceConfig' => 'setInstanceConfig'
+            'instanceConfig' => 'setInstanceConfig',
+            'sourceScalingConfigurationId' => 'setSourceScalingConfigurationId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scalingConfigurationName  伸缩配置名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线。
     * instanceConfig  instanceConfig
+    * sourceScalingConfigurationId  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
     *
     * @var string[]
     */
     protected static $getters = [
             'scalingConfigurationName' => 'getScalingConfigurationName',
-            'instanceConfig' => 'getInstanceConfig'
+            'instanceConfig' => 'getInstanceConfig',
+            'sourceScalingConfigurationId' => 'getSourceScalingConfigurationId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateScalingConfigOption implements ModelInterface, ArrayAccess
     {
         $this->container['scalingConfigurationName'] = isset($data['scalingConfigurationName']) ? $data['scalingConfigurationName'] : null;
         $this->container['instanceConfig'] = isset($data['instanceConfig']) ? $data['instanceConfig'] : null;
+        $this->container['sourceScalingConfigurationId'] = isset($data['sourceScalingConfigurationId']) ? $data['sourceScalingConfigurationId'] : null;
     }
 
     /**
@@ -181,6 +192,9 @@ class CreateScalingConfigOption implements ModelInterface, ArrayAccess
         if ($this->container['instanceConfig'] === null) {
             $invalidProperties[] = "'instanceConfig' can't be null";
         }
+            if (!is_null($this->container['sourceScalingConfigurationId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['sourceScalingConfigurationId'])) {
+                $invalidProperties[] = "invalid value for 'sourceScalingConfigurationId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
+            }
         return $invalidProperties;
     }
 
@@ -240,6 +254,30 @@ class CreateScalingConfigOption implements ModelInterface, ArrayAccess
     public function setInstanceConfig($instanceConfig)
     {
         $this->container['instanceConfig'] = $instanceConfig;
+        return $this;
+    }
+
+    /**
+    * Gets sourceScalingConfigurationId
+    *  源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
+    *
+    * @return string|null
+    */
+    public function getSourceScalingConfigurationId()
+    {
+        return $this->container['sourceScalingConfigurationId'];
+    }
+
+    /**
+    * Sets sourceScalingConfigurationId
+    *
+    * @param string|null $sourceScalingConfigurationId 源伸缩配置ID，通过ID获取原有伸缩配置信息进行修改，传入需修改的配置字段若为null值不产生修改，其他任何值（包括空值）均覆盖原有值。注意：若传入instance_id则优先使用instance_id获取到的值进行修改。
+    *
+    * @return $this
+    */
+    public function setSourceScalingConfigurationId($sourceScalingConfigurationId)
+    {
+        $this->container['sourceScalingConfigurationId'] = $sourceScalingConfigurationId;
         return $this;
     }
 

@@ -25,7 +25,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
-    * coolDownTime  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
-    * coolDownTime  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
-    * coolDownTime  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
-    * coolDownTime  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
-    * coolDownTime  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @var string[]
     */
@@ -383,7 +383,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets coolDownTime
-    *  冷却时间，取值范围0-86400，默认为900，单位是秒。
+    *  冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @return int|null
     */
@@ -395,7 +395,7 @@ class UpdateScalingPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets coolDownTime
     *
-    * @param int|null $coolDownTime 冷却时间，取值范围0-86400，默认为900，单位是秒。
+    * @param int|null $coolDownTime 冷却时间，取值范围0-86400，默认为300，单位是秒。
     *
     * @return $this
     */

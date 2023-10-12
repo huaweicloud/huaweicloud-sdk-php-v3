@@ -23,11 +23,11 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     * endTime  结束时间时间戳，毫秒时间
     * isDesc  是否降序  true / false
     * resourceType  资源类型，log_group / log_stream / tenant
-    * sortBy  排序依据，index/write/storage，必须是search_list中存在的数据
+    * sortBy  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     * startTime  开始时间时间戳，毫秒时间，最多支持30天范围内的查询
     * topn  查询前多少数据，范围1~100
     * filter  过滤条件 {     \"log_group_id\": \"xxxxxx\" }过滤器，为一个map结构，键为过滤属性，值为属性值，不支持模糊匹配
-    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @var string[]
     */
@@ -47,11 +47,11 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     * endTime  结束时间时间戳，毫秒时间
     * isDesc  是否降序  true / false
     * resourceType  资源类型，log_group / log_stream / tenant
-    * sortBy  排序依据，index/write/storage，必须是search_list中存在的数据
+    * sortBy  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     * startTime  开始时间时间戳，毫秒时间，最多支持30天范围内的查询
     * topn  查询前多少数据，范围1~100
     * filter  过滤条件 {     \"log_group_id\": \"xxxxxx\" }过滤器，为一个map结构，键为过滤属性，值为属性值，不支持模糊匹配
-    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @var string[]
     */
@@ -92,11 +92,11 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     * endTime  结束时间时间戳，毫秒时间
     * isDesc  是否降序  true / false
     * resourceType  资源类型，log_group / log_stream / tenant
-    * sortBy  排序依据，index/write/storage，必须是search_list中存在的数据
+    * sortBy  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     * startTime  开始时间时间戳，毫秒时间，最多支持30天范围内的查询
     * topn  查询前多少数据，范围1~100
     * filter  过滤条件 {     \"log_group_id\": \"xxxxxx\" }过滤器，为一个map结构，键为过滤属性，值为属性值，不支持模糊匹配
-    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @var string[]
     */
@@ -116,11 +116,11 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     * endTime  结束时间时间戳，毫秒时间
     * isDesc  是否降序  true / false
     * resourceType  资源类型，log_group / log_stream / tenant
-    * sortBy  排序依据，index/write/storage，必须是search_list中存在的数据
+    * sortBy  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     * startTime  开始时间时间戳，毫秒时间，最多支持30天范围内的查询
     * topn  查询前多少数据，范围1~100
     * filter  过滤条件 {     \"log_group_id\": \"xxxxxx\" }过滤器，为一个map结构，键为过滤属性，值为属性值，不支持模糊匹配
-    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @var string[]
     */
@@ -140,11 +140,11 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     * endTime  结束时间时间戳，毫秒时间
     * isDesc  是否降序  true / false
     * resourceType  资源类型，log_group / log_stream / tenant
-    * sortBy  排序依据，index/write/storage，必须是search_list中存在的数据
+    * sortBy  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     * startTime  开始时间时间戳，毫秒时间，最多支持30天范围内的查询
     * topn  查询前多少数据，范围1~100
     * filter  过滤条件 {     \"log_group_id\": \"xxxxxx\" }过滤器，为一个map结构，键为过滤属性，值为属性值，不支持模糊匹配
-    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * searchList  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @var string[]
     */
@@ -347,7 +347,7 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortBy
-    *  排序依据，index/write/storage，必须是search_list中存在的数据
+    *  排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     *
     * @return string
     */
@@ -359,7 +359,7 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     /**
     * Sets sortBy
     *
-    * @param string $sortBy 排序依据，index/write/storage，必须是search_list中存在的数据
+    * @param string $sortBy 排序依据，index/write/storage/basicTransfer/seniorTransfer，必须是search_list中存在的数据
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchList
-    *  查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    *  查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @return string[]
     */
@@ -455,7 +455,7 @@ class TopnRequstBody implements ModelInterface, ArrayAccess
     /**
     * Sets searchList
     *
-    * @param string[] $searchList 查询数据类型，字符串数组可多种搭配，只能在index/write/storage中选填
+    * @param string[] $searchList 查询数据类型，字符串数组可多种搭配，只能在index/write/storage/basicTransfer/seniorTransfer中选填
     *
     * @return $this
     */

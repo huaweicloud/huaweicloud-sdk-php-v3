@@ -25,6 +25,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
     * sortBy  排序顺序，正序（ASC）或者逆序（DESC)
+    * states  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    * groupId  应用的分组id，传入no_grouped为查询未分组的应用
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             'page' => 'int',
             'size' => 'int',
             'sortName' => 'string',
-            'sortBy' => 'string'
+            'sortBy' => 'string',
+            'states' => 'string[]',
+            'groupId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
     * sortBy  排序顺序，正序（ASC）或者逆序（DESC)
+    * states  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    * groupId  应用的分组id，传入no_grouped为查询未分组的应用
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
         'page' => 'int32',
         'size' => 'int32',
         'sortName' => null,
-        'sortBy' => 'int32'
+        'sortBy' => 'int32',
+        'states' => null,
+        'groupId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
     * sortBy  排序顺序，正序（ASC）或者逆序（DESC)
+    * states  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    * groupId  应用的分组id，传入no_grouped为查询未分组的应用
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             'page' => 'page',
             'size' => 'size',
             'sortName' => 'sort_name',
-            'sortBy' => 'sort_by'
+            'sortBy' => 'sort_by',
+            'states' => 'states',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
     * sortBy  排序顺序，正序（ASC）或者逆序（DESC)
+    * states  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    * groupId  应用的分组id，传入no_grouped为查询未分组的应用
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             'page' => 'setPage',
             'size' => 'setSize',
             'sortName' => 'setSortName',
-            'sortBy' => 'setSortBy'
+            'sortBy' => 'setSortBy',
+            'states' => 'setStates',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
     * sortBy  排序顺序，正序（ASC）或者逆序（DESC)
+    * states  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    * groupId  应用的分组id，传入no_grouped为查询未分组的应用
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             'page' => 'getPage',
             'size' => 'getSize',
             'sortName' => 'getSortName',
-            'sortBy' => 'getSortBy'
+            'sortBy' => 'getSortBy',
+            'states' => 'getStates',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -171,6 +191,14 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     }
     const SORT_NAME_NAME = 'name';
     const SORT_NAME_START_TIME = 'startTime';
+    const STATES_ABORT = 'abort';
+    const STATES_FAILED = 'failed';
+    const STATES_NOT_STARTED = 'not_started';
+    const STATES_PENDING = 'pending';
+    const STATES_RUNNING = 'running';
+    const STATES_SUCCEEDED = 'succeeded';
+    const STATES_TIMEOUT = 'timeout';
+    const STATES_NOT_EXECUTED = 'not_executed';
     
 
     /**
@@ -183,6 +211,25 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
         return [
             self::SORT_NAME_NAME,
             self::SORT_NAME_START_TIME,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatesAllowableValues()
+    {
+        return [
+            self::STATES_ABORT,
+            self::STATES_FAILED,
+            self::STATES_NOT_STARTED,
+            self::STATES_PENDING,
+            self::STATES_RUNNING,
+            self::STATES_SUCCEEDED,
+            self::STATES_TIMEOUT,
+            self::STATES_NOT_EXECUTED,
         ];
     }
 
@@ -207,6 +254,8 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['sortName'] = isset($data['sortName']) ? $data['sortName'] : null;
         $this->container['sortBy'] = isset($data['sortBy']) ? $data['sortBy'] : null;
+        $this->container['states'] = isset($data['states']) ? $data['states'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -229,6 +278,12 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^[A-Za-z0-9]{32}$/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[A-Za-z0-9]{32}$/.";
             }
+        if ($this->container['page'] === null) {
+            $invalidProperties[] = "'page' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
             $allowedValues = $this->getSortNameAllowableValues();
                 if (!is_null($this->container['sortName']) && !in_array($this->container['sortName'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -237,6 +292,9 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['groupId']) && !preg_match("/^[A-Za-z0-9]{32}|no_grouped$/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^[A-Za-z0-9]{32}|no_grouped$/.";
+            }
         return $invalidProperties;
     }
 
@@ -279,7 +337,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * Gets page
     *  分页页码， 表示从此页开始查询， page大于等于1
     *
-    * @return int|null
+    * @return int
     */
     public function getPage()
     {
@@ -289,7 +347,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page 分页页码， 表示从此页开始查询， page大于等于1
+    * @param int $page 分页页码， 表示从此页开始查询， page大于等于1
     *
     * @return $this
     */
@@ -303,7 +361,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * Gets size
     *  每页显示的条目数量，size小于等于100
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -313,7 +371,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 每页显示的条目数量，size小于等于100
+    * @param int $size 每页显示的条目数量，size小于等于100
     *
     * @return $this
     */
@@ -368,6 +426,54 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     public function setSortBy($sortBy)
     {
         $this->container['sortBy'] = $sortBy;
+        return $this;
+    }
+
+    /**
+    * Gets states
+    *  应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    *
+    * @return string[]|null
+    */
+    public function getStates()
+    {
+        return $this->container['states'];
+    }
+
+    /**
+    * Sets states
+    *
+    * @param string[]|null $states 应用状态列表，支持查询以下状态： abort: 部署中止 failed: 部署失败 not_started: 取消执行 pending: 排队中 running: 正在部署 succeeded: 部署成功 timeout: 部署超时 not_executed: 未执行
+    *
+    * @return $this
+    */
+    public function setStates($states)
+    {
+        $this->container['states'] = $states;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  应用的分组id，传入no_grouped为查询未分组的应用
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 应用的分组id，传入no_grouped为查询未分组的应用
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

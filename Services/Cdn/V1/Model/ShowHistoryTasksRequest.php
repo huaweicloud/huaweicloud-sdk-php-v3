@@ -28,7 +28,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
     * orderType  desc 或者asc。默认值desc。
-    * fileType  默认是文件file。file：文件,directory：目录。
+    * fileType  file：文件,directory：目录。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
             'endDate' => 'int',
             'orderField' => 'string',
             'orderType' => 'string',
-            'fileType' => 'string'
+            'fileType' => 'string',
+            'taskType' => 'string'
     ];
 
     /**
@@ -54,7 +56,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
     * orderType  desc 或者asc。默认值desc。
-    * fileType  默认是文件file。file：文件,directory：目录。
+    * fileType  file：文件,directory：目录。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
         'endDate' => 'int64',
         'orderField' => null,
         'orderType' => null,
-        'fileType' => null
+        'fileType' => null,
+        'taskType' => null
     ];
 
     /**
@@ -101,7 +105,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
     * orderType  desc 或者asc。默认值desc。
-    * fileType  默认是文件file。file：文件,directory：目录。
+    * fileType  file：文件,directory：目录。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
             'endDate' => 'end_date',
             'orderField' => 'order_field',
             'orderType' => 'order_type',
-            'fileType' => 'file_type'
+            'fileType' => 'file_type',
+            'taskType' => 'task_type'
     ];
 
     /**
@@ -127,7 +133,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
     * orderType  desc 或者asc。默认值desc。
-    * fileType  默认是文件file。file：文件,directory：目录。
+    * fileType  file：文件,directory：目录。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
             'endDate' => 'setEndDate',
             'orderField' => 'setOrderField',
             'orderType' => 'setOrderType',
-            'fileType' => 'setFileType'
+            'fileType' => 'setFileType',
+            'taskType' => 'setTaskType'
     ];
 
     /**
@@ -153,7 +161,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
     * orderType  desc 或者asc。默认值desc。
-    * fileType  默认是文件file。file：文件,directory：目录。
+    * fileType  file：文件,directory：目录。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
             'endDate' => 'getEndDate',
             'orderField' => 'getOrderField',
             'orderType' => 'getOrderType',
-            'fileType' => 'getFileType'
+            'fileType' => 'getFileType',
+            'taskType' => 'getTaskType'
     ];
 
     /**
@@ -213,6 +223,8 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     const STATUS_TASK_DONE = 'task_done';
     const FILE_TYPE_FILE = 'file';
     const FILE_TYPE_DIRECTORY = 'directory';
+    const TASK_TYPE_REFRESH = 'refresh';
+    const TASK_TYPE_PREHEATING = 'preheating';
     
 
     /**
@@ -241,6 +253,19 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTaskTypeAllowableValues()
+    {
+        return [
+            self::TASK_TYPE_REFRESH,
+            self::TASK_TYPE_PREHEATING,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -266,6 +291,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
         $this->container['orderField'] = isset($data['orderField']) ? $data['orderField'] : null;
         $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
+        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
     }
 
     /**
@@ -300,6 +326,14 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['fileType']) && !in_array($this->container['fileType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'fileType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTaskTypeAllowableValues();
+                if (!is_null($this->container['taskType']) && !in_array($this->container['taskType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'taskType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -512,7 +546,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  默认是文件file。file：文件,directory：目录。
+    *  file：文件,directory：目录。
     *
     * @return string|null
     */
@@ -524,13 +558,37 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType 默认是文件file。file：文件,directory：目录。
+    * @param string|null $fileType file：文件,directory：目录。
     *
     * @return $this
     */
     public function setFileType($fileType)
     {
         $this->container['fileType'] = $fileType;
+        return $this;
+    }
+
+    /**
+    * Gets taskType
+    *  任务类型，refresh：刷新任务；preheating：预热任务
+    *
+    * @return string|null
+    */
+    public function getTaskType()
+    {
+        return $this->container['taskType'];
+    }
+
+    /**
+    * Sets taskType
+    *
+    * @param string|null $taskType 任务类型，refresh：刷新任务；preheating：预热任务
+    *
+    * @return $this
+    */
+    public function setTaskType($taskType)
+    {
+        $this->container['taskType'] = $taskType;
         return $this;
     }
 

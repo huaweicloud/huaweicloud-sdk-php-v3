@@ -236,10 +236,13 @@ class CreateHostedDirectConnect implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] > 400000)) {
+        if ($this->container['bandwidth'] === null) {
+            $invalidProperties[] = "'bandwidth' can't be null";
+        }
+            if (($this->container['bandwidth'] > 400000)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be smaller than or equal to 400000.";
             }
-            if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] < 2)) {
+            if (($this->container['bandwidth'] < 2)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be bigger than or equal to 2.";
             }
         if ($this->container['hostingId'] === null) {
@@ -341,7 +344,7 @@ class CreateHostedDirectConnect implements ModelInterface, ArrayAccess
     * Gets bandwidth
     *  指定托管专线接入带宽,单位Mbps
     *
-    * @return int|null
+    * @return int
     */
     public function getBandwidth()
     {
@@ -351,7 +354,7 @@ class CreateHostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 指定托管专线接入带宽,单位Mbps
+    * @param int $bandwidth 指定托管专线接入带宽,单位Mbps
     *
     * @return $this
     */

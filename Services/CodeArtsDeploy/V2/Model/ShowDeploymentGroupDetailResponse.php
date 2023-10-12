@@ -30,7 +30,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     * regionName  局点信息
     * projectId  项目ID
     * os  操作系统：windows|linux
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * nickName  用户昵称
     * createdBy  createdBy
@@ -70,7 +70,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     * regionName  局点信息
     * projectId  项目ID
     * os  操作系统：windows|linux
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * nickName  用户昵称
     * createdBy  createdBy
@@ -90,7 +90,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
         'regionName' => null,
         'projectId' => null,
         'os' => null,
-        'autoConnectionTestSwitch' => 'int32',
+        'autoConnectionTestSwitch' => null,
         'slaveClusterId' => null,
         'nickName' => null,
         'createdBy' => null,
@@ -131,7 +131,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     * regionName  局点信息
     * projectId  项目ID
     * os  操作系统：windows|linux
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * nickName  用户昵称
     * createdBy  createdBy
@@ -171,7 +171,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     * regionName  局点信息
     * projectId  项目ID
     * os  操作系统：windows|linux
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * nickName  用户昵称
     * createdBy  createdBy
@@ -211,7 +211,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     * regionName  局点信息
     * projectId  项目ID
     * os  操作系统：windows|linux
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * nickName  用户昵称
     * createdBy  createdBy
@@ -583,7 +583,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoConnectionTestSwitch
-    *  自动连通性验证 0不执行 1每日 2每周
+    *  自动测试功能已下架，该字段已失效
     *
     * @return int|null
     */
@@ -595,7 +595,7 @@ class ShowDeploymentGroupDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets autoConnectionTestSwitch
     *
-    * @param int|null $autoConnectionTestSwitch 自动连通性验证 0不执行 1每日 2每周
+    * @param int|null $autoConnectionTestSwitch 自动测试功能已下架，该字段已失效
     *
     * @return $this
     */

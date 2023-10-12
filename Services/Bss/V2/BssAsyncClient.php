@@ -4873,6 +4873,75 @@ class BssAsyncClient extends Client
     }
 
     /**
+     * 查询客户新客标签
+     *
+     * 伙伴通过该接口可以查询客户的新客标签。
+     * 
+     * &gt;![](public_sys-resources/icon-caution.gif) **注意：**
+     * &gt;-   新客标签失效后，new\\_customer\\_tag会变成N，且有效期过期。
+     * &gt;-   客户如果没有实名认证，则新客标签为空。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubCustomerNewTagAsync($request)
+    {
+        return $this->listSubCustomerNewTagAsyncWithHttpInfo($request);
+    }
+    
+    public function listSubCustomerNewTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/partners/sub-customers/new-customers-tags/batch-query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerNewTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerNewTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询客户列表
      *
      * 伙伴可以查询合作伙伴的客户信息列表。

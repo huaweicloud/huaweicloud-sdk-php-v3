@@ -21,21 +21,25 @@ class ShowCertKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * taskId  迁移任务ID
+    * enableCaCert  是否生成ca证书
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string'
+            'taskId' => 'string',
+            'enableCaCert' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskId  迁移任务ID
+    * enableCaCert  是否生成ca证书
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null
+        'taskId' => null,
+        'enableCaCert' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShowCertKeyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * taskId  迁移任务ID
+    * enableCaCert  是否生成ca证书
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskId' => 'task_id'
+            'taskId' => 'task_id',
+            'enableCaCert' => 'enable_ca_cert'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  迁移任务ID
+    * enableCaCert  是否生成ca证书
     *
     * @var string[]
     */
     protected static $setters = [
-            'taskId' => 'setTaskId'
+            'taskId' => 'setTaskId',
+            'enableCaCert' => 'setEnableCaCert'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  迁移任务ID
+    * enableCaCert  是否生成ca证书
     *
     * @var string[]
     */
     protected static $getters = [
-            'taskId' => 'getTaskId'
+            'taskId' => 'getTaskId',
+            'enableCaCert' => 'getEnableCaCert'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ShowCertKeyRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['enableCaCert'] = isset($data['enableCaCert']) ? $data['enableCaCert'] : null;
     }
 
     /**
@@ -202,6 +213,30 @@ class ShowCertKeyRequest implements ModelInterface, ArrayAccess
     public function setTaskId($taskId)
     {
         $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
+    * Gets enableCaCert
+    *  是否生成ca证书
+    *
+    * @return bool|null
+    */
+    public function getEnableCaCert()
+    {
+        return $this->container['enableCaCert'];
+    }
+
+    /**
+    * Sets enableCaCert
+    *
+    * @param bool|null $enableCaCert 是否生成ca证书
+    *
+    * @return $this
+    */
+    public function setEnableCaCert($enableCaCert)
+    {
+        $this->container['enableCaCert'] = $enableCaCert;
         return $this;
     }
 

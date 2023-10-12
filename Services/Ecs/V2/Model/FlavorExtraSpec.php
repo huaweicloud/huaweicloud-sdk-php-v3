@@ -52,6 +52,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * quotavifMaxNum  最多支持的弹性网卡个数
+    * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
@@ -89,6 +91,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'infogpuname' => 'string',
             'infocpuname' => 'string',
             'quotagpu' => 'string',
+            'quotavifMaxNum' => 'string',
+            'quotasubNetworkInterfaceMaxNum' => 'string',
             'ecsinstanceArchitecture' => 'string'
     ];
 
@@ -126,6 +130,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * quotavifMaxNum  最多支持的弹性网卡个数
+    * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
@@ -163,6 +169,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'infogpuname' => null,
         'infocpuname' => null,
         'quotagpu' => null,
+        'quotavifMaxNum' => null,
+        'quotasubNetworkInterfaceMaxNum' => null,
         'ecsinstanceArchitecture' => null
     ];
 
@@ -221,6 +229,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * quotavifMaxNum  最多支持的弹性网卡个数
+    * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
@@ -258,6 +268,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'infogpuname' => 'info:gpu:name',
             'infocpuname' => 'info:cpu:name',
             'quotagpu' => 'quota:gpu',
+            'quotavifMaxNum' => 'quota:vif_max_num',
+            'quotasubNetworkInterfaceMaxNum' => 'quota:sub_network_interface_max_num',
             'ecsinstanceArchitecture' => 'ecs:instance_architecture'
     ];
 
@@ -295,6 +307,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * quotavifMaxNum  最多支持的弹性网卡个数
+    * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
@@ -332,6 +346,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'infogpuname' => 'setInfogpuname',
             'infocpuname' => 'setInfocpuname',
             'quotagpu' => 'setQuotagpu',
+            'quotavifMaxNum' => 'setQuotavifMaxNum',
+            'quotasubNetworkInterfaceMaxNum' => 'setQuotasubNetworkInterfaceMaxNum',
             'ecsinstanceArchitecture' => 'setEcsinstanceArchitecture'
     ];
 
@@ -369,6 +385,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * quotavifMaxNum  最多支持的弹性网卡个数
+    * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
@@ -406,6 +424,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'infogpuname' => 'getInfogpuname',
             'infocpuname' => 'getInfocpuname',
             'quotagpu' => 'getQuotagpu',
+            'quotavifMaxNum' => 'getQuotavifMaxNum',
+            'quotasubNetworkInterfaceMaxNum' => 'getQuotasubNetworkInterfaceMaxNum',
             'ecsinstanceArchitecture' => 'getEcsinstanceArchitecture'
     ];
 
@@ -499,6 +519,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['infogpuname'] = isset($data['infogpuname']) ? $data['infogpuname'] : null;
         $this->container['infocpuname'] = isset($data['infocpuname']) ? $data['infocpuname'] : null;
         $this->container['quotagpu'] = isset($data['quotagpu']) ? $data['quotagpu'] : null;
+        $this->container['quotavifMaxNum'] = isset($data['quotavifMaxNum']) ? $data['quotavifMaxNum'] : null;
+        $this->container['quotasubNetworkInterfaceMaxNum'] = isset($data['quotasubNetworkInterfaceMaxNum']) ? $data['quotasubNetworkInterfaceMaxNum'] : null;
         $this->container['ecsinstanceArchitecture'] = isset($data['ecsinstanceArchitecture']) ? $data['ecsinstanceArchitecture'] : null;
     }
 
@@ -1289,6 +1311,54 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setQuotagpu($quotagpu)
     {
         $this->container['quotagpu'] = $quotagpu;
+        return $this;
+    }
+
+    /**
+    * Gets quotavifMaxNum
+    *  最多支持的弹性网卡个数
+    *
+    * @return string|null
+    */
+    public function getQuotavifMaxNum()
+    {
+        return $this->container['quotavifMaxNum'];
+    }
+
+    /**
+    * Sets quotavifMaxNum
+    *
+    * @param string|null $quotavifMaxNum 最多支持的弹性网卡个数
+    *
+    * @return $this
+    */
+    public function setQuotavifMaxNum($quotavifMaxNum)
+    {
+        $this->container['quotavifMaxNum'] = $quotavifMaxNum;
+        return $this;
+    }
+
+    /**
+    * Gets quotasubNetworkInterfaceMaxNum
+    *  最多支持的辅助弹性网卡个数
+    *
+    * @return string|null
+    */
+    public function getQuotasubNetworkInterfaceMaxNum()
+    {
+        return $this->container['quotasubNetworkInterfaceMaxNum'];
+    }
+
+    /**
+    * Sets quotasubNetworkInterfaceMaxNum
+    *
+    * @param string|null $quotasubNetworkInterfaceMaxNum 最多支持的辅助弹性网卡个数
+    *
+    * @return $this
+    */
+    public function setQuotasubNetworkInterfaceMaxNum($quotasubNetworkInterfaceMaxNum)
+    {
+        $this->container['quotasubNetworkInterfaceMaxNum'] = $quotasubNetworkInterfaceMaxNum;
         return $this;
     }
 

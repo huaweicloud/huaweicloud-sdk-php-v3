@@ -21,32 +21,24 @@ class ShowDirectConnectRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * directConnectId  物理专线连接ID。
-    * limit  每页返回的个数。 取值范围：1~2000。
-    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * fields  显示字段列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'directConnectId' => 'string',
-            'limit' => 'int',
-            'marker' => 'string',
             'fields' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * directConnectId  物理专线连接ID。
-    * limit  每页返回的个数。 取值范围：1~2000。
-    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * fields  显示字段列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'directConnectId' => null,
-        'limit' => 'int32',
-        'marker' => null,
         'fields' => null
     ];
 
@@ -74,48 +66,36 @@ class ShowDirectConnectRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * directConnectId  物理专线连接ID。
-    * limit  每页返回的个数。 取值范围：1~2000。
-    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * fields  显示字段列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'directConnectId' => 'direct_connect_id',
-            'limit' => 'limit',
-            'marker' => 'marker',
             'fields' => 'fields'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * directConnectId  物理专线连接ID。
-    * limit  每页返回的个数。 取值范围：1~2000。
-    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * fields  显示字段列表
     *
     * @var string[]
     */
     protected static $setters = [
             'directConnectId' => 'setDirectConnectId',
-            'limit' => 'setLimit',
-            'marker' => 'setMarker',
             'fields' => 'setFields'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * directConnectId  物理专线连接ID。
-    * limit  每页返回的个数。 取值范围：1~2000。
-    * marker  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * fields  显示字段列表
     *
     * @var string[]
     */
     protected static $getters = [
             'directConnectId' => 'getDirectConnectId',
-            'limit' => 'getLimit',
-            'marker' => 'getMarker',
             'fields' => 'getFields'
     ];
 
@@ -178,8 +158,6 @@ class ShowDirectConnectRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['directConnectId'] = isset($data['directConnectId']) ? $data['directConnectId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
     }
 
@@ -202,18 +180,6 @@ class ShowDirectConnectRequest implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['directConnectId'])) {
                 $invalidProperties[] = "invalid value for 'directConnectId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -250,54 +216,6 @@ class ShowDirectConnectRequest implements ModelInterface, ArrayAccess
     public function setDirectConnectId($directConnectId)
     {
         $this->container['directConnectId'] = $directConnectId;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  每页返回的个数。 取值范围：1~2000。
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页返回的个数。 取值范围：1~2000。
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *  上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
         return $this;
     }
 

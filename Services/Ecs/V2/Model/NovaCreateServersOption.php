@@ -20,7 +20,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * imageRef  镜像ID或者镜像资源的URL。  - 镜像ID示例：3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 镜像URL示例：http://glance.openstack.example.com/images/3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 指定卷作为系统卷创弹性云服务器时，不需填写该参数；非卷创建弹性云服务器时需填写有效的UUID参数，否则API将返回400错误。  > 说明： > - 对于部分规格的弹性云服务器，不能支持公有云平台提供的所有公共镜像。具体规格的镜像支持列表，请登录管理控制台，以“创建弹性云服务器”页面系统自动过滤的镜像信息为准，并在镜像服务页面查询镜像ID。 > - 如果创建失败，请尝试修改参数配置。
     * flavorRef  规格ID或URL。
     * name  弹性云服务器名称，长度大于0小于256字节。  > 说明： >  > 云服务器内部主机名(hostname)命名规则遵循 [RFC 952](https://tools.ietf.org/html/rfc952)和[RFC 1123](https://tools.ietf.org/html/rfc1123)命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
@@ -64,7 +64,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * imageRef  镜像ID或者镜像资源的URL。  - 镜像ID示例：3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 镜像URL示例：http://glance.openstack.example.com/images/3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 指定卷作为系统卷创弹性云服务器时，不需填写该参数；非卷创建弹性云服务器时需填写有效的UUID参数，否则API将返回400错误。  > 说明： > - 对于部分规格的弹性云服务器，不能支持公有云平台提供的所有公共镜像。具体规格的镜像支持列表，请登录管理控制台，以“创建弹性云服务器”页面系统自动过滤的镜像信息为准，并在镜像服务页面查询镜像ID。 > - 如果创建失败，请尝试修改参数配置。
     * flavorRef  规格ID或URL。
     * name  弹性云服务器名称，长度大于0小于256字节。  > 说明： >  > 云服务器内部主机名(hostname)命名规则遵循 [RFC 952](https://tools.ietf.org/html/rfc952)和[RFC 1123](https://tools.ietf.org/html/rfc1123)命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
@@ -129,7 +129,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * imageRef  镜像ID或者镜像资源的URL。  - 镜像ID示例：3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 镜像URL示例：http://glance.openstack.example.com/images/3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 指定卷作为系统卷创弹性云服务器时，不需填写该参数；非卷创建弹性云服务器时需填写有效的UUID参数，否则API将返回400错误。  > 说明： > - 对于部分规格的弹性云服务器，不能支持公有云平台提供的所有公共镜像。具体规格的镜像支持列表，请登录管理控制台，以“创建弹性云服务器”页面系统自动过滤的镜像信息为准，并在镜像服务页面查询镜像ID。 > - 如果创建失败，请尝试修改参数配置。
     * flavorRef  规格ID或URL。
     * name  弹性云服务器名称，长度大于0小于256字节。  > 说明： >  > 云服务器内部主机名(hostname)命名规则遵循 [RFC 952](https://tools.ietf.org/html/rfc952)和[RFC 1123](https://tools.ietf.org/html/rfc1123)命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
@@ -173,7 +173,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * imageRef  镜像ID或者镜像资源的URL。  - 镜像ID示例：3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 镜像URL示例：http://glance.openstack.example.com/images/3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 指定卷作为系统卷创弹性云服务器时，不需填写该参数；非卷创建弹性云服务器时需填写有效的UUID参数，否则API将返回400错误。  > 说明： > - 对于部分规格的弹性云服务器，不能支持公有云平台提供的所有公共镜像。具体规格的镜像支持列表，请登录管理控制台，以“创建弹性云服务器”页面系统自动过滤的镜像信息为准，并在镜像服务页面查询镜像ID。 > - 如果创建失败，请尝试修改参数配置。
     * flavorRef  规格ID或URL。
     * name  弹性云服务器名称，长度大于0小于256字节。  > 说明： >  > 云服务器内部主机名(hostname)命名规则遵循 [RFC 952](https://tools.ietf.org/html/rfc952)和[RFC 1123](https://tools.ietf.org/html/rfc1123)命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
@@ -217,7 +217,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * autoTerminateTime  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     * imageRef  镜像ID或者镜像资源的URL。  - 镜像ID示例：3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 镜像URL示例：http://glance.openstack.example.com/images/3b8d6fef-af77-42ab-b8b7-5a7f0f0af8f2 - 指定卷作为系统卷创弹性云服务器时，不需填写该参数；非卷创建弹性云服务器时需填写有效的UUID参数，否则API将返回400错误。  > 说明： > - 对于部分规格的弹性云服务器，不能支持公有云平台提供的所有公共镜像。具体规格的镜像支持列表，请登录管理控制台，以“创建弹性云服务器”页面系统自动过滤的镜像信息为准，并在镜像服务页面查询镜像ID。 > - 如果创建失败，请尝试修改参数配置。
     * flavorRef  规格ID或URL。
     * name  弹性云服务器名称，长度大于0小于256字节。  > 说明： >  > 云服务器内部主机名(hostname)命名规则遵循 [RFC 952](https://tools.ietf.org/html/rfc952)和[RFC 1123](https://tools.ietf.org/html/rfc1123)命名规范，建议使用a-zA-z或0-9以及中划线\"-\"组成的名称命名，\"_\"将在弹性云服务器内部默认转化为\"-\"。
@@ -411,7 +411,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoTerminateTime
-    *  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    *  弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     /**
     * Sets autoTerminateTime
     *
-    * @param string|null $autoTerminateTime 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    * @param string|null $autoTerminateTime 弹性云服务器自动删除时间。  时间格式例如：2020-01-19T03:30:52Z
     *
     * @return $this
     */

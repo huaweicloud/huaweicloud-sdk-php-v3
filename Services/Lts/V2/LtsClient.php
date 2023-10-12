@@ -3476,6 +3476,189 @@ class LtsClient extends Client
     }
 
     /**
+     * 获取日志汇聚开关
+     *
+     * 只能由管理员或者委托管理员调用    获取日志汇聚开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAdminConfig($request)
+    {
+        return $this->showAdminConfigWithHttpInfo($request);
+    }
+
+    public function showAdminConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/lts/log-converge-config/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowAdminConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowAdminConfigRequest');
+    }
+
+    /**
+     * 获取组织成员汇聚配置
+     *
+     * 只能由组织管理员或者委托管理员调用    获取组织成员汇聚配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLogConvergeConfig($request)
+    {
+        return $this->showLogConvergeConfigWithHttpInfo($request);
+    }
+
+    public function showLogConvergeConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/lts/log-converge-config/{member_account_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['memberAccountId'] !== null) {
+            $pathParams['member_account_id'] = $localVarParams['memberAccountId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogConvergeConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogConvergeConfigRequest');
+    }
+
+    /**
+     * 获取组织成员日志组日志流
+     *
+     * 只能由管理员或者委托管理员调用，获取组织成员日志组日志流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMemberGroupAndStream($request)
+    {
+        return $this->showMemberGroupAndStreamWithHttpInfo($request);
+    }
+
+    public function showMemberGroupAndStreamWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/lts/{member_account_id}/all-streams';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['memberAccountId'] !== null) {
+            $pathParams['member_account_id'] = $localVarParams['memberAccountId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowMemberGroupAndStreamResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowMemberGroupAndStreamRequest');
+    }
+
+    /**
      * 查询单个消息模板
      *
      * 该接口用于查询单个通知模板
@@ -3789,6 +3972,68 @@ class LtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateKeywordsAlarmRuleResponse',
             $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateKeywordsAlarmRuleRequest');
+    }
+
+    /**
+     * 更新汇聚配置
+     *
+     * 只能由管理员或者委托管理员 ,更新汇聚配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogConvergeConfig($request)
+    {
+        return $this->updateLogConvergeConfigWithHttpInfo($request);
+    }
+
+    public function updateLogConvergeConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/lts/log-converge-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogConvergeConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogConvergeConfigRequest');
     }
 
     /**
@@ -4111,6 +4356,68 @@ class LtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateStructTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateStructTemplateRequest');
+    }
+
+    /**
+     * 修改日志汇聚开关
+     *
+     * 只能由管理员或者委托管理员调用     修改日志汇聚开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSwitch($request)
+    {
+        return $this->updateSwitchWithHttpInfo($request);
+    }
+
+    public function updateSwitchWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/lts/log-converge-config/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['logConvergeSwitch'] !== null) {
+            $queryParams['log_converge_switch'] = $localVarParams['logConvergeSwitch'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateSwitchResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateSwitchRequest');
     }
 
     /**
@@ -4483,313 +4790,6 @@ class LtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateAomMappingRulesResponse',
             $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateAomMappingRulesRequest');
-    }
-
-    /**
-     * 获取日志汇聚开关
-     *
-     * 只能由管理员或者委托管理员调用    获取日志汇聚开关
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showAdminConfig($request)
-    {
-        return $this->showAdminConfigWithHttpInfo($request);
-    }
-
-    public function showAdminConfigWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/lts/log-converge-config/switch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowAdminConfigResponse',
-            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowAdminConfigRequest');
-    }
-
-    /**
-     * 获取组织成员汇聚配置
-     *
-     * 只能由组织管理员或者委托管理员调用    获取组织成员汇聚配置
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showLogConvergeConfig($request)
-    {
-        return $this->showLogConvergeConfigWithHttpInfo($request);
-    }
-
-    public function showLogConvergeConfigWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/lts/log-converge-config/{member_account_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['memberAccountId'] !== null) {
-            $pathParams['member_account_id'] = $localVarParams['memberAccountId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogConvergeConfigResponse',
-            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogConvergeConfigRequest');
-    }
-
-    /**
-     * 获取组织成员日志组日志流
-     *
-     * 只能由管理员或者委托管理员调用，获取组织成员日志组日志流
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showMemberGroupAndStream($request)
-    {
-        return $this->showMemberGroupAndStreamWithHttpInfo($request);
-    }
-
-    public function showMemberGroupAndStreamWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/lts/{member_account_id}/all-streams';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['memberAccountId'] !== null) {
-            $pathParams['member_account_id'] = $localVarParams['memberAccountId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowMemberGroupAndStreamResponse',
-            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowMemberGroupAndStreamRequest');
-    }
-
-    /**
-     * 更新汇聚配置
-     *
-     * 只能由管理员或者委托管理员 ,更新汇聚配置
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateLogConvergeConfig($request)
-    {
-        return $this->updateLogConvergeConfigWithHttpInfo($request);
-    }
-
-    public function updateLogConvergeConfigWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/lts/log-converge-config';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogConvergeConfigResponse',
-            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateLogConvergeConfigRequest');
-    }
-
-    /**
-     * 修改日志汇聚开关
-     *
-     * 只能由管理员或者委托管理员调用     修改日志汇聚开关
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateSwitch($request)
-    {
-        return $this->updateSwitchWithHttpInfo($request);
-    }
-
-    public function updateSwitchWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/lts/log-converge-config/switch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['logConvergeSwitch'] !== null) {
-            $queryParams['log_converge_switch'] = $localVarParams['logConvergeSwitch'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateSwitchResponse',
-            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateSwitchRequest');
     }
 
     /**

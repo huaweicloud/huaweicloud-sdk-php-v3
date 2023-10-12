@@ -28,6 +28,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * resourceId  该实例对应的资源Id。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'specCode' => 'string',
             'azCode' => 'string',
             'ip' => 'string',
-            'volume' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterVolumeRsp'
+            'volume' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterVolumeRsp',
+            'resourceId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * resourceId  该实例对应的资源Id。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
         'specCode' => null,
         'azCode' => null,
         'ip' => null,
-        'volume' => null
+        'volume' => null,
+        'resourceId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * resourceId  该实例对应的资源Id。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'specCode' => 'specCode',
             'azCode' => 'azCode',
             'ip' => 'ip',
-            'volume' => 'volume'
+            'volume' => 'volume',
+            'resourceId' => 'resourceId'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * resourceId  该实例对应的资源Id。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'specCode' => 'setSpecCode',
             'azCode' => 'setAzCode',
             'ip' => 'setIp',
-            'volume' => 'setVolume'
+            'volume' => 'setVolume',
+            'resourceId' => 'setResourceId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     * azCode  节点所属AZ信息。
     * ip  实例ip信息。
     * volume  volume
+    * resourceId  该实例对应的资源Id。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
             'specCode' => 'getSpecCode',
             'azCode' => 'getAzCode',
             'ip' => 'getIp',
-            'volume' => 'getVolume'
+            'volume' => 'getVolume',
+            'resourceId' => 'getResourceId'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
         $this->container['azCode'] = isset($data['azCode']) ? $data['azCode'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
     }
 
     /**
@@ -441,6 +452,30 @@ class ClusterListInstances implements ModelInterface, ArrayAccess
     public function setVolume($volume)
     {
         $this->container['volume'] = $volume;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  该实例对应的资源Id。
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 该实例对应的资源Id。
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
         return $this;
     }
 

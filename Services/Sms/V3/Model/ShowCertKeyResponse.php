@@ -21,26 +21,46 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cert  证书
-    * privateKey  私钥
+    * cert  源端证书
+    * privateKey  源端私钥
+    * ca  ca证书
+    * targetMgmtCert  目的端管理层证书
+    * targetMgmtPrivateKey  目的端管理层私钥
+    * targetDataCert  目的端数据层证书
+    * targetDataPrivateKey  目的端数据层私钥
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'cert' => 'string',
-            'privateKey' => 'string'
+            'privateKey' => 'string',
+            'ca' => 'string',
+            'targetMgmtCert' => 'string',
+            'targetMgmtPrivateKey' => 'string',
+            'targetDataCert' => 'string',
+            'targetDataPrivateKey' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cert  证书
-    * privateKey  私钥
+    * cert  源端证书
+    * privateKey  源端私钥
+    * ca  ca证书
+    * targetMgmtCert  目的端管理层证书
+    * targetMgmtPrivateKey  目的端管理层私钥
+    * targetDataCert  目的端数据层证书
+    * targetDataPrivateKey  目的端数据层私钥
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'cert' => null,
-        'privateKey' => null
+        'privateKey' => null,
+        'ca' => null,
+        'targetMgmtCert' => null,
+        'targetMgmtPrivateKey' => null,
+        'targetDataCert' => null,
+        'targetDataPrivateKey' => null
     ];
 
     /**
@@ -66,38 +86,68 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cert  证书
-    * privateKey  私钥
+    * cert  源端证书
+    * privateKey  源端私钥
+    * ca  ca证书
+    * targetMgmtCert  目的端管理层证书
+    * targetMgmtPrivateKey  目的端管理层私钥
+    * targetDataCert  目的端数据层证书
+    * targetDataPrivateKey  目的端数据层私钥
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'cert' => 'cert',
-            'privateKey' => 'private_key'
+            'privateKey' => 'private_key',
+            'ca' => 'ca',
+            'targetMgmtCert' => 'target_mgmt_cert',
+            'targetMgmtPrivateKey' => 'target_mgmt_private_key',
+            'targetDataCert' => 'target_data_cert',
+            'targetDataPrivateKey' => 'target_data_private_key'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cert  证书
-    * privateKey  私钥
+    * cert  源端证书
+    * privateKey  源端私钥
+    * ca  ca证书
+    * targetMgmtCert  目的端管理层证书
+    * targetMgmtPrivateKey  目的端管理层私钥
+    * targetDataCert  目的端数据层证书
+    * targetDataPrivateKey  目的端数据层私钥
     *
     * @var string[]
     */
     protected static $setters = [
             'cert' => 'setCert',
-            'privateKey' => 'setPrivateKey'
+            'privateKey' => 'setPrivateKey',
+            'ca' => 'setCa',
+            'targetMgmtCert' => 'setTargetMgmtCert',
+            'targetMgmtPrivateKey' => 'setTargetMgmtPrivateKey',
+            'targetDataCert' => 'setTargetDataCert',
+            'targetDataPrivateKey' => 'setTargetDataPrivateKey'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cert  证书
-    * privateKey  私钥
+    * cert  源端证书
+    * privateKey  源端私钥
+    * ca  ca证书
+    * targetMgmtCert  目的端管理层证书
+    * targetMgmtPrivateKey  目的端管理层私钥
+    * targetDataCert  目的端数据层证书
+    * targetDataPrivateKey  目的端数据层私钥
     *
     * @var string[]
     */
     protected static $getters = [
             'cert' => 'getCert',
-            'privateKey' => 'getPrivateKey'
+            'privateKey' => 'getPrivateKey',
+            'ca' => 'getCa',
+            'targetMgmtCert' => 'getTargetMgmtCert',
+            'targetMgmtPrivateKey' => 'getTargetMgmtPrivateKey',
+            'targetDataCert' => 'getTargetDataCert',
+            'targetDataPrivateKey' => 'getTargetDataPrivateKey'
     ];
 
     /**
@@ -160,6 +210,11 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
     {
         $this->container['cert'] = isset($data['cert']) ? $data['cert'] : null;
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
+        $this->container['ca'] = isset($data['ca']) ? $data['ca'] : null;
+        $this->container['targetMgmtCert'] = isset($data['targetMgmtCert']) ? $data['targetMgmtCert'] : null;
+        $this->container['targetMgmtPrivateKey'] = isset($data['targetMgmtPrivateKey']) ? $data['targetMgmtPrivateKey'] : null;
+        $this->container['targetDataCert'] = isset($data['targetDataCert']) ? $data['targetDataCert'] : null;
+        $this->container['targetDataPrivateKey'] = isset($data['targetDataPrivateKey']) ? $data['targetDataPrivateKey'] : null;
     }
 
     /**
@@ -182,6 +237,36 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateKey']) && (mb_strlen($this->container['privateKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateKey', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['ca']) && (mb_strlen($this->container['ca']) > 1048576)) {
+                $invalidProperties[] = "invalid value for 'ca', the character length must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['ca']) && (mb_strlen($this->container['ca']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ca', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['targetMgmtCert']) && (mb_strlen($this->container['targetMgmtCert']) > 1048576)) {
+                $invalidProperties[] = "invalid value for 'targetMgmtCert', the character length must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['targetMgmtCert']) && (mb_strlen($this->container['targetMgmtCert']) < 1)) {
+                $invalidProperties[] = "invalid value for 'targetMgmtCert', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['targetMgmtPrivateKey']) && (mb_strlen($this->container['targetMgmtPrivateKey']) > 1048576)) {
+                $invalidProperties[] = "invalid value for 'targetMgmtPrivateKey', the character length must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['targetMgmtPrivateKey']) && (mb_strlen($this->container['targetMgmtPrivateKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'targetMgmtPrivateKey', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['targetDataCert']) && (mb_strlen($this->container['targetDataCert']) > 1048576)) {
+                $invalidProperties[] = "invalid value for 'targetDataCert', the character length must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['targetDataCert']) && (mb_strlen($this->container['targetDataCert']) < 1)) {
+                $invalidProperties[] = "invalid value for 'targetDataCert', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['targetDataPrivateKey']) && (mb_strlen($this->container['targetDataPrivateKey']) > 1048576)) {
+                $invalidProperties[] = "invalid value for 'targetDataPrivateKey', the character length must be smaller than or equal to 1048576.";
+            }
+            if (!is_null($this->container['targetDataPrivateKey']) && (mb_strlen($this->container['targetDataPrivateKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'targetDataPrivateKey', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -198,7 +283,7 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cert
-    *  证书
+    *  源端证书
     *
     * @return string|null
     */
@@ -210,7 +295,7 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cert
     *
-    * @param string|null $cert 证书
+    * @param string|null $cert 源端证书
     *
     * @return $this
     */
@@ -222,7 +307,7 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  私钥
+    *  源端私钥
     *
     * @return string|null
     */
@@ -234,13 +319,133 @@ class ShowCertKeyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 私钥
+    * @param string|null $privateKey 源端私钥
     *
     * @return $this
     */
     public function setPrivateKey($privateKey)
     {
         $this->container['privateKey'] = $privateKey;
+        return $this;
+    }
+
+    /**
+    * Gets ca
+    *  ca证书
+    *
+    * @return string|null
+    */
+    public function getCa()
+    {
+        return $this->container['ca'];
+    }
+
+    /**
+    * Sets ca
+    *
+    * @param string|null $ca ca证书
+    *
+    * @return $this
+    */
+    public function setCa($ca)
+    {
+        $this->container['ca'] = $ca;
+        return $this;
+    }
+
+    /**
+    * Gets targetMgmtCert
+    *  目的端管理层证书
+    *
+    * @return string|null
+    */
+    public function getTargetMgmtCert()
+    {
+        return $this->container['targetMgmtCert'];
+    }
+
+    /**
+    * Sets targetMgmtCert
+    *
+    * @param string|null $targetMgmtCert 目的端管理层证书
+    *
+    * @return $this
+    */
+    public function setTargetMgmtCert($targetMgmtCert)
+    {
+        $this->container['targetMgmtCert'] = $targetMgmtCert;
+        return $this;
+    }
+
+    /**
+    * Gets targetMgmtPrivateKey
+    *  目的端管理层私钥
+    *
+    * @return string|null
+    */
+    public function getTargetMgmtPrivateKey()
+    {
+        return $this->container['targetMgmtPrivateKey'];
+    }
+
+    /**
+    * Sets targetMgmtPrivateKey
+    *
+    * @param string|null $targetMgmtPrivateKey 目的端管理层私钥
+    *
+    * @return $this
+    */
+    public function setTargetMgmtPrivateKey($targetMgmtPrivateKey)
+    {
+        $this->container['targetMgmtPrivateKey'] = $targetMgmtPrivateKey;
+        return $this;
+    }
+
+    /**
+    * Gets targetDataCert
+    *  目的端数据层证书
+    *
+    * @return string|null
+    */
+    public function getTargetDataCert()
+    {
+        return $this->container['targetDataCert'];
+    }
+
+    /**
+    * Sets targetDataCert
+    *
+    * @param string|null $targetDataCert 目的端数据层证书
+    *
+    * @return $this
+    */
+    public function setTargetDataCert($targetDataCert)
+    {
+        $this->container['targetDataCert'] = $targetDataCert;
+        return $this;
+    }
+
+    /**
+    * Gets targetDataPrivateKey
+    *  目的端数据层私钥
+    *
+    * @return string|null
+    */
+    public function getTargetDataPrivateKey()
+    {
+        return $this->container['targetDataPrivateKey'];
+    }
+
+    /**
+    * Sets targetDataPrivateKey
+    *
+    * @param string|null $targetDataPrivateKey 目的端数据层私钥
+    *
+    * @return $this
+    */
+    public function setTargetDataPrivateKey($targetDataPrivateKey)
+    {
+        $this->container['targetDataPrivateKey'] = $targetDataPrivateKey;
         return $this;
     }
 

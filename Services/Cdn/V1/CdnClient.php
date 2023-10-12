@@ -1473,6 +1473,9 @@ class CdnClient extends Client
         if ($localVarParams['fileType'] !== null) {
             $queryParams['file_type'] = $localVarParams['fileType'];
         }
+        if ($localVarParams['taskType'] !== null) {
+            $queryParams['task_type'] = $localVarParams['taskType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']

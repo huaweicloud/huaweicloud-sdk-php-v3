@@ -24,7 +24,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     * endTime  结束时间时间戳，毫秒时间
     * period  查询时间间隔，单位为小时，范围为1-24
     * resourceType  资源类型，log_group / log_stream / tenant
-    * searchType  查询流量类型值为：write，index，storage
+    * searchType  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     * resourceId  资源ID
     *
     * @var string[]
@@ -44,7 +44,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     * endTime  结束时间时间戳，毫秒时间
     * period  查询时间间隔，单位为小时，范围为1-24
     * resourceType  资源类型，log_group / log_stream / tenant
-    * searchType  查询流量类型值为：write，index，storage
+    * searchType  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     * resourceId  资源ID
     *
     * @var string[]
@@ -85,7 +85,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     * endTime  结束时间时间戳，毫秒时间
     * period  查询时间间隔，单位为小时，范围为1-24
     * resourceType  资源类型，log_group / log_stream / tenant
-    * searchType  查询流量类型值为：write，index，storage
+    * searchType  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     * resourceId  资源ID
     *
     * @var string[]
@@ -105,7 +105,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     * endTime  结束时间时间戳，毫秒时间
     * period  查询时间间隔，单位为小时，范围为1-24
     * resourceType  资源类型，log_group / log_stream / tenant
-    * searchType  查询流量类型值为：write，index，storage
+    * searchType  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     * resourceId  资源ID
     *
     * @var string[]
@@ -125,7 +125,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     * endTime  结束时间时间戳，毫秒时间
     * period  查询时间间隔，单位为小时，范围为1-24
     * resourceType  资源类型，log_group / log_stream / tenant
-    * searchType  查询流量类型值为：write，index，storage
+    * searchType  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     * resourceId  资源ID
     *
     * @var string[]
@@ -340,7 +340,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets searchType
-    *  查询流量类型值为：write，index，storage
+    *  查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     *
     * @return string
     */
@@ -352,7 +352,7 @@ class TimelineTrafficStatisticsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets searchType
     *
-    * @param string $searchType 查询流量类型值为：write，index，storage
+    * @param string $searchType 查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
     *
     * @return $this
     */

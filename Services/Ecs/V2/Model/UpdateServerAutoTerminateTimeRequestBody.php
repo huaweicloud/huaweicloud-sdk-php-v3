@@ -20,7 +20,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * autoTerminateTime  销毁时间
+    * autoTerminateTime  定时删除时间
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * autoTerminateTime  销毁时间
+    * autoTerminateTime  定时删除时间
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * autoTerminateTime  销毁时间
+    * autoTerminateTime  定时删除时间
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * autoTerminateTime  销毁时间
+    * autoTerminateTime  定时删除时间
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * autoTerminateTime  销毁时间
+    * autoTerminateTime  定时删除时间
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
 
     /**
     * Gets autoTerminateTime
-    *  销毁时间
+    *  定时删除时间
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayA
     /**
     * Sets autoTerminateTime
     *
-    * @param string $autoTerminateTime 销毁时间
+    * @param string $autoTerminateTime 定时删除时间
     *
     * @return $this
     */

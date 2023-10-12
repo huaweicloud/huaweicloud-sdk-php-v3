@@ -21,6 +21,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  节点状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
+    * resourceId  该实例对应的资源Id。
     * type  当前节点的类型。
     * id  实例ID。
     * name  实例名字。
@@ -33,6 +34,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'status' => 'string',
+            'resourceId' => 'string',
             'type' => 'string',
             'id' => 'string',
             'name' => 'string',
@@ -45,6 +47,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  节点状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
+    * resourceId  该实例对应的资源Id。
     * type  当前节点的类型。
     * id  实例ID。
     * name  实例名字。
@@ -57,6 +60,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'status' => null,
+        'resourceId' => null,
         'type' => null,
         'id' => null,
         'name' => null,
@@ -90,6 +94,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  节点状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
+    * resourceId  该实例对应的资源Id。
     * type  当前节点的类型。
     * id  实例ID。
     * name  实例名字。
@@ -102,6 +107,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'status' => 'status',
+            'resourceId' => 'resourceId',
             'type' => 'type',
             'id' => 'id',
             'name' => 'name',
@@ -114,6 +120,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  节点状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
+    * resourceId  该实例对应的资源Id。
     * type  当前节点的类型。
     * id  实例ID。
     * name  实例名字。
@@ -126,6 +133,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'status' => 'setStatus',
+            'resourceId' => 'setResourceId',
             'type' => 'setType',
             'id' => 'setId',
             'name' => 'setName',
@@ -138,6 +146,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  节点状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
+    * resourceId  该实例对应的资源Id。
     * type  当前节点的类型。
     * id  实例ID。
     * name  实例名字。
@@ -150,6 +159,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'status' => 'getStatus',
+            'resourceId' => 'getResourceId',
             'type' => 'getType',
             'id' => 'getId',
             'name' => 'getName',
@@ -218,6 +228,7 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -273,6 +284,30 @@ class ClusterDetailInstances implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  该实例对应的资源Id。
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 该实例对应的资源Id。
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
         return $this;
     }
 

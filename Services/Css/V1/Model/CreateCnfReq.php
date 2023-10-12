@@ -23,13 +23,15 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * confContent  配置文件内容。
     * setting  setting
+    * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'confContent' => 'string',
-            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting'
+            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting',
+            'sensitiveWords' => 'string[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * confContent  配置文件内容。
     * setting  setting
+    * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'confContent' => null,
-        'setting' => null
+        'setting' => null,
+        'sensitiveWords' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * confContent  配置文件内容。
     * setting  setting
+    * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'confContent' => 'confContent',
-            'setting' => 'setting'
+            'setting' => 'setting',
+            'sensitiveWords' => 'sensitive_words'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * confContent  配置文件内容。
     * setting  setting
+    * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'confContent' => 'setConfContent',
-            'setting' => 'setSetting'
+            'setting' => 'setSetting',
+            'sensitiveWords' => 'setSensitiveWords'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * confContent  配置文件内容。
     * setting  setting
+    * sensitiveWords  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'confContent' => 'getConfContent',
-            'setting' => 'getSetting'
+            'setting' => 'getSetting',
+            'sensitiveWords' => 'getSensitiveWords'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['confContent'] = isset($data['confContent']) ? $data['confContent'] : null;
         $this->container['setting'] = isset($data['setting']) ? $data['setting'] : null;
+        $this->container['sensitiveWords'] = isset($data['sensitiveWords']) ? $data['sensitiveWords'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class CreateCnfReq implements ModelInterface, ArrayAccess
     public function setSetting($setting)
     {
         $this->container['setting'] = $setting;
+        return $this;
+    }
+
+    /**
+    * Gets sensitiveWords
+    *  敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    *
+    * @return string[]|null
+    */
+    public function getSensitiveWords()
+    {
+        return $this->container['sensitiveWords'];
+    }
+
+    /**
+    * Sets sensitiveWords
+    *
+    * @param string[]|null $sensitiveWords 敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
+    *
+    * @return $this
+    */
+    public function setSensitiveWords($sensitiveWords)
+    {
+        $this->container['sensitiveWords'] = $sensitiveWords;
         return $this;
     }
 

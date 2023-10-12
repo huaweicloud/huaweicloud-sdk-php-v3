@@ -34,7 +34,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     * notificationBeginTime  告警通知开启时间
     * notificationEndTime  告警通知关闭时间
     * enterpriseProjectId  企业项目ID
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * alarmTemplateId  告警规则关联告警模板ID
     *
     * @var string[]
     */
@@ -715,7 +715,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTemplateId
-    *  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    *  告警规则关联告警模板ID
     *
     * @return string|null
     */
@@ -727,7 +727,7 @@ class ListAlarmResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTemplateId
     *
-    * @param string|null $alarmTemplateId 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+    * @param string|null $alarmTemplateId 告警规则关联告警模板ID
     *
     * @return $this
     */

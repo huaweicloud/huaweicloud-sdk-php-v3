@@ -32,7 +32,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'accessConfigId' => 'string',
-            'accessConfigDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilCreate',
+            'accessConfigDetail' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilUpdate',
             'hostGroupInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigHostGroupIdList',
             'accessConfigTag' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTag[]',
             'logSplit' => 'bool',
@@ -275,7 +275,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * Gets accessConfigDetail
     *  accessConfigDetail
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilCreate|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilUpdate|null
     */
     public function getAccessConfigDetail()
     {
@@ -285,7 +285,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets accessConfigDetail
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilCreate|null $accessConfigDetail accessConfigDetail
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AccessConfigDeatilUpdate|null $accessConfigDetail accessConfigDetail
     *
     * @return $this
     */

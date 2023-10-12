@@ -142,7 +142,6 @@ class ListTagResourceInstancesRequest implements ModelInterface, ArrayAccess
     const RESOURCE_TYPE_DC_DIRECTCONNECT = 'dc-directconnect';
     const RESOURCE_TYPE_DC_VGW = 'dc-vgw';
     const RESOURCE_TYPE_DC_VIF = 'dc-vif';
-    const RESOURCE_TYPE_DC_LAG = 'dc-lag';
     
 
     /**
@@ -156,7 +155,6 @@ class ListTagResourceInstancesRequest implements ModelInterface, ArrayAccess
             self::RESOURCE_TYPE_DC_DIRECTCONNECT,
             self::RESOURCE_TYPE_DC_VGW,
             self::RESOURCE_TYPE_DC_VIF,
-            self::RESOURCE_TYPE_DC_LAG,
         ];
     }
 

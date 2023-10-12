@@ -26,7 +26,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
     * invocationTarget  任务对象，目前仅支持telescope
     * createTime  任务创建时间
@@ -60,7 +60,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
     * invocationTarget  任务对象，目前仅支持telescope
     * createTime  任务创建时间
@@ -115,7 +115,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
     * invocationTarget  任务对象，目前仅支持telescope
     * createTime  任务创建时间
@@ -149,7 +149,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
     * invocationTarget  任务对象，目前仅支持telescope
     * createTime  任务创建时间
@@ -183,7 +183,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  主机类型，ECS弹性云服务器，BMS裸金属服务器
     * intranetIps  内网ip列表
     * elasticIps  弹性公网ip列表
-    * invocationType  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * invocationType  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     * invocationStatus  任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
     * invocationTarget  任务对象，目前仅支持telescope
     * createTime  任务创建时间
@@ -254,6 +254,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_INSTALL = 'INSTALL';
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
+    const INVOCATION_TYPE_RETRY = 'RETRY';
     const INVOCATION_STATUS_PENDING = 'PENDING';
     const INVOCATION_STATUS_RUNNING = 'RUNNING';
     const INVOCATION_STATUS_TIMEOUT = 'TIMEOUT';
@@ -288,6 +289,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_INSTALL,
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
+            self::INVOCATION_TYPE_RETRY,
         ];
     }
 
@@ -588,7 +590,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    *  任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     *
     * @return string|null
     */
@@ -600,7 +602,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType 任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+    * @param string|null $invocationType 任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
     *
     * @return $this
     */

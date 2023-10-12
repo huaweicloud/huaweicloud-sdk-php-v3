@@ -26,6 +26,74 @@ class VpcClient extends Client
 
 
     /**
+     * 流量镜像会话添加镜像源
+     *
+     * 流量镜像会话添加镜像源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addSourcesToTrafficMirrorSession($request)
+    {
+        return $this->addSourcesToTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function addSourcesToTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions/{traffic_mirror_session_id}/add-sources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorSessionId'] !== null) {
+            $pathParams['traffic_mirror_session_id'] = $localVarParams['trafficMirrorSessionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\AddSourcesToTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\AddSourcesToTrafficMirrorSessionRequest');
+    }
+
+    /**
      * 批量创建辅助弹性网卡
      *
      * 批量创建辅助弹性网卡
@@ -286,6 +354,201 @@ class VpcClient extends Client
     }
 
     /**
+     * 创建流量镜像筛选条件
+     *
+     * 创建流量镜像筛选条件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTrafficMirrorFilter($request)
+    {
+        return $this->createTrafficMirrorFilterWithHttpInfo($request);
+    }
+
+    public function createTrafficMirrorFilterWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorFilterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorFilterRequest');
+    }
+
+    /**
+     * 创建流量镜像筛选规则
+     *
+     * 创建流量镜像筛选规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTrafficMirrorFilterRule($request)
+    {
+        return $this->createTrafficMirrorFilterRuleWithHttpInfo($request);
+    }
+
+    public function createTrafficMirrorFilterRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filter-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorFilterRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorFilterRuleRequest');
+    }
+
+    /**
+     * 创建流量镜像会话
+     *
+     * 创建流量镜像会话
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTrafficMirrorSession($request)
+    {
+        return $this->createTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function createTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateTrafficMirrorSessionRequest');
+    }
+
+    /**
      * 删除安全组
      *
      * 删除安全组
@@ -478,6 +741,201 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 删除流量镜像筛选条件
+     *
+     * 删除流量镜像筛选条件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTrafficMirrorFilter($request)
+    {
+        return $this->deleteTrafficMirrorFilterWithHttpInfo($request);
+    }
+
+    public function deleteTrafficMirrorFilterWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters/{traffic_mirror_filter_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $pathParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorFilterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorFilterRequest');
+    }
+
+    /**
+     * 删除流量镜像筛选规则
+     *
+     * 删除流量镜像筛选规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTrafficMirrorFilterRule($request)
+    {
+        return $this->deleteTrafficMirrorFilterRuleWithHttpInfo($request);
+    }
+
+    public function deleteTrafficMirrorFilterRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filter-rules/{traffic_mirror_filter_rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterRuleId'] !== null) {
+            $pathParams['traffic_mirror_filter_rule_id'] = $localVarParams['trafficMirrorFilterRuleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorFilterRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorFilterRuleRequest');
+    }
+
+    /**
+     * 删除流量镜像会话
+     *
+     * 删除流量镜像会话
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTrafficMirrorSession($request)
+    {
+        return $this->deleteTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function deleteTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions/{traffic_mirror_session_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorSessionId'] !== null) {
+            $pathParams['traffic_mirror_session_id'] = $localVarParams['trafficMirrorSessionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorSessionRequest');
     }
 
     /**
@@ -742,6 +1200,279 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询流量镜像筛选规则列表
+     *
+     * 查询流量镜像筛选规则列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrafficMirrorFilterRules($request)
+    {
+        return $this->listTrafficMirrorFilterRulesWithHttpInfo($request);
+    }
+
+    public function listTrafficMirrorFilterRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filter-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $queryParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
+        if ($localVarParams['sourceCidrBlock'] !== null) {
+            $queryParams['source_cidr_block'] = $localVarParams['sourceCidrBlock'];
+        }
+        if ($localVarParams['destinationCidrBlock'] !== null) {
+            $queryParams['destination_cidr_block'] = $localVarParams['destinationCidrBlock'];
+        }
+        if ($localVarParams['sourcePortRange'] !== null) {
+            $queryParams['source_port_range'] = $localVarParams['sourcePortRange'];
+        }
+        if ($localVarParams['destinationPortRange'] !== null) {
+            $queryParams['destination_port_range'] = $localVarParams['destinationPortRange'];
+        }
+        if ($localVarParams['action'] !== null) {
+            $queryParams['action'] = $localVarParams['action'];
+        }
+        if ($localVarParams['priority'] !== null) {
+            $queryParams['priority'] = $localVarParams['priority'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorFilterRulesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorFilterRulesRequest');
+    }
+
+    /**
+     * 查询流量镜像筛选条件列表
+     *
+     * 查询流量镜像筛选条件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrafficMirrorFilters($request)
+    {
+        return $this->listTrafficMirrorFiltersWithHttpInfo($request);
+    }
+
+    public function listTrafficMirrorFiltersWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['createdAt'] !== null) {
+            $queryParams['created_at'] = $localVarParams['createdAt'];
+        }
+        if ($localVarParams['updatedAt'] !== null) {
+            $queryParams['updated_at'] = $localVarParams['updatedAt'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorFiltersResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorFiltersRequest');
+    }
+
+    /**
+     * 查询流量镜像会话列表
+     *
+     * 查询流量镜像会话列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrafficMirrorSessions($request)
+    {
+        return $this->listTrafficMirrorSessionsWithHttpInfo($request);
+    }
+
+    public function listTrafficMirrorSessionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $queryParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($localVarParams['trafficMirrorTargetId'] !== null) {
+            $queryParams['traffic_mirror_target_id'] = $localVarParams['trafficMirrorTargetId'];
+        }
+        if ($localVarParams['trafficMirrorTargetType'] !== null) {
+            $queryParams['traffic_mirror_target_type'] = $localVarParams['trafficMirrorTargetType'];
+        }
+        if ($localVarParams['virtualNetworkId'] !== null) {
+            $queryParams['virtual_network_id'] = $localVarParams['virtualNetworkId'];
+        }
+        if ($localVarParams['packetLength'] !== null) {
+            $queryParams['packet_length'] = $localVarParams['packetLength'];
+        }
+        if ($localVarParams['priority'] !== null) {
+            $queryParams['priority'] = $localVarParams['priority'];
+        }
+        if ($localVarParams['enabled'] !== null) {
+            $queryParams['enabled'] = $localVarParams['enabled'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['createdAt'] !== null) {
+            $queryParams['created_at'] = $localVarParams['createdAt'];
+        }
+        if ($localVarParams['updatedAt'] !== null) {
+            $queryParams['updated_at'] = $localVarParams['updatedAt'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorSessionsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListTrafficMirrorSessionsRequest');
+    }
+
+    /**
      * 迁移辅助弹性网卡
      *
      * 批量迁移辅助弹性网卡
@@ -804,6 +1535,74 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 流量镜像会话移除镜像源
+     *
+     * 流量镜像会话移除镜像源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function removeSourcesFromTrafficMirrorSession($request)
+    {
+        return $this->removeSourcesFromTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function removeSourcesFromTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions/{traffic_mirror_session_id}/remove-sources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorSessionId'] !== null) {
+            $pathParams['traffic_mirror_session_id'] = $localVarParams['trafficMirrorSessionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSourcesFromTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSourcesFromTrafficMirrorSessionRequest');
     }
 
     /**
@@ -1064,6 +1863,201 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询流量镜像筛选条件详情
+     *
+     * 查询流量镜像筛选条件详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTrafficMirrorFilter($request)
+    {
+        return $this->showTrafficMirrorFilterWithHttpInfo($request);
+    }
+
+    public function showTrafficMirrorFilterWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters/{traffic_mirror_filter_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $pathParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorFilterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorFilterRequest');
+    }
+
+    /**
+     * 查询流量镜像筛选规则详情
+     *
+     * 查询流量镜像筛选规则详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTrafficMirrorFilterRule($request)
+    {
+        return $this->showTrafficMirrorFilterRuleWithHttpInfo($request);
+    }
+
+    public function showTrafficMirrorFilterRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filter-rules/{traffic_mirror_filter_rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterRuleId'] !== null) {
+            $pathParams['traffic_mirror_filter_rule_id'] = $localVarParams['trafficMirrorFilterRuleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorFilterRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorFilterRuleRequest');
+    }
+
+    /**
+     * 查询流量镜像会话详情
+     *
+     * 查询流量镜像会话详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTrafficMirrorSession($request)
+    {
+        return $this->showTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function showTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions/{traffic_mirror_session_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorSessionId'] !== null) {
+            $pathParams['traffic_mirror_session_id'] = $localVarParams['trafficMirrorSessionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorSessionRequest');
+    }
+
+    /**
      * 更新安全组
      *
      * 更新安全组
@@ -1197,6 +2191,210 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 更新流量镜像筛选条件
+     *
+     * 更新流量镜像筛选条件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTrafficMirrorFilter($request)
+    {
+        return $this->updateTrafficMirrorFilterWithHttpInfo($request);
+    }
+
+    public function updateTrafficMirrorFilterWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters/{traffic_mirror_filter_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $pathParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorFilterResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorFilterRequest');
+    }
+
+    /**
+     * 更新流量镜像筛选规则
+     *
+     * 更新流量镜像筛选规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTrafficMirrorFilterRule($request)
+    {
+        return $this->updateTrafficMirrorFilterRuleWithHttpInfo($request);
+    }
+
+    public function updateTrafficMirrorFilterRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filter-rules/{traffic_mirror_filter_rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterRuleId'] !== null) {
+            $pathParams['traffic_mirror_filter_rule_id'] = $localVarParams['trafficMirrorFilterRuleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorFilterRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorFilterRuleRequest');
+    }
+
+    /**
+     * 更新流量镜像会话
+     *
+     * 更新流量镜像会话
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTrafficMirrorSession($request)
+    {
+        return $this->updateTrafficMirrorSessionWithHttpInfo($request);
+    }
+
+    public function updateTrafficMirrorSessionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-sessions/{traffic_mirror_session_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorSessionId'] !== null) {
+            $pathParams['traffic_mirror_session_id'] = $localVarParams['trafficMirrorSessionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorSessionResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateTrafficMirrorSessionRequest');
     }
 
     /**

@@ -25,6 +25,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
+    * sourceName  账号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -35,6 +36,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
             'lastUpdateStatus' => 'string',
             'lastUpdateTime' => 'string',
             'sourceId' => 'string',
+            'sourceName' => 'string',
             'sourceType' => 'string'
     ];
 
@@ -45,6 +47,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
+    * sourceName  账号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -55,6 +58,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
         'lastUpdateStatus' => null,
         'lastUpdateTime' => null,
         'sourceId' => null,
+        'sourceName' => null,
         'sourceType' => null
     ];
 
@@ -86,6 +90,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
+    * sourceName  账号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -96,6 +101,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
             'lastUpdateStatus' => 'last_update_status',
             'lastUpdateTime' => 'last_update_time',
             'sourceId' => 'source_id',
+            'sourceName' => 'source_name',
             'sourceType' => 'source_type'
     ];
 
@@ -106,6 +112,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
+    * sourceName  账号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -116,6 +123,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
             'lastUpdateStatus' => 'setLastUpdateStatus',
             'lastUpdateTime' => 'setLastUpdateTime',
             'sourceId' => 'setSourceId',
+            'sourceName' => 'setSourceName',
             'sourceType' => 'setSourceType'
     ];
 
@@ -126,6 +134,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
+    * sourceName  账号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -136,6 +145,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
             'lastUpdateStatus' => 'getLastUpdateStatus',
             'lastUpdateTime' => 'getLastUpdateTime',
             'sourceId' => 'getSourceId',
+            'sourceName' => 'getSourceName',
             'sourceType' => 'getSourceType'
     ];
 
@@ -202,6 +212,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
         $this->container['lastUpdateStatus'] = isset($data['lastUpdateStatus']) ? $data['lastUpdateStatus'] : null;
         $this->container['lastUpdateTime'] = isset($data['lastUpdateTime']) ? $data['lastUpdateTime'] : null;
         $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
+        $this->container['sourceName'] = isset($data['sourceName']) ? $data['sourceName'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
     }
 
@@ -344,6 +355,30 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     public function setSourceId($sourceId)
     {
         $this->container['sourceId'] = $sourceId;
+        return $this;
+    }
+
+    /**
+    * Gets sourceName
+    *  账号名。
+    *
+    * @return string|null
+    */
+    public function getSourceName()
+    {
+        return $this->container['sourceName'];
+    }
+
+    /**
+    * Sets sourceName
+    *
+    * @param string|null $sourceName 账号名。
+    *
+    * @return $this
+    */
+    public function setSourceName($sourceName)
+    {
+        $this->container['sourceName'] = $sourceName;
         return $this;
     }
 

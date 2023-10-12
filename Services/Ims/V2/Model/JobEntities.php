@@ -23,6 +23,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     * imageId  镜像ID
     * currentTask  当前任务名称
     * imageName  镜像名称
+    * additionErrorCode  添加错误码
+    * additionErrorMsg  添加错误消息
+    * errorCode  错误码
+    * error  错误消息
+    * alarmCode  告警代码
     * processPercent  任务执行进度
     * results  批量任务执行结果
     * subJobsResult  子任务结果列表
@@ -34,6 +39,11 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'string',
             'currentTask' => 'string',
             'imageName' => 'string',
+            'additionErrorCode' => 'string',
+            'additionErrorMsg' => 'string',
+            'errorCode' => 'string',
+            'error' => 'string',
+            'alarmCode' => 'string',
             'processPercent' => 'double',
             'results' => '\HuaweiCloud\SDK\Ims\V2\Model\JobEntitiesResult[]',
             'subJobsResult' => '\HuaweiCloud\SDK\Ims\V2\Model\SubJobResult[]',
@@ -45,6 +55,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     * imageId  镜像ID
     * currentTask  当前任务名称
     * imageName  镜像名称
+    * additionErrorCode  添加错误码
+    * additionErrorMsg  添加错误消息
+    * errorCode  错误码
+    * error  错误消息
+    * alarmCode  告警代码
     * processPercent  任务执行进度
     * results  批量任务执行结果
     * subJobsResult  子任务结果列表
@@ -56,6 +71,11 @@ class JobEntities implements ModelInterface, ArrayAccess
         'imageId' => null,
         'currentTask' => null,
         'imageName' => null,
+        'additionErrorCode' => null,
+        'additionErrorMsg' => null,
+        'errorCode' => null,
+        'error' => null,
+        'alarmCode' => null,
         'processPercent' => 'double',
         'results' => null,
         'subJobsResult' => null,
@@ -88,6 +108,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     * imageId  镜像ID
     * currentTask  当前任务名称
     * imageName  镜像名称
+    * additionErrorCode  添加错误码
+    * additionErrorMsg  添加错误消息
+    * errorCode  错误码
+    * error  错误消息
+    * alarmCode  告警代码
     * processPercent  任务执行进度
     * results  批量任务执行结果
     * subJobsResult  子任务结果列表
@@ -99,6 +124,11 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'image_id',
             'currentTask' => 'current_task',
             'imageName' => 'image_name',
+            'additionErrorCode' => 'addition_error_code',
+            'additionErrorMsg' => 'addition_error_msg',
+            'errorCode' => 'error_code',
+            'error' => 'error',
+            'alarmCode' => 'alarm_code',
             'processPercent' => 'process_percent',
             'results' => 'results',
             'subJobsResult' => 'sub_jobs_result',
@@ -110,6 +140,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     * imageId  镜像ID
     * currentTask  当前任务名称
     * imageName  镜像名称
+    * additionErrorCode  添加错误码
+    * additionErrorMsg  添加错误消息
+    * errorCode  错误码
+    * error  错误消息
+    * alarmCode  告警代码
     * processPercent  任务执行进度
     * results  批量任务执行结果
     * subJobsResult  子任务结果列表
@@ -121,6 +156,11 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'setImageId',
             'currentTask' => 'setCurrentTask',
             'imageName' => 'setImageName',
+            'additionErrorCode' => 'setAdditionErrorCode',
+            'additionErrorMsg' => 'setAdditionErrorMsg',
+            'errorCode' => 'setErrorCode',
+            'error' => 'setError',
+            'alarmCode' => 'setAlarmCode',
             'processPercent' => 'setProcessPercent',
             'results' => 'setResults',
             'subJobsResult' => 'setSubJobsResult',
@@ -132,6 +172,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     * imageId  镜像ID
     * currentTask  当前任务名称
     * imageName  镜像名称
+    * additionErrorCode  添加错误码
+    * additionErrorMsg  添加错误消息
+    * errorCode  错误码
+    * error  错误消息
+    * alarmCode  告警代码
     * processPercent  任务执行进度
     * results  批量任务执行结果
     * subJobsResult  子任务结果列表
@@ -143,6 +188,11 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'getImageId',
             'currentTask' => 'getCurrentTask',
             'imageName' => 'getImageName',
+            'additionErrorCode' => 'getAdditionErrorCode',
+            'additionErrorMsg' => 'getAdditionErrorMsg',
+            'errorCode' => 'getErrorCode',
+            'error' => 'getError',
+            'alarmCode' => 'getAlarmCode',
             'processPercent' => 'getProcessPercent',
             'results' => 'getResults',
             'subJobsResult' => 'getSubJobsResult',
@@ -210,6 +260,11 @@ class JobEntities implements ModelInterface, ArrayAccess
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['currentTask'] = isset($data['currentTask']) ? $data['currentTask'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
+        $this->container['additionErrorCode'] = isset($data['additionErrorCode']) ? $data['additionErrorCode'] : null;
+        $this->container['additionErrorMsg'] = isset($data['additionErrorMsg']) ? $data['additionErrorMsg'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['error'] = isset($data['error']) ? $data['error'] : null;
+        $this->container['alarmCode'] = isset($data['alarmCode']) ? $data['alarmCode'] : null;
         $this->container['processPercent'] = isset($data['processPercent']) ? $data['processPercent'] : null;
         $this->container['results'] = isset($data['results']) ? $data['results'] : null;
         $this->container['subJobsResult'] = isset($data['subJobsResult']) ? $data['subJobsResult'] : null;
@@ -307,6 +362,126 @@ class JobEntities implements ModelInterface, ArrayAccess
     public function setImageName($imageName)
     {
         $this->container['imageName'] = $imageName;
+        return $this;
+    }
+
+    /**
+    * Gets additionErrorCode
+    *  添加错误码
+    *
+    * @return string|null
+    */
+    public function getAdditionErrorCode()
+    {
+        return $this->container['additionErrorCode'];
+    }
+
+    /**
+    * Sets additionErrorCode
+    *
+    * @param string|null $additionErrorCode 添加错误码
+    *
+    * @return $this
+    */
+    public function setAdditionErrorCode($additionErrorCode)
+    {
+        $this->container['additionErrorCode'] = $additionErrorCode;
+        return $this;
+    }
+
+    /**
+    * Gets additionErrorMsg
+    *  添加错误消息
+    *
+    * @return string|null
+    */
+    public function getAdditionErrorMsg()
+    {
+        return $this->container['additionErrorMsg'];
+    }
+
+    /**
+    * Sets additionErrorMsg
+    *
+    * @param string|null $additionErrorMsg 添加错误消息
+    *
+    * @return $this
+    */
+    public function setAdditionErrorMsg($additionErrorMsg)
+    {
+        $this->container['additionErrorMsg'] = $additionErrorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  错误码
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 错误码
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets error
+    *  错误消息
+    *
+    * @return string|null
+    */
+    public function getError()
+    {
+        return $this->container['error'];
+    }
+
+    /**
+    * Sets error
+    *
+    * @param string|null $error 错误消息
+    *
+    * @return $this
+    */
+    public function setError($error)
+    {
+        $this->container['error'] = $error;
+        return $this;
+    }
+
+    /**
+    * Gets alarmCode
+    *  告警代码
+    *
+    * @return string|null
+    */
+    public function getAlarmCode()
+    {
+        return $this->container['alarmCode'];
+    }
+
+    /**
+    * Sets alarmCode
+    *
+    * @param string|null $alarmCode 告警代码
+    *
+    * @return $this
+    */
+    public function setAlarmCode($alarmCode)
+    {
+        $this->container['alarmCode'] = $alarmCode;
         return $this;
     }
 

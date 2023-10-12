@@ -178,13 +178,10 @@ class ServerTag implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 43)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
             }
-            if ((mb_strlen($this->container['value']) < 0)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -229,7 +226,7 @@ class ServerTag implements ModelInterface, ArrayAccess
     * Gets value
     *  值。  - 长度不超过43个字符。  - 字符集：A-Z，a-z ， 0-9，‘.’，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。  - 只能包含数字、字母、中划线“-”、下划线“_”。
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -239,7 +236,7 @@ class ServerTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。  - 长度不超过43个字符。  - 字符集：A-Z，a-z ， 0-9，‘.’，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。  - 只能包含数字、字母、中划线“-”、下划线“_”。
+    * @param string|null $value 值。  - 长度不超过43个字符。  - 字符集：A-Z，a-z ， 0-9，‘.’，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。  - 只能包含数字、字母、中划线“-”、下划线“_”。
     *
     * @return $this
     */

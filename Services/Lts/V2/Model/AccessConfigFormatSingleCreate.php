@@ -184,9 +184,6 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['mode'] === null) {
-            $invalidProperties[] = "'mode' can't be null";
-        }
             $allowedValues = $this->getModeAllowableValues();
                 if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -195,13 +192,10 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 64)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 64)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['value']) < 1)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -222,7 +216,7 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
     * Gets mode
     *  单行日志。system：系统时间，wildcard：时间通配符。
     *
-    * @return string
+    * @return string|null
     */
     public function getMode()
     {
@@ -232,7 +226,7 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 单行日志。system：系统时间，wildcard：时间通配符。
+    * @param string|null $mode 单行日志。system：系统时间，wildcard：时间通配符。
     *
     * @return $this
     */
@@ -246,7 +240,7 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
     * Gets value
     *  日志时间。 当mode为”system”，则填入当前时间戳。 当mode为\"wildcard\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -256,7 +250,7 @@ class AccessConfigFormatSingleCreate implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 日志时间。 当mode为”system”，则填入当前时间戳。 当mode为\"wildcard\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
+    * @param string|null $value 日志时间。 当mode为”system”，则填入当前时间戳。 当mode为\"wildcard\"，则时间通配符：用日志打印时间来标识一条日志数据，通过时间通配符来匹配日志，每条日志的行首显示日志的打印时间；如果日志中的时间格式为：2019-01-01 23:59:59，时间通配符应该填写为：YYYY-MM-DD hh:mm:ss；如果日志中的时间格式为：19-1-1 23:59:59，时间通配符应该填写为：YY-M-D hh:mm:ss
     *
     * @return $this
     */

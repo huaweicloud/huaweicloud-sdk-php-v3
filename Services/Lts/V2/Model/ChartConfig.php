@@ -76,9 +76,9 @@ class ChartConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'canSort' => 'can_sort',
-            'canSearch' => 'can_search',
-            'pageSize' => 'page_size'
+            'canSort' => 'canSort',
+            'canSearch' => 'canSearch',
+            'pageSize' => 'pageSize'
     ];
 
     /**

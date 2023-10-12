@@ -31,6 +31,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
+    * createdBy  创建者
     *
     * @var string[]
     */
@@ -44,7 +45,8 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'string',
             'status' => 'string',
             'errorMessage' => 'string',
-            'varsStructure' => '\HuaweiCloud\SDK\Config\V1\Model\VarsStructure[]'
+            'varsStructure' => '\HuaweiCloud\SDK\Config\V1\Model\VarsStructure[]',
+            'createdBy' => 'string'
     ];
 
     /**
@@ -59,6 +61,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
+    * createdBy  创建者
     *
     * @var string[]
     */
@@ -72,7 +75,8 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
         'updatedAt' => null,
         'status' => null,
         'errorMessage' => null,
-        'varsStructure' => null
+        'varsStructure' => null,
+        'createdBy' => null
     ];
 
     /**
@@ -108,6 +112,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
+    * createdBy  创建者
     *
     * @var string[]
     */
@@ -121,7 +126,8 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'status' => 'status',
             'errorMessage' => 'error_message',
-            'varsStructure' => 'vars_structure'
+            'varsStructure' => 'vars_structure',
+            'createdBy' => 'created_by'
     ];
 
     /**
@@ -136,6 +142,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
+    * createdBy  创建者
     *
     * @var string[]
     */
@@ -149,7 +156,8 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'status' => 'setStatus',
             'errorMessage' => 'setErrorMessage',
-            'varsStructure' => 'setVarsStructure'
+            'varsStructure' => 'setVarsStructure',
+            'createdBy' => 'setCreatedBy'
     ];
 
     /**
@@ -164,6 +172,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
+    * createdBy  创建者
     *
     * @var string[]
     */
@@ -177,7 +186,8 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'status' => 'getStatus',
             'errorMessage' => 'getErrorMessage',
-            'varsStructure' => 'getVarsStructure'
+            'varsStructure' => 'getVarsStructure',
+            'createdBy' => 'getCreatedBy'
     ];
 
     /**
@@ -275,6 +285,7 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['varsStructure'] = isset($data['varsStructure']) ? $data['varsStructure'] : null;
+        $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
     }
 
     /**
@@ -559,6 +570,30 @@ class ShowConformancePackResponse implements ModelInterface, ArrayAccess
     public function setVarsStructure($varsStructure)
     {
         $this->container['varsStructure'] = $varsStructure;
+        return $this;
+    }
+
+    /**
+    * Gets createdBy
+    *  创建者
+    *
+    * @return string|null
+    */
+    public function getCreatedBy()
+    {
+        return $this->container['createdBy'];
+    }
+
+    /**
+    * Sets createdBy
+    *
+    * @param string|null $createdBy 创建者
+    *
+    * @return $this
+    */
+    public function setCreatedBy($createdBy)
+    {
+        $this->container['createdBy'] = $createdBy;
         return $this;
     }
 

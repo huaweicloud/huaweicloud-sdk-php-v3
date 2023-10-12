@@ -183,9 +183,6 @@ class CesClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['instanceName'] !== null) {
-            $queryParams['instance_name'] = $localVarParams['instanceName'];
-        }
         if ($localVarParams['instanceType'] !== null) {
             $queryParams['instance_type'] = $localVarParams['instanceType'];
         }

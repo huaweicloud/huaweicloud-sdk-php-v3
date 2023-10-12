@@ -202,6 +202,15 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['sourceLogStreamId'] === null) {
+            $invalidProperties[] = "'sourceLogStreamId' can't be null";
+        }
+        if ($this->container['targetLogStreamName'] === null) {
+            $invalidProperties[] = "'targetLogStreamName' can't be null";
+        }
+        if ($this->container['targetLogStreamTtl'] === null) {
+            $invalidProperties[] = "'targetLogStreamTtl' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +229,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     * Gets sourceLogStreamId
     *  源日志流ID
     *
-    * @return string|null
+    * @return string
     */
     public function getSourceLogStreamId()
     {
@@ -230,7 +239,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceLogStreamId
     *
-    * @param string|null $sourceLogStreamId 源日志流ID
+    * @param string $sourceLogStreamId 源日志流ID
     *
     * @return $this
     */
@@ -268,7 +277,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     * Gets targetLogStreamName
     *  目标日志流名称
     *
-    * @return string|null
+    * @return string
     */
     public function getTargetLogStreamName()
     {
@@ -278,7 +287,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetLogStreamName
     *
-    * @param string|null $targetLogStreamName 目标日志流名称
+    * @param string $targetLogStreamName 目标日志流名称
     *
     * @return $this
     */
@@ -316,7 +325,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     * Gets targetLogStreamTtl
     *  目标日志流ttl
     *
-    * @return int|null
+    * @return int
     */
     public function getTargetLogStreamTtl()
     {
@@ -326,7 +335,7 @@ class LogMappingStreamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetLogStreamTtl
     *
-    * @param int|null $targetLogStreamTtl 目标日志流ttl
+    * @param int $targetLogStreamTtl 目标日志流ttl
     *
     * @return $this
     */

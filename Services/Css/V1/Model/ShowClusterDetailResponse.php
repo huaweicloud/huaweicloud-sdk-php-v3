@@ -47,6 +47,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * tags  集群标签。
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
+    * bandwidthResourceId  es公网访问的资源id
     *
     * @var string[]
     */
@@ -76,7 +77,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterDetailTags[]',
             'failedReason' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterDetailFailedReasons',
-            'period' => 'bool'
+            'period' => 'bool',
+            'bandwidthResourceId' => 'string'
     ];
 
     /**
@@ -107,6 +109,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * tags  集群标签。
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
+    * bandwidthResourceId  es公网访问的资源id
     *
     * @var string[]
     */
@@ -136,7 +139,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'tags' => null,
         'failedReason' => null,
-        'period' => null
+        'period' => null,
+        'bandwidthResourceId' => null
     ];
 
     /**
@@ -188,6 +192,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * tags  集群标签。
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
+    * bandwidthResourceId  es公网访问的资源id
     *
     * @var string[]
     */
@@ -217,7 +222,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterpriseProjectId',
             'tags' => 'tags',
             'failedReason' => 'failedReason',
-            'period' => 'period'
+            'period' => 'period',
+            'bandwidthResourceId' => 'bandwidthResourceId'
     ];
 
     /**
@@ -248,6 +254,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * tags  集群标签。
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
+    * bandwidthResourceId  es公网访问的资源id
     *
     * @var string[]
     */
@@ -277,7 +284,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
             'failedReason' => 'setFailedReason',
-            'period' => 'setPeriod'
+            'period' => 'setPeriod',
+            'bandwidthResourceId' => 'setBandwidthResourceId'
     ];
 
     /**
@@ -308,6 +316,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * tags  集群标签。
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
+    * bandwidthResourceId  es公网访问的资源id
     *
     * @var string[]
     */
@@ -337,7 +346,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
             'failedReason' => 'getFailedReason',
-            'period' => 'getPeriod'
+            'period' => 'getPeriod',
+            'bandwidthResourceId' => 'getBandwidthResourceId'
     ];
 
     /**
@@ -424,6 +434,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['failedReason'] = isset($data['failedReason']) ? $data['failedReason'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['bandwidthResourceId'] = isset($data['bandwidthResourceId']) ? $data['bandwidthResourceId'] : null;
     }
 
     /**
@@ -1069,6 +1080,30 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     public function setPeriod($period)
     {
         $this->container['period'] = $period;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthResourceId
+    *  es公网访问的资源id
+    *
+    * @return string|null
+    */
+    public function getBandwidthResourceId()
+    {
+        return $this->container['bandwidthResourceId'];
+    }
+
+    /**
+    * Sets bandwidthResourceId
+    *
+    * @param string|null $bandwidthResourceId es公网访问的资源id
+    *
+    * @return $this
+    */
+    public function setBandwidthResourceId($bandwidthResourceId)
+    {
+        $this->container['bandwidthResourceId'] = $bandwidthResourceId;
         return $this;
     }
 

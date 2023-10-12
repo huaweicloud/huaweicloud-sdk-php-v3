@@ -25,7 +25,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * fields  显示字段列表
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * status  根椐资源状态过淲实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
@@ -53,7 +53,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * fields  显示字段列表
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * status  根椐资源状态过淲实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
@@ -102,7 +102,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * fields  显示字段列表
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * status  根椐资源状态过淲实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
@@ -130,7 +130,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * fields  显示字段列表
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * status  根椐资源状态过淲实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
@@ -158,7 +158,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     * fields  显示字段列表
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * status  根椐资源状态过淲实例
     * directConnectId  根椐物理专线ID过滤查询实例信息
@@ -426,7 +426,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤中心网络列表。
+    *  根据企业项目ID过滤资源实例
     *
     * @return string[]|null
     */
@@ -438,7 +438,7 @@ class ListVirtualInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤中心网络列表。
+    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤资源实例
     *
     * @return $this
     */

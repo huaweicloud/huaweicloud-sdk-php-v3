@@ -23,7 +23,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     * name  主机集群名
     * description  描述
     * slaveClusterId  自定义slave资源池id
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     * name  主机集群名
     * description  描述
     * slaveClusterId  自定义slave资源池id
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     * name  主机集群名
     * description  描述
     * slaveClusterId  自定义slave资源池id
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     * name  主机集群名
     * description  描述
     * slaveClusterId  自定义slave资源池id
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     * name  主机集群名
     * description  描述
     * slaveClusterId  自定义slave资源池id
-    * autoConnectionTestSwitch  自动连通性验证 0不执行 1每日 2每周
+    * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     *
     * @var string[]
     */
@@ -322,7 +322,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoConnectionTestSwitch
-    *  自动连通性验证 0不执行 1每日 2每周
+    *  自动测试功能已下架，该字段已失效
     *
     * @return int|null
     */
@@ -334,7 +334,7 @@ class DeploymentGroupUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets autoConnectionTestSwitch
     *
-    * @param int|null $autoConnectionTestSwitch 自动连通性验证 0不执行 1每日 2每周
+    * @param int|null $autoConnectionTestSwitch 自动测试功能已下架，该字段已失效
     *
     * @return $this
     */

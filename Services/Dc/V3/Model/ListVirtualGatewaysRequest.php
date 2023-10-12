@@ -26,6 +26,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * vpcId  通过VPC-ID过虑虚拟网关实例
     *
     * @var string[]
@@ -37,6 +38,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'string[]',
             'sortKey' => 'string',
             'id' => 'string[]',
+            'enterpriseProjectId' => 'string[]',
             'vpcId' => 'string[]'
     ];
 
@@ -48,6 +50,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * vpcId  通过VPC-ID过虑虚拟网关实例
     *
     * @var string[]
@@ -59,6 +62,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
         'sortDir' => null,
         'sortKey' => null,
         'id' => null,
+        'enterpriseProjectId' => null,
         'vpcId' => null
     ];
 
@@ -91,6 +95,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * vpcId  通过VPC-ID过虑虚拟网关实例
     *
     * @var string[]
@@ -102,6 +107,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'sort_dir',
             'sortKey' => 'sort_key',
             'id' => 'id',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'vpcId' => 'vpc_id'
     ];
 
@@ -113,6 +119,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * vpcId  通过VPC-ID过虑虚拟网关实例
     *
     * @var string[]
@@ -124,6 +131,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'setSortDir',
             'sortKey' => 'setSortKey',
             'id' => 'setId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'vpcId' => 'setVpcId'
     ];
 
@@ -135,6 +143,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * sortKey  排序字段。
     * id  根据资源ID过滤实例
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * vpcId  通过VPC-ID过虑虚拟网关实例
     *
     * @var string[]
@@ -146,6 +155,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'getSortDir',
             'sortKey' => 'getSortKey',
             'id' => 'getId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'vpcId' => 'getVpcId'
     ];
 
@@ -228,6 +238,7 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
     }
 
@@ -412,6 +423,30 @@ class ListVirtualGatewaysRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  根据企业项目ID过滤资源实例
+    *
+    * @return string[]|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤资源实例
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

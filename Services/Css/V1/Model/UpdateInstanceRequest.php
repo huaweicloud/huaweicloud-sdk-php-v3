@@ -22,24 +22,28 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateInstanceRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定替换集群ID。
     * instanceId  指定替换节点ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class UpdateInstanceRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\UpdateInstanceRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\UpdateInstanceRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

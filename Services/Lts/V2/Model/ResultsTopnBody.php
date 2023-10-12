@@ -27,6 +27,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称，资源类型为日志组时返回
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logGroupId' => 'string',
             'logGroupName' => 'string',
             'logStreamId' => 'string',
-            'logStreamName' => 'string'
+            'logStreamName' => 'string',
+            'basicTransfer' => 'double',
+            'seniorTransfer' => 'double',
+            'isAgencyTransfer' => 'bool'
     ];
 
     /**
@@ -49,6 +55,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称，资源类型为日志组时返回
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         'logGroupId' => null,
         'logGroupName' => null,
         'logStreamId' => null,
-        'logStreamName' => null
+        'logStreamName' => null,
+        'basicTransfer' => 'double',
+        'seniorTransfer' => 'double',
+        'isAgencyTransfer' => null
     ];
 
     /**
@@ -92,6 +104,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称，资源类型为日志组时返回
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logGroupId' => 'log_group_id',
             'logGroupName' => 'log_group_name',
             'logStreamId' => 'log_stream_id',
-            'logStreamName' => 'log_stream_name'
+            'logStreamName' => 'log_stream_name',
+            'basicTransfer' => 'basic_transfer',
+            'seniorTransfer' => 'senior_transfer',
+            'isAgencyTransfer' => 'is_agency_transfer'
     ];
 
     /**
@@ -114,6 +132,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称，资源类型为日志组时返回
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logGroupId' => 'setLogGroupId',
             'logGroupName' => 'setLogGroupName',
             'logStreamId' => 'setLogStreamId',
-            'logStreamName' => 'setLogStreamName'
+            'logStreamName' => 'setLogStreamName',
+            'basicTransfer' => 'setBasicTransfer',
+            'seniorTransfer' => 'setSeniorTransfer',
+            'isAgencyTransfer' => 'setIsAgencyTransfer'
     ];
 
     /**
@@ -136,6 +160,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称，资源类型为日志组时返回
     * logStreamId  日志流id，资源类型为日志流时返回
     * logStreamName  日志流名称，资源类型为日志流时返回
+    * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logGroupId' => 'getLogGroupId',
             'logGroupName' => 'getLogGroupName',
             'logStreamId' => 'getLogStreamId',
-            'logStreamName' => 'getLogStreamName'
+            'logStreamName' => 'getLogStreamName',
+            'basicTransfer' => 'getBasicTransfer',
+            'seniorTransfer' => 'getSeniorTransfer',
+            'isAgencyTransfer' => 'getIsAgencyTransfer'
     ];
 
     /**
@@ -214,6 +244,9 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['basicTransfer'] = isset($data['basicTransfer']) ? $data['basicTransfer'] : null;
+        $this->container['seniorTransfer'] = isset($data['seniorTransfer']) ? $data['seniorTransfer'] : null;
+        $this->container['isAgencyTransfer'] = isset($data['isAgencyTransfer']) ? $data['isAgencyTransfer'] : null;
     }
 
     /**
@@ -418,6 +451,78 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
+        return $this;
+    }
+
+    /**
+    * Gets basicTransfer
+    *  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    *
+    * @return double|null
+    */
+    public function getBasicTransfer()
+    {
+        return $this->container['basicTransfer'];
+    }
+
+    /**
+    * Sets basicTransfer
+    *
+    * @param double|null $basicTransfer 基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+    *
+    * @return $this
+    */
+    public function setBasicTransfer($basicTransfer)
+    {
+        $this->container['basicTransfer'] = $basicTransfer;
+        return $this;
+    }
+
+    /**
+    * Gets seniorTransfer
+    *  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    *
+    * @return double|null
+    */
+    public function getSeniorTransfer()
+    {
+        return $this->container['seniorTransfer'];
+    }
+
+    /**
+    * Sets seniorTransfer
+    *
+    * @param double|null $seniorTransfer 基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+    *
+    * @return $this
+    */
+    public function setSeniorTransfer($seniorTransfer)
+    {
+        $this->container['seniorTransfer'] = $seniorTransfer;
+        return $this;
+    }
+
+    /**
+    * Gets isAgencyTransfer
+    *  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    *
+    * @return bool|null
+    */
+    public function getIsAgencyTransfer()
+    {
+        return $this->container['isAgencyTransfer'];
+    }
+
+    /**
+    * Sets isAgencyTransfer
+    *
+    * @param bool|null $isAgencyTransfer 不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    *
+    * @return $this
+    */
+    public function setIsAgencyTransfer($isAgencyTransfer)
+    {
+        $this->container['isAgencyTransfer'] = $isAgencyTransfer;
         return $this;
     }
 

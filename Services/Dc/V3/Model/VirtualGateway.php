@@ -249,20 +249,7 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE__DEFAULT = 'default';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE__DEFAULT,
-        ];
-    }
 
 
     /**
@@ -327,14 +314,6 @@ class VirtualGateway implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['bgpAsn']) && ($this->container['bgpAsn'] > 4294967295)) {
                 $invalidProperties[] = "invalid value for 'bgpAsn', must be smaller than or equal to 4294967295.";
             }

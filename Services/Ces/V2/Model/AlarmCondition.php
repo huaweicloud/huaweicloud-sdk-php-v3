@@ -205,6 +205,7 @@ class AlarmCondition implements ModelInterface, ArrayAccess
     const SUPPRESS_DURATION_10800 = 10800;
     const SUPPRESS_DURATION_21600 = 21600;
     const SUPPRESS_DURATION_43200 = 43200;
+    const SUPPRESS_DURATION_86400 = 86400;
     
 
     /**
@@ -242,6 +243,7 @@ class AlarmCondition implements ModelInterface, ArrayAccess
             self::SUPPRESS_DURATION_10800,
             self::SUPPRESS_DURATION_21600,
             self::SUPPRESS_DURATION_43200,
+            self::SUPPRESS_DURATION_86400,
         ];
     }
 

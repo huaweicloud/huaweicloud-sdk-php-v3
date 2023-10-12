@@ -280,6 +280,130 @@ class CesClient extends Client
     }
 
     /**
+     * 批量删除告警通知屏蔽规则
+     *
+     * 批量删除告警通知屏蔽规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteNotificationMasks($request)
+    {
+        return $this->batchDeleteNotificationMasksWithHttpInfo($request);
+    }
+
+    public function batchDeleteNotificationMasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteNotificationMasksResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteNotificationMasksRequest');
+    }
+
+    /**
+     * 批量删除一键告警
+     *
+     * 批量删除一键告警
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteOneClickAlarms($request)
+    {
+        return $this->batchDeleteOneClickAlarmsWithHttpInfo($request);
+    }
+
+    public function batchDeleteOneClickAlarmsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteOneClickAlarmsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteOneClickAlarmsRequest');
+    }
+
+    /**
      * 批量删除资源分组
      *
      * 批量删除资源分组
@@ -466,6 +590,263 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchEnableAlarmRulesResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchEnableAlarmRulesRequest');
+    }
+
+    /**
+     * 批量修改告警通知屏蔽规则的屏蔽时间
+     *
+     * 批量修改告警通知屏蔽规则的屏蔽时间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateNotificationMaskTime($request)
+    {
+        return $this->batchUpdateNotificationMaskTimeWithHttpInfo($request);
+    }
+
+    public function batchUpdateNotificationMaskTimeWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateNotificationMaskTimeResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateNotificationMaskTimeRequest');
+    }
+
+    /**
+     * 批量设置告警通知屏蔽规则
+     *
+     * 批量设置告警通知屏蔽规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateNotificationMasks($request)
+    {
+        return $this->batchUpdateNotificationMasksWithHttpInfo($request);
+    }
+
+    public function batchUpdateNotificationMasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateNotificationMasksResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateNotificationMasksRequest');
+    }
+
+    /**
+     * 批量修改一键告警关联告警规则策略的启用状态
+     *
+     * 批量修改一键告警关联告警规则策略的启用状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateOneClickAlarmPoliciesEnabledState($request)
+    {
+        return $this->batchUpdateOneClickAlarmPoliciesEnabledStateWithHttpInfo($request);
+    }
+
+    public function batchUpdateOneClickAlarmPoliciesEnabledStateWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms/{one_click_alarm_id}/alarms/{alarm_id}/policies/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['oneClickAlarmId'] !== null) {
+            $pathParams['one_click_alarm_id'] = $localVarParams['oneClickAlarmId'];
+        }
+        if ($localVarParams['alarmId'] !== null) {
+            $pathParams['alarm_id'] = $localVarParams['alarmId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmPoliciesEnabledStateResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmPoliciesEnabledStateRequest');
+    }
+
+    /**
+     * 批量修改一键告警关联告警规则的启用状态
+     *
+     * 批量修改一键告警关联告警规则的启用状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateOneClickAlarmsEnabledState($request)
+    {
+        return $this->batchUpdateOneClickAlarmsEnabledStateWithHttpInfo($request);
+    }
+
+    public function batchUpdateOneClickAlarmsEnabledStateWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms/{one_click_alarm_id}/alarm-rules/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['oneClickAlarmId'] !== null) {
+            $pathParams['one_click_alarm_id'] = $localVarParams['oneClickAlarmId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmsEnabledStateResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\BatchUpdateOneClickAlarmsEnabledStateRequest');
     }
 
     /**
@@ -717,6 +1098,68 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\CreateDashboardWidgetsResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\CreateDashboardWidgetsRequest');
+    }
+
+    /**
+     * 创建一键告警
+     *
+     * 创建一键告警
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOneClickAlarm($request)
+    {
+        return $this->createOneClickAlarmWithHttpInfo($request);
+    }
+
+    public function createOneClickAlarmWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\CreateOneClickAlarmResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\CreateOneClickAlarmRequest');
     }
 
     /**
@@ -1557,6 +2000,68 @@ class CesClient extends Client
     }
 
     /**
+     * 查询CES指定项目指定资源类型标签列表
+     *
+     * 查询CES指定项目指定资源类型标签列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCesTargetProjectTags($request)
+    {
+        return $this->listCesTargetProjectTagsWithHttpInfo($request);
+    }
+
+    public function listCesTargetProjectTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/{resource_type}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListCesTargetProjectTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListCesTargetProjectTagsRequest');
+    }
+
+    /**
      * 查询监控看板列表
      *
      * 查询监控看板列表
@@ -1687,6 +2192,263 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardWidgetsResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListDashboardWidgetsRequest');
+    }
+
+    /**
+     * 查询告警通知屏蔽资源列表
+     *
+     * 查询告警通知屏蔽资源列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationMaskResources($request)
+    {
+        return $this->listNotificationMaskResourcesWithHttpInfo($request);
+    }
+
+    public function listNotificationMaskResourcesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks/{notification_mask_id}/resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['notificationMaskId'] !== null) {
+            $pathParams['notification_mask_id'] = $localVarParams['notificationMaskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMaskResourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMaskResourcesRequest');
+    }
+
+    /**
+     * 查询告警通知屏蔽列表
+     *
+     * 批量查询指定类型的通知屏蔽规则，目前最多支持100个通知屏蔽规则的批量查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationMasks($request)
+    {
+        return $this->listNotificationMasksWithHttpInfo($request);
+    }
+
+    public function listNotificationMasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks/batch-query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMasksResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMasksRequest');
+    }
+
+    /**
+     * 查询一键告警关联告警规则列表
+     *
+     * 查询一键告警关联告警规则列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOneClickAlarmRules($request)
+    {
+        return $this->listOneClickAlarmRulesWithHttpInfo($request);
+    }
+
+    public function listOneClickAlarmRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms/{one_click_alarm_id}/alarms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['oneClickAlarmId'] !== null) {
+            $pathParams['one_click_alarm_id'] = $localVarParams['oneClickAlarmId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListOneClickAlarmRulesResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListOneClickAlarmRulesRequest');
+    }
+
+    /**
+     * 查询一键告警列表
+     *
+     * 查询一键告警列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOneClickAlarms($request)
+    {
+        return $this->listOneClickAlarmsWithHttpInfo($request);
+    }
+
+    public function listOneClickAlarmsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\ListOneClickAlarmsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\ListOneClickAlarmsRequest');
     }
 
     /**
@@ -2033,6 +2795,71 @@ class CesClient extends Client
     }
 
     /**
+     * 修改告警规则告警通知信息
+     *
+     * 修改告警规则告警通知信息，告警策略&amp;资源请使用对应接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAlarmNotifications($request)
+    {
+        return $this->updateAlarmNotificationsWithHttpInfo($request);
+    }
+
+    public function updateAlarmNotificationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/alarms/{alarm_id}/notifications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['alarmId'] !== null) {
+            $pathParams['alarm_id'] = $localVarParams['alarmId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmNotificationsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmNotificationsRequest');
+    }
+
+    /**
      * 修改告警规则策略(全量修改)
      *
      * 修改告警规则策略(全量修改)
@@ -2225,6 +3052,136 @@ class CesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateDashboardResponse',
             $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateDashboardRequest');
+    }
+
+    /**
+     * 修改告警通知屏蔽规则
+     *
+     * 修改告警通知屏蔽规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNotificationMasks($request)
+    {
+        return $this->updateNotificationMasksWithHttpInfo($request);
+    }
+
+    public function updateNotificationMasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notification-masks/{notification_mask_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['notificationMaskId'] !== null) {
+            $pathParams['notification_mask_id'] = $localVarParams['notificationMaskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMasksResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMasksRequest');
+    }
+
+    /**
+     * 批量修改开启状态的一键告警关联告警规则的告警通知
+     *
+     * 批量修改开启状态的一键告警关联告警规则的告警通知
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOneClickAlarmNotifications($request)
+    {
+        return $this->updateOneClickAlarmNotificationsWithHttpInfo($request);
+    }
+
+    public function updateOneClickAlarmNotificationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/one-click-alarms/{one_click_alarm_id}/notifications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['oneClickAlarmId'] !== null) {
+            $pathParams['one_click_alarm_id'] = $localVarParams['oneClickAlarmId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'text/plain; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateOneClickAlarmNotificationsResponse',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateOneClickAlarmNotificationsRequest');
     }
 
     /**

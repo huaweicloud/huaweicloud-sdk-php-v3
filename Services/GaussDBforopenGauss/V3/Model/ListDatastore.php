@@ -21,25 +21,33 @@ class ListDatastore implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  数据库引擎。
-    * version  数据库版本。
+    * version  数据库大版本。
+    * completeVersion  数据库小版本。
+    * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'completeVersion' => 'string',
+            'hotfixVersions' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  数据库引擎。
-    * version  数据库版本。
+    * version  数据库大版本。
+    * completeVersion  数据库小版本。
+    * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'version' => null
+        'version' => null,
+        'completeVersion' => null,
+        'hotfixVersions' => null
     ];
 
     /**
@@ -66,37 +74,49 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  数据库引擎。
-    * version  数据库版本。
+    * version  数据库大版本。
+    * completeVersion  数据库小版本。
+    * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'version' => 'version'
+            'version' => 'version',
+            'completeVersion' => 'complete_version',
+            'hotfixVersions' => 'hotfix_versions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  数据库引擎。
-    * version  数据库版本。
+    * version  数据库大版本。
+    * completeVersion  数据库小版本。
+    * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'completeVersion' => 'setCompleteVersion',
+            'hotfixVersions' => 'setHotfixVersions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  数据库引擎。
-    * version  数据库版本。
+    * version  数据库大版本。
+    * completeVersion  数据库小版本。
+    * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'completeVersion' => 'getCompleteVersion',
+            'hotfixVersions' => 'getHotfixVersions'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['completeVersion'] = isset($data['completeVersion']) ? $data['completeVersion'] : null;
+        $this->container['hotfixVersions'] = isset($data['hotfixVersions']) ? $data['hotfixVersions'] : null;
     }
 
     /**
@@ -215,7 +237,7 @@ class ListDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据库版本。
+    *  数据库大版本。
     *
     * @return string
     */
@@ -227,13 +249,61 @@ class ListDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 数据库版本。
+    * @param string $version 数据库大版本。
     *
     * @return $this
     */
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets completeVersion
+    *  数据库小版本。
+    *
+    * @return string|null
+    */
+    public function getCompleteVersion()
+    {
+        return $this->container['completeVersion'];
+    }
+
+    /**
+    * Sets completeVersion
+    *
+    * @param string|null $completeVersion 数据库小版本。
+    *
+    * @return $this
+    */
+    public function setCompleteVersion($completeVersion)
+    {
+        $this->container['completeVersion'] = $completeVersion;
+        return $this;
+    }
+
+    /**
+    * Gets hotfixVersions
+    *  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    *
+    * @return string|null
+    */
+    public function getHotfixVersions()
+    {
+        return $this->container['hotfixVersions'];
+    }
+
+    /**
+    * Sets hotfixVersions
+    *
+    * @param string|null $hotfixVersions 数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    *
+    * @return $this
+    */
+    public function setHotfixVersions($hotfixVersions)
+    {
+        $this->container['hotfixVersions'] = $hotfixVersions;
         return $this;
     }
 

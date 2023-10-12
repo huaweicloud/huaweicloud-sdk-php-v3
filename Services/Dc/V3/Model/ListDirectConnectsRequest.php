@@ -26,7 +26,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * hostingId  根椐运营专线ID过滤托管专线列表
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
@@ -52,7 +52,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * hostingId  根椐运营专线ID过滤托管专线列表
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
@@ -99,7 +99,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * hostingId  根椐运营专线ID过滤托管专线列表
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
@@ -125,7 +125,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * hostingId  根椐运营专线ID过滤托管专线列表
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
@@ -151,7 +151,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序字段。
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * hostingId  根椐运营专线ID过滤托管专线列表
-    * enterpriseProjectId  根据企业项目ID过滤中心网络列表。
+    * enterpriseProjectId  根据企业项目ID过滤资源实例
     * id  根据资源ID过滤实例
     * name  根据名字过滤查询，可查询多个名字。
     *
@@ -439,7 +439,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤中心网络列表。
+    *  根据企业项目ID过滤资源实例
     *
     * @return string[]|null
     */
@@ -451,7 +451,7 @@ class ListDirectConnectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤中心网络列表。
+    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤资源实例
     *
     * @return $this
     */

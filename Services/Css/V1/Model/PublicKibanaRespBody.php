@@ -23,13 +23,15 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     * eipSize  带宽大小。单位：Mbit/s
     * elbWhiteListResp  elbWhiteListResp
     * publicKibanaIp  kibana访问IP。
+    * bandwidthResourceId  当前kibana公网对应的资源Id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'eipSize' => 'int',
             'elbWhiteListResp' => '\HuaweiCloud\SDK\Css\V1\Model\KibanaElbWhiteListResp',
-            'publicKibanaIp' => 'string'
+            'publicKibanaIp' => 'string',
+            'bandwidthResourceId' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     * eipSize  带宽大小。单位：Mbit/s
     * elbWhiteListResp  elbWhiteListResp
     * publicKibanaIp  kibana访问IP。
+    * bandwidthResourceId  当前kibana公网对应的资源Id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'eipSize' => null,
         'elbWhiteListResp' => null,
-        'publicKibanaIp' => null
+        'publicKibanaIp' => null,
+        'bandwidthResourceId' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     * eipSize  带宽大小。单位：Mbit/s
     * elbWhiteListResp  elbWhiteListResp
     * publicKibanaIp  kibana访问IP。
+    * bandwidthResourceId  当前kibana公网对应的资源Id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'eipSize' => 'eipSize',
             'elbWhiteListResp' => 'elbWhiteListResp',
-            'publicKibanaIp' => 'publicKibanaIp'
+            'publicKibanaIp' => 'publicKibanaIp',
+            'bandwidthResourceId' => 'bandwidthResourceId'
     ];
 
     /**
@@ -86,13 +92,15 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     * eipSize  带宽大小。单位：Mbit/s
     * elbWhiteListResp  elbWhiteListResp
     * publicKibanaIp  kibana访问IP。
+    * bandwidthResourceId  当前kibana公网对应的资源Id。
     *
     * @var string[]
     */
     protected static $setters = [
             'eipSize' => 'setEipSize',
             'elbWhiteListResp' => 'setElbWhiteListResp',
-            'publicKibanaIp' => 'setPublicKibanaIp'
+            'publicKibanaIp' => 'setPublicKibanaIp',
+            'bandwidthResourceId' => 'setBandwidthResourceId'
     ];
 
     /**
@@ -100,13 +108,15 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     * eipSize  带宽大小。单位：Mbit/s
     * elbWhiteListResp  elbWhiteListResp
     * publicKibanaIp  kibana访问IP。
+    * bandwidthResourceId  当前kibana公网对应的资源Id。
     *
     * @var string[]
     */
     protected static $getters = [
             'eipSize' => 'getEipSize',
             'elbWhiteListResp' => 'getElbWhiteListResp',
-            'publicKibanaIp' => 'getPublicKibanaIp'
+            'publicKibanaIp' => 'getPublicKibanaIp',
+            'bandwidthResourceId' => 'getBandwidthResourceId'
     ];
 
     /**
@@ -170,6 +180,7 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
         $this->container['eipSize'] = isset($data['eipSize']) ? $data['eipSize'] : null;
         $this->container['elbWhiteListResp'] = isset($data['elbWhiteListResp']) ? $data['elbWhiteListResp'] : null;
         $this->container['publicKibanaIp'] = isset($data['publicKibanaIp']) ? $data['publicKibanaIp'] : null;
+        $this->container['bandwidthResourceId'] = isset($data['bandwidthResourceId']) ? $data['bandwidthResourceId'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class PublicKibanaRespBody implements ModelInterface, ArrayAccess
     public function setPublicKibanaIp($publicKibanaIp)
     {
         $this->container['publicKibanaIp'] = $publicKibanaIp;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthResourceId
+    *  当前kibana公网对应的资源Id。
+    *
+    * @return string|null
+    */
+    public function getBandwidthResourceId()
+    {
+        return $this->container['bandwidthResourceId'];
+    }
+
+    /**
+    * Sets bandwidthResourceId
+    *
+    * @param string|null $bandwidthResourceId 当前kibana公网对应的资源Id。
+    *
+    * @return $this
+    */
+    public function setBandwidthResourceId($bandwidthResourceId)
+    {
+        $this->container['bandwidthResourceId'] = $bandwidthResourceId;
         return $this;
     }
 

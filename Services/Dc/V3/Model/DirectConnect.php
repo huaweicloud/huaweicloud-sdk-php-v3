@@ -436,12 +436,9 @@ class DirectConnect implements ModelInterface, ArrayAccess
     const TYPE_STANDARD = 'standard';
     const TYPE_HOSTING = 'hosting';
     const TYPE_HOSTED = 'hosted';
-    const TYPE_ONESTOP_STANDARD = 'onestop_standard';
-    const TYPE_ONESTOP_HOSTED = 'onestop_hosted';
     const CHARGE_MODE_PREPAYMENT = 'prepayment';
     const CHARGE_MODE_BANDWIDTH = 'bandwidth';
     const CHARGE_MODE_TRAFFIC = 'traffic';
-    const CHARGE_MODE_PORT = 'port';
     const STATUS_BUILD = 'BUILD';
     const STATUS_PAID = 'PAID';
     const STATUS_APPLY = 'APPLY';
@@ -488,8 +485,6 @@ class DirectConnect implements ModelInterface, ArrayAccess
             self::TYPE_STANDARD,
             self::TYPE_HOSTING,
             self::TYPE_HOSTED,
-            self::TYPE_ONESTOP_STANDARD,
-            self::TYPE_ONESTOP_HOSTED,
         ];
     }
 
@@ -504,7 +499,6 @@ class DirectConnect implements ModelInterface, ArrayAccess
             self::CHARGE_MODE_PREPAYMENT,
             self::CHARGE_MODE_BANDWIDTH,
             self::CHARGE_MODE_TRAFFIC,
-            self::CHARGE_MODE_PORT,
         ];
     }
 

@@ -25,7 +25,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
-    * policies  告警策略
+    * alarmTemplateId  告警规则关联告警模板ID
+    * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
@@ -34,7 +35,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @var string[]
     */
@@ -44,6 +44,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'resourceGroupId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
+            'alarmTemplateId' => 'string',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
@@ -52,8 +53,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'string',
             'enterpriseProjectId' => 'string',
             'enabled' => 'bool',
-            'notificationEnabled' => 'bool',
-            'alarmTemplateId' => 'string'
+            'notificationEnabled' => 'bool'
     ];
 
     /**
@@ -63,7 +63,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
-    * policies  告警策略
+    * alarmTemplateId  告警规则关联告警模板ID
+    * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
@@ -72,7 +73,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @var string[]
     */
@@ -82,6 +82,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'namespace' => null,
         'resourceGroupId' => null,
         'resources' => null,
+        'alarmTemplateId' => null,
         'policies' => null,
         'type' => null,
         'alarmNotifications' => null,
@@ -90,8 +91,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'notificationEndTime' => null,
         'enterpriseProjectId' => null,
         'enabled' => null,
-        'notificationEnabled' => null,
-        'alarmTemplateId' => null
+        'notificationEnabled' => null
     ];
 
     /**
@@ -122,7 +122,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
-    * policies  告警策略
+    * alarmTemplateId  告警规则关联告警模板ID
+    * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
@@ -131,7 +132,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @var string[]
     */
@@ -141,6 +141,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'namespace',
             'resourceGroupId' => 'resource_group_id',
             'resources' => 'resources',
+            'alarmTemplateId' => 'alarm_template_id',
             'policies' => 'policies',
             'type' => 'type',
             'alarmNotifications' => 'alarm_notifications',
@@ -149,8 +150,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'notification_end_time',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enabled' => 'enabled',
-            'notificationEnabled' => 'notification_enabled',
-            'alarmTemplateId' => 'alarm_template_id'
+            'notificationEnabled' => 'notification_enabled'
     ];
 
     /**
@@ -160,7 +160,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
-    * policies  告警策略
+    * alarmTemplateId  告警规则关联告警模板ID
+    * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
@@ -169,7 +170,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @var string[]
     */
@@ -179,6 +179,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'setNamespace',
             'resourceGroupId' => 'setResourceGroupId',
             'resources' => 'setResources',
+            'alarmTemplateId' => 'setAlarmTemplateId',
             'policies' => 'setPolicies',
             'type' => 'setType',
             'alarmNotifications' => 'setAlarmNotifications',
@@ -187,8 +188,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'setNotificationEndTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enabled' => 'setEnabled',
-            'notificationEnabled' => 'setNotificationEnabled',
-            'alarmTemplateId' => 'setAlarmTemplateId'
+            'notificationEnabled' => 'setNotificationEnabled'
     ];
 
     /**
@@ -198,7 +198,8 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * namespace  查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
-    * policies  告警策略
+    * alarmTemplateId  告警规则关联告警模板ID
+    * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
     * okNotifications  告警恢复触发的动作
@@ -207,7 +208,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * enabled  告警开关
     * notificationEnabled  是否开启告警通知
-    * alarmTemplateId  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
     *
     * @var string[]
     */
@@ -217,6 +217,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'namespace' => 'getNamespace',
             'resourceGroupId' => 'getResourceGroupId',
             'resources' => 'getResources',
+            'alarmTemplateId' => 'getAlarmTemplateId',
             'policies' => 'getPolicies',
             'type' => 'getType',
             'alarmNotifications' => 'getAlarmNotifications',
@@ -225,8 +226,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'notificationEndTime' => 'getNotificationEndTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enabled' => 'getEnabled',
-            'notificationEnabled' => 'getNotificationEnabled',
-            'alarmTemplateId' => 'getAlarmTemplateId'
+            'notificationEnabled' => 'getNotificationEnabled'
     ];
 
     /**
@@ -292,6 +292,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['resourceGroupId'] = isset($data['resourceGroupId']) ? $data['resourceGroupId'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['alarmNotifications'] = isset($data['alarmNotifications']) ? $data['alarmNotifications'] : null;
@@ -301,7 +302,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['notificationEnabled'] = isset($data['notificationEnabled']) ? $data['notificationEnabled'] : null;
-        $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
     }
 
     /**
@@ -348,6 +348,15 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['resources'] === null) {
             $invalidProperties[] = "'resources' can't be null";
         }
+            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
+                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -378,15 +387,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         if ($this->container['notificationEnabled'] === null) {
             $invalidProperties[] = "'notificationEnabled' can't be null";
         }
-            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['alarmTemplateId']) && (mb_strlen($this->container['alarmTemplateId']) < 2)) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', the character length must be bigger than or equal to 2.";
-            }
-            if (!is_null($this->container['alarmTemplateId']) && !preg_match("/^at([0-9A-Za-z])+$/", $this->container['alarmTemplateId'])) {
-                $invalidProperties[] = "invalid value for 'alarmTemplateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
-            }
         return $invalidProperties;
     }
 
@@ -522,8 +522,32 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets alarmTemplateId
+    *  告警规则关联告警模板ID
+    *
+    * @return string|null
+    */
+    public function getAlarmTemplateId()
+    {
+        return $this->container['alarmTemplateId'];
+    }
+
+    /**
+    * Sets alarmTemplateId
+    *
+    * @param string|null $alarmTemplateId 告警规则关联告警模板ID
+    *
+    * @return $this
+    */
+    public function setAlarmTemplateId($alarmTemplateId)
+    {
+        $this->container['alarmTemplateId'] = $alarmTemplateId;
+        return $this;
+    }
+
+    /**
     * Gets policies
-    *  告警策略
+    *  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null
     */
@@ -535,7 +559,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies 告警策略
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies 告警策略，当alarm_template_id字段为空时必填，不为空时不填
     *
     * @return $this
     */
@@ -734,30 +758,6 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     public function setNotificationEnabled($notificationEnabled)
     {
         $this->container['notificationEnabled'] = $notificationEnabled;
-        return $this;
-    }
-
-    /**
-    * Gets alarmTemplateId
-    *  告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
-    *
-    * @return string|null
-    */
-    public function getAlarmTemplateId()
-    {
-        return $this->container['alarmTemplateId'];
-    }
-
-    /**
-    * Sets alarmTemplateId
-    *
-    * @param string|null $alarmTemplateId 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
-    *
-    * @return $this
-    */
-    public function setAlarmTemplateId($alarmTemplateId)
-    {
-        $this->container['alarmTemplateId'] = $alarmTemplateId;
         return $this;
     }
 

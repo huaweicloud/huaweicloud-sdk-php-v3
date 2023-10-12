@@ -42,6 +42,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * energyType  能源类型。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -67,7 +70,10 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'remarks' => 'string',
             'inspectionRecord' => 'string',
             'codeNumber' => 'string',
-            'textLocation' => 'object'
+            'textLocation' => 'object',
+            'energyType' => 'string',
+            'front' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseFront',
+            'back' => '\HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback'
     ];
 
     /**
@@ -94,6 +100,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * energyType  能源类型。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -119,7 +128,10 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         'remarks' => null,
         'inspectionRecord' => null,
         'codeNumber' => null,
-        'textLocation' => null
+        'textLocation' => null,
+        'energyType' => null,
+        'front' => null,
+        'back' => null
     ];
 
     /**
@@ -167,6 +179,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * energyType  能源类型。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -192,7 +207,10 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'remarks' => 'remarks',
             'inspectionRecord' => 'inspection_record',
             'codeNumber' => 'code_number',
-            'textLocation' => 'text_location'
+            'textLocation' => 'text_location',
+            'energyType' => 'energy_type',
+            'front' => 'front',
+            'back' => 'back'
     ];
 
     /**
@@ -219,6 +237,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * energyType  能源类型。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -244,7 +265,10 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'remarks' => 'setRemarks',
             'inspectionRecord' => 'setInspectionRecord',
             'codeNumber' => 'setCodeNumber',
-            'textLocation' => 'setTextLocation'
+            'textLocation' => 'setTextLocation',
+            'energyType' => 'setEnergyType',
+            'front' => 'setFront',
+            'back' => 'setBack'
     ];
 
     /**
@@ -271,6 +295,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    * energyType  能源类型。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -296,7 +323,10 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'remarks' => 'getRemarks',
             'inspectionRecord' => 'getInspectionRecord',
             'codeNumber' => 'getCodeNumber',
-            'textLocation' => 'getTextLocation'
+            'textLocation' => 'getTextLocation',
+            'energyType' => 'getEnergyType',
+            'front' => 'getFront',
+            'back' => 'getBack'
     ];
 
     /**
@@ -379,6 +409,9 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         $this->container['inspectionRecord'] = isset($data['inspectionRecord']) ? $data['inspectionRecord'] : null;
         $this->container['codeNumber'] = isset($data['codeNumber']) ? $data['codeNumber'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['energyType'] = isset($data['energyType']) ? $data['energyType'] : null;
+        $this->container['front'] = isset($data['front']) ? $data['front'] : null;
+        $this->container['back'] = isset($data['back']) ? $data['back'] : null;
     }
 
     /**
@@ -928,6 +961,78 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets energyType
+    *  能源类型。
+    *
+    * @return string|null
+    */
+    public function getEnergyType()
+    {
+        return $this->container['energyType'];
+    }
+
+    /**
+    * Sets energyType
+    *
+    * @param string|null $energyType 能源类型。
+    *
+    * @return $this
+    */
+    public function setEnergyType($energyType)
+    {
+        $this->container['energyType'] = $energyType;
+        return $this;
+    }
+
+    /**
+    * Gets front
+    *  front
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseFront|null
+    */
+    public function getFront()
+    {
+        return $this->container['front'];
+    }
+
+    /**
+    * Sets front
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseFront|null $front front
+    *
+    * @return $this
+    */
+    public function setFront($front)
+    {
+        $this->container['front'] = $front;
+        return $this;
+    }
+
+    /**
+    * Gets back
+    *  back
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback|null
+    */
+    public function getBack()
+    {
+        return $this->container['back'];
+    }
+
+    /**
+    * Sets back
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\VehicleLicenseback|null $back back
+    *
+    * @return $this
+    */
+    public function setBack($back)
+    {
+        $this->container['back'] = $back;
         return $this;
     }
 

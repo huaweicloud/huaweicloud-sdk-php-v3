@@ -24,6 +24,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     * policyAssignmentName  合规规则名称
     * compliance  compliance
     * accountId  源帐号ID。
+    * accountName  帐户名称
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'string',
             'policyAssignmentName' => 'string',
             'compliance' => '\HuaweiCloud\SDK\Config\V1\Model\Compliance',
-            'accountId' => 'string'
+            'accountId' => 'string',
+            'accountName' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     * policyAssignmentName  合规规则名称
     * compliance  compliance
     * accountId  源帐号ID。
+    * accountName  帐户名称
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
         'policyAssignmentId' => null,
         'policyAssignmentName' => null,
         'compliance' => null,
-        'accountId' => null
+        'accountId' => null,
+        'accountName' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     * policyAssignmentName  合规规则名称
     * compliance  compliance
     * accountId  源帐号ID。
+    * accountName  帐户名称
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'policy_assignment_id',
             'policyAssignmentName' => 'policy_assignment_name',
             'compliance' => 'compliance',
-            'accountId' => 'account_id'
+            'accountId' => 'account_id',
+            'accountName' => 'account_name'
     ];
 
     /**
@@ -93,6 +99,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     * policyAssignmentName  合规规则名称
     * compliance  compliance
     * accountId  源帐号ID。
+    * accountName  帐户名称
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'setPolicyAssignmentId',
             'policyAssignmentName' => 'setPolicyAssignmentName',
             'compliance' => 'setCompliance',
-            'accountId' => 'setAccountId'
+            'accountId' => 'setAccountId',
+            'accountName' => 'setAccountName'
     ];
 
     /**
@@ -109,6 +117,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     * policyAssignmentName  合规规则名称
     * compliance  compliance
     * accountId  源帐号ID。
+    * accountName  帐户名称
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'getPolicyAssignmentId',
             'policyAssignmentName' => 'getPolicyAssignmentName',
             'compliance' => 'getCompliance',
-            'accountId' => 'getAccountId'
+            'accountId' => 'getAccountId',
+            'accountName' => 'getAccountName'
     ];
 
     /**
@@ -181,6 +191,7 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
         $this->container['policyAssignmentName'] = isset($data['policyAssignmentName']) ? $data['policyAssignmentName'] : null;
         $this->container['compliance'] = isset($data['compliance']) ? $data['compliance'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class AggregatePolicyAssignments implements ModelInterface, ArrayAccess
     public function setAccountId($accountId)
     {
         $this->container['accountId'] = $accountId;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  帐户名称
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName 帐户名称
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
         return $this;
     }
 

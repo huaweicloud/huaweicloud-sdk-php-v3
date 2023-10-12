@@ -1368,6 +1368,9 @@ class SmsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enableCaCert'] !== null) {
+            $queryParams['enable_ca_cert'] = $localVarParams['enableCaCert'];
+        }
         if ($localVarParams['taskId'] !== null) {
             $pathParams['task_id'] = $localVarParams['taskId'];
         }

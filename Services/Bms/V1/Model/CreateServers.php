@@ -59,7 +59,7 @@ class CreateServers implements ModelInterface, ArrayAccess
             'dataVolumes' => '\HuaweiCloud\SDK\Bms\V1\Model\DataVolumes[]',
             'extendparam' => '\HuaweiCloud\SDK\Bms\V1\Model\ExtendParam',
             'schedulerHints' => '\HuaweiCloud\SDK\Bms\V1\Model\CreateSchedulerHints',
-            'serverTags' => 'map[string,\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]]'
+            'serverTags' => '\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]'
     ];
 
     /**
@@ -801,7 +801,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     * Gets serverTags
     *  裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
     *
-    * @return map[string,\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]]|null
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]|null
     */
     public function getServerTags()
     {
@@ -811,7 +811,7 @@ class CreateServers implements ModelInterface, ArrayAccess
     /**
     * Sets serverTags
     *
-    * @param map[string,\HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]]|null $serverTags 裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\SystemTags[]|null $serverTags 裸金属服务器的标签。详情请参见表 server_tags字段数据结构说明。 说明：创建裸金属服务器时，一台裸金属服务器最多可以添加10个标签。其中，__type_baremetal为系统内部标签，因此实际能添加的标签为9个。
     *
     * @return $this
     */

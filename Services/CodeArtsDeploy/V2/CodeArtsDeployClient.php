@@ -288,7 +288,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 获取应用列表
      *
-     * 查询项目下应用列表
+     * 查询项目下应用列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -353,7 +353,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
      *
-     * 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
+     * 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -626,6 +626,71 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
+     * 查询部署记录的执行参数
+     *
+     * 查询部署记录的执行参数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showExecutionParams($request)
+    {
+        return $this->showExecutionParamsWithHttpInfo($request);
+    }
+
+    public function showExecutionParamsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/history/tasks/{task_id}/params';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['recordId'] !== null) {
+            $queryParams['record_id'] = $localVarParams['recordId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowExecutionParamsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowExecutionParamsRequest');
+    }
+
+    /**
      * 部署应用
      *
      * 根据部署任务id部署应用。
@@ -696,7 +761,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 应用下创建环境
      *
-     * 应用下创建环境
+     * 应用下创建环境。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -764,7 +829,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 删除应用下的环境
      *
-     * 删除应用下的环境
+     * 删除应用下的环境。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -832,7 +897,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 环境下删除主机
      *
-     * 环境下删除主机
+     * 环境下删除主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -903,7 +968,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 环境下导入主机
      *
-     * 环境下导入主机
+     * 环境下导入主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -974,7 +1039,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 查询应用下环境列表
      *
-     * 查询应用下环境列表
+     * 查询应用下环境列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1054,7 +1119,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 查询环境详情
      *
-     * 查询环境详情
+     * 查询环境详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2052,7 +2117,7 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
-     * 查询主机集群
+     * 查询主机集群详情
      *
      * 根据主机集群id查询主机集群详情。该接口于2024年09月30日后不再维护，推荐使用新版ShowHostClusterDetail接口。
      * 
@@ -2114,7 +2179,7 @@ class CodeArtsDeployClient extends Client
     }
 
     /**
-     * 查询主机集群
+     * 查询主机集群详情
      *
      * 根据主机集群id查询主机集群详情。
      * 
@@ -2246,7 +2311,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 获取指定应用的应用部署成功率
      *
-     * 获取指定应用的应用部署成功率
+     * 获取指定应用的应用部署成功率。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2311,7 +2376,7 @@ class CodeArtsDeployClient extends Client
     /**
      * 获取指定项目的应用部署成功率
      *
-     * 获取指定项目的应用部署成功率
+     * 获取指定项目的应用部署成功率。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

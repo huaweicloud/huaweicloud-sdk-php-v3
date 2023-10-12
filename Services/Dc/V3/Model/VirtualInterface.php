@@ -349,9 +349,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SERVICE_TYPE_VPC = 'vpc';
     const SERVICE_TYPE_VGW = 'VGW';
-    const SERVICE_TYPE_GDWW = 'GDWW';
+    const SERVICE_TYPE_GDGW = 'GDGW';
     const SERVICE_TYPE_LGW = 'LGW';
     const TYPE__PRIVATE = 'private';
     const TYPE__PUBLIC = 'public';
@@ -365,9 +364,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     public function getServiceTypeAllowableValues()
     {
         return [
-            self::SERVICE_TYPE_VPC,
             self::SERVICE_TYPE_VGW,
-            self::SERVICE_TYPE_GDWW,
+            self::SERVICE_TYPE_GDGW,
             self::SERVICE_TYPE_LGW,
         ];
     }

@@ -22,24 +22,28 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  插件名称
     * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * version  插件版本
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'version' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  插件名称
     * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * version  插件版本
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'status' => null
+        'status' => null,
+        'version' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  插件名称
     * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * version  插件版本
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'status' => 'status'
+            'status' => 'status',
+            'version' => 'version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  插件名称
     * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * version  插件版本
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'version' => 'setVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  插件名称
     * status  插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+    * version  插件版本
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -180,6 +190,7 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -204,6 +215,12 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 32)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -263,6 +280,30 @@ class ExtensionInfo implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  插件版本
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 插件版本
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

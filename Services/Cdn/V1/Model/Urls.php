@@ -28,6 +28,7 @@ class Urls implements ModelInterface, ArrayAccess
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
     * fileType  文件类型，目录还是文件。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class Urls implements ModelInterface, ArrayAccess
             'taskId' => 'int',
             'modifyTime' => 'int',
             'createTime' => 'int',
-            'fileType' => 'string'
+            'fileType' => 'string',
+            'mode' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class Urls implements ModelInterface, ArrayAccess
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
     * fileType  文件类型，目录还是文件。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class Urls implements ModelInterface, ArrayAccess
         'taskId' => 'int64',
         'modifyTime' => 'int64',
         'createTime' => 'int64',
-        'fileType' => null
+        'fileType' => null,
+        'mode' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class Urls implements ModelInterface, ArrayAccess
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
     * fileType  文件类型，目录还是文件。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class Urls implements ModelInterface, ArrayAccess
             'taskId' => 'task_id',
             'modifyTime' => 'modify_time',
             'createTime' => 'create_time',
-            'fileType' => 'file_type'
+            'fileType' => 'file_type',
+            'mode' => 'mode'
     ];
 
     /**
@@ -121,6 +127,7 @@ class Urls implements ModelInterface, ArrayAccess
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
     * fileType  文件类型，目录还是文件。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class Urls implements ModelInterface, ArrayAccess
             'taskId' => 'setTaskId',
             'modifyTime' => 'setModifyTime',
             'createTime' => 'setCreateTime',
-            'fileType' => 'setFileType'
+            'fileType' => 'setFileType',
+            'mode' => 'setMode'
     ];
 
     /**
@@ -145,6 +153,7 @@ class Urls implements ModelInterface, ArrayAccess
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
     * fileType  文件类型，目录还是文件。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class Urls implements ModelInterface, ArrayAccess
             'taskId' => 'getTaskId',
             'modifyTime' => 'getModifyTime',
             'createTime' => 'getCreateTime',
-            'fileType' => 'getFileType'
+            'fileType' => 'getFileType',
+            'mode' => 'getMode'
     ];
 
     /**
@@ -225,6 +235,7 @@ class Urls implements ModelInterface, ArrayAccess
         $this->container['modifyTime'] = isset($data['modifyTime']) ? $data['modifyTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class Urls implements ModelInterface, ArrayAccess
     public function setFileType($fileType)
     {
         $this->container['fileType'] = $fileType;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定删除标签的集群ID。
     * resourceType  资源类型，当前固定值为“css-cluster”，表示是集群类型。
-    * key  需要删除的标签名。
+    * key  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定删除标签的集群ID。
     * resourceType  资源类型，当前固定值为“css-cluster”，表示是集群类型。
-    * key  需要删除的标签名。
+    * key  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  指定删除标签的集群ID。
     * resourceType  资源类型，当前固定值为“css-cluster”，表示是集群类型。
-    * key  需要删除的标签名。
+    * key  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定删除标签的集群ID。
     * resourceType  资源类型，当前固定值为“css-cluster”，表示是集群类型。
-    * key  需要删除的标签名。
+    * key  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定删除标签的集群ID。
     * resourceType  资源类型，当前固定值为“css-cluster”，表示是集群类型。
-    * key  需要删除的标签名。
+    * key  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  需要删除的标签名。
+    *  需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DeleteClustersTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 需要删除的标签名。
+    * @param string $key 需要删除的标签名。如果标签名为中文需要经过url编码再调用该接口。
     *
     * @return $this
     */

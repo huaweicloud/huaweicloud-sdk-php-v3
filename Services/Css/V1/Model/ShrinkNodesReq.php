@@ -20,21 +20,25 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'migrateData' => 'string',
             'shrinkNodes' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'migrateData' => null,
         'shrinkNodes' => null
     ];
 
@@ -61,31 +65,37 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'migrateData' => 'migrate_data',
             'shrinkNodes' => 'shrinkNodes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
     *
     * @var string[]
     */
     protected static $setters = [
+            'migrateData' => 'setMigrateData',
             'shrinkNodes' => 'setShrinkNodes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * migrateData  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
     * shrinkNodes  需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
     *
     * @var string[]
     */
     protected static $getters = [
+            'migrateData' => 'getMigrateData',
             'shrinkNodes' => 'getShrinkNodes'
     ];
 
@@ -147,6 +157,7 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['migrateData'] = isset($data['migrateData']) ? $data['migrateData'] : null;
         $this->container['shrinkNodes'] = isset($data['shrinkNodes']) ? $data['shrinkNodes'] : null;
     }
 
@@ -173,6 +184,30 @@ class ShrinkNodesReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets migrateData
+    *  是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
+    *
+    * @return string|null
+    */
+    public function getMigrateData()
+    {
+        return $this->container['migrateData'];
+    }
+
+    /**
+    * Sets migrateData
+    *
+    * @param string|null $migrateData 是否迁移数据。 - \"true\"：迁移数据。 - \"false\"：不迁移数据。
+    *
+    * @return $this
+    */
+    public function setMigrateData($migrateData)
+    {
+        $this->container['migrateData'] = $migrateData;
+        return $this;
     }
 
     /**

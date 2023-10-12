@@ -23,13 +23,15 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
+    * groupAccountName  账号名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceDetails' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyComplianceSummaryUnit',
             'assignmentDetails' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyComplianceSummaryUnit',
-            'groupName' => 'string'
+            'groupName' => 'string',
+            'groupAccountName' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
+    * groupAccountName  账号名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceDetails' => null,
         'assignmentDetails' => null,
-        'groupName' => null
+        'groupName' => null,
+        'groupAccountName' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
+    * groupAccountName  账号名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceDetails' => 'resource_details',
             'assignmentDetails' => 'assignment_details',
-            'groupName' => 'group_name'
+            'groupName' => 'group_name',
+            'groupAccountName' => 'group_account_name'
     ];
 
     /**
@@ -86,13 +92,15 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
+    * groupAccountName  账号名称
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceDetails' => 'setResourceDetails',
             'assignmentDetails' => 'setAssignmentDetails',
-            'groupName' => 'setGroupName'
+            'groupName' => 'setGroupName',
+            'groupAccountName' => 'setGroupAccountName'
     ];
 
     /**
@@ -100,13 +108,15 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
+    * groupAccountName  账号名称
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceDetails' => 'getResourceDetails',
             'assignmentDetails' => 'getAssignmentDetails',
-            'groupName' => 'getGroupName'
+            'groupName' => 'getGroupName',
+            'groupAccountName' => 'getGroupAccountName'
     ];
 
     /**
@@ -170,6 +180,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
         $this->container['resourceDetails'] = isset($data['resourceDetails']) ? $data['resourceDetails'] : null;
         $this->container['assignmentDetails'] = isset($data['assignmentDetails']) ? $data['assignmentDetails'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['groupAccountName'] = isset($data['groupAccountName']) ? $data['groupAccountName'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets groupAccountName
+    *  账号名称
+    *
+    * @return string|null
+    */
+    public function getGroupAccountName()
+    {
+        return $this->container['groupAccountName'];
+    }
+
+    /**
+    * Sets groupAccountName
+    *
+    * @param string|null $groupAccountName 账号名称
+    *
+    * @return $this
+    */
+    public function setGroupAccountName($groupAccountName)
+    {
+        $this->container['groupAccountName'] = $groupAccountName;
         return $this;
     }
 
