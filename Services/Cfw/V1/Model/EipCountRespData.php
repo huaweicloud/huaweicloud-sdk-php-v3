@@ -22,28 +22,32 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * eipTotal  EIP总数
-    * eipProtected  EIP防护数
+    * eipProtected  该账号下所有墙防护EIP总数量
+    * eipProtectedSelf  该当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'objectId' => 'string',
             'eipTotal' => 'int',
-            'eipProtected' => 'int'
+            'eipProtected' => 'int',
+            'eipProtectedSelf' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * eipTotal  EIP总数
-    * eipProtected  EIP防护数
+    * eipProtected  该账号下所有墙防护EIP总数量
+    * eipProtectedSelf  该当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'objectId' => null,
         'eipTotal' => 'int32',
-        'eipProtected' => 'int32'
+        'eipProtected' => 'int32',
+        'eipProtectedSelf' => 'int32'
     ];
 
     /**
@@ -71,42 +75,48 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * eipTotal  EIP总数
-    * eipProtected  EIP防护数
+    * eipProtected  该账号下所有墙防护EIP总数量
+    * eipProtectedSelf  该当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'objectId' => 'object_id',
             'eipTotal' => 'eip_total',
-            'eipProtected' => 'eip_protected'
+            'eipProtected' => 'eip_protected',
+            'eipProtectedSelf' => 'eip_protected_self'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * eipTotal  EIP总数
-    * eipProtected  EIP防护数
+    * eipProtected  该账号下所有墙防护EIP总数量
+    * eipProtectedSelf  该当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $setters = [
             'objectId' => 'setObjectId',
             'eipTotal' => 'setEipTotal',
-            'eipProtected' => 'setEipProtected'
+            'eipProtected' => 'setEipProtected',
+            'eipProtectedSelf' => 'setEipProtectedSelf'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * eipTotal  EIP总数
-    * eipProtected  EIP防护数
+    * eipProtected  该账号下所有墙防护EIP总数量
+    * eipProtectedSelf  该当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $getters = [
             'objectId' => 'getObjectId',
             'eipTotal' => 'getEipTotal',
-            'eipProtected' => 'getEipProtected'
+            'eipProtected' => 'getEipProtected',
+            'eipProtectedSelf' => 'getEipProtectedSelf'
     ];
 
     /**
@@ -170,6 +180,7 @@ class EipCountRespData implements ModelInterface, ArrayAccess
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['eipTotal'] = isset($data['eipTotal']) ? $data['eipTotal'] : null;
         $this->container['eipProtected'] = isset($data['eipProtected']) ? $data['eipProtected'] : null;
+        $this->container['eipProtectedSelf'] = isset($data['eipProtectedSelf']) ? $data['eipProtectedSelf'] : null;
     }
 
     /**
@@ -259,7 +270,7 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipProtected
-    *  EIP防护数
+    *  该账号下所有墙防护EIP总数量
     *
     * @return int|null
     */
@@ -271,13 +282,37 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     /**
     * Sets eipProtected
     *
-    * @param int|null $eipProtected EIP防护数
+    * @param int|null $eipProtected 该账号下所有墙防护EIP总数量
     *
     * @return $this
     */
     public function setEipProtected($eipProtected)
     {
         $this->container['eipProtected'] = $eipProtected;
+        return $this;
+    }
+
+    /**
+    * Gets eipProtectedSelf
+    *  该当前防火墙防护EIP数量
+    *
+    * @return int|null
+    */
+    public function getEipProtectedSelf()
+    {
+        return $this->container['eipProtectedSelf'];
+    }
+
+    /**
+    * Sets eipProtectedSelf
+    *
+    * @param int|null $eipProtectedSelf 该当前防火墙防护EIP数量
+    *
+    * @return $this
+    */
+    public function setEipProtectedSelf($eipProtectedSelf)
+    {
+        $this->container['eipProtectedSelf'] = $eipProtectedSelf;
         return $this;
     }
 

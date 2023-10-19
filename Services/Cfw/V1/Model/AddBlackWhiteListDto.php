@@ -27,6 +27,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
+    * description  描述
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
             'addressType' => 'int',
             'address' => 'string',
             'protocol' => 'int',
-            'port' => 'string'
+            'port' => 'string',
+            'description' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
+    * description  描述
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
         'addressType' => null,
         'address' => null,
         'protocol' => null,
-        'port' => null
+        'port' => null,
+        'description' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
+    * description  描述
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
             'addressType' => 'address_type',
             'address' => 'address',
             'protocol' => 'protocol',
-            'port' => 'port'
+            'port' => 'port',
+            'description' => 'description'
     ];
 
     /**
@@ -114,6 +120,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
+    * description  描述
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
             'addressType' => 'setAddressType',
             'address' => 'setAddress',
             'protocol' => 'setProtocol',
-            'port' => 'setPort'
+            'port' => 'setPort',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -136,6 +144,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
+    * description  描述
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
             'addressType' => 'getAddressType',
             'address' => 'getAddress',
             'protocol' => 'getProtocol',
-            'port' => 'getPort'
+            'port' => 'getPort',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -214,6 +224,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -427,6 +438,30 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     public function setPort($port)
     {
         $this->container['port'] = $port;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

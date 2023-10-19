@@ -20,8 +20,8 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页。
-    * previousMarker  上一页的marker，值为资源的uuid，为空时表示第一页。
+    * nextMarker  向后分页标识符。
+    * previousMarker  向前分页标识符。
     * currentCount  当前列表中资源数量。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页。
-    * previousMarker  上一页的marker，值为资源的uuid，为空时表示第一页。
+    * nextMarker  向后分页标识符。
+    * previousMarker  向前分页标识符。
     * currentCount  当前列表中资源数量。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页。
-    * previousMarker  上一页的marker，值为资源的uuid，为空时表示第一页。
+    * nextMarker  向后分页标识符。
+    * previousMarker  向前分页标识符。
     * currentCount  当前列表中资源数量。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页。
-    * previousMarker  上一页的marker，值为资源的uuid，为空时表示第一页。
+    * nextMarker  向后分页标识符。
+    * previousMarker  向前分页标识符。
     * currentCount  当前列表中资源数量。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextMarker  下一页的marker，值为资源的uuid，为空时表示最后一页。
-    * previousMarker  上一页的marker，值为资源的uuid，为空时表示第一页。
+    * nextMarker  向后分页标识符。
+    * previousMarker  向前分页标识符。
     * currentCount  当前列表中资源数量。
     *
     * @var string[]
@@ -180,22 +180,25 @@ class PageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['nextMarker']) && (mb_strlen($this->container['nextMarker']) > 36)) {
-                $invalidProperties[] = "invalid value for 'nextMarker', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['nextMarker']) && (mb_strlen($this->container['nextMarker']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'nextMarker', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['nextMarker']) && (mb_strlen($this->container['nextMarker']) < 0)) {
-                $invalidProperties[] = "invalid value for 'nextMarker', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['nextMarker']) && (mb_strlen($this->container['nextMarker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nextMarker', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['previousMarker']) && (mb_strlen($this->container['previousMarker']) > 36)) {
-                $invalidProperties[] = "invalid value for 'previousMarker', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['previousMarker']) && (mb_strlen($this->container['previousMarker']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'previousMarker', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['previousMarker']) && (mb_strlen($this->container['previousMarker']) < 0)) {
-                $invalidProperties[] = "invalid value for 'previousMarker', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['previousMarker']) && (mb_strlen($this->container['previousMarker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'previousMarker', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['currentCount']) && ($this->container['currentCount'] > 2000)) {
+        if ($this->container['currentCount'] === null) {
+            $invalidProperties[] = "'currentCount' can't be null";
+        }
+            if (($this->container['currentCount'] > 2000)) {
                 $invalidProperties[] = "invalid value for 'currentCount', must be smaller than or equal to 2000.";
             }
-            if (!is_null($this->container['currentCount']) && ($this->container['currentCount'] < 0)) {
+            if (($this->container['currentCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'currentCount', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -214,7 +217,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  下一页的marker，值为资源的uuid，为空时表示最后一页。
+    *  向后分页标识符。
     *
     * @return string|null
     */
@@ -226,7 +229,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker 下一页的marker，值为资源的uuid，为空时表示最后一页。
+    * @param string|null $nextMarker 向后分页标识符。
     *
     * @return $this
     */
@@ -238,7 +241,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousMarker
-    *  上一页的marker，值为资源的uuid，为空时表示第一页。
+    *  向前分页标识符。
     *
     * @return string|null
     */
@@ -250,7 +253,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets previousMarker
     *
-    * @param string|null $previousMarker 上一页的marker，值为资源的uuid，为空时表示第一页。
+    * @param string|null $previousMarker 向前分页标识符。
     *
     * @return $this
     */
@@ -264,7 +267,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     * Gets currentCount
     *  当前列表中资源数量。
     *
-    * @return int|null
+    * @return int
     */
     public function getCurrentCount()
     {
@@ -274,7 +277,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentCount
     *
-    * @param int|null $currentCount 当前列表中资源数量。
+    * @param int $currentCount 当前列表中资源数量。
     *
     * @return $this
     */

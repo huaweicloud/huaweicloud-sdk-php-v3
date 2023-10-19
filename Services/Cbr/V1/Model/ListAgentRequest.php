@@ -31,7 +31,7 @@ class ListAgentRequest implements ModelInterface, ArrayAccess
             'limit' => 'string',
             'offset' => 'int',
             'status' => 'string',
-            'agentId' => 'string'
+            'agentId' => 'string[]'
     ];
 
     /**
@@ -287,7 +287,7 @@ class ListAgentRequest implements ModelInterface, ArrayAccess
     * Gets agentId
     *  客户端ID
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getAgentId()
     {
@@ -297,7 +297,7 @@ class ListAgentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId 客户端ID
+    * @param string[]|null $agentId 客户端ID
     *
     * @return $this
     */

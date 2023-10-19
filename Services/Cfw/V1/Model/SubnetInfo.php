@@ -27,6 +27,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * gatewayIp  子网网关ip
     * vpcId  vpc id
     * status  子网的状态
+    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class SubnetInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'gatewayIp' => 'string',
             'vpcId' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'ipv6Enable' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * gatewayIp  子网网关ip
     * vpcId  vpc id
     * status  子网的状态
+    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class SubnetInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'gatewayIp' => null,
         'vpcId' => null,
-        'status' => null
+        'status' => null,
+        'ipv6Enable' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * gatewayIp  子网网关ip
     * vpcId  vpc id
     * status  子网的状态
+    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class SubnetInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'gatewayIp' => 'gateway_ip',
             'vpcId' => 'vpc_id',
-            'status' => 'status'
+            'status' => 'status',
+            'ipv6Enable' => 'ipv6_enable'
     ];
 
     /**
@@ -114,6 +120,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * gatewayIp  子网网关ip
     * vpcId  vpc id
     * status  子网的状态
+    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class SubnetInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'gatewayIp' => 'setGatewayIp',
             'vpcId' => 'setVpcId',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'ipv6Enable' => 'setIpv6Enable'
     ];
 
     /**
@@ -136,6 +144,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * gatewayIp  子网网关ip
     * vpcId  vpc id
     * status  子网的状态
+    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class SubnetInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'gatewayIp' => 'getGatewayIp',
             'vpcId' => 'getVpcId',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'ipv6Enable' => 'getIpv6Enable'
     ];
 
     /**
@@ -214,6 +224,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
         $this->container['gatewayIp'] = isset($data['gatewayIp']) ? $data['gatewayIp'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
     }
 
     /**
@@ -224,15 +235,9 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['cidr'] === null) {
-            $invalidProperties[] = "'cidr' can't be null";
-        }
-            if (!preg_match("/^(?:(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(?:\\.(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}(?:(?:\/|\\\\)(?:\\d|[1-2]\\d|3[0-2]))?)$/", $this->container['cidr'])) {
+            if (!is_null($this->container['cidr']) && !preg_match("/^(?:(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(?:\\.(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}(?:(?:\/|\\\\)(?:\\d|[1-2]\\d|3[0-2]))?)$/", $this->container['cidr'])) {
                 $invalidProperties[] = "invalid value for 'cidr', must be conform to the pattern /^(?:(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(?:\\.(?:[0-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}(?:(?:\/|\\\\)(?:\\d|[1-2]\\d|3[0-2]))?)$/.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -275,7 +280,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * Gets cidr
     *  vpc cidr
     *
-    * @return string
+    * @return string|null
     */
     public function getCidr()
     {
@@ -285,7 +290,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string $cidr vpc cidr
+    * @param string|null $cidr vpc cidr
     *
     * @return $this
     */
@@ -299,7 +304,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     * Gets name
     *  子网名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -309,7 +314,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 子网名称
+    * @param string|null $name 子网名称
     *
     * @return $this
     */
@@ -412,6 +417,30 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Enable
+    *  是否支持ipv6，boolean值为true表示是，false表示否
+    *
+    * @return bool|null
+    */
+    public function getIpv6Enable()
+    {
+        return $this->container['ipv6Enable'];
+    }
+
+    /**
+    * Sets ipv6Enable
+    *
+    * @param bool|null $ipv6Enable 是否支持ipv6，boolean值为true表示是，false表示否
+    *
+    * @return $this
+    */
+    public function setIpv6Enable($ipv6Enable)
+    {
+        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

@@ -22,24 +22,28 @@ class ChangeSeversOsMetadataWithoutCloudInitOption implements ModelInterface, Ar
     * Array of property to type mappings. Used for (de)serialization
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'systemEncrypted' => 'string',
-            'systemCmkid' => 'string'
+            'systemCmkid' => 'string',
+            'byol' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'systemEncrypted' => null,
-        'systemCmkid' => null
+        'systemCmkid' => null,
+        'byol' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ChangeSeversOsMetadataWithoutCloudInitOption implements ModelInterface, Ar
     * and the value is the original name
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'systemEncrypted' => '__system__encrypted',
-            'systemCmkid' => '__system__cmkid'
+            'systemCmkid' => '__system__cmkid',
+            'byol' => 'BYOL'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $setters = [
             'systemEncrypted' => 'setSystemEncrypted',
-            'systemCmkid' => 'setSystemCmkid'
+            'systemCmkid' => 'setSystemCmkid',
+            'byol' => 'setByol'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $getters = [
             'systemEncrypted' => 'getSystemEncrypted',
-            'systemCmkid' => 'getSystemCmkid'
+            'systemCmkid' => 'getSystemCmkid',
+            'byol' => 'getByol'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ChangeSeversOsMetadataWithoutCloudInitOption implements ModelInterface, Ar
     {
         $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : null;
         $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
+        $this->container['byol'] = isset($data['byol']) ? $data['byol'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ChangeSeversOsMetadataWithoutCloudInitOption implements ModelInterface, Ar
     public function setSystemCmkid($systemCmkid)
     {
         $this->container['systemCmkid'] = $systemCmkid;
+        return $this;
+    }
+
+    /**
+    * Gets byol
+    *  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
+    *
+    * @return string|null
+    */
+    public function getByol()
+    {
+        return $this->container['byol'];
+    }
+
+    /**
+    * Sets byol
+    *
+    * @param string|null $byol 如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
+    *
+    * @return $this
+    */
+    public function setByol($byol)
+    {
+        $this->container['byol'] = $byol;
         return $this;
     }
 

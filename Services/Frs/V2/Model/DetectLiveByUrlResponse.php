@@ -23,24 +23,28 @@ class DetectLiveByUrlResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoResult  videoResult
     * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。调用失败时无此字段](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'videoResult' => '\HuaweiCloud\SDK\Frs\V2\Model\LiveDetectRespVideoresult',
-            'warningList' => '\HuaweiCloud\SDK\Frs\V2\Model\WarningList[]'
+            'warningList' => '\HuaweiCloud\SDK\Frs\V2\Model\WarningList[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * videoResult  videoResult
     * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。调用失败时无此字段](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'videoResult' => null,
-        'warningList' => null
+        'warningList' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class DetectLiveByUrlResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoResult  videoResult
     * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。调用失败时无此字段](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'videoResult' => 'video-result',
-            'warningList' => 'warning-list'
+            'warningList' => 'warning-list',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * videoResult  videoResult
     * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。调用失败时无此字段](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'videoResult' => 'setVideoResult',
-            'warningList' => 'setWarningList'
+            'warningList' => 'setWarningList',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * videoResult  videoResult
     * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。调用失败时无此字段](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'videoResult' => 'getVideoResult',
-            'warningList' => 'getWarningList'
+            'warningList' => 'getWarningList',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class DetectLiveByUrlResponse implements ModelInterface, ArrayAccess
     {
         $this->container['videoResult'] = isset($data['videoResult']) ? $data['videoResult'] : null;
         $this->container['warningList'] = isset($data['warningList']) ? $data['warningList'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class DetectLiveByUrlResponse implements ModelInterface, ArrayAccess
     public function setWarningList($warningList)
     {
         $this->container['warningList'] = $warningList;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * items  地址组成员id列表
+    * coveredIp  覆盖ip列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]'
+            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]',
+            'coveredIp' => '\HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * items  地址组成员id列表
+    * coveredIp  覆盖ip列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'items' => null
+        'items' => null,
+        'coveredIp' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AddressItems implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * items  地址组成员id列表
+    * coveredIp  覆盖ip列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'items' => 'items'
+            'items' => 'items',
+            'coveredIp' => 'covered_ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * items  地址组成员id列表
+    * coveredIp  覆盖ip列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'items' => 'setItems'
+            'items' => 'setItems',
+            'coveredIp' => 'setCoveredIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * items  地址组成员id列表
+    * coveredIp  覆盖ip列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'items' => 'getItems'
+            'items' => 'getItems',
+            'coveredIp' => 'getCoveredIp'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['coveredIp'] = isset($data['coveredIp']) ? $data['coveredIp'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class AddressItems implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+        return $this;
+    }
+
+    /**
+    * Gets coveredIp
+    *  覆盖ip列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]|null
+    */
+    public function getCoveredIp()
+    {
+        return $this->container['coveredIp'];
+    }
+
+    /**
+    * Sets coveredIp
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]|null $coveredIp 覆盖ip列表
+    *
+    * @return $this
+    */
+    public function setCoveredIp($coveredIp)
+    {
+        $this->container['coveredIp'] = $coveredIp;
         return $this;
     }
 

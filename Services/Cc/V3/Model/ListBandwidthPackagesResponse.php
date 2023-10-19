@@ -21,30 +21,30 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bandwidthPackages  带宽包实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * bandwidthPackages  带宽包实例列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bandwidthPackages' => '\HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[]',
+            'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
-            'requestId' => 'string'
+            'bandwidthPackages' => '\HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bandwidthPackages  带宽包实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * bandwidthPackages  带宽包实例列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bandwidthPackages' => null,
+        'requestId' => null,
         'pageInfo' => null,
-        'requestId' => null
+        'bandwidthPackages' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bandwidthPackages  带宽包实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * bandwidthPackages  带宽包实例列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'bandwidthPackages' => 'bandwidth_packages',
+            'requestId' => 'request_id',
             'pageInfo' => 'page_info',
-            'requestId' => 'request_id'
+            'bandwidthPackages' => 'bandwidth_packages'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bandwidthPackages  带宽包实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * bandwidthPackages  带宽包实例列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'bandwidthPackages' => 'setBandwidthPackages',
+            'requestId' => 'setRequestId',
             'pageInfo' => 'setPageInfo',
-            'requestId' => 'setRequestId'
+            'bandwidthPackages' => 'setBandwidthPackages'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bandwidthPackages  带宽包实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * bandwidthPackages  带宽包实例列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'bandwidthPackages' => 'getBandwidthPackages',
+            'requestId' => 'getRequestId',
             'pageInfo' => 'getPageInfo',
-            'requestId' => 'getRequestId'
+            'bandwidthPackages' => 'getBandwidthPackages'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['bandwidthPackages'] = isset($data['bandwidthPackages']) ? $data['bandwidthPackages'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['bandwidthPackages'] = isset($data['bandwidthPackages']) ? $data['bandwidthPackages'] : null;
     }
 
     /**
@@ -181,12 +181,18 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['bandwidthPackages'] === null) {
+            $invalidProperties[] = "'bandwidthPackages' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -202,26 +208,26 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bandwidthPackages
-    *  带宽包实例列表。
+    * Gets requestId
+    *  资源ID标识符。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[]|null
+    * @return string
     */
-    public function getBandwidthPackages()
+    public function getRequestId()
     {
-        return $this->container['bandwidthPackages'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets bandwidthPackages
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[]|null $bandwidthPackages 带宽包实例列表。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
-    public function setBandwidthPackages($bandwidthPackages)
+    public function setRequestId($requestId)
     {
-        $this->container['bandwidthPackages'] = $bandwidthPackages;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
@@ -250,26 +256,26 @@ class ListBandwidthPackagesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  请求ID。
+    * Gets bandwidthPackages
+    *  带宽包实例列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[]
     */
-    public function getRequestId()
+    public function getBandwidthPackages()
     {
-        return $this->container['requestId'];
+        return $this->container['bandwidthPackages'];
     }
 
     /**
-    * Sets requestId
+    * Sets bandwidthPackages
     *
-    * @param string|null $requestId 请求ID。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage[] $bandwidthPackages 带宽包实例列表。
     *
     * @return $this
     */
-    public function setRequestId($requestId)
+    public function setBandwidthPackages($bandwidthPackages)
     {
-        $this->container['requestId'] = $requestId;
+        $this->container['bandwidthPackages'] = $bandwidthPackages;
         return $this;
     }
 

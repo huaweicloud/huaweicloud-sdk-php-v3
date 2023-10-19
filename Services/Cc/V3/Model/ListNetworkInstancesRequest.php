@@ -20,14 +20,14 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  分页查询时，每页返回的个数。
-    * marker  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * id  根据ID过滤网络实例列表。
-    * name  根据名称过滤网络实例列表。
-    * description  根据描述过滤网络实例列表。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * id  根据id查询，可查询多个id。
+    * name  根据名字查询，可查询多个名字。
+    * description  根据描述查询，可查询多个描述。
+    * cloudConnectionId  根据云连接的ID过滤列表。
     * status  根据状态过滤网络实例列表。ACTIVE：表示状态可用。
     * type  根据类型过滤网络实例列表。
-    * cloudConnectionId  根据云连接实例ID过滤网络实例列表。
     * instanceId  根据网络实例ID过滤网络实例列表。
     * regionId  根据网络实例所在的Region过滤网络实例列表。
     *
@@ -39,23 +39,23 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
             'id' => 'string[]',
             'name' => 'string[]',
             'description' => 'string[]',
+            'cloudConnectionId' => 'string[]',
             'status' => 'string[]',
             'type' => 'string[]',
-            'cloudConnectionId' => 'string[]',
             'instanceId' => 'string[]',
             'regionId' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  分页查询时，每页返回的个数。
-    * marker  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * id  根据ID过滤网络实例列表。
-    * name  根据名称过滤网络实例列表。
-    * description  根据描述过滤网络实例列表。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * id  根据id查询，可查询多个id。
+    * name  根据名字查询，可查询多个名字。
+    * description  根据描述查询，可查询多个描述。
+    * cloudConnectionId  根据云连接的ID过滤列表。
     * status  根据状态过滤网络实例列表。ACTIVE：表示状态可用。
     * type  根据类型过滤网络实例列表。
-    * cloudConnectionId  根据云连接实例ID过滤网络实例列表。
     * instanceId  根据网络实例ID过滤网络实例列表。
     * regionId  根据网络实例所在的Region过滤网络实例列表。
     *
@@ -67,9 +67,9 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'description' => null,
+        'cloudConnectionId' => null,
         'status' => null,
         'type' => null,
-        'cloudConnectionId' => null,
         'instanceId' => null,
         'regionId' => null
     ];
@@ -97,14 +97,14 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  分页查询时，每页返回的个数。
-    * marker  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * id  根据ID过滤网络实例列表。
-    * name  根据名称过滤网络实例列表。
-    * description  根据描述过滤网络实例列表。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * id  根据id查询，可查询多个id。
+    * name  根据名字查询，可查询多个名字。
+    * description  根据描述查询，可查询多个描述。
+    * cloudConnectionId  根据云连接的ID过滤列表。
     * status  根据状态过滤网络实例列表。ACTIVE：表示状态可用。
     * type  根据类型过滤网络实例列表。
-    * cloudConnectionId  根据云连接实例ID过滤网络实例列表。
     * instanceId  根据网络实例ID过滤网络实例列表。
     * regionId  根据网络实例所在的Region过滤网络实例列表。
     *
@@ -116,23 +116,23 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'description' => 'description',
+            'cloudConnectionId' => 'cloud_connection_id',
             'status' => 'status',
             'type' => 'type',
-            'cloudConnectionId' => 'cloud_connection_id',
             'instanceId' => 'instance_id',
             'regionId' => 'region_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  分页查询时，每页返回的个数。
-    * marker  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * id  根据ID过滤网络实例列表。
-    * name  根据名称过滤网络实例列表。
-    * description  根据描述过滤网络实例列表。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * id  根据id查询，可查询多个id。
+    * name  根据名字查询，可查询多个名字。
+    * description  根据描述查询，可查询多个描述。
+    * cloudConnectionId  根据云连接的ID过滤列表。
     * status  根据状态过滤网络实例列表。ACTIVE：表示状态可用。
     * type  根据类型过滤网络实例列表。
-    * cloudConnectionId  根据云连接实例ID过滤网络实例列表。
     * instanceId  根据网络实例ID过滤网络实例列表。
     * regionId  根据网络实例所在的Region过滤网络实例列表。
     *
@@ -144,23 +144,23 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'cloudConnectionId' => 'setCloudConnectionId',
             'status' => 'setStatus',
             'type' => 'setType',
-            'cloudConnectionId' => 'setCloudConnectionId',
             'instanceId' => 'setInstanceId',
             'regionId' => 'setRegionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  分页查询时，每页返回的个数。
-    * marker  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-    * id  根据ID过滤网络实例列表。
-    * name  根据名称过滤网络实例列表。
-    * description  根据描述过滤网络实例列表。
+    * limit  每页返回的个数。 取值范围：1~1000。
+    * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
+    * id  根据id查询，可查询多个id。
+    * name  根据名字查询，可查询多个名字。
+    * description  根据描述查询，可查询多个描述。
+    * cloudConnectionId  根据云连接的ID过滤列表。
     * status  根据状态过滤网络实例列表。ACTIVE：表示状态可用。
     * type  根据类型过滤网络实例列表。
-    * cloudConnectionId  根据云连接实例ID过滤网络实例列表。
     * instanceId  根据网络实例ID过滤网络实例列表。
     * regionId  根据网络实例所在的Region过滤网络实例列表。
     *
@@ -172,9 +172,9 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'cloudConnectionId' => 'getCloudConnectionId',
             'status' => 'getStatus',
             'type' => 'getType',
-            'cloudConnectionId' => 'getCloudConnectionId',
             'instanceId' => 'getInstanceId',
             'regionId' => 'getRegionId'
     ];
@@ -255,9 +255,9 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['cloudConnectionId'] = isset($data['cloudConnectionId']) ? $data['cloudConnectionId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['cloudConnectionId'] = isset($data['cloudConnectionId']) ? $data['cloudConnectionId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
     }
@@ -270,17 +270,17 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -298,7 +298,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页查询时，每页返回的个数。
+    *  每页返回的个数。 取值范围：1~1000。
     *
     * @return int|null
     */
@@ -310,7 +310,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页查询时，每页返回的个数。
+    * @param int|null $limit 每页返回的个数。 取值范围：1~1000。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+    *  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+    * @param string|null $marker 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤网络实例列表。
+    *  根据id查询，可查询多个id。
     *
     * @return string[]|null
     */
@@ -358,7 +358,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤网络实例列表。
+    * @param string[]|null $id 根据id查询，可查询多个id。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称过滤网络实例列表。
+    *  根据名字查询，可查询多个名字。
     *
     * @return string[]|null
     */
@@ -382,7 +382,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名称过滤网络实例列表。
+    * @param string[]|null $name 根据名字查询，可查询多个名字。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  根据描述过滤网络实例列表。
+    *  根据描述查询，可查询多个描述。
     *
     * @return string[]|null
     */
@@ -406,13 +406,37 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description 根据描述过滤网络实例列表。
+    * @param string[]|null $description 根据描述查询，可查询多个描述。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets cloudConnectionId
+    *  根据云连接的ID过滤列表。
+    *
+    * @return string[]|null
+    */
+    public function getCloudConnectionId()
+    {
+        return $this->container['cloudConnectionId'];
+    }
+
+    /**
+    * Sets cloudConnectionId
+    *
+    * @param string[]|null $cloudConnectionId 根据云连接的ID过滤列表。
+    *
+    * @return $this
+    */
+    public function setCloudConnectionId($cloudConnectionId)
+    {
+        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 
@@ -461,30 +485,6 @@ class ListNetworkInstancesRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets cloudConnectionId
-    *  根据云连接实例ID过滤网络实例列表。
-    *
-    * @return string[]|null
-    */
-    public function getCloudConnectionId()
-    {
-        return $this->container['cloudConnectionId'];
-    }
-
-    /**
-    * Sets cloudConnectionId
-    *
-    * @param string[]|null $cloudConnectionId 根据云连接实例ID过滤网络实例列表。
-    *
-    * @return $this
-    */
-    public function setCloudConnectionId($cloudConnectionId)
-    {
-        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 

@@ -21,26 +21,26 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * cloudConnection  cloudConnection
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cloudConnection' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnection',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'cloudConnection' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnection'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * cloudConnection  cloudConnection
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cloudConnection' => null,
-        'requestId' => null
+        'requestId' => null,
+        'cloudConnection' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  资源ID标识符。
     * cloudConnection  cloudConnection
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cloudConnection' => 'cloud_connection',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'cloudConnection' => 'cloud_connection'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  资源ID标识符。
     * cloudConnection  cloudConnection
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'cloudConnection' => 'setCloudConnection',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'cloudConnection' => 'setCloudConnection'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  资源ID标识符。
     * cloudConnection  cloudConnection
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'cloudConnection' => 'getCloudConnection',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'cloudConnection' => 'getCloudConnection'
     ];
 
     /**
@@ -158,8 +158,8 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cloudConnection'] = isset($data['cloudConnection']) ? $data['cloudConnection'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['cloudConnection'] = isset($data['cloudConnection']) ? $data['cloudConnection'] : null;
     }
 
     /**
@@ -170,12 +170,18 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['cloudConnection'] === null) {
+            $invalidProperties[] = "'cloudConnection' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -191,34 +197,10 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cloudConnection
-    *  cloudConnection
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection|null
-    */
-    public function getCloudConnection()
-    {
-        return $this->container['cloudConnection'];
-    }
-
-    /**
-    * Sets cloudConnection
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection|null $cloudConnection cloudConnection
-    *
-    * @return $this
-    */
-    public function setCloudConnection($cloudConnection)
-    {
-        $this->container['cloudConnection'] = $cloudConnection;
-        return $this;
-    }
-
-    /**
     * Gets requestId
-    *  请求ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getRequestId()
     {
@@ -228,13 +210,37 @@ class CreateCloudConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets cloudConnection
+    *  cloudConnection
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection
+    */
+    public function getCloudConnection()
+    {
+        return $this->container['cloudConnection'];
+    }
+
+    /**
+    * Sets cloudConnection
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection $cloudConnection cloudConnection
+    *
+    * @return $this
+    */
+    public function setCloudConnection($cloudConnection)
+    {
+        $this->container['cloudConnection'] = $cloudConnection;
         return $this;
     }
 

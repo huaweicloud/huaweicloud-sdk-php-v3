@@ -26,6 +26,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
     * addressSetName  地址组名称
     * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * regionListJson  规则region列表json值
+    * regionList  规则region列表
+    * domainSetId  域名组id
+    * domainSetName  域名组名称
+    * ipAddress  IP地址列表
+    * addressGroup  地址组列表
+    * addressGroupNames  地址组名称列表
     *
     * @var string[]
     */
@@ -35,7 +42,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'address' => 'string',
             'addressSetId' => 'string',
             'addressSetName' => 'string',
-            'domainAddressName' => 'string'
+            'domainAddressName' => 'string',
+            'regionListJson' => 'string',
+            'regionList' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]',
+            'domainSetId' => 'string',
+            'domainSetName' => 'string',
+            'ipAddress' => 'string[]',
+            'addressGroup' => 'string[]',
+            'addressGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]'
     ];
 
     /**
@@ -46,6 +60,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
     * addressSetName  地址组名称
     * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * regionListJson  规则region列表json值
+    * regionList  规则region列表
+    * domainSetId  域名组id
+    * domainSetName  域名组名称
+    * ipAddress  IP地址列表
+    * addressGroup  地址组列表
+    * addressGroupNames  地址组名称列表
     *
     * @var string[]
     */
@@ -55,7 +76,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
         'address' => null,
         'addressSetId' => null,
         'addressSetName' => null,
-        'domainAddressName' => null
+        'domainAddressName' => null,
+        'regionListJson' => null,
+        'regionList' => null,
+        'domainSetId' => null,
+        'domainSetName' => null,
+        'ipAddress' => null,
+        'addressGroup' => null,
+        'addressGroupNames' => null
     ];
 
     /**
@@ -87,6 +115,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
     * addressSetName  地址组名称
     * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * regionListJson  规则region列表json值
+    * regionList  规则region列表
+    * domainSetId  域名组id
+    * domainSetName  域名组名称
+    * ipAddress  IP地址列表
+    * addressGroup  地址组列表
+    * addressGroupNames  地址组名称列表
     *
     * @var string[]
     */
@@ -96,7 +131,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'address' => 'address',
             'addressSetId' => 'address_set_id',
             'addressSetName' => 'address_set_name',
-            'domainAddressName' => 'domain_address_name'
+            'domainAddressName' => 'domain_address_name',
+            'regionListJson' => 'region_list_json',
+            'regionList' => 'region_list',
+            'domainSetId' => 'domain_set_id',
+            'domainSetName' => 'domain_set_name',
+            'ipAddress' => 'ip_address',
+            'addressGroup' => 'address_group',
+            'addressGroupNames' => 'address_group_names'
     ];
 
     /**
@@ -107,6 +149,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
     * addressSetName  地址组名称
     * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * regionListJson  规则region列表json值
+    * regionList  规则region列表
+    * domainSetId  域名组id
+    * domainSetName  域名组名称
+    * ipAddress  IP地址列表
+    * addressGroup  地址组列表
+    * addressGroupNames  地址组名称列表
     *
     * @var string[]
     */
@@ -116,7 +165,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'addressSetId' => 'setAddressSetId',
             'addressSetName' => 'setAddressSetName',
-            'domainAddressName' => 'setDomainAddressName'
+            'domainAddressName' => 'setDomainAddressName',
+            'regionListJson' => 'setRegionListJson',
+            'regionList' => 'setRegionList',
+            'domainSetId' => 'setDomainSetId',
+            'domainSetName' => 'setDomainSetName',
+            'ipAddress' => 'setIpAddress',
+            'addressGroup' => 'setAddressGroup',
+            'addressGroupNames' => 'setAddressGroupNames'
     ];
 
     /**
@@ -127,6 +183,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
     * addressSetName  地址组名称
     * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * regionListJson  规则region列表json值
+    * regionList  规则region列表
+    * domainSetId  域名组id
+    * domainSetName  域名组名称
+    * ipAddress  IP地址列表
+    * addressGroup  地址组列表
+    * addressGroupNames  地址组名称列表
     *
     * @var string[]
     */
@@ -136,7 +199,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'addressSetId' => 'getAddressSetId',
             'addressSetName' => 'getAddressSetName',
-            'domainAddressName' => 'getDomainAddressName'
+            'domainAddressName' => 'getDomainAddressName',
+            'regionListJson' => 'getRegionListJson',
+            'regionList' => 'getRegionList',
+            'domainSetId' => 'getDomainSetId',
+            'domainSetName' => 'getDomainSetName',
+            'ipAddress' => 'getIpAddress',
+            'addressGroup' => 'getAddressGroup',
+            'addressGroupNames' => 'getAddressGroupNames'
     ];
 
     /**
@@ -203,6 +273,13 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
         $this->container['addressSetId'] = isset($data['addressSetId']) ? $data['addressSetId'] : null;
         $this->container['addressSetName'] = isset($data['addressSetName']) ? $data['addressSetName'] : null;
         $this->container['domainAddressName'] = isset($data['domainAddressName']) ? $data['domainAddressName'] : null;
+        $this->container['regionListJson'] = isset($data['regionListJson']) ? $data['regionListJson'] : null;
+        $this->container['regionList'] = isset($data['regionList']) ? $data['regionList'] : null;
+        $this->container['domainSetId'] = isset($data['domainSetId']) ? $data['domainSetId'] : null;
+        $this->container['domainSetName'] = isset($data['domainSetName']) ? $data['domainSetName'] : null;
+        $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
+        $this->container['addressGroup'] = isset($data['addressGroup']) ? $data['addressGroup'] : null;
+        $this->container['addressGroupNames'] = isset($data['addressGroupNames']) ? $data['addressGroupNames'] : null;
     }
 
     /**
@@ -371,6 +448,174 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     public function setDomainAddressName($domainAddressName)
     {
         $this->container['domainAddressName'] = $domainAddressName;
+        return $this;
+    }
+
+    /**
+    * Gets regionListJson
+    *  规则region列表json值
+    *
+    * @return string|null
+    */
+    public function getRegionListJson()
+    {
+        return $this->container['regionListJson'];
+    }
+
+    /**
+    * Sets regionListJson
+    *
+    * @param string|null $regionListJson 规则region列表json值
+    *
+    * @return $this
+    */
+    public function setRegionListJson($regionListJson)
+    {
+        $this->container['regionListJson'] = $regionListJson;
+        return $this;
+    }
+
+    /**
+    * Gets regionList
+    *  规则region列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null
+    */
+    public function getRegionList()
+    {
+        return $this->container['regionList'];
+    }
+
+    /**
+    * Sets regionList
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则region列表
+    *
+    * @return $this
+    */
+    public function setRegionList($regionList)
+    {
+        $this->container['regionList'] = $regionList;
+        return $this;
+    }
+
+    /**
+    * Gets domainSetId
+    *  域名组id
+    *
+    * @return string|null
+    */
+    public function getDomainSetId()
+    {
+        return $this->container['domainSetId'];
+    }
+
+    /**
+    * Sets domainSetId
+    *
+    * @param string|null $domainSetId 域名组id
+    *
+    * @return $this
+    */
+    public function setDomainSetId($domainSetId)
+    {
+        $this->container['domainSetId'] = $domainSetId;
+        return $this;
+    }
+
+    /**
+    * Gets domainSetName
+    *  域名组名称
+    *
+    * @return string|null
+    */
+    public function getDomainSetName()
+    {
+        return $this->container['domainSetName'];
+    }
+
+    /**
+    * Sets domainSetName
+    *
+    * @param string|null $domainSetName 域名组名称
+    *
+    * @return $this
+    */
+    public function setDomainSetName($domainSetName)
+    {
+        $this->container['domainSetName'] = $domainSetName;
+        return $this;
+    }
+
+    /**
+    * Gets ipAddress
+    *  IP地址列表
+    *
+    * @return string[]|null
+    */
+    public function getIpAddress()
+    {
+        return $this->container['ipAddress'];
+    }
+
+    /**
+    * Sets ipAddress
+    *
+    * @param string[]|null $ipAddress IP地址列表
+    *
+    * @return $this
+    */
+    public function setIpAddress($ipAddress)
+    {
+        $this->container['ipAddress'] = $ipAddress;
+        return $this;
+    }
+
+    /**
+    * Gets addressGroup
+    *  地址组列表
+    *
+    * @return string[]|null
+    */
+    public function getAddressGroup()
+    {
+        return $this->container['addressGroup'];
+    }
+
+    /**
+    * Sets addressGroup
+    *
+    * @param string[]|null $addressGroup 地址组列表
+    *
+    * @return $this
+    */
+    public function setAddressGroup($addressGroup)
+    {
+        $this->container['addressGroup'] = $addressGroup;
+        return $this;
+    }
+
+    /**
+    * Gets addressGroupNames
+    *  地址组名称列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null
+    */
+    public function getAddressGroupNames()
+    {
+        return $this->container['addressGroupNames'];
+    }
+
+    /**
+    * Sets addressGroupNames
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null $addressGroupNames 地址组名称列表
+    *
+    * @return $this
+    */
+    public function setAddressGroupNames($addressGroupNames)
+    {
+        $this->container['addressGroupNames'] = $addressGroupNames;
         return $this;
     }
 

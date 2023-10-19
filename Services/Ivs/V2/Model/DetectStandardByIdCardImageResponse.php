@@ -23,24 +23,28 @@ class DetectStandardByIdCardImageResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * meta  meta
     * result  result
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'meta' => '\HuaweiCloud\SDK\Ivs\V2\Model\Meta',
-            'result' => '\HuaweiCloud\SDK\Ivs\V2\Model\IvsStandardByIdCardImageResponseBodyResult'
+            'result' => '\HuaweiCloud\SDK\Ivs\V2\Model\IvsStandardByIdCardImageResponseBodyResult',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * meta  meta
     * result  result
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'meta' => null,
-        'result' => null
+        'result' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class DetectStandardByIdCardImageResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * meta  meta
     * result  result
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'meta' => 'meta',
-            'result' => 'result'
+            'result' => 'result',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * meta  meta
     * result  result
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'meta' => 'setMeta',
-            'result' => 'setResult'
+            'result' => 'setResult',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * meta  meta
     * result  result
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'meta' => 'getMeta',
-            'result' => 'getResult'
+            'result' => 'getResult',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class DetectStandardByIdCardImageResponse implements ModelInterface, ArrayAccess
     {
         $this->container['meta'] = isset($data['meta']) ? $data['meta'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class DetectStandardByIdCardImageResponse implements ModelInterface, ArrayAccess
     public function setResult($result)
     {
         $this->container['result'] = $result;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

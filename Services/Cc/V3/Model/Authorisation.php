@@ -20,19 +20,19 @@ class Authorisation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  授权的ID。
-    * name  授权的名称。
-    * description  授权的描述信息。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * domainId  实例所属帐号ID。
+    * cloudConnectionId  资源ID标识符。
     * status  授权的状态。
-    * createdAt  创建授权的时间。
-    * updatedAt  更新授权的时间。
-    * domainId  授权者的账户ID。
-    * instanceId  授权实例的ID。
     * instanceType  授权实例的类型。
-    * regionId  授权实例所属Region。
-    * projectId  授权实例所属项目ID。
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
-    * cloudConnectionId  被授权云连接实例ID。
     *
     * @var string[]
     */
@@ -40,33 +40,33 @@ class Authorisation implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'description' => 'string',
-            'status' => 'string',
+            'instanceId' => 'string',
+            'projectId' => 'string',
+            'regionId' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'domainId' => 'string',
-            'instanceId' => 'string',
+            'cloudConnectionId' => 'string',
+            'status' => 'string',
             'instanceType' => 'string',
-            'regionId' => 'string',
-            'projectId' => 'string',
-            'cloudConnectionDomainId' => 'string',
-            'cloudConnectionId' => 'string'
+            'cloudConnectionDomainId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  授权的ID。
-    * name  授权的名称。
-    * description  授权的描述信息。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * domainId  实例所属帐号ID。
+    * cloudConnectionId  资源ID标识符。
     * status  授权的状态。
-    * createdAt  创建授权的时间。
-    * updatedAt  更新授权的时间。
-    * domainId  授权者的账户ID。
-    * instanceId  授权实例的ID。
     * instanceType  授权实例的类型。
-    * regionId  授权实例所属Region。
-    * projectId  授权实例所属项目ID。
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
-    * cloudConnectionId  被授权云连接实例ID。
     *
     * @var string[]
     */
@@ -74,16 +74,16 @@ class Authorisation implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'description' => null,
-        'status' => null,
+        'instanceId' => null,
+        'projectId' => null,
+        'regionId' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
         'domainId' => null,
-        'instanceId' => null,
+        'cloudConnectionId' => null,
+        'status' => null,
         'instanceType' => null,
-        'regionId' => null,
-        'projectId' => null,
-        'cloudConnectionDomainId' => null,
-        'cloudConnectionId' => null
+        'cloudConnectionDomainId' => null
     ];
 
     /**
@@ -109,19 +109,19 @@ class Authorisation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  授权的ID。
-    * name  授权的名称。
-    * description  授权的描述信息。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * domainId  实例所属帐号ID。
+    * cloudConnectionId  资源ID标识符。
     * status  授权的状态。
-    * createdAt  创建授权的时间。
-    * updatedAt  更新授权的时间。
-    * domainId  授权者的账户ID。
-    * instanceId  授权实例的ID。
     * instanceType  授权实例的类型。
-    * regionId  授权实例所属Region。
-    * projectId  授权实例所属项目ID。
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
-    * cloudConnectionId  被授权云连接实例ID。
     *
     * @var string[]
     */
@@ -129,33 +129,33 @@ class Authorisation implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'description' => 'description',
-            'status' => 'status',
+            'instanceId' => 'instance_id',
+            'projectId' => 'project_id',
+            'regionId' => 'region_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'domainId' => 'domain_id',
-            'instanceId' => 'instance_id',
+            'cloudConnectionId' => 'cloud_connection_id',
+            'status' => 'status',
             'instanceType' => 'instance_type',
-            'regionId' => 'region_id',
-            'projectId' => 'project_id',
-            'cloudConnectionDomainId' => 'cloud_connection_domain_id',
-            'cloudConnectionId' => 'cloud_connection_id'
+            'cloudConnectionDomainId' => 'cloud_connection_domain_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  授权的ID。
-    * name  授权的名称。
-    * description  授权的描述信息。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * domainId  实例所属帐号ID。
+    * cloudConnectionId  资源ID标识符。
     * status  授权的状态。
-    * createdAt  创建授权的时间。
-    * updatedAt  更新授权的时间。
-    * domainId  授权者的账户ID。
-    * instanceId  授权实例的ID。
     * instanceType  授权实例的类型。
-    * regionId  授权实例所属Region。
-    * projectId  授权实例所属项目ID。
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
-    * cloudConnectionId  被授权云连接实例ID。
     *
     * @var string[]
     */
@@ -163,33 +163,33 @@ class Authorisation implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
-            'status' => 'setStatus',
+            'instanceId' => 'setInstanceId',
+            'projectId' => 'setProjectId',
+            'regionId' => 'setRegionId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'domainId' => 'setDomainId',
-            'instanceId' => 'setInstanceId',
+            'cloudConnectionId' => 'setCloudConnectionId',
+            'status' => 'setStatus',
             'instanceType' => 'setInstanceType',
-            'regionId' => 'setRegionId',
-            'projectId' => 'setProjectId',
-            'cloudConnectionDomainId' => 'setCloudConnectionDomainId',
-            'cloudConnectionId' => 'setCloudConnectionId'
+            'cloudConnectionDomainId' => 'setCloudConnectionDomainId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  授权的ID。
-    * name  授权的名称。
-    * description  授权的描述信息。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * domainId  实例所属帐号ID。
+    * cloudConnectionId  资源ID标识符。
     * status  授权的状态。
-    * createdAt  创建授权的时间。
-    * updatedAt  更新授权的时间。
-    * domainId  授权者的账户ID。
-    * instanceId  授权实例的ID。
     * instanceType  授权实例的类型。
-    * regionId  授权实例所属Region。
-    * projectId  授权实例所属项目ID。
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
-    * cloudConnectionId  被授权云连接实例ID。
     *
     * @var string[]
     */
@@ -197,16 +197,16 @@ class Authorisation implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
-            'status' => 'getStatus',
+            'instanceId' => 'getInstanceId',
+            'projectId' => 'getProjectId',
+            'regionId' => 'getRegionId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'domainId' => 'getDomainId',
-            'instanceId' => 'getInstanceId',
+            'cloudConnectionId' => 'getCloudConnectionId',
+            'status' => 'getStatus',
             'instanceType' => 'getInstanceType',
-            'regionId' => 'getRegionId',
-            'projectId' => 'getProjectId',
-            'cloudConnectionDomainId' => 'getCloudConnectionDomainId',
-            'cloudConnectionId' => 'getCloudConnectionId'
+            'cloudConnectionDomainId' => 'getCloudConnectionDomainId'
     ];
 
     /**
@@ -270,16 +270,16 @@ class Authorisation implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
-        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['cloudConnectionDomainId'] = isset($data['cloudConnectionDomainId']) ? $data['cloudConnectionDomainId'] : null;
         $this->container['cloudConnectionId'] = isset($data['cloudConnectionId']) ? $data['cloudConnectionId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['cloudConnectionDomainId'] = isset($data['cloudConnectionDomainId']) ? $data['cloudConnectionDomainId'] : null;
     }
 
     /**
@@ -290,17 +290,29 @@ class Authorisation implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) < 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -308,23 +320,77 @@ class Authorisation implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
+            }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['regionId'] === null) {
+            $invalidProperties[] = "'regionId' can't be null";
+        }
+            if ((mb_strlen($this->container['regionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['regionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
+        }
+        if ($this->container['domainId'] === null) {
+            $invalidProperties[] = "'domainId' can't be null";
+        }
+            if ((mb_strlen($this->container['domainId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['domainId']) < 10)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 10.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{10,32}/", $this->container['domainId'])) {
+                $invalidProperties[] = "invalid value for 'domainId', must be conform to the pattern /[a-fA-F0-9]{10,32}/.";
+            }
+        if ($this->container['cloudConnectionId'] === null) {
+            $invalidProperties[] = "'cloudConnectionId' can't be null";
+        }
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 255)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) > 255)) {
                 $invalidProperties[] = "invalid value for 'instanceType', the character length must be smaller than or equal to 255.";
@@ -332,29 +398,11 @@ class Authorisation implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'instanceType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['cloudConnectionDomainId']) && (mb_strlen($this->container['cloudConnectionDomainId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'cloudConnectionDomainId', the character length must be smaller than or equal to 36.";
             }
             if (!is_null($this->container['cloudConnectionDomainId']) && (mb_strlen($this->container['cloudConnectionDomainId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cloudConnectionDomainId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['cloudConnectionId']) && (mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['cloudConnectionId']) && (mb_strlen($this->container['cloudConnectionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -372,9 +420,9 @@ class Authorisation implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  授权的ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -384,7 +432,7 @@ class Authorisation implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 授权的ID。
+    * @param string $id 资源ID标识符。
     *
     * @return $this
     */
@@ -396,9 +444,9 @@ class Authorisation implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  授权的名称。
+    *  实例名字。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -408,7 +456,7 @@ class Authorisation implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 授权的名称。
+    * @param string $name 实例名字。
     *
     * @return $this
     */
@@ -420,7 +468,7 @@ class Authorisation implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  授权的描述信息。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -432,13 +480,181 @@ class Authorisation implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 授权的描述信息。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  资源ID标识符。
+    *
+    * @return string
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string $instanceId 资源ID标识符。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  实例所属项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 实例所属项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets regionId
+    *  RegionID。
+    *
+    * @return string
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string $regionId RegionID。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return \DateTime
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param \DateTime $createdAt 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets domainId
+    *  实例所属帐号ID。
+    *
+    * @return string
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string $domainId 实例所属帐号ID。
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets cloudConnectionId
+    *  资源ID标识符。
+    *
+    * @return string
+    */
+    public function getCloudConnectionId()
+    {
+        return $this->container['cloudConnectionId'];
+    }
+
+    /**
+    * Sets cloudConnectionId
+    *
+    * @param string $cloudConnectionId 资源ID标识符。
+    *
+    * @return $this
+    */
+    public function setCloudConnectionId($cloudConnectionId)
+    {
+        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 
@@ -467,102 +683,6 @@ class Authorisation implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createdAt
-    *  创建授权的时间。
-    *
-    * @return \DateTime|null
-    */
-    public function getCreatedAt()
-    {
-        return $this->container['createdAt'];
-    }
-
-    /**
-    * Sets createdAt
-    *
-    * @param \DateTime|null $createdAt 创建授权的时间。
-    *
-    * @return $this
-    */
-    public function setCreatedAt($createdAt)
-    {
-        $this->container['createdAt'] = $createdAt;
-        return $this;
-    }
-
-    /**
-    * Gets updatedAt
-    *  更新授权的时间。
-    *
-    * @return \DateTime|null
-    */
-    public function getUpdatedAt()
-    {
-        return $this->container['updatedAt'];
-    }
-
-    /**
-    * Sets updatedAt
-    *
-    * @param \DateTime|null $updatedAt 更新授权的时间。
-    *
-    * @return $this
-    */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->container['updatedAt'] = $updatedAt;
-        return $this;
-    }
-
-    /**
-    * Gets domainId
-    *  授权者的账户ID。
-    *
-    * @return string|null
-    */
-    public function getDomainId()
-    {
-        return $this->container['domainId'];
-    }
-
-    /**
-    * Sets domainId
-    *
-    * @param string|null $domainId 授权者的账户ID。
-    *
-    * @return $this
-    */
-    public function setDomainId($domainId)
-    {
-        $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  授权实例的ID。
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 授权实例的ID。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
     * Gets instanceType
     *  授权实例的类型。
     *
@@ -587,54 +707,6 @@ class Authorisation implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets regionId
-    *  授权实例所属Region。
-    *
-    * @return string|null
-    */
-    public function getRegionId()
-    {
-        return $this->container['regionId'];
-    }
-
-    /**
-    * Sets regionId
-    *
-    * @param string|null $regionId 授权实例所属Region。
-    *
-    * @return $this
-    */
-    public function setRegionId($regionId)
-    {
-        $this->container['regionId'] = $regionId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  授权实例所属项目ID。
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 授权实例所属项目ID。
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
     * Gets cloudConnectionDomainId
     *  被授权云连接实例所属的账户ID。
     *
@@ -655,30 +727,6 @@ class Authorisation implements ModelInterface, ArrayAccess
     public function setCloudConnectionDomainId($cloudConnectionDomainId)
     {
         $this->container['cloudConnectionDomainId'] = $cloudConnectionDomainId;
-        return $this;
-    }
-
-    /**
-    * Gets cloudConnectionId
-    *  被授权云连接实例ID。
-    *
-    * @return string|null
-    */
-    public function getCloudConnectionId()
-    {
-        return $this->container['cloudConnectionId'];
-    }
-
-    /**
-    * Sets cloudConnectionId
-    *
-    * @param string|null $cloudConnectionId 被授权云连接实例ID。
-    *
-    * @return $this
-    */
-    public function setCloudConnectionId($cloudConnectionId)
-    {
-        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 

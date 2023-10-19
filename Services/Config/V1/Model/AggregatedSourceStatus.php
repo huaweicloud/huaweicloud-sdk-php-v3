@@ -25,7 +25,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
-    * sourceName  账号名。
+    * sourceName  帐号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
-    * sourceName  账号名。
+    * sourceName  帐号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
-    * sourceName  账号名。
+    * sourceName  帐号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
-    * sourceName  账号名。
+    * sourceName  帐号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     * lastUpdateStatus  最近一次更新的状态类型。
     * lastUpdateTime  最近一次更新的时间。
     * sourceId  源帐号ID或组织。
-    * sourceName  账号名。
+    * sourceName  帐号名。
     * sourceType  源帐号类型（ACCOUNT | ORGANIZATION）。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceName
-    *  账号名。
+    *  帐号名。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class AggregatedSourceStatus implements ModelInterface, ArrayAccess
     /**
     * Sets sourceName
     *
-    * @param string|null $sourceName 账号名。
+    * @param string|null $sourceName 帐号名。
     *
     * @return $this
     */

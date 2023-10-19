@@ -24,6 +24,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     * isApplied  是否应用，0否 1是
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'id' => 'int',
             'isApplied' => 'int',
             'isCustomized' => 'int',
-            'serverIp' => 'string'
+            'serverIp' => 'string',
+            'healthCheckDomainName' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     * isApplied  是否应用，0否 1是
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
         'id' => 'int32',
         'isApplied' => 'int32',
         'isCustomized' => 'int32',
-        'serverIp' => null
+        'serverIp' => null,
+        'healthCheckDomainName' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     * isApplied  是否应用，0否 1是
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'id' => 'id',
             'isApplied' => 'is_applied',
             'isCustomized' => 'is_customized',
-            'serverIp' => 'server_ip'
+            'serverIp' => 'server_ip',
+            'healthCheckDomainName' => 'health_check_domain_name'
     ];
 
     /**
@@ -93,6 +99,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     * isApplied  是否应用，0否 1是
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'isApplied' => 'setIsApplied',
             'isCustomized' => 'setIsCustomized',
-            'serverIp' => 'setServerIp'
+            'serverIp' => 'setServerIp',
+            'healthCheckDomainName' => 'setHealthCheckDomainName'
     ];
 
     /**
@@ -109,6 +117,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     * isApplied  是否应用，0否 1是
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'isApplied' => 'getIsApplied',
             'isCustomized' => 'getIsCustomized',
-            'serverIp' => 'getServerIp'
+            'serverIp' => 'getServerIp',
+            'healthCheckDomainName' => 'getHealthCheckDomainName'
     ];
 
     /**
@@ -181,6 +191,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
         $this->container['isApplied'] = isset($data['isApplied']) ? $data['isApplied'] : null;
         $this->container['isCustomized'] = isset($data['isCustomized']) ? $data['isCustomized'] : null;
         $this->container['serverIp'] = isset($data['serverIp']) ? $data['serverIp'] : null;
+        $this->container['healthCheckDomainName'] = isset($data['healthCheckDomainName']) ? $data['healthCheckDomainName'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     public function setServerIp($serverIp)
     {
         $this->container['serverIp'] = $serverIp;
+        return $this;
+    }
+
+    /**
+    * Gets healthCheckDomainName
+    *  健康检查域名
+    *
+    * @return string|null
+    */
+    public function getHealthCheckDomainName()
+    {
+        return $this->container['healthCheckDomainName'];
+    }
+
+    /**
+    * Sets healthCheckDomainName
+    *
+    * @param string|null $healthCheckDomainName 健康检查域名
+    *
+    * @return $this
+    */
+    public function setHealthCheckDomainName($healthCheckDomainName)
+    {
+        $this->container['healthCheckDomainName'] = $healthCheckDomainName;
         return $this;
     }
 

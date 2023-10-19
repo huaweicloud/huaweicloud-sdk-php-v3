@@ -26,6 +26,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatName  防护资源nat网关名称
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
+    * protectedResourceMode  防护资源模式
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceId' => 'string',
             'protectedResourceNatName' => 'string',
             'protectedResourceNatId' => 'string',
-            'protectedResourceProjectId' => 'string'
+            'protectedResourceProjectId' => 'string',
+            'protectedResourceMode' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatName  防护资源nat网关名称
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
+    * protectedResourceMode  防护资源模式
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
         'protectedResourceId' => null,
         'protectedResourceNatName' => null,
         'protectedResourceNatId' => null,
-        'protectedResourceProjectId' => null
+        'protectedResourceProjectId' => null,
+        'protectedResourceMode' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatName  防护资源nat网关名称
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
+    * protectedResourceMode  防护资源模式
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceId' => 'protected_resource_id',
             'protectedResourceNatName' => 'protected_resource_nat_name',
             'protectedResourceNatId' => 'protected_resource_nat_id',
-            'protectedResourceProjectId' => 'protected_resource_project_id'
+            'protectedResourceProjectId' => 'protected_resource_project_id',
+            'protectedResourceMode' => 'protected_resource_mode'
     ];
 
     /**
@@ -107,6 +113,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatName  防护资源nat网关名称
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
+    * protectedResourceMode  防护资源模式
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceId' => 'setProtectedResourceId',
             'protectedResourceNatName' => 'setProtectedResourceNatName',
             'protectedResourceNatId' => 'setProtectedResourceNatId',
-            'protectedResourceProjectId' => 'setProtectedResourceProjectId'
+            'protectedResourceProjectId' => 'setProtectedResourceProjectId',
+            'protectedResourceMode' => 'setProtectedResourceMode'
     ];
 
     /**
@@ -127,6 +135,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatName  防护资源nat网关名称
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
+    * protectedResourceMode  防护资源模式
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceId' => 'getProtectedResourceId',
             'protectedResourceNatName' => 'getProtectedResourceNatName',
             'protectedResourceNatId' => 'getProtectedResourceNatId',
-            'protectedResourceProjectId' => 'getProtectedResourceProjectId'
+            'protectedResourceProjectId' => 'getProtectedResourceProjectId',
+            'protectedResourceMode' => 'getProtectedResourceMode'
     ];
 
     /**
@@ -203,6 +213,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
         $this->container['protectedResourceNatName'] = isset($data['protectedResourceNatName']) ? $data['protectedResourceNatName'] : null;
         $this->container['protectedResourceNatId'] = isset($data['protectedResourceNatId']) ? $data['protectedResourceNatId'] : null;
         $this->container['protectedResourceProjectId'] = isset($data['protectedResourceProjectId']) ? $data['protectedResourceProjectId'] : null;
+        $this->container['protectedResourceMode'] = isset($data['protectedResourceMode']) ? $data['protectedResourceMode'] : null;
     }
 
     /**
@@ -377,6 +388,30 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     public function setProtectedResourceProjectId($protectedResourceProjectId)
     {
         $this->container['protectedResourceProjectId'] = $protectedResourceProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets protectedResourceMode
+    *  防护资源模式
+    *
+    * @return string|null
+    */
+    public function getProtectedResourceMode()
+    {
+        return $this->container['protectedResourceMode'];
+    }
+
+    /**
+    * Sets protectedResourceMode
+    *
+    * @param string|null $protectedResourceMode 防护资源模式
+    *
+    * @return $this
+    */
+    public function setProtectedResourceMode($protectedResourceMode)
+    {
+        $this->container['protectedResourceMode'] = $protectedResourceMode;
         return $this;
     }
 

@@ -21,30 +21,30 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudConnections  云连接实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnections  云连接实例列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cloudConnections' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[]',
+            'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
-            'requestId' => 'string'
+            'cloudConnections' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudConnections  云连接实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnections  云连接实例列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cloudConnections' => null,
+        'requestId' => null,
         'pageInfo' => null,
-        'requestId' => null
+        'cloudConnections' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudConnections  云连接实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnections  云连接实例列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cloudConnections' => 'cloud_connections',
+            'requestId' => 'request_id',
             'pageInfo' => 'page_info',
-            'requestId' => 'request_id'
+            'cloudConnections' => 'cloud_connections'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudConnections  云连接实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnections  云连接实例列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'cloudConnections' => 'setCloudConnections',
+            'requestId' => 'setRequestId',
             'pageInfo' => 'setPageInfo',
-            'requestId' => 'setRequestId'
+            'cloudConnections' => 'setCloudConnections'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudConnections  云连接实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnections  云连接实例列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'cloudConnections' => 'getCloudConnections',
+            'requestId' => 'getRequestId',
             'pageInfo' => 'getPageInfo',
-            'requestId' => 'getRequestId'
+            'cloudConnections' => 'getCloudConnections'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cloudConnections'] = isset($data['cloudConnections']) ? $data['cloudConnections'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['cloudConnections'] = isset($data['cloudConnections']) ? $data['cloudConnections'] : null;
     }
 
     /**
@@ -181,12 +181,18 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['cloudConnections'] === null) {
+            $invalidProperties[] = "'cloudConnections' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -202,26 +208,26 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cloudConnections
-    *  云连接实例列表。
+    * Gets requestId
+    *  资源ID标识符。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[]|null
+    * @return string
     */
-    public function getCloudConnections()
+    public function getRequestId()
     {
-        return $this->container['cloudConnections'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets cloudConnections
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[]|null $cloudConnections 云连接实例列表。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
-    public function setCloudConnections($cloudConnections)
+    public function setRequestId($requestId)
     {
-        $this->container['cloudConnections'] = $cloudConnections;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
@@ -250,26 +256,26 @@ class ListCloudConnectionsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  请求ID。
+    * Gets cloudConnections
+    *  云连接实例列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[]
     */
-    public function getRequestId()
+    public function getCloudConnections()
     {
-        return $this->container['requestId'];
+        return $this->container['cloudConnections'];
     }
 
     /**
-    * Sets requestId
+    * Sets cloudConnections
     *
-    * @param string|null $requestId 请求ID。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnection[] $cloudConnections 云连接实例列表。
     *
     * @return $this
     */
-    public function setRequestId($requestId)
+    public function setCloudConnections($cloudConnections)
     {
-        $this->container['requestId'] = $requestId;
+        $this->container['cloudConnections'] = $cloudConnections;
         return $this;
     }
 

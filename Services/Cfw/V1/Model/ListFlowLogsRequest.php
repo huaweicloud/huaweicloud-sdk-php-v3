@@ -35,8 +35,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID，首页时为null，非首页时不为null
     * nextDate  日期，首页时为null，非首页时不为null
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目的主机
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'int',
             'offset' => 'int',
             'limit' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'dstHost' => 'string'
     ];
 
     /**
@@ -77,8 +79,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID，首页时为null，非首页时不为null
     * nextDate  日期，首页时为null，非首页时不为null
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目的主机
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
         'nextDate' => 'int64',
         'offset' => null,
         'limit' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'dstHost' => null
     ];
 
     /**
@@ -140,8 +144,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID，首页时为null，非首页时不为null
     * nextDate  日期，首页时为null，非首页时不为null
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目的主机
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'next_date',
             'offset' => 'offset',
             'limit' => 'limit',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'dstHost' => 'dst_host'
     ];
 
     /**
@@ -182,8 +188,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID，首页时为null，非首页时不为null
     * nextDate  日期，首页时为null，非首页时不为null
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目的主机
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'setNextDate',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'dstHost' => 'setDstHost'
     ];
 
     /**
@@ -224,8 +232,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID，首页时为null，非首页时不为null
     * nextDate  日期，首页时为null，非首页时不为null
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目的主机
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'getNextDate',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'dstHost' => 'getDstHost'
     ];
 
     /**
@@ -360,6 +370,7 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
     }
 
     /**
@@ -798,7 +809,7 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示个数，范围为1-1024
     *
     * @return int
     */
@@ -810,7 +821,7 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示个数
+    * @param int $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -841,6 +852,30 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目的主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目的主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
         return $this;
     }
 

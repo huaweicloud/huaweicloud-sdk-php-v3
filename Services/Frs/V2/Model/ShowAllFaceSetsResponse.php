@@ -22,21 +22,25 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * faceSetsInfo  [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hc) [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'faceSetsInfo' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo[]'
+            'faceSetsInfo' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * faceSetsInfo  [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hc) [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'faceSetsInfo' => null
+        'faceSetsInfo' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * faceSetsInfo  [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hc) [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'faceSetsInfo' => 'face_sets_info'
+            'faceSetsInfo' => 'face_sets_info',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * faceSetsInfo  [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hc) [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'faceSetsInfo' => 'setFaceSetsInfo'
+            'faceSetsInfo' => 'setFaceSetsInfo',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * faceSetsInfo  [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hc) [人脸库信息，详见[FaceSetInfo](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0020.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'faceSetsInfo' => 'getFaceSetsInfo'
+            'faceSetsInfo' => 'getFaceSetsInfo',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['faceSetsInfo'] = isset($data['faceSetsInfo']) ? $data['faceSetsInfo'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     public function setFaceSetsInfo($faceSetsInfo)
     {
         $this->container['faceSetsInfo'] = $faceSetsInfo;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

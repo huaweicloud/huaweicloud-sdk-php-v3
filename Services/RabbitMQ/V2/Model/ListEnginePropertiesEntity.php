@@ -31,6 +31,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  每个Broker的最大带宽。
     * minStoragePerNode  每个节点的最小存储。单位为GB。
     * maxTpsPerBroker  每个Broker的最大TPS。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'minBroker' => 'string',
             'maxBandwidthPerBroker' => 'string',
             'minStoragePerNode' => 'string',
-            'maxTpsPerBroker' => 'string'
+            'maxTpsPerBroker' => 'string',
+            'productAlias' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  每个Broker的最大带宽。
     * minStoragePerNode  每个节点的最小存储。单位为GB。
     * maxTpsPerBroker  每个Broker的最大TPS。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         'minBroker' => null,
         'maxBandwidthPerBroker' => null,
         'minStoragePerNode' => null,
-        'maxTpsPerBroker' => null
+        'maxTpsPerBroker' => null,
+        'productAlias' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  每个Broker的最大带宽。
     * minStoragePerNode  每个节点的最小存储。单位为GB。
     * maxTpsPerBroker  每个Broker的最大TPS。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'minBroker' => 'min_broker',
             'maxBandwidthPerBroker' => 'max_bandwidth_per_broker',
             'minStoragePerNode' => 'min_storage_per_node',
-            'maxTpsPerBroker' => 'max_tps_per_broker'
+            'maxTpsPerBroker' => 'max_tps_per_broker',
+            'productAlias' => 'product_alias'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  每个Broker的最大带宽。
     * minStoragePerNode  每个节点的最小存储。单位为GB。
     * maxTpsPerBroker  每个Broker的最大TPS。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'minBroker' => 'setMinBroker',
             'maxBandwidthPerBroker' => 'setMaxBandwidthPerBroker',
             'minStoragePerNode' => 'setMinStoragePerNode',
-            'maxTpsPerBroker' => 'setMaxTpsPerBroker'
+            'maxTpsPerBroker' => 'setMaxTpsPerBroker',
+            'productAlias' => 'setProductAlias'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  每个Broker的最大带宽。
     * minStoragePerNode  每个节点的最小存储。单位为GB。
     * maxTpsPerBroker  每个Broker的最大TPS。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'minBroker' => 'getMinBroker',
             'maxBandwidthPerBroker' => 'getMaxBandwidthPerBroker',
             'minStoragePerNode' => 'getMinStoragePerNode',
-            'maxTpsPerBroker' => 'getMaxTpsPerBroker'
+            'maxTpsPerBroker' => 'getMaxTpsPerBroker',
+            'productAlias' => 'getProductAlias'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         $this->container['maxBandwidthPerBroker'] = isset($data['maxBandwidthPerBroker']) ? $data['maxBandwidthPerBroker'] : null;
         $this->container['minStoragePerNode'] = isset($data['minStoragePerNode']) ? $data['minStoragePerNode'] : null;
         $this->container['maxTpsPerBroker'] = isset($data['maxTpsPerBroker']) ? $data['maxTpsPerBroker'] : null;
+        $this->container['productAlias'] = isset($data['productAlias']) ? $data['productAlias'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     public function setMaxTpsPerBroker($maxTpsPerBroker)
     {
         $this->container['maxTpsPerBroker'] = $maxTpsPerBroker;
+        return $this;
+    }
+
+    /**
+    * Gets productAlias
+    *  product_id的别名。
+    *
+    * @return string|null
+    */
+    public function getProductAlias()
+    {
+        return $this->container['productAlias'];
+    }
+
+    /**
+    * Sets productAlias
+    *
+    * @param string|null $productAlias product_id的别名。
+    *
+    * @return $this
+    */
+    public function setProductAlias($productAlias)
+    {
+        $this->container['productAlias'] = $productAlias;
         return $this;
     }
 

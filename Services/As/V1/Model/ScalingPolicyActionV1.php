@@ -22,7 +22,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * operation  操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
     * instanceNumber  操作实例个数，默认为1。当配额为默认配额时，取值范围如下：  operation为SET时，取值范围为：0~300。 operation为ADD或REMOVE/REDUCE时，取值范围为：1~300。 说明： 配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
-    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * operation  操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
     * instanceNumber  操作实例个数，默认为1。当配额为默认配额时，取值范围如下：  operation为SET时，取值范围为：0~300。 operation为ADD或REMOVE/REDUCE时，取值范围为：1~300。 说明： 配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
-    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * operation  操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
     * instanceNumber  操作实例个数，默认为1。当配额为默认配额时，取值范围如下：  operation为SET时，取值范围为：0~300。 operation为ADD或REMOVE/REDUCE时，取值范围为：1~300。 说明： 配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
-    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * operation  操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
     * instanceNumber  操作实例个数，默认为1。当配额为默认配额时，取值范围如下：  operation为SET时，取值范围为：0~300。 operation为ADD或REMOVE/REDUCE时，取值范围为：1~300。 说明： 配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
-    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * operation  操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
     * instanceNumber  操作实例个数，默认为1。当配额为默认配额时，取值范围如下：  operation为SET时，取值范围为：0~300。 operation为ADD或REMOVE/REDUCE时，取值范围为：1~300。 说明： 配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
-    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * instancePercentage  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @var string[]
     */
@@ -277,7 +277,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
 
     /**
     * Gets instancePercentage
-    *  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    *  操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @return int|null
     */
@@ -289,7 +289,7 @@ class ScalingPolicyActionV1 implements ModelInterface, ArrayAccess
     /**
     * Sets instancePercentage
     *
-    * @param int|null $instancePercentage 操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。  当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。  配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
+    * @param int|null $instancePercentage 操作实例百分比，将伸缩组容量增加、减少或设置为伸缩组当前实例个数的百分比。操作为ADD或REMOVE/REDUCE时取值范围为1到20000的整数，操作为SET时取值范围为0到20000的整数。当instance_number和instance_percentage参数均无配置时，则操作实例个数为1。配置参数时，instance_number和instance_percentage参数只能选其中一个进行配置。
     *
     * @return $this
     */

@@ -20,14 +20,14 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * instanceDomainId  实例所属帐号ID。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * cloudConnectionId  资源ID标识符。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-    * instanceId  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    * instanceDomainId  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    * projectId  网络实例的项目ID。
-    * regionId  网络实例的RegionID。
-    * cloudConnectionId  云连接实例ID。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -35,25 +35,25 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'type' => 'string',
             'instanceId' => 'string',
             'instanceDomainId' => 'string',
             'projectId' => 'string',
             'regionId' => 'string',
             'cloudConnectionId' => 'string',
+            'type' => 'string',
             'cidrs' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * instanceDomainId  实例所属帐号ID。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * cloudConnectionId  资源ID标识符。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-    * instanceId  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    * instanceDomainId  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    * projectId  网络实例的项目ID。
-    * regionId  网络实例的RegionID。
-    * cloudConnectionId  云连接实例ID。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -61,12 +61,12 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'type' => null,
         'instanceId' => null,
         'instanceDomainId' => null,
         'projectId' => null,
         'regionId' => null,
         'cloudConnectionId' => null,
+        'type' => null,
         'cidrs' => null
     ];
 
@@ -93,14 +93,14 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * instanceDomainId  实例所属帐号ID。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * cloudConnectionId  资源ID标识符。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-    * instanceId  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    * instanceDomainId  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    * projectId  网络实例的项目ID。
-    * regionId  网络实例的RegionID。
-    * cloudConnectionId  云连接实例ID。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -108,25 +108,25 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
-            'type' => 'type',
             'instanceId' => 'instance_id',
             'instanceDomainId' => 'instance_domain_id',
             'projectId' => 'project_id',
             'regionId' => 'region_id',
             'cloudConnectionId' => 'cloud_connection_id',
+            'type' => 'type',
             'cidrs' => 'cidrs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * instanceDomainId  实例所属帐号ID。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * cloudConnectionId  资源ID标识符。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-    * instanceId  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    * instanceDomainId  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    * projectId  网络实例的项目ID。
-    * regionId  网络实例的RegionID。
-    * cloudConnectionId  云连接实例ID。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -134,25 +134,25 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
-            'type' => 'setType',
             'instanceId' => 'setInstanceId',
             'instanceDomainId' => 'setInstanceDomainId',
             'projectId' => 'setProjectId',
             'regionId' => 'setRegionId',
             'cloudConnectionId' => 'setCloudConnectionId',
+            'type' => 'setType',
             'cidrs' => 'setCidrs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * instanceId  资源ID标识符。
+    * instanceDomainId  实例所属帐号ID。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
+    * cloudConnectionId  资源ID标识符。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-    * instanceId  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    * instanceDomainId  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    * projectId  网络实例的项目ID。
-    * regionId  网络实例的RegionID。
-    * cloudConnectionId  云连接实例ID。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -160,12 +160,12 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
-            'type' => 'getType',
             'instanceId' => 'getInstanceId',
             'instanceDomainId' => 'getInstanceDomainId',
             'projectId' => 'getProjectId',
             'regionId' => 'getRegionId',
             'cloudConnectionId' => 'getCloudConnectionId',
+            'type' => 'getType',
             'cidrs' => 'getCidrs'
     ];
 
@@ -244,12 +244,12 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceDomainId'] = isset($data['instanceDomainId']) ? $data['instanceDomainId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['cloudConnectionId'] = isset($data['cloudConnectionId']) ? $data['cloudConnectionId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['cidrs'] = isset($data['cidrs']) ? $data['cidrs'] : null;
     }
 
@@ -264,14 +264,74 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 85)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 85.";
+            if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
+            }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+            if (!is_null($this->container['instanceDomainId']) && (mb_strlen($this->container['instanceDomainId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'instanceDomainId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['instanceDomainId']) && (mb_strlen($this->container['instanceDomainId']) < 10)) {
+                $invalidProperties[] = "invalid value for 'instanceDomainId', the character length must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['instanceDomainId']) && !preg_match("/[a-fA-F0-9]{10,32}/", $this->container['instanceDomainId'])) {
+                $invalidProperties[] = "invalid value for 'instanceDomainId', must be conform to the pattern /[a-fA-F0-9]{10,32}/.";
+            }
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['regionId'] === null) {
+            $invalidProperties[] = "'regionId' can't be null";
+        }
+            if ((mb_strlen($this->container['regionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['regionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['cloudConnectionId'] === null) {
+            $invalidProperties[] = "'cloudConnectionId' can't be null";
+        }
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
             }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -289,48 +349,6 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
-            if ((mb_strlen($this->container['instanceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['instanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['instanceDomainId']) && (mb_strlen($this->container['instanceDomainId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'instanceDomainId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['instanceDomainId']) && (mb_strlen($this->container['instanceDomainId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'instanceDomainId', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-            if ((mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['projectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['regionId'] === null) {
-            $invalidProperties[] = "'regionId' can't be null";
-        }
-            if ((mb_strlen($this->container['regionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['regionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['cloudConnectionId'] === null) {
-            $invalidProperties[] = "'cloudConnectionId' can't be null";
-        }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['cidrs'] === null) {
             $invalidProperties[] = "'cidrs' can't be null";
@@ -351,7 +369,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    *  实例名字。
     *
     * @return string|null
     */
@@ -363,7 +381,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    * @param string|null $name 实例名字。
     *
     * @return $this
     */
@@ -375,7 +393,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  网络实例的描述。不支持 <>。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -387,13 +405,133 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 网络实例的描述。不支持 <>。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  资源ID标识符。
+    *
+    * @return string
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string $instanceId 资源ID标识符。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceDomainId
+    *  实例所属帐号ID。
+    *
+    * @return string|null
+    */
+    public function getInstanceDomainId()
+    {
+        return $this->container['instanceDomainId'];
+    }
+
+    /**
+    * Sets instanceDomainId
+    *
+    * @param string|null $instanceDomainId 实例所属帐号ID。
+    *
+    * @return $this
+    */
+    public function setInstanceDomainId($instanceDomainId)
+    {
+        $this->container['instanceDomainId'] = $instanceDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  实例所属项目ID。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 实例所属项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets regionId
+    *  RegionID。
+    *
+    * @return string
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string $regionId RegionID。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
+    * Gets cloudConnectionId
+    *  资源ID标识符。
+    *
+    * @return string
+    */
+    public function getCloudConnectionId()
+    {
+        return $this->container['cloudConnectionId'];
+    }
+
+    /**
+    * Sets cloudConnectionId
+    *
+    * @param string $cloudConnectionId 资源ID标识符。
+    *
+    * @return $this
+    */
+    public function setCloudConnectionId($cloudConnectionId)
+    {
+        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 
@@ -418,126 +556,6 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  添加到云连接网络实例的ID，VPC或者VGW的ID。
-    *
-    * @return string
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string $instanceId 添加到云连接网络实例的ID，VPC或者VGW的ID。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets instanceDomainId
-    *  网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    *
-    * @return string|null
-    */
-    public function getInstanceDomainId()
-    {
-        return $this->container['instanceDomainId'];
-    }
-
-    /**
-    * Sets instanceDomainId
-    *
-    * @param string|null $instanceDomainId 网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-    *
-    * @return $this
-    */
-    public function setInstanceDomainId($instanceDomainId)
-    {
-        $this->container['instanceDomainId'] = $instanceDomainId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  网络实例的项目ID。
-    *
-    * @return string
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string $projectId 网络实例的项目ID。
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets regionId
-    *  网络实例的RegionID。
-    *
-    * @return string
-    */
-    public function getRegionId()
-    {
-        return $this->container['regionId'];
-    }
-
-    /**
-    * Sets regionId
-    *
-    * @param string $regionId 网络实例的RegionID。
-    *
-    * @return $this
-    */
-    public function setRegionId($regionId)
-    {
-        $this->container['regionId'] = $regionId;
-        return $this;
-    }
-
-    /**
-    * Gets cloudConnectionId
-    *  云连接实例ID。
-    *
-    * @return string
-    */
-    public function getCloudConnectionId()
-    {
-        return $this->container['cloudConnectionId'];
-    }
-
-    /**
-    * Sets cloudConnectionId
-    *
-    * @param string $cloudConnectionId 云连接实例ID。
-    *
-    * @return $this
-    */
-    public function setCloudConnectionId($cloudConnectionId)
-    {
-        $this->container['cloudConnectionId'] = $cloudConnectionId;
         return $this;
     }
 

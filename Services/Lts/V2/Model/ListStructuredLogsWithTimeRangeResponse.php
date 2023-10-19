@@ -21,22 +21,22 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * result  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'context' => 'string[]'
+            'result' => 'object[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * result  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'context' => null
+        'result' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * result  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'context' => 'context'
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * result  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $setters = [
-            'context' => 'setContext'
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * context  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * result  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @var string[]
     */
     protected static $getters = [
-            'context' => 'getContext'
+            'result' => 'getResult'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     */
     public function __construct(array $data = null)
     {
-        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets context
+    * Gets result
     *  查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
-    * @return string[]|null
+    * @return object[]|null
     */
-    public function getContext()
+    public function getResult()
     {
-        return $this->container['context'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets context
+    * Sets result
     *
-    * @param string[]|null $context 查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
+    * @param object[]|null $result 查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
     *
     * @return $this
     */
-    public function setContext($context)
+    public function setResult($result)
     {
-        $this->container['context'] = $context;
+        $this->container['result'] = $result;
         return $this;
     }
 

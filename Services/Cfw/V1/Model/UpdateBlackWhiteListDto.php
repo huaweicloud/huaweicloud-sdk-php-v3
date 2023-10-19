@@ -27,6 +27,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * port  端口
     * listType  黑白名单类型4：黑名单，5：白名单
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * description  描述
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'protocol' => 'int',
             'port' => 'string',
             'listType' => 'int',
-            'objectId' => 'string'
+            'objectId' => 'string',
+            'description' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * port  端口
     * listType  黑白名单类型4：黑名单，5：白名单
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * description  描述
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
         'protocol' => null,
         'port' => null,
         'listType' => 'int32',
-        'objectId' => null
+        'objectId' => null,
+        'description' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * port  端口
     * listType  黑白名单类型4：黑名单，5：白名单
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * description  描述
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'port' => 'port',
             'listType' => 'list_type',
-            'objectId' => 'object_id'
+            'objectId' => 'object_id',
+            'description' => 'description'
     ];
 
     /**
@@ -114,6 +120,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * port  端口
     * listType  黑白名单类型4：黑名单，5：白名单
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * description  描述
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'port' => 'setPort',
             'listType' => 'setListType',
-            'objectId' => 'setObjectId'
+            'objectId' => 'setObjectId',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -136,6 +144,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * port  端口
     * listType  黑白名单类型4：黑名单，5：白名单
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * description  描述
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'port' => 'getPort',
             'listType' => 'getListType',
-            'objectId' => 'getObjectId'
+            'objectId' => 'getObjectId',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -229,6 +239,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['listType'] = isset($data['listType']) ? $data['listType'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -426,6 +437,30 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     public function setObjectId($objectId)
     {
         $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

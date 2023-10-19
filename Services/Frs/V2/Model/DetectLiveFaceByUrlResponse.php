@@ -23,24 +23,28 @@ class DetectLiveFaceByUrlResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * result  result
     * warningList  警告信息列表。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'result' => '\HuaweiCloud\SDK\Frs\V2\Model\LiveDetectFaceRespResult',
-            'warningList' => '\HuaweiCloud\SDK\Frs\V2\Model\WarningList[]'
+            'warningList' => '\HuaweiCloud\SDK\Frs\V2\Model\WarningList[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  result
     * warningList  警告信息列表。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'result' => null,
-        'warningList' => null
+        'warningList' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class DetectLiveFaceByUrlResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * result  result
     * warningList  警告信息列表。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'result' => 'result',
-            'warningList' => 'warning-list'
+            'warningList' => 'warning-list',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  result
     * warningList  警告信息列表。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'result' => 'setResult',
-            'warningList' => 'setWarningList'
+            'warningList' => 'setWarningList',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  result
     * warningList  警告信息列表。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'result' => 'getResult',
-            'warningList' => 'getWarningList'
+            'warningList' => 'getWarningList',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class DetectLiveFaceByUrlResponse implements ModelInterface, ArrayAccess
     {
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['warningList'] = isset($data['warningList']) ? $data['warningList'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class DetectLiveFaceByUrlResponse implements ModelInterface, ArrayAccess
     public function setWarningList($warningList)
     {
         $this->container['warningList'] = $warningList;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

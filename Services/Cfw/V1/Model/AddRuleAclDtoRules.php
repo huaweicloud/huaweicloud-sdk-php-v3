@@ -35,6 +35,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * tag  tag
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'direction' => 'int',
             'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
-            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto'
+            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
+            'tag' => '\HuaweiCloud\SDK\Cfw\V1\Model\TagsVO'
     ];
 
     /**
@@ -73,6 +75,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * tag  tag
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         'direction' => 'int32',
         'source' => null,
         'destination' => null,
-        'service' => null
+        'service' => null,
+        'tag' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * tag  tag
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'direction' => 'direction',
             'source' => 'source',
             'destination' => 'destination',
-            'service' => 'service'
+            'service' => 'service',
+            'tag' => 'tag'
     ];
 
     /**
@@ -170,6 +176,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * tag  tag
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'direction' => 'setDirection',
             'source' => 'setSource',
             'destination' => 'setDestination',
-            'service' => 'setService'
+            'service' => 'setService',
+            'tag' => 'setTag'
     ];
 
     /**
@@ -208,6 +216,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * tag  tag
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'direction' => 'getDirection',
             'source' => 'getSource',
             'destination' => 'getDestination',
-            'service' => 'getService'
+            'service' => 'getService',
+            'tag' => 'getTag'
     ];
 
     /**
@@ -364,6 +374,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
     /**
@@ -804,6 +815,30 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     public function setService($service)
     {
         $this->container['service'] = $service;
+        return $this;
+    }
+
+    /**
+    * Gets tag
+    *  tag
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\TagsVO|null
+    */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+    * Sets tag
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\TagsVO|null $tag tag
+    *
+    * @return $this
+    */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
         return $this;
     }
 

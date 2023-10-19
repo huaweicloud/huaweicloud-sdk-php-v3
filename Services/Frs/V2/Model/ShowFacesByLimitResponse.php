@@ -24,13 +24,15 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
     * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'faceSetId' => 'string',
             'faceSetName' => 'string',
-            'faces' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetFace[]'
+            'faces' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetFace[]',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
     * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'faceSetId' => null,
         'faceSetName' => null,
-        'faces' => null
+        'faces' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
     * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'faceSetId' => 'face_set_id',
             'faceSetName' => 'face_set_name',
-            'faces' => 'faces'
+            'faces' => 'faces',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
     * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'faceSetId' => 'setFaceSetId',
             'faceSetName' => 'setFaceSetName',
-            'faces' => 'setFaces'
+            'faces' => 'setFaces',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
     * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。调用失败时无此字段。](tag:hk)
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'faceSetId' => 'getFaceSetId',
             'faceSetName' => 'getFaceSetName',
-            'faces' => 'getFaces'
+            'faces' => 'getFaces',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
         $this->container['faceSetId'] = isset($data['faceSetId']) ? $data['faceSetId'] : null;
         $this->container['faceSetName'] = isset($data['faceSetName']) ? $data['faceSetName'] : null;
         $this->container['faces'] = isset($data['faces']) ? $data['faces'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ShowFacesByLimitResponse implements ModelInterface, ArrayAccess
     public function setFaces($faces)
     {
         $this->container['faces'] = $faces;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

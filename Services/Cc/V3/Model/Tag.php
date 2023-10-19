@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键
-    * value  值
+    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键
-    * value  值
+    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键
-    * value  值
+    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @var string[]
     */
@@ -169,17 +169,26 @@ class Tag implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 128)) {
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 128)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
+            if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FFF-_]+$/.";
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['value']) && !preg_match("/^[A-Za-z0-9\\u4E00-\\u9FFF-_.]*$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^[A-Za-z0-9\\u4E00-\\u9FFF-_.]*$/.";
             }
         return $invalidProperties;
     }
@@ -197,9 +206,9 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键
+    *  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -209,7 +218,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键
+    * @param string $key 标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
     *
     * @return $this
     */
@@ -221,7 +230,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值
+    *  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @return string|null
     */
@@ -233,7 +242,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值
+    * @param string|null $value 标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
     *
     * @return $this
     */

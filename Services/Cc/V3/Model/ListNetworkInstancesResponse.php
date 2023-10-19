@@ -21,30 +21,30 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * networkInstances  网络实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * networkInstances  网络实例列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'networkInstances' => '\HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[]',
+            'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
-            'requestId' => 'string'
+            'networkInstances' => '\HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * networkInstances  网络实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * networkInstances  网络实例列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'networkInstances' => null,
+        'requestId' => null,
         'pageInfo' => null,
-        'requestId' => null
+        'networkInstances' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * networkInstances  网络实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * networkInstances  网络实例列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'networkInstances' => 'network_instances',
+            'requestId' => 'request_id',
             'pageInfo' => 'page_info',
-            'requestId' => 'request_id'
+            'networkInstances' => 'network_instances'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * networkInstances  网络实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * networkInstances  网络实例列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'networkInstances' => 'setNetworkInstances',
+            'requestId' => 'setRequestId',
             'pageInfo' => 'setPageInfo',
-            'requestId' => 'setRequestId'
+            'networkInstances' => 'setNetworkInstances'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * networkInstances  网络实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * networkInstances  网络实例列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'networkInstances' => 'getNetworkInstances',
+            'requestId' => 'getRequestId',
             'pageInfo' => 'getPageInfo',
-            'requestId' => 'getRequestId'
+            'networkInstances' => 'getNetworkInstances'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['networkInstances'] = isset($data['networkInstances']) ? $data['networkInstances'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['networkInstances'] = isset($data['networkInstances']) ? $data['networkInstances'] : null;
     }
 
     /**
@@ -181,12 +181,18 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['networkInstances'] === null) {
+            $invalidProperties[] = "'networkInstances' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -202,26 +208,26 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets networkInstances
-    *  网络实例列表。
+    * Gets requestId
+    *  资源ID标识符。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[]|null
+    * @return string
     */
-    public function getNetworkInstances()
+    public function getRequestId()
     {
-        return $this->container['networkInstances'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets networkInstances
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[]|null $networkInstances 网络实例列表。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
-    public function setNetworkInstances($networkInstances)
+    public function setRequestId($requestId)
     {
-        $this->container['networkInstances'] = $networkInstances;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
@@ -250,26 +256,26 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  请求ID。
+    * Gets networkInstances
+    *  网络实例列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[]
     */
-    public function getRequestId()
+    public function getNetworkInstances()
     {
-        return $this->container['requestId'];
+        return $this->container['networkInstances'];
     }
 
     /**
-    * Sets requestId
+    * Sets networkInstances
     *
-    * @param string|null $requestId 请求ID。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\NetworkInstance[] $networkInstances 网络实例列表。
     *
     * @return $this
     */
-    public function setRequestId($requestId)
+    public function setNetworkInstances($networkInstances)
     {
-        $this->container['requestId'] = $requestId;
+        $this->container['networkInstances'] = $networkInstances;
         return $this;
     }
 

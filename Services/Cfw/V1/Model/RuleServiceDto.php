@@ -26,6 +26,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
+    * customService  自定义服务
+    * serviceGroup  服务组列表
+    * serviceGroupNames  服务组名称列表
     *
     * @var string[]
     */
@@ -35,7 +38,10 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
             'sourcePort' => 'string',
             'destPort' => 'string',
             'serviceSetId' => 'string',
-            'serviceSetName' => 'string'
+            'serviceSetName' => 'string',
+            'customService' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceItem[]',
+            'serviceGroup' => 'string[]',
+            'serviceGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]'
     ];
 
     /**
@@ -46,6 +52,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
+    * customService  自定义服务
+    * serviceGroup  服务组列表
+    * serviceGroupNames  服务组名称列表
     *
     * @var string[]
     */
@@ -55,7 +64,10 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
         'sourcePort' => null,
         'destPort' => null,
         'serviceSetId' => null,
-        'serviceSetName' => null
+        'serviceSetName' => null,
+        'customService' => null,
+        'serviceGroup' => null,
+        'serviceGroupNames' => null
     ];
 
     /**
@@ -87,6 +99,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
+    * customService  自定义服务
+    * serviceGroup  服务组列表
+    * serviceGroupNames  服务组名称列表
     *
     * @var string[]
     */
@@ -96,7 +111,10 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
             'sourcePort' => 'source_port',
             'destPort' => 'dest_port',
             'serviceSetId' => 'service_set_id',
-            'serviceSetName' => 'service_set_name'
+            'serviceSetName' => 'service_set_name',
+            'customService' => 'custom_service',
+            'serviceGroup' => 'service_group',
+            'serviceGroupNames' => 'service_group_names'
     ];
 
     /**
@@ -107,6 +125,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
+    * customService  自定义服务
+    * serviceGroup  服务组列表
+    * serviceGroupNames  服务组名称列表
     *
     * @var string[]
     */
@@ -116,7 +137,10 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
             'sourcePort' => 'setSourcePort',
             'destPort' => 'setDestPort',
             'serviceSetId' => 'setServiceSetId',
-            'serviceSetName' => 'setServiceSetName'
+            'serviceSetName' => 'setServiceSetName',
+            'customService' => 'setCustomService',
+            'serviceGroup' => 'setServiceGroup',
+            'serviceGroupNames' => 'setServiceGroupNames'
     ];
 
     /**
@@ -127,6 +151,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
+    * customService  自定义服务
+    * serviceGroup  服务组列表
+    * serviceGroupNames  服务组名称列表
     *
     * @var string[]
     */
@@ -136,7 +163,10 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
             'sourcePort' => 'getSourcePort',
             'destPort' => 'getDestPort',
             'serviceSetId' => 'getServiceSetId',
-            'serviceSetName' => 'getServiceSetName'
+            'serviceSetName' => 'getServiceSetName',
+            'customService' => 'getCustomService',
+            'serviceGroup' => 'getServiceGroup',
+            'serviceGroupNames' => 'getServiceGroupNames'
     ];
 
     /**
@@ -203,6 +233,9 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
         $this->container['destPort'] = isset($data['destPort']) ? $data['destPort'] : null;
         $this->container['serviceSetId'] = isset($data['serviceSetId']) ? $data['serviceSetId'] : null;
         $this->container['serviceSetName'] = isset($data['serviceSetName']) ? $data['serviceSetName'] : null;
+        $this->container['customService'] = isset($data['customService']) ? $data['customService'] : null;
+        $this->container['serviceGroup'] = isset($data['serviceGroup']) ? $data['serviceGroup'] : null;
+        $this->container['serviceGroupNames'] = isset($data['serviceGroupNames']) ? $data['serviceGroupNames'] : null;
     }
 
     /**
@@ -374,6 +407,78 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     public function setServiceSetName($serviceSetName)
     {
         $this->container['serviceSetName'] = $serviceSetName;
+        return $this;
+    }
+
+    /**
+    * Gets customService
+    *  自定义服务
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceItem[]|null
+    */
+    public function getCustomService()
+    {
+        return $this->container['customService'];
+    }
+
+    /**
+    * Sets customService
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceItem[]|null $customService 自定义服务
+    *
+    * @return $this
+    */
+    public function setCustomService($customService)
+    {
+        $this->container['customService'] = $customService;
+        return $this;
+    }
+
+    /**
+    * Gets serviceGroup
+    *  服务组列表
+    *
+    * @return string[]|null
+    */
+    public function getServiceGroup()
+    {
+        return $this->container['serviceGroup'];
+    }
+
+    /**
+    * Sets serviceGroup
+    *
+    * @param string[]|null $serviceGroup 服务组列表
+    *
+    * @return $this
+    */
+    public function setServiceGroup($serviceGroup)
+    {
+        $this->container['serviceGroup'] = $serviceGroup;
+        return $this;
+    }
+
+    /**
+    * Gets serviceGroupNames
+    *  服务组名称列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null
+    */
+    public function getServiceGroupNames()
+    {
+        return $this->container['serviceGroupNames'];
+    }
+
+    /**
+    * Sets serviceGroupNames
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null $serviceGroupNames 服务组名称列表
+    *
+    * @return $this
+    */
+    public function setServiceGroupNames($serviceGroupNames)
+    {
+        $this->container['serviceGroupNames'] = $serviceGroupNames;
         return $this;
     }
 

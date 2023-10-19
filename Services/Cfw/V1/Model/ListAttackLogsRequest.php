@@ -32,7 +32,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * logId  日志ID，当是第一页时为空，不是第一页时不为空
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作0：permit,1：deny
     * direction  方向0：外到内1：内到外
@@ -41,6 +41,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * level  威胁等级
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * logType  log_type
     *
     * @var string[]
     */
@@ -65,7 +67,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackRule' => 'string',
             'level' => 'string',
             'source' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'dstHost' => 'string',
+            'logType' => 'string'
     ];
 
     /**
@@ -82,7 +86,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * logId  日志ID，当是第一页时为空，不是第一页时不为空
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作0：permit,1：deny
     * direction  方向0：外到内1：内到外
@@ -91,6 +95,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * level  威胁等级
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * logType  log_type
     *
     * @var string[]
     */
@@ -115,7 +121,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         'attackRule' => null,
         'level' => null,
         'source' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'dstHost' => null,
+        'logType' => null
     ];
 
     /**
@@ -153,7 +161,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * logId  日志ID，当是第一页时为空，不是第一页时不为空
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作0：permit,1：deny
     * direction  方向0：外到内1：内到外
@@ -162,6 +170,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * level  威胁等级
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * logType  log_type
     *
     * @var string[]
     */
@@ -186,7 +196,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackRule' => 'attack_rule',
             'level' => 'level',
             'source' => 'source',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'dstHost' => 'dst_host',
+            'logType' => 'log_type'
     ];
 
     /**
@@ -203,7 +215,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * logId  日志ID，当是第一页时为空，不是第一页时不为空
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作0：permit,1：deny
     * direction  方向0：外到内1：内到外
@@ -212,6 +224,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * level  威胁等级
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * logType  log_type
     *
     * @var string[]
     */
@@ -236,7 +250,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackRule' => 'setAttackRule',
             'level' => 'setLevel',
             'source' => 'setSource',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'dstHost' => 'setDstHost',
+            'logType' => 'setLogType'
     ];
 
     /**
@@ -253,7 +269,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * logId  日志ID，当是第一页时为空，不是第一页时不为空
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作0：permit,1：deny
     * direction  方向0：外到内1：内到外
@@ -262,6 +278,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * level  威胁等级
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * logType  log_type
     *
     * @var string[]
     */
@@ -286,7 +304,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackRule' => 'getAttackRule',
             'level' => 'getLevel',
             'source' => 'getSource',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'dstHost' => 'getDstHost',
+            'logType' => 'getLogType'
     ];
 
     /**
@@ -337,6 +357,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     const ACTION__1 = '1';
     const DIRECTION__0 = '0';
     const DIRECTION__1 = '1';
+    const LOG_TYPE_INTERNET = 'internet';
+    const LOG_TYPE_NAT = 'nat';
+    const LOG_TYPE_VPC = 'vpc';
     
 
     /**
@@ -380,6 +403,20 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLogTypeAllowableValues()
+    {
+        return [
+            self::LOG_TYPE_INTERNET,
+            self::LOG_TYPE_NAT,
+            self::LOG_TYPE_VPC,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -417,6 +454,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
     }
 
     /**
@@ -474,6 +513,14 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'direction', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getLogTypeAllowableValues();
+                if (!is_null($this->container['logType']) && !in_array($this->container['logType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'logType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -782,7 +829,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示个数，范围为1-1024
     *
     * @return int
     */
@@ -794,7 +841,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示个数
+    * @param int $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -993,6 +1040,54 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目标主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目标主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets logType
+    *  log_type
+    *
+    * @return string|null
+    */
+    public function getLogType()
+    {
+        return $this->container['logType'];
+    }
+
+    /**
+    * Sets logType
+    *
+    * @param string|null $logType log_type
+    *
+    * @return $this
+    */
+    public function setLogType($logType)
+    {
+        $this->container['logType'] = $logType;
         return $this;
     }
 

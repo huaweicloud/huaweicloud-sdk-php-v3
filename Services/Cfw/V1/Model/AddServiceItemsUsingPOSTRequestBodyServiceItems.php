@@ -21,7 +21,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Array of property to type mappings. Used for (de)serialization
     * itemId  服务成员id
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * name  服务成员名称
@@ -41,7 +41,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Array of property to format mappings. Used for (de)serialization
     * itemId  服务成员id
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * name  服务成员名称
@@ -82,7 +82,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * itemId  服务成员id
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * name  服务成员名称
@@ -102,7 +102,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * itemId  服务成员id
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * name  服务成员名称
@@ -122,7 +122,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * itemId  服务成员id
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * name  服务成员名称
@@ -262,7 +262,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
 
     /**
     * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     *
     * @return int
     */
@@ -274,7 +274,7 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Sets protocol
     *
-    * @param int $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param int $protocol 协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     *
     * @return $this
     */

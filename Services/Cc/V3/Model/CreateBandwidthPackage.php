@@ -20,19 +20,19 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
-    * enterpriseProjectId  带宽包实例所属的企业项目ID。
-    * localAreaId  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
-    * remoteAreaId  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * projectId  实例所属项目ID。
+    * localAreaId  localAreaId
+    * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
-    * projectId  项目ID。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
+    * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
-    * specCode  产品编码。
     *
     * @var string[]
     */
@@ -40,33 +40,33 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'enterpriseProjectId' => 'string',
-            'localAreaId' => 'string',
-            'remoteAreaId' => 'string',
+            'projectId' => 'string',
+            'localAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
+            'remoteAreaId' => '\HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef',
             'chargeMode' => 'string',
             'billingMode' => 'int',
             'bandwidth' => 'int',
-            'projectId' => 'string',
             'resourceId' => 'string',
             'resourceType' => 'string',
-            'interflowMode' => 'string',
-            'specCode' => 'string'
+            'specCode' => 'string',
+            'interflowMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
-    * enterpriseProjectId  带宽包实例所属的企业项目ID。
-    * localAreaId  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
-    * remoteAreaId  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * projectId  实例所属项目ID。
+    * localAreaId  localAreaId
+    * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
-    * projectId  项目ID。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
+    * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
-    * specCode  产品编码。
     *
     * @var string[]
     */
@@ -74,16 +74,16 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'enterpriseProjectId' => null,
+        'projectId' => null,
         'localAreaId' => null,
         'remoteAreaId' => null,
         'chargeMode' => null,
         'billingMode' => 'int32',
         'bandwidth' => 'int32',
-        'projectId' => null,
         'resourceId' => null,
         'resourceType' => null,
-        'interflowMode' => null,
-        'specCode' => null
+        'specCode' => null,
+        'interflowMode' => null
     ];
 
     /**
@@ -109,19 +109,19 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
-    * enterpriseProjectId  带宽包实例所属的企业项目ID。
-    * localAreaId  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
-    * remoteAreaId  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * projectId  实例所属项目ID。
+    * localAreaId  localAreaId
+    * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
-    * projectId  项目ID。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
+    * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
-    * specCode  产品编码。
     *
     * @var string[]
     */
@@ -129,33 +129,33 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'projectId' => 'project_id',
             'localAreaId' => 'local_area_id',
             'remoteAreaId' => 'remote_area_id',
             'chargeMode' => 'charge_mode',
             'billingMode' => 'billing_mode',
             'bandwidth' => 'bandwidth',
-            'projectId' => 'project_id',
             'resourceId' => 'resource_id',
             'resourceType' => 'resource_type',
-            'interflowMode' => 'interflow_mode',
-            'specCode' => 'spec_code'
+            'specCode' => 'spec_code',
+            'interflowMode' => 'interflow_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
-    * enterpriseProjectId  带宽包实例所属的企业项目ID。
-    * localAreaId  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
-    * remoteAreaId  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * projectId  实例所属项目ID。
+    * localAreaId  localAreaId
+    * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
-    * projectId  项目ID。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
+    * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
-    * specCode  产品编码。
     *
     * @var string[]
     */
@@ -163,33 +163,33 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'projectId' => 'setProjectId',
             'localAreaId' => 'setLocalAreaId',
             'remoteAreaId' => 'setRemoteAreaId',
             'chargeMode' => 'setChargeMode',
             'billingMode' => 'setBillingMode',
             'bandwidth' => 'setBandwidth',
-            'projectId' => 'setProjectId',
             'resourceId' => 'setResourceId',
             'resourceType' => 'setResourceType',
-            'interflowMode' => 'setInterflowMode',
-            'specCode' => 'setSpecCode'
+            'specCode' => 'setSpecCode',
+            'interflowMode' => 'setInterflowMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
-    * enterpriseProjectId  带宽包实例所属的企业项目ID。
-    * localAreaId  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
-    * remoteAreaId  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * projectId  实例所属项目ID。
+    * localAreaId  localAreaId
+    * remoteAreaId  remoteAreaId
     * chargeMode  带宽包实例的计费方式。 bandwidth是按带宽计费。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     * bandwidth  带宽包实例中的带宽值。
-    * projectId  项目ID。
     * resourceId  带宽包实例绑定的资源ID。
     * resourceType  带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
+    * specCode  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
     * interflowMode  互通类型: - Area: 大区互通 - Region: 城域互通
-    * specCode  产品编码。
     *
     * @var string[]
     */
@@ -197,16 +197,16 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'projectId' => 'getProjectId',
             'localAreaId' => 'getLocalAreaId',
             'remoteAreaId' => 'getRemoteAreaId',
             'chargeMode' => 'getChargeMode',
             'billingMode' => 'getBillingMode',
             'bandwidth' => 'getBandwidth',
-            'projectId' => 'getProjectId',
             'resourceId' => 'getResourceId',
             'resourceType' => 'getResourceType',
-            'interflowMode' => 'getInterflowMode',
-            'specCode' => 'getSpecCode'
+            'specCode' => 'getSpecCode',
+            'interflowMode' => 'getInterflowMode'
     ];
 
     /**
@@ -249,18 +249,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const LOCAL_AREA_ID_CHINESE_MAINLAND = 'Chinese-Mainland';
-    const LOCAL_AREA_ID_ASIA_PACIFIC = 'Asia-Pacific';
-    const LOCAL_AREA_ID_AFRICA = 'Africa';
-    const LOCAL_AREA_ID_WESTERN_LATIN_AMERICA = 'Western-Latin-America';
-    const LOCAL_AREA_ID_EASTERN_LATIN_AMERICA = 'Eastern-Latin-America';
-    const LOCAL_AREA_ID_NORTHERN_LATIN_AMERICA = 'Northern-Latin-America';
-    const REMOTE_AREA_ID_CHINESE_MAINLAND = 'Chinese-Mainland';
-    const REMOTE_AREA_ID_ASIA_PACIFIC = 'Asia-Pacific';
-    const REMOTE_AREA_ID_AFRICA = 'Africa';
-    const REMOTE_AREA_ID_WESTERN_LATIN_AMERICA = 'Western-Latin-America';
-    const REMOTE_AREA_ID_EASTERN_LATIN_AMERICA = 'Eastern-Latin-America';
-    const REMOTE_AREA_ID_NORTHERN_LATIN_AMERICA = 'Northern-Latin-America';
     const CHARGE_MODE_BANDWIDTH = 'bandwidth';
     const BILLING_MODE_3 = 3;
     const BILLING_MODE_4 = 4;
@@ -270,40 +258,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     const INTERFLOW_MODE_AREA = 'Area';
     const INTERFLOW_MODE_REGION = 'Region';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getLocalAreaIdAllowableValues()
-    {
-        return [
-            self::LOCAL_AREA_ID_CHINESE_MAINLAND,
-            self::LOCAL_AREA_ID_ASIA_PACIFIC,
-            self::LOCAL_AREA_ID_AFRICA,
-            self::LOCAL_AREA_ID_WESTERN_LATIN_AMERICA,
-            self::LOCAL_AREA_ID_EASTERN_LATIN_AMERICA,
-            self::LOCAL_AREA_ID_NORTHERN_LATIN_AMERICA,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRemoteAreaIdAllowableValues()
-    {
-        return [
-            self::REMOTE_AREA_ID_CHINESE_MAINLAND,
-            self::REMOTE_AREA_ID_ASIA_PACIFIC,
-            self::REMOTE_AREA_ID_AFRICA,
-            self::REMOTE_AREA_ID_WESTERN_LATIN_AMERICA,
-            self::REMOTE_AREA_ID_EASTERN_LATIN_AMERICA,
-            self::REMOTE_AREA_ID_NORTHERN_LATIN_AMERICA,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -376,16 +330,16 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['localAreaId'] = isset($data['localAreaId']) ? $data['localAreaId'] : null;
         $this->container['remoteAreaId'] = isset($data['remoteAreaId']) ? $data['remoteAreaId'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['interflowMode'] = isset($data['interflowMode']) ? $data['interflowMode'] : null;
         $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
+        $this->container['interflowMode'] = isset($data['interflowMode']) ? $data['interflowMode'] : null;
     }
 
     /**
@@ -408,55 +362,42 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             if (!preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 85)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 85.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[^&lt;&gt;]*$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^&lt;&gt;]*$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['localAreaId'] === null) {
             $invalidProperties[] = "'localAreaId' can't be null";
         }
-            $allowedValues = $this->getLocalAreaIdAllowableValues();
-                if (!is_null($this->container['localAreaId']) && !in_array($this->container['localAreaId'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'localAreaId', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if ((mb_strlen($this->container['localAreaId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'localAreaId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['localAreaId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'localAreaId', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['remoteAreaId'] === null) {
             $invalidProperties[] = "'remoteAreaId' can't be null";
         }
-            $allowedValues = $this->getRemoteAreaIdAllowableValues();
-                if (!is_null($this->container['remoteAreaId']) && !in_array($this->container['remoteAreaId'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'remoteAreaId', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if ((mb_strlen($this->container['remoteAreaId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'remoteAreaId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['remoteAreaId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'remoteAreaId', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['chargeMode'] === null) {
             $invalidProperties[] = "'chargeMode' can't be null";
         }
@@ -494,15 +435,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             if (($this->container['bandwidth'] < 2)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be bigger than or equal to 2.";
             }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-            if ((mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['projectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 36.";
             }
@@ -523,6 +455,12 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['specCode']) && (mb_strlen($this->container['specCode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'specCode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['specCode']) && (mb_strlen($this->container['specCode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'specCode', the character length must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getInterflowModeAllowableValues();
                 if (!is_null($this->container['interflowMode']) && !in_array($this->container['interflowMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -536,12 +474,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['interflowMode']) && (mb_strlen($this->container['interflowMode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'interflowMode', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['specCode']) && (mb_strlen($this->container['specCode']) > 36)) {
-                $invalidProperties[] = "invalid value for 'specCode', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['specCode']) && (mb_strlen($this->container['specCode']) < 0)) {
-                $invalidProperties[] = "invalid value for 'specCode', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -559,7 +491,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  带宽包实例的名字。
+    *  实例名字。
     *
     * @return string
     */
@@ -571,7 +503,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 带宽包实例的名字。
+    * @param string $name 实例名字。
     *
     * @return $this
     */
@@ -583,7 +515,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  带宽包实例的描述。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -595,7 +527,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 带宽包实例的描述。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */
@@ -607,7 +539,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  带宽包实例所属的企业项目ID。
+    *  实例所属企业项目ID。
     *
     * @return string|null
     */
@@ -619,7 +551,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 带宽包实例所属的企业项目ID。
+    * @param string|null $enterpriseProjectId 实例所属企业项目ID。
     *
     * @return $this
     */
@@ -630,10 +562,34 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets localAreaId
-    *  本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * Gets projectId
+    *  实例所属项目ID。
     *
     * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 实例所属项目ID。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets localAreaId
+    *  localAreaId
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
     */
     public function getLocalAreaId()
     {
@@ -643,7 +599,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets localAreaId
     *
-    * @param string $localAreaId 本端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $localAreaId localAreaId
     *
     * @return $this
     */
@@ -655,9 +611,9 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteAreaId
-    *  远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    *  remoteAreaId
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef
     */
     public function getRemoteAreaId()
     {
@@ -667,7 +623,7 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAreaId
     *
-    * @param string $remoteAreaId 远端大区。 云连接支持的大区有： | Chinese-Mainland | 中国大陆 | | Asia-Pacific | 亚太 | | Africa | 非洲 | | Western-Latin-America | 拉美西 | | Eastern-Latin-America | 拉美东 | | Northern-Latin-America | 拉美北 |
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\AreaIdDef $remoteAreaId remoteAreaId
     *
     * @return $this
     */
@@ -750,30 +706,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  项目ID。
-    *
-    * @return string
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string $projectId 项目ID。
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
     * Gets resourceId
     *  带宽包实例绑定的资源ID。
     *
@@ -822,6 +754,30 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets specCode
+    *  带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
+    *
+    * @return string|null
+    */
+    public function getSpecCode()
+    {
+        return $this->container['specCode'];
+    }
+
+    /**
+    * Sets specCode
+    *
+    * @param string|null $specCode 带宽包实例的规格编码。 bandwidth.aftoela：大陆站+国际站南非-拉美东 bandwidth.aftonla：大陆站+国际站南非-拉美北 bandwidth.aftowla：大陆站+国际站南非-拉美西 bandwidth.aptoaf：国际站亚太-南非 bandwidth.aptoap：国际站亚太-亚太 bandwidth.aptoela：大陆站+国际站亚太-拉美东 bandwidth.aptonla：大陆站+国际站亚太-拉美北 bandwidth.aptowla：大陆站+国际站亚太-拉美西 bandwidth.cmtoaf：国际站中国大陆-南非 bandwidth.cmtoap：国际站中国大陆-亚太 bandwidth.cmtocm：国际站中国大陆-中国大陆 bandwidth.cmtoela：大陆站+国际站中国大陆-拉美东 bandwidth.cmtonla：大陆站+国际站中国大陆-拉美北 bandwidth.cmtowla：大陆站+国际站中国大陆-拉美西 bandwidth.elatoela：大陆站+国际站拉美东-拉美东 bandwidth.elatonla：大陆站+国际站拉美东-拉美北 bandwidth.wlatoela：大陆站+国际站拉美西-拉美东 bandwidth.wlatonla：大陆站+国际站拉美西-拉美北 bandwidth.wlatowla：大陆站+国际站拉美西-拉美西
+    *
+    * @return $this
+    */
+    public function setSpecCode($specCode)
+    {
+        $this->container['specCode'] = $specCode;
+        return $this;
+    }
+
+    /**
     * Gets interflowMode
     *  互通类型: - Area: 大区互通 - Region: 城域互通
     *
@@ -842,30 +798,6 @@ class CreateBandwidthPackage implements ModelInterface, ArrayAccess
     public function setInterflowMode($interflowMode)
     {
         $this->container['interflowMode'] = $interflowMode;
-        return $this;
-    }
-
-    /**
-    * Gets specCode
-    *  产品编码。
-    *
-    * @return string|null
-    */
-    public function getSpecCode()
-    {
-        return $this->container['specCode'];
-    }
-
-    /**
-    * Sets specCode
-    *
-    * @param string|null $specCode 产品编码。
-    *
-    * @return $this
-    */
-    public function setSpecCode($specCode)
-    {
-        $this->container['specCode'] = $specCode;
         return $this;
     }
 

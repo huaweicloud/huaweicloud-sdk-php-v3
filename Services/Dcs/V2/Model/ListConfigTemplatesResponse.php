@@ -22,25 +22,25 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateNum  模板个数。
-    * configTemplates  模板的详情数组。
+    * templates  模板的详情数组。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'templateNum' => 'int',
-            'configTemplates' => '\HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]'
+            'templates' => '\HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateNum  模板个数。
-    * configTemplates  模板的详情数组。
+    * templates  模板的详情数组。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'templateNum' => 'int32',
-        'configTemplates' => null
+        'templates' => null
     ];
 
     /**
@@ -67,37 +67,37 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateNum  模板个数。
-    * configTemplates  模板的详情数组。
+    * templates  模板的详情数组。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'templateNum' => 'template_num',
-            'configTemplates' => 'config_templates'
+            'templates' => 'templates'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateNum  模板个数。
-    * configTemplates  模板的详情数组。
+    * templates  模板的详情数组。
     *
     * @var string[]
     */
     protected static $setters = [
             'templateNum' => 'setTemplateNum',
-            'configTemplates' => 'setConfigTemplates'
+            'templates' => 'setTemplates'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateNum  模板个数。
-    * configTemplates  模板的详情数组。
+    * templates  模板的详情数组。
     *
     * @var string[]
     */
     protected static $getters = [
             'templateNum' => 'getTemplateNum',
-            'configTemplates' => 'getConfigTemplates'
+            'templates' => 'getTemplates'
     ];
 
     /**
@@ -159,7 +159,7 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateNum'] = isset($data['templateNum']) ? $data['templateNum'] : null;
-        $this->container['configTemplates'] = isset($data['configTemplates']) ? $data['configTemplates'] : null;
+        $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets configTemplates
+    * Gets templates
     *  模板的详情数组。
     *
     * @return \HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]|null
     */
-    public function getConfigTemplates()
+    public function getTemplates()
     {
-        return $this->container['configTemplates'];
+        return $this->container['templates'];
     }
 
     /**
-    * Sets configTemplates
+    * Sets templates
     *
-    * @param \HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]|null $configTemplates 模板的详情数组。
+    * @param \HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]|null $templates 模板的详情数组。
     *
     * @return $this
     */
-    public function setConfigTemplates($configTemplates)
+    public function setTemplates($templates)
     {
-        $this->container['configTemplates'] = $configTemplates;
+        $this->container['templates'] = $templates;
         return $this;
     }
 

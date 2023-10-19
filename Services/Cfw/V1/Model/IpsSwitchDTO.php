@@ -21,7 +21,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * ipsType  补丁类型，1-基础补丁 2=虚拟补丁
+    * ipsType  补丁类型，仅支持虚拟补丁，值为2。
     * status  ips特性开关状态
     *
     * @var string[]
@@ -35,7 +35,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * ipsType  补丁类型，1-基础补丁 2=虚拟补丁
+    * ipsType  补丁类型，仅支持虚拟补丁，值为2。
     * status  ips特性开关状态
     *
     * @var string[]
@@ -70,7 +70,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * ipsType  补丁类型，1-基础补丁 2=虚拟补丁
+    * ipsType  补丁类型，仅支持虚拟补丁，值为2。
     * status  ips特性开关状态
     *
     * @var string[]
@@ -84,7 +84,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * ipsType  补丁类型，1-基础补丁 2=虚拟补丁
+    * ipsType  补丁类型，仅支持虚拟补丁，值为2。
     * status  ips特性开关状态
     *
     * @var string[]
@@ -98,7 +98,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * ipsType  补丁类型，1-基础补丁 2=虚拟补丁
+    * ipsType  补丁类型，仅支持虚拟补丁，值为2。
     * status  ips特性开关状态
     *
     * @var string[]
@@ -255,7 +255,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsType
-    *  补丁类型，1-基础补丁 2=虚拟补丁
+    *  补丁类型，仅支持虚拟补丁，值为2。
     *
     * @return int
     */
@@ -267,7 +267,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsType
     *
-    * @param int $ipsType 补丁类型，1-基础补丁 2=虚拟补丁
+    * @param int $ipsType 补丁类型，仅支持虚拟补丁，值为2。
     *
     * @return $this
     */

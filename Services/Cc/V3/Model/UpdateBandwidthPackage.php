@@ -20,8 +20,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
@@ -36,8 +36,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
@@ -73,8 +73,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
@@ -89,8 +89,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
@@ -105,8 +105,8 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  带宽包实例的名字。
-    * description  带宽包实例的描述。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * bandwidth  带宽包实例中的带宽值。
     * billingMode  带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
     *
@@ -215,14 +215,14 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 85)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 85.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[^&lt;&gt;]*$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^&lt;&gt;]*$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
             }
             if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] > 999999)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be smaller than or equal to 999999.";
@@ -254,7 +254,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  带宽包实例的名字。
+    *  实例名字。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 带宽包实例的名字。
+    * @param string|null $name 实例名字。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  带宽包实例的描述。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -290,7 +290,7 @@ class UpdateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 带宽包实例的描述。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */

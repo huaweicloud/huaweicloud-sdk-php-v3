@@ -21,21 +21,25 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dnsServer  DNS服务器
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dnsServer' => '\HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]'
+            'dnsServer' => '\HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]',
+            'healthCheckDomainName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dnsServer  DNS服务器
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dnsServer' => null
+        'dnsServer' => null,
+        'healthCheckDomainName' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dnsServer  DNS服务器
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dnsServer' => 'dns_server'
+            'dnsServer' => 'dns_server',
+            'healthCheckDomainName' => 'health_check_domain_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dnsServer  DNS服务器
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
     protected static $setters = [
-            'dnsServer' => 'setDnsServer'
+            'dnsServer' => 'setDnsServer',
+            'healthCheckDomainName' => 'setHealthCheckDomainName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dnsServer  DNS服务器
+    * healthCheckDomainName  健康检查域名
     *
     * @var string[]
     */
     protected static $getters = [
-            'dnsServer' => 'getDnsServer'
+            'dnsServer' => 'getDnsServer',
+            'healthCheckDomainName' => 'getHealthCheckDomainName'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['dnsServer'] = isset($data['dnsServer']) ? $data['dnsServer'] : null;
+        $this->container['healthCheckDomainName'] = isset($data['healthCheckDomainName']) ? $data['healthCheckDomainName'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     public function setDnsServer($dnsServer)
     {
         $this->container['dnsServer'] = $dnsServer;
+        return $this;
+    }
+
+    /**
+    * Gets healthCheckDomainName
+    *  健康检查域名
+    *
+    * @return string|null
+    */
+    public function getHealthCheckDomainName()
+    {
+        return $this->container['healthCheckDomainName'];
+    }
+
+    /**
+    * Sets healthCheckDomainName
+    *
+    * @param string|null $healthCheckDomainName 健康检查域名
+    *
+    * @return $this
+    */
+    public function setHealthCheckDomainName($healthCheckDomainName)
+    {
+        $this->container['healthCheckDomainName'] = $healthCheckDomainName;
         return $this;
     }
 

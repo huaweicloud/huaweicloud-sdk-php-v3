@@ -24,7 +24,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     * description  终端节点组描述信息，取值范围：0~255个字符之间，禁止输入字符：<>。
     * trafficDialPercentage  流量拨分到此组的百分比。
     * regionId  终端节点组所属区域ID。
-    * listeners  关联监听器列表。
+    * listeners  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     * description  终端节点组描述信息，取值范围：0~255个字符之间，禁止输入字符：<>。
     * trafficDialPercentage  流量拨分到此组的百分比。
     * regionId  终端节点组所属区域ID。
-    * listeners  关联监听器列表。
+    * listeners  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     * description  终端节点组描述信息，取值范围：0~255个字符之间，禁止输入字符：<>。
     * trafficDialPercentage  流量拨分到此组的百分比。
     * regionId  终端节点组所属区域ID。
-    * listeners  关联监听器列表。
+    * listeners  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     * description  终端节点组描述信息，取值范围：0~255个字符之间，禁止输入字符：<>。
     * trafficDialPercentage  流量拨分到此组的百分比。
     * regionId  终端节点组所属区域ID。
-    * listeners  关联监听器列表。
+    * listeners  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     * description  终端节点组描述信息，取值范围：0~255个字符之间，禁止输入字符：<>。
     * trafficDialPercentage  流量拨分到此组的百分比。
     * regionId  终端节点组所属区域ID。
-    * listeners  关联监听器列表。
+    * listeners  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @var string[]
     */
@@ -356,7 +356,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets listeners
-    *  关联监听器列表。
+    *  关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @return \HuaweiCloud\SDK\Ga\V1\Model\Id[]
     */
@@ -368,7 +368,7 @@ class CreateEndpointGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets listeners
     *
-    * @param \HuaweiCloud\SDK\Ga\V1\Model\Id[] $listeners 关联监听器列表。
+    * @param \HuaweiCloud\SDK\Ga\V1\Model\Id[] $listeners 关联监听器列表。一个终端节点组下仅支持关联一个监听器。
     *
     * @return $this
     */

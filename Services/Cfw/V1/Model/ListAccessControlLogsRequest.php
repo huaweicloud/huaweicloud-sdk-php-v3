@@ -34,9 +34,12 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID,第一页为空，其他页不为空
     * nextDate  日期,第一页为空，其他页不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * logType  日志类型
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * ruleName  规则名称
+    * action  动作0：permit,1：deny
     *
     * @var string[]
     */
@@ -57,7 +60,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'logType' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'dstHost' => 'string',
+            'ruleName' => 'string',
+            'action' => 'string'
     ];
 
     /**
@@ -76,9 +82,12 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID,第一页为空，其他页不为空
     * nextDate  日期,第一页为空，其他页不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * logType  日志类型
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * ruleName  规则名称
+    * action  动作0：permit,1：deny
     *
     * @var string[]
     */
@@ -99,7 +108,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         'offset' => null,
         'limit' => null,
         'logType' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'dstHost' => null,
+        'ruleName' => null,
+        'action' => null
     ];
 
     /**
@@ -139,9 +151,12 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID,第一页为空，其他页不为空
     * nextDate  日期,第一页为空，其他页不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * logType  日志类型
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * ruleName  规则名称
+    * action  动作0：permit,1：deny
     *
     * @var string[]
     */
@@ -162,7 +177,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'logType' => 'log_type',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'dstHost' => 'dst_host',
+            'ruleName' => 'rule_name',
+            'action' => 'action'
     ];
 
     /**
@@ -181,9 +199,12 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID,第一页为空，其他页不为空
     * nextDate  日期,第一页为空，其他页不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * logType  日志类型
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * ruleName  规则名称
+    * action  动作0：permit,1：deny
     *
     * @var string[]
     */
@@ -204,7 +225,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'logType' => 'setLogType',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'dstHost' => 'setDstHost',
+            'ruleName' => 'setRuleName',
+            'action' => 'setAction'
     ];
 
     /**
@@ -223,9 +247,12 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * logId  文档ID,第一页为空，其他页不为空
     * nextDate  日期,第一页为空，其他页不为空
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * logType  日志类型
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * dstHost  目标主机
+    * ruleName  规则名称
+    * action  动作0：permit,1：deny
     *
     * @var string[]
     */
@@ -246,7 +273,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'logType' => 'getLogType',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'dstHost' => 'getDstHost',
+            'ruleName' => 'getRuleName',
+            'action' => 'getAction'
     ];
 
     /**
@@ -341,6 +371,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**
@@ -732,7 +765,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示个数，范围为1-1024
     *
     * @return int
     */
@@ -744,7 +777,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示个数
+    * @param int $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -799,6 +832,78 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目标主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目标主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets ruleName
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getRuleName()
+    {
+        return $this->container['ruleName'];
+    }
+
+    /**
+    * Sets ruleName
+    *
+    * @param string|null $ruleName 规则名称
+    *
+    * @return $this
+    */
+    public function setRuleName($ruleName)
+    {
+        $this->container['ruleName'] = $ruleName;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  动作0：permit,1：deny
+    *
+    * @return string|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string|null $action 动作0：permit,1：deny
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

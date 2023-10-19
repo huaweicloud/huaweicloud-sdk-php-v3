@@ -39,6 +39,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  packet
     * app  应用协议
     * packetMessages  攻击报文信息
+    * dstHost  目标主机
+    * srcRegionId  源区域id
+    * srcRegionName  源区域名称
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域名称
     *
     * @var string[]
     */
@@ -61,7 +66,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'protocol' => 'string',
             'packet' => '\HuaweiCloud\SDK\Cfw\V1\Model\Packet',
             'app' => 'string',
-            'packetMessages' => '\HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]'
+            'packetMessages' => '\HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]',
+            'dstHost' => 'string',
+            'srcRegionId' => 'string',
+            'srcRegionName' => 'string',
+            'dstRegionId' => 'string',
+            'dstRegionName' => 'string'
     ];
 
     /**
@@ -85,6 +95,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  packet
     * app  应用协议
     * packetMessages  攻击报文信息
+    * dstHost  目标主机
+    * srcRegionId  源区域id
+    * srcRegionName  源区域名称
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域名称
     *
     * @var string[]
     */
@@ -107,7 +122,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         'protocol' => null,
         'packet' => null,
         'app' => null,
-        'packetMessages' => null
+        'packetMessages' => null,
+        'dstHost' => null,
+        'srcRegionId' => null,
+        'srcRegionName' => null,
+        'dstRegionId' => null,
+        'dstRegionName' => null
     ];
 
     /**
@@ -152,6 +172,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  packet
     * app  应用协议
     * packetMessages  攻击报文信息
+    * dstHost  目标主机
+    * srcRegionId  源区域id
+    * srcRegionName  源区域名称
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域名称
     *
     * @var string[]
     */
@@ -174,7 +199,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'protocol' => 'protocol',
             'packet' => 'packet',
             'app' => 'app',
-            'packetMessages' => 'packetMessages'
+            'packetMessages' => 'packetMessages',
+            'dstHost' => 'dst_host',
+            'srcRegionId' => 'src_region_id',
+            'srcRegionName' => 'src_region_name',
+            'dstRegionId' => 'dst_region_id',
+            'dstRegionName' => 'dst_region_name'
     ];
 
     /**
@@ -198,6 +228,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  packet
     * app  应用协议
     * packetMessages  攻击报文信息
+    * dstHost  目标主机
+    * srcRegionId  源区域id
+    * srcRegionName  源区域名称
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域名称
     *
     * @var string[]
     */
@@ -220,7 +255,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'protocol' => 'setProtocol',
             'packet' => 'setPacket',
             'app' => 'setApp',
-            'packetMessages' => 'setPacketMessages'
+            'packetMessages' => 'setPacketMessages',
+            'dstHost' => 'setDstHost',
+            'srcRegionId' => 'setSrcRegionId',
+            'srcRegionName' => 'setSrcRegionName',
+            'dstRegionId' => 'setDstRegionId',
+            'dstRegionName' => 'setDstRegionName'
     ];
 
     /**
@@ -244,6 +284,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  packet
     * app  应用协议
     * packetMessages  攻击报文信息
+    * dstHost  目标主机
+    * srcRegionId  源区域id
+    * srcRegionName  源区域名称
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域名称
     *
     * @var string[]
     */
@@ -266,7 +311,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'protocol' => 'getProtocol',
             'packet' => 'getPacket',
             'app' => 'getApp',
-            'packetMessages' => 'getPacketMessages'
+            'packetMessages' => 'getPacketMessages',
+            'dstHost' => 'getDstHost',
+            'srcRegionId' => 'getSrcRegionId',
+            'srcRegionName' => 'getSrcRegionName',
+            'dstRegionId' => 'getDstRegionId',
+            'dstRegionName' => 'getDstRegionName'
     ];
 
     /**
@@ -361,6 +411,11 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         $this->container['packet'] = isset($data['packet']) ? $data['packet'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['packetMessages'] = isset($data['packetMessages']) ? $data['packetMessages'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['srcRegionId'] = isset($data['srcRegionId']) ? $data['srcRegionId'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstRegionId'] = isset($data['dstRegionId']) ? $data['dstRegionId'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
     }
 
     /**
@@ -858,6 +913,126 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     public function setPacketMessages($packetMessages)
     {
         $this->container['packetMessages'] = $packetMessages;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目标主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目标主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionId
+    *  源区域id
+    *
+    * @return string|null
+    */
+    public function getSrcRegionId()
+    {
+        return $this->container['srcRegionId'];
+    }
+
+    /**
+    * Sets srcRegionId
+    *
+    * @param string|null $srcRegionId 源区域id
+    *
+    * @return $this
+    */
+    public function setSrcRegionId($srcRegionId)
+    {
+        $this->container['srcRegionId'] = $srcRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源区域名称
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源区域名称
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionId
+    *  目的区域id
+    *
+    * @return string|null
+    */
+    public function getDstRegionId()
+    {
+        return $this->container['dstRegionId'];
+    }
+
+    /**
+    * Sets dstRegionId
+    *
+    * @param string|null $dstRegionId 目的区域id
+    *
+    * @return $this
+    */
+    public function setDstRegionId($dstRegionId)
+    {
+        $this->container['dstRegionId'] = $dstRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的区域名称
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的区域名称
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
         return $this;
     }
 

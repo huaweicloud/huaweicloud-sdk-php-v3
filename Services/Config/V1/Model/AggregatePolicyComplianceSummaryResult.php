@@ -23,7 +23,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
-    * groupAccountName  账号名称
+    * groupAccountName  帐号名称
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
-    * groupAccountName  账号名称
+    * groupAccountName  帐号名称
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
-    * groupAccountName  账号名称
+    * groupAccountName  帐号名称
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
-    * groupAccountName  账号名称
+    * groupAccountName  帐号名称
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     * resourceDetails  resourceDetails
     * assignmentDetails  assignmentDetails
     * groupName  分组名称
-    * groupAccountName  账号名称
+    * groupAccountName  帐号名称
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
 
     /**
     * Gets groupAccountName
-    *  账号名称
+    *  帐号名称
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class AggregatePolicyComplianceSummaryResult implements ModelInterface, ArrayAcc
     /**
     * Sets groupAccountName
     *
-    * @param string|null $groupAccountName 账号名称
+    * @param string|null $groupAccountName 帐号名称
     *
     * @return $this
     */

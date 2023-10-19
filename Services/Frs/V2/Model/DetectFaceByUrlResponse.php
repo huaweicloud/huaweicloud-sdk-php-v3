@@ -22,21 +22,25 @@ class DetectFaceByUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * faces  检测到的人脸。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'faces' => '\HuaweiCloud\SDK\Frs\V2\Model\DetectFace[]'
+            'faces' => '\HuaweiCloud\SDK\Frs\V2\Model\DetectFace[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * faces  检测到的人脸。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'faces' => null
+        'faces' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class DetectFaceByUrlResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * faces  检测到的人脸。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'faces' => 'faces'
+            'faces' => 'faces',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * faces  检测到的人脸。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'faces' => 'setFaces'
+            'faces' => 'setFaces',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * faces  检测到的人脸。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'faces' => 'getFaces'
+            'faces' => 'getFaces',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class DetectFaceByUrlResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['faces'] = isset($data['faces']) ? $data['faces'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class DetectFaceByUrlResponse implements ModelInterface, ArrayAccess
     public function setFaces($faces)
     {
         $this->container['faces'] = $faces;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

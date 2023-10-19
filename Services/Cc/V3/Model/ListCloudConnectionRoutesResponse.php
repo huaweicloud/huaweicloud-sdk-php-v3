@@ -21,30 +21,30 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudConnectionRoutes  云连接路由实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnectionRoutes  云连接路由实例列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cloudConnectionRoutes' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[]',
+            'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
-            'requestId' => 'string'
+            'cloudConnectionRoutes' => '\HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudConnectionRoutes  云连接路由实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnectionRoutes  云连接路由实例列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cloudConnectionRoutes' => null,
+        'requestId' => null,
         'pageInfo' => null,
-        'requestId' => null
+        'cloudConnectionRoutes' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudConnectionRoutes  云连接路由实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnectionRoutes  云连接路由实例列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cloudConnectionRoutes' => 'cloud_connection_routes',
+            'requestId' => 'request_id',
             'pageInfo' => 'page_info',
-            'requestId' => 'request_id'
+            'cloudConnectionRoutes' => 'cloud_connection_routes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudConnectionRoutes  云连接路由实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnectionRoutes  云连接路由实例列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'cloudConnectionRoutes' => 'setCloudConnectionRoutes',
+            'requestId' => 'setRequestId',
             'pageInfo' => 'setPageInfo',
-            'requestId' => 'setRequestId'
+            'cloudConnectionRoutes' => 'setCloudConnectionRoutes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudConnectionRoutes  云连接路由实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * cloudConnectionRoutes  云连接路由实例列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'cloudConnectionRoutes' => 'getCloudConnectionRoutes',
+            'requestId' => 'getRequestId',
             'pageInfo' => 'getPageInfo',
-            'requestId' => 'getRequestId'
+            'cloudConnectionRoutes' => 'getCloudConnectionRoutes'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cloudConnectionRoutes'] = isset($data['cloudConnectionRoutes']) ? $data['cloudConnectionRoutes'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['cloudConnectionRoutes'] = isset($data['cloudConnectionRoutes']) ? $data['cloudConnectionRoutes'] : null;
     }
 
     /**
@@ -181,12 +181,18 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['cloudConnectionRoutes'] === null) {
+            $invalidProperties[] = "'cloudConnectionRoutes' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -202,26 +208,26 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cloudConnectionRoutes
-    *  云连接路由实例列表。
+    * Gets requestId
+    *  资源ID标识符。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[]|null
+    * @return string
     */
-    public function getCloudConnectionRoutes()
+    public function getRequestId()
     {
-        return $this->container['cloudConnectionRoutes'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets cloudConnectionRoutes
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[]|null $cloudConnectionRoutes 云连接路由实例列表。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
-    public function setCloudConnectionRoutes($cloudConnectionRoutes)
+    public function setRequestId($requestId)
     {
-        $this->container['cloudConnectionRoutes'] = $cloudConnectionRoutes;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
@@ -250,26 +256,26 @@ class ListCloudConnectionRoutesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  请求ID。
+    * Gets cloudConnectionRoutes
+    *  云连接路由实例列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[]
     */
-    public function getRequestId()
+    public function getCloudConnectionRoutes()
     {
-        return $this->container['requestId'];
+        return $this->container['cloudConnectionRoutes'];
     }
 
     /**
-    * Sets requestId
+    * Sets cloudConnectionRoutes
     *
-    * @param string|null $requestId 请求ID。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\CloudConnectionRoute[] $cloudConnectionRoutes 云连接路由实例列表。
     *
     * @return $this
     */
-    public function setRequestId($requestId)
+    public function setCloudConnectionRoutes($cloudConnectionRoutes)
     {
-        $this->container['requestId'] = $requestId;
+        $this->container['cloudConnectionRoutes'] = $cloudConnectionRoutes;
         return $this;
     }
 

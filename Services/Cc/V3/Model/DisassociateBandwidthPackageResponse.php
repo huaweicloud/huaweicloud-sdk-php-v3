@@ -21,26 +21,26 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * bandwidthPackage  bandwidthPackage
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bandwidthPackage' => '\HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'bandwidthPackage' => '\HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * bandwidthPackage  bandwidthPackage
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bandwidthPackage' => null,
-        'requestId' => null
+        'requestId' => null,
+        'bandwidthPackage' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  资源ID标识符。
     * bandwidthPackage  bandwidthPackage
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'bandwidthPackage' => 'bandwidth_package',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'bandwidthPackage' => 'bandwidth_package'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  资源ID标识符。
     * bandwidthPackage  bandwidthPackage
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'bandwidthPackage' => 'setBandwidthPackage',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'bandwidthPackage' => 'setBandwidthPackage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  资源ID标识符。
     * bandwidthPackage  bandwidthPackage
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'bandwidthPackage' => 'getBandwidthPackage',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'bandwidthPackage' => 'getBandwidthPackage'
     ];
 
     /**
@@ -158,8 +158,8 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['bandwidthPackage'] = isset($data['bandwidthPackage']) ? $data['bandwidthPackage'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['bandwidthPackage'] = isset($data['bandwidthPackage']) ? $data['bandwidthPackage'] : null;
     }
 
     /**
@@ -170,12 +170,18 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['bandwidthPackage'] === null) {
+            $invalidProperties[] = "'bandwidthPackage' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -191,34 +197,10 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets bandwidthPackage
-    *  bandwidthPackage
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage|null
-    */
-    public function getBandwidthPackage()
-    {
-        return $this->container['bandwidthPackage'];
-    }
-
-    /**
-    * Sets bandwidthPackage
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage|null $bandwidthPackage bandwidthPackage
-    *
-    * @return $this
-    */
-    public function setBandwidthPackage($bandwidthPackage)
-    {
-        $this->container['bandwidthPackage'] = $bandwidthPackage;
-        return $this;
-    }
-
-    /**
     * Gets requestId
-    *  请求ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getRequestId()
     {
@@ -228,13 +210,37 @@ class DisassociateBandwidthPackageResponse implements ModelInterface, ArrayAcces
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthPackage
+    *  bandwidthPackage
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage
+    */
+    public function getBandwidthPackage()
+    {
+        return $this->container['bandwidthPackage'];
+    }
+
+    /**
+    * Sets bandwidthPackage
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\BandwidthPackage $bandwidthPackage bandwidthPackage
+    *
+    * @return $this
+    */
+    public function setBandwidthPackage($bandwidthPackage)
+    {
+        $this->container['bandwidthPackage'] = $bandwidthPackage;
         return $this;
     }
 

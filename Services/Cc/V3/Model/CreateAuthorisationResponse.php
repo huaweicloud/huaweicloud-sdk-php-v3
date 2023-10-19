@@ -21,26 +21,26 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * authorisation  authorisation
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorisation' => '\HuaweiCloud\SDK\Cc\V3\Model\Authorisation',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'authorisation' => '\HuaweiCloud\SDK\Cc\V3\Model\Authorisation'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * authorisation  authorisation
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorisation' => null,
-        'requestId' => null
+        'requestId' => null,
+        'authorisation' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  资源ID标识符。
     * authorisation  authorisation
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorisation' => 'authorisation',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'authorisation' => 'authorisation'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  资源ID标识符。
     * authorisation  authorisation
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'authorisation' => 'setAuthorisation',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'authorisation' => 'setAuthorisation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  资源ID标识符。
     * authorisation  authorisation
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'authorisation' => 'getAuthorisation',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'authorisation' => 'getAuthorisation'
     ];
 
     /**
@@ -158,8 +158,8 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorisation'] = isset($data['authorisation']) ? $data['authorisation'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['authorisation'] = isset($data['authorisation']) ? $data['authorisation'] : null;
     }
 
     /**
@@ -170,12 +170,18 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['authorisation'] === null) {
+            $invalidProperties[] = "'authorisation' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -191,34 +197,10 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets authorisation
-    *  authorisation
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\Authorisation|null
-    */
-    public function getAuthorisation()
-    {
-        return $this->container['authorisation'];
-    }
-
-    /**
-    * Sets authorisation
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Authorisation|null $authorisation authorisation
-    *
-    * @return $this
-    */
-    public function setAuthorisation($authorisation)
-    {
-        $this->container['authorisation'] = $authorisation;
-        return $this;
-    }
-
-    /**
     * Gets requestId
-    *  请求ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getRequestId()
     {
@@ -228,13 +210,37 @@ class CreateAuthorisationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets authorisation
+    *  authorisation
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\Authorisation
+    */
+    public function getAuthorisation()
+    {
+        return $this->container['authorisation'];
+    }
+
+    /**
+    * Sets authorisation
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\Authorisation $authorisation authorisation
+    *
+    * @return $this
+    */
+    public function setAuthorisation($authorisation)
+    {
+        $this->container['authorisation'] = $authorisation;
         return $this;
     }
 

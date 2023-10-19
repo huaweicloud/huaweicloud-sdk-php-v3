@@ -22,21 +22,25 @@ class CreateFaceSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * faceSetInfo  faceSetInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'faceSetInfo' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo'
+            'faceSetInfo' => '\HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * faceSetInfo  faceSetInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'faceSetInfo' => null
+        'faceSetInfo' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CreateFaceSetResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * faceSetInfo  faceSetInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'faceSetInfo' => 'face_set_info'
+            'faceSetInfo' => 'face_set_info',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * faceSetInfo  faceSetInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'faceSetInfo' => 'setFaceSetInfo'
+            'faceSetInfo' => 'setFaceSetInfo',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * faceSetInfo  faceSetInfo
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'faceSetInfo' => 'getFaceSetInfo'
+            'faceSetInfo' => 'getFaceSetInfo',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateFaceSetResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['faceSetInfo'] = isset($data['faceSetInfo']) ? $data['faceSetInfo'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class CreateFaceSetResponse implements ModelInterface, ArrayAccess
     public function setFaceSetInfo($faceSetInfo)
     {
         $this->container['faceSetInfo'] = $faceSetInfo;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

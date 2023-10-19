@@ -24,6 +24,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * name  数据库名称。
+    * charset  数据库使用的字符集，如utf8mb4、gbk等。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'instanceId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'name' => 'string',
+            'charset' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * name  数据库名称。
+    * charset  数据库使用的字符集，如utf8mb4、gbk等。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'instanceId' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'name' => null,
+        'charset' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * name  数据库名称。
+    * charset  数据库使用的字符集，如utf8mb4、gbk等。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'name' => 'name',
+            'charset' => 'charset'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * name  数据库名称。
+    * charset  数据库使用的字符集，如utf8mb4、gbk等。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'name' => 'setName',
+            'charset' => 'setCharset'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * name  数据库名称。
+    * charset  数据库使用的字符集，如utf8mb4、gbk等。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'name' => 'getName',
+            'charset' => 'getCharset'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['charset'] = isset($data['charset']) ? $data['charset'] : null;
     }
 
     /**
@@ -301,6 +323,54 @@ class ListGaussMySqlDatabaseRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  数据库名称。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 数据库名称。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets charset
+    *  数据库使用的字符集，如utf8mb4、gbk等。
+    *
+    * @return string|null
+    */
+    public function getCharset()
+    {
+        return $this->container['charset'];
+    }
+
+    /**
+    * Sets charset
+    *
+    * @param string|null $charset 数据库使用的字符集，如utf8mb4、gbk等。
+    *
+    * @return $this
+    */
+    public function setCharset($charset)
+    {
+        $this->container['charset'] = $charset;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * total  总数
     * records  规则击中次数列表
@@ -36,7 +36,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * total  总数
     * records  规则击中次数列表
@@ -73,7 +73,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * total  总数
     * records  规则击中次数列表
@@ -89,7 +89,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * total  总数
     * records  规则击中次数列表
@@ -105,7 +105,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * total  总数
     * records  规则击中次数列表
@@ -207,7 +207,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示个数，范围为1-1024
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class RuleHitCountRecords implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */

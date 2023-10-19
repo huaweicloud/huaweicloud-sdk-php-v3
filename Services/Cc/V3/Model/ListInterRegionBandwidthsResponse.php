@@ -21,30 +21,30 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * interRegionBandwidths  域间带宽实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * interRegionBandwidths  域间带宽实例列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'interRegionBandwidths' => '\HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[]',
+            'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Cc\V3\Model\PageInfo',
-            'requestId' => 'string'
+            'interRegionBandwidths' => '\HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * interRegionBandwidths  域间带宽实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * interRegionBandwidths  域间带宽实例列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'interRegionBandwidths' => null,
+        'requestId' => null,
         'pageInfo' => null,
-        'requestId' => null
+        'interRegionBandwidths' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * interRegionBandwidths  域间带宽实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * interRegionBandwidths  域间带宽实例列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'interRegionBandwidths' => 'inter_region_bandwidths',
+            'requestId' => 'request_id',
             'pageInfo' => 'page_info',
-            'requestId' => 'request_id'
+            'interRegionBandwidths' => 'inter_region_bandwidths'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * interRegionBandwidths  域间带宽实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * interRegionBandwidths  域间带宽实例列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'interRegionBandwidths' => 'setInterRegionBandwidths',
+            'requestId' => 'setRequestId',
             'pageInfo' => 'setPageInfo',
-            'requestId' => 'setRequestId'
+            'interRegionBandwidths' => 'setInterRegionBandwidths'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * interRegionBandwidths  域间带宽实例列表。
+    * requestId  资源ID标识符。
     * pageInfo  pageInfo
-    * requestId  请求ID。
+    * interRegionBandwidths  域间带宽实例列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'interRegionBandwidths' => 'getInterRegionBandwidths',
+            'requestId' => 'getRequestId',
             'pageInfo' => 'getPageInfo',
-            'requestId' => 'getRequestId'
+            'interRegionBandwidths' => 'getInterRegionBandwidths'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['interRegionBandwidths'] = isset($data['interRegionBandwidths']) ? $data['interRegionBandwidths'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['interRegionBandwidths'] = isset($data['interRegionBandwidths']) ? $data['interRegionBandwidths'] : null;
     }
 
     /**
@@ -181,12 +181,18 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['interRegionBandwidths'] === null) {
+            $invalidProperties[] = "'interRegionBandwidths' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -202,26 +208,26 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets interRegionBandwidths
-    *  域间带宽实例列表。
+    * Gets requestId
+    *  资源ID标识符。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[]|null
+    * @return string
     */
-    public function getInterRegionBandwidths()
+    public function getRequestId()
     {
-        return $this->container['interRegionBandwidths'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets interRegionBandwidths
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[]|null $interRegionBandwidths 域间带宽实例列表。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
-    public function setInterRegionBandwidths($interRegionBandwidths)
+    public function setRequestId($requestId)
     {
-        $this->container['interRegionBandwidths'] = $interRegionBandwidths;
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 
@@ -250,26 +256,26 @@ class ListInterRegionBandwidthsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestId
-    *  请求ID。
+    * Gets interRegionBandwidths
+    *  域间带宽实例列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[]
     */
-    public function getRequestId()
+    public function getInterRegionBandwidths()
     {
-        return $this->container['requestId'];
+        return $this->container['interRegionBandwidths'];
     }
 
     /**
-    * Sets requestId
+    * Sets interRegionBandwidths
     *
-    * @param string|null $requestId 请求ID。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth[] $interRegionBandwidths 域间带宽实例列表。
     *
     * @return $this
     */
-    public function setRequestId($requestId)
+    public function setInterRegionBandwidths($interRegionBandwidths)
     {
-        $this->container['requestId'] = $requestId;
+        $this->container['interRegionBandwidths'] = $interRegionBandwidths;
         return $this;
     }
 

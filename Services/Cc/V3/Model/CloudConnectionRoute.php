@@ -20,13 +20,13 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  云连接实例路由的ID。
-    * cloudConnectionId  云连接实例的ID。
-    * domainId  帐号ID。
-    * projectId  网络实例的项目ID。
-    * instanceId  路由条目下一跳指向的网络实例的ID。
+    * id  资源ID标识符。
+    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属帐号ID。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-    * regionId  Region的ID。
     * destination  目的地址。
     *
     * @var string[]
@@ -35,22 +35,22 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'id' => 'string',
             'cloudConnectionId' => 'string',
             'domainId' => 'string',
-            'projectId' => 'string',
             'instanceId' => 'string',
-            'type' => 'string',
+            'projectId' => 'string',
             'regionId' => 'string',
+            'type' => 'string',
             'destination' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  云连接实例路由的ID。
-    * cloudConnectionId  云连接实例的ID。
-    * domainId  帐号ID。
-    * projectId  网络实例的项目ID。
-    * instanceId  路由条目下一跳指向的网络实例的ID。
+    * id  资源ID标识符。
+    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属帐号ID。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-    * regionId  Region的ID。
     * destination  目的地址。
     *
     * @var string[]
@@ -59,10 +59,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         'id' => null,
         'cloudConnectionId' => null,
         'domainId' => null,
-        'projectId' => null,
         'instanceId' => null,
-        'type' => null,
+        'projectId' => null,
         'regionId' => null,
+        'type' => null,
         'destination' => null
     ];
 
@@ -89,13 +89,13 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  云连接实例路由的ID。
-    * cloudConnectionId  云连接实例的ID。
-    * domainId  帐号ID。
-    * projectId  网络实例的项目ID。
-    * instanceId  路由条目下一跳指向的网络实例的ID。
+    * id  资源ID标识符。
+    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属帐号ID。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-    * regionId  Region的ID。
     * destination  目的地址。
     *
     * @var string[]
@@ -104,22 +104,22 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'id' => 'id',
             'cloudConnectionId' => 'cloud_connection_id',
             'domainId' => 'domain_id',
-            'projectId' => 'project_id',
             'instanceId' => 'instance_id',
-            'type' => 'type',
+            'projectId' => 'project_id',
             'regionId' => 'region_id',
+            'type' => 'type',
             'destination' => 'destination'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  云连接实例路由的ID。
-    * cloudConnectionId  云连接实例的ID。
-    * domainId  帐号ID。
-    * projectId  网络实例的项目ID。
-    * instanceId  路由条目下一跳指向的网络实例的ID。
+    * id  资源ID标识符。
+    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属帐号ID。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-    * regionId  Region的ID。
     * destination  目的地址。
     *
     * @var string[]
@@ -128,22 +128,22 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'cloudConnectionId' => 'setCloudConnectionId',
             'domainId' => 'setDomainId',
-            'projectId' => 'setProjectId',
             'instanceId' => 'setInstanceId',
-            'type' => 'setType',
+            'projectId' => 'setProjectId',
             'regionId' => 'setRegionId',
+            'type' => 'setType',
             'destination' => 'setDestination'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  云连接实例路由的ID。
-    * cloudConnectionId  云连接实例的ID。
-    * domainId  帐号ID。
-    * projectId  网络实例的项目ID。
-    * instanceId  路由条目下一跳指向的网络实例的ID。
+    * id  资源ID标识符。
+    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属帐号ID。
+    * instanceId  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-    * regionId  Region的ID。
     * destination  目的地址。
     *
     * @var string[]
@@ -152,10 +152,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'cloudConnectionId' => 'getCloudConnectionId',
             'domainId' => 'getDomainId',
-            'projectId' => 'getProjectId',
             'instanceId' => 'getInstanceId',
-            'type' => 'getType',
+            'projectId' => 'getProjectId',
             'regionId' => 'getRegionId',
+            'type' => 'getType',
             'destination' => 'getDestination'
     ];
 
@@ -235,10 +235,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['cloudConnectionId'] = isset($data['cloudConnectionId']) ? $data['cloudConnectionId'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
     }
 
@@ -250,35 +250,74 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) < 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['cloudConnectionId']) && (mb_strlen($this->container['cloudConnectionId']) > 36)) {
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['cloudConnectionId'] === null) {
+            $invalidProperties[] = "'cloudConnectionId' can't be null";
+        }
+            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['cloudConnectionId']) && (mb_strlen($this->container['cloudConnectionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 32)) {
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['domainId'] === null) {
+            $invalidProperties[] = "'domainId' can't be null";
+        }
+            if ((mb_strlen($this->container['domainId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 10)) {
+            if ((mb_strlen($this->container['domainId']) < 10)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 10.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            if (!preg_match("/[a-fA-F0-9]{10,32}/", $this->container['domainId'])) {
+                $invalidProperties[] = "invalid value for 'domainId', must be conform to the pattern /[a-fA-F0-9]{10,32}/.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['regionId'] === null) {
+            $invalidProperties[] = "'regionId' can't be null";
+        }
+            if ((mb_strlen($this->container['regionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['regionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -293,12 +332,6 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 2)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 2.";
-            }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['destination']) && (mb_strlen($this->container['destination']) > 36)) {
                 $invalidProperties[] = "invalid value for 'destination', the character length must be smaller than or equal to 36.";
@@ -322,9 +355,9 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  云连接实例路由的ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -334,7 +367,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 云连接实例路由的ID。
+    * @param string $id 资源ID标识符。
     *
     * @return $this
     */
@@ -346,9 +379,9 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  云连接实例的ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getCloudConnectionId()
     {
@@ -358,7 +391,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string|null $cloudConnectionId 云连接实例的ID。
+    * @param string $cloudConnectionId 资源ID标识符。
     *
     * @return $this
     */
@@ -370,9 +403,9 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  帐号ID。
+    *  实例所属帐号ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getDomainId()
     {
@@ -382,7 +415,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 帐号ID。
+    * @param string $domainId 实例所属帐号ID。
     *
     * @return $this
     */
@@ -393,10 +426,34 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  网络实例的项目ID。
+    * Gets instanceId
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string $instanceId 资源ID标识符。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  实例所属项目ID。
+    *
+    * @return string
     */
     public function getProjectId()
     {
@@ -406,7 +463,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 网络实例的项目ID。
+    * @param string $projectId 实例所属项目ID。
     *
     * @return $this
     */
@@ -417,26 +474,26 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  路由条目下一跳指向的网络实例的ID。
+    * Gets regionId
+    *  RegionID。
     *
-    * @return string|null
+    * @return string
     */
-    public function getInstanceId()
+    public function getRegionId()
     {
-        return $this->container['instanceId'];
+        return $this->container['regionId'];
     }
 
     /**
-    * Sets instanceId
+    * Sets regionId
     *
-    * @param string|null $instanceId 路由条目下一跳指向的网络实例的ID。
+    * @param string $regionId RegionID。
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setRegionId($regionId)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['regionId'] = $regionId;
         return $this;
     }
 
@@ -461,30 +518,6 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets regionId
-    *  Region的ID。
-    *
-    * @return string|null
-    */
-    public function getRegionId()
-    {
-        return $this->container['regionId'];
-    }
-
-    /**
-    * Sets regionId
-    *
-    * @param string|null $regionId Region的ID。
-    *
-    * @return $this
-    */
-    public function setRegionId($regionId)
-    {
-        $this->container['regionId'] = $regionId;
         return $this;
     }
 

@@ -32,6 +32,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * app  应用协议
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstIp' => 'string',
             'app' => 'string',
             'dstPort' => 'string',
-            'protocol' => 'string'
+            'protocol' => 'string',
+            'dstHost' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * app  应用协议
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         'dstIp' => null,
         'app' => null,
         'dstPort' => null,
-        'protocol' => null
+        'protocol' => null,
+        'dstHost' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * app  应用协议
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstIp' => 'dst_ip',
             'app' => 'app',
             'dstPort' => 'dst_port',
-            'protocol' => 'protocol'
+            'protocol' => 'protocol',
+            'dstHost' => 'dst_host'
     ];
 
     /**
@@ -149,6 +155,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * app  应用协议
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstIp' => 'setDstIp',
             'app' => 'setApp',
             'dstPort' => 'setDstPort',
-            'protocol' => 'setProtocol'
+            'protocol' => 'setProtocol',
+            'dstHost' => 'setDstHost'
     ];
 
     /**
@@ -181,6 +189,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * app  应用协议
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstIp' => 'getDstIp',
             'app' => 'getApp',
             'dstPort' => 'getDstPort',
-            'protocol' => 'getProtocol'
+            'protocol' => 'getProtocol',
+            'dstHost' => 'getDstHost'
     ];
 
     /**
@@ -284,6 +294,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['dstPort'] = isset($data['dstPort']) ? $data['dstPort'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
     }
 
     /**
@@ -601,6 +612,30 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     public function setProtocol($protocol)
     {
         $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目标主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目标主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
         return $this;
     }
 

@@ -631,6 +631,65 @@ class CcClient extends Client
     }
 
     /**
+     * 查询带宽包的标签信息
+     *
+     * 查询带宽包的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPackageTags($request)
+    {
+        return $this->listBandwidthPackageTagsWithHttpInfo($request);
+    }
+
+    public function listBandwidthPackageTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageTagsRequest');
+    }
+
+    /**
      * 查询带宽包列表
      *
      * 查询带宽包列表。
@@ -674,11 +733,14 @@ class CcClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['billingMode'] !== null) {
             $queryParams['billing_mode'] = $localVarParams['billingMode'];
@@ -712,6 +774,68 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackagesResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackagesRequest');
+    }
+
+    /**
+     * 通过标签过滤带宽包实例
+     *
+     * 通过标签过滤带宽包实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPackagesByTags($request)
+    {
+        return $this->listBandwidthPackagesByTagsWithHttpInfo($request);
+    }
+
+    public function listBandwidthPackagesByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackagesByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackagesByTagsRequest');
     }
 
     /**
@@ -777,6 +901,136 @@ class CcClient extends Client
     }
 
     /**
+     * 创建带宽包标签
+     *
+     * 创建带宽包标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function tagBandwidthPackage($request)
+    {
+        return $this->tagBandwidthPackageWithHttpInfo($request);
+    }
+
+    public function tagBandwidthPackageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/{id}/tag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\TagBandwidthPackageResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\TagBandwidthPackageRequest');
+    }
+
+    /**
+     * 删除带宽包标签
+     *
+     * 删除带宽包标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function untagBandwidthPackage($request)
+    {
+        return $this->untagBandwidthPackageWithHttpInfo($request);
+    }
+
+    public function untagBandwidthPackageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/{id}/untag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UntagBandwidthPackageResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UntagBandwidthPackageRequest');
+    }
+
+    /**
      * 更新带宽包实例
      *
      * 更新带宽包实例。
@@ -839,6 +1093,1560 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateBandwidthPackageResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateBandwidthPackageRequest');
+    }
+
+    /**
+     * 应用中心网络策略
+     *
+     * 应用中心网络策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function applyCentralNetworkPolicy($request)
+    {
+        return $this->applyCentralNetworkPolicyWithHttpInfo($request);
+    }
+
+    public function applyCentralNetworkPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}/apply';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ApplyCentralNetworkPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ApplyCentralNetworkPolicyRequest');
+    }
+
+    /**
+     * 创建中心网络
+     *
+     * 创建中心网络。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCentralNetwork($request)
+    {
+        return $this->createCentralNetworkWithHttpInfo($request);
+    }
+
+    public function createCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkRequest');
+    }
+
+    /**
+     * 创建一个新版本的中心网络策略
+     *
+     * 创建一份只读的中心网络的策略。如果您有策略文档内容改动，需要基于此版本重新创建一个新版本的策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCentralNetworkPolicy($request)
+    {
+        return $this->createCentralNetworkPolicyWithHttpInfo($request);
+    }
+
+    public function createCentralNetworkPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkPolicyRequest');
+    }
+
+    /**
+     * 删除中心网络
+     *
+     * 删除中心网络，请先清除附件后再删除中心网络。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCentralNetwork($request)
+    {
+        return $this->deleteCentralNetworkWithHttpInfo($request);
+    }
+
+    public function deleteCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/{central_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkRequest');
+    }
+
+    /**
+     * 删除中心网络策略版本
+     *
+     * 删除中心网络策略版本。您无法删除正在被应用的中心策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCentralNetworkPolicy($request)
+    {
+        return $this->deleteCentralNetworkPolicyWithHttpInfo($request);
+    }
+
+    public function deleteCentralNetworkPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkPolicyRequest');
+    }
+
+    /**
+     * 查询所有版本的中心网络策略列表
+     *
+     * 查询所有版本的中心网络策略列表。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkPolicies($request)
+    {
+        return $this->listCentralNetworkPoliciesWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkPoliciesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['isApplied'] !== null) {
+            $queryParams['is_applied'] = $localVarParams['isApplied'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkPoliciesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkPoliciesRequest');
+    }
+
+    /**
+     * 查询中心网络策略变化集
+     *
+     * 查询与当前应用中心网络策略的变化集。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkPolicyChangeSet($request)
+    {
+        return $this->listCentralNetworkPolicyChangeSetWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkPolicyChangeSetWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}/change-set';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkPolicyChangeSetResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkPolicyChangeSetRequest');
+    }
+
+    /**
+     * 查询中心网络的标签信息
+     *
+     * 查询中心网络的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkTags($request)
+    {
+        return $this->listCentralNetworkTagsWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkTagsRequest');
+    }
+
+    /**
+     * 查询中心网络列表
+     *
+     * 查询中心网络列表。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworks($request)
+    {
+        return $this->listCentralNetworksWithHttpInfo($request);
+    }
+
+    public function listCentralNetworksWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['enterpriseRouterId'] !== null) {
+            $queryParams['enterprise_router_id'] = $localVarParams['enterpriseRouterId'];
+        }
+        if ($localVarParams['attachmentInstanceId'] !== null) {
+            $queryParams['attachment_instance_id'] = $localVarParams['attachmentInstanceId'];
+        }
+        if ($localVarParams['globalConnectionBandwidthId'] !== null) {
+            $queryParams['global_connection_bandwidth_id'] = $localVarParams['globalConnectionBandwidthId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $queryParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworksResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworksRequest');
+    }
+
+    /**
+     * 查询中心网络详情
+     *
+     * 查询中心网络详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCentralNetwork($request)
+    {
+        return $this->showCentralNetworkWithHttpInfo($request);
+    }
+
+    public function showCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/{central_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkRequest');
+    }
+
+    /**
+     * 创建中心网络标签
+     *
+     * 创建中心网络标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function tagCentralNetwork($request)
+    {
+        return $this->tagCentralNetworkWithHttpInfo($request);
+    }
+
+    public function tagCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/{central_network_id}/tag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\TagCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\TagCentralNetworkRequest');
+    }
+
+    /**
+     * 删除中心网络标签
+     *
+     * 删除中心网络标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function untagCentralNetwork($request)
+    {
+        return $this->untagCentralNetworkWithHttpInfo($request);
+    }
+
+    public function untagCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/{central_network_id}/untag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UntagCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UntagCentralNetworkRequest');
+    }
+
+    /**
+     * 更新中心网络详情
+     *
+     * 更新中心网络详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCentralNetwork($request)
+    {
+        return $this->updateCentralNetworkWithHttpInfo($request);
+    }
+
+    public function updateCentralNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/{central_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkRequest');
+    }
+
+    /**
+     * 创建中心网络GDGW附件
+     *
+     * 创建中心网络的GDGW附件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCentralNetworkGdgwAttachment($request)
+    {
+        return $this->createCentralNetworkGdgwAttachmentWithHttpInfo($request);
+    }
+
+    public function createCentralNetworkGdgwAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkGdgwAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkGdgwAttachmentRequest');
+    }
+
+    /**
+     * 删除中心网络附件
+     *
+     * 删除中心网络附件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCentralNetworkAttachment($request)
+    {
+        return $this->deleteCentralNetworkAttachmentWithHttpInfo($request);
+    }
+
+    public function deleteCentralNetworkAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/attachments/{attachment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['attachmentId'] !== null) {
+            $pathParams['attachment_id'] = $localVarParams['attachmentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteCentralNetworkAttachmentRequest');
+    }
+
+    /**
+     * 查询中心网络附件列表
+     *
+     * 查询中心网络附件列表，分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkAttachments($request)
+    {
+        return $this->listCentralNetworkAttachmentsWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkAttachmentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['attachmentInstanceType'] !== null) {
+            $queryParams['attachment_instance_type'] = $localVarParams['attachmentInstanceType'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['attachmentInstanceId'] !== null) {
+            $queryParams['attachment_instance_id'] = $localVarParams['attachmentInstanceId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkAttachmentsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkAttachmentsRequest');
+    }
+
+    /**
+     * 查询中心网络GDGW附件列表
+     *
+     * 查询中心网络GDGW附件列表。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkGdgwAttachments($request)
+    {
+        return $this->listCentralNetworkGdgwAttachmentsWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkGdgwAttachmentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $queryParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkGdgwAttachmentsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkGdgwAttachmentsRequest');
+    }
+
+    /**
+     * 查询中心网络GDGW附件详情
+     *
+     * 查询中心网络GDGW附件详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCentralNetworkGdgwAttachment($request)
+    {
+        return $this->showCentralNetworkGdgwAttachmentWithHttpInfo($request);
+    }
+
+    public function showCentralNetworkGdgwAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments/{gdgw_attachment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['gdgwAttachmentId'] !== null) {
+            $pathParams['gdgw_attachment_id'] = $localVarParams['gdgwAttachmentId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkGdgwAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkGdgwAttachmentRequest');
+    }
+
+    /**
+     * 更新中心网络GDGW附件
+     *
+     * 更新中心网络GDGW附件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCentralNetworkGdgwAttachment($request)
+    {
+        return $this->updateCentralNetworkGdgwAttachmentWithHttpInfo($request);
+    }
+
+    public function updateCentralNetworkGdgwAttachmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments/{gdgw_attachment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['gdgwAttachmentId'] !== null) {
+            $pathParams['gdgw_attachment_id'] = $localVarParams['gdgwAttachmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkGdgwAttachmentResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkGdgwAttachmentRequest');
+    }
+
+    /**
+     * 查询中心网络连接列表
+     *
+     * 查询中心网络连接列表接口。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkConnections($request)
+    {
+        return $this->listCentralNetworkConnectionsWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkConnectionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/connections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['globalConnectionBandwidthId'] !== null) {
+            $queryParams['global_connection_bandwidth_id'] = $localVarParams['globalConnectionBandwidthId'];
+        }
+        if ($localVarParams['bandwidthType'] !== null) {
+            $queryParams['bandwidth_type'] = $localVarParams['bandwidthType'];
+        }
+        if ($localVarParams['connectionType'] !== null) {
+            $queryParams['connection_type'] = $localVarParams['connectionType'];
+        }
+        if ($localVarParams['isCrossRegion'] !== null) {
+            $queryParams['is_cross_region'] = $localVarParams['isCrossRegion'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkConnectionsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkConnectionsRequest');
+    }
+
+    /**
+     * 更新中心网络连接接口
+     *
+     * 更新中心网络连接接口（仅支持更新带宽）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCentralNetworkConnection($request)
+    {
+        return $this->updateCentralNetworkConnectionWithHttpInfo($request);
+    }
+
+    public function updateCentralNetworkConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/connections/{connection_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkConnectionRequest');
+    }
+
+    /**
+     * 查询中心网络配额
+     *
+     * 查询中心网络配额。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkQuotas($request)
+    {
+        return $this->listCentralNetworkQuotasWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkQuotasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['quotaType'] !== null) {
+            $queryParams['quota_type'] = $localVarParams['quotaType'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkQuotasResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkQuotasRequest');
     }
 
     /**
@@ -966,6 +2774,65 @@ class CcClient extends Client
     }
 
     /**
+     * 查询云连接实例的标签信息
+     *
+     * 查询云连接实例的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudConnectionTags($request)
+    {
+        return $this->listCloudConnectionTagsWithHttpInfo($request);
+    }
+
+    public function listCloudConnectionTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/cloud-connections/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionTagsRequest');
+    }
+
+    /**
      * 查询云连接列表
      *
      * 查询云连接列表。
@@ -1012,11 +2879,11 @@ class CcClient extends Client
         if ($localVarParams['description'] !== null) {
             $queryParams['description'] = $localVarParams['description'];
         }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
@@ -1050,6 +2917,68 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionsResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionsRequest');
+    }
+
+    /**
+     * 通过标签过滤云连接实例
+     *
+     * 通过标签过滤云连接实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudConnectionsByTags($request)
+    {
+        return $this->listCloudConnectionsByTagsWithHttpInfo($request);
+    }
+
+    public function listCloudConnectionsByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/cloud-connections/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionsByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionsByTagsRequest');
     }
 
     /**
@@ -1112,6 +3041,136 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCloudConnectionResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCloudConnectionRequest');
+    }
+
+    /**
+     * 创建云连接实例标签
+     *
+     * 创建云连接实例标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function tagCloudConnection($request)
+    {
+        return $this->tagCloudConnectionWithHttpInfo($request);
+    }
+
+    public function tagCloudConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/cloud-connections/{id}/tag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\TagCloudConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\TagCloudConnectionRequest');
+    }
+
+    /**
+     * 删除云连接实例标签
+     *
+     * 删除云连接实例标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function untagCloudConnection($request)
+    {
+        return $this->untagCloudConnectionWithHttpInfo($request);
+    }
+
+    public function untagCloudConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/cloud-connections/{id}/untag';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UntagCloudConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UntagCloudConnectionRequest');
     }
 
     /**
@@ -1180,6 +3239,80 @@ class CcClient extends Client
     }
 
     /**
+     * 查询云连接配额
+     *
+     * 查询云连接配额。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudConnectionQuotas($request)
+    {
+        return $this->listCloudConnectionQuotasWithHttpInfo($request);
+    }
+
+    public function listCloudConnectionQuotasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['quotaType'] !== null) {
+            $queryParams['quota_type'] = $localVarParams['quotaType'];
+        }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionQuotasResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCloudConnectionQuotasRequest');
+    }
+
+    /**
      * 查询云连接路由条目列表
      *
      * 查询云连接路由条目列表。
@@ -1217,9 +3350,6 @@ class CcClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
-        if ($localVarParams['id'] !== null) {
-            $queryParams['id'] = $localVarParams['id'];
-        }
         if ($localVarParams['cloudConnectionId'] !== null) {
             $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
         }
@@ -1228,6 +3358,9 @@ class CcClient extends Client
         }
         if ($localVarParams['regionId'] !== null) {
             $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1820,14 +3953,14 @@ class CcClient extends Client
         if ($localVarParams['description'] !== null) {
             $queryParams['description'] = $localVarParams['description'];
         }
+        if ($localVarParams['cloudConnectionId'] !== null) {
+            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
-        }
-        if ($localVarParams['cloudConnectionId'] !== null) {
-            $queryParams['cloud_connection_id'] = $localVarParams['cloudConnectionId'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
@@ -1988,470 +4121,6 @@ class CcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateNetworkInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateNetworkInstanceRequest');
-    }
-
-    /**
-     * 查询配额
-     *
-     * 查询配额
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listQuotas($request)
-    {
-        return $this->listQuotasWithHttpInfo($request);
-    }
-
-    public function listQuotasWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/quotas';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['quotaType'] !== null) {
-            $queryParams['quota_type'] = $localVarParams['quotaType'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListQuotasResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListQuotasRequest');
-    }
-
-    /**
-     * 批量创建和删除资源标签
-     *
-     * 批量创建和删除标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function batchCreateDeleteTags($request)
-    {
-        return $this->batchCreateDeleteTagsWithHttpInfo($request);
-    }
-
-    public function batchCreateDeleteTagsWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags/action';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\BatchCreateDeleteTagsResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\BatchCreateDeleteTagsRequest');
-    }
-
-    /**
-     * 添加资源标签
-     *
-     * 添加资源标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createTag($request)
-    {
-        return $this->createTagWithHttpInfo($request);
-    }
-
-    public function createTagWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateTagResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateTagRequest');
-    }
-
-    /**
-     * 删除资源标签
-     *
-     * 删除资源标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteTag($request)
-    {
-        return $this->deleteTagWithHttpInfo($request);
-    }
-
-    public function deleteTagWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags/{tag_key}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['tagKey'] !== null) {
-            $pathParams['tag_key'] = $localVarParams['tagKey'];
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteTagResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteTagRequest');
-    }
-
-    /**
-     * 查询账户资源标签
-     *
-     * 查询账户资源标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listDomainTags($request)
-    {
-        return $this->listDomainTagsWithHttpInfo($request);
-    }
-
-    public function listDomainTagsWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/tags';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListDomainTagsResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListDomainTagsRequest');
-    }
-
-    /**
-     * 查询资源实例
-     *
-     * 查询资源实例
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listResourceByFilterTag($request)
-    {
-        return $this->listResourceByFilterTagWithHttpInfo($request);
-    }
-
-    public function listResourceByFilterTagWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/resource-instances/action';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListResourceByFilterTagResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListResourceByFilterTagRequest');
-    }
-
-    /**
-     * 查询资源标签
-     *
-     * 查询资源标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listTags($request)
-    {
-        return $this->listTagsWithHttpInfo($request);
-    }
-
-    public function listTagsWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListTagsResponse',
-            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListTagsRequest');
     }
 
     protected function callApi(

@@ -20,10 +20,10 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  域间实例的ID。
-    * projectId  域间实例本段的项目ID。
-    * localRegionId  域间实例本段的RegionID。
-    * remoteRegionId  域间实例对段的RegionID。
+    * id  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * localRegionId  域间实例本端的RegionID。
+    * remoteRegionId  域间实例对端的RegionID。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  域间实例的ID。
-    * projectId  域间实例本段的项目ID。
-    * localRegionId  域间实例本段的RegionID。
-    * remoteRegionId  域间实例对段的RegionID。
+    * id  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * localRegionId  域间实例本端的RegionID。
+    * remoteRegionId  域间实例对端的RegionID。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class InterRegion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  域间实例的ID。
-    * projectId  域间实例本段的项目ID。
-    * localRegionId  域间实例本段的RegionID。
-    * remoteRegionId  域间实例对段的RegionID。
+    * id  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * localRegionId  域间实例本端的RegionID。
+    * remoteRegionId  域间实例对端的RegionID。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  域间实例的ID。
-    * projectId  域间实例本段的项目ID。
-    * localRegionId  域间实例本段的RegionID。
-    * remoteRegionId  域间实例对段的RegionID。
+    * id  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * localRegionId  域间实例本端的RegionID。
+    * remoteRegionId  域间实例对端的RegionID。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  域间实例的ID。
-    * projectId  域间实例本段的项目ID。
-    * localRegionId  域间实例本段的RegionID。
-    * remoteRegionId  域间实例对段的RegionID。
+    * id  资源ID标识符。
+    * projectId  实例所属项目ID。
+    * localRegionId  域间实例本端的RegionID。
+    * remoteRegionId  域间实例对端的RegionID。
     *
     * @var string[]
     */
@@ -191,17 +191,29 @@ class InterRegion implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) < 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
             if (!is_null($this->container['localRegionId']) && (mb_strlen($this->container['localRegionId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'localRegionId', the character length must be smaller than or equal to 36.";
@@ -231,9 +243,9 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  域间实例的ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -243,7 +255,7 @@ class InterRegion implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 域间实例的ID。
+    * @param string $id 资源ID标识符。
     *
     * @return $this
     */
@@ -255,9 +267,9 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  域间实例本段的项目ID。
+    *  实例所属项目ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getProjectId()
     {
@@ -267,7 +279,7 @@ class InterRegion implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 域间实例本段的项目ID。
+    * @param string $projectId 实例所属项目ID。
     *
     * @return $this
     */
@@ -279,7 +291,7 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Gets localRegionId
-    *  域间实例本段的RegionID。
+    *  域间实例本端的RegionID。
     *
     * @return string|null
     */
@@ -291,7 +303,7 @@ class InterRegion implements ModelInterface, ArrayAccess
     /**
     * Sets localRegionId
     *
-    * @param string|null $localRegionId 域间实例本段的RegionID。
+    * @param string|null $localRegionId 域间实例本端的RegionID。
     *
     * @return $this
     */
@@ -303,7 +315,7 @@ class InterRegion implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteRegionId
-    *  域间实例对段的RegionID。
+    *  域间实例对端的RegionID。
     *
     * @return string|null
     */
@@ -315,7 +327,7 @@ class InterRegion implements ModelInterface, ArrayAccess
     /**
     * Sets remoteRegionId
     *
-    * @param string|null $remoteRegionId 域间实例对段的RegionID。
+    * @param string|null $remoteRegionId 域间实例对端的RegionID。
     *
     * @return $this
     */

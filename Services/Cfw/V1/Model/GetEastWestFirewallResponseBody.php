@@ -30,7 +30,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
+    * mode  防护模式
+    * ewVpcRouteLimit  东西向路由限制
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'protectInfos' => '\HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]',
             'total' => 'int',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'mode' => 'string',
+            'ewVpcRouteLimit' => 'int'
     ];
 
     /**
@@ -60,7 +64,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
+    * mode  防护模式
+    * ewVpcRouteLimit  东西向路由限制
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         'protectInfos' => null,
         'total' => 'int32',
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'mode' => null,
+        'ewVpcRouteLimit' => 'int32'
     ];
 
     /**
@@ -111,7 +119,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
+    * mode  防护模式
+    * ewVpcRouteLimit  东西向路由限制
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'protectInfos' => 'protect_infos',
             'total' => 'total',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'mode' => 'mode',
+            'ewVpcRouteLimit' => 'ew_vpc_route_limit'
     ];
 
     /**
@@ -141,7 +153,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
+    * mode  防护模式
+    * ewVpcRouteLimit  东西向路由限制
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'protectInfos' => 'setProtectInfos',
             'total' => 'setTotal',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'mode' => 'setMode',
+            'ewVpcRouteLimit' => 'setEwVpcRouteLimit'
     ];
 
     /**
@@ -171,7 +187,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * limit  每页显示个数，范围为1-1024
+    * mode  防护模式
+    * ewVpcRouteLimit  东西向路由限制
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'protectInfos' => 'getProtectInfos',
             'total' => 'getTotal',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'mode' => 'getMode',
+            'ewVpcRouteLimit' => 'getEwVpcRouteLimit'
     ];
 
     /**
@@ -258,6 +278,8 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['ewVpcRouteLimit'] = isset($data['ewVpcRouteLimit']) ? $data['ewVpcRouteLimit'] : null;
     }
 
     /**
@@ -524,7 +546,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示个数，范围为1-1024
     *
     * @return int|null
     */
@@ -536,13 +558,61 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  防护模式
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 防护模式
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets ewVpcRouteLimit
+    *  东西向路由限制
+    *
+    * @return int|null
+    */
+    public function getEwVpcRouteLimit()
+    {
+        return $this->container['ewVpcRouteLimit'];
+    }
+
+    /**
+    * Sets ewVpcRouteLimit
+    *
+    * @param int|null $ewVpcRouteLimit 东西向路由限制
+    *
+    * @return $this
+    */
+    public function setEwVpcRouteLimit($ewVpcRouteLimit)
+    {
+        $this->container['ewVpcRouteLimit'] = $ewVpcRouteLimit;
         return $this;
     }
 

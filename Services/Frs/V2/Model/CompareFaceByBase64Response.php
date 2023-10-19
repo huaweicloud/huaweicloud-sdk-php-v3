@@ -24,13 +24,15 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     * image1Face  image1Face
     * image2Face  image2Face
     * similarity  人脸相似度，1表示最大，0表示最小，值越大表示越相似。一般情况下超过0.93即可认为是同一个人。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'image1Face' => '\HuaweiCloud\SDK\Frs\V2\Model\CompareFace',
             'image2Face' => '\HuaweiCloud\SDK\Frs\V2\Model\CompareFace',
-            'similarity' => 'double'
+            'similarity' => 'double',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -38,13 +40,15 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     * image1Face  image1Face
     * image2Face  image2Face
     * similarity  人脸相似度，1表示最大，0表示最小，值越大表示越相似。一般情况下超过0.93即可认为是同一个人。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'image1Face' => null,
         'image2Face' => null,
-        'similarity' => 'double'
+        'similarity' => 'double',
+        'xRequestId' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     * image1Face  image1Face
     * image2Face  image2Face
     * similarity  人脸相似度，1表示最大，0表示最小，值越大表示越相似。一般情况下超过0.93即可认为是同一个人。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'image1Face' => 'image1_face',
             'image2Face' => 'image2_face',
-            'similarity' => 'similarity'
+            'similarity' => 'similarity',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     * image1Face  image1Face
     * image2Face  image2Face
     * similarity  人脸相似度，1表示最大，0表示最小，值越大表示越相似。一般情况下超过0.93即可认为是同一个人。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'image1Face' => 'setImage1Face',
             'image2Face' => 'setImage2Face',
-            'similarity' => 'setSimilarity'
+            'similarity' => 'setSimilarity',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     * image1Face  image1Face
     * image2Face  image2Face
     * similarity  人脸相似度，1表示最大，0表示最小，值越大表示越相似。一般情况下超过0.93即可认为是同一个人。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'image1Face' => 'getImage1Face',
             'image2Face' => 'getImage2Face',
-            'similarity' => 'getSimilarity'
+            'similarity' => 'getSimilarity',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
         $this->container['image1Face'] = isset($data['image1Face']) ? $data['image1Face'] : null;
         $this->container['image2Face'] = isset($data['image2Face']) ? $data['image2Face'] : null;
         $this->container['similarity'] = isset($data['similarity']) ? $data['similarity'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class CompareFaceByBase64Response implements ModelInterface, ArrayAccess
     public function setSimilarity($similarity)
     {
         $this->container['similarity'] = $similarity;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

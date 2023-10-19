@@ -43,7 +43,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * healthPeriodicAuditTime  健康检查的间隔时间。
     * healthPeriodicAuditGracePeriod  健康状况检查宽限期。
     * instanceTerminatePolicy  移除策略。
-    * notifications  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * notifications  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     * deletePublicip  删除云服务器是否删除云服务器绑定的弹性IP。
     * deleteVolume  删除云服务器是否删除云服务器绑定的数据盘
     * cloudLocationId  该参数为预留字段
@@ -115,7 +115,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * healthPeriodicAuditTime  健康检查的间隔时间。
     * healthPeriodicAuditGracePeriod  健康状况检查宽限期。
     * instanceTerminatePolicy  移除策略。
-    * notifications  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * notifications  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     * deletePublicip  删除云服务器是否删除云服务器绑定的弹性IP。
     * deleteVolume  删除云服务器是否删除云服务器绑定的数据盘
     * cloudLocationId  该参数为预留字段
@@ -208,7 +208,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * healthPeriodicAuditTime  健康检查的间隔时间。
     * healthPeriodicAuditGracePeriod  健康状况检查宽限期。
     * instanceTerminatePolicy  移除策略。
-    * notifications  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * notifications  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     * deletePublicip  删除云服务器是否删除云服务器绑定的弹性IP。
     * deleteVolume  删除云服务器是否删除云服务器绑定的数据盘
     * cloudLocationId  该参数为预留字段
@@ -280,7 +280,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * healthPeriodicAuditTime  健康检查的间隔时间。
     * healthPeriodicAuditGracePeriod  健康状况检查宽限期。
     * instanceTerminatePolicy  移除策略。
-    * notifications  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * notifications  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     * deletePublicip  删除云服务器是否删除云服务器绑定的弹性IP。
     * deleteVolume  删除云服务器是否删除云服务器绑定的数据盘
     * cloudLocationId  该参数为预留字段
@@ -352,7 +352,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * healthPeriodicAuditTime  健康检查的间隔时间。
     * healthPeriodicAuditGracePeriod  健康状况检查宽限期。
     * instanceTerminatePolicy  移除策略。
-    * notifications  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * notifications  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     * deletePublicip  删除云服务器是否删除云服务器绑定的弹性IP。
     * deleteVolume  删除云服务器是否删除云服务器绑定的数据盘
     * cloudLocationId  该参数为预留字段
@@ -1176,7 +1176,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets notifications
-    *  通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    *  通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     *
     * @return string[]|null
     */
@@ -1188,7 +1188,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     /**
     * Sets notifications
     *
-    * @param string[]|null $notifications 通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+    * @param string[]|null $notifications 通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
     *
     * @return $this
     */

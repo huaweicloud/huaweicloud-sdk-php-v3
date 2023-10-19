@@ -24,13 +24,15 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     * faceNumber  删除的人脸数量。 调用失败时无此字段。
     * faceSetId  人脸库ID。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'faceNumber' => 'int',
             'faceSetId' => 'string',
-            'faceSetName' => 'string'
+            'faceSetName' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -38,13 +40,15 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     * faceNumber  删除的人脸数量。 调用失败时无此字段。
     * faceSetId  人脸库ID。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'faceNumber' => 'int32',
         'faceSetId' => null,
-        'faceSetName' => null
+        'faceSetName' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     * faceNumber  删除的人脸数量。 调用失败时无此字段。
     * faceSetId  人脸库ID。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'faceNumber' => 'face_number',
             'faceSetId' => 'face_set_id',
-            'faceSetName' => 'face_set_name'
+            'faceSetName' => 'face_set_name',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     * faceNumber  删除的人脸数量。 调用失败时无此字段。
     * faceSetId  人脸库ID。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'faceNumber' => 'setFaceNumber',
             'faceSetId' => 'setFaceSetId',
-            'faceSetName' => 'setFaceSetName'
+            'faceSetName' => 'setFaceSetName',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     * faceNumber  删除的人脸数量。 调用失败时无此字段。
     * faceSetId  人脸库ID。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'faceNumber' => 'getFaceNumber',
             'faceSetId' => 'getFaceSetId',
-            'faceSetName' => 'getFaceSetName'
+            'faceSetName' => 'getFaceSetName',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
         $this->container['faceNumber'] = isset($data['faceNumber']) ? $data['faceNumber'] : null;
         $this->container['faceSetId'] = isset($data['faceSetId']) ? $data['faceSetId'] : null;
         $this->container['faceSetName'] = isset($data['faceSetName']) ? $data['faceSetName'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class DeleteFaceByFaceIdResponse implements ModelInterface, ArrayAccess
     public function setFaceSetName($faceSetName)
     {
         $this->container['faceSetName'] = $faceSetName;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  带宽包实例待解关联的资源实例ID。
-    * resourceType  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * resourceId  带宽包实例绑定的资源ID。
+    * resourceType  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  带宽包实例待解关联的资源实例ID。
-    * resourceType  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * resourceId  带宽包实例绑定的资源ID。
+    * resourceType  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  带宽包实例待解关联的资源实例ID。
-    * resourceType  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * resourceId  带宽包实例绑定的资源ID。
+    * resourceType  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  带宽包实例待解关联的资源实例ID。
-    * resourceType  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * resourceId  带宽包实例绑定的资源ID。
+    * resourceType  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  带宽包实例待解关联的资源实例ID。
-    * resourceType  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * resourceId  带宽包实例绑定的资源ID。
+    * resourceType  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @var string[]
     */
@@ -202,8 +202,8 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['resourceType']) > 36)) {
-                $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['resourceType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['resourceType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 0.";
@@ -224,7 +224,7 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  带宽包实例待解关联的资源实例ID。
+    *  带宽包实例绑定的资源ID。
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 带宽包实例待解关联的资源实例ID。
+    * @param string $resourceId 带宽包实例绑定的资源ID。
     *
     * @return $this
     */
@@ -248,7 +248,7 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    *  带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class DisassociateBandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+    * @param string $resourceType 带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
     *
     * @return $this
     */

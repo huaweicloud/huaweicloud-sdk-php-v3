@@ -23,13 +23,15 @@ class Features implements ModelInterface, ArrayAccess
     * supportAcl  是否支持acl - true：是 - false：否
     * supportTransparentClientIp  实例是否支持客户端ip透传 - true：是 - false：否
     * supportSsl  是否支持SSL - true：是 - false：否
+    * supportAuditLog  是否支持审计日志 - true: 是 - false: 否
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'supportAcl' => 'bool',
             'supportTransparentClientIp' => 'bool',
-            'supportSsl' => 'bool'
+            'supportSsl' => 'bool',
+            'supportAuditLog' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class Features implements ModelInterface, ArrayAccess
     * supportAcl  是否支持acl - true：是 - false：否
     * supportTransparentClientIp  实例是否支持客户端ip透传 - true：是 - false：否
     * supportSsl  是否支持SSL - true：是 - false：否
+    * supportAuditLog  是否支持审计日志 - true: 是 - false: 否
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'supportAcl' => null,
         'supportTransparentClientIp' => null,
-        'supportSsl' => null
+        'supportSsl' => null,
+        'supportAuditLog' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class Features implements ModelInterface, ArrayAccess
     * supportAcl  是否支持acl - true：是 - false：否
     * supportTransparentClientIp  实例是否支持客户端ip透传 - true：是 - false：否
     * supportSsl  是否支持SSL - true：是 - false：否
+    * supportAuditLog  是否支持审计日志 - true: 是 - false: 否
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'supportAcl' => 'support_acl',
             'supportTransparentClientIp' => 'support_transparent_client_ip',
-            'supportSsl' => 'support_ssl'
+            'supportSsl' => 'support_ssl',
+            'supportAuditLog' => 'support_audit_log'
     ];
 
     /**
@@ -86,13 +92,15 @@ class Features implements ModelInterface, ArrayAccess
     * supportAcl  是否支持acl - true：是 - false：否
     * supportTransparentClientIp  实例是否支持客户端ip透传 - true：是 - false：否
     * supportSsl  是否支持SSL - true：是 - false：否
+    * supportAuditLog  是否支持审计日志 - true: 是 - false: 否
     *
     * @var string[]
     */
     protected static $setters = [
             'supportAcl' => 'setSupportAcl',
             'supportTransparentClientIp' => 'setSupportTransparentClientIp',
-            'supportSsl' => 'setSupportSsl'
+            'supportSsl' => 'setSupportSsl',
+            'supportAuditLog' => 'setSupportAuditLog'
     ];
 
     /**
@@ -100,13 +108,15 @@ class Features implements ModelInterface, ArrayAccess
     * supportAcl  是否支持acl - true：是 - false：否
     * supportTransparentClientIp  实例是否支持客户端ip透传 - true：是 - false：否
     * supportSsl  是否支持SSL - true：是 - false：否
+    * supportAuditLog  是否支持审计日志 - true: 是 - false: 否
     *
     * @var string[]
     */
     protected static $getters = [
             'supportAcl' => 'getSupportAcl',
             'supportTransparentClientIp' => 'getSupportTransparentClientIp',
-            'supportSsl' => 'getSupportSsl'
+            'supportSsl' => 'getSupportSsl',
+            'supportAuditLog' => 'getSupportAuditLog'
     ];
 
     /**
@@ -170,6 +180,7 @@ class Features implements ModelInterface, ArrayAccess
         $this->container['supportAcl'] = isset($data['supportAcl']) ? $data['supportAcl'] : null;
         $this->container['supportTransparentClientIp'] = isset($data['supportTransparentClientIp']) ? $data['supportTransparentClientIp'] : null;
         $this->container['supportSsl'] = isset($data['supportSsl']) ? $data['supportSsl'] : null;
+        $this->container['supportAuditLog'] = isset($data['supportAuditLog']) ? $data['supportAuditLog'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class Features implements ModelInterface, ArrayAccess
     public function setSupportSsl($supportSsl)
     {
         $this->container['supportSsl'] = $supportSsl;
+        return $this;
+    }
+
+    /**
+    * Gets supportAuditLog
+    *  是否支持审计日志 - true: 是 - false: 否
+    *
+    * @return bool|null
+    */
+    public function getSupportAuditLog()
+    {
+        return $this->container['supportAuditLog'];
+    }
+
+    /**
+    * Sets supportAuditLog
+    *
+    * @param bool|null $supportAuditLog 是否支持审计日志 - true: 是 - false: 否
+    *
+    * @return $this
+    */
+    public function setSupportAuditLog($supportAuditLog)
+    {
+        $this->container['supportAuditLog'] = $supportAuditLog;
         return $this;
     }
 

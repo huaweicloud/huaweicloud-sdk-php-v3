@@ -22,21 +22,25 @@ class DeleteFaceSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'faceSetName' => 'string'
+            'faceSetName' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'faceSetName' => null
+        'faceSetName' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class DeleteFaceSetResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'faceSetName' => 'face_set_name'
+            'faceSetName' => 'face_set_name',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'faceSetName' => 'setFaceSetName'
+            'faceSetName' => 'setFaceSetName',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * faceSetName  人脸库名称。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'faceSetName' => 'getFaceSetName'
+            'faceSetName' => 'getFaceSetName',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class DeleteFaceSetResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['faceSetName'] = isset($data['faceSetName']) ? $data['faceSetName'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class DeleteFaceSetResponse implements ModelInterface, ArrayAccess
     public function setFaceSetName($faceSetName)
     {
         $this->container['faceSetName'] = $faceSetName;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

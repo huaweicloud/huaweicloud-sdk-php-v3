@@ -21,26 +21,26 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * interRegionBandwidth  interRegionBandwidth
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'interRegionBandwidth' => '\HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'interRegionBandwidth' => '\HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  资源ID标识符。
     * interRegionBandwidth  interRegionBandwidth
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'interRegionBandwidth' => null,
-        'requestId' => null
+        'requestId' => null,
+        'interRegionBandwidth' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  资源ID标识符。
     * interRegionBandwidth  interRegionBandwidth
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'interRegionBandwidth' => 'inter_region_bandwidth',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'interRegionBandwidth' => 'inter_region_bandwidth'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  资源ID标识符。
     * interRegionBandwidth  interRegionBandwidth
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'interRegionBandwidth' => 'setInterRegionBandwidth',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'interRegionBandwidth' => 'setInterRegionBandwidth'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  资源ID标识符。
     * interRegionBandwidth  interRegionBandwidth
-    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'interRegionBandwidth' => 'getInterRegionBandwidth',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'interRegionBandwidth' => 'getInterRegionBandwidth'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['interRegionBandwidth'] = isset($data['interRegionBandwidth']) ? $data['interRegionBandwidth'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['interRegionBandwidth'] = isset($data['interRegionBandwidth']) ? $data['interRegionBandwidth'] : null;
     }
 
     /**
@@ -170,12 +170,18 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+        if ($this->container['requestId'] === null) {
+            $invalidProperties[] = "'requestId' can't be null";
+        }
+            if ((mb_strlen($this->container['requestId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['requestId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['interRegionBandwidth'] === null) {
+            $invalidProperties[] = "'interRegionBandwidth' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -191,34 +197,10 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets interRegionBandwidth
-    *  interRegionBandwidth
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth|null
-    */
-    public function getInterRegionBandwidth()
-    {
-        return $this->container['interRegionBandwidth'];
-    }
-
-    /**
-    * Sets interRegionBandwidth
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth|null $interRegionBandwidth interRegionBandwidth
-    *
-    * @return $this
-    */
-    public function setInterRegionBandwidth($interRegionBandwidth)
-    {
-        $this->container['interRegionBandwidth'] = $interRegionBandwidth;
-        return $this;
-    }
-
-    /**
     * Gets requestId
-    *  请求ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getRequestId()
     {
@@ -228,13 +210,37 @@ class ShowInterRegionBandwidthResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string $requestId 资源ID标识符。
     *
     * @return $this
     */
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets interRegionBandwidth
+    *  interRegionBandwidth
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth
+    */
+    public function getInterRegionBandwidth()
+    {
+        return $this->container['interRegionBandwidth'];
+    }
+
+    /**
+    * Sets interRegionBandwidth
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\InterRegionBandwidth $interRegionBandwidth interRegionBandwidth
+    *
+    * @return $this
+    */
+    public function setInterRegionBandwidth($interRegionBandwidth)
+    {
+        $this->container['interRegionBandwidth'] = $interRegionBandwidth;
         return $this;
     }
 

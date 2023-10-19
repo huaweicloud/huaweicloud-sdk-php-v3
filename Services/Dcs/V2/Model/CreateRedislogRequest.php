@@ -21,7 +21,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     * logType  返回日志的类型，当前仅支持Redis运行日志，类型为run
     * replicationId  副本ID，可以从分片与副本中查询对应节点的副本ID
     *
@@ -37,7 +37,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     * logType  返回日志的类型，当前仅支持Redis运行日志，类型为run
     * replicationId  副本ID，可以从分片与副本中查询对应节点的副本ID
     *
@@ -74,7 +74,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     * logType  返回日志的类型，当前仅支持Redis运行日志，类型为run
     * replicationId  副本ID，可以从分片与副本中查询对应节点的副本ID
     *
@@ -90,7 +90,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     * logType  返回日志的类型，当前仅支持Redis运行日志，类型为run
     * replicationId  副本ID，可以从分片与副本中查询对应节点的副本ID
     *
@@ -106,7 +106,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * queryTime  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     * logType  返回日志的类型，当前仅支持Redis运行日志，类型为run
     * replicationId  副本ID，可以从分片与副本中查询对应节点的副本ID
     *
@@ -159,7 +159,26 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const QUERY_TIME_0 = 0;
+    const QUERY_TIME_1 = 1;
+    const QUERY_TIME_3 = 3;
+    const QUERY_TIME_7 = 7;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getQueryTimeAllowableValues()
+    {
+        return [
+            self::QUERY_TIME_0,
+            self::QUERY_TIME_1,
+            self::QUERY_TIME_3,
+            self::QUERY_TIME_7,
+        ];
+    }
 
 
     /**
@@ -194,6 +213,14 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getQueryTimeAllowableValues();
+                if (!is_null($this->container['queryTime']) && !in_array($this->container['queryTime'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'queryTime', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['logType'] === null) {
             $invalidProperties[] = "'logType' can't be null";
         }
@@ -237,7 +264,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryTime
-    *  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    *  日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     *
     * @return int|null
     */
@@ -249,7 +276,7 @@ class CreateRedislogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queryTime
     *
-    * @param int|null $queryTime 日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。最大支持0-7。
+    * @param int|null $queryTime 日期偏移量，表示从过去的n天开始查询，例如：传入0则表示查询今天的日志，传入7则表示查询过去7天的日志。当前支持0，1，3，7。
     *
     * @return $this
     */

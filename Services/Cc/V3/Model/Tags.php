@@ -20,25 +20,21 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  动作。|- create：创建。 delete：删除。
-    * tags  批量添加/删除资源标签
+    * tags  实例标签。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string',
             'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  动作。|- create：创建。 delete：删除。
-    * tags  批量添加/删除资源标签
+    * tags  实例标签。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null,
         'tags' => null
     ];
 
@@ -65,37 +61,31 @@ class Tags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  动作。|- create：创建。 delete：删除。
-    * tags  批量添加/删除资源标签
+    * tags  实例标签。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action',
             'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  动作。|- create：创建。 delete：删除。
-    * tags  批量添加/删除资源标签
+    * tags  实例标签。
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction',
             'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  动作。|- create：创建。 delete：删除。
-    * tags  批量添加/删除资源标签
+    * tags  实例标签。
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction',
             'tags' => 'getTags'
     ];
 
@@ -139,22 +129,7 @@ class Tags implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_CREATE = 'create';
-    const ACTION_DELETE = 'delete';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_CREATE,
-            self::ACTION_DELETE,
-        ];
-    }
 
 
     /**
@@ -172,7 +147,6 @@ class Tags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
@@ -184,14 +158,6 @@ class Tags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -207,32 +173,8 @@ class Tags implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets action
-    *  动作。|- create：创建。 delete：删除。
-    *
-    * @return string|null
-    */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-    * Sets action
-    *
-    * @param string|null $action 动作。|- create：创建。 delete：删除。
-    *
-    * @return $this
-    */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
-        return $this;
-    }
-
-    /**
     * Gets tags
-    *  批量添加/删除资源标签
+    *  实例标签。
     *
     * @return \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null
     */
@@ -244,7 +186,7 @@ class Tags implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null $tags 批量添加/删除资源标签
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null $tags 实例标签。
     *
     * @return $this
     */

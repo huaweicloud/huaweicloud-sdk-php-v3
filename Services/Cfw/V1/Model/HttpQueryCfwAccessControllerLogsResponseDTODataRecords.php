@@ -24,6 +24,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * ruleName  规则名称
     * ruleId  规则ID
     * hitTime  命中时间
+    * srcRegionId  源区域id
+    * srcRegionName  源区域name
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域name
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -31,6 +35,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -39,13 +44,18 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'ruleName' => 'string',
             'ruleId' => 'string',
             'hitTime' => 'int',
+            'srcRegionId' => 'string',
+            'srcRegionName' => 'string',
+            'dstRegionId' => 'string',
+            'dstRegionName' => 'string',
             'logId' => 'string',
             'srcIp' => 'string',
             'srcPort' => 'string',
             'dstIp' => 'string',
             'dstPort' => 'string',
             'protocol' => 'string',
-            'app' => 'string'
+            'app' => 'string',
+            'dstHost' => 'string'
     ];
 
     /**
@@ -54,6 +64,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * ruleName  规则名称
     * ruleId  规则ID
     * hitTime  命中时间
+    * srcRegionId  源区域id
+    * srcRegionName  源区域name
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域name
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -61,6 +75,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -69,13 +84,18 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         'ruleName' => null,
         'ruleId' => null,
         'hitTime' => null,
+        'srcRegionId' => null,
+        'srcRegionName' => null,
+        'dstRegionId' => null,
+        'dstRegionName' => null,
         'logId' => null,
         'srcIp' => null,
         'srcPort' => null,
         'dstIp' => null,
         'dstPort' => null,
         'protocol' => null,
-        'app' => null
+        'app' => null,
+        'dstHost' => null
     ];
 
     /**
@@ -105,6 +125,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * ruleName  规则名称
     * ruleId  规则ID
     * hitTime  命中时间
+    * srcRegionId  源区域id
+    * srcRegionName  源区域name
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域name
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -112,6 +136,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -120,13 +145,18 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'ruleName' => 'rule_name',
             'ruleId' => 'rule_id',
             'hitTime' => 'hit_time',
+            'srcRegionId' => 'src_region_id',
+            'srcRegionName' => 'src_region_name',
+            'dstRegionId' => 'dst_region_id',
+            'dstRegionName' => 'dst_region_name',
             'logId' => 'log_id',
             'srcIp' => 'src_ip',
             'srcPort' => 'src_port',
             'dstIp' => 'dst_ip',
             'dstPort' => 'dst_port',
             'protocol' => 'protocol',
-            'app' => 'app'
+            'app' => 'app',
+            'dstHost' => 'dst_host'
     ];
 
     /**
@@ -135,6 +165,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * ruleName  规则名称
     * ruleId  规则ID
     * hitTime  命中时间
+    * srcRegionId  源区域id
+    * srcRegionName  源区域name
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域name
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -142,6 +176,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -150,13 +185,18 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'ruleName' => 'setRuleName',
             'ruleId' => 'setRuleId',
             'hitTime' => 'setHitTime',
+            'srcRegionId' => 'setSrcRegionId',
+            'srcRegionName' => 'setSrcRegionName',
+            'dstRegionId' => 'setDstRegionId',
+            'dstRegionName' => 'setDstRegionName',
             'logId' => 'setLogId',
             'srcIp' => 'setSrcIp',
             'srcPort' => 'setSrcPort',
             'dstIp' => 'setDstIp',
             'dstPort' => 'setDstPort',
             'protocol' => 'setProtocol',
-            'app' => 'setApp'
+            'app' => 'setApp',
+            'dstHost' => 'setDstHost'
     ];
 
     /**
@@ -165,6 +205,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * ruleName  规则名称
     * ruleId  规则ID
     * hitTime  命中时间
+    * srcRegionId  源区域id
+    * srcRegionName  源区域name
+    * dstRegionId  目的区域id
+    * dstRegionName  目的区域name
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -172,6 +216,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
+    * dstHost  目标主机
     *
     * @var string[]
     */
@@ -180,13 +225,18 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'ruleName' => 'getRuleName',
             'ruleId' => 'getRuleId',
             'hitTime' => 'getHitTime',
+            'srcRegionId' => 'getSrcRegionId',
+            'srcRegionName' => 'getSrcRegionName',
+            'dstRegionId' => 'getDstRegionId',
+            'dstRegionName' => 'getDstRegionName',
             'logId' => 'getLogId',
             'srcIp' => 'getSrcIp',
             'srcPort' => 'getSrcPort',
             'dstIp' => 'getDstIp',
             'dstPort' => 'getDstPort',
             'protocol' => 'getProtocol',
-            'app' => 'getApp'
+            'app' => 'getApp',
+            'dstHost' => 'getDstHost'
     ];
 
     /**
@@ -251,6 +301,10 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
         $this->container['hitTime'] = isset($data['hitTime']) ? $data['hitTime'] : null;
+        $this->container['srcRegionId'] = isset($data['srcRegionId']) ? $data['srcRegionId'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstRegionId'] = isset($data['dstRegionId']) ? $data['dstRegionId'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['srcIp'] = isset($data['srcIp']) ? $data['srcIp'] : null;
         $this->container['srcPort'] = isset($data['srcPort']) ? $data['srcPort'] : null;
@@ -258,6 +312,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         $this->container['dstPort'] = isset($data['dstPort']) ? $data['dstPort'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
     }
 
     /**
@@ -375,6 +430,102 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     public function setHitTime($hitTime)
     {
         $this->container['hitTime'] = $hitTime;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionId
+    *  源区域id
+    *
+    * @return string|null
+    */
+    public function getSrcRegionId()
+    {
+        return $this->container['srcRegionId'];
+    }
+
+    /**
+    * Sets srcRegionId
+    *
+    * @param string|null $srcRegionId 源区域id
+    *
+    * @return $this
+    */
+    public function setSrcRegionId($srcRegionId)
+    {
+        $this->container['srcRegionId'] = $srcRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源区域name
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源区域name
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionId
+    *  目的区域id
+    *
+    * @return string|null
+    */
+    public function getDstRegionId()
+    {
+        return $this->container['dstRegionId'];
+    }
+
+    /**
+    * Sets dstRegionId
+    *
+    * @param string|null $dstRegionId 目的区域id
+    *
+    * @return $this
+    */
+    public function setDstRegionId($dstRegionId)
+    {
+        $this->container['dstRegionId'] = $dstRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的区域name
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的区域name
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
         return $this;
     }
 
@@ -543,6 +694,30 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     public function setApp($app)
     {
         $this->container['app'] = $app;
+        return $this;
+    }
+
+    /**
+    * Gets dstHost
+    *  目标主机
+    *
+    * @return string|null
+    */
+    public function getDstHost()
+    {
+        return $this->container['dstHost'];
+    }
+
+    /**
+    * Sets dstHost
+    *
+    * @param string|null $dstHost 目标主机
+    *
+    * @return $this
+    */
+    public function setDstHost($dstHost)
+    {
+        $this->container['dstHost'] = $dstHost;
         return $this;
     }
 

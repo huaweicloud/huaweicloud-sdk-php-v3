@@ -42,7 +42,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
             'protectType' => 'string',
             'objectType' => 'string',
             'enterpriseProjectId' => 'string',
-            'id' => 'string',
+            'id' => 'string[]',
             'policyId' => 'string',
             'status' => 'string',
             'resourceIds' => 'string'
@@ -509,7 +509,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * Gets id
     *  存储库ID
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getId()
     {
@@ -519,7 +519,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 存储库ID
+    * @param string[]|null $id 存储库ID
     *
     * @return $this
     */

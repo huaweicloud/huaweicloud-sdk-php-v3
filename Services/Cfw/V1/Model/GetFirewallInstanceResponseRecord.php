@@ -35,6 +35,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * resources  防火墙资源列表
     * fwInstanceName  防火墙名称
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * resourceId  资源id
+    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'featureToggle' => 'map[string,bool]',
             'resources' => '\HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]',
             'fwInstanceName' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'resourceId' => 'string',
+            'supportUrlFiltering' => 'bool'
     ];
 
     /**
@@ -73,6 +77,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * resources  防火墙资源列表
     * fwInstanceName  防火墙名称
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * resourceId  资源id
+    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         'featureToggle' => null,
         'resources' => null,
         'fwInstanceName' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'resourceId' => null,
+        'supportUrlFiltering' => null
     ];
 
     /**
@@ -132,6 +140,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * resources  防火墙资源列表
     * fwInstanceName  防火墙名称
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * resourceId  资源id
+    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'featureToggle' => 'feature_toggle',
             'resources' => 'resources',
             'fwInstanceName' => 'fw_instance_name',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'resourceId' => 'resource_id',
+            'supportUrlFiltering' => 'support_url_filtering'
     ];
 
     /**
@@ -170,6 +182,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * resources  防火墙资源列表
     * fwInstanceName  防火墙名称
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * resourceId  资源id
+    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'featureToggle' => 'setFeatureToggle',
             'resources' => 'setResources',
             'fwInstanceName' => 'setFwInstanceName',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'resourceId' => 'setResourceId',
+            'supportUrlFiltering' => 'setSupportUrlFiltering'
     ];
 
     /**
@@ -208,6 +224,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * resources  防火墙资源列表
     * fwInstanceName  防火墙名称
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * resourceId  资源id
+    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'featureToggle' => 'getFeatureToggle',
             'resources' => 'getResources',
             'fwInstanceName' => 'getFwInstanceName',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'resourceId' => 'getResourceId',
+            'supportUrlFiltering' => 'getSupportUrlFiltering'
     ];
 
     /**
@@ -339,6 +359,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['fwInstanceName'] = isset($data['fwInstanceName']) ? $data['fwInstanceName'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['supportUrlFiltering'] = isset($data['supportUrlFiltering']) ? $data['supportUrlFiltering'] : null;
     }
 
     /**
@@ -728,6 +750,54 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  资源id
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 资源id
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets supportUrlFiltering
+    *  是否支持url过滤，true表示是，false表示不是
+    *
+    * @return bool|null
+    */
+    public function getSupportUrlFiltering()
+    {
+        return $this->container['supportUrlFiltering'];
+    }
+
+    /**
+    * Sets supportUrlFiltering
+    *
+    * @param bool|null $supportUrlFiltering 是否支持url过滤，true表示是，false表示不是
+    *
+    * @return $this
+    */
+    public function setSupportUrlFiltering($supportUrlFiltering)
+    {
+        $this->container['supportUrlFiltering'] = $supportUrlFiltering;
         return $this;
     }
 

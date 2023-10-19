@@ -20,8 +20,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  云连接实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  云连接实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  云连接实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  云连接实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  云连接实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     *
     * @var string[]
     */
@@ -184,8 +184,8 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[^&lt;&gt;]*$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^&lt;&gt;]*$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
             }
         return $invalidProperties;
     }
@@ -203,7 +203,7 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    *  实例名字。
     *
     * @return string|null
     */
@@ -215,7 +215,7 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    * @param string|null $name 实例名字。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  云连接实例的描述。不支持 <>。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class UpdateCloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 云连接实例的描述。不支持 <>。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */

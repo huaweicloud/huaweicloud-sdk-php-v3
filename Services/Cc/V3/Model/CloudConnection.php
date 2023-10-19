@@ -20,17 +20,17 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  云连接实例的ID。
-    * name  云连接实例的名字。
-    * description  云连接实例的描述。
-    * domainId  帐号ID。
-    * enterpriseProjectId  云连接实例的企业项目ID。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * domainId  实例所属帐号ID。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * tags  实例标签。
     * status  云连接实例的状态。ACTIVE：表示状态可用。
     * adminStateUp  云连接实例的管理状态。
-    * createdAt  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    * updatedAt  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
     * usedScene  云连接使用场景。 - VPC：虚拟私有云。
-    * tags  标签列表。
     * networkInstanceNumber  云连接实例关联网络实例的个数。
     * bandwidthPackageNumber  云连接实例关联带宽包的个数。
     * interRegionBandwidthNumber  云连接实例关联域间带宽的个数。
@@ -43,12 +43,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
             'description' => 'string',
             'domainId' => 'string',
             'enterpriseProjectId' => 'string',
-            'status' => 'string',
-            'adminStateUp' => 'bool',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'usedScene' => 'string',
             'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\Tag[]',
+            'status' => 'string',
+            'adminStateUp' => 'bool',
+            'usedScene' => 'string',
             'networkInstanceNumber' => 'int',
             'bandwidthPackageNumber' => 'int',
             'interRegionBandwidthNumber' => 'int'
@@ -56,17 +56,17 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  云连接实例的ID。
-    * name  云连接实例的名字。
-    * description  云连接实例的描述。
-    * domainId  帐号ID。
-    * enterpriseProjectId  云连接实例的企业项目ID。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * domainId  实例所属帐号ID。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * tags  实例标签。
     * status  云连接实例的状态。ACTIVE：表示状态可用。
     * adminStateUp  云连接实例的管理状态。
-    * createdAt  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    * updatedAt  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
     * usedScene  云连接使用场景。 - VPC：虚拟私有云。
-    * tags  标签列表。
     * networkInstanceNumber  云连接实例关联网络实例的个数。
     * bandwidthPackageNumber  云连接实例关联带宽包的个数。
     * interRegionBandwidthNumber  云连接实例关联域间带宽的个数。
@@ -79,12 +79,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
         'description' => null,
         'domainId' => null,
         'enterpriseProjectId' => null,
-        'status' => null,
-        'adminStateUp' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'usedScene' => null,
         'tags' => null,
+        'status' => null,
+        'adminStateUp' => null,
+        'usedScene' => null,
         'networkInstanceNumber' => 'int32',
         'bandwidthPackageNumber' => 'int32',
         'interRegionBandwidthNumber' => 'int32'
@@ -113,17 +113,17 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  云连接实例的ID。
-    * name  云连接实例的名字。
-    * description  云连接实例的描述。
-    * domainId  帐号ID。
-    * enterpriseProjectId  云连接实例的企业项目ID。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * domainId  实例所属帐号ID。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * tags  实例标签。
     * status  云连接实例的状态。ACTIVE：表示状态可用。
     * adminStateUp  云连接实例的管理状态。
-    * createdAt  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    * updatedAt  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
     * usedScene  云连接使用场景。 - VPC：虚拟私有云。
-    * tags  标签列表。
     * networkInstanceNumber  云连接实例关联网络实例的个数。
     * bandwidthPackageNumber  云连接实例关联带宽包的个数。
     * interRegionBandwidthNumber  云连接实例关联域间带宽的个数。
@@ -136,12 +136,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
             'description' => 'description',
             'domainId' => 'domain_id',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'status' => 'status',
-            'adminStateUp' => 'admin_state_up',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'usedScene' => 'used_scene',
             'tags' => 'tags',
+            'status' => 'status',
+            'adminStateUp' => 'admin_state_up',
+            'usedScene' => 'used_scene',
             'networkInstanceNumber' => 'network_instance_number',
             'bandwidthPackageNumber' => 'bandwidth_package_number',
             'interRegionBandwidthNumber' => 'inter_region_bandwidth_number'
@@ -149,17 +149,17 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  云连接实例的ID。
-    * name  云连接实例的名字。
-    * description  云连接实例的描述。
-    * domainId  帐号ID。
-    * enterpriseProjectId  云连接实例的企业项目ID。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * domainId  实例所属帐号ID。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * tags  实例标签。
     * status  云连接实例的状态。ACTIVE：表示状态可用。
     * adminStateUp  云连接实例的管理状态。
-    * createdAt  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    * updatedAt  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
     * usedScene  云连接使用场景。 - VPC：虚拟私有云。
-    * tags  标签列表。
     * networkInstanceNumber  云连接实例关联网络实例的个数。
     * bandwidthPackageNumber  云连接实例关联带宽包的个数。
     * interRegionBandwidthNumber  云连接实例关联域间带宽的个数。
@@ -172,12 +172,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'domainId' => 'setDomainId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'status' => 'setStatus',
-            'adminStateUp' => 'setAdminStateUp',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'usedScene' => 'setUsedScene',
             'tags' => 'setTags',
+            'status' => 'setStatus',
+            'adminStateUp' => 'setAdminStateUp',
+            'usedScene' => 'setUsedScene',
             'networkInstanceNumber' => 'setNetworkInstanceNumber',
             'bandwidthPackageNumber' => 'setBandwidthPackageNumber',
             'interRegionBandwidthNumber' => 'setInterRegionBandwidthNumber'
@@ -185,17 +185,17 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  云连接实例的ID。
-    * name  云连接实例的名字。
-    * description  云连接实例的描述。
-    * domainId  帐号ID。
-    * enterpriseProjectId  云连接实例的企业项目ID。
+    * id  资源ID标识符。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
+    * domainId  实例所属帐号ID。
+    * enterpriseProjectId  实例所属企业项目ID。
+    * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    * tags  实例标签。
     * status  云连接实例的状态。ACTIVE：表示状态可用。
     * adminStateUp  云连接实例的管理状态。
-    * createdAt  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    * updatedAt  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
     * usedScene  云连接使用场景。 - VPC：虚拟私有云。
-    * tags  标签列表。
     * networkInstanceNumber  云连接实例关联网络实例的个数。
     * bandwidthPackageNumber  云连接实例关联带宽包的个数。
     * interRegionBandwidthNumber  云连接实例关联域间带宽的个数。
@@ -208,12 +208,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'domainId' => 'getDomainId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'status' => 'getStatus',
-            'adminStateUp' => 'getAdminStateUp',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'usedScene' => 'getUsedScene',
             'tags' => 'getTags',
+            'status' => 'getStatus',
+            'adminStateUp' => 'getAdminStateUp',
+            'usedScene' => 'getUsedScene',
             'networkInstanceNumber' => 'getNetworkInstanceNumber',
             'bandwidthPackageNumber' => 'getBandwidthPackageNumber',
             'interRegionBandwidthNumber' => 'getInterRegionBandwidthNumber'
@@ -308,12 +308,12 @@ class CloudConnection implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
-        $this->container['usedScene'] = isset($data['usedScene']) ? $data['usedScene'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['usedScene'] = isset($data['usedScene']) ? $data['usedScene'] : null;
         $this->container['networkInstanceNumber'] = isset($data['networkInstanceNumber']) ? $data['networkInstanceNumber'] : null;
         $this->container['bandwidthPackageNumber'] = isset($data['bandwidthPackageNumber']) ? $data['bandwidthPackageNumber'] : null;
         $this->container['interRegionBandwidthNumber'] = isset($data['interRegionBandwidthNumber']) ? $data['interRegionBandwidthNumber'] : null;
@@ -327,17 +327,29 @@ class CloudConnection implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) < 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -345,18 +357,36 @@ class CloudConnection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 32)) {
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
+            }
+        if ($this->container['domainId'] === null) {
+            $invalidProperties[] = "'domainId' can't be null";
+        }
+            if ((mb_strlen($this->container['domainId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 10)) {
+            if ((mb_strlen($this->container['domainId']) < 10)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 10.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{10,32}/", $this->container['domainId'])) {
+                $invalidProperties[] = "invalid value for 'domainId', must be conform to the pattern /[a-fA-F0-9]{10,32}/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
+        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -419,9 +449,9 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  云连接实例的ID。
+    *  资源ID标识符。
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -431,7 +461,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 云连接实例的ID。
+    * @param string $id 资源ID标识符。
     *
     * @return $this
     */
@@ -443,9 +473,9 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  云连接实例的名字。
+    *  实例名字。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -455,7 +485,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 云连接实例的名字。
+    * @param string $name 实例名字。
     *
     * @return $this
     */
@@ -467,7 +497,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  云连接实例的描述。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -479,7 +509,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 云连接实例的描述。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */
@@ -491,9 +521,9 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  帐号ID。
+    *  实例所属帐号ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getDomainId()
     {
@@ -503,7 +533,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 帐号ID。
+    * @param string $domainId 实例所属帐号ID。
     *
     * @return $this
     */
@@ -515,7 +545,7 @@ class CloudConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  云连接实例的企业项目ID。
+    *  实例所属企业项目ID。
     *
     * @return string|null
     */
@@ -527,13 +557,85 @@ class CloudConnection implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 云连接实例的企业项目ID。
+    * @param string|null $enterpriseProjectId 实例所属企业项目ID。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return \DateTime
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param \DateTime $createdAt 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  实例标签。
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null $tags 实例标签。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 
@@ -586,54 +688,6 @@ class CloudConnection implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createdAt
-    *  云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    *
-    * @return \DateTime|null
-    */
-    public function getCreatedAt()
-    {
-        return $this->container['createdAt'];
-    }
-
-    /**
-    * Sets createdAt
-    *
-    * @param \DateTime|null $createdAt 云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    *
-    * @return $this
-    */
-    public function setCreatedAt($createdAt)
-    {
-        $this->container['createdAt'] = $createdAt;
-        return $this;
-    }
-
-    /**
-    * Gets updatedAt
-    *  云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    *
-    * @return \DateTime|null
-    */
-    public function getUpdatedAt()
-    {
-        return $this->container['updatedAt'];
-    }
-
-    /**
-    * Sets updatedAt
-    *
-    * @param \DateTime|null $updatedAt 云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-    *
-    * @return $this
-    */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->container['updatedAt'] = $updatedAt;
-        return $this;
-    }
-
-    /**
     * Gets usedScene
     *  云连接使用场景。 - VPC：虚拟私有云。
     *
@@ -654,30 +708,6 @@ class CloudConnection implements ModelInterface, ArrayAccess
     public function setUsedScene($usedScene)
     {
         $this->container['usedScene'] = $usedScene;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  标签列表。
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Tag[]|null $tags 标签列表。
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
         return $this;
     }
 

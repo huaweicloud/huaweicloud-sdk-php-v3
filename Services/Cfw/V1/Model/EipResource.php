@@ -32,6 +32,11 @@ class EipResource implements ModelInterface, ArrayAccess
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * tags  标签列表
+    * domainId  EIP所属用户
+    * owner  所属用户的名称
+    * fwDomainId  防火墙所属用户
     *
     * @var string[]
     */
@@ -47,7 +52,12 @@ class EipResource implements ModelInterface, ArrayAccess
             'associateInstanceType' => 'string',
             'fwInstanceName' => 'string',
             'fwInstanceId' => 'string',
-            'fwEnterpriseProjectId' => 'string'
+            'fwEnterpriseProjectId' => 'string',
+            'objectId' => 'string',
+            'tags' => 'string',
+            'domainId' => 'string',
+            'owner' => 'string',
+            'fwDomainId' => 'string'
     ];
 
     /**
@@ -64,6 +74,11 @@ class EipResource implements ModelInterface, ArrayAccess
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * tags  标签列表
+    * domainId  EIP所属用户
+    * owner  所属用户的名称
+    * fwDomainId  防火墙所属用户
     *
     * @var string[]
     */
@@ -79,7 +94,12 @@ class EipResource implements ModelInterface, ArrayAccess
         'associateInstanceType' => null,
         'fwInstanceName' => null,
         'fwInstanceId' => null,
-        'fwEnterpriseProjectId' => null
+        'fwEnterpriseProjectId' => null,
+        'objectId' => null,
+        'tags' => null,
+        'domainId' => null,
+        'owner' => null,
+        'fwDomainId' => null
     ];
 
     /**
@@ -117,6 +137,11 @@ class EipResource implements ModelInterface, ArrayAccess
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * tags  标签列表
+    * domainId  EIP所属用户
+    * owner  所属用户的名称
+    * fwDomainId  防火墙所属用户
     *
     * @var string[]
     */
@@ -132,7 +157,12 @@ class EipResource implements ModelInterface, ArrayAccess
             'associateInstanceType' => 'associate_instance_type',
             'fwInstanceName' => 'fw_instance_name',
             'fwInstanceId' => 'fw_instance_id',
-            'fwEnterpriseProjectId' => 'fw_enterprise_project_id'
+            'fwEnterpriseProjectId' => 'fw_enterprise_project_id',
+            'objectId' => 'object_id',
+            'tags' => 'tags',
+            'domainId' => 'domain_id',
+            'owner' => 'owner',
+            'fwDomainId' => 'fw_domain_id'
     ];
 
     /**
@@ -149,6 +179,11 @@ class EipResource implements ModelInterface, ArrayAccess
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * tags  标签列表
+    * domainId  EIP所属用户
+    * owner  所属用户的名称
+    * fwDomainId  防火墙所属用户
     *
     * @var string[]
     */
@@ -164,7 +199,12 @@ class EipResource implements ModelInterface, ArrayAccess
             'associateInstanceType' => 'setAssociateInstanceType',
             'fwInstanceName' => 'setFwInstanceName',
             'fwInstanceId' => 'setFwInstanceId',
-            'fwEnterpriseProjectId' => 'setFwEnterpriseProjectId'
+            'fwEnterpriseProjectId' => 'setFwEnterpriseProjectId',
+            'objectId' => 'setObjectId',
+            'tags' => 'setTags',
+            'domainId' => 'setDomainId',
+            'owner' => 'setOwner',
+            'fwDomainId' => 'setFwDomainId'
     ];
 
     /**
@@ -181,6 +221,11 @@ class EipResource implements ModelInterface, ArrayAccess
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * tags  标签列表
+    * domainId  EIP所属用户
+    * owner  所属用户的名称
+    * fwDomainId  防火墙所属用户
     *
     * @var string[]
     */
@@ -196,7 +241,12 @@ class EipResource implements ModelInterface, ArrayAccess
             'associateInstanceType' => 'getAssociateInstanceType',
             'fwInstanceName' => 'getFwInstanceName',
             'fwInstanceId' => 'getFwInstanceId',
-            'fwEnterpriseProjectId' => 'getFwEnterpriseProjectId'
+            'fwEnterpriseProjectId' => 'getFwEnterpriseProjectId',
+            'objectId' => 'getObjectId',
+            'tags' => 'getTags',
+            'domainId' => 'getDomainId',
+            'owner' => 'getOwner',
+            'fwDomainId' => 'getFwDomainId'
     ];
 
     /**
@@ -284,6 +334,11 @@ class EipResource implements ModelInterface, ArrayAccess
         $this->container['fwInstanceName'] = isset($data['fwInstanceName']) ? $data['fwInstanceName'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
         $this->container['fwEnterpriseProjectId'] = isset($data['fwEnterpriseProjectId']) ? $data['fwEnterpriseProjectId'] : null;
+        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['fwDomainId'] = isset($data['fwDomainId']) ? $data['fwDomainId'] : null;
     }
 
     /**
@@ -601,6 +656,126 @@ class EipResource implements ModelInterface, ArrayAccess
     public function setFwEnterpriseProjectId($fwEnterpriseProjectId)
     {
         $this->container['fwEnterpriseProjectId'] = $fwEnterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets objectId
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getObjectId()
+    {
+        return $this->container['objectId'];
+    }
+
+    /**
+    * Sets objectId
+    *
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setObjectId($objectId)
+    {
+        $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets domainId
+    *  EIP所属用户
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId EIP所属用户
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets owner
+    *  所属用户的名称
+    *
+    * @return string|null
+    */
+    public function getOwner()
+    {
+        return $this->container['owner'];
+    }
+
+    /**
+    * Sets owner
+    *
+    * @param string|null $owner 所属用户的名称
+    *
+    * @return $this
+    */
+    public function setOwner($owner)
+    {
+        $this->container['owner'] = $owner;
+        return $this;
+    }
+
+    /**
+    * Gets fwDomainId
+    *  防火墙所属用户
+    *
+    * @return string|null
+    */
+    public function getFwDomainId()
+    {
+        return $this->container['fwDomainId'];
+    }
+
+    /**
+    * Sets fwDomainId
+    *
+    * @param string|null $fwDomainId 防火墙所属用户
+    *
+    * @return $this
+    */
+    public function setFwDomainId($fwDomainId)
+    {
+        $this->container['fwDomainId'] = $fwDomainId;
         return $this;
     }
 

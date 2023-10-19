@@ -23,13 +23,15 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'systemEncrypted' => 'string',
             'systemCmkid' => 'string',
-            'userData' => 'string'
+            'userData' => 'string',
+            'byol' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'systemEncrypted' => null,
         'systemCmkid' => null,
-        'userData' => null
+        'userData' => null,
+        'byol' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'systemEncrypted' => '__system__encrypted',
             'systemCmkid' => '__system__cmkid',
-            'userData' => 'user_data'
+            'userData' => 'user_data',
+            'byol' => 'BYOL'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $setters = [
             'systemEncrypted' => 'setSystemEncrypted',
             'systemCmkid' => 'setSystemCmkid',
-            'userData' => 'setUserData'
+            'userData' => 'setUserData',
+            'byol' => 'setByol'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
+    * byol  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
     *
     * @var string[]
     */
     protected static $getters = [
             'systemEncrypted' => 'getSystemEncrypted',
             'systemCmkid' => 'getSystemCmkid',
-            'userData' => 'getUserData'
+            'userData' => 'getUserData',
+            'byol' => 'getByol'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
         $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : null;
         $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
+        $this->container['byol'] = isset($data['byol']) ? $data['byol'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class ChangeSeversOsMetadata implements ModelInterface, ArrayAccess
     public function setUserData($userData)
     {
         $this->container['userData'] = $userData;
+        return $this;
+    }
+
+    /**
+    * Gets byol
+    *  如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
+    *
+    * @return string|null
+    */
+    public function getByol()
+    {
+        return $this->container['byol'];
+    }
+
+    /**
+    * Sets byol
+    *
+    * @param string|null $byol 如果您已拥有操作系统或软件的许可证（一般是指按物理插槽数、物理内核数等进行认证的许可证），您可以通过自带许可（BYOL）的方式将业务完整迁移到云平台，继续使用您的许可证。 - true： 使用自有license - 其他值： 视为非法参数，接口报错
+    *
+    * @return $this
+    */
+    public function setByol($byol)
+    {
+        $this->container['byol'] = $byol;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-    * description  网络实例的描述。不支持 <>。
+    * name  实例名字。
+    * description  实例描述。不支持 <>。
     * cidrs  网络实例发布的网段路由列表。
     *
     * @var string[]
@@ -183,20 +183,20 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 85)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 85.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[^&lt;&gt;]*$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^&lt;&gt;]*$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
             }
         return $invalidProperties;
     }
@@ -214,7 +214,7 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    *  实例名字。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+    * @param string|null $name 实例名字。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  网络实例的描述。不支持 <>。
+    *  实例描述。不支持 <>。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class UpdateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 网络实例的描述。不支持 <>。
+    * @param string|null $description 实例描述。不支持 <>。
     *
     * @return $this
     */
