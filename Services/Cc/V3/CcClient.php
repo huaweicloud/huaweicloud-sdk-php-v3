@@ -2418,6 +2418,68 @@ class CcClient extends Client
     }
 
     /**
+     * 查询中心网络能力列表
+     *
+     * 查询中心网络能力列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkCapabilities($request)
+    {
+        return $this->listCentralNetworkCapabilitiesWithHttpInfo($request);
+    }
+
+    public function listCentralNetworkCapabilitiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/gcn/capabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['capability'] !== null) {
+            $queryParams['capability'] = $localVarParams['capability'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkCapabilitiesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkCapabilitiesRequest');
+    }
+
+    /**
      * 查询中心网络连接列表
      *
      * 查询中心网络连接列表接口。

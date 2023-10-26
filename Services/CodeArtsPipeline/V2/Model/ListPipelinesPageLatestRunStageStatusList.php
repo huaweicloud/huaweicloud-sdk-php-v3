@@ -25,6 +25,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     * status  状态
     * startTime  开始时间
     * endTime  结束时间
+    * id  阶段ID
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
             'sequence' => 'int',
             'status' => 'string',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'id' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     * status  状态
     * startTime  开始时间
     * endTime  结束时间
+    * id  阶段ID
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
         'sequence' => 'int32',
         'status' => null,
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'id' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     * status  状态
     * startTime  开始时间
     * endTime  结束时间
+    * id  阶段ID
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
             'sequence' => 'sequence',
             'status' => 'status',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'id' => 'id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     * status  状态
     * startTime  开始时间
     * endTime  结束时间
+    * id  阶段ID
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
             'sequence' => 'setSequence',
             'status' => 'setStatus',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'id' => 'setId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     * status  状态
     * startTime  开始时间
     * endTime  结束时间
+    * id  阶段ID
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
             'sequence' => 'getSequence',
             'status' => 'getStatus',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'id' => 'getId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class ListPipelinesPageLatestRunStageStatusList implements ModelInterface, Array
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  阶段ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 阶段ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

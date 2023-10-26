@@ -1780,11 +1780,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 ['application/json']
             );
         }
@@ -1885,7 +1885,7 @@ class AosAsyncClient extends Client
      * 
      * 此API用于删除指定资源栈集下指定局点（region）或指定成员账户（domain_id）的资源栈实例，并返回资源栈集操作ID（stack_set_operation_id）
      * 
-     * **请谨慎操作，删除资源栈实例将会删除与该资源栈实例相关的堆栈以及堆栈所管理的一切资源。
+     * **请谨慎操作，删除资源栈实例将会删除与该资源栈实例相关的堆栈以及堆栈所管理的一切资源。**
      * 
      * * 用户可以根据资源栈集操作ID（stack_set_operation_id），通过ShowStackSetOperationMetadata API获取资源栈集操作状态
      * 
@@ -1927,11 +1927,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -2087,11 +2087,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 ['application/json']
             );
         }
@@ -2369,6 +2369,82 @@ class AosAsyncClient extends Client
     }
 
     /**
+     * 获取资源栈实例
+     *
+     * 获取资源栈实例（ShowStackInstance）
+     * 
+     * 用户可以使用此API获取资源栈实例的详细信息，包括关联资源栈名称与id，创建时间，参数覆盖等
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStackInstanceAsync($request)
+    {
+        return $this->showStackInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function showStackInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/stack-sets/{stack_set_name}/stack-instances/{stack_instance_addr}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stackSetId'] !== null) {
+            $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['stackSetName'] !== null) {
+            $pathParams['stack_set_name'] = $localVarParams['stackSetName'];
+        }
+        if ($localVarParams['stackInstanceAddr'] !== null) {
+            $pathParams['stack_instance_addr'] = $localVarParams['stackInstanceAddr'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'x-response-examples-1']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'x-response-examples-1'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\ShowStackInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\ShowStackInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取资源栈集元数据
      *
      * 获取资源栈集元数据（ShowStackSetMetadata）
@@ -2413,11 +2489,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -2491,11 +2567,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -2592,6 +2668,89 @@ class AosAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Aos\V1\Model\ShowStackSetTemplateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Aos\V1\Model\ShowStackSetTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新资源栈实例
+     *
+     * 更新资源栈实例（UpdateStackInstances）
+     * 
+     * 此API用于更新并部署指定资源栈实例集合，并返回资源栈集操作ID（stack_set_operation_id）
+     * 
+     * 此API可以通过var_overrides参数，更新指定资源栈实例的参数值，进行参数覆盖。若var_overrides参数未给与，则默认使用当前资源栈集中记录的参数进行部署，详见：var_overrides参数描述。用户只可以更新已经存在的资源栈实例，如果用户想要增加额外的资源栈实例，请使用CreateStackInstances API。
+     * 
+     * 通过DeployStackSet API更新资源栈集参数后，资源栈实例中已经被覆盖的参数不会被更新，仍然保留覆盖值。
+     * 
+     * 用户只能覆盖已经在资源栈集中记录的参数，如果用户想要增加可以覆盖的参数，需要先通过DeployStackSet API更新资源栈集记录的参数集合。
+     * 
+     * * 当触发的部署失败时，资源栈实例不会自动回滚参数覆盖，但部署失败的资源栈会默认自动回滚，已经部署成功的资源栈不会触发回滚。
+     * 
+     * * 用户可以根据资源栈集操作ID（stack_set_operation_id），通过ShowStackSetOperationMetadata API获取资源栈集操作状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateStackInstancesAsync($request)
+    {
+        return $this->updateStackInstancesAsyncWithHttpInfo($request);
+    }
+    
+    public function updateStackInstancesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/stack-sets/{stack_set_name}/stack-instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['stackSetName'] !== null) {
+            $pathParams['stack_set_name'] = $localVarParams['stackSetName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'x-response-examples-1']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'x-response-examples-1'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PATCH',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\UpdateStackInstancesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\UpdateStackInstancesRequest',
             $asyncRequest = true);
     }
 
@@ -2798,11 +2957,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*'],
                 []
             );
         }
@@ -2879,11 +3038,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*'],
                 []
             );
         }
@@ -2960,11 +3119,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'x-response-examples-1']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'x-response-examples-1'],
+                ['application/json'],
                 []
             );
         }
@@ -3034,11 +3193,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'x-response-examples-1']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'x-response-examples-1'],
+                ['application/json'],
                 []
             );
         }
@@ -3111,11 +3270,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'x-response-examples-1']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'x-response-examples-1'],
+                ['application/json'],
                 []
             );
         }
@@ -3192,11 +3351,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*'],
                 []
             );
         }
@@ -3272,11 +3431,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'x-response-examples-1']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'x-response-examples-1'],
+                ['application/json'],
                 []
             );
         }
@@ -3347,11 +3506,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 []
             );
         }

@@ -30,6 +30,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * loginIp  登录源IP
     * loginUserName  登录用户名
+    * containerId  容器ID
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             'hash' => 'string',
             'privateIp' => 'string',
             'loginIp' => 'string',
-            'loginUserName' => 'string'
+            'loginUserName' => 'string',
+            'containerId' => 'string',
+            'containerName' => 'string'
     ];
 
     /**
@@ -58,6 +62,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * loginIp  登录源IP
     * loginUserName  登录用户名
+    * containerId  容器ID
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
         'hash' => null,
         'privateIp' => null,
         'loginIp' => null,
-        'loginUserName' => null
+        'loginUserName' => null,
+        'containerId' => null,
+        'containerName' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * loginIp  登录源IP
     * loginUserName  登录用户名
+    * containerId  容器ID
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             'hash' => 'hash',
             'privateIp' => 'private_ip',
             'loginIp' => 'login_ip',
-            'loginUserName' => 'login_user_name'
+            'loginUserName' => 'login_user_name',
+            'containerId' => 'container_id',
+            'containerName' => 'container_name'
     ];
 
     /**
@@ -135,6 +147,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * loginIp  登录源IP
     * loginUserName  登录用户名
+    * containerId  容器ID
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             'hash' => 'setHash',
             'privateIp' => 'setPrivateIp',
             'loginIp' => 'setLoginIp',
-            'loginUserName' => 'setLoginUserName'
+            'loginUserName' => 'setLoginUserName',
+            'containerId' => 'setContainerId',
+            'containerName' => 'setContainerName'
     ];
 
     /**
@@ -163,6 +179,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * loginIp  登录源IP
     * loginUserName  登录用户名
+    * containerId  容器ID
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             'hash' => 'getHash',
             'privateIp' => 'getPrivateIp',
             'loginIp' => 'getLoginIp',
-            'loginUserName' => 'getLoginUserName'
+            'loginUserName' => 'getLoginUserName',
+            'containerId' => 'getContainerId',
+            'containerName' => 'getContainerName'
     ];
 
     /**
@@ -247,6 +267,8 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['loginIp'] = isset($data['loginIp']) ? $data['loginIp'] : null;
         $this->container['loginUserName'] = isset($data['loginUserName']) ? $data['loginUserName'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
+        $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
     }
 
     /**
@@ -295,6 +317,18 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['loginUserName']) && !preg_match("/^.*$/", $this->container['loginUserName'])) {
                 $invalidProperties[] = "invalid value for 'loginUserName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 64)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 64.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -547,6 +581,54 @@ class EventDetailRequestInfo implements ModelInterface, ArrayAccess
     public function setLoginUserName($loginUserName)
     {
         $this->container['loginUserName'] = $loginUserName;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  容器ID
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId 容器ID
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
+        return $this;
+    }
+
+    /**
+    * Gets containerName
+    *  容器名称
+    *
+    * @return string|null
+    */
+    public function getContainerName()
+    {
+        return $this->container['containerName'];
+    }
+
+    /**
+    * Sets containerName
+    *
+    * @param string|null $containerName 容器名称
+    *
+    * @return $this
+    */
+    public function setContainerName($containerName)
+    {
+        $this->container['containerName'] = $containerName;
         return $this;
     }
 

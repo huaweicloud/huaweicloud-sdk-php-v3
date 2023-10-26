@@ -24,6 +24,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -34,6 +35,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'bool',
             'brokers' => 'string[]',
             'name' => 'string',
+            'groupDesc' => 'string',
             'retryMaxTime' => 'float',
             'fromBeginning' => 'bool'
     ];
@@ -44,6 +46,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -54,6 +57,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         'broadcast' => null,
         'brokers' => null,
         'name' => null,
+        'groupDesc' => null,
         'retryMaxTime' => null,
         'fromBeginning' => null
     ];
@@ -85,6 +89,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -95,6 +100,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'broadcast',
             'brokers' => 'brokers',
             'name' => 'name',
+            'groupDesc' => 'group_desc',
             'retryMaxTime' => 'retry_max_time',
             'fromBeginning' => 'from_beginning'
     ];
@@ -105,6 +111,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -115,6 +122,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'setBroadcast',
             'brokers' => 'setBrokers',
             'name' => 'setName',
+            'groupDesc' => 'setGroupDesc',
             'retryMaxTime' => 'setRetryMaxTime',
             'fromBeginning' => 'setFromBeginning'
     ];
@@ -125,6 +133,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数。
     * fromBeginning  是否重头消费。
     *
@@ -135,6 +144,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'getBroadcast',
             'brokers' => 'getBrokers',
             'name' => 'getName',
+            'groupDesc' => 'getGroupDesc',
             'retryMaxTime' => 'getRetryMaxTime',
             'fromBeginning' => 'getFromBeginning'
     ];
@@ -201,6 +211,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
         $this->container['fromBeginning'] = isset($data['fromBeginning']) ? $data['fromBeginning'] : null;
     }
@@ -213,6 +224,12 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) > 200)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -320,6 +337,30 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  消费组描述，长度0~200个字符。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

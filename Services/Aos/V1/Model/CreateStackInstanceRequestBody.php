@@ -28,7 +28,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'stackSetId' => 'string',
-            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets',
+            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets',
             'varOverrides' => '\HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides'
     ];
 
@@ -234,7 +234,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * Gets deploymentTargets
     *  deploymentTargets
     *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets
     */
     public function getDeploymentTargets()
     {
@@ -244,7 +244,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentTargets
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets $deploymentTargets deploymentTargets
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets $deploymentTargets deploymentTargets
     *
     * @return $this
     */

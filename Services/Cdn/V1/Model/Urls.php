@@ -20,14 +20,14 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  urlid
+    * id  url id。
     * url  url具体值。
-    * status  url状态。
-    * type  任务类型。
+    * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
+    * type  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * taskId  任务id。
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
-    * fileType  文件类型，目录还是文件。
+    * fileType  文件类型，directory：目录，或file：文件。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
@@ -46,14 +46,14 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  urlid
+    * id  url id。
     * url  url具体值。
-    * status  url状态。
-    * type  任务类型。
+    * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
+    * type  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * taskId  任务id。
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
-    * fileType  文件类型，目录还是文件。
+    * fileType  文件类型，directory：目录，或file：文件。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
@@ -93,14 +93,14 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  urlid
+    * id  url id。
     * url  url具体值。
-    * status  url状态。
-    * type  任务类型。
+    * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
+    * type  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * taskId  任务id。
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
-    * fileType  文件类型，目录还是文件。
+    * fileType  文件类型，directory：目录，或file：文件。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
@@ -119,14 +119,14 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  urlid
+    * id  url id。
     * url  url具体值。
-    * status  url状态。
-    * type  任务类型。
+    * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
+    * type  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * taskId  任务id。
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
-    * fileType  文件类型，目录还是文件。
+    * fileType  文件类型，directory：目录，或file：文件。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
@@ -145,14 +145,14 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  urlid
+    * id  url id。
     * url  url具体值。
-    * status  url状态。
-    * type  任务类型。
+    * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
+    * type  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * taskId  任务id。
     * modifyTime  修改时间戳（毫秒）。
     * createTime  创建时间戳（毫秒）。
-    * fileType  文件类型，目录还是文件。
+    * fileType  文件类型，directory：目录，或file：文件。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @var string[]
@@ -262,7 +262,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  urlid
+    *  url id。
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id urlid
+    * @param int|null $id url id。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  url状态。
+    *  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status url状态。
+    * @param string|null $status url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务类型。
+    *  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 任务类型。
+    * @param string|null $type 任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class Urls implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  文件类型，目录还是文件。
+    *  文件类型，directory：目录，或file：文件。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class Urls implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType 文件类型，目录还是文件。
+    * @param string|null $fileType 文件类型，directory：目录，或file：文件。
     *
     * @return $this
     */

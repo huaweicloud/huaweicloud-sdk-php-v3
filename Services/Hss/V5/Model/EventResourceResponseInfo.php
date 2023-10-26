@@ -29,6 +29,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vmName  虚拟机名称
     * vmUuid  虚拟机UUID
     * containerId  容器ID
+    * containerStatus  容器状态
+    * podUid  pod uid
+    * podName  pod name
+    * namespace  namespace
+    * clusterId  集群id
+    * clusterName  集群名称
     * imageId  镜像ID
     * imageName  镜像名称
     * hostAttr  主机属性
@@ -52,6 +58,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
             'vmName' => 'string',
             'vmUuid' => 'string',
             'containerId' => 'string',
+            'containerStatus' => 'string',
+            'podUid' => 'string',
+            'podName' => 'string',
+            'namespace' => 'string',
+            'clusterId' => 'string',
+            'clusterName' => 'string',
             'imageId' => 'string',
             'imageName' => 'string',
             'hostAttr' => 'string',
@@ -75,6 +87,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vmName  虚拟机名称
     * vmUuid  虚拟机UUID
     * containerId  容器ID
+    * containerStatus  容器状态
+    * podUid  pod uid
+    * podName  pod name
+    * namespace  namespace
+    * clusterId  集群id
+    * clusterName  集群名称
     * imageId  镜像ID
     * imageName  镜像名称
     * hostAttr  主机属性
@@ -98,6 +116,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
         'vmName' => null,
         'vmUuid' => null,
         'containerId' => null,
+        'containerStatus' => null,
+        'podUid' => null,
+        'podName' => null,
+        'namespace' => null,
+        'clusterId' => null,
+        'clusterName' => null,
         'imageId' => null,
         'imageName' => null,
         'hostAttr' => null,
@@ -142,6 +166,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vmName  虚拟机名称
     * vmUuid  虚拟机UUID
     * containerId  容器ID
+    * containerStatus  容器状态
+    * podUid  pod uid
+    * podName  pod name
+    * namespace  namespace
+    * clusterId  集群id
+    * clusterName  集群名称
     * imageId  镜像ID
     * imageName  镜像名称
     * hostAttr  主机属性
@@ -165,6 +195,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
             'vmName' => 'vm_name',
             'vmUuid' => 'vm_uuid',
             'containerId' => 'container_id',
+            'containerStatus' => 'container_status',
+            'podUid' => 'pod_uid',
+            'podName' => 'pod_name',
+            'namespace' => 'namespace',
+            'clusterId' => 'cluster_id',
+            'clusterName' => 'cluster_name',
             'imageId' => 'image_id',
             'imageName' => 'image_name',
             'hostAttr' => 'host_attr',
@@ -188,6 +224,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vmName  虚拟机名称
     * vmUuid  虚拟机UUID
     * containerId  容器ID
+    * containerStatus  容器状态
+    * podUid  pod uid
+    * podName  pod name
+    * namespace  namespace
+    * clusterId  集群id
+    * clusterName  集群名称
     * imageId  镜像ID
     * imageName  镜像名称
     * hostAttr  主机属性
@@ -211,6 +253,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
             'vmName' => 'setVmName',
             'vmUuid' => 'setVmUuid',
             'containerId' => 'setContainerId',
+            'containerStatus' => 'setContainerStatus',
+            'podUid' => 'setPodUid',
+            'podName' => 'setPodName',
+            'namespace' => 'setNamespace',
+            'clusterId' => 'setClusterId',
+            'clusterName' => 'setClusterName',
             'imageId' => 'setImageId',
             'imageName' => 'setImageName',
             'hostAttr' => 'setHostAttr',
@@ -234,6 +282,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vmName  虚拟机名称
     * vmUuid  虚拟机UUID
     * containerId  容器ID
+    * containerStatus  容器状态
+    * podUid  pod uid
+    * podName  pod name
+    * namespace  namespace
+    * clusterId  集群id
+    * clusterName  集群名称
     * imageId  镜像ID
     * imageName  镜像名称
     * hostAttr  主机属性
@@ -257,6 +311,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
             'vmName' => 'getVmName',
             'vmUuid' => 'getVmUuid',
             'containerId' => 'getContainerId',
+            'containerStatus' => 'getContainerStatus',
+            'podUid' => 'getPodUid',
+            'podName' => 'getPodName',
+            'namespace' => 'getNamespace',
+            'clusterId' => 'getClusterId',
+            'clusterName' => 'getClusterName',
             'imageId' => 'getImageId',
             'imageName' => 'getImageName',
             'hostAttr' => 'getHostAttr',
@@ -336,6 +396,12 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
         $this->container['vmName'] = isset($data['vmName']) ? $data['vmName'] : null;
         $this->container['vmUuid'] = isset($data['vmUuid']) ? $data['vmUuid'] : null;
         $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
+        $this->container['containerStatus'] = isset($data['containerStatus']) ? $data['containerStatus'] : null;
+        $this->container['podUid'] = isset($data['podUid']) ? $data['podUid'] : null;
+        $this->container['podName'] = isset($data['podName']) ? $data['podName'] : null;
+        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
         $this->container['hostAttr'] = isset($data['hostAttr']) ? $data['hostAttr'] : null;
@@ -382,6 +448,24 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['containerId']) && !preg_match("/^.*$/", $this->container['containerId'])) {
                 $invalidProperties[] = "invalid value for 'containerId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['containerStatus']) && !preg_match("/^.*$/", $this->container['containerStatus'])) {
+                $invalidProperties[] = "invalid value for 'containerStatus', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['podUid']) && !preg_match("/^.*$/", $this->container['podUid'])) {
+                $invalidProperties[] = "invalid value for 'podUid', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['podName']) && !preg_match("/^.*$/", $this->container['podName'])) {
+                $invalidProperties[] = "invalid value for 'podName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['namespace']) && !preg_match("/^.*$/", $this->container['namespace'])) {
+                $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['clusterId']) && !preg_match("/^.*$/", $this->container['clusterId'])) {
+                $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['clusterName']) && !preg_match("/^.*$/", $this->container['clusterName'])) {
+                $invalidProperties[] = "invalid value for 'clusterName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['imageId']) && !preg_match("/^.*$/", $this->container['imageId'])) {
                 $invalidProperties[] = "invalid value for 'imageId', must be conform to the pattern /^.*$/.";
@@ -640,6 +724,150 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     public function setContainerId($containerId)
     {
         $this->container['containerId'] = $containerId;
+        return $this;
+    }
+
+    /**
+    * Gets containerStatus
+    *  容器状态
+    *
+    * @return string|null
+    */
+    public function getContainerStatus()
+    {
+        return $this->container['containerStatus'];
+    }
+
+    /**
+    * Sets containerStatus
+    *
+    * @param string|null $containerStatus 容器状态
+    *
+    * @return $this
+    */
+    public function setContainerStatus($containerStatus)
+    {
+        $this->container['containerStatus'] = $containerStatus;
+        return $this;
+    }
+
+    /**
+    * Gets podUid
+    *  pod uid
+    *
+    * @return string|null
+    */
+    public function getPodUid()
+    {
+        return $this->container['podUid'];
+    }
+
+    /**
+    * Sets podUid
+    *
+    * @param string|null $podUid pod uid
+    *
+    * @return $this
+    */
+    public function setPodUid($podUid)
+    {
+        $this->container['podUid'] = $podUid;
+        return $this;
+    }
+
+    /**
+    * Gets podName
+    *  pod name
+    *
+    * @return string|null
+    */
+    public function getPodName()
+    {
+        return $this->container['podName'];
+    }
+
+    /**
+    * Sets podName
+    *
+    * @param string|null $podName pod name
+    *
+    * @return $this
+    */
+    public function setPodName($podName)
+    {
+        $this->container['podName'] = $podName;
+        return $this;
+    }
+
+    /**
+    * Gets namespace
+    *  namespace
+    *
+    * @return string|null
+    */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+    * Sets namespace
+    *
+    * @param string|null $namespace namespace
+    *
+    * @return $this
+    */
+    public function setNamespace($namespace)
+    {
+        $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  集群id
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId 集群id
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterName
+    *  集群名称
+    *
+    * @return string|null
+    */
+    public function getClusterName()
+    {
+        return $this->container['clusterName'];
+    }
+
+    /**
+    * Sets clusterName
+    *
+    * @param string|null $clusterName 集群名称
+    *
+    * @return $this
+    */
+    public function setClusterName($clusterName)
+    {
+        $this->container['clusterName'] = $clusterName;
         return $this;
     }
 

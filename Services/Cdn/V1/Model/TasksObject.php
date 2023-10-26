@@ -21,7 +21,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  任务id。
-    * taskType  任务的类型， 其值可以为refresh或preheating。
+    * taskType  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     * status  刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
     * processing  处理中的url个数。
     * succeed  成功处理的url个数。
@@ -47,7 +47,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  任务id。
-    * taskType  任务的类型， 其值可以为refresh或preheating。
+    * taskType  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     * status  刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
     * processing  处理中的url个数。
     * succeed  成功处理的url个数。
@@ -94,7 +94,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  任务id。
-    * taskType  任务的类型， 其值可以为refresh或preheating。
+    * taskType  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     * status  刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
     * processing  处理中的url个数。
     * succeed  成功处理的url个数。
@@ -120,7 +120,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务id。
-    * taskType  任务的类型， 其值可以为refresh或preheating。
+    * taskType  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     * status  刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
     * processing  处理中的url个数。
     * succeed  成功处理的url个数。
@@ -146,7 +146,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务id。
-    * taskType  任务的类型， 其值可以为refresh或preheating。
+    * taskType  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     * status  刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
     * processing  处理中的url个数。
     * succeed  成功处理的url个数。
@@ -332,7 +332,7 @@ class TasksObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskType
-    *  任务的类型， 其值可以为refresh或preheating。
+    *  任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class TasksObject implements ModelInterface, ArrayAccess
     /**
     * Sets taskType
     *
-    * @param string|null $taskType 任务的类型， 其值可以为refresh或preheating。
+    * @param string|null $taskType 任务的类型， 其值可以为refresh：刷新任务，或preheating：预热任务。
     *
     * @return $this
     */

@@ -26,6 +26,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
+    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
             'selectType' => 'string',
             'type' => 'string',
             'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]',
-            'hostDataList' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulOperateInfo[]'
+            'hostDataList' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulOperateInfo[]',
+            'backupInfoId' => 'string',
+            'customBackupHosts' => '\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
+    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
         'selectType' => null,
         'type' => null,
         'dataList' => null,
-        'hostDataList' => null
+        'hostDataList' => null,
+        'backupInfoId' => null,
+        'customBackupHosts' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
+    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
             'selectType' => 'select_type',
             'type' => 'type',
             'dataList' => 'data_list',
-            'hostDataList' => 'host_data_list'
+            'hostDataList' => 'host_data_list',
+            'backupInfoId' => 'backup_info_id',
+            'customBackupHosts' => 'custom_backup_hosts'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
+    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
             'selectType' => 'setSelectType',
             'type' => 'setType',
             'dataList' => 'setDataList',
-            'hostDataList' => 'setHostDataList'
+            'hostDataList' => 'setHostDataList',
+            'backupInfoId' => 'setBackupInfoId',
+            'customBackupHosts' => 'setCustomBackupHosts'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
+    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
             'selectType' => 'getSelectType',
             'type' => 'getType',
             'dataList' => 'getDataList',
-            'hostDataList' => 'getHostDataList'
+            'hostDataList' => 'getHostDataList',
+            'backupInfoId' => 'getBackupInfoId',
+            'customBackupHosts' => 'getCustomBackupHosts'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
         $this->container['hostDataList'] = isset($data['hostDataList']) ? $data['hostDataList'] : null;
+        $this->container['backupInfoId'] = isset($data['backupInfoId']) ? $data['backupInfoId'] : null;
+        $this->container['customBackupHosts'] = isset($data['customBackupHosts']) ? $data['customBackupHosts'] : null;
     }
 
     /**
@@ -243,6 +265,12 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
         if ($this->container['dataList'] === null) {
             $invalidProperties[] = "'dataList' can't be null";
         }
+            if (!is_null($this->container['backupInfoId']) && (mb_strlen($this->container['backupInfoId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'backupInfoId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['backupInfoId']) && (mb_strlen($this->container['backupInfoId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'backupInfoId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -398,6 +426,54 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     public function setHostDataList($hostDataList)
     {
         $this->container['hostDataList'] = $hostDataList;
+        return $this;
+    }
+
+    /**
+    * Gets backupInfoId
+    *  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    *
+    * @return string|null
+    */
+    public function getBackupInfoId()
+    {
+        return $this->container['backupInfoId'];
+    }
+
+    /**
+    * Sets backupInfoId
+    *
+    * @param string|null $backupInfoId 本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    *
+    * @return $this
+    */
+    public function setBackupInfoId($backupInfoId)
+    {
+        $this->container['backupInfoId'] = $backupInfoId;
+        return $this;
+    }
+
+    /**
+    * Gets customBackupHosts
+    *  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]|null
+    */
+    public function getCustomBackupHosts()
+    {
+        return $this->container['customBackupHosts'];
+    }
+
+    /**
+    * Sets customBackupHosts
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]|null $customBackupHosts 自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    *
+    * @return $this
+    */
+    public function setCustomBackupHosts($customBackupHosts)
+    {
+        $this->container['customBackupHosts'] = $customBackupHosts;
         return $this;
     }
 

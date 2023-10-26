@@ -25,7 +25,7 @@ class DeploymentTargetsPrimitiveTypeHolder implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $openAPITypes = [
-            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets'
+            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets'
     ];
 
     /**
@@ -179,7 +179,7 @@ class DeploymentTargetsPrimitiveTypeHolder implements ModelInterface, ArrayAcces
     * Gets deploymentTargets
     *  deploymentTargets
     *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets
     */
     public function getDeploymentTargets()
     {
@@ -189,7 +189,7 @@ class DeploymentTargetsPrimitiveTypeHolder implements ModelInterface, ArrayAcces
     /**
     * Sets deploymentTargets
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets $deploymentTargets deploymentTargets
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets $deploymentTargets deploymentTargets
     *
     * @return $this
     */

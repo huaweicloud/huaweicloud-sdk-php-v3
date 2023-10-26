@@ -23,13 +23,15 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * port  端口号
     * type  类型
     * num  端口数量
+    * status  危险类型:danger/unknown
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'port' => 'int',
             'type' => 'string',
-            'num' => 'int'
+            'num' => 'int',
+            'status' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * port  端口号
     * type  类型
     * num  端口数量
+    * status  危险类型:danger/unknown
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'port' => null,
         'type' => null,
-        'num' => null
+        'num' => null,
+        'status' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * port  端口号
     * type  类型
     * num  端口数量
+    * status  危险类型:danger/unknown
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'port' => 'port',
             'type' => 'type',
-            'num' => 'num'
+            'num' => 'num',
+            'status' => 'status'
     ];
 
     /**
@@ -86,13 +92,15 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * port  端口号
     * type  类型
     * num  端口数量
+    * status  危险类型:danger/unknown
     *
     * @var string[]
     */
     protected static $setters = [
             'port' => 'setPort',
             'type' => 'setType',
-            'num' => 'setNum'
+            'num' => 'setNum',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -100,13 +108,15 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * port  端口号
     * type  类型
     * num  端口数量
+    * status  危险类型:danger/unknown
     *
     * @var string[]
     */
     protected static $getters = [
             'port' => 'getPort',
             'type' => 'getType',
-            'num' => 'getNum'
+            'num' => 'getNum',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -170,6 +180,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -197,6 +208,12 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['num']) && ($this->container['num'] < 0)) {
                 $invalidProperties[] = "invalid value for 'num', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 16)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -281,6 +298,30 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     public function setNum($num)
     {
         $this->container['num'] = $num;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  危险类型:danger/unknown
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 危险类型:danger/unknown
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

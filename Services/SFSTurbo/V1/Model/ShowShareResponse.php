@@ -38,8 +38,8 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
-    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
-    * subStatus  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
+    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     *
@@ -88,8 +88,8 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
-    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
-    * subStatus  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
+    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     *
@@ -159,8 +159,8 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
-    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
-    * subStatus  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
+    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     *
@@ -209,8 +209,8 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
-    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
-    * subStatus  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
+    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     *
@@ -259,8 +259,8 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
-    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
-    * subStatus  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
+    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     *
@@ -826,7 +826,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
+    *  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
     *
     * @return string|null
     */
@@ -838,7 +838,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
+    * @param string|null $status SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
     *
     * @return $this
     */
@@ -850,7 +850,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subStatus
-    *  SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    *  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     *
     * @return string|null
     */
@@ -862,7 +862,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subStatus
     *
-    * @param string|null $subStatus SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+    * @param string|null $subStatus SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     *
     * @return $this
     */

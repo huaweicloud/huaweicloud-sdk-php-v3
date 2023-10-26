@@ -21,7 +21,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * refreshTask  任务ID
+    * refreshTask  任务ID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * refreshTask  任务ID
+    * refreshTask  任务ID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * refreshTask  任务ID
+    * refreshTask  任务ID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * refreshTask  任务ID
+    * refreshTask  任务ID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * refreshTask  任务ID
+    * refreshTask  任务ID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets refreshTask
-    *  任务ID
+    *  任务ID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets refreshTask
     *
-    * @param string|null $refreshTask 任务ID
+    * @param string|null $refreshTask 任务ID。
     *
     * @return $this
     */

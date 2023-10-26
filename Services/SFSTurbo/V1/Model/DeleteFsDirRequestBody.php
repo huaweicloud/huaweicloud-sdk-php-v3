@@ -20,7 +20,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  合法的的目录全路径
+    * path  合法的目录全路径
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  合法的的目录全路径
+    * path  合法的目录全路径
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  合法的的目录全路径
+    * path  合法的目录全路径
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  合法的的目录全路径
+    * path  合法的目录全路径
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  合法的的目录全路径
+    * path  合法的目录全路径
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  合法的的目录全路径
+    *  合法的目录全路径
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeleteFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string $path 合法的的目录全路径
+    * @param string $path 合法的目录全路径
     *
     * @return $this
     */

@@ -40,6 +40,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * countBackuped  已有备份数
     * agentStatus  Agent状态
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  总容量，单位GB
@@ -75,6 +76,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'countBackuped' => 'int',
             'agentStatus' => 'string',
             'version' => 'string',
+            'hostSource' => 'string',
             'vaultId' => 'string',
             'vaultName' => 'string',
             'vaultSize' => 'int',
@@ -110,6 +112,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * countBackuped  已有备份数
     * agentStatus  Agent状态
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  总容量，单位GB
@@ -145,6 +148,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         'countBackuped' => null,
         'agentStatus' => null,
         'version' => null,
+        'hostSource' => null,
         'vaultId' => null,
         'vaultName' => null,
         'vaultSize' => null,
@@ -201,6 +205,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * countBackuped  已有备份数
     * agentStatus  Agent状态
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  总容量，单位GB
@@ -236,6 +241,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'countBackuped' => 'count_backuped',
             'agentStatus' => 'agent_status',
             'version' => 'version',
+            'hostSource' => 'host_source',
             'vaultId' => 'vault_id',
             'vaultName' => 'vault_name',
             'vaultSize' => 'vault_size',
@@ -271,6 +277,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * countBackuped  已有备份数
     * agentStatus  Agent状态
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  总容量，单位GB
@@ -306,6 +313,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'countBackuped' => 'setCountBackuped',
             'agentStatus' => 'setAgentStatus',
             'version' => 'setVersion',
+            'hostSource' => 'setHostSource',
             'vaultId' => 'setVaultId',
             'vaultName' => 'setVaultName',
             'vaultSize' => 'setVaultSize',
@@ -341,6 +349,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * countBackuped  已有备份数
     * agentStatus  Agent状态
     * version  主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
+    * hostSource  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
     * vaultId  存储库ID
     * vaultName  存储库名称
     * vaultSize  总容量，单位GB
@@ -376,6 +385,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'countBackuped' => 'getCountBackuped',
             'agentStatus' => 'getAgentStatus',
             'version' => 'getVersion',
+            'hostSource' => 'getHostSource',
             'vaultId' => 'getVaultId',
             'vaultName' => 'getVaultName',
             'vaultSize' => 'getVaultSize',
@@ -467,6 +477,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         $this->container['countBackuped'] = isset($data['countBackuped']) ? $data['countBackuped'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['hostSource'] = isset($data['hostSource']) ? $data['hostSource'] : null;
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
         $this->container['vaultName'] = isset($data['vaultName']) ? $data['vaultName'] : null;
         $this->container['vaultSize'] = isset($data['vaultSize']) ? $data['vaultSize'] : null;
@@ -601,6 +612,12 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostSource']) && (mb_strlen($this->container['hostSource']) > 32)) {
+                $invalidProperties[] = "invalid value for 'hostSource', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['hostSource']) && (mb_strlen($this->container['hostSource']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostSource', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['vaultId']) && (mb_strlen($this->container['vaultId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'vaultId', the character length must be smaller than or equal to 128.";
@@ -1153,6 +1170,30 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets hostSource
+    *  服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
+    *
+    * @return string|null
+    */
+    public function getHostSource()
+    {
+        return $this->container['hostSource'];
+    }
+
+    /**
+    * Sets hostSource
+    *
+    * @param string|null $hostSource 服务器类型，包含如下3种输入。   - ecs ：ecs。   - outside ：线下主机。   - workspace ：云桌面。
+    *
+    * @return $this
+    */
+    public function setHostSource($hostSource)
+    {
+        $this->container['hostSource'] = $hostSource;
         return $this;
     }
 

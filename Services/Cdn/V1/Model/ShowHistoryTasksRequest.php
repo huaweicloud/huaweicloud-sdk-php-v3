@@ -26,9 +26,9 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
     * startDate  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-    * orderType  desc 或者asc。默认值desc。
-    * fileType  file：文件,directory：目录。
+    * orderField  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
+    * orderType  desc：降序，或者asc：升序。默认值desc。
+    * fileType  默认是文件file。file：文件,directory：目录。
     * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
@@ -54,9 +54,9 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
     * startDate  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-    * orderType  desc 或者asc。默认值desc。
-    * fileType  file：文件,directory：目录。
+    * orderField  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
+    * orderType  desc：降序，或者asc：升序。默认值desc。
+    * fileType  默认是文件file。file：文件,directory：目录。
     * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
@@ -103,9 +103,9 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
     * startDate  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-    * orderType  desc 或者asc。默认值desc。
-    * fileType  file：文件,directory：目录。
+    * orderField  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
+    * orderType  desc：降序，或者asc：升序。默认值desc。
+    * fileType  默认是文件file。file：文件,directory：目录。
     * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
@@ -131,9 +131,9 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
     * startDate  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-    * orderType  desc 或者asc。默认值desc。
-    * fileType  file：文件,directory：目录。
+    * orderField  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
+    * orderType  desc：降序，或者asc：升序。默认值desc。
+    * fileType  默认是文件file。file：文件,directory：目录。
     * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
@@ -159,9 +159,9 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
     * startDate  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endDate  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * orderField  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-    * orderType  desc 或者asc。默认值desc。
-    * fileType  file：文件,directory：目录。
+    * orderField  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
+    * orderType  desc：降序，或者asc：升序。默认值desc。
+    * fileType  默认是文件file。file：文件,directory：目录。
     * taskType  任务类型，refresh：刷新任务；preheating：预热任务
     *
     * @var string[]
@@ -498,7 +498,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderField
-    *  用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
+    *  用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderField
     *
-    * @param string|null $orderField 用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
+    * @param string|null $orderField 用来排序的字段，支持的字段有“task_type”：任务的类型，“total”：url总数，“processing”：处理中的url个数， “succeed”：成功处理的url个数，“failed”：处理失败的url个数，“create_time”：任务的创建时间。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"：降序。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderType
-    *  desc 或者asc。默认值desc。
+    *  desc：降序，或者asc：升序。默认值desc。
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderType
     *
-    * @param string|null $orderType desc 或者asc。默认值desc。
+    * @param string|null $orderType desc：降序，或者asc：升序。默认值desc。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  file：文件,directory：目录。
+    *  默认是文件file。file：文件,directory：目录。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class ShowHistoryTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType file：文件,directory：目录。
+    * @param string|null $fileType 默认是文件file。file：文件,directory：目录。
     *
     * @return $this
     */

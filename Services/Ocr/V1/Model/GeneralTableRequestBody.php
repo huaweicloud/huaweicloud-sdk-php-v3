@@ -27,6 +27,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     * returnConfidence  是否返回置信度的开关，可选值包括： - true：返回置信度 - false：不返回置信度  > 说明： - 如果未传入该参数，系统默认为“false”，即不返回置信度。
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回'excel'字段，表示xlsx格式的表格识别结果的base64编码 - false：不返回。默认为false  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为.xlsx文件。
     * returnRectificationMatrix  可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
+    * withBorders  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
             'returnCharLocation' => 'bool',
             'returnConfidence' => 'bool',
             'returnExcel' => 'bool',
-            'returnRectificationMatrix' => 'bool'
+            'returnRectificationMatrix' => 'bool',
+            'withBorders' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     * returnConfidence  是否返回置信度的开关，可选值包括： - true：返回置信度 - false：不返回置信度  > 说明： - 如果未传入该参数，系统默认为“false”，即不返回置信度。
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回'excel'字段，表示xlsx格式的表格识别结果的base64编码 - false：不返回。默认为false  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为.xlsx文件。
     * returnRectificationMatrix  可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
+    * withBorders  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
         'returnCharLocation' => null,
         'returnConfidence' => null,
         'returnExcel' => null,
-        'returnRectificationMatrix' => null
+        'returnRectificationMatrix' => null,
+        'withBorders' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     * returnConfidence  是否返回置信度的开关，可选值包括： - true：返回置信度 - false：不返回置信度  > 说明： - 如果未传入该参数，系统默认为“false”，即不返回置信度。
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回'excel'字段，表示xlsx格式的表格识别结果的base64编码 - false：不返回。默认为false  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为.xlsx文件。
     * returnRectificationMatrix  可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
+    * withBorders  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
             'returnCharLocation' => 'return_char_location',
             'returnConfidence' => 'return_confidence',
             'returnExcel' => 'return_excel',
-            'returnRectificationMatrix' => 'return_rectification_matrix'
+            'returnRectificationMatrix' => 'return_rectification_matrix',
+            'withBorders' => 'with_borders'
     ];
 
     /**
@@ -114,6 +120,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     * returnConfidence  是否返回置信度的开关，可选值包括： - true：返回置信度 - false：不返回置信度  > 说明： - 如果未传入该参数，系统默认为“false”，即不返回置信度。
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回'excel'字段，表示xlsx格式的表格识别结果的base64编码 - false：不返回。默认为false  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为.xlsx文件。
     * returnRectificationMatrix  可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
+    * withBorders  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
             'returnCharLocation' => 'setReturnCharLocation',
             'returnConfidence' => 'setReturnConfidence',
             'returnExcel' => 'setReturnExcel',
-            'returnRectificationMatrix' => 'setReturnRectificationMatrix'
+            'returnRectificationMatrix' => 'setReturnRectificationMatrix',
+            'withBorders' => 'setWithBorders'
     ];
 
     /**
@@ -136,6 +144,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     * returnConfidence  是否返回置信度的开关，可选值包括： - true：返回置信度 - false：不返回置信度  > 说明： - 如果未传入该参数，系统默认为“false”，即不返回置信度。
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回'excel'字段，表示xlsx格式的表格识别结果的base64编码 - false：不返回。默认为false  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为.xlsx文件。
     * returnRectificationMatrix  可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
+    * withBorders  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
             'returnCharLocation' => 'getReturnCharLocation',
             'returnConfidence' => 'getReturnConfidence',
             'returnExcel' => 'getReturnExcel',
-            'returnRectificationMatrix' => 'getReturnRectificationMatrix'
+            'returnRectificationMatrix' => 'getReturnRectificationMatrix',
+            'withBorders' => 'getWithBorders'
     ];
 
     /**
@@ -214,6 +224,7 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnConfidence'] = isset($data['returnConfidence']) ? $data['returnConfidence'] : null;
         $this->container['returnExcel'] = isset($data['returnExcel']) ? $data['returnExcel'] : null;
         $this->container['returnRectificationMatrix'] = isset($data['returnRectificationMatrix']) ? $data['returnRectificationMatrix'] : null;
+        $this->container['withBorders'] = isset($data['withBorders']) ? $data['withBorders'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class GeneralTableRequestBody implements ModelInterface, ArrayAccess
     public function setReturnRectificationMatrix($returnRectificationMatrix)
     {
         $this->container['returnRectificationMatrix'] = $returnRectificationMatrix;
+        return $this;
+    }
+
+    /**
+    * Gets withBorders
+    *  可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
+    *
+    * @return bool|null
+    */
+    public function getWithBorders()
+    {
+        return $this->container['withBorders'];
+    }
+
+    /**
+    * Sets withBorders
+    *
+    * @param bool|null $withBorders 可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
+    *
+    * @return $this
+    */
+    public function setWithBorders($withBorders)
+    {
+        $this->container['withBorders'] = $withBorders;
         return $this;
     }
 

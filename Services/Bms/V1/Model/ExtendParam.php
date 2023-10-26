@@ -20,7 +20,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     * regionId  裸金属服务器所在区域ID。请参考地区和终端节点获取。
     * periodType  订购周期类型。取值范围：month：月year：年 说明：chargingMode为prePaid时生效，且为必选值。
     * periodNum  订购周期数。取值范围：periodType=month（周期类型为月）时，取值为[1-9]。periodType=year（周期类型为年）时，取值为1。 说明：chargingMode为prePaid时生效，且为必选值。
@@ -42,7 +42,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     * regionId  裸金属服务器所在区域ID。请参考地区和终端节点获取。
     * periodType  订购周期类型。取值范围：month：月year：年 说明：chargingMode为prePaid时生效，且为必选值。
     * periodNum  订购周期数。取值范围：periodType=month（周期类型为月）时，取值为[1-9]。periodType=year（周期类型为年）时，取值为1。 说明：chargingMode为prePaid时生效，且为必选值。
@@ -85,7 +85,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     * regionId  裸金属服务器所在区域ID。请参考地区和终端节点获取。
     * periodType  订购周期类型。取值范围：month：月year：年 说明：chargingMode为prePaid时生效，且为必选值。
     * periodNum  订购周期数。取值范围：periodType=month（周期类型为月）时，取值为[1-9]。periodType=year（周期类型为年）时，取值为1。 说明：chargingMode为prePaid时生效，且为必选值。
@@ -107,7 +107,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     * regionId  裸金属服务器所在区域ID。请参考地区和终端节点获取。
     * periodType  订购周期类型。取值范围：month：月year：年 说明：chargingMode为prePaid时生效，且为必选值。
     * periodNum  订购周期数。取值范围：periodType=month（周期类型为月）时，取值为[1-9]。periodType=year（周期类型为年）时，取值为1。 说明：chargingMode为prePaid时生效，且为必选值。
@@ -129,7 +129,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * chargingMode  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     * regionId  裸金属服务器所在区域ID。请参考地区和终端节点获取。
     * periodType  订购周期类型。取值范围：month：月year：年 说明：chargingMode为prePaid时生效，且为必选值。
     * periodNum  订购周期数。取值范围：periodType=month（周期类型为月）时，取值为[1-9]。periodType=year（周期类型为年）时，取值为1。 说明：chargingMode为prePaid时生效，且为必选值。
@@ -190,6 +190,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const CHARGING_MODE_PRE_PAID = 'prePaid';
+    const CHARGING_MODE_POST_PAID = 'postPaid';
     const PERIOD_TYPE_MONTH = 'month';
     const PERIOD_TYPE_YEAR = 'year';
     
@@ -203,6 +204,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
     {
         return [
             self::CHARGING_MODE_PRE_PAID,
+            self::CHARGING_MODE_POST_PAID,
         ];
     }
 
@@ -284,7 +286,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    *  计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     *
     * @return string|null
     */
@@ -296,7 +298,7 @@ class ExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+    * @param string|null $chargingMode 计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
     *
     * @return $this
     */

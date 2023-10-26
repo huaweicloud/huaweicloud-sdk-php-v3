@@ -35,6 +35,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * groupId  服务器组ID
     * groupName  服务器组名称
     * region  region id
+    * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
@@ -44,6 +45,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
+    * agentUpgradable  agent是否可升级
     * limit  每页显示个数，默认10
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -65,6 +67,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'groupName' => 'string',
             'region' => 'string',
+            'hasIntrusion' => 'bool',
             'policyGroupId' => 'string',
             'policyGroupName' => 'string',
             'chargingMode' => 'string',
@@ -74,6 +77,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'string',
             'label' => 'string',
             'serverGroup' => 'string',
+            'agentUpgradable' => 'bool',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -95,6 +99,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * groupId  服务器组ID
     * groupName  服务器组名称
     * region  region id
+    * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
@@ -104,6 +109,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
+    * agentUpgradable  agent是否可升级
     * limit  每页显示个数，默认10
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -125,6 +131,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'groupId' => null,
         'groupName' => null,
         'region' => null,
+        'hasIntrusion' => null,
         'policyGroupId' => null,
         'policyGroupName' => null,
         'chargingMode' => null,
@@ -134,6 +141,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         'assetValue' => null,
         'label' => null,
         'serverGroup' => null,
+        'agentUpgradable' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -176,6 +184,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * groupId  服务器组ID
     * groupName  服务器组名称
     * region  region id
+    * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
@@ -185,6 +194,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
+    * agentUpgradable  agent是否可升级
     * limit  每页显示个数，默认10
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -206,6 +216,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'groupName' => 'group_name',
             'region' => 'region',
+            'hasIntrusion' => 'has_intrusion',
             'policyGroupId' => 'policy_group_id',
             'policyGroupName' => 'policy_group_name',
             'chargingMode' => 'charging_mode',
@@ -215,6 +226,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'asset_value',
             'label' => 'label',
             'serverGroup' => 'server_group',
+            'agentUpgradable' => 'agent_upgradable',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
@@ -236,6 +248,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * groupId  服务器组ID
     * groupName  服务器组名称
     * region  region id
+    * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
@@ -245,6 +258,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
+    * agentUpgradable  agent是否可升级
     * limit  每页显示个数，默认10
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -266,6 +280,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'groupName' => 'setGroupName',
             'region' => 'setRegion',
+            'hasIntrusion' => 'setHasIntrusion',
             'policyGroupId' => 'setPolicyGroupId',
             'policyGroupName' => 'setPolicyGroupName',
             'chargingMode' => 'setChargingMode',
@@ -275,6 +290,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'setAssetValue',
             'label' => 'setLabel',
             'serverGroup' => 'setServerGroup',
+            'agentUpgradable' => 'setAgentUpgradable',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
@@ -296,6 +312,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * groupId  服务器组ID
     * groupName  服务器组名称
     * region  region id
+    * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
@@ -305,6 +322,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * label  资产标签
     * serverGroup  资产服务器组
+    * agentUpgradable  agent是否可升级
     * limit  每页显示个数，默认10
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -326,6 +344,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'groupName' => 'getGroupName',
             'region' => 'getRegion',
+            'hasIntrusion' => 'getHasIntrusion',
             'policyGroupId' => 'getPolicyGroupId',
             'policyGroupName' => 'getPolicyGroupName',
             'chargingMode' => 'getChargingMode',
@@ -335,6 +354,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'getAssetValue',
             'label' => 'getLabel',
             'serverGroup' => 'getServerGroup',
+            'agentUpgradable' => 'getAgentUpgradable',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -412,6 +432,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['hasIntrusion'] = isset($data['hasIntrusion']) ? $data['hasIntrusion'] : null;
         $this->container['policyGroupId'] = isset($data['policyGroupId']) ? $data['policyGroupId'] : null;
         $this->container['policyGroupName'] = isset($data['policyGroupName']) ? $data['policyGroupName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
@@ -421,6 +442,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['serverGroup'] = isset($data['serverGroup']) ? $data['serverGroup'] : null;
+        $this->container['agentUpgradable'] = isset($data['agentUpgradable']) ? $data['agentUpgradable'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -940,6 +962,30 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hasIntrusion
+    *  存在告警事件
+    *
+    * @return bool|null
+    */
+    public function getHasIntrusion()
+    {
+        return $this->container['hasIntrusion'];
+    }
+
+    /**
+    * Sets hasIntrusion
+    *
+    * @param bool|null $hasIntrusion 存在告警事件
+    *
+    * @return $this
+    */
+    public function setHasIntrusion($hasIntrusion)
+    {
+        $this->container['hasIntrusion'] = $hasIntrusion;
+        return $this;
+    }
+
+    /**
     * Gets policyGroupId
     *  策略组ID
     *
@@ -1152,6 +1198,30 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     public function setServerGroup($serverGroup)
     {
         $this->container['serverGroup'] = $serverGroup;
+        return $this;
+    }
+
+    /**
+    * Gets agentUpgradable
+    *  agent是否可升级
+    *
+    * @return bool|null
+    */
+    public function getAgentUpgradable()
+    {
+        return $this->container['agentUpgradable'];
+    }
+
+    /**
+    * Sets agentUpgradable
+    *
+    * @param bool|null $agentUpgradable agent是否可升级
+    *
+    * @return $this
+    */
+    public function setAgentUpgradable($agentUpgradable)
+    {
+        $this->container['agentUpgradable'] = $agentUpgradable;
         return $this;
     }
 

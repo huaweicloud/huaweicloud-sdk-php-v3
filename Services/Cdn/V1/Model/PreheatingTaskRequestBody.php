@@ -20,21 +20,25 @@ class PreheatingTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * zhUrlEncode  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    * urls  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'zhUrlEncode' => 'bool',
             'urls' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * zhUrlEncode  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    * urls  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'zhUrlEncode' => null,
         'urls' => null
     ];
 
@@ -61,31 +65,37 @@ class PreheatingTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * zhUrlEncode  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    * urls  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'zhUrlEncode' => 'zh_url_encode',
             'urls' => 'urls'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * zhUrlEncode  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    * urls  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $setters = [
+            'zhUrlEncode' => 'setZhUrlEncode',
             'urls' => 'setUrls'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * zhUrlEncode  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    * urls  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $getters = [
+            'zhUrlEncode' => 'getZhUrlEncode',
             'urls' => 'getUrls'
     ];
 
@@ -147,6 +157,7 @@ class PreheatingTaskRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['zhUrlEncode'] = isset($data['zhUrlEncode']) ? $data['zhUrlEncode'] : null;
         $this->container['urls'] = isset($data['urls']) ? $data['urls'] : null;
     }
 
@@ -176,8 +187,32 @@ class PreheatingTaskRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets zhUrlEncode
+    *  是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    *
+    * @return bool|null
+    */
+    public function getZhUrlEncode()
+    {
+        return $this->container['zhUrlEncode'];
+    }
+
+    /**
+    * Sets zhUrlEncode
+    *
+    * @param bool|null $zhUrlEncode 是否对url中的中文字符进行编码后预热，false代表不开启，true代表开启，开启后仅预热转码后的URL。
+    *
+    * @return $this
+    */
+    public function setZhUrlEncode($zhUrlEncode)
+    {
+        $this->container['zhUrlEncode'] = $zhUrlEncode;
+        return $this;
+    }
+
+    /**
     * Gets urls
-    *  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    *  需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @return string[]
     */
@@ -189,7 +224,7 @@ class PreheatingTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets urls
     *
-    * @param string[] $urls 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
+    * @param string[] $urls 需要预热的URL必须带有“http://”或“https://”，多个URL用逗号分隔，目前不支持对目录的预热，单个url的长度限制为4096字符,单次最多输入1000个url。
     *
     * @return $this
     */

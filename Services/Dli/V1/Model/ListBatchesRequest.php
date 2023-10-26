@@ -23,6 +23,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * from  起始批处理作业的索引号，默认从0开始。
+    * jobName  批处理作业的名称。
     * jobId  jobId
     * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
     * queueName  queueName
@@ -36,6 +37,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
             'clusterName' => 'string',
             'end' => 'int',
             'from' => 'int',
+            'jobName' => 'string',
             'jobId' => 'string',
             'order' => 'string',
             'queueName' => 'string',
@@ -49,6 +51,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * from  起始批处理作业的索引号，默认从0开始。
+    * jobName  批处理作业的名称。
     * jobId  jobId
     * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
     * queueName  queueName
@@ -62,6 +65,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
         'clusterName' => null,
         'end' => 'int64',
         'from' => 'int32',
+        'jobName' => null,
         'jobId' => null,
         'order' => null,
         'queueName' => null,
@@ -96,6 +100,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * from  起始批处理作业的索引号，默认从0开始。
+    * jobName  批处理作业的名称。
     * jobId  jobId
     * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
     * queueName  queueName
@@ -109,6 +114,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
             'clusterName' => 'cluster_name',
             'end' => 'end',
             'from' => 'from',
+            'jobName' => 'job-name',
             'jobId' => 'job-id',
             'order' => 'order',
             'queueName' => 'queue_name',
@@ -122,6 +128,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * from  起始批处理作业的索引号，默认从0开始。
+    * jobName  批处理作业的名称。
     * jobId  jobId
     * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
     * queueName  queueName
@@ -135,6 +142,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
             'clusterName' => 'setClusterName',
             'end' => 'setEnd',
             'from' => 'setFrom',
+            'jobName' => 'setJobName',
             'jobId' => 'setJobId',
             'order' => 'setOrder',
             'queueName' => 'setQueueName',
@@ -148,6 +156,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     * clusterName  DLI队列名称，不填写则获取当前Project下所有批处理作业(不推荐使用)。
     * end  用于查询开始时间在该时间点之前的作业。时间格式为unix时间戳，单位：毫秒。
     * from  起始批处理作业的索引号，默认从0开始。
+    * jobName  批处理作业的名称。
     * jobId  jobId
     * order  指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。
     * queueName  queueName
@@ -161,6 +170,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
             'clusterName' => 'getClusterName',
             'end' => 'getEnd',
             'from' => 'getFrom',
+            'jobName' => 'getJobName',
             'jobId' => 'getJobId',
             'order' => 'getOrder',
             'queueName' => 'getQueueName',
@@ -230,6 +240,7 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
+        $this->container['jobName'] = isset($data['jobName']) ? $data['jobName'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
@@ -329,6 +340,30 @@ class ListBatchesRequest implements ModelInterface, ArrayAccess
     public function setFrom($from)
     {
         $this->container['from'] = $from;
+        return $this;
+    }
+
+    /**
+    * Gets jobName
+    *  批处理作业的名称。
+    *
+    * @return string|null
+    */
+    public function getJobName()
+    {
+        return $this->container['jobName'];
+    }
+
+    /**
+    * Sets jobName
+    *
+    * @param string|null $jobName 批处理作业的名称。
+    *
+    * @return $this
+    */
+    public function setJobName($jobName)
+    {
+        $this->container['jobName'] = $jobName;
         return $this;
     }
 

@@ -20,9 +20,12 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * port  端口号
+    * port  端口号，精确匹配
+    * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
     * enterpriseProjectId  企业项目
+    * sortKey  排序的key值，目前支持按照端口号port排序
+    * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
     *
@@ -30,17 +33,23 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'port' => 'int',
+            'portString' => 'string',
             'type' => 'string',
             'enterpriseProjectId' => 'string',
+            'sortKey' => 'string',
+            'sortDir' => 'string',
             'limit' => 'int',
             'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * port  端口号
+    * port  端口号，精确匹配
+    * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
     * enterpriseProjectId  企业项目
+    * sortKey  排序的key值，目前支持按照端口号port排序
+    * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
     *
@@ -48,8 +57,11 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'port' => null,
+        'portString' => null,
         'type' => null,
         'enterpriseProjectId' => null,
+        'sortKey' => null,
+        'sortDir' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -77,9 +89,12 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * port  端口号
+    * port  端口号，精确匹配
+    * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
     * enterpriseProjectId  企业项目
+    * sortKey  排序的key值，目前支持按照端口号port排序
+    * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
     *
@@ -87,17 +102,23 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'port' => 'port',
+            'portString' => 'port_string',
             'type' => 'type',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * port  端口号
+    * port  端口号，精确匹配
+    * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
     * enterpriseProjectId  企业项目
+    * sortKey  排序的key值，目前支持按照端口号port排序
+    * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
     *
@@ -105,17 +126,23 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'port' => 'setPort',
+            'portString' => 'setPortString',
             'type' => 'setType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * port  端口号
+    * port  端口号，精确匹配
+    * portString  端口字符串，用来进行模糊匹配
     * type  端口类型
     * enterpriseProjectId  企业项目
+    * sortKey  排序的key值，目前支持按照端口号port排序
+    * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
     *
@@ -123,8 +150,11 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'port' => 'getPort',
+            'portString' => 'getPortString',
             'type' => 'getType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -188,8 +218,11 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
+        $this->container['portString'] = isset($data['portString']) ? $data['portString'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -208,6 +241,12 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['port']) && ($this->container['port'] < 1)) {
                 $invalidProperties[] = "invalid value for 'port', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['portString']) && (mb_strlen($this->container['portString']) > 256)) {
+                $invalidProperties[] = "invalid value for 'portString', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['portString']) && (mb_strlen($this->container['portString']) < 1)) {
+                $invalidProperties[] = "invalid value for 'portString', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 256)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 256.";
             }
@@ -219,6 +258,18 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 32)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
@@ -248,7 +299,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口号
+    *  端口号，精确匹配
     *
     * @return int|null
     */
@@ -260,13 +311,37 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 端口号
+    * @param int|null $port 端口号，精确匹配
     *
     * @return $this
     */
     public function setPort($port)
     {
         $this->container['port'] = $port;
+        return $this;
+    }
+
+    /**
+    * Gets portString
+    *  端口字符串，用来进行模糊匹配
+    *
+    * @return string|null
+    */
+    public function getPortString()
+    {
+        return $this->container['portString'];
+    }
+
+    /**
+    * Sets portString
+    *
+    * @param string|null $portString 端口字符串，用来进行模糊匹配
+    *
+    * @return $this
+    */
+    public function setPortString($portString)
+    {
+        $this->container['portString'] = $portString;
         return $this;
     }
 
@@ -315,6 +390,54 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  排序的key值，目前支持按照端口号port排序
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 排序的key值，目前支持按照端口号port排序
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  升序还是降序，默认升序，asc
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 升序还是降序，默认升序，asc
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
         return $this;
     }
 

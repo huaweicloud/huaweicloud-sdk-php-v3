@@ -27,7 +27,7 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'stackSetId' => 'string',
-            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets'
+            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets'
     ];
 
     /**
@@ -223,7 +223,7 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * Gets deploymentTargets
     *  deploymentTargets
     *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets
     */
     public function getDeploymentTargets()
     {
@@ -233,7 +233,7 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentTargets
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargetsPrimitiveTypeHolderDeploymentTargets $deploymentTargets deploymentTargets
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets $deploymentTargets deploymentTargets
     *
     * @return $this
     */

@@ -25,6 +25,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。  取值范围：最多支持30个broker。
     * newProductId  垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  当oper_type类型是horizontal时，该参数必填。
+    * tenantIps  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    * secondTenantSubnetId  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'newStorageSpace' => 'int',
             'newBrokerNum' => 'int',
             'newProductId' => 'string',
-            'publicipId' => 'string'
+            'publicipId' => 'string',
+            'tenantIps' => 'string[]',
+            'secondTenantSubnetId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。  取值范围：最多支持30个broker。
     * newProductId  垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  当oper_type类型是horizontal时，该参数必填。
+    * tenantIps  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    * secondTenantSubnetId  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
         'newStorageSpace' => 'int32',
         'newBrokerNum' => 'int32',
         'newProductId' => null,
-        'publicipId' => null
+        'publicipId' => null,
+        'tenantIps' => null,
+        'secondTenantSubnetId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。  取值范围：最多支持30个broker。
     * newProductId  垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  当oper_type类型是horizontal时，该参数必填。
+    * tenantIps  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    * secondTenantSubnetId  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'newStorageSpace' => 'new_storage_space',
             'newBrokerNum' => 'new_broker_num',
             'newProductId' => 'new_product_id',
-            'publicipId' => 'publicip_id'
+            'publicipId' => 'publicip_id',
+            'tenantIps' => 'tenant_ips',
+            'secondTenantSubnetId' => 'second_tenant_subnet_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。  取值范围：最多支持30个broker。
     * newProductId  垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  当oper_type类型是horizontal时，该参数必填。
+    * tenantIps  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    * secondTenantSubnetId  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'newStorageSpace' => 'setNewStorageSpace',
             'newBrokerNum' => 'setNewBrokerNum',
             'newProductId' => 'setNewProductId',
-            'publicipId' => 'setPublicipId'
+            'publicipId' => 'setPublicipId',
+            'tenantIps' => 'setTenantIps',
+            'secondTenantSubnetId' => 'setSecondTenantSubnetId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。  取值范围：最多支持30个broker。
     * newProductId  垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
     * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  当oper_type类型是horizontal时，该参数必填。
+    * tenantIps  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    * secondTenantSubnetId  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'newStorageSpace' => 'getNewStorageSpace',
             'newBrokerNum' => 'getNewBrokerNum',
             'newProductId' => 'getNewProductId',
-            'publicipId' => 'getPublicipId'
+            'publicipId' => 'getPublicipId',
+            'tenantIps' => 'getTenantIps',
+            'secondTenantSubnetId' => 'getSecondTenantSubnetId'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
         $this->container['newBrokerNum'] = isset($data['newBrokerNum']) ? $data['newBrokerNum'] : null;
         $this->container['newProductId'] = isset($data['newProductId']) ? $data['newProductId'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
+        $this->container['tenantIps'] = isset($data['tenantIps']) ? $data['tenantIps'] : null;
+        $this->container['secondTenantSubnetId'] = isset($data['secondTenantSubnetId']) ? $data['secondTenantSubnetId'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     public function setPublicipId($publicipId)
     {
         $this->container['publicipId'] = $publicipId;
+        return $this;
+    }
+
+    /**
+    * Gets tenantIps
+    *  指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    *
+    * @return string[]|null
+    */
+    public function getTenantIps()
+    {
+        return $this->container['tenantIps'];
+    }
+
+    /**
+    * Sets tenantIps
+    *
+    * @param string[]|null $tenantIps 指定的内网IP地址，仅支持指定IPv4。  指定的IP数量只能小于等于新增节点数量。  当指定IP小于节点数量时，未指定的节点随机分配内网IP地址。
+    *
+    * @return $this
+    */
+    public function setTenantIps($tenantIps)
+    {
+        $this->container['tenantIps'] = $tenantIps;
+        return $this;
+    }
+
+    /**
+    * Gets secondTenantSubnetId
+    *  实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
+    *
+    * @return string|null
+    */
+    public function getSecondTenantSubnetId()
+    {
+        return $this->container['secondTenantSubnetId'];
+    }
+
+    /**
+    * Sets secondTenantSubnetId
+    *
+    * @param string|null $secondTenantSubnetId 实例扩容时新节点使用备用子网的id  当实例扩容使用备用子网，则传入此值  需要联系客服添加白名单才能传入此值
+    *
+    * @return $this
+    */
+    public function setSecondTenantSubnetId($secondTenantSubnetId)
+    {
+        $this->container['secondTenantSubnetId'] = $secondTenantSubnetId;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class ShowTemplateVersionContentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * body  空响应体
     * location  location
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'body' => 'string',
             'location' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * body  空响应体
     * location  location
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'body' => null,
         'location' => null
     ];
 
@@ -62,31 +66,37 @@ class ShowTemplateVersionContentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * body  空响应体
     * location  location
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'body' => 'body',
             'location' => 'Location'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * body  空响应体
     * location  location
     *
     * @var string[]
     */
     protected static $setters = [
+            'body' => 'setBody',
             'location' => 'setLocation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * body  空响应体
     * location  location
     *
     * @var string[]
     */
     protected static $getters = [
+            'body' => 'getBody',
             'location' => 'getLocation'
     ];
 
@@ -148,6 +158,7 @@ class ShowTemplateVersionContentResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
     }
 
@@ -171,6 +182,30 @@ class ShowTemplateVersionContentResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets body
+    *  空响应体
+    *
+    * @return string|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param string|null $body 空响应体
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
+        return $this;
     }
 
     /**

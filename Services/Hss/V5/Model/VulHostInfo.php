@@ -21,7 +21,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostId  主机id
-    * severityLevel  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响资产名称
     * hostIp  受影响资产ip
     * agentId  主机对应的agent id
@@ -40,6 +40,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -63,13 +64,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'assetValue' => 'string',
             'isAffectBusiness' => 'bool',
             'firstScanTime' => 'int',
-            'scanTime' => 'int'
+            'scanTime' => 'int',
+            'supportRestore' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostId  主机id
-    * severityLevel  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响资产名称
     * hostIp  受影响资产ip
     * agentId  主机对应的agent id
@@ -88,6 +90,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         'assetValue' => null,
         'isAffectBusiness' => null,
         'firstScanTime' => 'int64',
-        'scanTime' => 'int64'
+        'scanTime' => 'int64',
+        'supportRestore' => null
     ];
 
     /**
@@ -138,7 +142,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostId  主机id
-    * severityLevel  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响资产名称
     * hostIp  受影响资产ip
     * agentId  主机对应的agent id
@@ -157,6 +161,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -180,13 +185,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'assetValue' => 'asset_value',
             'isAffectBusiness' => 'is_affect_business',
             'firstScanTime' => 'first_scan_time',
-            'scanTime' => 'scan_time'
+            'scanTime' => 'scan_time',
+            'supportRestore' => 'support_restore'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostId  主机id
-    * severityLevel  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响资产名称
     * hostIp  受影响资产ip
     * agentId  主机对应的agent id
@@ -205,6 +211,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -228,13 +235,14 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'assetValue' => 'setAssetValue',
             'isAffectBusiness' => 'setIsAffectBusiness',
             'firstScanTime' => 'setFirstScanTime',
-            'scanTime' => 'setScanTime'
+            'scanTime' => 'setScanTime',
+            'supportRestore' => 'setSupportRestore'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostId  主机id
-    * severityLevel  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostName  受影响资产名称
     * hostIp  受影响资产ip
     * agentId  主机对应的agent id
@@ -253,6 +261,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'assetValue' => 'getAssetValue',
             'isAffectBusiness' => 'getIsAffectBusiness',
             'firstScanTime' => 'getFirstScanTime',
-            'scanTime' => 'getScanTime'
+            'scanTime' => 'getScanTime',
+            'supportRestore' => 'getSupportRestore'
     ];
 
     /**
@@ -357,6 +367,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         $this->container['isAffectBusiness'] = isset($data['isAffectBusiness']) ? $data['isAffectBusiness'] : null;
         $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
         $this->container['scanTime'] = isset($data['scanTime']) ? $data['scanTime'] : null;
+        $this->container['supportRestore'] = isset($data['supportRestore']) ? $data['supportRestore'] : null;
     }
 
     /**
@@ -515,7 +526,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    *  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -527,7 +538,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 危险程度   - Critical : 高危   - High : 中危   - Medium : 中危   - Low : 低危
+    * @param string|null $severityLevel 危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -966,6 +977,30 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     public function setScanTime($scanTime)
     {
         $this->container['scanTime'] = $scanTime;
+        return $this;
+    }
+
+    /**
+    * Gets supportRestore
+    *  是否可以回滚到修复漏洞时创建的备份
+    *
+    * @return bool|null
+    */
+    public function getSupportRestore()
+    {
+        return $this->container['supportRestore'];
+    }
+
+    /**
+    * Sets supportRestore
+    *
+    * @param bool|null $supportRestore 是否可以回滚到修复漏洞时创建的备份
+    *
+    * @return $this
+    */
+    public function setSupportRestore($supportRestore)
+    {
+        $this->container['supportRestore'] = $supportRestore;
         return $this;
     }
 

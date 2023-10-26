@@ -24,6 +24,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为变更流水线
     * sources  流水线源
+    * variables  流水线参数
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'isPublish' => 'bool',
-            'sources' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]'
+            'sources' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]',
+            'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为变更流水线
     * sources  流水线源
+    * variables  流水线参数
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'isPublish' => null,
-        'sources' => null
+        'sources' => null,
+        'variables' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为变更流水线
     * sources  流水线源
+    * variables  流水线参数
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'isPublish' => 'is_publish',
-            'sources' => 'sources'
+            'sources' => 'sources',
+            'variables' => 'variables'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为变更流水线
     * sources  流水线源
+    * variables  流水线参数
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'isPublish' => 'setIsPublish',
-            'sources' => 'setSources'
+            'sources' => 'setSources',
+            'variables' => 'setVariables'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为变更流水线
     * sources  流水线源
+    * variables  流水线参数
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'isPublish' => 'getIsPublish',
-            'sources' => 'getSources'
+            'sources' => 'getSources',
+            'variables' => 'getVariables'
     ];
 
     /**
@@ -181,6 +191,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isPublish'] = isset($data['isPublish']) ? $data['isPublish'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['variables'] = isset($data['variables']) ? $data['variables'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     public function setSources($sources)
     {
         $this->container['sources'] = $sources;
+        return $this;
+    }
+
+    /**
+    * Gets variables
+    *  流水线参数
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]|null
+    */
+    public function getVariables()
+    {
+        return $this->container['variables'];
+    }
+
+    /**
+    * Sets variables
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineByTemplateDTOVariables[]|null $variables 流水线参数
+    *
+    * @return $this
+    */
+    public function setVariables($variables)
+    {
+        $this->container['variables'] = $variables;
         return $this;
     }
 

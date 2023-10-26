@@ -24,6 +24,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
     * protectionType  防护文件类型
     * excludeDirectory  排除目录，选填
@@ -32,6 +33,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * countAssociatedServer  关联server个数
     * operatingSystem  操作系统类型
     * processWhitelist  进程白名单
+    * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @var string[]
     */
@@ -40,6 +42,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'policyName' => 'string',
             'protectionMode' => 'string',
             'baitProtectionStatus' => 'string',
+            'deployMode' => 'string',
             'protectionDirectory' => 'string',
             'protectionType' => 'string',
             'excludeDirectory' => 'string',
@@ -47,7 +50,8 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'runtimeDetectionDirectory' => 'string',
             'countAssociatedServer' => 'int',
             'operatingSystem' => 'string',
-            'processWhitelist' => '\HuaweiCloud\SDK\Hss\V5\Model\TrustProcessInfo[]'
+            'processWhitelist' => '\HuaweiCloud\SDK\Hss\V5\Model\TrustProcessInfo[]',
+            'defaultPolicy' => 'int'
     ];
 
     /**
@@ -56,6 +60,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
     * protectionType  防护文件类型
     * excludeDirectory  排除目录，选填
@@ -64,6 +69,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * countAssociatedServer  关联server个数
     * operatingSystem  操作系统类型
     * processWhitelist  进程白名单
+    * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @var string[]
     */
@@ -72,6 +78,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
         'policyName' => null,
         'protectionMode' => null,
         'baitProtectionStatus' => null,
+        'deployMode' => null,
         'protectionDirectory' => null,
         'protectionType' => null,
         'excludeDirectory' => null,
@@ -79,7 +86,8 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
         'runtimeDetectionDirectory' => null,
         'countAssociatedServer' => 'int32',
         'operatingSystem' => null,
-        'processWhitelist' => null
+        'processWhitelist' => null,
+        'defaultPolicy' => 'int32'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
     * protectionType  防护文件类型
     * excludeDirectory  排除目录，选填
@@ -117,6 +126,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * countAssociatedServer  关联server个数
     * operatingSystem  操作系统类型
     * processWhitelist  进程白名单
+    * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @var string[]
     */
@@ -125,6 +135,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'policyName' => 'policy_name',
             'protectionMode' => 'protection_mode',
             'baitProtectionStatus' => 'bait_protection_status',
+            'deployMode' => 'deploy_mode',
             'protectionDirectory' => 'protection_directory',
             'protectionType' => 'protection_type',
             'excludeDirectory' => 'exclude_directory',
@@ -132,7 +143,8 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'runtimeDetectionDirectory' => 'runtime_detection_directory',
             'countAssociatedServer' => 'count_associated_server',
             'operatingSystem' => 'operating_system',
-            'processWhitelist' => 'process_whitelist'
+            'processWhitelist' => 'process_whitelist',
+            'defaultPolicy' => 'default_policy'
     ];
 
     /**
@@ -141,6 +153,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
     * protectionType  防护文件类型
     * excludeDirectory  排除目录，选填
@@ -149,6 +162,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * countAssociatedServer  关联server个数
     * operatingSystem  操作系统类型
     * processWhitelist  进程白名单
+    * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @var string[]
     */
@@ -157,6 +171,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'policyName' => 'setPolicyName',
             'protectionMode' => 'setProtectionMode',
             'baitProtectionStatus' => 'setBaitProtectionStatus',
+            'deployMode' => 'setDeployMode',
             'protectionDirectory' => 'setProtectionDirectory',
             'protectionType' => 'setProtectionType',
             'excludeDirectory' => 'setExcludeDirectory',
@@ -164,7 +179,8 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'runtimeDetectionDirectory' => 'setRuntimeDetectionDirectory',
             'countAssociatedServer' => 'setCountAssociatedServer',
             'operatingSystem' => 'setOperatingSystem',
-            'processWhitelist' => 'setProcessWhitelist'
+            'processWhitelist' => 'setProcessWhitelist',
+            'defaultPolicy' => 'setDefaultPolicy'
     ];
 
     /**
@@ -173,6 +189,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
     * protectionType  防护文件类型
     * excludeDirectory  排除目录，选填
@@ -181,6 +198,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * countAssociatedServer  关联server个数
     * operatingSystem  操作系统类型
     * processWhitelist  进程白名单
+    * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
     * @var string[]
     */
@@ -189,6 +207,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'policyName' => 'getPolicyName',
             'protectionMode' => 'getProtectionMode',
             'baitProtectionStatus' => 'getBaitProtectionStatus',
+            'deployMode' => 'getDeployMode',
             'protectionDirectory' => 'getProtectionDirectory',
             'protectionType' => 'getProtectionType',
             'excludeDirectory' => 'getExcludeDirectory',
@@ -196,7 +215,8 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             'runtimeDetectionDirectory' => 'getRuntimeDetectionDirectory',
             'countAssociatedServer' => 'getCountAssociatedServer',
             'operatingSystem' => 'getOperatingSystem',
-            'processWhitelist' => 'getProcessWhitelist'
+            'processWhitelist' => 'getProcessWhitelist',
+            'defaultPolicy' => 'getDefaultPolicy'
     ];
 
     /**
@@ -261,6 +281,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
         $this->container['policyName'] = isset($data['policyName']) ? $data['policyName'] : null;
         $this->container['protectionMode'] = isset($data['protectionMode']) ? $data['protectionMode'] : null;
         $this->container['baitProtectionStatus'] = isset($data['baitProtectionStatus']) ? $data['baitProtectionStatus'] : null;
+        $this->container['deployMode'] = isset($data['deployMode']) ? $data['deployMode'] : null;
         $this->container['protectionDirectory'] = isset($data['protectionDirectory']) ? $data['protectionDirectory'] : null;
         $this->container['protectionType'] = isset($data['protectionType']) ? $data['protectionType'] : null;
         $this->container['excludeDirectory'] = isset($data['excludeDirectory']) ? $data['excludeDirectory'] : null;
@@ -269,6 +290,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
         $this->container['countAssociatedServer'] = isset($data['countAssociatedServer']) ? $data['countAssociatedServer'] : null;
         $this->container['operatingSystem'] = isset($data['operatingSystem']) ? $data['operatingSystem'] : null;
         $this->container['processWhitelist'] = isset($data['processWhitelist']) ? $data['processWhitelist'] : null;
+        $this->container['defaultPolicy'] = isset($data['defaultPolicy']) ? $data['defaultPolicy'] : null;
     }
 
     /**
@@ -302,6 +324,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['baitProtectionStatus']) && (mb_strlen($this->container['baitProtectionStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'baitProtectionStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['deployMode']) && (mb_strlen($this->container['deployMode']) > 128)) {
+                $invalidProperties[] = "invalid value for 'deployMode', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['deployMode']) && (mb_strlen($this->container['deployMode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'deployMode', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['protectionDirectory']) && (mb_strlen($this->container['protectionDirectory']) > 128)) {
                 $invalidProperties[] = "invalid value for 'protectionDirectory', the character length must be smaller than or equal to 128.";
@@ -344,6 +372,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['operatingSystem']) && (mb_strlen($this->container['operatingSystem']) < 0)) {
                 $invalidProperties[] = "invalid value for 'operatingSystem', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['defaultPolicy']) && ($this->container['defaultPolicy'] > 10)) {
+                $invalidProperties[] = "invalid value for 'defaultPolicy', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['defaultPolicy']) && ($this->container['defaultPolicy'] < 0)) {
+                $invalidProperties[] = "invalid value for 'defaultPolicy', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -452,6 +486,30 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     public function setBaitProtectionStatus($baitProtectionStatus)
     {
         $this->container['baitProtectionStatus'] = $baitProtectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets deployMode
+    *  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    *
+    * @return string|null
+    */
+    public function getDeployMode()
+    {
+        return $this->container['deployMode'];
+    }
+
+    /**
+    * Sets deployMode
+    *
+    * @param string|null $deployMode 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
+    *
+    * @return $this
+    */
+    public function setDeployMode($deployMode)
+    {
+        $this->container['deployMode'] = $deployMode;
         return $this;
     }
 
@@ -644,6 +702,30 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     public function setProcessWhitelist($processWhitelist)
     {
         $this->container['processWhitelist'] = $processWhitelist;
+        return $this;
+    }
+
+    /**
+    * Gets defaultPolicy
+    *  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
+    *
+    * @return int|null
+    */
+    public function getDefaultPolicy()
+    {
+        return $this->container['defaultPolicy'];
+    }
+
+    /**
+    * Sets defaultPolicy
+    *
+    * @param int|null $defaultPolicy 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
+    *
+    * @return $this
+    */
+    public function setDefaultPolicy($defaultPolicy)
+    {
+        $this->container['defaultPolicy'] = $defaultPolicy;
         return $this;
     }
 

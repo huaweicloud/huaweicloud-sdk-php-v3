@@ -27,7 +27,7 @@ class ListSharesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'shares' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\Shares[]',
+            'shares' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfo[]',
             'count' => 'int'
     ];
 
@@ -188,7 +188,7 @@ class ListSharesResponse implements ModelInterface, ArrayAccess
     * Gets shares
     *  SFS Turbo文件系统的列表。
     *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\Shares[]|null
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfo[]|null
     */
     public function getShares()
     {
@@ -198,7 +198,7 @@ class ListSharesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets shares
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\Shares[]|null $shares SFS Turbo文件系统的列表。
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfo[]|null $shares SFS Turbo文件系统的列表。
     *
     * @return $this
     */

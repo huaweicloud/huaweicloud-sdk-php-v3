@@ -2346,6 +2346,68 @@ class RdsClient extends Client
     }
 
     /**
+     * 获取诊断后的实例数量
+     *
+     * 获取诊断后的实例数量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstanceDiagnosis($request)
+    {
+        return $this->listInstanceDiagnosisWithHttpInfo($request);
+    }
+
+    public function listInstanceDiagnosisWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/diagnosis';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engine'] !== null) {
+            $queryParams['engine'] = $localVarParams['engine'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstanceDiagnosisResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstanceDiagnosisRequest');
+    }
+
+    /**
      * 查询实例参数修改历史
      *
      * 实例参数修改历史。
@@ -2577,6 +2639,77 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesRequest');
+    }
+
+    /**
+     * 获取指定诊断项的诊断结果
+     *
+     * 获取指定诊断项的诊断结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstancesInfoDiagnosis($request)
+    {
+        return $this->listInstancesInfoDiagnosisWithHttpInfo($request);
+    }
+
+    public function listInstancesInfoDiagnosisWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/diagnosis/info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engine'] !== null) {
+            $queryParams['engine'] = $localVarParams['engine'];
+        }
+        if ($localVarParams['diagnosis'] !== null) {
+            $queryParams['diagnosis'] = $localVarParams['diagnosis'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesInfoDiagnosisResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesInfoDiagnosisRequest');
     }
 
     /**

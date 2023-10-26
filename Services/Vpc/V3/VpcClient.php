@@ -26,6 +26,74 @@ class VpcClient extends Client
 
 
     /**
+     * 端口插入安全组
+     *
+     * 端口插入安全组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addSecurityGroups($request)
+    {
+        return $this->addSecurityGroupsWithHttpInfo($request);
+    }
+
+    public function addSecurityGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/insert-security-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\AddSecurityGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\AddSecurityGroupsRequest');
+    }
+
+    /**
      * 流量镜像会话添加镜像源
      *
      * 流量镜像会话添加镜像源
@@ -1603,6 +1671,74 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 端口移除安全组
+     *
+     * 端口移除安全组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function removeSecurityGroups($request)
+    {
+        return $this->removeSecurityGroupsWithHttpInfo($request);
+    }
+
+    public function removeSecurityGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/remove-security-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSecurityGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSecurityGroupsRequest');
     }
 
     /**

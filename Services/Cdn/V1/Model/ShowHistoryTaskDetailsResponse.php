@@ -22,7 +22,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  任务id。
-    * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务。
     * status  任务执行结果,task_done:成功，task_inprocess:处理中。
     * urls  本次提交的url列表。
     * createTime  创建时间。
@@ -50,7 +50,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  任务id。
-    * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务。
     * status  任务执行结果,task_done:成功，task_inprocess:处理中。
     * urls  本次提交的url列表。
     * createTime  创建时间。
@@ -99,7 +99,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  任务id。
-    * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务。
     * status  任务执行结果,task_done:成功，task_inprocess:处理中。
     * urls  本次提交的url列表。
     * createTime  创建时间。
@@ -127,7 +127,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务id。
-    * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务。
     * status  任务执行结果,task_done:成功，task_inprocess:处理中。
     * urls  本次提交的url列表。
     * createTime  创建时间。
@@ -155,7 +155,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务id。
-    * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * taskType  任务类型，refresh：刷新任务；preheating：预热任务。
     * status  任务执行结果,task_done:成功，task_inprocess:处理中。
     * urls  本次提交的url列表。
     * createTime  创建时间。
@@ -298,7 +298,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskType
-    *  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    *  任务类型，refresh：刷新任务；preheating：预热任务。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskType
     *
-    * @param string|null $taskType 任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
+    * @param string|null $taskType 任务类型，refresh：刷新任务；preheating：预热任务。
     *
     * @return $this
     */

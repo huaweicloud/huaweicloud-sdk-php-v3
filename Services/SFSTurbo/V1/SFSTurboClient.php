@@ -225,9 +225,74 @@ class SFSTurboClient extends Client
     }
 
     /**
+     * 创建文件系统后端存储库
+     *
+     * 创建文件系统后端存储库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createBackendTarget($request)
+    {
+        return $this->createBackendTargetWithHttpInfo($request);
+    }
+
+    public function createBackendTargetWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateBackendTargetResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateBackendTargetRequest');
+    }
+
+    /**
      * 创建目录
      *
-     * 创建目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 创建目录
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -292,7 +357,7 @@ class SFSTurboClient extends Client
     /**
      * 创建目标文件夹quota
      *
-     * 创建目标文件夹quota。只支持对空目录设置目录quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 创建目标文件夹quota。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -352,6 +417,204 @@ class SFSTurboClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateFsDirQuotaResponse',
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateFsDirQuotaRequest');
+    }
+
+    /**
+     * 创建文件系统异步任务
+     *
+     * 创建文件系统异步任务（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFsTask($request)
+    {
+        return $this->createFsTaskWithHttpInfo($request);
+    }
+
+    public function createFsTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/{feature}/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['feature'] !== null) {
+            $pathParams['feature'] = $localVarParams['feature'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateFsTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateFsTaskRequest');
+    }
+
+    /**
+     * 创建SFSTurbo 和 OBS 之间的联动任务
+     *
+     * 创建SFSTurbo 和 OBS 之间的联动任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHpcCacheTask($request)
+    {
+        return $this->createHpcCacheTaskWithHttpInfo($request);
+    }
+
+    public function createHpcCacheTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/{share_id}/hpc-cache/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateHpcCacheTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateHpcCacheTaskRequest');
+    }
+
+    /**
+     * 创建权限规则
+     *
+     * 创建权限规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPermRule($request)
+    {
+        return $this->createPermRuleWithHttpInfo($request);
+    }
+
+    public function createPermRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreatePermRuleResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreatePermRuleRequest');
     }
 
     /**
@@ -485,9 +748,77 @@ class SFSTurboClient extends Client
     }
 
     /**
+     * 删除文件系统后端存储库
+     *
+     * 删除文件系统后端存储库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteBackendTarget($request)
+    {
+        return $this->deleteBackendTargetWithHttpInfo($request);
+    }
+
+    public function deleteBackendTargetWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets/{target_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['deleteDataInFileSystem'] !== null) {
+            $queryParams['delete_data_in_file_system'] = $localVarParams['deleteDataInFileSystem'];
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['targetId'] !== null) {
+            $pathParams['target_id'] = $localVarParams['targetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteBackendTargetResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteBackendTargetRequest');
+    }
+
+    /**
      * 删除文件系统目录
      *
-     * 删除文件系统目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 删除文件系统目录
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -552,7 +883,7 @@ class SFSTurboClient extends Client
     /**
      * 删除目标文件夹quota
      *
-     * 删除目标文件夹quota。只支持对空目录进行删除quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 删除目标文件夹quota。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -612,6 +943,139 @@ class SFSTurboClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsDirQuotaResponse',
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsDirQuotaRequest');
+    }
+
+    /**
+     * 取消/删除文件系统异步任务
+     *
+     * 如果异步任务正在执行，则取消并删除任务；否则，删除任务。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteFsTask($request)
+    {
+        return $this->deleteFsTaskWithHttpInfo($request);
+    }
+
+    public function deleteFsTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/{feature}/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['feature'] !== null) {
+            $pathParams['feature'] = $localVarParams['feature'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsTaskRequest');
+    }
+
+    /**
+     * 删除权限规则
+     *
+     * 删除权限规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePermRule($request)
+    {
+        return $this->deletePermRuleWithHttpInfo($request);
+    }
+
+    public function deletePermRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeletePermRuleResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeletePermRuleRequest');
     }
 
     /**
@@ -807,6 +1271,281 @@ class SFSTurboClient extends Client
     }
 
     /**
+     * 查询文件系统后端存储库列表
+     *
+     * 查询文件系统后端存储库列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBackendTargets($request)
+    {
+        return $this->listBackendTargetsWithHttpInfo($request);
+    }
+
+    public function listBackendTargetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListBackendTargetsResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListBackendTargetsRequest');
+    }
+
+    /**
+     * 获取文件系统异步任务列表
+     *
+     * 获取文件系统异步任务列表（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFsTasks($request)
+    {
+        return $this->listFsTasksWithHttpInfo($request);
+    }
+
+    public function listFsTasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/{feature}/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['feature'] !== null) {
+            $pathParams['feature'] = $localVarParams['feature'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListFsTasksResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListFsTasksRequest');
+    }
+
+    /**
+     * 查询联动任务详情列表
+     *
+     * 查询联动任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHpcCacheTasks($request)
+    {
+        return $this->listHpcCacheTasksWithHttpInfo($request);
+    }
+
+    public function listHpcCacheTasksWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/{share_id}/hpc-cache/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListHpcCacheTasksResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListHpcCacheTasksRequest');
+    }
+
+    /**
+     * 查询文件系统的权限规则列表
+     *
+     * 查询文件系统的权限规则列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPermRules($request)
+    {
+        return $this->listPermRulesWithHttpInfo($request);
+    }
+
+    public function listPermRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListPermRulesResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ListPermRulesRequest');
+    }
+
+    /**
      * 查询租户所有共享的标签
      *
      * 查询租户所有共享的标签集合。
@@ -931,9 +1670,139 @@ class SFSTurboClient extends Client
     }
 
     /**
+     * 配置hpc缓存型后端信息
+     *
+     * 配置hpc缓存型后端信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setHpcCacheBackend($request)
+    {
+        return $this->setHpcCacheBackendWithHttpInfo($request);
+    }
+
+    public function setHpcCacheBackendWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\SetHpcCacheBackendResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\SetHpcCacheBackendRequest');
+    }
+
+    /**
+     * 获取文件系统后端存储库详细信息
+     *
+     * 获取文件系统后端存储库详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackendTargetInfo($request)
+    {
+        return $this->showBackendTargetInfoWithHttpInfo($request);
+    }
+
+    public function showBackendTargetInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets/{target_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['targetId'] !== null) {
+            $pathParams['target_id'] = $localVarParams['targetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowBackendTargetInfoResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowBackendTargetInfoRequest');
+    }
+
+    /**
      * 查询目录是否存在
      *
-     * 查询目录是否存在 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 查询目录是否存在
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -998,7 +1867,7 @@ class SFSTurboClient extends Client
     /**
      * 查询目标文件夹quota
      *
-     * 查询目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 查询目标文件夹quota
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1058,6 +1927,269 @@ class SFSTurboClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsDirQuotaResponse',
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsDirQuotaRequest');
+    }
+
+    /**
+     * 查询目录资源使用情况
+     *
+     * 查询目录资源使用情况(包括子目录的资源)。后端有5min的缓存时间，查询的数据可能有延迟。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFsDirUsage($request)
+    {
+        return $this->showFsDirUsageWithHttpInfo($request);
+    }
+
+    public function showFsDirUsageWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/dir-usage';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['path'] !== null) {
+            $queryParams['path'] = $localVarParams['path'];
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsDirUsageResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsDirUsageRequest');
+    }
+
+    /**
+     * 获取文件系统异步任务详情
+     *
+     * 获取文件系统异步任务详情（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFsTask($request)
+    {
+        return $this->showFsTaskWithHttpInfo($request);
+    }
+
+    public function showFsTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/{feature}/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['feature'] !== null) {
+            $pathParams['feature'] = $localVarParams['feature'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowFsTaskRequest');
+    }
+
+    /**
+     * 查询联动任务详情
+     *
+     * 查询联动任务详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHpcCacheTask($request)
+    {
+        return $this->showHpcCacheTaskWithHttpInfo($request);
+    }
+
+    public function showHpcCacheTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/{share_id}/hpc-cache/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowHpcCacheTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowHpcCacheTaskRequest');
+    }
+
+    /**
+     * 查询文件系统的某一个权限规则
+     *
+     * 查询文件系统的某一个权限规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPermRule($request)
+    {
+        return $this->showPermRuleWithHttpInfo($request);
+    }
+
+    public function showPermRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowPermRuleResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowPermRuleRequest');
     }
 
     /**
@@ -1187,7 +2319,7 @@ class SFSTurboClient extends Client
     /**
      * 更新目标文件夹quota
      *
-     * 更新目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+     * 更新目标文件夹quota
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1247,6 +2379,139 @@ class SFSTurboClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateFsDirQuotaResponse',
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateFsDirQuotaRequest');
+    }
+
+    /**
+     * 更新文件系统
+     *
+     * 设置文件系统冷数据淘汰时间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateHpcShare($request)
+    {
+        return $this->updateHpcShareWithHttpInfo($request);
+    }
+
+    public function updateHpcShareWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateHpcShareResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateHpcShareRequest');
+    }
+
+    /**
+     * 修改权限规则
+     *
+     * 修改权限规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePermRule($request)
+    {
+        return $this->updatePermRuleWithHttpInfo($request);
+    }
+
+    public function updatePermRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdatePermRuleResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdatePermRuleRequest');
     }
 
     protected function callApi(

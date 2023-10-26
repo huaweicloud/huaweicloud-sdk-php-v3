@@ -20,8 +20,8 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newSize  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
-    * newBandwidth  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * newSize  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
+    * newBandwidth  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     * bssParam  bssParam
     *
     * @var string[]
@@ -34,8 +34,8 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newSize  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
-    * newBandwidth  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * newSize  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
+    * newBandwidth  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     * bssParam  bssParam
     *
     * @var string[]
@@ -69,8 +69,8 @@ class Extend implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newSize  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
-    * newBandwidth  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * newSize  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
+    * newBandwidth  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     * bssParam  bssParam
     *
     * @var string[]
@@ -83,8 +83,8 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newSize  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
-    * newBandwidth  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * newSize  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
+    * newBandwidth  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     * bssParam  bssParam
     *
     * @var string[]
@@ -97,8 +97,8 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newSize  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
-    * newBandwidth  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * newSize  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
+    * newBandwidth  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     * bssParam  bssParam
     *
     * @var string[]
@@ -183,8 +183,8 @@ class Extend implements ModelInterface, ArrayAccess
         if ($this->container['newSize'] === null) {
             $invalidProperties[] = "'newSize' can't be null";
         }
-            if (($this->container['newSize'] > 327680)) {
-                $invalidProperties[] = "invalid value for 'newSize', must be smaller than or equal to 327680.";
+            if (($this->container['newSize'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'newSize', must be smaller than or equal to 1048576.";
             }
             if (($this->container['newSize'] < 500)) {
                 $invalidProperties[] = "invalid value for 'newSize', must be bigger than or equal to 500.";
@@ -205,7 +205,7 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Gets newSize
-    *  扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
+    *  扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
     *
     * @return int
     */
@@ -217,7 +217,7 @@ class Extend implements ModelInterface, ArrayAccess
     /**
     * Sets newSize
     *
-    * @param int $newSize 扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680
+    * @param int $newSize 扩容后文件系统的新容量，以GiB为单位。  通用型-标准型和性能型，取值范围500~32768 GiB，扩容步长大于等于100 GiB。  通用型-标准型增强版和性能型增强版。容量范围是10240~327680 GiB。扩容步长大于等于100 GiB。  HPC型文件系统，容量范围是3686~1048576 GiB。HPC型文件系统的容量必须为1.2TiB的倍数，扩容步长需要大于等于1.2TiB，需要将目标容量换算为GiB后需要向下取整。如4.8TiB->4915GiB，8.4TiB->8601GiB。  HPC缓存型文件系统，容量范围是4096~1048576 GiB。扩容步长均为1TiB。需要将目标容量换算为GiB。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class Extend implements ModelInterface, ArrayAccess
 
     /**
     * Gets newBandwidth
-    *  扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    *  带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class Extend implements ModelInterface, ArrayAccess
     /**
     * Sets newBandwidth
     *
-    * @param int|null $newBandwidth 扩缩带宽后文件系统的新带宽，以 GB 为单位。仅支持 hpc cache 型文件系统
+    * @param int|null $newBandwidth 带宽的目标值，单位：GB。仅HPC缓存型支持带宽扩缩。 支持的带宽值为：\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @return $this
     */

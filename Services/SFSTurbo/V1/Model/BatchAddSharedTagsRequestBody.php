@@ -21,7 +21,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-    * tags  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * tags  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     * sysTags  系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
     *
     * @var string[]
@@ -244,7 +244,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    *  标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     *
     * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null
     */
@@ -256,7 +256,7 @@ class BatchAddSharedTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $tags 标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $tags 标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
     *
     * @return $this
     */

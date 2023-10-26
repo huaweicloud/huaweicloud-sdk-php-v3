@@ -3863,6 +3863,9 @@ class IoTDAClient extends Client
         if ($localVarParams['appId'] !== null) {
             $queryParams['app_id'] = $localVarParams['appId'];
         }
+        if ($localVarParams['productName'] !== null) {
+            $queryParams['product_name'] = $localVarParams['productName'];
+        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }

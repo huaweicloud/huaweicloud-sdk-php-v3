@@ -27,7 +27,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * scanTime  最近扫描时间
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
     * appList  服务器上受该漏洞影响的软件列表
-    * severityLevel  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  解决方案
     * url  URL链接
     * description  漏洞描述
@@ -37,6 +37,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * cveList  CVE列表
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
+    * appName  软件名称
+    * appVersion  软件版本
+    * appPath  软件路径
+    * version  主机配额
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -57,7 +62,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'int',
             'cveList' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoCveList[]',
             'isAffectBusiness' => 'bool',
-            'firstScanTime' => 'int'
+            'firstScanTime' => 'int',
+            'appName' => 'string',
+            'appVersion' => 'string',
+            'appPath' => 'string',
+            'version' => 'string',
+            'supportRestore' => 'bool'
     ];
 
     /**
@@ -69,7 +79,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * scanTime  最近扫描时间
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
     * appList  服务器上受该漏洞影响的软件列表
-    * severityLevel  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  解决方案
     * url  URL链接
     * description  漏洞描述
@@ -79,6 +89,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * cveList  CVE列表
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
+    * appName  软件名称
+    * appVersion  软件版本
+    * appPath  软件路径
+    * version  主机配额
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -99,7 +114,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         'repairSuccessNum' => 'int32',
         'cveList' => null,
         'isAffectBusiness' => null,
-        'firstScanTime' => 'int64'
+        'firstScanTime' => 'int64',
+        'appName' => null,
+        'appVersion' => null,
+        'appPath' => null,
+        'version' => null,
+        'supportRestore' => null
     ];
 
     /**
@@ -132,7 +152,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * scanTime  最近扫描时间
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
     * appList  服务器上受该漏洞影响的软件列表
-    * severityLevel  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  解决方案
     * url  URL链接
     * description  漏洞描述
@@ -142,6 +162,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * cveList  CVE列表
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
+    * appName  软件名称
+    * appVersion  软件版本
+    * appPath  软件路径
+    * version  主机配额
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -162,7 +187,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'repair_success_num',
             'cveList' => 'cve_list',
             'isAffectBusiness' => 'is_affect_business',
-            'firstScanTime' => 'first_scan_time'
+            'firstScanTime' => 'first_scan_time',
+            'appName' => 'app_name',
+            'appVersion' => 'app_version',
+            'appPath' => 'app_path',
+            'version' => 'version',
+            'supportRestore' => 'support_restore'
     ];
 
     /**
@@ -174,7 +204,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * scanTime  最近扫描时间
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
     * appList  服务器上受该漏洞影响的软件列表
-    * severityLevel  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  解决方案
     * url  URL链接
     * description  漏洞描述
@@ -184,6 +214,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * cveList  CVE列表
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
+    * appName  软件名称
+    * appVersion  软件版本
+    * appPath  软件路径
+    * version  主机配额
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -204,7 +239,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'setRepairSuccessNum',
             'cveList' => 'setCveList',
             'isAffectBusiness' => 'setIsAffectBusiness',
-            'firstScanTime' => 'setFirstScanTime'
+            'firstScanTime' => 'setFirstScanTime',
+            'appName' => 'setAppName',
+            'appVersion' => 'setAppVersion',
+            'appPath' => 'setAppPath',
+            'version' => 'setVersion',
+            'supportRestore' => 'setSupportRestore'
     ];
 
     /**
@@ -216,7 +256,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * scanTime  最近扫描时间
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
     * appList  服务器上受该漏洞影响的软件列表
-    * severityLevel  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  解决方案
     * url  URL链接
     * description  漏洞描述
@@ -226,6 +266,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * cveList  CVE列表
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
+    * appName  软件名称
+    * appVersion  软件版本
+    * appPath  软件路径
+    * version  主机配额
+    * supportRestore  是否可以回滚到修复漏洞时创建的备份
     *
     * @var string[]
     */
@@ -246,7 +291,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'getRepairSuccessNum',
             'cveList' => 'getCveList',
             'isAffectBusiness' => 'getIsAffectBusiness',
-            'firstScanTime' => 'getFirstScanTime'
+            'firstScanTime' => 'getFirstScanTime',
+            'appName' => 'getAppName',
+            'appVersion' => 'getAppVersion',
+            'appPath' => 'getAppPath',
+            'version' => 'getVersion',
+            'supportRestore' => 'getSupportRestore'
     ];
 
     /**
@@ -324,6 +374,11 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         $this->container['cveList'] = isset($data['cveList']) ? $data['cveList'] : null;
         $this->container['isAffectBusiness'] = isset($data['isAffectBusiness']) ? $data['isAffectBusiness'] : null;
         $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
+        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
+        $this->container['appPath'] = isset($data['appPath']) ? $data['appPath'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['supportRestore'] = isset($data['supportRestore']) ? $data['supportRestore'] : null;
     }
 
     /**
@@ -411,6 +466,30 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['firstScanTime']) && ($this->container['firstScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'firstScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appVersion', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appVersion', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) > 512)) {
+                $invalidProperties[] = "invalid value for 'appPath', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appPath', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -596,7 +675,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    *  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -608,7 +687,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 危险程度   - Critical : 致命   - High : 高危   - Medium : 中危   - Low : 低危
+    * @param string|null $severityLevel 危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -831,6 +910,126 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     public function setFirstScanTime($firstScanTime)
     {
         $this->container['firstScanTime'] = $firstScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets appName
+    *  软件名称
+    *
+    * @return string|null
+    */
+    public function getAppName()
+    {
+        return $this->container['appName'];
+    }
+
+    /**
+    * Sets appName
+    *
+    * @param string|null $appName 软件名称
+    *
+    * @return $this
+    */
+    public function setAppName($appName)
+    {
+        $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets appVersion
+    *  软件版本
+    *
+    * @return string|null
+    */
+    public function getAppVersion()
+    {
+        return $this->container['appVersion'];
+    }
+
+    /**
+    * Sets appVersion
+    *
+    * @param string|null $appVersion 软件版本
+    *
+    * @return $this
+    */
+    public function setAppVersion($appVersion)
+    {
+        $this->container['appVersion'] = $appVersion;
+        return $this;
+    }
+
+    /**
+    * Gets appPath
+    *  软件路径
+    *
+    * @return string|null
+    */
+    public function getAppPath()
+    {
+        return $this->container['appPath'];
+    }
+
+    /**
+    * Sets appPath
+    *
+    * @param string|null $appPath 软件路径
+    *
+    * @return $this
+    */
+    public function setAppPath($appPath)
+    {
+        $this->container['appPath'] = $appPath;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  主机配额
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 主机配额
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets supportRestore
+    *  是否可以回滚到修复漏洞时创建的备份
+    *
+    * @return bool|null
+    */
+    public function getSupportRestore()
+    {
+        return $this->container['supportRestore'];
+    }
+
+    /**
+    * Sets supportRestore
+    *
+    * @param bool|null $supportRestore 是否可以回滚到修复漏洞时创建的备份
+    *
+    * @return $this
+    */
+    public function setSupportRestore($supportRestore)
+    {
+        $this->container['supportRestore'] = $supportRestore;
         return $this;
     }
 

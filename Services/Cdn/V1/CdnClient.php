@@ -2120,7 +2120,7 @@ class CdnClient extends Client
     /**
      * 查询刷新预热URL记录
      *
-     * 查询刷新预热URL记录。如需此接口，请提交工单开通
+     * 查询刷新预热URL记录。如需此接口，请提交工单开通。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

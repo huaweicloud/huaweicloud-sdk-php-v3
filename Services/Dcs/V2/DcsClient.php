@@ -347,6 +347,71 @@ class DcsClient extends Client
     }
 
     /**
+     * 数据迁移配置页实例连接测试
+     *
+     * 数据迁移配置页实例连接测试
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkMigrationConnectivity($request)
+    {
+        return $this->checkMigrationConnectivityWithHttpInfo($request);
+    }
+
+    public function checkMigrationConnectivityWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/migration/{task_id}/connectivity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\CheckMigrationConnectivityResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\CheckMigrationConnectivityRequest');
+    }
+
+    /**
      * 备份指定实例
      *
      * 备份指定的缓存实例。
@@ -1045,6 +1110,71 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\CreateOnlineMigrationTaskResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\CreateOnlineMigrationTaskRequest');
+    }
+
+    /**
+     * 新增/修改高级备份信息
+     *
+     * 新增/修改高级备份信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOrUpdateBackUpInfo($request)
+    {
+        return $this->createOrUpdateBackUpInfoWithHttpInfo($request);
+    }
+
+    public function createOrUpdateBackUpInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/additional-backups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\CreateOrUpdateBackUpInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\CreateOrUpdateBackUpInfoRequest');
     }
 
     /**
@@ -1765,6 +1895,71 @@ class DcsClient extends Client
     }
 
     /**
+     * 进行IP交换
+     *
+     * 进行IP交换
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exchangeInstanceIp($request)
+    {
+        return $this->exchangeInstanceIpWithHttpInfo($request);
+    }
+
+    public function exchangeInstanceIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/migration-task/{task_id}/exchange-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ExchangeInstanceIpResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ExchangeInstanceIpRequest');
+    }
+
+    /**
      * 集群分片倒换
      *
      * 集群分片倒换，适用于proxy和cluster实例
@@ -1830,6 +2025,71 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteClusterSwitchoverResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteClusterSwitchoverRequest');
+    }
+
+    /**
+     * 执行web-cli命令V2接口
+     *
+     * 登入web-cli，执行redis命令
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function executeCommandMobilization($request)
+    {
+        return $this->executeCommandMobilizationWithHttpInfo($request);
+    }
+
+    public function executeCommandMobilizationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/webcli/command';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteCommandMobilizationResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ExecuteCommandMobilizationRequest');
     }
 
     /**
@@ -2238,6 +2498,77 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ListBigkeyScanTasksResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ListBigkeyScanTasksRequest');
+    }
+
+    /**
+     * 查询任务中心任务列表
+     *
+     * 查询任务中心任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCenterTask($request)
+    {
+        return $this->listCenterTaskWithHttpInfo($request);
+    }
+
+    public function listCenterTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ListCenterTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ListCenterTaskRequest');
     }
 
     /**
@@ -2954,6 +3285,77 @@ class DcsClient extends Client
     }
 
     /**
+     * 查询迁移日志列表
+     *
+     * 查询迁移日志列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMigrationTaskLogs($request)
+    {
+        return $this->listMigrationTaskLogsWithHttpInfo($request);
+    }
+
+    public function listMigrationTaskLogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/migration-task/{task_id}/logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['logLevel'] !== null) {
+            $queryParams['log_level'] = $localVarParams['logLevel'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ListMigrationTaskLogsResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ListMigrationTaskLogsRequest');
+    }
+
+    /**
      * 查询主维度信息列表
      *
      * 查询主维度对象列表，主维度ID当前支持dcs_instance_id，dcs_memcached_instance_id。
@@ -3494,6 +3896,71 @@ class DcsClient extends Client
     }
 
     /**
+     * 登录webCli
+     *
+     * 登录webCli
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function loginWebCli($request)
+    {
+        return $this->loginWebCliWithHttpInfo($request);
+    }
+
+    public function loginWebCliWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/webcli/auth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\LoginWebCliResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\LoginWebCliRequest');
+    }
+
+    /**
      * 重置ACL账号密码
      *
      * 重置ACL账号密码。
@@ -3822,6 +4289,68 @@ class DcsClient extends Client
     }
 
     /**
+     * 立刻扫描过期Key
+     *
+     * 立刻扫描过期Key
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function scanExpireKey($request)
+    {
+        return $this->scanExpireKeyWithHttpInfo($request);
+    }
+
+    public function scanExpireKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/auto-expire/scan';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ScanExpireKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ScanExpireKeyRequest');
+    }
+
+    /**
      * 配置在线数据迁移任务
      *
      * 配置在线数据迁移任务。
@@ -3884,6 +4413,133 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\SetOnlineMigrationTaskResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\SetOnlineMigrationTaskRequest');
+    }
+
+    /**
+     * 查询高级备份信息
+     *
+     * 查询高级备份信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackUpInfo($request)
+    {
+        return $this->showBackUpInfoWithHttpInfo($request);
+    }
+
+    public function showBackUpInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/additional-backups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowBackUpInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowBackUpInfoRequest');
+    }
+
+    /**
+     * 查询后台任务详细信息
+     *
+     * 查询后台任务详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackgroundTaskProgress($request)
+    {
+        return $this->showBackgroundTaskProgressWithHttpInfo($request);
+    }
+
+    public function showBackgroundTaskProgressWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/tasks/{task_id}/progress';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowBackgroundTaskProgressResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowBackgroundTaskProgressRequest');
     }
 
     /**
@@ -4138,6 +4794,68 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowDiagnosisTaskDetailsResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowDiagnosisTaskDetailsRequest');
+    }
+
+    /**
+     * 查询过期Key扫描记录
+     *
+     * 查询过期Key扫描记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showExpireKeyScanInfo($request)
+    {
+        return $this->showExpireKeyScanInfoWithHttpInfo($request);
+    }
+
+    public function showExpireKeyScanInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/auto-expire/histories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowExpireKeyScanInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowExpireKeyScanInfoRequest');
     }
 
     /**
@@ -4763,6 +5481,68 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowTagsResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowTagsRequest');
+    }
+
+    /**
+     * 提交前置检查任务
+     *
+     * 提交前置检查任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startInstanceResizeCheckJob($request)
+    {
+        return $this->startInstanceResizeCheckJobWithHttpInfo($request);
+    }
+
+    public function startInstanceResizeCheckJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/resize/check-job';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\StartInstanceResizeCheckJobResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\StartInstanceResizeCheckJobRequest');
     }
 
     /**
@@ -5478,6 +6258,71 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceBandwidthResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceBandwidthRequest');
+    }
+
+    /**
+     * 设置迁移任务自动重连
+     *
+     * 设置迁移任务自动重连
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateMigrationTask($request)
+    {
+        return $this->updateMigrationTaskWithHttpInfo($request);
+    }
+
+    public function updateMigrationTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/migration-task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateMigrationTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateMigrationTaskRequest');
     }
 
     /**

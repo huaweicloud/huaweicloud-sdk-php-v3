@@ -6540,6 +6540,9 @@ class DliAsyncClient extends Client
         if ($localVarParams['from'] !== null) {
             $queryParams['from'] = $localVarParams['from'];
         }
+        if ($localVarParams['jobName'] !== null) {
+            $queryParams['job_name'] = $localVarParams['jobName'];
+        }
         if ($localVarParams['jobId'] !== null) {
             $queryParams['job_id'] = $localVarParams['jobId'];
         }

@@ -3201,12 +3201,12 @@ class CesAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateNotificationMasksAsync($request)
+    public function updateNotificationMaskAsync($request)
     {
-        return $this->updateNotificationMasksAsyncWithHttpInfo($request);
+        return $this->updateNotificationMaskAsyncWithHttpInfo($request);
     }
     
-    public function updateNotificationMasksAsyncWithHttpInfo($request){
+    public function updateNotificationMaskAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2/{project_id}/notification-masks/{notification_mask_id}';
         $formParams = [];
@@ -3253,9 +3253,9 @@ class CesAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMasksResponse',
+            $responseType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMaskResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMasksRequest',
+            $requestType='\HuaweiCloud\SDK\Ces\V2\Model\UpdateNotificationMaskRequest',
             $asyncRequest = true);
     }
 

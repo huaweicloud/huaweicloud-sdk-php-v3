@@ -25,6 +25,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称。
+    * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
     * appId  应用id。
     * appName  应用名称。
@@ -37,6 +38,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'broadcast' => 'bool',
             'brokers' => 'string[]',
             'name' => 'string',
+            'groupDesc' => 'string',
             'retryMaxTime' => 'float',
             'appId' => 'string',
             'appName' => 'string',
@@ -49,6 +51,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称。
+    * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
     * appId  应用id。
     * appName  应用名称。
@@ -61,6 +64,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         'broadcast' => null,
         'brokers' => null,
         'name' => null,
+        'groupDesc' => null,
         'retryMaxTime' => null,
         'appId' => null,
         'appName' => null,
@@ -94,6 +98,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称。
+    * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
     * appId  应用id。
     * appName  应用名称。
@@ -106,6 +111,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'broadcast' => 'broadcast',
             'brokers' => 'brokers',
             'name' => 'name',
+            'groupDesc' => 'group_desc',
             'retryMaxTime' => 'retry_max_time',
             'appId' => 'app_id',
             'appName' => 'app_name',
@@ -118,6 +124,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称。
+    * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
     * appId  应用id。
     * appName  应用名称。
@@ -130,6 +137,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'broadcast' => 'setBroadcast',
             'brokers' => 'setBrokers',
             'name' => 'setName',
+            'groupDesc' => 'setGroupDesc',
             'retryMaxTime' => 'setRetryMaxTime',
             'appId' => 'setAppId',
             'appName' => 'setAppName',
@@ -142,6 +150,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * brokers  关联的代理列表。
     * name  消费组名称。
+    * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
     * appId  应用id。
     * appName  应用名称。
@@ -154,6 +163,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'broadcast' => 'getBroadcast',
             'brokers' => 'getBrokers',
             'name' => 'getName',
+            'groupDesc' => 'getGroupDesc',
             'retryMaxTime' => 'getRetryMaxTime',
             'appId' => 'getAppId',
             'appName' => 'getAppName',
@@ -222,6 +232,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
@@ -343,6 +354,30 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  消费组描述。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc 消费组描述。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

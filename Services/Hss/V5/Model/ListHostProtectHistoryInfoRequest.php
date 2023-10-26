@@ -27,6 +27,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * endTime  终止时间
     * limit  limit
     * offset  offset
+    * hostName  服务器名称
+    * hostIp  服务器ip
+    * filePath  防护文件
+    * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
     *
     * @var string[]
     */
@@ -37,7 +41,11 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             'startTime' => 'int',
             'endTime' => 'int',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'hostName' => 'string',
+            'hostIp' => 'string',
+            'filePath' => 'string',
+            'fileOperation' => 'string'
     ];
 
     /**
@@ -49,6 +57,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * endTime  终止时间
     * limit  limit
     * offset  offset
+    * hostName  服务器名称
+    * hostIp  服务器ip
+    * filePath  防护文件
+    * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
     *
     * @var string[]
     */
@@ -59,7 +71,11 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
         'startTime' => 'int64',
         'endTime' => 'int64',
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'hostName' => null,
+        'hostIp' => null,
+        'filePath' => null,
+        'fileOperation' => null
     ];
 
     /**
@@ -92,6 +108,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * endTime  终止时间
     * limit  limit
     * offset  offset
+    * hostName  服务器名称
+    * hostIp  服务器ip
+    * filePath  防护文件
+    * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
     *
     * @var string[]
     */
@@ -102,7 +122,11 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'hostName' => 'host_name',
+            'hostIp' => 'host_ip',
+            'filePath' => 'file_path',
+            'fileOperation' => 'file_operation'
     ];
 
     /**
@@ -114,6 +138,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * endTime  终止时间
     * limit  limit
     * offset  offset
+    * hostName  服务器名称
+    * hostIp  服务器ip
+    * filePath  防护文件
+    * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
     *
     * @var string[]
     */
@@ -124,7 +152,11 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'hostName' => 'setHostName',
+            'hostIp' => 'setHostIp',
+            'filePath' => 'setFilePath',
+            'fileOperation' => 'setFileOperation'
     ];
 
     /**
@@ -136,6 +168,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * endTime  终止时间
     * limit  limit
     * offset  offset
+    * hostName  服务器名称
+    * hostIp  服务器ip
+    * filePath  防护文件
+    * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
     *
     * @var string[]
     */
@@ -146,7 +182,11 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'hostName' => 'getHostName',
+            'hostIp' => 'getHostIp',
+            'filePath' => 'getFilePath',
+            'fileOperation' => 'getFileOperation'
     ];
 
     /**
@@ -214,6 +254,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
+        $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
+        $this->container['fileOperation'] = isset($data['fileOperation']) ? $data['fileOperation'] : null;
     }
 
     /**
@@ -283,6 +327,30 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             }
             if (($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['filePath']) && (mb_strlen($this->container['filePath']) > 128)) {
+                $invalidProperties[] = "invalid value for 'filePath', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['filePath']) && (mb_strlen($this->container['filePath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'filePath', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['fileOperation']) && (mb_strlen($this->container['fileOperation']) > 128)) {
+                $invalidProperties[] = "invalid value for 'fileOperation', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['fileOperation']) && (mb_strlen($this->container['fileOperation']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fileOperation', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -463,6 +531,102 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets hostName
+    *  服务器名称
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName 服务器名称
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets hostIp
+    *  服务器ip
+    *
+    * @return string|null
+    */
+    public function getHostIp()
+    {
+        return $this->container['hostIp'];
+    }
+
+    /**
+    * Sets hostIp
+    *
+    * @param string|null $hostIp 服务器ip
+    *
+    * @return $this
+    */
+    public function setHostIp($hostIp)
+    {
+        $this->container['hostIp'] = $hostIp;
+        return $this;
+    }
+
+    /**
+    * Gets filePath
+    *  防护文件
+    *
+    * @return string|null
+    */
+    public function getFilePath()
+    {
+        return $this->container['filePath'];
+    }
+
+    /**
+    * Sets filePath
+    *
+    * @param string|null $filePath 防护文件
+    *
+    * @return $this
+    */
+    public function setFilePath($filePath)
+    {
+        $this->container['filePath'] = $filePath;
+        return $this;
+    }
+
+    /**
+    * Gets fileOperation
+    *  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
+    *
+    * @return string|null
+    */
+    public function getFileOperation()
+    {
+        return $this->container['fileOperation'];
+    }
+
+    /**
+    * Sets fileOperation
+    *
+    * @param string|null $fileOperation 文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性
+    *
+    * @return $this
+    */
+    public function setFileOperation($fileOperation)
+    {
+        $this->container['fileOperation'] = $fileOperation;
         return $this;
     }
 
