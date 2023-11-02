@@ -22,15 +22,16 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * adminStateUp  后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * description  后端云服务器组的描述信息。
-    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     * name  后端云服务器组的名称。
     * sessionPersistence  sessionPersistence
     * slowStart  slowStart
-    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
     *
     * @var string[]
     */
@@ -45,22 +46,24 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'vpcId' => 'string',
             'type' => 'string',
             'protectionStatus' => 'string',
-            'protectionReason' => 'string'
+            'protectionReason' => 'string',
+            'anyPortEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * adminStateUp  后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * description  后端云服务器组的描述信息。
-    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     * name  后端云服务器组的名称。
     * sessionPersistence  sessionPersistence
     * slowStart  slowStart
-    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         'vpcId' => null,
         'type' => null,
         'protectionStatus' => null,
-        'protectionReason' => null
+        'protectionReason' => null,
+        'anyPortEnable' => null
     ];
 
     /**
@@ -103,15 +107,16 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * adminStateUp  后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * description  后端云服务器组的描述信息。
-    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     * name  后端云服务器组的名称。
     * sessionPersistence  sessionPersistence
     * slowStart  slowStart
-    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
     *
     * @var string[]
     */
@@ -126,22 +131,24 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'vpcId' => 'vpc_id',
             'type' => 'type',
             'protectionStatus' => 'protection_status',
-            'protectionReason' => 'protection_reason'
+            'protectionReason' => 'protection_reason',
+            'anyPortEnable' => 'any_port_enable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * adminStateUp  后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * description  后端云服务器组的描述信息。
-    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     * name  后端云服务器组的名称。
     * sessionPersistence  sessionPersistence
     * slowStart  slowStart
-    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
     *
     * @var string[]
     */
@@ -156,22 +163,24 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'vpcId' => 'setVpcId',
             'type' => 'setType',
             'protectionStatus' => 'setProtectionStatus',
-            'protectionReason' => 'setProtectionReason'
+            'protectionReason' => 'setProtectionReason',
+            'anyPortEnable' => 'setAnyPortEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * adminStateUp  后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * description  后端云服务器组的描述信息。
-    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     * name  后端云服务器组的名称。
     * sessionPersistence  sessionPersistence
     * slowStart  slowStart
-    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * memberDeletionProtectionEnable  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  只有vpc_id为空时允许更新。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  使用说明： - 只有type为空时允许更新，不允许从非空更新为空。
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
             'vpcId' => 'getVpcId',
             'type' => 'getType',
             'protectionStatus' => 'getProtectionStatus',
-            'protectionReason' => 'getProtectionReason'
+            'protectionReason' => 'getProtectionReason',
+            'anyPortEnable' => 'getAnyPortEnable'
     ];
 
     /**
@@ -273,6 +283,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
+        $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
     }
 
     /**
@@ -379,7 +390,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets lbAlgorithm
-    *  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    *  后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     *
     * @return string|null
     */
@@ -391,7 +402,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets lbAlgorithm
     *
-    * @param string|null $lbAlgorithm 后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
+    * @param string|null $lbAlgorithm 后端云服务器组的负载均衡算法。  取值： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  使用说明： - 当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  [不支持QUIC_CID。](tag:hws_eu,g42,hk_g42,hcso_dt,tm)
     *
     * @return $this
     */
@@ -475,7 +486,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberDeletionProtectionEnable
-    *  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *  是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     *
     * @return bool|null
     */
@@ -487,7 +498,7 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets memberDeletionProtectionEnable
     *
-    * @param bool|null $memberDeletionProtectionEnable 是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * @param bool|null $memberDeletionProtectionEnable 是否开启删除保护。  取值：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
     *
     * @return $this
     */
@@ -590,6 +601,30 @@ class UpdatePoolOption implements ModelInterface, ArrayAccess
     public function setProtectionReason($protectionReason)
     {
         $this->container['protectionReason'] = $protectionReason;
+        return $this;
+    }
+
+    /**
+    * Gets anyPortEnable
+    *  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    *
+    * @return bool|null
+    */
+    public function getAnyPortEnable()
+    {
+        return $this->container['anyPortEnable'];
+    }
+
+    /**
+    * Sets anyPortEnable
+    *
+    * @param bool|null $anyPortEnable 后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。  > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    *
+    * @return $this
+    */
+    public function setAnyPortEnable($anyPortEnable)
+    {
+        $this->container['anyPortEnable'] = $anyPortEnable;
         return $this;
     }
 

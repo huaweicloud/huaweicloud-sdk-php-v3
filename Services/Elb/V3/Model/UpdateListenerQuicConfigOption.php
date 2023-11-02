@@ -20,8 +20,8 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
+    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
+    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
+    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
+    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
-    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * quicListenerId  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
+    * enableQuicUpgrade  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets quicListenerId
-    *  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    *  监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
     /**
     * Sets quicListenerId
     *
-    * @param string|null $quicListenerId 监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * @param string|null $quicListenerId 监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableQuicUpgrade
-    *  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    *  QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class UpdateListenerQuicConfigOption implements ModelInterface, ArrayAccess
     /**
     * Sets enableQuicUpgrade
     *
-    * @param bool|null $enableQuicUpgrade QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
+    * @param bool|null $enableQuicUpgrade QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级； 开启HTTPS监听器升级QUIC监听器能力  [不支持QUIC。](tag:hws_eu,g42,hk_g42,hcso_dt,dt,dt_test,tm)
     *
     * @return $this
     */

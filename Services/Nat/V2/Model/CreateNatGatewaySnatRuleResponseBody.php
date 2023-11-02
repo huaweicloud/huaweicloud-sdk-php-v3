@@ -27,11 +27,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度限制为255。
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
             'createdAt' => 'string',
             'networkId' => 'string',
             'adminStateUp' => 'bool',
-            'floatingIpAddress' => 'string'
+            'floatingIpAddress' => 'string',
+            'globalEipId' => 'string',
+            'globalEipAddress' => 'string'
     ];
 
     /**
@@ -59,11 +63,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度限制为255。
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         'createdAt' => null,
         'networkId' => null,
         'adminStateUp' => null,
-        'floatingIpAddress' => null
+        'floatingIpAddress' => null,
+        'globalEipId' => null,
+        'globalEipAddress' => null
     ];
 
     /**
@@ -112,11 +120,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度限制为255。
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
             'createdAt' => 'created_at',
             'networkId' => 'network_id',
             'adminStateUp' => 'admin_state_up',
-            'floatingIpAddress' => 'floating_ip_address'
+            'floatingIpAddress' => 'floating_ip_address',
+            'globalEipId' => 'global_eip_id',
+            'globalEipAddress' => 'global_eip_address'
     ];
 
     /**
@@ -144,11 +156,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度限制为255。
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
             'createdAt' => 'setCreatedAt',
             'networkId' => 'setNetworkId',
             'adminStateUp' => 'setAdminStateUp',
-            'floatingIpAddress' => 'setFloatingIpAddress'
+            'floatingIpAddress' => 'setFloatingIpAddress',
+            'globalEipId' => 'setGlobalEipId',
+            'globalEipAddress' => 'setGlobalEipAddress'
     ];
 
     /**
@@ -176,11 +192,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度限制为255。
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
             'createdAt' => 'getCreatedAt',
             'networkId' => 'getNetworkId',
             'adminStateUp' => 'getAdminStateUp',
-            'floatingIpAddress' => 'getFloatingIpAddress'
+            'floatingIpAddress' => 'getFloatingIpAddress',
+            'globalEipId' => 'getGlobalEipId',
+            'globalEipAddress' => 'getGlobalEipAddress'
     ];
 
     /**
@@ -292,6 +312,8 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['floatingIpAddress'] = isset($data['floatingIpAddress']) ? $data['floatingIpAddress'] : null;
+        $this->container['globalEipId'] = isset($data['globalEipId']) ? $data['globalEipId'] : null;
+        $this->container['globalEipAddress'] = isset($data['globalEipAddress']) ? $data['globalEipAddress'] : null;
     }
 
     /**
@@ -314,6 +336,12 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
         }
+            if ((mb_strlen($this->container['tenantId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['tenantId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['natGatewayId'] === null) {
             $invalidProperties[] = "'natGatewayId' can't be null";
         }
@@ -326,8 +354,8 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['cidr'] === null) {
             $invalidProperties[] = "'cidr' can't be null";
         }
-            if ((mb_strlen($this->container['cidr']) > 39)) {
-                $invalidProperties[] = "invalid value for 'cidr', the character length must be smaller than or equal to 39.";
+            if ((mb_strlen($this->container['cidr']) > 18)) {
+                $invalidProperties[] = "invalid value for 'cidr', the character length must be smaller than or equal to 18.";
             }
             if ((mb_strlen($this->container['cidr']) < 9)) {
                 $invalidProperties[] = "invalid value for 'cidr', the character length must be bigger than or equal to 9.";
@@ -335,14 +363,29 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['sourceType'] === null) {
             $invalidProperties[] = "'sourceType' can't be null";
         }
+            if (($this->container['sourceType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be smaller than or equal to 1.";
+            }
+            if (($this->container['sourceType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be bigger than or equal to 0.";
+            }
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['floatingIpId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
+            }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
             if ((mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
@@ -379,6 +422,30 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['floatingIpAddress'] === null) {
             $invalidProperties[] = "'floatingIpAddress' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if ((mb_strlen($this->container['floatingIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
+            }
+        if ($this->container['globalEipId'] === null) {
+            $invalidProperties[] = "'globalEipId' can't be null";
+        }
+            if ((mb_strlen($this->container['globalEipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['globalEipId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['globalEipAddress'] === null) {
+            $invalidProperties[] = "'globalEipAddress' can't be null";
+        }
+            if ((mb_strlen($this->container['globalEipAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be smaller than or equal to 15.";
+            }
+            if ((mb_strlen($this->container['globalEipAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be bigger than or equal to 7.";
+            }
         return $invalidProperties;
     }
 
@@ -563,7 +630,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets status
-    *  功能说明：SNAT规则的状态。
+    *  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return string
     */
@@ -575,7 +642,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     /**
     * Sets status
     *
-    * @param string $status 功能说明：SNAT规则的状态。
+    * @param string $status SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */
@@ -659,7 +726,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets floatingIpAddress
-    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     *
     * @return string
     */
@@ -671,13 +738,61 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     /**
     * Sets floatingIpAddress
     *
-    * @param string $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * @param string $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     *
     * @return $this
     */
     public function setFloatingIpAddress($floatingIpAddress)
     {
         $this->container['floatingIpAddress'] = $floatingIpAddress;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipId
+    *  全域弹性公网IP的id。
+    *
+    * @return string
+    */
+    public function getGlobalEipId()
+    {
+        return $this->container['globalEipId'];
+    }
+
+    /**
+    * Sets globalEipId
+    *
+    * @param string $globalEipId 全域弹性公网IP的id。
+    *
+    * @return $this
+    */
+    public function setGlobalEipId($globalEipId)
+    {
+        $this->container['globalEipId'] = $globalEipId;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipAddress
+    *  全域弹性公网IP的地址。
+    *
+    * @return string
+    */
+    public function getGlobalEipAddress()
+    {
+        return $this->container['globalEipAddress'];
+    }
+
+    /**
+    * Sets globalEipAddress
+    *
+    * @param string $globalEipAddress 全域弹性公网IP的地址。
+    *
+    * @return $this
+    */
+    public function setGlobalEipAddress($globalEipAddress)
+    {
+        $this->container['globalEipAddress'] = $globalEipAddress;
         return $this;
     }
 

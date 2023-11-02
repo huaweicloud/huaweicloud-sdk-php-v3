@@ -21,20 +21,22 @@ class DeleteBackgroundTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * message  返回消息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'message' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * message  返回消息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'message' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class DeleteBackgroundTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * message  返回消息
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * message  返回消息
     *
     * @var string[]
     */
     protected static $setters = [
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * message  返回消息
     *
     * @var string[]
     */
     protected static $getters = [
+            'message' => 'getMessage'
     ];
 
     /**
@@ -143,6 +148,7 @@ class DeleteBackgroundTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class DeleteBackgroundTaskResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets message
+    *  返回消息
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 返回消息
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+        return $this;
     }
 
     /**

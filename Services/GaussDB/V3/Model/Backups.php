@@ -25,13 +25,14 @@ class Backups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * status  备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-    * takeUpTime  备份花费时间(单位：minutes)
+    * takeUpTime  备份花费时间（单位：minutes）
     * type  备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
-    * size  备份大小，(单位：MB)
+    * size  备份大小（单位：MB）。
     * datastore  datastore
-    * instanceId  实例ID。
-    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-    * description  备份文件描述信息
+    * instanceId  实例ID，严格匹配UUID规则。
+    * instanceName  实例名称。
+    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
+    * description  备份文件描述信息。
     *
     * @var string[]
     */
@@ -46,6 +47,7 @@ class Backups implements ModelInterface, ArrayAccess
             'size' => 'int',
             'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInBackup',
             'instanceId' => 'string',
+            'instanceName' => 'string',
             'backupLevel' => 'string',
             'description' => 'string'
     ];
@@ -57,13 +59,14 @@ class Backups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * status  备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-    * takeUpTime  备份花费时间(单位：minutes)
+    * takeUpTime  备份花费时间（单位：minutes）
     * type  备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
-    * size  备份大小，(单位：MB)
+    * size  备份大小（单位：MB）。
     * datastore  datastore
-    * instanceId  实例ID。
-    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-    * description  备份文件描述信息
+    * instanceId  实例ID，严格匹配UUID规则。
+    * instanceName  实例名称。
+    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
+    * description  备份文件描述信息。
     *
     * @var string[]
     */
@@ -78,6 +81,7 @@ class Backups implements ModelInterface, ArrayAccess
         'size' => 'int64',
         'datastore' => null,
         'instanceId' => null,
+        'instanceName' => null,
         'backupLevel' => null,
         'description' => null
     ];
@@ -110,13 +114,14 @@ class Backups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * status  备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-    * takeUpTime  备份花费时间(单位：minutes)
+    * takeUpTime  备份花费时间（单位：minutes）
     * type  备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
-    * size  备份大小，(单位：MB)
+    * size  备份大小（单位：MB）。
     * datastore  datastore
-    * instanceId  实例ID。
-    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-    * description  备份文件描述信息
+    * instanceId  实例ID，严格匹配UUID规则。
+    * instanceName  实例名称。
+    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
+    * description  备份文件描述信息。
     *
     * @var string[]
     */
@@ -131,6 +136,7 @@ class Backups implements ModelInterface, ArrayAccess
             'size' => 'size',
             'datastore' => 'datastore',
             'instanceId' => 'instance_id',
+            'instanceName' => 'instance_name',
             'backupLevel' => 'backup_level',
             'description' => 'description'
     ];
@@ -142,13 +148,14 @@ class Backups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * status  备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-    * takeUpTime  备份花费时间(单位：minutes)
+    * takeUpTime  备份花费时间（单位：minutes）
     * type  备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
-    * size  备份大小，(单位：MB)
+    * size  备份大小（单位：MB）。
     * datastore  datastore
-    * instanceId  实例ID。
-    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-    * description  备份文件描述信息
+    * instanceId  实例ID，严格匹配UUID规则。
+    * instanceName  实例名称。
+    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
+    * description  备份文件描述信息。
     *
     * @var string[]
     */
@@ -163,6 +170,7 @@ class Backups implements ModelInterface, ArrayAccess
             'size' => 'setSize',
             'datastore' => 'setDatastore',
             'instanceId' => 'setInstanceId',
+            'instanceName' => 'setInstanceName',
             'backupLevel' => 'setBackupLevel',
             'description' => 'setDescription'
     ];
@@ -174,13 +182,14 @@ class Backups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * status  备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-    * takeUpTime  备份花费时间(单位：minutes)
+    * takeUpTime  备份花费时间（单位：minutes）
     * type  备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
-    * size  备份大小，(单位：MB)
+    * size  备份大小（单位：MB）。
     * datastore  datastore
-    * instanceId  实例ID。
-    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-    * description  备份文件描述信息
+    * instanceId  实例ID，严格匹配UUID规则。
+    * instanceName  实例名称。
+    * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
+    * description  备份文件描述信息。
     *
     * @var string[]
     */
@@ -195,6 +204,7 @@ class Backups implements ModelInterface, ArrayAccess
             'size' => 'getSize',
             'datastore' => 'getDatastore',
             'instanceId' => 'getInstanceId',
+            'instanceName' => 'getInstanceName',
             'backupLevel' => 'getBackupLevel',
             'description' => 'getDescription'
     ];
@@ -239,44 +249,10 @@ class Backups implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const STATUS_BUILDING = 'BUILDING';
-    const STATUS_COMPLETED = 'COMPLETED';
-    const STATUS_FAILED = 'FAILED';
-    const STATUS_AVAILABLE = 'AVAILABLE';
-    const TYPE_AUTO = 'auto';
-    const TYPE_MANUAL = 'manual';
     const BACKUP_LEVEL__0 = '0';
     const BACKUP_LEVEL__1 = '1';
     const BACKUP_LEVEL__2 = '2';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_BUILDING,
-            self::STATUS_COMPLETED,
-            self::STATUS_FAILED,
-            self::STATUS_AVAILABLE,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_AUTO,
-            self::TYPE_MANUAL,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -318,6 +294,7 @@ class Backups implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -330,22 +307,6 @@ class Backups implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getBackupLevelAllowableValues();
                 if (!is_null($this->container['backupLevel']) && !in_array($this->container['backupLevel'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -490,7 +451,7 @@ class Backups implements ModelInterface, ArrayAccess
 
     /**
     * Gets takeUpTime
-    *  备份花费时间(单位：minutes)
+    *  备份花费时间（单位：minutes）
     *
     * @return int|null
     */
@@ -502,7 +463,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets takeUpTime
     *
-    * @param int|null $takeUpTime 备份花费时间(单位：minutes)
+    * @param int|null $takeUpTime 备份花费时间（单位：minutes）
     *
     * @return $this
     */
@@ -538,7 +499,7 @@ class Backups implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  备份大小，(单位：MB)
+    *  备份大小（单位：MB）。
     *
     * @return int|null
     */
@@ -550,7 +511,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 备份大小，(单位：MB)
+    * @param int|null $size 备份大小（单位：MB）。
     *
     * @return $this
     */
@@ -586,7 +547,7 @@ class Backups implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  实例ID，严格匹配UUID规则。
     *
     * @return string|null
     */
@@ -598,7 +559,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId 实例ID，严格匹配UUID规则。
     *
     * @return $this
     */
@@ -609,8 +570,32 @@ class Backups implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets instanceName
+    *  实例名称。
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 实例名称。
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
     * Gets backupLevel
-    *  备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
+    *  备份级别。当开启一级备份开关时，返回该参数。
     *
     * @return string|null
     */
@@ -622,7 +607,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel 备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
+    * @param string|null $backupLevel 备份级别。当开启一级备份开关时，返回该参数。
     *
     * @return $this
     */
@@ -634,7 +619,7 @@ class Backups implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  备份文件描述信息
+    *  备份文件描述信息。
     *
     * @return string|null
     */
@@ -646,7 +631,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 备份文件描述信息
+    * @param string|null $description 备份文件描述信息。
     *
     * @return $this
     */

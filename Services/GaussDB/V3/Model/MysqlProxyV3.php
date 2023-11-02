@@ -40,7 +40,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
-    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
+    * subnetId  数据库代理所属的子网ID。
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'switchConnectionPoolTypeEnabled' => 'bool',
             'routeMode' => 'int',
             'balanceRouteModeEnabled' => 'bool',
-            'consistenceMode' => 'string'
+            'consistenceMode' => 'string',
+            'subnetId' => 'string'
     ];
 
     /**
@@ -90,7 +92,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
-    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
+    * subnetId  数据库代理所属的子网ID。
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'switchConnectionPoolTypeEnabled' => null,
         'routeMode' => 'int32',
         'balanceRouteModeEnabled' => null,
-        'consistenceMode' => null
+        'consistenceMode' => null,
+        'subnetId' => null
     ];
 
     /**
@@ -161,7 +165,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
-    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
+    * subnetId  数据库代理所属的子网ID。
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'switchConnectionPoolTypeEnabled' => 'switch_connection_pool_type_enabled',
             'routeMode' => 'route_mode',
             'balanceRouteModeEnabled' => 'balance_route_mode_enabled',
-            'consistenceMode' => 'consistence_mode'
+            'consistenceMode' => 'consistence_mode',
+            'subnetId' => 'subnet_id'
     ];
 
     /**
@@ -211,7 +217,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
-    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
+    * subnetId  数据库代理所属的子网ID。
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'switchConnectionPoolTypeEnabled' => 'setSwitchConnectionPoolTypeEnabled',
             'routeMode' => 'setRouteMode',
             'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled',
-            'consistenceMode' => 'setConsistenceMode'
+            'consistenceMode' => 'setConsistenceMode',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
@@ -261,7 +269,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * switchConnectionPoolTypeEnabled  数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
-    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
+    * subnetId  数据库代理所属的子网ID。
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'switchConnectionPoolTypeEnabled' => 'getSwitchConnectionPoolTypeEnabled',
             'routeMode' => 'getRouteMode',
             'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled',
-            'consistenceMode' => 'getConsistenceMode'
+            'consistenceMode' => 'getConsistenceMode',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -368,6 +378,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['balanceRouteModeEnabled'] = isset($data['balanceRouteModeEnabled']) ? $data['balanceRouteModeEnabled'] : null;
         $this->container['consistenceMode'] = isset($data['consistenceMode']) ? $data['consistenceMode'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -874,7 +885,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets consistenceMode
-    *  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    *  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     *
     * @return string|null
     */
@@ -886,13 +897,37 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     /**
     * Sets consistenceMode
     *
-    * @param string|null $consistenceMode 一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+    * @param string|null $consistenceMode 一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     *
     * @return $this
     */
     public function setConsistenceMode($consistenceMode)
     {
         $this->container['consistenceMode'] = $consistenceMode;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  数据库代理所属的子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 数据库代理所属的子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

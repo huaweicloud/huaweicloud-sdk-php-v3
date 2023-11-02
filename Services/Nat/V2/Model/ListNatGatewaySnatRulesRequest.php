@@ -23,7 +23,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度限制为255。
@@ -31,7 +31,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -55,7 +55,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度限制为255。
@@ -63,7 +63,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度限制为255。
@@ -116,7 +116,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -140,7 +140,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度限制为255。
@@ -148,7 +148,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -172,7 +172,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度限制为255。
@@ -180,7 +180,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  功能说明：SNAT规则的状态。
+    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -308,6 +308,18 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
+            }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
+            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
@@ -317,11 +329,26 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) > 36)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
             }
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) < 1)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['networkId']) && (mb_strlen($this->container['networkId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'networkId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['networkId']) && (mb_strlen($this->container['networkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'networkId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['sourceType']) && ($this->container['sourceType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['sourceType']) && ($this->container['sourceType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -419,7 +446,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpAddress
-    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     *
     * @return string|null
     */
@@ -431,7 +458,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingIpAddress
     *
-    * @param string|null $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+    * @param string|null $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     *
     * @return $this
     */
@@ -611,7 +638,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  功能说明：SNAT规则的状态。
+    *  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return string|null
     */
@@ -623,7 +650,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 功能说明：SNAT规则的状态。
+    * @param string|null $status SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */

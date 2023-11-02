@@ -20,7 +20,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaKey
-    *  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    *  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets quotaKey
     *
-    * @param string[]|null $quotaKey 资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_bindings。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
+    * @param string[]|null $quotaKey 资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。  支持多值查询，查询条件格式：quota_key=xxx&quota_key=xxx。
     *
     * @return $this
     */

@@ -30,12 +30,14 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  功能说明：DNAT规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -55,7 +57,9 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
             'internalServicePortRange' => 'string',
             'externalServicePortRange' => 'string',
             'protocol' => 'string',
-            'createdAt' => 'string'
+            'createdAt' => 'string',
+            'globalEipId' => 'string',
+            'globalEipAddress' => 'string'
     ];
 
     /**
@@ -70,12 +74,14 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  功能说明：DNAT规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -95,7 +101,9 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
         'internalServicePortRange' => null,
         'externalServicePortRange' => null,
         'protocol' => null,
-        'createdAt' => null
+        'createdAt' => null,
+        'globalEipId' => null,
+        'globalEipAddress' => null
     ];
 
     /**
@@ -131,12 +139,14 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  功能说明：DNAT规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -156,7 +166,9 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
             'internalServicePortRange' => 'internal_service_port_range',
             'externalServicePortRange' => 'external_service_port_range',
             'protocol' => 'protocol',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'globalEipId' => 'global_eip_id',
+            'globalEipAddress' => 'global_eip_address'
     ];
 
     /**
@@ -171,12 +183,14 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  功能说明：DNAT规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -196,7 +210,9 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
             'internalServicePortRange' => 'setInternalServicePortRange',
             'externalServicePortRange' => 'setExternalServicePortRange',
             'protocol' => 'setProtocol',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'globalEipId' => 'setGlobalEipId',
+            'globalEipAddress' => 'setGlobalEipAddress'
     ];
 
     /**
@@ -211,12 +227,14 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  功能说明：DNAT规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * globalEipId  全域弹性公网IP的id。
+    * globalEipAddress  全域弹性公网IP的地址。
     *
     * @var string[]
     */
@@ -236,7 +254,9 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
             'internalServicePortRange' => 'getInternalServicePortRange',
             'externalServicePortRange' => 'getExternalServicePortRange',
             'protocol' => 'getProtocol',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'globalEipId' => 'getGlobalEipId',
+            'globalEipAddress' => 'getGlobalEipAddress'
     ];
 
     /**
@@ -353,6 +373,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
         $this->container['externalServicePortRange'] = isset($data['externalServicePortRange']) ? $data['externalServicePortRange'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['globalEipId'] = isset($data['globalEipId']) ? $data['globalEipId'] : null;
+        $this->container['globalEipAddress'] = isset($data['globalEipAddress']) ? $data['globalEipAddress'] : null;
     }
 
     /**
@@ -375,17 +397,32 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
         }
+            if ((mb_strlen($this->container['tenantId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['tenantId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
             if ((mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
+            if ((mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
             }
             if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'portId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 15)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 7)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 7.";
             }
         if ($this->container['internalServicePort'] === null) {
             $invalidProperties[] = "'internalServicePort' can't be null";
@@ -417,6 +454,12 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['floatingIpAddress'] === null) {
             $invalidProperties[] = "'floatingIpAddress' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if ((mb_strlen($this->container['floatingIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
+            }
         if ($this->container['externalServicePort'] === null) {
             $invalidProperties[] = "'externalServicePort' can't be null";
         }
@@ -459,6 +502,24 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['createdAt']) < 1)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['globalEipId'] === null) {
+            $invalidProperties[] = "'globalEipId' can't be null";
+        }
+            if ((mb_strlen($this->container['globalEipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['globalEipId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
+            }
+        if ($this->container['globalEipAddress'] === null) {
+            $invalidProperties[] = "'globalEipAddress' can't be null";
+        }
+            if ((mb_strlen($this->container['globalEipAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be smaller than or equal to 15.";
+            }
+            if ((mb_strlen($this->container['globalEipAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be bigger than or equal to 7.";
             }
         return $invalidProperties;
     }
@@ -716,7 +777,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  功能说明：DNAT规则的状态。
+    *  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return string
     */
@@ -728,7 +789,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 功能说明：DNAT规则的状态。
+    * @param string $status DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */
@@ -855,6 +916,54 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipId
+    *  全域弹性公网IP的id。
+    *
+    * @return string
+    */
+    public function getGlobalEipId()
+    {
+        return $this->container['globalEipId'];
+    }
+
+    /**
+    * Sets globalEipId
+    *
+    * @param string $globalEipId 全域弹性公网IP的id。
+    *
+    * @return $this
+    */
+    public function setGlobalEipId($globalEipId)
+    {
+        $this->container['globalEipId'] = $globalEipId;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipAddress
+    *  全域弹性公网IP的地址。
+    *
+    * @return string
+    */
+    public function getGlobalEipAddress()
+    {
+        return $this->container['globalEipAddress'];
+    }
+
+    /**
+    * Sets globalEipAddress
+    *
+    * @param string $globalEipAddress 全域弹性公网IP的地址。
+    *
+    * @return $this
+    */
+    public function setGlobalEipAddress($globalEipAddress)
+    {
+        $this->container['globalEipAddress'] = $globalEipAddress;
         return $this;
     }
 

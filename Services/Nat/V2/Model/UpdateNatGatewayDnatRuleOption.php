@@ -30,6 +30,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             'internalServicePort' => 'int',
             'externalServicePort' => 'int',
             'internalServicePortRange' => 'string',
-            'externalServicePortRange' => 'string'
+            'externalServicePortRange' => 'string',
+            'globalEipId' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
         'internalServicePort' => 'int32',
         'externalServicePort' => 'int32',
         'internalServicePortRange' => null,
-        'externalServicePortRange' => null
+        'externalServicePortRange' => null,
+        'globalEipId' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             'internalServicePort' => 'internal_service_port',
             'externalServicePort' => 'external_service_port',
             'internalServicePortRange' => 'internal_service_port_range',
-            'externalServicePortRange' => 'external_service_port_range'
+            'externalServicePortRange' => 'external_service_port_range',
+            'globalEipId' => 'global_eip_id'
     ];
 
     /**
@@ -135,6 +141,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             'internalServicePort' => 'setInternalServicePort',
             'externalServicePort' => 'setExternalServicePort',
             'internalServicePortRange' => 'setInternalServicePortRange',
-            'externalServicePortRange' => 'setExternalServicePortRange'
+            'externalServicePortRange' => 'setExternalServicePortRange',
+            'globalEipId' => 'setGlobalEipId'
     ];
 
     /**
@@ -163,6 +171,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             'internalServicePort' => 'getInternalServicePort',
             'externalServicePort' => 'getExternalServicePort',
             'internalServicePortRange' => 'getInternalServicePortRange',
-            'externalServicePortRange' => 'getExternalServicePortRange'
+            'externalServicePortRange' => 'getExternalServicePortRange',
+            'globalEipId' => 'getGlobalEipId'
     ];
 
     /**
@@ -264,6 +274,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
         $this->container['externalServicePort'] = isset($data['externalServicePort']) ? $data['externalServicePort'] : null;
         $this->container['internalServicePortRange'] = isset($data['internalServicePortRange']) ? $data['internalServicePortRange'] : null;
         $this->container['externalServicePortRange'] = isset($data['externalServicePortRange']) ? $data['externalServicePortRange'] : null;
+        $this->container['globalEipId'] = isset($data['globalEipId']) ? $data['globalEipId'] : null;
     }
 
     /**
@@ -277,8 +288,29 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
         if ($this->container['natGatewayId'] === null) {
             $invalidProperties[] = "'natGatewayId' can't be null";
         }
+            if ((mb_strlen($this->container['natGatewayId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['natGatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be bigger than or equal to 36.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 15)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 7)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 7.";
             }
             $allowedValues = $this->getProtocolAllowableValues();
                 if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
@@ -294,6 +326,12 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
+            }
             if (!is_null($this->container['internalServicePort']) && ($this->container['internalServicePort'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'internalServicePort', must be smaller than or equal to 65535.";
             }
@@ -305,6 +343,12 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['externalServicePort']) && ($this->container['externalServicePort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'externalServicePort', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -557,6 +601,30 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     public function setExternalServicePortRange($externalServicePortRange)
     {
         $this->container['externalServicePortRange'] = $externalServicePortRange;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipId
+    *  全域弹性公网IP的id。
+    *
+    * @return string|null
+    */
+    public function getGlobalEipId()
+    {
+        return $this->container['globalEipId'];
+    }
+
+    /**
+    * Sets globalEipId
+    *
+    * @param string|null $globalEipId 全域弹性公网IP的id。
+    *
+    * @return $this
+    */
+    public function setGlobalEipId($globalEipId)
+    {
+        $this->container['globalEipId'] = $globalEipId;
         return $this;
     }
 

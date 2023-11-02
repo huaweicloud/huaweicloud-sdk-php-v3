@@ -219,6 +219,9 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getSpecAllowableValues();
                 if (!is_null($this->container['spec']) && !in_array($this->container['spec'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

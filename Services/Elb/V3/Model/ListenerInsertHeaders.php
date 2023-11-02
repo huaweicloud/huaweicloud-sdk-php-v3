@@ -24,6 +24,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     * xForwardedPort  X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
     * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
     * xForwardedHost  X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
+    * xForwardedProto  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    * xRealIp  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    * xForwardedElbId  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsCertificateId  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsProtocol  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    * xForwardedTlsCipher  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
     *
     * @var string[]
     */
@@ -31,7 +37,13 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
             'xForwardedElbIp' => 'bool',
             'xForwardedPort' => 'bool',
             'xForwardedForPort' => 'bool',
-            'xForwardedHost' => 'bool'
+            'xForwardedHost' => 'bool',
+            'xForwardedProto' => 'bool',
+            'xRealIp' => 'bool',
+            'xForwardedElbId' => 'bool',
+            'xForwardedTlsCertificateId' => 'bool',
+            'xForwardedTlsProtocol' => 'bool',
+            'xForwardedTlsCipher' => 'bool'
     ];
 
     /**
@@ -40,6 +52,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     * xForwardedPort  X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
     * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
     * xForwardedHost  X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
+    * xForwardedProto  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    * xRealIp  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    * xForwardedElbId  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsCertificateId  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsProtocol  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    * xForwardedTlsCipher  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
     *
     * @var string[]
     */
@@ -47,7 +65,13 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
         'xForwardedElbIp' => null,
         'xForwardedPort' => null,
         'xForwardedForPort' => null,
-        'xForwardedHost' => null
+        'xForwardedHost' => null,
+        'xForwardedProto' => null,
+        'xRealIp' => null,
+        'xForwardedElbId' => null,
+        'xForwardedTlsCertificateId' => null,
+        'xForwardedTlsProtocol' => null,
+        'xForwardedTlsCipher' => null
     ];
 
     /**
@@ -77,6 +101,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     * xForwardedPort  X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
     * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
     * xForwardedHost  X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
+    * xForwardedProto  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    * xRealIp  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    * xForwardedElbId  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsCertificateId  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsProtocol  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    * xForwardedTlsCipher  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
     *
     * @var string[]
     */
@@ -84,7 +114,13 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
             'xForwardedElbIp' => 'X-Forwarded-ELB-IP',
             'xForwardedPort' => 'X-Forwarded-Port',
             'xForwardedForPort' => 'X-Forwarded-For-Port',
-            'xForwardedHost' => 'X-Forwarded-Host'
+            'xForwardedHost' => 'X-Forwarded-Host',
+            'xForwardedProto' => 'X-Forwarded-Proto',
+            'xRealIp' => 'X-Real-IP',
+            'xForwardedElbId' => 'X-Forwarded-ELB-ID',
+            'xForwardedTlsCertificateId' => 'X-Forwarded-TLS-Certificate-ID',
+            'xForwardedTlsProtocol' => 'X-Forwarded-TLS-Protocol',
+            'xForwardedTlsCipher' => 'X-Forwarded-TLS-Cipher'
     ];
 
     /**
@@ -93,6 +129,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     * xForwardedPort  X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
     * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
     * xForwardedHost  X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
+    * xForwardedProto  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    * xRealIp  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    * xForwardedElbId  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsCertificateId  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsProtocol  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    * xForwardedTlsCipher  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
     *
     * @var string[]
     */
@@ -100,7 +142,13 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
             'xForwardedElbIp' => 'setXForwardedElbIp',
             'xForwardedPort' => 'setXForwardedPort',
             'xForwardedForPort' => 'setXForwardedForPort',
-            'xForwardedHost' => 'setXForwardedHost'
+            'xForwardedHost' => 'setXForwardedHost',
+            'xForwardedProto' => 'setXForwardedProto',
+            'xRealIp' => 'setXRealIp',
+            'xForwardedElbId' => 'setXForwardedElbId',
+            'xForwardedTlsCertificateId' => 'setXForwardedTlsCertificateId',
+            'xForwardedTlsProtocol' => 'setXForwardedTlsProtocol',
+            'xForwardedTlsCipher' => 'setXForwardedTlsCipher'
     ];
 
     /**
@@ -109,6 +157,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     * xForwardedPort  X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
     * xForwardedForPort  X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
     * xForwardedHost  X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
+    * xForwardedProto  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    * xRealIp  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    * xForwardedElbId  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsCertificateId  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    * xForwardedTlsProtocol  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    * xForwardedTlsCipher  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
     *
     * @var string[]
     */
@@ -116,7 +170,13 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
             'xForwardedElbIp' => 'getXForwardedElbIp',
             'xForwardedPort' => 'getXForwardedPort',
             'xForwardedForPort' => 'getXForwardedForPort',
-            'xForwardedHost' => 'getXForwardedHost'
+            'xForwardedHost' => 'getXForwardedHost',
+            'xForwardedProto' => 'getXForwardedProto',
+            'xRealIp' => 'getXRealIp',
+            'xForwardedElbId' => 'getXForwardedElbId',
+            'xForwardedTlsCertificateId' => 'getXForwardedTlsCertificateId',
+            'xForwardedTlsProtocol' => 'getXForwardedTlsProtocol',
+            'xForwardedTlsCipher' => 'getXForwardedTlsCipher'
     ];
 
     /**
@@ -181,6 +241,12 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
         $this->container['xForwardedPort'] = isset($data['xForwardedPort']) ? $data['xForwardedPort'] : null;
         $this->container['xForwardedForPort'] = isset($data['xForwardedForPort']) ? $data['xForwardedForPort'] : null;
         $this->container['xForwardedHost'] = isset($data['xForwardedHost']) ? $data['xForwardedHost'] : null;
+        $this->container['xForwardedProto'] = isset($data['xForwardedProto']) ? $data['xForwardedProto'] : null;
+        $this->container['xRealIp'] = isset($data['xRealIp']) ? $data['xRealIp'] : null;
+        $this->container['xForwardedElbId'] = isset($data['xForwardedElbId']) ? $data['xForwardedElbId'] : null;
+        $this->container['xForwardedTlsCertificateId'] = isset($data['xForwardedTlsCertificateId']) ? $data['xForwardedTlsCertificateId'] : null;
+        $this->container['xForwardedTlsProtocol'] = isset($data['xForwardedTlsProtocol']) ? $data['xForwardedTlsProtocol'] : null;
+        $this->container['xForwardedTlsCipher'] = isset($data['xForwardedTlsCipher']) ? $data['xForwardedTlsCipher'] : null;
     }
 
     /**
@@ -298,6 +364,150 @@ class ListenerInsertHeaders implements ModelInterface, ArrayAccess
     public function setXForwardedHost($xForwardedHost)
     {
         $this->container['xForwardedHost'] = $xForwardedHost;
+        return $this;
+    }
+
+    /**
+    * Gets xForwardedProto
+    *  X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXForwardedProto()
+    {
+        return $this->container['xForwardedProto'];
+    }
+
+    /**
+    * Sets xForwardedProto
+    *
+    * @param bool|null $xForwardedProto X-Forwarded-Proto设为true可以将负载均衡器实例的监听协议通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXForwardedProto($xForwardedProto)
+    {
+        $this->container['xForwardedProto'] = $xForwardedProto;
+        return $this;
+    }
+
+    /**
+    * Gets xRealIp
+    *  X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXRealIp()
+    {
+        return $this->container['xRealIp'];
+    }
+
+    /**
+    * Sets xRealIp
+    *
+    * @param bool|null $xRealIp X-Real-IP设为true可以将客户端的IP通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXRealIp($xRealIp)
+    {
+        $this->container['xRealIp'] = $xRealIp;
+        return $this;
+    }
+
+    /**
+    * Gets xForwardedElbId
+    *  X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXForwardedElbId()
+    {
+        return $this->container['xForwardedElbId'];
+    }
+
+    /**
+    * Sets xForwardedElbId
+    *
+    * @param bool|null $xForwardedElbId X-Forwarded-ELB-ID设为true可以将负载均衡器实例的ID通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXForwardedElbId($xForwardedElbId)
+    {
+        $this->container['xForwardedElbId'] = $xForwardedElbId;
+        return $this;
+    }
+
+    /**
+    * Gets xForwardedTlsCertificateId
+    *  X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXForwardedTlsCertificateId()
+    {
+        return $this->container['xForwardedTlsCertificateId'];
+    }
+
+    /**
+    * Sets xForwardedTlsCertificateId
+    *
+    * @param bool|null $xForwardedTlsCertificateId X-Forwarded-TLS-Certificate-ID设为true可以将负载均衡器实例的证书ID通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXForwardedTlsCertificateId($xForwardedTlsCertificateId)
+    {
+        $this->container['xForwardedTlsCertificateId'] = $xForwardedTlsCertificateId;
+        return $this;
+    }
+
+    /**
+    * Gets xForwardedTlsProtocol
+    *  X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXForwardedTlsProtocol()
+    {
+        return $this->container['xForwardedTlsProtocol'];
+    }
+
+    /**
+    * Sets xForwardedTlsProtocol
+    *
+    * @param bool|null $xForwardedTlsProtocol X-Forwarded-TLS-Protocol设为true可以将负载均衡器实例的算法协议通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXForwardedTlsProtocol($xForwardedTlsProtocol)
+    {
+        $this->container['xForwardedTlsProtocol'] = $xForwardedTlsProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets xForwardedTlsCipher
+    *  X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
+    *
+    * @return bool|null
+    */
+    public function getXForwardedTlsCipher()
+    {
+        return $this->container['xForwardedTlsCipher'];
+    }
+
+    /**
+    * Sets xForwardedTlsCipher
+    *
+    * @param bool|null $xForwardedTlsCipher X-Forwarded-TLS-Cipher设为true可以将负载均衡器实例的算法套件通过报文的http头带到后端云服务器。
+    *
+    * @return $this
+    */
+    public function setXForwardedTlsCipher($xForwardedTlsCipher)
+    {
+        $this->container['xForwardedTlsCipher'] = $xForwardedTlsCipher;
         return $this;
     }
 

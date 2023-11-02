@@ -23,7 +23,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * connection  并发数。单位：个
     * cps  新建数。单位：个
     * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Mbit/s。
+    * bandwidth  带宽。单位：Kbit/s。
     * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
     * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
     *
@@ -43,7 +43,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * connection  并发数。单位：个
     * cps  新建数。单位：个
     * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Mbit/s。
+    * bandwidth  带宽。单位：Kbit/s。
     * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
     * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
     *
@@ -84,7 +84,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * connection  并发数。单位：个
     * cps  新建数。单位：个
     * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Mbit/s。
+    * bandwidth  带宽。单位：Kbit/s。
     * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
     * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
     *
@@ -104,7 +104,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * connection  并发数。单位：个
     * cps  新建数。单位：个
     * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Mbit/s。
+    * bandwidth  带宽。单位：Kbit/s。
     * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
     * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
     *
@@ -124,7 +124,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * connection  并发数。单位：个
     * cps  新建数。单位：个
     * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Mbit/s。
+    * bandwidth  带宽。单位：Kbit/s。
     * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
     * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
     *
@@ -307,7 +307,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  带宽。单位：Mbit/s。
+    *  带宽。单位：Kbit/s。
     *
     * @return int|null
     */
@@ -319,7 +319,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 带宽。单位：Mbit/s。
+    * @param int|null $bandwidth 带宽。单位：Kbit/s。
     *
     * @return $this
     */

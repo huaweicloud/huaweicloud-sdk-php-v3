@@ -20,14 +20,16 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
-    * instanceId  实例ID。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * instanceId  实例ID，严格匹配UUID规则。
     * backupId  备份ID。
-    * backupType  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * backupType  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
+    * name  备份名称。
+    * instanceName  实例名称。
     *
     * @var string[]
     */
@@ -39,19 +41,23 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
             'offset' => 'string',
             'limit' => 'string',
             'beginTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'name' => 'string',
+            'instanceName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
-    * instanceId  实例ID。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * instanceId  实例ID，严格匹配UUID规则。
     * backupId  备份ID。
-    * backupType  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * backupType  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
+    * name  备份名称。
+    * instanceName  实例名称。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
         'offset' => null,
         'limit' => null,
         'beginTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'name' => null,
+        'instanceName' => null
     ];
 
     /**
@@ -89,14 +97,16 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
-    * instanceId  实例ID。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * instanceId  实例ID，严格匹配UUID规则。
     * backupId  备份ID。
-    * backupType  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * backupType  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
+    * name  备份名称。
+    * instanceName  实例名称。
     *
     * @var string[]
     */
@@ -108,19 +118,23 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'beginTime' => 'begin_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'name' => 'name',
+            'instanceName' => 'instance_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
-    * instanceId  实例ID。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * instanceId  实例ID，严格匹配UUID规则。
     * backupId  备份ID。
-    * backupType  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * backupType  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
+    * name  备份名称。
+    * instanceName  实例名称。
     *
     * @var string[]
     */
@@ -132,19 +146,23 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'beginTime' => 'setBeginTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'name' => 'setName',
+            'instanceName' => 'setInstanceName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
-    * instanceId  实例ID。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * instanceId  实例ID，严格匹配UUID规则。
     * backupId  备份ID。
-    * backupType  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * backupType  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
+    * name  备份名称。
+    * instanceName  实例名称。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'beginTime' => 'getBeginTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'name' => 'getName',
+            'instanceName' => 'getInstanceName'
     ];
 
     /**
@@ -225,6 +245,8 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
     }
 
     /**
@@ -251,7 +273,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言。
+    *  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return string|null
     */
@@ -263,7 +285,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言。
+    * @param string|null $xLanguage 请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return $this
     */
@@ -275,7 +297,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  实例ID，严格匹配UUID规则。
     *
     * @return string|null
     */
@@ -287,7 +309,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId 实例ID，严格匹配UUID规则。
     *
     * @return $this
     */
@@ -323,7 +345,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupType
-    *  备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    *  备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     *
     * @return string|null
     */
@@ -335,7 +357,7 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupType
     *
-    * @param string|null $backupType 备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+    * @param string|null $backupType 备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
     *
     * @return $this
     */
@@ -438,6 +460,54 @@ class ShowGaussMySqlBackupListRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  备份名称。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 备份名称。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  实例名称。
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 实例名称。
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
         return $this;
     }
 

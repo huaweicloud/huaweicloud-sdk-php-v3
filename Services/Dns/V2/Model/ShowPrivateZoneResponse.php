@@ -37,6 +37,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -56,7 +58,9 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'string',
             'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
             'masters' => 'string[]',
-            'routers' => '\HuaweiCloud\SDK\Dns\V2\Model\Router[]'
+            'routers' => '\HuaweiCloud\SDK\Dns\V2\Model\Router[]',
+            'proxyPattern' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -77,6 +81,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -96,7 +102,9 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
         'updatedAt' => null,
         'links' => null,
         'masters' => null,
-        'routers' => null
+        'routers' => null,
+        'proxyPattern' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -138,6 +146,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -157,7 +167,9 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'links' => 'links',
             'masters' => 'masters',
-            'routers' => 'routers'
+            'routers' => 'routers',
+            'proxyPattern' => 'proxy_pattern',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -178,6 +190,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -197,7 +211,9 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'links' => 'setLinks',
             'masters' => 'setMasters',
-            'routers' => 'setRouters'
+            'routers' => 'setRouters',
+            'proxyPattern' => 'setProxyPattern',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -218,6 +234,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -237,7 +255,9 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'links' => 'getLinks',
             'masters' => 'getMasters',
-            'routers' => 'getRouters'
+            'routers' => 'getRouters',
+            'proxyPattern' => 'getProxyPattern',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -314,6 +334,8 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['masters'] = isset($data['masters']) ? $data['masters'] : null;
         $this->container['routers'] = isset($data['routers']) ? $data['routers'] : null;
+        $this->container['proxyPattern'] = isset($data['proxyPattern']) ? $data['proxyPattern'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -719,6 +741,54 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     public function setRouters($routers)
     {
         $this->container['routers'] = $routers;
+        return $this;
+    }
+
+    /**
+    * Gets proxyPattern
+    *  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return string|null
+    */
+    public function getProxyPattern()
+    {
+        return $this->container['proxyPattern'];
+    }
+
+    /**
+    * Sets proxyPattern
+    *
+    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return $this
+    */
+    public function setProxyPattern($proxyPattern)
+    {
+        $this->container['proxyPattern'] = $proxyPattern;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  域名关联的企业项目ID，长度不超过36个字符。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 域名关联的企业项目ID，长度不超过36个字符。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

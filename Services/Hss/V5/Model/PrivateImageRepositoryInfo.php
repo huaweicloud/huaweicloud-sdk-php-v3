@@ -37,7 +37,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * maliciousFileNum  恶意文件数
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
-    * scanable  是否可扫描
+    * scannable  是否可扫描
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -60,7 +60,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'maliciousFileNum' => 'int',
             'domainName' => 'string',
             'sharedStatus' => 'string',
-            'scanable' => 'bool',
+            'scannable' => 'bool',
             'associationImages' => '\HuaweiCloud\SDK\Hss\V5\Model\AssociateImages[]'
     ];
 
@@ -83,7 +83,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * maliciousFileNum  恶意文件数
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
-    * scanable  是否可扫描
+    * scannable  是否可扫描
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -106,7 +106,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         'maliciousFileNum' => 'int32',
         'domainName' => null,
         'sharedStatus' => null,
-        'scanable' => 'int64',
+        'scannable' => 'int64',
         'associationImages' => null
     ];
 
@@ -150,7 +150,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * maliciousFileNum  恶意文件数
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
-    * scanable  是否可扫描
+    * scannable  是否可扫描
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -173,7 +173,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'maliciousFileNum' => 'malicious_file_num',
             'domainName' => 'domain_name',
             'sharedStatus' => 'shared_status',
-            'scanable' => 'scanable',
+            'scannable' => 'scannable',
             'associationImages' => 'association_images'
     ];
 
@@ -196,7 +196,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * maliciousFileNum  恶意文件数
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
-    * scanable  是否可扫描
+    * scannable  是否可扫描
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -219,7 +219,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'maliciousFileNum' => 'setMaliciousFileNum',
             'domainName' => 'setDomainName',
             'sharedStatus' => 'setSharedStatus',
-            'scanable' => 'setScanable',
+            'scannable' => 'setScannable',
             'associationImages' => 'setAssociationImages'
     ];
 
@@ -242,7 +242,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * maliciousFileNum  恶意文件数
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
-    * scanable  是否可扫描
+    * scannable  是否可扫描
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -265,7 +265,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'maliciousFileNum' => 'getMaliciousFileNum',
             'domainName' => 'getDomainName',
             'sharedStatus' => 'getSharedStatus',
-            'scanable' => 'getScanable',
+            'scannable' => 'getScannable',
             'associationImages' => 'getAssociationImages'
     ];
 
@@ -344,7 +344,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         $this->container['maliciousFileNum'] = isset($data['maliciousFileNum']) ? $data['maliciousFileNum'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['sharedStatus'] = isset($data['sharedStatus']) ? $data['sharedStatus'] : null;
-        $this->container['scanable'] = isset($data['scanable']) ? $data['scanable'] : null;
+        $this->container['scannable'] = isset($data['scannable']) ? $data['scannable'] : null;
         $this->container['associationImages'] = isset($data['associationImages']) ? $data['associationImages'] : null;
     }
 
@@ -875,26 +875,26 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets scanable
+    * Gets scannable
     *  是否可扫描
     *
     * @return bool|null
     */
-    public function getScanable()
+    public function getScannable()
     {
-        return $this->container['scanable'];
+        return $this->container['scannable'];
     }
 
     /**
-    * Sets scanable
+    * Sets scannable
     *
-    * @param bool|null $scanable 是否可扫描
+    * @param bool|null $scannable 是否可扫描
     *
     * @return $this
     */
-    public function setScanable($scanable)
+    public function setScannable($scannable)
     {
-        $this->container['scanable'] = $scanable;
+        $this->container['scannable'] = $scannable;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * description  备注信息。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * description  备注信息。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * description  备注信息。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * description  备注信息。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * ip  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * description  备注信息。
     *
     * @var string[]
@@ -194,7 +194,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    *  IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class UpadateIpGroupIpOption implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * @param string $ip IP地址。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     *
     * @return $this
     */

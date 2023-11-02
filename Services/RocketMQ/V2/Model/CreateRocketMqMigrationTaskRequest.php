@@ -24,7 +24,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  body
+    * body  元数据json文件。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
             'overwrite' => 'string',
             'name' => 'string',
             'type' => 'string',
-            'body' => 'string'
+            'body' => 'map[string,object]'
     ];
 
     /**
@@ -42,7 +42,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  body
+    * body  元数据json文件。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  body
+    * body  元数据json文件。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  body
+    * body  元数据json文件。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  body
+    * body  元数据json文件。
     *
     * @var string[]
     */
@@ -372,9 +372,9 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  元数据json文件。
     *
-    * @return string|null
+    * @return map[string,object]|null
     */
     public function getBody()
     {
@@ -384,7 +384,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param map[string,object]|null $body 元数据json文件。
     *
     * @return $this
     */

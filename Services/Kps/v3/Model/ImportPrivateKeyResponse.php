@@ -26,7 +26,7 @@ class ImportPrivateKeyResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'keypair' => '\HuaweiCloud\SDK\Kps\v3\Model\KeypairBean'
+            'keypair' => '\HuaweiCloud\SDK\Kps\v3\Model\ImportPrivateKeyAction'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ImportPrivateKeyResponse implements ModelInterface, ArrayAccess
     * Gets keypair
     *  keypair
     *
-    * @return \HuaweiCloud\SDK\Kps\v3\Model\KeypairBean|null
+    * @return \HuaweiCloud\SDK\Kps\v3\Model\ImportPrivateKeyAction|null
     */
     public function getKeypair()
     {
@@ -187,7 +187,7 @@ class ImportPrivateKeyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keypair
     *
-    * @param \HuaweiCloud\SDK\Kps\v3\Model\KeypairBean|null $keypair keypair
+    * @param \HuaweiCloud\SDK\Kps\v3\Model\ImportPrivateKeyAction|null $keypair keypair
     *
     * @return $this
     */

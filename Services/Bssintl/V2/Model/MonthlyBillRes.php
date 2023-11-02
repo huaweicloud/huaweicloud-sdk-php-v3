@@ -53,6 +53,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * id  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -99,6 +100,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'rootResourceId' => 'string',
             'parentResourceId' => 'string',
             'tradeId' => 'string',
+            'id' => 'string',
             'productSpecDesc' => 'string',
             'subServiceTypeCode' => 'string',
             'subServiceTypeName' => 'string',
@@ -145,6 +147,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * id  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -191,6 +194,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'rootResourceId' => null,
         'parentResourceId' => null,
         'tradeId' => null,
+        'id' => null,
         'productSpecDesc' => null,
         'subServiceTypeCode' => null,
         'subServiceTypeName' => null,
@@ -258,6 +262,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * id  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -304,6 +309,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'rootResourceId' => 'root_resource_id',
             'parentResourceId' => 'parent_resource_id',
             'tradeId' => 'trade_id',
+            'id' => 'id',
             'productSpecDesc' => 'product_spec_desc',
             'subServiceTypeCode' => 'sub_service_type_code',
             'subServiceTypeName' => 'sub_service_type_name',
@@ -350,6 +356,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * id  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -396,6 +403,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'rootResourceId' => 'setRootResourceId',
             'parentResourceId' => 'setParentResourceId',
             'tradeId' => 'setTradeId',
+            'id' => 'setId',
             'productSpecDesc' => 'setProductSpecDesc',
             'subServiceTypeCode' => 'setSubServiceTypeCode',
             'subServiceTypeName' => 'setSubServiceTypeName',
@@ -442,6 +450,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * id  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -488,6 +497,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'rootResourceId' => 'getRootResourceId',
             'parentResourceId' => 'getParentResourceId',
             'tradeId' => 'getTradeId',
+            'id' => 'getId',
             'productSpecDesc' => 'getProductSpecDesc',
             'subServiceTypeCode' => 'getSubServiceTypeCode',
             'subServiceTypeName' => 'getSubServiceTypeName',
@@ -590,6 +600,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['rootResourceId'] = isset($data['rootResourceId']) ? $data['rootResourceId'] : null;
         $this->container['parentResourceId'] = isset($data['parentResourceId']) ? $data['parentResourceId'] : null;
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['productSpecDesc'] = isset($data['productSpecDesc']) ? $data['productSpecDesc'] : null;
         $this->container['subServiceTypeCode'] = isset($data['subServiceTypeCode']) ? $data['subServiceTypeCode'] : null;
         $this->container['subServiceTypeName'] = isset($data['subServiceTypeName']) ? $data['subServiceTypeName'] : null;
@@ -1436,6 +1447,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setTradeId($tradeId)
     {
         $this->container['tradeId'] = $tradeId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

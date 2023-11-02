@@ -25,7 +25,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
-    * nodesReadWeight  数据库节点的读权重设置。
+    * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * subnetId  数据库VPC下的子网ID。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyName' => 'string',
             'proxyMode' => 'string',
             'routeMode' => 'int',
-            'nodesReadWeight' => '\HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]'
+            'nodesReadWeight' => '\HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]',
+            'subnetId' => 'string'
     ];
 
     /**
@@ -45,7 +47,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
-    * nodesReadWeight  数据库节点的读权重设置。
+    * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * subnetId  数据库VPC下的子网ID。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         'proxyName' => 'int32',
         'proxyMode' => 'int32',
         'routeMode' => 'int32',
-        'nodesReadWeight' => null
+        'nodesReadWeight' => null,
+        'subnetId' => null
     ];
 
     /**
@@ -86,7 +90,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
-    * nodesReadWeight  数据库节点的读权重设置。
+    * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * subnetId  数据库VPC下的子网ID。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyName' => 'proxy_name',
             'proxyMode' => 'proxy_mode',
             'routeMode' => 'route_mode',
-            'nodesReadWeight' => 'nodes_read_weight'
+            'nodesReadWeight' => 'nodes_read_weight',
+            'subnetId' => 'subnet_id'
     ];
 
     /**
@@ -106,7 +112,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
-    * nodesReadWeight  数据库节点的读权重设置。
+    * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * subnetId  数据库VPC下的子网ID。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyName' => 'setProxyName',
             'proxyMode' => 'setProxyMode',
             'routeMode' => 'setRouteMode',
-            'nodesReadWeight' => 'setNodesReadWeight'
+            'nodesReadWeight' => 'setNodesReadWeight',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
@@ -126,7 +134,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
-    * nodesReadWeight  数据库节点的读权重设置。
+    * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * subnetId  数据库VPC下的子网ID。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyName' => 'getProxyName',
             'proxyMode' => 'getProxyMode',
             'routeMode' => 'getRouteMode',
-            'nodesReadWeight' => 'getNodesReadWeight'
+            'nodesReadWeight' => 'getNodesReadWeight',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -218,6 +228,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         $this->container['proxyMode'] = isset($data['proxyMode']) ? $data['proxyMode'] : null;
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['nodesReadWeight'] = isset($data['nodesReadWeight']) ? $data['nodesReadWeight'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -378,7 +389,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodesReadWeight
-    *  数据库节点的读权重设置。
+    *  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]|null
     */
@@ -390,13 +401,37 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodesReadWeight
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]|null $nodesReadWeight 数据库节点的读权重设置。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]|null $nodesReadWeight 数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     *
     * @return $this
     */
     public function setNodesReadWeight($nodesReadWeight)
     {
         $this->container['nodesReadWeight'] = $nodesReadWeight;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  数据库VPC下的子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 数据库VPC下的子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

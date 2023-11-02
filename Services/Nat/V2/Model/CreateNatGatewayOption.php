@@ -27,6 +27,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
+    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'description' => 'string',
             'spec' => 'string',
             'enterpriseProjectId' => 'string',
-            'sessionConf' => '\HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration'
+            'sessionConf' => '\HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration',
+            'ngportIpAddress' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
+    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
         'description' => null,
         'spec' => null,
         'enterpriseProjectId' => null,
-        'sessionConf' => null
+        'sessionConf' => null,
+        'ngportIpAddress' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
+    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'description' => 'description',
             'spec' => 'spec',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'sessionConf' => 'session_conf'
+            'sessionConf' => 'session_conf',
+            'ngportIpAddress' => 'ngport_ip_address'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
+    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'spec' => 'setSpec',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'sessionConf' => 'setSessionConf'
+            'sessionConf' => 'setSessionConf',
+            'ngportIpAddress' => 'setNgportIpAddress'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
+    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'spec' => 'getSpec',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'sessionConf' => 'getSessionConf'
+            'sessionConf' => 'getSessionConf',
+            'ngportIpAddress' => 'getNgportIpAddress'
     ];
 
     /**
@@ -233,6 +243,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sessionConf'] = isset($data['sessionConf']) ? $data['sessionConf'] : null;
+        $this->container['ngportIpAddress'] = isset($data['ngportIpAddress']) ? $data['ngportIpAddress'] : null;
     }
 
     /**
@@ -249,14 +260,32 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['routerId'] === null) {
             $invalidProperties[] = "'routerId' can't be null";
         }
+            if ((mb_strlen($this->container['routerId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'routerId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['routerId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'routerId', the character length must be bigger than or equal to 36.";
+            }
         if ($this->container['internalNetworkId'] === null) {
             $invalidProperties[] = "'internalNetworkId' can't be null";
         }
+            if ((mb_strlen($this->container['internalNetworkId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'internalNetworkId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['internalNetworkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'internalNetworkId', the character length must be bigger than or equal to 36.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['spec'] === null) {
             $invalidProperties[] = "'spec' can't be null";
@@ -271,6 +300,15 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
 
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 7.";
             }
         return $invalidProperties;
     }
@@ -451,6 +489,30 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     public function setSessionConf($sessionConf)
     {
         $this->container['sessionConf'] = $sessionConf;
+        return $this;
+    }
+
+    /**
+    * Gets ngportIpAddress
+    *  公网NAT网关私有IP地址，由VPC中子网分配。
+    *
+    * @return string|null
+    */
+    public function getNgportIpAddress()
+    {
+        return $this->container['ngportIpAddress'];
+    }
+
+    /**
+    * Sets ngportIpAddress
+    *
+    * @param string|null $ngportIpAddress 公网NAT网关私有IP地址，由VPC中子网分配。
+    *
+    * @return $this
+    */
+    public function setNgportIpAddress($ngportIpAddress)
+    {
+        $this->container['ngportIpAddress'] = $ngportIpAddress;
         return $this;
     }
 

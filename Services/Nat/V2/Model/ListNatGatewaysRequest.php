@@ -25,7 +25,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * description  公网NAT网关实例的描述，长度限制为255。
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。
+    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
@@ -55,7 +55,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * description  公网NAT网关实例的描述，长度限制为255。
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。
+    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
@@ -106,7 +106,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * description  公网NAT网关实例的描述，长度限制为255。
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。
+    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
@@ -136,7 +136,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * description  公网NAT网关实例的描述，长度限制为255。
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。
+    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
@@ -166,7 +166,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * description  公网NAT网关实例的描述，长度限制为255。
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。
+    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
@@ -317,8 +317,14 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) > 36)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
@@ -486,7 +492,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  公网NAT网关实例的状态。
+    *  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     *
     * @return string[]|null
     */
@@ -498,7 +504,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 公网NAT网关实例的状态。
+    * @param string[]|null $status 公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     *
     * @return $this
     */

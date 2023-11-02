@@ -30,6 +30,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     * tags  根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
+    * chargeMode  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'chargeMode' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     * tags  根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
+    * chargeMode  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'offset' => null,
         'limit' => null,
-        'tags' => null
+        'tags' => null,
+        'chargeMode' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     * tags  根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
+    * chargeMode  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'chargeMode' => 'charge_mode'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     * tags  根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
+    * chargeMode  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'chargeMode' => 'setChargeMode'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100
     * tags  根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
+    * chargeMode  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'chargeMode' => 'getChargeMode'
     ];
 
     /**
@@ -223,6 +233,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const TYPE_HA = 'Ha';
     const DATASTORE_TYPE_GAUSS_DB_FOR_OPEN_GAUSS = 'GaussDB(for openGauss)';
     const DATASTORE_TYPE_GAUSS_DB = 'GaussDB';
+    const CHARGE_MODE_POST_PAID = 'postPaid';
+    const CHARGE_MODE_PRE_PAID = 'prePaid';
     
 
     /**
@@ -248,6 +260,19 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         return [
             self::DATASTORE_TYPE_GAUSS_DB_FOR_OPEN_GAUSS,
             self::DATASTORE_TYPE_GAUSS_DB,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChargeModeAllowableValues()
+    {
+        return [
+            self::CHARGE_MODE_POST_PAID,
+            self::CHARGE_MODE_PRE_PAID,
         ];
     }
 
@@ -277,6 +302,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
     }
 
     /**
@@ -299,6 +325,14 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['datastoreType']) && !in_array($this->container['datastoreType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'datastoreType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getChargeModeAllowableValues();
+                if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chargeMode', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -554,6 +588,30 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets chargeMode
+    *  计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
+    *
+    * @return string|null
+    */
+    public function getChargeMode()
+    {
+        return $this->container['chargeMode'];
+    }
+
+    /**
+    * Sets chargeMode
+    *
+    * @param string|null $chargeMode 计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
+    *
+    * @return $this
+    */
+    public function setChargeMode($chargeMode)
+    {
+        $this->container['chargeMode'] = $chargeMode;
         return $this;
     }
 

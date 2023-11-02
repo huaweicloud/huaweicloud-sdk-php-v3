@@ -21,7 +21,8 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * natGatewayId  公网NAT网关的id。
-    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
+    * globalEipId  全域弹性公网IP的id。
     * description  SNAT规则的描述，长度限制为255。
     *
     * @var string[]
@@ -29,13 +30,15 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'natGatewayId' => 'string',
             'publicIpAddress' => 'string',
+            'globalEipId' => 'string',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * natGatewayId  公网NAT网关的id。
-    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
+    * globalEipId  全域弹性公网IP的id。
     * description  SNAT规则的描述，长度限制为255。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'natGatewayId' => null,
         'publicIpAddress' => null,
+        'globalEipId' => null,
         'description' => null
     ];
 
@@ -70,7 +74,8 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * natGatewayId  公网NAT网关的id。
-    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
+    * globalEipId  全域弹性公网IP的id。
     * description  SNAT规则的描述，长度限制为255。
     *
     * @var string[]
@@ -78,13 +83,15 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'natGatewayId' => 'nat_gateway_id',
             'publicIpAddress' => 'public_ip_address',
+            'globalEipId' => 'global_eip_id',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * natGatewayId  公网NAT网关的id。
-    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
+    * globalEipId  全域弹性公网IP的id。
     * description  SNAT规则的描述，长度限制为255。
     *
     * @var string[]
@@ -92,13 +99,15 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     protected static $setters = [
             'natGatewayId' => 'setNatGatewayId',
             'publicIpAddress' => 'setPublicIpAddress',
+            'globalEipId' => 'setGlobalEipId',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * natGatewayId  公网NAT网关的id。
-    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * publicIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
+    * globalEipId  全域弹性公网IP的id。
     * description  SNAT规则的描述，长度限制为255。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     protected static $getters = [
             'natGatewayId' => 'getNatGatewayId',
             'publicIpAddress' => 'getPublicIpAddress',
+            'globalEipId' => 'getGlobalEipId',
             'description' => 'getDescription'
     ];
 
@@ -169,6 +179,7 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     {
         $this->container['natGatewayId'] = isset($data['natGatewayId']) ? $data['natGatewayId'] : null;
         $this->container['publicIpAddress'] = isset($data['publicIpAddress']) ? $data['publicIpAddress'] : null;
+        $this->container['globalEipId'] = isset($data['globalEipId']) ? $data['globalEipId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -183,8 +194,29 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
         if ($this->container['natGatewayId'] === null) {
             $invalidProperties[] = "'natGatewayId' can't be null";
         }
+            if ((mb_strlen($this->container['natGatewayId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['natGatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['publicIpAddress']) && (mb_strlen($this->container['publicIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'publicIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['publicIpAddress']) && (mb_strlen($this->container['publicIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'publicIpAddress', the character length must be bigger than or equal to 7.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -226,7 +258,7 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpAddress
-    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
     *
     * @return string|null
     */
@@ -238,13 +270,37 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpAddress
     *
-    * @param string|null $publicIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。 约束：弹性公网IP的id个数不能超过20个
+    * @param string|null $publicIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 约束：弹性公网IP的id个数不能超过20个
     *
     * @return $this
     */
     public function setPublicIpAddress($publicIpAddress)
     {
         $this->container['publicIpAddress'] = $publicIpAddress;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipId
+    *  全域弹性公网IP的id。
+    *
+    * @return string|null
+    */
+    public function getGlobalEipId()
+    {
+        return $this->container['globalEipId'];
+    }
+
+    /**
+    * Sets globalEipId
+    *
+    * @param string|null $globalEipId 全域弹性公网IP的id。
+    *
+    * @return $this
+    */
+    public function setGlobalEipId($globalEipId)
+    {
+        $this->container['globalEipId'] = $globalEipId;
         return $this;
     }
 

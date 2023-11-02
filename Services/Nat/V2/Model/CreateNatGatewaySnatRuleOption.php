@@ -26,6 +26,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * description  SNAT规则的描述，长度限制为255。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             'networkId' => 'string',
             'description' => 'string',
             'sourceType' => 'int',
-            'floatingIpId' => 'string'
+            'floatingIpId' => 'string',
+            'globalEipId' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * description  SNAT规则的描述，长度限制为255。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
         'networkId' => null,
         'description' => null,
         'sourceType' => 'int32',
-        'floatingIpId' => null
+        'floatingIpId' => null,
+        'globalEipId' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * description  SNAT规则的描述，长度限制为255。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             'networkId' => 'network_id',
             'description' => 'description',
             'sourceType' => 'source_type',
-            'floatingIpId' => 'floating_ip_id'
+            'floatingIpId' => 'floating_ip_id',
+            'globalEipId' => 'global_eip_id'
     ];
 
     /**
@@ -107,6 +113,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * description  SNAT规则的描述，长度限制为255。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             'networkId' => 'setNetworkId',
             'description' => 'setDescription',
             'sourceType' => 'setSourceType',
-            'floatingIpId' => 'setFloatingIpId'
+            'floatingIpId' => 'setFloatingIpId',
+            'globalEipId' => 'setGlobalEipId'
     ];
 
     /**
@@ -127,6 +135,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * description  SNAT规则的描述，长度限制为255。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
+    * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             'networkId' => 'getNetworkId',
             'description' => 'getDescription',
             'sourceType' => 'getSourceType',
-            'floatingIpId' => 'getFloatingIpId'
+            'floatingIpId' => 'getFloatingIpId',
+            'globalEipId' => 'getGlobalEipId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['floatingIpId'] = isset($data['floatingIpId']) ? $data['floatingIpId'] : null;
+        $this->container['globalEipId'] = isset($data['globalEipId']) ? $data['globalEipId'] : null;
     }
 
     /**
@@ -222,6 +233,12 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['natGatewayId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be bigger than or equal to 36.";
             }
+            if (!is_null($this->container['cidr']) && (mb_strlen($this->container['cidr']) > 18)) {
+                $invalidProperties[] = "invalid value for 'cidr', the character length must be smaller than or equal to 18.";
+            }
+            if (!is_null($this->container['cidr']) && (mb_strlen($this->container['cidr']) < 9)) {
+                $invalidProperties[] = "invalid value for 'cidr', the character length must be bigger than or equal to 9.";
+            }
             if (!is_null($this->container['networkId']) && (mb_strlen($this->container['networkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'networkId', the character length must be smaller than or equal to 36.";
             }
@@ -231,9 +248,30 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sourceType']) && ($this->container['sourceType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['sourceType']) && ($this->container['sourceType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceType', must be bigger than or equal to 0.";
+            }
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
+            if ((mb_strlen($this->container['floatingIpId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['floatingIpId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -389,6 +427,30 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     public function setFloatingIpId($floatingIpId)
     {
         $this->container['floatingIpId'] = $floatingIpId;
+        return $this;
+    }
+
+    /**
+    * Gets globalEipId
+    *  全域弹性公网IP的id。
+    *
+    * @return string|null
+    */
+    public function getGlobalEipId()
+    {
+        return $this->container['globalEipId'];
+    }
+
+    /**
+    * Sets globalEipId
+    *
+    * @param string|null $globalEipId 全域弹性公网IP的id。
+    *
+    * @return $this
+    */
+    public function setGlobalEipId($globalEipId)
+    {
+        $this->container['globalEipId'] = $globalEipId;
         return $this;
     }
 

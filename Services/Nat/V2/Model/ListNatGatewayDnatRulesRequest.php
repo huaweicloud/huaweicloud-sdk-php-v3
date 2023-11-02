@@ -23,7 +23,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
-    * status  Dnat规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * floatingIpId  弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
@@ -59,7 +59,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
-    * status  Dnat规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * floatingIpId  弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
@@ -116,7 +116,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
-    * status  Dnat规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * floatingIpId  弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
@@ -152,7 +152,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
-    * status  Dnat规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * floatingIpId  弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
@@ -188,7 +188,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
-    * status  Dnat规则的状态。
+    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     * floatingIpId  弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
@@ -330,11 +330,17 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['externalServicePort']) && ($this->container['externalServicePort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'externalServicePort', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
             }
-            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 0)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
+            }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
             }
             if (!is_null($this->container['internalServicePort']) && ($this->container['internalServicePort'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'internalServicePort', must be smaller than or equal to 65535.";
@@ -357,11 +363,26 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) > 36)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
             }
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) < 1)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 15)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 7)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 7.";
             }
         return $invalidProperties;
     }
@@ -451,7 +472,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  Dnat规则的状态。
+    *  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return string[]|null
     */
@@ -463,7 +484,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status Dnat规则的状态。
+    * @param string[]|null $status DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */

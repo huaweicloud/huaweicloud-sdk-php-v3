@@ -21,22 +21,26 @@ class DeleteGaussMySqlBackupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'backupId' => 'string',
+            'backupName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'backupId' => null,
+        'backupName' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class DeleteGaussMySqlBackupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID。
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'backupId' => 'backup_id',
+            'backupName' => 'backup_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID。
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'backupId' => 'setBackupId',
+            'backupName' => 'setBackupName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID。
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'backupId' => 'getBackupId',
+            'backupName' => 'getBackupName'
     ];
 
     /**
@@ -148,7 +158,8 @@ class DeleteGaussMySqlBackupResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
+        $this->container['backupName'] = isset($data['backupName']) ? $data['backupName'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class DeleteGaussMySqlBackupResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets jobId
-    *  任务ID。
+    * Gets backupId
+    *  备份ID。
     *
     * @return string|null
     */
-    public function getJobId()
+    public function getBackupId()
     {
-        return $this->container['jobId'];
+        return $this->container['backupId'];
     }
 
     /**
-    * Sets jobId
+    * Sets backupId
     *
-    * @param string|null $jobId 任务ID。
+    * @param string|null $backupId 备份ID。
     *
     * @return $this
     */
-    public function setJobId($jobId)
+    public function setBackupId($backupId)
     {
-        $this->container['jobId'] = $jobId;
+        $this->container['backupId'] = $backupId;
+        return $this;
+    }
+
+    /**
+    * Gets backupName
+    *  备份名称。
+    *
+    * @return string|null
+    */
+    public function getBackupName()
+    {
+        return $this->container['backupName'];
+    }
+
+    /**
+    * Sets backupName
+    *
+    * @param string|null $backupName 备份名称。
+    *
+    * @return $this
+    */
+    public function setBackupName($backupName)
+    {
+        $this->container['backupName'] = $backupName;
         return $this;
     }
 
