@@ -20,28 +20,24 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainSetId  域名组id
     * domainName  域名
     * description  描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domainSetId' => 'string',
             'domainName' => 'string',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainSetId  域名组id
     * domainName  域名
     * description  描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domainSetId' => null,
         'domainName' => null,
         'description' => null
     ];
@@ -69,42 +65,36 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainSetId  域名组id
     * domainName  域名
     * description  描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domainSetId' => 'domain_set_id',
             'domainName' => 'domain_name',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainSetId  域名组id
     * domainName  域名
     * description  描述
     *
     * @var string[]
     */
     protected static $setters = [
-            'domainSetId' => 'setDomainSetId',
             'domainName' => 'setDomainName',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainSetId  域名组id
     * domainName  域名
     * description  描述
     *
     * @var string[]
     */
     protected static $getters = [
-            'domainSetId' => 'getDomainSetId',
             'domainName' => 'getDomainName',
             'description' => 'getDescription'
     ];
@@ -167,7 +157,6 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domainSetId'] = isset($data['domainSetId']) ? $data['domainSetId'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -192,30 +181,6 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets domainSetId
-    *  域名组id
-    *
-    * @return string|null
-    */
-    public function getDomainSetId()
-    {
-        return $this->container['domainSetId'];
-    }
-
-    /**
-    * Sets domainSetId
-    *
-    * @param string|null $domainSetId 域名组id
-    *
-    * @return $this
-    */
-    public function setDomainSetId($domainSetId)
-    {
-        $this->container['domainSetId'] = $domainSetId;
-        return $this;
     }
 
     /**

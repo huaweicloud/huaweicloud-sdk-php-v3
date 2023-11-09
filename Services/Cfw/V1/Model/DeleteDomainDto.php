@@ -21,28 +21,24 @@ class DeleteDomainDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainAddressIds  域名地址组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'objectId' => 'string',
-            'domainSetId' => 'string',
             'domainAddressIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainAddressIds  域名地址组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'objectId' => null,
-        'domainSetId' => null,
         'domainAddressIds' => null
     ];
 
@@ -70,42 +66,36 @@ class DeleteDomainDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainAddressIds  域名地址组
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'objectId' => 'object_id',
-            'domainSetId' => 'domain_set_id',
             'domainAddressIds' => 'domain_address_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainAddressIds  域名地址组
     *
     * @var string[]
     */
     protected static $setters = [
             'objectId' => 'setObjectId',
-            'domainSetId' => 'setDomainSetId',
             'domainAddressIds' => 'setDomainAddressIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainAddressIds  域名地址组
     *
     * @var string[]
     */
     protected static $getters = [
             'objectId' => 'getObjectId',
-            'domainSetId' => 'getDomainSetId',
             'domainAddressIds' => 'getDomainAddressIds'
     ];
 
@@ -168,7 +158,6 @@ class DeleteDomainDto implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
-        $this->container['domainSetId'] = isset($data['domainSetId']) ? $data['domainSetId'] : null;
         $this->container['domainAddressIds'] = isset($data['domainAddressIds']) ? $data['domainAddressIds'] : null;
     }
 
@@ -182,9 +171,6 @@ class DeleteDomainDto implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
-        }
-        if ($this->container['domainSetId'] === null) {
-            $invalidProperties[] = "'domainSetId' can't be null";
         }
         if ($this->container['domainAddressIds'] === null) {
             $invalidProperties[] = "'domainAddressIds' can't be null";
@@ -224,30 +210,6 @@ class DeleteDomainDto implements ModelInterface, ArrayAccess
     public function setObjectId($objectId)
     {
         $this->container['objectId'] = $objectId;
-        return $this;
-    }
-
-    /**
-    * Gets domainSetId
-    *  域名组id
-    *
-    * @return string
-    */
-    public function getDomainSetId()
-    {
-        return $this->container['domainSetId'];
-    }
-
-    /**
-    * Sets domainSetId
-    *
-    * @param string $domainSetId 域名组id
-    *
-    * @return $this
-    */
-    public function setDomainSetId($domainSetId)
-    {
-        $this->container['domainSetId'] = $domainSetId;
         return $this;
     }
 

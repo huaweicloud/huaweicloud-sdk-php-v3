@@ -59,6 +59,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * tags  标签列表，每个标签用<key,value>键值对表示。
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * originGraphSizeTypeIndex  图的初始规格。该参数从2.3.15版本后开始支持。
+    * expandTime  图扩副本的时间。
+    * resizeTime  图扩容的时间。
+    * enableMultiLabel  是否启用多标签。
     *
     * @var string[]
     */
@@ -101,7 +105,11 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'bool',
             'tags' => '\HuaweiCloud\SDK\Ges\V2\Model\ListGraphsRespTags[]',
             'productType' => 'string',
-            'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\ListGraphsRespVertexIdType'
+            'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\ListGraphsRespVertexIdType',
+            'originGraphSizeTypeIndex' => 'string',
+            'expandTime' => 'string',
+            'resizeTime' => 'string',
+            'enableMultiLabel' => 'bool'
     ];
 
     /**
@@ -145,6 +153,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * tags  标签列表，每个标签用<key,value>键值对表示。
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * originGraphSizeTypeIndex  图的初始规格。该参数从2.3.15版本后开始支持。
+    * expandTime  图扩副本的时间。
+    * resizeTime  图扩容的时间。
+    * enableMultiLabel  是否启用多标签。
     *
     * @var string[]
     */
@@ -187,7 +199,11 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         'enableHttps' => null,
         'tags' => null,
         'productType' => null,
-        'vertexIdType' => null
+        'vertexIdType' => null,
+        'originGraphSizeTypeIndex' => null,
+        'expandTime' => null,
+        'resizeTime' => null,
+        'enableMultiLabel' => null
     ];
 
     /**
@@ -252,6 +268,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * tags  标签列表，每个标签用<key,value>键值对表示。
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * originGraphSizeTypeIndex  图的初始规格。该参数从2.3.15版本后开始支持。
+    * expandTime  图扩副本的时间。
+    * resizeTime  图扩容的时间。
+    * enableMultiLabel  是否启用多标签。
     *
     * @var string[]
     */
@@ -294,7 +314,11 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'enable_https',
             'tags' => 'tags',
             'productType' => 'product_type',
-            'vertexIdType' => 'vertex_id_type'
+            'vertexIdType' => 'vertex_id_type',
+            'originGraphSizeTypeIndex' => 'origin_graph_size_type_index',
+            'expandTime' => 'expand_time',
+            'resizeTime' => 'resize_time',
+            'enableMultiLabel' => 'enable_multi_label'
     ];
 
     /**
@@ -338,6 +362,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * tags  标签列表，每个标签用<key,value>键值对表示。
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * originGraphSizeTypeIndex  图的初始规格。该参数从2.3.15版本后开始支持。
+    * expandTime  图扩副本的时间。
+    * resizeTime  图扩容的时间。
+    * enableMultiLabel  是否启用多标签。
     *
     * @var string[]
     */
@@ -380,7 +408,11 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'setEnableHttps',
             'tags' => 'setTags',
             'productType' => 'setProductType',
-            'vertexIdType' => 'setVertexIdType'
+            'vertexIdType' => 'setVertexIdType',
+            'originGraphSizeTypeIndex' => 'setOriginGraphSizeTypeIndex',
+            'expandTime' => 'setExpandTime',
+            'resizeTime' => 'setResizeTime',
+            'enableMultiLabel' => 'setEnableMultiLabel'
     ];
 
     /**
@@ -424,6 +456,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * tags  标签列表，每个标签用<key,value>键值对表示。
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * originGraphSizeTypeIndex  图的初始规格。该参数从2.3.15版本后开始支持。
+    * expandTime  图扩副本的时间。
+    * resizeTime  图扩容的时间。
+    * enableMultiLabel  是否启用多标签。
     *
     * @var string[]
     */
@@ -466,7 +502,11 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'getEnableHttps',
             'tags' => 'getTags',
             'productType' => 'getProductType',
-            'vertexIdType' => 'getVertexIdType'
+            'vertexIdType' => 'getVertexIdType',
+            'originGraphSizeTypeIndex' => 'getOriginGraphSizeTypeIndex',
+            'expandTime' => 'getExpandTime',
+            'resizeTime' => 'getResizeTime',
+            'enableMultiLabel' => 'getEnableMultiLabel'
     ];
 
     /**
@@ -566,6 +606,10 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['vertexIdType'] = isset($data['vertexIdType']) ? $data['vertexIdType'] : null;
+        $this->container['originGraphSizeTypeIndex'] = isset($data['originGraphSizeTypeIndex']) ? $data['originGraphSizeTypeIndex'] : null;
+        $this->container['expandTime'] = isset($data['expandTime']) ? $data['expandTime'] : null;
+        $this->container['resizeTime'] = isset($data['resizeTime']) ? $data['resizeTime'] : null;
+        $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
     }
 
     /**
@@ -1523,6 +1567,102 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     public function setVertexIdType($vertexIdType)
     {
         $this->container['vertexIdType'] = $vertexIdType;
+        return $this;
+    }
+
+    /**
+    * Gets originGraphSizeTypeIndex
+    *  图的初始规格。该参数从2.3.15版本后开始支持。
+    *
+    * @return string|null
+    */
+    public function getOriginGraphSizeTypeIndex()
+    {
+        return $this->container['originGraphSizeTypeIndex'];
+    }
+
+    /**
+    * Sets originGraphSizeTypeIndex
+    *
+    * @param string|null $originGraphSizeTypeIndex 图的初始规格。该参数从2.3.15版本后开始支持。
+    *
+    * @return $this
+    */
+    public function setOriginGraphSizeTypeIndex($originGraphSizeTypeIndex)
+    {
+        $this->container['originGraphSizeTypeIndex'] = $originGraphSizeTypeIndex;
+        return $this;
+    }
+
+    /**
+    * Gets expandTime
+    *  图扩副本的时间。
+    *
+    * @return string|null
+    */
+    public function getExpandTime()
+    {
+        return $this->container['expandTime'];
+    }
+
+    /**
+    * Sets expandTime
+    *
+    * @param string|null $expandTime 图扩副本的时间。
+    *
+    * @return $this
+    */
+    public function setExpandTime($expandTime)
+    {
+        $this->container['expandTime'] = $expandTime;
+        return $this;
+    }
+
+    /**
+    * Gets resizeTime
+    *  图扩容的时间。
+    *
+    * @return string|null
+    */
+    public function getResizeTime()
+    {
+        return $this->container['resizeTime'];
+    }
+
+    /**
+    * Sets resizeTime
+    *
+    * @param string|null $resizeTime 图扩容的时间。
+    *
+    * @return $this
+    */
+    public function setResizeTime($resizeTime)
+    {
+        $this->container['resizeTime'] = $resizeTime;
+        return $this;
+    }
+
+    /**
+    * Gets enableMultiLabel
+    *  是否启用多标签。
+    *
+    * @return bool|null
+    */
+    public function getEnableMultiLabel()
+    {
+        return $this->container['enableMultiLabel'];
+    }
+
+    /**
+    * Sets enableMultiLabel
+    *
+    * @param bool|null $enableMultiLabel 是否启用多标签。
+    *
+    * @return $this
+    */
+    public function setEnableMultiLabel($enableMultiLabel)
+    {
+        $this->container['enableMultiLabel'] = $enableMultiLabel;
         return $this;
     }
 

@@ -21,6 +21,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * body  body
     *
@@ -28,6 +29,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
+            'setId' => 'string',
             'enterpriseProjectId' => 'string',
             'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\DeleteDomainDto'
     ];
@@ -35,6 +37,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * body  body
     *
@@ -42,6 +45,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'projectId' => null,
+        'setId' => null,
         'enterpriseProjectId' => null,
         'body' => null
     ];
@@ -70,6 +74,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * body  body
     *
@@ -77,6 +82,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
+            'setId' => 'set_id',
             'enterpriseProjectId' => 'enterprise_project_id',
             'body' => 'body'
     ];
@@ -84,6 +90,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * body  body
     *
@@ -91,6 +98,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
+            'setId' => 'setSetId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'body' => 'setBody'
     ];
@@ -98,6 +106,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * body  body
     *
@@ -105,6 +114,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
+            'setId' => 'getSetId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'body' => 'getBody'
     ];
@@ -168,6 +178,7 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -182,6 +193,9 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
+        }
+        if ($this->container['setId'] === null) {
+            $invalidProperties[] = "'setId' can't be null";
         }
         return $invalidProperties;
     }
@@ -218,6 +232,30 @@ class DeleteDomainsRequest implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets setId
+    *  域名组id
+    *
+    * @return string
+    */
+    public function getSetId()
+    {
+        return $this->container['setId'];
+    }
+
+    /**
+    * Sets setId
+    *
+    * @param string $setId 域名组id
+    *
+    * @return $this
+    */
+    public function setSetId($setId)
+    {
+        $this->container['setId'] = $setId;
         return $this;
     }
 

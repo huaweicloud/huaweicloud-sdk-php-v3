@@ -39,6 +39,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableHttps  是否开启安全模式，开启安全模式会对性能有较大影响
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * enableMultiLabel  是否启用多标签
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'cryptAlgorithm' => 'string',
             'enableHttps' => 'bool',
             'productType' => 'string',
-            'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\CreateGraphReqGraphVertexIdType'
+            'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\CreateGraphReqGraphVertexIdType',
+            'enableMultiLabel' => 'bool'
     ];
 
     /**
@@ -85,6 +87,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableHttps  是否开启安全模式，开启安全模式会对性能有较大影响
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * enableMultiLabel  是否启用多标签
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         'cryptAlgorithm' => null,
         'enableHttps' => null,
         'productType' => null,
-        'vertexIdType' => null
+        'vertexIdType' => null,
+        'enableMultiLabel' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableHttps  是否开启安全模式，开启安全模式会对性能有较大影响
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * enableMultiLabel  是否启用多标签
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'cryptAlgorithm' => 'crypt_algorithm',
             'enableHttps' => 'enable_https',
             'productType' => 'product_type',
-            'vertexIdType' => 'vertex_id_type'
+            'vertexIdType' => 'vertex_id_type',
+            'enableMultiLabel' => 'enable_multi_label'
     ];
 
     /**
@@ -198,6 +204,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableHttps  是否开启安全模式，开启安全模式会对性能有较大影响
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * enableMultiLabel  是否启用多标签
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'cryptAlgorithm' => 'setCryptAlgorithm',
             'enableHttps' => 'setEnableHttps',
             'productType' => 'setProductType',
-            'vertexIdType' => 'setVertexIdType'
+            'vertexIdType' => 'setVertexIdType',
+            'enableMultiLabel' => 'setEnableMultiLabel'
     ];
 
     /**
@@ -244,6 +252,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableHttps  是否开启安全模式，开启安全模式会对性能有较大影响
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
+    * enableMultiLabel  是否启用多标签
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'cryptAlgorithm' => 'getCryptAlgorithm',
             'enableHttps' => 'getEnableHttps',
             'productType' => 'getProductType',
-            'vertexIdType' => 'getVertexIdType'
+            'vertexIdType' => 'getVertexIdType',
+            'enableMultiLabel' => 'getEnableMultiLabel'
     ];
 
     /**
@@ -346,6 +356,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         $this->container['enableHttps'] = isset($data['enableHttps']) ? $data['enableHttps'] : null;
         $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['vertexIdType'] = isset($data['vertexIdType']) ? $data['vertexIdType'] : null;
+        $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
     }
 
     /**
@@ -844,6 +855,30 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     public function setVertexIdType($vertexIdType)
     {
         $this->container['vertexIdType'] = $vertexIdType;
+        return $this;
+    }
+
+    /**
+    * Gets enableMultiLabel
+    *  是否启用多标签
+    *
+    * @return bool|null
+    */
+    public function getEnableMultiLabel()
+    {
+        return $this->container['enableMultiLabel'];
+    }
+
+    /**
+    * Sets enableMultiLabel
+    *
+    * @param bool|null $enableMultiLabel 是否启用多标签
+    *
+    * @return $this
+    */
+    public function setEnableMultiLabel($enableMultiLabel)
+    {
+        $this->container['enableMultiLabel'] = $enableMultiLabel;
         return $this;
     }
 

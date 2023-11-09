@@ -31,10 +31,11 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
+    * serviceNetwork  serviceNetwork
     * authentication  authentication
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  控制节点的高级配置
-    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     * clusterTags  集群资源标签
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
@@ -56,6 +57,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'hostNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\HostNetwork',
             'containerNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ContainerNetwork',
             'eniNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\EniNetwork',
+            'serviceNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ServiceNetwork',
             'authentication' => '\HuaweiCloud\SDK\Cce\V3\Model\Authentication',
             'billingMode' => 'int',
             'masters' => '\HuaweiCloud\SDK\Cce\V3\Model\MasterSpec[]',
@@ -81,10 +83,11 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
+    * serviceNetwork  serviceNetwork
     * authentication  authentication
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  控制节点的高级配置
-    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     * clusterTags  集群资源标签
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
@@ -106,6 +109,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'hostNetwork' => null,
         'containerNetwork' => null,
         'eniNetwork' => null,
+        'serviceNetwork' => null,
         'authentication' => null,
         'billingMode' => 'int32',
         'masters' => null,
@@ -152,10 +156,11 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
+    * serviceNetwork  serviceNetwork
     * authentication  authentication
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  控制节点的高级配置
-    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     * clusterTags  集群资源标签
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
@@ -177,6 +182,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'hostNetwork' => 'hostNetwork',
             'containerNetwork' => 'containerNetwork',
             'eniNetwork' => 'eniNetwork',
+            'serviceNetwork' => 'serviceNetwork',
             'authentication' => 'authentication',
             'billingMode' => 'billingMode',
             'masters' => 'masters',
@@ -202,10 +208,11 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
+    * serviceNetwork  serviceNetwork
     * authentication  authentication
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  控制节点的高级配置
-    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     * clusterTags  集群资源标签
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
@@ -227,6 +234,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'hostNetwork' => 'setHostNetwork',
             'containerNetwork' => 'setContainerNetwork',
             'eniNetwork' => 'setEniNetwork',
+            'serviceNetwork' => 'setServiceNetwork',
             'authentication' => 'setAuthentication',
             'billingMode' => 'setBillingMode',
             'masters' => 'setMasters',
@@ -252,10 +260,11 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * hostNetwork  hostNetwork
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
+    * serviceNetwork  serviceNetwork
     * authentication  authentication
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  控制节点的高级配置
-    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     * clusterTags  集群资源标签
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
@@ -277,6 +286,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'hostNetwork' => 'getHostNetwork',
             'containerNetwork' => 'getContainerNetwork',
             'eniNetwork' => 'getEniNetwork',
+            'serviceNetwork' => 'getServiceNetwork',
             'authentication' => 'getAuthentication',
             'billingMode' => 'getBillingMode',
             'masters' => 'getMasters',
@@ -403,6 +413,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['hostNetwork'] = isset($data['hostNetwork']) ? $data['hostNetwork'] : null;
         $this->container['containerNetwork'] = isset($data['containerNetwork']) ? $data['containerNetwork'] : null;
         $this->container['eniNetwork'] = isset($data['eniNetwork']) ? $data['eniNetwork'] : null;
+        $this->container['serviceNetwork'] = isset($data['serviceNetwork']) ? $data['serviceNetwork'] : null;
         $this->container['authentication'] = isset($data['authentication']) ? $data['authentication'] : null;
         $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
         $this->container['masters'] = isset($data['masters']) ? $data['masters'] : null;
@@ -744,6 +755,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets serviceNetwork
+    *  serviceNetwork
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ServiceNetwork|null
+    */
+    public function getServiceNetwork()
+    {
+        return $this->container['serviceNetwork'];
+    }
+
+    /**
+    * Sets serviceNetwork
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ServiceNetwork|null $serviceNetwork serviceNetwork
+    *
+    * @return $this
+    */
+    public function setServiceNetwork($serviceNetwork)
+    {
+        $this->container['serviceNetwork'] = $serviceNetwork;
+        return $this;
+    }
+
+    /**
     * Gets authentication
     *  authentication
     *
@@ -817,7 +852,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets kubernetesSvcIpRange
-    *  服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    *  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     *
     * @return string|null
     */
@@ -829,7 +864,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Sets kubernetesSvcIpRange
     *
-    * @param string|null $kubernetesSvcIpRange 服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+    * @param string|null $kubernetesSvcIpRange 服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
     *
     * @return $this
     */

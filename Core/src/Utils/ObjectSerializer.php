@@ -121,7 +121,6 @@ class ObjectSerializer
                     $deserialized[$key] = self::deserialize($value, $subClassType, null);
                 }
             }
-            return $deserialized;
         } elseif (0 === strcasecmp(substr($responseType, -2), '[]')) {
             $response = is_string($response) ? json_decode($response) : $response;
             $subClassType = substr($responseType, 0, -2);
@@ -136,11 +135,7 @@ class ObjectSerializer
 
             return $response;
         } elseif ('\DateTime' === $responseType) {
-            if (!empty($response)) {
-                return new \DateTime($response);
-            } else {
-                return null;
-            }
+            return self::getDateTime($response);
         } elseif (in_array($responseType, ObjectSerializer::$primitiveTypes, true)) {
             settype($response, $responseType);
 
@@ -169,6 +164,27 @@ class ObjectSerializer
             }
 
             return $instance;
+        }
+    }
+
+    /**
+     * @param $dateStr
+     * @return \DateTime|null
+     */
+    private static function getDateTime($dateStr): ?\DateTime
+    {
+        if (empty($dateStr)) {
+            return null;
+        }
+        $dateTime = strstr($dateStr, ".", true);
+        try {
+            // should case to dateTime type in exception handler
+            if ($dateTime == false) {
+                return new \DateTime($dateStr);
+            }
+            return new \DateTime($dateTime);
+        } catch (\Exception $e) {
+            return null;
         }
     }
 }

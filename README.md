@@ -58,8 +58,9 @@ use HuaweiCloud\SDK\Iam\V3\IamClient;
 use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
 use Monolog\Logger;
 
-$ak = "{your ak string}";
-$sk = "{your sk string}";
+//Do not hard-code authentication information into the code, as this may pose a security risk
+$ak = getenv("HUAWEICLOUD_SDK_AK");
+$sk = getenv("HUAWEICLOUD_SDK_SK");
 $endpoint = "{your endpoint}";
 $domainId = "{your domain id}";
 

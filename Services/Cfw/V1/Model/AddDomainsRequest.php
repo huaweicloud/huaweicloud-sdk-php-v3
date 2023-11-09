@@ -21,6 +21,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * body  body
@@ -29,6 +30,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
+            'setId' => 'string',
             'enterpriseProjectId' => 'string',
             'fwInstanceId' => 'string',
             'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddDomainListDto'
@@ -37,6 +39,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * body  body
@@ -45,6 +48,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'projectId' => null,
+        'setId' => null,
         'enterpriseProjectId' => null,
         'fwInstanceId' => null,
         'body' => null
@@ -74,6 +78,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * body  body
@@ -82,6 +87,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
+            'setId' => 'set_id',
             'enterpriseProjectId' => 'enterprise_project_id',
             'fwInstanceId' => 'fw_instance_id',
             'body' => 'body'
@@ -90,6 +96,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * body  body
@@ -98,6 +105,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
+            'setId' => 'setSetId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'fwInstanceId' => 'setFwInstanceId',
             'body' => 'setBody'
@@ -106,6 +114,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
+    * setId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * body  body
@@ -114,6 +123,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
+            'setId' => 'getSetId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'fwInstanceId' => 'getFwInstanceId',
             'body' => 'getBody'
@@ -178,6 +188,7 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -193,6 +204,9 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
+        }
+        if ($this->container['setId'] === null) {
+            $invalidProperties[] = "'setId' can't be null";
         }
         return $invalidProperties;
     }
@@ -229,6 +243,30 @@ class AddDomainsRequest implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets setId
+    *  域名组id
+    *
+    * @return string
+    */
+    public function getSetId()
+    {
+        return $this->container['setId'];
+    }
+
+    /**
+    * Sets setId
+    *
+    * @param string $setId 域名组id
+    *
+    * @return $this
+    */
+    public function setSetId($setId)
+    {
+        $this->container['setId'] = $setId;
         return $this;
     }
 

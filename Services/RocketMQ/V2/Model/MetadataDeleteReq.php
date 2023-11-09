@@ -66,7 +66,7 @@ class MetadataDeleteReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskIds' => 'taskIds'
+            'taskIds' => 'task_ids'
     ];
 
     /**

@@ -21,6 +21,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * categories  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
@@ -30,6 +31,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'eventType' => 'string',
+            'categories' => 'string[]',
             'glossaryNames' => 'string[]',
             'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\TextDetectionDataReq',
             'whiteGlossaryNames' => 'string[]',
@@ -39,6 +41,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * categories  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
@@ -48,6 +51,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'eventType' => null,
+        'categories' => null,
         'glossaryNames' => null,
         'data' => null,
         'whiteGlossaryNames' => null,
@@ -78,6 +82,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * categories  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
@@ -87,6 +92,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'eventType' => 'event_type',
+            'categories' => 'categories',
             'glossaryNames' => 'glossary_names',
             'data' => 'data',
             'whiteGlossaryNames' => 'white_glossary_names',
@@ -96,6 +102,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * categories  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
@@ -105,6 +112,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'eventType' => 'setEventType',
+            'categories' => 'setCategories',
             'glossaryNames' => 'setGlossaryNames',
             'data' => 'setData',
             'whiteGlossaryNames' => 'setWhiteGlossaryNames',
@@ -114,6 +122,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
+    * categories  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
     * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
     * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
@@ -123,6 +132,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'eventType' => 'getEventType',
+            'categories' => 'getCategories',
             'glossaryNames' => 'getGlossaryNames',
             'data' => 'getData',
             'whiteGlossaryNames' => 'getWhiteGlossaryNames',
@@ -188,6 +198,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['glossaryNames'] = isset($data['glossaryNames']) ? $data['glossaryNames'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['whiteGlossaryNames'] = isset($data['whiteGlossaryNames']) ? $data['whiteGlossaryNames'] : null;
@@ -240,6 +251,30 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets categories
+    *  文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
+    *
+    * @return string[]|null
+    */
+    public function getCategories()
+    {
+        return $this->container['categories'];
+    }
+
+    /**
+    * Sets categories
+    *
+    * @param string[]|null $categories 文本审核场景，可选值如下： terrorism: 暴恐 porn: 色情 ban: 违禁 abuse: 辱骂 ad: 广告 当categories缺省或为空时，默认审核terrorism、porn、ban、abuse、ad。
+    *
+    * @return $this
+    */
+    public function setCategories($categories)
+    {
+        $this->container['categories'] = $categories;
         return $this;
     }
 

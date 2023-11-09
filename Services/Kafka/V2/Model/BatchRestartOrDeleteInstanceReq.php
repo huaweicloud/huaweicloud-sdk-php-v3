@@ -78,7 +78,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'allFailure'
+            'allFailure' => 'all_failure'
     ];
 
     /**

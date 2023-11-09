@@ -21,21 +21,25 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
+    * language  支持检测的文本语言
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'text' => 'string'
+            'text' => 'string',
+            'language' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
+    * language  支持检测的文本语言
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'text' => null
+        'text' => null,
+        'language' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
+    * language  支持检测的文本语言
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'text' => 'text'
+            'text' => 'text',
+            'language' => 'language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
+    * language  支持检测的文本语言
     *
     * @var string[]
     */
     protected static $setters = [
-            'text' => 'setText'
+            'text' => 'setText',
+            'language' => 'setLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过1500个字符时，只检测前1500个字符。
+    * language  支持检测的文本语言
     *
     * @var string[]
     */
     protected static $getters = [
-            'text' => 'getText'
+            'text' => 'getText',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -129,7 +139,20 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_ZH = 'zh';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_ZH,
+        ];
+    }
 
 
     /**
@@ -148,6 +171,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -167,6 +191,14 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['text']) < 1)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -202,6 +234,30 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     public function setText($text)
     {
         $this->container['text'] = $text;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  支持检测的文本语言
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 支持检测的文本语言
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

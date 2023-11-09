@@ -44,7 +44,8 @@ require 'path/to/vendor/autoload.php';
 ## 代码示例
 
 - 使用如下代码同步查询当前账号下已创建的永久 AK 信息，实际使用中请将 `IamClient` 替换为您使用的产品/服务相应的 `{Service}Client` 。
-- 调用前请根据实际情况替换如下变量：`{your ak string}`、 `{your sk string}`、 `{your endpoint}` 以及 `{your domain id}`。
+- 认证用的ak和sk硬编码到代码中或者明文存储都有很大的安全风险，建议在配置文件或者环境变量中密文存放，使用时解密，确保安全。
+- 本示例中的ak和sk保存在环境变量中，运行本示例前请先配置环境变量`HUAWEICLOUD_SDK_AK`和`HUAWEICLOUD_SDK_SK`。
 
 ``` php
 <?php
@@ -60,8 +61,9 @@ use HuaweiCloud\SDK\Iam\V3\IamClient;
 use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
 use Monolog\Logger;
 
-$ak = "{your ak string}";
-$sk = "{your sk string}";
+// 请勿将认证信息硬编码到代码中，有安全风险，可通过环境变量等方式配置认证信息
+$ak = getenv("HUAWEICLOUD_SDK_AK");
+$sk = getenv("HUAWEICLOUD_SDK_SK");
 $endpoint = "{your endpoint}";
 $domainId = "{your domain id}";
 

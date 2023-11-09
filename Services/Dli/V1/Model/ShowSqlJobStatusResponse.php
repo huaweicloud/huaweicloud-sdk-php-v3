@@ -35,6 +35,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
+    * userConf  SQL配置参数信息Json字符串。
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -58,6 +59,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'databaseName' => 'string',
             'tableName' => 'string',
             'detail' => 'string',
+            'userConf' => 'string',
             'statement' => 'string',
             'isSuccess' => 'bool',
             'message' => 'string',
@@ -81,6 +83,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
+    * userConf  SQL配置参数信息Json字符串。
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -104,6 +107,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
         'databaseName' => null,
         'tableName' => null,
         'detail' => null,
+        'userConf' => null,
         'statement' => null,
         'isSuccess' => null,
         'message' => null,
@@ -148,6 +152,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
+    * userConf  SQL配置参数信息Json字符串。
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -171,6 +176,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'databaseName' => 'database_name',
             'tableName' => 'table_name',
             'detail' => 'detail',
+            'userConf' => 'user_conf',
             'statement' => 'statement',
             'isSuccess' => 'is_success',
             'message' => 'message',
@@ -194,6 +200,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
+    * userConf  SQL配置参数信息Json字符串。
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -217,6 +224,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'databaseName' => 'setDatabaseName',
             'tableName' => 'setTableName',
             'detail' => 'setDetail',
+            'userConf' => 'setUserConf',
             'statement' => 'setStatement',
             'isSuccess' => 'setIsSuccess',
             'message' => 'setMessage',
@@ -240,6 +248,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * databaseName  记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
+    * userConf  SQL配置参数信息Json字符串。
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -263,6 +272,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'databaseName' => 'getDatabaseName',
             'tableName' => 'getTableName',
             'detail' => 'getDetail',
+            'userConf' => 'getUserConf',
             'statement' => 'getStatement',
             'isSuccess' => 'getIsSuccess',
             'message' => 'getMessage',
@@ -363,6 +373,7 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
+        $this->container['userConf'] = isset($data['userConf']) ? $data['userConf'] : null;
         $this->container['statement'] = isset($data['statement']) ? $data['statement'] : null;
         $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
@@ -733,6 +744,30 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     public function setDetail($detail)
     {
         $this->container['detail'] = $detail;
+        return $this;
+    }
+
+    /**
+    * Gets userConf
+    *  SQL配置参数信息Json字符串。
+    *
+    * @return string|null
+    */
+    public function getUserConf()
+    {
+        return $this->container['userConf'];
+    }
+
+    /**
+    * Sets userConf
+    *
+    * @param string|null $userConf SQL配置参数信息Json字符串。
+    *
+    * @return $this
+    */
+    public function setUserConf($userConf)
+    {
+        $this->container['userConf'] = $userConf;
         return $this;
     }
 

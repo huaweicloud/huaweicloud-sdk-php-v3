@@ -22,7 +22,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * configurationId  实例ID，严格匹配UUID规则。
+    * configurationId  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * configurationId  实例ID，严格匹配UUID规则。
+    * configurationId  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * configurationId  实例ID，严格匹配UUID规则。
+    * configurationId  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * configurationId  实例ID，严格匹配UUID规则。
+    * configurationId  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     * instanceId  实例ID，严格匹配UUID规则。
-    * configurationId  实例ID，严格匹配UUID规则。
+    * configurationId  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     * body  body
     *
     * @var string[]
@@ -261,7 +261,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurationId
-    *  实例ID，严格匹配UUID规则。
+    *  参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     *
     * @return string
     */
@@ -273,7 +273,7 @@ class CopyInstanceConfigurationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets configurationId
     *
-    * @param string $configurationId 实例ID，严格匹配UUID规则。
+    * @param string $configurationId 参数组ID。  通过调用[查询实例详情信息](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlInstanceInfo.html)接口获取。  请求响应成功后在响应消息体中包含的“configuration_id”的值即为configuration_id值。
     *
     * @return $this
     */

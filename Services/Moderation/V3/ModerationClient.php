@@ -336,6 +336,68 @@ class ModerationClient extends Client
     }
 
     /**
+     * 创建文档内容审核作业
+     *
+     * 创建文档内容审核作业，创建成功会将作业ID返回给用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runCreateDocumentModerationJob($request)
+    {
+        return $this->runCreateDocumentModerationJobWithHttpInfo($request);
+    }
+
+    public function runCreateDocumentModerationJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/moderation/document/jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateDocumentModerationJobResponse',
+            $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateDocumentModerationJobRequest');
+    }
+
+    /**
      * 创建视频内容审核作业
      *
      * 创建视频内容审核作业，创建成功会将作业ID返回给用户
@@ -518,6 +580,68 @@ class ModerationClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryAudioModerationJobResponse',
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryAudioModerationJobRequest');
+    }
+
+    /**
+     * 查询文档审核作业结果
+     *
+     * 查询文档审核结果接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runQueryDocumentModerationJob($request)
+    {
+        return $this->runQueryDocumentModerationJobWithHttpInfo($request);
+    }
+
+    public function runQueryDocumentModerationJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/moderation/document/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryDocumentModerationJobResponse',
+            $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryDocumentModerationJobRequest');
     }
 
     /**

@@ -20,7 +20,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CertDuration implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class CertDuration implements ModelInterface, ArrayAccess
         if ($this->container['duration'] === null) {
             $invalidProperties[] = "'duration' can't be null";
         }
-            if (($this->container['duration'] > 10950)) {
-                $invalidProperties[] = "invalid value for 'duration', must be smaller than or equal to 10950.";
+            if (($this->container['duration'] > 1825)) {
+                $invalidProperties[] = "invalid value for 'duration', must be smaller than or equal to 1825.";
             }
             if (($this->container['duration'] < 1)) {
                 $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to 1.";
@@ -183,7 +183,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    *  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @return int
     */
@@ -195,7 +195,7 @@ class CertDuration implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int $duration 集群证书有效时间，单位为天，最小值为1，最大值为10950(30*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值30年。
+    * @param int $duration 集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
     *
     * @return $this
     */

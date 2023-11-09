@@ -26,6 +26,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
     * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    * language  可指定图片中文字语种类型
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'imageTextConfig' => '\HuaweiCloud\SDK\Moderation\V3\Model\ImgTextConfig',
             'url' => 'string',
             'image' => 'string',
-            'bizType' => 'string'
+            'bizType' => 'string',
+            'language' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
     * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    * language  可指定图片中文字语种类型
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
         'imageTextConfig' => null,
         'url' => null,
         'image' => null,
-        'bizType' => null
+        'bizType' => null,
+        'language' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
     * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    * language  可指定图片中文字语种类型
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'imageTextConfig' => 'image_text_config',
             'url' => 'url',
             'image' => 'image',
-            'bizType' => 'biz_type'
+            'bizType' => 'biz_type',
+            'language' => 'language'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
     * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    * language  可指定图片中文字语种类型
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'imageTextConfig' => 'setImageTextConfig',
             'url' => 'setUrl',
             'image' => 'setImage',
-            'bizType' => 'setBizType'
+            'bizType' => 'setBizType',
+            'language' => 'setLanguage'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     * url  图片url, 与image二选一，目前支持： - 公网HTTP/HTTPS URL
     * image  与url二选一，图片文件Base64编码字符串，要求base64编码后大小不超过10M，支持JPG/PNG/JPEG/WEBP/GIF/TIFF/TIF/HEIF等格式。
     * bizType  自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
+    * language  可指定图片中文字语种类型
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
             'imageTextConfig' => 'getImageTextConfig',
             'url' => 'getUrl',
             'image' => 'getImage',
-            'bizType' => 'getBizType'
+            'bizType' => 'getBizType',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -179,7 +189,20 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANGUAGE_ZH = 'zh';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_ZH,
+        ];
+    }
 
 
     /**
@@ -203,6 +226,7 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -213,6 +237,14 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -368,6 +400,30 @@ class ImageDetectionReq implements ModelInterface, ArrayAccess
     public function setBizType($bizType)
     {
         $this->container['bizType'] = $bizType;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  可指定图片中文字语种类型
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 可指定图片中文字语种类型
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

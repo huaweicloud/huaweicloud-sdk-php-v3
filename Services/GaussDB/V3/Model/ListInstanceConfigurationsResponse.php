@@ -22,7 +22,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * configurations  configurations
-    * totalCount  配置信息的总数。
+    * totalCount  参数信息的总数。
     * parameterValues  参数对象。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * configurations  configurations
-    * totalCount  配置信息的总数。
+    * totalCount  参数信息的总数。
     * parameterValues  参数对象。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * configurations  configurations
-    * totalCount  配置信息的总数。
+    * totalCount  参数信息的总数。
     * parameterValues  参数对象。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * configurations  configurations
-    * totalCount  配置信息的总数。
+    * totalCount  参数信息的总数。
     * parameterValues  参数对象。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * configurations  configurations
-    * totalCount  配置信息的总数。
+    * totalCount  参数信息的总数。
     * parameterValues  参数对象。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  配置信息的总数。
+    *  参数信息的总数。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListInstanceConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 配置信息的总数。
+    * @param int|null $totalCount 参数信息的总数。
     *
     * @return $this
     */

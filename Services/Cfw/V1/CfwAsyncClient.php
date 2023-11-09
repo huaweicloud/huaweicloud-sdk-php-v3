@@ -336,7 +336,7 @@ class CfwAsyncClient extends Client
     
     public function addDomainsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/domain-set/domains';
+        $resourcePath = '/v1/{project_id}/domain-set/domains/{set_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -358,6 +358,9 @@ class CfwAsyncClient extends Client
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['setId'] !== null) {
+            $pathParams['set_id'] = $localVarParams['setId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1073,7 +1076,7 @@ class CfwAsyncClient extends Client
     
     public function deleteDomainsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/domain-set/domains';
+        $resourcePath = '/v1/{project_id}/domain-set/domains/{set_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1092,6 +1095,9 @@ class CfwAsyncClient extends Client
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['setId'] !== null) {
+            $pathParams['set_id'] = $localVarParams['setId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

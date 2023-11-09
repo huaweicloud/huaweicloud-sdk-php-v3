@@ -1617,6 +1617,71 @@ class DliClient extends Client
     }
 
     /**
+     * 新增队列属性
+     *
+     * 该接口用于增加队列属性, 一次可增加多个属性。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createQueueProperty($request)
+    {
+        return $this->createQueuePropertyWithHttpInfo($request);
+    }
+
+    public function createQueuePropertyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/queues/{queue_name}/properties';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateQueuePropertyResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateQueuePropertyRequest');
+    }
+
+    /**
      * 删除跨源认证
      *
      * 该API用于删除跨源认证信息。
@@ -2120,6 +2185,71 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePlanResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePlanRequest');
+    }
+
+    /**
+     * 删除队列的属性
+     *
+     * 该接口用于删除队列的属性，一次可删除多个属性值。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteQueueProperty($request)
+    {
+        return $this->deleteQueuePropertyWithHttpInfo($request);
+    }
+
+    public function deleteQueuePropertyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/queues/{queue_name}/properties';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePropertyResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePropertyRequest');
     }
 
     /**
@@ -2865,6 +2995,74 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePlansResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePlansRequest');
+    }
+
+    /**
+     * 获取队列属性
+     *
+     * 获取队列配置的属性
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listQueueProperty($request)
+    {
+        return $this->listQueuePropertyWithHttpInfo($request);
+    }
+
+    public function listQueuePropertyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/queues/{queue_name}/properties';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertyResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertyRequest');
     }
 
     /**
@@ -4276,6 +4474,71 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueueCidrResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueueCidrRequest');
+    }
+
+    /**
+     * 更新队列属性
+     *
+     * 更新队列属性
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateQueueProperty($request)
+    {
+        return $this->updateQueuePropertyWithHttpInfo($request);
+    }
+
+    public function updateQueuePropertyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/queues/{queue_name}/properties';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueuePropertyResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueuePropertyRequest');
     }
 
     /**

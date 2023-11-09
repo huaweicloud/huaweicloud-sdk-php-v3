@@ -33,6 +33,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     * remark  备份缓存实例的备注信息。
     * status  备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
     * isSupportRestore  是否可以进行恢复操作，取值为TRUE或FALSE。
+    * backupFormat  备份类型。
+    * executionAt  执行时间.
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
             'errorCode' => 'string',
             'remark' => 'string',
             'status' => 'string',
-            'isSupportRestore' => 'string'
+            'isSupportRestore' => 'string',
+            'backupFormat' => 'string',
+            'executionAt' => 'string'
     ];
 
     /**
@@ -67,6 +71,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     * remark  备份缓存实例的备注信息。
     * status  备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
     * isSupportRestore  是否可以进行恢复操作，取值为TRUE或FALSE。
+    * backupFormat  备份类型。
+    * executionAt  执行时间.
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
         'errorCode' => null,
         'remark' => 'string',
         'status' => 'string',
-        'isSupportRestore' => 'string'
+        'isSupportRestore' => 'string',
+        'backupFormat' => null,
+        'executionAt' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     * remark  备份缓存实例的备注信息。
     * status  备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
     * isSupportRestore  是否可以进行恢复操作，取值为TRUE或FALSE。
+    * backupFormat  备份类型。
+    * executionAt  执行时间.
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
             'errorCode' => 'error_code',
             'remark' => 'remark',
             'status' => 'status',
-            'isSupportRestore' => 'is_support_restore'
+            'isSupportRestore' => 'is_support_restore',
+            'backupFormat' => 'backup_format',
+            'executionAt' => 'execution_at'
     ];
 
     /**
@@ -156,6 +168,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     * remark  备份缓存实例的备注信息。
     * status  备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
     * isSupportRestore  是否可以进行恢复操作，取值为TRUE或FALSE。
+    * backupFormat  备份类型。
+    * executionAt  执行时间.
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
             'errorCode' => 'setErrorCode',
             'remark' => 'setRemark',
             'status' => 'setStatus',
-            'isSupportRestore' => 'setIsSupportRestore'
+            'isSupportRestore' => 'setIsSupportRestore',
+            'backupFormat' => 'setBackupFormat',
+            'executionAt' => 'setExecutionAt'
     ];
 
     /**
@@ -190,6 +206,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     * remark  备份缓存实例的备注信息。
     * status  备份状态。 - waiting：等待中。 - backuping：备份中。 - succeed：备份成功。 - failed：备份失败。 - expired：备份文件过期。 - deleted：已手动删除备份文件。
     * isSupportRestore  是否可以进行恢复操作，取值为TRUE或FALSE。
+    * backupFormat  备份类型。
+    * executionAt  执行时间.
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
             'errorCode' => 'getErrorCode',
             'remark' => 'getRemark',
             'status' => 'getStatus',
-            'isSupportRestore' => 'getIsSupportRestore'
+            'isSupportRestore' => 'getIsSupportRestore',
+            'backupFormat' => 'getBackupFormat',
+            'executionAt' => 'getExecutionAt'
     ];
 
     /**
@@ -257,6 +277,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     const STATUS_FAILED = 'failed';
     const STATUS_EXPIRED = 'expired';
     const STATUS_DELETED = 'deleted';
+    const BACKUP_FORMAT_AOF = 'aof';
+    const BACKUP_FORMAT_RDB = 'rdb';
     
 
     /**
@@ -289,6 +311,19 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBackupFormatAllowableValues()
+    {
+        return [
+            self::BACKUP_FORMAT_AOF,
+            self::BACKUP_FORMAT_RDB,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -318,6 +353,8 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['isSupportRestore'] = isset($data['isSupportRestore']) ? $data['isSupportRestore'] : null;
+        $this->container['backupFormat'] = isset($data['backupFormat']) ? $data['backupFormat'] : null;
+        $this->container['executionAt'] = isset($data['executionAt']) ? $data['executionAt'] : null;
     }
 
     /**
@@ -340,6 +377,14 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getBackupFormatAllowableValues();
+                if (!is_null($this->container['backupFormat']) && !in_array($this->container['backupFormat'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'backupFormat', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -667,6 +712,54 @@ class BackupRecordResponse implements ModelInterface, ArrayAccess
     public function setIsSupportRestore($isSupportRestore)
     {
         $this->container['isSupportRestore'] = $isSupportRestore;
+        return $this;
+    }
+
+    /**
+    * Gets backupFormat
+    *  备份类型。
+    *
+    * @return string|null
+    */
+    public function getBackupFormat()
+    {
+        return $this->container['backupFormat'];
+    }
+
+    /**
+    * Sets backupFormat
+    *
+    * @param string|null $backupFormat 备份类型。
+    *
+    * @return $this
+    */
+    public function setBackupFormat($backupFormat)
+    {
+        $this->container['backupFormat'] = $backupFormat;
+        return $this;
+    }
+
+    /**
+    * Gets executionAt
+    *  执行时间.
+    *
+    * @return string|null
+    */
+    public function getExecutionAt()
+    {
+        return $this->container['executionAt'];
+    }
+
+    /**
+    * Sets executionAt
+    *
+    * @param string|null $executionAt 执行时间.
+    *
+    * @return $this
+    */
+    public function setExecutionAt($executionAt)
+    {
+        $this->container['executionAt'] = $executionAt;
         return $this;
     }
 

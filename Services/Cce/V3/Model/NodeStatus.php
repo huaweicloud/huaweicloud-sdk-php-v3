@@ -20,7 +20,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     * lastProbeTime  节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
     * jobId  创建或删除时的任务ID。
     * serverId  底层云服务器或裸金属节点ID。
@@ -44,7 +44,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     * lastProbeTime  节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
     * jobId  创建或删除时的任务ID。
     * serverId  底层云服务器或裸金属节点ID。
@@ -89,7 +89,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     * lastProbeTime  节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
     * jobId  创建或删除时的任务ID。
     * serverId  底层云服务器或裸金属节点ID。
@@ -113,7 +113,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     * lastProbeTime  节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
     * jobId  创建或删除时的任务ID。
     * serverId  底层云服务器或裸金属节点ID。
@@ -137,7 +137,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * phase  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     * lastProbeTime  节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
     * jobId  创建或删除时的任务ID。
     * serverId  底层云服务器或裸金属节点ID。
@@ -201,8 +201,6 @@ class NodeStatus implements ModelInterface, ArrayAccess
     }
     const PHASE_BUILD = 'Build';
     const PHASE_INSTALLING = 'Installing';
-    const PHASE_INSTALLED = 'Installed';
-    const PHASE_SHUT_DOWN = 'ShutDown';
     const PHASE_UPGRADING = 'Upgrading';
     const PHASE_ACTIVE = 'Active';
     const PHASE_ABNORMAL = 'Abnormal';
@@ -220,8 +218,6 @@ class NodeStatus implements ModelInterface, ArrayAccess
         return [
             self::PHASE_BUILD,
             self::PHASE_INSTALLING,
-            self::PHASE_INSTALLED,
-            self::PHASE_SHUT_DOWN,
             self::PHASE_UPGRADING,
             self::PHASE_ACTIVE,
             self::PHASE_ABNORMAL,
@@ -288,7 +284,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    *  节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     *
     * @return string|null
     */
@@ -300,7 +296,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+    * @param string|null $phase 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
     *
     * @return $this
     */

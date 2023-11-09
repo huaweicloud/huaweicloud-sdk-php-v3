@@ -22,7 +22,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainNames  域名列表
     *
     * @var string[]
@@ -30,7 +29,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'fwInstanceId' => 'string',
             'objectId' => 'string',
-            'domainSetId' => 'string',
             'domainNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\DomainSetInfoDto[]'
     ];
 
@@ -38,7 +36,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainNames  域名列表
     *
     * @var string[]
@@ -46,7 +43,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'fwInstanceId' => null,
         'objectId' => null,
-        'domainSetId' => null,
         'domainNames' => null
     ];
 
@@ -75,7 +71,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainNames  域名列表
     *
     * @var string[]
@@ -83,7 +78,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'fwInstanceId' => 'fw_instance_id',
             'objectId' => 'object_id',
-            'domainSetId' => 'domain_set_id',
             'domainNames' => 'domain_names'
     ];
 
@@ -91,7 +85,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainNames  域名列表
     *
     * @var string[]
@@ -99,7 +92,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     protected static $setters = [
             'fwInstanceId' => 'setFwInstanceId',
             'objectId' => 'setObjectId',
-            'domainSetId' => 'setDomainSetId',
             'domainNames' => 'setDomainNames'
     ];
 
@@ -107,7 +99,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    * domainSetId  域名组id
     * domainNames  域名列表
     *
     * @var string[]
@@ -115,7 +106,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     protected static $getters = [
             'fwInstanceId' => 'getFwInstanceId',
             'objectId' => 'getObjectId',
-            'domainSetId' => 'getDomainSetId',
             'domainNames' => 'getDomainNames'
     ];
 
@@ -179,7 +169,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     {
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
-        $this->container['domainSetId'] = isset($data['domainSetId']) ? $data['domainSetId'] : null;
         $this->container['domainNames'] = isset($data['domainNames']) ? $data['domainNames'] : null;
     }
 
@@ -196,9 +185,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
         }
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
-        }
-        if ($this->container['domainSetId'] === null) {
-            $invalidProperties[] = "'domainSetId' can't be null";
         }
         if ($this->container['domainNames'] === null) {
             $invalidProperties[] = "'domainNames' can't be null";
@@ -262,30 +248,6 @@ class AddDomainListDto implements ModelInterface, ArrayAccess
     public function setObjectId($objectId)
     {
         $this->container['objectId'] = $objectId;
-        return $this;
-    }
-
-    /**
-    * Gets domainSetId
-    *  域名组id
-    *
-    * @return string
-    */
-    public function getDomainSetId()
-    {
-        return $this->container['domainSetId'];
-    }
-
-    /**
-    * Sets domainSetId
-    *
-    * @param string $domainSetId 域名组id
-    *
-    * @return $this
-    */
-    public function setDomainSetId($domainSetId)
-    {
-        $this->container['domainSetId'] = $domainSetId;
         return $this;
     }
 
