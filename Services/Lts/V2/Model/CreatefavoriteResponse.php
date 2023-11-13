@@ -30,6 +30,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * projectId  项目id
+    * isGlobal  是否开启日志收藏
     *
     * @var string[]
     */
@@ -42,7 +43,8 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'string',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'isGlobal' => 'bool'
     ];
 
     /**
@@ -56,6 +58,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * projectId  项目id
+    * isGlobal  是否开启日志收藏
     *
     * @var string[]
     */
@@ -68,7 +71,8 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
         'logGroupName' => null,
         'logStreamId' => null,
         'logStreamName' => null,
-        'projectId' => null
+        'projectId' => null,
+        'isGlobal' => null
     ];
 
     /**
@@ -103,6 +107,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * projectId  项目id
+    * isGlobal  是否开启日志收藏
     *
     * @var string[]
     */
@@ -115,7 +120,8 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'log_group_name',
             'logStreamId' => 'log_stream_id',
             'logStreamName' => 'log_stream_name',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'isGlobal' => 'is_global'
     ];
 
     /**
@@ -129,6 +135,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * projectId  项目id
+    * isGlobal  是否开启日志收藏
     *
     * @var string[]
     */
@@ -141,7 +148,8 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'setLogGroupName',
             'logStreamId' => 'setLogStreamId',
             'logStreamName' => 'setLogStreamName',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'isGlobal' => 'setIsGlobal'
     ];
 
     /**
@@ -155,6 +163,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     * logStreamId  日志流id
     * logStreamName  日志流名称
     * projectId  项目id
+    * isGlobal  是否开启日志收藏
     *
     * @var string[]
     */
@@ -167,7 +176,8 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
             'logGroupName' => 'getLogGroupName',
             'logStreamId' => 'getLogStreamId',
             'logStreamName' => 'getLogStreamName',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'isGlobal' => 'getIsGlobal'
     ];
 
     /**
@@ -237,6 +247,7 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['isGlobal'] = isset($data['isGlobal']) ? $data['isGlobal'] : null;
     }
 
     /**
@@ -480,6 +491,30 @@ class CreatefavoriteResponse implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets isGlobal
+    *  是否开启日志收藏
+    *
+    * @return bool|null
+    */
+    public function getIsGlobal()
+    {
+        return $this->container['isGlobal'];
+    }
+
+    /**
+    * Sets isGlobal
+    *
+    * @param bool|null $isGlobal 是否开启日志收藏
+    *
+    * @return $this
+    */
+    public function setIsGlobal($isGlobal)
+    {
+        $this->container['isGlobal'] = $isGlobal;
         return $this;
     }
 

@@ -292,6 +292,130 @@ class RdsClient extends Client
     }
 
     /**
+     * 库级时间点恢复
+     *
+     * 库级时间点恢复
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchRestoreDatabase($request)
+    {
+        return $this->batchRestoreDatabaseWithHttpInfo($request);
+    }
+
+    public function batchRestoreDatabaseWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/batch/restore/databases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\BatchRestoreDatabaseResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\BatchRestoreDatabaseRequest');
+    }
+
+    /**
+     * 表级时间点恢复（PostgreSQL）
+     *
+     * 表级时间点恢复（PostgreSQL）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchRestorePostgreSqlTables($request)
+    {
+        return $this->batchRestorePostgreSqlTablesWithHttpInfo($request);
+    }
+
+    public function batchRestorePostgreSqlTablesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/batch/restore/tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\BatchRestorePostgreSqlTablesResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\BatchRestorePostgreSqlTablesRequest');
+    }
+
+    /**
      * 批量添加标签
      *
      * 批量添加标签。
@@ -2346,6 +2470,74 @@ class RdsClient extends Client
     }
 
     /**
+     * 查询指定时间点可恢复的库
+     *
+     * 查询指定时间点可恢复的库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHistoryDatabase($request)
+    {
+        return $this->listHistoryDatabaseWithHttpInfo($request);
+    }
+
+    public function listHistoryDatabaseWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{database_name}/instances/history/databases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListHistoryDatabaseResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListHistoryDatabaseRequest');
+    }
+
+    /**
      * 获取诊断后的实例数量
      *
      * 获取诊断后的实例数量
@@ -2710,145 +2902,6 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesInfoDiagnosisResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesInfoDiagnosisRequest');
-    }
-
-    /**
-     * 查询购买推荐
-     *
-     * 查询购买推荐
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listInstancesRecommendation($request)
-    {
-        return $this->listInstancesRecommendationWithHttpInfo($request);
-    }
-
-    public function listInstancesRecommendationWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/instances/product-recommendation';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['engine'] !== null) {
-            $queryParams['engine'] = $localVarParams['engine'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesRecommendationResponse',
-            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesRecommendationRequest');
-    }
-
-    /**
-     * 查询监控大盘列表
-     *
-     * 查询监控大盘列表
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listInstancesResourceMetrics($request)
-    {
-        return $this->listInstancesResourceMetricsWithHttpInfo($request);
-    }
-
-    public function listInstancesResourceMetricsWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/instances/resource-monitoring';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['engine'] !== null) {
-            $queryParams['engine'] = $localVarParams['engine'];
-        }
-        if ($localVarParams['searchField'] !== null) {
-            $queryParams['search_field'] = $localVarParams['searchField'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['order'] !== null) {
-            $queryParams['order'] = $localVarParams['order'];
-        }
-        if ($localVarParams['sortField'] !== null) {
-            $queryParams['sort_field'] = $localVarParams['sortField'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesResourceMetricsResponse',
-            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListInstancesResourceMetricsRequest');
     }
 
     /**
@@ -3405,6 +3458,74 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListPostgresqlHbaInfoHistoryResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListPostgresqlHbaInfoHistoryRequest');
+    }
+
+    /**
+     * 查询指定时间点可恢复的表(PostgreSQL)
+     *
+     * 查询指定时间点可恢复的表(PostgreSQL)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPostgresqlListHistoryTables($request)
+    {
+        return $this->listPostgresqlListHistoryTablesWithHttpInfo($request);
+    }
+
+    public function listPostgresqlListHistoryTablesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{database_name}/instances/history/tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListPostgresqlListHistoryTablesResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListPostgresqlListHistoryTablesRequest');
     }
 
     /**

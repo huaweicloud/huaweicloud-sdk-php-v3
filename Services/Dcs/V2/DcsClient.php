@@ -1444,6 +1444,71 @@ class DcsClient extends Client
     }
 
     /**
+     * 删除任务中心任务
+     *
+     * 删除任务中心任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCenterTask($request)
+    {
+        return $this->deleteCenterTaskWithHttpInfo($request);
+    }
+
+    public function deleteCenterTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteCenterTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteCenterTaskRequest');
+    }
+
+    /**
      * 删除自定义模板
      *
      * 删除自定义模板
@@ -1503,6 +1568,71 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteConfigTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteConfigTemplateRequest');
+    }
+
+    /**
+     * 删除诊断记录
+     *
+     * 删除诊断记录。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDiagnosisTask($request)
+    {
+        return $this->deleteDiagnosisTaskWithHttpInfo($request);
+    }
+
+    public function deleteDiagnosisTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/diagnosis';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteDiagnosisTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\DeleteDiagnosisTaskRequest');
     }
 
     /**
@@ -5355,6 +5485,70 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowMigrationTaskStatsResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowMigrationTaskStatsRequest');
+    }
+
+    /**
+     * 查询实例节点信息
+     *
+     * 查询指定实例的节点信息。
+     * 仅支持Redis4.0和Redis5.0实例查询。
+     * 创建中实例不返回节点信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showNodesInformation($request)
+    {
+        return $this->showNodesInformationWithHttpInfo($request);
+    }
+
+    public function showNodesInformationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/logical-nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowNodesInformationResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ShowNodesInformationRequest');
     }
 
     /**

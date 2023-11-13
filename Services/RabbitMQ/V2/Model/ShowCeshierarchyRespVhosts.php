@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\RabbitMQ\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class InstanceState implements ModelInterface, ArrayAccess
+class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class InstanceState implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'InstanceState';
+    protected static $openAPIModelName = 'ShowCeshierarchyResp_vhosts';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  实例状态
-    * waitRestartForParams  参数变更，是否需要重启
+    * name  vhost名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string',
-            'waitRestartForParams' => 'bool'
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  实例状态
-    * waitRestartForParams  参数变更，是否需要重启
+    * name  vhost名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null,
-        'waitRestartForParams' => null
+        'name' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class InstanceState implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  实例状态
-    * waitRestartForParams  参数变更，是否需要重启
+    * name  vhost名称。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status',
-            'waitRestartForParams' => 'wait_restart_for_params'
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  实例状态
-    * waitRestartForParams  参数变更，是否需要重启
+    * name  vhost名称。
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus',
-            'waitRestartForParams' => 'setWaitRestartForParams'
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  实例状态
-    * waitRestartForParams  参数变更，是否需要重启
+    * name  vhost名称。
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus',
-            'waitRestartForParams' => 'getWaitRestartForParams'
+            'name' => 'getName'
     ];
 
     /**
@@ -157,8 +147,7 @@ class InstanceState implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['waitRestartForParams'] = isset($data['waitRestartForParams']) ? $data['waitRestartForParams'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -169,12 +158,6 @@ class InstanceState implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['waitRestartForParams'] === null) {
-            $invalidProperties[] = "'waitRestartForParams' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,50 +173,26 @@ class InstanceState implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
-    *  实例状态
+    * Gets name
+    *  vhost名称。
     *
-    * @return string
+    * @return string|null
     */
-    public function getStatus()
+    public function getName()
     {
-        return $this->container['status'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets status
+    * Sets name
     *
-    * @param string $status 实例状态
+    * @param string|null $name vhost名称。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setName($name)
     {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets waitRestartForParams
-    *  参数变更，是否需要重启
-    *
-    * @return bool
-    */
-    public function getWaitRestartForParams()
-    {
-        return $this->container['waitRestartForParams'];
-    }
-
-    /**
-    * Sets waitRestartForParams
-    *
-    * @param bool $waitRestartForParams 参数变更，是否需要重启
-    *
-    * @return $this
-    */
-    public function setWaitRestartForParams($waitRestartForParams)
-    {
-        $this->container['waitRestartForParams'] = $waitRestartForParams;
+        $this->container['name'] = $name;
         return $this;
     }
 

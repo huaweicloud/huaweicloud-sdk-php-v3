@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class VolumeFlavor implements ModelInterface, ArrayAccess
+class PostgreSQLRestoreDatabase implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,42 +16,30 @@ class VolumeFlavor implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'VolumeFlavor';
+    protected static $openAPIModelName = 'PostgreSQLRestoreDatabase';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engineVersion  引擎版本
-    * code  磁盘规格码
-    * type  磁盘类型
-    * size  磁盘大小
-    * period  订购周期
+    * database  数据库名
+    * schemas  模式信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'engineVersion' => 'string',
-            'code' => 'string',
-            'type' => 'string',
-            'size' => 'string',
-            'period' => 'string[]'
+            'database' => 'string',
+            'schemas' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreSchema[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engineVersion  引擎版本
-    * code  磁盘规格码
-    * type  磁盘类型
-    * size  磁盘大小
-    * period  订购周期
+    * database  数据库名
+    * schemas  模式信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'engineVersion' => null,
-        'code' => null,
-        'type' => null,
-        'size' => null,
-        'period' => null
+        'database' => null,
+        'schemas' => null
     ];
 
     /**
@@ -77,56 +65,38 @@ class VolumeFlavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engineVersion  引擎版本
-    * code  磁盘规格码
-    * type  磁盘类型
-    * size  磁盘大小
-    * period  订购周期
+    * database  数据库名
+    * schemas  模式信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'engineVersion' => 'engine_version',
-            'code' => 'code',
-            'type' => 'type',
-            'size' => 'size',
-            'period' => 'period'
+            'database' => 'database',
+            'schemas' => 'schemas'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engineVersion  引擎版本
-    * code  磁盘规格码
-    * type  磁盘类型
-    * size  磁盘大小
-    * period  订购周期
+    * database  数据库名
+    * schemas  模式信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'engineVersion' => 'setEngineVersion',
-            'code' => 'setCode',
-            'type' => 'setType',
-            'size' => 'setSize',
-            'period' => 'setPeriod'
+            'database' => 'setDatabase',
+            'schemas' => 'setSchemas'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engineVersion  引擎版本
-    * code  磁盘规格码
-    * type  磁盘类型
-    * size  磁盘大小
-    * period  订购周期
+    * database  数据库名
+    * schemas  模式信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'engineVersion' => 'getEngineVersion',
-            'code' => 'getCode',
-            'type' => 'getType',
-            'size' => 'getSize',
-            'period' => 'getPeriod'
+            'database' => 'getDatabase',
+            'schemas' => 'getSchemas'
     ];
 
     /**
@@ -187,11 +157,8 @@ class VolumeFlavor implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['database'] = isset($data['database']) ? $data['database'] : null;
+        $this->container['schemas'] = isset($data['schemas']) ? $data['schemas'] : null;
     }
 
     /**
@@ -202,21 +169,6 @@ class VolumeFlavor implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['engineVersion'] === null) {
-            $invalidProperties[] = "'engineVersion' can't be null";
-        }
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-        if ($this->container['period'] === null) {
-            $invalidProperties[] = "'period' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -232,122 +184,50 @@ class VolumeFlavor implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets engineVersion
-    *  引擎版本
+    * Gets database
+    *  数据库名
     *
-    * @return string
+    * @return string|null
     */
-    public function getEngineVersion()
+    public function getDatabase()
     {
-        return $this->container['engineVersion'];
+        return $this->container['database'];
     }
 
     /**
-    * Sets engineVersion
+    * Sets database
     *
-    * @param string $engineVersion 引擎版本
+    * @param string|null $database 数据库名
     *
     * @return $this
     */
-    public function setEngineVersion($engineVersion)
+    public function setDatabase($database)
     {
-        $this->container['engineVersion'] = $engineVersion;
+        $this->container['database'] = $database;
         return $this;
     }
 
     /**
-    * Gets code
-    *  磁盘规格码
+    * Gets schemas
+    *  模式信息
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreSchema[]|null
     */
-    public function getCode()
+    public function getSchemas()
     {
-        return $this->container['code'];
+        return $this->container['schemas'];
     }
 
     /**
-    * Sets code
+    * Sets schemas
     *
-    * @param string $code 磁盘规格码
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreSchema[]|null $schemas 模式信息
     *
     * @return $this
     */
-    public function setCode($code)
+    public function setSchemas($schemas)
     {
-        $this->container['code'] = $code;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  磁盘类型
-    *
-    * @return string
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string $type 磁盘类型
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets size
-    *  磁盘大小
-    *
-    * @return string
-    */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-    * Sets size
-    *
-    * @param string $size 磁盘大小
-    *
-    * @return $this
-    */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
-        return $this;
-    }
-
-    /**
-    * Gets period
-    *  订购周期
-    *
-    * @return string[]
-    */
-    public function getPeriod()
-    {
-        return $this->container['period'];
-    }
-
-    /**
-    * Sets period
-    *
-    * @param string[] $period 订购周期
-    *
-    * @return $this
-    */
-    public function setPeriod($period)
-    {
-        $this->container['period'] = $period;
+        $this->container['schemas'] = $schemas;
         return $this;
     }
 

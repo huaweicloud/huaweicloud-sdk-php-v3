@@ -20,10 +20,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * elasticResourcePoolName  资源池名称
+    * id  资源池id
     * updateTime  更新时间
     * queues  
     * owner  用户名
-    * elasticResourcePoolName  资源池名称
     * description  资源池描述
     * maxCu  最大cu数量
     * minCu  最小cu数量
@@ -43,10 +44,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'elasticResourcePoolName' => 'string',
+            'id' => 'int',
             'updateTime' => 'int',
             'queues' => 'string[]',
             'owner' => 'string',
-            'elasticResourcePoolName' => 'string',
             'description' => 'string',
             'maxCu' => 'int',
             'minCu' => 'int',
@@ -66,10 +68,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * elasticResourcePoolName  资源池名称
+    * id  资源池id
     * updateTime  更新时间
     * queues  
     * owner  用户名
-    * elasticResourcePoolName  资源池名称
     * description  资源池描述
     * maxCu  最大cu数量
     * minCu  最小cu数量
@@ -89,10 +92,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'elasticResourcePoolName' => null,
+        'id' => 'int32',
         'updateTime' => 'int64',
         'queues' => null,
         'owner' => null,
-        'elasticResourcePoolName' => null,
         'description' => null,
         'maxCu' => 'int32',
         'minCu' => 'int32',
@@ -133,10 +137,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * elasticResourcePoolName  资源池名称
+    * id  资源池id
     * updateTime  更新时间
     * queues  
     * owner  用户名
-    * elasticResourcePoolName  资源池名称
     * description  资源池描述
     * maxCu  最大cu数量
     * minCu  最小cu数量
@@ -156,10 +161,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'elasticResourcePoolName' => 'elastic_resource_pool_name',
+            'id' => 'id',
             'updateTime' => 'update_time',
             'queues' => 'queues',
             'owner' => 'owner',
-            'elasticResourcePoolName' => 'elastic_resource_pool_name',
             'description' => 'description',
             'maxCu' => 'max_cu',
             'minCu' => 'min_cu',
@@ -179,10 +185,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * elasticResourcePoolName  资源池名称
+    * id  资源池id
     * updateTime  更新时间
     * queues  
     * owner  用户名
-    * elasticResourcePoolName  资源池名称
     * description  资源池描述
     * maxCu  最大cu数量
     * minCu  最小cu数量
@@ -202,10 +209,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'elasticResourcePoolName' => 'setElasticResourcePoolName',
+            'id' => 'setId',
             'updateTime' => 'setUpdateTime',
             'queues' => 'setQueues',
             'owner' => 'setOwner',
-            'elasticResourcePoolName' => 'setElasticResourcePoolName',
             'description' => 'setDescription',
             'maxCu' => 'setMaxCu',
             'minCu' => 'setMinCu',
@@ -225,10 +233,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * elasticResourcePoolName  资源池名称
+    * id  资源池id
     * updateTime  更新时间
     * queues  
     * owner  用户名
-    * elasticResourcePoolName  资源池名称
     * description  资源池描述
     * maxCu  最大cu数量
     * minCu  最小cu数量
@@ -248,10 +257,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'elasticResourcePoolName' => 'getElasticResourcePoolName',
+            'id' => 'getId',
             'updateTime' => 'getUpdateTime',
             'queues' => 'getQueues',
             'owner' => 'getOwner',
-            'elasticResourcePoolName' => 'getElasticResourcePoolName',
             'description' => 'getDescription',
             'maxCu' => 'getMaxCu',
             'minCu' => 'getMinCu',
@@ -327,10 +337,11 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['queues'] = isset($data['queues']) ? $data['queues'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['maxCu'] = isset($data['maxCu']) ? $data['maxCu'] : null;
         $this->container['minCu'] = isset($data['minCu']) ? $data['minCu'] : null;
@@ -368,6 +379,54 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets elasticResourcePoolName
+    *  资源池名称
+    *
+    * @return string|null
+    */
+    public function getElasticResourcePoolName()
+    {
+        return $this->container['elasticResourcePoolName'];
+    }
+
+    /**
+    * Sets elasticResourcePoolName
+    *
+    * @param string|null $elasticResourcePoolName 资源池名称
+    *
+    * @return $this
+    */
+    public function setElasticResourcePoolName($elasticResourcePoolName)
+    {
+        $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  资源池id
+    *
+    * @return int|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param int|null $id 资源池id
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**
@@ -439,30 +498,6 @@ class ElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     public function setOwner($owner)
     {
         $this->container['owner'] = $owner;
-        return $this;
-    }
-
-    /**
-    * Gets elasticResourcePoolName
-    *  资源池名称
-    *
-    * @return string|null
-    */
-    public function getElasticResourcePoolName()
-    {
-        return $this->container['elasticResourcePoolName'];
-    }
-
-    /**
-    * Sets elasticResourcePoolName
-    *
-    * @param string|null $elasticResourcePoolName 资源池名称
-    *
-    * @return $this
-    */
-    public function setElasticResourcePoolName($elasticResourcePoolName)
-    {
-        $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
         return $this;
     }
 

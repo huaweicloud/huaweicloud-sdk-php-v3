@@ -24,7 +24,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * isSuccess  是否成功
     * message  消息
     * count  数量
-    * elasticResourcePoolName  弹性资源池名称
     * elasticResourcePools  弹性资源池列表
     *
     * @var string[]
@@ -33,7 +32,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'count' => 'int',
-            'elasticResourcePoolName' => 'string',
             'elasticResourcePools' => '\HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolsResponse[]'
     ];
 
@@ -42,7 +40,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * isSuccess  是否成功
     * message  消息
     * count  数量
-    * elasticResourcePoolName  弹性资源池名称
     * elasticResourcePools  弹性资源池列表
     *
     * @var string[]
@@ -51,7 +48,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
         'isSuccess' => null,
         'message' => null,
         'count' => 'int32',
-        'elasticResourcePoolName' => null,
         'elasticResourcePools' => null
     ];
 
@@ -81,7 +77,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * isSuccess  是否成功
     * message  消息
     * count  数量
-    * elasticResourcePoolName  弹性资源池名称
     * elasticResourcePools  弹性资源池列表
     *
     * @var string[]
@@ -90,7 +85,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'is_success',
             'message' => 'message',
             'count' => 'count',
-            'elasticResourcePoolName' => 'elastic_resource_pool_name',
             'elasticResourcePools' => 'elastic_resource_pools'
     ];
 
@@ -99,7 +93,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * isSuccess  是否成功
     * message  消息
     * count  数量
-    * elasticResourcePoolName  弹性资源池名称
     * elasticResourcePools  弹性资源池列表
     *
     * @var string[]
@@ -108,7 +101,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'setIsSuccess',
             'message' => 'setMessage',
             'count' => 'setCount',
-            'elasticResourcePoolName' => 'setElasticResourcePoolName',
             'elasticResourcePools' => 'setElasticResourcePools'
     ];
 
@@ -117,7 +109,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * isSuccess  是否成功
     * message  消息
     * count  数量
-    * elasticResourcePoolName  弹性资源池名称
     * elasticResourcePools  弹性资源池列表
     *
     * @var string[]
@@ -126,7 +117,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'getIsSuccess',
             'message' => 'getMessage',
             'count' => 'getCount',
-            'elasticResourcePoolName' => 'getElasticResourcePoolName',
             'elasticResourcePools' => 'getElasticResourcePools'
     ];
 
@@ -191,7 +181,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
         $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
         $this->container['elasticResourcePools'] = isset($data['elasticResourcePools']) ? $data['elasticResourcePools'] : null;
     }
 
@@ -286,30 +275,6 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     public function setCount($count)
     {
         $this->container['count'] = $count;
-        return $this;
-    }
-
-    /**
-    * Gets elasticResourcePoolName
-    *  弹性资源池名称
-    *
-    * @return string|null
-    */
-    public function getElasticResourcePoolName()
-    {
-        return $this->container['elasticResourcePoolName'];
-    }
-
-    /**
-    * Sets elasticResourcePoolName
-    *
-    * @param string|null $elasticResourcePoolName 弹性资源池名称
-    *
-    * @return $this
-    */
-    public function setElasticResourcePoolName($elasticResourcePoolName)
-    {
-        $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
         return $this;
     }
 

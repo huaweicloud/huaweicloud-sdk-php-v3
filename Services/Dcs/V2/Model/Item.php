@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\Dcs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
+class Item implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListInstancesRecommendationRequest';
+    protected static $openAPIModelName = 'Item';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎类型
+    * result  诊断结果
+    * id  诊断报告ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'engine' => 'string'
+            'result' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎类型
+    * result  诊断结果
+    * id  诊断报告ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'engine' => null
+        'result' => null,
+        'id' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎类型
+    * result  诊断结果
+    * id  诊断报告ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'engine' => 'engine'
+            'result' => 'result',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎类型
+    * result  诊断结果
+    * id  诊断报告ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'engine' => 'setEngine'
+            'result' => 'setResult',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎类型
+    * result  诊断结果
+    * id  诊断报告ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'engine' => 'getEngine'
+            'result' => 'getResult',
+            'id' => 'getId'
     ];
 
     /**
@@ -129,24 +139,7 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_MYSQL = 'mysql';
-    const ENGINE_POSTGRESQL = 'postgresql';
-    const ENGINE_SQLSERVER = 'sqlserver';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineAllowableValues()
-    {
-        return [
-            self::ENGINE_MYSQL,
-            self::ENGINE_POSTGRESQL,
-            self::ENGINE_SQLSERVER,
-        ];
-    }
 
 
     /**
@@ -164,7 +157,8 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -175,17 +169,6 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['engine'] === null) {
-            $invalidProperties[] = "'engine' can't be null";
-        }
-            $allowedValues = $this->getEngineAllowableValues();
-                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engine', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -201,26 +184,50 @@ class ListInstancesRecommendationRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets engine
-    *  引擎类型
+    * Gets result
+    *  诊断结果
     *
-    * @return string
+    * @return string|null
     */
-    public function getEngine()
+    public function getResult()
     {
-        return $this->container['engine'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets engine
+    * Sets result
     *
-    * @param string $engine 引擎类型
+    * @param string|null $result 诊断结果
     *
     * @return $this
     */
-    public function setEngine($engine)
+    public function setResult($result)
     {
-        $this->container['engine'] = $engine;
+        $this->container['result'] = $result;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  诊断报告ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 诊断报告ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

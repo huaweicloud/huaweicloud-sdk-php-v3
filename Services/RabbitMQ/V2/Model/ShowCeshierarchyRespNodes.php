@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\RabbitMQ\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorRsp implements ModelInterface, ArrayAccess
+class ShowCeshierarchyRespNodes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorRsp';
+    protected static $openAPIModelName = 'ShowCeshierarchyResp_nodes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * name  节点名称。
+    * availableZone  可用区。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'string',
-            'errorMsg' => 'string'
+            'name' => 'string',
+            'availableZone' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * name  节点名称。
+    * availableZone  可用区。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => null,
-        'errorMsg' => null
+        'name' => null,
+        'availableZone' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * name  节点名称。
+    * availableZone  可用区。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg'
+            'name' => 'name',
+            'availableZone' => 'available_zone'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * name  节点名称。
+    * availableZone  可用区。
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg'
+            'name' => 'setName',
+            'availableZone' => 'setAvailableZone'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * name  节点名称。
+    * availableZone  可用区。
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg'
+            'name' => 'getName',
+            'availableZone' => 'getAvailableZone'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['availableZone'] = isset($data['availableZone']) ? $data['availableZone'] : null;
     }
 
     /**
@@ -169,24 +169,6 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-            if ((mb_strlen($this->container['errorCode']) > 36)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['errorCode']) < 8)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 8.";
-            }
-        if ($this->container['errorMsg'] === null) {
-            $invalidProperties[] = "'errorMsg' can't be null";
-        }
-            if ((mb_strlen($this->container['errorMsg']) > 512)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 512.";
-            }
-            if ((mb_strlen($this->container['errorMsg']) < 2)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +184,50 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  错误码。
+    * Gets name
+    *  节点名称。
     *
-    * @return string
+    * @return string|null
     */
-    public function getErrorCode()
+    public function getName()
     {
-        return $this->container['errorCode'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets errorCode
+    * Sets name
     *
-    * @param string $errorCode 错误码。
+    * @param string|null $name 节点名称。
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setName($name)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['name'] = $name;
         return $this;
     }
 
     /**
-    * Gets errorMsg
-    *  错误描述。
+    * Gets availableZone
+    *  可用区。
     *
-    * @return string
+    * @return string|null
     */
-    public function getErrorMsg()
+    public function getAvailableZone()
     {
-        return $this->container['errorMsg'];
+        return $this->container['availableZone'];
     }
 
     /**
-    * Sets errorMsg
+    * Sets availableZone
     *
-    * @param string $errorMsg 错误描述。
+    * @param string|null $availableZone 可用区。
     *
     * @return $this
     */
-    public function setErrorMsg($errorMsg)
+    public function setAvailableZone($availableZone)
     {
-        $this->container['errorMsg'] = $errorMsg;
+        $this->container['availableZone'] = $availableZone;
         return $this;
     }
 

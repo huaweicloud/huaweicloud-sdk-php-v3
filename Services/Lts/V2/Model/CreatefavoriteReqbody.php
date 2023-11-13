@@ -27,6 +27,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * isGlobal  是否支持全局化，必填true，否则创建不了收藏
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
             'logGroupId' => 'string',
             'logGroupName' => 'string',
             'logStreamId' => 'string',
-            'logStreamName' => 'string'
+            'logStreamName' => 'string',
+            'isGlobal' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * isGlobal  是否支持全局化，必填true，否则创建不了收藏
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
         'logGroupId' => null,
         'logGroupName' => null,
         'logStreamId' => null,
-        'logStreamName' => null
+        'logStreamName' => null,
+        'isGlobal' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * isGlobal  是否支持全局化，必填true，否则创建不了收藏
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
             'logGroupId' => 'log_group_id',
             'logGroupName' => 'log_group_name',
             'logStreamId' => 'log_stream_id',
-            'logStreamName' => 'log_stream_name'
+            'logStreamName' => 'log_stream_name',
+            'isGlobal' => 'is_global'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * isGlobal  是否支持全局化，必填true，否则创建不了收藏
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
             'logGroupId' => 'setLogGroupId',
             'logGroupName' => 'setLogGroupName',
             'logStreamId' => 'setLogStreamId',
-            'logStreamName' => 'setLogStreamName'
+            'logStreamName' => 'setLogStreamName',
+            'isGlobal' => 'setIsGlobal'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     * logGroupName  日志组名称
     * logStreamId  日志流id
     * logStreamName  日志流名称
+    * isGlobal  是否支持全局化，必填true，否则创建不了收藏
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
             'logGroupId' => 'getLogGroupId',
             'logGroupName' => 'getLogGroupName',
             'logStreamId' => 'getLogStreamId',
-            'logStreamName' => 'getLogStreamName'
+            'logStreamName' => 'getLogStreamName',
+            'isGlobal' => 'getIsGlobal'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
         $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['isGlobal'] = isset($data['isGlobal']) ? $data['isGlobal'] : null;
     }
 
     /**
@@ -235,6 +246,9 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
         }
         if ($this->container['logStreamId'] === null) {
             $invalidProperties[] = "'logStreamId' can't be null";
+        }
+        if ($this->container['isGlobal'] === null) {
+            $invalidProperties[] = "'isGlobal' can't be null";
         }
         return $invalidProperties;
     }
@@ -415,6 +429,30 @@ class CreatefavoriteReqbody implements ModelInterface, ArrayAccess
     public function setLogStreamName($logStreamName)
     {
         $this->container['logStreamName'] = $logStreamName;
+        return $this;
+    }
+
+    /**
+    * Gets isGlobal
+    *  是否支持全局化，必填true，否则创建不了收藏
+    *
+    * @return bool
+    */
+    public function getIsGlobal()
+    {
+        return $this->container['isGlobal'];
+    }
+
+    /**
+    * Sets isGlobal
+    *
+    * @param bool $isGlobal 是否支持全局化，必填true，否则创建不了收藏
+    *
+    * @return $this
+    */
+    public function setIsGlobal($isGlobal)
+    {
+        $this->container['isGlobal'] = $isGlobal;
         return $this;
     }
 

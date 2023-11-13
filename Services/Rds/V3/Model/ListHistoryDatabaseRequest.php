@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAccess
+class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,34 @@ class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListInstancesResourceMetricsResponse';
+    protected static $openAPIModelName = 'ListHistoryDatabaseRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  总记录数
-    * resourceMonitoringInfos  资源监控信息
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * xLanguage  语言
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'int',
-            'resourceMonitoringInfos' => '\HuaweiCloud\SDK\Rds\V3\Model\ResourceMonitoringInfo[]'
+            'databaseName' => 'string',
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  总记录数
-    * resourceMonitoringInfos  资源监控信息
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * xLanguage  语言
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => 'int32',
-        'resourceMonitoringInfos' => null
+        'databaseName' => null,
+        'xLanguage' => null,
+        'body' => null
     ];
 
     /**
@@ -66,38 +69,44 @@ class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  总记录数
-    * resourceMonitoringInfos  资源监控信息
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * xLanguage  语言
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalCount' => 'total_count',
-            'resourceMonitoringInfos' => 'resource_monitoring_infos'
+            'databaseName' => 'database_name',
+            'xLanguage' => 'X-Language',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  总记录数
-    * resourceMonitoringInfos  资源监控信息
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * xLanguage  语言
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalCount' => 'setTotalCount',
-            'resourceMonitoringInfos' => 'setResourceMonitoringInfos'
+            'databaseName' => 'setDatabaseName',
+            'xLanguage' => 'setXLanguage',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  总记录数
-    * resourceMonitoringInfos  资源监控信息
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * xLanguage  语言
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalCount' => 'getTotalCount',
-            'resourceMonitoringInfos' => 'getResourceMonitoringInfos'
+            'databaseName' => 'getDatabaseName',
+            'xLanguage' => 'getXLanguage',
+            'body' => 'getBody'
     ];
 
     /**
@@ -158,8 +167,9 @@ class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['resourceMonitoringInfos'] = isset($data['resourceMonitoringInfos']) ? $data['resourceMonitoringInfos'] : null;
+        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -170,6 +180,9 @@ class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['databaseName'] === null) {
+            $invalidProperties[] = "'databaseName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -185,50 +198,74 @@ class ListInstancesResourceMetricsResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets totalCount
-    *  总记录数
+    * Gets databaseName
+    *  数据库引擎。支持的引擎如下，不区分大小写：postgresql
     *
-    * @return int|null
+    * @return string
     */
-    public function getTotalCount()
+    public function getDatabaseName()
     {
-        return $this->container['totalCount'];
+        return $this->container['databaseName'];
     }
 
     /**
-    * Sets totalCount
+    * Sets databaseName
     *
-    * @param int|null $totalCount 总记录数
+    * @param string $databaseName 数据库引擎。支持的引擎如下，不区分大小写：postgresql
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setDatabaseName($databaseName)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['databaseName'] = $databaseName;
         return $this;
     }
 
     /**
-    * Gets resourceMonitoringInfos
-    *  资源监控信息
+    * Gets xLanguage
+    *  语言
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\ResourceMonitoringInfo[]|null
+    * @return string|null
     */
-    public function getResourceMonitoringInfos()
+    public function getXLanguage()
     {
-        return $this->container['resourceMonitoringInfos'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets resourceMonitoringInfos
+    * Sets xLanguage
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\ResourceMonitoringInfo[]|null $resourceMonitoringInfos 资源监控信息
+    * @param string|null $xLanguage 语言
     *
     * @return $this
     */
-    public function setResourceMonitoringInfos($resourceMonitoringInfos)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['resourceMonitoringInfos'] = $resourceMonitoringInfos;
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseRequest|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseRequest|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

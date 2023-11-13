@@ -1133,6 +1133,71 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
+     * 查询实例在CES的监控层级关系
+     *
+     * 查询实例在CES的监控层级关系。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCesHierarchyAsync($request)
+    {
+        return $this->showCesHierarchyAsyncWithHttpInfo($request);
+    }
+    
+    public function showCesHierarchyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/ces-hierarchy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCesHierarchyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCesHierarchyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询新规格可扩容规格列表
      *
      * 查询新规格实例可扩容列表
@@ -1400,6 +1465,80 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowMaintainWindowsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowMaintainWindowsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询RabbitMQ产品规格核数
+     *
+     * 查询RabbitMQ产品规格核数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRabbitMqProductCoresAsync($request)
+    {
+        return $this->showRabbitMqProductCoresAsyncWithHttpInfo($request);
+    }
+    
+    public function showRabbitMqProductCoresAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{engine}/products/cores';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['brokerNum'] !== null) {
+            $queryParams['broker_num'] = $localVarParams['brokerNum'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['engine'] !== null) {
+            $pathParams['engine'] = $localVarParams['engine'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowRabbitMqProductCoresResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowRabbitMqProductCoresRequest',
             $asyncRequest = true);
     }
 

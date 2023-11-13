@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RecommendedProduct implements ModelInterface, ArrayAccess
+class ListPostgresqlListHistoryTablesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RecommendedProduct';
+    protected static $openAPIModelName = 'ListPostgresqlListHistoryTablesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recommendedLevel  推荐级别
-    * applicationScenarios  应用场景
-    * flavors  规格信息
+    * xLanguage  语言
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recommendedLevel' => 'string',
-            'applicationScenarios' => 'string',
-            'flavors' => '\HuaweiCloud\SDK\Rds\V3\Model\RecommendFlavor[]'
+            'xLanguage' => 'string',
+            'databaseName' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryTableRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recommendedLevel  推荐级别
-    * applicationScenarios  应用场景
-    * flavors  规格信息
+    * xLanguage  语言
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recommendedLevel' => null,
-        'applicationScenarios' => null,
-        'flavors' => null
+        'xLanguage' => null,
+        'databaseName' => null,
+        'body' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recommendedLevel  推荐级别
-    * applicationScenarios  应用场景
-    * flavors  规格信息
+    * xLanguage  语言
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recommendedLevel' => 'recommended_level',
-            'applicationScenarios' => 'application_scenarios',
-            'flavors' => 'flavors'
+            'xLanguage' => 'X-Language',
+            'databaseName' => 'database_name',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recommendedLevel  推荐级别
-    * applicationScenarios  应用场景
-    * flavors  规格信息
+    * xLanguage  语言
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'recommendedLevel' => 'setRecommendedLevel',
-            'applicationScenarios' => 'setApplicationScenarios',
-            'flavors' => 'setFlavors'
+            'xLanguage' => 'setXLanguage',
+            'databaseName' => 'setDatabaseName',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recommendedLevel  推荐级别
-    * applicationScenarios  应用场景
-    * flavors  规格信息
+    * xLanguage  语言
+    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'recommendedLevel' => 'getRecommendedLevel',
-            'applicationScenarios' => 'getApplicationScenarios',
-            'flavors' => 'getFlavors'
+            'xLanguage' => 'getXLanguage',
+            'databaseName' => 'getDatabaseName',
+            'body' => 'getBody'
     ];
 
     /**
@@ -149,41 +149,7 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RECOMMENDED_LEVEL__0 = '0';
-    const RECOMMENDED_LEVEL__1 = '1';
-    const RECOMMENDED_LEVEL__2 = '2';
-    const APPLICATION_SCENARIOS__0 = '0';
-    const APPLICATION_SCENARIOS__1 = '1';
-    const APPLICATION_SCENARIOS__2 = '2';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRecommendedLevelAllowableValues()
-    {
-        return [
-            self::RECOMMENDED_LEVEL__0,
-            self::RECOMMENDED_LEVEL__1,
-            self::RECOMMENDED_LEVEL__2,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getApplicationScenariosAllowableValues()
-    {
-        return [
-            self::APPLICATION_SCENARIOS__0,
-            self::APPLICATION_SCENARIOS__1,
-            self::APPLICATION_SCENARIOS__2,
-        ];
-    }
 
 
     /**
@@ -201,9 +167,9 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recommendedLevel'] = isset($data['recommendedLevel']) ? $data['recommendedLevel'] : null;
-        $this->container['applicationScenarios'] = isset($data['applicationScenarios']) ? $data['applicationScenarios'] : null;
-        $this->container['flavors'] = isset($data['flavors']) ? $data['flavors'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -214,30 +180,8 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['recommendedLevel'] === null) {
-            $invalidProperties[] = "'recommendedLevel' can't be null";
-        }
-            $allowedValues = $this->getRecommendedLevelAllowableValues();
-                if (!is_null($this->container['recommendedLevel']) && !in_array($this->container['recommendedLevel'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'recommendedLevel', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-        if ($this->container['applicationScenarios'] === null) {
-            $invalidProperties[] = "'applicationScenarios' can't be null";
-        }
-            $allowedValues = $this->getApplicationScenariosAllowableValues();
-                if (!is_null($this->container['applicationScenarios']) && !in_array($this->container['applicationScenarios'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'applicationScenarios', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-        if ($this->container['flavors'] === null) {
-            $invalidProperties[] = "'flavors' can't be null";
+        if ($this->container['databaseName'] === null) {
+            $invalidProperties[] = "'databaseName' can't be null";
         }
         return $invalidProperties;
     }
@@ -254,74 +198,74 @@ class RecommendedProduct implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recommendedLevel
-    *  推荐级别
+    * Gets xLanguage
+    *  语言
     *
-    * @return string
+    * @return string|null
     */
-    public function getRecommendedLevel()
+    public function getXLanguage()
     {
-        return $this->container['recommendedLevel'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets recommendedLevel
+    * Sets xLanguage
     *
-    * @param string $recommendedLevel 推荐级别
+    * @param string|null $xLanguage 语言
     *
     * @return $this
     */
-    public function setRecommendedLevel($recommendedLevel)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['recommendedLevel'] = $recommendedLevel;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets applicationScenarios
-    *  应用场景
+    * Gets databaseName
+    *  数据库引擎。支持的引擎如下，不区分大小写：postgresql
     *
     * @return string
     */
-    public function getApplicationScenarios()
+    public function getDatabaseName()
     {
-        return $this->container['applicationScenarios'];
+        return $this->container['databaseName'];
     }
 
     /**
-    * Sets applicationScenarios
+    * Sets databaseName
     *
-    * @param string $applicationScenarios 应用场景
+    * @param string $databaseName 数据库引擎。支持的引擎如下，不区分大小写：postgresql
     *
     * @return $this
     */
-    public function setApplicationScenarios($applicationScenarios)
+    public function setDatabaseName($databaseName)
     {
-        $this->container['applicationScenarios'] = $applicationScenarios;
+        $this->container['databaseName'] = $databaseName;
         return $this;
     }
 
     /**
-    * Gets flavors
-    *  规格信息
+    * Gets body
+    *  body
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\RecommendFlavor[]
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryTableRequest|null
     */
-    public function getFlavors()
+    public function getBody()
     {
-        return $this->container['flavors'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets flavors
+    * Sets body
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\RecommendFlavor[] $flavors 规格信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryTableRequest|null $body body
     *
     * @return $this
     */
-    public function setFlavors($flavors)
+    public function setBody($body)
     {
-        $this->container['flavors'] = $flavors;
+        $this->container['body'] = $body;
         return $this;
     }
 

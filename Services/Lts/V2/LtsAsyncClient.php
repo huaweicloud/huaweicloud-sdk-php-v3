@@ -4309,7 +4309,7 @@ class LtsAsyncClient extends Client
     
     public function updateLogStreamAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/groups/{log_group_id}/streams_ttl/{log_stream_id}';
+        $resourcePath = '/v2/{project_id}/groups/{log_group_id}/streams-ttl/{log_stream_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

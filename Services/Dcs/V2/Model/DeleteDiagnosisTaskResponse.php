@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\Dcs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
+class DeleteDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,26 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListInstancesRecommendationResponse';
+    protected static $openAPIModelName = 'DeleteDiagnosisTaskResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎类型
-    * recommendedProducts  推荐商品信息
+    * results  删除实例诊断结果
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'engine' => 'string',
-            'recommendedProducts' => '\HuaweiCloud\SDK\Rds\V3\Model\RecommendedProduct[]'
+            'results' => '\HuaweiCloud\SDK\Dcs\V2\Model\Item[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎类型
-    * recommendedProducts  推荐商品信息
+    * results  删除实例诊断结果
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'engine' => null,
-        'recommendedProducts' => null
+        'results' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎类型
-    * recommendedProducts  推荐商品信息
+    * results  删除实例诊断结果
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'engine' => 'engine',
-            'recommendedProducts' => 'recommended_products'
+            'results' => 'results'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎类型
-    * recommendedProducts  推荐商品信息
+    * results  删除实例诊断结果
     *
     * @var string[]
     */
     protected static $setters = [
-            'engine' => 'setEngine',
-            'recommendedProducts' => 'setRecommendedProducts'
+            'results' => 'setResults'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎类型
-    * recommendedProducts  推荐商品信息
+    * results  删除实例诊断结果
     *
     * @var string[]
     */
     protected static $getters = [
-            'engine' => 'getEngine',
-            'recommendedProducts' => 'getRecommendedProducts'
+            'results' => 'getResults'
     ];
 
     /**
@@ -140,24 +130,7 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_MYSQL = 'mysql';
-    const ENGINE_POSTGRESQL = 'postgresql';
-    const ENGINE_SQLSERVER = 'sqlserver';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineAllowableValues()
-    {
-        return [
-            self::ENGINE_MYSQL,
-            self::ENGINE_POSTGRESQL,
-            self::ENGINE_SQLSERVER,
-        ];
-    }
 
 
     /**
@@ -175,8 +148,7 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
-        $this->container['recommendedProducts'] = isset($data['recommendedProducts']) ? $data['recommendedProducts'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
 
     /**
@@ -187,14 +159,6 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getEngineAllowableValues();
-                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engine', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -210,50 +174,26 @@ class ListInstancesRecommendationResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets engine
-    *  引擎类型
+    * Gets results
+    *  删除实例诊断结果
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dcs\V2\Model\Item[]|null
     */
-    public function getEngine()
+    public function getResults()
     {
-        return $this->container['engine'];
+        return $this->container['results'];
     }
 
     /**
-    * Sets engine
+    * Sets results
     *
-    * @param string|null $engine 引擎类型
+    * @param \HuaweiCloud\SDK\Dcs\V2\Model\Item[]|null $results 删除实例诊断结果
     *
     * @return $this
     */
-    public function setEngine($engine)
+    public function setResults($results)
     {
-        $this->container['engine'] = $engine;
-        return $this;
-    }
-
-    /**
-    * Gets recommendedProducts
-    *  推荐商品信息
-    *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\RecommendedProduct[]|null
-    */
-    public function getRecommendedProducts()
-    {
-        return $this->container['recommendedProducts'];
-    }
-
-    /**
-    * Sets recommendedProducts
-    *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\RecommendedProduct[]|null $recommendedProducts 推荐商品信息
-    *
-    * @return $this
-    */
-    public function setRecommendedProducts($recommendedProducts)
-    {
-        $this->container['recommendedProducts'] = $recommendedProducts;
+        $this->container['results'] = $results;
         return $this;
     }
 

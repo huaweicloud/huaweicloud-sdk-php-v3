@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class EpsRegion {
 
-    public static $REGION = array("https://eps.myhuaweicloud.com"=>"cn-north-4",);
+    public static $REGION = array("https://eps.myhuaweicloud.com"=>"cn-north-4","https://eps.eu-west-101.myhuaweicloud.eu"=>"eu-west-101",);
 
     public static function valueOf($regionId)
     {
