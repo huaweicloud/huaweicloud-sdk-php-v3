@@ -20,7 +20,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * jobId  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     * buildNumber  构建任务的构建编号，从1开始，每次构建递增1
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * jobId  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     * buildNumber  构建任务的构建编号，从1开始，每次构建递增1
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * jobId  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     * buildNumber  构建任务的构建编号，从1开始，每次构建递增1
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * jobId  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     * buildNumber  构建任务的构建编号，从1开始，每次构建递增1
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * jobId  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     * buildNumber  构建任务的构建编号，从1开始，每次构建递增1
     *
     * @var string[]
@@ -178,6 +178,9 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
         if ($this->container['buildNumber'] === null) {
             $invalidProperties[] = "'buildNumber' can't be null";
         }
+            if (($this->container['buildNumber'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'buildNumber', must be smaller than or equal to 2147483647.";
+            }
             if (($this->container['buildNumber'] < 1)) {
                 $invalidProperties[] = "invalid value for 'buildNumber', must be bigger than or equal to 1.";
             }
@@ -197,7 +200,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    *  构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     *
     * @return string
     */
@@ -209,7 +212,7 @@ class ShowHistoryDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 构建的任务ID [获取项目下构建任务列表](https://support.huaweicloud.com/api-codeci/ShowJobListByProjectId.html)； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
+    * @param string $jobId 构建的任务ID； 编辑构建任务时，浏览器URL末尾的32位数字、字母组合的字符串。
     *
     * @return $this
     */

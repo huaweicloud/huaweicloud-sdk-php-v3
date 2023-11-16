@@ -23,7 +23,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -33,7 +33,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     * sessionConf  sessionConf
     * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
-    * billingInfo  订单信息。
+    * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
@@ -63,7 +63,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -73,7 +73,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     * sessionConf  sessionConf
     * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
-    * billingInfo  订单信息。
+    * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
@@ -124,7 +124,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -134,7 +134,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     * sessionConf  sessionConf
     * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
-    * billingInfo  订单信息。
+    * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
@@ -164,7 +164,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -174,7 +174,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     * sessionConf  sessionConf
     * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
-    * billingInfo  订单信息。
+    * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
@@ -204,7 +204,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -214,7 +214,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     * sessionConf  sessionConf
     * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
-    * billingInfo  订单信息。
+    * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
@@ -581,7 +581,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  公网NAT网关实例的描述，长度限制为255。
+    *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return string
     */
@@ -593,7 +593,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 公网NAT网关实例的描述，长度限制为255。
+    * @param string $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */
@@ -821,7 +821,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingInfo
-    *  订单信息。
+    *  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     *
     * @return string
     */
@@ -833,7 +833,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets billingInfo
     *
-    * @param string $billingInfo 订单信息。
+    * @param string $billingInfo 订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     *
     * @return $this
     */

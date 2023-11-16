@@ -26,7 +26,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     * topic  **参数说明**：转发kafka消息关联的topic信息。
     * username  **参数说明**：转发kafka关联的用户名信息。
     * password  **参数说明**：转发kafka关联的密码信息。
-    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * mechanism  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
+    * securityProtocol  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
             'topic' => 'string',
             'username' => 'string',
             'password' => 'string',
-            'mechanism' => 'string'
+            'mechanism' => 'string',
+            'securityProtocol' => 'string'
     ];
 
     /**
@@ -48,7 +50,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     * topic  **参数说明**：转发kafka消息关联的topic信息。
     * username  **参数说明**：转发kafka关联的用户名信息。
     * password  **参数说明**：转发kafka关联的密码信息。
-    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * mechanism  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
+    * securityProtocol  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
         'topic' => null,
         'username' => null,
         'password' => null,
-        'mechanism' => null
+        'mechanism' => null,
+        'securityProtocol' => null
     ];
 
     /**
@@ -91,7 +95,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     * topic  **参数说明**：转发kafka消息关联的topic信息。
     * username  **参数说明**：转发kafka关联的用户名信息。
     * password  **参数说明**：转发kafka关联的密码信息。
-    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * mechanism  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
+    * securityProtocol  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
             'topic' => 'topic',
             'username' => 'username',
             'password' => 'password',
-            'mechanism' => 'mechanism'
+            'mechanism' => 'mechanism',
+            'securityProtocol' => 'security_protocol'
     ];
 
     /**
@@ -113,7 +119,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     * topic  **参数说明**：转发kafka消息关联的topic信息。
     * username  **参数说明**：转发kafka关联的用户名信息。
     * password  **参数说明**：转发kafka关联的密码信息。
-    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * mechanism  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
+    * securityProtocol  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
             'topic' => 'setTopic',
             'username' => 'setUsername',
             'password' => 'setPassword',
-            'mechanism' => 'setMechanism'
+            'mechanism' => 'setMechanism',
+            'securityProtocol' => 'setSecurityProtocol'
     ];
 
     /**
@@ -135,7 +143,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     * topic  **参数说明**：转发kafka消息关联的topic信息。
     * username  **参数说明**：转发kafka关联的用户名信息。
     * password  **参数说明**：转发kafka关联的密码信息。
-    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * mechanism  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
+    * securityProtocol  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
             'topic' => 'getTopic',
             'username' => 'getUsername',
             'password' => 'getPassword',
-            'mechanism' => 'getMechanism'
+            'mechanism' => 'getMechanism',
+            'securityProtocol' => 'getSecurityProtocol'
     ];
 
     /**
@@ -214,6 +224,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['mechanism'] = isset($data['mechanism']) ? $data['mechanism'] : null;
+        $this->container['securityProtocol'] = isset($data['securityProtocol']) ? $data['securityProtocol'] : null;
     }
 
     /**
@@ -266,8 +277,11 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
             if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) < 1)) {
                 $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['mechanism']) && !preg_match("/(PAAS|PLAIN)/", $this->container['mechanism'])) {
-                $invalidProperties[] = "invalid value for 'mechanism', must be conform to the pattern /(PAAS|PLAIN)/.";
+            if (!is_null($this->container['mechanism']) && !preg_match("/(PAAS|PLAIN|SCRAM-SHA-512)/", $this->container['mechanism'])) {
+                $invalidProperties[] = "invalid value for 'mechanism', must be conform to the pattern /(PAAS|PLAIN|SCRAM-SHA-512)/.";
+            }
+            if (!is_null($this->container['securityProtocol']) && !preg_match("/(SASL_SSL|SASL_PLAINTEXT)/", $this->container['securityProtocol'])) {
+                $invalidProperties[] = "invalid value for 'securityProtocol', must be conform to the pattern /(SASL_SSL|SASL_PLAINTEXT)/.";
             }
         return $invalidProperties;
     }
@@ -429,7 +443,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets mechanism
-    *  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    *  **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
     *
     * @return string|null
     */
@@ -441,13 +455,37 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets mechanism
     *
-    * @param string|null $mechanism **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * @param string|null $mechanism **参数说明**：转发kafka关联的SASL认证机制。 **取值范围**： - PAAS：明文传输，此模式下为非数据加密传输模式，数据传输不安全，建议您使用更安全的数据加密模式。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。一种简单的用户名密码校验机制，在SASL_PLAINTEXT场景下，不建议使用。 - SCRAM-SHA-512：SASL/SCRAM-SHA-512模式。需要填写对应的用户名密码信息。采用哈希算法对用户名与密码生成凭证，进行身份校验的安全认证机制，比PLAIN机制安全性更高。
     *
     * @return $this
     */
     public function setMechanism($mechanism)
     {
         $this->container['mechanism'] = $mechanism;
+        return $this;
+    }
+
+    /**
+    * Gets securityProtocol
+    *  **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
+    *
+    * @return string|null
+    */
+    public function getSecurityProtocol()
+    {
+        return $this->container['securityProtocol'];
+    }
+
+    /**
+    * Sets securityProtocol
+    *
+    * @param string|null $securityProtocol **参数说明**：kafka传输安全协议，此字段不填默认为SASL_SSL。当mechanism为PAAS或不填时，该字段不生效。 **取值范围**： - SASL_SSL：采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持帐号密码认证，性能更好，建议mechanism使用SCRAM-SHA-512机制。
+    *
+    * @return $this
+    */
+    public function setSecurityProtocol($securityProtocol)
+    {
+        $this->container['securityProtocol'] = $securityProtocol;
         return $this;
     }
 

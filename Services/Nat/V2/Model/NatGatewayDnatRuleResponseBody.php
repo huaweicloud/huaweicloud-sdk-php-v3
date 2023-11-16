@@ -22,7 +22,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  DNAT规则的ID。
     * tenantId  项目的ID。
-    * description  DNAT规则的描述。长度限制为255。
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -66,7 +66,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  DNAT规则的ID。
     * tenantId  项目的ID。
-    * description  DNAT规则的描述。长度限制为255。
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -131,7 +131,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  DNAT规则的ID。
     * tenantId  项目的ID。
-    * description  DNAT规则的描述。长度限制为255。
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -175,7 +175,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  DNAT规则的ID。
     * tenantId  项目的ID。
-    * description  DNAT规则的描述。长度限制为255。
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -219,7 +219,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  DNAT规则的ID。
     * tenantId  项目的ID。
-    * description  DNAT规则的描述。长度限制为255。
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -585,7 +585,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述。长度限制为255。
+    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     *
     * @return string
     */
@@ -597,7 +597,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description DNAT规则的描述。长度限制为255。
+    * @param string $description DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

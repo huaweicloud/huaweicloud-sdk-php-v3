@@ -25,7 +25,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。 取值约束： - 与virsubnet_id参数二选一。 - cidr不能与已有snat规则的网段相同。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * transitIpAssociations  关联的中转IP详情列表。
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -53,7 +53,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。 取值约束： - 与virsubnet_id参数二选一。 - cidr不能与已有snat规则的网段相同。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * transitIpAssociations  关联的中转IP详情列表。
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -102,7 +102,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。 取值约束： - 与virsubnet_id参数二选一。 - cidr不能与已有snat规则的网段相同。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * transitIpAssociations  关联的中转IP详情列表。
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -130,7 +130,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。 取值约束： - 与virsubnet_id参数二选一。 - cidr不能与已有snat规则的网段相同。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * transitIpAssociations  关联的中转IP详情列表。
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -158,7 +158,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。 取值约束： - 与virsubnet_id参数二选一。 - cidr不能与已有snat规则的网段相同。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     * transitIpAssociations  关联的中转IP详情列表。
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -435,7 +435,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述。
+    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description SNAT规则的描述。
+    * @param string|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

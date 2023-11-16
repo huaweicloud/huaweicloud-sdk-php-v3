@@ -30,6 +30,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    * coldStorage  冷存储量
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logStreamName' => 'string',
             'basicTransfer' => 'double',
             'seniorTransfer' => 'double',
-            'isAgencyTransfer' => 'bool'
+            'isAgencyTransfer' => 'bool',
+            'coldStorage' => 'double'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    * coldStorage  冷存储量
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         'logStreamName' => null,
         'basicTransfer' => 'double',
         'seniorTransfer' => 'double',
-        'isAgencyTransfer' => null
+        'isAgencyTransfer' => null,
+        'coldStorage' => 'double'
     ];
 
     /**
@@ -107,6 +111,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    * coldStorage  冷存储量
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logStreamName' => 'log_stream_name',
             'basicTransfer' => 'basic_transfer',
             'seniorTransfer' => 'senior_transfer',
-            'isAgencyTransfer' => 'is_agency_transfer'
+            'isAgencyTransfer' => 'is_agency_transfer',
+            'coldStorage' => 'cold_storage'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    * coldStorage  冷存储量
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logStreamName' => 'setLogStreamName',
             'basicTransfer' => 'setBasicTransfer',
             'seniorTransfer' => 'setSeniorTransfer',
-            'isAgencyTransfer' => 'setIsAgencyTransfer'
+            'isAgencyTransfer' => 'setIsAgencyTransfer',
+            'coldStorage' => 'setColdStorage'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     * basicTransfer  基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
     * seniorTransfer  基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
     * isAgencyTransfer  不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+    * coldStorage  冷存储量
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
             'logStreamName' => 'getLogStreamName',
             'basicTransfer' => 'getBasicTransfer',
             'seniorTransfer' => 'getSeniorTransfer',
-            'isAgencyTransfer' => 'getIsAgencyTransfer'
+            'isAgencyTransfer' => 'getIsAgencyTransfer',
+            'coldStorage' => 'getColdStorage'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
         $this->container['basicTransfer'] = isset($data['basicTransfer']) ? $data['basicTransfer'] : null;
         $this->container['seniorTransfer'] = isset($data['seniorTransfer']) ? $data['seniorTransfer'] : null;
         $this->container['isAgencyTransfer'] = isset($data['isAgencyTransfer']) ? $data['isAgencyTransfer'] : null;
+        $this->container['coldStorage'] = isset($data['coldStorage']) ? $data['coldStorage'] : null;
     }
 
     /**
@@ -523,6 +534,30 @@ class ResultsTopnBody implements ModelInterface, ArrayAccess
     public function setIsAgencyTransfer($isAgencyTransfer)
     {
         $this->container['isAgencyTransfer'] = $isAgencyTransfer;
+        return $this;
+    }
+
+    /**
+    * Gets coldStorage
+    *  冷存储量
+    *
+    * @return double|null
+    */
+    public function getColdStorage()
+    {
+        return $this->container['coldStorage'];
+    }
+
+    /**
+    * Sets coldStorage
+    *
+    * @param double|null $coldStorage 冷存储量
+    *
+    * @return $this
+    */
+    public function setColdStorage($coldStorage)
+    {
+        $this->container['coldStorage'] = $coldStorage;
         return $this;
     }
 

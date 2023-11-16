@@ -22,24 +22,28 @@ class Router implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * routerId  Router(VPC)所属VPC的ID。
     * routerRegion  Router(VPC)所在的region。
+    * status  资源状态。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'routerId' => 'string',
-            'routerRegion' => 'string'
+            'routerRegion' => 'string',
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * routerId  Router(VPC)所属VPC的ID。
     * routerRegion  Router(VPC)所在的region。
+    * status  资源状态。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'routerId' => null,
-        'routerRegion' => null
+        'routerRegion' => null,
+        'status' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class Router implements ModelInterface, ArrayAccess
     * and the value is the original name
     * routerId  Router(VPC)所属VPC的ID。
     * routerRegion  Router(VPC)所在的region。
+    * status  资源状态。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'routerId' => 'router_id',
-            'routerRegion' => 'router_region'
+            'routerRegion' => 'router_region',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * routerId  Router(VPC)所属VPC的ID。
     * routerRegion  Router(VPC)所在的region。
+    * status  资源状态。
     *
     * @var string[]
     */
     protected static $setters = [
             'routerId' => 'setRouterId',
-            'routerRegion' => 'setRouterRegion'
+            'routerRegion' => 'setRouterRegion',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * routerId  Router(VPC)所属VPC的ID。
     * routerRegion  Router(VPC)所在的region。
+    * status  资源状态。
     *
     * @var string[]
     */
     protected static $getters = [
             'routerId' => 'getRouterId',
-            'routerRegion' => 'getRouterRegion'
+            'routerRegion' => 'getRouterRegion',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Router implements ModelInterface, ArrayAccess
     {
         $this->container['routerId'] = isset($data['routerId']) ? $data['routerId'] : null;
         $this->container['routerRegion'] = isset($data['routerRegion']) ? $data['routerRegion'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class Router implements ModelInterface, ArrayAccess
     public function setRouterRegion($routerRegion)
     {
         $this->container['routerRegion'] = $routerRegion;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  资源状态。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 资源状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

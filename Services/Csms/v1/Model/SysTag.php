@@ -21,25 +21,25 @@ class SysTag implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  标签键。
-    * values  标签值。
+    * value  标签值。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'values' => 'string'
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  标签键。
-    * values  标签值。
+    * value  标签值。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
-        'values' => null
+        'value' => null
     ];
 
     /**
@@ -66,37 +66,37 @@ class SysTag implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  标签键。
-    * values  标签值。
+    * value  标签值。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
-            'values' => 'values'
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  标签键。
-    * values  标签值。
+    * value  标签值。
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
-            'values' => 'setValues'
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  标签键。
-    * values  标签值。
+    * value  标签值。
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
-            'values' => 'getValues'
+            'value' => 'getValue'
     ];
 
     /**
@@ -158,7 +158,7 @@ class SysTag implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -175,11 +175,11 @@ class SysTag implements ModelInterface, ArrayAccess
             if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['values']) && (mb_strlen($this->container['values']) > 255)) {
-                $invalidProperties[] = "invalid value for 'values', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['values']) && (mb_strlen($this->container['values']) < 0)) {
-                $invalidProperties[] = "invalid value for 'values', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -220,26 +220,26 @@ class SysTag implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets values
+    * Gets value
     *  标签值。
     *
     * @return string|null
     */
-    public function getValues()
+    public function getValue()
     {
-        return $this->container['values'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets values
+    * Sets value
     *
-    * @param string|null $values 标签值。
+    * @param string|null $value 标签值。
     *
     * @return $this
     */
-    public function setValues($values)
+    public function setValue($value)
     {
-        $this->container['values'] = $values;
+        $this->container['value'] = $value;
         return $this;
     }
 

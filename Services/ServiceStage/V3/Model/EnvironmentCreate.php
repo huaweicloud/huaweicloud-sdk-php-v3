@@ -251,9 +251,6 @@ class EnvironmentCreate implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['vpcId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 64.";
             }
-        if ($this->container['deployMode'] === null) {
-            $invalidProperties[] = "'deployMode' can't be null";
-        }
             $allowedValues = $this->getDeployModeAllowableValues();
                 if (!is_null($this->container['deployMode']) && !in_array($this->container['deployMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -376,7 +373,7 @@ class EnvironmentCreate implements ModelInterface, ArrayAccess
     * Gets deployMode
     *  deployMode
     *
-    * @return string
+    * @return string|null
     */
     public function getDeployMode()
     {
@@ -386,7 +383,7 @@ class EnvironmentCreate implements ModelInterface, ArrayAccess
     /**
     * Sets deployMode
     *
-    * @param string $deployMode deployMode
+    * @param string|null $deployMode deployMode
     *
     * @return $this
     */

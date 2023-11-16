@@ -21,6 +21,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * funcId  函数id，唯一标识函数。
+    * resourceId  函数资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -67,6 +69,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'funcId' => 'string',
+            'resourceId' => 'string',
             'funcUrn' => 'string',
             'funcName' => 'string',
             'domainId' => 'string',
@@ -113,6 +117,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * funcId  函数id，唯一标识函数。
+    * resourceId  函数资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -159,6 +165,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'funcId' => null,
+        'resourceId' => null,
         'funcUrn' => null,
         'funcName' => null,
         'domainId' => null,
@@ -226,6 +234,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * funcId  函数id，唯一标识函数。
+    * resourceId  函数资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -272,6 +282,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'funcId' => 'func_id',
+            'resourceId' => 'resource_id',
             'funcUrn' => 'func_urn',
             'funcName' => 'func_name',
             'domainId' => 'domain_id',
@@ -318,6 +330,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * funcId  函数id，唯一标识函数。
+    * resourceId  函数资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -364,6 +378,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'funcId' => 'setFuncId',
+            'resourceId' => 'setResourceId',
             'funcUrn' => 'setFuncUrn',
             'funcName' => 'setFuncName',
             'domainId' => 'setDomainId',
@@ -410,6 +426,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * funcId  函数id，唯一标识函数。
+    * resourceId  函数资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -456,6 +474,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'funcId' => 'getFuncId',
+            'resourceId' => 'getResourceId',
             'funcUrn' => 'getFuncUrn',
             'funcName' => 'getFuncName',
             'domainId' => 'getDomainId',
@@ -639,6 +659,8 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['funcId'] = isset($data['funcId']) ? $data['funcId'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['funcUrn'] = isset($data['funcUrn']) ? $data['funcUrn'] : null;
         $this->container['funcName'] = isset($data['funcName']) ? $data['funcName'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
@@ -727,6 +749,54 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets funcId
+    *  函数id，唯一标识函数。
+    *
+    * @return string|null
+    */
+    public function getFuncId()
+    {
+        return $this->container['funcId'];
+    }
+
+    /**
+    * Sets funcId
+    *
+    * @param string|null $funcId 函数id，唯一标识函数。
+    *
+    * @return $this
+    */
+    public function setFuncId($funcId)
+    {
+        $this->container['funcId'] = $funcId;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  函数资源id。
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 函数资源id。
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
     }
 
     /**

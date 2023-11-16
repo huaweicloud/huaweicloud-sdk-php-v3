@@ -47,6 +47,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     * startTime  开始构建时间
     * runnableTime  八爪鱼真正开始构建时间
     * finishTime  构建结束时间
+    * duration  构建时长
     * recordStatus  record状态
     * usePrivateSlave  是否使用自定义执行机
     * region  租户所在region
@@ -83,6 +84,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'runnableTime' => 'string',
             'finishTime' => 'string',
+            'duration' => 'float',
             'recordStatus' => 'string',
             'usePrivateSlave' => 'int',
             'region' => 'string',
@@ -119,6 +121,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     * startTime  开始构建时间
     * runnableTime  八爪鱼真正开始构建时间
     * finishTime  构建结束时间
+    * duration  构建时长
     * recordStatus  record状态
     * usePrivateSlave  是否使用自定义执行机
     * region  租户所在region
@@ -155,6 +158,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
         'startTime' => null,
         'runnableTime' => null,
         'finishTime' => null,
+        'duration' => 'float',
         'recordStatus' => null,
         'usePrivateSlave' => null,
         'region' => null,
@@ -212,6 +216,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     * startTime  开始构建时间
     * runnableTime  八爪鱼真正开始构建时间
     * finishTime  构建结束时间
+    * duration  构建时长
     * recordStatus  record状态
     * usePrivateSlave  是否使用自定义执行机
     * region  租户所在region
@@ -248,6 +253,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'runnableTime' => 'runnable_time',
             'finishTime' => 'finish_time',
+            'duration' => 'duration',
             'recordStatus' => 'record_status',
             'usePrivateSlave' => 'use_private_slave',
             'region' => 'region',
@@ -284,6 +290,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     * startTime  开始构建时间
     * runnableTime  八爪鱼真正开始构建时间
     * finishTime  构建结束时间
+    * duration  构建时长
     * recordStatus  record状态
     * usePrivateSlave  是否使用自定义执行机
     * region  租户所在region
@@ -320,6 +327,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'runnableTime' => 'setRunnableTime',
             'finishTime' => 'setFinishTime',
+            'duration' => 'setDuration',
             'recordStatus' => 'setRecordStatus',
             'usePrivateSlave' => 'setUsePrivateSlave',
             'region' => 'setRegion',
@@ -356,6 +364,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     * startTime  开始构建时间
     * runnableTime  八爪鱼真正开始构建时间
     * finishTime  构建结束时间
+    * duration  构建时长
     * recordStatus  record状态
     * usePrivateSlave  是否使用自定义执行机
     * region  租户所在region
@@ -392,6 +401,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'runnableTime' => 'getRunnableTime',
             'finishTime' => 'getFinishTime',
+            'duration' => 'getDuration',
             'recordStatus' => 'getRecordStatus',
             'usePrivateSlave' => 'getUsePrivateSlave',
             'region' => 'getRegion',
@@ -484,6 +494,7 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['runnableTime'] = isset($data['runnableTime']) ? $data['runnableTime'] : null;
         $this->container['finishTime'] = isset($data['finishTime']) ? $data['finishTime'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['recordStatus'] = isset($data['recordStatus']) ? $data['recordStatus'] : null;
         $this->container['usePrivateSlave'] = isset($data['usePrivateSlave']) ? $data['usePrivateSlave'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
@@ -1158,6 +1169,30 @@ class RecordInfoResult implements ModelInterface, ArrayAccess
     public function setFinishTime($finishTime)
     {
         $this->container['finishTime'] = $finishTime;
+        return $this;
+    }
+
+    /**
+    * Gets duration
+    *  构建时长
+    *
+    * @return float|null
+    */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+    * Sets duration
+    *
+    * @param float|null $duration 构建时长
+    *
+    * @return $this
+    */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
         return $this;
     }
 

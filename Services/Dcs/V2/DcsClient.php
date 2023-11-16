@@ -5771,6 +5771,9 @@ class DcsClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -5778,7 +5781,7 @@ class DcsClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json;charset=UTF-8', 'application/json'],
-                []
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(

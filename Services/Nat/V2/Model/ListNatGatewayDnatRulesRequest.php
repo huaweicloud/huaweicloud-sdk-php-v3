@@ -28,7 +28,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
     * id  DNAT规则的ID。
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
@@ -64,7 +64,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
     * id  DNAT规则的ID。
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
@@ -121,7 +121,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
     * id  DNAT规则的ID。
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
@@ -157,7 +157,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
     * id  DNAT规则的ID。
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
@@ -193,7 +193,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
     * id  DNAT规则的ID。
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
@@ -592,7 +592,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述，长度限制为255。
+    *  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description DNAT规则的描述，长度限制为255。
+    * @param string|null $description DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

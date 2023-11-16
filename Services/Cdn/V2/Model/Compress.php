@@ -183,9 +183,6 @@ class Compress implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -228,7 +225,7 @@ class Compress implements ModelInterface, ArrayAccess
     * Gets type
     *  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -238,7 +235,7 @@ class Compress implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * @param string|null $type 智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
     *
     * @return $this
     */

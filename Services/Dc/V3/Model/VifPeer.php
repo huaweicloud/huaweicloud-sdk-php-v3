@@ -37,6 +37,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpRouteLimit' => 'int',
             'bgpStatus' => 'string',
             'status' => 'string',
-            'vifId' => 'string'
+            'vifId' => 'string',
+            'receiveRouteNum' => 'int'
     ];
 
     /**
@@ -79,6 +81,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class VifPeer implements ModelInterface, ArrayAccess
         'bgpRouteLimit' => 'int32',
         'bgpStatus' => null,
         'status' => null,
-        'vifId' => null
+        'vifId' => null,
+        'receiveRouteNum' => 'int32'
     ];
 
     /**
@@ -142,6 +146,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpRouteLimit' => 'bgp_route_limit',
             'bgpStatus' => 'bgp_status',
             'status' => 'status',
-            'vifId' => 'vif_id'
+            'vifId' => 'vif_id',
+            'receiveRouteNum' => 'receive_route_num'
     ];
 
     /**
@@ -184,6 +190,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpRouteLimit' => 'setBgpRouteLimit',
             'bgpStatus' => 'setBgpStatus',
             'status' => 'setStatus',
-            'vifId' => 'setVifId'
+            'vifId' => 'setVifId',
+            'receiveRouteNum' => 'setReceiveRouteNum'
     ];
 
     /**
@@ -226,6 +234,7 @@ class VifPeer implements ModelInterface, ArrayAccess
     * bgpStatus  接口BGP协议状态,如果是静态路由接口则状态为 null
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
+    * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpRouteLimit' => 'getBgpRouteLimit',
             'bgpStatus' => 'getBgpStatus',
             'status' => 'getStatus',
-            'vifId' => 'getVifId'
+            'vifId' => 'getVifId',
+            'receiveRouteNum' => 'getReceiveRouteNum'
     ];
 
     /**
@@ -339,6 +349,7 @@ class VifPeer implements ModelInterface, ArrayAccess
         $this->container['bgpStatus'] = isset($data['bgpStatus']) ? $data['bgpStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['vifId'] = isset($data['vifId']) ? $data['vifId'] : null;
+        $this->container['receiveRouteNum'] = isset($data['receiveRouteNum']) ? $data['receiveRouteNum'] : null;
     }
 
     /**
@@ -818,6 +829,30 @@ class VifPeer implements ModelInterface, ArrayAccess
     public function setVifId($vifId)
     {
         $this->container['vifId'] = $vifId;
+        return $this;
+    }
+
+    /**
+    * Gets receiveRouteNum
+    *  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    *
+    * @return int|null
+    */
+    public function getReceiveRouteNum()
+    {
+        return $this->container['receiveRouteNum'];
+    }
+
+    /**
+    * Sets receiveRouteNum
+    *
+    * @param int|null $receiveRouteNum 路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    *
+    * @return $this
+    */
+    public function setReceiveRouteNum($receiveRouteNum)
+    {
+        $this->container['receiveRouteNum'] = $receiveRouteNum;
         return $this;
     }
 

@@ -23,7 +23,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     * version  应用组件版本号，满足版本语义，如1.0.1。
     * flavorId  flavorId
     * artifacts  组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-    * configuration  应用配置，如环境变量。
+    * configuration  configuration
     * description  描述。
     * externalAccesses  访问方式列表。
     * referResources  部署资源列表。
@@ -34,7 +34,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
             'version' => 'string',
             'flavorId' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\FlavorId',
             'artifacts' => 'map[string,object]',
-            'configuration' => 'map[string,object]',
+            'configuration' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\InstanceConfiguration',
             'description' => 'string',
             'externalAccesses' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ExternalAccesses[]',
             'referResources' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ReferResourceCreate[]'
@@ -45,7 +45,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     * version  应用组件版本号，满足版本语义，如1.0.1。
     * flavorId  flavorId
     * artifacts  组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-    * configuration  应用配置，如环境变量。
+    * configuration  configuration
     * description  描述。
     * externalAccesses  访问方式列表。
     * referResources  部署资源列表。
@@ -88,7 +88,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     * version  应用组件版本号，满足版本语义，如1.0.1。
     * flavorId  flavorId
     * artifacts  组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-    * configuration  应用配置，如环境变量。
+    * configuration  configuration
     * description  描述。
     * externalAccesses  访问方式列表。
     * referResources  部署资源列表。
@@ -110,7 +110,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     * version  应用组件版本号，满足版本语义，如1.0.1。
     * flavorId  flavorId
     * artifacts  组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-    * configuration  应用配置，如环境变量。
+    * configuration  configuration
     * description  描述。
     * externalAccesses  访问方式列表。
     * referResources  部署资源列表。
@@ -132,7 +132,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     * version  应用组件版本号，满足版本语义，如1.0.1。
     * flavorId  flavorId
     * artifacts  组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-    * configuration  应用配置，如环境变量。
+    * configuration  configuration
     * description  描述。
     * externalAccesses  访问方式列表。
     * referResources  部署资源列表。
@@ -321,9 +321,9 @@ class InstanceModify implements ModelInterface, ArrayAccess
 
     /**
     * Gets configuration
-    *  应用配置，如环境变量。
+    *  configuration
     *
-    * @return map[string,object]|null
+    * @return \HuaweiCloud\SDK\ServiceStage\V2\Model\InstanceConfiguration|null
     */
     public function getConfiguration()
     {
@@ -333,7 +333,7 @@ class InstanceModify implements ModelInterface, ArrayAccess
     /**
     * Sets configuration
     *
-    * @param map[string,object]|null $configuration 应用配置，如环境变量。
+    * @param \HuaweiCloud\SDK\ServiceStage\V2\Model\InstanceConfiguration|null $configuration configuration
     *
     * @return $this
     */

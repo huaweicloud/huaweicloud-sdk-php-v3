@@ -37,7 +37,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -81,7 +81,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -146,7 +146,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -190,7 +190,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -234,7 +234,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
@@ -746,7 +746,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyPattern
-    *  内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     *
     * @return string|null
     */
@@ -758,7 +758,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets proxyPattern
     *
-    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。 取值范围： AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     *
     * @return $this
     */

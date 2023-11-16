@@ -912,7 +912,7 @@ class LtsClient extends Client
     }
 
     /**
-     * 查询Demo
+     * 创建日志收藏
      *
      * 创建日志收藏
      * 

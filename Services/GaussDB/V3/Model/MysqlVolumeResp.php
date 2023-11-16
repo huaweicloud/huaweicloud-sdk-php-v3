@@ -25,7 +25,7 @@ class MysqlVolumeResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'size' => 'string'
+            'size' => 'int'
     ];
 
     /**
@@ -179,7 +179,7 @@ class MysqlVolumeResp implements ModelInterface, ArrayAccess
     * Gets size
     *  磁盘大小。单位GB。  取值范围：10~128000，为10的整数倍。
     *
-    * @return string
+    * @return int
     */
     public function getSize()
     {
@@ -189,7 +189,7 @@ class MysqlVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string $size 磁盘大小。单位GB。  取值范围：10~128000，为10的整数倍。
+    * @param int $size 磁盘大小。单位GB。  取值范围：10~128000，为10的整数倍。
     *
     * @return $this
     */

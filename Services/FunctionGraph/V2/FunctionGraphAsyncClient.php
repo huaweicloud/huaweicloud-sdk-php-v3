@@ -1647,6 +1647,68 @@ class FunctionGraphAsyncClient extends Client
     }
 
     /**
+     * 允许异步状态通知
+     *
+     * 允许异步状态通知。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableAsyncStatusLogAsync($request)
+    {
+        return $this->enableAsyncStatusLogAsyncWithHttpInfo($request);
+    }
+    
+    public function enableAsyncStatusLogAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/enable-async-status-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\EnableAsyncStatusLogResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\EnableAsyncStatusLogRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 开通lts日志上报功能
      *
      * 开通lts日志上报功能。
@@ -2084,6 +2146,139 @@ class FunctionGraphAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListAsyncInvocationsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListAsyncInvocationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定函数绑定的servicebridge函数列表
+     *
+     * 获取指定函数绑定的servicebridge函数列表信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBridgeFunctionsAsync($request)
+    {
+        return $this->listBridgeFunctionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listBridgeFunctionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/servicebridge/relation';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['functionUrn'] !== null) {
+            $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListBridgeFunctionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListBridgeFunctionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取servicebridge可用的版本
+     *
+     * 获取servicebridge可用的版本
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBridgeVersionsAsync($request)
+    {
+        return $this->listBridgeVersionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listBridgeVersionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/servicebridge/version';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListBridgeVersionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListBridgeVersionsRequest',
             $asyncRequest = true);
     }
 
@@ -2589,6 +2784,154 @@ class FunctionGraphAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionStatisticsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询函数标签列表
+     *
+     * 查询函数标签列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFunctionTagsAsync($request)
+    {
+        return $this->listFunctionTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listFunctionTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取函数模板列表
+     *
+     * 获取函数模板列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFunctionTemplateAsync($request)
+    {
+        return $this->listFunctionTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function listFunctionTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['maxitems'] !== null) {
+            $queryParams['maxitems'] = $localVarParams['maxitems'];
+        }
+        if ($localVarParams['ispublic'] !== null) {
+            $queryParams['ispublic'] = $localVarParams['ispublic'];
+        }
+        if ($localVarParams['runtime'] !== null) {
+            $queryParams['runtime'] = $localVarParams['runtime'];
+        }
+        if ($localVarParams['scene'] !== null) {
+            $queryParams['scene'] = $localVarParams['scene'];
+        }
+        if ($localVarParams['service'] !== null) {
+            $queryParams['service'] = $localVarParams['service'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -3495,6 +3838,77 @@ class FunctionGraphAsyncClient extends Client
     }
 
     /**
+     * 查询函数实例使用情况指标
+     *
+     * 查询函数实例使用情况指标。
+     * 
+     * - 指标单位为分钟：
+     * 当查询时间范围小于1小时,指标周期为1分钟
+     * 当查询时间范围小于1天,指标周期为30分钟
+     * 当查询时间范围大于1天,指标周期为180分钟
+     * - 指标分为如下几类：reservedinstancenum（预留实例使用）、concurrency（实例使用/并发）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFuncReservedInstanceMetricsAsync($request)
+    {
+        return $this->showFuncReservedInstanceMetricsAsyncWithHttpInfo($request);
+    }
+    
+    public function showFuncReservedInstanceMetricsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/{func_urn}/instancereports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['funcUrn'] !== null) {
+            $pathParams['func_urn'] = $localVarParams['funcUrn'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFuncReservedInstanceMetricsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFuncReservedInstanceMetricsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询函数快照制作状态
      *
      * 查询函数快照制作状态。
@@ -3758,6 +4172,139 @@ class FunctionGraphAsyncClient extends Client
     }
 
     /**
+     * 查询函数实例流量指标
+     *
+     * 查询函数流量指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFunctionMetricsAsync($request)
+    {
+        return $this->showFunctionMetricsAsyncWithHttpInfo($request);
+    }
+    
+    public function showFunctionMetricsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/{func_urn}/slareports/{period}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['funcUrn'] !== null) {
+            $pathParams['func_urn'] = $localVarParams['funcUrn'];
+        }
+        if ($localVarParams['period'] !== null) {
+            $pathParams['period'] = $localVarParams['period'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionMetricsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionMetricsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定函数模板
+     *
+     * 获取指定函数模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFunctionTemplateAsync($request)
+    {
+        return $this->showFunctionTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function showFunctionTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/templates/{template_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $pathParams['template_id'] = $localVarParams['templateId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowFunctionTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取指定触发器的信息
      *
      * 获取特定触发器的信息。
@@ -3890,6 +4437,68 @@ class FunctionGraphAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowLtsLogDetailsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowLtsLogDetailsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询异步日志详情
+     *
+     * 查询异步日志详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showProjectAsyncStatusLogInfoAsync($request)
+    {
+        return $this->showProjectAsyncStatusLogInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showProjectAsyncStatusLogInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/async-status-log-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowProjectAsyncStatusLogInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowProjectAsyncStatusLogInfoRequest',
             $asyncRequest = true);
     }
 
@@ -5076,6 +5685,74 @@ class FunctionGraphAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionCodeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新函数收藏状态
+     *
+     * 更新函数收藏状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFunctionCollectStateAsync($request)
+    {
+        return $this->updateFunctionCollectStateAsyncWithHttpInfo($request);
+    }
+    
+    public function updateFunctionCollectStateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/fgs/functions/{func_urn}/collect/{state}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['funcUrn'] !== null) {
+            $pathParams['func_urn'] = $localVarParams['funcUrn'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $pathParams['state'] = $localVarParams['state'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionCollectStateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateFunctionCollectStateRequest',
             $asyncRequest = true);
     }
 

@@ -23,7 +23,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
@@ -47,7 +47,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
@@ -92,7 +92,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
@@ -116,7 +116,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
@@ -140,7 +140,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
@@ -398,7 +398,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  公网NAT网关实例的描述，长度限制为255。
+    *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 公网NAT网关实例的描述，长度限制为255。
+    * @param string|null $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

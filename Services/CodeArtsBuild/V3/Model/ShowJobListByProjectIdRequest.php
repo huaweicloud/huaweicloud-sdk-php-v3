@@ -20,7 +20,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * projectId  CodeArts项目ID，32位数字、小写字母组合。
     * pageIndex  分页页码， 表示从此页开始查询， page_index大于等于0
     * pageSize  每页显示的条目数量，page_size小于等于100
     *
@@ -34,7 +34,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * projectId  CodeArts项目ID，32位数字、小写字母组合。
     * pageIndex  分页页码， 表示从此页开始查询， page_index大于等于0
     * pageSize  每页显示的条目数量，page_size小于等于100
     *
@@ -69,7 +69,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * projectId  CodeArts项目ID，32位数字、小写字母组合。
     * pageIndex  分页页码， 表示从此页开始查询， page_index大于等于0
     * pageSize  每页显示的条目数量，page_size小于等于100
     *
@@ -83,7 +83,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * projectId  CodeArts项目ID，32位数字、小写字母组合。
     * pageIndex  分页页码， 表示从此页开始查询， page_index大于等于0
     * pageSize  每页显示的条目数量，page_size小于等于100
     *
@@ -97,7 +97,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * projectId  CodeArts项目ID，32位数字、小写字母组合。
     * pageIndex  分页页码， 表示从此页开始查询， page_index大于等于0
     * pageSize  每页显示的条目数量，page_size小于等于100
     *
@@ -217,7 +217,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    *  CodeArts项目ID，32位数字、小写字母组合。
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class ShowJobListByProjectIdRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId CodeArts项目ID，32位数字、小写字母组合。[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)
+    * @param string $projectId CodeArts项目ID，32位数字、小写字母组合。
     *
     * @return $this
     */

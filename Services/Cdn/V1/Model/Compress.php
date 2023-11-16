@@ -21,25 +21,29 @@ class Compress implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  智能压缩开关（on：开启，off：关闭）。
-    * type  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * type  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'fileType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  智能压缩开关（on：开启，off：关闭）。
-    * type  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * type  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
-        'type' => null
+        'type' => null,
+        'fileType' => null
     ];
 
     /**
@@ -66,37 +70,43 @@ class Compress implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  智能压缩开关（on：开启，off：关闭）。
-    * type  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * type  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'type' => 'type'
+            'type' => 'type',
+            'fileType' => 'file_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  智能压缩开关（on：开启，off：关闭）。
-    * type  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * type  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'type' => 'setType'
+            'type' => 'setType',
+            'fileType' => 'setFileType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  智能压缩开关（on：开启，off：关闭）。
-    * type  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * type  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
+    * fileType  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'type' => 'getType'
+            'type' => 'getType',
+            'fileType' => 'getFileType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Compress implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
     }
 
     /**
@@ -212,7 +223,7 @@ class Compress implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    *  智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
     *
     * @return string|null
     */
@@ -224,13 +235,37 @@ class Compress implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 智能压缩类型（gzip：gzip压缩，br：br压缩）。
+    * @param string|null $type 智能压缩类型（gzip：gzip压缩，brotli：brotli压缩）。
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets fileType
+    *  压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    *
+    * @return string|null
+    */
+    public function getFileType()
+    {
+        return $this->container['fileType'];
+    }
+
+    /**
+    * Sets fileType
+    *
+    * @param string|null $fileType 压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+    *
+    * @return $this
+    */
+    public function setFileType($fileType)
+    {
+        $this->container['fileType'] = $fileType;
         return $this;
     }
 

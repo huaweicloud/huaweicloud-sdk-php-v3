@@ -235,8 +235,17 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['templateId'] === null) {
+            $invalidProperties[] = "'templateId' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['params'] === null) {
+            $invalidProperties[] = "'params' can't be null";
         }
         return $invalidProperties;
     }
@@ -256,7 +265,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     * Gets templateId
     *  来源系统模板ID
     *
-    * @return string|null
+    * @return string
     */
     public function getTemplateId()
     {
@@ -266,7 +275,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 来源系统模板ID
+    * @param string $templateId 来源系统模板ID
     *
     * @return $this
     */
@@ -304,7 +313,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     * Gets type
     *  模板类型
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -314,7 +323,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 模板类型
+    * @param string $type 模板类型
     *
     * @return $this
     */
@@ -424,7 +433,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     * Gets params
     *  参数配置信息
     *
-    * @return map[string,string]|null
+    * @return map[string,string]
     */
     public function getParams()
     {
@@ -434,7 +443,7 @@ class CreateCustomTemplateBody implements ModelInterface, ArrayAccess
     /**
     * Sets params
     *
-    * @param map[string,string]|null $params 参数配置信息
+    * @param map[string,string] $params 参数配置信息
     *
     * @return $this
     */

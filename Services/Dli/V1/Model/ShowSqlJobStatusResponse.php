@@ -36,6 +36,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
     * userConf  SQL配置参数信息Json字符串。
+    * resultPath  查询结果OBS路径
+    * resultFormat  查询结果格式
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -60,6 +62,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'tableName' => 'string',
             'detail' => 'string',
             'userConf' => 'string',
+            'resultPath' => 'string',
+            'resultFormat' => 'string',
             'statement' => 'string',
             'isSuccess' => 'bool',
             'message' => 'string',
@@ -84,6 +88,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
     * userConf  SQL配置参数信息Json字符串。
+    * resultPath  查询结果OBS路径
+    * resultFormat  查询结果格式
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -108,6 +114,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
         'tableName' => null,
         'detail' => null,
         'userConf' => null,
+        'resultPath' => null,
+        'resultFormat' => null,
         'statement' => null,
         'isSuccess' => null,
         'message' => null,
@@ -153,6 +161,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
     * userConf  SQL配置参数信息Json字符串。
+    * resultPath  查询结果OBS路径
+    * resultFormat  查询结果格式
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -177,6 +187,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'tableName' => 'table_name',
             'detail' => 'detail',
             'userConf' => 'user_conf',
+            'resultPath' => 'result_path',
+            'resultFormat' => 'result_format',
             'statement' => 'statement',
             'isSuccess' => 'is_success',
             'message' => 'message',
@@ -201,6 +213,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
     * userConf  SQL配置参数信息Json字符串。
+    * resultPath  查询结果OBS路径
+    * resultFormat  查询结果格式
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -225,6 +239,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'tableName' => 'setTableName',
             'detail' => 'setDetail',
             'userConf' => 'setUserConf',
+            'resultPath' => 'setResultPath',
+            'resultFormat' => 'setResultFormat',
             'statement' => 'setStatement',
             'isSuccess' => 'setIsSuccess',
             'message' => 'setMessage',
@@ -249,6 +265,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     * tableName  记录其操作的表名称。类型为Import和Export作业才有“table_name”属性。
     * detail  SQL查询的相关列信息的Json字符串。
     * userConf  SQL配置参数信息Json字符串。
+    * resultPath  查询结果OBS路径
+    * resultFormat  查询结果格式
     * statement  作业执行的SQL语句。
     * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
@@ -273,6 +291,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
             'tableName' => 'getTableName',
             'detail' => 'getDetail',
             'userConf' => 'getUserConf',
+            'resultPath' => 'getResultPath',
+            'resultFormat' => 'getResultFormat',
             'statement' => 'getStatement',
             'isSuccess' => 'getIsSuccess',
             'message' => 'getMessage',
@@ -374,6 +394,8 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
         $this->container['userConf'] = isset($data['userConf']) ? $data['userConf'] : null;
+        $this->container['resultPath'] = isset($data['resultPath']) ? $data['resultPath'] : null;
+        $this->container['resultFormat'] = isset($data['resultFormat']) ? $data['resultFormat'] : null;
         $this->container['statement'] = isset($data['statement']) ? $data['statement'] : null;
         $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
@@ -768,6 +790,54 @@ class ShowSqlJobStatusResponse implements ModelInterface, ArrayAccess
     public function setUserConf($userConf)
     {
         $this->container['userConf'] = $userConf;
+        return $this;
+    }
+
+    /**
+    * Gets resultPath
+    *  查询结果OBS路径
+    *
+    * @return string|null
+    */
+    public function getResultPath()
+    {
+        return $this->container['resultPath'];
+    }
+
+    /**
+    * Sets resultPath
+    *
+    * @param string|null $resultPath 查询结果OBS路径
+    *
+    * @return $this
+    */
+    public function setResultPath($resultPath)
+    {
+        $this->container['resultPath'] = $resultPath;
+        return $this;
+    }
+
+    /**
+    * Gets resultFormat
+    *  查询结果格式
+    *
+    * @return string|null
+    */
+    public function getResultFormat()
+    {
+        return $this->container['resultFormat'];
+    }
+
+    /**
+    * Sets resultFormat
+    *
+    * @param string|null $resultFormat 查询结果格式
+    *
+    * @return $this
+    */
+    public function setResultFormat($resultFormat)
+    {
+        $this->container['resultFormat'] = $resultFormat;
         return $this;
     }
 

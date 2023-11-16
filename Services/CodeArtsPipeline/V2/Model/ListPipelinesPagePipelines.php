@@ -23,6 +23,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * name  流水线名称
     * projectId  项目ID
+    * projectName  项目名称
     * componentId  组件ID
     * isPublish  是否为变更流水线
     * isCollect  是否收藏此流水线
@@ -37,6 +38,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'pipelineId' => 'string',
             'name' => 'string',
             'projectId' => 'string',
+            'projectName' => 'string',
             'componentId' => 'string',
             'isPublish' => 'bool',
             'isCollect' => 'bool',
@@ -51,6 +53,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * name  流水线名称
     * projectId  项目ID
+    * projectName  项目名称
     * componentId  组件ID
     * isPublish  是否为变更流水线
     * isCollect  是否收藏此流水线
@@ -65,6 +68,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         'pipelineId' => null,
         'name' => null,
         'projectId' => null,
+        'projectName' => null,
         'componentId' => null,
         'isPublish' => null,
         'isCollect' => null,
@@ -100,6 +104,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * name  流水线名称
     * projectId  项目ID
+    * projectName  项目名称
     * componentId  组件ID
     * isPublish  是否为变更流水线
     * isCollect  是否收藏此流水线
@@ -114,6 +119,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'pipelineId' => 'pipeline_id',
             'name' => 'name',
             'projectId' => 'project_id',
+            'projectName' => 'project_name',
             'componentId' => 'component_id',
             'isPublish' => 'is_publish',
             'isCollect' => 'is_collect',
@@ -128,6 +134,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * name  流水线名称
     * projectId  项目ID
+    * projectName  项目名称
     * componentId  组件ID
     * isPublish  是否为变更流水线
     * isCollect  是否收藏此流水线
@@ -142,6 +149,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'pipelineId' => 'setPipelineId',
             'name' => 'setName',
             'projectId' => 'setProjectId',
+            'projectName' => 'setProjectName',
             'componentId' => 'setComponentId',
             'isPublish' => 'setIsPublish',
             'isCollect' => 'setIsCollect',
@@ -156,6 +164,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * name  流水线名称
     * projectId  项目ID
+    * projectName  项目名称
     * componentId  组件ID
     * isPublish  是否为变更流水线
     * isCollect  是否收藏此流水线
@@ -170,6 +179,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'pipelineId' => 'getPipelineId',
             'name' => 'getName',
             'projectId' => 'getProjectId',
+            'projectName' => 'getProjectName',
             'componentId' => 'getComponentId',
             'isPublish' => 'getIsPublish',
             'isCollect' => 'getIsCollect',
@@ -240,6 +250,7 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
         $this->container['isPublish'] = isset($data['isPublish']) ? $data['isPublish'] : null;
         $this->container['isCollect'] = isset($data['isCollect']) ? $data['isCollect'] : null;
@@ -340,6 +351,30 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets projectName
+    *  项目名称
+    *
+    * @return string|null
+    */
+    public function getProjectName()
+    {
+        return $this->container['projectName'];
+    }
+
+    /**
+    * Sets projectName
+    *
+    * @param string|null $projectName 项目名称
+    *
+    * @return $this
+    */
+    public function setProjectName($projectName)
+    {
+        $this->container['projectName'] = $projectName;
         return $this;
     }
 

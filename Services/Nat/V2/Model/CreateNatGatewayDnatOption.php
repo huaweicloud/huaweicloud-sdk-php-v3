@@ -20,7 +20,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
@@ -50,7 +50,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
@@ -101,7 +101,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
@@ -131,7 +131,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
@@ -161,7 +161,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  DNAT规则的描述，长度限制为255。
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
@@ -347,7 +347,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述，长度限制为255。
+    *  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description DNAT规则的描述，长度限制为255。
+    * @param string|null $description DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

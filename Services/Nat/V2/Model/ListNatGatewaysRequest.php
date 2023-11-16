@@ -22,7 +22,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
@@ -52,7 +52,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
@@ -103,7 +103,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
@@ -133,7 +133,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
@@ -163,7 +163,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-    * description  公网NAT网关实例的描述，长度限制为255。
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
@@ -420,7 +420,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  公网NAT网关实例的描述，长度限制为255。
+    *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 公网NAT网关实例的描述，长度限制为255。
+    * @param string|null $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
     *
     * @return $this
     */

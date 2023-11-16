@@ -20,34 +20,58 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
-    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     * expireTime  过期时间，单位：秒。
+    * signMethod  加密算法。
+    * matchType  鉴权范围。
+    * inheritConfig  inheritConfig
+    * key  鉴权KEY。
+    * backupKey  鉴权KEY（备）。
+    * signArg  鉴权参数。
+    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'type' => 'string',
-            'timeFormat' => 'string',
-            'expireTime' => 'int'
+            'expireTime' => 'int',
+            'signMethod' => 'string',
+            'matchType' => 'string',
+            'inheritConfig' => '\HuaweiCloud\SDK\Cdn\V1\Model\InheritConfigQuery',
+            'key' => 'string',
+            'backupKey' => 'string',
+            'signArg' => 'string',
+            'timeFormat' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
-    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     * expireTime  过期时间，单位：秒。
+    * signMethod  加密算法。
+    * matchType  鉴权范围。
+    * inheritConfig  inheritConfig
+    * key  鉴权KEY。
+    * backupKey  鉴权KEY（备）。
+    * signArg  鉴权参数。
+    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'type' => null,
-        'timeFormat' => null,
-        'expireTime' => 'int32'
+        'expireTime' => 'int32',
+        'signMethod' => null,
+        'matchType' => null,
+        'inheritConfig' => null,
+        'key' => null,
+        'backupKey' => null,
+        'signArg' => null,
+        'timeFormat' => null
     ];
 
     /**
@@ -73,50 +97,86 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
-    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     * expireTime  过期时间，单位：秒。
+    * signMethod  加密算法。
+    * matchType  鉴权范围。
+    * inheritConfig  inheritConfig
+    * key  鉴权KEY。
+    * backupKey  鉴权KEY（备）。
+    * signArg  鉴权参数。
+    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'type' => 'type',
-            'timeFormat' => 'time_format',
-            'expireTime' => 'expire_time'
+            'expireTime' => 'expire_time',
+            'signMethod' => 'sign_method',
+            'matchType' => 'match_type',
+            'inheritConfig' => 'inherit_config',
+            'key' => 'key',
+            'backupKey' => 'backup_key',
+            'signArg' => 'sign_arg',
+            'timeFormat' => 'time_format'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
-    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     * expireTime  过期时间，单位：秒。
+    * signMethod  加密算法。
+    * matchType  鉴权范围。
+    * inheritConfig  inheritConfig
+    * key  鉴权KEY。
+    * backupKey  鉴权KEY（备）。
+    * signArg  鉴权参数。
+    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'type' => 'setType',
-            'timeFormat' => 'setTimeFormat',
-            'expireTime' => 'setExpireTime'
+            'expireTime' => 'setExpireTime',
+            'signMethod' => 'setSignMethod',
+            'matchType' => 'setMatchType',
+            'inheritConfig' => 'setInheritConfig',
+            'key' => 'setKey',
+            'backupKey' => 'setBackupKey',
+            'signArg' => 'setSignArg',
+            'timeFormat' => 'setTimeFormat'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  是否开启URL鉴权，off：开启,on：关闭。
+    * status  是否开启URL鉴权，on：开启,off：关闭。
     * type  鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
-    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     * expireTime  过期时间，单位：秒。
+    * signMethod  加密算法。
+    * matchType  鉴权范围。
+    * inheritConfig  inheritConfig
+    * key  鉴权KEY。
+    * backupKey  鉴权KEY（备）。
+    * signArg  鉴权参数。
+    * timeFormat  时间格式， dec：十进制, hex：十六进制。
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'type' => 'getType',
-            'timeFormat' => 'getTimeFormat',
-            'expireTime' => 'getExpireTime'
+            'expireTime' => 'getExpireTime',
+            'signMethod' => 'getSignMethod',
+            'matchType' => 'getMatchType',
+            'inheritConfig' => 'getInheritConfig',
+            'key' => 'getKey',
+            'backupKey' => 'getBackupKey',
+            'signArg' => 'getSignArg',
+            'timeFormat' => 'getTimeFormat'
     ];
 
     /**
@@ -179,8 +239,14 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['timeFormat'] = isset($data['timeFormat']) ? $data['timeFormat'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
+        $this->container['signMethod'] = isset($data['signMethod']) ? $data['signMethod'] : null;
+        $this->container['matchType'] = isset($data['matchType']) ? $data['matchType'] : null;
+        $this->container['inheritConfig'] = isset($data['inheritConfig']) ? $data['inheritConfig'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['backupKey'] = isset($data['backupKey']) ? $data['backupKey'] : null;
+        $this->container['signArg'] = isset($data['signArg']) ? $data['signArg'] : null;
+        $this->container['timeFormat'] = isset($data['timeFormat']) ? $data['timeFormat'] : null;
     }
 
     /**
@@ -210,7 +276,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  是否开启URL鉴权，off：开启,on：关闭。
+    *  是否开启URL鉴权，on：开启,off：关闭。
     *
     * @return string
     */
@@ -222,7 +288,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 是否开启URL鉴权，off：开启,on：关闭。
+    * @param string $status 是否开启URL鉴权，on：开启,off：关闭。
     *
     * @return $this
     */
@@ -257,30 +323,6 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets timeFormat
-    *  时间格式， dec：十进制, hex：十六进制。
-    *
-    * @return string|null
-    */
-    public function getTimeFormat()
-    {
-        return $this->container['timeFormat'];
-    }
-
-    /**
-    * Sets timeFormat
-    *
-    * @param string|null $timeFormat 时间格式， dec：十进制, hex：十六进制。
-    *
-    * @return $this
-    */
-    public function setTimeFormat($timeFormat)
-    {
-        $this->container['timeFormat'] = $timeFormat;
-        return $this;
-    }
-
-    /**
     * Gets expireTime
     *  过期时间，单位：秒。
     *
@@ -301,6 +343,174 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     public function setExpireTime($expireTime)
     {
         $this->container['expireTime'] = $expireTime;
+        return $this;
+    }
+
+    /**
+    * Gets signMethod
+    *  加密算法。
+    *
+    * @return string|null
+    */
+    public function getSignMethod()
+    {
+        return $this->container['signMethod'];
+    }
+
+    /**
+    * Sets signMethod
+    *
+    * @param string|null $signMethod 加密算法。
+    *
+    * @return $this
+    */
+    public function setSignMethod($signMethod)
+    {
+        $this->container['signMethod'] = $signMethod;
+        return $this;
+    }
+
+    /**
+    * Gets matchType
+    *  鉴权范围。
+    *
+    * @return string|null
+    */
+    public function getMatchType()
+    {
+        return $this->container['matchType'];
+    }
+
+    /**
+    * Sets matchType
+    *
+    * @param string|null $matchType 鉴权范围。
+    *
+    * @return $this
+    */
+    public function setMatchType($matchType)
+    {
+        $this->container['matchType'] = $matchType;
+        return $this;
+    }
+
+    /**
+    * Gets inheritConfig
+    *  inheritConfig
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\InheritConfigQuery|null
+    */
+    public function getInheritConfig()
+    {
+        return $this->container['inheritConfig'];
+    }
+
+    /**
+    * Sets inheritConfig
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\InheritConfigQuery|null $inheritConfig inheritConfig
+    *
+    * @return $this
+    */
+    public function setInheritConfig($inheritConfig)
+    {
+        $this->container['inheritConfig'] = $inheritConfig;
+        return $this;
+    }
+
+    /**
+    * Gets key
+    *  鉴权KEY。
+    *
+    * @return string|null
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string|null $key 鉴权KEY。
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
+        return $this;
+    }
+
+    /**
+    * Gets backupKey
+    *  鉴权KEY（备）。
+    *
+    * @return string|null
+    */
+    public function getBackupKey()
+    {
+        return $this->container['backupKey'];
+    }
+
+    /**
+    * Sets backupKey
+    *
+    * @param string|null $backupKey 鉴权KEY（备）。
+    *
+    * @return $this
+    */
+    public function setBackupKey($backupKey)
+    {
+        $this->container['backupKey'] = $backupKey;
+        return $this;
+    }
+
+    /**
+    * Gets signArg
+    *  鉴权参数。
+    *
+    * @return string|null
+    */
+    public function getSignArg()
+    {
+        return $this->container['signArg'];
+    }
+
+    /**
+    * Sets signArg
+    *
+    * @param string|null $signArg 鉴权参数。
+    *
+    * @return $this
+    */
+    public function setSignArg($signArg)
+    {
+        $this->container['signArg'] = $signArg;
+        return $this;
+    }
+
+    /**
+    * Gets timeFormat
+    *  时间格式， dec：十进制, hex：十六进制。
+    *
+    * @return string|null
+    */
+    public function getTimeFormat()
+    {
+        return $this->container['timeFormat'];
+    }
+
+    /**
+    * Sets timeFormat
+    *
+    * @param string|null $timeFormat 时间格式， dec：十进制, hex：十六进制。
+    *
+    * @return $this
+    */
+    public function setTimeFormat($timeFormat)
+    {
+        $this->container['timeFormat'] = $timeFormat;
         return $this;
     }
 

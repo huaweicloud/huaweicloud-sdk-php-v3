@@ -91,6 +91,163 @@ class CseClient extends Client
     }
 
     /**
+     * 创建治理策略
+     *
+     * 创建治理策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createGovernancePolicy($request)
+    {
+        return $this->createGovernancePolicyWithHttpInfo($request);
+    }
+
+    public function createGovernancePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/{kind}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['xEnvironment'] !== null) {
+            $headerParams[$arr['xEnvironment']] = $localVarParams['xEnvironment'];
+        }
+        if ($localVarParams['kind'] !== null) {
+            $pathParams['kind'] = $localVarParams['kind'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\CreateGovernancePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\CreateGovernancePolicyRequest');
+    }
+
+    /**
+     * 创建灰度发布策略
+     *
+     * 创建灰度发布策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMicroserviceRouteRule($request)
+    {
+        return $this->createMicroserviceRouteRuleWithHttpInfo($request);
+    }
+
+    public function createMicroserviceRouteRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/route-rule/microservices/{service_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['environment'] !== null) {
+            $queryParams['environment'] = $localVarParams['environment'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['serviceName'] !== null) {
+            $pathParams['service_name'] = $localVarParams['serviceName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\CreateMicroserviceRouteRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\CreateMicroserviceRouteRuleRequest');
+    }
+
+    /**
      * 删除微服务引擎专享版
      *
      * 删除微服务引擎专享版。
@@ -153,6 +310,160 @@ class CseClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteEngineResponse',
             $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteEngineRequest');
+    }
+
+    /**
+     * 删除治理策略
+     *
+     * 删除治理策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteGovernancePolicy($request)
+    {
+        return $this->deleteGovernancePolicyWithHttpInfo($request);
+    }
+
+    public function deleteGovernancePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/{kind}/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['xEnvironment'] !== null) {
+            $headerParams[$arr['xEnvironment']] = $localVarParams['xEnvironment'];
+        }
+        if ($localVarParams['kind'] !== null) {
+            $pathParams['kind'] = $localVarParams['kind'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteGovernancePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteGovernancePolicyRequest');
+    }
+
+    /**
+     * 删除灰度发布策略
+     *
+     * 删除灰度发布策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteMicroserviceRouteRule($request)
+    {
+        return $this->deleteMicroserviceRouteRuleWithHttpInfo($request);
+    }
+
+    public function deleteMicroserviceRouteRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/route-rule/microservices/{service_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['environment'] !== null) {
+            $queryParams['environment'] = $localVarParams['environment'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['serviceName'] !== null) {
+            $pathParams['service_name'] = $localVarParams['serviceName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteMicroserviceRouteRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteMicroserviceRouteRuleRequest');
     }
 
     /**
@@ -357,6 +668,379 @@ class CseClient extends Client
     }
 
     /**
+     * 查询指定类型治理策略列表
+     *
+     * 查询指定类型治理策略列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGovernancePolicy($request)
+    {
+        return $this->listGovernancePolicyWithHttpInfo($request);
+    }
+
+    public function listGovernancePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/{kind}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['xEnvironment'] !== null) {
+            $headerParams[$arr['xEnvironment']] = $localVarParams['xEnvironment'];
+        }
+        if ($localVarParams['kind'] !== null) {
+            $pathParams['kind'] = $localVarParams['kind'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyRequest');
+    }
+
+    /**
+     * 查询治理策略详情
+     *
+     * 查询治理策略详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGovernancePolicyByPolicyId($request)
+    {
+        return $this->listGovernancePolicyByPolicyIdWithHttpInfo($request);
+    }
+
+    public function listGovernancePolicyByPolicyIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/{kind}/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['xEnvironment'] !== null) {
+            $headerParams[$arr['xEnvironment']] = $localVarParams['xEnvironment'];
+        }
+        if ($localVarParams['kind'] !== null) {
+            $pathParams['kind'] = $localVarParams['kind'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyByPolicyIdResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyByPolicyIdRequest');
+    }
+
+    /**
+     * 查询治理策略列表
+     *
+     * 查询治理策略列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGovernancePolicys($request)
+    {
+        return $this->listGovernancePolicysWithHttpInfo($request);
+    }
+
+    public function listGovernancePolicysWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/display';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['environment'] !== null) {
+            $queryParams['environment'] = $localVarParams['environment'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicysResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicysRequest');
+    }
+
+    /**
+     * 查询微服务的灰度发布规则
+     *
+     * 查询微服务的灰度发布规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMicroserviceRouteRule($request)
+    {
+        return $this->listMicroserviceRouteRuleWithHttpInfo($request);
+    }
+
+    public function listMicroserviceRouteRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/route-rule/microservices/{service_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['environment'] !== null) {
+            $queryParams['environment'] = $localVarParams['environment'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['serviceName'] !== null) {
+            $pathParams['service_name'] = $localVarParams['serviceName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ListMicroserviceRouteRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ListMicroserviceRouteRuleRequest');
+    }
+
+    /**
+     * 变更微服务引擎规格
+     *
+     * 变更微服务引擎规格。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resizeEngine($request)
+    {
+        return $this->resizeEngineWithHttpInfo($request);
+    }
+
+    public function resizeEngineWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/enginemgr/engines/{engine_id}/resize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams[$arr['accept']] = $localVarParams['accept'];
+        }
+        if ($localVarParams['engineId'] !== null) {
+            $pathParams['engine_id'] = $localVarParams['engineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ResizeEngineResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ResizeEngineRequest');
+    }
+
+    /**
      * 对微服务引擎专享版进行重试
      *
      * 对微服务引擎专享版进行重试
@@ -558,6 +1242,86 @@ class CseClient extends Client
     }
 
     /**
+     * 修改治理策略
+     *
+     * 修改治理策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGovernancePolicy($request)
+    {
+        return $this->updateGovernancePolicyWithHttpInfo($request);
+    }
+
+    public function updateGovernancePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/govern/governance/{kind}/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['xEnvironment'] !== null) {
+            $headerParams[$arr['xEnvironment']] = $localVarParams['xEnvironment'];
+        }
+        if ($localVarParams['kind'] !== null) {
+            $pathParams['kind'] = $localVarParams['kind'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UpdateGovernancePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UpdateGovernancePolicyRequest');
+    }
+
+    /**
      * 升级微服务引擎专享版
      *
      * 升级微服务引擎专享版
@@ -623,6 +1387,74 @@ class CseClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineResponse',
             $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineRequest');
+    }
+
+    /**
+     * 更新微服务引擎专享版配置
+     *
+     * 更新微服务引擎专享版配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeEngineConfig($request)
+    {
+        return $this->upgradeEngineConfigWithHttpInfo($request);
+    }
+
+    public function upgradeEngineConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/enginemgr/engines/{engine_id}/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['engineId'] !== null) {
+            $pathParams['engine_id'] = $localVarParams['engineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineConfigRequest');
     }
 
     /**
@@ -702,6 +1534,293 @@ class CseClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UploadKieResponse',
             $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UploadKieRequest');
+    }
+
+    /**
+     * 创建nacos命名空间
+     *
+     * 创建nacos命名空间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createNacosNamespaces($request)
+    {
+        return $this->createNacosNamespacesWithHttpInfo($request);
+    }
+
+    public function createNacosNamespacesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/nacos/v1/console/namespaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['customNamespaceId'] !== null) {
+            $queryParams['custom_namespace_id'] = $localVarParams['customNamespaceId'];
+        }
+        if ($localVarParams['namespaceName'] !== null) {
+            $queryParams['namespace_name'] = $localVarParams['namespaceName'];
+        }
+        if ($localVarParams['namespaceDesc'] !== null) {
+            $queryParams['namespace_desc'] = $localVarParams['namespaceDesc'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\CreateNacosNamespacesResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\CreateNacosNamespacesRequest');
+    }
+
+    /**
+     * 删除nacos命名空间
+     *
+     * 删除nacos命名空间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteNacosNamespaces($request)
+    {
+        return $this->deleteNacosNamespacesWithHttpInfo($request);
+    }
+
+    public function deleteNacosNamespacesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/nacos/v1/console/namespaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespaceId'] !== null) {
+            $queryParams['namespace_id'] = $localVarParams['namespaceId'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteNacosNamespacesResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteNacosNamespacesRequest');
+    }
+
+    /**
+     * 查询nacos命名空间
+     *
+     * 查询nacos命名空间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNacosNamespaces($request)
+    {
+        return $this->listNacosNamespacesWithHttpInfo($request);
+    }
+
+    public function listNacosNamespacesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/nacos/v1/console/namespaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ListNacosNamespacesResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ListNacosNamespacesRequest');
+    }
+
+    /**
+     * 更新nacos命名空间
+     *
+     * 更新nacos命名空间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNacosNamespaces($request)
+    {
+        return $this->updateNacosNamespacesWithHttpInfo($request);
+    }
+
+    public function updateNacosNamespacesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/nacos/v1/console/namespaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['namespaceShowName'] !== null) {
+            $queryParams['namespace_show_name'] = $localVarParams['namespaceShowName'];
+        }
+        if ($localVarParams['namespaceDesc'] !== null) {
+            $queryParams['namespace_desc'] = $localVarParams['namespaceDesc'];
+        }
+        if ($localVarParams['xEngineId'] !== null) {
+            $headerParams[$arr['xEngineId']] = $localVarParams['xEngineId'];
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams[$arr['xEnterpriseProjectId']] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UpdateNacosNamespacesResponse',
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UpdateNacosNamespacesRequest');
     }
 
     protected function callApi(

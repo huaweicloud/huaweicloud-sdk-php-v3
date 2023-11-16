@@ -50,7 +50,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'createdAt' => null,
+        'createdAt' => 'int64',
         'groupId' => null,
         'state' => null,
         'coordinatorId' => null,

@@ -22,24 +22,28 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'value' => 'string'
+            'value' => 'string',
+            'uaList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'value' => null
+        'value' => null,
+        'uaList' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'value' => 'value'
+            'value' => 'value',
+            'uaList' => 'ua_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'value' => 'setValue'
+            'value' => 'setValue',
+            'uaList' => 'setUaList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'value' => 'getValue'
+            'value' => 'getValue',
+            'uaList' => 'getUaList'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['uaList'] = isset($data['uaList']) ? $data['uaList'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets uaList
+    *  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
+    *
+    * @return string[]|null
+    */
+    public function getUaList()
+    {
+        return $this->container['uaList'];
+    }
+
+    /**
+    * Sets uaList
+    *
+    * @param string[]|null $uaList 配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
+    *
+    * @return $this
+    */
+    public function setUaList($uaList)
+    {
+        $this->container['uaList'] = $uaList;
         return $this;
     }
 

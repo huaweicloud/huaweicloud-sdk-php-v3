@@ -23,6 +23,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
+    * allowedValues  预定义合规包模板参数允许值列表
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -31,6 +32,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'defaultValue' => 'object',
+            'allowedValues' => 'object[]',
             'type' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
+    * allowedValues  预定义合规包模板参数允许值列表
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'defaultValue' => null,
+        'allowedValues' => null,
         'type' => null
     ];
 
@@ -76,6 +80,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
+    * allowedValues  预定义合规包模板参数允许值列表
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -84,6 +89,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'defaultValue' => 'default_value',
+            'allowedValues' => 'allowed_values',
             'type' => 'type'
     ];
 
@@ -92,6 +98,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
+    * allowedValues  预定义合规包模板参数允许值列表
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -100,6 +107,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'defaultValue' => 'setDefaultValue',
+            'allowedValues' => 'setAllowedValues',
             'type' => 'setType'
     ];
 
@@ -108,6 +116,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
+    * allowedValues  预定义合规包模板参数允许值列表
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'defaultValue' => 'getDefaultValue',
+            'allowedValues' => 'getAllowedValues',
             'type' => 'getType'
     ];
 
@@ -205,6 +215,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
+        $this->container['allowedValues'] = isset($data['allowedValues']) ? $data['allowedValues'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
@@ -307,6 +318,30 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     public function setDefaultValue($defaultValue)
     {
         $this->container['defaultValue'] = $defaultValue;
+        return $this;
+    }
+
+    /**
+    * Gets allowedValues
+    *  预定义合规包模板参数允许值列表
+    *
+    * @return object[]|null
+    */
+    public function getAllowedValues()
+    {
+        return $this->container['allowedValues'];
+    }
+
+    /**
+    * Sets allowedValues
+    *
+    * @param object[]|null $allowedValues 预定义合规包模板参数允许值列表
+    *
+    * @return $this
+    */
+    public function setAllowedValues($allowedValues)
+    {
+        $this->container['allowedValues'] = $allowedValues;
         return $this;
     }
 

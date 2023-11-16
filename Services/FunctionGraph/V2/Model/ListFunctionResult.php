@@ -20,6 +20,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceId  资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -62,6 +63,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'resourceId' => 'string',
             'funcUrn' => 'string',
             'funcName' => 'string',
             'domainId' => 'string',
@@ -104,6 +106,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceId  资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -146,6 +149,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'resourceId' => null,
         'funcUrn' => null,
         'funcName' => null,
         'domainId' => null,
@@ -209,6 +213,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceId  资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -251,6 +256,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'resourceId' => 'resource_id',
             'funcUrn' => 'func_urn',
             'funcName' => 'func_name',
             'domainId' => 'domain_id',
@@ -293,6 +299,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceId  资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -335,6 +342,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'resourceId' => 'setResourceId',
             'funcUrn' => 'setFuncUrn',
             'funcName' => 'setFuncName',
             'domainId' => 'setDomainId',
@@ -377,6 +385,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceId  资源id。
     * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
     * funcName  函数名称。
     * domainId  域名id。
@@ -419,6 +428,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'resourceId' => 'getResourceId',
             'funcUrn' => 'getFuncUrn',
             'funcName' => 'getFuncName',
             'domainId' => 'getDomainId',
@@ -598,6 +608,7 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['funcUrn'] = isset($data['funcUrn']) ? $data['funcUrn'] : null;
         $this->container['funcName'] = isset($data['funcName']) ? $data['funcName'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
@@ -733,6 +744,30 @@ class ListFunctionResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets resourceId
+    *  资源id。
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 资源id。
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
     }
 
     /**

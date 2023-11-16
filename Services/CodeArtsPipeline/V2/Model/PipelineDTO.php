@@ -24,6 +24,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为发布流水线
     * sources  流水线源
+    * variables  流水线自定义全局变量
+    * schedules  流水线定时执行配置
+    * triggers  流水线代码事件触发配置
+    * manifestVersion  流水线结构定义版本，新版默认为3.0
+    * definition  流水线结构定义
+    * projectName  项目名称
     *
     * @var string[]
     */
@@ -31,7 +37,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'isPublish' => 'bool',
-            'sources' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]'
+            'sources' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]',
+            'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]',
+            'schedules' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]',
+            'triggers' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]',
+            'manifestVersion' => 'string',
+            'definition' => 'string',
+            'projectName' => 'string'
     ];
 
     /**
@@ -40,6 +52,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为发布流水线
     * sources  流水线源
+    * variables  流水线自定义全局变量
+    * schedules  流水线定时执行配置
+    * triggers  流水线代码事件触发配置
+    * manifestVersion  流水线结构定义版本，新版默认为3.0
+    * definition  流水线结构定义
+    * projectName  项目名称
     *
     * @var string[]
     */
@@ -47,7 +65,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'isPublish' => null,
-        'sources' => null
+        'sources' => null,
+        'variables' => null,
+        'schedules' => null,
+        'triggers' => null,
+        'manifestVersion' => null,
+        'definition' => null,
+        'projectName' => null
     ];
 
     /**
@@ -77,6 +101,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为发布流水线
     * sources  流水线源
+    * variables  流水线自定义全局变量
+    * schedules  流水线定时执行配置
+    * triggers  流水线代码事件触发配置
+    * manifestVersion  流水线结构定义版本，新版默认为3.0
+    * definition  流水线结构定义
+    * projectName  项目名称
     *
     * @var string[]
     */
@@ -84,7 +114,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'isPublish' => 'is_publish',
-            'sources' => 'sources'
+            'sources' => 'sources',
+            'variables' => 'variables',
+            'schedules' => 'schedules',
+            'triggers' => 'triggers',
+            'manifestVersion' => 'manifest_version',
+            'definition' => 'definition',
+            'projectName' => 'project_name'
     ];
 
     /**
@@ -93,6 +129,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为发布流水线
     * sources  流水线源
+    * variables  流水线自定义全局变量
+    * schedules  流水线定时执行配置
+    * triggers  流水线代码事件触发配置
+    * manifestVersion  流水线结构定义版本，新版默认为3.0
+    * definition  流水线结构定义
+    * projectName  项目名称
     *
     * @var string[]
     */
@@ -100,7 +142,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'isPublish' => 'setIsPublish',
-            'sources' => 'setSources'
+            'sources' => 'setSources',
+            'variables' => 'setVariables',
+            'schedules' => 'setSchedules',
+            'triggers' => 'setTriggers',
+            'manifestVersion' => 'setManifestVersion',
+            'definition' => 'setDefinition',
+            'projectName' => 'setProjectName'
     ];
 
     /**
@@ -109,6 +157,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * description  流水线描述
     * isPublish  是否为发布流水线
     * sources  流水线源
+    * variables  流水线自定义全局变量
+    * schedules  流水线定时执行配置
+    * triggers  流水线代码事件触发配置
+    * manifestVersion  流水线结构定义版本，新版默认为3.0
+    * definition  流水线结构定义
+    * projectName  项目名称
     *
     * @var string[]
     */
@@ -116,7 +170,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'isPublish' => 'getIsPublish',
-            'sources' => 'getSources'
+            'sources' => 'getSources',
+            'variables' => 'getVariables',
+            'schedules' => 'getSchedules',
+            'triggers' => 'getTriggers',
+            'manifestVersion' => 'getManifestVersion',
+            'definition' => 'getDefinition',
+            'projectName' => 'getProjectName'
     ];
 
     /**
@@ -181,6 +241,12 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isPublish'] = isset($data['isPublish']) ? $data['isPublish'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['variables'] = isset($data['variables']) ? $data['variables'] : null;
+        $this->container['schedules'] = isset($data['schedules']) ? $data['schedules'] : null;
+        $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
+        $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
+        $this->container['definition'] = isset($data['definition']) ? $data['definition'] : null;
+        $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
     }
 
     /**
@@ -298,6 +364,150 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function setSources($sources)
     {
         $this->container['sources'] = $sources;
+        return $this;
+    }
+
+    /**
+    * Gets variables
+    *  流水线自定义全局变量
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null
+    */
+    public function getVariables()
+    {
+        return $this->container['variables'];
+    }
+
+    /**
+    * Sets variables
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CustomVariable[]|null $variables 流水线自定义全局变量
+    *
+    * @return $this
+    */
+    public function setVariables($variables)
+    {
+        $this->container['variables'] = $variables;
+        return $this;
+    }
+
+    /**
+    * Gets schedules
+    *  流水线定时执行配置
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null
+    */
+    public function getSchedules()
+    {
+        return $this->container['schedules'];
+    }
+
+    /**
+    * Sets schedules
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSchedule[]|null $schedules 流水线定时执行配置
+    *
+    * @return $this
+    */
+    public function setSchedules($schedules)
+    {
+        $this->container['schedules'] = $schedules;
+        return $this;
+    }
+
+    /**
+    * Gets triggers
+    *  流水线代码事件触发配置
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null
+    */
+    public function getTriggers()
+    {
+        return $this->container['triggers'];
+    }
+
+    /**
+    * Sets triggers
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]|null $triggers 流水线代码事件触发配置
+    *
+    * @return $this
+    */
+    public function setTriggers($triggers)
+    {
+        $this->container['triggers'] = $triggers;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersion
+    *  流水线结构定义版本，新版默认为3.0
+    *
+    * @return string|null
+    */
+    public function getManifestVersion()
+    {
+        return $this->container['manifestVersion'];
+    }
+
+    /**
+    * Sets manifestVersion
+    *
+    * @param string|null $manifestVersion 流水线结构定义版本，新版默认为3.0
+    *
+    * @return $this
+    */
+    public function setManifestVersion($manifestVersion)
+    {
+        $this->container['manifestVersion'] = $manifestVersion;
+        return $this;
+    }
+
+    /**
+    * Gets definition
+    *  流水线结构定义
+    *
+    * @return string|null
+    */
+    public function getDefinition()
+    {
+        return $this->container['definition'];
+    }
+
+    /**
+    * Sets definition
+    *
+    * @param string|null $definition 流水线结构定义
+    *
+    * @return $this
+    */
+    public function setDefinition($definition)
+    {
+        $this->container['definition'] = $definition;
+        return $this;
+    }
+
+    /**
+    * Gets projectName
+    *  项目名称
+    *
+    * @return string|null
+    */
+    public function getProjectName()
+    {
+        return $this->container['projectName'];
+    }
+
+    /**
+    * Sets projectName
+    *
+    * @param string|null $projectName 项目名称
+    *
+    * @return $this
+    */
+    public function setProjectName($projectName)
+    {
+        $this->container['projectName'] = $projectName;
         return $this;
     }
 
