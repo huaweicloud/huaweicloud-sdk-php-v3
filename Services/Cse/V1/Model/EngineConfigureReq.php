@@ -20,22 +20,22 @@ class EngineConfigureReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  版本号
+    * authType  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'version' => 'string'
+            'authType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  版本号
+    * authType  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'version' => null
+        'authType' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class EngineConfigureReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  版本号
+    * authType  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'version' => 'version'
+            'authType' => 'authType'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  版本号
+    * authType  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @var string[]
     */
     protected static $setters = [
-            'version' => 'setVersion'
+            'authType' => 'setAuthType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  版本号
+    * authType  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @var string[]
     */
     protected static $getters = [
-            'version' => 'getVersion'
+            'authType' => 'getAuthType'
     ];
 
     /**
@@ -147,7 +147,7 @@ class EngineConfigureReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
     }
 
     /**
@@ -158,12 +158,9 @@ class EngineConfigureReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
+        if ($this->container['authType'] === null) {
+            $invalidProperties[] = "'authType' can't be null";
         }
-            if ((mb_strlen($this->container['version']) > 24)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 24.";
-            }
         return $invalidProperties;
     }
 
@@ -179,26 +176,26 @@ class EngineConfigureReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets version
-    *  版本号
+    * Gets authType
+    *  authType安全认证类型，支持填写NONE和RBAC。
     *
     * @return string
     */
-    public function getVersion()
+    public function getAuthType()
     {
-        return $this->container['version'];
+        return $this->container['authType'];
     }
 
     /**
-    * Sets version
+    * Sets authType
     *
-    * @param string $version 版本号
+    * @param string $authType authType安全认证类型，支持填写NONE和RBAC。
     *
     * @return $this
     */
-    public function setVersion($version)
+    public function setAuthType($authType)
     {
-        $this->container['version'] = $version;
+        $this->container['authType'] = $authType;
         return $this;
     }
 

@@ -212,11 +212,21 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const ENGINE_KAFKA = 'kafka';
     const STATUS_CREATING = 'CREATING';
     const STATUS_RUNNING = 'RUNNING';
-    const STATUS_FAULTY = 'FAULTY';
     const STATUS_RESTARTING = 'RESTARTING';
-    const STATUS_RESIZING = 'RESIZING';
-    const STATUS_RESIZING_FAILED = 'RESIZING FAILED';
+    const STATUS_DELETING = 'DELETING';
+    const STATUS_ERROR = 'ERROR';
+    const STATUS_CREATEFAILED = 'CREATEFAILED';
+    const STATUS_FREEZING = 'FREEZING';
     const STATUS_FROZEN = 'FROZEN';
+    const STATUS_EXTENDING = 'EXTENDING';
+    const STATUS_SHRINKING = 'SHRINKING';
+    const STATUS_EXTENDEDFAILED = 'EXTENDEDFAILED';
+    const STATUS_CONFIGURING = 'CONFIGURING';
+    const STATUS_UPGRADING = 'UPGRADING';
+    const STATUS_UPGRADINGFAILED = 'UPGRADINGFAILED';
+    const STATUS_ROLLBACK = 'ROLLBACK';
+    const STATUS_ROLLBACKFAILED = 'ROLLBACKFAILED';
+    const STATUS_VOLUMETYPECHANGING = 'VOLUMETYPECHANGING';
     const INCLUDE_FAILURE_TRUE = 'true';
     const INCLUDE_FAILURE_FALSE = 'false';
     const EXACT_MATCH_NAME_TRUE = 'true';
@@ -245,11 +255,21 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         return [
             self::STATUS_CREATING,
             self::STATUS_RUNNING,
-            self::STATUS_FAULTY,
             self::STATUS_RESTARTING,
-            self::STATUS_RESIZING,
-            self::STATUS_RESIZING_FAILED,
+            self::STATUS_DELETING,
+            self::STATUS_ERROR,
+            self::STATUS_CREATEFAILED,
+            self::STATUS_FREEZING,
             self::STATUS_FROZEN,
+            self::STATUS_EXTENDING,
+            self::STATUS_SHRINKING,
+            self::STATUS_EXTENDEDFAILED,
+            self::STATUS_CONFIGURING,
+            self::STATUS_UPGRADING,
+            self::STATUS_UPGRADINGFAILED,
+            self::STATUS_ROLLBACK,
+            self::STATUS_ROLLBACKFAILED,
+            self::STATUS_VOLUMETYPECHANGING,
         ];
     }
 

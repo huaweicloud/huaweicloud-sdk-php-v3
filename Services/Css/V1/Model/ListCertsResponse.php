@@ -21,20 +21,20 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defaultCerts  defaultCerts
-    * customCerts  customCerts
+    * defaultCerts  默认证书列表。
+    * customCerts  自定义证书列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'defaultCerts' => '\HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource',
-            'customCerts' => '\HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource'
+            'defaultCerts' => '\HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]',
+            'customCerts' => '\HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defaultCerts  defaultCerts
-    * customCerts  customCerts
+    * defaultCerts  默认证书列表。
+    * customCerts  自定义证书列表。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defaultCerts  defaultCerts
-    * customCerts  customCerts
+    * defaultCerts  默认证书列表。
+    * customCerts  自定义证书列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defaultCerts  defaultCerts
-    * customCerts  customCerts
+    * defaultCerts  默认证书列表。
+    * customCerts  自定义证书列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defaultCerts  defaultCerts
-    * customCerts  customCerts
+    * defaultCerts  默认证书列表。
+    * customCerts  自定义证书列表。
     *
     * @var string[]
     */
@@ -186,9 +186,9 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultCerts
-    *  defaultCerts
+    *  默认证书列表。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]|null
     */
     public function getDefaultCerts()
     {
@@ -198,7 +198,7 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultCerts
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource|null $defaultCerts defaultCerts
+    * @param \HuaweiCloud\SDK\Css\V1\Model\DefaultCertsResource[]|null $defaultCerts 默认证书列表。
     *
     * @return $this
     */
@@ -210,9 +210,9 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets customCerts
-    *  customCerts
+    *  自定义证书列表。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]|null
     */
     public function getCustomCerts()
     {
@@ -222,7 +222,7 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets customCerts
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource|null $customCerts customCerts
+    * @param \HuaweiCloud\SDK\Css\V1\Model\CustomCertsResource[]|null $customCerts 自定义证书列表。
     *
     * @return $this
     */

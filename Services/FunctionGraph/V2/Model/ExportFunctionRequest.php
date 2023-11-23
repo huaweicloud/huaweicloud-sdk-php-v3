@@ -21,9 +21,9 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * config  是否导出函数配置，默认为false
-    * code  是否导出函数代码，默认为false
-    * type  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * config  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * code  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * type  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * config  是否导出函数配置，默认为false
-    * code  是否导出函数代码，默认为false
-    * type  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * config  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * code  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * type  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * config  是否导出函数配置，默认为false
-    * code  是否导出函数代码，默认为false
-    * type  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * config  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * code  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * type  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * config  是否导出函数配置，默认为false
-    * code  是否导出函数代码，默认为false
-    * type  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * config  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * code  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * type  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * config  是否导出函数配置，默认为false
-    * code  是否导出函数代码，默认为false
-    * type  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * config  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * code  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
+    * type  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets config
-    *  是否导出函数配置，默认为false
+    *  是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
     *
     * @return bool|null
     */
@@ -252,7 +252,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets config
     *
-    * @param bool|null $config 是否导出函数配置，默认为false
+    * @param bool|null $config 是否导出函数配置，默认为false。若无type参数，则必填code=true或config=true至少一项。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  是否导出函数代码，默认为false
+    *  是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param bool|null $code 是否导出函数代码，默认为false
+    * @param bool|null $code 是否导出函数代码，默认为false。若无type参数，则必填code=true或config=true至少一项。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    *  不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 不兼容与code、config参数混用；type=code代表导出代码,type=config代码导出配置
+    * @param string|null $type 不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
     *
     * @return $this
     */

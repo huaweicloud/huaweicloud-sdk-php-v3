@@ -26,7 +26,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
@@ -58,7 +58,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
@@ -111,7 +111,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
@@ -143,7 +143,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
@@ -175,7 +175,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
@@ -518,7 +518,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    *  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

@@ -20,8 +20,10 @@ class Thumbnail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
-    * time  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
+    * quantity  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    * quantityTime  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    * time  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     * dots  **type**取值为dots时必填。指定时间截图时的时间点数组。
     * coverPosition  该值表示指定第几张截图作为封面。  默认值：1。
     * format  截图文件格式。  取值如下： - 1：jpg。  默认值：1 。
@@ -32,6 +34,8 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'type' => 'string',
+            'quantity' => 'int',
+            'quantityTime' => 'int',
             'time' => 'int',
             'dots' => 'int[]',
             'coverPosition' => 'int',
@@ -42,8 +46,10 @@ class Thumbnail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
-    * time  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
+    * quantity  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    * quantityTime  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    * time  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     * dots  **type**取值为dots时必填。指定时间截图时的时间点数组。
     * coverPosition  该值表示指定第几张截图作为封面。  默认值：1。
     * format  截图文件格式。  取值如下： - 1：jpg。  默认值：1 。
@@ -54,7 +60,9 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'time' => null,
+        'quantity' => 'int32',
+        'quantityTime' => 'int32',
+        'time' => 'int32',
         'dots' => null,
         'coverPosition' => null,
         'format' => null,
@@ -85,8 +93,10 @@ class Thumbnail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
-    * time  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
+    * quantity  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    * quantityTime  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    * time  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     * dots  **type**取值为dots时必填。指定时间截图时的时间点数组。
     * coverPosition  该值表示指定第几张截图作为封面。  默认值：1。
     * format  截图文件格式。  取值如下： - 1：jpg。  默认值：1 。
@@ -97,6 +107,8 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'type' => 'type',
+            'quantity' => 'quantity',
+            'quantityTime' => 'quantity_time',
             'time' => 'time',
             'dots' => 'dots',
             'coverPosition' => 'cover_position',
@@ -107,8 +119,10 @@ class Thumbnail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
-    * time  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
+    * quantity  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    * quantityTime  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    * time  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     * dots  **type**取值为dots时必填。指定时间截图时的时间点数组。
     * coverPosition  该值表示指定第几张截图作为封面。  默认值：1。
     * format  截图文件格式。  取值如下： - 1：jpg。  默认值：1 。
@@ -119,6 +133,8 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'type' => 'setType',
+            'quantity' => 'setQuantity',
+            'quantityTime' => 'setQuantityTime',
             'time' => 'setTime',
             'dots' => 'setDots',
             'coverPosition' => 'setCoverPosition',
@@ -129,8 +145,10 @@ class Thumbnail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
-    * time  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * type  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
+    * quantity  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    * quantityTime  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    * time  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     * dots  **type**取值为dots时必填。指定时间截图时的时间点数组。
     * coverPosition  该值表示指定第几张截图作为封面。  默认值：1。
     * format  截图文件格式。  取值如下： - 1：jpg。  默认值：1 。
@@ -141,6 +159,8 @@ class Thumbnail implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'type' => 'getType',
+            'quantity' => 'getQuantity',
+            'quantityTime' => 'getQuantityTime',
             'time' => 'getTime',
             'dots' => 'getDots',
             'coverPosition' => 'getCoverPosition',
@@ -191,6 +211,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
     }
     const TYPE_TIME = 'time';
     const TYPE_DOTS = 'dots';
+    const TYPE_QUANTITY = 'quantity';
     
 
     /**
@@ -203,6 +224,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
         return [
             self::TYPE_TIME,
             self::TYPE_DOTS,
+            self::TYPE_QUANTITY,
         ];
     }
 
@@ -223,6 +245,8 @@ class Thumbnail implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['quantityTime'] = isset($data['quantityTime']) ? $data['quantityTime'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['dots'] = isset($data['dots']) ? $data['dots'] : null;
         $this->container['coverPosition'] = isset($data['coverPosition']) ? $data['coverPosition'] : null;
@@ -250,6 +274,24 @@ class Thumbnail implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 10)) {
+                $invalidProperties[] = "invalid value for 'quantity', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['quantity']) && ($this->container['quantity'] < 1)) {
+                $invalidProperties[] = "invalid value for 'quantity', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['quantityTime']) && ($this->container['quantityTime'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'quantityTime', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['quantityTime']) && ($this->container['quantityTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'quantityTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['time']) && ($this->container['time'] > 100)) {
+                $invalidProperties[] = "invalid value for 'time', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['time']) && ($this->container['time'] < 0)) {
+                $invalidProperties[] = "invalid value for 'time', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -266,7 +308,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
+    *  截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
     *
     * @return string
     */
@@ -278,7 +320,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。
+    * @param string $type 截图类型。  取值如下： - time：每次进行截图的间隔时间。 - dots: 按照指定的时间点截图。 - quantity： 按照指定张数，根据视频时长等分视频截图。
     *
     * @return $this
     */
@@ -289,8 +331,56 @@ class Thumbnail implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets quantity
+    *  **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    *
+    * @return int|null
+    */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+    * Sets quantity
+    *
+    * @param int|null $quantity **type**取值为quantity时必填。 按照指定张数，根据视频时长等分视频截图。 取值范围：[1,10]之间的整数。
+    *
+    * @return $this
+    */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
+        return $this;
+    }
+
+    /**
+    * Gets quantityTime
+    *  **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    *
+    * @return int|null
+    */
+    public function getQuantityTime()
+    {
+        return $this->container['quantityTime'];
+    }
+
+    /**
+    * Sets quantityTime
+    *
+    * @param int|null $quantityTime **type**取值为quantity时选填。 按照指定时间间隔取指定张数截图。 取值范围：[0,2147483647]之间的整数。
+    *
+    * @return $this
+    */
+    public function setQuantityTime($quantityTime)
+    {
+        $this->container['quantityTime'] = $quantityTime;
+        return $this;
+    }
+
+    /**
     * Gets time
-    *  **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    *  根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     *
     * @return int|null
     */
@@ -302,7 +392,7 @@ class Thumbnail implements ModelInterface, ArrayAccess
     /**
     * Sets time
     *
-    * @param int|null $time **type**取值为time时必填。根据时间间隔采样时的时间间隔值。  取值范围：[1,12]之间的整数。  单位：秒。
+    * @param int|null $time 根据时间间隔采样时的时间间隔值。单位：秒。 **type**取值为time时。 默认值：12 取值范围：[0,100]之间的整数。
     *
     * @return $this
     */

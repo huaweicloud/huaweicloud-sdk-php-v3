@@ -23,7 +23,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     * id  节点ID。
     * name  节点名称。
     * status  节点状态。
-    * role  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * role  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     * subnetId  节点所在的子网的ID。
     * privateIp  节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
     * publicIp  绑定的公网IP。该参数仅针对绑定了公网IP的节点有效。
@@ -51,7 +51,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     * id  节点ID。
     * name  节点名称。
     * status  节点状态。
-    * role  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * role  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     * subnetId  节点所在的子网的ID。
     * privateIp  节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
     * publicIp  绑定的公网IP。该参数仅针对绑定了公网IP的节点有效。
@@ -100,7 +100,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     * id  节点ID。
     * name  节点名称。
     * status  节点状态。
-    * role  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * role  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     * subnetId  节点所在的子网的ID。
     * privateIp  节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
     * publicIp  绑定的公网IP。该参数仅针对绑定了公网IP的节点有效。
@@ -128,7 +128,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     * id  节点ID。
     * name  节点名称。
     * status  节点状态。
-    * role  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * role  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     * subnetId  节点所在的子网的ID。
     * privateIp  节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
     * publicIp  绑定的公网IP。该参数仅针对绑定了公网IP的节点有效。
@@ -156,7 +156,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     * id  节点ID。
     * name  节点名称。
     * status  节点状态。
-    * role  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * role  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     * subnetId  节点所在的子网的ID。
     * privateIp  节点内网IP。在弹性云服务器创建成功后参数值存在，否则，值为\"\"。
     * publicIp  绑定的公网IP。该参数仅针对绑定了公网IP的节点有效。
@@ -375,7 +375,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    *  节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     *
     * @return string
     */
@@ -387,7 +387,7 @@ class ListInstancesNodeResult implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string $role 节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+    * @param string $role 节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
     *
     * @return $this
     */

@@ -22,25 +22,25 @@ class SwitchOpenSourceStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  状态
-    * ruleTemplateInstanceId  规则模版实例ID
+    * ruleSetId  规则集ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'bool',
-            'ruleTemplateInstanceId' => 'string'
+            'ruleSetId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  状态
-    * ruleTemplateInstanceId  规则模版实例ID
+    * ruleSetId  规则集ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
-        'ruleTemplateInstanceId' => null
+        'ruleSetId' => null
     ];
 
     /**
@@ -67,37 +67,37 @@ class SwitchOpenSourceStrategyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  状态
-    * ruleTemplateInstanceId  规则模版实例ID
+    * ruleSetId  规则集ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'ruleTemplateInstanceId' => 'rule_template_instance_id'
+            'ruleSetId' => 'rule_set_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  状态
-    * ruleTemplateInstanceId  规则模版实例ID
+    * ruleSetId  规则集ID
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'ruleTemplateInstanceId' => 'setRuleTemplateInstanceId'
+            'ruleSetId' => 'setRuleSetId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  状态
-    * ruleTemplateInstanceId  规则模版实例ID
+    * ruleSetId  规则集ID
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'ruleTemplateInstanceId' => 'getRuleTemplateInstanceId'
+            'ruleSetId' => 'getRuleSetId'
     ];
 
     /**
@@ -159,7 +159,7 @@ class SwitchOpenSourceStrategyResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['ruleTemplateInstanceId'] = isset($data['ruleTemplateInstanceId']) ? $data['ruleTemplateInstanceId'] : null;
+        $this->container['ruleSetId'] = isset($data['ruleSetId']) ? $data['ruleSetId'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class SwitchOpenSourceStrategyResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ruleTemplateInstanceId
-    *  规则模版实例ID
+    * Gets ruleSetId
+    *  规则集ID
     *
     * @return string|null
     */
-    public function getRuleTemplateInstanceId()
+    public function getRuleSetId()
     {
-        return $this->container['ruleTemplateInstanceId'];
+        return $this->container['ruleSetId'];
     }
 
     /**
-    * Sets ruleTemplateInstanceId
+    * Sets ruleSetId
     *
-    * @param string|null $ruleTemplateInstanceId 规则模版实例ID
+    * @param string|null $ruleSetId 规则集ID
     *
     * @return $this
     */
-    public function setRuleTemplateInstanceId($ruleTemplateInstanceId)
+    public function setRuleSetId($ruleSetId)
     {
-        $this->container['ruleTemplateInstanceId'] = $ruleTemplateInstanceId;
+        $this->container['ruleSetId'] = $ruleSetId;
         return $this;
     }
 

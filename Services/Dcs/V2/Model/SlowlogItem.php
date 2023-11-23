@@ -25,6 +25,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
+    * databaseId  慢日志数据库id
+    * username  慢日志名称
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'command' => 'string',
             'startTime' => 'string',
             'duration' => 'string',
-            'shardName' => 'string'
+            'shardName' => 'string',
+            'databaseId' => 'int',
+            'username' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
+    * databaseId  慢日志数据库id
+    * username  慢日志名称
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
         'command' => null,
         'startTime' => null,
         'duration' => null,
-        'shardName' => null
+        'shardName' => null,
+        'databaseId' => null,
+        'username' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
+    * databaseId  慢日志数据库id
+    * username  慢日志名称
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'command' => 'command',
             'startTime' => 'start_time',
             'duration' => 'duration',
-            'shardName' => 'shard_name'
+            'shardName' => 'shard_name',
+            'databaseId' => 'database_id',
+            'username' => 'username'
     ];
 
     /**
@@ -100,6 +112,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
+    * databaseId  慢日志数据库id
+    * username  慢日志名称
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'command' => 'setCommand',
             'startTime' => 'setStartTime',
             'duration' => 'setDuration',
-            'shardName' => 'setShardName'
+            'shardName' => 'setShardName',
+            'databaseId' => 'setDatabaseId',
+            'username' => 'setUsername'
     ];
 
     /**
@@ -118,6 +134,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
+    * databaseId  慢日志数据库id
+    * username  慢日志名称
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class SlowlogItem implements ModelInterface, ArrayAccess
             'command' => 'getCommand',
             'startTime' => 'getStartTime',
             'duration' => 'getDuration',
-            'shardName' => 'getShardName'
+            'shardName' => 'getShardName',
+            'databaseId' => 'getDatabaseId',
+            'username' => 'getUsername'
     ];
 
     /**
@@ -192,6 +212,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['shardName'] = isset($data['shardName']) ? $data['shardName'] : null;
+        $this->container['databaseId'] = isset($data['databaseId']) ? $data['databaseId'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     public function setShardName($shardName)
     {
         $this->container['shardName'] = $shardName;
+        return $this;
+    }
+
+    /**
+    * Gets databaseId
+    *  慢日志数据库id
+    *
+    * @return int|null
+    */
+    public function getDatabaseId()
+    {
+        return $this->container['databaseId'];
+    }
+
+    /**
+    * Sets databaseId
+    *
+    * @param int|null $databaseId 慢日志数据库id
+    *
+    * @return $this
+    */
+    public function setDatabaseId($databaseId)
+    {
+        $this->container['databaseId'] = $databaseId;
+        return $this;
+    }
+
+    /**
+    * Gets username
+    *  慢日志名称
+    *
+    * @return string|null
+    */
+    public function getUsername()
+    {
+        return $this->container['username'];
+    }
+
+    /**
+    * Sets username
+    *
+    * @param string|null $username 慢日志名称
+    *
+    * @return $this
+    */
+    public function setUsername($username)
+    {
+        $this->container['username'] = $username;
         return $this;
     }
 

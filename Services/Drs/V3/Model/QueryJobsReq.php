@@ -30,6 +30,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     * serviceName  开启EPS时使用，值为eps
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     * tags  标签
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  DRS绑定数据库实例IP
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
             'netType' => 'string',
             'serviceName' => 'string',
             'status' => 'string',
-            'tags' => 'map[string,string]'
+            'tags' => 'map[string,string]',
+            'instanceIds' => 'string[]',
+            'instanceIp' => 'string'
     ];
 
     /**
@@ -58,6 +62,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     * serviceName  开启EPS时使用，值为eps
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     * tags  标签
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  DRS绑定数据库实例IP
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
         'netType' => null,
         'serviceName' => null,
         'status' => null,
-        'tags' => null
+        'tags' => null,
+        'instanceIds' => null,
+        'instanceIp' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     * serviceName  开启EPS时使用，值为eps
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     * tags  标签
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  DRS绑定数据库实例IP
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
             'netType' => 'net_type',
             'serviceName' => 'service_name',
             'status' => 'status',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'instanceIds' => 'instance_ids',
+            'instanceIp' => 'instance_ip'
     ];
 
     /**
@@ -135,6 +147,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     * serviceName  开启EPS时使用，值为eps
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     * tags  标签
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  DRS绑定数据库实例IP
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
             'netType' => 'setNetType',
             'serviceName' => 'setServiceName',
             'status' => 'setStatus',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'instanceIds' => 'setInstanceIds',
+            'instanceIp' => 'setInstanceIp'
     ];
 
     /**
@@ -163,6 +179,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     * serviceName  开启EPS时使用，值为eps
     * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
     * tags  标签
+    * instanceIds  数据库实例ID列表，最多支持10个
+    * instanceIp  DRS绑定数据库实例IP
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
             'netType' => 'getNetType',
             'serviceName' => 'getServiceName',
             'status' => 'getStatus',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'instanceIds' => 'getInstanceIds',
+            'instanceIp' => 'getInstanceIp'
     ];
 
     /**
@@ -367,6 +387,8 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
         $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['instanceIds'] = isset($data['instanceIds']) ? $data['instanceIds'] : null;
+        $this->container['instanceIp'] = isset($data['instanceIp']) ? $data['instanceIp'] : null;
     }
 
     /**
@@ -678,6 +700,54 @@ class QueryJobsReq implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIds
+    *  数据库实例ID列表，最多支持10个
+    *
+    * @return string[]|null
+    */
+    public function getInstanceIds()
+    {
+        return $this->container['instanceIds'];
+    }
+
+    /**
+    * Sets instanceIds
+    *
+    * @param string[]|null $instanceIds 数据库实例ID列表，最多支持10个
+    *
+    * @return $this
+    */
+    public function setInstanceIds($instanceIds)
+    {
+        $this->container['instanceIds'] = $instanceIds;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIp
+    *  DRS绑定数据库实例IP
+    *
+    * @return string|null
+    */
+    public function getInstanceIp()
+    {
+        return $this->container['instanceIp'];
+    }
+
+    /**
+    * Sets instanceIp
+    *
+    * @param string|null $instanceIp DRS绑定数据库实例IP
+    *
+    * @return $this
+    */
+    public function setInstanceIp($instanceIp)
+    {
+        $this->container['instanceIp'] = $instanceIp;
         return $this;
     }
 

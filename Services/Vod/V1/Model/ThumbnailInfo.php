@@ -22,6 +22,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sample  视频截图信息。
     * dots  dots
+    * quantity  视频截图信息，截图类型为数量。
     * execDesc  执行情况描述。
     * thumbnailStatus  截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
     *
@@ -30,6 +31,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'sample' => '\HuaweiCloud\SDK\Vod\V1\Model\ThumbnailRsp[]',
             'dots' => '\HuaweiCloud\SDK\Vod\V1\Model\ThumbnailRsp[]',
+            'quantity' => '\HuaweiCloud\SDK\Vod\V1\Model\ThumbnailRsp[]',
             'execDesc' => 'string',
             'thumbnailStatus' => 'string'
     ];
@@ -38,6 +40,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * sample  视频截图信息。
     * dots  dots
+    * quantity  视频截图信息，截图类型为数量。
     * execDesc  执行情况描述。
     * thumbnailStatus  截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
     *
@@ -46,6 +49,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'sample' => null,
         'dots' => null,
+        'quantity' => null,
         'execDesc' => null,
         'thumbnailStatus' => null
     ];
@@ -75,6 +79,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sample  视频截图信息。
     * dots  dots
+    * quantity  视频截图信息，截图类型为数量。
     * execDesc  执行情况描述。
     * thumbnailStatus  截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
     *
@@ -83,6 +88,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'sample' => 'sample',
             'dots' => 'dots',
+            'quantity' => 'quantity',
             'execDesc' => 'exec_desc',
             'thumbnailStatus' => 'thumbnail_status'
     ];
@@ -91,6 +97,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * sample  视频截图信息。
     * dots  dots
+    * quantity  视频截图信息，截图类型为数量。
     * execDesc  执行情况描述。
     * thumbnailStatus  截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
     *
@@ -99,6 +106,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'sample' => 'setSample',
             'dots' => 'setDots',
+            'quantity' => 'setQuantity',
             'execDesc' => 'setExecDesc',
             'thumbnailStatus' => 'setThumbnailStatus'
     ];
@@ -107,6 +115,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * sample  视频截图信息。
     * dots  dots
+    * quantity  视频截图信息，截图类型为数量。
     * execDesc  执行情况描述。
     * thumbnailStatus  截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
     *
@@ -115,6 +124,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'sample' => 'getSample',
             'dots' => 'getDots',
+            'quantity' => 'getQuantity',
             'execDesc' => 'getExecDesc',
             'thumbnailStatus' => 'getThumbnailStatus'
     ];
@@ -179,6 +189,7 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     {
         $this->container['sample'] = isset($data['sample']) ? $data['sample'] : null;
         $this->container['dots'] = isset($data['dots']) ? $data['dots'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
         $this->container['execDesc'] = isset($data['execDesc']) ? $data['execDesc'] : null;
         $this->container['thumbnailStatus'] = isset($data['thumbnailStatus']) ? $data['thumbnailStatus'] : null;
     }
@@ -250,6 +261,30 @@ class ThumbnailInfo implements ModelInterface, ArrayAccess
     public function setDots($dots)
     {
         $this->container['dots'] = $dots;
+        return $this;
+    }
+
+    /**
+    * Gets quantity
+    *  视频截图信息，截图类型为数量。
+    *
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\ThumbnailRsp[]|null
+    */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+    * Sets quantity
+    *
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\ThumbnailRsp[]|null $quantity 视频截图信息，截图类型为数量。
+    *
+    * @return $this
+    */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
         return $this;
     }
 

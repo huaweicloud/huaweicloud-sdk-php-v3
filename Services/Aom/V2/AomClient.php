@@ -2040,6 +2040,319 @@ class AomClient extends Client
     }
 
     /**
+     * 新增Prometheus实例数据源
+     *
+     * 该接口用于新增Prometheus实例数据源
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPromInstance($request)
+    {
+        return $this->createPromInstanceWithHttpInfo($request);
+    }
+
+    public function createPromInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aom/prometheus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\CreatePromInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\CreatePromInstanceRequest');
+    }
+
+    /**
+     * 创建预汇聚规则
+     *
+     * 该接口用于创建预汇聚规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRecordingRule($request)
+    {
+        return $this->createRecordingRuleWithHttpInfo($request);
+    }
+
+    public function createRecordingRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{prometheus_instance}/aom/api/v1/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['prometheusInstance'] !== null) {
+            $pathParams['prometheus_instance'] = $localVarParams['prometheusInstance'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\CreateRecordingRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\CreateRecordingRuleRequest');
+    }
+
+    /**
+     * 卸载托管Prometheus
+     *
+     * 该接口用于卸载托管Prometheus
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePromInstance($request)
+    {
+        return $this->deletePromInstanceWithHttpInfo($request);
+    }
+
+    public function deletePromInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aom/prometheus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['promId'] !== null) {
+            $queryParams['prom_id'] = $localVarParams['promId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeletePromInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeletePromInstanceRequest');
+    }
+
+    /**
+     * 获取Prometheus监控所需Token-access code
+     *
+     * 该接口用于获取Prometheus监控所需Token-access code
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAccessCode($request)
+    {
+        return $this->listAccessCodeWithHttpInfo($request);
+    }
+
+    public function listAccessCodeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/access-code';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAccessCodeResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAccessCodeRequest');
+    }
+
+    /**
+     * 查询集群Agent信息
+     *
+     * 该接口用于查询集群Agent信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAgents($request)
+    {
+        return $this->listAgentsWithHttpInfo($request);
+    }
+
+    public function listAgentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{cluster_id}/{namespace}/agents';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsRequest');
+    }
+
+    /**
      * 瞬时数据查询
      *
      * 该接口用于查询PromQL(Prometheus Query Language)在特定时间点下的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
@@ -2406,6 +2719,136 @@ class AomClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetadataAomPromGetResponse',
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetadataAomPromGetRequest');
+    }
+
+    /**
+     * 是否开通aom2.0
+     *
+     * 该接口用于查询用户是否已经完成aom2.0授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPermissions($request)
+    {
+        return $this->listPermissionsWithHttpInfo($request);
+    }
+
+    public function listPermissionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aom/auth/grant';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsRequest');
+    }
+
+    /**
+     * 获取所有正常实例
+     *
+     * 该接口用于获取所有正常prometheus实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPromInstance($request)
+    {
+        return $this->listPromInstanceWithHttpInfo($request);
+    }
+
+    public function listPromInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aom/prometheus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['promId'] !== null) {
+            $queryParams['prom_id'] = $localVarParams['promId'];
+        }
+        if ($localVarParams['promType'] !== null) {
+            $queryParams['prom_type'] = $localVarParams['promType'];
+        }
+        if ($localVarParams['cceClusterEnable'] !== null) {
+            $queryParams['cce_cluster_enable'] = $localVarParams['cceClusterEnable'];
+        }
+        if ($localVarParams['promStatus'] !== null) {
+            $queryParams['prom_status'] = $localVarParams['promStatus'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListPromInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListPromInstanceRequest');
     }
 
     /**

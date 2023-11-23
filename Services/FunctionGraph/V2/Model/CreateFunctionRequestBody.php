@@ -40,6 +40,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcCode  funcCode
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
@@ -68,6 +70,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcCode' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncCode',
             'initializerHandler' => 'string',
             'initializerTimeout' => 'int',
+            'preStopHandler' => 'string',
+            'preStopTimeout' => 'int',
             'enterpriseProjectId' => 'string',
             'type' => 'string',
             'logConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncLogConfig',
@@ -96,6 +100,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcCode  funcCode
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
@@ -124,6 +130,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'funcCode' => null,
         'initializerHandler' => null,
         'initializerTimeout' => 'int32',
+        'preStopHandler' => null,
+        'preStopTimeout' => 'int32',
         'enterpriseProjectId' => null,
         'type' => null,
         'logConfig' => null,
@@ -173,6 +181,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcCode  funcCode
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
@@ -201,6 +211,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcCode' => 'func_code',
             'initializerHandler' => 'initializer_handler',
             'initializerTimeout' => 'initializer_timeout',
+            'preStopHandler' => 'pre_stop_handler',
+            'preStopTimeout' => 'pre_stop_timeout',
             'enterpriseProjectId' => 'enterprise_project_id',
             'type' => 'type',
             'logConfig' => 'log_config',
@@ -229,6 +241,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcCode  funcCode
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
@@ -257,6 +271,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcCode' => 'setFuncCode',
             'initializerHandler' => 'setInitializerHandler',
             'initializerTimeout' => 'setInitializerTimeout',
+            'preStopHandler' => 'setPreStopHandler',
+            'preStopTimeout' => 'setPreStopTimeout',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'type' => 'setType',
             'logConfig' => 'setLogConfig',
@@ -285,6 +301,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcCode  funcCode
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
@@ -313,6 +331,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcCode' => 'getFuncCode',
             'initializerHandler' => 'getInitializerHandler',
             'initializerTimeout' => 'getInitializerTimeout',
+            'preStopHandler' => 'getPreStopHandler',
+            'preStopTimeout' => 'getPreStopTimeout',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'type' => 'getType',
             'logConfig' => 'getLogConfig',
@@ -480,6 +500,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['funcCode'] = isset($data['funcCode']) ? $data['funcCode'] : null;
         $this->container['initializerHandler'] = isset($data['initializerHandler']) ? $data['initializerHandler'] : null;
         $this->container['initializerTimeout'] = isset($data['initializerTimeout']) ? $data['initializerTimeout'] : null;
+        $this->container['preStopHandler'] = isset($data['preStopHandler']) ? $data['preStopHandler'] : null;
+        $this->container['preStopTimeout'] = isset($data['preStopTimeout']) ? $data['preStopTimeout'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['logConfig'] = isset($data['logConfig']) ? $data['logConfig'] : null;
@@ -1030,6 +1052,54 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setInitializerTimeout($initializerTimeout)
     {
         $this->container['initializerTimeout'] = $initializerTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets preStopHandler
+    *  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return string|null
+    */
+    public function getPreStopHandler()
+    {
+        return $this->container['preStopHandler'];
+    }
+
+    /**
+    * Sets preStopHandler
+    *
+    * @param string|null $preStopHandler 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return $this
+    */
+    public function setPreStopHandler($preStopHandler)
+    {
+        $this->container['preStopHandler'] = $preStopHandler;
+        return $this;
+    }
+
+    /**
+    * Gets preStopTimeout
+    *  初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return int|null
+    */
+    public function getPreStopTimeout()
+    {
+        return $this->container['preStopTimeout'];
+    }
+
+    /**
+    * Sets preStopTimeout
+    *
+    * @param int|null $preStopTimeout 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return $this
+    */
+    public function setPreStopTimeout($preStopTimeout)
+    {
+        $this->container['preStopTimeout'] = $preStopTimeout;
         return $this;
     }
 

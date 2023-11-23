@@ -21,7 +21,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * sessionConf  sessionConf
     *
@@ -37,7 +37,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * sessionConf  sessionConf
     *
@@ -74,7 +74,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * sessionConf  sessionConf
     *
@@ -90,7 +90,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * sessionConf  sessionConf
     *
@@ -106,7 +106,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
     * sessionConf  sessionConf
     *
@@ -270,7 +270,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    *  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description 公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

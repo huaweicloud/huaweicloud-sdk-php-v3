@@ -26,7 +26,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
-    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * listFile  listFile
     *
     * @var string[]
@@ -50,7 +50,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
-    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * listFile  listFile
     *
     * @var string[]
@@ -95,7 +95,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
-    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * listFile  listFile
     *
     * @var string[]
@@ -119,7 +119,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
-    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * listFile  listFile
     *
     * @var string[]
@@ -143,7 +143,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
-    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * listFile  listFile
     *
     * @var string[]
@@ -449,7 +449,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudType
-    *  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    *  源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return string|null
     */
@@ -461,7 +461,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     /**
     * Sets cloudType
     *
-    * @param string|null $cloudType 源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * @param string|null $cloudType 源端云服务提供商，当task_type为URL_LIST时，本参数为URLSource且必选。可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return $this
     */

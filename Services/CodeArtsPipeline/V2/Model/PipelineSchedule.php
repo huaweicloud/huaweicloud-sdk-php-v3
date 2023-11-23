@@ -34,7 +34,7 @@ class PipelineSchedule implements ModelInterface, ArrayAccess
             'type' => 'string',
             'name' => 'string',
             'enable' => 'string',
-            'daysOfWeek' => 'string',
+            'daysOfWeek' => 'int[]',
             'timeZone' => 'string'
     ];
 
@@ -54,7 +54,7 @@ class PipelineSchedule implements ModelInterface, ArrayAccess
         'type' => null,
         'name' => null,
         'enable' => null,
-        'daysOfWeek' => null,
+        'daysOfWeek' => 'int32',
         'timeZone' => null
     ];
 
@@ -327,7 +327,7 @@ class PipelineSchedule implements ModelInterface, ArrayAccess
     * Gets daysOfWeek
     *  一周内具体时间
     *
-    * @return string|null
+    * @return int[]|null
     */
     public function getDaysOfWeek()
     {
@@ -337,7 +337,7 @@ class PipelineSchedule implements ModelInterface, ArrayAccess
     /**
     * Sets daysOfWeek
     *
-    * @param string|null $daysOfWeek 一周内具体时间
+    * @param int[]|null $daysOfWeek 一周内具体时间
     *
     * @return $this
     */

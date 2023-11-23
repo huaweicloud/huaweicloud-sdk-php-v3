@@ -20,22 +20,22 @@ class CreateRouteTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  version
+    * tag  实例标记。满足标记条件的实例放到这一组。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'version' => 'string'
+            'tag' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  version
+    * tag  实例标记。满足标记条件的实例放到这一组。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'version' => null
+        'tag' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class CreateRouteTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  version
+    * tag  实例标记。满足标记条件的实例放到这一组。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'version' => 'version'
+            'tag' => '&lt;tag&gt;'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  version
+    * tag  实例标记。满足标记条件的实例放到这一组。
     *
     * @var string[]
     */
     protected static $setters = [
-            'version' => 'setVersion'
+            'tag' => 'setTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  version
+    * tag  实例标记。满足标记条件的实例放到这一组。
     *
     * @var string[]
     */
     protected static $getters = [
-            'version' => 'getVersion'
+            'tag' => 'getTag'
     ];
 
     /**
@@ -147,7 +147,7 @@ class CreateRouteTags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class CreateRouteTags implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets version
-    *  version
+    * Gets tag
+    *  实例标记。满足标记条件的实例放到这一组。
     *
     * @return string|null
     */
-    public function getVersion()
+    public function getTag()
     {
-        return $this->container['version'];
+        return $this->container['tag'];
     }
 
     /**
-    * Sets version
+    * Sets tag
     *
-    * @param string|null $version version
+    * @param string|null $tag 实例标记。满足标记条件的实例放到这一组。
     *
     * @return $this
     */
-    public function setVersion($version)
+    public function setTag($tag)
     {
-        $this->container['version'] = $version;
+        $this->container['tag'] = $tag;
         return $this;
     }
 

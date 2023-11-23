@@ -21,7 +21,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  测试事件名称。只能由字母、数字、中划线和下划线组成，且必须以大写或小写字母开头
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  测试事件名称。只能由字母、数字、中划线和下划线组成，且必须以大写或小写字母开头
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  测试事件名称。只能由字母、数字、中划线和下划线组成，且必须以大写或小写字母开头
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  测试事件名称。只能由字母、数字、中划线和下划线组成，且必须以大写或小写字母开头
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  测试事件名称。只能由字母、数字、中划线和下划线组成，且必须以大写或小写字母开头
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  测试事件content,为json字符串
+    *  测试事件content，为json字符串的base64编码
     *
     * @return string
     */
@@ -230,7 +230,7 @@ class CreateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string $content 测试事件content,为json字符串
+    * @param string $content 测试事件content，为json字符串的base64编码
     *
     * @return $this
     */

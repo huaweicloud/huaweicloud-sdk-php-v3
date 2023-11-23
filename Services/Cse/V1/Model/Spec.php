@@ -112,15 +112,15 @@ class Spec implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'engineId' => 'engine_id',
-            'specType' => 'spec_type',
+            'engineId' => 'engineId',
+            'specType' => 'specType',
             'cluster' => 'cluster',
-            'clusterId' => 'cluster_id',
-            'clusterNodes' => 'cluster_nodes',
+            'clusterId' => 'clusterId',
+            'clusterNodes' => 'clusterNodes',
             'flavor' => 'flavor',
             'region' => 'region',
             'version' => 'version',
-            'extendParam' => 'extend_param'
+            'extendParam' => 'extendParam'
     ];
 
     /**

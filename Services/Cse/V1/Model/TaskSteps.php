@@ -96,12 +96,12 @@ class TaskSteps implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskName' => 'task_name',
-            'taskNames' => 'task_names',
+            'taskName' => 'taskName',
+            'taskNames' => 'taskNames',
             'status' => 'status',
-            'startTime' => 'start_time',
-            'endTime' => 'end_time',
-            'taskExecutorBrief' => 'task_executor_brief',
+            'startTime' => 'startTime',
+            'endTime' => 'endTime',
+            'taskExecutorBrief' => 'taskExecutorBrief',
             'tasks' => 'tasks'
     ];
 

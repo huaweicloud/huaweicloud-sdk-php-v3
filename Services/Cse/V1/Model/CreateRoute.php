@@ -20,8 +20,8 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  name
-    * weight  weight
+    * name  规则名称。
+    * weight  权重值。
     * tags  tags
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  name
-    * weight  weight
+    * name  规则名称。
+    * weight  权重值。
     * tags  tags
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CreateRoute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  name
-    * weight  weight
+    * name  规则名称。
+    * weight  权重值。
     * tags  tags
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  name
-    * weight  weight
+    * name  规则名称。
+    * weight  权重值。
     * tags  tags
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  name
-    * weight  weight
+    * name  规则名称。
+    * weight  权重值。
     * tags  tags
     *
     * @var string[]
@@ -196,7 +196,7 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name
+    *  规则名称。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CreateRoute implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 规则名称。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CreateRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets weight
-    *  weight
+    *  权重值。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class CreateRoute implements ModelInterface, ArrayAccess
     /**
     * Sets weight
     *
-    * @param int|null $weight weight
+    * @param int|null $weight 权重值。
     *
     * @return $this
     */

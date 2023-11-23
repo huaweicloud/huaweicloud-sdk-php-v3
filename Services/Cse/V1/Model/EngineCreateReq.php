@@ -27,6 +27,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     * azList  当前局点可用区列表。
     * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
+    * vpcId  vpc标识
     * networkId  微服务引擎专享版子网ID
     * subnetCidr  微服务引擎专享版子网划分
     * publicIpId  微服务引擎专享版公网地址ID，当前为null
@@ -44,6 +45,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'azList' => 'string[]',
             'authType' => 'string',
             'vpc' => 'string',
+            'vpcId' => 'string',
             'networkId' => 'string',
             'subnetCidr' => 'string',
             'publicIpId' => 'string',
@@ -61,6 +63,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     * azList  当前局点可用区列表。
     * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
+    * vpcId  vpc标识
     * networkId  微服务引擎专享版子网ID
     * subnetCidr  微服务引擎专享版子网划分
     * publicIpId  微服务引擎专享版公网地址ID，当前为null
@@ -78,6 +81,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         'azList' => null,
         'authType' => null,
         'vpc' => null,
+        'vpcId' => null,
         'networkId' => null,
         'subnetCidr' => null,
         'publicIpId' => null,
@@ -116,6 +120,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     * azList  当前局点可用区列表。
     * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
+    * vpcId  vpc标识
     * networkId  微服务引擎专享版子网ID
     * subnetCidr  微服务引擎专享版子网划分
     * publicIpId  微服务引擎专享版公网地址ID，当前为null
@@ -133,6 +138,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'azList' => 'azList',
             'authType' => 'authType',
             'vpc' => 'vpc',
+            'vpcId' => 'vpcId',
             'networkId' => 'networkId',
             'subnetCidr' => 'subnetCidr',
             'publicIpId' => 'publicIpId',
@@ -150,6 +156,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     * azList  当前局点可用区列表。
     * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
+    * vpcId  vpc标识
     * networkId  微服务引擎专享版子网ID
     * subnetCidr  微服务引擎专享版子网划分
     * publicIpId  微服务引擎专享版公网地址ID，当前为null
@@ -167,6 +174,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'azList' => 'setAzList',
             'authType' => 'setAuthType',
             'vpc' => 'setVpc',
+            'vpcId' => 'setVpcId',
             'networkId' => 'setNetworkId',
             'subnetCidr' => 'setSubnetCidr',
             'publicIpId' => 'setPublicIpId',
@@ -184,6 +192,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     * azList  当前局点可用区列表。
     * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
+    * vpcId  vpc标识
     * networkId  微服务引擎专享版子网ID
     * subnetCidr  微服务引擎专享版子网划分
     * publicIpId  微服务引擎专享版公网地址ID，当前为null
@@ -201,6 +210,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'azList' => 'getAzList',
             'authType' => 'getAuthType',
             'vpc' => 'getVpc',
+            'vpcId' => 'getVpcId',
             'networkId' => 'getNetworkId',
             'subnetCidr' => 'getSubnetCidr',
             'publicIpId' => 'getPublicIpId',
@@ -336,6 +346,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         $this->container['azList'] = isset($data['azList']) ? $data['azList'] : null;
         $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
         $this->container['vpc'] = isset($data['vpc']) ? $data['vpc'] : null;
+        $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
         $this->container['subnetCidr'] = isset($data['subnetCidr']) ? $data['subnetCidr'] : null;
         $this->container['publicIpId'] = isset($data['publicIpId']) ? $data['publicIpId'] : null;
@@ -405,6 +416,9 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         }
             if ((mb_strlen($this->container['vpc']) > 64)) {
                 $invalidProperties[] = "invalid value for 'vpc', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 64.";
             }
         if ($this->container['networkId'] === null) {
             $invalidProperties[] = "'networkId' can't be null";
@@ -611,6 +625,30 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     public function setVpc($vpc)
     {
         $this->container['vpc'] = $vpc;
+        return $this;
+    }
+
+    /**
+    * Gets vpcId
+    *  vpc标识
+    *
+    * @return string|null
+    */
+    public function getVpcId()
+    {
+        return $this->container['vpcId'];
+    }
+
+    /**
+    * Sets vpcId
+    *
+    * @param string|null $vpcId vpc标识
+    *
+    * @return $this
+    */
+    public function setVpcId($vpcId)
+    {
+        $this->container['vpcId'] = $vpcId;
         return $this;
     }
 

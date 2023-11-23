@@ -21,7 +21,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enable  负载均衡器弹性扩缩容开关
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enable  负载均衡器弹性扩缩容开关
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enable  负载均衡器弹性扩缩容开关
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enable  负载均衡器弹性扩缩容开关
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enable  负载均衡器弹性扩缩容开关
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * minL7FlavorId  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets minL7FlavorId
-    *  弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    *  弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Sets minL7FlavorId
     *
-    * @param string|null $minL7FlavorId 弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
+    * @param string|null $minL7FlavorId 弹性扩缩容的最小七层规格ID，类型为L7_elastic，有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @return $this
     */

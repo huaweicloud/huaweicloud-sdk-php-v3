@@ -26,6 +26,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     * description  使用description过滤查询
     * createdAt  使用创建时间戳排序
     * updatedAt  使用更新时间戳排序
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'updatedAt' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     * description  使用description过滤查询
     * createdAt  使用创建时间戳排序
     * updatedAt  使用更新时间戳排序
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'createdAt' => null,
-        'updatedAt' => null
+        'updatedAt' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     * description  使用description过滤查询
     * createdAt  使用创建时间戳排序
     * updatedAt  使用更新时间戳排序
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     * description  使用description过滤查询
     * createdAt  使用创建时间戳排序
     * updatedAt  使用更新时间戳排序
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     * description  使用description过滤查询
     * createdAt  使用创建时间戳排序
     * updatedAt  使用更新时间戳排序
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -371,6 +393,54 @@ class ListTrafficMirrorFiltersRequest implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  功能说明：每页返回的个数 取值范围：0-2000
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 功能说明：每页返回的个数 取值范围：0-2000
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

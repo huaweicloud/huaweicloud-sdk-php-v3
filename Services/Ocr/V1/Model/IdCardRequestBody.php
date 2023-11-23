@@ -27,6 +27,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'returnVerification' => 'bool',
             'returnTextLocation' => 'bool',
             'detectReproduce' => 'bool',
-            'detectCopy' => 'bool'
+            'detectCopy' => 'bool',
+            'returnPortraitLocation' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         'returnVerification' => null,
         'returnTextLocation' => null,
         'detectReproduce' => null,
-        'detectCopy' => null
+        'detectCopy' => null,
+        'returnPortraitLocation' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'returnVerification' => 'return_verification',
             'returnTextLocation' => 'return_text_location',
             'detectReproduce' => 'detect_reproduce',
-            'detectCopy' => 'detect_copy'
+            'detectCopy' => 'detect_copy',
+            'returnPortraitLocation' => 'return_portrait_location'
     ];
 
     /**
@@ -114,6 +120,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'returnVerification' => 'setReturnVerification',
             'returnTextLocation' => 'setReturnTextLocation',
             'detectReproduce' => 'setDetectReproduce',
-            'detectCopy' => 'setDetectCopy'
+            'detectCopy' => 'setDetectCopy',
+            'returnPortraitLocation' => 'setReturnPortraitLocation'
     ];
 
     /**
@@ -136,6 +144,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'returnVerification' => 'getReturnVerification',
             'returnTextLocation' => 'getReturnTextLocation',
             'detectReproduce' => 'getDetectReproduce',
-            'detectCopy' => 'getDetectCopy'
+            'detectCopy' => 'getDetectCopy',
+            'returnPortraitLocation' => 'getReturnPortraitLocation'
     ];
 
     /**
@@ -214,6 +224,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
         $this->container['detectReproduce'] = isset($data['detectReproduce']) ? $data['detectReproduce'] : null;
         $this->container['detectCopy'] = isset($data['detectCopy']) ? $data['detectCopy'] : null;
+        $this->container['returnPortraitLocation'] = isset($data['returnPortraitLocation']) ? $data['returnPortraitLocation'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     public function setDetectCopy($detectCopy)
     {
         $this->container['detectCopy'] = $detectCopy;
+        return $this;
+    }
+
+    /**
+    * Gets returnPortraitLocation
+    *  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    *
+    * @return bool|null
+    */
+    public function getReturnPortraitLocation()
+    {
+        return $this->container['returnPortraitLocation'];
+    }
+
+    /**
+    * Sets returnPortraitLocation
+    *
+    * @param bool|null $returnPortraitLocation 返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    *
+    * @return $this
+    */
+    public function setReturnPortraitLocation($returnPortraitLocation)
+    {
+        $this->container['returnPortraitLocation'] = $returnPortraitLocation;
         return $this;
     }
 

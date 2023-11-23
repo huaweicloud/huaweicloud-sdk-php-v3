@@ -21,17 +21,17 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  查询治理策略列表响应结构体
+    * body  查询治理策略列表响应结构体。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyResponseBody[]'
+            'body' => '\HuaweiCloud\SDK\Cse\V1\Model\GovPolicyDetail[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  查询治理策略列表响应结构体
+    * body  查询治理策略列表响应结构体。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  查询治理策略列表响应结构体
+    * body  查询治理策略列表响应结构体。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  查询治理策略列表响应结构体
+    * body  查询治理策略列表响应结构体。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  查询治理策略列表响应结构体
+    * body  查询治理策略列表响应结构体。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  查询治理策略列表响应结构体
+    *  查询治理策略列表响应结构体。
     *
-    * @return \HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyResponseBody[]|null
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\GovPolicyDetail[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class ListGovernancePolicysResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Cse\V1\Model\ListGovernancePolicyResponseBody[]|null $body 查询治理策略列表响应结构体
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\GovPolicyDetail[]|null $body 查询治理策略列表响应结构体。
     *
     * @return $this
     */

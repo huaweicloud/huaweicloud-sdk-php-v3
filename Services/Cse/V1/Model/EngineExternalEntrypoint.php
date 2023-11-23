@@ -81,10 +81,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'externalAddress' => 'external_address',
-            'publicAddress' => 'public_address',
-            'serviceEndpoint' => 'service_endpoint',
-            'publicServiceEndpoint' => 'public_service_endpoint'
+            'externalAddress' => 'externalAddress',
+            'publicAddress' => 'publicAddress',
+            'serviceEndpoint' => 'serviceEndpoint',
+            'publicServiceEndpoint' => 'publicServiceEndpoint'
     ];
 
     /**

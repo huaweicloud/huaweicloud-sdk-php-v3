@@ -38,6 +38,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * extendConfig  函数扩展配置。
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
@@ -70,6 +72,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'extendConfig' => 'string',
             'initializerHandler' => 'string',
             'initializerTimeout' => 'int',
+            'preStopHandler' => 'string',
+            'preStopTimeout' => 'int',
             'ephemeralStorage' => 'int',
             'enterpriseProjectId' => 'string',
             'logConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncLogConfig',
@@ -102,6 +106,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * extendConfig  函数扩展配置。
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
@@ -134,6 +140,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'extendConfig' => null,
         'initializerHandler' => null,
         'initializerTimeout' => 'int32',
+        'preStopHandler' => null,
+        'preStopTimeout' => 'int32',
         'ephemeralStorage' => null,
         'enterpriseProjectId' => null,
         'logConfig' => null,
@@ -187,6 +195,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * extendConfig  函数扩展配置。
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
@@ -219,6 +229,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'extendConfig' => 'extend_config',
             'initializerHandler' => 'initializer_handler',
             'initializerTimeout' => 'initializer_timeout',
+            'preStopHandler' => 'pre_stop_handler',
+            'preStopTimeout' => 'pre_stop_timeout',
             'ephemeralStorage' => 'ephemeral_storage',
             'enterpriseProjectId' => 'enterprise_project_id',
             'logConfig' => 'log_config',
@@ -251,6 +263,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * extendConfig  函数扩展配置。
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
@@ -283,6 +297,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'extendConfig' => 'setExtendConfig',
             'initializerHandler' => 'setInitializerHandler',
             'initializerTimeout' => 'setInitializerTimeout',
+            'preStopHandler' => 'setPreStopHandler',
+            'preStopTimeout' => 'setPreStopTimeout',
             'ephemeralStorage' => 'setEphemeralStorage',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'logConfig' => 'setLogConfig',
@@ -315,6 +331,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * extendConfig  函数扩展配置。
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
@@ -347,6 +365,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'extendConfig' => 'getExtendConfig',
             'initializerHandler' => 'getInitializerHandler',
             'initializerTimeout' => 'getInitializerTimeout',
+            'preStopHandler' => 'getPreStopHandler',
+            'preStopTimeout' => 'getPreStopTimeout',
             'ephemeralStorage' => 'getEphemeralStorage',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'logConfig' => 'getLogConfig',
@@ -482,6 +502,8 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['extendConfig'] = isset($data['extendConfig']) ? $data['extendConfig'] : null;
         $this->container['initializerHandler'] = isset($data['initializerHandler']) ? $data['initializerHandler'] : null;
         $this->container['initializerTimeout'] = isset($data['initializerTimeout']) ? $data['initializerTimeout'] : null;
+        $this->container['preStopHandler'] = isset($data['preStopHandler']) ? $data['preStopHandler'] : null;
+        $this->container['preStopTimeout'] = isset($data['preStopTimeout']) ? $data['preStopTimeout'] : null;
         $this->container['ephemeralStorage'] = isset($data['ephemeralStorage']) ? $data['ephemeralStorage'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['logConfig'] = isset($data['logConfig']) ? $data['logConfig'] : null;
@@ -968,6 +990,54 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setInitializerTimeout($initializerTimeout)
     {
         $this->container['initializerTimeout'] = $initializerTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets preStopHandler
+    *  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return string|null
+    */
+    public function getPreStopHandler()
+    {
+        return $this->container['preStopHandler'];
+    }
+
+    /**
+    * Sets preStopHandler
+    *
+    * @param string|null $preStopHandler 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return $this
+    */
+    public function setPreStopHandler($preStopHandler)
+    {
+        $this->container['preStopHandler'] = $preStopHandler;
+        return $this;
+    }
+
+    /**
+    * Gets preStopTimeout
+    *  初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return int|null
+    */
+    public function getPreStopTimeout()
+    {
+        return $this->container['preStopTimeout'];
+    }
+
+    /**
+    * Sets preStopTimeout
+    *
+    * @param int|null $preStopTimeout 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return $this
+    */
+    public function setPreStopTimeout($preStopTimeout)
+    {
+        $this->container['preStopTimeout'] = $preStopTimeout;
         return $this;
     }
 

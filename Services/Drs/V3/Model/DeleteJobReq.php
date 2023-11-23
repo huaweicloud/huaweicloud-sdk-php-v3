@@ -22,24 +22,28 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
     * jobId  任务ID
+    * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'deleteType' => 'string',
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'isShowBreakpointPosition' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
     * jobId  任务ID
+    * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'deleteType' => null,
-        'jobId' => null
+        'jobId' => null,
+        'isShowBreakpointPosition' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
     * jobId  任务ID
+    * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'deleteType' => 'delete_type',
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'isShowBreakpointPosition' => 'is_show_breakpoint_position'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
     * jobId  任务ID
+    * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
     * @var string[]
     */
     protected static $setters = [
             'deleteType' => 'setDeleteType',
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'isShowBreakpointPosition' => 'setIsShowBreakpointPosition'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
     * jobId  任务ID
+    * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
     * @var string[]
     */
     protected static $getters = [
             'deleteType' => 'getDeleteType',
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'isShowBreakpointPosition' => 'getIsShowBreakpointPosition'
     ];
 
     /**
@@ -176,6 +186,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     {
         $this->container['deleteType'] = isset($data['deleteType']) ? $data['deleteType'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['isShowBreakpointPosition'] = isset($data['isShowBreakpointPosition']) ? $data['isShowBreakpointPosition'] : null;
     }
 
     /**
@@ -259,6 +270,30 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets isShowBreakpointPosition
+    *  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
+    *
+    * @return bool|null
+    */
+    public function getIsShowBreakpointPosition()
+    {
+        return $this->container['isShowBreakpointPosition'];
+    }
+
+    /**
+    * Sets isShowBreakpointPosition
+    *
+    * @param bool|null $isShowBreakpointPosition MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
+    *
+    * @return $this
+    */
+    public function setIsShowBreakpointPosition($isShowBreakpointPosition)
+    {
+        $this->container['isShowBreakpointPosition'] = $isShowBreakpointPosition;
         return $this;
     }
 

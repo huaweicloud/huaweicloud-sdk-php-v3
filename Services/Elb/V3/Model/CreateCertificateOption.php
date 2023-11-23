@@ -23,9 +23,9 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * certificate  HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
     * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     * name  证书的名称。
-    * privateKey  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
     * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -53,9 +53,9 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * certificate  HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
     * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     * name  证书的名称。
-    * privateKey  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
     * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -104,9 +104,9 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * certificate  HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
     * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     * name  证书的名称。
-    * privateKey  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
     * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -134,9 +134,9 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * certificate  HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
     * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     * name  证书的名称。
-    * privateKey  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
     * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -164,9 +164,9 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * certificate  HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
     * description  证书的描述。
-    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * domain  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     * name  证书的名称。
-    * privateKey  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * privateKey  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     * projectId  证书所在的项目ID。
     * type  SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
     * enterpriseProjectId  证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -292,6 +292,12 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) > 10000)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) < 0)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
@@ -403,7 +409,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    *  服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     *
     * @return string|null
     */
@@ -415,7 +421,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string|null $domain 服务器证书所签域名。该字段仅type为server时有效。  总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com。  泛域名：在普通域名的基础上仅允许首字母为\"*\"。例：*.test.com
+    * @param string|null $domain 服务器证书所签域名。该字段仅type为server时有效。  总长度为0-10000，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过100个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符， 只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
     *
     * @return $this
     */
@@ -451,7 +457,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    *  HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     *
     * @return string|null
     */
@@ -463,7 +469,7 @@ class CreateCertificateOption implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey HTTPS协议监听器使用的证书私钥。取值范围：PEM编码格式，最大长度8192字符。  使用说明： - 仅当type为server时该字段有效且必选。 - 当type为client时该字段无效，不需要传入。如果传入则必须是符合PEM格式的字符串，但仍然不会生效。
+    * @param string|null $privateKey HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
     *
     * @return $this
     */

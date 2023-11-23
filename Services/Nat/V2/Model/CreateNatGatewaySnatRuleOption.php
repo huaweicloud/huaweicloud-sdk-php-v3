@@ -23,7 +23,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
     * globalEipId  全域弹性公网IP的id。
@@ -45,7 +45,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
     * globalEipId  全域弹性公网IP的id。
@@ -88,7 +88,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
     * globalEipId  全域弹性公网IP的id。
@@ -110,7 +110,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
     * globalEipId  全域弹性公网IP的id。
@@ -132,7 +132,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
     * globalEipId  全域弹性公网IP的id。
@@ -360,7 +360,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    *  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

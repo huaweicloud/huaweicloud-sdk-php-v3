@@ -26,6 +26,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * scheduler  scheduler
     * probes  probes
+    * containerSpec  containerSpec
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
             'strategy' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationStrategy',
             'lifecycle' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationLifecycle',
             'scheduler' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationScheduler',
-            'probes' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationProbes'
+            'probes' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationProbes',
+            'containerSpec' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationContainerSpec'
     ];
 
     /**
@@ -46,6 +48,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * scheduler  scheduler
     * probes  probes
+    * containerSpec  containerSpec
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
         'strategy' => null,
         'lifecycle' => null,
         'scheduler' => null,
-        'probes' => null
+        'probes' => null,
+        'containerSpec' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * scheduler  scheduler
     * probes  probes
+    * containerSpec  containerSpec
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
             'strategy' => 'strategy',
             'lifecycle' => 'lifecycle',
             'scheduler' => 'scheduler',
-            'probes' => 'probes'
+            'probes' => 'probes',
+            'containerSpec' => 'container_spec'
     ];
 
     /**
@@ -107,6 +113,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * scheduler  scheduler
     * probes  probes
+    * containerSpec  containerSpec
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
             'strategy' => 'setStrategy',
             'lifecycle' => 'setLifecycle',
             'scheduler' => 'setScheduler',
-            'probes' => 'setProbes'
+            'probes' => 'setProbes',
+            'containerSpec' => 'setContainerSpec'
     ];
 
     /**
@@ -127,6 +135,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * scheduler  scheduler
     * probes  probes
+    * containerSpec  containerSpec
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
             'strategy' => 'getStrategy',
             'lifecycle' => 'getLifecycle',
             'scheduler' => 'getScheduler',
-            'probes' => 'getProbes'
+            'probes' => 'getProbes',
+            'containerSpec' => 'getContainerSpec'
     ];
 
     /**
@@ -203,6 +213,7 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
         $this->container['lifecycle'] = isset($data['lifecycle']) ? $data['lifecycle'] : null;
         $this->container['scheduler'] = isset($data['scheduler']) ? $data['scheduler'] : null;
         $this->container['probes'] = isset($data['probes']) ? $data['probes'] : null;
+        $this->container['containerSpec'] = isset($data['containerSpec']) ? $data['containerSpec'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class InstanceConfiguration implements ModelInterface, ArrayAccess
     public function setProbes($probes)
     {
         $this->container['probes'] = $probes;
+        return $this;
+    }
+
+    /**
+    * Gets containerSpec
+    *  containerSpec
+    *
+    * @return \HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationContainerSpec|null
+    */
+    public function getContainerSpec()
+    {
+        return $this->container['containerSpec'];
+    }
+
+    /**
+    * Sets containerSpec
+    *
+    * @param \HuaweiCloud\SDK\ServiceStage\V2\Model\ConfigurationContainerSpec|null $containerSpec containerSpec
+    *
+    * @return $this
+    */
+    public function setContainerSpec($containerSpec)
+    {
+        $this->container['containerSpec'] = $containerSpec;
         return $this;
     }
 

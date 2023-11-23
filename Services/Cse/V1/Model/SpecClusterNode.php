@@ -66,7 +66,7 @@ class SpecClusterNode implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterNodes' => 'cluster_nodes'
+            'clusterNodes' => 'clusterNodes'
     ];
 
     /**

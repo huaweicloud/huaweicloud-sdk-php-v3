@@ -20,7 +20,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  后端服务器名称。注意：该名称并非ECS名称。
+    * name  后端服务器名称。
     * address  后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。
     * protocolPort  后端服务器端口号。
     * subnetCidrId  后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。  当所在LB未开启跨VPC后端，该参数必填。  当所在LB开启跨VPC后端，该参数非必填，表示添加跨VPC后端，此时address必须为ipv4地址， pool的协议必须为TCP/HTTP/HTTPS，pool所属的LB的跨VPC后端转发能力必须打开。
@@ -38,7 +38,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  后端服务器名称。注意：该名称并非ECS名称。
+    * name  后端服务器名称。
     * address  后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。
     * protocolPort  后端服务器端口号。
     * subnetCidrId  后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。  当所在LB未开启跨VPC后端，该参数必填。  当所在LB开启跨VPC后端，该参数非必填，表示添加跨VPC后端，此时address必须为ipv4地址， pool的协议必须为TCP/HTTP/HTTPS，pool所属的LB的跨VPC后端转发能力必须打开。
@@ -77,7 +77,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  后端服务器名称。注意：该名称并非ECS名称。
+    * name  后端服务器名称。
     * address  后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。
     * protocolPort  后端服务器端口号。
     * subnetCidrId  后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。  当所在LB未开启跨VPC后端，该参数必填。  当所在LB开启跨VPC后端，该参数非必填，表示添加跨VPC后端，此时address必须为ipv4地址， pool的协议必须为TCP/HTTP/HTTPS，pool所属的LB的跨VPC后端转发能力必须打开。
@@ -95,7 +95,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  后端服务器名称。注意：该名称并非ECS名称。
+    * name  后端服务器名称。
     * address  后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。
     * protocolPort  后端服务器端口号。
     * subnetCidrId  后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。  当所在LB未开启跨VPC后端，该参数必填。  当所在LB开启跨VPC后端，该参数非必填，表示添加跨VPC后端，此时address必须为ipv4地址， pool的协议必须为TCP/HTTP/HTTPS，pool所属的LB的跨VPC后端转发能力必须打开。
@@ -113,7 +113,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  后端服务器名称。注意：该名称并非ECS名称。
+    * name  后端服务器名称。
     * address  后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。
     * protocolPort  后端服务器端口号。
     * subnetCidrId  后端云服务器所在的子网ID。该子网和后端云服务器关联的负载均衡器的子网必须在同一VPC下。  当所在LB未开启跨VPC后端，该参数必填。  当所在LB开启跨VPC后端，该参数非必填，表示添加跨VPC后端，此时address必须为ipv4地址， pool的协议必须为TCP/HTTP/HTTPS，pool所属的LB的跨VPC后端转发能力必须打开。
@@ -254,7 +254,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  后端服务器名称。注意：该名称并非ECS名称。
+    *  后端服务器名称。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class BatchCreateMembersOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 后端服务器名称。注意：该名称并非ECS名称。
+    * @param string|null $name 后端服务器名称。
     *
     * @return $this
     */

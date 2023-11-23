@@ -22,7 +22,8 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务Id
     * progress  迁移百分比
-    * increTransDelay  增量迁移时延
+    * increTransDelay  增量迁移时延。单位：s
+    * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
     * transferStatus  任务状态
     * processTime  迁移时间，时间戳
@@ -37,6 +38,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'progress' => 'string',
             'increTransDelay' => 'string',
+            'increTransDelayMillis' => 'string',
             'taskMode' => 'string',
             'transferStatus' => 'string',
             'processTime' => 'string',
@@ -50,7 +52,8 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务Id
     * progress  迁移百分比
-    * increTransDelay  增量迁移时延
+    * increTransDelay  增量迁移时延。单位：s
+    * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
     * transferStatus  任务状态
     * processTime  迁移时间，时间戳
@@ -65,6 +68,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
         'jobId' => null,
         'progress' => null,
         'increTransDelay' => null,
+        'increTransDelayMillis' => null,
         'taskMode' => null,
         'transferStatus' => null,
         'processTime' => null,
@@ -99,7 +103,8 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务Id
     * progress  迁移百分比
-    * increTransDelay  增量迁移时延
+    * increTransDelay  增量迁移时延。单位：s
+    * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
     * transferStatus  任务状态
     * processTime  迁移时间，时间戳
@@ -114,6 +119,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'progress' => 'progress',
             'increTransDelay' => 'incre_trans_delay',
+            'increTransDelayMillis' => 'incre_trans_delay_millis',
             'taskMode' => 'task_mode',
             'transferStatus' => 'transfer_status',
             'processTime' => 'process_time',
@@ -127,7 +133,8 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务Id
     * progress  迁移百分比
-    * increTransDelay  增量迁移时延
+    * increTransDelay  增量迁移时延。单位：s
+    * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
     * transferStatus  任务状态
     * processTime  迁移时间，时间戳
@@ -142,6 +149,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'progress' => 'setProgress',
             'increTransDelay' => 'setIncreTransDelay',
+            'increTransDelayMillis' => 'setIncreTransDelayMillis',
             'taskMode' => 'setTaskMode',
             'transferStatus' => 'setTransferStatus',
             'processTime' => 'setProcessTime',
@@ -155,7 +163,8 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务Id
     * progress  迁移百分比
-    * increTransDelay  增量迁移时延
+    * increTransDelay  增量迁移时延。单位：s
+    * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
     * transferStatus  任务状态
     * processTime  迁移时间，时间戳
@@ -170,6 +179,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'progress' => 'getProgress',
             'increTransDelay' => 'getIncreTransDelay',
+            'increTransDelayMillis' => 'getIncreTransDelayMillis',
             'taskMode' => 'getTaskMode',
             'transferStatus' => 'getTransferStatus',
             'processTime' => 'getProcessTime',
@@ -257,6 +267,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['increTransDelay'] = isset($data['increTransDelay']) ? $data['increTransDelay'] : null;
+        $this->container['increTransDelayMillis'] = isset($data['increTransDelayMillis']) ? $data['increTransDelayMillis'] : null;
         $this->container['taskMode'] = isset($data['taskMode']) ? $data['taskMode'] : null;
         $this->container['transferStatus'] = isset($data['transferStatus']) ? $data['transferStatus'] : null;
         $this->container['processTime'] = isset($data['processTime']) ? $data['processTime'] : null;
@@ -346,7 +357,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets increTransDelay
-    *  增量迁移时延
+    *  增量迁移时延。单位：s
     *
     * @return string|null
     */
@@ -358,13 +369,37 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     /**
     * Sets increTransDelay
     *
-    * @param string|null $increTransDelay 增量迁移时延
+    * @param string|null $increTransDelay 增量迁移时延。单位：s
     *
     * @return $this
     */
     public function setIncreTransDelay($increTransDelay)
     {
         $this->container['increTransDelay'] = $increTransDelay;
+        return $this;
+    }
+
+    /**
+    * Gets increTransDelayMillis
+    *  增量迁移时延。单位：ms
+    *
+    * @return string|null
+    */
+    public function getIncreTransDelayMillis()
+    {
+        return $this->container['increTransDelayMillis'];
+    }
+
+    /**
+    * Sets increTransDelayMillis
+    *
+    * @param string|null $increTransDelayMillis 增量迁移时延。单位：ms
+    *
+    * @return $this
+    */
+    public function setIncreTransDelayMillis($increTransDelayMillis)
+    {
+        $this->container['increTransDelayMillis'] = $increTransDelayMillis;
         return $this;
     }
 

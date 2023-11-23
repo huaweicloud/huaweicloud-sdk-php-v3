@@ -20,22 +20,22 @@ class CreateMatchHeaders implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * aaaa  aaaa
+    * header  header
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'aaaa' => '\HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersAaaa'
+            'header' => '\HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersHeader'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * aaaa  aaaa
+    * header  header
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'aaaa' => null
+        'header' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class CreateMatchHeaders implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * aaaa  aaaa
+    * header  header
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'aaaa' => 'aaaa'
+            'header' => '&lt;header&gt;'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * aaaa  aaaa
+    * header  header
     *
     * @var string[]
     */
     protected static $setters = [
-            'aaaa' => 'setAaaa'
+            'header' => 'setHeader'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * aaaa  aaaa
+    * header  header
     *
     * @var string[]
     */
     protected static $getters = [
-            'aaaa' => 'getAaaa'
+            'header' => 'getHeader'
     ];
 
     /**
@@ -147,7 +147,7 @@ class CreateMatchHeaders implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['aaaa'] = isset($data['aaaa']) ? $data['aaaa'] : null;
+        $this->container['header'] = isset($data['header']) ? $data['header'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class CreateMatchHeaders implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets aaaa
-    *  aaaa
+    * Gets header
+    *  header
     *
-    * @return \HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersAaaa|null
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersHeader|null
     */
-    public function getAaaa()
+    public function getHeader()
     {
-        return $this->container['aaaa'];
+        return $this->container['header'];
     }
 
     /**
-    * Sets aaaa
+    * Sets header
     *
-    * @param \HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersAaaa|null $aaaa aaaa
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\CreateMatchHeadersHeader|null $header header
     *
     * @return $this
     */
-    public function setAaaa($aaaa)
+    public function setHeader($header)
     {
-        $this->container['aaaa'] = $aaaa;
+        $this->container['header'] = $header;
         return $this;
     }
 

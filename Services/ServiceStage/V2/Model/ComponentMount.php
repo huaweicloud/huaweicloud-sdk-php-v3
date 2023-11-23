@@ -180,6 +180,12 @@ class ComponentMount implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['path'] === null) {
+            $invalidProperties[] = "'path' can't be null";
+        }
+        if ($this->container['readOnly'] === null) {
+            $invalidProperties[] = "'readOnly' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +204,7 @@ class ComponentMount implements ModelInterface, ArrayAccess
     * Gets path
     *  挂载路径
     *
-    * @return string|null
+    * @return string
     */
     public function getPath()
     {
@@ -208,7 +214,7 @@ class ComponentMount implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 挂载路径
+    * @param string $path 挂载路径
     *
     * @return $this
     */
@@ -246,7 +252,7 @@ class ComponentMount implements ModelInterface, ArrayAccess
     * Gets readOnly
     *  是否只读
     *
-    * @return bool|null
+    * @return bool
     */
     public function getReadOnly()
     {
@@ -256,7 +262,7 @@ class ComponentMount implements ModelInterface, ArrayAccess
     /**
     * Sets readOnly
     *
-    * @param bool|null $readOnly 是否只读
+    * @param bool $readOnly 是否只读
     *
     * @return $this
     */

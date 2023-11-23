@@ -21,7 +21,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  私网NAT网关实例的名字。 私网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  私网NAT网关实例的名字。 私网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  私网NAT网关实例的名字。 私网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  私网NAT网关实例的名字。 私网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  私网NAT网关实例的名字。 私网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
-    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * description  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
     *
     * @var string[]
@@ -259,7 +259,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    *  私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -271,7 +271,7 @@ class UpdatePrivateNatOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 私网NAT网关的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description 私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

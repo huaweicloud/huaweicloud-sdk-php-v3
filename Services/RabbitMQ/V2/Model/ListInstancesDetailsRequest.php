@@ -210,13 +210,22 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const STATUS_CREATING = 'CREATING';
-    const STATUS_CREATEFAILED = 'CREATEFAILED';
     const STATUS_RUNNING = 'RUNNING';
-    const STATUS_ERROR = 'ERROR';
-    const STATUS_STARTING = 'STARTING';
     const STATUS_RESTARTING = 'RESTARTING';
-    const STATUS_CLOSING = 'CLOSING';
+    const STATUS_DELETING = 'DELETING';
+    const STATUS_ERROR = 'ERROR';
+    const STATUS_CREATEFAILED = 'CREATEFAILED';
+    const STATUS_FREEZING = 'FREEZING';
     const STATUS_FROZEN = 'FROZEN';
+    const STATUS_EXTENDING = 'EXTENDING';
+    const STATUS_SHRINKING = 'SHRINKING';
+    const STATUS_EXTENDEDFAILED = 'EXTENDEDFAILED';
+    const STATUS_CONFIGURING = 'CONFIGURING';
+    const STATUS_UPGRADING = 'UPGRADING';
+    const STATUS_UPGRADINGFAILED = 'UPGRADINGFAILED';
+    const STATUS_ROLLBACK = 'ROLLBACK';
+    const STATUS_ROLLBACKFAILED = 'ROLLBACKFAILED';
+    const STATUS_VOLUMETYPECHANGING = 'VOLUMETYPECHANGING';
     const INCLUDE_FAILURE_TRUE = 'true';
     const INCLUDE_FAILURE_FALSE = 'false';
     const EXACT_MATCH_NAME_TRUE = 'true';
@@ -232,13 +241,22 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::STATUS_CREATING,
-            self::STATUS_CREATEFAILED,
             self::STATUS_RUNNING,
-            self::STATUS_ERROR,
-            self::STATUS_STARTING,
             self::STATUS_RESTARTING,
-            self::STATUS_CLOSING,
+            self::STATUS_DELETING,
+            self::STATUS_ERROR,
+            self::STATUS_CREATEFAILED,
+            self::STATUS_FREEZING,
             self::STATUS_FROZEN,
+            self::STATUS_EXTENDING,
+            self::STATUS_SHRINKING,
+            self::STATUS_EXTENDEDFAILED,
+            self::STATUS_CONFIGURING,
+            self::STATUS_UPGRADING,
+            self::STATUS_UPGRADINGFAILED,
+            self::STATUS_ROLLBACK,
+            self::STATUS_ROLLBACKFAILED,
+            self::STATUS_VOLUMETYPECHANGING,
         ];
     }
 

@@ -112,14 +112,14 @@ class EngineReference implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'vpc' => 'vpc',
-            'azList' => 'az_list',
-            'networkId' => 'network_id',
-            'subnetCidr' => 'subnet_cidr',
-            'subnetCidrV6' => 'subnet_cidr_v6',
-            'subnetGateway' => 'subnet_gateway',
-            'publicIpId' => 'public_ip_id',
-            'serviceLimit' => 'service_limit',
-            'instanceLimit' => 'instance_limit',
+            'azList' => 'azList',
+            'networkId' => 'networkId',
+            'subnetCidr' => 'subnetCidr',
+            'subnetCidrV6' => 'subnetCidrV6',
+            'subnetGateway' => 'subnetGateway',
+            'publicIpId' => 'publicIpId',
+            'serviceLimit' => 'serviceLimit',
+            'instanceLimit' => 'instanceLimit',
             'inputs' => 'inputs'
     ];
 

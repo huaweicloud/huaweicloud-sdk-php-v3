@@ -23,7 +23,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。取值约束：与virsubnet_id参数二选一。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpIds  功能说明：中转IP的ID的列表。 取值约束：中转IP的ID个数不能超过1个。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。取值约束：与virsubnet_id参数二选一。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpIds  功能说明：中转IP的ID的列表。 取值约束：中转IP的ID个数不能超过1个。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。取值约束：与virsubnet_id参数二选一。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpIds  功能说明：中转IP的ID的列表。 取值约束：中转IP的ID个数不能超过1个。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。取值约束：与virsubnet_id参数二选一。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpIds  功能说明：中转IP的ID的列表。 取值约束：中转IP的ID个数不能超过1个。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * cidr  功能说明：规则匹配的CIDR。取值约束：与virsubnet_id参数二选一。
     * virsubnetId  功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpIds  功能说明：中转IP的ID的列表。 取值约束：中转IP的ID个数不能超过1个。
     *
     * @var string[]
@@ -320,7 +320,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class CreatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

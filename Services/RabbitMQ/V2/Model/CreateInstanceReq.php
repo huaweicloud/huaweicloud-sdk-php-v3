@@ -39,7 +39,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
     * bssParam  bssParam
     *
@@ -91,7 +91,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
     * bssParam  bssParam
     *
@@ -164,7 +164,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
     * bssParam  bssParam
     *
@@ -216,7 +216,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
     * bssParam  bssParam
     *
@@ -268,7 +268,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * publicipId  RabbitMQ实例绑定的弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * tags  标签列表。
     * bssParam  bssParam
     *
@@ -993,7 +993,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。若为企业项目帐号，该参数必填。
+    *  企业项目ID。若为企业项目账号，该参数必填。
     *
     * @return string|null
     */
@@ -1005,7 +1005,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。若为企业项目帐号，该参数必填。
+    * @param string|null $enterpriseProjectId 企业项目ID。若为企业项目账号，该参数必填。
     *
     * @return $this
     */

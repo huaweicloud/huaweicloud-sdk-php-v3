@@ -25,9 +25,77 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 新增负载均衡器可用区
+     *
+     * 给负载均衡器新增可用区。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchAddAvailableZonesAsync($request)
+    {
+        return $this->batchAddAvailableZonesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchAddAvailableZonesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/availability-zone/batch-add';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchAddAvailableZonesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchAddAvailableZonesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量创建后端服务器
      *
-     * 在指定pool下批量创建后端服务器。一次最多添加200个。
+     * 在指定pool下批量创建后端服务器。一次最多创建200个。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -95,7 +163,7 @@ class ElbAsyncClient extends Client
     /**
      * 批量删除后端服务器
      *
-     * 在指定pool下批量删除后端服务器。一次最多删除200个。
+     * 在指定pool下批量删除后端服务器。一次最多添加200个。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -161,9 +229,78 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 移除负载均衡器可用区
+     *
+     * 移除负载均衡器的可用区。
+     * &gt; 移除可用区可能导致已有链接断开，请谨慎操作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchRemoveAvailableZonesAsync($request)
+    {
+        return $this->batchRemoveAvailableZonesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchRemoveAvailableZonesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/availability-zone/batch-remove';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json', 'application/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json', 'application/xml'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchRemoveAvailableZonesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchRemoveAvailableZonesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量更新后端服务器
      *
-     * 在指定pool下批量更新后端服务器。一次最多更新200个。
+     * 在指定pool下批量更新后端服务器。一次最多添加200个。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -701,6 +838,11 @@ class ElbAsyncClient extends Client
      * 5. 若要创建公网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id和ipv6_bandwidth。
      * 6. 不支持绑定已有未使用的内网IPv4、内网IPv6或公网IPv6地址。
      * 
+     * [&gt; 关于计费：
+     * - 若billing_info非空时，包周期。
+     * - 若billing_info为空，autoscaling.enable&#x3D;true时，弹性计费。
+     * - 若billing_info为空，autoscaling.enable&#x3D;false或未设置，charge_mode&#x3D;lcu，按量计费。
+     * - 若billing_info为空，autoscaling.enable&#x3D;false或未设置，charge_mode&#x3D;flavor，固定规格按需计费。](tag:hws)
      * [&gt; 不支持创建IPv6地址负载均衡器](tag:dt,dt_test)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -766,7 +908,7 @@ class ElbAsyncClient extends Client
     /**
      * 创建云日志
      *
-     * 创建云日志。
+     * 创建云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -825,6 +967,71 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\CreateLogtankResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\CreateLogtankRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建主备后端服务器组
+     *
+     * 创建主备后端服务器组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMasterSlavePoolAsync($request)
+    {
+        return $this->createMasterSlavePoolAsyncWithHttpInfo($request);
+    }
+    
+    public function createMasterSlavePoolAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/master-slave-pools';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlavePoolResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlavePoolRequest',
             $asyncRequest = true);
     }
 
@@ -965,6 +1172,8 @@ class ElbAsyncClient extends Client
      * 创建自定义安全策略
      *
      * 创建自定义安全策略。用于在创建HTTPS监听器时，请求参数中指定security_policy_id来设置监听器的自定义安全策略。
+     * 
+     * [荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1552,7 +1761,7 @@ class ElbAsyncClient extends Client
     /**
      * 删除云日志
      *
-     * 删除云日志。
+     * 删除云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1611,6 +1820,71 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteLogtankResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteLogtankRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除主备后端服务器组
+     *
+     * 删除主备后端服务器组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteMasterSlavePoolAsync($request)
+    {
+        return $this->deleteMasterSlavePoolAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteMasterSlavePoolAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/master-slave-pools/{pool_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['poolId'] !== null) {
+            $pathParams['pool_id'] = $localVarParams['poolId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteMasterSlavePoolResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\DeleteMasterSlavePoolRequest',
             $asyncRequest = true);
     }
 
@@ -1750,7 +2024,7 @@ class ElbAsyncClient extends Client
     /**
      * 删除自定义安全策略
      *
-     * 删除自定义安全策略。
+     * 删除自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2770,6 +3044,12 @@ class ElbAsyncClient extends Client
         if ($localVarParams['globalEips'] !== null) {
             $queryParams['global_eips'] = $localVarParams['globalEips'];
         }
+        if ($localVarParams['logTopicId'] !== null) {
+            $queryParams['log_topic_id'] = $localVarParams['logTopicId'];
+        }
+        if ($localVarParams['logGroupId'] !== null) {
+            $queryParams['log_group_id'] = $localVarParams['logGroupId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2804,7 +3084,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询云日志列表
      *
-     * 查询云日志列表。
+     * 查询云日志列表。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2884,6 +3164,122 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListLogtanksResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListLogtanksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主备后端服务器组列表
+     *
+     * 主备后端服务器组列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMasterSlavePoolsAsync($request)
+    {
+        return $this->listMasterSlavePoolsAsyncWithHttpInfo($request);
+    }
+    
+    public function listMasterSlavePoolsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/master-slave-pools';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['healthmonitorId'] !== null) {
+            $queryParams['healthmonitor_id'] = $localVarParams['healthmonitorId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $queryParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
+        if ($localVarParams['lbAlgorithm'] !== null) {
+            $queryParams['lb_algorithm'] = $localVarParams['lbAlgorithm'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['ipVersion'] !== null) {
+            $queryParams['ip_version'] = $localVarParams['ipVersion'];
+        }
+        if ($localVarParams['memberAddress'] !== null) {
+            $queryParams['member_address'] = $localVarParams['memberAddress'];
+        }
+        if ($localVarParams['memberDeviceId'] !== null) {
+            $queryParams['member_device_id'] = $localVarParams['memberDeviceId'];
+        }
+        if ($localVarParams['listenerId'] !== null) {
+            $queryParams['listener_id'] = $localVarParams['listenerId'];
+        }
+        if ($localVarParams['memberInstanceId'] !== null) {
+            $queryParams['member_instance_id'] = $localVarParams['memberInstanceId'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListMasterSlavePoolsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListMasterSlavePoolsRequest',
             $asyncRequest = true);
     }
 
@@ -3190,7 +3586,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询自定义安全策略列表
      *
-     * 查询自定义安全策略列表。
+     * 查询自定义安全策略列表。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3866,7 +4262,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询云日志详情
      *
-     * 云日志详情。
+     * 云日志详情。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3925,6 +4321,71 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLogtankResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLogtankRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主备后端服务器组详情
+     *
+     * 主备后端服务器组详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMasterSlavePoolAsync($request)
+    {
+        return $this->showMasterSlavePoolAsyncWithHttpInfo($request);
+    }
+    
+    public function showMasterSlavePoolAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/master-slave-pools/{pool_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['poolId'] !== null) {
+            $pathParams['pool_id'] = $localVarParams['poolId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowMasterSlavePoolResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowMasterSlavePoolRequest',
             $asyncRequest = true);
     }
 
@@ -4126,7 +4587,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询自定义安全策略详情
      *
-     * 查询自定义安全策略详情。
+     * 查询自定义安全策略详情。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4602,7 +5063,7 @@ class ElbAsyncClient extends Client
     /**
      * 更新云日志
      *
-     * 更新云日志。
+     * 更新云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4809,7 +5270,7 @@ class ElbAsyncClient extends Client
     /**
      * 更新自定义安全策略
      *
-     * 更新自定义安全策略。
+     * 更新自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4937,9 +5398,9 @@ class ElbAsyncClient extends Client
     }
 
     /**
-     * 批量删除IP地址组的IP地址
+     * 删除IP地址组的IP列表项
      *
-     * 批量删除IP地址组的IP地址。
+     * 批量删除IP地址组的IP列表信息。[荷兰region不支持该API](tag:dt,dt_test)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5103,7 +5564,7 @@ class ElbAsyncClient extends Client
      * 
      * 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
      * 
-     * [不支持IPv6。](tag:dt,dt_test)
+     * [荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5168,7 +5629,7 @@ class ElbAsyncClient extends Client
     /**
      * 删除IP地址组
      *
-     * 删除IP地址组。
+     * 删除ip地址组。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5233,7 +5694,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询IP地址组列表
      *
-     * 查询IP地址组列表。
+     * 查询IP地址组列表。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5316,7 +5777,7 @@ class ElbAsyncClient extends Client
     /**
      * 查询IP地址组详情
      *
-     * 获取IP地址组详情。
+     * 获取IP地址组详情。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5386,7 +5847,7 @@ class ElbAsyncClient extends Client
      * 
      * 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
      * 
-     * [不支持IPv6。](tag:dt,dt_test)
+     * [荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5452,9 +5913,9 @@ class ElbAsyncClient extends Client
     }
 
     /**
-     * 更新IP地址组的IP列表
+     * 更新IP地址组的IP列表项
      *
-     * 更新IP地址组的IP列表。
+     * 添加新的IP地址到IP地址组的IP列表信息，或更新已有IP地址的描述。[荷兰region不支持该API](tag:dt,dt_test)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

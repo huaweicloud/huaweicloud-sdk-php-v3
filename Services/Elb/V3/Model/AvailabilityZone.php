@@ -22,7 +22,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  可用区唯一编码。
     * state  可用区状态。  取值：ACTIVE。
-    * protocol  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * protocol  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     * publicBorderGroup  可用区组，如：center
     * category  范围编码，0表示center，21表示homezone
     *
@@ -40,7 +40,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * code  可用区唯一编码。
     * state  可用区状态。  取值：ACTIVE。
-    * protocol  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * protocol  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     * publicBorderGroup  可用区组，如：center
     * category  范围编码，0表示center，21表示homezone
     *
@@ -79,7 +79,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  可用区唯一编码。
     * state  可用区状态。  取值：ACTIVE。
-    * protocol  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * protocol  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     * publicBorderGroup  可用区组，如：center
     * category  范围编码，0表示center，21表示homezone
     *
@@ -97,7 +97,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  可用区唯一编码。
     * state  可用区状态。  取值：ACTIVE。
-    * protocol  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * protocol  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     * publicBorderGroup  可用区组，如：center
     * category  范围编码，0表示center，21表示homezone
     *
@@ -115,7 +115,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  可用区唯一编码。
     * state  可用区状态。  取值：ACTIVE。
-    * protocol  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * protocol  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     * publicBorderGroup  可用区组，如：center
     * category  范围编码，0表示center，21表示homezone
     *
@@ -281,7 +281,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    *  [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     *
     * @return string[]
     */
@@ -293,7 +293,7 @@ class AvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string[] $protocol [当前可用区可用的LB规格类别列表。](tag:,hws_hk,ctc,hcs,cmcc,hws_ocb,tm,hws_eu,hcso_dt,dt,dt_test,hws_ocb,ocb,fcs,g42,hk_g42,hws_g42) [当前可用区未售罄的LB规格类别列表。](tag:hws)  取值：L4-表示当前可用区可创建网络型的LB；L7-表示当前可用区可创建应用型的LB。
+    * @param string[] $protocol [未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,tm,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [LB规格类别](tag:ocb)
     *
     * @return $this
     */

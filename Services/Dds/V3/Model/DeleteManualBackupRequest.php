@@ -20,7 +20,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backupId  备份文件ID。
+    * backupId  备份ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backupId  备份文件ID。
+    * backupId  备份ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backupId  备份文件ID。
+    * backupId  备份ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backupId  备份文件ID。
+    * backupId  备份ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backupId  备份文件ID。
+    * backupId  备份ID。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  备份文件ID。
+    *  备份ID。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeleteManualBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 备份文件ID。
+    * @param string $backupId 备份ID。
     *
     * @return $this
     */

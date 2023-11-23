@@ -118,14 +118,14 @@ class ShowEngineJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'engineId' => 'engine_id',
+            'engineId' => 'engineId',
             'type' => 'type',
             'description' => 'description',
             'status' => 'status',
             'scheduling' => 'scheduling',
-            'createUser' => 'create_user',
-            'startTime' => 'start_time',
-            'endTime' => 'end_time',
+            'createUser' => 'createUser',
+            'startTime' => 'startTime',
+            'endTime' => 'endTime',
             'context' => 'context',
             'tasks' => 'tasks'
     ];

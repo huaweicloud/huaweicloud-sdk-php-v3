@@ -24,7 +24,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * cidr  规则匹配的CIDR。
     * virsubnetId  规则匹配的子网的ID。
@@ -54,7 +54,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * cidr  规则匹配的CIDR。
     * virsubnetId  规则匹配的子网的ID。
@@ -105,7 +105,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * cidr  规则匹配的CIDR。
     * virsubnetId  规则匹配的子网的ID。
@@ -135,7 +135,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * cidr  规则匹配的CIDR。
     * virsubnetId  规则匹配的子网的ID。
@@ -165,7 +165,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * cidr  规则匹配的CIDR。
     * virsubnetId  规则匹配的子网的ID。
@@ -392,7 +392,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string[]|null
     */
@@ -404,7 +404,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string[]|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

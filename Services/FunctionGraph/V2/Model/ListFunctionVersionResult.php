@@ -30,7 +30,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
@@ -49,6 +49,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * strategyConfig  strategyConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * longTime  是否是支持长时间运行
     * functionAsyncConfig  functionAsyncConfig
     * type  函数版本
@@ -92,6 +94,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
             'strategyConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\StrategyConfig',
             'initializerHandler' => 'string',
             'initializerTimeout' => 'int',
+            'preStopHandler' => 'string',
+            'preStopTimeout' => 'int',
             'longTime' => 'bool',
             'functionAsyncConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FunctionAsyncConfig',
             'type' => 'string',
@@ -116,7 +120,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
@@ -135,6 +139,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * strategyConfig  strategyConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * longTime  是否是支持长时间运行
     * functionAsyncConfig  functionAsyncConfig
     * type  函数版本
@@ -178,6 +184,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
         'strategyConfig' => null,
         'initializerHandler' => null,
         'initializerTimeout' => 'int32',
+        'preStopHandler' => null,
+        'preStopTimeout' => 'int32',
         'longTime' => null,
         'functionAsyncConfig' => null,
         'type' => null,
@@ -223,7 +231,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
@@ -242,6 +250,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * strategyConfig  strategyConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * longTime  是否是支持长时间运行
     * functionAsyncConfig  functionAsyncConfig
     * type  函数版本
@@ -285,6 +295,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
             'strategyConfig' => 'strategy_config',
             'initializerHandler' => 'initializer_handler',
             'initializerTimeout' => 'initializer_timeout',
+            'preStopHandler' => 'pre_stop_handler',
+            'preStopTimeout' => 'pre_stop_timeout',
             'longTime' => 'long_time',
             'functionAsyncConfig' => 'function_async_config',
             'type' => 'type',
@@ -309,7 +321,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
@@ -328,6 +340,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * strategyConfig  strategyConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * longTime  是否是支持长时间运行
     * functionAsyncConfig  functionAsyncConfig
     * type  函数版本
@@ -371,6 +385,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
             'strategyConfig' => 'setStrategyConfig',
             'initializerHandler' => 'setInitializerHandler',
             'initializerTimeout' => 'setInitializerTimeout',
+            'preStopHandler' => 'setPreStopHandler',
+            'preStopTimeout' => 'setPreStopTimeout',
             'longTime' => 'setLongTime',
             'functionAsyncConfig' => 'setFunctionAsyncConfig',
             'type' => 'setType',
@@ -395,7 +411,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
@@ -414,6 +430,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * strategyConfig  strategyConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * longTime  是否是支持长时间运行
     * functionAsyncConfig  functionAsyncConfig
     * type  函数版本
@@ -457,6 +475,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
             'strategyConfig' => 'getStrategyConfig',
             'initializerHandler' => 'getInitializerHandler',
             'initializerTimeout' => 'getInitializerTimeout',
+            'preStopHandler' => 'getPreStopHandler',
+            'preStopTimeout' => 'getPreStopTimeout',
             'longTime' => 'getLongTime',
             'functionAsyncConfig' => 'getFunctionAsyncConfig',
             'type' => 'getType',
@@ -622,6 +642,8 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
         $this->container['strategyConfig'] = isset($data['strategyConfig']) ? $data['strategyConfig'] : null;
         $this->container['initializerHandler'] = isset($data['initializerHandler']) ? $data['initializerHandler'] : null;
         $this->container['initializerTimeout'] = isset($data['initializerTimeout']) ? $data['initializerTimeout'] : null;
+        $this->container['preStopHandler'] = isset($data['preStopHandler']) ? $data['preStopHandler'] : null;
+        $this->container['preStopTimeout'] = isset($data['preStopTimeout']) ? $data['preStopTimeout'] : null;
         $this->container['longTime'] = isset($data['longTime']) ? $data['longTime'] : null;
         $this->container['functionAsyncConfig'] = isset($data['functionAsyncConfig']) ? $data['functionAsyncConfig'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -965,7 +987,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpu
-    *  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    *  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     *
     * @return int
     */
@@ -977,7 +999,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     /**
     * Sets cpu
     *
-    * @param int $cpu 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+    * @param int $cpu 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     *
     * @return $this
     */
@@ -1416,6 +1438,54 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     public function setInitializerTimeout($initializerTimeout)
     {
         $this->container['initializerTimeout'] = $initializerTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets preStopHandler
+    *  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return string|null
+    */
+    public function getPreStopHandler()
+    {
+        return $this->container['preStopHandler'];
+    }
+
+    /**
+    * Sets preStopHandler
+    *
+    * @param string|null $preStopHandler 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+    *
+    * @return $this
+    */
+    public function setPreStopHandler($preStopHandler)
+    {
+        $this->container['preStopHandler'] = $preStopHandler;
+        return $this;
+    }
+
+    /**
+    * Gets preStopTimeout
+    *  初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return int|null
+    */
+    public function getPreStopTimeout()
+    {
+        return $this->container['preStopTimeout'];
+    }
+
+    /**
+    * Sets preStopTimeout
+    *
+    * @param int|null $preStopTimeout 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+    *
+    * @return $this
+    */
+    public function setPreStopTimeout($preStopTimeout)
+    {
+        $this->container['preStopTimeout'] = $preStopTimeout;
         return $this;
     }
 

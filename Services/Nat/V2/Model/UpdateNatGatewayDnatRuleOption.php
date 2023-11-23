@@ -21,7 +21,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * natGatewayId  NAT网关的id。
-    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -51,7 +51,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * natGatewayId  NAT网关的id。
-    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -102,7 +102,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * natGatewayId  NAT网关的id。
-    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -132,7 +132,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * natGatewayId  NAT网关的id。
-    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -162,7 +162,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * natGatewayId  NAT网关的id。
-    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -390,7 +390,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    *  DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class UpdateNatGatewayDnatRuleOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description DNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

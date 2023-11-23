@@ -23,7 +23,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -63,7 +63,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -124,7 +124,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -164,7 +164,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -204,7 +204,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * id  公网NAT网关实例的ID。
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
-    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
     * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -581,7 +581,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string
     */
@@ -593,7 +593,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+    * @param string $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

@@ -28,6 +28,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
+    * dmlTypes  DML同步类型。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'dataSyncTopologyType' => 'string',
             'supportDdlInfo' => 'string',
             'syncTypePolicy' => 'string',
-            'incrementReadMode' => 'string'
+            'incrementReadMode' => 'string',
+            'dmlTypes' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
+    * dmlTypes  DML同步类型。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
         'dataSyncTopologyType' => null,
         'supportDdlInfo' => null,
         'syncTypePolicy' => null,
-        'incrementReadMode' => null
+        'incrementReadMode' => null,
+        'dmlTypes' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
+    * dmlTypes  DML同步类型。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'dataSyncTopologyType' => 'data_sync_topology_type',
             'supportDdlInfo' => 'support_ddl_info',
             'syncTypePolicy' => 'sync_type_policy',
-            'incrementReadMode' => 'increment_read_mode'
+            'incrementReadMode' => 'increment_read_mode',
+            'dmlTypes' => 'dml_types'
     ];
 
     /**
@@ -121,6 +127,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
+    * dmlTypes  DML同步类型。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'dataSyncTopologyType' => 'setDataSyncTopologyType',
             'supportDdlInfo' => 'setSupportDdlInfo',
             'syncTypePolicy' => 'setSyncTypePolicy',
-            'incrementReadMode' => 'setIncrementReadMode'
+            'incrementReadMode' => 'setIncrementReadMode',
+            'dmlTypes' => 'setDmlTypes'
     ];
 
     /**
@@ -145,6 +153,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
+    * dmlTypes  DML同步类型。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'dataSyncTopologyType' => 'getDataSyncTopologyType',
             'supportDdlInfo' => 'getSupportDdlInfo',
             'syncTypePolicy' => 'getSyncTypePolicy',
-            'incrementReadMode' => 'getIncrementReadMode'
+            'incrementReadMode' => 'getIncrementReadMode',
+            'dmlTypes' => 'getDmlTypes'
     ];
 
     /**
@@ -299,6 +309,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
         $this->container['supportDdlInfo'] = isset($data['supportDdlInfo']) ? $data['supportDdlInfo'] : null;
         $this->container['syncTypePolicy'] = isset($data['syncTypePolicy']) ? $data['syncTypePolicy'] : null;
         $this->container['incrementReadMode'] = isset($data['incrementReadMode']) ? $data['incrementReadMode'] : null;
+        $this->container['dmlTypes'] = isset($data['dmlTypes']) ? $data['dmlTypes'] : null;
     }
 
     /**
@@ -544,6 +555,30 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     public function setIncrementReadMode($incrementReadMode)
     {
         $this->container['incrementReadMode'] = $incrementReadMode;
+        return $this;
+    }
+
+    /**
+    * Gets dmlTypes
+    *  DML同步类型。
+    *
+    * @return string|null
+    */
+    public function getDmlTypes()
+    {
+        return $this->container['dmlTypes'];
+    }
+
+    /**
+    * Sets dmlTypes
+    *
+    * @param string|null $dmlTypes DML同步类型。
+    *
+    * @return $this
+    */
+    public function setDmlTypes($dmlTypes)
+    {
+        $this->container['dmlTypes'] = $dmlTypes;
         return $this;
     }
 

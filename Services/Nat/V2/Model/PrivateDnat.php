@@ -22,7 +22,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  DNAT规则的ID。
     * projectId  项目的ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * gatewayId  私网NAT网关实例的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的端口。
@@ -58,7 +58,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  DNAT规则的ID。
     * projectId  项目的ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * gatewayId  私网NAT网关实例的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的端口。
@@ -115,7 +115,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  DNAT规则的ID。
     * projectId  项目的ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * gatewayId  私网NAT网关实例的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的端口。
@@ -151,7 +151,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  DNAT规则的ID。
     * projectId  项目的ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * gatewayId  私网NAT网关实例的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的端口。
@@ -187,7 +187,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  DNAT规则的ID。
     * projectId  项目的ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * gatewayId  私网NAT网关实例的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的端口。
@@ -462,7 +462,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class PrivateDnat implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

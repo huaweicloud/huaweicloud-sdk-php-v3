@@ -20,7 +20,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
@@ -42,7 +42,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
@@ -85,7 +85,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
@@ -107,7 +107,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
@@ -129,7 +129,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
@@ -307,7 +307,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

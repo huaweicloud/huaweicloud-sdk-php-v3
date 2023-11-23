@@ -172,6 +172,9 @@ class CreateOrDeleteInstanceTags implements ModelInterface, ArrayAccess
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -214,7 +217,7 @@ class CreateOrDeleteInstanceTags implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Dcs\V2\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\Dcs\V2\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -224,7 +227,7 @@ class CreateOrDeleteInstanceTags implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dcs\V2\Model\ResourceTag[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Dcs\V2\Model\ResourceTag[] $tags 标签列表。
     *
     * @return $this
     */

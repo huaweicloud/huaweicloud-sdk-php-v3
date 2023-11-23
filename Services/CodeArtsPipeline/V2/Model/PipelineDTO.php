@@ -30,6 +30,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * manifestVersion  流水线结构定义版本，新版默认为3.0
     * definition  流水线结构定义
     * projectName  项目名称
+    * groupId  流水线组ID
+    * id  若为复制场景，则为原流水线ID
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'triggers' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTrigger[]',
             'manifestVersion' => 'string',
             'definition' => 'string',
-            'projectName' => 'string'
+            'projectName' => 'string',
+            'groupId' => 'string',
+            'id' => 'string'
     ];
 
     /**
@@ -58,6 +62,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * manifestVersion  流水线结构定义版本，新版默认为3.0
     * definition  流水线结构定义
     * projectName  项目名称
+    * groupId  流水线组ID
+    * id  若为复制场景，则为原流水线ID
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         'triggers' => null,
         'manifestVersion' => null,
         'definition' => null,
-        'projectName' => null
+        'projectName' => null,
+        'groupId' => null,
+        'id' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * manifestVersion  流水线结构定义版本，新版默认为3.0
     * definition  流水线结构定义
     * projectName  项目名称
+    * groupId  流水线组ID
+    * id  若为复制场景，则为原流水线ID
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'triggers' => 'triggers',
             'manifestVersion' => 'manifest_version',
             'definition' => 'definition',
-            'projectName' => 'project_name'
+            'projectName' => 'project_name',
+            'groupId' => 'group_id',
+            'id' => 'id'
     ];
 
     /**
@@ -135,6 +147,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * manifestVersion  流水线结构定义版本，新版默认为3.0
     * definition  流水线结构定义
     * projectName  项目名称
+    * groupId  流水线组ID
+    * id  若为复制场景，则为原流水线ID
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'triggers' => 'setTriggers',
             'manifestVersion' => 'setManifestVersion',
             'definition' => 'setDefinition',
-            'projectName' => 'setProjectName'
+            'projectName' => 'setProjectName',
+            'groupId' => 'setGroupId',
+            'id' => 'setId'
     ];
 
     /**
@@ -163,6 +179,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * manifestVersion  流水线结构定义版本，新版默认为3.0
     * definition  流水线结构定义
     * projectName  项目名称
+    * groupId  流水线组ID
+    * id  若为复制场景，则为原流水线ID
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'triggers' => 'getTriggers',
             'manifestVersion' => 'getManifestVersion',
             'definition' => 'getDefinition',
-            'projectName' => 'getProjectName'
+            'projectName' => 'getProjectName',
+            'groupId' => 'getGroupId',
+            'id' => 'getId'
     ];
 
     /**
@@ -247,6 +267,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
         $this->container['definition'] = isset($data['definition']) ? $data['definition'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -508,6 +530,54 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function setProjectName($projectName)
     {
         $this->container['projectName'] = $projectName;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  流水线组ID
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 流水线组ID
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  若为复制场景，则为原流水线ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 若为复制场景，则为原流水线ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

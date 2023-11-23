@@ -21,7 +21,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * poolId  后端服务器组ID。
-    * memberId  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * memberId  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * poolId  后端服务器组ID。
-    * memberId  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * memberId  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * poolId  后端服务器组ID。
-    * memberId  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * memberId  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * poolId  后端服务器组ID。
-    * memberId  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * memberId  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * poolId  后端服务器组ID。
-    * memberId  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * memberId  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberId
-    *  后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    *  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DeleteMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Sets memberId
     *
-    * @param string $memberId 后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  memberID可以通过查询后端云服务器列表接口获取。
+    * @param string $memberId 后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。  member ID可以通过查询后端云服务器列表接口获取。
     *
     * @return $this
     */

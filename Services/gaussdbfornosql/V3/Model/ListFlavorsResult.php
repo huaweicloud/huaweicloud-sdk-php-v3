@@ -24,7 +24,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     * engineVersion  引擎版本。
     * vcpus  CPU核数。
     * ram  内存大小，单位为兆字节。
-    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     * availabilityZone  支持该规格的可用区ID。   - 该字段已废弃，请不要使用。
     * azStatus  规格在可用区内的状态，包含以下状态：   - normal，在售。   - unsupported，暂不支持该规格。   - sellout，售罄。
     *
@@ -46,7 +46,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     * engineVersion  引擎版本。
     * vcpus  CPU核数。
     * ram  内存大小，单位为兆字节。
-    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     * availabilityZone  支持该规格的可用区ID。   - 该字段已废弃，请不要使用。
     * azStatus  规格在可用区内的状态，包含以下状态：   - normal，在售。   - unsupported，暂不支持该规格。   - sellout，售罄。
     *
@@ -89,7 +89,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     * engineVersion  引擎版本。
     * vcpus  CPU核数。
     * ram  内存大小，单位为兆字节。
-    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     * availabilityZone  支持该规格的可用区ID。   - 该字段已废弃，请不要使用。
     * azStatus  规格在可用区内的状态，包含以下状态：   - normal，在售。   - unsupported，暂不支持该规格。   - sellout，售罄。
     *
@@ -111,7 +111,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     * engineVersion  引擎版本。
     * vcpus  CPU核数。
     * ram  内存大小，单位为兆字节。
-    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     * availabilityZone  支持该规格的可用区ID。   - 该字段已废弃，请不要使用。
     * azStatus  规格在可用区内的状态，包含以下状态：   - normal，在售。   - unsupported，暂不支持该规格。   - sellout，售罄。
     *
@@ -133,7 +133,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     * engineVersion  引擎版本。
     * vcpus  CPU核数。
     * ram  内存大小，单位为兆字节。
-    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * specCode  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     * availabilityZone  支持该规格的可用区ID。   - 该字段已废弃，请不要使用。
     * azStatus  规格在可用区内的状态，包含以下状态：   - normal，在售。   - unsupported，暂不支持该规格。   - sellout，售罄。
     *
@@ -357,7 +357,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCode
-    *  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    *  资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     *
     * @return string
     */
@@ -369,7 +369,7 @@ class ListFlavorsResult implements ModelInterface, ArrayAccess
     /**
     * Sets specCode
     *
-    * @param string $specCode 资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GaussDB NoSQL的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
+    * @param string $specCode 资源规格编码。例如：geminidb.cassandra.8xlarge.4   - “geminidb.cassandra”表示云数据库GeminiDB的Cassandra数据库产品。   - “8xlarge.4”表示节点性能规格。
     *
     * @return $this
     */

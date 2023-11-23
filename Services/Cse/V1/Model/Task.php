@@ -141,22 +141,22 @@ class Task implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id',
+            'jobId' => 'jobId',
             'id' => 'id',
             'type' => 'type',
             'assigned' => 'assigned',
-            'taskName' => 'task_name',
-            'engineName' => 'engine_name',
-            'taskOrder' => 'task_order',
+            'taskName' => 'taskName',
+            'engineName' => 'engineName',
+            'taskOrder' => 'taskOrder',
             'status' => 'status',
-            'startTime' => 'start_time',
-            'endTime' => 'end_time',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time',
+            'startTime' => 'startTime',
+            'endTime' => 'endTime',
+            'createTime' => 'createTime',
+            'updateTime' => 'updateTime',
             'timeout' => 'timeout',
             'log' => 'log',
             'output' => 'output',
-            'taskExecutorBrief' => 'task_executor_brief'
+            'taskExecutorBrief' => 'taskExecutorBrief'
     ];
 
     /**

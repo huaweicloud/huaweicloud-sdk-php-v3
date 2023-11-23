@@ -1399,6 +1399,12 @@ class VpcClient extends Client
         if ($localVarParams['priority'] !== null) {
             $queryParams['priority'] = $localVarParams['priority'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1475,6 +1481,12 @@ class VpcClient extends Client
         }
         if ($localVarParams['updatedAt'] !== null) {
             $queryParams['updated_at'] = $localVarParams['updatedAt'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -1576,6 +1588,12 @@ class VpcClient extends Client
         }
         if ($localVarParams['updatedAt'] !== null) {
             $queryParams['updated_at'] = $localVarParams['updatedAt'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

@@ -20,7 +20,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * used  已使用配额。
     * unit  配额单位。  取值：count，表示个数。
@@ -36,7 +36,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * used  已使用配额。
     * unit  配额单位。  取值：count，表示个数。
@@ -73,7 +73,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * used  已使用配额。
     * unit  配额单位。  取值：count，表示个数。
@@ -89,7 +89,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * used  已使用配额。
     * unit  配额单位。  取值：count，表示个数。
@@ -105,7 +105,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaKey  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * quotaKey  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     * quotaLimit  总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * used  已使用配额。
     * unit  配额单位。  取值：count，表示个数。
@@ -219,7 +219,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaKey
-    *  资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    *  资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quotaKey
     *
-    * @param string $quotaKey 资源类型。  取值： loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、 ipgroup_bindings、ipgroup_max_length。  members_per_pool表示一个pool下最多可关联的member数量。  ipgroup_bindings表示一个ipgroup下最多可关联的listener数量。  ipgroup_max_length表示一个ipgroup下最多设置的ip地址数量。
+    * @param string $quotaKey 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
     *
     * @return $this
     */

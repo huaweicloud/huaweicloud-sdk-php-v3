@@ -20,7 +20,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * type  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     * version  数据库版本。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * type  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     * version  数据库版本。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * type  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     * version  数据库版本。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * type  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     * version  数据库版本。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * type  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     * version  数据库版本。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    *  数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class RecycleDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型。   - 取值为“cassandra”，表示GaussDB(for Cassandra)数据库实例。   - 取值为“mongodb”，表示GaussDB(for Mongo)数据库实例。   - 取值为“influxdb”，表示GaussDB(for Influx)数据库实例。   - 取值为“redis”，表示GaussDB(for Redis)数据库实例。
+    * @param string $type 数据库类型。   - 取值为“cassandra”，表示GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示GeminiDB Influx数据库实例。   - 取值为“redis”，表示GeminiDB Redis数据库实例。
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
     * enterpriseProjectId  企业项目ID。创建DNAT规则时，关联的企业项目ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * externalIpAddress  中转IP的地址。
@@ -57,7 +57,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
     * enterpriseProjectId  企业项目ID。创建DNAT规则时，关联的企业项目ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * externalIpAddress  中转IP的地址。
@@ -110,7 +110,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
     * enterpriseProjectId  企业项目ID。创建DNAT规则时，关联的企业项目ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * externalIpAddress  中转IP的地址。
@@ -142,7 +142,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
     * enterpriseProjectId  企业项目ID。创建DNAT规则时，关联的企业项目ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * externalIpAddress  中转IP的地址。
@@ -174,7 +174,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
     * enterpriseProjectId  企业项目ID。创建DNAT规则时，关联的企业项目ID。
-    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * externalIpAddress  中转IP的地址。
@@ -427,7 +427,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string[]|null
     */
@@ -439,7 +439,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string[]|null $description DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

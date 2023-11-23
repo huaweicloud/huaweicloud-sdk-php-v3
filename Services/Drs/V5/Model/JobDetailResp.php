@@ -46,6 +46,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * supportImportFileResp  supportImportFileResp
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
+    * connectionManagement  connectionManagement
     *
     * @var string[]
     */
@@ -75,7 +76,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'compareResult' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareResultInfo',
             'supportImportFileResp' => '\HuaweiCloud\SDK\Drs\V5\Model\SupportImportFileResult',
             'instanceFeatures' => 'map[string,string]',
-            'taskVersion' => 'string'
+            'taskVersion' => 'string',
+            'connectionManagement' => '\HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement'
     ];
 
     /**
@@ -106,6 +108,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * supportImportFileResp  supportImportFileResp
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
+    * connectionManagement  connectionManagement
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'compareResult' => null,
         'supportImportFileResp' => null,
         'instanceFeatures' => null,
-        'taskVersion' => null
+        'taskVersion' => null,
+        'connectionManagement' => null
     ];
 
     /**
@@ -187,6 +191,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * supportImportFileResp  supportImportFileResp
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
+    * connectionManagement  connectionManagement
     *
     * @var string[]
     */
@@ -216,7 +221,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'compareResult' => 'compare_result',
             'supportImportFileResp' => 'support_import_file_resp',
             'instanceFeatures' => 'instance_features',
-            'taskVersion' => 'task_version'
+            'taskVersion' => 'task_version',
+            'connectionManagement' => 'connection_management'
     ];
 
     /**
@@ -247,6 +253,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * supportImportFileResp  supportImportFileResp
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
+    * connectionManagement  connectionManagement
     *
     * @var string[]
     */
@@ -276,7 +283,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'compareResult' => 'setCompareResult',
             'supportImportFileResp' => 'setSupportImportFileResp',
             'instanceFeatures' => 'setInstanceFeatures',
-            'taskVersion' => 'setTaskVersion'
+            'taskVersion' => 'setTaskVersion',
+            'connectionManagement' => 'setConnectionManagement'
     ];
 
     /**
@@ -307,6 +315,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * supportImportFileResp  supportImportFileResp
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
+    * connectionManagement  connectionManagement
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'compareResult' => 'getCompareResult',
             'supportImportFileResp' => 'getSupportImportFileResp',
             'instanceFeatures' => 'getInstanceFeatures',
-            'taskVersion' => 'getTaskVersion'
+            'taskVersion' => 'getTaskVersion',
+            'connectionManagement' => 'getConnectionManagement'
     ];
 
     /**
@@ -423,6 +433,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['supportImportFileResp'] = isset($data['supportImportFileResp']) ? $data['supportImportFileResp'] : null;
         $this->container['instanceFeatures'] = isset($data['instanceFeatures']) ? $data['instanceFeatures'] : null;
         $this->container['taskVersion'] = isset($data['taskVersion']) ? $data['taskVersion'] : null;
+        $this->container['connectionManagement'] = isset($data['connectionManagement']) ? $data['connectionManagement'] : null;
     }
 
     /**
@@ -1068,6 +1079,30 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function setTaskVersion($taskVersion)
     {
         $this->container['taskVersion'] = $taskVersion;
+        return $this;
+    }
+
+    /**
+    * Gets connectionManagement
+    *  connectionManagement
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement|null
+    */
+    public function getConnectionManagement()
+    {
+        return $this->container['connectionManagement'];
+    }
+
+    /**
+    * Sets connectionManagement
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement|null $connectionManagement connectionManagement
+    *
+    * @return $this
+    */
+    public function setConnectionManagement($connectionManagement)
+    {
+        $this->container['connectionManagement'] = $connectionManagement;
         return $this;
     }
 

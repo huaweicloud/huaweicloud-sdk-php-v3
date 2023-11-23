@@ -21,7 +21,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * transitIpIds  中转IP的ID的列表。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * transitIpIds  中转IP的ID的列表。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * transitIpIds  中转IP的ID的列表。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * transitIpIds  中转IP的ID的列表。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * transitIpIds  中转IP的ID的列表。
-    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * description  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    *  SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class UpdatePrivateSnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+    * @param string|null $description SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */

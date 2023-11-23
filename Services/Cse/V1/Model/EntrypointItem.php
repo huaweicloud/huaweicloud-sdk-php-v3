@@ -86,10 +86,10 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'masterEntrypoint' => 'master_entrypoint',
-            'masterEntrypointIpv6' => 'master_entrypoint_ipv6',
+            'masterEntrypoint' => 'masterEntrypoint',
+            'masterEntrypointIpv6' => 'masterEntrypointIpv6',
             'slaveEntrypoint' => 'slave_entrypoint',
-            'slaveEntrypointIpv6' => 'slave_entrypoint_ipv6',
+            'slaveEntrypointIpv6' => 'slaveEntrypointIpv6',
             'type' => 'type'
     ];
 

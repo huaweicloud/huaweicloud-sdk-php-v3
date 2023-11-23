@@ -21,7 +21,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * authenticationKey  CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     * domain  从指定域名获取对象。
     * protocol  协议类型，支持http和https协议。
     *
@@ -37,7 +37,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * authenticationKey  CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     * domain  从指定域名获取对象。
     * protocol  协议类型，支持http和https协议。
     *
@@ -74,7 +74,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * authenticationKey  CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     * domain  从指定域名获取对象。
     * protocol  协议类型，支持http和https协议。
     *
@@ -90,7 +90,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * authenticationKey  CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     * domain  从指定域名获取对象。
     * protocol  协议类型，支持http和https协议。
     *
@@ -106,7 +106,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * authenticationKey  CDN鉴权秘钥，如果CDN需要进行鉴权，则此选项为必选。  无需授权：无需配置此项。 Qiniu：无需配置此项。 Aliyun：根据authentication_type指定的鉴权方式配置此项。 KingsoftCloud：无需配置此项。
-    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * authenticationType  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     * domain  从指定域名获取对象。
     * protocol  协议类型，支持http和https协议。
     *
@@ -165,6 +165,10 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     const AUTHENTICATION_TYPE_ALIYUN_OSS_B = 'ALIYUN_OSS_B';
     const AUTHENTICATION_TYPE_ALIYUN_OSS_C = 'ALIYUN_OSS_C';
     const AUTHENTICATION_TYPE_KSYUN_PRIVATE_AUTHENTICATION = 'KSYUN_PRIVATE_AUTHENTICATION';
+    const AUTHENTICATION_TYPE_TENCENT_COS_A = 'TENCENT_COS_A';
+    const AUTHENTICATION_TYPE_TENCENT_COS_B = 'TENCENT_COS_B';
+    const AUTHENTICATION_TYPE_TENCENT_COS_C = 'TENCENT_COS_C';
+    const AUTHENTICATION_TYPE_TENCENT_COS_D = 'TENCENT_COS_D';
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';
     
@@ -183,6 +187,10 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
             self::AUTHENTICATION_TYPE_ALIYUN_OSS_B,
             self::AUTHENTICATION_TYPE_ALIYUN_OSS_C,
             self::AUTHENTICATION_TYPE_KSYUN_PRIVATE_AUTHENTICATION,
+            self::AUTHENTICATION_TYPE_TENCENT_COS_A,
+            self::AUTHENTICATION_TYPE_TENCENT_COS_B,
+            self::AUTHENTICATION_TYPE_TENCENT_COS_C,
+            self::AUTHENTICATION_TYPE_TENCENT_COS_D,
         ];
     }
 
@@ -258,8 +266,8 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['domain']) < 0)) {
                 $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/", $this->container['domain'])) {
-                $invalidProperties[] = "invalid value for 'domain', must be conform to the pattern /^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/.";
+            if (!preg_match("/^(?=^.{3,255}$)(?!^.*\\.myhuaweicloud.com$)(?!^.*\\.myhwclouds.com$)((?!^.*(\\d)+$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$)/", $this->container['domain'])) {
+                $invalidProperties[] = "invalid value for 'domain', must be conform to the pattern /^(?=^.{3,255}$)(?!^.*\\.myhuaweicloud.com$)(?!^.*\\.myhwclouds.com$)((?!^.*(\\d)+$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$)/.";
             }
         if ($this->container['protocol'] === null) {
             $invalidProperties[] = "'protocol' can't be null";
@@ -312,7 +320,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets authenticationType
-    *  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    *  鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     *
     * @return string
     */
@@ -324,7 +332,7 @@ class SourceCdnReq implements ModelInterface, ArrayAccess
     /**
     * Sets authenticationType
     *
-    * @param string $authenticationType 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
+    * @param string $authenticationType 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN, TENCENT_COS_A, TENCENT_COS_B, TENCENT_COS_C, TENCENT_COS_D
     *
     * @return $this
     */

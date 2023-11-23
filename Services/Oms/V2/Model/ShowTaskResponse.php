@@ -44,7 +44,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * skippedNum  迁移忽略对象数（存在以下两种情况会自动跳过：1.源端对象最后修改时间在迁移指定时间前；2.目的端已有该对象。）
     * srcNode  srcNode
     * startTime  任务启动时间（Unix时间戳，毫秒）。
-    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     * successfulNum  迁移成功对象数量。
     * taskType  任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
     * groupType  分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
@@ -126,7 +126,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * skippedNum  迁移忽略对象数（存在以下两种情况会自动跳过：1.源端对象最后修改时间在迁移指定时间前；2.目的端已有该对象。）
     * srcNode  srcNode
     * startTime  任务启动时间（Unix时间戳，毫秒）。
-    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     * successfulNum  迁移成功对象数量。
     * taskType  任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
     * groupType  分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
@@ -229,7 +229,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * skippedNum  迁移忽略对象数（存在以下两种情况会自动跳过：1.源端对象最后修改时间在迁移指定时间前；2.目的端已有该对象。）
     * srcNode  srcNode
     * startTime  任务启动时间（Unix时间戳，毫秒）。
-    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     * successfulNum  迁移成功对象数量。
     * taskType  任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
     * groupType  分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
@@ -311,7 +311,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * skippedNum  迁移忽略对象数（存在以下两种情况会自动跳过：1.源端对象最后修改时间在迁移指定时间前；2.目的端已有该对象。）
     * srcNode  srcNode
     * startTime  任务启动时间（Unix时间戳，毫秒）。
-    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     * successfulNum  迁移成功对象数量。
     * taskType  任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
     * groupType  分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
@@ -393,7 +393,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * skippedNum  迁移忽略对象数（存在以下两种情况会自动跳过：1.源端对象最后修改时间在迁移指定时间前；2.目的端已有该对象。）
     * srcNode  srcNode
     * startTime  任务启动时间（Unix时间戳，毫秒）。
-    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * status  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     * successfulNum  迁移成功对象数量。
     * taskType  任务类型，为空默认设置为object。 list：对象列表迁移 object：文件/文件夹迁移 prefix：对象前缀迁移 url_list: url对象列表
     * groupType  分组类型 NORMAL_TASK：一般迁移任务 SYNC_TASK：同步任务所属迁移任务 GROUP_TASK：任务组所属迁移任务
@@ -705,8 +705,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && ($this->container['status'] > 5)) {
-                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 5.";
+            if (!is_null($this->container['status']) && ($this->container['status'] > 7)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 7.";
             }
             if (!is_null($this->container['status']) && ($this->container['status'] < 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
@@ -1347,7 +1347,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    *  任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     *
     * @return int|null
     */
@@ -1359,7 +1359,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功
+    * @param int|null $status 任务状态。 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7：等待中
     *
     * @return $this
     */

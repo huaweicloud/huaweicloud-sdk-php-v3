@@ -21,7 +21,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * period  时间间隔
+    * period  时间间隔（单位：min）
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * period  时间间隔
+    * period  时间间隔（单位：min）
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * period  时间间隔
+    * period  时间间隔（单位：min）
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * period  时间间隔
+    * period  时间间隔（单位：min）
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
-    * period  时间间隔
+    * period  时间间隔（单位：min）
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  时间间隔
+    *  时间间隔（单位：min）
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ShowFunctionMetricsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string $period 时间间隔
+    * @param string $period 时间间隔（单位：min）
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * precedence  precedence
+    * precedence  优先级，数字越大，优先级越高。
     * match  match
-    * route  route
+    * route  路由规则列表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * precedence  precedence
+    * precedence  优先级，数字越大，优先级越高。
     * match  match
-    * route  route
+    * route  路由规则列表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CreateRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * precedence  precedence
+    * precedence  优先级，数字越大，优先级越高。
     * match  match
-    * route  route
+    * route  路由规则列表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * precedence  precedence
+    * precedence  优先级，数字越大，优先级越高。
     * match  match
-    * route  route
+    * route  路由规则列表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * precedence  precedence
+    * precedence  优先级，数字越大，优先级越高。
     * match  match
-    * route  route
+    * route  路由规则列表。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets precedence
-    *  precedence
+    *  优先级，数字越大，优先级越高。
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class CreateRules implements ModelInterface, ArrayAccess
     /**
     * Sets precedence
     *
-    * @param int|null $precedence precedence
+    * @param int|null $precedence 优先级，数字越大，优先级越高。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CreateRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets route
-    *  route
+    *  路由规则列表。
     *
     * @return \HuaweiCloud\SDK\Cse\V1\Model\CreateRoute[]|null
     */
@@ -256,7 +256,7 @@ class CreateRules implements ModelInterface, ArrayAccess
     /**
     * Sets route
     *
-    * @param \HuaweiCloud\SDK\Cse\V1\Model\CreateRoute[]|null $route route
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\CreateRoute[]|null $route 路由规则列表。
     *
     * @return $this
     */

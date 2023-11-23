@@ -46,7 +46,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     * executingTaskNum  正在运行的迁移任务数
     * waitingTaskNum  等待中的迁移任务数
     * totalNum  迁移任务组包含的对象总数量
-    * createCompleteNum  任务创建的对象总数量
+    * createCompleteNum  已完成任务创建的对象总数量
     * successNum  成功的对象数量
     * failNum  失败的对象数量
     * skipNum  忽略的对象数量
@@ -128,7 +128,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     * executingTaskNum  正在运行的迁移任务数
     * waitingTaskNum  等待中的迁移任务数
     * totalNum  迁移任务组包含的对象总数量
-    * createCompleteNum  任务创建的对象总数量
+    * createCompleteNum  已完成任务创建的对象总数量
     * successNum  成功的对象数量
     * failNum  失败的对象数量
     * skipNum  忽略的对象数量
@@ -231,7 +231,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     * executingTaskNum  正在运行的迁移任务数
     * waitingTaskNum  等待中的迁移任务数
     * totalNum  迁移任务组包含的对象总数量
-    * createCompleteNum  任务创建的对象总数量
+    * createCompleteNum  已完成任务创建的对象总数量
     * successNum  成功的对象数量
     * failNum  失败的对象数量
     * skipNum  忽略的对象数量
@@ -313,7 +313,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     * executingTaskNum  正在运行的迁移任务数
     * waitingTaskNum  等待中的迁移任务数
     * totalNum  迁移任务组包含的对象总数量
-    * createCompleteNum  任务创建的对象总数量
+    * createCompleteNum  已完成任务创建的对象总数量
     * successNum  成功的对象数量
     * failNum  失败的对象数量
     * skipNum  忽略的对象数量
@@ -395,7 +395,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     * executingTaskNum  正在运行的迁移任务数
     * waitingTaskNum  等待中的迁移任务数
     * totalNum  迁移任务组包含的对象总数量
-    * createCompleteNum  任务创建的对象总数量
+    * createCompleteNum  已完成任务创建的对象总数量
     * successNum  成功的对象数量
     * failNum  失败的对象数量
     * skipNum  忽略的对象数量
@@ -1406,7 +1406,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createCompleteNum
-    *  任务创建的对象总数量
+    *  已完成任务创建的对象总数量
     *
     * @return int|null
     */
@@ -1418,7 +1418,7 @@ class TaskGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets createCompleteNum
     *
-    * @param int|null $createCompleteNum 任务创建的对象总数量
+    * @param int|null $createCompleteNum 已完成任务创建的对象总数量
     *
     * @return $this
     */

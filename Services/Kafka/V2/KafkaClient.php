@@ -808,6 +808,71 @@ class KafkaClient extends Client
     }
 
     /**
+     * 创建客户端流控配置
+     *
+     * 该接口用于向Kafka实例提交创建user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createKafkaUserClientQuotaTask($request)
+    {
+        return $this->createKafkaUserClientQuotaTaskWithHttpInfo($request);
+    }
+
+    public function createKafkaUserClientQuotaTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/kafka/{project_id}/instances/{instance_id}/kafka-user-client-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateKafkaUserClientQuotaTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateKafkaUserClientQuotaTaskRequest');
+    }
+
+    /**
      * 新增Kafka实例指定Topic分区
      *
      * 新增Kafka实例指定Topic分区。
@@ -1254,6 +1319,71 @@ class KafkaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteInstanceRequest');
+    }
+
+    /**
+     * 删除客户端流控设置
+     *
+     * 该接口用于向Kafka实例提交删除user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKafkaUserClientQuotaTask($request)
+    {
+        return $this->deleteKafkaUserClientQuotaTaskWithHttpInfo($request);
+    }
+
+    public function deleteKafkaUserClientQuotaTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/kafka/{project_id}/instances/{instance_id}/kafka-user-client-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaUserClientQuotaTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaUserClientQuotaTaskRequest');
     }
 
     /**
@@ -3535,6 +3665,74 @@ class KafkaClient extends Client
     }
 
     /**
+     * 查询客户端流控配置
+     *
+     * 该接口用于向Kafka实例查询流控的配置，若成功则返回流控配置的列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showKafkaUserClientQuota($request)
+    {
+        return $this->showKafkaUserClientQuotaWithHttpInfo($request);
+    }
+
+    public function showKafkaUserClientQuotaWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/kafka/{project_id}/instances/{instance_id}/kafka-user-client-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowKafkaUserClientQuotaResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowKafkaUserClientQuotaRequest');
+    }
+
+    /**
      * 查询维护时间窗时间段
      *
      * 查询维护时间窗开始时间和结束时间。
@@ -4415,6 +4613,71 @@ class KafkaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceUserResponse',
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceUserRequest');
+    }
+
+    /**
+     * 修改客户端流控设置
+     *
+     * 该接口用于向Kafka实例提交修改user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateKafkaUserClientQuotaTask($request)
+    {
+        return $this->updateKafkaUserClientQuotaTaskWithHttpInfo($request);
+    }
+
+    public function updateKafkaUserClientQuotaTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/kafka/{project_id}/instances/{instance_id}/kafka-user-client-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateKafkaUserClientQuotaTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateKafkaUserClientQuotaTaskRequest');
     }
 
     /**

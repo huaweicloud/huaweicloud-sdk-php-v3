@@ -22,7 +22,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  微服务引擎专享版的ID
     * name  引擎的名称
-    * enterprisProjectId  微服务引擎专享版所属企业项目ID
+    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
     * enterpriseProjectName  微服务引擎专享版所属企业项目名称
     * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     * description  微服务引擎专享版的描述
@@ -51,7 +51,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'enterprisProjectId' => 'string',
+            'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string',
             'type' => 'string',
             'description' => 'string',
@@ -80,7 +80,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  微服务引擎专享版的ID
     * name  引擎的名称
-    * enterprisProjectId  微服务引擎专享版所属企业项目ID
+    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
     * enterpriseProjectName  微服务引擎专享版所属企业项目名称
     * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     * description  微服务引擎专享版的描述
@@ -109,7 +109,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'enterprisProjectId' => null,
+        'enterpriseProjectId' => null,
         'enterpriseProjectName' => null,
         'type' => null,
         'description' => null,
@@ -159,7 +159,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  微服务引擎专享版的ID
     * name  引擎的名称
-    * enterprisProjectId  微服务引擎专享版所属企业项目ID
+    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
     * enterpriseProjectName  微服务引擎专享版所属企业项目名称
     * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     * description  微服务引擎专享版的描述
@@ -188,28 +188,28 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'enterprisProjectId' => 'enterpris_project_id',
-            'enterpriseProjectName' => 'enterprise_project_name',
+            'enterpriseProjectId' => 'enterpriseProjectId',
+            'enterpriseProjectName' => 'enterpriseProjectName',
             'type' => 'type',
             'description' => 'description',
             'flavor' => 'flavor',
             'payment' => 'payment',
-            'authType' => 'auth_type',
+            'authType' => 'authType',
             'status' => 'status',
-            'externalAddress' => 'external_address',
-            'serviceEndpoint' => 'service_endpoint',
-            'publicAddress' => 'public_address',
-            'publicServiceEndpoint' => 'public_service_endpoint',
-            'totalInstance' => 'total_instance',
-            'usedInstance' => 'used_instance',
-            'availableInstance' => 'available_instance',
+            'externalAddress' => 'externalAddress',
+            'serviceEndpoint' => 'serviceEndpoint',
+            'publicAddress' => 'publicAddress',
+            'publicServiceEndpoint' => 'publicServiceEndpoint',
+            'totalInstance' => 'totalInstance',
+            'usedInstance' => 'usedInstance',
+            'availableInstance' => 'availableInstance',
             'version' => 'version',
-            'latestVersion' => 'latest_version',
-            'createTime' => 'create_time',
-            'dueTo' => 'due_to',
-            'latestJobId' => 'latest_job_id',
-            'engineAdditionalActions' => 'engine_additional_actions',
-            'specType' => 'spec_type',
+            'latestVersion' => 'latestVersion',
+            'createTime' => 'createTime',
+            'dueTo' => 'dueTo',
+            'latestJobId' => 'latestJobId',
+            'engineAdditionalActions' => 'engineAdditionalActions',
+            'specType' => 'specType',
             'reference' => 'reference'
     ];
 
@@ -217,7 +217,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  微服务引擎专享版的ID
     * name  引擎的名称
-    * enterprisProjectId  微服务引擎专享版所属企业项目ID
+    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
     * enterpriseProjectName  微服务引擎专享版所属企业项目名称
     * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     * description  微服务引擎专享版的描述
@@ -246,7 +246,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'enterprisProjectId' => 'setEnterprisProjectId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enterpriseProjectName' => 'setEnterpriseProjectName',
             'type' => 'setType',
             'description' => 'setDescription',
@@ -275,7 +275,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  微服务引擎专享版的ID
     * name  引擎的名称
-    * enterprisProjectId  微服务引擎专享版所属企业项目ID
+    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
     * enterpriseProjectName  微服务引擎专享版所属企业项目名称
     * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     * description  微服务引擎专享版的描述
@@ -304,7 +304,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'enterprisProjectId' => 'getEnterprisProjectId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enterpriseProjectName' => 'getEnterpriseProjectName',
             'type' => 'getType',
             'description' => 'getDescription',
@@ -509,7 +509,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['enterprisProjectId'] = isset($data['enterprisProjectId']) ? $data['enterprisProjectId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -648,26 +648,26 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets enterprisProjectId
+    * Gets enterpriseProjectId
     *  微服务引擎专享版所属企业项目ID
     *
     * @return string|null
     */
-    public function getEnterprisProjectId()
+    public function getEnterpriseProjectId()
     {
-        return $this->container['enterprisProjectId'];
+        return $this->container['enterpriseProjectId'];
     }
 
     /**
-    * Sets enterprisProjectId
+    * Sets enterpriseProjectId
     *
-    * @param string|null $enterprisProjectId 微服务引擎专享版所属企业项目ID
+    * @param string|null $enterpriseProjectId 微服务引擎专享版所属企业项目ID
     *
     * @return $this
     */
-    public function setEnterprisProjectId($enterprisProjectId)
+    public function setEnterpriseProjectId($enterpriseProjectId)
     {
-        $this->container['enterprisProjectId'] = $enterprisProjectId;
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

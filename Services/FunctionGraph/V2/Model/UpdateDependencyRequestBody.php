@@ -20,9 +20,9 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
-    * dependType  导入类型,目前支持obs和zip。
+    * dependType  导入类型，目前支持obs和zip。
     * runtime  运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
@@ -40,9 +40,9 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
-    * dependType  导入类型,目前支持obs和zip。
+    * dependType  导入类型，目前支持obs和zip。
     * runtime  运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
@@ -81,9 +81,9 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
-    * dependType  导入类型,目前支持obs和zip。
+    * dependType  导入类型，目前支持obs和zip。
     * runtime  运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
@@ -101,9 +101,9 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
-    * dependType  导入类型,目前支持obs和zip。
+    * dependType  导入类型，目前支持obs和zip。
     * runtime  运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
@@ -121,9 +121,9 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
-    * dependType  导入类型,目前支持obs和zip。
+    * dependType  导入类型，目前支持obs和zip。
     * runtime  运行时语言， Java11、Nodejs14:、Python3:在type为v2时支持。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
@@ -293,7 +293,7 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependFile
-    *  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    *  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dependFile
     *
-    * @param string|null $dependFile depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+    * @param string|null $dependFile depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dependType
-    *  导入类型,目前支持obs和zip。
+    *  导入类型，目前支持obs和zip。
     *
     * @return string
     */
@@ -353,7 +353,7 @@ class UpdateDependencyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dependType
     *
-    * @param string $dependType 导入类型,目前支持obs和zip。
+    * @param string $dependType 导入类型，目前支持obs和zip。
     *
     * @return $this
     */

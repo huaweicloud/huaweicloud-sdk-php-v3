@@ -24,6 +24,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * title  媒资名称。
     * duration  媒资时长。  单位：秒。
+    * durationMs  视频时长，单位毫秒。
     * size  媒资原始大小。  单位：字节。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class TopUrl implements ModelInterface, ArrayAccess
             'assetId' => 'string',
             'title' => 'string',
             'duration' => 'int',
+            'durationMs' => 'int',
             'size' => 'int'
     ];
 
@@ -42,6 +44,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * title  媒资名称。
     * duration  媒资时长。  单位：秒。
+    * durationMs  视频时长，单位毫秒。
     * size  媒资原始大小。  单位：字节。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class TopUrl implements ModelInterface, ArrayAccess
         'assetId' => null,
         'title' => null,
         'duration' => null,
+        'durationMs' => 'int64',
         'size' => 'int64'
     ];
 
@@ -81,6 +85,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * title  媒资名称。
     * duration  媒资时长。  单位：秒。
+    * durationMs  视频时长，单位毫秒。
     * size  媒资原始大小。  单位：字节。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class TopUrl implements ModelInterface, ArrayAccess
             'assetId' => 'asset_id',
             'title' => 'title',
             'duration' => 'duration',
+            'durationMs' => 'duration_ms',
             'size' => 'size'
     ];
 
@@ -99,6 +105,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * title  媒资名称。
     * duration  媒资时长。  单位：秒。
+    * durationMs  视频时长，单位毫秒。
     * size  媒资原始大小。  单位：字节。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class TopUrl implements ModelInterface, ArrayAccess
             'assetId' => 'setAssetId',
             'title' => 'setTitle',
             'duration' => 'setDuration',
+            'durationMs' => 'setDurationMs',
             'size' => 'setSize'
     ];
 
@@ -117,6 +125,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * title  媒资名称。
     * duration  媒资时长。  单位：秒。
+    * durationMs  视频时长，单位毫秒。
     * size  媒资原始大小。  单位：字节。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class TopUrl implements ModelInterface, ArrayAccess
             'assetId' => 'getAssetId',
             'title' => 'getTitle',
             'duration' => 'getDuration',
+            'durationMs' => 'getDurationMs',
             'size' => 'getSize'
     ];
 
@@ -191,6 +201,7 @@ class TopUrl implements ModelInterface, ArrayAccess
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
@@ -309,6 +320,30 @@ class TopUrl implements ModelInterface, ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets durationMs
+    *  视频时长，单位毫秒。
+    *
+    * @return int|null
+    */
+    public function getDurationMs()
+    {
+        return $this->container['durationMs'];
+    }
+
+    /**
+    * Sets durationMs
+    *
+    * @param int|null $durationMs 视频时长，单位毫秒。
+    *
+    * @return $this
+    */
+    public function setDurationMs($durationMs)
+    {
+        $this->container['durationMs'] = $durationMs;
         return $this;
     }
 

@@ -25,136 +25,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 创建作业模板
-     *
-     * 该API用于创建作业模板。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createJobTemplatesAsync($request)
-    {
-        return $this->createJobTemplatesAsyncWithHttpInfo($request);
-    }
-    
-    public function createJobTemplatesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/templates';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateJobTemplatesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateJobTemplatesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 存储指定SQL语句
-     *
-     * 该API用于存储指定的SQL语句，后续可以重复使用。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createSqlTemplatesAsync($request)
-    {
-        return $this->createSqlTemplatesAsyncWithHttpInfo($request);
-    }
-    
-    public function createSqlTemplatesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/sqls';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlTemplatesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlTemplatesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 批量删除SQL模板
      *
      * 该API用于批量删除SQL模板。
@@ -164,12 +34,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function deleteSqlTemplatesAsync($request)
+    public function batchDeleteSqlJobTemplatesAsync($request)
     {
-        return $this->deleteSqlTemplatesAsyncWithHttpInfo($request);
+        return $this->batchDeleteSqlJobTemplatesAsyncWithHttpInfo($request);
     }
     
-    public function deleteSqlTemplatesAsyncWithHttpInfo($request){
+    public function batchDeleteSqlJobTemplatesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/sqls-deletion';
         $formParams = [];
@@ -213,9 +83,139 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteSqlJobTemplatesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlTemplatesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteSqlJobTemplatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建作业模板
+     *
+     * 该API用于创建作业模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSparkJobTemplateAsync($request)
+    {
+        return $this->createSparkJobTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function createSparkJobTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 存储指定SQL语句
+     *
+     * 该API用于存储指定的SQL语句，后续可以重复使用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSqlJobTemplateAsync($request)
+    {
+        return $this->createSqlJobTemplateAsyncWithHttpInfo($request);
+    }
+    
+    public function createSqlJobTemplateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/sqls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -229,12 +229,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listJobTemplatesAsync($request)
+    public function listSparkJobTemplatesAsync($request)
     {
-        return $this->listJobTemplatesAsyncWithHttpInfo($request);
+        return $this->listSparkJobTemplatesAsyncWithHttpInfo($request);
     }
     
-    public function listJobTemplatesAsyncWithHttpInfo($request){
+    public function listSparkJobTemplatesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/templates';
         $formParams = [];
@@ -287,9 +287,74 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobTemplatesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobTemplatesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobTemplatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看所有SQL模板
+     *
+     * 该API用查看用户保存的所有SQL模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlJobTemplatesAsync($request)
+    {
+        return $this->listSqlJobTemplatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listSqlJobTemplatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/sqls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyword'] !== null) {
+            $queryParams['keyword'] = $localVarParams['keyword'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobTemplatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlJobTemplatesRequest',
             $asyncRequest = true);
     }
 
@@ -303,12 +368,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function showJobTemplateAsync($request)
+    public function showSparkJobTemplateAsync($request)
     {
-        return $this->showJobTemplateAsyncWithHttpInfo($request);
+        return $this->showSparkJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function showJobTemplateAsyncWithHttpInfo($request){
+    public function showSparkJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/templates/{template_id}';
         $formParams = [];
@@ -352,9 +417,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobTemplateResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobTemplateRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -421,71 +486,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 查看所有SQL模板
-     *
-     * 该API用查看用户保存的所有SQL模板。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showSqlTemplatesAsync($request)
-    {
-        return $this->showSqlTemplatesAsyncWithHttpInfo($request);
-    }
-    
-    public function showSqlTemplatesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/sqls';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['keyword'] !== null) {
-            $queryParams['keyword'] = $localVarParams['keyword'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlTemplatesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlTemplatesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 修改作业模板
      *
      * 该API用于修改作业模板。
@@ -495,12 +495,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateJobTemplatesAsync($request)
+    public function updateSparkJobTemplateAsync($request)
     {
-        return $this->updateJobTemplatesAsyncWithHttpInfo($request);
+        return $this->updateSparkJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function updateJobTemplatesAsyncWithHttpInfo($request){
+    public function updateSparkJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/templates/{template_id}';
         $formParams = [];
@@ -547,9 +547,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSparkJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobTemplatesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSparkJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -563,12 +563,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateSqlTemplatesAsync($request)
+    public function updateSqlJobTemplateAsync($request)
     {
-        return $this->updateSqlTemplatesAsyncWithHttpInfo($request);
+        return $this->updateSqlJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function updateSqlTemplatesAsyncWithHttpInfo($request){
+    public function updateSqlJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/sqls/{sql_id}';
         $formParams = [];
@@ -615,77 +615,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlTemplatesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 绑定队列
-     *
-     * 该API用于在已创建的增强型跨源中绑定队列。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function associateConnectionQueueAsync($request)
-    {
-        return $this->associateConnectionQueueAsyncWithHttpInfo($request);
-    }
-    
-    public function associateConnectionQueueAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/associate-queue';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['connectionId'] !== null) {
-            $pathParams['connection_id'] = $localVarParams['connectionId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\AssociateConnectionQueueResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\AssociateConnectionQueueRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -758,23 +690,23 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 数据赋权（用户、项目）
+     * 绑定队列
      *
-     * 该API用于将DLI资源权限赋给、回收、更新指定的其他用户或项目。
+     * 该API用于在已创建的增强型跨源中绑定队列。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function authorizeResourceAsync($request)
+    public function associateQueueToEnhancedConnectionAsync($request)
     {
-        return $this->authorizeResourceAsyncWithHttpInfo($request);
+        return $this->associateQueueToEnhancedConnectionAsyncWithHttpInfo($request);
     }
     
-    public function authorizeResourceAsyncWithHttpInfo($request){
+    public function associateQueueToEnhancedConnectionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/authorization';
+        $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/associate-queue';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -788,17 +720,20 @@ class DliAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['*/*']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['*/*'],
                 ['application/json']
             );
         }
@@ -808,7 +743,7 @@ class DliAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -816,9 +751,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\AuthorizeResourceResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\AssociateQueueToEnhancedConnectionResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\AuthorizeResourceRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\AssociateQueueToEnhancedConnectionRequest',
             $asyncRequest = true);
     }
 
@@ -1029,74 +964,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 创建地址连通性请求
-     *
-     * 创建地址连通性请求API接口，往指定集群发送地址连通性测试请求，并将测试地址插入表内
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function checkConnectionAsync($request)
-    {
-        return $this->checkConnectionAsyncWithHttpInfo($request);
-    }
-    
-    public function checkConnectionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/queues/{queue_name}/connection-test';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['queueName'] !== null) {
-            $pathParams['queue_name'] = $localVarParams['queueName'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CheckConnectionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CheckConnectionRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 创建跨源认证
      *
      * 该API用于创建跨源认证。
@@ -1158,6 +1025,74 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建地址连通性请求
+     *
+     * 创建地址连通性请求API接口，往指定集群发送地址连通性测试请求，并将测试地址插入表内
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createConnectivityTaskAsync($request)
+    {
+        return $this->createConnectivityTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function createConnectivityTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/queues/{queue_name}/connection-test';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateConnectivityTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateConnectivityTaskRequest',
             $asyncRequest = true);
     }
 
@@ -1502,12 +1437,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createGlobalValueAsync($request)
+    public function createGlobalVariableAsync($request)
     {
-        return $this->createGlobalValueAsyncWithHttpInfo($request);
+        return $this->createGlobalVariableAsyncWithHttpInfo($request);
     }
     
-    public function createGlobalValueAsyncWithHttpInfo($request){
+    public function createGlobalVariableAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/variables';
         $formParams = [];
@@ -1551,9 +1486,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalValueResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalVariableResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalValueRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalVariableRequest',
             $asyncRequest = true);
     }
 
@@ -2098,12 +2033,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function deleteGlobalValueAsync($request)
+    public function deleteGlobalVariableAsync($request)
     {
-        return $this->deleteGlobalValueAsyncWithHttpInfo($request);
+        return $this->deleteGlobalVariableAsyncWithHttpInfo($request);
     }
     
-    public function deleteGlobalValueAsyncWithHttpInfo($request){
+    public function deleteGlobalVariableAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/variables/{var_name}';
         $formParams = [];
@@ -2147,9 +2082,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalValueResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalVariableResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalValueRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalVariableRequest',
             $asyncRequest = true);
     }
 
@@ -2434,12 +2369,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function disassociateConnectionQueueAsync($request)
+    public function disassociateQueueFromEnhancedConnectionAsync($request)
     {
-        return $this->disassociateConnectionQueueAsyncWithHttpInfo($request);
+        return $this->disassociateQueueFromEnhancedConnectionAsyncWithHttpInfo($request);
     }
     
-    public function disassociateConnectionQueueAsyncWithHttpInfo($request){
+    public function disassociateQueueFromEnhancedConnectionAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/disassociate-queue';
         $formParams = [];
@@ -2486,9 +2421,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DisassociateConnectionQueueResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DisassociateQueueFromEnhancedConnectionResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DisassociateConnectionQueueRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DisassociateQueueFromEnhancedConnectionRequest',
             $asyncRequest = true);
     }
 
@@ -2560,6 +2495,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListAuthInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListAuthInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看赋权对象的用者权限信息
+     *
+     * 获取对象赋权用户的权限信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAuthorizationPrivilegesAsync($request)
+    {
+        return $this->listAuthorizationPrivilegesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAuthorizationPrivilegesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/authorization/privileges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['object'] !== null) {
+            $queryParams['object'] = $localVarParams['object'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListAuthorizationPrivilegesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListAuthorizationPrivilegesRequest',
             $asyncRequest = true);
     }
 
@@ -3011,12 +3011,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listGlobalValuesAsync($request)
+    public function listGlobalVariablesAsync($request)
     {
-        return $this->listGlobalValuesAsyncWithHttpInfo($request);
+        return $this->listGlobalVariablesAsyncWithHttpInfo($request);
     }
     
-    public function listGlobalValuesAsyncWithHttpInfo($request){
+    public function listGlobalVariablesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/variables';
         $formParams = [];
@@ -3063,9 +3063,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalValuesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalVariablesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalValuesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalVariablesRequest',
             $asyncRequest = true);
     }
 
@@ -3144,12 +3144,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listQueuePropertyAsync($request)
+    public function listQueuePropertiesAsync($request)
     {
-        return $this->listQueuePropertyAsyncWithHttpInfo($request);
+        return $this->listQueuePropertiesAsyncWithHttpInfo($request);
     }
     
-    public function listQueuePropertyAsyncWithHttpInfo($request){
+    public function listQueuePropertiesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/queues/{queue_name}/properties';
         $formParams = [];
@@ -3199,9 +3199,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertyResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertiesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertyRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuePropertiesRequest',
             $asyncRequest = true);
     }
 
@@ -3617,6 +3617,71 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 数据赋权（用户、项目）
+     *
+     * 该API用于将DLI资源权限赋给、回收、更新指定的其他用户或项目。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runAuthorizationActionAsync($request)
+    {
+        return $this->runAuthorizationActionAsyncWithHttpInfo($request);
+    }
+    
+    public function runAuthorizationActionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/authorization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\RunAuthorizationActionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\RunAuthorizationActionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 重启/扩容/缩容队列
      *
      * 该功能用于重新启动队列、扩容队列、缩容队列。
@@ -3681,6 +3746,74 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定地址连通性测试详情
+     *
+     * 该API用于在连通性测试提交后查询连通性结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConnectivityTaskAsync($request)
+    {
+        return $this->showConnectivityTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showConnectivityTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/queues/{queue_name}/connection-test/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowConnectivityTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowConnectivityTaskRequest',
             $asyncRequest = true);
     }
 
@@ -3886,12 +4019,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function showEnhancedPrivilegeAsync($request)
+    public function showEnhancedConnectionPrivilegeAsync($request)
     {
-        return $this->showEnhancedPrivilegeAsyncWithHttpInfo($request);
+        return $this->showEnhancedConnectionPrivilegeAsyncWithHttpInfo($request);
     }
     
-    public function showEnhancedPrivilegeAsyncWithHttpInfo($request){
+    public function showEnhancedConnectionPrivilegeAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/privileges';
         $formParams = [];
@@ -3935,142 +4068,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedPrivilegeResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedConnectionPrivilegeResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedPrivilegeRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询指定地址连通性测试详情
-     *
-     * 该API用于在连通性测试提交后查询连通性结果。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showNodeConnectivityAsync($request)
-    {
-        return $this->showNodeConnectivityAsyncWithHttpInfo($request);
-    }
-    
-    public function showNodeConnectivityAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/queues/{queue_name}/connection-test/{task_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['queueName'] !== null) {
-            $pathParams['queue_name'] = $localVarParams['queueName'];
-        }
-        if ($localVarParams['taskId'] !== null) {
-            $pathParams['task_id'] = $localVarParams['taskId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowNodeConnectivityResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowNodeConnectivityRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查看赋权对象的用者权限信息
-     *
-     * 获取对象赋权用户的权限信息
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showObjectUserAsync($request)
-    {
-        return $this->showObjectUserAsyncWithHttpInfo($request);
-    }
-    
-    public function showObjectUserAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/authorization/privileges';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['object'] !== null) {
-            $queryParams['object'] = $localVarParams['object'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowObjectUserResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowObjectUserRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedConnectionPrivilegeRequest',
             $asyncRequest = true);
     }
 
@@ -4084,12 +4084,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function showQueueDetailAsync($request)
+    public function showQueueAsync($request)
     {
-        return $this->showQueueDetailAsyncWithHttpInfo($request);
+        return $this->showQueueAsyncWithHttpInfo($request);
     }
     
-    public function showQueueDetailAsyncWithHttpInfo($request){
+    public function showQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/queues/{queue_name}';
         $formParams = [];
@@ -4133,9 +4133,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueDetailResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueDetailRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueRequest',
             $asyncRequest = true);
     }
 
@@ -4350,12 +4350,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateElasticResourcePoolQueueInfoAsync($request)
+    public function updateElasticResourcePoolQueueAsync($request)
     {
-        return $this->updateElasticResourcePoolQueueInfoAsyncWithHttpInfo($request);
+        return $this->updateElasticResourcePoolQueueAsyncWithHttpInfo($request);
     }
     
-    public function updateElasticResourcePoolQueueInfoAsyncWithHttpInfo($request){
+    public function updateElasticResourcePoolQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v3/{project_id}/elastic-resource-pools/{elastic_resource_pool_name}/queues/{queue_name}';
         $formParams = [];
@@ -4405,9 +4405,77 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueInfoResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueInfoRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改增强型跨源主机信息
+     *
+     * 该API用于在跨源中修改数据源主机信息，仅支持全量覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateEnhancedConnectionAsync($request)
+    {
+        return $this->updateEnhancedConnectionAsyncWithHttpInfo($request);
+    }
+    
+    public function updateEnhancedConnectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateEnhancedConnectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateEnhancedConnectionRequest',
             $asyncRequest = true);
     }
 
@@ -4421,12 +4489,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateGlobalValueAsync($request)
+    public function updateGlobalVariableAsync($request)
     {
-        return $this->updateGlobalValueAsyncWithHttpInfo($request);
+        return $this->updateGlobalVariableAsyncWithHttpInfo($request);
     }
     
-    public function updateGlobalValueAsyncWithHttpInfo($request){
+    public function updateGlobalVariableAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/variables/{var_name}';
         $formParams = [];
@@ -4473,9 +4541,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalValueResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalValueRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableRequest',
             $asyncRequest = true);
     }
 
@@ -4541,74 +4609,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改增强型跨源主机信息
-     *
-     * 该API用于在跨源中修改数据源主机信息，仅支持全量覆盖。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateHostMassageAsync($request)
-    {
-        return $this->updateHostMassageAsyncWithHttpInfo($request);
-    }
-    
-    public function updateHostMassageAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['connectionId'] !== null) {
-            $pathParams['connection_id'] = $localVarParams['connectionId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateHostMassageResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateHostMassageRequest',
             $asyncRequest = true);
     }
 
@@ -5230,12 +5230,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createFlinkJarAsync($request)
+    public function createFlinkJarJobAsync($request)
     {
-        return $this->createFlinkJarAsyncWithHttpInfo($request);
+        return $this->createFlinkJarJobAsyncWithHttpInfo($request);
     }
     
-    public function createFlinkJarAsyncWithHttpInfo($request){
+    public function createFlinkJarJobAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/flink-jobs';
         $formParams = [];
@@ -5279,9 +5279,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarJobResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarJobRequest',
             $asyncRequest = true);
     }
 
@@ -5351,6 +5351,74 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 生成flink SQL作业的静态流图
+     *
+     * 生成flink SQL作业的静态流图
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFlinkSqlJobGraphAsync($request)
+    {
+        return $this->createFlinkSqlJobGraphAsyncWithHttpInfo($request);
+    }
+    
+    public function createFlinkSqlJobGraphAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/streaming/jobs/{job_id}/gen-graph';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobGraphResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobGraphRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 新建Flink作业模板
      *
      * 在DLI服务中新建一个Flink作业模板，最多100个。
@@ -5360,12 +5428,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createFlinkTemplateAsync($request)
+    public function createFlinkSqlJobTemplateAsync($request)
     {
-        return $this->createFlinkTemplateAsyncWithHttpInfo($request);
+        return $this->createFlinkSqlJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function createFlinkTemplateAsyncWithHttpInfo($request){
+    public function createFlinkSqlJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/job-templates';
         $formParams = [];
@@ -5409,9 +5477,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkTemplateResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkTemplateRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -5546,74 +5614,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 生成flink SQL作业的静态流图
-     *
-     * 生成flink SQL作业的静态流图
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createStreamGraphAsync($request)
-    {
-        return $this->createStreamGraphAsyncWithHttpInfo($request);
-    }
-    
-    public function createStreamGraphAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/streaming/jobs/{job_id}/gen-graph';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['jobId'] !== null) {
-            $pathParams['job_id'] = $localVarParams['jobId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateStreamGraphResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateStreamGraphRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 删除作业
      *
      * 删除任何状态的作业。
@@ -5688,12 +5688,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function deleteFlinkTemplateAsync($request)
+    public function deleteFlinkSqlJobTemplateAsync($request)
     {
-        return $this->deleteFlinkTemplateAsyncWithHttpInfo($request);
+        return $this->deleteFlinkSqlJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function deleteFlinkTemplateAsyncWithHttpInfo($request){
+    public function deleteFlinkSqlJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/job-templates/{template_id}';
         $formParams = [];
@@ -5737,9 +5737,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteFlinkTemplateResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteFlinkSqlJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteFlinkTemplateRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteFlinkSqlJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -5753,12 +5753,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function exportFlinkJobAsync($request)
+    public function exportFlinkJobsAsync($request)
     {
-        return $this->exportFlinkJobAsyncWithHttpInfo($request);
+        return $this->exportFlinkJobsAsyncWithHttpInfo($request);
     }
     
-    public function exportFlinkJobAsyncWithHttpInfo($request){
+    public function exportFlinkJobsAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/jobs/export';
         $formParams = [];
@@ -5802,9 +5802,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportFlinkJobResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportFlinkJobsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportFlinkJobRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportFlinkJobsRequest',
             $asyncRequest = true);
     }
 
@@ -5818,12 +5818,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function importFlinkJobAsync($request)
+    public function importFlinkJobsAsync($request)
     {
-        return $this->importFlinkJobAsyncWithHttpInfo($request);
+        return $this->importFlinkJobsAsyncWithHttpInfo($request);
     }
     
-    public function importFlinkJobAsyncWithHttpInfo($request){
+    public function importFlinkJobsAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/jobs/import';
         $formParams = [];
@@ -5867,9 +5867,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobsRequest',
             $asyncRequest = true);
     }
 
@@ -5981,12 +5981,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listFlinkTemplatesAsync($request)
+    public function listFlinkSqlJobTemplatesAsync($request)
     {
-        return $this->listFlinkTemplatesAsyncWithHttpInfo($request);
+        return $this->listFlinkSqlJobTemplatesAsyncWithHttpInfo($request);
     }
     
-    public function listFlinkTemplatesAsyncWithHttpInfo($request){
+    public function listFlinkSqlJobTemplatesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/job-templates';
         $formParams = [];
@@ -6042,9 +6042,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListFlinkTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListFlinkSqlJobTemplatesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListFlinkTemplatesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListFlinkSqlJobTemplatesRequest',
             $asyncRequest = true);
     }
 
@@ -6179,71 +6179,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 查询Flink作业执行计划
-     *
-     * 查询Flink作业执行计划。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showFlinkExecuteGraphAsync($request)
-    {
-        return $this->showFlinkExecuteGraphAsyncWithHttpInfo($request);
-    }
-    
-    public function showFlinkExecuteGraphAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/streaming/jobs/{job_id}/execute-graph';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['jobId'] !== null) {
-            $pathParams['job_id'] = $localVarParams['jobId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkExecuteGraphResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkExecuteGraphRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询Flink作业详情
      *
      * 查看一个Flink作业的详情信息。
@@ -6305,6 +6240,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkJobResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询Flink作业执行计划
+     *
+     * 查询Flink作业执行计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlinkJobExecutionGraphAsync($request)
+    {
+        return $this->showFlinkJobExecutionGraphAsyncWithHttpInfo($request);
+    }
+    
+    public function showFlinkJobExecutionGraphAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/streaming/jobs/{job_id}/execute-graph';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkJobExecutionGraphResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkJobExecutionGraphRequest',
             $asyncRequest = true);
     }
 
@@ -6448,12 +6448,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateFlinkJarAsync($request)
+    public function updateFlinkJarJobAsync($request)
     {
-        return $this->updateFlinkJarAsyncWithHttpInfo($request);
+        return $this->updateFlinkJarJobAsyncWithHttpInfo($request);
     }
     
-    public function updateFlinkJarAsyncWithHttpInfo($request){
+    public function updateFlinkJarJobAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/flink-jobs/{job_id}';
         $formParams = [];
@@ -6500,9 +6500,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarJobResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarJobRequest',
             $asyncRequest = true);
     }
 
@@ -6516,12 +6516,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateFlinkSqlAsync($request)
+    public function updateFlinkSqlJobAsync($request)
     {
-        return $this->updateFlinkSqlAsyncWithHttpInfo($request);
+        return $this->updateFlinkSqlJobAsyncWithHttpInfo($request);
     }
     
-    public function updateFlinkSqlAsyncWithHttpInfo($request){
+    public function updateFlinkSqlJobAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/sql-jobs/{job_id}';
         $formParams = [];
@@ -6568,9 +6568,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobRequest',
             $asyncRequest = true);
     }
 
@@ -6584,12 +6584,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function updateFlinkTemplateAsync($request)
+    public function updateFlinkSqlJobTemplateAsync($request)
     {
-        return $this->updateFlinkTemplateAsyncWithHttpInfo($request);
+        return $this->updateFlinkSqlJobTemplateAsyncWithHttpInfo($request);
     }
     
-    public function updateFlinkTemplateAsyncWithHttpInfo($request){
+    public function updateFlinkSqlJobTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/streaming/job-templates/{template_id}';
         $formParams = [];
@@ -6636,9 +6636,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkTemplateResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobTemplateResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkTemplateRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobTemplateRequest',
             $asyncRequest = true);
     }
 
@@ -6652,12 +6652,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function cancelBatchJobAsync($request)
+    public function cancelSparkJobAsync($request)
     {
-        return $this->cancelBatchJobAsyncWithHttpInfo($request);
+        return $this->cancelSparkJobAsyncWithHttpInfo($request);
     }
     
-    public function cancelBatchJobAsyncWithHttpInfo($request){
+    public function cancelSparkJobAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/batches/{batch_id}';
         $formParams = [];
@@ -6701,9 +6701,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CancelBatchJobResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CancelSparkJobResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CancelBatchJobRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CancelSparkJobRequest',
             $asyncRequest = true);
     }
 
@@ -6717,12 +6717,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createBatchJobAsync($request)
+    public function createSparkJobAsync($request)
     {
-        return $this->createBatchJobAsyncWithHttpInfo($request);
+        return $this->createSparkJobAsyncWithHttpInfo($request);
     }
     
-    public function createBatchJobAsyncWithHttpInfo($request){
+    public function createSparkJobAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/batches';
         $formParams = [];
@@ -6769,9 +6769,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateBatchJobResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateBatchJobRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobRequest',
             $asyncRequest = true);
     }
 
@@ -6785,12 +6785,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listBatchesAsync($request)
+    public function listSparkJobsAsync($request)
     {
-        return $this->listBatchesAsyncWithHttpInfo($request);
+        return $this->listSparkJobsAsyncWithHttpInfo($request);
     }
     
-    public function listBatchesAsyncWithHttpInfo($request){
+    public function listSparkJobsAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/batches';
         $formParams = [];
@@ -6861,74 +6861,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListBatchesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListBatchesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询批处理作业详情
-     *
-     * 该API用于根据批处理作业的id查询作业详情。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBatchInfoAsync($request)
-    {
-        return $this->showBatchInfoAsyncWithHttpInfo($request);
-    }
-    
-    public function showBatchInfoAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/batches/{batch_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['batchId'] !== null) {
-            $pathParams['batch_id'] = $localVarParams['batchId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchInfoResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchInfoRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobsRequest',
             $asyncRequest = true);
     }
 
@@ -7010,6 +6945,71 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 查询批处理作业详情
+     *
+     * 该API用于根据批处理作业的id查询作业详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSparkJobAsync($request)
+    {
+        return $this->showSparkJobAsyncWithHttpInfo($request);
+    }
+    
+    public function showSparkJobAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/batches/{batch_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['batchId'] !== null) {
+            $pathParams['batch_id'] = $localVarParams['batchId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询批处理作业状态
      *
      * 该API用于查询批处理作业的状态。
@@ -7019,12 +7019,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function showBatchStateAsync($request)
+    public function showSparkJobStatusAsync($request)
     {
-        return $this->showBatchStateAsyncWithHttpInfo($request);
+        return $this->showSparkJobStatusAsyncWithHttpInfo($request);
     }
     
-    public function showBatchStateAsyncWithHttpInfo($request){
+    public function showSparkJobStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/batches/{batch_id}/state';
         $formParams = [];
@@ -7068,9 +7068,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchStateResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchStateRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobStatusRequest',
             $asyncRequest = true);
     }
 
@@ -8019,12 +8019,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function previewJobResultAsync($request)
+    public function previewSqlJobResultAsync($request)
     {
-        return $this->previewJobResultAsyncWithHttpInfo($request);
+        return $this->previewSqlJobResultAsyncWithHttpInfo($request);
     }
     
-    public function previewJobResultAsyncWithHttpInfo($request){
+    public function previewSqlJobResultAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/jobs/{job_id}/preview';
         $formParams = [];
@@ -8071,9 +8071,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewJobResultResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewJobResultRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultRequest',
             $asyncRequest = true);
     }
 
@@ -8142,71 +8142,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowDescribeTableResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowDescribeTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询作业执行进度信息
-     *
-     * 该API用于获取作业执行进度信息，如果作业正在执行，可以获取到子作业的信息，如果作业刚开始或者已经结束，不可以获取到子作业信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showJobProgressAsync($request)
-    {
-        return $this->showJobProgressAsyncWithHttpInfo($request);
-    }
-    
-    public function showJobProgressAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/jobs/{job_id}/progress';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['jobId'] !== null) {
-            $pathParams['job_id'] = $localVarParams['jobId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobProgressResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobProgressRequest',
             $asyncRequest = true);
     }
 
@@ -8345,6 +8280,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobDetailResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询作业执行进度信息
+     *
+     * 该API用于获取作业执行进度信息，如果作业正在执行，可以获取到子作业的信息，如果作业刚开始或者已经结束，不可以获取到子作业信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSqlJobProgressAsync($request)
+    {
+        return $this->showSqlJobProgressAsyncWithHttpInfo($request);
+    }
+    
+    public function showSqlJobProgressAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/jobs/{job_id}/progress';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobProgressResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobProgressRequest',
             $asyncRequest = true);
     }
 

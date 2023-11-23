@@ -22,7 +22,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
-    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
+    * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
     * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
@@ -37,6 +38,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'packType' => 'string',
             'codec' => 'string',
             'duration' => 'int',
+            'durationMs' => 'int',
             'videoSize' => 'int',
             'width' => 'int',
             'hight' => 'int',
@@ -50,7 +52,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
-    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
+    * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
     * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
@@ -65,6 +68,7 @@ class MetaData implements ModelInterface, ArrayAccess
         'packType' => null,
         'codec' => null,
         'duration' => 'int64',
+        'durationMs' => 'int64',
         'videoSize' => 'int64',
         'width' => 'int64',
         'hight' => 'int64',
@@ -99,7 +103,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
-    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
+    * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
     * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
@@ -114,6 +119,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'packType' => 'pack_type',
             'codec' => 'codec',
             'duration' => 'duration',
+            'durationMs' => 'duration_ms',
             'videoSize' => 'video_size',
             'width' => 'width',
             'hight' => 'hight',
@@ -127,7 +133,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
-    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
+    * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
     * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
@@ -142,6 +149,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'packType' => 'setPackType',
             'codec' => 'setCodec',
             'duration' => 'setDuration',
+            'durationMs' => 'setDurationMs',
             'videoSize' => 'setVideoSize',
             'width' => 'setWidth',
             'hight' => 'setHight',
@@ -155,7 +163,8 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
-    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
+    * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
     * width  视频宽度（单位：像素）。 - 编码为H.264的取值范围：[32,3840]之间2的倍数。 - 编码为H.265的取值范围：[320,3840]之间4的倍数。
     * hight  视频高度（单位：像素）。 - 编码为H.264的取值范围：[32,2160]之间2的倍数 。 - 编码为H.265的取值范围：[240,2160]之间4的倍数。
@@ -170,6 +179,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'packType' => 'getPackType',
             'codec' => 'getCodec',
             'duration' => 'getDuration',
+            'durationMs' => 'getDurationMs',
             'videoSize' => 'getVideoSize',
             'width' => 'getWidth',
             'hight' => 'getHight',
@@ -356,6 +366,7 @@ class MetaData implements ModelInterface, ArrayAccess
         $this->container['packType'] = isset($data['packType']) ? $data['packType'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['videoSize'] = isset($data['videoSize']) ? $data['videoSize'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['hight'] = isset($data['hight']) ? $data['hight'] : null;
@@ -453,7 +464,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    *  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     *
     * @return int|null
     */
@@ -465,13 +476,37 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
+    * @param int|null $duration 视频时长。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     *
     * @return $this
     */
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets durationMs
+    *  视频时长，单位毫秒。
+    *
+    * @return int|null
+    */
+    public function getDurationMs()
+    {
+        return $this->container['durationMs'];
+    }
+
+    /**
+    * Sets durationMs
+    *
+    * @param int|null $durationMs 视频时长，单位毫秒。
+    *
+    * @return $this
+    */
+    public function setDurationMs($durationMs)
+    {
+        $this->container['durationMs'] = $durationMs;
         return $this;
     }
 

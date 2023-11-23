@@ -32,6 +32,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     * destinationPortRange  使用规则目的端口范围过滤
     * action  使用规则action过滤
     * priority  使用规则优先级过滤
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
             'sourcePortRange' => 'string',
             'destinationPortRange' => 'string',
             'action' => 'string',
-            'priority' => 'string'
+            'priority' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -64,6 +68,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     * destinationPortRange  使用规则目的端口范围过滤
     * action  使用规则action过滤
     * priority  使用规则优先级过滤
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
         'sourcePortRange' => null,
         'destinationPortRange' => null,
         'action' => null,
-        'priority' => null
+        'priority' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     * destinationPortRange  使用规则目的端口范围过滤
     * action  使用规则action过滤
     * priority  使用规则优先级过滤
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
             'sourcePortRange' => 'source_port_range',
             'destinationPortRange' => 'destination_port_range',
             'action' => 'action',
-            'priority' => 'priority'
+            'priority' => 'priority',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -149,6 +161,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     * destinationPortRange  使用规则目的端口范围过滤
     * action  使用规则action过滤
     * priority  使用规则优先级过滤
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
             'sourcePortRange' => 'setSourcePortRange',
             'destinationPortRange' => 'setDestinationPortRange',
             'action' => 'setAction',
-            'priority' => 'setPriority'
+            'priority' => 'setPriority',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -181,6 +197,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     * destinationPortRange  使用规则目的端口范围过滤
     * action  使用规则action过滤
     * priority  使用规则优先级过滤
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
             'sourcePortRange' => 'getSourcePortRange',
             'destinationPortRange' => 'getDestinationPortRange',
             'action' => 'getAction',
-            'priority' => 'getPriority'
+            'priority' => 'getPriority',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -269,6 +289,8 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
         $this->container['destinationPortRange'] = isset($data['destinationPortRange']) ? $data['destinationPortRange'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -581,6 +603,54 @@ class ListTrafficMirrorFilterRulesRequest implements ModelInterface, ArrayAccess
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  功能说明：每页返回的个数 取值范围：0-2000
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 功能说明：每页返回的个数 取值范围：0-2000
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

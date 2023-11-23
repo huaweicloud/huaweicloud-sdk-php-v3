@@ -21,7 +21,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * createdAt  IP地址组的创建时间。
-    * description  IP地址组的更新时间。
+    * description  IP地址组的描述信息。
     * id  IP地址组的ID。
     * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  与IP地址组关联的监听器的ID列表。
@@ -45,7 +45,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * createdAt  IP地址组的创建时间。
-    * description  IP地址组的更新时间。
+    * description  IP地址组的描述信息。
     * id  IP地址组的ID。
     * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  与IP地址组关联的监听器的ID列表。
@@ -90,7 +90,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * createdAt  IP地址组的创建时间。
-    * description  IP地址组的更新时间。
+    * description  IP地址组的描述信息。
     * id  IP地址组的ID。
     * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  与IP地址组关联的监听器的ID列表。
@@ -114,7 +114,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * createdAt  IP地址组的创建时间。
-    * description  IP地址组的更新时间。
+    * description  IP地址组的描述信息。
     * id  IP地址组的ID。
     * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  与IP地址组关联的监听器的ID列表。
@@ -138,7 +138,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * createdAt  IP地址组的创建时间。
-    * description  IP地址组的更新时间。
+    * description  IP地址组的描述信息。
     * id  IP地址组的ID。
     * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
     * listeners  与IP地址组关联的监听器的ID列表。
@@ -299,7 +299,7 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  IP地址组的更新时间。
+    *  IP地址组的描述信息。
     *
     * @return string
     */
@@ -311,7 +311,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description IP地址组的更新时间。
+    * @param string $description IP地址组的描述信息。
     *
     * @return $this
     */
