@@ -50,9 +50,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'dstRegionName' => 'string',
             'logId' => 'string',
             'srcIp' => 'string',
-            'srcPort' => 'string',
+            'srcPort' => 'int',
             'dstIp' => 'string',
-            'dstPort' => 'string',
+            'dstPort' => 'int',
             'protocol' => 'string',
             'app' => 'string',
             'dstHost' => 'string'
@@ -83,16 +83,16 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         'action' => null,
         'ruleName' => null,
         'ruleId' => null,
-        'hitTime' => null,
+        'hitTime' => 'int64',
         'srcRegionId' => null,
         'srcRegionName' => null,
         'dstRegionId' => null,
         'dstRegionName' => null,
         'logId' => null,
         'srcIp' => null,
-        'srcPort' => null,
+        'srcPort' => 'int32',
         'dstIp' => null,
-        'dstPort' => null,
+        'dstPort' => 'int32',
         'protocol' => null,
         'app' => null,
         'dstHost' => null
@@ -581,7 +581,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * Gets srcPort
     *  源端口
     *
-    * @return string|null
+    * @return int|null
     */
     public function getSrcPort()
     {
@@ -591,7 +591,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets srcPort
     *
-    * @param string|null $srcPort 源端口
+    * @param int|null $srcPort 源端口
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * Gets dstPort
     *  目的端口
     *
-    * @return string|null
+    * @return int|null
     */
     public function getDstPort()
     {
@@ -639,7 +639,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets dstPort
     *
-    * @param string|null $dstPort 目的端口
+    * @param int|null $dstPort 目的端口
     *
     * @return $this
     */

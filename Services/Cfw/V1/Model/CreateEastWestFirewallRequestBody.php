@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErInstance implements ModelInterface, ArrayAccess
+class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,46 +16,34 @@ class ErInstance implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErInstance';
+    protected static $openAPIModelName = 'CreateEastWestFirewallRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ER实例id
-    * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
+    * erId  出方向关联ER实例id
+    * inspectionCidr  inspection cidr
+    * mode  东西向防火墙模式，填写er
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'name' => 'string',
-            'state' => 'string',
-            'enterpriseProjectId' => 'string',
-            'projectId' => 'string',
-            'enableIpv6' => 'string'
+            'erId' => 'string',
+            'inspectionCidr' => 'string',
+            'mode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ER实例id
-    * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
+    * erId  出方向关联ER实例id
+    * inspectionCidr  inspection cidr
+    * mode  东西向防火墙模式，填写er
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'state' => null,
-        'enterpriseProjectId' => null,
-        'projectId' => null,
-        'enableIpv6' => null
+        'erId' => null,
+        'inspectionCidr' => null,
+        'mode' => null
     ];
 
     /**
@@ -81,62 +69,44 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ER实例id
-    * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
+    * erId  出方向关联ER实例id
+    * inspectionCidr  inspection cidr
+    * mode  东西向防火墙模式，填写er
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'name' => 'name',
-            'state' => 'state',
-            'enterpriseProjectId' => 'enterprise_project_id',
-            'projectId' => 'project_id',
-            'enableIpv6' => 'enable_ipv6'
+            'erId' => 'er_id',
+            'inspectionCidr' => 'inspection_cidr',
+            'mode' => 'mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ER实例id
-    * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
+    * erId  出方向关联ER实例id
+    * inspectionCidr  inspection cidr
+    * mode  东西向防火墙模式，填写er
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'name' => 'setName',
-            'state' => 'setState',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'projectId' => 'setProjectId',
-            'enableIpv6' => 'setEnableIpv6'
+            'erId' => 'setErId',
+            'inspectionCidr' => 'setInspectionCidr',
+            'mode' => 'setMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ER实例id
-    * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
+    * erId  出方向关联ER实例id
+    * inspectionCidr  inspection cidr
+    * mode  东西向防火墙模式，填写er
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'name' => 'getName',
-            'state' => 'getState',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'projectId' => 'getProjectId',
-            'enableIpv6' => 'getEnableIpv6'
+            'erId' => 'getErId',
+            'inspectionCidr' => 'getInspectionCidr',
+            'mode' => 'getMode'
     ];
 
     /**
@@ -197,12 +167,9 @@ class ErInstance implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['enableIpv6'] = isset($data['enableIpv6']) ? $data['enableIpv6'] : null;
+        $this->container['erId'] = isset($data['erId']) ? $data['erId'] : null;
+        $this->container['inspectionCidr'] = isset($data['inspectionCidr']) ? $data['inspectionCidr'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
     }
 
     /**
@@ -213,6 +180,15 @@ class ErInstance implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['erId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['erId'])) {
+                $invalidProperties[] = "invalid value for 'erId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
+            }
+        if ($this->container['inspectionCidr'] === null) {
+            $invalidProperties[] = "'inspectionCidr' can't be null";
+        }
+        if ($this->container['mode'] === null) {
+            $invalidProperties[] = "'mode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -228,146 +204,74 @@ class ErInstance implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  ER实例id
+    * Gets erId
+    *  出方向关联ER实例id
     *
     * @return string|null
     */
-    public function getId()
+    public function getErId()
     {
-        return $this->container['id'];
+        return $this->container['erId'];
     }
 
     /**
-    * Sets id
+    * Sets erId
     *
-    * @param string|null $id ER实例id
+    * @param string|null $erId 出方向关联ER实例id
     *
     * @return $this
     */
-    public function setId($id)
+    public function setErId($erId)
     {
-        $this->container['id'] = $id;
+        $this->container['erId'] = $erId;
         return $this;
     }
 
     /**
-    * Gets name
-    *  ER名称
+    * Gets inspectionCidr
+    *  inspection cidr
     *
-    * @return string|null
+    * @return string
     */
-    public function getName()
+    public function getInspectionCidr()
     {
-        return $this->container['name'];
+        return $this->container['inspectionCidr'];
     }
 
     /**
-    * Sets name
+    * Sets inspectionCidr
     *
-    * @param string|null $name ER名称
+    * @param string $inspectionCidr inspection cidr
     *
     * @return $this
     */
-    public function setName($name)
+    public function setInspectionCidr($inspectionCidr)
     {
-        $this->container['name'] = $name;
+        $this->container['inspectionCidr'] = $inspectionCidr;
         return $this;
     }
 
     /**
-    * Gets state
-    *  ER状态
+    * Gets mode
+    *  东西向防火墙模式，填写er
     *
-    * @return string|null
+    * @return string
     */
-    public function getState()
+    public function getMode()
     {
-        return $this->container['state'];
+        return $this->container['mode'];
     }
 
     /**
-    * Sets state
+    * Sets mode
     *
-    * @param string|null $state ER状态
+    * @param string $mode 东西向防火墙模式，填写er
     *
     * @return $this
     */
-    public function setState($state)
+    public function setMode($mode)
     {
-        $this->container['state'] = $state;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectId
-    *  企业租户id
-    *
-    * @return string|null
-    */
-    public function getEnterpriseProjectId()
-    {
-        return $this->container['enterpriseProjectId'];
-    }
-
-    /**
-    * Sets enterpriseProjectId
-    *
-    * @param string|null $enterpriseProjectId 企业租户id
-    *
-    * @return $this
-    */
-    public function setEnterpriseProjectId($enterpriseProjectId)
-    {
-        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  租户id
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 租户id
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets enableIpv6
-    *  是否开启ipv6
-    *
-    * @return string|null
-    */
-    public function getEnableIpv6()
-    {
-        return $this->container['enableIpv6'];
-    }
-
-    /**
-    * Sets enableIpv6
-    *
-    * @param string|null $enableIpv6 是否开启ipv6
-    *
-    * @return $this
-    */
-    public function setEnableIpv6($enableIpv6)
-    {
-        $this->container['enableIpv6'] = $enableIpv6;
+        $this->container['mode'] = $mode;
         return $this;
     }
 

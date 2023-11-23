@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
+class ListLogConfigRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,42 +16,34 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ChangeIpsSwitchStatusRequest';
+    protected static $openAPIModelName = 'ListLogConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  project_id
+    * projectId  租户项目id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * xLanguage  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'enterpriseProjectId' => 'string',
             'fwInstanceId' => 'string',
-            'xLanguage' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchDTO'
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  project_id
+    * projectId  租户项目id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * xLanguage  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
-        'enterpriseProjectId' => null,
         'fwInstanceId' => null,
-        'xLanguage' => null,
-        'body' => null
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -77,56 +69,44 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  project_id
+    * projectId  租户项目id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * xLanguage  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
-            'enterpriseProjectId' => 'enterprise_project_id',
             'fwInstanceId' => 'fw_instance_id',
-            'xLanguage' => 'X-Language',
-            'body' => 'body'
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  project_id
+    * projectId  租户项目id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * xLanguage  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'fwInstanceId' => 'setFwInstanceId',
-            'xLanguage' => 'setXLanguage',
-            'body' => 'setBody'
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  project_id
+    * projectId  租户项目id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * xLanguage  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'fwInstanceId' => 'getFwInstanceId',
-            'xLanguage' => 'getXLanguage',
-            'body' => 'getBody'
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -188,10 +168,8 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -204,6 +182,9 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
+        }
+        if ($this->container['fwInstanceId'] === null) {
+            $invalidProperties[] = "'fwInstanceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,7 +202,7 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  project_id
+    *  租户项目id
     *
     * @return string
     */
@@ -233,13 +214,37 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId project_id
+    * @param string $projectId 租户项目id
     *
     * @return $this
     */
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
         return $this;
     }
 
@@ -264,78 +269,6 @@ class ChangeIpsSwitchStatusRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    *
-    * @return string|null
-    */
-    public function getFwInstanceId()
-    {
-        return $this->container['fwInstanceId'];
-    }
-
-    /**
-    * Sets fwInstanceId
-    *
-    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    *
-    * @return $this
-    */
-    public function setFwInstanceId($fwInstanceId)
-    {
-        $this->container['fwInstanceId'] = $fwInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets xLanguage
-    *  语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    *
-    * @return string|null
-    */
-    public function getXLanguage()
-    {
-        return $this->container['xLanguage'];
-    }
-
-    /**
-    * Sets xLanguage
-    *
-    * @param string|null $xLanguage 语言头部，默认为zh-cn，如需使用英文，请选择en-us
-    *
-    * @return $this
-    */
-    public function setXLanguage($xLanguage)
-    {
-        $this->container['xLanguage'] = $xLanguage;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchDTO|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchDTO|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
         return $this;
     }
 

@@ -31,7 +31,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
-    * direction  方向：0表示外到内，1表示内到外
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * source  source
     * destination  destination
     * service  service
@@ -71,7 +71,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
-    * direction  方向：0表示外到内，1表示内到外
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * source  source
     * destination  destination
     * service  service
@@ -132,7 +132,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
-    * direction  方向：0表示外到内，1表示内到外
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * source  source
     * destination  destination
     * service  service
@@ -172,7 +172,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
-    * direction  方向：0表示外到内，1表示内到外
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * source  source
     * destination  destination
     * service  service
@@ -212,7 +212,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
-    * direction  方向：0表示外到内，1表示内到外
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * source  source
     * destination  destination
     * service  service
@@ -724,7 +724,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  方向：0表示外到内，1表示内到外
+    *  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     *
     * @return int|null
     */
@@ -736,7 +736,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param int|null $direction 方向：0表示外到内，1表示内到外
+    * @param int|null $direction 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     *
     * @return $this
     */

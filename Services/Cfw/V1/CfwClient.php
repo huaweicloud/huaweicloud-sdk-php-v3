@@ -241,6 +241,7 @@ class CfwClient extends Client
     /**
      * 添加域名组
      *
+     * 添加域名组
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -380,6 +381,77 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\AddDomainsResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\AddDomainsRequest');
+    }
+
+    /**
+     * 创建日志配置
+     *
+     * 创建日志配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addLogConfig($request)
+    {
+        return $this->addLogConfigWithHttpInfo($request);
+    }
+
+    public function addLogConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\AddLogConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\AddLogConfigRequest');
     }
 
     /**
@@ -527,6 +599,7 @@ class CfwClient extends Client
     /**
      * 批量删除地址组成员
      *
+     * 批量删除地址组成员
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -597,6 +670,7 @@ class CfwClient extends Client
     /**
      * 批量删除服务组成员信息
      *
+     * 批量删除服务组成员信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -733,6 +807,77 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ChangeEastWestFirewallStatusResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ChangeEastWestFirewallStatusRequest');
+    }
+
+    /**
+     * 创建东西向防火墙
+     *
+     * 创建东西向防火墙
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createEastWestFirewall($request)
+    {
+        return $this->createEastWestFirewallWithHttpInfo($request);
+    }
+
+    public function createEastWestFirewallWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/firewall/east-west';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\CreateEastWestFirewallResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\CreateEastWestFirewallRequest');
     }
 
     /**
@@ -951,6 +1096,7 @@ class CfwClient extends Client
     /**
      * 删除域名组
      *
+     * 删除域名组
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2463,6 +2609,74 @@ class CfwClient extends Client
     }
 
     /**
+     * 获取日志配置
+     *
+     * 获取日志配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogConfig($request)
+    {
+        return $this->listLogConfigWithHttpInfo($request);
+    }
+
+    public function listLogConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\ListLogConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\ListLogConfigRequest');
+    }
+
+    /**
      * 查询防护VPC数
      *
      * 查询防护vpc信息
@@ -2986,6 +3200,7 @@ class CfwClient extends Client
     /**
      * 更新域名组
      *
+     * 更新域名组
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3054,6 +3269,77 @@ class CfwClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateDomainSetResponse',
             $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateDomainSetRequest');
+    }
+
+    /**
+     * 更新日志配置
+     *
+     * 更新日志配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogConfig($request)
+    {
+        return $this->updateLogConfigWithHttpInfo($request);
+    }
+
+    public function updateLogConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cfw/logs/configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateLogConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cfw\V1\Model\UpdateLogConfigRequest');
     }
 
     /**
@@ -3275,6 +3561,7 @@ class CfwClient extends Client
     /**
      * 批量更新规则动作
      *
+     * 批量更新规则动作
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3668,6 +3955,7 @@ class CfwClient extends Client
     /**
      * 查询规则标签
      *
+     * 查询规则标签
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3889,7 +4177,7 @@ class CfwClient extends Client
     /**
      * 弹性IP开启关闭
      *
-     * 开启关闭EIP,客户购买EIP后首次开启EIP防护前需使用ListEips同步EIP资产，sync字段设置为1。
+     * 开启关闭EIP，客户购买EIP后首次开启EIP防护前需使用ListEips同步EIP资产，sync字段设置为1。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4236,6 +4524,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

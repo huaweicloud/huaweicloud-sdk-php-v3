@@ -36,7 +36,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -80,7 +80,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -145,7 +145,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -189,7 +189,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -233,7 +233,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -796,7 +796,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则type，0：互联网规则，1：vpc规则，2nat规则
+    *  规则type，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return int|null
     */
@@ -808,7 +808,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2nat规则
+    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return $this
     */

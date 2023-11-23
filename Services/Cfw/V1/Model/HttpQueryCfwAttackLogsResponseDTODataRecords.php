@@ -36,7 +36,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议
-    * packet  packet
+    * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
     * dstHost  目标主机
@@ -50,13 +50,13 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     protected static $openAPITypes = [
             'direction' => 'string',
             'action' => 'string',
-            'eventTime' => 'string',
+            'eventTime' => 'int',
             'attackType' => 'string',
             'attackRule' => 'string',
             'level' => 'string',
             'source' => 'string',
             'packetLength' => 'int',
-            'attackRuleId' => 'int',
+            'attackRuleId' => 'string',
             'hitTime' => 'int',
             'logId' => 'string',
             'srcIp' => 'string',
@@ -64,7 +64,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'dstIp' => 'string',
             'dstPort' => 'int',
             'protocol' => 'string',
-            'packet' => '\HuaweiCloud\SDK\Cfw\V1\Model\Packet',
+            'packet' => 'string',
             'app' => 'string',
             'packetMessages' => '\HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]',
             'dstHost' => 'string',
@@ -92,7 +92,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议
-    * packet  packet
+    * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
     * dstHost  目标主机
@@ -106,7 +106,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     protected static $openAPIFormats = [
         'direction' => null,
         'action' => null,
-        'eventTime' => null,
+        'eventTime' => 'int64',
         'attackType' => null,
         'attackRule' => null,
         'level' => null,
@@ -169,7 +169,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议
-    * packet  packet
+    * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
     * dstHost  目标主机
@@ -225,7 +225,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议
-    * packet  packet
+    * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
     * dstHost  目标主机
@@ -281,7 +281,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议
-    * packet  packet
+    * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
     * dstHost  目标主机
@@ -512,7 +512,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * Gets eventTime
     *  事件时间
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEventTime()
     {
@@ -522,7 +522,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets eventTime
     *
-    * @param string|null $eventTime 事件时间
+    * @param int|null $eventTime 事件时间
     *
     * @return $this
     */
@@ -656,7 +656,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * Gets attackRuleId
     *  攻击规则id
     *
-    * @return int|null
+    * @return string|null
     */
     public function getAttackRuleId()
     {
@@ -666,7 +666,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets attackRuleId
     *
-    * @param int|null $attackRuleId 攻击规则id
+    * @param string|null $attackRuleId 攻击规则id
     *
     * @return $this
     */
@@ -846,9 +846,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets packet
-    *  packet
+    *  攻击日志报文
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\Packet|null
+    * @return string|null
     */
     public function getPacket()
     {
@@ -858,7 +858,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets packet
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\Packet|null $packet packet
+    * @param string|null $packet 攻击日志报文
     *
     * @return $this
     */

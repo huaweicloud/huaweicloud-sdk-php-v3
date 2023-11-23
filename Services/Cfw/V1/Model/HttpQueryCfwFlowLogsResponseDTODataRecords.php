@@ -44,10 +44,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'endTime' => 'int',
             'logId' => 'string',
             'srcIp' => 'string',
-            'srcPort' => 'string',
+            'srcPort' => 'int',
             'dstIp' => 'string',
             'app' => 'string',
-            'dstPort' => 'string',
+            'dstPort' => 'int',
             'protocol' => 'string',
             'dstHost' => 'string'
     ];
@@ -74,14 +74,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         'bytes' => null,
         'direction' => null,
         'packets' => null,
-        'startTime' => null,
-        'endTime' => null,
+        'startTime' => 'int64',
+        'endTime' => 'int64',
         'logId' => null,
         'srcIp' => null,
-        'srcPort' => null,
+        'srcPort' => 'int32',
         'dstIp' => null,
         'app' => null,
-        'dstPort' => null,
+        'dstPort' => 'int32',
         'protocol' => null,
         'dstHost' => null
     ];
@@ -499,7 +499,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * Gets srcPort
     *  源端口
     *
-    * @return string|null
+    * @return int|null
     */
     public function getSrcPort()
     {
@@ -509,7 +509,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets srcPort
     *
-    * @param string|null $srcPort 源端口
+    * @param int|null $srcPort 源端口
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * Gets dstPort
     *  目的端口
     *
-    * @return string|null
+    * @return int|null
     */
     public function getDstPort()
     {
@@ -581,7 +581,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets dstPort
     *
-    * @param string|null $dstPort 目的端口
+    * @param int|null $dstPort 目的端口
     *
     * @return $this
     */

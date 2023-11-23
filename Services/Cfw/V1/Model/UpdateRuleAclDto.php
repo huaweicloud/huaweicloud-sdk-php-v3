@@ -23,7 +23,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6
     * name  规则名称
     * sequence  sequence
-    * direction  规则方向
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
@@ -35,7 +35,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6
     * name  规则名称
     * sequence  sequence
-    * direction  规则方向
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
@@ -77,7 +77,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -128,7 +128,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6
     * name  规则名称
     * sequence  sequence
-    * direction  规则方向
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
@@ -140,7 +140,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -170,7 +170,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6
     * name  规则名称
     * sequence  sequence
-    * direction  规则方向
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
@@ -182,7 +182,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -212,7 +212,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6
     * name  规则名称
     * sequence  sequence
-    * direction  规则方向
+    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
@@ -224,7 +224,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -539,7 +539,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  规则方向
+    *  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     *
     * @return int|null
     */
@@ -551,7 +551,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param int|null $direction 规则方向
+    * @param int|null $direction 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     *
     * @return $this
     */
@@ -827,7 +827,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则type，0：互联网规则，1:vpc规则，2：nat规则
+    *  规则type，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return int|null
     */
@@ -839,7 +839,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 规则type，0：互联网规则，1:vpc规则，2：nat规则
+    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     * eipCount  eip数量
     * vpcCount  vpc数量
     * bandwidth  带宽
@@ -48,7 +48,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     * eipCount  eip数量
     * vpcCount  vpc数量
     * bandwidth  带宽
@@ -97,7 +97,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     * eipCount  eip数量
     * vpcCount  vpc数量
     * bandwidth  带宽
@@ -125,7 +125,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     * eipCount  eip数量
     * vpcCount  vpc数量
     * bandwidth  带宽
@@ -153,7 +153,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * version  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     * eipCount  eip数量
     * vpcCount  vpc数量
     * bandwidth  带宽
@@ -309,7 +309,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    *  防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     *
     * @return int|null
     */
@@ -321,7 +321,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param int|null $version 防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+    * @param int|null $version 防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
     *
     * @return $this
     */
