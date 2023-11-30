@@ -20,9 +20,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appId  应用id
-    * appName  应用名称
-    * appType  应用来源
+    * appId  应用id。
+    * appName  应用名称。
+    * appType  应用来源。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appId  应用id
-    * appName  应用名称
-    * appType  应用来源
+    * appId  应用id。
+    * appName  应用名称。
+    * appType  应用来源。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appId  应用id
-    * appName  应用名称
-    * appType  应用来源
+    * appId  应用id。
+    * appName  应用名称。
+    * appType  应用来源。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appId  应用id
-    * appName  应用名称
-    * appType  应用来源
+    * appId  应用id。
+    * appName  应用名称。
+    * appType  应用来源。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appId  应用id
-    * appName  应用名称
-    * appType  应用来源
+    * appId  应用id。
+    * appName  应用名称。
+    * appType  应用来源。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  应用id
+    *  应用id。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 应用id
+    * @param string|null $appId 应用id。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  应用名称
+    *  应用名称。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 应用名称
+    * @param string|null $appName 应用名称。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  应用来源
+    *  应用来源。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param string|null $appType 应用来源
+    * @param string|null $appType 应用来源。
     *
     * @return $this
     */

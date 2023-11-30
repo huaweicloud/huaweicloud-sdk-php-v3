@@ -20,21 +20,21 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * promName  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * promVersion  普罗实例版本号
-    * cceSpec  CCE场景特殊字段
+    * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * promVersion  Prometheus实例版本号。
+    * cceSpec  CCE场景特殊字段。
     * promConfig  promConfig
-    * promCreateTimestamp  普罗实例创建时间戳
-    * promUpdateTimestamp  普罗实例更新时间戳
-    * promStatus  普罗实例状态 true/false
-    * enterpriseProjectId  普罗实例所属的企业项目
-    * projectId  普罗实例所属projectId
-    * isDeletedTag  删除标记
-    * deletedTime  删除时间
+    * promCreateTimestamp  Prometheus实例创建时间戳。
+    * promUpdateTimestamp  Prometheus实例更新时间戳。
+    * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  Prometheus实例所属的企业项目。
+    * projectId  Prometheus实例所属projectId。
+    * isDeletedTag  删除标记。
+    * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
-    * cceSpecConfig  普罗实例所属CCE特殊配置
+    * cceSpecConfig  Prometheus实例所属CCE特殊配置。
     * application  application
     *
     * @var string[]
@@ -60,21 +60,21 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * promName  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * promVersion  普罗实例版本号
-    * cceSpec  CCE场景特殊字段
+    * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * promVersion  Prometheus实例版本号。
+    * cceSpec  CCE场景特殊字段。
     * promConfig  promConfig
-    * promCreateTimestamp  普罗实例创建时间戳
-    * promUpdateTimestamp  普罗实例更新时间戳
-    * promStatus  普罗实例状态 true/false
-    * enterpriseProjectId  普罗实例所属的企业项目
-    * projectId  普罗实例所属projectId
-    * isDeletedTag  删除标记
-    * deletedTime  删除时间
+    * promCreateTimestamp  Prometheus实例创建时间戳。
+    * promUpdateTimestamp  Prometheus实例更新时间戳。
+    * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  Prometheus实例所属的企业项目。
+    * projectId  Prometheus实例所属projectId。
+    * isDeletedTag  删除标记。
+    * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
-    * cceSpecConfig  普罗实例所属CCE特殊配置
+    * cceSpecConfig  Prometheus实例所属CCE特殊配置。
     * application  application
     *
     * @var string[]
@@ -121,21 +121,21 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * promName  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * promVersion  普罗实例版本号
-    * cceSpec  CCE场景特殊字段
+    * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * promVersion  Prometheus实例版本号。
+    * cceSpec  CCE场景特殊字段。
     * promConfig  promConfig
-    * promCreateTimestamp  普罗实例创建时间戳
-    * promUpdateTimestamp  普罗实例更新时间戳
-    * promStatus  普罗实例状态 true/false
-    * enterpriseProjectId  普罗实例所属的企业项目
-    * projectId  普罗实例所属projectId
-    * isDeletedTag  删除标记
-    * deletedTime  删除时间
+    * promCreateTimestamp  Prometheus实例创建时间戳。
+    * promUpdateTimestamp  Prometheus实例更新时间戳。
+    * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  Prometheus实例所属的企业项目。
+    * projectId  Prometheus实例所属projectId。
+    * isDeletedTag  删除标记。
+    * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
-    * cceSpecConfig  普罗实例所属CCE特殊配置
+    * cceSpecConfig  Prometheus实例所属CCE特殊配置。
     * application  application
     *
     * @var string[]
@@ -161,21 +161,21 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * promName  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * promVersion  普罗实例版本号
-    * cceSpec  CCE场景特殊字段
+    * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * promVersion  Prometheus实例版本号。
+    * cceSpec  CCE场景特殊字段。
     * promConfig  promConfig
-    * promCreateTimestamp  普罗实例创建时间戳
-    * promUpdateTimestamp  普罗实例更新时间戳
-    * promStatus  普罗实例状态 true/false
-    * enterpriseProjectId  普罗实例所属的企业项目
-    * projectId  普罗实例所属projectId
-    * isDeletedTag  删除标记
-    * deletedTime  删除时间
+    * promCreateTimestamp  Prometheus实例创建时间戳。
+    * promUpdateTimestamp  Prometheus实例更新时间戳。
+    * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  Prometheus实例所属的企业项目。
+    * projectId  Prometheus实例所属projectId。
+    * isDeletedTag  删除标记。
+    * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
-    * cceSpecConfig  普罗实例所属CCE特殊配置
+    * cceSpecConfig  Prometheus实例所属CCE特殊配置。
     * application  application
     *
     * @var string[]
@@ -201,21 +201,21 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * promName  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * promVersion  普罗实例版本号
-    * cceSpec  CCE场景特殊字段
+    * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * promVersion  Prometheus实例版本号。
+    * cceSpec  CCE场景特殊字段。
     * promConfig  promConfig
-    * promCreateTimestamp  普罗实例创建时间戳
-    * promUpdateTimestamp  普罗实例更新时间戳
-    * promStatus  普罗实例状态 true/false
-    * enterpriseProjectId  普罗实例所属的企业项目
-    * projectId  普罗实例所属projectId
-    * isDeletedTag  删除标记
-    * deletedTime  删除时间
+    * promCreateTimestamp  Prometheus实例创建时间戳。
+    * promUpdateTimestamp  Prometheus实例更新时间戳。
+    * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  Prometheus实例所属的企业项目。
+    * projectId  Prometheus实例所属projectId。
+    * isDeletedTag  删除标记。
+    * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
-    * cceSpecConfig  普罗实例所属CCE特殊配置
+    * cceSpecConfig  Prometheus实例所属CCE特殊配置。
     * application  application
     *
     * @var string[]
@@ -353,18 +353,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         if ($this->container['promName'] === null) {
             $invalidProperties[] = "'promName' can't be null";
         }
-            if ((mb_strlen($this->container['promName']) > 100)) {
-                $invalidProperties[] = "invalid value for 'promName', the character length must be smaller than or equal to 100.";
-            }
-            if ((mb_strlen($this->container['promName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'promName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['promId']) && (mb_strlen($this->container['promId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['promId']) && (mb_strlen($this->container['promId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be bigger than or equal to 36.";
-            }
         if ($this->container['promType'] === null) {
             $invalidProperties[] = "'promType' can't be null";
         }
@@ -376,54 +364,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['promVersion']) && (mb_strlen($this->container['promVersion']) > 1)) {
-                $invalidProperties[] = "invalid value for 'promVersion', the character length must be smaller than or equal to 1.";
-            }
-            if (!is_null($this->container['promVersion']) && (mb_strlen($this->container['promVersion']) < 1)) {
-                $invalidProperties[] = "invalid value for 'promVersion', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['promCreateTimestamp']) && ($this->container['promCreateTimestamp'] > 9999999999999)) {
-                $invalidProperties[] = "invalid value for 'promCreateTimestamp', must be smaller than or equal to 9999999999999.";
-            }
-            if (!is_null($this->container['promCreateTimestamp']) && ($this->container['promCreateTimestamp'] < 0)) {
-                $invalidProperties[] = "invalid value for 'promCreateTimestamp', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['promUpdateTimestamp']) && ($this->container['promUpdateTimestamp'] > 9999999999999)) {
-                $invalidProperties[] = "invalid value for 'promUpdateTimestamp', must be smaller than or equal to 9999999999999.";
-            }
-            if (!is_null($this->container['promUpdateTimestamp']) && ($this->container['promUpdateTimestamp'] < 0)) {
-                $invalidProperties[] = "invalid value for 'promUpdateTimestamp', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['promStatus']) && (mb_strlen($this->container['promStatus']) > 5)) {
-                $invalidProperties[] = "invalid value for 'promStatus', the character length must be smaller than or equal to 5.";
-            }
-            if (!is_null($this->container['promStatus']) && (mb_strlen($this->container['promStatus']) < 4)) {
-                $invalidProperties[] = "invalid value for 'promStatus', the character length must be bigger than or equal to 4.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
-            }
-            if (!is_null($this->container['isDeletedTag']) && ($this->container['isDeletedTag'] > 9999999999999)) {
-                $invalidProperties[] = "invalid value for 'isDeletedTag', must be smaller than or equal to 9999999999999.";
-            }
-            if (!is_null($this->container['isDeletedTag']) && ($this->container['isDeletedTag'] < 0)) {
-                $invalidProperties[] = "invalid value for 'isDeletedTag', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['deletedTime']) && ($this->container['deletedTime'] > 9999999999999)) {
-                $invalidProperties[] = "invalid value for 'deletedTime', must be smaller than or equal to 9999999999999.";
-            }
-            if (!is_null($this->container['deletedTime']) && ($this->container['deletedTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'deletedTime', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -440,7 +380,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promName
-    *  普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
+    *  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     *
     * @return string
     */
@@ -452,7 +392,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promName
     *
-    * @param string $promName 普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
+    * @param string $promName Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     *
     * @return $this
     */
@@ -464,7 +404,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promId
-    *  普罗实例ID
+    *  Prometheus实例id。
     *
     * @return string|null
     */
@@ -476,7 +416,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promId
     *
-    * @param string|null $promId 普罗实例ID
+    * @param string|null $promId Prometheus实例id。
     *
     * @return $this
     */
@@ -488,7 +428,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+    *  Prometheus实例类型。
     *
     * @return string
     */
@@ -500,7 +440,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string $promType 普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+    * @param string $promType Prometheus实例类型。
     *
     * @return $this
     */
@@ -512,7 +452,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promVersion
-    *  普罗实例版本号
+    *  Prometheus实例版本号。
     *
     * @return string|null
     */
@@ -524,7 +464,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promVersion
     *
-    * @param string|null $promVersion 普罗实例版本号
+    * @param string|null $promVersion Prometheus实例版本号。
     *
     * @return $this
     */
@@ -536,7 +476,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets cceSpec
-    *  CCE场景特殊字段
+    *  CCE场景特殊字段。
     *
     * @return string|null
     */
@@ -548,7 +488,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets cceSpec
     *
-    * @param string|null $cceSpec CCE场景特殊字段
+    * @param string|null $cceSpec CCE场景特殊字段。
     *
     * @return $this
     */
@@ -584,7 +524,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promCreateTimestamp
-    *  普罗实例创建时间戳
+    *  Prometheus实例创建时间戳。
     *
     * @return int|null
     */
@@ -596,7 +536,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promCreateTimestamp
     *
-    * @param int|null $promCreateTimestamp 普罗实例创建时间戳
+    * @param int|null $promCreateTimestamp Prometheus实例创建时间戳。
     *
     * @return $this
     */
@@ -608,7 +548,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promUpdateTimestamp
-    *  普罗实例更新时间戳
+    *  Prometheus实例更新时间戳。
     *
     * @return int|null
     */
@@ -620,7 +560,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promUpdateTimestamp
     *
-    * @param int|null $promUpdateTimestamp 普罗实例更新时间戳
+    * @param int|null $promUpdateTimestamp Prometheus实例更新时间戳。
     *
     * @return $this
     */
@@ -632,7 +572,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promStatus
-    *  普罗实例状态 true/false
+    *  Prometheus实例状态。
     *
     * @return string|null
     */
@@ -644,7 +584,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promStatus
     *
-    * @param string|null $promStatus 普罗实例状态 true/false
+    * @param string|null $promStatus Prometheus实例状态。
     *
     * @return $this
     */
@@ -656,7 +596,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  普罗实例所属的企业项目
+    *  Prometheus实例所属的企业项目。
     *
     * @return string|null
     */
@@ -668,7 +608,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 普罗实例所属的企业项目
+    * @param string|null $enterpriseProjectId Prometheus实例所属的企业项目。
     *
     * @return $this
     */
@@ -680,7 +620,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  普罗实例所属projectId
+    *  Prometheus实例所属projectId。
     *
     * @return string|null
     */
@@ -692,7 +632,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 普罗实例所属projectId
+    * @param string|null $projectId Prometheus实例所属projectId。
     *
     * @return $this
     */
@@ -704,7 +644,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDeletedTag
-    *  删除标记
+    *  删除标记。
     *
     * @return int|null
     */
@@ -716,7 +656,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets isDeletedTag
     *
-    * @param int|null $isDeletedTag 删除标记
+    * @param int|null $isDeletedTag 删除标记。
     *
     * @return $this
     */
@@ -728,7 +668,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletedTime
-    *  删除时间
+    *  删除时间。
     *
     * @return int|null
     */
@@ -740,7 +680,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets deletedTime
     *
-    * @param int|null $deletedTime 删除时间
+    * @param int|null $deletedTime 删除时间。
     *
     * @return $this
     */
@@ -776,7 +716,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets cceSpecConfig
-    *  普罗实例所属CCE特殊配置
+    *  Prometheus实例所属CCE特殊配置。
     *
     * @return string|null
     */
@@ -788,7 +728,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets cceSpecConfig
     *
-    * @param string|null $cceSpecConfig 普罗实例所属CCE特殊配置
+    * @param string|null $cceSpecConfig Prometheus实例所属CCE特殊配置。
     *
     * @return $this
     */

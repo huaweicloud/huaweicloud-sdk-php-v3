@@ -21,28 +21,24 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  规则模版实例名称
-    * parentId  规则类型
     * rules  规则实例列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'parentId' => 'string',
             'rules' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\UpdateRuleInstance[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  规则模版实例名称
-    * parentId  规则类型
     * rules  规则实例列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'parentId' => null,
         'rules' => null
     ];
 
@@ -70,42 +66,36 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  规则模版实例名称
-    * parentId  规则类型
     * rules  规则实例列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'parentId' => 'parent_id',
             'rules' => 'rules'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  规则模版实例名称
-    * parentId  规则类型
     * rules  规则实例列表
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'parentId' => 'setParentId',
             'rules' => 'setRules'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  规则模版实例名称
-    * parentId  规则类型
     * rules  规则实例列表
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'parentId' => 'getParentId',
             'rules' => 'getRules'
     ];
 
@@ -168,7 +158,6 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
     }
 
@@ -218,30 +207,6 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets parentId
-    *  规则类型
-    *
-    * @return string|null
-    */
-    public function getParentId()
-    {
-        return $this->container['parentId'];
-    }
-
-    /**
-    * Sets parentId
-    *
-    * @param string|null $parentId 规则类型
-    *
-    * @return $this
-    */
-    public function setParentId($parentId)
-    {
-        $this->container['parentId'] = $parentId;
         return $this;
     }
 

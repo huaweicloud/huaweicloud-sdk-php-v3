@@ -26,7 +26,7 @@ class ListPermissionsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'map[string,\HuaweiCloud\SDK\Aom\V2\Model\AuthModel]'
+            'body' => 'string'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListPermissionsResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return map[string,\HuaweiCloud\SDK\Aom\V2\Model\AuthModel]|null
+    * @return string|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class ListPermissionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param map[string,\HuaweiCloud\SDK\Aom\V2\Model\AuthModel]|null $body body
+    * @param string|null $body body
     *
     * @return $this
     */

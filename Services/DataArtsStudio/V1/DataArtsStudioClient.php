@@ -13360,11 +13360,11 @@ class DataArtsStudioClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -15031,6 +15031,9 @@ class DataArtsStudioClient extends Client
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xReturnPublishMessages'] !== null) {
+            $headerParams[$arr['xReturnPublishMessages']] = $localVarParams['xReturnPublishMessages'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

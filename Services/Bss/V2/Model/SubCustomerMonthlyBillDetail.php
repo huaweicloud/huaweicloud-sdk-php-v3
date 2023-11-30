@@ -92,22 +92,22 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'resourceTag' => 'string',
             'consumeTime' => 'string',
             'usageType' => 'string',
-            'usageAmount' => 'double',
+            'usageAmount' => 'float',
             'usageMeasureId' => 'int',
-            'freeResourceUsage' => 'double',
+            'freeResourceUsage' => 'float',
             'freeResourceMeasureId' => 'int',
-            'riUsage' => 'double',
+            'riUsage' => 'float',
             'riUsageMeasureId' => 'int',
-            'officialAmount' => 'double',
-            'officialDiscountAmount' => 'double',
-            'paymentAmount' => 'double',
-            'cashAmount' => 'double',
-            'creditAmount' => 'double',
-            'couponAmount' => 'double',
-            'flexipurchaseCouponAmount' => 'double',
-            'storedValueCardAmount' => 'double',
-            'debtAmount' => 'double',
-            'writeoffAmount' => 'double',
+            'officialAmount' => 'float',
+            'officialDiscountAmount' => 'float',
+            'paymentAmount' => 'float',
+            'cashAmount' => 'float',
+            'creditAmount' => 'float',
+            'couponAmount' => 'float',
+            'flexipurchaseCouponAmount' => 'float',
+            'storedValueCardAmount' => 'float',
+            'debtAmount' => 'float',
+            'writeoffAmount' => 'float',
             'periodType' => 'int',
             'accountManagerId' => 'string',
             'partnerId' => 'string',
@@ -194,22 +194,22 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'resourceTag' => null,
         'consumeTime' => null,
         'usageType' => null,
-        'usageAmount' => 'double',
+        'usageAmount' => 'bigdecimal',
         'usageMeasureId' => 'int32',
-        'freeResourceUsage' => 'double',
+        'freeResourceUsage' => 'bigdecimal',
         'freeResourceMeasureId' => 'int32',
-        'riUsage' => 'double',
+        'riUsage' => 'bigdecimal',
         'riUsageMeasureId' => 'int32',
-        'officialAmount' => 'double',
-        'officialDiscountAmount' => 'double',
-        'paymentAmount' => 'double',
-        'cashAmount' => 'double',
-        'creditAmount' => 'double',
-        'couponAmount' => 'double',
-        'flexipurchaseCouponAmount' => 'double',
-        'storedValueCardAmount' => 'double',
-        'debtAmount' => 'double',
-        'writeoffAmount' => 'double',
+        'officialAmount' => 'bigdecimal',
+        'officialDiscountAmount' => 'bigdecimal',
+        'paymentAmount' => 'bigdecimal',
+        'cashAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'flexipurchaseCouponAmount' => 'bigdecimal',
+        'storedValueCardAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'writeoffAmount' => 'bigdecimal',
         'periodType' => 'int32',
         'accountManagerId' => null,
         'partnerId' => null,
@@ -1186,7 +1186,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets usageAmount
     *  资源的使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getUsageAmount()
     {
@@ -1196,7 +1196,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets usageAmount
     *
-    * @param double|null $usageAmount 资源的使用量。
+    * @param float|null $usageAmount 资源的使用量。
     *
     * @return $this
     */
@@ -1234,7 +1234,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets freeResourceUsage
     *  套餐内使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFreeResourceUsage()
     {
@@ -1244,7 +1244,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceUsage
     *
-    * @param double|null $freeResourceUsage 套餐内使用量。
+    * @param float|null $freeResourceUsage 套餐内使用量。
     *
     * @return $this
     */
@@ -1282,7 +1282,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets riUsage
     *  预留实例使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getRiUsage()
     {
@@ -1292,7 +1292,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets riUsage
     *
-    * @param double|null $riUsage 预留实例使用量。
+    * @param float|null $riUsage 预留实例使用量。
     *
     * @return $this
     */
@@ -1330,7 +1330,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets officialAmount
     *  官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialAmount()
     {
@@ -1340,7 +1340,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount 官网价。
+    * @param float|null $officialAmount 官网价。
     *
     * @return $this
     */
@@ -1354,7 +1354,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets officialDiscountAmount
     *  对应官网价折扣金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialDiscountAmount()
     {
@@ -1364,7 +1364,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets officialDiscountAmount
     *
-    * @param double|null $officialDiscountAmount 对应官网价折扣金额。
+    * @param float|null $officialDiscountAmount 对应官网价折扣金额。
     *
     * @return $this
     */
@@ -1378,7 +1378,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets paymentAmount
     *  应付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getPaymentAmount()
     {
@@ -1388,7 +1388,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets paymentAmount
     *
-    * @param double|null $paymentAmount 应付金额。
+    * @param float|null $paymentAmount 应付金额。
     *
     * @return $this
     */
@@ -1402,7 +1402,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets cashAmount
     *  现金支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashAmount()
     {
@@ -1412,7 +1412,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param double|null $cashAmount 现金支付金额。
+    * @param float|null $cashAmount 现金支付金额。
     *
     * @return $this
     */
@@ -1426,7 +1426,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用额度支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -1436,7 +1436,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用额度支付金额。
+    * @param float|null $creditAmount 信用额度支付金额。
     *
     * @return $this
     */
@@ -1450,7 +1450,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -1460,7 +1460,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券支付金额。
+    * @param float|null $couponAmount 代金券支付金额。
     *
     * @return $this
     */
@@ -1474,7 +1474,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets flexipurchaseCouponAmount
     *  现金券支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -1484,7 +1484,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount 现金券支付金额。
+    * @param float|null $flexipurchaseCouponAmount 现金券支付金额。
     *
     * @return $this
     */
@@ -1498,7 +1498,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets storedValueCardAmount
     *  储值卡支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredValueCardAmount()
     {
@@ -1508,7 +1508,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets storedValueCardAmount
     *
-    * @param double|null $storedValueCardAmount 储值卡支付金额。
+    * @param float|null $storedValueCardAmount 储值卡支付金额。
     *
     * @return $this
     */
@@ -1522,7 +1522,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠费金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -1532,7 +1532,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠费金额。
+    * @param float|null $debtAmount 欠费金额。
     *
     * @return $this
     */
@@ -1546,7 +1546,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Gets writeoffAmount
     *  欠费核销金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getWriteoffAmount()
     {
@@ -1556,7 +1556,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets writeoffAmount
     *
-    * @param double|null $writeoffAmount 欠费核销金额。
+    * @param float|null $writeoffAmount 欠费核销金额。
     *
     * @return $this
     */

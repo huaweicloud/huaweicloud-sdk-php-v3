@@ -334,6 +334,12 @@ class SisAsyncClient extends Client
         if ($localVarParams['audioFormat'] !== null) {
             $queryParams['audio_format'] = $localVarParams['audioFormat'];
         }
+        if ($localVarParams['obsBucketName'] !== null) {
+            $queryParams['obs_bucket_name'] = $localVarParams['obsBucketName'];
+        }
+        if ($localVarParams['obsObjectKey'] !== null) {
+            $queryParams['obs_object_key'] = $localVarParams['obsObjectKey'];
+        }
         if ($localVarParams['addPunc'] !== null) {
             $queryParams['add_punc'] = $localVarParams['addPunc'];
         }
@@ -345,12 +351,6 @@ class SisAsyncClient extends Client
         }
         if ($localVarParams['vocabularyId'] !== null) {
             $queryParams['vocabulary_id'] = $localVarParams['vocabularyId'];
-        }
-        if ($localVarParams['obsBucketName'] !== null) {
-            $queryParams['obs_bucket_name'] = $localVarParams['obsBucketName'];
-        }
-        if ($localVarParams['obsObjectKey'] !== null) {
-            $queryParams['obs_object_key'] = $localVarParams['obsObjectKey'];
         }
         if ($localVarParams['firstChannelOnly'] !== null) {
             $queryParams['first_channel_only'] = $localVarParams['firstChannelOnly'];

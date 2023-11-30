@@ -35,7 +35,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'quotaId' => 'string',
             'customerIds' => 'string[]',
-            'faceValue' => 'double',
+            'faceValue' => 'float',
             'validTime' => 'string',
             'expireTime' => 'string',
             'cloudServiceTypes' => 'string[]',
@@ -61,7 +61,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'quotaId' => null,
         'customerIds' => null,
-        'faceValue' => 'double',
+        'faceValue' => 'bigdecimal',
         'validTime' => null,
         'expireTime' => null,
         'cloudServiceTypes' => null,
@@ -357,7 +357,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * Gets faceValue
     *  代金券面值。 单位：元。取值大于0且精确到小数点后2位。
     *
-    * @return double
+    * @return float
     */
     public function getFaceValue()
     {
@@ -367,7 +367,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     /**
     * Sets faceValue
     *
-    * @param double $faceValue 代金券面值。 单位：元。取值大于0且精确到小数点后2位。
+    * @param float $faceValue 代金券面值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return $this
     */

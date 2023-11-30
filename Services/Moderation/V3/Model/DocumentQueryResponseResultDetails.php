@@ -24,7 +24,10 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     * type  当前内容片段的类型，可取值有： text: 文本 image: 图像 video: 视频
     * label  当前内容片段的风险类型： politics：涉政 terrorism：暴恐 porn：色情 sexy：性感 abuse：辱骂 ad：广告 qr_code：二维码 watermark：水印 meaningless：无意义 ban：违禁 bad_scene：不良场景 moan：娇喘
     * index  当前处理的片段索引
-    * text  当前内容片段中的文本内容
+    * text  当前内容片段中的文本内容，仅当type为text时存在
+    * startPosition  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    * endPosition  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    * imageUrl  网页图片url，仅当type为image且文档格式为webpage时存在
     * segments  命中的风险片段信息列表，仅在有命中敏感词时才返回
     * videoImageDetails  网页视频中截帧部分审核详情
     * audioDetails  网页视频中音频部分审核详情
@@ -37,6 +40,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
             'label' => 'string',
             'index' => 'int',
             'text' => 'string',
+            'startPosition' => 'int',
+            'endPosition' => 'int',
+            'imageUrl' => 'string',
             'segments' => '\HuaweiCloud\SDK\Moderation\V3\Model\DocumentQueryResponseResultSegments[]',
             'videoImageDetails' => '\HuaweiCloud\SDK\Moderation\V3\Model\DocumentVideoImageDetail[]',
             'audioDetails' => '\HuaweiCloud\SDK\Moderation\V3\Model\DocumentAudioDetail[]'
@@ -48,7 +54,10 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     * type  当前内容片段的类型，可取值有： text: 文本 image: 图像 video: 视频
     * label  当前内容片段的风险类型： politics：涉政 terrorism：暴恐 porn：色情 sexy：性感 abuse：辱骂 ad：广告 qr_code：二维码 watermark：水印 meaningless：无意义 ban：违禁 bad_scene：不良场景 moan：娇喘
     * index  当前处理的片段索引
-    * text  当前内容片段中的文本内容
+    * text  当前内容片段中的文本内容，仅当type为text时存在
+    * startPosition  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    * endPosition  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    * imageUrl  网页图片url，仅当type为image且文档格式为webpage时存在
     * segments  命中的风险片段信息列表，仅在有命中敏感词时才返回
     * videoImageDetails  网页视频中截帧部分审核详情
     * audioDetails  网页视频中音频部分审核详情
@@ -61,6 +70,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
         'label' => null,
         'index' => 'int32',
         'text' => null,
+        'startPosition' => 'int32',
+        'endPosition' => 'int32',
+        'imageUrl' => null,
         'segments' => null,
         'videoImageDetails' => null,
         'audioDetails' => null
@@ -93,7 +105,10 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     * type  当前内容片段的类型，可取值有： text: 文本 image: 图像 video: 视频
     * label  当前内容片段的风险类型： politics：涉政 terrorism：暴恐 porn：色情 sexy：性感 abuse：辱骂 ad：广告 qr_code：二维码 watermark：水印 meaningless：无意义 ban：违禁 bad_scene：不良场景 moan：娇喘
     * index  当前处理的片段索引
-    * text  当前内容片段中的文本内容
+    * text  当前内容片段中的文本内容，仅当type为text时存在
+    * startPosition  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    * endPosition  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    * imageUrl  网页图片url，仅当type为image且文档格式为webpage时存在
     * segments  命中的风险片段信息列表，仅在有命中敏感词时才返回
     * videoImageDetails  网页视频中截帧部分审核详情
     * audioDetails  网页视频中音频部分审核详情
@@ -106,6 +121,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
             'label' => 'label',
             'index' => 'index',
             'text' => 'text',
+            'startPosition' => 'start_position',
+            'endPosition' => 'end_position',
+            'imageUrl' => 'image_url',
             'segments' => 'segments',
             'videoImageDetails' => 'video_image_details',
             'audioDetails' => 'audio_details'
@@ -117,7 +135,10 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     * type  当前内容片段的类型，可取值有： text: 文本 image: 图像 video: 视频
     * label  当前内容片段的风险类型： politics：涉政 terrorism：暴恐 porn：色情 sexy：性感 abuse：辱骂 ad：广告 qr_code：二维码 watermark：水印 meaningless：无意义 ban：违禁 bad_scene：不良场景 moan：娇喘
     * index  当前处理的片段索引
-    * text  当前内容片段中的文本内容
+    * text  当前内容片段中的文本内容，仅当type为text时存在
+    * startPosition  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    * endPosition  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    * imageUrl  网页图片url，仅当type为image且文档格式为webpage时存在
     * segments  命中的风险片段信息列表，仅在有命中敏感词时才返回
     * videoImageDetails  网页视频中截帧部分审核详情
     * audioDetails  网页视频中音频部分审核详情
@@ -130,6 +151,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
             'label' => 'setLabel',
             'index' => 'setIndex',
             'text' => 'setText',
+            'startPosition' => 'setStartPosition',
+            'endPosition' => 'setEndPosition',
+            'imageUrl' => 'setImageUrl',
             'segments' => 'setSegments',
             'videoImageDetails' => 'setVideoImageDetails',
             'audioDetails' => 'setAudioDetails'
@@ -141,7 +165,10 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     * type  当前内容片段的类型，可取值有： text: 文本 image: 图像 video: 视频
     * label  当前内容片段的风险类型： politics：涉政 terrorism：暴恐 porn：色情 sexy：性感 abuse：辱骂 ad：广告 qr_code：二维码 watermark：水印 meaningless：无意义 ban：违禁 bad_scene：不良场景 moan：娇喘
     * index  当前处理的片段索引
-    * text  当前内容片段中的文本内容
+    * text  当前内容片段中的文本内容，仅当type为text时存在
+    * startPosition  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    * endPosition  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    * imageUrl  网页图片url，仅当type为image且文档格式为webpage时存在
     * segments  命中的风险片段信息列表，仅在有命中敏感词时才返回
     * videoImageDetails  网页视频中截帧部分审核详情
     * audioDetails  网页视频中音频部分审核详情
@@ -154,6 +181,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
             'label' => 'getLabel',
             'index' => 'getIndex',
             'text' => 'getText',
+            'startPosition' => 'getStartPosition',
+            'endPosition' => 'getEndPosition',
+            'imageUrl' => 'getImageUrl',
             'segments' => 'getSegments',
             'videoImageDetails' => 'getVideoImageDetails',
             'audioDetails' => 'getAudioDetails'
@@ -222,6 +252,9 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['index'] = isset($data['index']) ? $data['index'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['startPosition'] = isset($data['startPosition']) ? $data['startPosition'] : null;
+        $this->container['endPosition'] = isset($data['endPosition']) ? $data['endPosition'] : null;
+        $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['segments'] = isset($data['segments']) ? $data['segments'] : null;
         $this->container['videoImageDetails'] = isset($data['videoImageDetails']) ? $data['videoImageDetails'] : null;
         $this->container['audioDetails'] = isset($data['audioDetails']) ? $data['audioDetails'] : null;
@@ -347,7 +380,7 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets text
-    *  当前内容片段中的文本内容
+    *  当前内容片段中的文本内容，仅当type为text时存在
     *
     * @return string|null
     */
@@ -359,13 +392,85 @@ class DocumentQueryResponseResultDetails implements ModelInterface, ArrayAccess
     /**
     * Sets text
     *
-    * @param string|null $text 当前内容片段中的文本内容
+    * @param string|null $text 当前内容片段中的文本内容，仅当type为text时存在
     *
     * @return $this
     */
     public function setText($text)
     {
         $this->container['text'] = $text;
+        return $this;
+    }
+
+    /**
+    * Gets startPosition
+    *  当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    *
+    * @return int|null
+    */
+    public function getStartPosition()
+    {
+        return $this->container['startPosition'];
+    }
+
+    /**
+    * Sets startPosition
+    *
+    * @param int|null $startPosition 当前文本内容片段在输入中的起始位置，仅当type为text时存在
+    *
+    * @return $this
+    */
+    public function setStartPosition($startPosition)
+    {
+        $this->container['startPosition'] = $startPosition;
+        return $this;
+    }
+
+    /**
+    * Gets endPosition
+    *  当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    *
+    * @return int|null
+    */
+    public function getEndPosition()
+    {
+        return $this->container['endPosition'];
+    }
+
+    /**
+    * Sets endPosition
+    *
+    * @param int|null $endPosition 当前文本内容片段在输入中的结束位置，仅当type为text时存在
+    *
+    * @return $this
+    */
+    public function setEndPosition($endPosition)
+    {
+        $this->container['endPosition'] = $endPosition;
+        return $this;
+    }
+
+    /**
+    * Gets imageUrl
+    *  网页图片url，仅当type为image且文档格式为webpage时存在
+    *
+    * @return string|null
+    */
+    public function getImageUrl()
+    {
+        return $this->container['imageUrl'];
+    }
+
+    /**
+    * Sets imageUrl
+    *
+    * @param string|null $imageUrl 网页图片url，仅当type为image且文档格式为webpage时存在
+    *
+    * @return $this
+    */
+    public function setImageUrl($imageUrl)
+    {
+        $this->container['imageUrl'] = $imageUrl;
         return $this;
     }
 

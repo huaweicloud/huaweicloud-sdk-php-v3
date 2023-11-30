@@ -32,7 +32,7 @@ class ShowDataSetsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'count' => 'float',
             'entities' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\Entity[]',
-            'facets' => 'object',
+            'facets' => 'object[]',
             'metrics' => 'object',
             'referredEntities' => 'object'
     ];
@@ -269,7 +269,7 @@ class ShowDataSetsResponse implements ModelInterface, ArrayAccess
     * Gets facets
     *  资产分类facets维度信息列表，数据结构List<Map<String, List<Aggregation>>> 取值为count
     *
-    * @return object|null
+    * @return object[]|null
     */
     public function getFacets()
     {
@@ -279,7 +279,7 @@ class ShowDataSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets facets
     *
-    * @param object|null $facets 资产分类facets维度信息列表，数据结构List<Map<String, List<Aggregation>>> 取值为count
+    * @param object[]|null $facets 资产分类facets维度信息列表，数据结构List<Map<String, List<Aggregation>>> 取值为count
     *
     * @return $this
     */

@@ -158,6 +158,9 @@ class UploadPluginIconRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['uploadFile'] === null) {
+            $invalidProperties[] = "'uploadFile' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UploadPluginIconRequestBody implements ModelInterface, ArrayAccess
     * Gets uploadFile
     *  图标文件
     *
-    * @return \SplFileObject|null
+    * @return \SplFileObject
     */
     public function getUploadFile()
     {
@@ -186,7 +189,7 @@ class UploadPluginIconRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets uploadFile
     *
-    * @param \SplFileObject|null $uploadFile 图标文件
+    * @param \SplFileObject $uploadFile 图标文件
     *
     * @return $this
     */

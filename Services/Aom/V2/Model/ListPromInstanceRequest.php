@@ -20,10 +20,10 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * cceClusterEnable  cce集群开关 true/false
-    * promStatus  普罗实例状态 true/false
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * cceClusterEnable  cce集群开关。
+    * promStatus  Prometheus实例状态。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * cceClusterEnable  cce集群开关 true/false
-    * promStatus  普罗实例状态 true/false
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * cceClusterEnable  cce集群开关。
+    * promStatus  Prometheus实例状态。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * cceClusterEnable  cce集群开关 true/false
-    * promStatus  普罗实例状态 true/false
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * cceClusterEnable  cce集群开关。
+    * promStatus  Prometheus实例状态。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * cceClusterEnable  cce集群开关 true/false
-    * promStatus  普罗实例状态 true/false
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * cceClusterEnable  cce集群开关。
+    * promStatus  Prometheus实例状态。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * promId  普罗实例ID
-    * promType  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
-    * cceClusterEnable  cce集群开关 true/false
-    * promStatus  普罗实例状态 true/false
+    * promId  Prometheus实例id。
+    * promType  Prometheus实例类型。
+    * cceClusterEnable  cce集群开关。
+    * promStatus  Prometheus实例状态。
     *
     * @var string[]
     */
@@ -248,12 +248,6 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['promId']) && (mb_strlen($this->container['promId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['promId']) && (mb_strlen($this->container['promId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be bigger than or equal to 36.";
-            }
             $allowedValues = $this->getPromTypeAllowableValues();
                 if (!is_null($this->container['promType']) && !in_array($this->container['promType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -294,7 +288,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promId
-    *  普罗实例ID
+    *  Prometheus实例id。
     *
     * @return string|null
     */
@@ -306,7 +300,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promId
     *
-    * @param string|null $promId 普罗实例ID
+    * @param string|null $promId Prometheus实例id。
     *
     * @return $this
     */
@@ -318,7 +312,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+    *  Prometheus实例类型。
     *
     * @return string|null
     */
@@ -330,7 +324,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string|null $promType 普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+    * @param string|null $promType Prometheus实例类型。
     *
     * @return $this
     */
@@ -342,7 +336,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cceClusterEnable
-    *  cce集群开关 true/false
+    *  cce集群开关。
     *
     * @return string|null
     */
@@ -354,7 +348,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cceClusterEnable
     *
-    * @param string|null $cceClusterEnable cce集群开关 true/false
+    * @param string|null $cceClusterEnable cce集群开关。
     *
     * @return $this
     */
@@ -366,7 +360,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promStatus
-    *  普罗实例状态 true/false
+    *  Prometheus实例状态。
     *
     * @return string|null
     */
@@ -378,7 +372,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promStatus
     *
-    * @param string|null $promStatus 普罗实例状态 true/false
+    * @param string|null $promStatus Prometheus实例状态。
     *
     * @return $this
     */

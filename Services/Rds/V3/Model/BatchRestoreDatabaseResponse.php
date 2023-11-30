@@ -26,7 +26,7 @@ class BatchRestoreDatabaseResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'restoreResult' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreResult[]'
+            'restoreResult' => '\HuaweiCloud\SDK\Rds\V3\Model\RestoreResult[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class BatchRestoreDatabaseResponse implements ModelInterface, ArrayAccess
     * Gets restoreResult
     *  表信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreResult[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreResult[]|null
     */
     public function getRestoreResult()
     {
@@ -187,7 +187,7 @@ class BatchRestoreDatabaseResponse implements ModelInterface, ArrayAccess
     /**
     * Sets restoreResult
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreResult[]|null $restoreResult 表信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreResult[]|null $restoreResult 表信息
     *
     * @return $this
     */

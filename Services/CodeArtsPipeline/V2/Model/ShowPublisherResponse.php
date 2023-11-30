@@ -21,22 +21,22 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  发布商详情
+    * publisherDetailMap  发布商详情
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]'
+            'publisherDetailMap' => 'map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  发布商详情
+    * publisherDetailMap  发布商详情
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'publisherDetailMap' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  发布商详情
+    * publisherDetailMap  发布商详情
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'publisherDetailMap' => 'publisher_detail_map'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  发布商详情
+    * publisherDetailMap  发布商详情
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'publisherDetailMap' => 'setPublisherDetailMap'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  发布商详情
+    * publisherDetailMap  发布商详情
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'publisherDetailMap' => 'getPublisherDetailMap'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['publisherDetailMap'] = isset($data['publisherDetailMap']) ? $data['publisherDetailMap'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ShowPublisherResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
+    * Gets publisherDetailMap
     *  发布商详情
     *
     * @return map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null
     */
-    public function getBody()
+    public function getPublisherDetailMap()
     {
-        return $this->container['body'];
+        return $this->container['publisherDetailMap'];
     }
 
     /**
-    * Sets body
+    * Sets publisherDetailMap
     *
-    * @param map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null $body 发布商详情
+    * @param map[string,\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PublisherVO]|null $publisherDetailMap 发布商详情
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setPublisherDetailMap($publisherDetailMap)
     {
-        $this->container['body'] = $body;
+        $this->container['publisherDetailMap'] = $publisherDetailMap;
         return $this;
     }
 

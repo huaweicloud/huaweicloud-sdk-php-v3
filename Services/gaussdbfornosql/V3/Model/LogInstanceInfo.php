@@ -27,6 +27,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
+    * supportedLogTypes  日志类型。slow_log表示慢日志，audit_log表示审计日志。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
             'mode' => 'string',
             'datastore' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\InstancesDatastoreResult',
             'actions' => 'string[]',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'supportedLogTypes' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
+    * supportedLogTypes  日志类型。slow_log表示慢日志，audit_log表示审计日志。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
         'mode' => null,
         'datastore' => null,
         'actions' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'supportedLogTypes' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
+    * supportedLogTypes  日志类型。slow_log表示慢日志，audit_log表示审计日志。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
             'mode' => 'mode',
             'datastore' => 'datastore',
             'actions' => 'actions',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'supportedLogTypes' => 'supported_log_types'
     ];
 
     /**
@@ -114,6 +120,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
+    * supportedLogTypes  日志类型。slow_log表示慢日志，audit_log表示审计日志。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
             'mode' => 'setMode',
             'datastore' => 'setDatastore',
             'actions' => 'setActions',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'supportedLogTypes' => 'setSupportedLogTypes'
     ];
 
     /**
@@ -136,6 +144,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     * datastore  datastore
     * actions  实例正在执行的动作。
     * enterpriseProjectId  企业项目ID。
+    * supportedLogTypes  日志类型。slow_log表示慢日志，audit_log表示审计日志。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
             'mode' => 'getMode',
             'datastore' => 'getDatastore',
             'actions' => 'getActions',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'supportedLogTypes' => 'getSupportedLogTypes'
     ];
 
     /**
@@ -189,7 +199,22 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SUPPORTED_LOG_TYPES_SLOW_LOG = 'slow_log';
+    const SUPPORTED_LOG_TYPES_AUDIT_LOG = 'audit_log';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSupportedLogTypesAllowableValues()
+    {
+        return [
+            self::SUPPORTED_LOG_TYPES_SLOW_LOG,
+            self::SUPPORTED_LOG_TYPES_AUDIT_LOG,
+        ];
+    }
 
 
     /**
@@ -214,6 +239,7 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['supportedLogTypes'] = isset($data['supportedLogTypes']) ? $data['supportedLogTypes'] : null;
     }
 
     /**
@@ -224,6 +250,14 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getSupportedLogTypesAllowableValues();
+                if (!is_null($this->container['supportedLogTypes']) && !in_array($this->container['supportedLogTypes'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'supportedLogTypes', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -403,6 +437,30 @@ class LogInstanceInfo implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets supportedLogTypes
+    *  日志类型。slow_log表示慢日志，audit_log表示审计日志。
+    *
+    * @return string|null
+    */
+    public function getSupportedLogTypes()
+    {
+        return $this->container['supportedLogTypes'];
+    }
+
+    /**
+    * Sets supportedLogTypes
+    *
+    * @param string|null $supportedLogTypes 日志类型。slow_log表示慢日志，audit_log表示审计日志。
+    *
+    * @return $this
+    */
+    public function setSupportedLogTypes($supportedLogTypes)
+    {
+        $this->container['supportedLogTypes'] = $supportedLogTypes;
         return $this;
     }
 

@@ -25,7 +25,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数。
+    * retryMaxTime  最大重试次数，取值范围为1~16。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数。
+    * retryMaxTime  最大重试次数，取值范围为1~16。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数。
+    * retryMaxTime  最大重试次数，取值范围为1~16。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数。
+    * retryMaxTime  最大重试次数，取值范围为1~16。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
-    * retryMaxTime  最大重试次数。
+    * retryMaxTime  最大重试次数，取值范围为1~16。
     * fromBeginning  是否重头消费。
     *
     * @var string[]
@@ -366,7 +366,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数。
+    *  最大重试次数，取值范围为1~16。
     *
     * @return float|null
     */
@@ -378,7 +378,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param float|null $retryMaxTime 最大重试次数。
+    * @param float|null $retryMaxTime 最大重试次数，取值范围为1~16。
     *
     * @return $this
     */

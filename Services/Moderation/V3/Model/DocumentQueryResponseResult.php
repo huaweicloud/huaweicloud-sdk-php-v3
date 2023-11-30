@@ -20,7 +20,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     * details  审核详情
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     * details  审核详情
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     * details  审核详情
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     * details  审核详情
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * suggestion  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     * details  审核详情
     *
     * @var string[]
@@ -185,7 +185,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestion
-    *  文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    *  文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DocumentQueryResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets suggestion
     *
-    * @param string|null $suggestion 文档审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
+    * @param string|null $suggestion 文档审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检 pass：不包含敏感信息，通过
     *
     * @return $this
     */

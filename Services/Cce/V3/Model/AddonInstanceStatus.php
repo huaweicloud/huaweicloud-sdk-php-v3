@@ -201,7 +201,6 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
     const STATUS_AVAILABLE = 'available';
     const STATUS_ROLLBACKING = 'rollbacking';
     const STATUS_ROLLBACK_FAILED = 'rollbackFailed';
-    const STATUS_UNKNOWN = 'unknown';
     
 
     /**
@@ -224,7 +223,6 @@ class AddonInstanceStatus implements ModelInterface, ArrayAccess
             self::STATUS_AVAILABLE,
             self::STATUS_ROLLBACKING,
             self::STATUS_ROLLBACK_FAILED,
-            self::STATUS_UNKNOWN,
         ];
     }
 

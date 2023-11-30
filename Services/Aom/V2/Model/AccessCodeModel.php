@@ -20,10 +20,10 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessCode  access_code
-    * accessCodeId  access_code_id
-    * createAt  创建时间
-    * status  状态 enable:开启 unenable:关闭
+    * accessCode  access_code。
+    * accessCodeId  access_code_id。
+    * createAt  创建时间。
+    * status  状态。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessCode  access_code
-    * accessCodeId  access_code_id
-    * createAt  创建时间
-    * status  状态 enable:开启 unenable:关闭
+    * accessCode  access_code。
+    * accessCodeId  access_code_id。
+    * createAt  创建时间。
+    * status  状态。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessCode  access_code
-    * accessCodeId  access_code_id
-    * createAt  创建时间
-    * status  状态 enable:开启 unenable:关闭
+    * accessCode  access_code。
+    * accessCodeId  access_code_id。
+    * createAt  创建时间。
+    * status  状态。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessCode  access_code
-    * accessCodeId  access_code_id
-    * createAt  创建时间
-    * status  状态 enable:开启 unenable:关闭
+    * accessCode  access_code。
+    * accessCodeId  access_code_id。
+    * createAt  创建时间。
+    * status  状态。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessCode  access_code
-    * accessCodeId  access_code_id
-    * createAt  创建时间
-    * status  状态 enable:开启 unenable:关闭
+    * accessCode  access_code。
+    * accessCodeId  access_code_id。
+    * createAt  创建时间。
+    * status  状态。
     *
     * @var string[]
     */
@@ -159,22 +159,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const STATUS_ENABLE = 'enable';
-    const STATUS_UNENABLE = 'unenable';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ENABLE,
-            self::STATUS_UNENABLE,
-        ];
-    }
 
 
     /**
@@ -206,32 +191,6 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['accessCode']) && (mb_strlen($this->container['accessCode']) > 64)) {
-                $invalidProperties[] = "invalid value for 'accessCode', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['accessCode']) && (mb_strlen($this->container['accessCode']) < 64)) {
-                $invalidProperties[] = "invalid value for 'accessCode', the character length must be bigger than or equal to 64.";
-            }
-            if (!is_null($this->container['accessCodeId']) && (mb_strlen($this->container['accessCodeId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'accessCodeId', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['accessCodeId']) && (mb_strlen($this->container['accessCodeId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'accessCodeId', the character length must be bigger than or equal to 32.";
-            }
-            if (!is_null($this->container['createAt']) && ($this->container['createAt'] > 9999999999999)) {
-                $invalidProperties[] = "invalid value for 'createAt', must be smaller than or equal to 9999999999999.";
-            }
-            if (!is_null($this->container['createAt']) && ($this->container['createAt'] < 0)) {
-                $invalidProperties[] = "invalid value for 'createAt', must be bigger than or equal to 0.";
-            }
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -248,7 +207,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessCode
-    *  access_code
+    *  access_code。
     *
     * @return string|null
     */
@@ -260,7 +219,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     /**
     * Sets accessCode
     *
-    * @param string|null $accessCode access_code
+    * @param string|null $accessCode access_code。
     *
     * @return $this
     */
@@ -272,7 +231,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessCodeId
-    *  access_code_id
+    *  access_code_id。
     *
     * @return string|null
     */
@@ -284,7 +243,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     /**
     * Sets accessCodeId
     *
-    * @param string|null $accessCodeId access_code_id
+    * @param string|null $accessCodeId access_code_id。
     *
     * @return $this
     */
@@ -296,7 +255,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets createAt
-    *  创建时间
+    *  创建时间。
     *
     * @return int|null
     */
@@ -308,7 +267,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param int|null $createAt 创建时间
+    * @param int|null $createAt 创建时间。
     *
     * @return $this
     */
@@ -320,7 +279,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态 enable:开启 unenable:关闭
+    *  状态。
     *
     * @return string|null
     */
@@ -332,7 +291,7 @@ class AccessCodeModel implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态 enable:开启 unenable:关闭
+    * @param string|null $status 状态。
     *
     * @return $this
     */

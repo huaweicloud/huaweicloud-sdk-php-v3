@@ -28,7 +28,7 @@ class ListBandwidthPackageTagsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\MultivaluedTag[]'
     ];
 
     /**
@@ -224,7 +224,7 @@ class ListBandwidthPackageTagsResponse implements ModelInterface, ArrayAccess
     * Gets tags
     *  带宽包的所有标签。
     *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\Tag[]
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\MultivaluedTag[]
     */
     public function getTags()
     {
@@ -234,7 +234,7 @@ class ListBandwidthPackageTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\Tag[] $tags 带宽包的所有标签。
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\MultivaluedTag[] $tags 带宽包的所有标签。
     *
     * @return $this
     */

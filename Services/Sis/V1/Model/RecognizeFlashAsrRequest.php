@@ -22,12 +22,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
     * audioFormat  音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
+    * obsBucketName  obs桶名
+    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * addPunc  是否加标点， 可以为 yes, 默认no
     * digitNorm  是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
     * vocabularyId  热词表id
-    * obsBucketName  obs桶名
-    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * firstChannelOnly  表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
@@ -35,12 +35,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'property' => 'string',
             'audioFormat' => 'string',
+            'obsBucketName' => 'string',
+            'obsObjectKey' => 'string',
             'addPunc' => 'string',
             'digitNorm' => 'string',
             'needWordInfo' => 'string',
             'vocabularyId' => 'string',
-            'obsBucketName' => 'string',
-            'obsObjectKey' => 'string',
             'firstChannelOnly' => 'string'
     ];
 
@@ -48,12 +48,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
     * audioFormat  音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
+    * obsBucketName  obs桶名
+    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * addPunc  是否加标点， 可以为 yes, 默认no
     * digitNorm  是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
     * vocabularyId  热词表id
-    * obsBucketName  obs桶名
-    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * firstChannelOnly  表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
@@ -61,12 +61,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'property' => null,
         'audioFormat' => null,
+        'obsBucketName' => null,
+        'obsObjectKey' => null,
         'addPunc' => null,
         'digitNorm' => null,
         'needWordInfo' => null,
         'vocabularyId' => null,
-        'obsBucketName' => null,
-        'obsObjectKey' => null,
         'firstChannelOnly' => null
     ];
 
@@ -95,12 +95,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
     * audioFormat  音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
+    * obsBucketName  obs桶名
+    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * addPunc  是否加标点， 可以为 yes, 默认no
     * digitNorm  是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
     * vocabularyId  热词表id
-    * obsBucketName  obs桶名
-    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * firstChannelOnly  表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
@@ -108,12 +108,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'property' => 'property',
             'audioFormat' => 'audio_format',
+            'obsBucketName' => 'obs_bucket_name',
+            'obsObjectKey' => 'obs_object_key',
             'addPunc' => 'add_punc',
             'digitNorm' => 'digit_norm',
             'needWordInfo' => 'need_word_info',
             'vocabularyId' => 'vocabulary_id',
-            'obsBucketName' => 'obs_bucket_name',
-            'obsObjectKey' => 'obs_object_key',
             'firstChannelOnly' => 'first_channel_only'
     ];
 
@@ -121,12 +121,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
     * audioFormat  音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
+    * obsBucketName  obs桶名
+    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * addPunc  是否加标点， 可以为 yes, 默认no
     * digitNorm  是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
     * vocabularyId  热词表id
-    * obsBucketName  obs桶名
-    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * firstChannelOnly  表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
@@ -134,12 +134,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'property' => 'setProperty',
             'audioFormat' => 'setAudioFormat',
+            'obsBucketName' => 'setObsBucketName',
+            'obsObjectKey' => 'setObsObjectKey',
             'addPunc' => 'setAddPunc',
             'digitNorm' => 'setDigitNorm',
             'needWordInfo' => 'setNeedWordInfo',
             'vocabularyId' => 'setVocabularyId',
-            'obsBucketName' => 'setObsBucketName',
-            'obsObjectKey' => 'setObsObjectKey',
             'firstChannelOnly' => 'setFirstChannelOnly'
     ];
 
@@ -147,12 +147,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
     * audioFormat  音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
+    * obsBucketName  obs桶名
+    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * addPunc  是否加标点， 可以为 yes, 默认no
     * digitNorm  是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
     * needWordInfo  表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
     * vocabularyId  热词表id
-    * obsBucketName  obs桶名
-    * obsObjectKey  obs对象key，经过urlencode编码，长度不超过1024个字符
     * firstChannelOnly  表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
     *
     * @var string[]
@@ -160,12 +160,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'property' => 'getProperty',
             'audioFormat' => 'getAudioFormat',
+            'obsBucketName' => 'getObsBucketName',
+            'obsObjectKey' => 'getObsObjectKey',
             'addPunc' => 'getAddPunc',
             'digitNorm' => 'getDigitNorm',
             'needWordInfo' => 'getNeedWordInfo',
             'vocabularyId' => 'getVocabularyId',
-            'obsBucketName' => 'getObsBucketName',
-            'obsObjectKey' => 'getObsObjectKey',
             'firstChannelOnly' => 'getFirstChannelOnly'
     ];
 
@@ -325,12 +325,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     {
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
         $this->container['audioFormat'] = isset($data['audioFormat']) ? $data['audioFormat'] : null;
+        $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
+        $this->container['obsObjectKey'] = isset($data['obsObjectKey']) ? $data['obsObjectKey'] : null;
         $this->container['addPunc'] = isset($data['addPunc']) ? $data['addPunc'] : null;
         $this->container['digitNorm'] = isset($data['digitNorm']) ? $data['digitNorm'] : null;
         $this->container['needWordInfo'] = isset($data['needWordInfo']) ? $data['needWordInfo'] : null;
         $this->container['vocabularyId'] = isset($data['vocabularyId']) ? $data['vocabularyId'] : null;
-        $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
-        $this->container['obsObjectKey'] = isset($data['obsObjectKey']) ? $data['obsObjectKey'] : null;
         $this->container['firstChannelOnly'] = isset($data['firstChannelOnly']) ? $data['firstChannelOnly'] : null;
     }
 
@@ -364,6 +364,12 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['obsBucketName'] === null) {
+            $invalidProperties[] = "'obsBucketName' can't be null";
+        }
+        if ($this->container['obsObjectKey'] === null) {
+            $invalidProperties[] = "'obsObjectKey' can't be null";
+        }
             $allowedValues = $this->getAddPuncAllowableValues();
                 if (!is_null($this->container['addPunc']) && !in_array($this->container['addPunc'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -455,6 +461,54 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     public function setAudioFormat($audioFormat)
     {
         $this->container['audioFormat'] = $audioFormat;
+        return $this;
+    }
+
+    /**
+    * Gets obsBucketName
+    *  obs桶名
+    *
+    * @return string
+    */
+    public function getObsBucketName()
+    {
+        return $this->container['obsBucketName'];
+    }
+
+    /**
+    * Sets obsBucketName
+    *
+    * @param string $obsBucketName obs桶名
+    *
+    * @return $this
+    */
+    public function setObsBucketName($obsBucketName)
+    {
+        $this->container['obsBucketName'] = $obsBucketName;
+        return $this;
+    }
+
+    /**
+    * Gets obsObjectKey
+    *  obs对象key，经过urlencode编码，长度不超过1024个字符
+    *
+    * @return string
+    */
+    public function getObsObjectKey()
+    {
+        return $this->container['obsObjectKey'];
+    }
+
+    /**
+    * Sets obsObjectKey
+    *
+    * @param string $obsObjectKey obs对象key，经过urlencode编码，长度不超过1024个字符
+    *
+    * @return $this
+    */
+    public function setObsObjectKey($obsObjectKey)
+    {
+        $this->container['obsObjectKey'] = $obsObjectKey;
         return $this;
     }
 
@@ -551,54 +605,6 @@ class RecognizeFlashAsrRequest implements ModelInterface, ArrayAccess
     public function setVocabularyId($vocabularyId)
     {
         $this->container['vocabularyId'] = $vocabularyId;
-        return $this;
-    }
-
-    /**
-    * Gets obsBucketName
-    *  obs桶名
-    *
-    * @return string|null
-    */
-    public function getObsBucketName()
-    {
-        return $this->container['obsBucketName'];
-    }
-
-    /**
-    * Sets obsBucketName
-    *
-    * @param string|null $obsBucketName obs桶名
-    *
-    * @return $this
-    */
-    public function setObsBucketName($obsBucketName)
-    {
-        $this->container['obsBucketName'] = $obsBucketName;
-        return $this;
-    }
-
-    /**
-    * Gets obsObjectKey
-    *  obs对象key，经过urlencode编码，长度不超过1024个字符
-    *
-    * @return string|null
-    */
-    public function getObsObjectKey()
-    {
-        return $this->container['obsObjectKey'];
-    }
-
-    /**
-    * Sets obsObjectKey
-    *
-    * @param string|null $obsObjectKey obs对象key，经过urlencode编码，长度不超过1024个字符
-    *
-    * @return $this
-    */
-    public function setObsObjectKey($obsObjectKey)
-    {
-        $this->container['obsObjectKey'] = $obsObjectKey;
         return $this;
     }
 

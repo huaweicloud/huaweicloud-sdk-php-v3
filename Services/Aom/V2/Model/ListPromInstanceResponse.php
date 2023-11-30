@@ -21,7 +21,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * prometheus  普罗实例列表名称
+    * prometheus  Prometheus实例名称列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * prometheus  普罗实例列表名称
+    * prometheus  Prometheus实例名称列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * prometheus  普罗实例列表名称
+    * prometheus  Prometheus实例名称列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * prometheus  普罗实例列表名称
+    * prometheus  Prometheus实例名称列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * prometheus  普罗实例列表名称
+    * prometheus  Prometheus实例名称列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets prometheus
-    *  普罗实例列表名称
+    *  Prometheus实例名称列表。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]|null
     */
@@ -187,7 +187,7 @@ class ListPromInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets prometheus
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]|null $prometheus 普罗实例列表名称
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]|null $prometheus Prometheus实例名称列表。
     *
     * @return $this
     */

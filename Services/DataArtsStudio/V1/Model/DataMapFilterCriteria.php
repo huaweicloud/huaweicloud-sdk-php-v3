@@ -20,10 +20,10 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * attribute  属性
-    * operator  操作表示，默认值EQ
-    * value  值
-    * condition  condition
+    * attribute  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
+    * operator  操作表示，枚举值：EQ、IN
+    * value  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
+    * condition  条件拼接准则，取值范围 AND,OR
     * criterion  条件准则
     *
     * @var string[]
@@ -31,17 +31,17 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'attribute' => 'string',
             'operator' => 'string',
-            'value' => 'object',
-            'condition' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ConditionInfo',
+            'value' => 'string[]',
+            'condition' => 'string',
             'criterion' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DataMapFilterCriteria[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * attribute  属性
-    * operator  操作表示，默认值EQ
-    * value  值
-    * condition  condition
+    * attribute  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
+    * operator  操作表示，枚举值：EQ、IN
+    * value  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
+    * condition  条件拼接准则，取值范围 AND,OR
     * criterion  条件准则
     *
     * @var string[]
@@ -77,10 +77,10 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * attribute  属性
-    * operator  操作表示，默认值EQ
-    * value  值
-    * condition  condition
+    * attribute  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
+    * operator  操作表示，枚举值：EQ、IN
+    * value  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
+    * condition  条件拼接准则，取值范围 AND,OR
     * criterion  条件准则
     *
     * @var string[]
@@ -95,10 +95,10 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * attribute  属性
-    * operator  操作表示，默认值EQ
-    * value  值
-    * condition  condition
+    * attribute  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
+    * operator  操作表示，枚举值：EQ、IN
+    * value  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
+    * condition  条件拼接准则，取值范围 AND,OR
     * criterion  条件准则
     *
     * @var string[]
@@ -113,10 +113,10 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * attribute  属性
-    * operator  操作表示，默认值EQ
-    * value  值
-    * condition  condition
+    * attribute  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
+    * operator  操作表示，枚举值：EQ、IN
+    * value  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
+    * condition  条件拼接准则，取值范围 AND,OR
     * criterion  条件准则
     *
     * @var string[]
@@ -169,7 +169,58 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ATTRIBUTE_BASE_DATA_ASSET_SOURCE_TYPE = 'base.DataAsset.sourceType';
+    const ATTRIBUTE_TYPE_NAME = 'typeName';
+    const ATTRIBUTE_CLASSIFICATIONS_NAME = 'classifications.name';
+    const ATTRIBUTE_TAGS_NAME = 'tags.name';
+    const ATTRIBUTE_SECURITY_LEVEL_NAME = 'securityLevel.name';
+    const ATTRIBUTE_WORKSPACE_ID = 'workspaceId';
+    const OPERATOR_IN = 'IN';
+    const OPERATOR_EQ = 'EQ';
+    const CONDITION__OR = 'OR';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAttributeAllowableValues()
+    {
+        return [
+            self::ATTRIBUTE_BASE_DATA_ASSET_SOURCE_TYPE,
+            self::ATTRIBUTE_TYPE_NAME,
+            self::ATTRIBUTE_CLASSIFICATIONS_NAME,
+            self::ATTRIBUTE_TAGS_NAME,
+            self::ATTRIBUTE_SECURITY_LEVEL_NAME,
+            self::ATTRIBUTE_WORKSPACE_ID,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOperatorAllowableValues()
+    {
+        return [
+            self::OPERATOR_IN,
+            self::OPERATOR_EQ,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConditionAllowableValues()
+    {
+        return [
+            self::CONDITION__OR,
+        ];
+    }
 
 
     /**
@@ -202,6 +253,30 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAttributeAllowableValues();
+                if (!is_null($this->container['attribute']) && !in_array($this->container['attribute'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'attribute', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getOperatorAllowableValues();
+                if (!is_null($this->container['operator']) && !in_array($this->container['operator'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'operator', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getConditionAllowableValues();
+                if (!is_null($this->container['condition']) && !in_array($this->container['condition'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'condition', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -218,7 +293,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribute
-    *  属性
+    *  过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
     *
     * @return string|null
     */
@@ -230,7 +305,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     /**
     * Sets attribute
     *
-    * @param string|null $attribute 属性
+    * @param string|null $attribute 过滤属性维度，枚举值：typeName、base.DataAsset.sourceType、classifications.name、tags.name、securityLevel.name、workspaceId
     *
     * @return $this
     */
@@ -242,7 +317,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  操作表示，默认值EQ
+    *  操作表示，枚举值：EQ、IN
     *
     * @return string|null
     */
@@ -254,7 +329,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string|null $operator 操作表示，默认值EQ
+    * @param string|null $operator 操作表示，枚举值：EQ、IN
     *
     * @return $this
     */
@@ -266,9 +341,9 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值
+    *  属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
     *
-    * @return object|null
+    * @return string[]|null
     */
     public function getValue()
     {
@@ -278,7 +353,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param object|null $value 值
+    * @param string[]|null $value 属性过滤值，根据attribute变化。如attribute为数据源：base.DataAsset.sourceType，则值可为[\"dws\", \"hive\"]
     *
     * @return $this
     */
@@ -290,9 +365,9 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  condition
+    *  条件拼接准则，取值范围 AND,OR
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ConditionInfo|null
+    * @return string|null
     */
     public function getCondition()
     {
@@ -302,7 +377,7 @@ class DataMapFilterCriteria implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ConditionInfo|null $condition condition
+    * @param string|null $condition 条件拼接准则，取值范围 AND,OR
     *
     * @return $this
     */

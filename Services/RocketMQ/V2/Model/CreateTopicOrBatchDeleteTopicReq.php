@@ -24,7 +24,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * brokers  关联的代理。
     * queueNum  队列数，范围1~50。
     * permission  权限。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -377,7 +377,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageType
-    *  消息类型。
+    *  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets messageType
     *
-    * @param string|null $messageType 消息类型。
+    * @param string|null $messageType 消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @return $this
     */

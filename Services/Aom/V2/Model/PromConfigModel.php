@@ -20,11 +20,11 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * remoteWriteUrl  普罗实例remote-write地址
-    * remoteReadUrl  普罗实例remote-read地址
-    * promHttpApiEndpoint  普罗实例调用url
-    * dashboardId  普罗实例关联dashboard的dashboard ID
-    * regionId  普罗实例所属的region
+    * remoteWriteUrl  Prometheus实例remote-write地址。
+    * remoteReadUrl  Prometheus实例remote-read地址。
+    * promHttpApiEndpoint  Prometheus实例调用url。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * regionId  Prometheus实例所属的region。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * remoteWriteUrl  普罗实例remote-write地址
-    * remoteReadUrl  普罗实例remote-read地址
-    * promHttpApiEndpoint  普罗实例调用url
-    * dashboardId  普罗实例关联dashboard的dashboard ID
-    * regionId  普罗实例所属的region
+    * remoteWriteUrl  Prometheus实例remote-write地址。
+    * remoteReadUrl  Prometheus实例remote-read地址。
+    * promHttpApiEndpoint  Prometheus实例调用url。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * regionId  Prometheus实例所属的region。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * remoteWriteUrl  普罗实例remote-write地址
-    * remoteReadUrl  普罗实例remote-read地址
-    * promHttpApiEndpoint  普罗实例调用url
-    * dashboardId  普罗实例关联dashboard的dashboard ID
-    * regionId  普罗实例所属的region
+    * remoteWriteUrl  Prometheus实例remote-write地址。
+    * remoteReadUrl  Prometheus实例remote-read地址。
+    * promHttpApiEndpoint  Prometheus实例调用url。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * regionId  Prometheus实例所属的region。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * remoteWriteUrl  普罗实例remote-write地址
-    * remoteReadUrl  普罗实例remote-read地址
-    * promHttpApiEndpoint  普罗实例调用url
-    * dashboardId  普罗实例关联dashboard的dashboard ID
-    * regionId  普罗实例所属的region
+    * remoteWriteUrl  Prometheus实例remote-write地址。
+    * remoteReadUrl  Prometheus实例remote-read地址。
+    * promHttpApiEndpoint  Prometheus实例调用url。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * regionId  Prometheus实例所属的region。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * remoteWriteUrl  普罗实例remote-write地址
-    * remoteReadUrl  普罗实例remote-read地址
-    * promHttpApiEndpoint  普罗实例调用url
-    * dashboardId  普罗实例关联dashboard的dashboard ID
-    * regionId  普罗实例所属的region
+    * remoteWriteUrl  Prometheus实例remote-write地址。
+    * remoteReadUrl  Prometheus实例remote-read地址。
+    * promHttpApiEndpoint  Prometheus实例调用url。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * regionId  Prometheus实例所属的region。
     *
     * @var string[]
     */
@@ -202,12 +202,6 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['dashboardId']) && (mb_strlen($this->container['dashboardId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'dashboardId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['dashboardId']) && (mb_strlen($this->container['dashboardId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'dashboardId', the character length must be bigger than or equal to 36.";
-            }
         return $invalidProperties;
     }
 
@@ -224,7 +218,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteWriteUrl
-    *  普罗实例remote-write地址
+    *  Prometheus实例remote-write地址。
     *
     * @return string|null
     */
@@ -236,7 +230,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets remoteWriteUrl
     *
-    * @param string|null $remoteWriteUrl 普罗实例remote-write地址
+    * @param string|null $remoteWriteUrl Prometheus实例remote-write地址。
     *
     * @return $this
     */
@@ -248,7 +242,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteReadUrl
-    *  普罗实例remote-read地址
+    *  Prometheus实例remote-read地址。
     *
     * @return string|null
     */
@@ -260,7 +254,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets remoteReadUrl
     *
-    * @param string|null $remoteReadUrl 普罗实例remote-read地址
+    * @param string|null $remoteReadUrl Prometheus实例remote-read地址。
     *
     * @return $this
     */
@@ -272,7 +266,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promHttpApiEndpoint
-    *  普罗实例调用url
+    *  Prometheus实例调用url。
     *
     * @return string|null
     */
@@ -284,7 +278,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets promHttpApiEndpoint
     *
-    * @param string|null $promHttpApiEndpoint 普罗实例调用url
+    * @param string|null $promHttpApiEndpoint Prometheus实例调用url。
     *
     * @return $this
     */
@@ -296,7 +290,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  普罗实例关联dashboard的dashboard ID
+    *  Prometheus实例关联dashboard的dashboard id。
     *
     * @return string|null
     */
@@ -308,7 +302,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 普罗实例关联dashboard的dashboard ID
+    * @param string|null $dashboardId Prometheus实例关联dashboard的dashboard id。
     *
     * @return $this
     */
@@ -320,7 +314,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  普罗实例所属的region
+    *  Prometheus实例所属的region。
     *
     * @return string|null
     */
@@ -332,7 +326,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 普罗实例所属的region
+    * @param string|null $regionId Prometheus实例所属的region。
     *
     * @return $this
     */

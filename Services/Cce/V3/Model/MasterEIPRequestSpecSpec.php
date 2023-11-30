@@ -16,11 +16,11 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'MasterEIPRequest_spec_spec';
+    protected static $openAPIModelName = 'MasterEIPRequestSpec_spec';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  弹性网卡ID，必选参数
+    * id  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  弹性网卡ID，必选参数
+    * id  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  弹性网卡ID，必选参数
+    * id  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  弹性网卡ID，必选参数
+    * id  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  弹性网卡ID，必选参数
+    * id  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  弹性网卡ID，必选参数
+    *  弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class MasterEIPRequestSpecSpec implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 弹性网卡ID，必选参数
+    * @param string|null $id 弹性网卡ID，绑定时必选，解绑时该字段无效
     *
     * @return $this
     */

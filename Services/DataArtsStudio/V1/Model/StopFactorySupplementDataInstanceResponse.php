@@ -21,37 +21,21 @@ class StopFactorySupplementDataInstanceResponse implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * msg  success
-    * rows  包含若干补数据实例信息
-    * success  查询是否成功，取值为true或者false
-    * total  补数据实例数量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'msg' => 'string',
-            'rows' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SupplementDataRespRows[]',
-            'success' => 'bool',
-            'total' => 'int',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * msg  success
-    * rows  包含若干补数据实例信息
-    * success  查询是否成功，取值为true或者false
-    * total  补数据实例数量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'msg' => null,
-        'rows' => null,
-        'success' => null,
-        'total' => 'int32',
         'xRequestId' => null
     ];
 
@@ -78,55 +62,31 @@ class StopFactorySupplementDataInstanceResponse implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * msg  success
-    * rows  包含若干补数据实例信息
-    * success  查询是否成功，取值为true或者false
-    * total  补数据实例数量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'msg' => 'msg',
-            'rows' => 'rows',
-            'success' => 'success',
-            'total' => 'total',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * msg  success
-    * rows  包含若干补数据实例信息
-    * success  查询是否成功，取值为true或者false
-    * total  补数据实例数量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'msg' => 'setMsg',
-            'rows' => 'setRows',
-            'success' => 'setSuccess',
-            'total' => 'setTotal',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * msg  success
-    * rows  包含若干补数据实例信息
-    * success  查询是否成功，取值为true或者false
-    * total  补数据实例数量
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'msg' => 'getMsg',
-            'rows' => 'getRows',
-            'success' => 'getSuccess',
-            'total' => 'getTotal',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -188,10 +148,6 @@ class StopFactorySupplementDataInstanceResponse implements ModelInterface, Array
     */
     public function __construct(array $data = null)
     {
-        $this->container['msg'] = isset($data['msg']) ? $data['msg'] : null;
-        $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
-        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -215,102 +171,6 @@ class StopFactorySupplementDataInstanceResponse implements ModelInterface, Array
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets msg
-    *  success
-    *
-    * @return string|null
-    */
-    public function getMsg()
-    {
-        return $this->container['msg'];
-    }
-
-    /**
-    * Sets msg
-    *
-    * @param string|null $msg success
-    *
-    * @return $this
-    */
-    public function setMsg($msg)
-    {
-        $this->container['msg'] = $msg;
-        return $this;
-    }
-
-    /**
-    * Gets rows
-    *  包含若干补数据实例信息
-    *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SupplementDataRespRows[]|null
-    */
-    public function getRows()
-    {
-        return $this->container['rows'];
-    }
-
-    /**
-    * Sets rows
-    *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SupplementDataRespRows[]|null $rows 包含若干补数据实例信息
-    *
-    * @return $this
-    */
-    public function setRows($rows)
-    {
-        $this->container['rows'] = $rows;
-        return $this;
-    }
-
-    /**
-    * Gets success
-    *  查询是否成功，取值为true或者false
-    *
-    * @return bool|null
-    */
-    public function getSuccess()
-    {
-        return $this->container['success'];
-    }
-
-    /**
-    * Sets success
-    *
-    * @param bool|null $success 查询是否成功，取值为true或者false
-    *
-    * @return $this
-    */
-    public function setSuccess($success)
-    {
-        $this->container['success'] = $success;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  补数据实例数量
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total 补数据实例数量
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
-        return $this;
     }
 
     /**

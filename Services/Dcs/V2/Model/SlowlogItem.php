@@ -25,8 +25,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
-    * databaseId  慢日志数据库id
-    * username  慢日志名称
+    * databaseId  数据库id，当前只对指定客户开放
+    * username  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
-    * databaseId  慢日志数据库id
-    * username  慢日志名称
+    * databaseId  数据库id，当前只对指定客户开放
+    * username  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
-    * databaseId  慢日志数据库id
-    * username  慢日志名称
+    * databaseId  数据库id，当前只对指定客户开放
+    * username  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
-    * databaseId  慢日志数据库id
-    * username  慢日志名称
+    * databaseId  数据库id，当前只对指定客户开放
+    * username  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     * startTime  执行开始时间,格式为“2020-06-19T07:06:07Z”
     * duration  持续时间，单位是ms
     * shardName  慢命令所在的分片名称，仅在实例类型为集群时支持
-    * databaseId  慢日志数据库id
-    * username  慢日志名称
+    * databaseId  数据库id，当前只对指定客户开放
+    * username  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @var string[]
     */
@@ -360,7 +360,7 @@ class SlowlogItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets databaseId
-    *  慢日志数据库id
+    *  数据库id，当前只对指定客户开放
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     /**
     * Sets databaseId
     *
-    * @param int|null $databaseId 慢日志数据库id
+    * @param int|null $databaseId 数据库id，当前只对指定客户开放
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class SlowlogItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  慢日志名称
+    *  操作慢日志的账号名称，当前只对指定客户开放
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class SlowlogItem implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username 慢日志名称
+    * @param string|null $username 操作慢日志的账号名称，当前只对指定客户开放
     *
     * @return $this
     */

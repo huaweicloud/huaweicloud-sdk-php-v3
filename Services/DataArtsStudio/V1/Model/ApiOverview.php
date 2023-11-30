@@ -22,10 +22,11 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  API ID
     * name  API名称
-    * groupId  API分组ID
+    * groupId  API分组ID（共享版）
     * description  API描述
-    * status  API状态
-    * debugStatus  API调试状态
+    * status  API状态（共享版）
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * type  API 类型
     * manager  API审核人
     * createUser  API创建者
@@ -40,6 +41,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'description' => 'string',
             'status' => 'string',
             'debugStatus' => 'string',
+            'publishMessages' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]',
             'type' => 'string',
             'manager' => 'string',
             'createUser' => 'string',
@@ -50,10 +52,11 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  API ID
     * name  API名称
-    * groupId  API分组ID
+    * groupId  API分组ID（共享版）
     * description  API描述
-    * status  API状态
-    * debugStatus  API调试状态
+    * status  API状态（共享版）
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * type  API 类型
     * manager  API审核人
     * createUser  API创建者
@@ -68,6 +71,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
         'description' => null,
         'status' => null,
         'debugStatus' => null,
+        'publishMessages' => null,
         'type' => null,
         'manager' => null,
         'createUser' => null,
@@ -99,10 +103,11 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  API ID
     * name  API名称
-    * groupId  API分组ID
+    * groupId  API分组ID（共享版）
     * description  API描述
-    * status  API状态
-    * debugStatus  API调试状态
+    * status  API状态（共享版）
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * type  API 类型
     * manager  API审核人
     * createUser  API创建者
@@ -117,6 +122,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'description' => 'description',
             'status' => 'status',
             'debugStatus' => 'debug_status',
+            'publishMessages' => 'publish_messages',
             'type' => 'type',
             'manager' => 'manager',
             'createUser' => 'create_user',
@@ -127,10 +133,11 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  API ID
     * name  API名称
-    * groupId  API分组ID
+    * groupId  API分组ID（共享版）
     * description  API描述
-    * status  API状态
-    * debugStatus  API调试状态
+    * status  API状态（共享版）
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * type  API 类型
     * manager  API审核人
     * createUser  API创建者
@@ -145,6 +152,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'status' => 'setStatus',
             'debugStatus' => 'setDebugStatus',
+            'publishMessages' => 'setPublishMessages',
             'type' => 'setType',
             'manager' => 'setManager',
             'createUser' => 'setCreateUser',
@@ -155,10 +163,11 @@ class ApiOverview implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  API ID
     * name  API名称
-    * groupId  API分组ID
+    * groupId  API分组ID（共享版）
     * description  API描述
-    * status  API状态
-    * debugStatus  API调试状态
+    * status  API状态（共享版）
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * type  API 类型
     * manager  API审核人
     * createUser  API创建者
@@ -173,6 +182,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'status' => 'getStatus',
             'debugStatus' => 'getDebugStatus',
+            'publishMessages' => 'getPublishMessages',
             'type' => 'getType',
             'manager' => 'getManager',
             'createUser' => 'getCreateUser',
@@ -308,6 +318,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['debugStatus'] = isset($data['debugStatus']) ? $data['debugStatus'] : null;
+        $this->container['publishMessages'] = isset($data['publishMessages']) ? $data['publishMessages'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['manager'] = isset($data['manager']) ? $data['manager'] : null;
         $this->container['createUser'] = isset($data['createUser']) ? $data['createUser'] : null;
@@ -410,7 +421,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  API分组ID
+    *  API分组ID（共享版）
     *
     * @return string|null
     */
@@ -422,7 +433,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId API分组ID
+    * @param string|null $groupId API分组ID（共享版）
     *
     * @return $this
     */
@@ -458,7 +469,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  API状态
+    *  API状态（共享版）
     *
     * @return string|null
     */
@@ -470,7 +481,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status API状态
+    * @param string|null $status API状态（共享版）
     *
     * @return $this
     */
@@ -482,7 +493,7 @@ class ApiOverview implements ModelInterface, ArrayAccess
 
     /**
     * Gets debugStatus
-    *  API调试状态
+    *  API调试状态（共享版）
     *
     * @return string|null
     */
@@ -494,13 +505,37 @@ class ApiOverview implements ModelInterface, ArrayAccess
     /**
     * Sets debugStatus
     *
-    * @param string|null $debugStatus API调试状态
+    * @param string|null $debugStatus API调试状态（共享版）
     *
     * @return $this
     */
     public function setDebugStatus($debugStatus)
     {
         $this->container['debugStatus'] = $debugStatus;
+        return $this;
+    }
+
+    /**
+    * Gets publishMessages
+    *  发布信息列表（专享版）
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]|null
+    */
+    public function getPublishMessages()
+    {
+        return $this->container['publishMessages'];
+    }
+
+    /**
+    * Sets publishMessages
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]|null $publishMessages 发布信息列表（专享版）
+    *
+    * @return $this
+    */
+    public function setPublishMessages($publishMessages)
+    {
+        $this->container['publishMessages'] = $publishMessages;
         return $this;
     }
 

@@ -23,6 +23,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间id
     * dlmType  dlm版本类型
     * contentType  资源类型
+    * xReturnPublishMessages  是否返回专享版API的发布信息
     * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
     * limit  查询条数, 即查询Y条数据
     *
@@ -32,6 +33,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
             'workspace' => 'string',
             'dlmType' => 'string',
             'contentType' => 'string',
+            'xReturnPublishMessages' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -41,6 +43,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间id
     * dlmType  dlm版本类型
     * contentType  资源类型
+    * xReturnPublishMessages  是否返回专享版API的发布信息
     * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
     * limit  查询条数, 即查询Y条数据
     *
@@ -50,6 +53,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'dlmType' => null,
         'contentType' => null,
+        'xReturnPublishMessages' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -80,6 +84,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间id
     * dlmType  dlm版本类型
     * contentType  资源类型
+    * xReturnPublishMessages  是否返回专享版API的发布信息
     * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
     * limit  查询条数, 即查询Y条数据
     *
@@ -89,6 +94,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
             'workspace' => 'workspace',
             'dlmType' => 'Dlm-Type',
             'contentType' => 'Content-Type',
+            'xReturnPublishMessages' => 'x-return-publish-messages',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -98,6 +104,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间id
     * dlmType  dlm版本类型
     * contentType  资源类型
+    * xReturnPublishMessages  是否返回专享版API的发布信息
     * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
     * limit  查询条数, 即查询Y条数据
     *
@@ -107,6 +114,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
             'workspace' => 'setWorkspace',
             'dlmType' => 'setDlmType',
             'contentType' => 'setContentType',
+            'xReturnPublishMessages' => 'setXReturnPublishMessages',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -116,6 +124,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间id
     * dlmType  dlm版本类型
     * contentType  资源类型
+    * xReturnPublishMessages  是否返回专享版API的发布信息
     * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
     * limit  查询条数, 即查询Y条数据
     *
@@ -125,6 +134,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
             'workspace' => 'getWorkspace',
             'dlmType' => 'getDlmType',
             'contentType' => 'getContentType',
+            'xReturnPublishMessages' => 'getXReturnPublishMessages',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -205,6 +215,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
         $this->container['dlmType'] = isset($data['dlmType']) ? $data['dlmType'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['xReturnPublishMessages'] = isset($data['xReturnPublishMessages']) ? $data['xReturnPublishMessages'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -317,6 +328,30 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets xReturnPublishMessages
+    *  是否返回专享版API的发布信息
+    *
+    * @return string|null
+    */
+    public function getXReturnPublishMessages()
+    {
+        return $this->container['xReturnPublishMessages'];
+    }
+
+    /**
+    * Sets xReturnPublishMessages
+    *
+    * @param string|null $xReturnPublishMessages 是否返回专享版API的发布信息
+    *
+    * @return $this
+    */
+    public function setXReturnPublishMessages($xReturnPublishMessages)
+    {
+        $this->container['xReturnPublishMessages'] = $xReturnPublishMessages;
         return $this;
     }
 

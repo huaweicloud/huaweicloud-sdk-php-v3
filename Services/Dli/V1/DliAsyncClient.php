@@ -3165,11 +3165,11 @@ class DliAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['page'] !== null) {
-            $queryParams['page'] = $localVarParams['page'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['queueName'] !== null) {
             $pathParams['queue_name'] = $localVarParams['queueName'];
@@ -4136,6 +4136,68 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQueueRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询配额
+     *
+     * 该API用于获取用户配额信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQuotaAsync($request)
+    {
+        return $this->showQuotaAsyncWithHttpInfo($request);
+    }
+    
+    public function showQuotaAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaRequest',
             $asyncRequest = true);
     }
 

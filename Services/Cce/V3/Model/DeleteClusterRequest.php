@@ -29,6 +29,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+    * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'string',
             'deleteSfs' => 'string',
             'deleteSfs30' => 'string',
-            'tobedeleted' => 'string'
+            'tobedeleted' => 'string',
+            'ondemandNodePolicy' => 'string',
+            'periodicNodePolicy' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+    * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
         'deleteObs' => null,
         'deleteSfs' => null,
         'deleteSfs30' => null,
-        'tobedeleted' => null
+        'tobedeleted' => null,
+        'ondemandNodePolicy' => null,
+        'periodicNodePolicy' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+    * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'delete_obs',
             'deleteSfs' => 'delete_sfs',
             'deleteSfs30' => 'delete_sfs30',
-            'tobedeleted' => 'tobedeleted'
+            'tobedeleted' => 'tobedeleted',
+            'ondemandNodePolicy' => 'ondemand_node_policy',
+            'periodicNodePolicy' => 'periodic_node_policy'
     ];
 
     /**
@@ -128,6 +140,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+    * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'setDeleteObs',
             'deleteSfs' => 'setDeleteSfs',
             'deleteSfs30' => 'setDeleteSfs30',
-            'tobedeleted' => 'setTobedeleted'
+            'tobedeleted' => 'setTobedeleted',
+            'ondemandNodePolicy' => 'setOndemandNodePolicy',
+            'periodicNodePolicy' => 'setPeriodicNodePolicy'
     ];
 
     /**
@@ -154,6 +170,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
+    * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'getDeleteObs',
             'deleteSfs' => 'getDeleteSfs',
             'deleteSfs30' => 'getDeleteSfs30',
-            'tobedeleted' => 'getTobedeleted'
+            'tobedeleted' => 'getTobedeleted',
+            'ondemandNodePolicy' => 'getOndemandNodePolicy',
+            'periodicNodePolicy' => 'getPeriodicNodePolicy'
     ];
 
     /**
@@ -245,6 +265,11 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     const DELETE_SFS30_FALSE = 'false';
     const DELETE_SFS30_SKIP = 'skip';
     const TOBEDELETED_TRUE = 'true';
+    const ONDEMAND_NODE_POLICY_DELETE = 'delete';
+    const ONDEMAND_NODE_POLICY_RESET = 'reset';
+    const ONDEMAND_NODE_POLICY_RETAIN = 'retain';
+    const PERIODIC_NODE_POLICY_RESET = 'reset';
+    const PERIODIC_NODE_POLICY_RETAIN = 'retain';
     
 
     /**
@@ -371,6 +396,33 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOndemandNodePolicyAllowableValues()
+    {
+        return [
+            self::ONDEMAND_NODE_POLICY_DELETE,
+            self::ONDEMAND_NODE_POLICY_RESET,
+            self::ONDEMAND_NODE_POLICY_RETAIN,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPeriodicNodePolicyAllowableValues()
+    {
+        return [
+            self::PERIODIC_NODE_POLICY_RESET,
+            self::PERIODIC_NODE_POLICY_RETAIN,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -396,6 +448,8 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
         $this->container['deleteSfs'] = isset($data['deleteSfs']) ? $data['deleteSfs'] : null;
         $this->container['deleteSfs30'] = isset($data['deleteSfs30']) ? $data['deleteSfs30'] : null;
         $this->container['tobedeleted'] = isset($data['tobedeleted']) ? $data['tobedeleted'] : null;
+        $this->container['ondemandNodePolicy'] = isset($data['ondemandNodePolicy']) ? $data['ondemandNodePolicy'] : null;
+        $this->container['periodicNodePolicy'] = isset($data['periodicNodePolicy']) ? $data['periodicNodePolicy'] : null;
     }
 
     /**
@@ -472,6 +526,22 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['tobedeleted']) && !in_array($this->container['tobedeleted'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'tobedeleted', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getOndemandNodePolicyAllowableValues();
+                if (!is_null($this->container['ondemandNodePolicy']) && !in_array($this->container['ondemandNodePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ondemandNodePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPeriodicNodePolicyAllowableValues();
+                if (!is_null($this->container['periodicNodePolicy']) && !in_array($this->container['periodicNodePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'periodicNodePolicy', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -703,6 +773,54 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     public function setTobedeleted($tobedeleted)
     {
         $this->container['tobedeleted'] = $tobedeleted;
+        return $this;
+    }
+
+    /**
+    * Gets ondemandNodePolicy
+    *  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    *
+    * @return string|null
+    */
+    public function getOndemandNodePolicy()
+    {
+        return $this->container['ondemandNodePolicy'];
+    }
+
+    /**
+    * Sets ondemandNodePolicy
+    *
+    * @param string|null $ondemandNodePolicy 集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    *
+    * @return $this
+    */
+    public function setOndemandNodePolicy($ondemandNodePolicy)
+    {
+        $this->container['ondemandNodePolicy'] = $ondemandNodePolicy;
+        return $this;
+    }
+
+    /**
+    * Gets periodicNodePolicy
+    *  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    *
+    * @return string|null
+    */
+    public function getPeriodicNodePolicy()
+    {
+        return $this->container['periodicNodePolicy'];
+    }
+
+    /**
+    * Sets periodicNodePolicy
+    *
+    * @param string|null $periodicNodePolicy 集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+    *
+    * @return $this
+    */
+    public function setPeriodicNodePolicy($periodicNodePolicy)
+    {
+        $this->container['periodicNodePolicy'] = $periodicNodePolicy;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * os  操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。
     * login  login
-    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -30,6 +30,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
+    * hostnameConfig  hostnameConfig
     *
     * @var string[]
     */
@@ -43,14 +44,15 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'k8sOptions' => '\HuaweiCloud\SDK\Cce\V3\Model\ReinstallK8sOptionsConfig',
             'lifecycle' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeLifecycleConfig',
             'initializedConditions' => 'string[]',
-            'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\ReinstallExtendParam'
+            'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\ReinstallExtendParam',
+            'hostnameConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * os  操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。
     * login  login
-    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -58,6 +60,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
+    * hostnameConfig  hostnameConfig
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
         'k8sOptions' => null,
         'lifecycle' => null,
         'initializedConditions' => null,
-        'extendParam' => null
+        'extendParam' => null,
+        'hostnameConfig' => null
     ];
 
     /**
@@ -99,7 +103,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * and the value is the original name
     * os  操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。
     * login  login
-    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -107,6 +111,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
+    * hostnameConfig  hostnameConfig
     *
     * @var string[]
     */
@@ -120,14 +125,15 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'k8sOptions' => 'k8sOptions',
             'lifecycle' => 'lifecycle',
             'initializedConditions' => 'initializedConditions',
-            'extendParam' => 'extendParam'
+            'extendParam' => 'extendParam',
+            'hostnameConfig' => 'hostnameConfig'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * os  操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。
     * login  login
-    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -135,6 +141,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
+    * hostnameConfig  hostnameConfig
     *
     * @var string[]
     */
@@ -148,14 +155,15 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'k8sOptions' => 'setK8sOptions',
             'lifecycle' => 'setLifecycle',
             'initializedConditions' => 'setInitializedConditions',
-            'extendParam' => 'setExtendParam'
+            'extendParam' => 'setExtendParam',
+            'hostnameConfig' => 'setHostnameConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * os  操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。
     * login  login
-    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -163,6 +171,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * lifecycle  lifecycle
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * extendParam  extendParam
+    * hostnameConfig  hostnameConfig
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
             'k8sOptions' => 'getK8sOptions',
             'lifecycle' => 'getLifecycle',
             'initializedConditions' => 'getInitializedConditions',
-            'extendParam' => 'getExtendParam'
+            'extendParam' => 'getExtendParam',
+            'hostnameConfig' => 'getHostnameConfig'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
         $this->container['lifecycle'] = isset($data['lifecycle']) ? $data['lifecycle'] : null;
         $this->container['initializedConditions'] = isset($data['initializedConditions']) ? $data['initializedConditions'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
+        $this->container['hostnameConfig'] = isset($data['hostnameConfig']) ? $data['hostnameConfig'] : null;
     }
 
     /**
@@ -327,7 +338,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    *  节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     *
     * @return string|null
     */
@@ -339,7 +350,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * @param string|null $name 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
     *
     * @return $this
     */
@@ -514,6 +525,30 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     public function setExtendParam($extendParam)
     {
         $this->container['extendParam'] = $extendParam;
+        return $this;
+    }
+
+    /**
+    * Gets hostnameConfig
+    *  hostnameConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig|null
+    */
+    public function getHostnameConfig()
+    {
+        return $this->container['hostnameConfig'];
+    }
+
+    /**
+    * Sets hostnameConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig|null $hostnameConfig hostnameConfig
+    *
+    * @return $this
+    */
+    public function setHostnameConfig($hostnameConfig)
+    {
+        $this->container['hostnameConfig'] = $hostnameConfig;
         return $this;
     }
 

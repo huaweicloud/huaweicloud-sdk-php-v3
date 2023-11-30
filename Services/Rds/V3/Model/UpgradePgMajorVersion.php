@@ -186,9 +186,6 @@ class UpgradePgMajorVersion implements ModelInterface, ArrayAccess
         if ($this->container['isChangePrivateIp'] === null) {
             $invalidProperties[] = "'isChangePrivateIp' can't be null";
         }
-        if ($this->container['statisticsCollectionMode'] === null) {
-            $invalidProperties[] = "'statisticsCollectionMode' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -255,7 +252,7 @@ class UpgradePgMajorVersion implements ModelInterface, ArrayAccess
     * Gets statisticsCollectionMode
     *  统计信息收集方式。is_change_private_ip为true时必选  before_change_private_ip：将实例内网IP切换到大版本实例前收集  after_change_private_ip：将实例内网IP切换到大版本实例后收集
     *
-    * @return string
+    * @return string|null
     */
     public function getStatisticsCollectionMode()
     {
@@ -265,7 +262,7 @@ class UpgradePgMajorVersion implements ModelInterface, ArrayAccess
     /**
     * Sets statisticsCollectionMode
     *
-    * @param string $statisticsCollectionMode 统计信息收集方式。is_change_private_ip为true时必选  before_change_private_ip：将实例内网IP切换到大版本实例前收集  after_change_private_ip：将实例内网IP切换到大版本实例后收集
+    * @param string|null $statisticsCollectionMode 统计信息收集方式。is_change_private_ip为true时必选  before_change_private_ip：将实例内网IP切换到大版本实例前收集  after_change_private_ip：将实例内网IP切换到大版本实例后收集
     *
     * @return $this
     */

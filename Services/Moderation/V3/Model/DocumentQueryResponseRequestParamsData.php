@@ -20,7 +20,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  创建作业时传的url参数
+    * url  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     * format  创建作业时传的format参数
     * frameInterval  创建作业时传的frame_interval参数
     *
@@ -34,7 +34,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  创建作业时传的url参数
+    * url  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     * format  创建作业时传的format参数
     * frameInterval  创建作业时传的frame_interval参数
     *
@@ -69,7 +69,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  创建作业时传的url参数
+    * url  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     * format  创建作业时传的format参数
     * frameInterval  创建作业时传的frame_interval参数
     *
@@ -83,7 +83,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  创建作业时传的url参数
+    * url  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     * format  创建作业时传的format参数
     * frameInterval  创建作业时传的frame_interval参数
     *
@@ -97,7 +97,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  创建作业时传的url参数
+    * url  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     * format  创建作业时传的format参数
     * frameInterval  创建作业时传的frame_interval参数
     *
@@ -202,7 +202,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
 
     /**
     * Gets url
-    *  创建作业时传的url参数
+    *  创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class DocumentQueryResponseRequestParamsData implements ModelInterface, ArrayAcc
     /**
     * Sets url
     *
-    * @param string $url 创建作业时传的url参数
+    * @param string $url 创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
     *
     * @return $this
     */

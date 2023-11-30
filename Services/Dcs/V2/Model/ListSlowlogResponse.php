@@ -21,24 +21,28 @@ class ListSlowlogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * totalNum  慢日志总条数
     * count  总数
     * slowlogs  慢日志列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'totalNum' => 'int',
             'count' => 'int',
             'slowlogs' => '\HuaweiCloud\SDK\Dcs\V2\Model\SlowlogItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * totalNum  慢日志总条数
     * count  总数
     * slowlogs  慢日志列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalNum' => null,
         'count' => null,
         'slowlogs' => null
     ];
@@ -66,36 +70,42 @@ class ListSlowlogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * totalNum  慢日志总条数
     * count  总数
     * slowlogs  慢日志列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalNum' => 'total_num',
             'count' => 'count',
             'slowlogs' => 'slowlogs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * totalNum  慢日志总条数
     * count  总数
     * slowlogs  慢日志列表
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalNum' => 'setTotalNum',
             'count' => 'setCount',
             'slowlogs' => 'setSlowlogs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * totalNum  慢日志总条数
     * count  总数
     * slowlogs  慢日志列表
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalNum' => 'getTotalNum',
             'count' => 'getCount',
             'slowlogs' => 'getSlowlogs'
     ];
@@ -158,6 +168,7 @@ class ListSlowlogResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['slowlogs'] = isset($data['slowlogs']) ? $data['slowlogs'] : null;
     }
@@ -182,6 +193,30 @@ class ListSlowlogResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets totalNum
+    *  慢日志总条数
+    *
+    * @return int|null
+    */
+    public function getTotalNum()
+    {
+        return $this->container['totalNum'];
+    }
+
+    /**
+    * Sets totalNum
+    *
+    * @param int|null $totalNum 慢日志总条数
+    *
+    * @return $this
+    */
+    public function setTotalNum($totalNum)
+    {
+        $this->container['totalNum'] = $totalNum;
+        return $this;
     }
 
     /**

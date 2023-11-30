@@ -30,7 +30,7 @@ class ListHistoryDatabaseResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'databaseLimit' => 'int',
             'tableLimit' => 'int',
-            'instances' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseInstance[]'
+            'instances' => '\HuaweiCloud\SDK\Rds\V3\Model\HistoryDatabaseInstance[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListHistoryDatabaseResponse implements ModelInterface, ArrayAccess
     * Gets instances
     *  实例信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseInstance[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\HistoryDatabaseInstance[]|null
     */
     public function getInstances()
     {
@@ -257,7 +257,7 @@ class ListHistoryDatabaseResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseInstance[]|null $instances 实例信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\HistoryDatabaseInstance[]|null $instances 实例信息
     *
     * @return $this
     */

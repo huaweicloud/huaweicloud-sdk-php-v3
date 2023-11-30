@@ -20,8 +20,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群id
-    * namespace  命名空间
+    * clusterId  集群id。
+    * namespace  命名空间。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群id
-    * namespace  命名空间
+    * clusterId  集群id。
+    * namespace  命名空间。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群id
-    * namespace  命名空间
+    * clusterId  集群id。
+    * namespace  命名空间。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群id
-    * namespace  命名空间
+    * clusterId  集群id。
+    * namespace  命名空间。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群id
-    * namespace  命名空间
+    * clusterId  集群id。
+    * namespace  命名空间。
     *
     * @var string[]
     */
@@ -172,21 +172,9 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
         if ($this->container['clusterId'] === null) {
             $invalidProperties[] = "'clusterId' can't be null";
         }
-            if ((mb_strlen($this->container['clusterId']) > 0)) {
-                $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 0.";
-            }
-            if ((mb_strlen($this->container['clusterId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['namespace'] === null) {
             $invalidProperties[] = "'namespace' can't be null";
         }
-            if ((mb_strlen($this->container['namespace']) > 0)) {
-                $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 0.";
-            }
-            if ((mb_strlen($this->container['namespace']) < 0)) {
-                $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -203,7 +191,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  集群id。
     *
     * @return string
     */
@@ -215,7 +203,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群id
+    * @param string $clusterId 集群id。
     *
     * @return $this
     */
@@ -227,7 +215,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  命名空间。
     *
     * @return string
     */
@@ -239,7 +227,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 命名空间
+    * @param string $namespace 命名空间。
     *
     * @return $this
     */

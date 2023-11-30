@@ -20,7 +20,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordingRule  recordingRule
+    * recordingRule  预聚合规则。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordingRule  recordingRule
+    * recordingRule  预聚合规则。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordingRule  recordingRule
+    * recordingRule  预聚合规则。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordingRule  recordingRule
+    * recordingRule  预聚合规则。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordingRule  recordingRule
+    * recordingRule  预聚合规则。
     *
     * @var string[]
     */
@@ -161,12 +161,6 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['recordingRule'] === null) {
             $invalidProperties[] = "'recordingRule' can't be null";
         }
-            if ((mb_strlen($this->container['recordingRule']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'recordingRule', the character length must be smaller than or equal to 1024.";
-            }
-            if ((mb_strlen($this->container['recordingRule']) < 1)) {
-                $invalidProperties[] = "invalid value for 'recordingRule', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -183,7 +177,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordingRule
-    *  recordingRule
+    *  预聚合规则。
     *
     * @return string
     */
@@ -195,7 +189,7 @@ class RecordingRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordingRule
     *
-    * @param string $recordingRule recordingRule
+    * @param string $recordingRule 预聚合规则。
     *
     * @return $this
     */

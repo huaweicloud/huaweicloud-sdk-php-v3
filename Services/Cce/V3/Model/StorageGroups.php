@@ -20,7 +20,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
     * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
     * virtualSpaces  group中空间配置的详细管理。
@@ -36,7 +36,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
     * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
     * virtualSpaces  group中空间配置的详细管理。
@@ -73,7 +73,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
     * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
     * virtualSpaces  group中空间配置的详细管理。
@@ -89,7 +89,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
     * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
     * virtualSpaces  group中空间配置的详细管理。
@@ -105,7 +105,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
     * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
     * virtualSpaces  group中空间配置的详细管理。
@@ -216,7 +216,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    *  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
+    * @param string $name storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     *
     * @return $this
     */

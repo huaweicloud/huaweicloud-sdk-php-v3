@@ -22,6 +22,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  名称
     * userId  用户ID
+    * description  描述
     * logoUrl  图标URL
     * website  网页地址
     * supportUrl  地址
@@ -34,6 +35,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'userId' => 'string',
+            'description' => 'string',
             'logoUrl' => 'string',
             'website' => 'string',
             'supportUrl' => 'string',
@@ -46,6 +48,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  名称
     * userId  用户ID
+    * description  描述
     * logoUrl  图标URL
     * website  网页地址
     * supportUrl  地址
@@ -58,6 +61,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'userId' => null,
+        'description' => null,
         'logoUrl' => null,
         'website' => null,
         'supportUrl' => null,
@@ -91,6 +95,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  名称
     * userId  用户ID
+    * description  描述
     * logoUrl  图标URL
     * website  网页地址
     * supportUrl  地址
@@ -103,6 +108,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'userId' => 'user_id',
+            'description' => 'description',
             'logoUrl' => 'logo_url',
             'website' => 'website',
             'supportUrl' => 'support_url',
@@ -115,6 +121,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  名称
     * userId  用户ID
+    * description  描述
     * logoUrl  图标URL
     * website  网页地址
     * supportUrl  地址
@@ -127,6 +134,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'userId' => 'setUserId',
+            'description' => 'setDescription',
             'logoUrl' => 'setLogoUrl',
             'website' => 'setWebsite',
             'supportUrl' => 'setSupportUrl',
@@ -139,6 +147,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  名称
     * userId  用户ID
+    * description  描述
     * logoUrl  图标URL
     * website  网页地址
     * supportUrl  地址
@@ -151,6 +160,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'userId' => 'getUserId',
+            'description' => 'getDescription',
             'logoUrl' => 'getLogoUrl',
             'website' => 'getWebsite',
             'supportUrl' => 'getSupportUrl',
@@ -219,6 +229,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['logoUrl'] = isset($data['logoUrl']) ? $data['logoUrl'] : null;
         $this->container['website'] = isset($data['website']) ? $data['website'] : null;
         $this->container['supportUrl'] = isset($data['supportUrl']) ? $data['supportUrl'] : null;
@@ -294,6 +305,30 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     public function setUserId($userId)
     {
         $this->container['userId'] = $userId;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

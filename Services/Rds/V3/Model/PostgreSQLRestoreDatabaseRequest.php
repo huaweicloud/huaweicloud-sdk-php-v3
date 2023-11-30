@@ -25,7 +25,7 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreDatabaseInstance[]'
+            'instances' => '\HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     * Gets instances
     *  库级恢复实例信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreDatabaseInstance[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]|null
     */
     public function getInstances()
     {
@@ -186,7 +186,7 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLRestoreDatabaseInstance[]|null $instances 库级恢复实例信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]|null $instances 库级恢复实例信息
     *
     * @return $this
     */

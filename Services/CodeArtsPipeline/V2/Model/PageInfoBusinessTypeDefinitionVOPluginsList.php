@@ -161,8 +161,8 @@ class PageInfoBusinessTypeDefinitionVOPluginsList implements ModelInterface, Arr
             'iconUrl' => 'icon_url',
             'multiStepEditable' => 'multi_step_editable',
             'location' => 'location',
-            'publisherUniqueId' => 'publisherUniqueId',
-            'manifestVersion' => 'manifestVersion'
+            'publisherUniqueId' => 'publisher_unique_id',
+            'manifestVersion' => 'manifest_version'
     ];
 
     /**

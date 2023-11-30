@@ -20,28 +20,28 @@ class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * engine  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     * xLanguage  语言
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'databaseName' => 'string',
+            'engine' => 'string',
             'xLanguage' => 'string',
             'body' => '\HuaweiCloud\SDK\Rds\V3\Model\PostgreSQLHistoryDatabaseRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * engine  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     * xLanguage  语言
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'databaseName' => null,
+        'engine' => null,
         'xLanguage' => null,
         'body' => null
     ];
@@ -69,42 +69,42 @@ class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * engine  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     * xLanguage  语言
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'databaseName' => 'database_name',
+            'engine' => 'engine',
             'xLanguage' => 'X-Language',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * engine  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     * xLanguage  语言
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'databaseName' => 'setDatabaseName',
+            'engine' => 'setEngine',
             'xLanguage' => 'setXLanguage',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * databaseName  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * engine  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     * xLanguage  语言
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'databaseName' => 'getDatabaseName',
+            'engine' => 'getEngine',
             'xLanguage' => 'getXLanguage',
             'body' => 'getBody'
     ];
@@ -167,7 +167,7 @@ class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -180,8 +180,8 @@ class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['databaseName'] === null) {
-            $invalidProperties[] = "'databaseName' can't be null";
+        if ($this->container['engine'] === null) {
+            $invalidProperties[] = "'engine' can't be null";
         }
         return $invalidProperties;
     }
@@ -198,26 +198,26 @@ class ListHistoryDatabaseRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets databaseName
-    *  数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * Gets engine
+    *  数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     *
     * @return string
     */
-    public function getDatabaseName()
+    public function getEngine()
     {
-        return $this->container['databaseName'];
+        return $this->container['engine'];
     }
 
     /**
-    * Sets databaseName
+    * Sets engine
     *
-    * @param string $databaseName 数据库引擎。支持的引擎如下，不区分大小写：postgresql
+    * @param string $engine 数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
     *
     * @return $this
     */
-    public function setDatabaseName($databaseName)
+    public function setEngine($engine)
     {
-        $this->container['databaseName'] = $databaseName;
+        $this->container['engine'] = $engine;
         return $this;
     }
 

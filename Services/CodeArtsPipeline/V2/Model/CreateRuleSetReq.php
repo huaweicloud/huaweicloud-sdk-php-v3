@@ -21,28 +21,24 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  规则集名称
-    * type  规则集类型
     * rules  规则集合
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'type' => 'string',
             'rules' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RequestRuleInstance[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  规则集名称
-    * type  规则集类型
     * rules  规则集合
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'type' => null,
         'rules' => null
     ];
 
@@ -70,42 +66,36 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  规则集名称
-    * type  规则集类型
     * rules  规则集合
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'type' => 'type',
             'rules' => 'rules'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  规则集名称
-    * type  规则集类型
     * rules  规则集合
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'type' => 'setType',
             'rules' => 'setRules'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  规则集名称
-    * type  规则集类型
     * rules  规则集合
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'type' => 'getType',
             'rules' => 'getRules'
     ];
 
@@ -168,7 +158,6 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
     }
 
@@ -186,9 +175,6 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) > 85)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 85.";
             }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['rules'] === null) {
             $invalidProperties[] = "'rules' can't be null";
         }
@@ -227,30 +213,6 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  规则集类型
-    *
-    * @return string
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string $type 规则集类型
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
         return $this;
     }
 

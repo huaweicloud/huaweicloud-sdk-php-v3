@@ -106,9 +106,9 @@ class PageInfoBusinessTypeDefinitionVOData implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $attributeMap = [
-            'businessType' => 'businessType',
-            'displayName' => 'displayName',
-            'uniqueId' => 'uniqueId',
+            'businessType' => 'business_type',
+            'displayName' => 'display_name',
+            'uniqueId' => 'unique_id',
             'editable' => 'editable',
             'removable' => 'removable',
             'cloneable' => 'cloneable',

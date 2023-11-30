@@ -32,7 +32,7 @@ class ListPLuginVersionResponse implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'total' => 'int',
-            'data' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoResponseListPluginBasicVOData[]'
+            'data' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginBasicVO[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListPLuginVersionResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  结果集
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoResponseListPluginBasicVOData[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginBasicVO[]|null
     */
     public function getData()
     {
@@ -292,7 +292,7 @@ class ListPLuginVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PageInfoResponseListPluginBasicVOData[]|null $data 结果集
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginBasicVO[]|null $data 结果集
     *
     * @return $this
     */

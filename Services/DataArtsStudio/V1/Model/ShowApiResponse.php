@@ -23,7 +23,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  API的ID
     * name  API名称
-    * groupId  API所属分组的ID
+    * groupId  API所属分组的ID（共享版）
     * description  API 描述
     * protocol  API 访问协议
     * publishType  发布类型，公开或者私有
@@ -36,9 +36,10 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * manager  API 审核人名称
-    * status  API的状态
+    * status  API的状态（共享版）
     * type  API 类型
-    * debugStatus  API调试状态
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * requestParas  API请求参数
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
@@ -64,6 +65,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'type' => 'string',
             'debugStatus' => 'string',
+            'publishMessages' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]',
             'requestParas' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RequestPara[]',
             'datasourceConfig' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DatasourceConfig',
             'backendConfig' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BackendConfig'
@@ -73,7 +75,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  API的ID
     * name  API名称
-    * groupId  API所属分组的ID
+    * groupId  API所属分组的ID（共享版）
     * description  API 描述
     * protocol  API 访问协议
     * publishType  发布类型，公开或者私有
@@ -86,9 +88,10 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * manager  API 审核人名称
-    * status  API的状态
+    * status  API的状态（共享版）
     * type  API 类型
-    * debugStatus  API调试状态
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * requestParas  API请求参数
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
@@ -114,6 +117,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'type' => null,
         'debugStatus' => null,
+        'publishMessages' => null,
         'requestParas' => null,
         'datasourceConfig' => null,
         'backendConfig' => null
@@ -144,7 +148,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  API的ID
     * name  API名称
-    * groupId  API所属分组的ID
+    * groupId  API所属分组的ID（共享版）
     * description  API 描述
     * protocol  API 访问协议
     * publishType  发布类型，公开或者私有
@@ -157,9 +161,10 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * manager  API 审核人名称
-    * status  API的状态
+    * status  API的状态（共享版）
     * type  API 类型
-    * debugStatus  API调试状态
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * requestParas  API请求参数
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
@@ -185,6 +190,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'type' => 'type',
             'debugStatus' => 'debug_status',
+            'publishMessages' => 'publish_messages',
             'requestParas' => 'request_paras',
             'datasourceConfig' => 'datasource_config',
             'backendConfig' => 'backend_config'
@@ -194,7 +200,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  API的ID
     * name  API名称
-    * groupId  API所属分组的ID
+    * groupId  API所属分组的ID（共享版）
     * description  API 描述
     * protocol  API 访问协议
     * publishType  发布类型，公开或者私有
@@ -207,9 +213,10 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * manager  API 审核人名称
-    * status  API的状态
+    * status  API的状态（共享版）
     * type  API 类型
-    * debugStatus  API调试状态
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * requestParas  API请求参数
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
@@ -235,6 +242,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'type' => 'setType',
             'debugStatus' => 'setDebugStatus',
+            'publishMessages' => 'setPublishMessages',
             'requestParas' => 'setRequestParas',
             'datasourceConfig' => 'setDatasourceConfig',
             'backendConfig' => 'setBackendConfig'
@@ -244,7 +252,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  API的ID
     * name  API名称
-    * groupId  API所属分组的ID
+    * groupId  API所属分组的ID（共享版）
     * description  API 描述
     * protocol  API 访问协议
     * publishType  发布类型，公开或者私有
@@ -257,9 +265,10 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  更新时间
     * manager  API 审核人名称
-    * status  API的状态
+    * status  API的状态（共享版）
     * type  API 类型
-    * debugStatus  API调试状态
+    * debugStatus  API调试状态（共享版）
+    * publishMessages  发布信息列表（专享版）
     * requestParas  API请求参数
     * datasourceConfig  datasourceConfig
     * backendConfig  backendConfig
@@ -285,6 +294,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'type' => 'getType',
             'debugStatus' => 'getDebugStatus',
+            'publishMessages' => 'getPublishMessages',
             'requestParas' => 'getRequestParas',
             'datasourceConfig' => 'getDatasourceConfig',
             'backendConfig' => 'getBackendConfig'
@@ -476,6 +486,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['debugStatus'] = isset($data['debugStatus']) ? $data['debugStatus'] : null;
+        $this->container['publishMessages'] = isset($data['publishMessages']) ? $data['publishMessages'] : null;
         $this->container['requestParas'] = isset($data['requestParas']) ? $data['requestParas'] : null;
         $this->container['datasourceConfig'] = isset($data['datasourceConfig']) ? $data['datasourceConfig'] : null;
         $this->container['backendConfig'] = isset($data['backendConfig']) ? $data['backendConfig'] : null;
@@ -601,7 +612,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  API所属分组的ID
+    *  API所属分组的ID（共享版）
     *
     * @return string|null
     */
@@ -613,7 +624,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId API所属分组的ID
+    * @param string|null $groupId API所属分组的ID（共享版）
     *
     * @return $this
     */
@@ -913,7 +924,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  API的状态
+    *  API的状态（共享版）
     *
     * @return string|null
     */
@@ -925,7 +936,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status API的状态
+    * @param string|null $status API的状态（共享版）
     *
     * @return $this
     */
@@ -961,7 +972,7 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets debugStatus
-    *  API调试状态
+    *  API调试状态（共享版）
     *
     * @return string|null
     */
@@ -973,13 +984,37 @@ class ShowApiResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debugStatus
     *
-    * @param string|null $debugStatus API调试状态
+    * @param string|null $debugStatus API调试状态（共享版）
     *
     * @return $this
     */
     public function setDebugStatus($debugStatus)
     {
         $this->container['debugStatus'] = $debugStatus;
+        return $this;
+    }
+
+    /**
+    * Gets publishMessages
+    *  发布信息列表（专享版）
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]|null
+    */
+    public function getPublishMessages()
+    {
+        return $this->container['publishMessages'];
+    }
+
+    /**
+    * Sets publishMessages
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApiPublishDTO[]|null $publishMessages 发布信息列表（专享版）
+    *
+    * @return $this
+    */
+    public function setPublishMessages($publishMessages)
+    {
+        $this->container['publishMessages'] = $publishMessages;
         return $this;
     }
 

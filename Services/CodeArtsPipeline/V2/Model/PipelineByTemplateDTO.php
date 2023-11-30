@@ -202,6 +202,15 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['isPublish'] === null) {
+            $invalidProperties[] = "'isPublish' can't be null";
+        }
+        if ($this->container['sources'] === null) {
+            $invalidProperties[] = "'sources' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +229,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * Gets name
     *  流水线名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -230,7 +239,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string $name 流水线名称
     *
     * @return $this
     */
@@ -268,7 +277,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * Gets isPublish
     *  是否为变更流水线
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsPublish()
     {
@@ -278,7 +287,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为变更流水线
+    * @param bool $isPublish 是否为变更流水线
     *
     * @return $this
     */
@@ -292,7 +301,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     * Gets sources
     *  流水线源
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]
     */
     public function getSources()
     {
@@ -302,7 +311,7 @@ class PipelineByTemplateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[]|null $sources 流水线源
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CodeSource[] $sources 流水线源
     *
     * @return $this
     */

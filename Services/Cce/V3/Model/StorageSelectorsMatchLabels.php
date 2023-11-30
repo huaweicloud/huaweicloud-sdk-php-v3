@@ -21,7 +21,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -39,7 +39,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -78,7 +78,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -96,7 +96,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -114,7 +114,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
-    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -242,7 +242,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    *  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string|null $volumeType 云硬盘类型，目前支持SSD\\GPSSD\\SAS三种。
+    * @param string|null $volumeType 云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
     *
     * @return $this
     */

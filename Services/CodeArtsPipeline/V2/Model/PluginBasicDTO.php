@@ -31,6 +31,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * isPrivate  是否私有
     * region  局点
     * maintainers  维护者
+    * pluginCompositionType  组合插件类型
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
             'description' => 'string',
             'isPrivate' => 'int',
             'region' => 'string',
-            'maintainers' => 'string'
+            'maintainers' => 'string',
+            'pluginCompositionType' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * isPrivate  是否私有
     * region  局点
     * maintainers  维护者
+    * pluginCompositionType  组合插件类型
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
         'description' => null,
         'isPrivate' => 'int32',
         'region' => null,
-        'maintainers' => null
+        'maintainers' => null,
+        'pluginCompositionType' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * isPrivate  是否私有
     * region  局点
     * maintainers  维护者
+    * pluginCompositionType  组合插件类型
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
             'description' => 'description',
             'isPrivate' => 'is_private',
             'region' => 'region',
-            'maintainers' => 'maintainers'
+            'maintainers' => 'maintainers',
+            'pluginCompositionType' => 'plugin_composition_type'
     ];
 
     /**
@@ -142,6 +148,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * isPrivate  是否私有
     * region  局点
     * maintainers  维护者
+    * pluginCompositionType  组合插件类型
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'isPrivate' => 'setIsPrivate',
             'region' => 'setRegion',
-            'maintainers' => 'setMaintainers'
+            'maintainers' => 'setMaintainers',
+            'pluginCompositionType' => 'setPluginCompositionType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * isPrivate  是否私有
     * region  局点
     * maintainers  维护者
+    * pluginCompositionType  组合插件类型
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'isPrivate' => 'getIsPrivate',
             'region' => 'getRegion',
-            'maintainers' => 'getMaintainers'
+            'maintainers' => 'getMaintainers',
+            'pluginCompositionType' => 'getPluginCompositionType'
     ];
 
     /**
@@ -258,6 +268,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
         $this->container['isPrivate'] = isset($data['isPrivate']) ? $data['isPrivate'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['maintainers'] = isset($data['maintainers']) ? $data['maintainers'] : null;
+        $this->container['pluginCompositionType'] = isset($data['pluginCompositionType']) ? $data['pluginCompositionType'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     public function setMaintainers($maintainers)
     {
         $this->container['maintainers'] = $maintainers;
+        return $this;
+    }
+
+    /**
+    * Gets pluginCompositionType
+    *  组合插件类型
+    *
+    * @return string|null
+    */
+    public function getPluginCompositionType()
+    {
+        return $this->container['pluginCompositionType'];
+    }
+
+    /**
+    * Sets pluginCompositionType
+    *
+    * @param string|null $pluginCompositionType 组合插件类型
+    *
+    * @return $this
+    */
+    public function setPluginCompositionType($pluginCompositionType)
+    {
+        $this->container['pluginCompositionType'] = $pluginCompositionType;
         return $this;
     }
 

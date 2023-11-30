@@ -32,7 +32,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * productId  RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true: 支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -78,7 +78,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * productId  RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true: 支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -145,7 +145,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * productId  RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true: 支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -191,7 +191,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * productId  RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true: 支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -237,7 +237,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * productId  RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
     * sslEnable  是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
     * storageSpecCode  存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
-    * enterpriseProjectId  企业项目ID。若为企业项目帐号，该参数必填。
+    * enterpriseProjectId  企业项目ID。若为企业项目账号，该参数必填。
     * enableAcl  是否开启访问控制列表。
     * ipv6Enable  是否支持IPv6。   - true: 支持   - false：不支持
     * enablePublicip  是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
@@ -787,7 +787,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。若为企业项目帐号，该参数必填。
+    *  企业项目ID。若为企业项目账号，该参数必填。
     *
     * @return string|null
     */
@@ -799,7 +799,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。若为企业项目帐号，该参数必填。
+    * @param string|null $enterpriseProjectId 企业项目ID。若为企业项目账号，该参数必填。
     *
     * @return $this
     */

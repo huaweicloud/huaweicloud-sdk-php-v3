@@ -21,29 +21,29 @@ class ListQueuePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * queueName  队列名称
-    * page  列表当前页
-    * pageSize  每页显示条数
+    * offset  偏移量
+    * limit  每页显示条数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'queueName' => 'string',
-            'page' => 'int',
-            'pageSize' => 'int'
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * queueName  队列名称
-    * page  列表当前页
-    * pageSize  每页显示条数
+    * offset  偏移量
+    * limit  每页显示条数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'queueName' => null,
-        'page' => 'int32',
-        'pageSize' => 'int32'
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -70,43 +70,43 @@ class ListQueuePropertiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * queueName  队列名称
-    * page  列表当前页
-    * pageSize  每页显示条数
+    * offset  偏移量
+    * limit  每页显示条数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'queueName' => 'queue_name',
-            'page' => 'page',
-            'pageSize' => 'page_size'
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * queueName  队列名称
-    * page  列表当前页
-    * pageSize  每页显示条数
+    * offset  偏移量
+    * limit  每页显示条数
     *
     * @var string[]
     */
     protected static $setters = [
             'queueName' => 'setQueueName',
-            'page' => 'setPage',
-            'pageSize' => 'setPageSize'
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * queueName  队列名称
-    * page  列表当前页
-    * pageSize  每页显示条数
+    * offset  偏移量
+    * limit  每页显示条数
     *
     * @var string[]
     */
     protected static $getters = [
             'queueName' => 'getQueueName',
-            'page' => 'getPage',
-            'pageSize' => 'getPageSize'
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -168,8 +168,8 @@ class ListQueuePropertiesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -192,11 +192,14 @@ class ListQueuePropertiesRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/", $this->container['queueName'])) {
                 $invalidProperties[] = "invalid value for 'queueName', must be conform to the pattern /^(?!_)(?![0-9]+$)[A-Za-z0-9_]*$/.";
             }
-            if (!is_null($this->container['page']) && ($this->container['page'] < 1)) {
-                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 1.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] > 20)) {
-                $invalidProperties[] = "invalid value for 'pageSize', must be smaller than or equal to 20.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -237,50 +240,50 @@ class ListQueuePropertiesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets page
-    *  列表当前页
+    * Gets offset
+    *  偏移量
     *
     * @return int|null
     */
-    public function getPage()
+    public function getOffset()
     {
-        return $this->container['page'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets page
+    * Sets offset
     *
-    * @param int|null $page 列表当前页
+    * @param int|null $offset 偏移量
     *
     * @return $this
     */
-    public function setPage($page)
+    public function setOffset($offset)
     {
-        $this->container['page'] = $page;
+        $this->container['offset'] = $offset;
         return $this;
     }
 
     /**
-    * Gets pageSize
+    * Gets limit
     *  每页显示条数
     *
     * @return int|null
     */
-    public function getPageSize()
+    public function getLimit()
     {
-        return $this->container['pageSize'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets pageSize
+    * Sets limit
     *
-    * @param int|null $pageSize 每页显示条数
+    * @param int|null $limit 每页显示条数
     *
     * @return $this
     */
-    public function setPageSize($pageSize)
+    public function setLimit($limit)
     {
-        $this->container['pageSize'] = $pageSize;
+        $this->container['limit'] = $limit;
         return $this;
     }
 

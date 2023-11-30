@@ -894,6 +894,71 @@ class AomClient extends Client
     }
 
     /**
+     * 查询集群主机安装的ICAgent信息
+     *
+     * 该接口用于查询集群主机安装的ICAgent信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAgents($request)
+    {
+        return $this->listAgentsWithHttpInfo($request);
+    }
+
+    public function listAgentsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{cluster_id}/{namespace}/agents';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsRequest');
+    }
+
+    /**
      * 查询阈值规则列表
      *
      * 该接口用于查询阈值规则列表。
@@ -1337,6 +1402,65 @@ class AomClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotifiedHistoriesResponse',
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListNotifiedHistoriesRequest');
+    }
+
+    /**
+     * 查询aom2.0相关云服务授权信息
+     *
+     * 该接口用于查询aom2.0相关云服务授权信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPermissions($request)
+    {
+        return $this->listPermissionsWithHttpInfo($request);
+    }
+
+    public function listPermissionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aom/auth/grant';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsRequest');
     }
 
     /**
@@ -2040,9 +2164,9 @@ class AomClient extends Client
     }
 
     /**
-     * 新增Prometheus实例数据源
+     * 新增Prometheus实例
      *
-     * 该接口用于新增Prometheus实例数据源
+     * 该接口用于新增Prometheus实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2102,9 +2226,9 @@ class AomClient extends Client
     }
 
     /**
-     * 创建预汇聚规则
+     * 创建Prometheus实例的预聚合规则
      *
-     * 该接口用于创建预汇聚规则
+     * 该接口用于给Prometheus实例创建预聚合规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2167,9 +2291,9 @@ class AomClient extends Client
     }
 
     /**
-     * 卸载托管Prometheus
+     * 卸载托管Prometheus实例
      *
-     * 该接口用于卸载托管Prometheus
+     * 该接口用于卸载托管Prometheus实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2229,9 +2353,9 @@ class AomClient extends Client
     }
 
     /**
-     * 获取Prometheus监控所需Token-access code
+     * 获取Prometheus实例调用凭证
      *
-     * 该接口用于获取Prometheus监控所需Token-access code
+     * 该接口用于获取Prometheus实例调用凭证。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2285,71 +2409,6 @@ class AomClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAccessCodeResponse',
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAccessCodeRequest');
-    }
-
-    /**
-     * 查询集群Agent信息
-     *
-     * 该接口用于查询集群Agent信息
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAgents($request)
-    {
-        return $this->listAgentsWithHttpInfo($request);
-    }
-
-    public function listAgentsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/{cluster_id}/{namespace}/agents';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $pathParams['cluster_id'] = $localVarParams['clusterId'];
-        }
-        if ($localVarParams['namespace'] !== null) {
-            $pathParams['namespace'] = $localVarParams['namespace'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsResponse',
-            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListAgentsRequest');
     }
 
     /**
@@ -2722,68 +2781,9 @@ class AomClient extends Client
     }
 
     /**
-     * 是否开通aom2.0
+     * 查询Prometheus实例
      *
-     * 该接口用于查询用户是否已经完成aom2.0授权
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listPermissions($request)
-    {
-        return $this->listPermissionsWithHttpInfo($request);
-    }
-
-    public function listPermissionsWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/aom/auth/grant';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsResponse',
-            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListPermissionsRequest');
-    }
-
-    /**
-     * 获取所有正常实例
-     *
-     * 该接口用于获取所有正常prometheus实例
+     * 该接口用于查询Prometheus实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

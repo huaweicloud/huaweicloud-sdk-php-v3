@@ -24,7 +24,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     * status  实例大版本升级状态 \" running\"：预检查或大版本升级进行中 \" success\"：预检查或大版本升级成功 \" failed\"：预检查或大版本升级失败
     * targetVersion  目标版本。
     * startTime  开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
-    * reportExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * checkExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     * detail  预检查或升级报告信息。
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
             'status' => 'string',
             'targetVersion' => 'string',
             'startTime' => 'string',
-            'reportExpirationTime' => 'string',
+            'checkExpirationTime' => 'string',
             'detail' => 'string'
     ];
 
@@ -42,7 +42,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     * status  实例大版本升级状态 \" running\"：预检查或大版本升级进行中 \" success\"：预检查或大版本升级成功 \" failed\"：预检查或大版本升级失败
     * targetVersion  目标版本。
     * startTime  开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
-    * reportExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * checkExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     * detail  预检查或升级报告信息。
     *
     * @var string[]
@@ -51,7 +51,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
         'status' => null,
         'targetVersion' => null,
         'startTime' => null,
-        'reportExpirationTime' => null,
+        'checkExpirationTime' => null,
         'detail' => null
     ];
 
@@ -81,7 +81,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     * status  实例大版本升级状态 \" running\"：预检查或大版本升级进行中 \" success\"：预检查或大版本升级成功 \" failed\"：预检查或大版本升级失败
     * targetVersion  目标版本。
     * startTime  开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
-    * reportExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * checkExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     * detail  预检查或升级报告信息。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
             'status' => 'status',
             'targetVersion' => 'target_version',
             'startTime' => 'start_time',
-            'reportExpirationTime' => 'report_expiration_time',
+            'checkExpirationTime' => 'check_expiration_time',
             'detail' => 'detail'
     ];
 
@@ -99,7 +99,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     * status  实例大版本升级状态 \" running\"：预检查或大版本升级进行中 \" success\"：预检查或大版本升级成功 \" failed\"：预检查或大版本升级失败
     * targetVersion  目标版本。
     * startTime  开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
-    * reportExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * checkExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     * detail  预检查或升级报告信息。
     *
     * @var string[]
@@ -108,7 +108,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
             'status' => 'setStatus',
             'targetVersion' => 'setTargetVersion',
             'startTime' => 'setStartTime',
-            'reportExpirationTime' => 'setReportExpirationTime',
+            'checkExpirationTime' => 'setCheckExpirationTime',
             'detail' => 'setDetail'
     ];
 
@@ -117,7 +117,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     * status  实例大版本升级状态 \" running\"：预检查或大版本升级进行中 \" success\"：预检查或大版本升级成功 \" failed\"：预检查或大版本升级失败
     * targetVersion  目标版本。
     * startTime  开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
-    * reportExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * checkExpirationTime  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     * detail  预检查或升级报告信息。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
             'status' => 'getStatus',
             'targetVersion' => 'getTargetVersion',
             'startTime' => 'getStartTime',
-            'reportExpirationTime' => 'getReportExpirationTime',
+            'checkExpirationTime' => 'getCheckExpirationTime',
             'detail' => 'getDetail'
     ];
 
@@ -191,7 +191,7 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['reportExpirationTime'] = isset($data['reportExpirationTime']) ? $data['reportExpirationTime'] : null;
+        $this->container['checkExpirationTime'] = isset($data['checkExpirationTime']) ? $data['checkExpirationTime'] : null;
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
@@ -290,26 +290,26 @@ class ShowUpgradeDbMajorVersionStatusResponse implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets reportExpirationTime
+    * Gets checkExpirationTime
     *  检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     *
     * @return string|null
     */
-    public function getReportExpirationTime()
+    public function getCheckExpirationTime()
     {
-        return $this->container['reportExpirationTime'];
+        return $this->container['checkExpirationTime'];
     }
 
     /**
-    * Sets reportExpirationTime
+    * Sets checkExpirationTime
     *
-    * @param string|null $reportExpirationTime 检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
+    * @param string|null $checkExpirationTime 检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
     *
     * @return $this
     */
-    public function setReportExpirationTime($reportExpirationTime)
+    public function setCheckExpirationTime($checkExpirationTime)
     {
-        $this->container['reportExpirationTime'] = $reportExpirationTime;
+        $this->container['checkExpirationTime'] = $checkExpirationTime;
         return $this;
     }
 

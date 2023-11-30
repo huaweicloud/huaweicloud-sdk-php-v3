@@ -20,7 +20,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrs
-    *  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    *  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\ContainerCIDR[]|null
     */
@@ -186,7 +186,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets cidrs
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ContainerCIDR[]|null $cidrs 容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ContainerCIDR[]|null $cidrs 容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
     *
     * @return $this
     */

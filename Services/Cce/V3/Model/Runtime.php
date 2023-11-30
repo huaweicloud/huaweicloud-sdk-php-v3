@@ -20,7 +20,7 @@ class Runtime implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * name  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class Runtime implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * name  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class Runtime implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * name  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Runtime implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * name  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Runtime implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * name  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class Runtime implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    *  容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class Runtime implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 容器运行时, 默认场景： - 1.25以下集群：默认为\"docker\" - 1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为欧拉2.5、欧拉2.8的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
+    * @param string|null $name 容器运行时，默认场景： - v1.25以下集群：默认为\"docker\" - v1.25及以上集群，随操作系统变化，默认的容器运行时不同：操作系统为EulerOS 2.5[、EulerOS 2.8](tag:hws,hws_hk)的节点默认为\"docker\"，其余操作系统的节点默认为\"containerd\"
     *
     * @return $this
     */

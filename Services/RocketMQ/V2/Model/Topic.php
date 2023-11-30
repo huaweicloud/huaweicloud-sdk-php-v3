@@ -25,7 +25,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class Topic implements ModelInterface, ArrayAccess
     * totalWriteQueueNum  总写队列个数。
     * permission  权限。
     * brokers  关联的代理。
-    * messageType  消息类型。
+    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @var string[]
     */
@@ -401,7 +401,7 @@ class Topic implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageType
-    *  消息类型。
+    *  消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class Topic implements ModelInterface, ArrayAccess
     /**
     * Sets messageType
     *
-    * @param string|null $messageType 消息类型。
+    * @param string|null $messageType 消息类型（RocketMQ实例5.x版本才包含此参数）。
     *
     * @return $this
     */

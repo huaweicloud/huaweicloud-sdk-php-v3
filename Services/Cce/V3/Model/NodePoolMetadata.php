@@ -22,7 +22,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  节点名池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     * uid  节点池的uid。创建成功后自动生成，填写无效
-    * annotations  节点池的注解，以key value对表示。
+    * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
     *
@@ -40,7 +40,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  节点名池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     * uid  节点池的uid。创建成功后自动生成，填写无效
-    * annotations  节点池的注解，以key value对表示。
+    * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
     *
@@ -79,7 +79,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  节点名池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     * uid  节点池的uid。创建成功后自动生成，填写无效
-    * annotations  节点池的注解，以key value对表示。
+    * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
     *
@@ -97,7 +97,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  节点名池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     * uid  节点池的uid。创建成功后自动生成，填写无效
-    * annotations  节点池的注解，以key value对表示。
+    * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
     *
@@ -115,7 +115,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  节点名池名称。  > 命名规则： > >  - 以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-50位，且不能以中划线(-)结尾。 > >  - 不允许创建名为 DefaultPool 的节点池。
     * uid  节点池的uid。创建成功后自动生成，填写无效
-    * annotations  节点池的注解，以key value对表示。
+    * annotations  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     * updateTimestamp  更新时间
     * creationTimestamp  创建时间
     *
@@ -278,7 +278,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets annotations
-    *  节点池的注解，以key value对表示。
+    *  节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     *
     * @return map[string,string]|null
     */
@@ -290,7 +290,7 @@ class NodePoolMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets annotations
     *
-    * @param map[string,string]|null $annotations 节点池的注解，以key value对表示。
+    * @param map[string,string]|null $annotations 节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
     *
     * @return $this
     */

@@ -16,7 +16,7 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'MasterEIPResponse_spec';
+    protected static $openAPIModelName = 'MasterEIPResponseSpec';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

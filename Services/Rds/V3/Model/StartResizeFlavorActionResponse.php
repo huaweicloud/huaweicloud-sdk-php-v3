@@ -21,22 +21,26 @@ class StartResizeFlavorActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * jobId  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
+    * orderId  订单号，规格变更包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * jobId  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
+    * orderId  订单号，规格变更包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'orderId' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class StartResizeFlavorActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID。
+    * jobId  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
+    * orderId  订单号，规格变更包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'orderId' => 'order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID。
+    * jobId  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
+    * orderId  订单号，规格变更包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID。
+    * jobId  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
+    * orderId  订单号，规格变更包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class StartResizeFlavorActionResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class StartResizeFlavorActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID。
+    *  规格变更的任务id。 仅规格变更按需实例时会返回该参数。
     *
     * @return string|null
     */
@@ -187,13 +198,37 @@ class StartResizeFlavorActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID。
+    * @param string|null $jobId 规格变更的任务id。 仅规格变更按需实例时会返回该参数。
     *
     * @return $this
     */
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单号，规格变更包年包月时返回该参数。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单号，规格变更包年包月时返回该参数。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

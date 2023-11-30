@@ -20,7 +20,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * promId  普罗实例id。
+    * promId  Prometheus实例id。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * promId  普罗实例id。
+    * promId  Prometheus实例id。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * promId  普罗实例id。
+    * promId  Prometheus实例id。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * promId  普罗实例id。
+    * promId  Prometheus实例id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * promId  普罗实例id。
+    * promId  Prometheus实例id。
     *
     * @var string[]
     */
@@ -161,12 +161,6 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
         if ($this->container['promId'] === null) {
             $invalidProperties[] = "'promId' can't be null";
         }
-            if ((mb_strlen($this->container['promId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['promId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'promId', the character length must be bigger than or equal to 36.";
-            }
         return $invalidProperties;
     }
 
@@ -183,7 +177,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promId
-    *  普罗实例id。
+    *  Prometheus实例id。
     *
     * @return string
     */
@@ -195,7 +189,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promId
     *
-    * @param string $promId 普罗实例id。
+    * @param string $promId Prometheus实例id。
     *
     * @return $this
     */

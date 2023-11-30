@@ -172,12 +172,6 @@ class CreateRecordingRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['prometheusInstance'] === null) {
             $invalidProperties[] = "'prometheusInstance' can't be null";
         }
-            if ((mb_strlen($this->container['prometheusInstance']) > 36)) {
-                $invalidProperties[] = "invalid value for 'prometheusInstance', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['prometheusInstance']) < 36)) {
-                $invalidProperties[] = "invalid value for 'prometheusInstance', the character length must be bigger than or equal to 36.";
-            }
         return $invalidProperties;
     }
 

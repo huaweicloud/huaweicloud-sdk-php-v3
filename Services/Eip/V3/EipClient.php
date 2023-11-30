@@ -133,6 +133,83 @@ class EipClient extends Client
     }
 
     /**
+     * 查看租户带宽限制
+     *
+     * 获取EIP带宽限制列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthsLimit($request)
+    {
+        return $this->listBandwidthsLimitWithHttpInfo($request);
+    }
+
+    public function listBandwidthsLimitWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/eip-bandwidth-limits';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['chargeMode'] !== null) {
+            $queryParams['charge_mode'] = $localVarParams['chargeMode'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListBandwidthsLimitResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListBandwidthsLimitRequest');
+    }
+
+    /**
      * 查询公共池列表
      *
      * 查询公共池列表
@@ -204,6 +281,116 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListCommonPoolsResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListCommonPoolsRequest');
+    }
+
+    /**
+     * 查询带宽列表
+     *
+     * 查询带宽列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEipBandwidths($request)
+    {
+        return $this->listEipBandwidthsWithHttpInfo($request);
+    }
+
+    public function listEipBandwidthsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip-bandwidths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['bandwidthType'] !== null) {
+            $queryParams['bandwidth_type'] = $localVarParams['bandwidthType'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['nameLike'] !== null) {
+            $queryParams['name_like'] = $localVarParams['nameLike'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['ingressSize'] !== null) {
+            $queryParams['ingress_size'] = $localVarParams['ingressSize'];
+        }
+        if ($localVarParams['adminState'] !== null) {
+            $queryParams['admin_state'] = $localVarParams['adminState'];
+        }
+        if ($localVarParams['billingInfo'] !== null) {
+            $queryParams['billing_info'] = $localVarParams['billingInfo'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['enableBandwidthRules'] !== null) {
+            $queryParams['enable_bandwidth_rules'] = $localVarParams['enableBandwidthRules'];
+        }
+        if ($localVarParams['ruleQuota'] !== null) {
+            $queryParams['rule_quota'] = $localVarParams['ruleQuota'];
+        }
+        if ($localVarParams['publicBorderGroup'] !== null) {
+            $queryParams['public_border_group'] = $localVarParams['publicBorderGroup'];
+        }
+        if ($localVarParams['chargeMode'] !== null) {
+            $queryParams['charge_mode'] = $localVarParams['chargeMode'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListEipBandwidthsResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListEipBandwidthsRequest');
     }
 
     /**
@@ -1462,6 +1649,71 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateDisassociatePublicipResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateDisassociatePublicipRequest');
+    }
+
+    /**
+     * 更新弹性公网IP
+     *
+     * 更新弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePublicip($request)
+    {
+        return $this->updatePublicipWithHttpInfo($request);
+    }
+
+    public function updatePublicipWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\UpdatePublicipResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\UpdatePublicipRequest');
     }
 
     protected function callApi(
