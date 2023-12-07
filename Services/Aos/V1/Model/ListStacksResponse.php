@@ -21,7 +21,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stacks  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * stacks  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stacks  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * stacks  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stacks  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * stacks  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stacks  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * stacks  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stacks  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * stacks  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stacks
-    *  资源栈列表。默认按照生成时间排序，最早生成的在最前
+    *  资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\Stack[]|null
     */
@@ -187,7 +187,7 @@ class ListStacksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stacks
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\Stack[]|null $stacks 资源栈列表。默认按照生成时间排序，最早生成的在最前
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\Stack[]|null $stacks 资源栈列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @return $this
     */

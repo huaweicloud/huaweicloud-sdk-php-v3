@@ -22,7 +22,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  流控的限定时间值
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
     * remark  参数说明和描述。  不支持<，>字符
@@ -42,7 +42,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  流控的限定时间值
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
     * remark  参数说明和描述。  不支持<，>字符
@@ -83,7 +83,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  流控的限定时间值
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
     * remark  参数说明和描述。  不支持<，>字符
@@ -103,7 +103,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  流控的限定时间值
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
     * remark  参数说明和描述。  不支持<，>字符
@@ -123,7 +123,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  流控的限定时间值
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
     * remark  参数说明和描述。  不支持<，>字符
@@ -328,7 +328,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeUnit
-    *  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    *  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     *
     * @return string
     */
@@ -340,7 +340,7 @@ class AppQuotaCreate implements ModelInterface, ArrayAccess
     /**
     * Sets timeUnit
     *
-    * @param string $timeUnit 限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * @param string $timeUnit 限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     *
     * @return $this
     */

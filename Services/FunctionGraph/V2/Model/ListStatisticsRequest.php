@@ -23,13 +23,17 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     * filter  参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
     * period  时间段单位为分钟，与filter参数metric配合使用。
     * option  月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
+    * marker  本次查询起始位置，默认值0
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'filter' => 'string',
             'period' => 'string',
-            'option' => 'string'
+            'option' => 'string',
+            'limit' => 'string',
+            'marker' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     * filter  参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
     * period  时间段单位为分钟，与filter参数metric配合使用。
     * option  月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
+    * marker  本次查询起始位置，默认值0
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'filter' => null,
         'period' => null,
-        'option' => null
+        'option' => null,
+        'limit' => null,
+        'marker' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     * filter  参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
     * period  时间段单位为分钟，与filter参数metric配合使用。
     * option  月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
+    * marker  本次查询起始位置，默认值0
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'filter' => 'filter',
             'period' => 'period',
-            'option' => 'option'
+            'option' => 'option',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     * filter  参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
     * period  时间段单位为分钟，与filter参数metric配合使用。
     * option  月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
+    * marker  本次查询起始位置，默认值0
     *
     * @var string[]
     */
     protected static $setters = [
             'filter' => 'setFilter',
             'period' => 'setPeriod',
-            'option' => 'setOption'
+            'option' => 'setOption',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     * filter  参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
     * period  时间段单位为分钟，与filter参数metric配合使用。
     * option  月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
+    * marker  本次查询起始位置，默认值0
     *
     * @var string[]
     */
     protected static $getters = [
             'filter' => 'getFilter',
             'period' => 'getPeriod',
-            'option' => 'getOption'
+            'option' => 'getOption',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -185,6 +205,8 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['option'] = isset($data['option']) ? $data['option'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -206,6 +228,18 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 64)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 64)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -289,6 +323,54 @@ class ListStatisticsRequest implements ModelInterface, ArrayAccess
     public function setOption($option)
     {
         $this->container['option'] = $option;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  本次查询最大返回的数据条数，最大值500，默认值100
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 本次查询最大返回的数据条数，最大值500，默认值100
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  本次查询起始位置，默认值0
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 本次查询起始位置，默认值0
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

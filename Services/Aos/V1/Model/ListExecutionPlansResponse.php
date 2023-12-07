@@ -21,7 +21,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * executionPlans  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * executionPlans  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * executionPlans  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * executionPlans  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * executionPlans  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * executionPlans  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlans
-    *  执行计划列表。默认按照生成时间排序，最早生成的在最前
+    *  执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlan[]|null
     */
@@ -187,7 +187,7 @@ class ListExecutionPlansResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlans
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlan[]|null $executionPlans 执行计划列表。默认按照生成时间排序，最早生成的在最前
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlan[]|null $executionPlans 执行计划列表。默认按照生成时间降序排序，最新生成的在最前
     *
     * @return $this
     */

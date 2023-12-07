@@ -23,24 +23,28 @@ class ResetFingerprintResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     * fingerprint  设备指纹。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'deviceId' => 'string',
-            'fingerprint' => 'string'
+            'fingerprint' => 'string',
+            'fingerprintType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     * fingerprint  设备指纹。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'deviceId' => null,
-        'fingerprint' => null
+        'fingerprint' => null,
+        'fingerprintType' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ResetFingerprintResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     * fingerprint  设备指纹。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'deviceId' => 'device_id',
-            'fingerprint' => 'fingerprint'
+            'fingerprint' => 'fingerprint',
+            'fingerprintType' => 'fingerprint_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     * fingerprint  设备指纹。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
     *
     * @var string[]
     */
     protected static $setters = [
             'deviceId' => 'setDeviceId',
-            'fingerprint' => 'setFingerprint'
+            'fingerprint' => 'setFingerprint',
+            'fingerprintType' => 'setFingerprintType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     * fingerprint  设备指纹。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
     *
     * @var string[]
     */
     protected static $getters = [
             'deviceId' => 'getDeviceId',
-            'fingerprint' => 'getFingerprint'
+            'fingerprint' => 'getFingerprint',
+            'fingerprintType' => 'getFingerprintType'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ResetFingerprintResponse implements ModelInterface, ArrayAccess
     {
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
+        $this->container['fingerprintType'] = isset($data['fingerprintType']) ? $data['fingerprintType'] : null;
     }
 
     /**
@@ -175,6 +186,9 @@ class ResetFingerprintResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['fingerprint']) && !preg_match("/^[a-fA-F0-9]{40}$|^[a-fA-F0-9]{64}$/", $this->container['fingerprint'])) {
                 $invalidProperties[] = "invalid value for 'fingerprint', must be conform to the pattern /^[a-fA-F0-9]{40}$|^[a-fA-F0-9]{64}$/.";
+            }
+            if (!is_null($this->container['fingerprintType']) && !preg_match("/PRIMARY|SECONDARY/", $this->container['fingerprintType'])) {
+                $invalidProperties[] = "invalid value for 'fingerprintType', must be conform to the pattern /PRIMARY|SECONDARY/.";
             }
         return $invalidProperties;
     }
@@ -235,6 +249,30 @@ class ResetFingerprintResponse implements ModelInterface, ArrayAccess
     public function setFingerprint($fingerprint)
     {
         $this->container['fingerprint'] = $fingerprint;
+        return $this;
+    }
+
+    /**
+    * Gets fingerprintType
+    *  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
+    *
+    * @return string|null
+    */
+    public function getFingerprintType()
+    {
+        return $this->container['fingerprintType'];
+    }
+
+    /**
+    * Sets fingerprintType
+    *
+    * @param string|null $fingerprintType **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。 - SECONDARY：重置辅指纹。
+    *
+    * @return $this
+    */
+    public function setFingerprintType($fingerprintType)
+    {
+        $this->container['fingerprintType'] = $fingerprintType;
         return $this;
     }
 

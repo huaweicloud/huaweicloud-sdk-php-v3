@@ -20,7 +20,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  证书名称
+    * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
     * type  证书可见范围
@@ -40,7 +40,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  证书名称
+    * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
     * type  证书可见范围
@@ -81,7 +81,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  证书名称
+    * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
     * type  证书可见范围
@@ -101,7 +101,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  证书名称
+    * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
     * type  证书可见范围
@@ -121,7 +121,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  证书名称
+    * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
     * type  证书可见范围
@@ -231,6 +231,9 @@ class CertificateForm implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+            if (!preg_match("/^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9_]|[\\u4e00-\\u9fa5]){3,49}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9_]|[\\u4e00-\\u9fa5]){3,49}$/.";
+            }
         if ($this->container['certContent'] === null) {
             $invalidProperties[] = "'certContent' can't be null";
         }
@@ -261,7 +264,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  证书名称
+    *  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     *
     * @return string
     */
@@ -273,7 +276,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 证书名称
+    * @param string $name 证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     *
     * @return $this
     */

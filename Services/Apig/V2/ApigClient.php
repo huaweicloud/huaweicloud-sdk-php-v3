@@ -8598,7 +8598,7 @@ class ApigClient extends Client
     /**
      * 创建ACL策略
      *
-     * 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。
+     * 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com”之类的网络域名。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9219,6 +9219,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 校验API分组名称是否存在
+     *
+     * 校验API分组名称是否存在。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkApiGroupsV2($request)
+    {
+        return $this->checkApiGroupsV2WithHttpInfo($request);
+    }
+
+    public function checkApiGroupsV2WithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/api-groups/check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\CheckApiGroupsV2Response',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\CheckApiGroupsV2Request');
+    }
+
+    /**
      * 校验API定义
      *
      * 校验API定义。校验API的路径或名称是否已存在
@@ -9824,7 +9889,7 @@ class ApigClient extends Client
      *
      * 查询API分组列表。
      * 
-     * 如果是租户操作，则查询该租户下所有的分组；如果是管理员权限帐号操作，则查询的是所有租户的分组。
+     * 如果是租户操作，则查询该租户下所有的分组；如果是管理员权限账号操作，则查询的是所有租户的分组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10283,7 +10348,7 @@ class ApigClient extends Client
     /**
      * 查询API列表
      *
-     * 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息。
+     * 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息和API请求参数信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10349,6 +10414,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['vpcChannelName'] !== null) {
             $queryParams['vpc_channel_name'] = $localVarParams['vpcChannelName'];
+        }
+        if ($localVarParams['returnDataMode'] !== null) {
+            $queryParams['return_data_mode'] = $localVarParams['returnDataMode'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];

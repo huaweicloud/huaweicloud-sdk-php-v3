@@ -21,17 +21,17 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  availabilityZone
+    * availabilityZone  可用区信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'availabilityZone' => '\HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones'
+            'availabilityZone' => '\HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  availabilityZone
+    * availabilityZone  可用区信息。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  availabilityZone
+    * availabilityZone  可用区信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  availabilityZone
+    * availabilityZone  可用区信息。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  availabilityZone
+    * availabilityZone  可用区信息。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  availabilityZone
+    *  可用区信息。
     *
-    * @return \HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones|null
+    * @return \HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones[]|null
     */
     public function getAvailabilityZone()
     {
@@ -187,7 +187,7 @@ class ShowAvailableZoneInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param \HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones|null $availabilityZone availabilityZone
+    * @param \HuaweiCloud\SDK\Cbh\V1\Model\AvailabilityZones[]|null $availabilityZone 可用区信息。
     *
     * @return $this
     */

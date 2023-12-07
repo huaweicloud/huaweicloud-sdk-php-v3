@@ -29,7 +29,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * type  实例类型  默认apig
     * spec  实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
     * createTime  实例创建时间。unix时间戳格式。
-    * enterpriseProjectId  企业项目ID，企业帐号必填
+    * enterpriseProjectId  企业项目ID，企业账号必填
     * eipAddress  实例绑定的弹性IP地址
     * chargingMode  实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
     * cbcMetadata  [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
@@ -119,7 +119,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * type  实例类型  默认apig
     * spec  实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
     * createTime  实例创建时间。unix时间戳格式。
-    * enterpriseProjectId  企业项目ID，企业帐号必填
+    * enterpriseProjectId  企业项目ID，企业账号必填
     * eipAddress  实例绑定的弹性IP地址
     * chargingMode  实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
     * cbcMetadata  [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
@@ -230,7 +230,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * type  实例类型  默认apig
     * spec  实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
     * createTime  实例创建时间。unix时间戳格式。
-    * enterpriseProjectId  企业项目ID，企业帐号必填
+    * enterpriseProjectId  企业项目ID，企业账号必填
     * eipAddress  实例绑定的弹性IP地址
     * chargingMode  实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
     * cbcMetadata  [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
@@ -320,7 +320,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * type  实例类型  默认apig
     * spec  实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
     * createTime  实例创建时间。unix时间戳格式。
-    * enterpriseProjectId  企业项目ID，企业帐号必填
+    * enterpriseProjectId  企业项目ID，企业账号必填
     * eipAddress  实例绑定的弹性IP地址
     * chargingMode  实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
     * cbcMetadata  [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
@@ -410,7 +410,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * type  实例类型  默认apig
     * spec  实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
     * createTime  实例创建时间。unix时间戳格式。
-    * enterpriseProjectId  企业项目ID，企业帐号必填
+    * enterpriseProjectId  企业项目ID，企业账号必填
     * eipAddress  实例绑定的弹性IP地址
     * chargingMode  实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
     * cbcMetadata  [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
@@ -1094,7 +1094,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，企业帐号必填
+    *  企业项目ID，企业账号必填
     *
     * @return string|null
     */
@@ -1106,7 +1106,7 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，企业帐号必填
+    * @param string|null $enterpriseProjectId 企业项目ID，企业账号必填
     *
     * @return $this
     */

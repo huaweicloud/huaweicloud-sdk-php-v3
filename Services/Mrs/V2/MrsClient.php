@@ -91,6 +91,71 @@ class MrsClient extends Client
     }
 
     /**
+     * 创建弹性伸缩策略
+     *
+     * 创建弹性伸缩策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutoScalingPolicy($request)
+    {
+        return $this->createAutoScalingPolicyWithHttpInfo($request);
+    }
+
+    public function createAutoScalingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/autoscaling-policy/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateAutoScalingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateAutoScalingPolicyRequest');
+    }
+
+    /**
      * 创建集群
      *
      * 创建一个MRS集群。使用接口前，您需要先获取下的资源信息。
@@ -225,6 +290,71 @@ class MrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateExecuteJobResponse',
             $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\CreateExecuteJobRequest');
+    }
+
+    /**
+     * 删除弹性伸缩策略
+     *
+     * 删除弹性伸缩策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutoScalingPolicy($request)
+    {
+        return $this->deleteAutoScalingPolicyWithHttpInfo($request);
+    }
+
+    public function deleteAutoScalingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/autoscaling-policy/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\DeleteAutoScalingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\DeleteAutoScalingPolicyRequest');
     }
 
     /**
@@ -773,6 +903,71 @@ class MrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateAgencyMappingResponse',
             $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateAgencyMappingRequest');
+    }
+
+    /**
+     * 更新弹性伸缩策略
+     *
+     * 更新弹性伸缩策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutoScalingPolicy($request)
+    {
+        return $this->updateAutoScalingPolicyWithHttpInfo($request);
+    }
+
+    public function updateAutoScalingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/autoscaling-policy/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateAutoScalingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateAutoScalingPolicyRequest');
     }
 
     /**

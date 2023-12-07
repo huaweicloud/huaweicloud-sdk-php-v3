@@ -28,8 +28,8 @@ class ConfigNasTarget implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'type' => 'object',
-            'url' => 'object'
+            'type' => 'string',
+            'url' => 'string'
     ];
 
     /**
@@ -231,7 +231,7 @@ class ConfigNasTarget implements ModelInterface, ArrayAccess
     * Gets type
     *  nas 配置协议类型
     *
-    * @return object
+    * @return string
     */
     public function getType()
     {
@@ -241,7 +241,7 @@ class ConfigNasTarget implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param object $type nas 配置协议类型
+    * @param string $type nas 配置协议类型
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ConfigNasTarget implements ModelInterface, ArrayAccess
     * Gets url
     *  nas 配置 ip
     *
-    * @return object
+    * @return string
     */
     public function getUrl()
     {
@@ -265,7 +265,7 @@ class ConfigNasTarget implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param object $url nas 配置 ip
+    * @param string $url nas 配置 ip
     *
     * @return $this
     */

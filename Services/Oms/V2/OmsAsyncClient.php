@@ -25,6 +25,71 @@ class OmsAsyncClient extends Client
     }
 
     /**
+     * 批量更新任务
+     *
+     * 批量更新迁移任务，可指定单个迁移任务组下所有的迁移任务或通过迁移任务ID来执行。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateTasksAsync($request)
+    {
+        return $this->batchUpdateTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdateTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/tasks/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Oms\V2\Model\BatchUpdateTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Oms\V2\Model\BatchUpdateTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 检查前缀是否在源端桶中存在
      *
      * 检查前缀是否在源端桶中存在
@@ -356,7 +421,7 @@ class OmsAsyncClient extends Client
      * 删除同步任务
      *
      * 调用该接口删除同步任务。
-     * 正在同步的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务(目前只支持华北-北京四、华东-上海一地区)。
+     * 正在同步的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -627,7 +692,7 @@ class OmsAsyncClient extends Client
     /**
      * 查询同步任务列表
      *
-     * 查询用户名下所有同步任务信息(目前只支持华北-北京四、华东-上海一地区)。
+     * 查询用户名下所有同步任务信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1298,7 +1363,7 @@ class OmsAsyncClient extends Client
     /**
      * 查询指定ID的同步任务详情
      *
-     * 查询指定ID的同步任务详情(目前只支持华北-北京四、华东-上海一地区)。
+     * 查询指定ID的同步任务详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

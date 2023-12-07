@@ -20,8 +20,8 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeGroupName  节点组名称。
-    * resourcePoolName  资源计划名称
+    * nodeGroupName  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
+    * resourcePoolName  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     * autoScalingPolicy  autoScalingPolicy
     *
     * @var string[]
@@ -29,13 +29,13 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'nodeGroupName' => 'string',
             'resourcePoolName' => 'string',
-            'autoScalingPolicy' => '\HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicy'
+            'autoScalingPolicy' => '\HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeGroupName  节点组名称。
-    * resourcePoolName  资源计划名称
+    * nodeGroupName  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
+    * resourcePoolName  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     * autoScalingPolicy  autoScalingPolicy
     *
     * @var string[]
@@ -69,8 +69,8 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeGroupName  节点组名称。
-    * resourcePoolName  资源计划名称
+    * nodeGroupName  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
+    * resourcePoolName  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     * autoScalingPolicy  autoScalingPolicy
     *
     * @var string[]
@@ -83,8 +83,8 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeGroupName  节点组名称。
-    * resourcePoolName  资源计划名称
+    * nodeGroupName  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
+    * resourcePoolName  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     * autoScalingPolicy  autoScalingPolicy
     *
     * @var string[]
@@ -97,8 +97,8 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeGroupName  节点组名称。
-    * resourcePoolName  资源计划名称
+    * nodeGroupName  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
+    * resourcePoolName  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     * autoScalingPolicy  autoScalingPolicy
     *
     * @var string[]
@@ -180,6 +180,9 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['nodeGroupName'] === null) {
+            $invalidProperties[] = "'nodeGroupName' can't be null";
+        }
         if ($this->container['resourcePoolName'] === null) {
             $invalidProperties[] = "'resourcePoolName' can't be null";
         }
@@ -199,9 +202,9 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeGroupName
-    *  节点组名称。
+    *  节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
     *
-    * @return string|null
+    * @return string
     */
     public function getNodeGroupName()
     {
@@ -211,7 +214,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     /**
     * Sets nodeGroupName
     *
-    * @param string|null $nodeGroupName 节点组名称。
+    * @param string $nodeGroupName 节点组名称。必填参数。如果resource_pool_name为default，则创建节点组维度的弹性伸缩策略。如果resource_pool_name不为default，则在该节点组下创建对应资源池维度的策略。
     *
     * @return $this
     */
@@ -223,7 +226,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourcePoolName
-    *  资源计划名称
+    *  资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     *
     * @return string
     */
@@ -235,7 +238,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourcePoolName
     *
-    * @param string $resourcePoolName 资源计划名称
+    * @param string $resourcePoolName 资源池名称。必填参数。当集群版本不支持按指定资源池进行弹性伸缩时，需要填写为default资源池。不为default时删除指定资源池维度的弹性伸缩策略。
     *
     * @return $this
     */
@@ -249,7 +252,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     * Gets autoScalingPolicy
     *  autoScalingPolicy
     *
-    * @return \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicy|null
+    * @return \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo|null
     */
     public function getAutoScalingPolicy()
     {
@@ -259,7 +262,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     /**
     * Sets autoScalingPolicy
     *
-    * @param \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicy|null $autoScalingPolicy autoScalingPolicy
+    * @param \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo|null $autoScalingPolicy autoScalingPolicy
     *
     * @return $this
     */

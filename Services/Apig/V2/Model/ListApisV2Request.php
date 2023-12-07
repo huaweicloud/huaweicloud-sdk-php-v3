@@ -33,7 +33,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * envId  发布的环境编号
     * type  API类型
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
-    * vpcChannelName  负载通道名称。
+    * vpcChannelName  负载通道名称
+    * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'envId' => 'string',
             'type' => 'int',
             'preciseSearch' => 'string',
-            'vpcChannelName' => 'string'
+            'vpcChannelName' => 'string',
+            'returnDataMode' => 'string'
     ];
 
     /**
@@ -69,7 +71,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * envId  发布的环境编号
     * type  API类型
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
-    * vpcChannelName  负载通道名称。
+    * vpcChannelName  负载通道名称
+    * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
         'envId' => null,
         'type' => null,
         'preciseSearch' => null,
-        'vpcChannelName' => null
+        'vpcChannelName' => null,
+        'returnDataMode' => null
     ];
 
     /**
@@ -126,7 +130,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * envId  发布的环境编号
     * type  API类型
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
-    * vpcChannelName  负载通道名称。
+    * vpcChannelName  负载通道名称
+    * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'envId' => 'env_id',
             'type' => 'type',
             'preciseSearch' => 'precise_search',
-            'vpcChannelName' => 'vpc_channel_name'
+            'vpcChannelName' => 'vpc_channel_name',
+            'returnDataMode' => 'return_data_mode'
     ];
 
     /**
@@ -162,7 +168,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * envId  发布的环境编号
     * type  API类型
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
-    * vpcChannelName  负载通道名称。
+    * vpcChannelName  负载通道名称
+    * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'envId' => 'setEnvId',
             'type' => 'setType',
             'preciseSearch' => 'setPreciseSearch',
-            'vpcChannelName' => 'setVpcChannelName'
+            'vpcChannelName' => 'setVpcChannelName',
+            'returnDataMode' => 'setReturnDataMode'
     ];
 
     /**
@@ -198,7 +206,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * envId  发布的环境编号
     * type  API类型
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
-    * vpcChannelName  负载通道名称。
+    * vpcChannelName  负载通道名称
+    * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'envId' => 'getEnvId',
             'type' => 'getType',
             'preciseSearch' => 'getPreciseSearch',
-            'vpcChannelName' => 'getVpcChannelName'
+            'vpcChannelName' => 'getVpcChannelName',
+            'returnDataMode' => 'getReturnDataMode'
     ];
 
     /**
@@ -259,7 +269,24 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RETURN_DATA_MODE_BRIEF = 'brief';
+    const RETURN_DATA_MODE_INCLUDE_GROUP = 'include_group';
+    const RETURN_DATA_MODE_INCLUDE_GROUP_BACKEND = 'include_group_backend';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getReturnDataModeAllowableValues()
+    {
+        return [
+            self::RETURN_DATA_MODE_BRIEF,
+            self::RETURN_DATA_MODE_INCLUDE_GROUP,
+            self::RETURN_DATA_MODE_INCLUDE_GROUP_BACKEND,
+        ];
+    }
 
 
     /**
@@ -291,6 +318,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['preciseSearch'] = isset($data['preciseSearch']) ? $data['preciseSearch'] : null;
         $this->container['vpcChannelName'] = isset($data['vpcChannelName']) ? $data['vpcChannelName'] : null;
+        $this->container['returnDataMode'] = isset($data['returnDataMode']) ? $data['returnDataMode'] : null;
     }
 
     /**
@@ -310,6 +338,14 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getReturnDataModeAllowableValues();
+                if (!is_null($this->container['returnDataMode']) && !in_array($this->container['returnDataMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'returnDataMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -638,7 +674,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcChannelName
-    *  负载通道名称。
+    *  负载通道名称
     *
     * @return string|null
     */
@@ -650,13 +686,37 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets vpcChannelName
     *
-    * @param string|null $vpcChannelName 负载通道名称。
+    * @param string|null $vpcChannelName 负载通道名称
     *
     * @return $this
     */
     public function setVpcChannelName($vpcChannelName)
     {
         $this->container['vpcChannelName'] = $vpcChannelName;
+        return $this;
+    }
+
+    /**
+    * Gets returnDataMode
+    *  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    *
+    * @return string|null
+    */
+    public function getReturnDataMode()
+    {
+        return $this->container['returnDataMode'];
+    }
+
+    /**
+    * Sets returnDataMode
+    *
+    * @param string|null $returnDataMode 指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    *
+    * @return $this
+    */
+    public function setReturnDataMode($returnDataMode)
+    {
+        $this->container['returnDataMode'] = $returnDataMode;
         return $this;
     }
 

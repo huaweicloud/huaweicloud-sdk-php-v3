@@ -21,7 +21,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackSetOperationId  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackSetOperationId  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackSetOperationId  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackSetOperationId  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackSetOperationId  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -184,7 +184,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackSetOperationId
-    *  资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    *  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @return string|null
     */
@@ -196,7 +196,7 @@ class UpdateStackInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stackSetOperationId
     *
-    * @param string|null $stackSetOperationId 资源栈集操作（operation）的唯一Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * @param string|null $stackSetOperationId 资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @return $this
     */

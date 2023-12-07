@@ -1428,6 +1428,68 @@ class DliClient extends Client
     }
 
     /**
+     * 创建跨源认证
+     *
+     * 该API用于创建跨源认证。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createJobAuthInfo($request)
+    {
+        return $this->createJobAuthInfoWithHttpInfo($request);
+    }
+
+    public function createJobAuthInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/datasource/auth-infos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateJobAuthInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateJobAuthInfoRequest');
+    }
+
+    /**
      * 创建队列
      *
      * 该API用于创建队列，该队列将会绑定用户指定的计算资源。
@@ -1994,6 +2056,68 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalVariableResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteGlobalVariableRequest');
+    }
+
+    /**
+     * 删除跨源认证
+     *
+     * 该API用于删除跨源认证信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteJobAuthInfo($request)
+    {
+        return $this->deleteJobAuthInfoWithHttpInfo($request);
+    }
+
+    public function deleteJobAuthInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/datasource/auth-infos/{auth_info_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authInfoName'] !== null) {
+            $pathParams['auth_info_name'] = $localVarParams['authInfoName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteJobAuthInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteJobAuthInfoRequest');
     }
 
     /**
@@ -2933,6 +3057,74 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalVariablesResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalVariablesRequest');
+    }
+
+    /**
+     * 查询增强型跨源授权信息
+     *
+     * 该API用于查询跨源认证信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listJobAuthInfos($request)
+    {
+        return $this->listJobAuthInfosWithHttpInfo($request);
+    }
+
+    public function listJobAuthInfosWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/datasource/auth-infos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authInfoName'] !== null) {
+            $queryParams['auth_info_name'] = $localVarParams['authInfoName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobAuthInfosResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobAuthInfosRequest');
     }
 
     /**
@@ -4466,6 +4658,68 @@ class DliClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerResponse',
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerRequest');
+    }
+
+    /**
+     * 更新跨源认证
+     *
+     * 该API用于更新跨源认证信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateJobAuthInfo($request)
+    {
+        return $this->updateJobAuthInfoWithHttpInfo($request);
+    }
+
+    public function updateJobAuthInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/datasource/auth-infos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobAuthInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobAuthInfoRequest');
     }
 
     /**

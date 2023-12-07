@@ -21,7 +21,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
-    * objectId  特殊APP的编号或特殊租户的帐号ID
+    * objectId  特殊APP的编号或特殊租户的账号ID
     * objectType  特殊对象类型
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
-    * objectId  特殊APP的编号或特殊租户的帐号ID
+    * objectId  特殊APP的编号或特殊租户的账号ID
     * objectType  特殊对象类型
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
-    * objectId  特殊APP的编号或特殊租户的帐号ID
+    * objectId  特殊APP的编号或特殊租户的账号ID
     * objectType  特殊对象类型
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
-    * objectId  特殊APP的编号或特殊租户的帐号ID
+    * objectId  特殊APP的编号或特殊租户的账号ID
     * objectType  特殊对象类型
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
-    * objectId  特殊APP的编号或特殊租户的帐号ID
+    * objectId  特殊APP的编号或特殊租户的账号ID
     * objectType  特殊对象类型
     *
     * @var string[]
@@ -252,7 +252,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  特殊APP的编号或特殊租户的帐号ID
+    *  特殊APP的编号或特殊租户的账号ID
     *
     * @return string
     */
@@ -264,7 +264,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 特殊APP的编号或特殊租户的帐号ID
+    * @param string $objectId 特殊APP的编号或特殊租户的账号ID
     *
     * @return $this
     */

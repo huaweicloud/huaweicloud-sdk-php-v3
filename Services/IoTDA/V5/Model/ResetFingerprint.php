@@ -22,24 +22,28 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fingerprint  **参数说明**：设备指纹。设置该字段时平台将设备指纹重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。 **取值范围**：长度为40的十六进制字符串或者长度为64的十六进制字符串。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'fingerprint' => 'string',
-            'forceDisconnect' => 'bool'
+            'forceDisconnect' => 'bool',
+            'fingerprintType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fingerprint  **参数说明**：设备指纹。设置该字段时平台将设备指纹重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。 **取值范围**：长度为40的十六进制字符串或者长度为64的十六进制字符串。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'fingerprint' => null,
-        'forceDisconnect' => null
+        'forceDisconnect' => null,
+        'fingerprintType' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fingerprint  **参数说明**：设备指纹。设置该字段时平台将设备指纹重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。 **取值范围**：长度为40的十六进制字符串或者长度为64的十六进制字符串。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'fingerprint' => 'fingerprint',
-            'forceDisconnect' => 'force_disconnect'
+            'forceDisconnect' => 'force_disconnect',
+            'fingerprintType' => 'fingerprint_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fingerprint  **参数说明**：设备指纹。设置该字段时平台将设备指纹重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。 **取值范围**：长度为40的十六进制字符串或者长度为64的十六进制字符串。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
     *
     * @var string[]
     */
     protected static $setters = [
             'fingerprint' => 'setFingerprint',
-            'forceDisconnect' => 'setForceDisconnect'
+            'forceDisconnect' => 'setForceDisconnect',
+            'fingerprintType' => 'setFingerprintType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fingerprint  **参数说明**：设备指纹。设置该字段时平台将设备指纹重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。 **取值范围**：长度为40的十六进制字符串或者长度为64的十六进制字符串。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * fingerprintType  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
     *
     * @var string[]
     */
     protected static $getters = [
             'fingerprint' => 'getFingerprint',
-            'forceDisconnect' => 'getForceDisconnect'
+            'forceDisconnect' => 'getForceDisconnect',
+            'fingerprintType' => 'getFingerprintType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
     {
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
         $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : null;
+        $this->container['fingerprintType'] = isset($data['fingerprintType']) ? $data['fingerprintType'] : null;
     }
 
     /**
@@ -171,6 +182,9 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['fingerprint']) && !preg_match("/^[a-fA-F0-9]{40}$|^[a-fA-F0-9]{64}$/", $this->container['fingerprint'])) {
                 $invalidProperties[] = "invalid value for 'fingerprint', must be conform to the pattern /^[a-fA-F0-9]{40}$|^[a-fA-F0-9]{64}$/.";
+            }
+            if (!is_null($this->container['fingerprintType']) && !preg_match("/PRIMARY|SECONDARY/", $this->container['fingerprintType'])) {
+                $invalidProperties[] = "invalid value for 'fingerprintType', must be conform to the pattern /PRIMARY|SECONDARY/.";
             }
         return $invalidProperties;
     }
@@ -231,6 +245,30 @@ class ResetFingerprint implements ModelInterface, ArrayAccess
     public function setForceDisconnect($forceDisconnect)
     {
         $this->container['forceDisconnect'] = $forceDisconnect;
+        return $this;
+    }
+
+    /**
+    * Gets fingerprintType
+    *  **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
+    *
+    * @return string|null
+    */
+    public function getFingerprintType()
+    {
+        return $this->container['fingerprintType'];
+    }
+
+    /**
+    * Sets fingerprintType
+    *
+    * @param string|null $fingerprintType **参数说明**：重置设备证书指纹的的类型。 **取值范围**： - PRIMARY：重置主指纹。设备证书鉴权优先使用的指纹，当设备接入物联网平台时，平台将优先使用主指纹进行校验。 - SECONDARY：重置辅指纹。设备的备用指纹，当主指纹校验不通过时，会启用辅指纹校验，辅指纹与主指纹有相同的效力。
+    *
+    * @return $this
+    */
+    public function setFingerprintType($fingerprintType)
+    {
+        $this->container['fingerprintType'] = $fingerprintType;
         return $this;
     }
 

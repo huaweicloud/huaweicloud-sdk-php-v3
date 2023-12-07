@@ -91,71 +91,6 @@ class FunctionGraphClient extends Client
     }
 
     /**
-     * 函数异步执行并返回预留实例ID
-     *
-     * 函数异步执行并返回预留实例ID用于场景指客户端请求执行比较费时任务，不需要同步等待执行完成返回结果，该方法提前返回任务执行对应的预留实例ID, 如果预留实例有异常，可以通过该实例ID把对应实例删除（该接口主要针对白名单用户）。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function asyncInvokeReservedFunction($request)
-    {
-        return $this->asyncInvokeReservedFunctionWithHttpInfo($request);
-    }
-
-    public function asyncInvokeReservedFunctionWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/fgs/functions/{function_urn}/reserved-invocations';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['functionUrn'] !== null) {
-            $pathParams['function_urn'] = $localVarParams['functionUrn'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\AsyncInvokeReservedFunctionResponse',
-            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\AsyncInvokeReservedFunctionRequest');
-    }
-
-    /**
      * 删除指定函数的所有触发器
      *
      * 删除指定函数所有触发器设置。
@@ -420,68 +355,6 @@ class FunctionGraphClient extends Client
     }
 
     /**
-     * 创建依赖包
-     *
-     * 创建依赖包
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createDependency($request)
-    {
-        return $this->createDependencyWithHttpInfo($request);
-    }
-
-    public function createDependencyWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/fgs/dependencies';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateDependencyResponse',
-            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateDependencyRequest');
-    }
-
-    /**
      * 创建依赖包版本
      *
      * 创建依赖包版本
@@ -673,7 +546,7 @@ class FunctionGraphClient extends Client
     /**
      * 创建应用程序
      *
-     * 创建应用程序
+     * 创建应用程序（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1002,7 +875,7 @@ class FunctionGraphClient extends Client
     /**
      * 创建下沉入口
      *
-     * 创建下沉入口。
+     * 创建下沉入口。（该功能目前仅支持华北-北京四、华东-上海一、华东-上海二、西南-贵阳一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1121,68 +994,6 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateWorkflowResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\CreateWorkflowRequest');
-    }
-
-    /**
-     * 删除指定的依赖包
-     *
-     * 删除指定的依赖包
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteDependency($request)
-    {
-        return $this->deleteDependencyWithHttpInfo($request);
-    }
-
-    public function deleteDependencyWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/fgs/dependencies/{depend_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['dependId'] !== null) {
-            $pathParams['depend_id'] = $localVarParams['dependId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteDependencyResponse',
-            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\DeleteDependencyRequest');
     }
 
     /**
@@ -1383,7 +1194,7 @@ class FunctionGraphClient extends Client
     /**
      * 删除应用程序
      *
-     * 删除应用程序
+     * 删除应用程序（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1708,7 +1519,7 @@ class FunctionGraphClient extends Client
     /**
      * 删除下沉入口
      *
-     * 删除下沉入口。
+     * 删除下沉入口。（该功能目前仅支持华北-北京四、华东-上海一、华东-上海二、西南-贵阳一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2175,7 +1986,7 @@ class FunctionGraphClient extends Client
     /**
      * 查询应用程序模板列表
      *
-     * 查询应用程序模板列表
+     * 查询应用程序模板列表（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2666,7 +2477,7 @@ class FunctionGraphClient extends Client
     /**
      * 查询应用程序列表
      *
-     * 查询应用程序列表
+     * 查询应用程序列表（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2693,6 +2504,12 @@ class FunctionGraphClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3506,6 +3323,12 @@ class FunctionGraphClient extends Client
         if ($localVarParams['option'] !== null) {
             $queryParams['option'] = $localVarParams['option'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -3812,7 +3635,7 @@ class FunctionGraphClient extends Client
     /**
      * 查询应用程序模板详情
      *
-     * 查询应用程序模板详情
+     * 查询应用程序模板详情（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3869,68 +3692,6 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowAppTemplateResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowAppTemplateRequest');
-    }
-
-    /**
-     * 获取指定依赖包
-     *
-     * 获取指定依赖包
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showDependcy($request)
-    {
-        return $this->showDependcyWithHttpInfo($request);
-    }
-
-    public function showDependcyWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/fgs/dependencies/{depend_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['dependId'] !== null) {
-            $pathParams['depend_id'] = $localVarParams['dependId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowDependcyResponse',
-            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\ShowDependcyRequest');
     }
 
     /**
@@ -4100,6 +3861,12 @@ class FunctionGraphClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
         if ($localVarParams['funcUrn'] !== null) {
             $pathParams['func_urn'] = $localVarParams['funcUrn'];
         }
@@ -4199,7 +3966,7 @@ class FunctionGraphClient extends Client
     /**
      * 查询应用程序详情
      *
-     * 查询应用程序详情
+     * 查询应用程序详情（该功能目前仅支持华北-北京四、华东-上海一）
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5565,71 +5332,6 @@ class FunctionGraphClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\StopWorkFlowResponse',
             $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\StopWorkFlowRequest');
-    }
-
-    /**
-     * 更新指定依赖包
-     *
-     * 更新指定依赖包
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateDependcy($request)
-    {
-        return $this->updateDependcyWithHttpInfo($request);
-    }
-
-    public function updateDependcyWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/fgs/dependencies/{depend_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['dependId'] !== null) {
-            $pathParams['depend_id'] = $localVarParams['dependId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateDependcyResponse',
-            $requestType='\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateDependcyRequest');
     }
 
     /**

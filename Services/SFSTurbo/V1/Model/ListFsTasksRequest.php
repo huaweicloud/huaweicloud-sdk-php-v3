@@ -23,7 +23,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
     * marker  marker，取值为task_id
-    * limit  limit, 取值为正整数
+    * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
     * marker  marker，取值为task_id
-    * limit  limit, 取值为正整数
+    * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
     * marker  marker，取值为task_id
-    * limit  limit, 取值为正整数
+    * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
     * marker  marker，取值为task_id
-    * limit  limit, 取值为正整数
+    * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
     * marker  marker，取值为task_id
-    * limit  limit, 取值为正整数
+    * limit  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @var string[]
     */
@@ -285,7 +285,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  limit, 取值为正整数
+    *  limit, 取值为正整数. 默认为20，最大值为100
     *
     * @return int|null
     */
@@ -297,7 +297,7 @@ class ListFsTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit, 取值为正整数
+    * @param int|null $limit limit, 取值为正整数. 默认为20，最大值为100
     *
     * @return $this
     */

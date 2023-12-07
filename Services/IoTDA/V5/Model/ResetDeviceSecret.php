@@ -22,24 +22,28 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secretType  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'secret' => 'string',
-            'forceDisconnect' => 'bool'
+            'forceDisconnect' => 'bool',
+            'secretType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secretType  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'secret' => null,
-        'forceDisconnect' => null
+        'forceDisconnect' => null,
+        'secretType' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     * and the value is the original name
     * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secretType  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'secret' => 'secret',
-            'forceDisconnect' => 'force_disconnect'
+            'forceDisconnect' => 'force_disconnect',
+            'secretType' => 'secret_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secretType  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
     *
     * @var string[]
     */
     protected static $setters = [
             'secret' => 'setSecret',
-            'forceDisconnect' => 'setForceDisconnect'
+            'forceDisconnect' => 'setForceDisconnect',
+            'secretType' => 'setSecretType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secretType  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
     *
     * @var string[]
     */
     protected static $getters = [
             'secret' => 'getSecret',
-            'forceDisconnect' => 'getForceDisconnect'
+            'forceDisconnect' => 'getForceDisconnect',
+            'secretType' => 'getSecretType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     {
         $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
         $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : null;
+        $this->container['secretType'] = isset($data['secretType']) ? $data['secretType'] : null;
     }
 
     /**
@@ -177,6 +188,9 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['secret']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['secret'])) {
                 $invalidProperties[] = "invalid value for 'secret', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
+            }
+            if (!is_null($this->container['secretType']) && !preg_match("/PRIMARY|SECONDARY/", $this->container['secretType'])) {
+                $invalidProperties[] = "invalid value for 'secretType', must be conform to the pattern /PRIMARY|SECONDARY/.";
             }
         return $invalidProperties;
     }
@@ -237,6 +251,30 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     public function setForceDisconnect($forceDisconnect)
     {
         $this->container['forceDisconnect'] = $forceDisconnect;
+        return $this;
+    }
+
+    /**
+    * Gets secretType
+    *  **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
+    *
+    * @return string|null
+    */
+    public function getSecretType()
+    {
+        return $this->container['secretType'];
+    }
+
+    /**
+    * Sets secretType
+    *
+    * @param string|null $secretType **参数说明**：重置设备秘钥的的类型。 **取值范围**： - PRIMARY：重置主秘钥。设备秘钥鉴权优先使用的密钥，当设备接入物联网平台时，平台将优先使用主密钥进行校验。 - SECONDARY：重置辅秘钥。设备的备用密钥，当主密钥校验不通过时，会启用辅密钥校验，辅密钥与主密钥有相同的效力；辅密钥对coap协议接入的设备不生效。
+    *
+    * @return $this
+    */
+    public function setSecretType($secretType)
+    {
+        $this->container['secretType'] = $secretType;
         return $this;
     }
 

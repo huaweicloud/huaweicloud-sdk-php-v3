@@ -42,6 +42,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
+    * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'routeMode' => 'int',
             'balanceRouteModeEnabled' => 'bool',
             'consistenceMode' => 'string',
-            'subnetId' => 'string'
+            'subnetId' => 'string',
+            'sslOption' => 'string'
     ];
 
     /**
@@ -94,6 +96,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
+    * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'routeMode' => 'int32',
         'balanceRouteModeEnabled' => null,
         'consistenceMode' => null,
-        'subnetId' => null
+        'subnetId' => null,
+        'sslOption' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
+    * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'routeMode' => 'route_mode',
             'balanceRouteModeEnabled' => 'balance_route_mode_enabled',
             'consistenceMode' => 'consistence_mode',
-            'subnetId' => 'subnet_id'
+            'subnetId' => 'subnet_id',
+            'sslOption' => 'ssl_option'
     ];
 
     /**
@@ -219,6 +225,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
+    * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'routeMode' => 'setRouteMode',
             'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled',
             'consistenceMode' => 'setConsistenceMode',
-            'subnetId' => 'setSubnetId'
+            'subnetId' => 'setSubnetId',
+            'sslOption' => 'setSslOption'
     ];
 
     /**
@@ -271,6 +279,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * balanceRouteModeEnabled  数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
+    * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'routeMode' => 'getRouteMode',
             'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled',
             'consistenceMode' => 'getConsistenceMode',
-            'subnetId' => 'getSubnetId'
+            'subnetId' => 'getSubnetId',
+            'sslOption' => 'getSslOption'
     ];
 
     /**
@@ -379,6 +389,7 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['balanceRouteModeEnabled'] = isset($data['balanceRouteModeEnabled']) ? $data['balanceRouteModeEnabled'] : null;
         $this->container['consistenceMode'] = isset($data['consistenceMode']) ? $data['consistenceMode'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['sslOption'] = isset($data['sslOption']) ? $data['sslOption'] : null;
     }
 
     /**
@@ -928,6 +939,30 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function setSubnetId($subnetId)
     {
         $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets sslOption
+    *  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    *
+    * @return string|null
+    */
+    public function getSslOption()
+    {
+        return $this->container['sslOption'];
+    }
+
+    /**
+    * Sets sslOption
+    *
+    * @param string|null $sslOption SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    *
+    * @return $this
+    */
+    public function setSslOption($sslOption)
+    {
+        $this->container['sslOption'] = $sslOption;
         return $this;
     }
 

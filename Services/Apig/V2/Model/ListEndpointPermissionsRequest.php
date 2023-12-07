@@ -23,7 +23,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * permission  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * permission  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * permission  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * permission  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * permission  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    *  权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ListEndpointPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限帐号ID，格式为“iam:domain::domain_id”，支持模糊搜索
+    * @param string|null $permission 权限账号ID，格式为“iam:domain::domain_id”，支持模糊搜索
     *
     * @return $this
     */

@@ -24,8 +24,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  日志结束偏移
     * limit  最大日志行数
     * sort  排序规则[\"asc\",\"desc\"]
-    * level  level
-    * jobRunId  jobRunId
     *
     * @var string[]
     */
@@ -33,9 +31,7 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'int',
             'endOffset' => 'int',
             'limit' => 'int',
-            'sort' => 'string',
-            'level' => 'string',
-            'jobRunId' => 'string'
+            'sort' => 'string'
     ];
 
     /**
@@ -44,8 +40,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  日志结束偏移
     * limit  最大日志行数
     * sort  排序规则[\"asc\",\"desc\"]
-    * level  level
-    * jobRunId  jobRunId
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class LogQuery implements ModelInterface, ArrayAccess
         'startOffset' => 'int64',
         'endOffset' => 'int64',
         'limit' => 'int64',
-        'sort' => null,
-        'level' => null,
-        'jobRunId' => null
+        'sort' => null
     ];
 
     /**
@@ -85,8 +77,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  日志结束偏移
     * limit  最大日志行数
     * sort  排序规则[\"asc\",\"desc\"]
-    * level  level
-    * jobRunId  jobRunId
     *
     * @var string[]
     */
@@ -94,9 +84,7 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'start_offset',
             'endOffset' => 'end_offset',
             'limit' => 'limit',
-            'sort' => 'sort',
-            'level' => 'level',
-            'jobRunId' => 'job_run_id'
+            'sort' => 'sort'
     ];
 
     /**
@@ -105,8 +93,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  日志结束偏移
     * limit  最大日志行数
     * sort  排序规则[\"asc\",\"desc\"]
-    * level  level
-    * jobRunId  jobRunId
     *
     * @var string[]
     */
@@ -114,9 +100,7 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'setStartOffset',
             'endOffset' => 'setEndOffset',
             'limit' => 'setLimit',
-            'sort' => 'setSort',
-            'level' => 'setLevel',
-            'jobRunId' => 'setJobRunId'
+            'sort' => 'setSort'
     ];
 
     /**
@@ -125,8 +109,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  日志结束偏移
     * limit  最大日志行数
     * sort  排序规则[\"asc\",\"desc\"]
-    * level  level
-    * jobRunId  jobRunId
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'getStartOffset',
             'endOffset' => 'getEndOffset',
             'limit' => 'getLimit',
-            'sort' => 'getSort',
-            'level' => 'getLevel',
-            'jobRunId' => 'getJobRunId'
+            'sort' => 'getSort'
     ];
 
     /**
@@ -201,8 +181,6 @@ class LogQuery implements ModelInterface, ArrayAccess
         $this->container['endOffset'] = isset($data['endOffset']) ? $data['endOffset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
-        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
-        $this->container['jobRunId'] = isset($data['jobRunId']) ? $data['jobRunId'] : null;
     }
 
     /**
@@ -326,54 +304,6 @@ class LogQuery implements ModelInterface, ArrayAccess
     public function setSort($sort)
     {
         $this->container['sort'] = $sort;
-        return $this;
-    }
-
-    /**
-    * Gets level
-    *  level
-    *
-    * @return string|null
-    */
-    public function getLevel()
-    {
-        return $this->container['level'];
-    }
-
-    /**
-    * Sets level
-    *
-    * @param string|null $level level
-    *
-    * @return $this
-    */
-    public function setLevel($level)
-    {
-        $this->container['level'] = $level;
-        return $this;
-    }
-
-    /**
-    * Gets jobRunId
-    *  jobRunId
-    *
-    * @return string|null
-    */
-    public function getJobRunId()
-    {
-        return $this->container['jobRunId'];
-    }
-
-    /**
-    * Sets jobRunId
-    *
-    * @param string|null $jobRunId jobRunId
-    *
-    * @return $this
-    */
-    public function setJobRunId($jobRunId)
-    {
-        $this->container['jobRunId'] = $jobRunId;
         return $this;
     }
 

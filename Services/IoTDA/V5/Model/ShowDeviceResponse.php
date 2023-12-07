@@ -56,7 +56,7 @@ class ShowDeviceResponse implements ModelInterface, ArrayAccess
             'fwVersion' => 'string',
             'swVersion' => 'string',
             'deviceSdkVersion' => 'string',
-            'authInfo' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfo',
+            'authInfo' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfoRes',
             'productId' => 'string',
             'productName' => 'string',
             'status' => 'string',
@@ -689,7 +689,7 @@ class ShowDeviceResponse implements ModelInterface, ArrayAccess
     * Gets authInfo
     *  authInfo
     *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfo|null
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfoRes|null
     */
     public function getAuthInfo()
     {
@@ -699,7 +699,7 @@ class ShowDeviceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authInfo
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfo|null $authInfo authInfo
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfoRes|null $authInfo authInfo
     *
     * @return $this
     */

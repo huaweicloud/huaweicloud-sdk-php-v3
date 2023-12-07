@@ -20,21 +20,29 @@ class ShowFuncReservedInstanceMetricsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * marker  本次查询起始位置，默认值0
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'marker' => 'string',
+            'limit' => 'string',
             'funcUrn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * marker  本次查询起始位置，默认值0
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'marker' => null,
+        'limit' => null,
         'funcUrn' => null
     ];
 
@@ -61,31 +69,43 @@ class ShowFuncReservedInstanceMetricsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * marker  本次查询起始位置，默认值0
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'marker' => 'marker',
+            'limit' => 'limit',
             'funcUrn' => 'func_urn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * marker  本次查询起始位置，默认值0
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
     protected static $setters = [
+            'marker' => 'setMarker',
+            'limit' => 'setLimit',
             'funcUrn' => 'setFuncUrn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * marker  本次查询起始位置，默认值0
+    * limit  本次查询最大返回的数据条数，最大值500，默认值100
     * funcUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
     protected static $getters = [
+            'marker' => 'getMarker',
+            'limit' => 'getLimit',
             'funcUrn' => 'getFuncUrn'
     ];
 
@@ -147,6 +167,8 @@ class ShowFuncReservedInstanceMetricsRequest implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['funcUrn'] = isset($data['funcUrn']) ? $data['funcUrn'] : null;
     }
 
@@ -158,6 +180,18 @@ class ShowFuncReservedInstanceMetricsRequest implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 64)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 64)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['funcUrn'] === null) {
             $invalidProperties[] = "'funcUrn' can't be null";
         }
@@ -173,6 +207,54 @@ class ShowFuncReservedInstanceMetricsRequest implements ModelInterface, ArrayAcc
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets marker
+    *  本次查询起始位置，默认值0
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 本次查询起始位置，默认值0
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  本次查询最大返回的数据条数，最大值500，默认值100
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 本次查询最大返回的数据条数，最大值500，默认值100
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
     }
 
     /**

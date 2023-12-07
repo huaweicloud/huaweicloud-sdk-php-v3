@@ -20,24 +20,28 @@ class InstanceChangeOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * instanceId  实例ID
     * productId  产品编号
     * resizeInfo  resizeInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'instanceId' => 'string',
             'productId' => 'string',
             'resizeInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\ResizeInstanceReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * instanceId  实例ID
     * productId  产品编号
     * resizeInfo  resizeInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'instanceId' => null,
         'productId' => null,
         'resizeInfo' => null
     ];
@@ -65,36 +69,42 @@ class InstanceChangeOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * instanceId  实例ID
     * productId  产品编号
     * resizeInfo  resizeInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'instanceId' => 'instance_id',
             'productId' => 'product_id',
             'resizeInfo' => 'resize_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * instanceId  实例ID
     * productId  产品编号
     * resizeInfo  resizeInfo
     *
     * @var string[]
     */
     protected static $setters = [
+            'instanceId' => 'setInstanceId',
             'productId' => 'setProductId',
             'resizeInfo' => 'setResizeInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * instanceId  实例ID
     * productId  产品编号
     * resizeInfo  resizeInfo
     *
     * @var string[]
     */
     protected static $getters = [
+            'instanceId' => 'getInstanceId',
             'productId' => 'getProductId',
             'resizeInfo' => 'getResizeInfo'
     ];
@@ -157,6 +167,7 @@ class InstanceChangeOrderReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['resizeInfo'] = isset($data['resizeInfo']) ? $data['resizeInfo'] : null;
     }
@@ -181,6 +192,30 @@ class InstanceChangeOrderReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
     }
 
     /**

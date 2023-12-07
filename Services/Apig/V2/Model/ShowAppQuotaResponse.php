@@ -24,7 +24,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  配额的限定时间值
     * remark  参数说明和描述
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
@@ -50,7 +50,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  配额的限定时间值
     * remark  参数说明和描述
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
@@ -97,7 +97,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  配额的限定时间值
     * remark  参数说明和描述
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
@@ -123,7 +123,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  配额的限定时间值
     * remark  参数说明和描述
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
@@ -149,7 +149,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * name  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * callLimits  凭据配额的访问次数限制
-    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * timeUnit  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     * timeInterval  配额的限定时间值
     * remark  参数说明和描述
     * resetTime  首次配额重置时间点，不配置默认为首次调用时间计算
@@ -365,7 +365,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeUnit
-    *  限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    *  限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class ShowAppQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets timeUnit
     *
-    * @param string|null $timeUnit 限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+    * @param string|null $timeUnit 限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
     *
     * @return $this
     */

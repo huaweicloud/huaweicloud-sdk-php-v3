@@ -222,8 +222,6 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const STATUS_SHRINKING = 'SHRINKING';
     const STATUS_EXTENDEDFAILED = 'EXTENDEDFAILED';
     const STATUS_CONFIGURING = 'CONFIGURING';
-    const STATUS_UPGRADING = 'UPGRADING';
-    const STATUS_UPGRADINGFAILED = 'UPGRADINGFAILED';
     const STATUS_ROLLBACK = 'ROLLBACK';
     const STATUS_ROLLBACKFAILED = 'ROLLBACKFAILED';
     const STATUS_VOLUMETYPECHANGING = 'VOLUMETYPECHANGING';
@@ -265,8 +263,6 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             self::STATUS_SHRINKING,
             self::STATUS_EXTENDEDFAILED,
             self::STATUS_CONFIGURING,
-            self::STATUS_UPGRADING,
-            self::STATUS_UPGRADINGFAILED,
             self::STATUS_ROLLBACK,
             self::STATUS_ROLLBACKFAILED,
             self::STATUS_VOLUMETYPECHANGING,

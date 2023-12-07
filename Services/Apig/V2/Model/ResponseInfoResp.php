@@ -20,7 +20,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  响应的HTTP状态码
+    * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
     * default  是否为默认响应
     *
@@ -34,7 +34,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  响应的HTTP状态码
+    * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
     * default  是否为默认响应
     *
@@ -69,7 +69,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  响应的HTTP状态码
+    * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
     * default  是否为默认响应
     *
@@ -83,7 +83,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  响应的HTTP状态码
+    * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
     * default  是否为默认响应
     *
@@ -97,7 +97,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  响应的HTTP状态码
+    * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
     * default  是否为默认响应
     *
@@ -196,7 +196,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  响应的HTTP状态码
+    *  响应的HTTP状态码。范围为200-599，但不允许为444。
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 响应的HTTP状态码
+    * @param int|null $status 响应的HTTP状态码。范围为200-599，但不允许为444。
     *
     * @return $this
     */

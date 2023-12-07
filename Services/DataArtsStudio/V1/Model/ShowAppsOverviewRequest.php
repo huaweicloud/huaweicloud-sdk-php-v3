@@ -246,9 +246,6 @@ class ShowAppsOverviewRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
-        if ($this->container['dlmType'] === null) {
-            $invalidProperties[] = "'dlmType' can't be null";
-        }
             $allowedValues = $this->getDlmTypeAllowableValues();
                 if (!is_null($this->container['dlmType']) && !in_array($this->container['dlmType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -319,7 +316,7 @@ class ShowAppsOverviewRequest implements ModelInterface, ArrayAccess
     * Gets dlmType
     *  dlm版本类型
     *
-    * @return string
+    * @return string|null
     */
     public function getDlmType()
     {
@@ -329,7 +326,7 @@ class ShowAppsOverviewRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dlmType
     *
-    * @param string $dlmType dlm版本类型
+    * @param string|null $dlmType dlm版本类型
     *
     * @return $this
     */

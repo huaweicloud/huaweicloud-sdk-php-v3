@@ -21,7 +21,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permissions  权限列表
+    * permissions  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permissions  权限列表
+    * permissions  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permissions  权限列表
+    * permissions  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permissions  权限列表
+    * permissions  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permissions  权限列表
+    * permissions  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets permissions
-    *  权限列表
+    *  白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     *
     * @return string[]|null
     */
@@ -198,7 +198,7 @@ class AddEndpointPermissionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets permissions
     *
-    * @param string[]|null $permissions 权限列表
+    * @param string[]|null $permissions 白名单记录列表。每个白名单记录的格式为iam:domain::授权账号ID。  其中，授权账号ID是长度为32的字符串，只包含英文字母（a-f）或数字；也可为*，表示允许全部用户连接。
     *
     * @return $this
     */

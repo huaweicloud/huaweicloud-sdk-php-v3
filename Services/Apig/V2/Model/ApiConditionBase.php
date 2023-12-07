@@ -24,9 +24,9 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     * sysParamName  系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
     * cookieParamName  COOKIE参数名称。策略类型为cookie时必选
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
-    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值;
+    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @var string[]
     */
@@ -46,9 +46,9 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     * sysParamName  系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
     * cookieParamName  COOKIE参数名称。策略类型为cookie时必选
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
-    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值;
+    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @var string[]
     */
@@ -89,9 +89,9 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     * sysParamName  系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
     * cookieParamName  COOKIE参数名称。策略类型为cookie时必选
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
-    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值;
+    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @var string[]
     */
@@ -111,9 +111,9 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     * sysParamName  系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
     * cookieParamName  COOKIE参数名称。策略类型为cookie时必选
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
-    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值;
+    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @var string[]
     */
@@ -133,9 +133,9 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     * sysParamName  系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
     * cookieParamName  COOKIE参数名称。策略类型为cookie时必选
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
-    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值;
+    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @var string[]
     */
@@ -431,7 +431,7 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionType
-    *  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    *  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     /**
     * Sets conditionType
     *
-    * @param string|null $conditionType 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param,system,cookie,frontend_authorizer时必选
+    * @param string|null $conditionType 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionValue
-    *  策略值;
+    *  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @return string
     */
@@ -491,7 +491,7 @@ class ApiConditionBase implements ModelInterface, ArrayAccess
     /**
     * Sets conditionValue
     *
-    * @param string $conditionValue 策略值;
+    * @param string $conditionValue 策略值。策略类型为param，source，cookie，frontend_authorizer时必填
     *
     * @return $this
     */

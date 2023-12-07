@@ -25,7 +25,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     * reqUri  API的访问地址。  type = path时必填
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
     * groupId  分组ID。  校验分组下API定义是否重复时必填
-    * romaAppId  集成应用ID。  校验应用下API定义是否重复时必填
+    * romaAppId  集成应用ID  暂不支持
     * apiId  需要对比的API ID
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     * reqUri  API的访问地址。  type = path时必填
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
     * groupId  分组ID。  校验分组下API定义是否重复时必填
-    * romaAppId  集成应用ID。  校验应用下API定义是否重复时必填
+    * romaAppId  集成应用ID  暂不支持
     * apiId  需要对比的API ID
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     * reqUri  API的访问地址。  type = path时必填
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
     * groupId  分组ID。  校验分组下API定义是否重复时必填
-    * romaAppId  集成应用ID。  校验应用下API定义是否重复时必填
+    * romaAppId  集成应用ID  暂不支持
     * apiId  需要对比的API ID
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     * reqUri  API的访问地址。  type = path时必填
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
     * groupId  分组ID。  校验分组下API定义是否重复时必填
-    * romaAppId  集成应用ID。  校验应用下API定义是否重复时必填
+    * romaAppId  集成应用ID  暂不支持
     * apiId  需要对比的API ID
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     * reqUri  API的访问地址。  type = path时必填
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配）  type = path时必填
     * groupId  分组ID。  校验分组下API定义是否重复时必填
-    * romaAppId  集成应用ID。  校验应用下API定义是否重复时必填
+    * romaAppId  集成应用ID  暂不支持
     * apiId  需要对比的API ID
     *
     * @var string[]
@@ -418,7 +418,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets romaAppId
-    *  集成应用ID。  校验应用下API定义是否重复时必填
+    *  集成应用ID  暂不支持
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ApiCheckInfo implements ModelInterface, ArrayAccess
     /**
     * Sets romaAppId
     *
-    * @param string|null $romaAppId 集成应用ID。  校验应用下API定义是否重复时必填
+    * @param string|null $romaAppId 集成应用ID  暂不支持
     *
     * @return $this
     */

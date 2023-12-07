@@ -238,10 +238,13 @@ class AvailabilityZones implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 64)) {
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+            if ((mb_strlen($this->container['type']) > 64)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+            if ((mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -358,7 +361,7 @@ class AvailabilityZones implements ModelInterface, ArrayAccess
     * Gets type
     *  云堡垒机服务可用区类型。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -368,7 +371,7 @@ class AvailabilityZones implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 云堡垒机服务可用区类型。
+    * @param string $type 云堡垒机服务可用区类型。
     *
     * @return $this
     */

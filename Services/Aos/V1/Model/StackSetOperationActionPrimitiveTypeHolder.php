@@ -20,7 +20,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * action  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @var string[]
     */
@@ -133,6 +133,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
     const ACTION_DELETE_STACK_INSTANCES = 'DELETE_STACK_INSTANCES';
     const ACTION_DEPLOY_STACK_SET = 'DEPLOY_STACK_SET';
     const ACTION_DEPLOY_STACK_INSTANCES = 'DEPLOY_STACK_INSTANCES';
+    const ACTION_UPDATE_STACK_INSTANCES = 'UPDATE_STACK_INSTANCES';
     
 
     /**
@@ -147,6 +148,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
             self::ACTION_DELETE_STACK_INSTANCES,
             self::ACTION_DEPLOY_STACK_SET,
             self::ACTION_DEPLOY_STACK_INSTANCES,
+            self::ACTION_UPDATE_STACK_INSTANCES,
         ];
     }
 
@@ -201,7 +203,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
 
     /**
     * Gets action
-    *  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    *  用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @return string|null
     */
@@ -213,7 +215,7 @@ class StackSetOperationActionPrimitiveTypeHolder implements ModelInterface, Arra
     /**
     * Sets action
     *
-    * @param string|null $action 用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+    * @param string|null $action 用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
     *
     * @return $this
     */

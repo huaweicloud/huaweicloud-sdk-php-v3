@@ -269,6 +269,9 @@ class ListPluginAttachableApisRequest implements ModelInterface, ArrayAccess
         if ($this->container['pluginId'] === null) {
             $invalidProperties[] = "'pluginId' can't be null";
         }
+        if ($this->container['envId'] === null) {
+            $invalidProperties[] = "'envId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -383,7 +386,7 @@ class ListPluginAttachableApisRequest implements ModelInterface, ArrayAccess
     * Gets envId
     *  发布的环境编号
     *
-    * @return string|null
+    * @return string
     */
     public function getEnvId()
     {
@@ -393,7 +396,7 @@ class ListPluginAttachableApisRequest implements ModelInterface, ArrayAccess
     /**
     * Sets envId
     *
-    * @param string|null $envId 发布的环境编号
+    * @param string $envId 发布的环境编号
     *
     * @return $this
     */

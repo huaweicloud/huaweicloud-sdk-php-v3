@@ -24,7 +24,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedFlavor  创专属文件系统，要创建的虚拟机的规格。
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型。创建增强型/HPC型/HPC缓存型文件系统时，该参数必填。 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。 创建HPC型文件系统，需要填写\"hpc\"。 创建HPC缓存型，需要填写\"hpc_cache\"。
-    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedFlavor  创专属文件系统，要创建的虚拟机的规格。
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型。创建增强型/HPC型/HPC缓存型文件系统时，该参数必填。 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。 创建HPC型文件系统，需要填写\"hpc\"。 创建HPC缓存型，需要填写\"hpc_cache\"。
-    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedFlavor  创专属文件系统，要创建的虚拟机的规格。
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型。创建增强型/HPC型/HPC缓存型文件系统时，该参数必填。 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。 创建HPC型文件系统，需要填写\"hpc\"。 创建HPC缓存型，需要填写\"hpc_cache\"。
-    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedFlavor  创专属文件系统，要创建的虚拟机的规格。
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型。创建增强型/HPC型/HPC缓存型文件系统时，该参数必填。 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。 创建HPC型文件系统，需要填写\"hpc\"。 创建HPC缓存型，需要填写\"hpc_cache\"。
-    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedFlavor  创专属文件系统，要创建的虚拟机的规格。
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型。创建增强型/HPC型/HPC缓存型文件系统时，该参数必填。 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。 创建HPC型文件系统，需要填写\"hpc\"。 创建HPC缓存型，需要填写\"hpc_cache\"。
-    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * hpcBw  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets hpcBw
-    *  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    *  文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets hpcBw
     *
-    * @param string|null $hpcBw 文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"125M\"、\"250M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
+    * @param string|null $hpcBw 文件系统的带宽规格。创建HPC型/HPC缓存型文件系统时，该参数必填。 HPC型，可以填写\"20M\"、\"40M\"、\"125M\"、\"250M\"、\"500M\"、\"1000M\"。 HPC缓存型，可以填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"、\"48G\"。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationId  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * operationId  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationId  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * operationId  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationId  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * operationId  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationId  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * operationId  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationId  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * operationId  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationId
-    *  资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    *  资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class OperationIdPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     /**
     * Sets operationId
     *
-    * @param string|null $operationId 资源栈集操作Id。  此Id由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * @param string|null $operationId 资源栈集操作Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
     *
     * @return $this
     */
