@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\SecMaster\V2\Model;
+namespace HuaweiCloud\SDK\Live\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
+class ModifyDelayConfig implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DataobjectSearch_condition_data';
+    protected static $openAPIModelName = 'ModifyDelayConfig';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filed  字段
-    * expression  逻辑表达式
-    * value  字段值
+    * playDomain  播放域名
+    * app  应用名称，默认为live
+    * delay  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'filed' => 'string',
-            'expression' => 'string',
-            'value' => 'string'
+            'playDomain' => 'string',
+            'app' => 'string',
+            'delay' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filed  字段
-    * expression  逻辑表达式
-    * value  字段值
+    * playDomain  播放域名
+    * app  应用名称，默认为live
+    * delay  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'filed' => null,
-        'expression' => null,
-        'value' => null
+        'playDomain' => null,
+        'app' => null,
+        'delay' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filed  字段
-    * expression  逻辑表达式
-    * value  字段值
+    * playDomain  播放域名
+    * app  应用名称，默认为live
+    * delay  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'filed' => 'filed',
-            'expression' => 'expression',
-            'value' => 'value'
+            'playDomain' => 'play_domain',
+            'app' => 'app',
+            'delay' => 'delay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filed  字段
-    * expression  逻辑表达式
-    * value  字段值
+    * playDomain  播放域名
+    * app  应用名称，默认为live
+    * delay  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'filed' => 'setFiled',
-            'expression' => 'setExpression',
-            'value' => 'setValue'
+            'playDomain' => 'setPlayDomain',
+            'app' => 'setApp',
+            'delay' => 'setDelay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filed  字段
-    * expression  逻辑表达式
-    * value  字段值
+    * playDomain  播放域名
+    * app  应用名称，默认为live
+    * delay  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'filed' => 'getFiled',
-            'expression' => 'getExpression',
-            'value' => 'getValue'
+            'playDomain' => 'getPlayDomain',
+            'app' => 'getApp',
+            'delay' => 'getDelay'
     ];
 
     /**
@@ -167,9 +167,9 @@ class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['filed'] = isset($data['filed']) ? $data['filed'] : null;
-        $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['playDomain'] = isset($data['playDomain']) ? $data['playDomain'] : null;
+        $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
     }
 
     /**
@@ -180,24 +180,24 @@ class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['filed']) && (mb_strlen($this->container['filed']) > 64)) {
-                $invalidProperties[] = "invalid value for 'filed', the character length must be smaller than or equal to 64.";
+        if ($this->container['playDomain'] === null) {
+            $invalidProperties[] = "'playDomain' can't be null";
+        }
+            if ((mb_strlen($this->container['playDomain']) > 255)) {
+                $invalidProperties[] = "invalid value for 'playDomain', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['filed']) && (mb_strlen($this->container['filed']) < 0)) {
-                $invalidProperties[] = "invalid value for 'filed', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['playDomain']) < 1)) {
+                $invalidProperties[] = "invalid value for 'playDomain', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['expression']) && (mb_strlen($this->container['expression']) > 64)) {
-                $invalidProperties[] = "invalid value for 'expression', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) > 128)) {
+                $invalidProperties[] = "invalid value for 'app', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['expression']) && (mb_strlen($this->container['expression']) < 0)) {
-                $invalidProperties[] = "invalid value for 'expression', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) < 0)) {
+                $invalidProperties[] = "invalid value for 'app', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 64)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
-            }
+        if ($this->container['delay'] === null) {
+            $invalidProperties[] = "'delay' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -213,74 +213,74 @@ class DataobjectSearchConditionData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets filed
-    *  字段
+    * Gets playDomain
+    *  播放域名
     *
-    * @return string|null
+    * @return string
     */
-    public function getFiled()
+    public function getPlayDomain()
     {
-        return $this->container['filed'];
+        return $this->container['playDomain'];
     }
 
     /**
-    * Sets filed
+    * Sets playDomain
     *
-    * @param string|null $filed 字段
+    * @param string $playDomain 播放域名
     *
     * @return $this
     */
-    public function setFiled($filed)
+    public function setPlayDomain($playDomain)
     {
-        $this->container['filed'] = $filed;
+        $this->container['playDomain'] = $playDomain;
         return $this;
     }
 
     /**
-    * Gets expression
-    *  逻辑表达式
+    * Gets app
+    *  应用名称，默认为live
     *
     * @return string|null
     */
-    public function getExpression()
+    public function getApp()
     {
-        return $this->container['expression'];
+        return $this->container['app'];
     }
 
     /**
-    * Sets expression
+    * Sets app
     *
-    * @param string|null $expression 逻辑表达式
+    * @param string|null $app 应用名称，默认为live
     *
     * @return $this
     */
-    public function setExpression($expression)
+    public function setApp($app)
     {
-        $this->container['expression'] = $expression;
+        $this->container['app'] = $app;
         return $this;
     }
 
     /**
-    * Gets value
-    *  字段值
+    * Gets delay
+    *  延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
-    * @return string|null
+    * @return int
     */
-    public function getValue()
+    public function getDelay()
     {
-        return $this->container['value'];
+        return $this->container['delay'];
     }
 
     /**
-    * Sets value
+    * Sets delay
     *
-    * @param string|null $value 字段值
+    * @param int $delay 延时时间，单位：ms。  包含如下取值： - 2000（低）。 - 4000（中）。 - 6000（高）。
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setDelay($delay)
     {
-        $this->container['value'] = $value;
+        $this->container['delay'] = $delay;
         return $this;
     }
 

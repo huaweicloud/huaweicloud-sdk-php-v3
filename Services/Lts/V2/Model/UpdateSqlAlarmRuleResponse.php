@@ -21,11 +21,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  测试
-    * indexId  测试
-    * language  测试
-    * projectId  测试
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
+    * indexId  索引id
+    * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -34,38 +33,44 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
     * topics  主题
+    * language  邮件附加信息语言
+    * id  规则ID。
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'indexId' => 'string',
-            'language' => 'string',
-            'projectId' => 'string',
             'sqlAlarmRuleName' => 'string',
+            'isCssSql' => 'bool',
+            'indexId' => 'string',
+            'projectId' => 'string',
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody',
             'conditionExpression' => 'string',
             'sqlAlarmLevel' => 'string',
             'sqlAlarmSend' => 'bool',
             'domainId' => 'string',
             'createTime' => 'int',
             'updateTime' => 'int',
-            'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]'
+            'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
+            'language' => 'string',
+            'id' => 'string',
+            'notificationFrequency' => 'int',
+            'alarmActionRuleName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  测试
-    * indexId  测试
-    * language  测试
-    * projectId  测试
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
+    * indexId  索引id
+    * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -74,18 +79,21 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
     * topics  主题
+    * language  邮件附加信息语言
+    * id  规则ID。
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'indexId' => null,
-        'language' => null,
-        'projectId' => null,
         'sqlAlarmRuleName' => null,
+        'isCssSql' => null,
+        'indexId' => null,
+        'projectId' => null,
         'sqlAlarmRuleId' => null,
         'sqlAlarmRuleDescription' => null,
         'sqlRequests' => null,
@@ -96,7 +104,11 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         'domainId' => null,
         'createTime' => 'int64',
         'updateTime' => 'int64',
-        'topics' => null
+        'topics' => null,
+        'language' => null,
+        'id' => null,
+        'notificationFrequency' => 'int32',
+        'alarmActionRuleName' => null
     ];
 
     /**
@@ -122,11 +134,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  测试
-    * indexId  测试
-    * language  测试
-    * projectId  测试
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
+    * indexId  索引id
+    * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -135,18 +146,21 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
     * topics  主题
+    * language  邮件附加信息语言
+    * id  规则ID。
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'indexId' => 'indexId',
-            'language' => 'language',
-            'projectId' => 'projectId',
             'sqlAlarmRuleName' => 'sql_alarm_rule_name',
+            'isCssSql' => 'is_css_sql',
+            'indexId' => 'indexId',
+            'projectId' => 'projectId',
             'sqlAlarmRuleId' => 'sql_alarm_rule_id',
             'sqlAlarmRuleDescription' => 'sql_alarm_rule_description',
             'sqlRequests' => 'sql_requests',
@@ -157,16 +171,19 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
-            'topics' => 'topics'
+            'topics' => 'topics',
+            'language' => 'language',
+            'id' => 'id',
+            'notificationFrequency' => 'notification_frequency',
+            'alarmActionRuleName' => 'alarm_action_rule_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  测试
-    * indexId  测试
-    * language  测试
-    * projectId  测试
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
+    * indexId  索引id
+    * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -175,18 +192,21 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
     * topics  主题
+    * language  邮件附加信息语言
+    * id  规则ID。
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'indexId' => 'setIndexId',
-            'language' => 'setLanguage',
-            'projectId' => 'setProjectId',
             'sqlAlarmRuleName' => 'setSqlAlarmRuleName',
+            'isCssSql' => 'setIsCssSql',
+            'indexId' => 'setIndexId',
+            'projectId' => 'setProjectId',
             'sqlAlarmRuleId' => 'setSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'setSqlAlarmRuleDescription',
             'sqlRequests' => 'setSqlRequests',
@@ -197,16 +217,19 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
-            'topics' => 'setTopics'
+            'topics' => 'setTopics',
+            'language' => 'setLanguage',
+            'id' => 'setId',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'alarmActionRuleName' => 'setAlarmActionRuleName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  测试
-    * indexId  测试
-    * language  测试
-    * projectId  测试
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
+    * indexId  索引id
+    * projectId  项目id
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -215,18 +238,21 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
     * topics  主题
+    * language  邮件附加信息语言
+    * id  规则ID。
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'indexId' => 'getIndexId',
-            'language' => 'getLanguage',
-            'projectId' => 'getProjectId',
             'sqlAlarmRuleName' => 'getSqlAlarmRuleName',
+            'isCssSql' => 'getIsCssSql',
+            'indexId' => 'getIndexId',
+            'projectId' => 'getProjectId',
             'sqlAlarmRuleId' => 'getSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'getSqlAlarmRuleDescription',
             'sqlRequests' => 'getSqlRequests',
@@ -237,7 +263,11 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
-            'topics' => 'getTopics'
+            'topics' => 'getTopics',
+            'language' => 'getLanguage',
+            'id' => 'getId',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'alarmActionRuleName' => 'getAlarmActionRuleName'
     ];
 
     /**
@@ -284,6 +314,16 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     const SQL_ALARM_LEVEL_MINOR = 'Minor';
     const SQL_ALARM_LEVEL_MAJOR = 'Major';
     const SQL_ALARM_LEVEL_CRITICAL = 'CRITICAL';
+    const LANGUAGE_ZH_CN = 'zh-cn';
+    const LANGUAGE_EN_US = 'en-us';
+    const NOTIFICATION_FREQUENCY_0 = 0;
+    const NOTIFICATION_FREQUENCY_5 = 5;
+    const NOTIFICATION_FREQUENCY_10 = 10;
+    const NOTIFICATION_FREQUENCY_15 = 15;
+    const NOTIFICATION_FREQUENCY_30 = 30;
+    const NOTIFICATION_FREQUENCY_60 = 60;
+    const NOTIFICATION_FREQUENCY_180 = 180;
+    const NOTIFICATION_FREQUENCY_360 = 360;
     
 
     /**
@@ -298,6 +338,38 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             self::SQL_ALARM_LEVEL_MINOR,
             self::SQL_ALARM_LEVEL_MAJOR,
             self::SQL_ALARM_LEVEL_CRITICAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_ZH_CN,
+            self::LANGUAGE_EN_US,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationFrequencyAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_FREQUENCY_0,
+            self::NOTIFICATION_FREQUENCY_5,
+            self::NOTIFICATION_FREQUENCY_10,
+            self::NOTIFICATION_FREQUENCY_15,
+            self::NOTIFICATION_FREQUENCY_30,
+            self::NOTIFICATION_FREQUENCY_60,
+            self::NOTIFICATION_FREQUENCY_180,
+            self::NOTIFICATION_FREQUENCY_360,
         ];
     }
 
@@ -317,11 +389,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['indexId'] = isset($data['indexId']) ? $data['indexId'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['sqlAlarmRuleName'] = isset($data['sqlAlarmRuleName']) ? $data['sqlAlarmRuleName'] : null;
+        $this->container['isCssSql'] = isset($data['isCssSql']) ? $data['isCssSql'] : null;
+        $this->container['indexId'] = isset($data['indexId']) ? $data['indexId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['sqlAlarmRuleId'] = isset($data['sqlAlarmRuleId']) ? $data['sqlAlarmRuleId'] : null;
         $this->container['sqlAlarmRuleDescription'] = isset($data['sqlAlarmRuleDescription']) ? $data['sqlAlarmRuleDescription'] : null;
         $this->container['sqlRequests'] = isset($data['sqlRequests']) ? $data['sqlRequests'] : null;
@@ -333,6 +404,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
     }
 
     /**
@@ -343,36 +418,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['indexId']) && (mb_strlen($this->container['indexId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'indexId', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['indexId']) && (mb_strlen($this->container['indexId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'indexId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
-                $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['sqlAlarmRuleName']) && (mb_strlen($this->container['sqlAlarmRuleName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'sqlAlarmRuleName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['sqlAlarmRuleName']) && (mb_strlen($this->container['sqlAlarmRuleName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sqlAlarmRuleName', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['sqlAlarmRuleId']) && (mb_strlen($this->container['sqlAlarmRuleId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'sqlAlarmRuleId', the character length must be smaller than or equal to 36.";
             }
@@ -405,6 +450,34 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 13.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
+            }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getNotificationFrequencyAllowableValues();
+                if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationFrequency', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -417,102 +490,6 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets id
-    *  测试
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 测试
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets indexId
-    *  测试
-    *
-    * @return string|null
-    */
-    public function getIndexId()
-    {
-        return $this->container['indexId'];
-    }
-
-    /**
-    * Sets indexId
-    *
-    * @param string|null $indexId 测试
-    *
-    * @return $this
-    */
-    public function setIndexId($indexId)
-    {
-        $this->container['indexId'] = $indexId;
-        return $this;
-    }
-
-    /**
-    * Gets language
-    *  测试
-    *
-    * @return string|null
-    */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-    * Sets language
-    *
-    * @param string|null $language 测试
-    *
-    * @return $this
-    */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  测试
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 测试
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
-        return $this;
     }
 
     /**
@@ -536,6 +513,78 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setSqlAlarmRuleName($sqlAlarmRuleName)
     {
         $this->container['sqlAlarmRuleName'] = $sqlAlarmRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets isCssSql
+    *  是否管道符sql查询
+    *
+    * @return bool|null
+    */
+    public function getIsCssSql()
+    {
+        return $this->container['isCssSql'];
+    }
+
+    /**
+    * Sets isCssSql
+    *
+    * @param bool|null $isCssSql 是否管道符sql查询
+    *
+    * @return $this
+    */
+    public function setIsCssSql($isCssSql)
+    {
+        $this->container['isCssSql'] = $isCssSql;
+        return $this;
+    }
+
+    /**
+    * Gets indexId
+    *  索引id
+    *
+    * @return string|null
+    */
+    public function getIndexId()
+    {
+        return $this->container['indexId'];
+    }
+
+    /**
+    * Sets indexId
+    *
+    * @param string|null $indexId 索引id
+    *
+    * @return $this
+    */
+    public function setIndexId($indexId)
+    {
+        $this->container['indexId'] = $indexId;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  项目id
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 项目id
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 
@@ -615,7 +664,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * Gets frequency
     *  frequency
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody|null
     */
     public function getFrequency()
     {
@@ -625,7 +674,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null $frequency frequency
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody|null $frequency frequency
     *
     * @return $this
     */
@@ -733,7 +782,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间(毫秒时间戳)
+    *  创建时间（毫秒时间戳）
     *
     * @return int|null
     */
@@ -745,7 +794,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间(毫秒时间戳)
+    * @param int|null $createTime 创建时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -757,7 +806,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间(毫秒时间戳)
+    *  更新时间（毫秒时间戳）
     *
     * @return int|null
     */
@@ -769,7 +818,7 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间(毫秒时间戳)
+    * @param int|null $updateTime 更新时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -800,6 +849,102 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setTopics($topics)
     {
         $this->container['topics'] = $topics;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  邮件附加信息语言
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 邮件附加信息语言
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  规则ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 规则ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  通知频率,单位(分钟)
+    *
+    * @return int|null
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param int|null $notificationFrequency 通知频率,单位(分钟)
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
         return $this;
     }
 

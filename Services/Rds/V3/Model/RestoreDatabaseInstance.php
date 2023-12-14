@@ -180,6 +180,15 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['restoreTime'] === null) {
+            $invalidProperties[] = "'restoreTime' can't be null";
+        }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['databases'] === null) {
+            $invalidProperties[] = "'databases' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +207,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Gets restoreTime
     *  恢复时间
     *
-    * @return int|null
+    * @return int
     */
     public function getRestoreTime()
     {
@@ -208,7 +217,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param int|null $restoreTime 恢复时间
+    * @param int $restoreTime 恢复时间
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  实例ID
     *
-    * @return string|null
+    * @return string
     */
     public function getInstanceId()
     {
@@ -232,7 +241,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID
+    * @param string $instanceId 实例ID
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Gets databases
     *  库信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInfo[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInfo[]
     */
     public function getDatabases()
     {
@@ -256,7 +265,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     /**
     * Sets databases
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInfo[]|null $databases 库信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInfo[] $databases 库信息
     *
     * @return $this
     */

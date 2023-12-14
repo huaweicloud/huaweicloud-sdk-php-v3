@@ -24,7 +24,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  元数据json文件。
+    * body  body
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
             'overwrite' => 'string',
             'name' => 'string',
             'type' => 'string',
-            'body' => 'map[string,object]'
+            'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\CreateRocketMqMigrationTaskReq'
     ];
 
     /**
@@ -42,7 +42,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  元数据json文件。
+    * body  body
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  元数据json文件。
+    * body  body
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  元数据json文件。
+    * body  body
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
     * name  迁移任务名称，名称规则参考创建实例
     * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
-    * body  元数据json文件。
+    * body  body
     *
     * @var string[]
     */
@@ -372,9 +372,9 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  元数据json文件。
+    *  body
     *
-    * @return map[string,object]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateRocketMqMigrationTaskReq|null
     */
     public function getBody()
     {
@@ -384,7 +384,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param map[string,object]|null $body 元数据json文件。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateRocketMqMigrationTaskReq|null $body body
     *
     * @return $this
     */

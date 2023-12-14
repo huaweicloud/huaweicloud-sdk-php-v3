@@ -1081,6 +1081,9 @@ class SmsAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['isConsistencyResultExist'] !== null) {
+            $queryParams['is_consistency_result_exist'] = $localVarParams['isConsistencyResultExist'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1535,6 +1538,71 @@ class SmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取一致性校验结果
+     *
+     * 获取一致性校验结果简报
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConsistencyResultAsync($request)
+    {
+        return $this->showConsistencyResultAsyncWithHttpInfo($request);
+    }
+    
+    public function showConsistencyResultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/tasks/{task_id}/consistency-result';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConsistencyResultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConsistencyResultRequest',
             $asyncRequest = true);
     }
 
@@ -2312,6 +2380,74 @@ class SmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCommandResultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCommandResultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 上传一致性校验结果
+     *
+     * Agent 上传一致性校验结果简报
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateConsistencyResultAsync($request)
+    {
+        return $this->updateConsistencyResultAsyncWithHttpInfo($request);
+    }
+    
+    public function updateConsistencyResultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/tasks/{task_id}/consistency-result';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateConsistencyResultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateConsistencyResultRequest',
             $asyncRequest = true);
     }
 

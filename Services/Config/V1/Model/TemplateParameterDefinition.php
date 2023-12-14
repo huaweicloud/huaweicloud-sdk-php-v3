@@ -23,7 +23,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
-    * allowedValues  预定义合规包模板参数允许值列表
+    * allowedValues  预定义合规包模板参数允许值列表。
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
-    * allowedValues  预定义合规包模板参数允许值列表
+    * allowedValues  预定义合规包模板参数允许值列表。
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
-    * allowedValues  预定义合规包模板参数允许值列表
+    * allowedValues  预定义合规包模板参数允许值列表。
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
-    * allowedValues  预定义合规包模板参数允许值列表
+    * allowedValues  预定义合规包模板参数允许值列表。
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     * name  预定义合规包模板参数名字。
     * description  预定义合规包模板参数描述。
     * defaultValue  预定义合规包模板参数默认值。
-    * allowedValues  预定义合规包模板参数允许值列表
+    * allowedValues  预定义合规包模板参数允许值列表。
     * type  预定义合规包模板参数类型。
     *
     * @var string[]
@@ -323,7 +323,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowedValues
-    *  预定义合规包模板参数允许值列表
+    *  预定义合规包模板参数允许值列表。
     *
     * @return object[]|null
     */
@@ -335,7 +335,7 @@ class TemplateParameterDefinition implements ModelInterface, ArrayAccess
     /**
     * Sets allowedValues
     *
-    * @param object[]|null $allowedValues 预定义合规包模板参数允许值列表
+    * @param object[]|null $allowedValues 预定义合规包模板参数允许值列表。
     *
     * @return $this
     */

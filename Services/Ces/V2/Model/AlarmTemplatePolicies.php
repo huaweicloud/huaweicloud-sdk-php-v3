@@ -28,7 +28,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -58,7 +58,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -109,7 +109,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -139,7 +139,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -169,7 +169,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -402,8 +402,8 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
         }
-            if (($this->container['count'] > 5)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 5.";
+            if (($this->container['count'] > 180)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 180.";
             }
             if (($this->container['count'] < 1)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 1.";
@@ -636,7 +636,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警连续触发次数，正整数[1, 5]
+    *  次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return int
     */
@@ -648,7 +648,7 @@ class AlarmTemplatePolicies implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count 告警连续触发次数，正整数[1, 5]
+    * @param int $count 次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return $this
     */

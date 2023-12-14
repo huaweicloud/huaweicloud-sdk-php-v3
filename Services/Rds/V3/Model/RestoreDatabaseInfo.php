@@ -169,6 +169,12 @@ class RestoreDatabaseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['oldName'] === null) {
+            $invalidProperties[] = "'oldName' can't be null";
+        }
+        if ($this->container['newName'] === null) {
+            $invalidProperties[] = "'newName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class RestoreDatabaseInfo implements ModelInterface, ArrayAccess
     * Gets oldName
     *  恢复前库名
     *
-    * @return string|null
+    * @return string
     */
     public function getOldName()
     {
@@ -197,7 +203,7 @@ class RestoreDatabaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets oldName
     *
-    * @param string|null $oldName 恢复前库名
+    * @param string $oldName 恢复前库名
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class RestoreDatabaseInfo implements ModelInterface, ArrayAccess
     * Gets newName
     *  恢复后库名
     *
-    * @return string|null
+    * @return string
     */
     public function getNewName()
     {
@@ -221,7 +227,7 @@ class RestoreDatabaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets newName
     *
-    * @param string|null $newName 恢复后库名
+    * @param string $newName 恢复后库名
     *
     * @return $this
     */

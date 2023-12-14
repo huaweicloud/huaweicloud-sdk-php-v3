@@ -43,6 +43,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     * audienceJoinUri  观众入会地址。
     * audiencePasswd  观众入会密码。
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     * notifySetting  notifySetting
     * attendees  与会嘉宾名称列表。
     *
@@ -71,6 +74,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
             'audienceJoinUri' => 'string',
             'audiencePasswd' => 'string',
             'enableRecording' => '\HuaweiCloud\SDK\Meeting\V1\Model\YesNoEnum',
+            'liveAddress' => 'string',
+            'auxAddress' => 'string',
+            'liveUrl' => 'string',
             'notifySetting' => '\HuaweiCloud\SDK\Meeting\V1\Model\OpenNotifySetting',
             'attendees' => 'string[]'
     ];
@@ -99,6 +105,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     * audienceJoinUri  观众入会地址。
     * audiencePasswd  观众入会密码。
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     * notifySetting  notifySetting
     * attendees  与会嘉宾名称列表。
     *
@@ -127,6 +136,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
         'audienceJoinUri' => null,
         'audiencePasswd' => null,
         'enableRecording' => null,
+        'liveAddress' => null,
+        'auxAddress' => null,
+        'liveUrl' => null,
         'notifySetting' => null,
         'attendees' => null
     ];
@@ -176,6 +188,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     * audienceJoinUri  观众入会地址。
     * audiencePasswd  观众入会密码。
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     * notifySetting  notifySetting
     * attendees  与会嘉宾名称列表。
     *
@@ -204,6 +219,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
             'audienceJoinUri' => 'audienceJoinUri',
             'audiencePasswd' => 'audiencePasswd',
             'enableRecording' => 'enableRecording',
+            'liveAddress' => 'liveAddress',
+            'auxAddress' => 'auxAddress',
+            'liveUrl' => 'liveUrl',
             'notifySetting' => 'notifySetting',
             'attendees' => 'attendees'
     ];
@@ -232,6 +250,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     * audienceJoinUri  观众入会地址。
     * audiencePasswd  观众入会密码。
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     * notifySetting  notifySetting
     * attendees  与会嘉宾名称列表。
     *
@@ -260,6 +281,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
             'audienceJoinUri' => 'setAudienceJoinUri',
             'audiencePasswd' => 'setAudiencePasswd',
             'enableRecording' => 'setEnableRecording',
+            'liveAddress' => 'setLiveAddress',
+            'auxAddress' => 'setAuxAddress',
+            'liveUrl' => 'setLiveUrl',
             'notifySetting' => 'setNotifySetting',
             'attendees' => 'setAttendees'
     ];
@@ -288,6 +312,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     * audienceJoinUri  观众入会地址。
     * audiencePasswd  观众入会密码。
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     * notifySetting  notifySetting
     * attendees  与会嘉宾名称列表。
     *
@@ -316,6 +343,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
             'audienceJoinUri' => 'getAudienceJoinUri',
             'audiencePasswd' => 'getAudiencePasswd',
             'enableRecording' => 'getEnableRecording',
+            'liveAddress' => 'getLiveAddress',
+            'auxAddress' => 'getAuxAddress',
+            'liveUrl' => 'getLiveUrl',
             'notifySetting' => 'getNotifySetting',
             'attendees' => 'getAttendees'
     ];
@@ -400,6 +430,9 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
         $this->container['audienceJoinUri'] = isset($data['audienceJoinUri']) ? $data['audienceJoinUri'] : null;
         $this->container['audiencePasswd'] = isset($data['audiencePasswd']) ? $data['audiencePasswd'] : null;
         $this->container['enableRecording'] = isset($data['enableRecording']) ? $data['enableRecording'] : null;
+        $this->container['liveAddress'] = isset($data['liveAddress']) ? $data['liveAddress'] : null;
+        $this->container['auxAddress'] = isset($data['auxAddress']) ? $data['auxAddress'] : null;
+        $this->container['liveUrl'] = isset($data['liveUrl']) ? $data['liveUrl'] : null;
         $this->container['notifySetting'] = isset($data['notifySetting']) ? $data['notifySetting'] : null;
         $this->container['attendees'] = isset($data['attendees']) ? $data['attendees'] : null;
     }
@@ -951,6 +984,78 @@ class ShowWebinarResponse implements ModelInterface, ArrayAccess
     public function setEnableRecording($enableRecording)
     {
         $this->container['enableRecording'] = $enableRecording;
+        return $this;
+    }
+
+    /**
+    * Gets liveAddress
+    *  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getLiveAddress()
+    {
+        return $this->container['liveAddress'];
+    }
+
+    /**
+    * Sets liveAddress
+    *
+    * @param string|null $liveAddress 主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setLiveAddress($liveAddress)
+    {
+        $this->container['liveAddress'] = $liveAddress;
+        return $this;
+    }
+
+    /**
+    * Gets auxAddress
+    *  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getAuxAddress()
+    {
+        return $this->container['auxAddress'];
+    }
+
+    /**
+    * Sets auxAddress
+    *
+    * @param string|null $auxAddress 辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setAuxAddress($auxAddress)
+    {
+        $this->container['auxAddress'] = $auxAddress;
+        return $this;
+    }
+
+    /**
+    * Gets liveUrl
+    *  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getLiveUrl()
+    {
+        return $this->container['liveUrl'];
+    }
+
+    /**
+    * Sets liveUrl
+    *
+    * @param string|null $liveUrl 直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setLiveUrl($liveUrl)
+    {
+        $this->container['liveUrl'] = $liveUrl;
         return $this;
     }
 

@@ -30,6 +30,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * migrationCycle  checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
+    * isConsistencyResultExist  是否存在一致性校验结果
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'migrationCycle' => 'string',
             'connected' => 'bool',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'isConsistencyResultExist' => 'bool'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * migrationCycle  checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
+    * isConsistencyResultExist  是否存在一致性校验结果
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'migrationCycle' => null,
         'connected' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'isConsistencyResultExist' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * migrationCycle  checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
+    * isConsistencyResultExist  是否存在一致性校验结果
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'migrationCycle' => 'migration_cycle',
             'connected' => 'connected',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'isConsistencyResultExist' => 'is_consistency_result_exist'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * migrationCycle  checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
+    * isConsistencyResultExist  是否存在一致性校验结果
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'migrationCycle' => 'setMigrationCycle',
             'connected' => 'setConnected',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'isConsistencyResultExist' => 'setIsConsistencyResultExist'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * migrationCycle  checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
+    * isConsistencyResultExist  是否存在一致性校验结果
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'migrationCycle' => 'getMigrationCycle',
             'connected' => 'getConnected',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'isConsistencyResultExist' => 'getIsConsistencyResultExist'
     ];
 
     /**
@@ -305,6 +315,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         $this->container['migrationCycle'] = isset($data['migrationCycle']) ? $data['migrationCycle'] : null;
         $this->container['connected'] = isset($data['connected']) ? $data['connected'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['isConsistencyResultExist'] = isset($data['isConsistencyResultExist']) ? $data['isConsistencyResultExist'] : null;
     }
 
     /**
@@ -630,6 +641,30 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets isConsistencyResultExist
+    *  是否存在一致性校验结果
+    *
+    * @return bool|null
+    */
+    public function getIsConsistencyResultExist()
+    {
+        return $this->container['isConsistencyResultExist'];
+    }
+
+    /**
+    * Sets isConsistencyResultExist
+    *
+    * @param bool|null $isConsistencyResultExist 是否存在一致性校验结果
+    *
+    * @return $this
+    */
+    public function setIsConsistencyResultExist($isConsistencyResultExist)
+    {
+        $this->container['isConsistencyResultExist'] = $isConsistencyResultExist;
         return $this;
     }
 

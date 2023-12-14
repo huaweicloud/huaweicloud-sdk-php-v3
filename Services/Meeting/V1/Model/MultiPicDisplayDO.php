@@ -32,7 +32,7 @@ class MultiPicDisplayDO implements ModelInterface, ArrayAccess
             'manualSet' => 'int',
             'imageType' => 'string',
             'subscriberInPics' => '\HuaweiCloud\SDK\Meeting\V1\Model\PicInfoNotify[]',
-            'switchTime' => 'string',
+            'switchTime' => 'int',
             'picLayoutInfo' => '\HuaweiCloud\SDK\Meeting\V1\Model\PicLayoutInfo'
     ];
 
@@ -50,7 +50,7 @@ class MultiPicDisplayDO implements ModelInterface, ArrayAccess
         'manualSet' => 'int32',
         'imageType' => null,
         'subscriberInPics' => null,
-        'switchTime' => null,
+        'switchTime' => 'int32',
         'picLayoutInfo' => null
     ];
 
@@ -292,7 +292,7 @@ class MultiPicDisplayDO implements ModelInterface, ArrayAccess
     * Gets switchTime
     *  表示轮询间隔，单位：秒。当同一个子画面中包含有多个视频源时，此参数有效。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getSwitchTime()
     {
@@ -302,7 +302,7 @@ class MultiPicDisplayDO implements ModelInterface, ArrayAccess
     /**
     * Sets switchTime
     *
-    * @param string|null $switchTime 表示轮询间隔，单位：秒。当同一个子画面中包含有多个视频源时，此参数有效。
+    * @param int|null $switchTime 表示轮询间隔，单位：秒。当同一个子画面中包含有多个视频源时，此参数有效。
     *
     * @return $this
     */

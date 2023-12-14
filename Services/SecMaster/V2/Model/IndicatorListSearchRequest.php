@@ -23,7 +23,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * ids  指标ID列表
     * name  指标名称
     * dataclassId  数据类ID
-    * condition  查询条件
+    * condition  condition
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
@@ -36,7 +36,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
             'ids' => 'string[]',
             'name' => 'string',
             'dataclassId' => 'string',
-            'condition' => 'string',
+            'condition' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchCondition',
             'offset' => 'int',
             'limit' => 'int',
             'sortBy' => 'string',
@@ -49,7 +49,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * ids  指标ID列表
     * name  指标名称
     * dataclassId  数据类ID
-    * condition  查询条件
+    * condition  condition
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
@@ -96,7 +96,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * ids  指标ID列表
     * name  指标名称
     * dataclassId  数据类ID
-    * condition  查询条件
+    * condition  condition
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
@@ -122,7 +122,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * ids  指标ID列表
     * name  指标名称
     * dataclassId  数据类ID
-    * condition  查询条件
+    * condition  condition
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
@@ -148,7 +148,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * ids  指标ID列表
     * name  指标名称
     * dataclassId  数据类ID
-    * condition  查询条件
+    * condition  condition
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
@@ -261,12 +261,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
         }
-            if ((mb_strlen($this->container['condition']) > 4096)) {
-                $invalidProperties[] = "invalid value for 'condition', the character length must be smaller than or equal to 4096.";
-            }
-            if ((mb_strlen($this->container['condition']) < 0)) {
-                $invalidProperties[] = "invalid value for 'condition', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['offset'] === null) {
             $invalidProperties[] = "'offset' can't be null";
         }
@@ -391,9 +385,9 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  查询条件
+    *  condition
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchCondition
     */
     public function getCondition()
     {
@@ -403,7 +397,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param string $condition 查询条件
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchCondition $condition condition
     *
     * @return $this
     */

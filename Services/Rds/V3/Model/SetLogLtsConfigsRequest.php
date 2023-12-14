@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\SecMaster\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
+class SetLogLtsConfigsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DataobjectSearch_condition_logics';
+    protected static $openAPIModelName = 'SetLogLtsConfigsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  表达式名称
+    * engine  引擎。
+    * xLanguage  语言。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string'
+            'engine' => 'string',
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigResponseBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  表达式名称
+    * engine  引擎。
+    * xLanguage  语言。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null
+        'engine' => null,
+        'xLanguage' => null,
+        'body' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  表达式名称
+    * engine  引擎。
+    * xLanguage  语言。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name'
+            'engine' => 'engine',
+            'xLanguage' => 'X-Language',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  表达式名称
+    * engine  引擎。
+    * xLanguage  语言。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName'
+            'engine' => 'setEngine',
+            'xLanguage' => 'setXLanguage',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  表达式名称
+    * engine  引擎。
+    * xLanguage  语言。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName'
+            'engine' => 'getEngine',
+            'xLanguage' => 'getXLanguage',
+            'body' => 'getBody'
     ];
 
     /**
@@ -129,7 +149,39 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_MYSQL = 'mysql';
+    const ENGINE_POSTGRESQL = 'postgresql';
+    const ENGINE_SQLSERVER = 'sqlserver';
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_MYSQL,
+            self::ENGINE_POSTGRESQL,
+            self::ENGINE_SQLSERVER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -147,7 +199,9 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -158,12 +212,25 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+        if ($this->container['engine'] === null) {
+            $invalidProperties[] = "'engine' can't be null";
+        }
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
+
         return $invalidProperties;
     }
 
@@ -179,26 +246,74 @@ class DataobjectSearchConditionLogics implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  表达式名称
+    * Gets engine
+    *  引擎。
     *
-    * @return string|null
+    * @return string
     */
-    public function getName()
+    public function getEngine()
     {
-        return $this->container['name'];
+        return $this->container['engine'];
     }
 
     /**
-    * Sets name
+    * Sets engine
     *
-    * @param string|null $name 表达式名称
+    * @param string $engine 引擎。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setEngine($engine)
     {
-        $this->container['name'] = $name;
+        $this->container['engine'] = $engine;
+        return $this;
+    }
+
+    /**
+    * Gets xLanguage
+    *  语言。
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 语言。
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigResponseBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\AddLogConfigResponseBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

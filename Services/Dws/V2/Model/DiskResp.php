@@ -21,6 +21,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceName  实例名称
+    * instanceId  实例ID
     * hostName  主机名称
     * diskName  磁盘名称
     * diskType  磁盘类型(系统盘、数据盘、日志盘)。
@@ -38,6 +39,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'instanceName' => 'string',
+            'instanceId' => 'string',
             'hostName' => 'string',
             'diskName' => 'string',
             'diskType' => 'string',
@@ -55,6 +57,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceName  实例名称
+    * instanceId  实例ID
     * hostName  主机名称
     * diskName  磁盘名称
     * diskType  磁盘类型(系统盘、数据盘、日志盘)。
@@ -72,6 +75,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'instanceName' => null,
+        'instanceId' => null,
         'hostName' => null,
         'diskName' => null,
         'diskType' => null,
@@ -110,6 +114,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceName  实例名称
+    * instanceId  实例ID
     * hostName  主机名称
     * diskName  磁盘名称
     * diskType  磁盘类型(系统盘、数据盘、日志盘)。
@@ -127,6 +132,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'instanceName' => 'instance_name',
+            'instanceId' => 'instance_id',
             'hostName' => 'host_name',
             'diskName' => 'disk_name',
             'diskType' => 'disk_type',
@@ -144,6 +150,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceName  实例名称
+    * instanceId  实例ID
     * hostName  主机名称
     * diskName  磁盘名称
     * diskType  磁盘类型(系统盘、数据盘、日志盘)。
@@ -161,6 +168,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'instanceName' => 'setInstanceName',
+            'instanceId' => 'setInstanceId',
             'hostName' => 'setHostName',
             'diskName' => 'setDiskName',
             'diskType' => 'setDiskType',
@@ -178,6 +186,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceName  实例名称
+    * instanceId  实例ID
     * hostName  主机名称
     * diskName  磁盘名称
     * diskType  磁盘类型(系统盘、数据盘、日志盘)。
@@ -195,6 +204,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'instanceName' => 'getInstanceName',
+            'instanceId' => 'getInstanceId',
             'hostName' => 'getHostName',
             'diskName' => 'getDiskName',
             'diskType' => 'getDiskType',
@@ -268,6 +278,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['diskName'] = isset($data['diskName']) ? $data['diskName'] : null;
         $this->container['diskType'] = isset($data['diskType']) ? $data['diskType'] : null;
@@ -325,6 +336,30 @@ class DiskResp implements ModelInterface, ArrayAccess
     public function setInstanceName($instanceName)
     {
         $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

@@ -41,6 +41,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * lastVisitTime  Agent上一次连接状态发生变化的时间
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
+    * isConsistencyResultExist  是否有一致性校验结果
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'totalsize' => 'int',
             'lastVisitTime' => 'int',
             'migrationCycle' => 'string',
-            'stateActionTime' => 'int'
+            'stateActionTime' => 'int',
+            'isConsistencyResultExist' => 'bool'
     ];
 
     /**
@@ -91,6 +93,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * lastVisitTime  Agent上一次连接状态发生变化的时间
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
+    * isConsistencyResultExist  是否有一致性校验结果
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         'totalsize' => 'int64',
         'lastVisitTime' => 'int64',
         'migrationCycle' => null,
-        'stateActionTime' => 'int64'
+        'stateActionTime' => 'int64',
+        'isConsistencyResultExist' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * lastVisitTime  Agent上一次连接状态发生变化的时间
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
+    * isConsistencyResultExist  是否有一致性校验结果
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'totalsize' => 'totalsize',
             'lastVisitTime' => 'last_visit_time',
             'migrationCycle' => 'migration_cycle',
-            'stateActionTime' => 'state_action_time'
+            'stateActionTime' => 'state_action_time',
+            'isConsistencyResultExist' => 'is_consistency_result_exist'
     ];
 
     /**
@@ -212,6 +218,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * lastVisitTime  Agent上一次连接状态发生变化的时间
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
+    * isConsistencyResultExist  是否有一致性校验结果
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'totalsize' => 'setTotalsize',
             'lastVisitTime' => 'setLastVisitTime',
             'migrationCycle' => 'setMigrationCycle',
-            'stateActionTime' => 'setStateActionTime'
+            'stateActionTime' => 'setStateActionTime',
+            'isConsistencyResultExist' => 'setIsConsistencyResultExist'
     ];
 
     /**
@@ -262,6 +270,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * lastVisitTime  Agent上一次连接状态发生变化的时间
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * stateActionTime  源端状态（state）上次发生变化的时间
+    * isConsistencyResultExist  是否有一致性校验结果
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'totalsize' => 'getTotalsize',
             'lastVisitTime' => 'getLastVisitTime',
             'migrationCycle' => 'getMigrationCycle',
-            'stateActionTime' => 'getStateActionTime'
+            'stateActionTime' => 'getStateActionTime',
+            'isConsistencyResultExist' => 'getIsConsistencyResultExist'
     ];
 
     /**
@@ -441,6 +451,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         $this->container['lastVisitTime'] = isset($data['lastVisitTime']) ? $data['lastVisitTime'] : null;
         $this->container['migrationCycle'] = isset($data['migrationCycle']) ? $data['migrationCycle'] : null;
         $this->container['stateActionTime'] = isset($data['stateActionTime']) ? $data['stateActionTime'] : null;
+        $this->container['isConsistencyResultExist'] = isset($data['isConsistencyResultExist']) ? $data['isConsistencyResultExist'] : null;
     }
 
     /**
@@ -1086,6 +1097,30 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     public function setStateActionTime($stateActionTime)
     {
         $this->container['stateActionTime'] = $stateActionTime;
+        return $this;
+    }
+
+    /**
+    * Gets isConsistencyResultExist
+    *  是否有一致性校验结果
+    *
+    * @return bool|null
+    */
+    public function getIsConsistencyResultExist()
+    {
+        return $this->container['isConsistencyResultExist'];
+    }
+
+    /**
+    * Sets isConsistencyResultExist
+    *
+    * @param bool|null $isConsistencyResultExist 是否有一致性校验结果
+    *
+    * @return $this
+    */
+    public function setIsConsistencyResultExist($isConsistencyResultExist)
+    {
+        $this->container['isConsistencyResultExist'] = $isConsistencyResultExist;
         return $this;
     }
 

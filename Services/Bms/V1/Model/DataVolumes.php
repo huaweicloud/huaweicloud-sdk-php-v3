@@ -169,6 +169,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const VOLUMETYPE_GPSSD = 'GPSSD';
     const VOLUMETYPE_SATA = 'SATA';
     const VOLUMETYPE_SAS = 'SAS';
     const VOLUMETYPE_SSD = 'SSD';
@@ -183,6 +184,7 @@ class DataVolumes implements ModelInterface, ArrayAccess
     public function getVolumetypeAllowableValues()
     {
         return [
+            self::VOLUMETYPE_GPSSD,
             self::VOLUMETYPE_SATA,
             self::VOLUMETYPE_SAS,
             self::VOLUMETYPE_SSD,

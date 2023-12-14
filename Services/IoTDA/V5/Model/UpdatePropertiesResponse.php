@@ -21,6 +21,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     * errorCode  属性更新异常错误码。
     * errorMsg  属性更新异常错误信息。
@@ -28,6 +29,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'requestId' => 'string',
             'response' => 'object',
             'errorCode' => 'string',
             'errorMsg' => 'object'
@@ -35,6 +37,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     * errorCode  属性更新异常错误码。
     * errorMsg  属性更新异常错误信息。
@@ -42,6 +45,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'requestId' => null,
         'response' => null,
         'errorCode' => null,
         'errorMsg' => null
@@ -70,6 +74,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     * errorCode  属性更新异常错误码。
     * errorMsg  属性更新异常错误信息。
@@ -77,6 +82,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'requestId' => 'request_id',
             'response' => 'response',
             'errorCode' => 'error_code',
             'errorMsg' => 'error_msg'
@@ -84,6 +90,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     * errorCode  属性更新异常错误码。
     * errorMsg  属性更新异常错误信息。
@@ -91,6 +98,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'requestId' => 'setRequestId',
             'response' => 'setResponse',
             'errorCode' => 'setErrorCode',
             'errorMsg' => 'setErrorMsg'
@@ -98,6 +106,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
     * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     * errorCode  属性更新异常错误码。
     * errorMsg  属性更新异常错误信息。
@@ -105,6 +114,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'requestId' => 'getRequestId',
             'response' => 'getResponse',
             'errorCode' => 'getErrorCode',
             'errorMsg' => 'getErrorMsg'
@@ -168,6 +178,7 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
@@ -193,6 +204,30 @@ class UpdatePropertiesResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets requestId
+    *  设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId 设备属性更新ID，用于唯一标识一条属性更新，在下发更新属性时由物联网平台分配获得。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
     }
 
     /**

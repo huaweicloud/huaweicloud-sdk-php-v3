@@ -23,13 +23,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
     * switchHce  是否切换hce
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'operation' => 'string',
             'param' => 'map[string,string]',
-            'switchHce' => 'bool'
+            'switchHce' => 'bool',
+            'isNeedConsistencyCheck' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
     * switchHce  是否切换hce
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'operation' => null,
         'param' => null,
-        'switchHce' => null
+        'switchHce' => null,
+        'isNeedConsistencyCheck' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
     * switchHce  是否切换hce
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'operation' => 'operation',
             'param' => 'param',
-            'switchHce' => 'switch_hce'
+            'switchHce' => 'switch_hce',
+            'isNeedConsistencyCheck' => 'is_need_consistency_check'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
     * switchHce  是否切换hce
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
     protected static $setters = [
             'operation' => 'setOperation',
             'param' => 'setParam',
-            'switchHce' => 'setSwitchHce'
+            'switchHce' => 'setSwitchHce',
+            'isNeedConsistencyCheck' => 'setIsNeedConsistencyCheck'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
     * switchHce  是否切换hce
+    * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
     */
     protected static $getters = [
             'operation' => 'getOperation',
             'param' => 'getParam',
-            'switchHce' => 'getSwitchHce'
+            'switchHce' => 'getSwitchHce',
+            'isNeedConsistencyCheck' => 'getIsNeedConsistencyCheck'
     ];
 
     /**
@@ -195,6 +205,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
         $this->container['param'] = isset($data['param']) ? $data['param'] : null;
         $this->container['switchHce'] = isset($data['switchHce']) ? $data['switchHce'] : null;
+        $this->container['isNeedConsistencyCheck'] = isset($data['isNeedConsistencyCheck']) ? $data['isNeedConsistencyCheck'] : null;
     }
 
     /**
@@ -299,6 +310,30 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     public function setSwitchHce($switchHce)
     {
         $this->container['switchHce'] = $switchHce;
+        return $this;
+    }
+
+    /**
+    * Gets isNeedConsistencyCheck
+    *  是否进行一致性校验
+    *
+    * @return bool|null
+    */
+    public function getIsNeedConsistencyCheck()
+    {
+        return $this->container['isNeedConsistencyCheck'];
+    }
+
+    /**
+    * Sets isNeedConsistencyCheck
+    *
+    * @param bool|null $isNeedConsistencyCheck 是否进行一致性校验
+    *
+    * @return $this
+    */
+    public function setIsNeedConsistencyCheck($isNeedConsistencyCheck)
+    {
+        $this->container['isNeedConsistencyCheck'] = $isNeedConsistencyCheck;
         return $this;
     }
 

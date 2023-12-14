@@ -5541,6 +5541,77 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 开启/关闭同声传译
+     *
+     * 该接口用于会议主席可以通过该接口开启/关闭同声传译。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resumeSimultaneousInterpretationAsync($request)
+    {
+        return $this->resumeSimultaneousInterpretationAsyncWithHttpInfo($request);
+    }
+    
+    public function resumeSimultaneousInterpretationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/control/conferences/simultaneousInterpretation';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams['x_conference_authorization'] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ResumeSimultaneousInterpretationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ResumeSimultaneousInterpretationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 点名会场
      *
      * 该接口用于点名指定与会者。点名会场的效果是除了主持人外，点名与会者为非静音状态，未点名的与会者统一为静音状态。同一时间，只允许一个与会者被点名。
@@ -7853,6 +7924,77 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 设置普通与会人的语言频道
+     *
+     * 主持人通过该接口设置某些普通与会者(包括主持人)加入哪个语言频道。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setAttendeeLanChannelAsync($request)
+    {
+        return $this->setAttendeeLanChannelAsyncWithHttpInfo($request);
+    }
+    
+    public function setAttendeeLanChannelAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/control/conferences/setAttendeeLanChannel';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams['x_conference_authorization'] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SetAttendeeLanChannelResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SetAttendeeLanChannelRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 申请联席主持人
      *
      * 该接口用于设置联席主持人或释放联席主持人。只能将来宾设置为联席主持人。
@@ -8065,6 +8207,77 @@ class MeetingAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SetHostViewResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SetHostViewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 设置传译组
+     *
+     * 主持人通过该接口设置传译组，每个传译组支持两种语言，传译组内支持多个传译员。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setInterpreterGroupAsync($request)
+    {
+        return $this->setInterpreterGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function setInterpreterGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/mmc/control/conferences/interpreterGroup';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceId'] !== null) {
+            $queryParams['conference_id'] = $localVarParams['conferenceId'];
+        }
+        if ($localVarParams['xConferenceAuthorization'] !== null) {
+            $headerParams['x_conference_authorization'] = $localVarParams['xConferenceAuthorization'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SetInterpreterGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SetInterpreterGroupRequest',
             $asyncRequest = true);
     }
 

@@ -21,19 +21,19 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  表达式名称
-    * data  表达式内容
+    * data  表达式内容列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'data' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchConditionData[]'
+            'data' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  表达式名称
-    * data  表达式内容
+    * data  表达式内容列表
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  表达式名称
-    * data  表达式内容
+    * data  表达式内容列表
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  表达式名称
-    * data  表达式内容
+    * data  表达式内容列表
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  表达式名称
-    * data  表达式内容
+    * data  表达式内容列表
     *
     * @var string[]
     */
@@ -215,9 +215,9 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  表达式内容
+    *  表达式内容列表
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchConditionData[]|null
+    * @return string[]|null
     */
     public function getData()
     {
@@ -227,7 +227,7 @@ class DataobjectSearchConditionConditions implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchConditionData[]|null $data 表达式内容
+    * @param string[]|null $data 表达式内容列表
     *
     * @return $this
     */

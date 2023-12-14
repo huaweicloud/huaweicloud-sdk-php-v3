@@ -64,6 +64,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     * confMode  会议类型模型。 * COMMON：MCU会议 * RTC：MMR会议
     * scheduleVmr  VMR预约记录。 true: VMR预约记录 false：普通会议 > 该参数将废弃，请勿使用。
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     * picDisplay  picDisplay
     * subConfs  周期子会议列表。
     * cycleSubConfId  第一个周期子会议的UUID。
@@ -115,6 +116,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
             'confMode' => 'string',
             'scheduleVmr' => 'bool',
             'concurrentParticipants' => 'int',
+            'supportSimultaneousInterpretation' => 'bool',
             'picDisplay' => '\HuaweiCloud\SDK\Meeting\V1\Model\MultiPicDisplayDO',
             'subConfs' => '\HuaweiCloud\SDK\Meeting\V1\Model\CycleSubConf[]',
             'cycleSubConfId' => 'string'
@@ -166,6 +168,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     * confMode  会议类型模型。 * COMMON：MCU会议 * RTC：MMR会议
     * scheduleVmr  VMR预约记录。 true: VMR预约记录 false：普通会议 > 该参数将废弃，请勿使用。
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     * picDisplay  picDisplay
     * subConfs  周期子会议列表。
     * cycleSubConfId  第一个周期子会议的UUID。
@@ -217,6 +220,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
         'confMode' => null,
         'scheduleVmr' => null,
         'concurrentParticipants' => 'int32',
+        'supportSimultaneousInterpretation' => null,
         'picDisplay' => null,
         'subConfs' => null,
         'cycleSubConfId' => null
@@ -289,6 +293,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     * confMode  会议类型模型。 * COMMON：MCU会议 * RTC：MMR会议
     * scheduleVmr  VMR预约记录。 true: VMR预约记录 false：普通会议 > 该参数将废弃，请勿使用。
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     * picDisplay  picDisplay
     * subConfs  周期子会议列表。
     * cycleSubConfId  第一个周期子会议的UUID。
@@ -340,6 +345,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
             'confMode' => 'confMode',
             'scheduleVmr' => 'scheduleVmr',
             'concurrentParticipants' => 'concurrentParticipants',
+            'supportSimultaneousInterpretation' => 'supportSimultaneousInterpretation',
             'picDisplay' => 'picDisplay',
             'subConfs' => 'subConfs',
             'cycleSubConfId' => 'cycleSubConfID'
@@ -391,6 +397,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     * confMode  会议类型模型。 * COMMON：MCU会议 * RTC：MMR会议
     * scheduleVmr  VMR预约记录。 true: VMR预约记录 false：普通会议 > 该参数将废弃，请勿使用。
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     * picDisplay  picDisplay
     * subConfs  周期子会议列表。
     * cycleSubConfId  第一个周期子会议的UUID。
@@ -442,6 +449,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
             'confMode' => 'setConfMode',
             'scheduleVmr' => 'setScheduleVmr',
             'concurrentParticipants' => 'setConcurrentParticipants',
+            'supportSimultaneousInterpretation' => 'setSupportSimultaneousInterpretation',
             'picDisplay' => 'setPicDisplay',
             'subConfs' => 'setSubConfs',
             'cycleSubConfId' => 'setCycleSubConfId'
@@ -493,6 +501,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     * confMode  会议类型模型。 * COMMON：MCU会议 * RTC：MMR会议
     * scheduleVmr  VMR预约记录。 true: VMR预约记录 false：普通会议 > 该参数将废弃，请勿使用。
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     * picDisplay  picDisplay
     * subConfs  周期子会议列表。
     * cycleSubConfId  第一个周期子会议的UUID。
@@ -544,6 +553,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
             'confMode' => 'getConfMode',
             'scheduleVmr' => 'getScheduleVmr',
             'concurrentParticipants' => 'getConcurrentParticipants',
+            'supportSimultaneousInterpretation' => 'getSupportSimultaneousInterpretation',
             'picDisplay' => 'getPicDisplay',
             'subConfs' => 'getSubConfs',
             'cycleSubConfId' => 'getCycleSubConfId'
@@ -683,6 +693,7 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
         $this->container['confMode'] = isset($data['confMode']) ? $data['confMode'] : null;
         $this->container['scheduleVmr'] = isset($data['scheduleVmr']) ? $data['scheduleVmr'] : null;
         $this->container['concurrentParticipants'] = isset($data['concurrentParticipants']) ? $data['concurrentParticipants'] : null;
+        $this->container['supportSimultaneousInterpretation'] = isset($data['supportSimultaneousInterpretation']) ? $data['supportSimultaneousInterpretation'] : null;
         $this->container['picDisplay'] = isset($data['picDisplay']) ? $data['picDisplay'] : null;
         $this->container['subConfs'] = isset($data['subConfs']) ? $data['subConfs'] : null;
         $this->container['cycleSubConfId'] = isset($data['cycleSubConfId']) ? $data['cycleSubConfId'] : null;
@@ -1785,6 +1796,30 @@ class ConferenceInfo implements ModelInterface, ArrayAccess
     public function setConcurrentParticipants($concurrentParticipants)
     {
         $this->container['concurrentParticipants'] = $concurrentParticipants;
+        return $this;
+    }
+
+    /**
+    * Gets supportSimultaneousInterpretation
+    *  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    *
+    * @return bool|null
+    */
+    public function getSupportSimultaneousInterpretation()
+    {
+        return $this->container['supportSimultaneousInterpretation'];
+    }
+
+    /**
+    * Sets supportSimultaneousInterpretation
+    *
+    * @param bool|null $supportSimultaneousInterpretation 会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    *
+    * @return $this
+    */
+    public function setSupportSimultaneousInterpretation($supportSimultaneousInterpretation)
+    {
+        $this->container['supportSimultaneousInterpretation'] = $supportSimultaneousInterpretation;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keywordsAlarmRuleName  关键词告警名称
+    * keywordsAlarmRuleName  关键词告警名称  >不能以点和下划线开头或以点结尾。
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -32,6 +32,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -47,12 +49,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
-            'recoveryPolicy' => 'int'
+            'recoveryPolicy' => 'int',
+            'notificationFrequency' => 'int',
+            'alarmActionRuleName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keywordsAlarmRuleName  关键词告警名称
+    * keywordsAlarmRuleName  关键词告警名称  >不能以点和下划线开头或以点结尾。
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -64,6 +68,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         'triggerConditionCount' => 'int32',
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
-        'recoveryPolicy' => 'int32'
+        'recoveryPolicy' => 'int32',
+        'notificationFrequency' => 'int32',
+        'alarmActionRuleName' => null
     ];
 
     /**
@@ -105,7 +113,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keywordsAlarmRuleName  关键词告警名称
+    * keywordsAlarmRuleName  关键词告警名称  >不能以点和下划线开头或以点结尾。
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -117,6 +125,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -132,12 +142,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'trigger_condition_count',
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
-            'recoveryPolicy' => 'recovery_policy'
+            'recoveryPolicy' => 'recovery_policy',
+            'notificationFrequency' => 'notification_frequency',
+            'alarmActionRuleName' => 'alarm_action_rule_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keywordsAlarmRuleName  关键词告警名称
+    * keywordsAlarmRuleName  关键词告警名称  >不能以点和下划线开头或以点结尾。
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -149,6 +161,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -164,12 +178,14 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'setTriggerConditionCount',
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'setRecoveryPolicy'
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'alarmActionRuleName' => 'setAlarmActionRuleName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keywordsAlarmRuleName  关键词告警名称
+    * keywordsAlarmRuleName  关键词告警名称  >不能以点和下划线开头或以点结尾。
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -181,6 +197,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'getTriggerConditionCount',
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'getRecoveryPolicy'
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'alarmActionRuleName' => 'getAlarmActionRuleName'
     ];
 
     /**
@@ -242,7 +262,15 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     const KEYWORDS_ALARM_LEVEL_INFO = 'Info';
     const KEYWORDS_ALARM_LEVEL_MINOR = 'Minor';
     const KEYWORDS_ALARM_LEVEL_MAJOR = 'Major';
-    const KEYWORDS_ALARM_LEVEL_CRITICAL = 'CRITICAL';
+    const KEYWORDS_ALARM_LEVEL_CRITICAL = 'Critical';
+    const NOTIFICATION_FREQUENCY_0 = 0;
+    const NOTIFICATION_FREQUENCY_5 = 5;
+    const NOTIFICATION_FREQUENCY_10 = 10;
+    const NOTIFICATION_FREQUENCY_15 = 15;
+    const NOTIFICATION_FREQUENCY_30 = 30;
+    const NOTIFICATION_FREQUENCY_60 = 60;
+    const NOTIFICATION_FREQUENCY_180 = 180;
+    const NOTIFICATION_FREQUENCY_360 = 360;
     
 
     /**
@@ -257,6 +285,25 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             self::KEYWORDS_ALARM_LEVEL_MINOR,
             self::KEYWORDS_ALARM_LEVEL_MAJOR,
             self::KEYWORDS_ALARM_LEVEL_CRITICAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationFrequencyAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_FREQUENCY_0,
+            self::NOTIFICATION_FREQUENCY_5,
+            self::NOTIFICATION_FREQUENCY_10,
+            self::NOTIFICATION_FREQUENCY_15,
+            self::NOTIFICATION_FREQUENCY_30,
+            self::NOTIFICATION_FREQUENCY_60,
+            self::NOTIFICATION_FREQUENCY_180,
+            self::NOTIFICATION_FREQUENCY_360,
         ];
     }
 
@@ -288,6 +335,8 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
         $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
     }
 
     /**
@@ -345,6 +394,17 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['domainId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
+        if ($this->container['notificationFrequency'] === null) {
+            $invalidProperties[] = "'notificationFrequency' can't be null";
+        }
+            $allowedValues = $this->getNotificationFrequencyAllowableValues();
+                if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationFrequency', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -361,7 +421,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keywordsAlarmRuleName
-    *  关键词告警名称
+    *  关键词告警名称  >不能以点和下划线开头或以点结尾。
     *
     * @return string
     */
@@ -373,7 +433,7 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keywordsAlarmRuleName
     *
-    * @param string $keywordsAlarmRuleName 关键词告警名称
+    * @param string $keywordsAlarmRuleName 关键词告警名称  >不能以点和下划线开头或以点结尾。
     *
     * @return $this
     */
@@ -644,6 +704,54 @@ class CreateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setRecoveryPolicy($recoveryPolicy)
     {
         $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  通知频率,单位(分钟)
+    *
+    * @return int
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param int $notificationFrequency 通知频率,单位(分钟)
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
         return $this;
     }
 

@@ -158,6 +158,9 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instances'] === null) {
+            $invalidProperties[] = "'instances' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     * Gets instances
     *  库级恢复实例信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]
     */
     public function getInstances()
     {
@@ -186,7 +189,7 @@ class PostgreSQLRestoreDatabaseRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[]|null $instances 库级恢复实例信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInstance[] $instances 库级恢复实例信息
     *
     * @return $this
     */

@@ -40,6 +40,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * cycleParams  cycleParams
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'vmrFlag' => 'int',
             'cycleParams' => '\HuaweiCloud\SDK\Meeting\V1\Model\CycleParams',
             'vmrId' => 'string',
-            'concurrentParticipants' => 'int'
+            'concurrentParticipants' => 'int',
+            'supportSimultaneousInterpretation' => 'bool'
     ];
 
     /**
@@ -88,6 +90,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * cycleParams  cycleParams
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
         'vmrFlag' => 'int32',
         'cycleParams' => null,
         'vmrId' => null,
-        'concurrentParticipants' => 'int32'
+        'concurrentParticipants' => 'int32',
+        'supportSimultaneousInterpretation' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * cycleParams  cycleParams
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'vmrFlag' => 'vmrFlag',
             'cycleParams' => 'cycleParams',
             'vmrId' => 'vmrID',
-            'concurrentParticipants' => 'concurrentParticipants'
+            'concurrentParticipants' => 'concurrentParticipants',
+            'supportSimultaneousInterpretation' => 'supportSimultaneousInterpretation'
     ];
 
     /**
@@ -205,6 +211,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * cycleParams  cycleParams
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'vmrFlag' => 'setVmrFlag',
             'cycleParams' => 'setCycleParams',
             'vmrId' => 'setVmrId',
-            'concurrentParticipants' => 'setConcurrentParticipants'
+            'concurrentParticipants' => 'setConcurrentParticipants',
+            'supportSimultaneousInterpretation' => 'setSupportSimultaneousInterpretation'
     ];
 
     /**
@@ -253,6 +261,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     * cycleParams  cycleParams
     * vmrId  绑定给当前创会帐号的VMR ID。通过[[查询云会议室及个人会议ID](https://support.huaweicloud.com/api-meeting/meeting_21_1106.html)](tag:hws)[[查询云会议室及个人会议ID](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_1106.html)](tag:hk)接口获取。 > * vmrID取上述查询接口中返回的id，不是vmrId > * 创建个人会议ID的会议时，使用vmrMode=0的VMR；创建云会议室的会议时，使用vmrMode=1的VMR
     * concurrentParticipants  会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
+    * supportSimultaneousInterpretation  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
             'vmrFlag' => 'getVmrFlag',
             'cycleParams' => 'getCycleParams',
             'vmrId' => 'getVmrId',
-            'concurrentParticipants' => 'getConcurrentParticipants'
+            'concurrentParticipants' => 'getConcurrentParticipants',
+            'supportSimultaneousInterpretation' => 'getSupportSimultaneousInterpretation'
     ];
 
     /**
@@ -357,6 +367,7 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
         $this->container['cycleParams'] = isset($data['cycleParams']) ? $data['cycleParams'] : null;
         $this->container['vmrId'] = isset($data['vmrId']) ? $data['vmrId'] : null;
         $this->container['concurrentParticipants'] = isset($data['concurrentParticipants']) ? $data['concurrentParticipants'] : null;
+        $this->container['supportSimultaneousInterpretation'] = isset($data['supportSimultaneousInterpretation']) ? $data['supportSimultaneousInterpretation'] : null;
     }
 
     /**
@@ -939,6 +950,30 @@ class RestScheduleConfDTO implements ModelInterface, ArrayAccess
     public function setConcurrentParticipants($concurrentParticipants)
     {
         $this->container['concurrentParticipants'] = $concurrentParticipants;
+        return $this;
+    }
+
+    /**
+    * Gets supportSimultaneousInterpretation
+    *  会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    *
+    * @return bool|null
+    */
+    public function getSupportSimultaneousInterpretation()
+    {
+        return $this->container['supportSimultaneousInterpretation'];
+    }
+
+    /**
+    * Sets supportSimultaneousInterpretation
+    *
+    * @param bool|null $supportSimultaneousInterpretation 会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+    *
+    * @return $this
+    */
+    public function setSupportSimultaneousInterpretation($supportSimultaneousInterpretation)
+    {
+        $this->container['supportSimultaneousInterpretation'] = $supportSimultaneousInterpretation;
         return $this;
     }
 

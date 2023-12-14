@@ -4518,6 +4518,83 @@ class ConfigClient extends Client
     }
 
     /**
+     * 列举资源记录器收集的资源概要
+     *
+     * 查询当前用户资源记录器收集的资源概览。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function collectTrackedResourcesSummary($request)
+    {
+        return $this->collectTrackedResourcesSummaryWithHttpInfo($request);
+    }
+
+    public function collectTrackedResourcesSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/tracked-resources/summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['epId'] !== null) {
+            $queryParams['ep_id'] = $localVarParams['epId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CollectTrackedResourcesSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CollectTrackedResourcesSummaryRequest');
+    }
+
+    /**
      * 查询资源数量
      *
      * 查询当前帐号的资源数量。
@@ -4595,6 +4672,86 @@ class ConfigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\CountAllResourcesResponse',
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\CountAllResourcesRequest');
+    }
+
+    /**
+     * 查询资源记录器收集的资源数量
+     *
+     * 查询当前用户资源记录器收集的资源数量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countTrackedResources($request)
+    {
+        return $this->countTrackedResourcesWithHttpInfo($request);
+    }
+
+    public function countTrackedResourcesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/tracked-resources/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['epId'] !== null) {
+            $queryParams['ep_id'] = $localVarParams['epId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CountTrackedResourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CountTrackedResourcesRequest');
     }
 
     /**
@@ -4900,6 +5057,157 @@ class ConfigClient extends Client
     }
 
     /**
+     * 列举资源记录器收集的资源标签
+     *
+     * 查询当前用户资源记录器收集的资源的标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrackedResourceTags($request)
+    {
+        return $this->listTrackedResourceTagsWithHttpInfo($request);
+    }
+
+    public function listTrackedResourceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/tracked-resources/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['key'] !== null) {
+            $queryParams['key'] = $localVarParams['key'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListTrackedResourceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListTrackedResourceTagsRequest');
+    }
+
+    /**
+     * 列举资源记录器收集的全部资源
+     *
+     * 查询当前用户资源记录器收集的全部资源，需要当前用户有rms:resources:list权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrackedResources($request)
+    {
+        return $this->listTrackedResourcesWithHttpInfo($request);
+    }
+
+    public function listTrackedResourcesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/tracked-resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['epId'] !== null) {
+            $queryParams['ep_id'] = $localVarParams['epId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListTrackedResourcesResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListTrackedResourcesRequest');
+    }
+
+    /**
      * 查询单个资源
      *
      * 指定资源ID，返回该资源的详细信息，需要当前用户有rms:resources:get权限。比如查询云服务器，对应的Config资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。Config支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
@@ -5027,6 +5335,68 @@ class ConfigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\ShowResourceDetailResponse',
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\ShowResourceDetailRequest');
+    }
+
+    /**
+     * 查询资源记录器收集的单个资源
+     *
+     * 查询当前用户资源记录器收集的单个资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTrackedResourceDetail($request)
+    {
+        return $this->showTrackedResourceDetailWithHttpInfo($request);
+    }
+
+    public function showTrackedResourceDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/tracked-resources/{resource_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ShowTrackedResourceDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ShowTrackedResourceDetailRequest');
     }
 
     /**

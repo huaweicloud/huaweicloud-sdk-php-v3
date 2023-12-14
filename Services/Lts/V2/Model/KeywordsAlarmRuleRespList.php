@@ -30,15 +30,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * topics  主题
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
-    * triggerConditionFrequency  触发条件：触发周期;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * topics  通知主题
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
+    * triggerConditionFrequency  触发条件：触发次数;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
-            'recoveryPolicy' => 'int'
+            'recoveryPolicy' => 'int',
+            'notificationFrequency' => 'int',
+            'alarmActionRuleName' => 'string'
     ];
 
     /**
@@ -76,15 +80,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * topics  主题
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
-    * triggerConditionFrequency  触发条件：触发周期;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * topics  通知主题
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
+    * triggerConditionFrequency  触发条件：触发次数;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         'triggerConditionCount' => 'int32',
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
-        'recoveryPolicy' => 'int32'
+        'recoveryPolicy' => 'int32',
+        'notificationFrequency' => 'int32',
+        'alarmActionRuleName' => null
     ];
 
     /**
@@ -143,15 +151,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * topics  主题
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
-    * triggerConditionFrequency  触发条件：触发周期;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * topics  通知主题
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
+    * triggerConditionFrequency  触发条件：触发次数;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'trigger_condition_count',
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
-            'recoveryPolicy' => 'recovery_policy'
+            'recoveryPolicy' => 'recovery_policy',
+            'notificationFrequency' => 'notification_frequency',
+            'alarmActionRuleName' => 'alarm_action_rule_name'
     ];
 
     /**
@@ -189,15 +201,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * topics  主题
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
-    * triggerConditionFrequency  触发条件：触发周期;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * topics  通知主题
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
+    * triggerConditionFrequency  触发条件：触发次数;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'setTriggerConditionCount',
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'setRecoveryPolicy'
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'alarmActionRuleName' => 'setAlarmActionRuleName'
     ];
 
     /**
@@ -235,15 +251,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * keywordsAlarmLevel  告警级别
     * keywordsAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * topics  主题
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
-    * triggerConditionFrequency  触发条件：触发周期;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * topics  通知主题
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
+    * triggerConditionFrequency  触发条件：触发次数;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'getTriggerConditionCount',
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'getRecoveryPolicy'
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'alarmActionRuleName' => 'getAlarmActionRuleName'
     ];
 
     /**
@@ -313,8 +333,16 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     const KEYWORDS_ALARM_LEVEL_MINOR = 'Minor';
     const KEYWORDS_ALARM_LEVEL_MAJOR = 'Major';
     const KEYWORDS_ALARM_LEVEL_CRITICAL = 'Critical';
-    const STATUS_RUNNING = 'RUNNING';
-    const STATUS_STOPPING = 'STOPPING';
+    const STATUS_RUNNING_ = 'RUNNING  启用';
+    const STATUS_STOPPING_ = 'STOPPING  停止';
+    const NOTIFICATION_FREQUENCY_0 = 0;
+    const NOTIFICATION_FREQUENCY_5 = 5;
+    const NOTIFICATION_FREQUENCY_10 = 10;
+    const NOTIFICATION_FREQUENCY_15 = 15;
+    const NOTIFICATION_FREQUENCY_30 = 30;
+    const NOTIFICATION_FREQUENCY_60 = 60;
+    const NOTIFICATION_FREQUENCY_180 = 180;
+    const NOTIFICATION_FREQUENCY_360 = 360;
     
 
     /**
@@ -340,8 +368,27 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function getStatusAllowableValues()
     {
         return [
-            self::STATUS_RUNNING,
-            self::STATUS_STOPPING,
+            self::STATUS_RUNNING_,
+            self::STATUS_STOPPING_,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationFrequencyAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_FREQUENCY_0,
+            self::NOTIFICATION_FREQUENCY_5,
+            self::NOTIFICATION_FREQUENCY_10,
+            self::NOTIFICATION_FREQUENCY_15,
+            self::NOTIFICATION_FREQUENCY_30,
+            self::NOTIFICATION_FREQUENCY_60,
+            self::NOTIFICATION_FREQUENCY_180,
+            self::NOTIFICATION_FREQUENCY_360,
         ];
     }
 
@@ -380,6 +427,8 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
         $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
     }
 
     /**
@@ -390,13 +439,10 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-            if ((mb_strlen($this->container['projectId']) > 32)) {
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['projectId']) < 32)) {
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['keywordsAlarmRuleId'] === null) {
@@ -467,9 +513,21 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
         }
+            if (($this->container['createTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
+            }
+            if (($this->container['createTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 13.";
+            }
         if ($this->container['updateTime'] === null) {
             $invalidProperties[] = "'updateTime' can't be null";
         }
+            if (($this->container['updateTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 13.";
+            }
+            if (($this->container['updateTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
+            }
         if ($this->container['topics'] === null) {
             $invalidProperties[] = "'topics' can't be null";
         }
@@ -477,6 +535,17 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['notificationFrequency'] === null) {
+            $invalidProperties[] = "'notificationFrequency' can't be null";
+        }
+            $allowedValues = $this->getNotificationFrequencyAllowableValues();
+                if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationFrequency', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -499,7 +568,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Gets projectId
     *  项目id
     *
-    * @return string
+    * @return string|null
     */
     public function getProjectId()
     {
@@ -509,7 +578,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目id
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */
@@ -737,7 +806,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间(毫秒时间戳)
+    *  创建时间（毫秒时间戳）
     *
     * @return int
     */
@@ -749,7 +818,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int $createTime 创建时间(毫秒时间戳)
+    * @param int $createTime 创建时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -761,7 +830,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间(毫秒时间戳)
+    *  更新时间（毫秒时间戳）
     *
     * @return int
     */
@@ -773,7 +842,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int $updateTime 更新时间(毫秒时间戳)
+    * @param int $updateTime 更新时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -785,7 +854,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  主题
+    *  通知主题
     *
     * @return \HuaweiCloud\SDK\Lts\V2\Model\Topics[]
     */
@@ -797,7 +866,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[] $topics 主题
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[] $topics 通知主题
     *
     * @return $this
     */
@@ -809,7 +878,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  templateName
+    *  消息模板名称
     *
     * @return string|null
     */
@@ -821,7 +890,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName templateName
+    * @param string|null $templateName 消息模板名称
     *
     * @return $this
     */
@@ -833,7 +902,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  告警状态
     *
     * @return string|null
     */
@@ -845,7 +914,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 告警状态
     *
     * @return $this
     */
@@ -857,7 +926,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerConditionCount
-    *  触发条件：触发次数;默认为1
+    *  触发条件：触发周期;默认为1
     *
     * @return int|null
     */
@@ -869,7 +938,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets triggerConditionCount
     *
-    * @param int|null $triggerConditionCount 触发条件：触发次数;默认为1
+    * @param int|null $triggerConditionCount 触发条件：触发周期;默认为1
     *
     * @return $this
     */
@@ -881,7 +950,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerConditionFrequency
-    *  触发条件：触发周期;默认为1
+    *  触发条件：触发次数;默认为1
     *
     * @return int|null
     */
@@ -893,7 +962,7 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets triggerConditionFrequency
     *
-    * @param int|null $triggerConditionFrequency 触发条件：触发周期;默认为1
+    * @param int|null $triggerConditionFrequency 触发条件：触发次数;默认为1
     *
     * @return $this
     */
@@ -948,6 +1017,54 @@ class KeywordsAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setRecoveryPolicy($recoveryPolicy)
     {
         $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  通知频率,单位(分钟)
+    *
+    * @return int
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param int $notificationFrequency 通知频率,单位(分钟)
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
         return $this;
     }
 

@@ -21,6 +21,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID。获取方法，请参见9.6-获取集群ID。
+    * instanceId  实例ID。
     * instanceName  实例名称。
     * limit  数据条目数。
     * offset  数据偏移量。
@@ -29,6 +30,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
+            'instanceId' => 'string',
             'instanceName' => 'string',
             'limit' => 'int',
             'offset' => 'int'
@@ -37,6 +39,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID。获取方法，请参见9.6-获取集群ID。
+    * instanceId  实例ID。
     * instanceName  实例名称。
     * limit  数据条目数。
     * offset  数据偏移量。
@@ -45,6 +48,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
+        'instanceId' => null,
         'instanceName' => null,
         'limit' => 'int32',
         'offset' => 'int32'
@@ -74,6 +78,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID。获取方法，请参见9.6-获取集群ID。
+    * instanceId  实例ID。
     * instanceName  实例名称。
     * limit  数据条目数。
     * offset  数据偏移量。
@@ -82,6 +87,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
+            'instanceId' => 'instance_id',
             'instanceName' => 'instance_name',
             'limit' => 'limit',
             'offset' => 'offset'
@@ -90,6 +96,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID。获取方法，请参见9.6-获取集群ID。
+    * instanceId  实例ID。
     * instanceName  实例名称。
     * limit  数据条目数。
     * offset  数据偏移量。
@@ -98,6 +105,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
+            'instanceId' => 'setInstanceId',
             'instanceName' => 'setInstanceName',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
@@ -106,6 +114,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID。获取方法，请参见9.6-获取集群ID。
+    * instanceId  实例ID。
     * instanceName  实例名称。
     * limit  数据条目数。
     * offset  数据偏移量。
@@ -114,6 +123,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
+            'instanceId' => 'getInstanceId',
             'instanceName' => 'getInstanceName',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
@@ -178,6 +188,7 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -232,6 +243,30 @@ class ListHostDiskRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

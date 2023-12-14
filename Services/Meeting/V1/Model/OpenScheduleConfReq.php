@@ -34,6 +34,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     * scope  主持人、嘉宾入会范围 。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户 * 3: 被邀请用户
     * audienceScope  观众入会范围。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     *
     * @var string[]
     */
@@ -51,7 +54,10 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
             'callRestriction' => 'bool',
             'scope' => 'int',
             'audienceScope' => 'int',
-            'enableRecording' => '\HuaweiCloud\SDK\Meeting\V1\Model\YesNoEnum'
+            'enableRecording' => '\HuaweiCloud\SDK\Meeting\V1\Model\YesNoEnum',
+            'liveAddress' => 'string',
+            'auxAddress' => 'string',
+            'liveUrl' => 'string'
     ];
 
     /**
@@ -70,6 +76,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     * scope  主持人、嘉宾入会范围 。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户 * 3: 被邀请用户
     * audienceScope  观众入会范围。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     *
     * @var string[]
     */
@@ -87,7 +96,10 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
         'callRestriction' => null,
         'scope' => null,
         'audienceScope' => null,
-        'enableRecording' => null
+        'enableRecording' => null,
+        'liveAddress' => null,
+        'auxAddress' => null,
+        'liveUrl' => null
     ];
 
     /**
@@ -127,6 +139,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     * scope  主持人、嘉宾入会范围 。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户 * 3: 被邀请用户
     * audienceScope  观众入会范围。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     *
     * @var string[]
     */
@@ -144,7 +159,10 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
             'callRestriction' => 'callRestriction',
             'scope' => 'scope',
             'audienceScope' => 'audienceScope',
-            'enableRecording' => 'enableRecording'
+            'enableRecording' => 'enableRecording',
+            'liveAddress' => 'liveAddress',
+            'auxAddress' => 'auxAddress',
+            'liveUrl' => 'liveUrl'
     ];
 
     /**
@@ -163,6 +181,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     * scope  主持人、嘉宾入会范围 。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户 * 3: 被邀请用户
     * audienceScope  观众入会范围。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     *
     * @var string[]
     */
@@ -180,7 +201,10 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
             'callRestriction' => 'setCallRestriction',
             'scope' => 'setScope',
             'audienceScope' => 'setAudienceScope',
-            'enableRecording' => 'setEnableRecording'
+            'enableRecording' => 'setEnableRecording',
+            'liveAddress' => 'setLiveAddress',
+            'auxAddress' => 'setAuxAddress',
+            'liveUrl' => 'setLiveUrl'
     ];
 
     /**
@@ -199,6 +223,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     * scope  主持人、嘉宾入会范围 。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户 * 3: 被邀请用户
     * audienceScope  观众入会范围。仅callRestriction设置成true后生效。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
     * enableRecording  enableRecording
+    * liveAddress  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * auxAddress  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    * liveUrl  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
     *
     * @var string[]
     */
@@ -216,7 +243,10 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
             'callRestriction' => 'getCallRestriction',
             'scope' => 'getScope',
             'audienceScope' => 'getAudienceScope',
-            'enableRecording' => 'getEnableRecording'
+            'enableRecording' => 'getEnableRecording',
+            'liveAddress' => 'getLiveAddress',
+            'auxAddress' => 'getAuxAddress',
+            'liveUrl' => 'getLiveUrl'
     ];
 
     /**
@@ -291,6 +321,9 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['audienceScope'] = isset($data['audienceScope']) ? $data['audienceScope'] : null;
         $this->container['enableRecording'] = isset($data['enableRecording']) ? $data['enableRecording'] : null;
+        $this->container['liveAddress'] = isset($data['liveAddress']) ? $data['liveAddress'] : null;
+        $this->container['auxAddress'] = isset($data['auxAddress']) ? $data['auxAddress'] : null;
+        $this->container['liveUrl'] = isset($data['liveUrl']) ? $data['liveUrl'] : null;
     }
 
     /**
@@ -316,6 +349,24 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
         if ($this->container['vmrId'] === null) {
             $invalidProperties[] = "'vmrId' can't be null";
         }
+            if (!is_null($this->container['liveAddress']) && (mb_strlen($this->container['liveAddress']) > 255)) {
+                $invalidProperties[] = "invalid value for 'liveAddress', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['liveAddress']) && (mb_strlen($this->container['liveAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'liveAddress', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['auxAddress']) && (mb_strlen($this->container['auxAddress']) > 255)) {
+                $invalidProperties[] = "invalid value for 'auxAddress', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['auxAddress']) && (mb_strlen($this->container['auxAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'auxAddress', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['liveUrl']) && (mb_strlen($this->container['liveUrl']) > 255)) {
+                $invalidProperties[] = "invalid value for 'liveUrl', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['liveUrl']) && (mb_strlen($this->container['liveUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'liveUrl', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -663,6 +714,78 @@ class OpenScheduleConfReq implements ModelInterface, ArrayAccess
     public function setEnableRecording($enableRecording)
     {
         $this->container['enableRecording'] = $enableRecording;
+        return $this;
+    }
+
+    /**
+    * Gets liveAddress
+    *  主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getLiveAddress()
+    {
+        return $this->container['liveAddress'];
+    }
+
+    /**
+    * Sets liveAddress
+    *
+    * @param string|null $liveAddress 主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setLiveAddress($liveAddress)
+    {
+        $this->container['liveAddress'] = $liveAddress;
+        return $this;
+    }
+
+    /**
+    * Gets auxAddress
+    *  辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getAuxAddress()
+    {
+        return $this->container['auxAddress'];
+    }
+
+    /**
+    * Sets auxAddress
+    *
+    * @param string|null $auxAddress 辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setAuxAddress($auxAddress)
+    {
+        $this->container['auxAddress'] = $auxAddress;
+        return $this;
+    }
+
+    /**
+    * Gets liveUrl
+    *  直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
+    *
+    * @return string|null
+    */
+    public function getLiveUrl()
+    {
+        return $this->container['liveUrl'];
+    }
+
+    /**
+    * Sets liveUrl
+    *
+    * @param string|null $liveUrl 直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
+    *
+    * @return $this
+    */
+    public function setLiveUrl($liveUrl)
+    {
+        $this->container['liveUrl'] = $liveUrl;
         return $this;
     }
 

@@ -20,17 +20,17 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tag  标签列表。请参考表TagBody字段数据结构说明。
+    * tag  tag
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tag' => 'object'
+            'tag' => '\HuaweiCloud\SDK\Nat\V2\Model\TagBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tag  标签列表。请参考表TagBody字段数据结构说明。
+    * tag  tag
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tag  标签列表。请参考表TagBody字段数据结构说明。
+    * tag  tag
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tag  标签列表。请参考表TagBody字段数据结构说明。
+    * tag  tag
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tag  标签列表。请参考表TagBody字段数据结构说明。
+    * tag  tag
     *
     * @var string[]
     */
@@ -177,9 +177,9 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  标签列表。请参考表TagBody字段数据结构说明。
+    *  tag
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\TagBody
     */
     public function getTag()
     {
@@ -189,7 +189,7 @@ class CreateNatTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param object $tag 标签列表。请参考表TagBody字段数据结构说明。
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\TagBody $tag tag
     *
     * @return $this
     */

@@ -31,11 +31,13 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  语言
+    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  主题信息
-    * conditionExpression  暂无
-    * indexId  暂无
+    * topics  通知主题
+    * conditionExpression  情况表述
+    * indexId  索引id
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -43,8 +45,8 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'keywordsAlarmRuleId' => 'string',
             'keywordsAlarmRuleName' => 'string',
             'keywordsAlarmRuleDescription' => 'string',
-            'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsResBody[]',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody',
             'keywordsAlarmLevel' => 'string',
             'keywordsAlarmSend' => 'bool',
             'domainId' => 'string',
@@ -54,7 +56,9 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
             'conditionExpression' => 'string',
-            'indexId' => 'string'
+            'indexId' => 'string',
+            'notificationFrequency' => 'int',
+            'alarmActionRuleName' => 'string'
     ];
 
     /**
@@ -69,11 +73,13 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  语言
+    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  主题信息
-    * conditionExpression  暂无
-    * indexId  暂无
+    * topics  通知主题
+    * conditionExpression  情况表述
+    * indexId  索引id
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -92,7 +98,9 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
         'projectId' => null,
         'topics' => null,
         'conditionExpression' => null,
-        'indexId' => null
+        'indexId' => null,
+        'notificationFrequency' => 'int32',
+        'alarmActionRuleName' => null
     ];
 
     /**
@@ -128,11 +136,13 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  语言
+    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  主题信息
-    * conditionExpression  暂无
-    * indexId  暂无
+    * topics  通知主题
+    * conditionExpression  情况表述
+    * indexId  索引id
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -151,7 +161,9 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'projectId' => 'projectId',
             'topics' => 'topics',
             'conditionExpression' => 'condition_expression',
-            'indexId' => 'indexId'
+            'indexId' => 'indexId',
+            'notificationFrequency' => 'notification_frequency',
+            'alarmActionRuleName' => 'alarm_action_rule_name'
     ];
 
     /**
@@ -166,11 +178,13 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  语言
+    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  主题信息
-    * conditionExpression  暂无
-    * indexId  暂无
+    * topics  通知主题
+    * conditionExpression  情况表述
+    * indexId  索引id
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -189,7 +203,9 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'topics' => 'setTopics',
             'conditionExpression' => 'setConditionExpression',
-            'indexId' => 'setIndexId'
+            'indexId' => 'setIndexId',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'alarmActionRuleName' => 'setAlarmActionRuleName'
     ];
 
     /**
@@ -204,11 +220,13 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * createTime  创建时间(毫秒时间戳)
     * updateTime  更新时间(毫秒时间戳)
-    * language  语言
+    * language  邮件附加信息语言
     * projectId  项目id
-    * topics  主题信息
-    * conditionExpression  暂无
-    * indexId  暂无
+    * topics  通知主题
+    * conditionExpression  情况表述
+    * indexId  索引id
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
@@ -227,7 +245,9 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'topics' => 'getTopics',
             'conditionExpression' => 'getConditionExpression',
-            'indexId' => 'getIndexId'
+            'indexId' => 'getIndexId',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'alarmActionRuleName' => 'getAlarmActionRuleName'
     ];
 
     /**
@@ -274,6 +294,16 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     const KEYWORDS_ALARM_LEVEL_MINOR = 'Minor';
     const KEYWORDS_ALARM_LEVEL_MAJOR = 'Major';
     const KEYWORDS_ALARM_LEVEL_CRITICAL = 'Critical';
+    const LANGUAGE_ZH_CN = 'zh-cn';
+    const LANGUAGE_EN_US = 'en-us';
+    const NOTIFICATION_FREQUENCY_0 = 0;
+    const NOTIFICATION_FREQUENCY_5 = 5;
+    const NOTIFICATION_FREQUENCY_10 = 10;
+    const NOTIFICATION_FREQUENCY_15 = 15;
+    const NOTIFICATION_FREQUENCY_30 = 30;
+    const NOTIFICATION_FREQUENCY_60 = 60;
+    const NOTIFICATION_FREQUENCY_180 = 180;
+    const NOTIFICATION_FREQUENCY_360 = 360;
     
 
     /**
@@ -288,6 +318,38 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             self::KEYWORDS_ALARM_LEVEL_MINOR,
             self::KEYWORDS_ALARM_LEVEL_MAJOR,
             self::KEYWORDS_ALARM_LEVEL_CRITICAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_ZH_CN,
+            self::LANGUAGE_EN_US,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationFrequencyAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_FREQUENCY_0,
+            self::NOTIFICATION_FREQUENCY_5,
+            self::NOTIFICATION_FREQUENCY_10,
+            self::NOTIFICATION_FREQUENCY_15,
+            self::NOTIFICATION_FREQUENCY_30,
+            self::NOTIFICATION_FREQUENCY_60,
+            self::NOTIFICATION_FREQUENCY_180,
+            self::NOTIFICATION_FREQUENCY_360,
         ];
     }
 
@@ -322,6 +384,8 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
         $this->container['conditionExpression'] = isset($data['conditionExpression']) ? $data['conditionExpression'] : null;
         $this->container['indexId'] = isset($data['indexId']) ? $data['indexId'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
     }
 
     /**
@@ -364,30 +428,40 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 13.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 13.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
+            }
+            $allowedValues = $this->getLanguageAllowableValues();
+                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 1024.";
+            $allowedValues = $this->getNotificationFrequencyAllowableValues();
+                if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationFrequency', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['conditionExpression']) && (mb_strlen($this->container['conditionExpression']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'conditionExpression', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['conditionExpression']) && (mb_strlen($this->container['conditionExpression']) < 1)) {
-                $invalidProperties[] = "invalid value for 'conditionExpression', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['indexId']) && (mb_strlen($this->container['indexId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'indexId', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['indexId']) && (mb_strlen($this->container['indexId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'indexId', the character length must be bigger than or equal to 1.";
-            }
+
         return $invalidProperties;
     }
 
@@ -478,7 +552,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * Gets keywordsRequests
     *  关键词详细信息
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsResBody[]|null
     */
     public function getKeywordsRequests()
     {
@@ -488,7 +562,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keywordsRequests
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]|null $keywordsRequests 关键词详细信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsResBody[]|null $keywordsRequests 关键词详细信息
     *
     * @return $this
     */
@@ -502,7 +576,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     * Gets frequency
     *  frequency
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody|null
     */
     public function getFrequency()
     {
@@ -512,7 +586,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency|null $frequency frequency
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody|null $frequency frequency
     *
     * @return $this
     */
@@ -644,7 +718,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言
+    *  邮件附加信息语言
     *
     * @return string|null
     */
@@ -656,7 +730,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言
+    * @param string|null $language 邮件附加信息语言
     *
     * @return $this
     */
@@ -692,7 +766,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  主题信息
+    *  通知主题
     *
     * @return \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null
     */
@@ -704,7 +778,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null $topics 主题信息
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Topics[]|null $topics 通知主题
     *
     * @return $this
     */
@@ -716,7 +790,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionExpression
-    *  暂无
+    *  情况表述
     *
     * @return string|null
     */
@@ -728,7 +802,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets conditionExpression
     *
-    * @param string|null $conditionExpression 暂无
+    * @param string|null $conditionExpression 情况表述
     *
     * @return $this
     */
@@ -740,7 +814,7 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets indexId
-    *  暂无
+    *  索引id
     *
     * @return string|null
     */
@@ -752,13 +826,61 @@ class UpdateKeywordsAlarmRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets indexId
     *
-    * @param string|null $indexId 暂无
+    * @param string|null $indexId 索引id
     *
     * @return $this
     */
     public function setIndexId($indexId)
     {
         $this->container['indexId'] = $indexId;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  通知频率,单位(分钟)
+    *
+    * @return int|null
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param int|null $notificationFrequency 通知频率,单位(分钟)
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
         return $this;
     }
 

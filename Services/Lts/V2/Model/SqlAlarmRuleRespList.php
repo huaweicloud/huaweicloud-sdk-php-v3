@@ -21,6 +21,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -30,23 +31,26 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sqlAlarmRuleName' => 'string',
+            'isCssSql' => 'bool',
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
-            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
+            'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody',
             'conditionExpression' => 'string',
             'topics' => '\HuaweiCloud\SDK\Lts\V2\Model\Topics[]',
             'sqlAlarmLevel' => 'string',
@@ -59,12 +63,15 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'int',
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
-            'recoveryPolicy' => 'int'
+            'recoveryPolicy' => 'int',
+            'notificationFrequency' => 'int',
+            'alarmActionRuleName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -74,19 +81,22 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sqlAlarmRuleName' => null,
+        'isCssSql' => null,
         'sqlAlarmRuleId' => null,
         'sqlAlarmRuleDescription' => null,
         'sqlRequests' => null,
@@ -103,7 +113,9 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         'triggerConditionCount' => 'int32',
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
-        'recoveryPolicy' => 'int32'
+        'recoveryPolicy' => 'int32',
+        'notificationFrequency' => 'int32',
+        'alarmActionRuleName' => null
     ];
 
     /**
@@ -130,6 +142,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -139,19 +152,22 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sqlAlarmRuleName' => 'sql_alarm_rule_name',
+            'isCssSql' => 'is_css_sql',
             'sqlAlarmRuleId' => 'sql_alarm_rule_id',
             'sqlAlarmRuleDescription' => 'sql_alarm_rule_description',
             'sqlRequests' => 'sql_requests',
@@ -168,12 +184,15 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'trigger_condition_count',
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
-            'recoveryPolicy' => 'recovery_policy'
+            'recoveryPolicy' => 'recovery_policy',
+            'notificationFrequency' => 'notification_frequency',
+            'alarmActionRuleName' => 'alarm_action_rule_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -183,19 +202,22 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $setters = [
             'sqlAlarmRuleName' => 'setSqlAlarmRuleName',
+            'isCssSql' => 'setIsCssSql',
             'sqlAlarmRuleId' => 'setSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'setSqlAlarmRuleDescription',
             'sqlRequests' => 'setSqlRequests',
@@ -212,12 +234,15 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'setTriggerConditionCount',
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'setRecoveryPolicy'
+            'recoveryPolicy' => 'setRecoveryPolicy',
+            'notificationFrequency' => 'setNotificationFrequency',
+            'alarmActionRuleName' => 'setAlarmActionRuleName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sqlAlarmRuleName  SQL告警名称
+    * isCssSql  是否管道符sql查询
     * sqlAlarmRuleId  SQL告警规则id
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -227,19 +252,22 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * sqlAlarmLevel  告警级别
     * sqlAlarmSend  是否发送
     * domainId  domainId
-    * createTime  创建时间(毫秒时间戳)
-    * updateTime  更新时间(毫秒时间戳)
-    * templateName  templateName
-    * status  status
-    * triggerConditionCount  触发条件：触发次数;默认为1
+    * createTime  创建时间（毫秒时间戳）
+    * updateTime  更新时间（毫秒时间戳）
+    * templateName  消息模板名称
+    * status  告警状态
+    * triggerConditionCount  触发条件：触发周期;默认为1
     * triggerConditionFrequency  触发条件：触发周期;默认为1
     * whetherRecoveryPolicy  是否打开恢复通知;默认false
     * recoveryPolicy  恢复策略周期;默认为3
+    * notificationFrequency  通知频率,单位(分钟)
+    * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     *
     * @var string[]
     */
     protected static $getters = [
             'sqlAlarmRuleName' => 'getSqlAlarmRuleName',
+            'isCssSql' => 'getIsCssSql',
             'sqlAlarmRuleId' => 'getSqlAlarmRuleId',
             'sqlAlarmRuleDescription' => 'getSqlAlarmRuleDescription',
             'sqlRequests' => 'getSqlRequests',
@@ -256,7 +284,9 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'triggerConditionCount' => 'getTriggerConditionCount',
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
-            'recoveryPolicy' => 'getRecoveryPolicy'
+            'recoveryPolicy' => 'getRecoveryPolicy',
+            'notificationFrequency' => 'getNotificationFrequency',
+            'alarmActionRuleName' => 'getAlarmActionRuleName'
     ];
 
     /**
@@ -303,8 +333,16 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     const SQL_ALARM_LEVEL_MINOR = 'Minor';
     const SQL_ALARM_LEVEL_MAJOR = 'Major';
     const SQL_ALARM_LEVEL_CRITICAL = 'Critical';
-    const STATUS_RUNNING = 'RUNNING';
-    const STATUS_STOPPING = 'STOPPING';
+    const STATUS_RUNNING = 'RUNNING 启用';
+    const STATUS_STOPPING = 'STOPPING 停止';
+    const NOTIFICATION_FREQUENCY_0 = 0;
+    const NOTIFICATION_FREQUENCY_5 = 5;
+    const NOTIFICATION_FREQUENCY_10 = 10;
+    const NOTIFICATION_FREQUENCY_15 = 15;
+    const NOTIFICATION_FREQUENCY_30 = 30;
+    const NOTIFICATION_FREQUENCY_60 = 60;
+    const NOTIFICATION_FREQUENCY_180 = 180;
+    const NOTIFICATION_FREQUENCY_360 = 360;
     
 
     /**
@@ -335,6 +373,25 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationFrequencyAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_FREQUENCY_0,
+            self::NOTIFICATION_FREQUENCY_5,
+            self::NOTIFICATION_FREQUENCY_10,
+            self::NOTIFICATION_FREQUENCY_15,
+            self::NOTIFICATION_FREQUENCY_30,
+            self::NOTIFICATION_FREQUENCY_60,
+            self::NOTIFICATION_FREQUENCY_180,
+            self::NOTIFICATION_FREQUENCY_360,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -352,6 +409,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sqlAlarmRuleName'] = isset($data['sqlAlarmRuleName']) ? $data['sqlAlarmRuleName'] : null;
+        $this->container['isCssSql'] = isset($data['isCssSql']) ? $data['isCssSql'] : null;
         $this->container['sqlAlarmRuleId'] = isset($data['sqlAlarmRuleId']) ? $data['sqlAlarmRuleId'] : null;
         $this->container['sqlAlarmRuleDescription'] = isset($data['sqlAlarmRuleDescription']) ? $data['sqlAlarmRuleDescription'] : null;
         $this->container['sqlRequests'] = isset($data['sqlRequests']) ? $data['sqlRequests'] : null;
@@ -369,6 +427,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         $this->container['triggerConditionFrequency'] = isset($data['triggerConditionFrequency']) ? $data['triggerConditionFrequency'] : null;
         $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
+        $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
+        $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
     }
 
     /**
@@ -450,13 +510,36 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
         }
+            if (($this->container['createTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 13.";
+            }
+            if (($this->container['createTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 13.";
+            }
         if ($this->container['updateTime'] === null) {
             $invalidProperties[] = "'updateTime' can't be null";
         }
+            if (($this->container['updateTime'] > 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 13.";
+            }
+            if (($this->container['updateTime'] < 13)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 13.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['notificationFrequency'] === null) {
+            $invalidProperties[] = "'notificationFrequency' can't be null";
+        }
+            $allowedValues = $this->getNotificationFrequencyAllowableValues();
+                if (!is_null($this->container['notificationFrequency']) && !in_array($this->container['notificationFrequency'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationFrequency', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -496,6 +579,30 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setSqlAlarmRuleName($sqlAlarmRuleName)
     {
         $this->container['sqlAlarmRuleName'] = $sqlAlarmRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets isCssSql
+    *  是否管道符sql查询
+    *
+    * @return bool|null
+    */
+    public function getIsCssSql()
+    {
+        return $this->container['isCssSql'];
+    }
+
+    /**
+    * Sets isCssSql
+    *
+    * @param bool|null $isCssSql 是否管道符sql查询
+    *
+    * @return $this
+    */
+    public function setIsCssSql($isCssSql)
+    {
+        $this->container['isCssSql'] = $isCssSql;
         return $this;
     }
 
@@ -575,7 +682,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * Gets frequency
     *  frequency
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\Frequency
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody
     */
     public function getFrequency()
     {
@@ -585,7 +692,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\Frequency $frequency frequency
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\FrequencyRespBody $frequency frequency
     *
     * @return $this
     */
@@ -717,7 +824,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间(毫秒时间戳)
+    *  创建时间（毫秒时间戳）
     *
     * @return int
     */
@@ -729,7 +836,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int $createTime 创建时间(毫秒时间戳)
+    * @param int $createTime 创建时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -741,7 +848,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间(毫秒时间戳)
+    *  更新时间（毫秒时间戳）
     *
     * @return int
     */
@@ -753,7 +860,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int $updateTime 更新时间(毫秒时间戳)
+    * @param int $updateTime 更新时间（毫秒时间戳）
     *
     * @return $this
     */
@@ -765,7 +872,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  templateName
+    *  消息模板名称
     *
     * @return string|null
     */
@@ -777,7 +884,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName templateName
+    * @param string|null $templateName 消息模板名称
     *
     * @return $this
     */
@@ -789,7 +896,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  告警状态
     *
     * @return string|null
     */
@@ -801,7 +908,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 告警状态
     *
     * @return $this
     */
@@ -813,7 +920,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerConditionCount
-    *  触发条件：触发次数;默认为1
+    *  触发条件：触发周期;默认为1
     *
     * @return int|null
     */
@@ -825,7 +932,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     /**
     * Sets triggerConditionCount
     *
-    * @param int|null $triggerConditionCount 触发条件：触发次数;默认为1
+    * @param int|null $triggerConditionCount 触发条件：触发周期;默认为1
     *
     * @return $this
     */
@@ -904,6 +1011,54 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setRecoveryPolicy($recoveryPolicy)
     {
         $this->container['recoveryPolicy'] = $recoveryPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets notificationFrequency
+    *  通知频率,单位(分钟)
+    *
+    * @return int
+    */
+    public function getNotificationFrequency()
+    {
+        return $this->container['notificationFrequency'];
+    }
+
+    /**
+    * Sets notificationFrequency
+    *
+    * @param int $notificationFrequency 通知频率,单位(分钟)
+    *
+    * @return $this
+    */
+    public function setNotificationFrequency($notificationFrequency)
+    {
+        $this->container['notificationFrequency'] = $notificationFrequency;
+        return $this;
+    }
+
+    /**
+    * Gets alarmActionRuleName
+    *  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return string|null
+    */
+    public function getAlarmActionRuleName()
+    {
+        return $this->container['alarmActionRuleName'];
+    }
+
+    /**
+    * Sets alarmActionRuleName
+    *
+    * @param string|null $alarmActionRuleName 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+    *
+    * @return $this
+    */
+    public function setAlarmActionRuleName($alarmActionRuleName)
+    {
+        $this->container['alarmActionRuleName'] = $alarmActionRuleName;
         return $this;
     }
 

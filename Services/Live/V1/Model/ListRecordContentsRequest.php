@@ -20,10 +20,10 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publishDomain  直播推流放域名
+    * publishDomain  直播推流域名
     * app  流应用名称
     * stream  流名称
-    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * startTime  开始时间,格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * endTime  结束时间，格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * offset  分页编号，从0开始算
@@ -44,10 +44,10 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publishDomain  直播推流放域名
+    * publishDomain  直播推流域名
     * app  流应用名称
     * stream  流名称
-    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * startTime  开始时间,格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * endTime  结束时间，格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * offset  分页编号，从0开始算
@@ -89,10 +89,10 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publishDomain  直播推流放域名
+    * publishDomain  直播推流域名
     * app  流应用名称
     * stream  流名称
-    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * startTime  开始时间,格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * endTime  结束时间，格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * offset  分页编号，从0开始算
@@ -113,10 +113,10 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publishDomain  直播推流放域名
+    * publishDomain  直播推流域名
     * app  流应用名称
     * stream  流名称
-    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * startTime  开始时间,格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * endTime  结束时间，格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * offset  分页编号，从0开始算
@@ -137,10 +137,10 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publishDomain  直播推流放域名
+    * publishDomain  直播推流域名
     * app  流应用名称
     * stream  流名称
-    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * startTime  开始时间,格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * endTime  结束时间，格式为：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * offset  分页编号，从0开始算
@@ -201,8 +201,6 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
     }
     const RECORD_TYPE_CONTINUOUS_RECORD = 'CONTINUOUS_RECORD';
     const RECORD_TYPE_COMMAND_RECORD = 'COMMAND_RECORD';
-    const RECORD_TYPE_PLAN_RECORD = 'PLAN_RECORD';
-    const RECORD_TYPE_ON_DEMAND_RECORD = 'ON_DEMAND_RECORD';
     
 
     /**
@@ -215,8 +213,6 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
         return [
             self::RECORD_TYPE_CONTINUOUS_RECORD,
             self::RECORD_TYPE_COMMAND_RECORD,
-            self::RECORD_TYPE_PLAN_RECORD,
-            self::RECORD_TYPE_ON_DEMAND_RECORD,
         ];
     }
 
@@ -329,7 +325,7 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publishDomain
-    *  直播推流放域名
+    *  直播推流域名
     *
     * @return string|null
     */
@@ -341,7 +337,7 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publishDomain
     *
-    * @param string|null $publishDomain 直播推流放域名
+    * @param string|null $publishDomain 直播推流域名
     *
     * @return $this
     */
@@ -401,7 +397,7 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordType
-    *  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    *  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     *
     * @return string|null
     */
@@ -413,7 +409,7 @@ class ListRecordContentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordType
     *
-    * @param string|null $recordType 录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD，ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * @param string|null $recordType 录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     *
     * @return $this
     */

@@ -30,7 +30,7 @@ class ListEnterpriseResourceResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
-            'resourceDetail' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionResult',
+            'resourceDetail' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListEnterpriseResourceDetail',
             'tags' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\KvItem[]',
             'sysTags' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\KvItem[]',
             'resourceName' => 'string'
@@ -244,7 +244,7 @@ class ListEnterpriseResourceResult implements ModelInterface, ArrayAccess
     * Gets resourceDetail
     *  resourceDetail
     *
-    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionResult|null
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListEnterpriseResourceDetail|null
     */
     public function getResourceDetail()
     {
@@ -254,7 +254,7 @@ class ListEnterpriseResourceResult implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionResult|null $resourceDetail resourceDetail
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListEnterpriseResourceDetail|null $resourceDetail resourceDetail
     *
     * @return $this
     */

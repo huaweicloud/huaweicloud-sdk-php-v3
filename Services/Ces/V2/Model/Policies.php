@@ -28,7 +28,7 @@ class Policies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值(Number.MAX_VALUE)
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -58,7 +58,7 @@ class Policies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值(Number.MAX_VALUE)
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -109,7 +109,7 @@ class Policies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值(Number.MAX_VALUE)
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -139,7 +139,7 @@ class Policies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值(Number.MAX_VALUE)
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -169,7 +169,7 @@ class Policies implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  告警阈值(Number.MAX_VALUE)
     * unit  数据的单位字符串，长度不超过32
-    * count  告警连续触发次数，正整数[1, 5]
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
     * suppressDuration  告警抑制周期，单位为秒，当告警抑制周期为0时，仅发送一次告警
     *
@@ -229,6 +229,7 @@ class Policies implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PERIOD_0 = 0;
     const PERIOD_1 = 1;
     const PERIOD_300 = 300;
     const PERIOD_1200 = 1200;
@@ -255,6 +256,7 @@ class Policies implements ModelInterface, ArrayAccess
     public function getPeriodAllowableValues()
     {
         return [
+            self::PERIOD_0,
             self::PERIOD_1,
             self::PERIOD_300,
             self::PERIOD_1200,
@@ -334,16 +336,13 @@ class Policies implements ModelInterface, ArrayAccess
             if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
             }
-        if ($this->container['dimensionName'] === null) {
-            $invalidProperties[] = "'dimensionName' can't be null";
-        }
-            if ((mb_strlen($this->container['dimensionName']) > 131)) {
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) > 131)) {
                 $invalidProperties[] = "invalid value for 'dimensionName', the character length must be smaller than or equal to 131.";
             }
-            if ((mb_strlen($this->container['dimensionName']) < 1)) {
+            if (!is_null($this->container['dimensionName']) && (mb_strlen($this->container['dimensionName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimensionName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimensionName'])) {
+            if (!is_null($this->container['dimensionName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimensionName'])) {
                 $invalidProperties[] = "invalid value for 'dimensionName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
             }
         if ($this->container['metricName'] === null) {
@@ -399,8 +398,8 @@ class Policies implements ModelInterface, ArrayAccess
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
         }
-            if (($this->container['count'] > 5)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 5.";
+            if (($this->container['count'] > 180)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 180.";
             }
             if (($this->container['count'] < 1)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 1.";
@@ -464,7 +463,7 @@ class Policies implements ModelInterface, ArrayAccess
     * Gets dimensionName
     *  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
-    * @return string
+    * @return string|null
     */
     public function getDimensionName()
     {
@@ -474,7 +473,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    * @param string|null $dimensionName 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
     *
     * @return $this
     */
@@ -630,7 +629,7 @@ class Policies implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警连续触发次数，正整数[1, 5]
+    *  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return int
     */
@@ -642,7 +641,7 @@ class Policies implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count 告警连续触发次数，正整数[1, 5]
+    * @param int $count 告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return $this
     */

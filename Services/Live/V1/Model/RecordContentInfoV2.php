@@ -25,7 +25,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     * app  应用名
     * stream  录制的流名
     * recordFormat  录制格式flv，hls，mp4
-    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * obsAddr  obsAddr
     * vodInfo  vodInfo
     * downloadUrl  OBS下载地址
@@ -57,7 +57,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     * app  应用名
     * stream  录制的流名
     * recordFormat  录制格式flv，hls，mp4
-    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * obsAddr  obsAddr
     * vodInfo  vodInfo
     * downloadUrl  OBS下载地址
@@ -110,7 +110,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     * app  应用名
     * stream  录制的流名
     * recordFormat  录制格式flv，hls，mp4
-    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * obsAddr  obsAddr
     * vodInfo  vodInfo
     * downloadUrl  OBS下载地址
@@ -142,7 +142,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     * app  应用名
     * stream  录制的流名
     * recordFormat  录制格式flv，hls，mp4
-    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * obsAddr  obsAddr
     * vodInfo  vodInfo
     * downloadUrl  OBS下载地址
@@ -174,7 +174,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     * app  应用名
     * stream  录制的流名
     * recordFormat  录制格式flv，hls，mp4
-    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * recordType  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     * obsAddr  obsAddr
     * vodInfo  vodInfo
     * downloadUrl  OBS下载地址
@@ -244,8 +244,6 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     const RECORD_FORMAT_MP4 = 'MP4';
     const RECORD_TYPE_CONTINUOUS_RECORD = 'CONTINUOUS_RECORD';
     const RECORD_TYPE_COMMAND_RECORD = 'COMMAND_RECORD';
-    const RECORD_TYPE_PLAN_RECORD = 'PLAN_RECORD';
-    const RECORD_TYPE_ON_DEMAND_RECORD = 'ON_DEMAND_RECORD';
     
 
     /**
@@ -272,8 +270,6 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
         return [
             self::RECORD_TYPE_CONTINUOUS_RECORD,
             self::RECORD_TYPE_COMMAND_RECORD,
-            self::RECORD_TYPE_PLAN_RECORD,
-            self::RECORD_TYPE_ON_DEMAND_RECORD,
         ];
     }
 
@@ -503,7 +499,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordType
-    *  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    *  录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     *
     * @return string|null
     */
@@ -515,7 +511,7 @@ class RecordContentInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets recordType
     *
-    * @param string|null $recordType 录制类型，CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。 - PLAN_RECORD：计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD：按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。
+    * @param string|null $recordType 录制类型，CONTINUOUS_RECORD，COMMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD：持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD：命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。
     *
     * @return $this
     */

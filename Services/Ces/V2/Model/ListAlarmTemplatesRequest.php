@@ -24,7 +24,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
     *
     * @var string[]
@@ -44,7 +44,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
     *
     * @var string[]
@@ -125,7 +125,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
     * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
     * dimName  资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
     *
     * @var string[]
@@ -181,6 +181,9 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     }
     const TEMPLATE_TYPE_SYSTEM = 'system';
     const TEMPLATE_TYPE_CUSTOM = 'custom';
+    const TEMPLATE_TYPE_SYSTEM_EVENT = 'system_event';
+    const TEMPLATE_TYPE_CUSTOM_EVENT = 'custom_event';
+    const TEMPLATE_TYPE_SYSTEM_CUSTOM_EVENT = 'system_custom_event';
     
 
     /**
@@ -193,6 +196,9 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
         return [
             self::TEMPLATE_TYPE_SYSTEM,
             self::TEMPLATE_TYPE_CUSTOM,
+            self::TEMPLATE_TYPE_SYSTEM_EVENT,
+            self::TEMPLATE_TYPE_CUSTOM_EVENT,
+            self::TEMPLATE_TYPE_SYSTEM_CUSTOM_EVENT,
         ];
     }
 
@@ -387,7 +393,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    *  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     *
     * @return string|null
     */
@@ -399,7 +405,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
+    * @param string|null $templateType 模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
     *
     * @return $this
     */
