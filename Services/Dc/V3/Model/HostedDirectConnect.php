@@ -31,10 +31,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     * applyTime  物理专线申请时间
     * createTime  物理专线创建时间
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
+    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
             'status' => 'string',
             'applyTime' => 'string',
             'createTime' => 'string',
-            'providerStatus' => 'string'
+            'providerStatus' => 'string',
+            'portType' => 'string',
+            'type' => 'string'
     ];
 
     /**
@@ -69,10 +73,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     * applyTime  物理专线申请时间
     * createTime  物理专线创建时间
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
+    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
         'status' => null,
         'applyTime' => null,
         'createTime' => null,
-        'providerStatus' => null
+        'providerStatus' => null,
+        'portType' => null,
+        'type' => null
     ];
 
     /**
@@ -128,10 +136,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     * applyTime  物理专线申请时间
     * createTime  物理专线创建时间
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
+    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
             'status' => 'status',
             'applyTime' => 'apply_time',
             'createTime' => 'create_time',
-            'providerStatus' => 'provider_status'
+            'providerStatus' => 'provider_status',
+            'portType' => 'port_type',
+            'type' => 'type'
     ];
 
     /**
@@ -166,10 +178,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     * applyTime  物理专线申请时间
     * createTime  物理专线创建时间
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
+    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'applyTime' => 'setApplyTime',
             'createTime' => 'setCreateTime',
-            'providerStatus' => 'setProviderStatus'
+            'providerStatus' => 'setProviderStatus',
+            'portType' => 'setPortType',
+            'type' => 'setType'
     ];
 
     /**
@@ -204,10 +220,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     * provider  专线线路的提供商
     * adminStateUp  管理状态：true或false
     * vlan  hosted物理专线预分配的vlan。
-    * status  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * status  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     * applyTime  物理专线申请时间
     * createTime  物理专线创建时间
     * providerStatus  物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+    * portType  物理专线接入接口的类型，支持1G 10G 40G 100G
+    * type  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'applyTime' => 'getApplyTime',
             'createTime' => 'getCreateTime',
-            'providerStatus' => 'getProviderStatus'
+            'providerStatus' => 'getProviderStatus',
+            'portType' => 'getPortType',
+            'type' => 'getType'
     ];
 
     /**
@@ -270,21 +290,23 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const STATUS_BUILD = 'BUILD';
-    const STATUS_PAID = 'PAID';
-    const STATUS_APPLY = 'APPLY';
-    const STATUS_PENDING_SURVEY = 'PENDING_SURVEY';
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_DOWN = 'DOWN';
     const STATUS_ERROR = 'ERROR';
     const STATUS_PENDING_DELETE = 'PENDING_DELETE';
-    const STATUS_DELETED = 'DELETED';
-    const STATUS_DENY = 'DENY';
-    const STATUS_PENDING_PAY = 'PENDING_PAY';
-    const STATUS_ORDERING = 'ORDERING';
-    const STATUS_ACCEPT = 'ACCEPT';
-    const STATUS_REJECTED = 'REJECTED';
+    const STATUS_PENDING_UPDATE = 'PENDING_UPDATE';
+    const STATUS_PENDING_CREATE = 'PENDING_CREATE';
     const PROVIDER_STATUS_ACTIVE = 'ACTIVE';
     const PROVIDER_STATUS_DOWN = 'DOWN';
+    const PORT_TYPE__1_G = '1G';
+    const PORT_TYPE__10_G = '10G';
+    const PORT_TYPE__40_G = '40G';
+    const PORT_TYPE__100_G = '100G';
+    const TYPE_STANDARD = 'standard';
+    const TYPE_HOSTING = 'hosting';
+    const TYPE_HOSTED = 'hosted';
+    const TYPE_ONESTOP_STANDARD = 'onestop_standard';
+    const TYPE_ONESTOP_HOSTED = 'onestop_hosted';
     
 
     /**
@@ -296,19 +318,12 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     {
         return [
             self::STATUS_BUILD,
-            self::STATUS_PAID,
-            self::STATUS_APPLY,
-            self::STATUS_PENDING_SURVEY,
             self::STATUS_ACTIVE,
             self::STATUS_DOWN,
             self::STATUS_ERROR,
             self::STATUS_PENDING_DELETE,
-            self::STATUS_DELETED,
-            self::STATUS_DENY,
-            self::STATUS_PENDING_PAY,
-            self::STATUS_ORDERING,
-            self::STATUS_ACCEPT,
-            self::STATUS_REJECTED,
+            self::STATUS_PENDING_UPDATE,
+            self::STATUS_PENDING_CREATE,
         ];
     }
 
@@ -322,6 +337,37 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
         return [
             self::PROVIDER_STATUS_ACTIVE,
             self::PROVIDER_STATUS_DOWN,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPortTypeAllowableValues()
+    {
+        return [
+            self::PORT_TYPE__1_G,
+            self::PORT_TYPE__10_G,
+            self::PORT_TYPE__40_G,
+            self::PORT_TYPE__100_G,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_STANDARD,
+            self::TYPE_HOSTING,
+            self::TYPE_HOSTED,
+            self::TYPE_ONESTOP_STANDARD,
+            self::TYPE_ONESTOP_HOSTED,
         ];
     }
 
@@ -356,6 +402,8 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
         $this->container['applyTime'] = isset($data['applyTime']) ? $data['applyTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['providerStatus'] = isset($data['providerStatus']) ? $data['providerStatus'] : null;
+        $this->container['portType'] = isset($data['portType']) ? $data['portType'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -432,6 +480,22 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['providerStatus']) && !in_array($this->container['providerStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'providerStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPortTypeAllowableValues();
+                if (!is_null($this->container['portType']) && !in_array($this->container['portType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'portType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -716,7 +780,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    *  操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     *
     * @return string|null
     */
@@ -728,7 +792,7 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+    * @param string|null $status 操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
     *
     * @return $this
     */
@@ -807,6 +871,54 @@ class HostedDirectConnect implements ModelInterface, ArrayAccess
     public function setProviderStatus($providerStatus)
     {
         $this->container['providerStatus'] = $providerStatus;
+        return $this;
+    }
+
+    /**
+    * Gets portType
+    *  物理专线接入接口的类型，支持1G 10G 40G 100G
+    *
+    * @return string|null
+    */
+    public function getPortType()
+    {
+        return $this->container['portType'];
+    }
+
+    /**
+    * Sets portType
+    *
+    * @param string|null $portType 物理专线接入接口的类型，支持1G 10G 40G 100G
+    *
+    * @return $this
+    */
+    public function setPortType($portType)
+    {
+        $this->container['portType'] = $portType;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

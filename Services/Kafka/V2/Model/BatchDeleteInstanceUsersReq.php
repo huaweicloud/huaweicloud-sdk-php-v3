@@ -20,8 +20,8 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  删除类型。当前只支持delete。
-    * users  用户列表。
+    * action  删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * users  用户列表。  当删除用户时，为必选参数。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  删除类型。当前只支持delete。
-    * users  用户列表。
+    * action  删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * users  用户列表。  当删除用户时，为必选参数。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  删除类型。当前只支持delete。
-    * users  用户列表。
+    * action  删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * users  用户列表。  当删除用户时，为必选参数。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  删除类型。当前只支持delete。
-    * users  用户列表。
+    * action  删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * users  用户列表。  当删除用户时，为必选参数。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  删除类型。当前只支持delete。
-    * users  用户列表。
+    * action  删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * users  用户列表。  当删除用户时，为必选参数。
     *
     * @var string[]
     */
@@ -206,7 +206,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  删除类型。当前只支持delete。
+    *  删除类型。当前只支持delete。  当删除用户时，为必选参数。
     *
     * @return string|null
     */
@@ -218,7 +218,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 删除类型。当前只支持delete。
+    * @param string|null $action 删除类型。当前只支持delete。  当删除用户时，为必选参数。
     *
     * @return $this
     */
@@ -230,7 +230,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  用户列表。
+    *  用户列表。  当删除用户时，为必选参数。
     *
     * @return string[]|null
     */
@@ -242,7 +242,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param string[]|null $users 用户列表。
+    * @param string[]|null $users 用户列表。  当删除用户时，为必选参数。
     *
     * @return $this
     */

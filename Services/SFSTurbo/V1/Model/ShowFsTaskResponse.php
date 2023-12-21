@@ -21,9 +21,9 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务id
+    * taskId  任务ID
     * status  任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
-    * dirUsage  目录资源使用情况(包含子目录)
+    * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
     *
@@ -39,9 +39,9 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务id
+    * taskId  任务ID
     * status  任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
-    * dirUsage  目录资源使用情况(包含子目录)
+    * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
     *
@@ -78,9 +78,9 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务id
+    * taskId  任务ID
     * status  任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
-    * dirUsage  目录资源使用情况(包含子目录)
+    * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
     *
@@ -96,9 +96,9 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务id
+    * taskId  任务ID
     * status  任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
-    * dirUsage  目录资源使用情况(包含子目录)
+    * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
     *
@@ -114,9 +114,9 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务id
+    * taskId  任务ID
     * status  任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
-    * dirUsage  目录资源使用情况(包含子目录)
+    * dirUsage  dirUsage
     * beginTime  任务开始时间，UTC时间，例如：2006-01-02 15:04:05'
     * endTime  任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
     *
@@ -250,7 +250,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  任务ID
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务id
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirUsage
-    *  目录资源使用情况(包含子目录)
+    *  dirUsage
     *
     * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDuInfo|null
     */
@@ -310,7 +310,7 @@ class ShowFsTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dirUsage
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDuInfo|null $dirUsage 目录资源使用情况(包含子目录)
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDuInfo|null $dirUsage dirUsage
     *
     * @return $this
     */

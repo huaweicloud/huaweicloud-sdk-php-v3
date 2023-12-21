@@ -48,7 +48,7 @@ class StepRun implements ModelInterface, ArrayAccess
             'identifier' => 'string',
             'multiStepEditable' => 'int',
             'id' => 'string',
-            'endpointIds' => 'string',
+            'endpointIds' => 'string[]',
             'lastDispatchId' => 'string',
             'status' => 'string',
             'message' => 'string',
@@ -546,7 +546,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * Gets endpointIds
     *  扩展点
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getEndpointIds()
     {
@@ -556,7 +556,7 @@ class StepRun implements ModelInterface, ArrayAccess
     /**
     * Sets endpointIds
     *
-    * @param string|null $endpointIds 扩展点
+    * @param string[]|null $endpointIds 扩展点
     *
     * @return $this
     */

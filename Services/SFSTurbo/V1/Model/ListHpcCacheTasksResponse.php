@@ -22,7 +22,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tasks  任务详情
-    * count  联动任务数量
+    * count  任务数量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tasks  任务详情
-    * count  联动任务数量
+    * count  任务数量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tasks  任务详情
-    * count  联动任务数量
+    * count  任务数量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tasks  任务详情
-    * count  联动任务数量
+    * count  任务数量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tasks  任务详情
-    * count  联动任务数量
+    * count  任务数量
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  联动任务数量
+    *  任务数量
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListHpcCacheTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 联动任务数量
+    * @param int|null $count 任务数量
     *
     * @return $this
     */

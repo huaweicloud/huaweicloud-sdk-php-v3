@@ -29,6 +29,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下2种。   - private_image ：私有镜像。   - shared_image ：共享镜像。
     * latestVersion  是否是最新版本
     * scanStatus  扫描状态，包含如下2种。   - unscan ：未扫描。   - success ：扫描完成。   - scanning ：正在扫描。   - failed ：扫描失败。   - download_failed ：下载失败。   - image_oversized ：镜像超大。   - waiting_for_scan ：等待扫描。
+    * scanFailedDesc  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
     * imageSize  镜像大小
     * latestUpdateTime  镜像版本最后更新时间
     * latestScanTime  最近扫描时间
@@ -52,6 +53,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'imageType' => 'string',
             'latestVersion' => 'bool',
             'scanStatus' => 'string',
+            'scanFailedDesc' => 'string',
             'imageSize' => 'int',
             'latestUpdateTime' => 'int',
             'latestScanTime' => 'int',
@@ -75,6 +77,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下2种。   - private_image ：私有镜像。   - shared_image ：共享镜像。
     * latestVersion  是否是最新版本
     * scanStatus  扫描状态，包含如下2种。   - unscan ：未扫描。   - success ：扫描完成。   - scanning ：正在扫描。   - failed ：扫描失败。   - download_failed ：下载失败。   - image_oversized ：镜像超大。   - waiting_for_scan ：等待扫描。
+    * scanFailedDesc  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
     * imageSize  镜像大小
     * latestUpdateTime  镜像版本最后更新时间
     * latestScanTime  最近扫描时间
@@ -98,6 +101,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         'imageType' => null,
         'latestVersion' => null,
         'scanStatus' => null,
+        'scanFailedDesc' => null,
         'imageSize' => 'int64',
         'latestUpdateTime' => 'int64',
         'latestScanTime' => 'int64',
@@ -142,6 +146,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下2种。   - private_image ：私有镜像。   - shared_image ：共享镜像。
     * latestVersion  是否是最新版本
     * scanStatus  扫描状态，包含如下2种。   - unscan ：未扫描。   - success ：扫描完成。   - scanning ：正在扫描。   - failed ：扫描失败。   - download_failed ：下载失败。   - image_oversized ：镜像超大。   - waiting_for_scan ：等待扫描。
+    * scanFailedDesc  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
     * imageSize  镜像大小
     * latestUpdateTime  镜像版本最后更新时间
     * latestScanTime  最近扫描时间
@@ -165,6 +170,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'imageType' => 'image_type',
             'latestVersion' => 'latest_version',
             'scanStatus' => 'scan_status',
+            'scanFailedDesc' => 'scan_failed_desc',
             'imageSize' => 'image_size',
             'latestUpdateTime' => 'latest_update_time',
             'latestScanTime' => 'latest_scan_time',
@@ -188,6 +194,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下2种。   - private_image ：私有镜像。   - shared_image ：共享镜像。
     * latestVersion  是否是最新版本
     * scanStatus  扫描状态，包含如下2种。   - unscan ：未扫描。   - success ：扫描完成。   - scanning ：正在扫描。   - failed ：扫描失败。   - download_failed ：下载失败。   - image_oversized ：镜像超大。   - waiting_for_scan ：等待扫描。
+    * scanFailedDesc  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
     * imageSize  镜像大小
     * latestUpdateTime  镜像版本最后更新时间
     * latestScanTime  最近扫描时间
@@ -211,6 +218,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'imageType' => 'setImageType',
             'latestVersion' => 'setLatestVersion',
             'scanStatus' => 'setScanStatus',
+            'scanFailedDesc' => 'setScanFailedDesc',
             'imageSize' => 'setImageSize',
             'latestUpdateTime' => 'setLatestUpdateTime',
             'latestScanTime' => 'setLatestScanTime',
@@ -234,6 +242,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下2种。   - private_image ：私有镜像。   - shared_image ：共享镜像。
     * latestVersion  是否是最新版本
     * scanStatus  扫描状态，包含如下2种。   - unscan ：未扫描。   - success ：扫描完成。   - scanning ：正在扫描。   - failed ：扫描失败。   - download_failed ：下载失败。   - image_oversized ：镜像超大。   - waiting_for_scan ：等待扫描。
+    * scanFailedDesc  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
     * imageSize  镜像大小
     * latestUpdateTime  镜像版本最后更新时间
     * latestScanTime  最近扫描时间
@@ -257,6 +266,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'imageType' => 'getImageType',
             'latestVersion' => 'getLatestVersion',
             'scanStatus' => 'getScanStatus',
+            'scanFailedDesc' => 'getScanFailedDesc',
             'imageSize' => 'getImageSize',
             'latestUpdateTime' => 'getLatestUpdateTime',
             'latestScanTime' => 'getLatestScanTime',
@@ -336,6 +346,7 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
         $this->container['latestVersion'] = isset($data['latestVersion']) ? $data['latestVersion'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
+        $this->container['scanFailedDesc'] = isset($data['scanFailedDesc']) ? $data['scanFailedDesc'] : null;
         $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
         $this->container['latestUpdateTime'] = isset($data['latestUpdateTime']) ? $data['latestUpdateTime'] : null;
         $this->container['latestScanTime'] = isset($data['latestScanTime']) ? $data['latestScanTime'] : null;
@@ -404,20 +415,26 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['scanFailedDesc']) && (mb_strlen($this->container['scanFailedDesc']) > 64)) {
+                $invalidProperties[] = "invalid value for 'scanFailedDesc', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['scanFailedDesc']) && (mb_strlen($this->container['scanFailedDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'scanFailedDesc', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] > 2147483547)) {
                 $invalidProperties[] = "invalid value for 'imageSize', must be smaller than or equal to 2147483547.";
             }
             if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'imageSize', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['latestUpdateTime']) && ($this->container['latestUpdateTime'] > 2147483547)) {
-                $invalidProperties[] = "invalid value for 'latestUpdateTime', must be smaller than or equal to 2147483547.";
+            if (!is_null($this->container['latestUpdateTime']) && ($this->container['latestUpdateTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'latestUpdateTime', must be smaller than or equal to 4070880000000.";
             }
             if (!is_null($this->container['latestUpdateTime']) && ($this->container['latestUpdateTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'latestUpdateTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] > 2147483547)) {
-                $invalidProperties[] = "invalid value for 'latestScanTime', must be smaller than or equal to 2147483547.";
+            if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'latestScanTime', must be smaller than or equal to 4070880000000.";
             }
             if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'latestScanTime', must be bigger than or equal to 0.";
@@ -679,6 +696,30 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     public function setScanStatus($scanStatus)
     {
         $this->container['scanStatus'] = $scanStatus;
+        return $this;
+    }
+
+    /**
+    * Gets scanFailedDesc
+    *  扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
+    *
+    * @return string|null
+    */
+    public function getScanFailedDesc()
+    {
+        return $this->container['scanFailedDesc'];
+    }
+
+    /**
+    * Sets scanFailedDesc
+    *
+    * @param string|null $scanFailedDesc 扫描失败原因，包含如下14种。   - \"unknown_error\" :未知错误   - \"authentication_failed\":认证失败   - \"download_failed\":镜像下载失败   - \"image_over_sized\":镜像大小超限   - \"image_oversized\":镜像超大   - \"failed_to_scan_vulnerability\":漏洞扫描失败      - \"failed_to_scan_file\":文件扫描失败   - \"failed_to_scan_software\":软件扫描失败   - \"failed_to_check_sensitive_information\":敏感信息核查失败   - \"failed_to_check_baseline\":基线检查失败   - \"failed_to_check_software_compliance\":软件合规检查失败   - \"failed_to_query_basic_image_information\":基础镜像信息查询失败   - \"response_timed_out\":响应超时   - \"database_error\" : 数据库错误   - \"failed_to_send_the_scan_request\" : 发送扫描请求失败
+    *
+    * @return $this
+    */
+    public function setScanFailedDesc($scanFailedDesc)
+    {
+        $this->container['scanFailedDesc'] = $scanFailedDesc;
         return $this;
     }
 

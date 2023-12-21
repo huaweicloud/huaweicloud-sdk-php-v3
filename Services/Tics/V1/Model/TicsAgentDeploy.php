@@ -48,8 +48,8 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'agentId' => 'string',
             'agentName' => 'string',
-            'aomFlag' => 'string',
-            'bcsFlag' => 'string',
+            'aomFlag' => 'bool',
+            'bcsFlag' => 'bool',
             'cceVersion' => 'string',
             'createTime' => '\DateTime',
             'creatorDomainId' => 'string',
@@ -59,7 +59,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
             'deployStatus' => 'string',
             'deployType' => 'string',
             'deploymentEventInformation' => 'string',
-            'highAvail' => 'string',
+            'highAvail' => 'bool',
             'imageId' => 'string',
             'imageVersion' => 'string',
             'leagueId' => 'string',
@@ -100,8 +100,8 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'agentId' => null,
         'agentName' => null,
-        'aomFlag' => 'byte',
-        'bcsFlag' => 'byte',
+        'aomFlag' => null,
+        'bcsFlag' => null,
         'cceVersion' => null,
         'createTime' => 'date-time',
         'creatorDomainId' => null,
@@ -111,7 +111,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
         'deployStatus' => null,
         'deployType' => null,
         'deploymentEventInformation' => null,
-        'highAvail' => 'byte',
+        'highAvail' => null,
         'imageId' => null,
         'imageVersion' => null,
         'leagueId' => null,
@@ -562,7 +562,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     * Gets aomFlag
     *  是否开启aom监控
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getAomFlag()
     {
@@ -572,7 +572,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     /**
     * Sets aomFlag
     *
-    * @param string|null $aomFlag 是否开启aom监控
+    * @param bool|null $aomFlag 是否开启aom监控
     *
     * @return $this
     */
@@ -586,7 +586,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     * Gets bcsFlag
     *  是否使用区块链存证
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getBcsFlag()
     {
@@ -596,7 +596,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     /**
     * Sets bcsFlag
     *
-    * @param string|null $bcsFlag 是否使用区块链存证
+    * @param bool|null $bcsFlag 是否使用区块链存证
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     * Gets highAvail
     *  可信节点是否高可用部署
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getHighAvail()
     {
@@ -836,7 +836,7 @@ class TicsAgentDeploy implements ModelInterface, ArrayAccess
     /**
     * Sets highAvail
     *
-    * @param string|null $highAvail 可信节点是否高可用部署
+    * @param bool|null $highAvail 可信节点是否高可用部署
     *
     * @return $this
     */

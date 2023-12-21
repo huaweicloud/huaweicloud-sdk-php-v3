@@ -22,7 +22,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * taskId  任务id
+    * taskId  任务ID
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * taskId  任务id
+    * taskId  任务ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * taskId  任务id
+    * taskId  任务ID
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * taskId  任务id
+    * taskId  任务ID
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统id
     * feature  任务类型。例，DU任务取值为dir-usage
-    * taskId  任务id
+    * taskId  任务ID
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  任务ID
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DeleteFsTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string $taskId 任务id
+    * @param string $taskId 任务ID
     *
     * @return $this
     */

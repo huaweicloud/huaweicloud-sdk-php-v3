@@ -21,21 +21,33 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， start大于等于0
+    * limit  每页显示的条目数量。
+    * status  过期key状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， start大于等于0
+    * limit  每页显示的条目数量。
+    * status  过期key状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
+        'status' => null
     ];
 
     /**
@@ -62,31 +74,49 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， start大于等于0
+    * limit  每页显示的条目数量。
+    * status  过期key状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， start大于等于0
+    * limit  每页显示的条目数量。
+    * status  过期key状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， start大于等于0
+    * limit  每页显示的条目数量。
+    * status  过期key状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -129,7 +159,26 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_WAITING = 'waiting';
+    const STATUS_RUNNING = 'running';
+    const STATUS_SUCCESS = 'success';
+    const STATUS_FAILED = 'failed';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_WAITING,
+            self::STATUS_RUNNING,
+            self::STATUS_SUCCESS,
+            self::STATUS_FAILED,
+        ];
+    }
 
 
     /**
@@ -148,6 +197,9 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -161,6 +213,14 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -196,6 +256,78 @@ class ShowExpireKeyScanInfoRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询， start大于等于0
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询， start大于等于0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  过期key状态
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 过期key状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

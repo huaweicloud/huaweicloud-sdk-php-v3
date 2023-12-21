@@ -20,7 +20,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
@@ -44,7 +44,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
@@ -89,7 +89,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
@@ -113,7 +113,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
@@ -137,7 +137,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * id  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     * replication  副本数，配置数据的可靠性。 取值范围：1-3。
     * syncMessageFlush  是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
     * partition  topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc,g42,tm,hk_g42,hk_tm)[1-20](tag:cmcc)。
@@ -278,7 +278,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    *  topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     *
     * @return string
     */
@@ -290,7 +290,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
+    * @param string $id topic名称，长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。
     *
     * @return $this
     */

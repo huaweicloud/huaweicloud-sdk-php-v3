@@ -32,7 +32,7 @@ class Instance implements ModelInterface, ArrayAccess
             'availabilityZone' => 'string',
             'cuNum' => 'int',
             'lemonNum' => 'int',
-            'nics' => '\HuaweiCloud\SDK\CloudTable\V2\Model\Nics[]',
+            'nics' => '\HuaweiCloud\SDK\CloudTable\V2\Model\Nic[]',
             'tsdNum' => 'int'
     ];
 
@@ -304,7 +304,7 @@ class Instance implements ModelInterface, ArrayAccess
     * Gets nics
     *  集群所在网络信息。
     *
-    * @return \HuaweiCloud\SDK\CloudTable\V2\Model\Nics[]
+    * @return \HuaweiCloud\SDK\CloudTable\V2\Model\Nic[]
     */
     public function getNics()
     {
@@ -314,7 +314,7 @@ class Instance implements ModelInterface, ArrayAccess
     /**
     * Sets nics
     *
-    * @param \HuaweiCloud\SDK\CloudTable\V2\Model\Nics[] $nics 集群所在网络信息。
+    * @param \HuaweiCloud\SDK\CloudTable\V2\Model\Nic[] $nics 集群所在网络信息。
     *
     * @return $this
     */

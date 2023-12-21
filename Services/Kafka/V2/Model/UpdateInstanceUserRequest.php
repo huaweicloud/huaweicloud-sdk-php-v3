@@ -20,7 +20,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息中间件。
+    * engine  消息引擎的类型。
     * instanceId  实例ID。
     * userName  用户名称。
     * body  body
@@ -36,7 +36,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息中间件。
+    * engine  消息引擎的类型。
     * instanceId  实例ID。
     * userName  用户名称。
     * body  body
@@ -73,7 +73,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息中间件。
+    * engine  消息引擎的类型。
     * instanceId  实例ID。
     * userName  用户名称。
     * body  body
@@ -89,7 +89,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息中间件。
+    * engine  消息引擎的类型。
     * instanceId  实例ID。
     * userName  用户名称。
     * body  body
@@ -105,7 +105,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息中间件。
+    * engine  消息引擎的类型。
     * instanceId  实例ID。
     * userName  用户名称。
     * body  body
@@ -216,7 +216,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息中间件。
+    *  消息引擎的类型。
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class UpdateInstanceUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息中间件。
+    * @param string $engine 消息引擎的类型。
     *
     * @return $this
     */

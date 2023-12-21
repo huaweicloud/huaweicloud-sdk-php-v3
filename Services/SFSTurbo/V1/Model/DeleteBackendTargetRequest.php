@@ -21,8 +21,8 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统id
-    * targetId  数据存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统id
-    * targetId  数据存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * shareId  文件系统id
-    * targetId  数据存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统id
-    * targetId  数据存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统id
-    * targetId  数据存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @var string[]
     */
@@ -226,7 +226,7 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  数据存储库 id
+    *  绑定关系id
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 数据存储库 id
+    * @param string $targetId 绑定关系id
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteDataInFileSystem
-    *  删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    *  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @return bool|null
     */
@@ -262,7 +262,7 @@ class DeleteBackendTargetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deleteDataInFileSystem
     *
-    * @param bool|null $deleteDataInFileSystem 删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+    * @param bool|null $deleteDataInFileSystem 删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
     *
     * @return $this
     */

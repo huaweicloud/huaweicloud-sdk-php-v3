@@ -24,6 +24,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
             'path' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'category' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
         'path' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'category' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
             'path' => 'path',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'category' => 'category'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
             'path' => 'setPath',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'category' => 'setCategory'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
             'path' => 'getPath',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'category' => 'getCategory'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -214,6 +225,12 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -322,6 +339,30 @@ class ListProcessStatisticsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 

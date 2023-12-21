@@ -24,7 +24,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
@@ -50,7 +50,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
@@ -97,7 +97,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
@@ -123,7 +123,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
@@ -149,7 +149,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态。 详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * includeFailure  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     * exactMatchName  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
     * enterpriseProjectId  企业项目ID。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
@@ -222,8 +222,6 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     const STATUS_SHRINKING = 'SHRINKING';
     const STATUS_EXTENDEDFAILED = 'EXTENDEDFAILED';
     const STATUS_CONFIGURING = 'CONFIGURING';
-    const STATUS_UPGRADING = 'UPGRADING';
-    const STATUS_UPGRADINGFAILED = 'UPGRADINGFAILED';
     const STATUS_ROLLBACK = 'ROLLBACK';
     const STATUS_ROLLBACKFAILED = 'ROLLBACKFAILED';
     const STATUS_VOLUMETYPECHANGING = 'VOLUMETYPECHANGING';
@@ -265,8 +263,6 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             self::STATUS_SHRINKING,
             self::STATUS_EXTENDEDFAILED,
             self::STATUS_CONFIGURING,
-            self::STATUS_UPGRADING,
-            self::STATUS_UPGRADINGFAILED,
             self::STATUS_ROLLBACK,
             self::STATUS_ROLLBACKFAILED,
             self::STATUS_VOLUMETYPECHANGING,
@@ -478,7 +474,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets includeFailure
-    *  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    *  是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     *
     * @return string|null
     */
@@ -490,7 +486,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets includeFailure
     *
-    * @param string|null $includeFailure 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+    * @param string|null $includeFailure 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”，不返回创建失败的实例数。
     *
     * @return $this
     */

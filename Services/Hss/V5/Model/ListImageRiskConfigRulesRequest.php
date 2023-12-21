@@ -22,7 +22,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -33,6 +33,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -49,14 +50,15 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
             'standard' => 'string',
             'resultType' => 'string',
             'checkRuleName' => 'string',
-            'severity' => 'string'
+            'severity' => 'string',
+            'instanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -67,6 +69,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
         'standard' => null,
         'resultType' => null,
         'checkRuleName' => null,
-        'severity' => null
+        'severity' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -111,7 +115,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -122,6 +126,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -138,14 +143,15 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
             'standard' => 'standard',
             'resultType' => 'result_type',
             'checkRuleName' => 'check_rule_name',
-            'severity' => 'severity'
+            'severity' => 'severity',
+            'instanceId' => 'instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -156,6 +162,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -172,14 +179,15 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
             'standard' => 'setStandard',
             'resultType' => 'setResultType',
             'checkRuleName' => 'setCheckRuleName',
-            'severity' => 'setSeverity'
+            'severity' => 'setSeverity',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -190,6 +198,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     * resultType  结果类型，包含如下： - pass ： 已通过 - failed : 未通过
     * checkRuleName  检查项名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
             'standard' => 'getStandard',
             'resultType' => 'getResultType',
             'checkRuleName' => 'getCheckRuleName',
-            'severity' => 'getSeverity'
+            'severity' => 'getSeverity',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
         $this->container['resultType'] = isset($data['resultType']) ? $data['resultType'] : null;
         $this->container['checkRuleName'] = isset($data['checkRuleName']) ? $data['checkRuleName'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -386,6 +397,12 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 0)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -450,7 +467,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return string
     */
@@ -462,7 +479,7 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return $this
     */
@@ -709,6 +726,30 @@ class ListImageRiskConfigRulesRequest implements ModelInterface, ArrayAccess
     public function setSeverity($severity)
     {
         $this->container['severity'] = $severity;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

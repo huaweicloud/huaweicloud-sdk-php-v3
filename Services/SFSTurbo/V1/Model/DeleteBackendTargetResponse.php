@@ -21,9 +21,9 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetId  后端存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否同时删除文件系统对应路径的数据
-    * lifecycle  后端存储库生命周期描述信息
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
+    * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -37,9 +37,9 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetId  后端存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否同时删除文件系统对应路径的数据
-    * lifecycle  后端存储库生命周期描述信息
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
+    * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -74,9 +74,9 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetId  后端存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否同时删除文件系统对应路径的数据
-    * lifecycle  后端存储库生命周期描述信息
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
+    * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,9 +90,9 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetId  后端存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否同时删除文件系统对应路径的数据
-    * lifecycle  后端存储库生命周期描述信息
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
+    * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -106,9 +106,9 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetId  后端存储库 id
-    * deleteDataInFileSystem  删除后端存储库时是否同时删除文件系统对应路径的数据
-    * lifecycle  后端存储库生命周期描述信息
+    * targetId  绑定关系id
+    * deleteDataInFileSystem  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
+    * lifecycle  绑定状态。只支持DELETING和FAILED
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -164,6 +164,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     const LIFECYCLE_AVAILABLE = 'AVAILABLE';
     const LIFECYCLE_MISCONFIGURED = 'MISCONFIGURED';
     const LIFECYCLE_CREATING = 'CREATING';
+    const LIFECYCLE_FAILED = 'FAILED';
     
 
     /**
@@ -178,6 +179,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
             self::LIFECYCLE_AVAILABLE,
             self::LIFECYCLE_MISCONFIGURED,
             self::LIFECYCLE_CREATING,
+            self::LIFECYCLE_FAILED,
         ];
     }
 
@@ -235,7 +237,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  后端存储库 id
+    *  绑定关系id
     *
     * @return string|null
     */
@@ -247,7 +249,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId 后端存储库 id
+    * @param string|null $targetId 绑定关系id
     *
     * @return $this
     */
@@ -259,7 +261,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteDataInFileSystem
-    *  删除后端存储库时是否同时删除文件系统对应路径的数据
+    *  删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     *
     * @return bool|null
     */
@@ -271,7 +273,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deleteDataInFileSystem
     *
-    * @param bool|null $deleteDataInFileSystem 删除后端存储库时是否同时删除文件系统对应路径的数据
+    * @param bool|null $deleteDataInFileSystem 删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
     *
     * @return $this
     */
@@ -283,7 +285,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lifecycle
-    *  后端存储库生命周期描述信息
+    *  绑定状态。只支持DELETING和FAILED
     *
     * @return string|null
     */
@@ -295,7 +297,7 @@ class DeleteBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lifecycle
     *
-    * @param string|null $lifecycle 后端存储库生命周期描述信息
+    * @param string|null $lifecycle 绑定状态。只支持DELETING和FAILED
     *
     * @return $this
     */

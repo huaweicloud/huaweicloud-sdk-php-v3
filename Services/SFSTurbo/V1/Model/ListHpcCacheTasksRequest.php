@@ -21,7 +21,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统ID
-    * type  操作类型
+    * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
@@ -39,7 +39,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统ID
-    * type  操作类型
+    * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
@@ -78,7 +78,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * shareId  文件系统ID
-    * type  操作类型
+    * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
@@ -96,7 +96,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统ID
-    * type  操作类型
+    * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
@@ -114,7 +114,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统ID
-    * type  操作类型
+    * type  任务类型
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
@@ -245,7 +245,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  操作类型
+    *  任务类型
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 操作类型
+    * @param string|null $type 任务类型
     *
     * @return $this
     */

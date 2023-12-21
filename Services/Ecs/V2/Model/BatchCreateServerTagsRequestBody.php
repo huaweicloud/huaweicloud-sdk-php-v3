@@ -27,7 +27,7 @@ class BatchCreateServerTagsRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerTag[]'
+            'tags' => '\HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerTag[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class BatchCreateServerTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerTag[]
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerTag[]
     */
     public function getTags()
     {
@@ -248,7 +248,7 @@ class BatchCreateServerTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ServerTag[] $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerTag[] $tags 标签列表。
     *
     * @return $this
     */

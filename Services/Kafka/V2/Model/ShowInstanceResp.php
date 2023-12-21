@@ -48,7 +48,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -216,7 +216,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -405,7 +405,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -573,7 +573,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -741,7 +741,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
     * certReplaced  是否能够证书替换。
@@ -1776,7 +1776,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaSecurityProtocol
-    *  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    *  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return string|null
     */
@@ -1788,7 +1788,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaSecurityProtocol
     *
-    * @param string|null $kafkaSecurityProtocol 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+    * @param string|null $kafkaSecurityProtocol 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return $this
     */

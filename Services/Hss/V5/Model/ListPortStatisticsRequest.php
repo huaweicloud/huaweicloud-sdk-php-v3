@@ -28,6 +28,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'string',
             'sortDir' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'category' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
         'sortKey' => null,
         'sortDir' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'category' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'category' => 'category'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'category' => 'setCategory'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * sortDir  升序还是降序，默认升序，asc
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'category' => 'getCategory'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -282,6 +293,12 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -486,6 +503,30 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 

@@ -23,13 +23,17 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * imageName  镜像名称
     * imageVersion  镜像版本
+    * instanceId  企业实例ID
+    * instanceUrl  下载企业镜像URL
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'namespace' => 'string',
             'imageName' => 'string',
-            'imageVersion' => 'string'
+            'imageVersion' => 'string',
+            'instanceId' => 'string',
+            'instanceUrl' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * imageName  镜像名称
     * imageVersion  镜像版本
+    * instanceId  企业实例ID
+    * instanceUrl  下载企业镜像URL
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'namespace' => null,
         'imageName' => null,
-        'imageVersion' => null
+        'imageVersion' => null,
+        'instanceId' => null,
+        'instanceUrl' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * imageName  镜像名称
     * imageVersion  镜像版本
+    * instanceId  企业实例ID
+    * instanceUrl  下载企业镜像URL
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'namespace' => 'namespace',
             'imageName' => 'image_name',
-            'imageVersion' => 'image_version'
+            'imageVersion' => 'image_version',
+            'instanceId' => 'instance_id',
+            'instanceUrl' => 'instance_url'
     ];
 
     /**
@@ -86,13 +98,17 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * imageName  镜像名称
     * imageVersion  镜像版本
+    * instanceId  企业实例ID
+    * instanceUrl  下载企业镜像URL
     *
     * @var string[]
     */
     protected static $setters = [
             'namespace' => 'setNamespace',
             'imageName' => 'setImageName',
-            'imageVersion' => 'setImageVersion'
+            'imageVersion' => 'setImageVersion',
+            'instanceId' => 'setInstanceId',
+            'instanceUrl' => 'setInstanceUrl'
     ];
 
     /**
@@ -100,13 +116,17 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * imageName  镜像名称
     * imageVersion  镜像版本
+    * instanceId  企业实例ID
+    * instanceUrl  下载企业镜像URL
     *
     * @var string[]
     */
     protected static $getters = [
             'namespace' => 'getNamespace',
             'imageName' => 'getImageName',
-            'imageVersion' => 'getImageVersion'
+            'imageVersion' => 'getImageVersion',
+            'instanceId' => 'getInstanceId',
+            'instanceUrl' => 'getInstanceUrl'
     ];
 
     /**
@@ -170,6 +190,8 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
         $this->container['imageVersion'] = isset($data['imageVersion']) ? $data['imageVersion'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceUrl'] = isset($data['instanceUrl']) ? $data['instanceUrl'] : null;
     }
 
     /**
@@ -197,6 +219,18 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['imageVersion']) && (mb_strlen($this->container['imageVersion']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) > 256)) {
+                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -281,6 +315,54 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
     public function setImageVersion($imageVersion)
     {
         $this->container['imageVersion'] = $imageVersion;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  企业实例ID
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 企业实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceUrl
+    *  下载企业镜像URL
+    *
+    * @return string|null
+    */
+    public function getInstanceUrl()
+    {
+        return $this->container['instanceUrl'];
+    }
+
+    /**
+    * Sets instanceUrl
+    *
+    * @param string|null $instanceUrl 下载企业镜像URL
+    *
+    * @return $this
+    */
+    public function setInstanceUrl($instanceUrl)
+    {
+        $this->container['instanceUrl'] = $instanceUrl;
         return $this;
     }
 

@@ -28,6 +28,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'partMatch' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'partMatch' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'partMatch' => 'part_match'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'partMatch' => 'setPartMatch'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'partMatch' => 'getPartMatch'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['partMatch'] = isset($data['partMatch']) ? $data['partMatch'] : null;
     }
 
     /**
@@ -486,6 +497,30 @@ class ListAutoLaunchsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets partMatch
+    *  是否模糊匹配，默认false表示精确匹配
+    *
+    * @return bool|null
+    */
+    public function getPartMatch()
+    {
+        return $this->container['partMatch'];
+    }
+
+    /**
+    * Sets partMatch
+    *
+    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    *
+    * @return $this
+    */
+    public function setPartMatch($partMatch)
+    {
+        $this->container['partMatch'] = $partMatch;
         return $this;
     }
 

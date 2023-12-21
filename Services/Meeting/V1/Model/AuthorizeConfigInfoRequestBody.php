@@ -25,7 +25,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     * authorizeUrl  鉴权中心URL。 > 开启SSO登录时必填
     * getTokenUrl  获取Token URL。 > 开启SSO登录时必填
     * clientId  APP ID。 > 开启SSO登录时必填
-    * clientSecret  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * clientSecret  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     * scope  授权范围。 * openid：OAuth2.0的OIDC
     * accFieldName  第三方帐号的字段名称。 > 开启SSO登录时必填
     * getUserInfoUrl  用户信息查询URL。
@@ -69,7 +69,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     * authorizeUrl  鉴权中心URL。 > 开启SSO登录时必填
     * getTokenUrl  获取Token URL。 > 开启SSO登录时必填
     * clientId  APP ID。 > 开启SSO登录时必填
-    * clientSecret  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * clientSecret  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     * scope  授权范围。 * openid：OAuth2.0的OIDC
     * accFieldName  第三方帐号的字段名称。 > 开启SSO登录时必填
     * getUserInfoUrl  用户信息查询URL。
@@ -134,7 +134,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     * authorizeUrl  鉴权中心URL。 > 开启SSO登录时必填
     * getTokenUrl  获取Token URL。 > 开启SSO登录时必填
     * clientId  APP ID。 > 开启SSO登录时必填
-    * clientSecret  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * clientSecret  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     * scope  授权范围。 * openid：OAuth2.0的OIDC
     * accFieldName  第三方帐号的字段名称。 > 开启SSO登录时必填
     * getUserInfoUrl  用户信息查询URL。
@@ -178,7 +178,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     * authorizeUrl  鉴权中心URL。 > 开启SSO登录时必填
     * getTokenUrl  获取Token URL。 > 开启SSO登录时必填
     * clientId  APP ID。 > 开启SSO登录时必填
-    * clientSecret  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * clientSecret  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     * scope  授权范围。 * openid：OAuth2.0的OIDC
     * accFieldName  第三方帐号的字段名称。 > 开启SSO登录时必填
     * getUserInfoUrl  用户信息查询URL。
@@ -222,7 +222,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     * authorizeUrl  鉴权中心URL。 > 开启SSO登录时必填
     * getTokenUrl  获取Token URL。 > 开启SSO登录时必填
     * clientId  APP ID。 > 开启SSO登录时必填
-    * clientSecret  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * clientSecret  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     * scope  授权范围。 * openid：OAuth2.0的OIDC
     * accFieldName  第三方帐号的字段名称。 > 开启SSO登录时必填
     * getUserInfoUrl  用户信息查询URL。
@@ -604,7 +604,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientSecret
-    *  APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    *  APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     *
     * @return string|null
     */
@@ -616,7 +616,7 @@ class AuthorizeConfigInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clientSecret
     *
-    * @param string|null $clientSecret APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+    * @param string|null $clientSecret APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
     *
     * @return $this
     */

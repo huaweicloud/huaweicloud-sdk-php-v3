@@ -21,8 +21,8 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * offset  偏移量，表示查询该偏移量后面的记录
-    * limit  查询返回记录的数量限制
+    * offset  偏移量，表示查询该偏移量后面的记录。
+    * limit  查询返回记录的数量限制。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * offset  偏移量，表示查询该偏移量后面的记录
-    * limit  查询返回记录的数量限制
+    * offset  偏移量，表示查询该偏移量后面的记录。
+    * limit  查询返回记录的数量限制。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * offset  偏移量，表示查询该偏移量后面的记录
-    * limit  查询返回记录的数量限制
+    * offset  偏移量，表示查询该偏移量后面的记录。
+    * limit  查询返回记录的数量限制。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * offset  偏移量，表示查询该偏移量后面的记录
-    * limit  查询返回记录的数量限制
+    * offset  偏移量，表示查询该偏移量后面的记录。
+    * limit  查询返回记录的数量限制。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * offset  偏移量，表示查询该偏移量后面的记录
-    * limit  查询返回记录的数量限制
+    * offset  偏移量，表示查询该偏移量后面的记录。
+    * limit  查询返回记录的数量限制。
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示查询该偏移量后面的记录
+    *  偏移量，表示查询该偏移量后面的记录。
     *
     * @return int|null
     */
@@ -247,7 +247,7 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示查询该偏移量后面的记录
+    * @param int|null $offset 偏移量，表示查询该偏移量后面的记录。
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询返回记录的数量限制
+    *  查询返回记录的数量限制。
     *
     * @return int|null
     */
@@ -271,7 +271,7 @@ class ShowKafkaUserClientQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询返回记录的数量限制
+    * @param int|null $limit 查询返回记录的数量限制。
     *
     * @return $this
     */

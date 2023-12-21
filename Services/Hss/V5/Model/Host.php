@@ -36,6 +36,7 @@ class Host implements ModelInterface, ArrayAccess
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
     * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * resourceId  主机安全配额ID（UUID）
     * outsideHost  是否非华为云机器
@@ -56,6 +57,7 @@ class Host implements ModelInterface, ArrayAccess
     * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
+    * protectInterrupt  防护是否中断
     *
     * @var string[]
     */
@@ -76,6 +78,7 @@ class Host implements ModelInterface, ArrayAccess
             'osType' => 'string',
             'osBit' => 'string',
             'detectResult' => 'string',
+            'expireTime' => 'int',
             'chargingMode' => 'string',
             'resourceId' => 'string',
             'outsideHost' => 'bool',
@@ -95,7 +98,8 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeStatus' => 'string',
             'upgradeResultCode' => 'string',
             'upgradable' => 'bool',
-            'openTime' => 'int'
+            'openTime' => 'int',
+            'protectInterrupt' => 'bool'
     ];
 
     /**
@@ -116,6 +120,7 @@ class Host implements ModelInterface, ArrayAccess
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
     * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * resourceId  主机安全配额ID（UUID）
     * outsideHost  是否非华为云机器
@@ -136,6 +141,7 @@ class Host implements ModelInterface, ArrayAccess
     * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
+    * protectInterrupt  防护是否中断
     *
     * @var string[]
     */
@@ -156,6 +162,7 @@ class Host implements ModelInterface, ArrayAccess
         'osType' => null,
         'osBit' => null,
         'detectResult' => null,
+        'expireTime' => 'int64',
         'chargingMode' => null,
         'resourceId' => null,
         'outsideHost' => null,
@@ -175,7 +182,8 @@ class Host implements ModelInterface, ArrayAccess
         'upgradeStatus' => null,
         'upgradeResultCode' => null,
         'upgradable' => null,
-        'openTime' => 'int64'
+        'openTime' => 'int64',
+        'protectInterrupt' => null
     ];
 
     /**
@@ -217,6 +225,7 @@ class Host implements ModelInterface, ArrayAccess
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
     * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * resourceId  主机安全配额ID（UUID）
     * outsideHost  是否非华为云机器
@@ -237,6 +246,7 @@ class Host implements ModelInterface, ArrayAccess
     * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
+    * protectInterrupt  防护是否中断
     *
     * @var string[]
     */
@@ -257,6 +267,7 @@ class Host implements ModelInterface, ArrayAccess
             'osType' => 'os_type',
             'osBit' => 'os_bit',
             'detectResult' => 'detect_result',
+            'expireTime' => 'expire_time',
             'chargingMode' => 'charging_mode',
             'resourceId' => 'resource_id',
             'outsideHost' => 'outside_host',
@@ -276,7 +287,8 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeStatus' => 'upgrade_status',
             'upgradeResultCode' => 'upgrade_result_code',
             'upgradable' => 'upgradable',
-            'openTime' => 'open_time'
+            'openTime' => 'open_time',
+            'protectInterrupt' => 'protect_interrupt'
     ];
 
     /**
@@ -297,6 +309,7 @@ class Host implements ModelInterface, ArrayAccess
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
     * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * resourceId  主机安全配额ID（UUID）
     * outsideHost  是否非华为云机器
@@ -317,6 +330,7 @@ class Host implements ModelInterface, ArrayAccess
     * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
+    * protectInterrupt  防护是否中断
     *
     * @var string[]
     */
@@ -337,6 +351,7 @@ class Host implements ModelInterface, ArrayAccess
             'osType' => 'setOsType',
             'osBit' => 'setOsBit',
             'detectResult' => 'setDetectResult',
+            'expireTime' => 'setExpireTime',
             'chargingMode' => 'setChargingMode',
             'resourceId' => 'setResourceId',
             'outsideHost' => 'setOutsideHost',
@@ -356,7 +371,8 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeStatus' => 'setUpgradeStatus',
             'upgradeResultCode' => 'setUpgradeResultCode',
             'upgradable' => 'setUpgradable',
-            'openTime' => 'setOpenTime'
+            'openTime' => 'setOpenTime',
+            'protectInterrupt' => 'setProtectInterrupt'
     ];
 
     /**
@@ -377,6 +393,7 @@ class Host implements ModelInterface, ArrayAccess
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
     * osBit  操作系统位数
     * detectResult  云主机安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
+    * expireTime  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * resourceId  主机安全配额ID（UUID）
     * outsideHost  是否非华为云机器
@@ -397,6 +414,7 @@ class Host implements ModelInterface, ArrayAccess
     * upgradeResultCode  升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下6种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
     * upgradable  该服务器agent是否可升级
     * openTime  开启防护时间，采用时间戳，默认毫秒，
+    * protectInterrupt  防护是否中断
     *
     * @var string[]
     */
@@ -417,6 +435,7 @@ class Host implements ModelInterface, ArrayAccess
             'osType' => 'getOsType',
             'osBit' => 'getOsBit',
             'detectResult' => 'getDetectResult',
+            'expireTime' => 'getExpireTime',
             'chargingMode' => 'getChargingMode',
             'resourceId' => 'getResourceId',
             'outsideHost' => 'getOutsideHost',
@@ -436,7 +455,8 @@ class Host implements ModelInterface, ArrayAccess
             'upgradeStatus' => 'getUpgradeStatus',
             'upgradeResultCode' => 'getUpgradeResultCode',
             'upgradable' => 'getUpgradable',
-            'openTime' => 'getOpenTime'
+            'openTime' => 'getOpenTime',
+            'protectInterrupt' => 'getProtectInterrupt'
     ];
 
     /**
@@ -513,6 +533,7 @@ class Host implements ModelInterface, ArrayAccess
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['osBit'] = isset($data['osBit']) ? $data['osBit'] : null;
         $this->container['detectResult'] = isset($data['detectResult']) ? $data['detectResult'] : null;
+        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['outsideHost'] = isset($data['outsideHost']) ? $data['outsideHost'] : null;
@@ -533,6 +554,7 @@ class Host implements ModelInterface, ArrayAccess
         $this->container['upgradeResultCode'] = isset($data['upgradeResultCode']) ? $data['upgradeResultCode'] : null;
         $this->container['upgradable'] = isset($data['upgradable']) ? $data['upgradable'] : null;
         $this->container['openTime'] = isset($data['openTime']) ? $data['openTime'] : null;
+        $this->container['protectInterrupt'] = isset($data['protectInterrupt']) ? $data['protectInterrupt'] : null;
     }
 
     /**
@@ -638,6 +660,12 @@ class Host implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['detectResult']) && (mb_strlen($this->container['detectResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'detectResult', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 4824695185000)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 4824695185000.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) > 32)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', the character length must be smaller than or equal to 32.";
@@ -1140,6 +1168,30 @@ class Host implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets expireTime
+    *  试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    *
+    * @return int|null
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param int|null $expireTime 试用版到期时间（-1表示非试用版配额，当值不为-1时为试用版本过期时间）
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
+        return $this;
+    }
+
+    /**
     * Gets chargingMode
     *  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     *
@@ -1616,6 +1668,30 @@ class Host implements ModelInterface, ArrayAccess
     public function setOpenTime($openTime)
     {
         $this->container['openTime'] = $openTime;
+        return $this;
+    }
+
+    /**
+    * Gets protectInterrupt
+    *  防护是否中断
+    *
+    * @return bool|null
+    */
+    public function getProtectInterrupt()
+    {
+        return $this->container['protectInterrupt'];
+    }
+
+    /**
+    * Sets protectInterrupt
+    *
+    * @param bool|null $protectInterrupt 防护是否中断
+    *
+    * @return $this
+    */
+    public function setProtectInterrupt($protectInterrupt)
+    {
+        $this->container['protectInterrupt'] = $protectInterrupt;
         return $this;
     }
 

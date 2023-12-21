@@ -23,7 +23,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
     * remark  备注
     * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
     * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
@@ -47,7 +47,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
     * remark  备注
     * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
     * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
@@ -92,7 +92,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
     * remark  备注
     * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
     * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
@@ -116,7 +116,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
     * remark  备注
     * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
     * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
@@ -140,7 +140,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * operateType  操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
     * remark  备注
     * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * dataList  漏洞列表
     * hostDataList  主机维度漏洞列表
     * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
@@ -359,7 +359,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    *  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * @param string|null $type 漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     *
     * @return $this
     */

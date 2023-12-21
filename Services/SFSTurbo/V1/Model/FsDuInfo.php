@@ -22,7 +22,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * path  文件系统内合法的目录全路径
     * usedCapacity  占用容量，单位：byte
-    * fileCount  该目录下所有文件数目
+    * fileCount  fileCount
     * message  错误信息
     *
     * @var string[]
@@ -38,7 +38,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * path  文件系统内合法的目录全路径
     * usedCapacity  占用容量，单位：byte
-    * fileCount  该目录下所有文件数目
+    * fileCount  fileCount
     * message  错误信息
     *
     * @var string[]
@@ -75,7 +75,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * path  文件系统内合法的目录全路径
     * usedCapacity  占用容量，单位：byte
-    * fileCount  该目录下所有文件数目
+    * fileCount  fileCount
     * message  错误信息
     *
     * @var string[]
@@ -91,7 +91,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * path  文件系统内合法的目录全路径
     * usedCapacity  占用容量，单位：byte
-    * fileCount  该目录下所有文件数目
+    * fileCount  fileCount
     * message  错误信息
     *
     * @var string[]
@@ -107,7 +107,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * path  文件系统内合法的目录全路径
     * usedCapacity  占用容量，单位：byte
-    * fileCount  该目录下所有文件数目
+    * fileCount  fileCount
     * message  错误信息
     *
     * @var string[]
@@ -191,27 +191,15 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
-        }
-            if ((mb_strlen($this->container['path']) > 4096)) {
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) > 4096)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 4096.";
             }
-            if ((mb_strlen($this->container['path']) < 0)) {
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 0)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['usedCapacity'] === null) {
-            $invalidProperties[] = "'usedCapacity' can't be null";
-        }
-            if (($this->container['usedCapacity'] < 0)) {
+            if (!is_null($this->container['usedCapacity']) && ($this->container['usedCapacity'] < 0)) {
                 $invalidProperties[] = "invalid value for 'usedCapacity', must be bigger than or equal to 0.";
             }
-        if ($this->container['fileCount'] === null) {
-            $invalidProperties[] = "'fileCount' can't be null";
-        }
-        if ($this->container['message'] === null) {
-            $invalidProperties[] = "'message' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -230,7 +218,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Gets path
     *  文件系统内合法的目录全路径
     *
-    * @return string
+    * @return string|null
     */
     public function getPath()
     {
@@ -240,7 +228,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string $path 文件系统内合法的目录全路径
+    * @param string|null $path 文件系统内合法的目录全路径
     *
     * @return $this
     */
@@ -254,7 +242,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Gets usedCapacity
     *  占用容量，单位：byte
     *
-    * @return int
+    * @return int|null
     */
     public function getUsedCapacity()
     {
@@ -264,7 +252,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     /**
     * Sets usedCapacity
     *
-    * @param int $usedCapacity 占用容量，单位：byte
+    * @param int|null $usedCapacity 占用容量，单位：byte
     *
     * @return $this
     */
@@ -276,9 +264,9 @@ class FsDuInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileCount
-    *  该目录下所有文件数目
+    *  fileCount
     *
-    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsFileCount
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsFileCount|null
     */
     public function getFileCount()
     {
@@ -288,7 +276,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileCount
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsFileCount $fileCount 该目录下所有文件数目
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsFileCount|null $fileCount fileCount
     *
     * @return $this
     */
@@ -302,7 +290,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     * Gets message
     *  错误信息
     *
-    * @return string
+    * @return string|null
     */
     public function getMessage()
     {
@@ -312,7 +300,7 @@ class FsDuInfo implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string $message 错误信息
+    * @param string|null $message 错误信息
     *
     * @return $this
     */

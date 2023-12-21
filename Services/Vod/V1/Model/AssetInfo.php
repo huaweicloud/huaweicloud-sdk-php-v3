@@ -23,6 +23,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * status  媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - WAITING_TRANSCODE：待发布（转码排队中） - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码） - NO_ASSET：该媒资不存在 - DELETING：正在删除 - DELETE_FAILED：删除失败 - OBS_CREATING：OBS转存方式创建中 - OBS_CREATE_FAILED： OBS转存失败 - OBS_CREATE_SUCCESS： OBS转存成功
     * description  媒资子状态或描述信息。 - 对于媒资异常场景，描述具体的异常原因。 - 对于正常场景，描述媒资的处理信息。
+    * isMultiTranscode  是否是多转码模式
     * baseInfo  baseInfo
     * playInfoArray  转码文件的播放信息。 - HLS或DASH：此数组的成员个数为n+1，n为转码输出路数。 - MP4：此数组的成员个数为n，n为转码输出路数。
     *
@@ -32,6 +33,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
             'assetId' => 'string',
             'status' => 'string',
             'description' => 'string',
+            'isMultiTranscode' => 'bool',
             'baseInfo' => '\HuaweiCloud\SDK\Vod\V1\Model\BaseInfo',
             'playInfoArray' => '\HuaweiCloud\SDK\Vod\V1\Model\PlayInfo[]'
     ];
@@ -41,6 +43,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * status  媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - WAITING_TRANSCODE：待发布（转码排队中） - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码） - NO_ASSET：该媒资不存在 - DELETING：正在删除 - DELETE_FAILED：删除失败 - OBS_CREATING：OBS转存方式创建中 - OBS_CREATE_FAILED： OBS转存失败 - OBS_CREATE_SUCCESS： OBS转存成功
     * description  媒资子状态或描述信息。 - 对于媒资异常场景，描述具体的异常原因。 - 对于正常场景，描述媒资的处理信息。
+    * isMultiTranscode  是否是多转码模式
     * baseInfo  baseInfo
     * playInfoArray  转码文件的播放信息。 - HLS或DASH：此数组的成员个数为n+1，n为转码输出路数。 - MP4：此数组的成员个数为n，n为转码输出路数。
     *
@@ -50,6 +53,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
         'assetId' => null,
         'status' => null,
         'description' => null,
+        'isMultiTranscode' => null,
         'baseInfo' => null,
         'playInfoArray' => null
     ];
@@ -80,6 +84,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * status  媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - WAITING_TRANSCODE：待发布（转码排队中） - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码） - NO_ASSET：该媒资不存在 - DELETING：正在删除 - DELETE_FAILED：删除失败 - OBS_CREATING：OBS转存方式创建中 - OBS_CREATE_FAILED： OBS转存失败 - OBS_CREATE_SUCCESS： OBS转存成功
     * description  媒资子状态或描述信息。 - 对于媒资异常场景，描述具体的异常原因。 - 对于正常场景，描述媒资的处理信息。
+    * isMultiTranscode  是否是多转码模式
     * baseInfo  baseInfo
     * playInfoArray  转码文件的播放信息。 - HLS或DASH：此数组的成员个数为n+1，n为转码输出路数。 - MP4：此数组的成员个数为n，n为转码输出路数。
     *
@@ -89,6 +94,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
             'assetId' => 'asset_id',
             'status' => 'status',
             'description' => 'description',
+            'isMultiTranscode' => 'is_multi_transcode',
             'baseInfo' => 'base_info',
             'playInfoArray' => 'play_info_array'
     ];
@@ -98,6 +104,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * status  媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - WAITING_TRANSCODE：待发布（转码排队中） - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码） - NO_ASSET：该媒资不存在 - DELETING：正在删除 - DELETE_FAILED：删除失败 - OBS_CREATING：OBS转存方式创建中 - OBS_CREATE_FAILED： OBS转存失败 - OBS_CREATE_SUCCESS： OBS转存成功
     * description  媒资子状态或描述信息。 - 对于媒资异常场景，描述具体的异常原因。 - 对于正常场景，描述媒资的处理信息。
+    * isMultiTranscode  是否是多转码模式
     * baseInfo  baseInfo
     * playInfoArray  转码文件的播放信息。 - HLS或DASH：此数组的成员个数为n+1，n为转码输出路数。 - MP4：此数组的成员个数为n，n为转码输出路数。
     *
@@ -107,6 +114,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
             'assetId' => 'setAssetId',
             'status' => 'setStatus',
             'description' => 'setDescription',
+            'isMultiTranscode' => 'setIsMultiTranscode',
             'baseInfo' => 'setBaseInfo',
             'playInfoArray' => 'setPlayInfoArray'
     ];
@@ -116,6 +124,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
     * assetId  媒资ID。
     * status  媒资状态。  取值如下： - UNCREATED：未创建（媒资ID不存在 ） - DELETED：已删除 - CANCELLED：上传取消 - SERVER_ERROR：上传失败（点播服务端故障） - UPLOAD_FAILED：上传失败（向OBS上传失败） - CREATING：创建中 - PUBLISHED：已发布 - WAITING_TRANSCODE：待发布（转码排队中） - TRANSCODING：待发布（转码中） - TRANSCODE_FAILED：待发布（转码失败） - TRANSCODE_SUCCEED：待发布（转码成功） - CREATED：待发布（未转码） - NO_ASSET：该媒资不存在 - DELETING：正在删除 - DELETE_FAILED：删除失败 - OBS_CREATING：OBS转存方式创建中 - OBS_CREATE_FAILED： OBS转存失败 - OBS_CREATE_SUCCESS： OBS转存成功
     * description  媒资子状态或描述信息。 - 对于媒资异常场景，描述具体的异常原因。 - 对于正常场景，描述媒资的处理信息。
+    * isMultiTranscode  是否是多转码模式
     * baseInfo  baseInfo
     * playInfoArray  转码文件的播放信息。 - HLS或DASH：此数组的成员个数为n+1，n为转码输出路数。 - MP4：此数组的成员个数为n，n为转码输出路数。
     *
@@ -125,6 +134,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
             'assetId' => 'getAssetId',
             'status' => 'getStatus',
             'description' => 'getDescription',
+            'isMultiTranscode' => 'getIsMultiTranscode',
             'baseInfo' => 'getBaseInfo',
             'playInfoArray' => 'getPlayInfoArray'
     ];
@@ -190,6 +200,7 @@ class AssetInfo implements ModelInterface, ArrayAccess
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['isMultiTranscode'] = isset($data['isMultiTranscode']) ? $data['isMultiTranscode'] : null;
         $this->container['baseInfo'] = isset($data['baseInfo']) ? $data['baseInfo'] : null;
         $this->container['playInfoArray'] = isset($data['playInfoArray']) ? $data['playInfoArray'] : null;
     }
@@ -285,6 +296,30 @@ class AssetInfo implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets isMultiTranscode
+    *  是否是多转码模式
+    *
+    * @return bool|null
+    */
+    public function getIsMultiTranscode()
+    {
+        return $this->container['isMultiTranscode'];
+    }
+
+    /**
+    * Sets isMultiTranscode
+    *
+    * @param bool|null $isMultiTranscode 是否是多转码模式
+    *
+    * @return $this
+    */
+    public function setIsMultiTranscode($isMultiTranscode)
+    {
+        $this->container['isMultiTranscode'] = $isMultiTranscode;
         return $this;
     }
 

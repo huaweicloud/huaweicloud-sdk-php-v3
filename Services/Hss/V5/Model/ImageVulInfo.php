@@ -25,7 +25,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     * description  漏洞描述
     * position  漏洞所在镜像层
     * appName  漏洞的软件名称
-    * version  漏洞版本
+    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * version  软件版本
     * solution  解决方案
     * url  补丁地址
     *
@@ -37,6 +38,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'description' => 'string',
             'position' => 'string',
             'appName' => 'string',
+            'appPath' => 'string',
             'version' => 'string',
             'solution' => 'string',
             'url' => 'string'
@@ -49,7 +51,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     * description  漏洞描述
     * position  漏洞所在镜像层
     * appName  漏洞的软件名称
-    * version  漏洞版本
+    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * version  软件版本
     * solution  解决方案
     * url  补丁地址
     *
@@ -61,6 +64,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
         'description' => null,
         'position' => null,
         'appName' => null,
+        'appPath' => null,
         'version' => null,
         'solution' => null,
         'url' => null
@@ -94,7 +98,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     * description  漏洞描述
     * position  漏洞所在镜像层
     * appName  漏洞的软件名称
-    * version  漏洞版本
+    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * version  软件版本
     * solution  解决方案
     * url  补丁地址
     *
@@ -106,6 +111,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'description' => 'description',
             'position' => 'position',
             'appName' => 'app_name',
+            'appPath' => 'app_path',
             'version' => 'version',
             'solution' => 'solution',
             'url' => 'url'
@@ -118,7 +124,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     * description  漏洞描述
     * position  漏洞所在镜像层
     * appName  漏洞的软件名称
-    * version  漏洞版本
+    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * version  软件版本
     * solution  解决方案
     * url  补丁地址
     *
@@ -130,6 +137,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'position' => 'setPosition',
             'appName' => 'setAppName',
+            'appPath' => 'setAppPath',
             'version' => 'setVersion',
             'solution' => 'setSolution',
             'url' => 'setUrl'
@@ -142,7 +150,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     * description  漏洞描述
     * position  漏洞所在镜像层
     * appName  漏洞的软件名称
-    * version  漏洞版本
+    * appPath  应用软件的路径（只有应用漏洞有该字段）
+    * version  软件版本
     * solution  解决方案
     * url  补丁地址
     *
@@ -154,6 +163,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'position' => 'getPosition',
             'appName' => 'getAppName',
+            'appPath' => 'getAppPath',
             'version' => 'getVersion',
             'solution' => 'getSolution',
             'url' => 'getUrl'
@@ -222,6 +232,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['appPath'] = isset($data['appPath']) ? $data['appPath'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['solution'] = isset($data['solution']) ? $data['solution'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
@@ -264,6 +275,12 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) > 512)) {
+                $invalidProperties[] = "invalid value for 'appPath', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appPath', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
@@ -418,8 +435,32 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets appPath
+    *  应用软件的路径（只有应用漏洞有该字段）
+    *
+    * @return string|null
+    */
+    public function getAppPath()
+    {
+        return $this->container['appPath'];
+    }
+
+    /**
+    * Sets appPath
+    *
+    * @param string|null $appPath 应用软件的路径（只有应用漏洞有该字段）
+    *
+    * @return $this
+    */
+    public function setAppPath($appPath)
+    {
+        $this->container['appPath'] = $appPath;
+        return $this;
+    }
+
+    /**
     * Gets version
-    *  漏洞版本
+    *  软件版本
     *
     * @return string|null
     */
@@ -431,7 +472,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 漏洞版本
+    * @param string|null $version 软件版本
     *
     * @return $this
     */

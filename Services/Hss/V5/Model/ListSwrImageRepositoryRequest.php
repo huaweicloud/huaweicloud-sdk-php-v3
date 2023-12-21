@@ -28,8 +28,18 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * latestVersion  仅关注最新版本镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * instanceName  企业镜像实例名称
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * hasMaliciousFile  是否存在恶意文件
+    * hasUnsafeSetting  是否存在基线检查
+    * hasVul  是否存在软件漏洞
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -43,7 +53,17 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'imageType' => 'string',
-            'scanStatus' => 'string'
+            'scanStatus' => 'string',
+            'instanceName' => 'string',
+            'imageSize' => 'int',
+            'startLatestUpdateTime' => 'int',
+            'endLatestUpdateTime' => 'int',
+            'startLatestScanTime' => 'int',
+            'endLatestScanTime' => 'int',
+            'hasMaliciousFile' => 'bool',
+            'hasUnsafeSetting' => 'bool',
+            'hasVul' => 'bool',
+            'instanceId' => 'string'
     ];
 
     /**
@@ -56,8 +76,18 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * latestVersion  仅关注最新版本镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * instanceName  企业镜像实例名称
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * hasMaliciousFile  是否存在恶意文件
+    * hasUnsafeSetting  是否存在基线检查
+    * hasVul  是否存在软件漏洞
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -71,7 +101,17 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'imageType' => null,
-        'scanStatus' => null
+        'scanStatus' => null,
+        'instanceName' => null,
+        'imageSize' => 'int64',
+        'startLatestUpdateTime' => 'int64',
+        'endLatestUpdateTime' => 'int64',
+        'startLatestScanTime' => 'int64',
+        'endLatestScanTime' => 'int64',
+        'hasMaliciousFile' => null,
+        'hasUnsafeSetting' => null,
+        'hasVul' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -105,8 +145,18 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * latestVersion  仅关注最新版本镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * instanceName  企业镜像实例名称
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * hasMaliciousFile  是否存在恶意文件
+    * hasUnsafeSetting  是否存在基线检查
+    * hasVul  是否存在软件漏洞
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -120,7 +170,17 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'imageType' => 'image_type',
-            'scanStatus' => 'scan_status'
+            'scanStatus' => 'scan_status',
+            'instanceName' => 'instance_name',
+            'imageSize' => 'image_size',
+            'startLatestUpdateTime' => 'start_latest_update_time',
+            'endLatestUpdateTime' => 'end_latest_update_time',
+            'startLatestScanTime' => 'start_latest_scan_time',
+            'endLatestScanTime' => 'end_latest_scan_time',
+            'hasMaliciousFile' => 'has_malicious_file',
+            'hasUnsafeSetting' => 'has_unsafe_setting',
+            'hasVul' => 'has_vul',
+            'instanceId' => 'instance_id'
     ];
 
     /**
@@ -133,8 +193,18 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * latestVersion  仅关注最新版本镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * instanceName  企业镜像实例名称
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * hasMaliciousFile  是否存在恶意文件
+    * hasUnsafeSetting  是否存在基线检查
+    * hasVul  是否存在软件漏洞
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -148,7 +218,17 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'imageType' => 'setImageType',
-            'scanStatus' => 'setScanStatus'
+            'scanStatus' => 'setScanStatus',
+            'instanceName' => 'setInstanceName',
+            'imageSize' => 'setImageSize',
+            'startLatestUpdateTime' => 'setStartLatestUpdateTime',
+            'endLatestUpdateTime' => 'setEndLatestUpdateTime',
+            'startLatestScanTime' => 'setStartLatestScanTime',
+            'endLatestScanTime' => 'setEndLatestScanTime',
+            'hasMaliciousFile' => 'setHasMaliciousFile',
+            'hasUnsafeSetting' => 'setHasUnsafeSetting',
+            'hasVul' => 'setHasVul',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
@@ -161,8 +241,18 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * latestVersion  仅关注最新版本镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * instanceName  企业镜像实例名称
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * hasMaliciousFile  是否存在恶意文件
+    * hasUnsafeSetting  是否存在基线检查
+    * hasVul  是否存在软件漏洞
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -176,7 +266,17 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'imageType' => 'getImageType',
-            'scanStatus' => 'getScanStatus'
+            'scanStatus' => 'getScanStatus',
+            'instanceName' => 'getInstanceName',
+            'imageSize' => 'getImageSize',
+            'startLatestUpdateTime' => 'getStartLatestUpdateTime',
+            'endLatestUpdateTime' => 'getEndLatestUpdateTime',
+            'startLatestScanTime' => 'getStartLatestScanTime',
+            'endLatestScanTime' => 'getEndLatestScanTime',
+            'hasMaliciousFile' => 'getHasMaliciousFile',
+            'hasUnsafeSetting' => 'getHasUnsafeSetting',
+            'hasVul' => 'getHasVul',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -247,6 +347,16 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
+        $this->container['startLatestUpdateTime'] = isset($data['startLatestUpdateTime']) ? $data['startLatestUpdateTime'] : null;
+        $this->container['endLatestUpdateTime'] = isset($data['endLatestUpdateTime']) ? $data['endLatestUpdateTime'] : null;
+        $this->container['startLatestScanTime'] = isset($data['startLatestScanTime']) ? $data['startLatestScanTime'] : null;
+        $this->container['endLatestScanTime'] = isset($data['endLatestScanTime']) ? $data['endLatestScanTime'] : null;
+        $this->container['hasMaliciousFile'] = isset($data['hasMaliciousFile']) ? $data['hasMaliciousFile'] : null;
+        $this->container['hasUnsafeSetting'] = isset($data['hasUnsafeSetting']) ? $data['hasUnsafeSetting'] : null;
+        $this->container['hasVul'] = isset($data['hasVul']) ? $data['hasVul'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -331,6 +441,48 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'imageSize', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'imageSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startLatestUpdateTime']) && ($this->container['startLatestUpdateTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'startLatestUpdateTime', must be smaller than or equal to 4070880000000.";
+            }
+            if (!is_null($this->container['startLatestUpdateTime']) && ($this->container['startLatestUpdateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'startLatestUpdateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['endLatestUpdateTime']) && ($this->container['endLatestUpdateTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'endLatestUpdateTime', must be smaller than or equal to 4070880000000.";
+            }
+            if (!is_null($this->container['endLatestUpdateTime']) && ($this->container['endLatestUpdateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'endLatestUpdateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startLatestScanTime']) && ($this->container['startLatestScanTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'startLatestScanTime', must be smaller than or equal to 4070880000000.";
+            }
+            if (!is_null($this->container['startLatestScanTime']) && ($this->container['startLatestScanTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'startLatestScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['endLatestScanTime']) && ($this->container['endLatestScanTime'] > 4070880000000)) {
+                $invalidProperties[] = "invalid value for 'endLatestScanTime', must be smaller than or equal to 4070880000000.";
+            }
+            if (!is_null($this->container['endLatestScanTime']) && ($this->container['endLatestScanTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'endLatestScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -540,7 +692,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return string
     */
@@ -552,7 +704,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return $this
     */
@@ -583,6 +735,246 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     public function setScanStatus($scanStatus)
     {
         $this->container['scanStatus'] = $scanStatus;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  企业镜像实例名称
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 企业镜像实例名称
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
+    * Gets imageSize
+    *  镜像大小
+    *
+    * @return int|null
+    */
+    public function getImageSize()
+    {
+        return $this->container['imageSize'];
+    }
+
+    /**
+    * Sets imageSize
+    *
+    * @param int|null $imageSize 镜像大小
+    *
+    * @return $this
+    */
+    public function setImageSize($imageSize)
+    {
+        $this->container['imageSize'] = $imageSize;
+        return $this;
+    }
+
+    /**
+    * Gets startLatestUpdateTime
+    *  创建时间开始日期
+    *
+    * @return int|null
+    */
+    public function getStartLatestUpdateTime()
+    {
+        return $this->container['startLatestUpdateTime'];
+    }
+
+    /**
+    * Sets startLatestUpdateTime
+    *
+    * @param int|null $startLatestUpdateTime 创建时间开始日期
+    *
+    * @return $this
+    */
+    public function setStartLatestUpdateTime($startLatestUpdateTime)
+    {
+        $this->container['startLatestUpdateTime'] = $startLatestUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets endLatestUpdateTime
+    *  创建时间结束日期
+    *
+    * @return int|null
+    */
+    public function getEndLatestUpdateTime()
+    {
+        return $this->container['endLatestUpdateTime'];
+    }
+
+    /**
+    * Sets endLatestUpdateTime
+    *
+    * @param int|null $endLatestUpdateTime 创建时间结束日期
+    *
+    * @return $this
+    */
+    public function setEndLatestUpdateTime($endLatestUpdateTime)
+    {
+        $this->container['endLatestUpdateTime'] = $endLatestUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets startLatestScanTime
+    *  最近一次扫描完成时间开始日期
+    *
+    * @return int|null
+    */
+    public function getStartLatestScanTime()
+    {
+        return $this->container['startLatestScanTime'];
+    }
+
+    /**
+    * Sets startLatestScanTime
+    *
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期
+    *
+    * @return $this
+    */
+    public function setStartLatestScanTime($startLatestScanTime)
+    {
+        $this->container['startLatestScanTime'] = $startLatestScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets endLatestScanTime
+    *  最近一次扫描完成时间结束日期
+    *
+    * @return int|null
+    */
+    public function getEndLatestScanTime()
+    {
+        return $this->container['endLatestScanTime'];
+    }
+
+    /**
+    * Sets endLatestScanTime
+    *
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期
+    *
+    * @return $this
+    */
+    public function setEndLatestScanTime($endLatestScanTime)
+    {
+        $this->container['endLatestScanTime'] = $endLatestScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets hasMaliciousFile
+    *  是否存在恶意文件
+    *
+    * @return bool|null
+    */
+    public function getHasMaliciousFile()
+    {
+        return $this->container['hasMaliciousFile'];
+    }
+
+    /**
+    * Sets hasMaliciousFile
+    *
+    * @param bool|null $hasMaliciousFile 是否存在恶意文件
+    *
+    * @return $this
+    */
+    public function setHasMaliciousFile($hasMaliciousFile)
+    {
+        $this->container['hasMaliciousFile'] = $hasMaliciousFile;
+        return $this;
+    }
+
+    /**
+    * Gets hasUnsafeSetting
+    *  是否存在基线检查
+    *
+    * @return bool|null
+    */
+    public function getHasUnsafeSetting()
+    {
+        return $this->container['hasUnsafeSetting'];
+    }
+
+    /**
+    * Sets hasUnsafeSetting
+    *
+    * @param bool|null $hasUnsafeSetting 是否存在基线检查
+    *
+    * @return $this
+    */
+    public function setHasUnsafeSetting($hasUnsafeSetting)
+    {
+        $this->container['hasUnsafeSetting'] = $hasUnsafeSetting;
+        return $this;
+    }
+
+    /**
+    * Gets hasVul
+    *  是否存在软件漏洞
+    *
+    * @return bool|null
+    */
+    public function getHasVul()
+    {
+        return $this->container['hasVul'];
+    }
+
+    /**
+    * Sets hasVul
+    *
+    * @param bool|null $hasVul 是否存在软件漏洞
+    *
+    * @return $this
+    */
+    public function setHasVul($hasVul)
+    {
+        $this->container['hasVul'] = $hasVul;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

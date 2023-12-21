@@ -21,7 +21,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  更新 HPC 型文件系统的操作类型。当前仅支持取值 config_gc_time
-    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  更新 HPC 型文件系统的操作类型。当前仅支持取值 config_gc_time
-    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  更新 HPC 型文件系统的操作类型。当前仅支持取值 config_gc_time
-    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  更新 HPC 型文件系统的操作类型。当前仅支持取值 config_gc_time
-    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  更新 HPC 型文件系统的操作类型。当前仅支持取值 config_gc_time
-    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * gcTime  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets gcTime
-    *  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    *  文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @return int
     */
@@ -227,7 +227,7 @@ class UpdateHpcShareRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets gcTime
     *
-    * @param int $gcTime 文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。新建立的 OBS 绑定关系冷数据淘汰时间默认为 60 小时
+    * @param int $gcTime 文件系统冷数据淘汰时间，单位为小时，取值范围 [1, 100000000]。系统默认为 60 小时
     *
     * @return $this
     */

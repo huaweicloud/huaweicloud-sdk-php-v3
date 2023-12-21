@@ -28,6 +28,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     * version  版本号
     * updateTime  更新时间
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             'appName' => 'string',
             'version' => 'string',
             'updateTime' => 'int',
-            'recentScanTime' => 'int'
+            'recentScanTime' => 'int',
+            'containerId' => 'string',
+            'containerName' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     * version  版本号
     * updateTime  更新时间
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
         'appName' => null,
         'version' => null,
         'updateTime' => 'int64',
-        'recentScanTime' => 'int64'
+        'recentScanTime' => 'int64',
+        'containerId' => null,
+        'containerName' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     * version  版本号
     * updateTime  更新时间
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             'appName' => 'app_name',
             'version' => 'version',
             'updateTime' => 'update_time',
-            'recentScanTime' => 'recent_scan_time'
+            'recentScanTime' => 'recent_scan_time',
+            'containerId' => 'container_id',
+            'containerName' => 'container_name'
     ];
 
     /**
@@ -121,6 +133,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     * version  版本号
     * updateTime  更新时间
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             'appName' => 'setAppName',
             'version' => 'setVersion',
             'updateTime' => 'setUpdateTime',
-            'recentScanTime' => 'setRecentScanTime'
+            'recentScanTime' => 'setRecentScanTime',
+            'containerId' => 'setContainerId',
+            'containerName' => 'setContainerName'
     ];
 
     /**
@@ -145,6 +161,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     * version  版本号
     * updateTime  更新时间
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             'appName' => 'getAppName',
             'version' => 'getVersion',
             'updateTime' => 'getUpdateTime',
-            'recentScanTime' => 'getRecentScanTime'
+            'recentScanTime' => 'getRecentScanTime',
+            'containerId' => 'getContainerId',
+            'containerName' => 'getContainerName'
     ];
 
     /**
@@ -225,6 +245,8 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['recentScanTime'] = isset($data['recentScanTime']) ? $data['recentScanTime'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
+        $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
     }
 
     /**
@@ -282,6 +304,18 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'recentScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -486,6 +520,54 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     public function setRecentScanTime($recentScanTime)
     {
         $this->container['recentScanTime'] = $recentScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  容器id
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId 容器id
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
+        return $this;
+    }
+
+    /**
+    * Gets containerName
+    *  容器名称
+    *
+    * @return string|null
+    */
+    public function getContainerName()
+    {
+        return $this->container['containerName'];
+    }
+
+    /**
+    * Sets containerName
+    *
+    * @param string|null $containerName 容器名称
+    *
+    * @return $this
+    */
+    public function setContainerName($containerName)
+    {
+        $this->container['containerName'] = $containerName;
         return $this;
     }
 

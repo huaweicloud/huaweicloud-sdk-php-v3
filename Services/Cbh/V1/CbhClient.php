@@ -165,12 +165,12 @@ class CbhClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createInstance($request)
+    public function createCbh($request)
     {
-        return $this->createInstanceWithHttpInfo($request);
+        return $this->createCbhWithHttpInfo($request);
     }
 
-    public function createInstanceWithHttpInfo($request)
+    public function createCbhWithHttpInfo($request)
     {
         $resourcePath = '/v1/{project_id}/cbs/instance/create';
         $formParams = [];
@@ -213,8 +213,8 @@ class CbhClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\CreateInstanceResponse',
-            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\CreateInstanceRequest');
+            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\CreateCbhResponse',
+            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\CreateCbhRequest');
     }
 
     /**
@@ -289,12 +289,12 @@ class CbhClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function installInstanceEip($request)
+    public function installCbhEip($request)
     {
-        return $this->installInstanceEipWithHttpInfo($request);
+        return $this->installCbhEipWithHttpInfo($request);
     }
 
-    public function installInstanceEipWithHttpInfo($request)
+    public function installCbhEipWithHttpInfo($request)
     {
         $resourcePath = '/v1/{project_id}/cbs/instance/{server_id}/eip/bind';
         $formParams = [];
@@ -340,8 +340,8 @@ class CbhClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\InstallInstanceEipResponse',
-            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\InstallInstanceEipRequest');
+            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\InstallCbhEipResponse',
+            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\InstallCbhEipRequest');
     }
 
     /**
@@ -968,12 +968,12 @@ class CbhClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function uninstallInstanceEip($request)
+    public function uninstallCbhEip($request)
     {
-        return $this->uninstallInstanceEipWithHttpInfo($request);
+        return $this->uninstallCbhEipWithHttpInfo($request);
     }
 
-    public function uninstallInstanceEipWithHttpInfo($request)
+    public function uninstallCbhEipWithHttpInfo($request)
     {
         $resourcePath = '/v1/{project_id}/cbs/instance/{server_id}/eip/unbind';
         $formParams = [];
@@ -1019,8 +1019,8 @@ class CbhClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\UninstallInstanceEipResponse',
-            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\UninstallInstanceEipRequest');
+            $responseType='\HuaweiCloud\SDK\Cbh\V1\Model\UninstallCbhEipResponse',
+            $requestType='\HuaweiCloud\SDK\Cbh\V1\Model\UninstallCbhEipRequest');
     }
 
     /**

@@ -21,7 +21,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统id
-    * targetId  数据存储库 id
+    * targetId  绑定关系id
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统id
-    * targetId  数据存储库 id
+    * targetId  绑定关系id
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * shareId  文件系统id
-    * targetId  数据存储库 id
+    * targetId  绑定关系id
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统id
-    * targetId  数据存储库 id
+    * targetId  绑定关系id
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统id
-    * targetId  数据存储库 id
+    * targetId  绑定关系id
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  数据存储库 id
+    *  绑定关系id
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ShowBackendTargetInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 数据存储库 id
+    * @param string $targetId 绑定关系id
     *
     * @return $this
     */

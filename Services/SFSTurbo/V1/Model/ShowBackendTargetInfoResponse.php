@@ -21,11 +21,11 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetId  后端存储库 id
-    * creationTime  后端存储库创建时间
-    * fileSystemPath  文件系统路径
+    * targetId  绑定关系id
+    * creationTime  绑定关系创建时间
+    * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
-    * lifecycle  后端存储库生命周期描述信息
+    * lifecycle  绑定状态
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -43,11 +43,11 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetId  后端存储库 id
-    * creationTime  后端存储库创建时间
-    * fileSystemPath  文件系统路径
+    * targetId  绑定关系id
+    * creationTime  绑定关系创建时间
+    * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
-    * lifecycle  后端存储库生命周期描述信息
+    * lifecycle  绑定状态
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -86,11 +86,11 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetId  后端存储库 id
-    * creationTime  后端存储库创建时间
-    * fileSystemPath  文件系统路径
+    * targetId  绑定关系id
+    * creationTime  绑定关系创建时间
+    * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
-    * lifecycle  后端存储库生命周期描述信息
+    * lifecycle  绑定状态
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -108,11 +108,11 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetId  后端存储库 id
-    * creationTime  后端存储库创建时间
-    * fileSystemPath  文件系统路径
+    * targetId  绑定关系id
+    * creationTime  绑定关系创建时间
+    * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
-    * lifecycle  后端存储库生命周期描述信息
+    * lifecycle  绑定状态
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -130,11 +130,11 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetId  后端存储库 id
-    * creationTime  后端存储库创建时间
-    * fileSystemPath  文件系统路径
+    * targetId  绑定关系id
+    * creationTime  绑定关系创建时间
+    * fileSystemPath  联动目录名称
     * failureDetails  failureDetails
-    * lifecycle  后端存储库生命周期描述信息
+    * lifecycle  绑定状态
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -270,7 +270,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  后端存储库 id
+    *  绑定关系id
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId 后端存储库 id
+    * @param string|null $targetId 绑定关系id
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTime
-    *  后端存储库创建时间
+    *  绑定关系创建时间
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creationTime
     *
-    * @param string|null $creationTime 后端存储库创建时间
+    * @param string|null $creationTime 绑定关系创建时间
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSystemPath
-    *  文件系统路径
+    *  联动目录名称
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileSystemPath
     *
-    * @param string|null $fileSystemPath 文件系统路径
+    * @param string|null $fileSystemPath 联动目录名称
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lifecycle
-    *  后端存储库生命周期描述信息
+    *  绑定状态
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class ShowBackendTargetInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lifecycle
     *
-    * @param string|null $lifecycle 后端存储库生命周期描述信息
+    * @param string|null $lifecycle 绑定状态
     *
     * @return $this
     */

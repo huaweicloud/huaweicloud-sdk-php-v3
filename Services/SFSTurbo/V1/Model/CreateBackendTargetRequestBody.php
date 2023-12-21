@@ -20,7 +20,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fileSystemPath  文件系统路径
+    * fileSystemPath  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     * obs  obs
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fileSystemPath  文件系统路径
+    * fileSystemPath  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     * obs  obs
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fileSystemPath  文件系统路径
+    * fileSystemPath  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     * obs  obs
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fileSystemPath  文件系统路径
+    * fileSystemPath  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     * obs  obs
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fileSystemPath  文件系统路径
+    * fileSystemPath  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     * obs  obs
     *
     * @var string[]
@@ -191,7 +191,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSystemPath
-    *  文件系统路径
+    *  联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateBackendTargetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets fileSystemPath
     *
-    * @param string $fileSystemPath 文件系统路径
+    * @param string $fileSystemPath 联动目录名称，SFS Turbo会在文件系统根目录下以该名称创建一个子目录，该目录用于绑定后端存储。子目录名称不能重复，长度不能超过255个字符，子目录名称不能是“.”或“..”。不支持多层目录，不能包含字符'/'。
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
     * name  任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
     * description  任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-    * engineType  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * engineType  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     * isTargetReadonly  指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
@@ -78,7 +78,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
     * name  任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
     * description  任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-    * engineType  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * engineType  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     * isTargetReadonly  指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
@@ -153,7 +153,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
     * name  任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
     * description  任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-    * engineType  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * engineType  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     * isTargetReadonly  指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
@@ -207,7 +207,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
     * name  任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
     * description  任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-    * engineType  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * engineType  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     * isTargetReadonly  指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
@@ -261,7 +261,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
     * name  任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
     * description  任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-    * engineType  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * engineType  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     * isTargetReadonly  指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
@@ -357,6 +357,9 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     const ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL = 'cloudDataGuard-mysql';
     const ENGINE_TYPE_GAUSSDBV5 = 'gaussdbv5';
     const ENGINE_TYPE_POSTGRESQL = 'postgresql';
+    const ENGINE_TYPE_MYSQL_TO_KAFKA = 'mysql-to-kafka';
+    const ENGINE_TYPE_TAURUS_TO_KAFKA = 'taurus-to-kafka';
+    const ENGINE_TYPE_GAUSSDBV5HA_TO_KAFKA = 'gaussdbv5ha-to-kafka';
     const JOB_DIRECTION_UP = 'up';
     const JOB_DIRECTION_DOWN = 'down';
     const JOB_DIRECTION_NON_DBS = 'non-dbs';
@@ -398,6 +401,9 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             self::ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL,
             self::ENGINE_TYPE_GAUSSDBV5,
             self::ENGINE_TYPE_POSTGRESQL,
+            self::ENGINE_TYPE_MYSQL_TO_KAFKA,
+            self::ENGINE_TYPE_TAURUS_TO_KAFKA,
+            self::ENGINE_TYPE_GAUSSDBV5HA_TO_KAFKA,
         ];
     }
 
@@ -730,7 +736,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineType
-    *  引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    *  引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     *
     * @return string
     */
@@ -742,7 +748,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param string $engineType 引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+    * @param string $engineType 引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
     *
     * @return $this
     */

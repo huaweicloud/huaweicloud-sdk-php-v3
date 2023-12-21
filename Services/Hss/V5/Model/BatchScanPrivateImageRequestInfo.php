@@ -29,6 +29,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
     *
     * @var string[]
     */
@@ -41,7 +46,12 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             'imageVersion' => 'string',
             'imageType' => 'string',
             'scanStatus' => 'string',
-            'latestVersion' => 'bool'
+            'latestVersion' => 'bool',
+            'imageSize' => 'int',
+            'startLatestUpdateTime' => 'int',
+            'endLatestUpdateTime' => 'int',
+            'startLatestScanTime' => 'int',
+            'endLatestScanTime' => 'int'
     ];
 
     /**
@@ -55,6 +65,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
     *
     * @var string[]
     */
@@ -67,7 +82,12 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
         'imageVersion' => null,
         'imageType' => null,
         'scanStatus' => null,
-        'latestVersion' => null
+        'latestVersion' => null,
+        'imageSize' => 'int64',
+        'startLatestUpdateTime' => 'int64',
+        'endLatestUpdateTime' => 'int64',
+        'startLatestScanTime' => 'int64',
+        'endLatestScanTime' => 'int64'
     ];
 
     /**
@@ -102,6 +122,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
     *
     * @var string[]
     */
@@ -114,7 +139,12 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             'imageVersion' => 'image_version',
             'imageType' => 'image_type',
             'scanStatus' => 'scan_status',
-            'latestVersion' => 'latest_version'
+            'latestVersion' => 'latest_version',
+            'imageSize' => 'image_size',
+            'startLatestUpdateTime' => 'start_latest_update_time',
+            'endLatestUpdateTime' => 'end_latest_update_time',
+            'startLatestScanTime' => 'start_latest_scan_time',
+            'endLatestScanTime' => 'end_latest_scan_time'
     ];
 
     /**
@@ -128,6 +158,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
     *
     * @var string[]
     */
@@ -140,7 +175,12 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             'imageVersion' => 'setImageVersion',
             'imageType' => 'setImageType',
             'scanStatus' => 'setScanStatus',
-            'latestVersion' => 'setLatestVersion'
+            'latestVersion' => 'setLatestVersion',
+            'imageSize' => 'setImageSize',
+            'startLatestUpdateTime' => 'setStartLatestUpdateTime',
+            'endLatestUpdateTime' => 'setEndLatestUpdateTime',
+            'startLatestScanTime' => 'setStartLatestScanTime',
+            'endLatestScanTime' => 'setEndLatestScanTime'
     ];
 
     /**
@@ -154,6 +194,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * latestVersion  仅关注最新版本镜像
+    * imageSize  镜像大小
+    * startLatestUpdateTime  创建时间开始日期
+    * endLatestUpdateTime  创建时间结束日期
+    * startLatestScanTime  最近一次扫描完成时间开始日期
+    * endLatestScanTime  最近一次扫描完成时间结束日期
     *
     * @var string[]
     */
@@ -166,7 +211,12 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             'imageVersion' => 'getImageVersion',
             'imageType' => 'getImageType',
             'scanStatus' => 'getScanStatus',
-            'latestVersion' => 'getLatestVersion'
+            'latestVersion' => 'getLatestVersion',
+            'imageSize' => 'getImageSize',
+            'startLatestUpdateTime' => 'getStartLatestUpdateTime',
+            'endLatestUpdateTime' => 'getEndLatestUpdateTime',
+            'startLatestScanTime' => 'getStartLatestScanTime',
+            'endLatestScanTime' => 'getEndLatestScanTime'
     ];
 
     /**
@@ -236,6 +286,11 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
         $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
         $this->container['latestVersion'] = isset($data['latestVersion']) ? $data['latestVersion'] : null;
+        $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
+        $this->container['startLatestUpdateTime'] = isset($data['startLatestUpdateTime']) ? $data['startLatestUpdateTime'] : null;
+        $this->container['endLatestUpdateTime'] = isset($data['endLatestUpdateTime']) ? $data['endLatestUpdateTime'] : null;
+        $this->container['startLatestScanTime'] = isset($data['startLatestScanTime']) ? $data['startLatestScanTime'] : null;
+        $this->container['endLatestScanTime'] = isset($data['endLatestScanTime']) ? $data['endLatestScanTime'] : null;
     }
 
     /**
@@ -293,6 +348,36 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'imageSize', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'imageSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startLatestUpdateTime']) && ($this->container['startLatestUpdateTime'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'startLatestUpdateTime', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['startLatestUpdateTime']) && ($this->container['startLatestUpdateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'startLatestUpdateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['endLatestUpdateTime']) && ($this->container['endLatestUpdateTime'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'endLatestUpdateTime', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['endLatestUpdateTime']) && ($this->container['endLatestUpdateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'endLatestUpdateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startLatestScanTime']) && ($this->container['startLatestScanTime'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'startLatestScanTime', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['startLatestScanTime']) && ($this->container['startLatestScanTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'startLatestScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['endLatestScanTime']) && ($this->container['endLatestScanTime'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'endLatestScanTime', must be smaller than or equal to 2147483547.";
+            }
+            if (!is_null($this->container['endLatestScanTime']) && ($this->container['endLatestScanTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'endLatestScanTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -521,6 +606,126 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     public function setLatestVersion($latestVersion)
     {
         $this->container['latestVersion'] = $latestVersion;
+        return $this;
+    }
+
+    /**
+    * Gets imageSize
+    *  镜像大小
+    *
+    * @return int|null
+    */
+    public function getImageSize()
+    {
+        return $this->container['imageSize'];
+    }
+
+    /**
+    * Sets imageSize
+    *
+    * @param int|null $imageSize 镜像大小
+    *
+    * @return $this
+    */
+    public function setImageSize($imageSize)
+    {
+        $this->container['imageSize'] = $imageSize;
+        return $this;
+    }
+
+    /**
+    * Gets startLatestUpdateTime
+    *  创建时间开始日期
+    *
+    * @return int|null
+    */
+    public function getStartLatestUpdateTime()
+    {
+        return $this->container['startLatestUpdateTime'];
+    }
+
+    /**
+    * Sets startLatestUpdateTime
+    *
+    * @param int|null $startLatestUpdateTime 创建时间开始日期
+    *
+    * @return $this
+    */
+    public function setStartLatestUpdateTime($startLatestUpdateTime)
+    {
+        $this->container['startLatestUpdateTime'] = $startLatestUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets endLatestUpdateTime
+    *  创建时间结束日期
+    *
+    * @return int|null
+    */
+    public function getEndLatestUpdateTime()
+    {
+        return $this->container['endLatestUpdateTime'];
+    }
+
+    /**
+    * Sets endLatestUpdateTime
+    *
+    * @param int|null $endLatestUpdateTime 创建时间结束日期
+    *
+    * @return $this
+    */
+    public function setEndLatestUpdateTime($endLatestUpdateTime)
+    {
+        $this->container['endLatestUpdateTime'] = $endLatestUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets startLatestScanTime
+    *  最近一次扫描完成时间开始日期
+    *
+    * @return int|null
+    */
+    public function getStartLatestScanTime()
+    {
+        return $this->container['startLatestScanTime'];
+    }
+
+    /**
+    * Sets startLatestScanTime
+    *
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期
+    *
+    * @return $this
+    */
+    public function setStartLatestScanTime($startLatestScanTime)
+    {
+        $this->container['startLatestScanTime'] = $startLatestScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets endLatestScanTime
+    *  最近一次扫描完成时间结束日期
+    *
+    * @return int|null
+    */
+    public function getEndLatestScanTime()
+    {
+        return $this->container['endLatestScanTime'];
+    }
+
+    /**
+    * Sets endLatestScanTime
+    *
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期
+    *
+    * @return $this
+    */
+    public function setEndLatestScanTime($endLatestScanTime)
+    {
+        $this->container['endLatestScanTime'] = $endLatestScanTime;
         return $this;
     }
 

@@ -30,6 +30,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'userGroup' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'category' => 'string',
+            'partMatch' => 'bool'
     ];
 
     /**
@@ -58,6 +62,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
         'userGroup' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'category' => null,
+        'partMatch' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'userGroup' => 'user_group',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'category' => 'category',
+            'partMatch' => 'part_match'
     ];
 
     /**
@@ -135,6 +147,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'userGroup' => 'setUserGroup',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'category' => 'setCategory',
+            'partMatch' => 'setPartMatch'
     ];
 
     /**
@@ -163,6 +179,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             'userGroup' => 'getUserGroup',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'category' => 'getCategory',
+            'partMatch' => 'getPartMatch'
     ];
 
     /**
@@ -247,6 +267,8 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['partMatch'] = isset($data['partMatch']) ? $data['partMatch'] : null;
     }
 
     /**
@@ -304,6 +326,12 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -556,6 +584,54 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets partMatch
+    *  是否模糊匹配，默认false表示精确匹配
+    *
+    * @return bool|null
+    */
+    public function getPartMatch()
+    {
+        return $this->container['partMatch'];
+    }
+
+    /**
+    * Sets partMatch
+    *
+    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    *
+    * @return $this
+    */
+    public function setPartMatch($partMatch)
+    {
+        $this->container['partMatch'] = $partMatch;
         return $this;
     }
 

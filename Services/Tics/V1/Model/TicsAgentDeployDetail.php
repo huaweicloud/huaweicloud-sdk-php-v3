@@ -27,6 +27,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     * consoleIp  可信节点所在ip
     * consolePort  可信节点服务端口
     * hostPath  主机挂载路径，本地挂载才会有值
+    * iefInstanceId  ief白金版实例id, 仅IEF高可用部署有值
     * namespaceName  命名空间名称
     * obsPvcName  可信节点CCE部署场景，对象文件存储PVC
     * persistenceId  持久化存储唯一标识
@@ -43,6 +44,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
             'consoleIp' => 'string',
             'consolePort' => 'int',
             'hostPath' => 'string',
+            'iefInstanceId' => 'string',
             'namespaceName' => 'string',
             'obsPvcName' => 'string',
             'persistenceId' => 'string',
@@ -59,6 +61,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     * consoleIp  可信节点所在ip
     * consolePort  可信节点服务端口
     * hostPath  主机挂载路径，本地挂载才会有值
+    * iefInstanceId  ief白金版实例id, 仅IEF高可用部署有值
     * namespaceName  命名空间名称
     * obsPvcName  可信节点CCE部署场景，对象文件存储PVC
     * persistenceId  持久化存储唯一标识
@@ -75,6 +78,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
         'consoleIp' => null,
         'consolePort' => 'int32',
         'hostPath' => null,
+        'iefInstanceId' => null,
         'namespaceName' => null,
         'obsPvcName' => null,
         'persistenceId' => null,
@@ -112,6 +116,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     * consoleIp  可信节点所在ip
     * consolePort  可信节点服务端口
     * hostPath  主机挂载路径，本地挂载才会有值
+    * iefInstanceId  ief白金版实例id, 仅IEF高可用部署有值
     * namespaceName  命名空间名称
     * obsPvcName  可信节点CCE部署场景，对象文件存储PVC
     * persistenceId  持久化存储唯一标识
@@ -128,6 +133,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
             'consoleIp' => 'console_ip',
             'consolePort' => 'console_port',
             'hostPath' => 'host_path',
+            'iefInstanceId' => 'ief_instance_id',
             'namespaceName' => 'namespace_name',
             'obsPvcName' => 'obs_pvc_name',
             'persistenceId' => 'persistence_id',
@@ -144,6 +150,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     * consoleIp  可信节点所在ip
     * consolePort  可信节点服务端口
     * hostPath  主机挂载路径，本地挂载才会有值
+    * iefInstanceId  ief白金版实例id, 仅IEF高可用部署有值
     * namespaceName  命名空间名称
     * obsPvcName  可信节点CCE部署场景，对象文件存储PVC
     * persistenceId  持久化存储唯一标识
@@ -160,6 +167,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
             'consoleIp' => 'setConsoleIp',
             'consolePort' => 'setConsolePort',
             'hostPath' => 'setHostPath',
+            'iefInstanceId' => 'setIefInstanceId',
             'namespaceName' => 'setNamespaceName',
             'obsPvcName' => 'setObsPvcName',
             'persistenceId' => 'setPersistenceId',
@@ -176,6 +184,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     * consoleIp  可信节点所在ip
     * consolePort  可信节点服务端口
     * hostPath  主机挂载路径，本地挂载才会有值
+    * iefInstanceId  ief白金版实例id, 仅IEF高可用部署有值
     * namespaceName  命名空间名称
     * obsPvcName  可信节点CCE部署场景，对象文件存储PVC
     * persistenceId  持久化存储唯一标识
@@ -192,6 +201,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
             'consoleIp' => 'getConsoleIp',
             'consolePort' => 'getConsolePort',
             'hostPath' => 'getHostPath',
+            'iefInstanceId' => 'getIefInstanceId',
             'namespaceName' => 'getNamespaceName',
             'obsPvcName' => 'getObsPvcName',
             'persistenceId' => 'getPersistenceId',
@@ -264,6 +274,7 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
         $this->container['consoleIp'] = isset($data['consoleIp']) ? $data['consoleIp'] : null;
         $this->container['consolePort'] = isset($data['consolePort']) ? $data['consolePort'] : null;
         $this->container['hostPath'] = isset($data['hostPath']) ? $data['hostPath'] : null;
+        $this->container['iefInstanceId'] = isset($data['iefInstanceId']) ? $data['iefInstanceId'] : null;
         $this->container['namespaceName'] = isset($data['namespaceName']) ? $data['namespaceName'] : null;
         $this->container['obsPvcName'] = isset($data['obsPvcName']) ? $data['obsPvcName'] : null;
         $this->container['persistenceId'] = isset($data['persistenceId']) ? $data['persistenceId'] : null;
@@ -458,6 +469,30 @@ class TicsAgentDeployDetail implements ModelInterface, ArrayAccess
     public function setHostPath($hostPath)
     {
         $this->container['hostPath'] = $hostPath;
+        return $this;
+    }
+
+    /**
+    * Gets iefInstanceId
+    *  ief白金版实例id, 仅IEF高可用部署有值
+    *
+    * @return string|null
+    */
+    public function getIefInstanceId()
+    {
+        return $this->container['iefInstanceId'];
+    }
+
+    /**
+    * Sets iefInstanceId
+    *
+    * @param string|null $iefInstanceId ief白金版实例id, 仅IEF高可用部署有值
+    *
+    * @return $this
+    */
+    public function setIefInstanceId($iefInstanceId)
+    {
+        $this->container['iefInstanceId'] = $iefInstanceId;
         return $this;
     }
 

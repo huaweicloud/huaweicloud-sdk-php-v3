@@ -23,13 +23,17 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     * idcardImage1  身份证人像面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * idcardImage2  身份证国徽面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'idcardImage1' => 'string',
             'idcardImage2' => 'string',
-            'faceImage' => 'string'
+            'faceImage' => 'string',
+            'detail' => 'bool',
+            'crop' => 'bool'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     * idcardImage1  身份证人像面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * idcardImage2  身份证国徽面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'idcardImage1' => null,
         'idcardImage2' => null,
-        'faceImage' => null
+        'faceImage' => null,
+        'detail' => null,
+        'crop' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     * idcardImage1  身份证人像面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * idcardImage2  身份证国徽面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'idcardImage1' => 'idcard_image1',
             'idcardImage2' => 'idcard_image2',
-            'faceImage' => 'face_image'
+            'faceImage' => 'face_image',
+            'detail' => 'detail',
+            'crop' => 'crop'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     * idcardImage1  身份证人像面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * idcardImage2  身份证国徽面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $setters = [
             'idcardImage1' => 'setIdcardImage1',
             'idcardImage2' => 'setIdcardImage2',
-            'faceImage' => 'setFaceImage'
+            'faceImage' => 'setFaceImage',
+            'detail' => 'setDetail',
+            'crop' => 'setCrop'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     * idcardImage1  身份证人像面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * idcardImage2  身份证国徽面图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $getters = [
             'idcardImage1' => 'getIdcardImage1',
             'idcardImage2' => 'getIdcardImage2',
-            'faceImage' => 'getFaceImage'
+            'faceImage' => 'getFaceImage',
+            'detail' => 'getDetail',
+            'crop' => 'getCrop'
     ];
 
     /**
@@ -170,6 +190,8 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
         $this->container['idcardImage1'] = isset($data['idcardImage1']) ? $data['idcardImage1'] : null;
         $this->container['idcardImage2'] = isset($data['idcardImage2']) ? $data['idcardImage2'] : null;
         $this->container['faceImage'] = isset($data['faceImage']) ? $data['faceImage'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
+        $this->container['crop'] = isset($data['crop']) ? $data['crop'] : null;
     }
 
     /**
@@ -269,6 +291,54 @@ class ReqDataByIdCardImage implements ModelInterface, ArrayAccess
     public function setFaceImage($faceImage)
     {
         $this->container['faceImage'] = $faceImage;
+        return $this;
+    }
+
+    /**
+    * Gets detail
+    *  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return bool|null
+    */
+    public function getDetail()
+    {
+        return $this->container['detail'];
+    }
+
+    /**
+    * Sets detail
+    *
+    * @param bool|null $detail 响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return $this
+    */
+    public function setDetail($detail)
+    {
+        $this->container['detail'] = $detail;
+        return $this;
+    }
+
+    /**
+    * Gets crop
+    *  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
+    *
+    * @return bool|null
+    */
+    public function getCrop()
+    {
+        return $this->container['crop'];
+    }
+
+    /**
+    * Sets crop
+    *
+    * @param bool|null $crop 是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
+    *
+    * @return $this
+    */
+    public function setCrop($crop)
+    {
+        $this->container['crop'] = $crop;
         return $this;
     }
 

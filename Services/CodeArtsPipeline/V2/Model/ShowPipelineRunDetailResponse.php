@@ -76,7 +76,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'groupName' => 'string',
             'detailUrl' => 'string',
-            'currentSystemTime' => 'string'
+            'currentSystemTime' => 'int'
     ];
 
     /**
@@ -136,7 +136,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
         'groupId' => null,
         'groupName' => null,
         'detailUrl' => null,
-        'currentSystemTime' => null
+        'currentSystemTime' => 'int64'
     ];
 
     /**
@@ -1052,7 +1052,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * Gets currentSystemTime
     *  当前系统时间
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCurrentSystemTime()
     {
@@ -1062,7 +1062,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currentSystemTime
     *
-    * @param string|null $currentSystemTime 当前系统时间
+    * @param int|null $currentSystemTime 当前系统时间
     *
     * @return $this
     */

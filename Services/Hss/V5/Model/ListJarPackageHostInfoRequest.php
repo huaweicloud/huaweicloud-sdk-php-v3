@@ -27,6 +27,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     * hostIp  服务器IP
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'hostIp' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'partMatch' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     * hostIp  服务器IP
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
         'hostName' => null,
         'hostIp' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'partMatch' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     * hostIp  服务器IP
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'partMatch' => 'part_match'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     * hostIp  服务器IP
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'partMatch' => 'setPartMatch'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     * hostIp  服务器IP
     * limit  默认10
     * offset  默认是0
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'partMatch' => 'getPartMatch'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['partMatch'] = isset($data['partMatch']) ? $data['partMatch'] : null;
     }
 
     /**
@@ -448,6 +459,30 @@ class ListJarPackageHostInfoRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets partMatch
+    *  是否模糊匹配，默认false表示精确匹配
+    *
+    * @return bool|null
+    */
+    public function getPartMatch()
+    {
+        return $this->container['partMatch'];
+    }
+
+    /**
+    * Sets partMatch
+    *
+    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    *
+    * @return $this
+    */
+    public function setPartMatch($partMatch)
+    {
+        $this->container['partMatch'] = $partMatch;
         return $this;
     }
 

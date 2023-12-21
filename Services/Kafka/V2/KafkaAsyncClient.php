@@ -366,9 +366,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 关闭kafka manager
+     * 关闭Kafka Manager
      *
-     * 关闭kafka manager，相应的原来开放出的management相关接口也将不可用
+     * 关闭Kafka Manager，相应的原来开放出的management相关接口也将不可用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -540,11 +540,11 @@ class KafkaAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'order_id']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'order_id'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -843,9 +843,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 创建客户端流控配置
+     * 创建用户/客户端流控配置
      *
-     * 该接口用于向Kafka实例提交创建user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 该接口用于向Kafka实例提交创建用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -907,77 +907,6 @@ class KafkaAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateKafkaUserClientQuotaTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateKafkaUserClientQuotaTaskRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 新增Kafka实例指定Topic分区
-     *
-     * 新增Kafka实例指定Topic分区。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createPartitionAsync($request)
-    {
-        return $this->createPartitionAsyncWithHttpInfo($request);
-    }
-    
-    public function createPartitionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/partitions-reassignment';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['topic'] !== null) {
-            $pathParams['topic'] = $localVarParams['topic'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreatePartitionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreatePartitionRequest',
             $asyncRequest = true);
     }
 
@@ -1251,9 +1180,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 关闭实例转储节点
+     * 关闭Smart Connect（按需实例）
      *
-     * 关闭实例转储节点。
+     * 介绍按需实例如何关闭Smart Connect。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1287,11 +1216,11 @@ class KafkaAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'job_id']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'job_id'],
+                ['application/json'],
                 []
             );
         }
@@ -1381,9 +1310,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 删除客户端流控设置
+     * 删除用户/客户端流控配置
      *
-     * 该接口用于向Kafka实例提交删除user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 该接口用于向Kafka实例提交删除用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2453,7 +2382,7 @@ class KafkaAsyncClient extends Client
     /**
      * 重置密码
      *
-     * 重置密码。
+     * 重置密码（只针对开通SSL的实例）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2590,9 +2519,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 实例规格变更
+     * 实例扩容
      *
-     * 实例规格变更。[当前通过调用API，只支持按需实例进行实例规格变更。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+     * 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2661,9 +2590,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 实例规格变更
+     * 实例扩容
      *
-     * 实例规格变更。[当前通过调用API，只支持按需实例进行实例规格变更。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+     * 实例扩容。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2790,6 +2719,77 @@ class KafkaAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\RestartManagerResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\RestartManagerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * Kafka生产消息
+     *
+     * 在控制台发送指定消息到Kafka实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function sendKafkaMessageAsync($request)
+    {
+        return $this->sendKafkaMessageAsyncWithHttpInfo($request);
+    }
+    
+    public function sendKafkaMessageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/messages/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['actionId'] !== null) {
+            $queryParams['action_id'] = $localVarParams['actionId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequest',
             $asyncRequest = true);
     }
 
@@ -3829,7 +3829,7 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 查询客户端流控配置
+     * 查询用户/客户端流控配置
      *
      * 该接口用于向Kafka实例查询流控的配置，若成功则返回流控配置的列表。
      * 
@@ -4822,9 +4822,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 修改客户端流控设置
+     * 修改用户/客户端流控配置
      *
-     * 该接口用于向Kafka实例提交修改user、client级别的流控任务，若成功则返回流控任务的job id。
+     * 该接口用于向Kafka实例提交修改用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

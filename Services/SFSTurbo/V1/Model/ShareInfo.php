@@ -41,6 +41,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
     * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
+    * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
+    * tags  tag标签的列表。
     *
     * @var string[]
     */
@@ -65,7 +67,9 @@ class ShareInfo implements ModelInterface, ArrayAccess
             'status' => 'string',
             'subStatus' => 'string',
             'subnetId' => 'string',
-            'vpcId' => 'string'
+            'vpcId' => 'string',
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
     ];
 
     /**
@@ -91,6 +95,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
     * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
+    * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
+    * tags  tag标签的列表。
     *
     * @var string[]
     */
@@ -115,7 +121,9 @@ class ShareInfo implements ModelInterface, ArrayAccess
         'status' => null,
         'subStatus' => null,
         'subnetId' => null,
-        'vpcId' => null
+        'vpcId' => null,
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -162,6 +170,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
     * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
+    * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
+    * tags  tag标签的列表。
     *
     * @var string[]
     */
@@ -186,7 +196,9 @@ class ShareInfo implements ModelInterface, ArrayAccess
             'status' => 'status',
             'subStatus' => 'sub_status',
             'subnetId' => 'subnet_id',
-            'vpcId' => 'vpc_id'
+            'vpcId' => 'vpc_id',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -212,6 +224,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
     * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
+    * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
+    * tags  tag标签的列表。
     *
     * @var string[]
     */
@@ -236,7 +250,9 @@ class ShareInfo implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'subStatus' => 'setSubStatus',
             'subnetId' => 'setSubnetId',
-            'vpcId' => 'setVpcId'
+            'vpcId' => 'setVpcId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -262,6 +278,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
     * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
+    * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
+    * tags  tag标签的列表。
     *
     * @var string[]
     */
@@ -286,7 +304,9 @@ class ShareInfo implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'subStatus' => 'getSubStatus',
             'subnetId' => 'getSubnetId',
-            'vpcId' => 'getVpcId'
+            'vpcId' => 'getVpcId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -383,6 +403,8 @@ class ShareInfo implements ModelInterface, ArrayAccess
         $this->container['subStatus'] = isset($data['subStatus']) ? $data['subStatus'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -916,6 +938,54 @@ class ShareInfo implements ModelInterface, ArrayAccess
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  SFS Turbo文件系统绑定的企业项目ID。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId SFS Turbo文件系统绑定的企业项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  tag标签的列表。
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]|null $tags tag标签的列表。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

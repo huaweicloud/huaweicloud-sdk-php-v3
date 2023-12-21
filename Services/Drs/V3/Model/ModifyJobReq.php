@@ -306,6 +306,11 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     const ENGINE_TYPE_MYSQL = 'mysql';
     const ENGINE_TYPE_MONGODB = 'mongodb';
     const ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL = 'cloudDataGuard-mysql';
+    const ENGINE_TYPE_GAUSSDBV5 = 'gaussdbv5';
+    const ENGINE_TYPE_POSTGRESQL = 'postgresql';
+    const ENGINE_TYPE_MYSQL_TO_KAFKA = 'mysql-to-kafka';
+    const ENGINE_TYPE_TAURUS_TO_KAFKA = 'taurus-to-kafka';
+    const ENGINE_TYPE_GAUSSDBV5HA_TO_KAFKA = 'gaussdbv5ha-to-kafka';
     const NET_TYPE_VPC = 'vpc';
     const NET_TYPE_VPN = 'vpn';
     const NET_TYPE_EIP = 'eip';
@@ -354,6 +359,11 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
             self::ENGINE_TYPE_MYSQL,
             self::ENGINE_TYPE_MONGODB,
             self::ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL,
+            self::ENGINE_TYPE_GAUSSDBV5,
+            self::ENGINE_TYPE_POSTGRESQL,
+            self::ENGINE_TYPE_MYSQL_TO_KAFKA,
+            self::ENGINE_TYPE_TAURUS_TO_KAFKA,
+            self::ENGINE_TYPE_GAUSSDBV5HA_TO_KAFKA,
         ];
     }
 

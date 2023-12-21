@@ -23,6 +23,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
     * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
     * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
+    * scanVulTypes  扫描的漏洞类型列表
     * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanPeriod' => 'string',
             'scanRangeType' => 'string',
             'hostIds' => 'string[]',
+            'scanVulTypes' => 'string[]',
             'status' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
     * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
     * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
+    * scanVulTypes  扫描的漏洞类型列表
     * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
         'scanPeriod' => null,
         'scanRangeType' => null,
         'hostIds' => null,
+        'scanVulTypes' => null,
         'status' => null
     ];
 
@@ -76,6 +80,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
     * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
     * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
+    * scanVulTypes  扫描的漏洞类型列表
     * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanPeriod' => 'scan_period',
             'scanRangeType' => 'scan_range_type',
             'hostIds' => 'host_ids',
+            'scanVulTypes' => 'scan_vul_types',
             'status' => 'status'
     ];
 
@@ -92,6 +98,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
     * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
     * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
+    * scanVulTypes  扫描的漏洞类型列表
     * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanPeriod' => 'setScanPeriod',
             'scanRangeType' => 'setScanRangeType',
             'hostIds' => 'setHostIds',
+            'scanVulTypes' => 'setScanVulTypes',
             'status' => 'setStatus'
     ];
 
@@ -108,6 +116,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
     * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
     * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
+    * scanVulTypes  扫描的漏洞类型列表
     * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanPeriod' => 'getScanPeriod',
             'scanRangeType' => 'getScanRangeType',
             'hostIds' => 'getHostIds',
+            'scanVulTypes' => 'getScanVulTypes',
             'status' => 'getStatus'
     ];
 
@@ -180,6 +190,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
         $this->container['scanPeriod'] = isset($data['scanPeriod']) ? $data['scanPeriod'] : null;
         $this->container['scanRangeType'] = isset($data['scanRangeType']) ? $data['scanRangeType'] : null;
         $this->container['hostIds'] = isset($data['hostIds']) ? $data['hostIds'] : null;
+        $this->container['scanVulTypes'] = isset($data['scanVulTypes']) ? $data['scanVulTypes'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -301,6 +312,30 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     public function setHostIds($hostIds)
     {
         $this->container['hostIds'] = $hostIds;
+        return $this;
+    }
+
+    /**
+    * Gets scanVulTypes
+    *  扫描的漏洞类型列表
+    *
+    * @return string[]|null
+    */
+    public function getScanVulTypes()
+    {
+        return $this->container['scanVulTypes'];
+    }
+
+    /**
+    * Sets scanVulTypes
+    *
+    * @param string[]|null $scanVulTypes 扫描的漏洞类型列表
+    *
+    * @return $this
+    */
+    public function setScanVulTypes($scanVulTypes)
+    {
+        $this->container['scanVulTypes'] = $scanVulTypes;
         return $this;
     }
 

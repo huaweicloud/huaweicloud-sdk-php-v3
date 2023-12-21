@@ -25,6 +25,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * video  现场拍摄人像视频数据，使用base64编码，要求base64编码后大小不超过10M。
     * actions  动作代码顺序列表，英文逗号（,）分隔。建议单动作，目前支持的动作有： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
     * nodThreshold  该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
             'verificationId' => 'string',
             'video' => 'string',
             'actions' => 'string',
-            'nodThreshold' => 'double'
+            'nodThreshold' => 'double',
+            'detail' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * video  现场拍摄人像视频数据，使用base64编码，要求base64编码后大小不超过10M。
     * actions  动作代码顺序列表，英文逗号（,）分隔。建议单动作，目前支持的动作有： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
     * nodThreshold  该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
         'verificationId' => null,
         'video' => null,
         'actions' => null,
-        'nodThreshold' => 'double'
+        'nodThreshold' => 'double',
+        'detail' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * video  现场拍摄人像视频数据，使用base64编码，要求base64编码后大小不超过10M。
     * actions  动作代码顺序列表，英文逗号（,）分隔。建议单动作，目前支持的动作有： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
     * nodThreshold  该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
             'verificationId' => 'verification_id',
             'video' => 'video',
             'actions' => 'actions',
-            'nodThreshold' => 'nod_threshold'
+            'nodThreshold' => 'nod_threshold',
+            'detail' => 'detail'
     ];
 
     /**
@@ -100,6 +106,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * video  现场拍摄人像视频数据，使用base64编码，要求base64编码后大小不超过10M。
     * actions  动作代码顺序列表，英文逗号（,）分隔。建议单动作，目前支持的动作有： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
     * nodThreshold  该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
             'verificationId' => 'setVerificationId',
             'video' => 'setVideo',
             'actions' => 'setActions',
-            'nodThreshold' => 'setNodThreshold'
+            'nodThreshold' => 'setNodThreshold',
+            'detail' => 'setDetail'
     ];
 
     /**
@@ -118,6 +126,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * video  现场拍摄人像视频数据，使用base64编码，要求base64编码后大小不超过10M。
     * actions  动作代码顺序列表，英文逗号（,）分隔。建议单动作，目前支持的动作有： • 1：左摇头 • 2：右摇头 • 3：点头 • 4：嘴部动作
     * nodThreshold  该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
             'verificationId' => 'getVerificationId',
             'video' => 'getVideo',
             'actions' => 'getActions',
-            'nodThreshold' => 'getNodThreshold'
+            'nodThreshold' => 'getNodThreshold',
+            'detail' => 'getDetail'
     ];
 
     /**
@@ -192,6 +202,7 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
         $this->container['video'] = isset($data['video']) ? $data['video'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
         $this->container['nodThreshold'] = isset($data['nodThreshold']) ? $data['nodThreshold'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
     /**
@@ -345,6 +356,30 @@ class StandardReqDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     public function setNodThreshold($nodThreshold)
     {
         $this->container['nodThreshold'] = $nodThreshold;
+        return $this;
+    }
+
+    /**
+    * Gets detail
+    *  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return bool|null
+    */
+    public function getDetail()
+    {
+        return $this->container['detail'];
+    }
+
+    /**
+    * Sets detail
+    *
+    * @param bool|null $detail 响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return $this
+    */
+    public function setDetail($detail)
+    {
+        $this->container['detail'] = $detail;
         return $this;
     }
 

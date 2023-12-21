@@ -27,6 +27,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     * dataDiskImageId  导入数据盘的数据盘镜像ID。
     * snapshotId  磁盘备份的快照ID。
     * metadata  metadata
+    * iops  云硬盘iops
+    * throughput  云硬盘吞吐量
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class DiskResult implements ModelInterface, ArrayAccess
             'dedicatedStorageId' => 'string',
             'dataDiskImageId' => 'string',
             'snapshotId' => 'string',
-            'metadata' => '\HuaweiCloud\SDK\_As\V1\Model\MetaData'
+            'metadata' => '\HuaweiCloud\SDK\_As\V1\Model\MetaData',
+            'iops' => 'int',
+            'throughput' => 'int'
     ];
 
     /**
@@ -49,6 +53,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     * dataDiskImageId  导入数据盘的数据盘镜像ID。
     * snapshotId  磁盘备份的快照ID。
     * metadata  metadata
+    * iops  云硬盘iops
+    * throughput  云硬盘吞吐量
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class DiskResult implements ModelInterface, ArrayAccess
         'dedicatedStorageId' => null,
         'dataDiskImageId' => null,
         'snapshotId' => null,
-        'metadata' => null
+        'metadata' => null,
+        'iops' => 'int32',
+        'throughput' => 'int32'
     ];
 
     /**
@@ -92,6 +100,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     * dataDiskImageId  导入数据盘的数据盘镜像ID。
     * snapshotId  磁盘备份的快照ID。
     * metadata  metadata
+    * iops  云硬盘iops
+    * throughput  云硬盘吞吐量
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class DiskResult implements ModelInterface, ArrayAccess
             'dedicatedStorageId' => 'dedicated_storage_id',
             'dataDiskImageId' => 'data_disk_image_id',
             'snapshotId' => 'snapshot_id',
-            'metadata' => 'metadata'
+            'metadata' => 'metadata',
+            'iops' => 'iops',
+            'throughput' => 'throughput'
     ];
 
     /**
@@ -114,6 +126,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     * dataDiskImageId  导入数据盘的数据盘镜像ID。
     * snapshotId  磁盘备份的快照ID。
     * metadata  metadata
+    * iops  云硬盘iops
+    * throughput  云硬盘吞吐量
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class DiskResult implements ModelInterface, ArrayAccess
             'dedicatedStorageId' => 'setDedicatedStorageId',
             'dataDiskImageId' => 'setDataDiskImageId',
             'snapshotId' => 'setSnapshotId',
-            'metadata' => 'setMetadata'
+            'metadata' => 'setMetadata',
+            'iops' => 'setIops',
+            'throughput' => 'setThroughput'
     ];
 
     /**
@@ -136,6 +152,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     * dataDiskImageId  导入数据盘的数据盘镜像ID。
     * snapshotId  磁盘备份的快照ID。
     * metadata  metadata
+    * iops  云硬盘iops
+    * throughput  云硬盘吞吐量
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class DiskResult implements ModelInterface, ArrayAccess
             'dedicatedStorageId' => 'getDedicatedStorageId',
             'dataDiskImageId' => 'getDataDiskImageId',
             'snapshotId' => 'getSnapshotId',
-            'metadata' => 'getMetadata'
+            'metadata' => 'getMetadata',
+            'iops' => 'getIops',
+            'throughput' => 'getThroughput'
     ];
 
     /**
@@ -194,6 +214,8 @@ class DiskResult implements ModelInterface, ArrayAccess
     const VOLUME_TYPE_SSD = 'SSD';
     const VOLUME_TYPE_CO_PL = 'co-pl';
     const VOLUME_TYPE_UH_11 = 'uh-11';
+    const VOLUME_TYPE_GPSSD2 = 'GPSSD2';
+    const VOLUME_TYPE_ESSD2 = 'ESSD2';
     const DISK_TYPE_SYS = 'SYS';
     const DISK_TYPE_DATA = 'DATA';
     
@@ -211,6 +233,8 @@ class DiskResult implements ModelInterface, ArrayAccess
             self::VOLUME_TYPE_SSD,
             self::VOLUME_TYPE_CO_PL,
             self::VOLUME_TYPE_UH_11,
+            self::VOLUME_TYPE_GPSSD2,
+            self::VOLUME_TYPE_ESSD2,
         ];
     }
 
@@ -250,6 +274,8 @@ class DiskResult implements ModelInterface, ArrayAccess
         $this->container['dataDiskImageId'] = isset($data['dataDiskImageId']) ? $data['dataDiskImageId'] : null;
         $this->container['snapshotId'] = isset($data['snapshotId']) ? $data['snapshotId'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
+        $this->container['throughput'] = isset($data['throughput']) ? $data['throughput'] : null;
     }
 
     /**
@@ -464,6 +490,54 @@ class DiskResult implements ModelInterface, ArrayAccess
     public function setMetadata($metadata)
     {
         $this->container['metadata'] = $metadata;
+        return $this;
+    }
+
+    /**
+    * Gets iops
+    *  云硬盘iops
+    *
+    * @return int|null
+    */
+    public function getIops()
+    {
+        return $this->container['iops'];
+    }
+
+    /**
+    * Sets iops
+    *
+    * @param int|null $iops 云硬盘iops
+    *
+    * @return $this
+    */
+    public function setIops($iops)
+    {
+        $this->container['iops'] = $iops;
+        return $this;
+    }
+
+    /**
+    * Gets throughput
+    *  云硬盘吞吐量
+    *
+    * @return int|null
+    */
+    public function getThroughput()
+    {
+        return $this->container['throughput'];
+    }
+
+    /**
+    * Sets throughput
+    *
+    * @param int|null $throughput 云硬盘吞吐量
+    *
+    * @return $this
+    */
+    public function setThroughput($throughput)
+    {
+        $this->container['throughput'] = $throughput;
         return $this;
     }
 

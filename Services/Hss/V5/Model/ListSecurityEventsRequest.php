@@ -26,6 +26,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * containerName  容器实例名称
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -41,6 +42,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
+    * eventName  告警名称
     *
     * @var string[]
     */
@@ -51,6 +53,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'hostId' => 'string',
             'privateIp' => 'string',
+            'publicIp' => 'string',
             'containerName' => 'string',
             'offset' => 'int',
             'limit' => 'int',
@@ -65,7 +68,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'attackTag' => 'string',
             'assetValue' => 'string',
             'tagList' => 'string[]',
-            'attCk' => 'string'
+            'attCk' => 'string',
+            'eventName' => 'string'
     ];
 
     /**
@@ -76,6 +80,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * containerName  容器实例名称
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -91,6 +96,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
+    * eventName  告警名称
     *
     * @var string[]
     */
@@ -101,6 +107,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         'hostName' => null,
         'hostId' => null,
         'privateIp' => null,
+        'publicIp' => null,
         'containerName' => null,
         'offset' => 'int32',
         'limit' => 'int32',
@@ -115,7 +122,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         'attackTag' => null,
         'assetValue' => null,
         'tagList' => null,
-        'attCk' => null
+        'attCk' => null,
+        'eventName' => null
     ];
 
     /**
@@ -147,6 +155,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * containerName  容器实例名称
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -162,6 +171,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
+    * eventName  告警名称
     *
     * @var string[]
     */
@@ -172,6 +182,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'hostId' => 'host_id',
             'privateIp' => 'private_ip',
+            'publicIp' => 'public_ip',
             'containerName' => 'container_name',
             'offset' => 'offset',
             'limit' => 'limit',
@@ -186,7 +197,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'attackTag' => 'attack_tag',
             'assetValue' => 'asset_value',
             'tagList' => 'tag_list',
-            'attCk' => 'att_ck'
+            'attCk' => 'att_ck',
+            'eventName' => 'event_name'
     ];
 
     /**
@@ -197,6 +209,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * containerName  容器实例名称
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -212,6 +225,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
+    * eventName  告警名称
     *
     * @var string[]
     */
@@ -222,6 +236,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'hostId' => 'setHostId',
             'privateIp' => 'setPrivateIp',
+            'publicIp' => 'setPublicIp',
             'containerName' => 'setContainerName',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
@@ -236,7 +251,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'attackTag' => 'setAttackTag',
             'assetValue' => 'setAssetValue',
             'tagList' => 'setTagList',
-            'attCk' => 'setAttCk'
+            'attCk' => 'setAttCk',
+            'eventName' => 'setEventName'
     ];
 
     /**
@@ -247,6 +263,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * containerName  容器实例名称
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -262,6 +279,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * tagList  事件标签列表，例如:[\"热点事件\"]
     * attCk  ATT&CK攻击阶，包含如下：   - Reconnaissance : 侦察   - Initial Access : 初始访问   - Execution : 执行   - Persistence : 持久化   - Privilege Escalation : 权限提升   - Defense Evasion : 防御绕过   - Credential Access : 凭据访问   - Command and Control : 命令与控制   - Impact : 影响破坏
+    * eventName  告警名称
     *
     * @var string[]
     */
@@ -272,6 +290,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'hostId' => 'getHostId',
             'privateIp' => 'getPrivateIp',
+            'publicIp' => 'getPublicIp',
             'containerName' => 'getContainerName',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
@@ -286,7 +305,8 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             'attackTag' => 'getAttackTag',
             'assetValue' => 'getAssetValue',
             'tagList' => 'getTagList',
-            'attCk' => 'getAttCk'
+            'attCk' => 'getAttCk',
+            'eventName' => 'getEventName'
     ];
 
     /**
@@ -353,6 +373,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
+        $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -368,6 +389,7 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
         $this->container['attCk'] = isset($data['attCk']) ? $data['attCk'] : null;
+        $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
     }
 
     /**
@@ -431,6 +453,15 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
+                $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
                 $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
@@ -497,6 +528,15 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['attCk']) && (mb_strlen($this->container['attCk']) < 0)) {
                 $invalidProperties[] = "invalid value for 'attCk', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'eventName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['eventName']) && !preg_match("/^.*$/", $this->container['eventName'])) {
+                $invalidProperties[] = "invalid value for 'eventName', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -653,6 +693,30 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     public function setPrivateIp($privateIp)
     {
         $this->container['privateIp'] = $privateIp;
+        return $this;
+    }
+
+    /**
+    * Gets publicIp
+    *  服务器公网IP
+    *
+    * @return string|null
+    */
+    public function getPublicIp()
+    {
+        return $this->container['publicIp'];
+    }
+
+    /**
+    * Sets publicIp
+    *
+    * @param string|null $publicIp 服务器公网IP
+    *
+    * @return $this
+    */
+    public function setPublicIp($publicIp)
+    {
+        $this->container['publicIp'] = $publicIp;
         return $this;
     }
 
@@ -1013,6 +1077,30 @@ class ListSecurityEventsRequest implements ModelInterface, ArrayAccess
     public function setAttCk($attCk)
     {
         $this->container['attCk'] = $attCk;
+        return $this;
+    }
+
+    /**
+    * Gets eventName
+    *  告警名称
+    *
+    * @return string|null
+    */
+    public function getEventName()
+    {
+        return $this->container['eventName'];
+    }
+
+    /**
+    * Sets eventName
+    *
+    * @param string|null $eventName 告警名称
+    *
+    * @return $this
+    */
+    public function setEventName($eventName)
+    {
+        $this->container['eventName'] = $eventName;
         return $this;
     }
 

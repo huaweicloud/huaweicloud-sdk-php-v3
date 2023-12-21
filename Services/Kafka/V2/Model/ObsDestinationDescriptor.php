@@ -20,17 +20,17 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * topics  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     * topicsRegex  转存topic的正则表达式，与topics必须二选一，不能同时都设置或者“.*”。
-    * consumerStrategy  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * consumerStrategy  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     * destinationFileType  转储文件格式。当前只支持text。
     * accessKey  访问密钥AK。
     * secretKey  访问密钥SK。
     * obsBucketName  存储该通道数据的OBS桶名称。
-    * obsPath  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
-    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
-    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
-    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * obsPath  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
+    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * topics  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     * topicsRegex  转存topic的正则表达式，与topics必须二选一，不能同时都设置或者“.*”。
-    * consumerStrategy  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * consumerStrategy  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     * destinationFileType  转储文件格式。当前只支持text。
     * accessKey  访问密钥AK。
     * secretKey  访问密钥SK。
     * obsBucketName  存储该通道数据的OBS桶名称。
-    * obsPath  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
-    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
-    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
-    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * obsPath  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
+    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * topics  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     * topicsRegex  转存topic的正则表达式，与topics必须二选一，不能同时都设置或者“.*”。
-    * consumerStrategy  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * consumerStrategy  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     * destinationFileType  转储文件格式。当前只支持text。
     * accessKey  访问密钥AK。
     * secretKey  访问密钥SK。
     * obsBucketName  存储该通道数据的OBS桶名称。
-    * obsPath  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
-    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
-    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
-    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * obsPath  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
+    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * topics  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     * topicsRegex  转存topic的正则表达式，与topics必须二选一，不能同时都设置或者“.*”。
-    * consumerStrategy  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * consumerStrategy  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     * destinationFileType  转储文件格式。当前只支持text。
     * accessKey  访问密钥AK。
     * secretKey  访问密钥SK。
     * obsBucketName  存储该通道数据的OBS桶名称。
-    * obsPath  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
-    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
-    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
-    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * obsPath  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
+    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * topics  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     * topicsRegex  转存topic的正则表达式，与topics必须二选一，不能同时都设置或者“.*”。
-    * consumerStrategy  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * consumerStrategy  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     * destinationFileType  转储文件格式。当前只支持text。
     * accessKey  访问密钥AK。
     * secretKey  访问密钥SK。
     * obsBucketName  存储该通道数据的OBS桶名称。
-    * obsPath  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
-    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
-    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
-    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * obsPath  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
+    * partitionFormat  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * recordDelimiter  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * deliverTimeInterval  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    *  转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     *
     * @return string
     */
@@ -361,7 +361,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string $topics 转存的topic列表名称，支持多个topic同时放置，以逗号“,”分隔。同时支持正则表达式。 例如topic1,topic2。
+    * @param string $topics 转存的topic列表名称，支持输入多个topic，以逗号“,”分隔。同时支持正则表达式。
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerStrategy
-    *  转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    *  转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     *
     * @return string
     */
@@ -409,7 +409,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets consumerStrategy
     *
-    * @param string $consumerStrategy 转储启动偏移量：   - latest: 从Topic最后端开始消费。   - earliest: 从Topic最前端消息开始消费。  默认是latest。
+    * @param string $consumerStrategy 转储启动偏移量：    - latest: 从Topic最后端开始消费。      - earliest: 从Topic最前端消息开始消费。  默认是latest。
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsPath
-    *  存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
+    *  存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets obsPath
     *
-    * @param string|null $obsPath 存储在obs的路径，默认可以不填。 取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。 默认配置为空。
+    * @param string|null $obsPath 存储在obs的路径，默认可以不填。  取值范围：英文字母、数字、下划线、中划线和斜杠，最大长度为64个字符。  默认配置为空。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionFormat
-    *  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    *  将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets partitionFormat
     *
-    * @param string|null $partitionFormat 将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。   - N/A：置空，不使用日期时间目录。   - yyyy：年   - yyyy/MM：年/月   - yyyy/MM/dd：年/月/日   - yyyy/MM/dd/HH：年/月/日/时   - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空 > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
+    * @param string|null $partitionFormat 将转储文件的生成时间使用“yyyy/MM/dd/HH/mm”格式生成分区字符串，用来定义写到OBS的Object文件所在的目录层次结构。    - N/A：置空，不使用日期时间目录。      - yyyy：年      - yyyy/MM：年/月      - yyyy/MM/dd：年/月/日      - yyyy/MM/dd/HH：年/月/日/时      - yyyy/MM/dd/HH/mm：年/月/日/时/分，例如：2017/11/10/14/49，目录结构就是“2017 > 11 > 10 > 14 > 49”，“2017”表示最外层文件夹。  默认值：空  > 数据转储成功后，存储的目录结构为“obs_bucket_path/file_prefix/partition_format”。默认时间是GMT+8 时间
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordDelimiter
-    *  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    *  转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets recordDelimiter
     *
-    * @param string|null $recordDelimiter 转储文件的记录分隔符，用于分隔写入转储文件的用户数据。 取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
+    * @param string|null $recordDelimiter 转储文件的记录分隔符，用于分隔写入转储文件的用户数据。  取值范围：   - 逗号“,”   - 分号“;”   - 竖线“|”   - 换行符“\\n”   - NULL  默认值：换行符“\\n”。
     *
     * @return $this
     */
@@ -589,7 +589,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
 
     /**
     * Gets deliverTimeInterval
-    *  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    *  根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @return int
     */
@@ -601,7 +601,7 @@ class ObsDestinationDescriptor implements ModelInterface, ArrayAccess
     /**
     * Sets deliverTimeInterval
     *
-    * @param int $deliverTimeInterval 根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。 取值范围：30～900 单位：秒。 > 使用OBS通道转储流式数据时该参数为必选配置。
+    * @param int $deliverTimeInterval 根据用户配置的时间，周期性的将数据导入OBS，若某个时间段内无数据，则此时间段不会生成打包文件。  取值范围：30～900  单位：秒。  > 使用OBS通道转储流式数据时该参数为必选配置。
     *
     * @return $this
     */

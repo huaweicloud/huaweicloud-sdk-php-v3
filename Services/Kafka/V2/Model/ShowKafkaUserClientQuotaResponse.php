@@ -22,7 +22,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * quotas  客户端流控配置列表。
-    * count  客户端流控配置数目。
+    * count  用户/客户端流控配置数目。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * quotas  客户端流控配置列表。
-    * count  客户端流控配置数目。
+    * count  用户/客户端流控配置数目。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * quotas  客户端流控配置列表。
-    * count  客户端流控配置数目。
+    * count  用户/客户端流控配置数目。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * quotas  客户端流控配置列表。
-    * count  客户端流控配置数目。
+    * count  用户/客户端流控配置数目。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * quotas  客户端流控配置列表。
-    * count  客户端流控配置数目。
+    * count  用户/客户端流控配置数目。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  客户端流控配置数目。
+    *  用户/客户端流控配置数目。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 客户端流控配置数目。
+    * @param int|null $count 用户/客户端流控配置数目。
     *
     * @return $this
     */

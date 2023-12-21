@@ -61,6 +61,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * fileInfoList  文件信息列表
     * eventDetails  事件信息的简述
     * tagList  标签列表
+    * eventCount  事件发生次数
     *
     * @var string[]
     */
@@ -105,7 +106,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'userInfoList' => '\HuaweiCloud\SDK\Hss\V5\Model\EventUserResponseInfo[]',
             'fileInfoList' => '\HuaweiCloud\SDK\Hss\V5\Model\EventFileResponseInfo[]',
             'eventDetails' => 'string',
-            'tagList' => 'string[]'
+            'tagList' => 'string[]',
+            'eventCount' => 'int'
     ];
 
     /**
@@ -151,6 +153,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * fileInfoList  文件信息列表
     * eventDetails  事件信息的简述
     * tagList  标签列表
+    * eventCount  事件发生次数
     *
     * @var string[]
     */
@@ -195,7 +198,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
         'userInfoList' => null,
         'fileInfoList' => null,
         'eventDetails' => null,
-        'tagList' => null
+        'tagList' => null,
+        'eventCount' => null
     ];
 
     /**
@@ -262,6 +266,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * fileInfoList  文件信息列表
     * eventDetails  事件信息的简述
     * tagList  标签列表
+    * eventCount  事件发生次数
     *
     * @var string[]
     */
@@ -306,7 +311,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'userInfoList' => 'user_info_list',
             'fileInfoList' => 'file_info_list',
             'eventDetails' => 'event_details',
-            'tagList' => 'tag_list'
+            'tagList' => 'tag_list',
+            'eventCount' => 'event_count'
     ];
 
     /**
@@ -352,6 +358,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * fileInfoList  文件信息列表
     * eventDetails  事件信息的简述
     * tagList  标签列表
+    * eventCount  事件发生次数
     *
     * @var string[]
     */
@@ -396,7 +403,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'userInfoList' => 'setUserInfoList',
             'fileInfoList' => 'setFileInfoList',
             'eventDetails' => 'setEventDetails',
-            'tagList' => 'setTagList'
+            'tagList' => 'setTagList',
+            'eventCount' => 'setEventCount'
     ];
 
     /**
@@ -442,6 +450,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * fileInfoList  文件信息列表
     * eventDetails  事件信息的简述
     * tagList  标签列表
+    * eventCount  事件发生次数
     *
     * @var string[]
     */
@@ -486,7 +495,8 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             'userInfoList' => 'getUserInfoList',
             'fileInfoList' => 'getFileInfoList',
             'eventDetails' => 'getEventDetails',
-            'tagList' => 'getTagList'
+            'tagList' => 'getTagList',
+            'eventCount' => 'getEventCount'
     ];
 
     /**
@@ -588,6 +598,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
         $this->container['fileInfoList'] = isset($data['fileInfoList']) ? $data['fileInfoList'] : null;
         $this->container['eventDetails'] = isset($data['eventDetails']) ? $data['eventDetails'] : null;
         $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
+        $this->container['eventCount'] = isset($data['eventCount']) ? $data['eventCount'] : null;
     }
 
     /**
@@ -714,6 +725,12 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['eventDetails']) && !preg_match("/^.*$/", $this->container['eventDetails'])) {
                 $invalidProperties[] = "invalid value for 'eventDetails', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['eventCount']) && ($this->container['eventCount'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'eventCount', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['eventCount']) && ($this->container['eventCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eventCount', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1710,6 +1727,30 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     public function setTagList($tagList)
     {
         $this->container['tagList'] = $tagList;
+        return $this;
+    }
+
+    /**
+    * Gets eventCount
+    *  事件发生次数
+    *
+    * @return int|null
+    */
+    public function getEventCount()
+    {
+        return $this->container['eventCount'];
+    }
+
+    /**
+    * Sets eventCount
+    *
+    * @param int|null $eventCount 事件发生次数
+    *
+    * @return $this
+    */
+    public function setEventCount($eventCount)
+    {
+        $this->container['eventCount'] = $eventCount;
         return $this;
     }
 

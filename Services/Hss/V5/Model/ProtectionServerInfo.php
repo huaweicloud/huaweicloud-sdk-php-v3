@@ -29,6 +29,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * osName  系统名称
     * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * agentVersion  agent版本
     * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
     * groupId  服务器组ID
     * groupName  服务器组名称
@@ -65,6 +66,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'string',
             'hostStatus' => 'string',
             'ransomProtectionStatus' => 'string',
+            'agentVersion' => 'string',
             'protectStatus' => 'string',
             'groupId' => 'string',
             'groupName' => 'string',
@@ -101,6 +103,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * osName  系统名称
     * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * agentVersion  agent版本
     * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
     * groupId  服务器组ID
     * groupName  服务器组名称
@@ -137,6 +140,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         'osName' => null,
         'hostStatus' => null,
         'ransomProtectionStatus' => null,
+        'agentVersion' => null,
         'protectStatus' => null,
         'groupId' => null,
         'groupName' => null,
@@ -194,6 +198,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * osName  系统名称
     * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * agentVersion  agent版本
     * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
     * groupId  服务器组ID
     * groupName  服务器组名称
@@ -230,6 +235,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'os_name',
             'hostStatus' => 'host_status',
             'ransomProtectionStatus' => 'ransom_protection_status',
+            'agentVersion' => 'agent_version',
             'protectStatus' => 'protect_status',
             'groupId' => 'group_id',
             'groupName' => 'group_name',
@@ -266,6 +272,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * osName  系统名称
     * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * agentVersion  agent版本
     * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
     * groupId  服务器组ID
     * groupName  服务器组名称
@@ -302,6 +309,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'setOsName',
             'hostStatus' => 'setHostStatus',
             'ransomProtectionStatus' => 'setRansomProtectionStatus',
+            'agentVersion' => 'setAgentVersion',
             'protectStatus' => 'setProtectStatus',
             'groupId' => 'setGroupId',
             'groupName' => 'setGroupName',
@@ -338,6 +346,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     * osName  系统名称
     * hostStatus  服务器状态，包含如下2种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。
     * ransomProtectionStatus  勒索防护状态，包含如下4种。   - closed ：关闭。   - opened ：开启。   - opening ：开启中。   - closing ：关闭中。
+    * agentVersion  agent版本
     * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
     * groupId  服务器组ID
     * groupName  服务器组名称
@@ -374,6 +383,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             'osName' => 'getOsName',
             'hostStatus' => 'getHostStatus',
             'ransomProtectionStatus' => 'getRansomProtectionStatus',
+            'agentVersion' => 'getAgentVersion',
             'protectStatus' => 'getProtectStatus',
             'groupId' => 'getGroupId',
             'groupName' => 'getGroupName',
@@ -466,6 +476,7 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
         $this->container['osName'] = isset($data['osName']) ? $data['osName'] : null;
         $this->container['hostStatus'] = isset($data['hostStatus']) ? $data['hostStatus'] : null;
         $this->container['ransomProtectionStatus'] = isset($data['ransomProtectionStatus']) ? $data['ransomProtectionStatus'] : null;
+        $this->container['agentVersion'] = isset($data['agentVersion']) ? $data['agentVersion'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
@@ -552,6 +563,12 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ransomProtectionStatus']) && (mb_strlen($this->container['ransomProtectionStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ransomProtectionStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) > 128)) {
+                $invalidProperties[] = "invalid value for 'agentVersion', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentVersion', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 32.";
@@ -906,6 +923,30 @@ class ProtectionServerInfo implements ModelInterface, ArrayAccess
     public function setRansomProtectionStatus($ransomProtectionStatus)
     {
         $this->container['ransomProtectionStatus'] = $ransomProtectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets agentVersion
+    *  agent版本
+    *
+    * @return string|null
+    */
+    public function getAgentVersion()
+    {
+        return $this->container['agentVersion'];
+    }
+
+    /**
+    * Sets agentVersion
+    *
+    * @param string|null $agentVersion agent版本
+    *
+    * @return $this
+    */
+    public function setAgentVersion($agentVersion)
+    {
+        $this->container['agentVersion'] = $agentVersion;
         return $this;
     }
 

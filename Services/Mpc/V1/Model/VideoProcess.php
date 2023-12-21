@@ -22,6 +22,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hlsInitCount  需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
     * hlsInitInterval  表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+    * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
@@ -31,6 +32,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'hlsInitCount' => 'int',
             'hlsInitInterval' => 'int',
+            'hlsStorageType' => 'string',
             'rotate' => 'int',
             'adaptation' => 'string',
             'upsample' => 'int'
@@ -40,6 +42,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hlsInitCount  需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
     * hlsInitInterval  表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+    * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
@@ -49,6 +52,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'hlsInitCount' => 'int32',
         'hlsInitInterval' => 'int32',
+        'hlsStorageType' => null,
         'rotate' => 'int32',
         'adaptation' => null,
         'upsample' => 'int32'
@@ -79,6 +83,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hlsInitCount  需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
     * hlsInitInterval  表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+    * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
@@ -88,6 +93,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'hlsInitCount' => 'hls_init_count',
             'hlsInitInterval' => 'hls_init_interval',
+            'hlsStorageType' => 'hls_storage_type',
             'rotate' => 'rotate',
             'adaptation' => 'adaptation',
             'upsample' => 'upsample'
@@ -97,6 +103,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hlsInitCount  需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
     * hlsInitInterval  表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+    * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
@@ -106,6 +113,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     protected static $setters = [
             'hlsInitCount' => 'setHlsInitCount',
             'hlsInitInterval' => 'setHlsInitInterval',
+            'hlsStorageType' => 'setHlsStorageType',
             'rotate' => 'setRotate',
             'adaptation' => 'setAdaptation',
             'upsample' => 'setUpsample'
@@ -115,6 +123,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hlsInitCount  需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
     * hlsInitInterval  表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
+    * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
@@ -124,6 +133,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     protected static $getters = [
             'hlsInitCount' => 'getHlsInitCount',
             'hlsInitInterval' => 'getHlsInitInterval',
+            'hlsStorageType' => 'getHlsStorageType',
             'rotate' => 'getRotate',
             'adaptation' => 'getAdaptation',
             'upsample' => 'getUpsample'
@@ -169,10 +179,25 @@ class VideoProcess implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const HLS_STORAGE_TYPE_COMPOSITE = 'composite';
+    const HLS_STORAGE_TYPE_SEPARATE = 'separate';
     const ADAPTATION_SHORT = 'SHORT';
     const ADAPTATION_LONG = 'LONG';
     const ADAPTATION_NONE = 'NONE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHlsStorageTypeAllowableValues()
+    {
+        return [
+            self::HLS_STORAGE_TYPE_COMPOSITE,
+            self::HLS_STORAGE_TYPE_SEPARATE,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -206,6 +231,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     {
         $this->container['hlsInitCount'] = isset($data['hlsInitCount']) ? $data['hlsInitCount'] : null;
         $this->container['hlsInitInterval'] = isset($data['hlsInitInterval']) ? $data['hlsInitInterval'] : null;
+        $this->container['hlsStorageType'] = isset($data['hlsStorageType']) ? $data['hlsStorageType'] : null;
         $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
         $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
         $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
@@ -230,6 +256,20 @@ class VideoProcess implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['hlsInitInterval']) && ($this->container['hlsInitInterval'] < 2)) {
                 $invalidProperties[] = "invalid value for 'hlsInitInterval', must be bigger than or equal to 2.";
+            }
+            $allowedValues = $this->getHlsStorageTypeAllowableValues();
+                if (!is_null($this->container['hlsStorageType']) && !in_array($this->container['hlsStorageType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hlsStorageType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['hlsStorageType']) && (mb_strlen($this->container['hlsStorageType']) > 16)) {
+                $invalidProperties[] = "invalid value for 'hlsStorageType', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['hlsStorageType']) && (mb_strlen($this->container['hlsStorageType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hlsStorageType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['rotate']) && ($this->container['rotate'] > 4)) {
                 $invalidProperties[] = "invalid value for 'rotate', must be smaller than or equal to 4.";
@@ -316,6 +356,30 @@ class VideoProcess implements ModelInterface, ArrayAccess
     public function setHlsInitInterval($hlsInitInterval)
     {
         $this->container['hlsInitInterval'] = $hlsInitInterval;
+        return $this;
+    }
+
+    /**
+    * Gets hlsStorageType
+    *  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
+    *
+    * @return string|null
+    */
+    public function getHlsStorageType()
+    {
+        return $this->container['hlsStorageType'];
+    }
+
+    /**
+    * Sets hlsStorageType
+    *
+    * @param string|null $hlsStorageType hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
+    *
+    * @return $this
+    */
+    public function setHlsStorageType($hlsStorageType)
+    {
+        $this->container['hlsStorageType'] = $hlsStorageType;
         return $this;
     }
 

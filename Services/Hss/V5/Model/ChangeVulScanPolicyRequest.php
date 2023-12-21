@@ -20,7 +20,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    *  企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class ChangeVulScanPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业租户ID，注：修改漏洞扫描策略将影响租户账号下所有主机的漏洞扫描行为，因此开通了多企业项目的用户，该参数须填写“all_granted_eps”才能执行漏洞策略修改。
     *
     * @return $this
     */

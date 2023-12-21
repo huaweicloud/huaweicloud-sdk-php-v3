@@ -328,6 +328,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     const DB_TYPE_POSTGRESQL = 'postgresql';
     const DB_TYPE_KAFKA = 'kafka';
     const DB_TYPE_GAUSSDBV5HA = 'gaussdbv5ha';
+    const DB_TYPE_TAURUS = 'taurus';
     const END_POINT_TYPE_SO = 'so';
     const END_POINT_TYPE_TA = 'ta';
     
@@ -360,6 +361,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
             self::DB_TYPE_POSTGRESQL,
             self::DB_TYPE_KAFKA,
             self::DB_TYPE_GAUSSDBV5HA,
+            self::DB_TYPE_TAURUS,
         ];
     }
 

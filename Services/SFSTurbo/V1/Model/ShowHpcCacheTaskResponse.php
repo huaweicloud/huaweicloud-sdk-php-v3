@@ -21,13 +21,13 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务id
+    * taskId  任务ID
     * type  任务类型
     * status  任务状态
-    * srcTarget  源端对象
-    * srcPrefix  源端路径
-    * destTarget  目的端对象
-    * destPrefix  目的端路径
+    * srcTarget  联动目录名称
+    * srcPrefix  导入导出任务的源端路径前缀
+    * destTarget  和src_target保持一致
+    * destPrefix  和src_prefix保持一致
     * startTime  任务开始时间
     * endTime  任务结束时间
     * message  任务执行结果信息
@@ -51,13 +51,13 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务id
+    * taskId  任务ID
     * type  任务类型
     * status  任务状态
-    * srcTarget  源端对象
-    * srcPrefix  源端路径
-    * destTarget  目的端对象
-    * destPrefix  目的端路径
+    * srcTarget  联动目录名称
+    * srcPrefix  导入导出任务的源端路径前缀
+    * destTarget  和src_target保持一致
+    * destPrefix  和src_prefix保持一致
     * startTime  任务开始时间
     * endTime  任务结束时间
     * message  任务执行结果信息
@@ -102,13 +102,13 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务id
+    * taskId  任务ID
     * type  任务类型
     * status  任务状态
-    * srcTarget  源端对象
-    * srcPrefix  源端路径
-    * destTarget  目的端对象
-    * destPrefix  目的端路径
+    * srcTarget  联动目录名称
+    * srcPrefix  导入导出任务的源端路径前缀
+    * destTarget  和src_target保持一致
+    * destPrefix  和src_prefix保持一致
     * startTime  任务开始时间
     * endTime  任务结束时间
     * message  任务执行结果信息
@@ -132,13 +132,13 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务id
+    * taskId  任务ID
     * type  任务类型
     * status  任务状态
-    * srcTarget  源端对象
-    * srcPrefix  源端路径
-    * destTarget  目的端对象
-    * destPrefix  目的端路径
+    * srcTarget  联动目录名称
+    * srcPrefix  导入导出任务的源端路径前缀
+    * destTarget  和src_target保持一致
+    * destPrefix  和src_prefix保持一致
     * startTime  任务开始时间
     * endTime  任务结束时间
     * message  任务执行结果信息
@@ -162,13 +162,13 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务id
+    * taskId  任务ID
     * type  任务类型
     * status  任务状态
-    * srcTarget  源端对象
-    * srcPrefix  源端路径
-    * destTarget  目的端对象
-    * destPrefix  目的端路径
+    * srcTarget  联动目录名称
+    * srcPrefix  导入导出任务的源端路径前缀
+    * destTarget  和src_target保持一致
+    * destPrefix  和src_prefix保持一致
     * startTime  任务开始时间
     * endTime  任务结束时间
     * message  任务执行结果信息
@@ -285,7 +285,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  任务ID
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务id
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */
@@ -357,7 +357,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTarget
-    *  源端对象
+    *  联动目录名称
     *
     * @return string|null
     */
@@ -369,7 +369,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcTarget
     *
-    * @param string|null $srcTarget 源端对象
+    * @param string|null $srcTarget 联动目录名称
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcPrefix
-    *  源端路径
+    *  导入导出任务的源端路径前缀
     *
     * @return string|null
     */
@@ -393,7 +393,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcPrefix
     *
-    * @param string|null $srcPrefix 源端路径
+    * @param string|null $srcPrefix 导入导出任务的源端路径前缀
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets destTarget
-    *  目的端对象
+    *  和src_target保持一致
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets destTarget
     *
-    * @param string|null $destTarget 目的端对象
+    * @param string|null $destTarget 和src_target保持一致
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets destPrefix
-    *  目的端路径
+    *  和src_prefix保持一致
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets destPrefix
     *
-    * @param string|null $destPrefix 目的端路径
+    * @param string|null $destPrefix 和src_prefix保持一致
     *
     * @return $this
     */

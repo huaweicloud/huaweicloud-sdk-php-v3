@@ -27,6 +27,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * hostName  节点名称
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'hostName' => 'string',
             'agentStatus' => 'string',
-            'protectStatus' => 'string'
+            'protectStatus' => 'string',
+            'containerTags' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * hostName  节点名称
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'hostName' => null,
         'agentStatus' => null,
-        'protectStatus' => null
+        'protectStatus' => null,
+        'containerTags' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * hostName  节点名称
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'hostName' => 'host_name',
             'agentStatus' => 'agent_status',
-            'protectStatus' => 'protect_status'
+            'protectStatus' => 'protect_status',
+            'containerTags' => 'container_tags'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * hostName  节点名称
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'hostName' => 'setHostName',
             'agentStatus' => 'setAgentStatus',
-            'protectStatus' => 'setProtectStatus'
+            'protectStatus' => 'setProtectStatus',
+            'containerTags' => 'setContainerTags'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * hostName  节点名称
     * agentStatus  Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭   - opened ：开启
+    * containerTags  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'hostName' => 'getHostName',
             'agentStatus' => 'getAgentStatus',
-            'protectStatus' => 'getProtectStatus'
+            'protectStatus' => 'getProtectStatus',
+            'containerTags' => 'getContainerTags'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
+        $this->container['containerTags'] = isset($data['containerTags']) ? $data['containerTags'] : null;
     }
 
     /**
@@ -274,6 +285,12 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerTags']) && (mb_strlen($this->container['containerTags']) > 32)) {
+                $invalidProperties[] = "invalid value for 'containerTags', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['containerTags']) && (mb_strlen($this->container['containerTags']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerTags', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -454,6 +471,30 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     public function setProtectStatus($protectStatus)
     {
         $this->container['protectStatus'] = $protectStatus;
+        return $this;
+    }
+
+    /**
+    * Gets containerTags
+    *  标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    *
+    * @return string|null
+    */
+    public function getContainerTags()
+    {
+        return $this->container['containerTags'];
+    }
+
+    /**
+    * Sets containerTags
+    *
+    * @param string|null $containerTags 标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
+    *
+    * @return $this
+    */
+    public function setContainerTags($containerTags)
+    {
+        $this->container['containerTags'] = $containerTags;
         return $this;
     }
 

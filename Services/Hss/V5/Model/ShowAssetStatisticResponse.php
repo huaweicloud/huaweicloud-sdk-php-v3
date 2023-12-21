@@ -30,6 +30,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
     * kernelModuleNum  内核模块数量
+    * webServiceNum  web服务数量
+    * webAppNum  web应用数量
+    * databaseNum  数据库数量
     *
     * @var string[]
     */
@@ -42,7 +45,10 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'webFrameworkNum' => 'int',
             'webSiteNum' => 'int',
             'jarPackageNum' => 'int',
-            'kernelModuleNum' => 'int'
+            'kernelModuleNum' => 'int',
+            'webServiceNum' => 'int',
+            'webAppNum' => 'int',
+            'databaseNum' => 'int'
     ];
 
     /**
@@ -56,6 +62,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
     * kernelModuleNum  内核模块数量
+    * webServiceNum  web服务数量
+    * webAppNum  web应用数量
+    * databaseNum  数据库数量
     *
     * @var string[]
     */
@@ -68,7 +77,10 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         'webFrameworkNum' => 'int64',
         'webSiteNum' => 'int64',
         'jarPackageNum' => 'int64',
-        'kernelModuleNum' => 'int64'
+        'kernelModuleNum' => 'int64',
+        'webServiceNum' => 'int64',
+        'webAppNum' => 'int64',
+        'databaseNum' => 'int64'
     ];
 
     /**
@@ -103,6 +115,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
     * kernelModuleNum  内核模块数量
+    * webServiceNum  web服务数量
+    * webAppNum  web应用数量
+    * databaseNum  数据库数量
     *
     * @var string[]
     */
@@ -115,7 +130,10 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'webFrameworkNum' => 'web_framework_num',
             'webSiteNum' => 'web_site_num',
             'jarPackageNum' => 'jar_package_num',
-            'kernelModuleNum' => 'kernel_module_num'
+            'kernelModuleNum' => 'kernel_module_num',
+            'webServiceNum' => 'web_service_num',
+            'webAppNum' => 'web_app_num',
+            'databaseNum' => 'database_num'
     ];
 
     /**
@@ -129,6 +147,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
     * kernelModuleNum  内核模块数量
+    * webServiceNum  web服务数量
+    * webAppNum  web应用数量
+    * databaseNum  数据库数量
     *
     * @var string[]
     */
@@ -141,7 +162,10 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'webFrameworkNum' => 'setWebFrameworkNum',
             'webSiteNum' => 'setWebSiteNum',
             'jarPackageNum' => 'setJarPackageNum',
-            'kernelModuleNum' => 'setKernelModuleNum'
+            'kernelModuleNum' => 'setKernelModuleNum',
+            'webServiceNum' => 'setWebServiceNum',
+            'webAppNum' => 'setWebAppNum',
+            'databaseNum' => 'setDatabaseNum'
     ];
 
     /**
@@ -155,6 +179,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
     * kernelModuleNum  内核模块数量
+    * webServiceNum  web服务数量
+    * webAppNum  web应用数量
+    * databaseNum  数据库数量
     *
     * @var string[]
     */
@@ -167,7 +194,10 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'webFrameworkNum' => 'getWebFrameworkNum',
             'webSiteNum' => 'getWebSiteNum',
             'jarPackageNum' => 'getJarPackageNum',
-            'kernelModuleNum' => 'getKernelModuleNum'
+            'kernelModuleNum' => 'getKernelModuleNum',
+            'webServiceNum' => 'getWebServiceNum',
+            'webAppNum' => 'getWebAppNum',
+            'databaseNum' => 'getDatabaseNum'
     ];
 
     /**
@@ -237,6 +267,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         $this->container['webSiteNum'] = isset($data['webSiteNum']) ? $data['webSiteNum'] : null;
         $this->container['jarPackageNum'] = isset($data['jarPackageNum']) ? $data['jarPackageNum'] : null;
         $this->container['kernelModuleNum'] = isset($data['kernelModuleNum']) ? $data['kernelModuleNum'] : null;
+        $this->container['webServiceNum'] = isset($data['webServiceNum']) ? $data['webServiceNum'] : null;
+        $this->container['webAppNum'] = isset($data['webAppNum']) ? $data['webAppNum'] : null;
+        $this->container['databaseNum'] = isset($data['databaseNum']) ? $data['databaseNum'] : null;
     }
 
     /**
@@ -300,6 +333,24 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['kernelModuleNum']) && ($this->container['kernelModuleNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'kernelModuleNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['webServiceNum']) && ($this->container['webServiceNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'webServiceNum', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['webServiceNum']) && ($this->container['webServiceNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'webServiceNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['webAppNum']) && ($this->container['webAppNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'webAppNum', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['webAppNum']) && ($this->container['webAppNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'webAppNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['databaseNum']) && ($this->container['databaseNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'databaseNum', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['databaseNum']) && ($this->container['databaseNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'databaseNum', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -528,6 +579,78 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     public function setKernelModuleNum($kernelModuleNum)
     {
         $this->container['kernelModuleNum'] = $kernelModuleNum;
+        return $this;
+    }
+
+    /**
+    * Gets webServiceNum
+    *  web服务数量
+    *
+    * @return int|null
+    */
+    public function getWebServiceNum()
+    {
+        return $this->container['webServiceNum'];
+    }
+
+    /**
+    * Sets webServiceNum
+    *
+    * @param int|null $webServiceNum web服务数量
+    *
+    * @return $this
+    */
+    public function setWebServiceNum($webServiceNum)
+    {
+        $this->container['webServiceNum'] = $webServiceNum;
+        return $this;
+    }
+
+    /**
+    * Gets webAppNum
+    *  web应用数量
+    *
+    * @return int|null
+    */
+    public function getWebAppNum()
+    {
+        return $this->container['webAppNum'];
+    }
+
+    /**
+    * Sets webAppNum
+    *
+    * @param int|null $webAppNum web应用数量
+    *
+    * @return $this
+    */
+    public function setWebAppNum($webAppNum)
+    {
+        $this->container['webAppNum'] = $webAppNum;
+        return $this;
+    }
+
+    /**
+    * Gets databaseNum
+    *  数据库数量
+    *
+    * @return int|null
+    */
+    public function getDatabaseNum()
+    {
+        return $this->container['databaseNum'];
+    }
+
+    /**
+    * Sets databaseNum
+    *
+    * @param int|null $databaseNum 数据库数量
+    *
+    * @return $this
+    */
+    public function setDatabaseNum($databaseNum)
+    {
+        $this->container['databaseNum'] = $databaseNum;
         return $this;
     }
 

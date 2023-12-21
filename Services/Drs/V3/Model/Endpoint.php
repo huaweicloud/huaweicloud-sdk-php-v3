@@ -355,6 +355,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     const DB_TYPE_POSTGRESQL = 'postgresql';
     const DB_TYPE_KAFKA = 'kafka';
     const DB_TYPE_GAUSSDBV5HA = 'gaussdbv5ha';
+    const DB_TYPE_TAURUS = 'taurus';
     const CLUSTER_MODE_SHARDING4_0 = 'Sharding4.0+';
     
 
@@ -372,6 +373,7 @@ class Endpoint implements ModelInterface, ArrayAccess
             self::DB_TYPE_POSTGRESQL,
             self::DB_TYPE_KAFKA,
             self::DB_TYPE_GAUSSDBV5HA,
+            self::DB_TYPE_TAURUS,
         ];
     }
 

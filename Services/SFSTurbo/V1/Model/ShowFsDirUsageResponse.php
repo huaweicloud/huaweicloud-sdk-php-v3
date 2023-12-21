@@ -21,7 +21,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dirUsage  消息描述
+    * dirUsage  dirUsage
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dirUsage  消息描述
+    * dirUsage  dirUsage
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dirUsage  消息描述
+    * dirUsage  dirUsage
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dirUsage  消息描述
+    * dirUsage  dirUsage
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dirUsage  消息描述
+    * dirUsage  dirUsage
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirUsage
-    *  消息描述
+    *  dirUsage
     *
     * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDirUasge|null
     */
@@ -198,7 +198,7 @@ class ShowFsDirUsageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dirUsage
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDirUasge|null $dirUsage 消息描述
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\FsDirUasge|null $dirUsage dirUsage
     *
     * @return $this
     */

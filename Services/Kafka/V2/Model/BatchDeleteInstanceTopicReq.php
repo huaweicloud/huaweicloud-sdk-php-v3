@@ -20,7 +20,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  待删除的topic列表。
+    * topics  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  待删除的topic列表。
+    * topics  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  待删除的topic列表。
+    * topics  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  待删除的topic列表。
+    * topics  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  待删除的topic列表。
+    * topics  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  待删除的topic列表。
+    *  待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string[]|null $topics 待删除的topic列表。
+    * @param string[]|null $topics 待删除的topic列表。  批量删除实例topic时，为必选参数。
     *
     * @return $this
     */

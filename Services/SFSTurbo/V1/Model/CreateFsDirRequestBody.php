@@ -21,9 +21,9 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * path  合法的的目录全路径
-    * mode  目录权限
-    * uid  用户id
-    * gid  用户组id
+    * mode  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
+    * gid  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * path  合法的的目录全路径
-    * mode  目录权限
-    * uid  用户id
-    * gid  用户组id
+    * mode  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
+    * gid  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * path  合法的的目录全路径
-    * mode  目录权限
-    * uid  用户id
-    * gid  用户组id
+    * mode  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
+    * gid  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * path  合法的的目录全路径
-    * mode  目录权限
-    * uid  用户id
-    * gid  用户组id
+    * mode  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
+    * gid  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * path  合法的的目录全路径
-    * mode  目录权限
-    * uid  用户id
-    * gid  用户组id
+    * mode  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
+    * gid  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  目录权限
+    *  目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
     *
     * @return int|null
     */
@@ -255,7 +255,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param int|null $mode 目录权限
+    * @param int|null $mode 目录权限，默认值是755，取值范围是0到777。第一位表示目录所有者的权限，第二位表示目录所属用户组的权限，第三位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：755中第一位7代表该目录所有者对该目录具有读、写、执行权限；第二位5代表该目录所属用户组对该目录具有读、执行权限；第三位5代表其他用户对该目录具有读、执行权限。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  用户id
+    *  目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @return int|null
     */
@@ -279,7 +279,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param int|null $uid 用户id
+    * @param int|null $uid 目录所有者的用户id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets gid
-    *  用户组id
+    *  目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @return int|null
     */
@@ -303,7 +303,7 @@ class CreateFsDirRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets gid
     *
-    * @param int|null $gid 用户组id
+    * @param int|null $gid 目录所属用户组id，默认值是0，取值范围是0到4,294,967,294（即2^32-2）。
     *
     * @return $this
     */

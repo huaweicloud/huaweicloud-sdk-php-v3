@@ -22,7 +22,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     * queryId  通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
     * offset  偏移量，表示查询该偏移量后面的记录。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
     * limit  查询返回记录的数量限制。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
@@ -56,7 +56,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     * queryId  通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
     * offset  偏移量，表示查询该偏移量后面的记录。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
     * limit  查询返回记录的数量限制。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
@@ -111,7 +111,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     * queryId  通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
     * offset  偏移量，表示查询该偏移量后面的记录。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
     * limit  查询返回记录的数量限制。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
@@ -145,7 +145,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     * queryId  通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
     * offset  偏移量，表示查询该偏移量后面的记录。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
     * limit  查询返回记录的数量限制。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
@@ -179,7 +179,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * type  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     * queryId  通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
     * offset  偏移量，表示查询该偏移量后面的记录。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
     * limit  查询返回记录的数量限制。  说明：部分type类型的任务详情支持分页查询，可以通过传递该参数进行分页控制。
@@ -257,7 +257,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     const TYPE_PRECHECK = 'precheck';
     const TYPE_PROGRESS = 'progress';
     const TYPE_LOG = 'log';
-    const TYPE_COMAPRE = 'comapre';
+    const TYPE_COMPARE = 'compare';
     const TYPE_FILE = 'file';
     const COMPARE_TYPE_OBJECT_COMPARE = 'object_compare';
     const COMPARE_TYPE_LINE_COMPARE = 'line_compare';
@@ -266,6 +266,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     const QUERY_TYPE_OVERVIEW = 'overview';
     const QUERY_TYPE__LIST = 'list';
     const QUERY_TYPE_DETAIL = 'detail';
+    const QUERY_TYPE_DIFF = 'diff';
     const OBJECT_TYPE_DB = 'DB';
     const OBJECT_TYPE_TABLE = 'TABLE';
     const OBJECT_TYPE_INDEX = 'INDEX';
@@ -300,7 +301,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             self::TYPE_PRECHECK,
             self::TYPE_PROGRESS,
             self::TYPE_LOG,
-            self::TYPE_COMAPRE,
+            self::TYPE_COMPARE,
             self::TYPE_FILE,
         ];
     }
@@ -331,6 +332,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             self::QUERY_TYPE_OVERVIEW,
             self::QUERY_TYPE__LIST,
             self::QUERY_TYPE_DETAIL,
+            self::QUERY_TYPE_DIFF,
         ];
     }
 
@@ -518,7 +520,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    *  任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     *
     * @return string
     */
@@ -530,7 +532,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - comapre：查询对比任务。 - file：对象导入信息
+    * @param string $type 任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
     *
     * @return $this
     */

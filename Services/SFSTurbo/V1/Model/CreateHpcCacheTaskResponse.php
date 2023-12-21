@@ -21,7 +21,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务任务id
+    * taskId  任务ID
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务任务id
+    * taskId  任务ID
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务任务id
+    * taskId  任务ID
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务任务id
+    * taskId  任务ID
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务任务id
+    * taskId  任务ID
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务任务id
+    *  任务ID
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务任务id
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */

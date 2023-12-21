@@ -38,6 +38,8 @@ class VifPeer implements ModelInterface, ArrayAccess
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
     * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpStatus' => 'string',
             'status' => 'string',
             'vifId' => 'string',
-            'receiveRouteNum' => 'int'
+            'receiveRouteNum' => 'int',
+            'enableNqa' => 'bool',
+            'enableBfd' => 'bool'
     ];
 
     /**
@@ -82,6 +86,8 @@ class VifPeer implements ModelInterface, ArrayAccess
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
     * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class VifPeer implements ModelInterface, ArrayAccess
         'bgpStatus' => null,
         'status' => null,
         'vifId' => null,
-        'receiveRouteNum' => 'int32'
+        'receiveRouteNum' => 'int32',
+        'enableNqa' => null,
+        'enableBfd' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class VifPeer implements ModelInterface, ArrayAccess
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
     * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpStatus' => 'bgp_status',
             'status' => 'status',
             'vifId' => 'vif_id',
-            'receiveRouteNum' => 'receive_route_num'
+            'receiveRouteNum' => 'receive_route_num',
+            'enableNqa' => 'enable_nqa',
+            'enableBfd' => 'enable_bfd'
     ];
 
     /**
@@ -191,6 +203,8 @@ class VifPeer implements ModelInterface, ArrayAccess
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
     * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpStatus' => 'setBgpStatus',
             'status' => 'setStatus',
             'vifId' => 'setVifId',
-            'receiveRouteNum' => 'setReceiveRouteNum'
+            'receiveRouteNum' => 'setReceiveRouteNum',
+            'enableNqa' => 'setEnableNqa',
+            'enableBfd' => 'setEnableBfd'
     ];
 
     /**
@@ -235,6 +251,8 @@ class VifPeer implements ModelInterface, ArrayAccess
     * status  VIF对等体状态
     * vifId  vif对等体对应的虚拟接口ID
     * receiveRouteNum  路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+    * enableNqa  是否使能nqa功能：true或false
+    * enableBfd  是否使能bfd功能：true或false
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class VifPeer implements ModelInterface, ArrayAccess
             'bgpStatus' => 'getBgpStatus',
             'status' => 'getStatus',
             'vifId' => 'getVifId',
-            'receiveRouteNum' => 'getReceiveRouteNum'
+            'receiveRouteNum' => 'getReceiveRouteNum',
+            'enableNqa' => 'getEnableNqa',
+            'enableBfd' => 'getEnableBfd'
     ];
 
     /**
@@ -350,6 +370,8 @@ class VifPeer implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['vifId'] = isset($data['vifId']) ? $data['vifId'] : null;
         $this->container['receiveRouteNum'] = isset($data['receiveRouteNum']) ? $data['receiveRouteNum'] : null;
+        $this->container['enableNqa'] = isset($data['enableNqa']) ? $data['enableNqa'] : null;
+        $this->container['enableBfd'] = isset($data['enableBfd']) ? $data['enableBfd'] : null;
     }
 
     /**
@@ -853,6 +875,54 @@ class VifPeer implements ModelInterface, ArrayAccess
     public function setReceiveRouteNum($receiveRouteNum)
     {
         $this->container['receiveRouteNum'] = $receiveRouteNum;
+        return $this;
+    }
+
+    /**
+    * Gets enableNqa
+    *  是否使能nqa功能：true或false
+    *
+    * @return bool|null
+    */
+    public function getEnableNqa()
+    {
+        return $this->container['enableNqa'];
+    }
+
+    /**
+    * Sets enableNqa
+    *
+    * @param bool|null $enableNqa 是否使能nqa功能：true或false
+    *
+    * @return $this
+    */
+    public function setEnableNqa($enableNqa)
+    {
+        $this->container['enableNqa'] = $enableNqa;
+        return $this;
+    }
+
+    /**
+    * Gets enableBfd
+    *  是否使能bfd功能：true或false
+    *
+    * @return bool|null
+    */
+    public function getEnableBfd()
+    {
+        return $this->container['enableBfd'];
+    }
+
+    /**
+    * Sets enableBfd
+    *
+    * @param bool|null $enableBfd 是否使能bfd功能：true或false
+    *
+    * @return $this
+    */
+    public function setEnableBfd($enableBfd)
+    {
+        $this->container['enableBfd'] = $enableBfd;
         return $this;
     }
 

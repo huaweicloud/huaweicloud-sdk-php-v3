@@ -41,6 +41,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
+    * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    * rateLimit  标识虚拟接口是否开启限速
+    * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * gatewayId  虚拟接口关联的网关的ID
+    * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * bgpRouteLimit  BGP的路由配置规格
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * vifPeers  vif的Peer的相关信息
     * extendAttribute  extendAttribute
     *
@@ -68,6 +82,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'deviceId' => 'string',
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dc\V3\Model\Tag[]',
+            'localGatewayV4Ip' => 'string',
+            'remoteGatewayV4Ip' => 'string',
+            'iesId' => 'string',
+            'reason' => 'string',
+            'rateLimit' => 'bool',
+            'addressFamily' => 'string',
+            'localGatewayV6Ip' => 'string',
+            'remoteGatewayV6Ip' => 'string',
+            'lgwId' => 'string',
+            'gatewayId' => 'string',
+            'remoteEpGroup' => 'string[]',
+            'serviceEpGroup' => 'string[]',
+            'bgpRouteLimit' => 'int',
+            'priority' => 'string',
             'vifPeers' => '\HuaweiCloud\SDK\Dc\V3\Model\VifPeer[]',
             'extendAttribute' => '\HuaweiCloud\SDK\Dc\V3\Model\VifExtendAttribute'
     ];
@@ -95,6 +123,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
+    * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    * rateLimit  标识虚拟接口是否开启限速
+    * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * gatewayId  虚拟接口关联的网关的ID
+    * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * bgpRouteLimit  BGP的路由配置规格
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * vifPeers  vif的Peer的相关信息
     * extendAttribute  extendAttribute
     *
@@ -122,6 +164,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         'deviceId' => null,
         'enterpriseProjectId' => null,
         'tags' => null,
+        'localGatewayV4Ip' => null,
+        'remoteGatewayV4Ip' => null,
+        'iesId' => null,
+        'reason' => null,
+        'rateLimit' => null,
+        'addressFamily' => null,
+        'localGatewayV6Ip' => null,
+        'remoteGatewayV6Ip' => null,
+        'lgwId' => null,
+        'gatewayId' => null,
+        'remoteEpGroup' => null,
+        'serviceEpGroup' => null,
+        'bgpRouteLimit' => 'int32',
+        'priority' => null,
         'vifPeers' => null,
         'extendAttribute' => null
     ];
@@ -170,6 +226,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
+    * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    * rateLimit  标识虚拟接口是否开启限速
+    * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * gatewayId  虚拟接口关联的网关的ID
+    * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * bgpRouteLimit  BGP的路由配置规格
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * vifPeers  vif的Peer的相关信息
     * extendAttribute  extendAttribute
     *
@@ -197,6 +267,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'deviceId' => 'device_id',
             'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
+            'localGatewayV4Ip' => 'local_gateway_v4_ip',
+            'remoteGatewayV4Ip' => 'remote_gateway_v4_ip',
+            'iesId' => 'ies_id',
+            'reason' => 'reason',
+            'rateLimit' => 'rate_limit',
+            'addressFamily' => 'address_family',
+            'localGatewayV6Ip' => 'local_gateway_v6_ip',
+            'remoteGatewayV6Ip' => 'remote_gateway_v6_ip',
+            'lgwId' => 'lgw_id',
+            'gatewayId' => 'gateway_id',
+            'remoteEpGroup' => 'remote_ep_group',
+            'serviceEpGroup' => 'service_ep_group',
+            'bgpRouteLimit' => 'bgp_route_limit',
+            'priority' => 'priority',
             'vifPeers' => 'vif_peers',
             'extendAttribute' => 'extend_attribute'
     ];
@@ -224,6 +308,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
+    * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    * rateLimit  标识虚拟接口是否开启限速
+    * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * gatewayId  虚拟接口关联的网关的ID
+    * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * bgpRouteLimit  BGP的路由配置规格
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * vifPeers  vif的Peer的相关信息
     * extendAttribute  extendAttribute
     *
@@ -251,6 +349,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'deviceId' => 'setDeviceId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
+            'localGatewayV4Ip' => 'setLocalGatewayV4Ip',
+            'remoteGatewayV4Ip' => 'setRemoteGatewayV4Ip',
+            'iesId' => 'setIesId',
+            'reason' => 'setReason',
+            'rateLimit' => 'setRateLimit',
+            'addressFamily' => 'setAddressFamily',
+            'localGatewayV6Ip' => 'setLocalGatewayV6Ip',
+            'remoteGatewayV6Ip' => 'setRemoteGatewayV6Ip',
+            'lgwId' => 'setLgwId',
+            'gatewayId' => 'setGatewayId',
+            'remoteEpGroup' => 'setRemoteEpGroup',
+            'serviceEpGroup' => 'setServiceEpGroup',
+            'bgpRouteLimit' => 'setBgpRouteLimit',
+            'priority' => 'setPriority',
             'vifPeers' => 'setVifPeers',
             'extendAttribute' => 'setExtendAttribute'
     ];
@@ -278,6 +390,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     * deviceId  归属的设备ID
     * enterpriseProjectId  实例所属企业项目ID
     * tags  标签信息
+    * localGatewayV4Ip  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV4Ip  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    * iesId  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    * reason  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    * rateLimit  标识虚拟接口是否开启限速
+    * addressFamily  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * localGatewayV6Ip  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * remoteGatewayV6Ip  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * lgwId  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    * gatewayId  虚拟接口关联的网关的ID
+    * remoteEpGroup  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * serviceEpGroup  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    * bgpRouteLimit  BGP的路由配置规格
+    * priority  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
     * vifPeers  vif的Peer的相关信息
     * extendAttribute  extendAttribute
     *
@@ -305,6 +431,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             'deviceId' => 'getDeviceId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
+            'localGatewayV4Ip' => 'getLocalGatewayV4Ip',
+            'remoteGatewayV4Ip' => 'getRemoteGatewayV4Ip',
+            'iesId' => 'getIesId',
+            'reason' => 'getReason',
+            'rateLimit' => 'getRateLimit',
+            'addressFamily' => 'getAddressFamily',
+            'localGatewayV6Ip' => 'getLocalGatewayV6Ip',
+            'remoteGatewayV6Ip' => 'getRemoteGatewayV6Ip',
+            'lgwId' => 'getLgwId',
+            'gatewayId' => 'getGatewayId',
+            'remoteEpGroup' => 'getRemoteEpGroup',
+            'serviceEpGroup' => 'getServiceEpGroup',
+            'bgpRouteLimit' => 'getBgpRouteLimit',
+            'priority' => 'getPriority',
             'vifPeers' => 'getVifPeers',
             'extendAttribute' => 'getExtendAttribute'
     ];
@@ -354,6 +494,8 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     const SERVICE_TYPE_LGW = 'LGW';
     const TYPE__PRIVATE = 'private';
     const TYPE__PUBLIC = 'public';
+    const PRIORITY_NORMAL = 'normal';
+    const PRIORITY_LOW = 'low';
     
 
     /**
@@ -380,6 +522,19 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         return [
             self::TYPE__PRIVATE,
             self::TYPE__PUBLIC,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPriorityAllowableValues()
+    {
+        return [
+            self::PRIORITY_NORMAL,
+            self::PRIORITY_LOW,
         ];
     }
 
@@ -420,6 +575,20 @@ class VirtualInterface implements ModelInterface, ArrayAccess
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['localGatewayV4Ip'] = isset($data['localGatewayV4Ip']) ? $data['localGatewayV4Ip'] : null;
+        $this->container['remoteGatewayV4Ip'] = isset($data['remoteGatewayV4Ip']) ? $data['remoteGatewayV4Ip'] : null;
+        $this->container['iesId'] = isset($data['iesId']) ? $data['iesId'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['rateLimit'] = isset($data['rateLimit']) ? $data['rateLimit'] : null;
+        $this->container['addressFamily'] = isset($data['addressFamily']) ? $data['addressFamily'] : null;
+        $this->container['localGatewayV6Ip'] = isset($data['localGatewayV6Ip']) ? $data['localGatewayV6Ip'] : null;
+        $this->container['remoteGatewayV6Ip'] = isset($data['remoteGatewayV6Ip']) ? $data['remoteGatewayV6Ip'] : null;
+        $this->container['lgwId'] = isset($data['lgwId']) ? $data['lgwId'] : null;
+        $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
+        $this->container['remoteEpGroup'] = isset($data['remoteEpGroup']) ? $data['remoteEpGroup'] : null;
+        $this->container['serviceEpGroup'] = isset($data['serviceEpGroup']) ? $data['serviceEpGroup'] : null;
+        $this->container['bgpRouteLimit'] = isset($data['bgpRouteLimit']) ? $data['bgpRouteLimit'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['vifPeers'] = isset($data['vifPeers']) ? $data['vifPeers'] : null;
         $this->container['extendAttribute'] = isset($data['extendAttribute']) ? $data['extendAttribute'] : null;
     }
@@ -508,6 +677,14 @@ class VirtualInterface implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+            $allowedValues = $this->getPriorityAllowableValues();
+                if (!is_null($this->container['priority']) && !in_array($this->container['priority'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'priority', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1023,6 +1200,342 @@ class VirtualInterface implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets localGatewayV4Ip
+    *  云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string|null
+    */
+    public function getLocalGatewayV4Ip()
+    {
+        return $this->container['localGatewayV4Ip'];
+    }
+
+    /**
+    * Sets localGatewayV4Ip
+    *
+    * @param string|null $localGatewayV4Ip 云侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setLocalGatewayV4Ip($localGatewayV4Ip)
+    {
+        $this->container['localGatewayV4Ip'] = $localGatewayV4Ip;
+        return $this;
+    }
+
+    /**
+    * Gets remoteGatewayV4Ip
+    *  客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string|null
+    */
+    public function getRemoteGatewayV4Ip()
+    {
+        return $this->container['remoteGatewayV4Ip'];
+    }
+
+    /**
+    * Sets remoteGatewayV4Ip
+    *
+    * @param string|null $remoteGatewayV4Ip 客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setRemoteGatewayV4Ip($remoteGatewayV4Ip)
+    {
+        $this->container['remoteGatewayV4Ip'] = $remoteGatewayV4Ip;
+        return $this;
+    }
+
+    /**
+    * Gets iesId
+    *  归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    *
+    * @return string|null
+    */
+    public function getIesId()
+    {
+        return $this->container['iesId'];
+    }
+
+    /**
+    * Sets iesId
+    *
+    * @param string|null $iesId 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+    *
+    * @return $this
+    */
+    public function setIesId($iesId)
+    {
+        $this->container['iesId'] = $iesId;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    *
+    * @return string|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param string|null $reason 如果资源的状态是Error的情况下，该参数会显示相关错误信息。
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
+    * Gets rateLimit
+    *  标识虚拟接口是否开启限速
+    *
+    * @return bool|null
+    */
+    public function getRateLimit()
+    {
+        return $this->container['rateLimit'];
+    }
+
+    /**
+    * Sets rateLimit
+    *
+    * @param bool|null $rateLimit 标识虚拟接口是否开启限速
+    *
+    * @return $this
+    */
+    public function setRateLimit($rateLimit)
+    {
+        $this->container['rateLimit'] = $rateLimit;
+        return $this;
+    }
+
+    /**
+    * Gets addressFamily
+    *  接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string|null
+    */
+    public function getAddressFamily()
+    {
+        return $this->container['addressFamily'];
+    }
+
+    /**
+    * Sets addressFamily
+    *
+    * @param string|null $addressFamily 接口的地址簇类型，ipv4，ipv6。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setAddressFamily($addressFamily)
+    {
+        $this->container['addressFamily'] = $addressFamily;
+        return $this;
+    }
+
+    /**
+    * Gets localGatewayV6Ip
+    *  云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string|null
+    */
+    public function getLocalGatewayV6Ip()
+    {
+        return $this->container['localGatewayV6Ip'];
+    }
+
+    /**
+    * Sets localGatewayV6Ip
+    *
+    * @param string|null $localGatewayV6Ip 云侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setLocalGatewayV6Ip($localGatewayV6Ip)
+    {
+        $this->container['localGatewayV6Ip'] = $localGatewayV6Ip;
+        return $this;
+    }
+
+    /**
+    * Gets remoteGatewayV6Ip
+    *  客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string|null
+    */
+    public function getRemoteGatewayV6Ip()
+    {
+        return $this->container['remoteGatewayV6Ip'];
+    }
+
+    /**
+    * Sets remoteGatewayV6Ip
+    *
+    * @param string|null $remoteGatewayV6Ip 客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setRemoteGatewayV6Ip($remoteGatewayV6Ip)
+    {
+        $this->container['remoteGatewayV6Ip'] = $remoteGatewayV6Ip;
+        return $this;
+    }
+
+    /**
+    * Gets lgwId
+    *  本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    *
+    * @return string|null
+    */
+    public function getLgwId()
+    {
+        return $this->container['lgwId'];
+    }
+
+    /**
+    * Sets lgwId
+    *
+    * @param string|null $lgwId 本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+    *
+    * @return $this
+    */
+    public function setLgwId($lgwId)
+    {
+        $this->container['lgwId'] = $lgwId;
+        return $this;
+    }
+
+    /**
+    * Gets gatewayId
+    *  虚拟接口关联的网关的ID
+    *
+    * @return string|null
+    */
+    public function getGatewayId()
+    {
+        return $this->container['gatewayId'];
+    }
+
+    /**
+    * Sets gatewayId
+    *
+    * @param string|null $gatewayId 虚拟接口关联的网关的ID
+    *
+    * @return $this
+    */
+    public function setGatewayId($gatewayId)
+    {
+        $this->container['gatewayId'] = $gatewayId;
+        return $this;
+    }
+
+    /**
+    * Gets remoteEpGroup
+    *  远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string[]|null
+    */
+    public function getRemoteEpGroup()
+    {
+        return $this->container['remoteEpGroup'];
+    }
+
+    /**
+    * Sets remoteEpGroup
+    *
+    * @param string[]|null $remoteEpGroup 远端子网列表，记录租户侧的cidrs。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setRemoteEpGroup($remoteEpGroup)
+    {
+        $this->container['remoteEpGroup'] = $remoteEpGroup;
+        return $this;
+    }
+
+    /**
+    * Gets serviceEpGroup
+    *  该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return string[]|null
+    */
+    public function getServiceEpGroup()
+    {
+        return $this->container['serviceEpGroup'];
+    }
+
+    /**
+    * Sets serviceEpGroup
+    *
+    * @param string[]|null $serviceEpGroup 该字段用于公网专线接口，表示租户可以访问云上公网服务地址列表。该字段现已迁移到vifpeer参数列表中，未来将会废弃。
+    *
+    * @return $this
+    */
+    public function setServiceEpGroup($serviceEpGroup)
+    {
+        $this->container['serviceEpGroup'] = $serviceEpGroup;
+        return $this;
+    }
+
+    /**
+    * Gets bgpRouteLimit
+    *  BGP的路由配置规格
+    *
+    * @return int|null
+    */
+    public function getBgpRouteLimit()
+    {
+        return $this->container['bgpRouteLimit'];
+    }
+
+    /**
+    * Sets bgpRouteLimit
+    *
+    * @param int|null $bgpRouteLimit BGP的路由配置规格
+    *
+    * @return $this
+    */
+    public function setBgpRouteLimit($bgpRouteLimit)
+    {
+        $this->container['bgpRouteLimit'] = $bgpRouteLimit;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return string|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param string|null $priority 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
         return $this;
     }
 

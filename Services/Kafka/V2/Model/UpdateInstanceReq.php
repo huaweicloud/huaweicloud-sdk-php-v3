@@ -22,8 +22,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
+    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
     * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
@@ -44,8 +44,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
+    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
     * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
@@ -87,8 +87,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
+    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
     * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
@@ -109,8 +109,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
+    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
     * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
@@ -131,8 +131,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
+    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
     * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
@@ -311,7 +311,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainBegin
-    *  维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
+    *  维护时间窗开始时间，格式为HH:mm:ss。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets maintainBegin
     *
-    * @param string|null $maintainBegin 维护时间窗开始时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 开始时间必须为22:00:00、02:00:00、06:00:00、10:00:00、14:00:00和18:00:00。   - 该参数不能单独为空，若该值为空，则结束时间也为空。系统分配一个默认开始时间02:00:00。
+    * @param string|null $maintainBegin 维护时间窗开始时间，格式为HH:mm:ss。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainEnd
-    *  维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    *  维护时间窗结束时间，格式为HH:mm:ss。
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets maintainEnd
     *
-    * @param string|null $maintainEnd 维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
+    * @param string|null $maintainEnd 维护时间窗结束时间，格式为HH:mm:ss。
     *
     * @return $this
     */

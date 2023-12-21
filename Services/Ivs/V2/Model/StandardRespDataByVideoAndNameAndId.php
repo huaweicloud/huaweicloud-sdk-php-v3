@@ -23,7 +23,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * similarity  人像相识度。取值范围[0,100]
+    * similarity  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     * videoResult  videoResult
     *
     * @var string[]
@@ -41,7 +41,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * similarity  人像相识度。取值范围[0,100]
+    * similarity  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     * videoResult  videoResult
     *
     * @var string[]
@@ -80,7 +80,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * similarity  人像相识度。取值范围[0,100]
+    * similarity  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     * videoResult  videoResult
     *
     * @var string[]
@@ -98,7 +98,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * similarity  人像相识度。取值范围[0,100]
+    * similarity  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     * videoResult  videoResult
     *
     * @var string[]
@@ -116,7 +116,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * similarity  人像相识度。取值范围[0,100]
+    * similarity  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     * videoResult  videoResult
     *
     * @var string[]
@@ -305,7 +305,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
 
     /**
     * Gets similarity
-    *  人像相识度。取值范围[0,100]
+    *  人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class StandardRespDataByVideoAndNameAndId implements ModelInterface, ArrayAccess
     /**
     * Sets similarity
     *
-    * @param string $similarity 人像相识度。取值范围[0,100]
+    * @param string $similarity 人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class CreateCloudTableClusterRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'projectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterRequestBody'
+            'body' => '\HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterReqBody'
     ];
 
     /**
@@ -249,7 +249,7 @@ class CreateCloudTableClusterRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterRequestBody|null
+    * @return \HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterReqBody|null
     */
     public function getBody()
     {
@@ -259,7 +259,7 @@ class CreateCloudTableClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\CloudTable\V2\Model\CreateClusterReqBody|null $body body
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  用户名称。
-    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * userName  用户名称。  设置用户权限时，为必选参数。
+    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  用户名称。
-    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * userName  用户名称。  设置用户权限时，为必选参数。
+    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  用户名称。
-    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * userName  用户名称。  设置用户权限时，为必选参数。
+    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  用户名称。
-    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * userName  用户名称。  设置用户权限时，为必选参数。
+    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  用户名称。
-    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * userName  用户名称。  设置用户权限时，为必选参数。
+    * accessPolicy  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名称。
+    *  用户名称。  设置用户权限时，为必选参数。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名称。
+    * @param string|null $userName 用户名称。  设置用户权限时，为必选参数。
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPolicy
-    *  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    *  权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @return string|null
     */
@@ -246,7 +246,7 @@ class AccessPolicyEntity implements ModelInterface, ArrayAccess
     /**
     * Sets accessPolicy
     *
-    * @param string|null $accessPolicy 权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
+    * @param string|null $accessPolicy 权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。  设置用户权限时，为必选参数。
     *
     * @return $this
     */

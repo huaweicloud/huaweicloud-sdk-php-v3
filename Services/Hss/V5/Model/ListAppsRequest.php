@@ -29,6 +29,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
             'installDir' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'category' => 'string',
+            'partMatch' => 'bool'
     ];
 
     /**
@@ -55,6 +59,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
         'installDir' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'category' => null,
+        'partMatch' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
             'installDir' => 'install_dir',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'category' => 'category',
+            'partMatch' => 'part_match'
     ];
 
     /**
@@ -128,6 +140,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
             'installDir' => 'setInstallDir',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'category' => 'setCategory',
+            'partMatch' => 'setPartMatch'
     ];
 
     /**
@@ -154,6 +170,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目
     * limit  默认10
     * offset  默认是0
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
+    * partMatch  是否模糊匹配，默认false表示精确匹配
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
             'installDir' => 'getInstallDir',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'category' => 'getCategory',
+            'partMatch' => 'getPartMatch'
     ];
 
     /**
@@ -236,6 +256,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['partMatch'] = isset($data['partMatch']) ? $data['partMatch'] : null;
     }
 
     /**
@@ -302,6 +324,12 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -530,6 +558,54 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets partMatch
+    *  是否模糊匹配，默认false表示精确匹配
+    *
+    * @return bool|null
+    */
+    public function getPartMatch()
+    {
+        return $this->container['partMatch'];
+    }
+
+    /**
+    * Sets partMatch
+    *
+    * @param bool|null $partMatch 是否模糊匹配，默认false表示精确匹配
+    *
+    * @return $this
+    */
+    public function setPartMatch($partMatch)
+    {
+        $this->container['partMatch'] = $partMatch;
         return $this;
     }
 

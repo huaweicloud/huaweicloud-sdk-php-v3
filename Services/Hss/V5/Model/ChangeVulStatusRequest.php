@@ -20,7 +20,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    *  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */

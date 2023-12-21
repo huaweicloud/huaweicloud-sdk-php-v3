@@ -21,7 +21,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gcTime  文件系统 gc_time
+    * gcTime  文件系统冷数据淘汰时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gcTime  文件系统 gc_time
+    * gcTime  文件系统冷数据淘汰时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gcTime  文件系统 gc_time
+    * gcTime  文件系统冷数据淘汰时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gcTime  文件系统 gc_time
+    * gcTime  文件系统冷数据淘汰时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gcTime  文件系统 gc_time
+    * gcTime  文件系统冷数据淘汰时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gcTime
-    *  文件系统 gc_time
+    *  文件系统冷数据淘汰时间
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class UpdateHpcShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gcTime
     *
-    * @param int|null $gcTime 文件系统 gc_time
+    * @param int|null $gcTime 文件系统冷数据淘汰时间
     *
     * @return $this
     */

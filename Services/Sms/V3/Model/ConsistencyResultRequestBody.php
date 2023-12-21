@@ -172,13 +172,10 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['consistencyResult'] === null) {
             $invalidProperties[] = "'consistencyResult' can't be null";
         }
-        if ($this->container['finishedTime'] === null) {
-            $invalidProperties[] = "'finishedTime' can't be null";
-        }
-            if (($this->container['finishedTime'] > 100000000000)) {
+            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] > 100000000000)) {
                 $invalidProperties[] = "invalid value for 'finishedTime', must be smaller than or equal to 100000000000.";
             }
-            if (($this->container['finishedTime'] < 0)) {
+            if (!is_null($this->container['finishedTime']) && ($this->container['finishedTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'finishedTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -223,7 +220,7 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     * Gets finishedTime
     *  检验完成时间
     *
-    * @return int
+    * @return int|null
     */
     public function getFinishedTime()
     {
@@ -233,7 +230,7 @@ class ConsistencyResultRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets finishedTime
     *
-    * @param int $finishedTime 检验完成时间
+    * @param int|null $finishedTime 检验完成时间
     *
     * @return $this
     */

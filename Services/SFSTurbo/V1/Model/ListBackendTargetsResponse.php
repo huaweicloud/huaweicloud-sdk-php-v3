@@ -21,8 +21,8 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  文件系统后端存储库列表元素个数
-    * targets  文件系统后端存储库列表
+    * count  后端存储列表个数
+    * targets  后端存储列表
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -35,8 +35,8 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  文件系统后端存储库列表元素个数
-    * targets  文件系统后端存储库列表
+    * count  后端存储列表个数
+    * targets  后端存储列表
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -70,8 +70,8 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  文件系统后端存储库列表元素个数
-    * targets  文件系统后端存储库列表
+    * count  后端存储列表个数
+    * targets  后端存储列表
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  文件系统后端存储库列表元素个数
-    * targets  文件系统后端存储库列表
+    * count  后端存储列表个数
+    * targets  后端存储列表
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  文件系统后端存储库列表元素个数
-    * targets  文件系统后端存储库列表
+    * count  后端存储列表个数
+    * targets  后端存储列表
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  文件系统后端存储库列表元素个数
+    *  后端存储列表个数
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 文件系统后端存储库列表元素个数
+    * @param int|null $count 后端存储列表个数
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets targets
-    *  文件系统后端存储库列表
+    *  后端存储列表
     *
     * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowBackendTargetInfoResponseBody[]|null
     */
@@ -233,7 +233,7 @@ class ListBackendTargetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets targets
     *
-    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowBackendTargetInfoResponseBody[]|null $targets 文件系统后端存储库列表
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowBackendTargetInfoResponseBody[]|null $targets 后端存储列表
     *
     * @return $this
     */

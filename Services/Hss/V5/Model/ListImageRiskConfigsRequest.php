@@ -22,7 +22,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称
@@ -31,6 +31,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -45,14 +46,15 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'imageVersion' => 'string',
             'checkName' => 'string',
             'severity' => 'string',
-            'standard' => 'string'
+            'standard' => 'string',
+            'instanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称
@@ -61,6 +63,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
         'imageVersion' => null,
         'checkName' => null,
         'severity' => null,
-        'standard' => null
+        'standard' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -103,7 +107,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称
@@ -112,6 +116,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -126,14 +131,15 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'imageVersion' => 'image_version',
             'checkName' => 'check_name',
             'severity' => 'severity',
-            'standard' => 'standard'
+            'standard' => 'standard',
+            'instanceId' => 'instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称
@@ -142,6 +148,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -156,14 +163,15 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'imageVersion' => 'setImageVersion',
             'checkName' => 'setCheckName',
             'severity' => 'setSeverity',
-            'standard' => 'setStandard'
+            'standard' => 'setStandard',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * namespace  组织名称
@@ -172,6 +180,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     * checkName  基线名称
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             'imageVersion' => 'getImageVersion',
             'checkName' => 'getCheckName',
             'severity' => 'getSeverity',
-            'standard' => 'getStandard'
+            'standard' => 'getStandard',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
         $this->container['checkName'] = isset($data['checkName']) ? $data['checkName'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -346,6 +357,12 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['standard']) && (mb_strlen($this->container['standard']) < 0)) {
                 $invalidProperties[] = "invalid value for 'standard', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -410,7 +427,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return string
     */
@@ -422,7 +439,7 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return $this
     */
@@ -621,6 +638,30 @@ class ListImageRiskConfigsRequest implements ModelInterface, ArrayAccess
     public function setStandard($standard)
     {
         $this->container['standard'] = $standard;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 企业仓库实例ID，swr共享版无需使用该参数
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

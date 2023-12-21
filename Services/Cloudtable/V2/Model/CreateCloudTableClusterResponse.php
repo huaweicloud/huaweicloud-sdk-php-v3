@@ -22,21 +22,29 @@ class CreateCloudTableClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID
+    * jobId  jobId
+    * getJobEndpoint  getJobEndpoint
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'jobId' => 'string',
+            'getJobEndpoint' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID
+    * jobId  jobId
+    * getJobEndpoint  getJobEndpoint
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterId' => null
+        'clusterId' => null,
+        'jobId' => null,
+        'getJobEndpoint' => null
     ];
 
     /**
@@ -63,31 +71,43 @@ class CreateCloudTableClusterResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID
+    * jobId  jobId
+    * getJobEndpoint  getJobEndpoint
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'jobId' => 'jobId',
+            'getJobEndpoint' => 'getJobEndpoint'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID
+    * jobId  jobId
+    * getJobEndpoint  getJobEndpoint
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'jobId' => 'setJobId',
+            'getJobEndpoint' => 'setGetJobEndpoint'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID
+    * jobId  jobId
+    * getJobEndpoint  getJobEndpoint
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'jobId' => 'getJobId',
+            'getJobEndpoint' => 'getGetJobEndpoint'
     ];
 
     /**
@@ -149,6 +169,8 @@ class CreateCloudTableClusterResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['getJobEndpoint'] = isset($data['getJobEndpoint']) ? $data['getJobEndpoint'] : null;
     }
 
     /**
@@ -194,6 +216,54 @@ class CreateCloudTableClusterResponse implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  jobId
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId jobId
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets getJobEndpoint
+    *  getJobEndpoint
+    *
+    * @return string|null
+    */
+    public function getGetJobEndpoint()
+    {
+        return $this->container['getJobEndpoint'];
+    }
+
+    /**
+    * Sets getJobEndpoint
+    *
+    * @param string|null $getJobEndpoint getJobEndpoint
+    *
+    * @return $this
+    */
+    public function setGetJobEndpoint($getJobEndpoint)
+    {
+        $this->container['getJobEndpoint'] = $getJobEndpoint;
         return $this;
     }
 

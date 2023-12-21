@@ -55,7 +55,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
         'state' => null,
         'coordinatorId' => null,
         'groupDesc' => null,
-        'lag' => null
+        'lag' => 'int64'
     ];
 
     /**

@@ -22,17 +22,18 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
     * imageName  镜像名称
-    * tagName  镜像版本名称
+    * tagName  镜像版本
     * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
     * vulId  漏洞ID（支持模糊查询）
     * appName  软件名
+    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     *
     * @var string[]
     */
@@ -49,24 +50,26 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'tagName' => 'string',
             'repairNecessity' => 'string',
             'vulId' => 'string',
-            'appName' => 'string'
+            'appName' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
     * imageName  镜像名称
-    * tagName  镜像版本名称
+    * tagName  镜像版本
     * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
     * vulId  漏洞ID（支持模糊查询）
     * appName  软件名
+    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         'tagName' => null,
         'repairNecessity' => null,
         'vulId' => null,
-        'appName' => null
+        'appName' => null,
+        'type' => null
     ];
 
     /**
@@ -111,17 +115,18 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
     * imageName  镜像名称
-    * tagName  镜像版本名称
+    * tagName  镜像版本
     * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
     * vulId  漏洞ID（支持模糊查询）
     * appName  软件名
+    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     *
     * @var string[]
     */
@@ -138,24 +143,26 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'tagName' => 'tag_name',
             'repairNecessity' => 'repair_necessity',
             'vulId' => 'vul_id',
-            'appName' => 'app_name'
+            'appName' => 'app_name',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
     * imageName  镜像名称
-    * tagName  镜像版本名称
+    * tagName  镜像版本
     * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
     * vulId  漏洞ID（支持模糊查询）
     * appName  软件名
+    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     *
     * @var string[]
     */
@@ -172,24 +179,26 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'tagName' => 'setTagName',
             'repairNecessity' => 'setRepairNecessity',
             'vulId' => 'setVulId',
-            'appName' => 'setAppName'
+            'appName' => 'setAppName',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  region id
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
     * imageName  镜像名称
-    * tagName  镜像版本名称
+    * tagName  镜像版本
     * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
     * vulId  漏洞ID（支持模糊查询）
     * appName  软件名
+    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'tagName' => 'getTagName',
             'repairNecessity' => 'getRepairNecessity',
             'vulId' => 'getVulId',
-            'appName' => 'getAppName'
+            'appName' => 'getAppName',
+            'type' => 'getType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         $this->container['repairNecessity'] = isset($data['repairNecessity']) ? $data['repairNecessity'] : null;
         $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -392,6 +403,12 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 32)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -456,7 +473,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return string
     */
@@ -468,7 +485,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     *
     * @return $this
     */
@@ -624,7 +641,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagName
-    *  镜像版本名称
+    *  镜像版本
     *
     * @return string
     */
@@ -636,7 +653,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tagName
     *
-    * @param string $tagName 镜像版本名称
+    * @param string $tagName 镜像版本
     *
     * @return $this
     */
@@ -715,6 +732,30 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     public function setAppName($appName)
     {
         $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

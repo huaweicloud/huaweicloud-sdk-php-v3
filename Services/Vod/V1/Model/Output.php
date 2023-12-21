@@ -22,6 +22,8 @@ class Output implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * playType  协议类型。  取值如下： - hls - dash - mp4
     * url  播放URL。
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
     * quality  清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
     * metaData  metaData
@@ -31,6 +33,8 @@ class Output implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'playType' => 'string',
             'url' => 'string',
+            'groupId' => 'string',
+            'groupName' => 'string',
             'encrypted' => 'int',
             'quality' => 'string',
             'metaData' => '\HuaweiCloud\SDK\Vod\V1\Model\MetaData'
@@ -40,6 +44,8 @@ class Output implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * playType  协议类型。  取值如下： - hls - dash - mp4
     * url  播放URL。
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
     * quality  清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
     * metaData  metaData
@@ -49,6 +55,8 @@ class Output implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'playType' => null,
         'url' => null,
+        'groupId' => null,
+        'groupName' => null,
         'encrypted' => null,
         'quality' => null,
         'metaData' => null
@@ -79,6 +87,8 @@ class Output implements ModelInterface, ArrayAccess
     * and the value is the original name
     * playType  协议类型。  取值如下： - hls - dash - mp4
     * url  播放URL。
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
     * quality  清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
     * metaData  metaData
@@ -88,6 +98,8 @@ class Output implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'playType' => 'play_type',
             'url' => 'url',
+            'groupId' => 'group_id',
+            'groupName' => 'group_name',
             'encrypted' => 'encrypted',
             'quality' => 'quality',
             'metaData' => 'meta_data'
@@ -97,6 +109,8 @@ class Output implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * playType  协议类型。  取值如下： - hls - dash - mp4
     * url  播放URL。
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
     * quality  清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
     * metaData  metaData
@@ -106,6 +120,8 @@ class Output implements ModelInterface, ArrayAccess
     protected static $setters = [
             'playType' => 'setPlayType',
             'url' => 'setUrl',
+            'groupId' => 'setGroupId',
+            'groupName' => 'setGroupName',
             'encrypted' => 'setEncrypted',
             'quality' => 'setQuality',
             'metaData' => 'setMetaData'
@@ -115,6 +131,8 @@ class Output implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * playType  协议类型。  取值如下： - hls - dash - mp4
     * url  播放URL。
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
     * quality  清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
     * metaData  metaData
@@ -124,6 +142,8 @@ class Output implements ModelInterface, ArrayAccess
     protected static $getters = [
             'playType' => 'getPlayType',
             'url' => 'getUrl',
+            'groupId' => 'getGroupId',
+            'groupName' => 'getGroupName',
             'encrypted' => 'getEncrypted',
             'quality' => 'getQuality',
             'metaData' => 'getMetaData'
@@ -229,6 +249,8 @@ class Output implements ModelInterface, ArrayAccess
     {
         $this->container['playType'] = isset($data['playType']) ? $data['playType'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['encrypted'] = isset($data['encrypted']) ? $data['encrypted'] : null;
         $this->container['quality'] = isset($data['quality']) ? $data['quality'] : null;
         $this->container['metaData'] = isset($data['metaData']) ? $data['metaData'] : null;
@@ -326,6 +348,54 @@ class Output implements ModelInterface, ArrayAccess
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  所属转码组Id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 所属转码组Id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets groupName
+    *  所属转码组名称
+    *
+    * @return string|null
+    */
+    public function getGroupName()
+    {
+        return $this->container['groupName'];
+    }
+
+    /**
+    * Sets groupName
+    *
+    * @param string|null $groupName 所属转码组名称
+    *
+    * @return $this
+    */
+    public function setGroupName($groupName)
+    {
+        $this->container['groupName'] = $groupName;
         return $this;
     }
 

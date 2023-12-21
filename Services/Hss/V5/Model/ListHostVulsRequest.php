@@ -20,9 +20,9 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * hostId  服务器id
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * vulName  漏洞名称
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -44,9 +44,9 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * hostId  服务器id
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * vulName  漏洞名称
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -89,9 +89,9 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * hostId  服务器id
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * vulName  漏洞名称
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -113,9 +113,9 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * hostId  服务器id
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * vulName  漏洞名称
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -137,9 +137,9 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * hostId  服务器id
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     * vulName  漏洞名称
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -302,7 +302,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业租户ID，查询所有企业项目时填写：all_granted_eps
+    *  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    *  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞
+    * @param string|null $type 漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
     *
     * @return $this
     */

@@ -224,46 +224,25 @@ class FsFileCount implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['dir'] === null) {
-            $invalidProperties[] = "'dir' can't be null";
-        }
-            if (($this->container['dir'] < 0)) {
+            if (!is_null($this->container['dir']) && ($this->container['dir'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dir', must be bigger than or equal to 0.";
             }
-        if ($this->container['regular'] === null) {
-            $invalidProperties[] = "'regular' can't be null";
-        }
-            if (($this->container['regular'] < 0)) {
+            if (!is_null($this->container['regular']) && ($this->container['regular'] < 0)) {
                 $invalidProperties[] = "invalid value for 'regular', must be bigger than or equal to 0.";
             }
-        if ($this->container['pipe'] === null) {
-            $invalidProperties[] = "'pipe' can't be null";
-        }
-            if (($this->container['pipe'] < 0)) {
+            if (!is_null($this->container['pipe']) && ($this->container['pipe'] < 0)) {
                 $invalidProperties[] = "invalid value for 'pipe', must be bigger than or equal to 0.";
             }
-        if ($this->container['char'] === null) {
-            $invalidProperties[] = "'char' can't be null";
-        }
-            if (($this->container['char'] < 0)) {
+            if (!is_null($this->container['char']) && ($this->container['char'] < 0)) {
                 $invalidProperties[] = "invalid value for 'char', must be bigger than or equal to 0.";
             }
-        if ($this->container['block'] === null) {
-            $invalidProperties[] = "'block' can't be null";
-        }
-            if (($this->container['block'] < 0)) {
+            if (!is_null($this->container['block']) && ($this->container['block'] < 0)) {
                 $invalidProperties[] = "invalid value for 'block', must be bigger than or equal to 0.";
             }
-        if ($this->container['socket'] === null) {
-            $invalidProperties[] = "'socket' can't be null";
-        }
-            if (($this->container['socket'] < 0)) {
+            if (!is_null($this->container['socket']) && ($this->container['socket'] < 0)) {
                 $invalidProperties[] = "invalid value for 'socket', must be bigger than or equal to 0.";
             }
-        if ($this->container['symlink'] === null) {
-            $invalidProperties[] = "'symlink' can't be null";
-        }
-            if (($this->container['symlink'] < 0)) {
+            if (!is_null($this->container['symlink']) && ($this->container['symlink'] < 0)) {
                 $invalidProperties[] = "invalid value for 'symlink', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -284,7 +263,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets dir
     *  目录数目
     *
-    * @return int
+    * @return int|null
     */
     public function getDir()
     {
@@ -294,7 +273,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets dir
     *
-    * @param int $dir 目录数目
+    * @param int|null $dir 目录数目
     *
     * @return $this
     */
@@ -308,7 +287,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets regular
     *  普通文件数目
     *
-    * @return int
+    * @return int|null
     */
     public function getRegular()
     {
@@ -318,7 +297,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets regular
     *
-    * @param int $regular 普通文件数目
+    * @param int|null $regular 普通文件数目
     *
     * @return $this
     */
@@ -332,7 +311,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets pipe
     *  管道文件数目
     *
-    * @return int
+    * @return int|null
     */
     public function getPipe()
     {
@@ -342,7 +321,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets pipe
     *
-    * @param int $pipe 管道文件数目
+    * @param int|null $pipe 管道文件数目
     *
     * @return $this
     */
@@ -356,7 +335,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets char
     *  字符设备数目
     *
-    * @return int
+    * @return int|null
     */
     public function getChar()
     {
@@ -366,7 +345,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets char
     *
-    * @param int $char 字符设备数目
+    * @param int|null $char 字符设备数目
     *
     * @return $this
     */
@@ -380,7 +359,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets block
     *  块设备数目
     *
-    * @return int
+    * @return int|null
     */
     public function getBlock()
     {
@@ -390,7 +369,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets block
     *
-    * @param int $block 块设备数目
+    * @param int|null $block 块设备数目
     *
     * @return $this
     */
@@ -404,7 +383,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets socket
     *  套接字数目
     *
-    * @return int
+    * @return int|null
     */
     public function getSocket()
     {
@@ -414,7 +393,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets socket
     *
-    * @param int $socket 套接字数目
+    * @param int|null $socket 套接字数目
     *
     * @return $this
     */
@@ -428,7 +407,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     * Gets symlink
     *  符号链接数目
     *
-    * @return int
+    * @return int|null
     */
     public function getSymlink()
     {
@@ -438,7 +417,7 @@ class FsFileCount implements ModelInterface, ArrayAccess
     /**
     * Sets symlink
     *
-    * @param int $symlink 符号链接数目
+    * @param int|null $symlink 符号链接数目
     *
     * @return $this
     */

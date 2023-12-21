@@ -23,13 +23,17 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     * verificationName  被验证人的姓名。
     * verificationId  被验证人的身份证号码。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'verificationName' => 'string',
             'verificationId' => 'string',
-            'faceImage' => 'string'
+            'faceImage' => 'string',
+            'detail' => 'bool',
+            'crop' => 'bool'
     ];
 
     /**
@@ -37,13 +41,17 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     * verificationName  被验证人的姓名。
     * verificationId  被验证人的身份证号码。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'verificationName' => null,
         'verificationId' => null,
-        'faceImage' => null
+        'faceImage' => null,
+        'detail' => null,
+        'crop' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     * verificationName  被验证人的姓名。
     * verificationId  被验证人的身份证号码。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'verificationName' => 'verification_name',
             'verificationId' => 'verification_id',
-            'faceImage' => 'face_image'
+            'faceImage' => 'face_image',
+            'detail' => 'detail',
+            'crop' => 'crop'
     ];
 
     /**
@@ -86,13 +98,17 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     * verificationName  被验证人的姓名。
     * verificationId  被验证人的身份证号码。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $setters = [
             'verificationName' => 'setVerificationName',
             'verificationId' => 'setVerificationId',
-            'faceImage' => 'setFaceImage'
+            'faceImage' => 'setFaceImage',
+            'detail' => 'setDetail',
+            'crop' => 'setCrop'
     ];
 
     /**
@@ -100,13 +116,17 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     * verificationName  被验证人的姓名。
     * verificationId  被验证人的身份证号码。
     * faceImage  现场人像图像数据，使用base64编码，要求base64编码后大小不超过4M。图像各边的像素大小在300到4000之间，支持JPG格式。
+    * detail  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    * crop  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
     *
     * @var string[]
     */
     protected static $getters = [
             'verificationName' => 'getVerificationName',
             'verificationId' => 'getVerificationId',
-            'faceImage' => 'getFaceImage'
+            'faceImage' => 'getFaceImage',
+            'detail' => 'getDetail',
+            'crop' => 'getCrop'
     ];
 
     /**
@@ -170,6 +190,8 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
         $this->container['verificationName'] = isset($data['verificationName']) ? $data['verificationName'] : null;
         $this->container['verificationId'] = isset($data['verificationId']) ? $data['verificationId'] : null;
         $this->container['faceImage'] = isset($data['faceImage']) ? $data['faceImage'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
+        $this->container['crop'] = isset($data['crop']) ? $data['crop'] : null;
     }
 
     /**
@@ -272,6 +294,54 @@ class StandardReqDataByNameAndId implements ModelInterface, ArrayAccess
     public function setFaceImage($faceImage)
     {
         $this->container['faceImage'] = $faceImage;
+        return $this;
+    }
+
+    /**
+    * Gets detail
+    *  响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return bool|null
+    */
+    public function getDetail()
+    {
+        return $this->container['detail'];
+    }
+
+    /**
+    * Sets detail
+    *
+    * @param bool|null $detail 响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+    *
+    * @return $this
+    */
+    public function setDetail($detail)
+    {
+        $this->container['detail'] = $detail;
+        return $this;
+    }
+
+    /**
+    * Gets crop
+    *  是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
+    *
+    * @return bool|null
+    */
+    public function getCrop()
+    {
+        return $this->container['crop'];
+    }
+
+    /**
+    * Sets crop
+    *
+    * @param bool|null $crop 是否允许对入参face_image进行人脸检测及图片裁剪，默认为true，表示允许。
+    *
+    * @return $this
+    */
+    public function setCrop($crop)
+    {
+        $this->container['crop'] = $crop;
         return $this;
     }
 

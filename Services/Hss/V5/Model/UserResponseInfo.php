@@ -32,6 +32,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * shell  用户启动shell
     * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'string',
             'shell' => 'string',
             'expireTime' => 'int',
-            'recentScanTime' => 'int'
+            'recentScanTime' => 'int',
+            'containerId' => 'string',
+            'containerName' => 'string'
     ];
 
     /**
@@ -64,6 +68,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * shell  用户启动shell
     * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         'userHomeDir' => null,
         'shell' => null,
         'expireTime' => 'int64',
-        'recentScanTime' => 'int64'
+        'recentScanTime' => 'int64',
+        'containerId' => null,
+        'containerName' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * shell  用户启动shell
     * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'user_home_dir',
             'shell' => 'shell',
             'expireTime' => 'expire_time',
-            'recentScanTime' => 'recent_scan_time'
+            'recentScanTime' => 'recent_scan_time',
+            'containerId' => 'container_id',
+            'containerName' => 'container_name'
     ];
 
     /**
@@ -149,6 +161,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * shell  用户启动shell
     * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'setUserHomeDir',
             'shell' => 'setShell',
             'expireTime' => 'setExpireTime',
-            'recentScanTime' => 'setRecentScanTime'
+            'recentScanTime' => 'setRecentScanTime',
+            'containerId' => 'setContainerId',
+            'containerName' => 'setContainerName'
     ];
 
     /**
@@ -181,6 +197,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     * shell  用户启动shell
     * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
+    * containerId  容器id
+    * containerName  容器名称
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userHomeDir' => 'getUserHomeDir',
             'shell' => 'getShell',
             'expireTime' => 'getExpireTime',
-            'recentScanTime' => 'getRecentScanTime'
+            'recentScanTime' => 'getRecentScanTime',
+            'containerId' => 'getContainerId',
+            'containerName' => 'getContainerName'
     ];
 
     /**
@@ -269,6 +289,8 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         $this->container['shell'] = isset($data['shell']) ? $data['shell'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['recentScanTime'] = isset($data['recentScanTime']) ? $data['recentScanTime'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
+        $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
     }
 
     /**
@@ -338,6 +360,18 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'recentScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -638,6 +672,54 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     public function setRecentScanTime($recentScanTime)
     {
         $this->container['recentScanTime'] = $recentScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  容器id
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId 容器id
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
+        return $this;
+    }
+
+    /**
+    * Gets containerName
+    *  容器名称
+    *
+    * @return string|null
+    */
+    public function getContainerName()
+    {
+        return $this->container['containerName'];
+    }
+
+    /**
+    * Sets containerName
+    *
+    * @param string|null $containerName 容器名称
+    *
+    * @return $this
+    */
+    public function setContainerName($containerName)
+    {
+        $this->container['containerName'] = $containerName;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bucket  obs 桶名称
-    * endpoint  obs 桶 endpoint
+    * bucket  OBS桶名称
+    * endpoint  OBS桶所在的区域域名
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bucket  obs 桶名称
-    * endpoint  obs 桶 endpoint
+    * bucket  OBS桶名称
+    * endpoint  OBS桶所在的区域域名
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bucket  obs 桶名称
-    * endpoint  obs 桶 endpoint
+    * bucket  OBS桶名称
+    * endpoint  OBS桶所在的区域域名
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bucket  obs 桶名称
-    * endpoint  obs 桶 endpoint
+    * bucket  OBS桶名称
+    * endpoint  OBS桶所在的区域域名
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bucket  obs 桶名称
-    * endpoint  obs 桶 endpoint
+    * bucket  OBS桶名称
+    * endpoint  OBS桶所在的区域域名
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucket
-    *  obs 桶名称
+    *  OBS桶名称
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     /**
     * Sets bucket
     *
-    * @param string $bucket obs 桶名称
+    * @param string $bucket OBS桶名称
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoint
-    *  obs 桶 endpoint
+    *  OBS桶所在的区域域名
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     /**
     * Sets endpoint
     *
-    * @param string $endpoint obs 桶 endpoint
+    * @param string $endpoint OBS桶所在的区域域名
     *
     * @return $this
     */

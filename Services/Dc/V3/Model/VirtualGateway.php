@@ -32,6 +32,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * status  操作状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_CREATE，PENDING_UPDATE，PENDING_DELETE
     * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
+    * deviceId  归属的设备ID
+    * redundantDeviceId  归属的冗余设备ID
+    * publicBorderGroup  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
     * tags  标签信息
     *
     * @var string[]
@@ -49,6 +52,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
             'status' => 'string',
             'bgpAsn' => 'int',
             'enterpriseProjectId' => 'string',
+            'deviceId' => 'string',
+            'redundantDeviceId' => 'string',
+            'publicBorderGroup' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dc\V3\Model\Tag[]'
     ];
 
@@ -66,6 +72,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * status  操作状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_CREATE，PENDING_UPDATE，PENDING_DELETE
     * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
+    * deviceId  归属的设备ID
+    * redundantDeviceId  归属的冗余设备ID
+    * publicBorderGroup  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
     * tags  标签信息
     *
     * @var string[]
@@ -83,6 +92,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
         'status' => null,
         'bgpAsn' => 'int32',
         'enterpriseProjectId' => null,
+        'deviceId' => null,
+        'redundantDeviceId' => null,
+        'publicBorderGroup' => null,
         'tags' => null
     ];
 
@@ -121,6 +133,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * status  操作状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_CREATE，PENDING_UPDATE，PENDING_DELETE
     * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
+    * deviceId  归属的设备ID
+    * redundantDeviceId  归属的冗余设备ID
+    * publicBorderGroup  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
     * tags  标签信息
     *
     * @var string[]
@@ -138,6 +153,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
             'status' => 'status',
             'bgpAsn' => 'bgp_asn',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'deviceId' => 'device_id',
+            'redundantDeviceId' => 'redundant_device_id',
+            'publicBorderGroup' => 'public_border_group',
             'tags' => 'tags'
     ];
 
@@ -155,6 +173,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * status  操作状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_CREATE，PENDING_UPDATE，PENDING_DELETE
     * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
+    * deviceId  归属的设备ID
+    * redundantDeviceId  归属的冗余设备ID
+    * publicBorderGroup  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
     * tags  标签信息
     *
     * @var string[]
@@ -172,6 +193,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'bgpAsn' => 'setBgpAsn',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'deviceId' => 'setDeviceId',
+            'redundantDeviceId' => 'setRedundantDeviceId',
+            'publicBorderGroup' => 'setPublicBorderGroup',
             'tags' => 'setTags'
     ];
 
@@ -189,6 +213,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     * status  操作状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_CREATE，PENDING_UPDATE，PENDING_DELETE
     * bgpAsn  虚拟网关本地的BGP自冶域号(asn)
     * enterpriseProjectId  实例所属企业项目ID
+    * deviceId  归属的设备ID
+    * redundantDeviceId  归属的冗余设备ID
+    * publicBorderGroup  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
     * tags  标签信息
     *
     * @var string[]
@@ -206,6 +233,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'bgpAsn' => 'getBgpAsn',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'deviceId' => 'getDeviceId',
+            'redundantDeviceId' => 'getRedundantDeviceId',
+            'publicBorderGroup' => 'getPublicBorderGroup',
             'tags' => 'getTags'
     ];
 
@@ -279,6 +309,9 @@ class VirtualGateway implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['bgpAsn'] = isset($data['bgpAsn']) ? $data['bgpAsn'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
+        $this->container['redundantDeviceId'] = isset($data['redundantDeviceId']) ? $data['redundantDeviceId'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
@@ -628,6 +661,78 @@ class VirtualGateway implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets deviceId
+    *  归属的设备ID
+    *
+    * @return string|null
+    */
+    public function getDeviceId()
+    {
+        return $this->container['deviceId'];
+    }
+
+    /**
+    * Sets deviceId
+    *
+    * @param string|null $deviceId 归属的设备ID
+    *
+    * @return $this
+    */
+    public function setDeviceId($deviceId)
+    {
+        $this->container['deviceId'] = $deviceId;
+        return $this;
+    }
+
+    /**
+    * Gets redundantDeviceId
+    *  归属的冗余设备ID
+    *
+    * @return string|null
+    */
+    public function getRedundantDeviceId()
+    {
+        return $this->container['redundantDeviceId'];
+    }
+
+    /**
+    * Sets redundantDeviceId
+    *
+    * @param string|null $redundantDeviceId 归属的冗余设备ID
+    *
+    * @return $this
+    */
+    public function setRedundantDeviceId($redundantDeviceId)
+    {
+        $this->container['redundantDeviceId'] = $redundantDeviceId;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  归属的可用区对应的边界组(public border group)，标识是否homezone局点。
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 归属的可用区对应的边界组(public border group)，标识是否homezone局点。
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

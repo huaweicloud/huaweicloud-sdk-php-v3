@@ -205,9 +205,6 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
         }
-        if ($this->container['groupName'] === null) {
-            $invalidProperties[] = "'groupName' can't be null";
-        }
         if ($this->container['firstLanguage'] === null) {
             $invalidProperties[] = "'firstLanguage' can't be null";
         }
@@ -256,7 +253,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     * Gets groupName
     *  传译组名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getGroupName()
     {
@@ -266,7 +263,7 @@ class InterpreterGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 传译组名称。
+    * @param string|null $groupName 传译组名称。
     *
     * @return $this
     */

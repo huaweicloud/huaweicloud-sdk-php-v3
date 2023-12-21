@@ -23,13 +23,15 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     * operateType  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
     * handler  备注信息
     * operateEventList  操作的事件列表
+    * eventWhiteRuleList  用户自定义告警白名单规则列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'operateType' => 'string',
             'handler' => 'string',
-            'operateEventList' => '\HuaweiCloud\SDK\Hss\V5\Model\OperateEventRequestInfo[]'
+            'operateEventList' => '\HuaweiCloud\SDK\Hss\V5\Model\OperateEventRequestInfo[]',
+            'eventWhiteRuleList' => '\HuaweiCloud\SDK\Hss\V5\Model\EventWhiteRuleListRequestInfo[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     * operateType  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
     * handler  备注信息
     * operateEventList  操作的事件列表
+    * eventWhiteRuleList  用户自定义告警白名单规则列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'operateType' => null,
         'handler' => null,
-        'operateEventList' => null
+        'operateEventList' => null,
+        'eventWhiteRuleList' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     * operateType  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
     * handler  备注信息
     * operateEventList  操作的事件列表
+    * eventWhiteRuleList  用户自定义告警白名单规则列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'operateType' => 'operate_type',
             'handler' => 'handler',
-            'operateEventList' => 'operate_event_list'
+            'operateEventList' => 'operate_event_list',
+            'eventWhiteRuleList' => 'event_white_rule_list'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     * operateType  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
     * handler  备注信息
     * operateEventList  操作的事件列表
+    * eventWhiteRuleList  用户自定义告警白名单规则列表
     *
     * @var string[]
     */
     protected static $setters = [
             'operateType' => 'setOperateType',
             'handler' => 'setHandler',
-            'operateEventList' => 'setOperateEventList'
+            'operateEventList' => 'setOperateEventList',
+            'eventWhiteRuleList' => 'setEventWhiteRuleList'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     * operateType  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
     * handler  备注信息
     * operateEventList  操作的事件列表
+    * eventWhiteRuleList  用户自定义告警白名单规则列表
     *
     * @var string[]
     */
     protected static $getters = [
             'operateType' => 'getOperateType',
             'handler' => 'getHandler',
-            'operateEventList' => 'getOperateEventList'
+            'operateEventList' => 'getOperateEventList',
+            'eventWhiteRuleList' => 'getEventWhiteRuleList'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
         $this->container['operateType'] = isset($data['operateType']) ? $data['operateType'] : null;
         $this->container['handler'] = isset($data['handler']) ? $data['handler'] : null;
         $this->container['operateEventList'] = isset($data['operateEventList']) ? $data['operateEventList'] : null;
+        $this->container['eventWhiteRuleList'] = isset($data['eventWhiteRuleList']) ? $data['eventWhiteRuleList'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class ChangeEventRequestInfo implements ModelInterface, ArrayAccess
     public function setOperateEventList($operateEventList)
     {
         $this->container['operateEventList'] = $operateEventList;
+        return $this;
+    }
+
+    /**
+    * Gets eventWhiteRuleList
+    *  用户自定义告警白名单规则列表
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\EventWhiteRuleListRequestInfo[]|null
+    */
+    public function getEventWhiteRuleList()
+    {
+        return $this->container['eventWhiteRuleList'];
+    }
+
+    /**
+    * Sets eventWhiteRuleList
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\EventWhiteRuleListRequestInfo[]|null $eventWhiteRuleList 用户自定义告警白名单规则列表
+    *
+    * @return $this
+    */
+    public function setEventWhiteRuleList($eventWhiteRuleList)
+    {
+        $this->container['eventWhiteRuleList'] = $eventWhiteRuleList;
         return $this;
     }
 

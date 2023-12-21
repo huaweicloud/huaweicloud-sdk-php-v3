@@ -25,6 +25,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * newPartitionBrokers  增加分区时指定broker列表
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -36,6 +37,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'syncReplication' => 'bool',
             'syncMessageFlush' => 'bool',
             'newPartitionNumbers' => 'int',
+            'newPartitionBrokers' => 'int[]',
             'topicOtherConfigs' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateInstanceTopicReqTopicOtherConfigs[]',
             'topicDesc' => 'string'
     ];
@@ -47,6 +49,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * newPartitionBrokers  增加分区时指定broker列表
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -58,6 +61,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
         'syncReplication' => null,
         'syncMessageFlush' => null,
         'newPartitionNumbers' => 'int32',
+        'newPartitionBrokers' => 'int32',
         'topicOtherConfigs' => null,
         'topicDesc' => null
     ];
@@ -90,6 +94,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * newPartitionBrokers  增加分区时指定broker列表
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -101,6 +106,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'syncReplication' => 'sync_replication',
             'syncMessageFlush' => 'sync_message_flush',
             'newPartitionNumbers' => 'new_partition_numbers',
+            'newPartitionBrokers' => 'new_partition_brokers',
             'topicOtherConfigs' => 'topic_other_configs',
             'topicDesc' => 'topic_desc'
     ];
@@ -112,6 +118,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * newPartitionBrokers  增加分区时指定broker列表
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -123,6 +130,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'syncReplication' => 'setSyncReplication',
             'syncMessageFlush' => 'setSyncMessageFlush',
             'newPartitionNumbers' => 'setNewPartitionNumbers',
+            'newPartitionBrokers' => 'setNewPartitionBrokers',
             'topicOtherConfigs' => 'setTopicOtherConfigs',
             'topicDesc' => 'setTopicDesc'
     ];
@@ -134,6 +142,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     * syncReplication  是否同步复制。
     * syncMessageFlush  是否同步落盘。
     * newPartitionNumbers  分区数。
+    * newPartitionBrokers  增加分区时指定broker列表
     * topicOtherConfigs  topic配置
     * topicDesc  topic描述
     *
@@ -145,6 +154,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
             'syncReplication' => 'getSyncReplication',
             'syncMessageFlush' => 'getSyncMessageFlush',
             'newPartitionNumbers' => 'getNewPartitionNumbers',
+            'newPartitionBrokers' => 'getNewPartitionBrokers',
             'topicOtherConfigs' => 'getTopicOtherConfigs',
             'topicDesc' => 'getTopicDesc'
     ];
@@ -212,6 +222,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
         $this->container['syncReplication'] = isset($data['syncReplication']) ? $data['syncReplication'] : null;
         $this->container['syncMessageFlush'] = isset($data['syncMessageFlush']) ? $data['syncMessageFlush'] : null;
         $this->container['newPartitionNumbers'] = isset($data['newPartitionNumbers']) ? $data['newPartitionNumbers'] : null;
+        $this->container['newPartitionBrokers'] = isset($data['newPartitionBrokers']) ? $data['newPartitionBrokers'] : null;
         $this->container['topicOtherConfigs'] = isset($data['topicOtherConfigs']) ? $data['topicOtherConfigs'] : null;
         $this->container['topicDesc'] = isset($data['topicDesc']) ? $data['topicDesc'] : null;
     }
@@ -358,6 +369,30 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     public function setNewPartitionNumbers($newPartitionNumbers)
     {
         $this->container['newPartitionNumbers'] = $newPartitionNumbers;
+        return $this;
+    }
+
+    /**
+    * Gets newPartitionBrokers
+    *  增加分区时指定broker列表
+    *
+    * @return int[]|null
+    */
+    public function getNewPartitionBrokers()
+    {
+        return $this->container['newPartitionBrokers'];
+    }
+
+    /**
+    * Sets newPartitionBrokers
+    *
+    * @param int[]|null $newPartitionBrokers 增加分区时指定broker列表
+    *
+    * @return $this
+    */
+    public function setNewPartitionBrokers($newPartitionBrokers)
+    {
+        $this->container['newPartitionBrokers'] = $newPartitionBrokers;
         return $this;
     }
 

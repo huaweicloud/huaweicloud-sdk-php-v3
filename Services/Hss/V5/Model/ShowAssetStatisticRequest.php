@@ -22,24 +22,28 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目
     * hostId  host id
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'hostId' => 'string'
+            'hostId' => 'string',
+            'category' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目
     * hostId  host id
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
-        'hostId' => null
+        'hostId' => null,
+        'category' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  企业项目
     * hostId  host id
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
-            'hostId' => 'host_id'
+            'hostId' => 'host_id',
+            'category' => 'category'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  企业项目
     * hostId  host id
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'hostId' => 'setHostId'
+            'hostId' => 'setHostId',
+            'category' => 'setCategory'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  企业项目
     * hostId  host id
+    * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'hostId' => 'getHostId'
+            'hostId' => 'getHostId',
+            'category' => 'getCategory'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 1)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -240,6 +257,30 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     public function setHostId($hostId)
     {
         $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 

@@ -21,6 +21,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * playType  播放协议类型。  取值如下： - hls - dash - mp4
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * url  播放URL。
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。  默认值：0。
     * metaData  metaData
@@ -29,6 +31,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'playType' => 'string',
+            'groupId' => 'string',
+            'groupName' => 'string',
             'url' => 'string',
             'encrypted' => 'int',
             'metaData' => '\HuaweiCloud\SDK\Vod\V1\Model\MetaData'
@@ -37,6 +41,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * playType  播放协议类型。  取值如下： - hls - dash - mp4
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * url  播放URL。
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。  默认值：0。
     * metaData  metaData
@@ -45,6 +51,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'playType' => null,
+        'groupId' => null,
+        'groupName' => null,
         'url' => null,
         'encrypted' => null,
         'metaData' => null
@@ -74,6 +82,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * playType  播放协议类型。  取值如下： - hls - dash - mp4
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * url  播放URL。
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。  默认值：0。
     * metaData  metaData
@@ -82,6 +92,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'playType' => 'play_type',
+            'groupId' => 'group_id',
+            'groupName' => 'group_name',
             'url' => 'url',
             'encrypted' => 'encrypted',
             'metaData' => 'meta_data'
@@ -90,6 +102,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * playType  播放协议类型。  取值如下： - hls - dash - mp4
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * url  播放URL。
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。  默认值：0。
     * metaData  metaData
@@ -98,6 +112,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'playType' => 'setPlayType',
+            'groupId' => 'setGroupId',
+            'groupName' => 'setGroupName',
             'url' => 'setUrl',
             'encrypted' => 'setEncrypted',
             'metaData' => 'setMetaData'
@@ -106,6 +122,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * playType  播放协议类型。  取值如下： - hls - dash - mp4
+    * groupId  所属转码组Id
+    * groupName  所属转码组名称
     * url  播放URL。
     * encrypted  标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。  默认值：0。
     * metaData  metaData
@@ -114,6 +132,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'playType' => 'getPlayType',
+            'groupId' => 'getGroupId',
+            'groupName' => 'getGroupName',
             'url' => 'getUrl',
             'encrypted' => 'getEncrypted',
             'metaData' => 'getMetaData'
@@ -178,6 +198,8 @@ class PlayInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['playType'] = isset($data['playType']) ? $data['playType'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['encrypted'] = isset($data['encrypted']) ? $data['encrypted'] : null;
         $this->container['metaData'] = isset($data['metaData']) ? $data['metaData'] : null;
@@ -226,6 +248,54 @@ class PlayInfo implements ModelInterface, ArrayAccess
     public function setPlayType($playType)
     {
         $this->container['playType'] = $playType;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  所属转码组Id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 所属转码组Id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets groupName
+    *  所属转码组名称
+    *
+    * @return string|null
+    */
+    public function getGroupName()
+    {
+        return $this->container['groupName'];
+    }
+
+    /**
+    * Sets groupName
+    *
+    * @param string|null $groupName 所属转码组名称
+    *
+    * @return $this
+    */
+    public function setGroupName($groupName)
+    {
+        $this->container['groupName'] = $groupName;
         return $this;
     }
 
