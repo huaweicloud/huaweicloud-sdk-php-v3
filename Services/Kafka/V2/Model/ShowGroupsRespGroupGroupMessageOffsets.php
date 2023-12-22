@@ -48,7 +48,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     */
     protected static $openAPIFormats = [
         'partition' => null,
-        'lag' => null,
+        'lag' => 'int64',
         'topic' => null,
         'messageCurrentOffset' => null,
         'messageLogEndOffset' => null

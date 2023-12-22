@@ -21,24 +21,28 @@ class TrackerOBSChannelConfigBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bucketName  OBS桶名称
+    * bucketPrefix  OBS桶前缀
     * regionId  区域id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bucketName' => 'string',
+            'bucketPrefix' => 'string',
             'regionId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucketName  OBS桶名称
+    * bucketPrefix  OBS桶前缀
     * regionId  区域id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bucketName' => null,
+        'bucketPrefix' => null,
         'regionId' => null
     ];
 
@@ -66,36 +70,42 @@ class TrackerOBSChannelConfigBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bucketName  OBS桶名称
+    * bucketPrefix  OBS桶前缀
     * regionId  区域id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bucketName' => 'bucket_name',
+            'bucketPrefix' => 'bucket_prefix',
             'regionId' => 'region_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucketName  OBS桶名称
+    * bucketPrefix  OBS桶前缀
     * regionId  区域id
     *
     * @var string[]
     */
     protected static $setters = [
             'bucketName' => 'setBucketName',
+            'bucketPrefix' => 'setBucketPrefix',
             'regionId' => 'setRegionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucketName  OBS桶名称
+    * bucketPrefix  OBS桶前缀
     * regionId  区域id
     *
     * @var string[]
     */
     protected static $getters = [
             'bucketName' => 'getBucketName',
+            'bucketPrefix' => 'getBucketPrefix',
             'regionId' => 'getRegionId'
     ];
 
@@ -158,6 +168,7 @@ class TrackerOBSChannelConfigBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['bucketName'] = isset($data['bucketName']) ? $data['bucketName'] : null;
+        $this->container['bucketPrefix'] = isset($data['bucketPrefix']) ? $data['bucketPrefix'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
     }
 
@@ -172,6 +183,18 @@ class TrackerOBSChannelConfigBody implements ModelInterface, ArrayAccess
         if ($this->container['bucketName'] === null) {
             $invalidProperties[] = "'bucketName' can't be null";
         }
+            if ((mb_strlen($this->container['bucketName']) > 63)) {
+                $invalidProperties[] = "invalid value for 'bucketName', the character length must be smaller than or equal to 63.";
+            }
+            if (!preg_match("/[a-z0-9\\-.]{3,63}/", $this->container['bucketName'])) {
+                $invalidProperties[] = "invalid value for 'bucketName', must be conform to the pattern /[a-z0-9\\-.]{3,63}/.";
+            }
+            if (!is_null($this->container['bucketPrefix']) && (mb_strlen($this->container['bucketPrefix']) > 256)) {
+                $invalidProperties[] = "invalid value for 'bucketPrefix', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['bucketPrefix']) && !preg_match("/^[a-zA-Z0-9_]+(\/([a-zA-Z0-9_]+))*$/", $this->container['bucketPrefix'])) {
+                $invalidProperties[] = "invalid value for 'bucketPrefix', must be conform to the pattern /^[a-zA-Z0-9_]+(\/([a-zA-Z0-9_]+))*$/.";
+            }
         if ($this->container['regionId'] === null) {
             $invalidProperties[] = "'regionId' can't be null";
         }
@@ -210,6 +233,30 @@ class TrackerOBSChannelConfigBody implements ModelInterface, ArrayAccess
     public function setBucketName($bucketName)
     {
         $this->container['bucketName'] = $bucketName;
+        return $this;
+    }
+
+    /**
+    * Gets bucketPrefix
+    *  OBS桶前缀
+    *
+    * @return string|null
+    */
+    public function getBucketPrefix()
+    {
+        return $this->container['bucketPrefix'];
+    }
+
+    /**
+    * Sets bucketPrefix
+    *
+    * @param string|null $bucketPrefix OBS桶前缀
+    *
+    * @return $this
+    */
+    public function setBucketPrefix($bucketPrefix)
+    {
+        $this->container['bucketPrefix'] = $bucketPrefix;
         return $this;
     }
 

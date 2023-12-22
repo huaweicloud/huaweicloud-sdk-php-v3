@@ -51,7 +51,7 @@ class ShowInstanceTopicDetailRespReplicas implements ModelInterface, ArrayAccess
         'leader' => null,
         'inSync' => null,
         'size' => null,
-        'lag' => null
+        'lag' => 'int64'
     ];
 
     /**
