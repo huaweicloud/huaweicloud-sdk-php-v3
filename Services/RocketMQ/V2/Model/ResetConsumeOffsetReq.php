@@ -169,6 +169,12 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
+        }
+        if ($this->container['timestamp'] === null) {
+            $invalidProperties[] = "'timestamp' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     * Gets topic
     *  重置的主题。
     *
-    * @return string|null
+    * @return string
     */
     public function getTopic()
     {
@@ -197,7 +203,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 重置的主题。
+    * @param string $topic 重置的主题。
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     * Gets timestamp
     *  重置的时间。
     *
-    * @return float|null
+    * @return float
     */
     public function getTimestamp()
     {
@@ -221,7 +227,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param float|null $timestamp 重置的时间。
+    * @param float $timestamp 重置的时间。
     *
     * @return $this
     */

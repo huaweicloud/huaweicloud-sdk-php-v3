@@ -20,10 +20,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * textContext  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体，当前支持fzyouh
-    * fontSize  字体大小。  取值范围：[4, 120]
-    * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  字体大小（像素）。  取值范围：[4, 120]
+    * fontColor  字体颜色。RGB颜色值。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * textContext  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体，当前支持fzyouh
-    * fontSize  字体大小。  取值范围：[4, 120]
-    * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  字体大小（像素）。  取值范围：[4, 120]
+    * fontColor  字体颜色。RGB颜色值。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * textContext  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体，当前支持fzyouh
-    * fontSize  字体大小。  取值范围：[4, 120]
-    * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  字体大小（像素）。  取值范围：[4, 120]
+    * fontColor  字体颜色。RGB颜色值。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * textContext  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体，当前支持fzyouh
-    * fontSize  字体大小。  取值范围：[4, 120]
-    * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  字体大小（像素）。  取值范围：[4, 120]
+    * fontColor  字体颜色。RGB颜色值。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * textContext  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体，当前支持fzyouh
-    * fontSize  字体大小。  取值范围：[4, 120]
-    * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  字体大小（像素）。  取值范围：[4, 120]
+    * fontColor  字体颜色。RGB颜色值。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets textContext
-    *  文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    *  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets textContext
     *
-    * @param string|null $textContext 文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * @param string|null $textContext 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontName
-    *  字体，当前支持fzyouh
+    *  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontName
     *
-    * @param string|null $fontName 字体，当前支持fzyouh
+    * @param string|null $fontName 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontSize
-    *  字体大小。  取值范围：[4, 120]
+    *  字体大小（像素）。  取值范围：[4, 120]
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontSize
     *
-    * @param int|null $fontSize 字体大小。  取值范围：[4, 120]
+    * @param int|null $fontSize 字体大小（像素）。  取值范围：[4, 120]
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontColor
-    *  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    *  字体颜色。RGB颜色值。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontColor
     *
-    * @param string|null $fontColor 字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
+    * @param string|null $fontColor 字体颜色。RGB颜色值。
     *
     * @return $this
     */

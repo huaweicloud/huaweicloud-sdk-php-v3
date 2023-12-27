@@ -23,10 +23,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptCoverUrl  剧本封面下载url。
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * text  台词脚本。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -36,10 +37,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
             'scriptId' => 'string',
             'scriptName' => 'string',
             'scriptDescription' => 'string',
-            'videoMakingType' => 'string',
-            'humanImage' => 'string',
             'modelAssetId' => 'string',
             'modelAssetType' => 'string',
+            'scriptCoverUrl' => 'string',
+            'scriptType' => 'string',
+            'text' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -49,10 +51,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptCoverUrl  剧本封面下载url。
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * text  台词脚本。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -62,10 +65,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
         'scriptId' => null,
         'scriptName' => null,
         'scriptDescription' => null,
-        'videoMakingType' => null,
-        'humanImage' => null,
         'modelAssetId' => null,
         'modelAssetType' => null,
+        'scriptCoverUrl' => null,
+        'scriptType' => null,
+        'text' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -96,10 +100,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptCoverUrl  剧本封面下载url。
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * text  台词脚本。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -109,10 +114,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
             'scriptId' => 'script_id',
             'scriptName' => 'script_name',
             'scriptDescription' => 'script_description',
-            'videoMakingType' => 'video_making_type',
-            'humanImage' => 'human_image',
             'modelAssetId' => 'model_asset_id',
             'modelAssetType' => 'model_asset_type',
+            'scriptCoverUrl' => 'script_cover_url',
+            'scriptType' => 'script_type',
+            'text' => 'text',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -122,10 +128,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptCoverUrl  剧本封面下载url。
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * text  台词脚本。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -135,10 +142,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
             'scriptId' => 'setScriptId',
             'scriptName' => 'setScriptName',
             'scriptDescription' => 'setScriptDescription',
-            'videoMakingType' => 'setVideoMakingType',
-            'humanImage' => 'setHumanImage',
             'modelAssetId' => 'setModelAssetId',
             'modelAssetType' => 'setModelAssetType',
+            'scriptCoverUrl' => 'setScriptCoverUrl',
+            'scriptType' => 'setScriptType',
+            'text' => 'setText',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -148,10 +156,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptCoverUrl  剧本封面下载url。
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * text  台词脚本。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -161,10 +170,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
             'scriptId' => 'getScriptId',
             'scriptName' => 'getScriptName',
             'scriptDescription' => 'getScriptDescription',
-            'videoMakingType' => 'getVideoMakingType',
-            'humanImage' => 'getHumanImage',
             'modelAssetId' => 'getModelAssetId',
             'modelAssetType' => 'getModelAssetType',
+            'scriptCoverUrl' => 'getScriptCoverUrl',
+            'scriptType' => 'getScriptType',
+            'text' => 'getText',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -209,24 +219,9 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const VIDEO_MAKING_TYPE_MODEL = 'MODEL';
-    const VIDEO_MAKING_TYPE_PICTURE = 'PICTURE';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_3_D = 'HUMAN_MODEL_3D';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getVideoMakingTypeAllowableValues()
-    {
-        return [
-            self::VIDEO_MAKING_TYPE_MODEL,
-            self::VIDEO_MAKING_TYPE_PICTURE,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -260,10 +255,11 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['scriptDescription'] = isset($data['scriptDescription']) ? $data['scriptDescription'] : null;
-        $this->container['videoMakingType'] = isset($data['videoMakingType']) ? $data['videoMakingType'] : null;
-        $this->container['humanImage'] = isset($data['humanImage']) ? $data['humanImage'] : null;
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
         $this->container['modelAssetType'] = isset($data['modelAssetType']) ? $data['modelAssetType'] : null;
+        $this->container['scriptCoverUrl'] = isset($data['scriptCoverUrl']) ? $data['scriptCoverUrl'] : null;
+        $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -300,20 +296,6 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scriptDescription']) && (mb_strlen($this->container['scriptDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scriptDescription', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getVideoMakingTypeAllowableValues();
-                if (!is_null($this->container['videoMakingType']) && !in_array($this->container['videoMakingType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'videoMakingType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['humanImage']) && (mb_strlen($this->container['humanImage']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['humanImage']) && (mb_strlen($this->container['humanImage']) < 1)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be smaller than or equal to 64.";
             }
@@ -328,6 +310,24 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['scriptCoverUrl']) && (mb_strlen($this->container['scriptCoverUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'scriptCoverUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['scriptCoverUrl']) && (mb_strlen($this->container['scriptCoverUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scriptCoverUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['scriptType']) && (mb_strlen($this->container['scriptType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'scriptType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['scriptType']) && (mb_strlen($this->container['scriptType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scriptType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) > 131072)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 131072.";
+            }
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) < 1)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
             }
@@ -427,54 +427,6 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets videoMakingType
-    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    *
-    * @return string|null
-    */
-    public function getVideoMakingType()
-    {
-        return $this->container['videoMakingType'];
-    }
-
-    /**
-    * Sets videoMakingType
-    *
-    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    *
-    * @return $this
-    */
-    public function setVideoMakingType($videoMakingType)
-    {
-        $this->container['videoMakingType'] = $videoMakingType;
-        return $this;
-    }
-
-    /**
-    * Gets humanImage
-    *  人物照片，需要Base64编码。
-    *
-    * @return string|null
-    */
-    public function getHumanImage()
-    {
-        return $this->container['humanImage'];
-    }
-
-    /**
-    * Sets humanImage
-    *
-    * @param string|null $humanImage 人物照片，需要Base64编码。
-    *
-    * @return $this
-    */
-    public function setHumanImage($humanImage)
-    {
-        $this->container['humanImage'] = $humanImage;
-        return $this;
-    }
-
-    /**
     * Gets modelAssetId
     *  数字人模型资产ID。
     *
@@ -519,6 +471,78 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     public function setModelAssetType($modelAssetType)
     {
         $this->container['modelAssetType'] = $modelAssetType;
+        return $this;
+    }
+
+    /**
+    * Gets scriptCoverUrl
+    *  剧本封面下载url。
+    *
+    * @return string|null
+    */
+    public function getScriptCoverUrl()
+    {
+        return $this->container['scriptCoverUrl'];
+    }
+
+    /**
+    * Sets scriptCoverUrl
+    *
+    * @param string|null $scriptCoverUrl 剧本封面下载url。
+    *
+    * @return $this
+    */
+    public function setScriptCoverUrl($scriptCoverUrl)
+    {
+        $this->container['scriptCoverUrl'] = $scriptCoverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets scriptType
+    *  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    *
+    * @return string|null
+    */
+    public function getScriptType()
+    {
+        return $this->container['scriptType'];
+    }
+
+    /**
+    * Sets scriptType
+    *
+    * @param string|null $scriptType 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    *
+    * @return $this
+    */
+    public function setScriptType($scriptType)
+    {
+        $this->container['scriptType'] = $scriptType;
+        return $this;
+    }
+
+    /**
+    * Gets text
+    *  台词脚本。
+    *
+    * @return string|null
+    */
+    public function getText()
+    {
+        return $this->container['text'];
+    }
+
+    /**
+    * Sets text
+    *
+    * @param string|null $text 台词脚本。
+    *
+    * @return $this
+    */
+    public function setText($text)
+    {
+        $this->container['text'] = $text;
         return $this;
     }
 

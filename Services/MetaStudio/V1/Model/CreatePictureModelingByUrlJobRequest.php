@@ -23,8 +23,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
-    * xUserPrivilege  测试用户判断。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -34,7 +33,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
-            'xUserPrivilege' => 'string',
             'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PictureModelingByUrlReq'
     ];
 
@@ -43,8 +41,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
-    * xUserPrivilege  测试用户判断。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -54,7 +51,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
         'xSdkDate' => null,
         'xProjectId' => null,
         'xAppUserId' => null,
-        'xUserPrivilege' => null,
         'body' => null
     ];
 
@@ -84,8 +80,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
-    * xUserPrivilege  测试用户判断。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -95,7 +90,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
-            'xUserPrivilege' => 'X-User-Privilege',
             'body' => 'body'
     ];
 
@@ -104,8 +98,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
-    * xUserPrivilege  测试用户判断。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -115,7 +108,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
-            'xUserPrivilege' => 'setXUserPrivilege',
             'body' => 'setBody'
     ];
 
@@ -124,8 +116,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
-    * xUserPrivilege  测试用户判断。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -135,7 +126,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
-            'xUserPrivilege' => 'getXUserPrivilege',
             'body' => 'getBody'
     ];
 
@@ -201,7 +191,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
-        $this->container['xUserPrivilege'] = isset($data['xUserPrivilege']) ? $data['xUserPrivilege'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -236,12 +225,6 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['xUserPrivilege']) && (mb_strlen($this->container['xUserPrivilege']) > 256)) {
-                $invalidProperties[] = "invalid value for 'xUserPrivilege', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['xUserPrivilege']) && (mb_strlen($this->container['xUserPrivilege']) < 0)) {
-                $invalidProperties[] = "invalid value for 'xUserPrivilege', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -331,7 +314,7 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -343,37 +326,13 @@ class CreatePictureModelingByUrlJobRequest implements ModelInterface, ArrayAcces
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */
     public function setXAppUserId($xAppUserId)
     {
         $this->container['xAppUserId'] = $xAppUserId;
-        return $this;
-    }
-
-    /**
-    * Gets xUserPrivilege
-    *  测试用户判断。
-    *
-    * @return string|null
-    */
-    public function getXUserPrivilege()
-    {
-        return $this->container['xUserPrivilege'];
-    }
-
-    /**
-    * Sets xUserPrivilege
-    *
-    * @param string|null $xUserPrivilege 测试用户判断。
-    *
-    * @return $this
-    */
-    public function setXUserPrivilege($xUserPrivilege)
-    {
-        $this->container['xUserPrivilege'] = $xUserPrivilege;
         return $this;
     }
 

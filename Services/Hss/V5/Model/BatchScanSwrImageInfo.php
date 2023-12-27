@@ -229,8 +229,8 @@ class BatchScanSwrImageInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) > 256)) {
                 $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

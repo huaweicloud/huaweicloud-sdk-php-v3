@@ -31,7 +31,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
     * isAutoPay  是否自动支付，下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。 - 1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) - 0：否（需要客户手动去支付，客户可以选择折扣和优惠券。）  默认值为“0”
-    * network  网络信息。
+    * network  network
     * ipv6Enable  云堡垒机实例是否支持IPV6。  默认值为“false”。
     * enterpriseProjectId  企业项目ID。  默认值为“0”。
     * attachDiskSize  附加磁盘大小。单位TB  > 说明： 附加磁盘和规格自带磁盘大小合起来不能超过300TB。
@@ -51,7 +51,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
             'periodNum' => 'int',
             'isAutoRenew' => 'int',
             'isAutoPay' => 'int',
-            'network' => 'object',
+            'network' => '\HuaweiCloud\SDK\Cbh\V2\Model\NetworkInfoCreate',
             'ipv6Enable' => 'bool',
             'enterpriseProjectId' => 'string',
             'attachDiskSize' => 'int',
@@ -71,7 +71,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
     * isAutoPay  是否自动支付，下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。 - 1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) - 0：否（需要客户手动去支付，客户可以选择折扣和优惠券。）  默认值为“0”
-    * network  网络信息。
+    * network  network
     * ipv6Enable  云堡垒机实例是否支持IPV6。  默认值为“false”。
     * enterpriseProjectId  企业项目ID。  默认值为“0”。
     * attachDiskSize  附加磁盘大小。单位TB  > 说明： 附加磁盘和规格自带磁盘大小合起来不能超过300TB。
@@ -132,7 +132,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
     * isAutoPay  是否自动支付，下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。 - 1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) - 0：否（需要客户手动去支付，客户可以选择折扣和优惠券。）  默认值为“0”
-    * network  网络信息。
+    * network  network
     * ipv6Enable  云堡垒机实例是否支持IPV6。  默认值为“false”。
     * enterpriseProjectId  企业项目ID。  默认值为“0”。
     * attachDiskSize  附加磁盘大小。单位TB  > 说明： 附加磁盘和规格自带磁盘大小合起来不能超过300TB。
@@ -172,7 +172,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
     * isAutoPay  是否自动支付，下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。 - 1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) - 0：否（需要客户手动去支付，客户可以选择折扣和优惠券。）  默认值为“0”
-    * network  网络信息。
+    * network  network
     * ipv6Enable  云堡垒机实例是否支持IPV6。  默认值为“false”。
     * enterpriseProjectId  企业项目ID。  默认值为“0”。
     * attachDiskSize  附加磁盘大小。单位TB  > 说明： 附加磁盘和规格自带磁盘大小合起来不能超过300TB。
@@ -212,7 +212,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
     * isAutoPay  是否自动支付，下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。 - 1：是（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) - 0：否（需要客户手动去支付，客户可以选择折扣和优惠券。）  默认值为“0”
-    * network  网络信息。
+    * network  network
     * ipv6Enable  云堡垒机实例是否支持IPV6。  默认值为“false”。
     * enterpriseProjectId  企业项目ID。  默认值为“0”。
     * attachDiskSize  附加磁盘大小。单位TB  > 说明： 附加磁盘和规格自带磁盘大小合起来不能超过300TB。
@@ -702,9 +702,9 @@ class CBHInstances implements ModelInterface, ArrayAccess
 
     /**
     * Gets network
-    *  网络信息。
+    *  network
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\NetworkInfoCreate
     */
     public function getNetwork()
     {
@@ -714,7 +714,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     /**
     * Sets network
     *
-    * @param object $network 网络信息。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\NetworkInfoCreate $network network
     *
     * @return $this
     */

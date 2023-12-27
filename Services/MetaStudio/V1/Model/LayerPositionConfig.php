@@ -20,8 +20,8 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dx  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * dy  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * dx  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
+    * dy  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     * layerIndex  图片/视频/人物图的层顺序。 > * 图层顺序从1开始的整数，底层图层顺序是1，往上依次增加。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dx  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * dy  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * dx  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
+    * dy  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     * layerIndex  图片/视频/人物图的层顺序。 > * 图层顺序从1开始的整数，底层图层顺序是1，往上依次增加。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dx  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * dy  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * dx  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
+    * dy  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     * layerIndex  图片/视频/人物图的层顺序。 > * 图层顺序从1开始的整数，底层图层顺序是1，往上依次增加。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dx  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * dy  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * dx  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
+    * dy  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     * layerIndex  图片/视频/人物图的层顺序。 > * 图层顺序从1开始的整数，底层图层顺序是1，往上依次增加。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dx  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * dy  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * dx  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
+    * dy  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     * layerIndex  图片/视频/人物图的层顺序。 > * 图层顺序从1开始的整数，底层图层顺序是1，往上依次增加。
     *
     * @var string[]
@@ -223,7 +223,7 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dx
-    *  图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    *  图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     *
     * @return int
     */
@@ -235,7 +235,7 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dx
     *
-    * @param int $dx 图层图片左上角像素点的X轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * @param int $dx 图层左上角像素点的X轴位置值（画布左上角坐标是0x0）。 > * 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dy
-    *  图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    *  图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     *
     * @return int
     */
@@ -259,7 +259,7 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dy
     *
-    * @param int $dy 图层图片左上角像素点的Y轴位置值（相对背景图片）。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * @param int $dy 图层图片左上角像素点的Y轴位置值（画布左上角坐标是0x0）。 > 横屏（16:9）画布像素为1920x1080；竖屏（9:16）画布像素为1080x1920。
     *
     * @return $this
     */

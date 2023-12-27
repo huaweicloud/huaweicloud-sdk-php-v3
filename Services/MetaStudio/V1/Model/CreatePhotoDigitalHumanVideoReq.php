@@ -20,13 +20,14 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * scriptId  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  拍摄脚本列表。
+    * shootScripts  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PhotoVideoConfig',
             'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]',
             'outputAssetConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OutputAssetConfig',
-            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig'
+            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * scriptId  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  拍摄脚本列表。
+    * shootScripts  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         'videoConfig' => null,
         'shootScripts' => null,
         'outputAssetConfig' => null,
-        'backgroundMusicConfig' => null
+        'backgroundMusicConfig' => null,
+        'reviewConfig' => null
     ];
 
     /**
@@ -85,13 +89,14 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * scriptId  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  拍摄脚本列表。
+    * shootScripts  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'video_config',
             'shootScripts' => 'shoot_scripts',
             'outputAssetConfig' => 'output_asset_config',
-            'backgroundMusicConfig' => 'background_music_config'
+            'backgroundMusicConfig' => 'background_music_config',
+            'reviewConfig' => 'review_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * scriptId  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  拍摄脚本列表。
+    * shootScripts  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'setVideoConfig',
             'shootScripts' => 'setShootScripts',
             'outputAssetConfig' => 'setOutputAssetConfig',
-            'backgroundMusicConfig' => 'setBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'setBackgroundMusicConfig',
+            'reviewConfig' => 'setReviewConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * scriptId  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  拍摄脚本列表。
+    * shootScripts  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'getVideoConfig',
             'shootScripts' => 'getShootScripts',
             'outputAssetConfig' => 'getOutputAssetConfig',
-            'backgroundMusicConfig' => 'getBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'getBackgroundMusicConfig',
+            'reviewConfig' => 'getReviewConfig'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
         $this->container['outputAssetConfig'] = isset($data['outputAssetConfig']) ? $data['outputAssetConfig'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
     }
 
     /**
@@ -261,7 +272,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptId
-    *  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    *  剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     *
     * @return string|null
     */
@@ -273,7 +284,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Sets scriptId
     *
-    * @param string|null $scriptId 剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+    * @param string|null $scriptId 剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
     *
     * @return $this
     */
@@ -357,7 +368,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets shootScripts
-    *  拍摄脚本列表。
+    *  剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]
     */
@@ -369,7 +380,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Sets shootScripts
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[] $shootScripts 拍摄脚本列表。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[] $shootScripts 剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
     *
     * @return $this
     */
@@ -424,6 +435,30 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     public function setBackgroundMusicConfig($backgroundMusicConfig)
     {
         $this->container['backgroundMusicConfig'] = $backgroundMusicConfig;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
         return $this;
     }
 

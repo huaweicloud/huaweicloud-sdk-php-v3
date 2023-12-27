@@ -22,7 +22,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  数字人直播任务ID。
-    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -31,6 +31,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * streamDuration  数字人直播推流时长，单位秒
+    * blockReason  封禁信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -46,13 +49,16 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'string',
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'liveEventReportUrl' => 'string',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'streamDuration' => 'float',
+            'blockReason' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  数字人直播任务ID。
-    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -61,6 +67,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * streamDuration  数字人直播推流时长，单位秒
+    * blockReason  封禁信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -76,6 +85,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         'lastupdateTime' => null,
         'rtcRoomInfo' => null,
         'liveEventReportUrl' => null,
+        'liveEventCallbackConfig' => null,
+        'streamDuration' => 'float',
+        'blockReason' => null,
         'xRequestId' => null
     ];
 
@@ -103,7 +115,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  数字人直播任务ID。
-    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -112,6 +124,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * streamDuration  数字人直播推流时长，单位秒
+    * blockReason  封禁信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -127,13 +142,16 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'lastupdate_time',
             'rtcRoomInfo' => 'rtc_room_info',
             'liveEventReportUrl' => 'live_event_report_url',
+            'liveEventCallbackConfig' => 'live_event_callback_config',
+            'streamDuration' => 'stream_duration',
+            'blockReason' => 'block_reason',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  数字人直播任务ID。
-    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -142,6 +160,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * streamDuration  数字人直播推流时长，单位秒
+    * blockReason  封禁信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -157,13 +178,16 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'setLastupdateTime',
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'liveEventReportUrl' => 'setLiveEventReportUrl',
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'streamDuration' => 'setStreamDuration',
+            'blockReason' => 'setBlockReason',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  数字人直播任务ID。
-    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -172,6 +196,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * streamDuration  数字人直播推流时长，单位秒
+    * blockReason  封禁信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -187,6 +214,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'getLastupdateTime',
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'liveEventReportUrl' => 'getLiveEventReportUrl',
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'streamDuration' => 'getStreamDuration',
+            'blockReason' => 'getBlockReason',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -234,6 +264,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     const STATE_PROCESSING = 'PROCESSING';
     const STATE_SUCCEED = 'SUCCEED';
     const STATE_FAILED = 'FAILED';
+    const STATE_BLOCKED = 'BLOCKED';
     
 
     /**
@@ -248,6 +279,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             self::STATE_PROCESSING,
             self::STATE_SUCCEED,
             self::STATE_FAILED,
+            self::STATE_BLOCKED,
         ];
     }
 
@@ -277,6 +309,9 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['lastupdateTime'] = isset($data['lastupdateTime']) ? $data['lastupdateTime'] : null;
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['liveEventReportUrl'] = isset($data['liveEventReportUrl']) ? $data['liveEventReportUrl'] : null;
+        $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['streamDuration'] = isset($data['streamDuration']) ? $data['streamDuration'] : null;
+        $this->container['blockReason'] = isset($data['blockReason']) ? $data['blockReason'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -344,6 +379,18 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['liveEventReportUrl']) && (mb_strlen($this->container['liveEventReportUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'liveEventReportUrl', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['streamDuration']) && ($this->container['streamDuration'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'streamDuration', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['streamDuration']) && ($this->container['streamDuration'] < 0)) {
+                $invalidProperties[] = "invalid value for 'streamDuration', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['blockReason']) && (mb_strlen($this->container['blockReason']) > 2000)) {
+                $invalidProperties[] = "invalid value for 'blockReason', the character length must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['blockReason']) && (mb_strlen($this->container['blockReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'blockReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -384,7 +431,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    *  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     *
     * @return string|null
     */
@@ -396,7 +443,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+    * @param string|null $state 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     *
     * @return $this
     */
@@ -595,6 +642,78 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setLiveEventReportUrl($liveEventReportUrl)
     {
         $this->container['liveEventReportUrl'] = $liveEventReportUrl;
+        return $this;
+    }
+
+    /**
+    * Gets liveEventCallbackConfig
+    *  liveEventCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    */
+    public function getLiveEventCallbackConfig()
+    {
+        return $this->container['liveEventCallbackConfig'];
+    }
+
+    /**
+    * Sets liveEventCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    *
+    * @return $this
+    */
+    public function setLiveEventCallbackConfig($liveEventCallbackConfig)
+    {
+        $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets streamDuration
+    *  数字人直播推流时长，单位秒
+    *
+    * @return float|null
+    */
+    public function getStreamDuration()
+    {
+        return $this->container['streamDuration'];
+    }
+
+    /**
+    * Sets streamDuration
+    *
+    * @param float|null $streamDuration 数字人直播推流时长，单位秒
+    *
+    * @return $this
+    */
+    public function setStreamDuration($streamDuration)
+    {
+        $this->container['streamDuration'] = $streamDuration;
+        return $this;
+    }
+
+    /**
+    * Gets blockReason
+    *  封禁信息
+    *
+    * @return string|null
+    */
+    public function getBlockReason()
+    {
+        return $this->container['blockReason'];
+    }
+
+    /**
+    * Sets blockReason
+    *
+    * @param string|null $blockReason 封禁信息
+    *
+    * @return $this
+    */
+    public function setBlockReason($blockReason)
+    {
+        $this->container['blockReason'] = $blockReason;
         return $this;
     }
 

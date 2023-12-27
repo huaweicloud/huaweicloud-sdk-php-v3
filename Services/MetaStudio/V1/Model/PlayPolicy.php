@@ -23,13 +23,15 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'repeatCount' => 'int',
             'autoPlayScript' => 'bool',
-            'playMode' => 'string'
+            'playMode' => 'string',
+            'randomPlayMode' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'repeatCount' => 'int32',
         'autoPlayScript' => null,
-        'playMode' => null
+        'playMode' => null,
+        'randomPlayMode' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'repeatCount' => 'repeat_count',
             'autoPlayScript' => 'auto_play_script',
-            'playMode' => 'play_mode'
+            'playMode' => 'play_mode',
+            'randomPlayMode' => 'random_play_mode'
     ];
 
     /**
@@ -86,13 +92,15 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     *
     * @var string[]
     */
     protected static $setters = [
             'repeatCount' => 'setRepeatCount',
             'autoPlayScript' => 'setAutoPlayScript',
-            'playMode' => 'setPlayMode'
+            'playMode' => 'setPlayMode',
+            'randomPlayMode' => 'setRandomPlayMode'
     ];
 
     /**
@@ -100,13 +108,15 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     *
     * @var string[]
     */
     protected static $getters = [
             'repeatCount' => 'getRepeatCount',
             'autoPlayScript' => 'getAutoPlayScript',
-            'playMode' => 'getPlayMode'
+            'playMode' => 'getPlayMode',
+            'randomPlayMode' => 'getRandomPlayMode'
     ];
 
     /**
@@ -151,6 +161,10 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     }
     const PLAY_MODE_TEXT = 'TEXT';
     const PLAY_MODE_AUDIO = 'AUDIO';
+    const RANDOM_PLAY_MODE_NONE = 'NONE';
+    const RANDOM_PLAY_MODE_SCENE = 'SCENE';
+    const RANDOM_PLAY_MODE_SCRIPT_ITEM = 'SCRIPT_ITEM';
+    const RANDOM_PLAY_MODE_SCENE_AND_SCRIPT_ITEM = 'SCENE_AND_SCRIPT_ITEM';
     
 
     /**
@@ -163,6 +177,21 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         return [
             self::PLAY_MODE_TEXT,
             self::PLAY_MODE_AUDIO,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRandomPlayModeAllowableValues()
+    {
+        return [
+            self::RANDOM_PLAY_MODE_NONE,
+            self::RANDOM_PLAY_MODE_SCENE,
+            self::RANDOM_PLAY_MODE_SCRIPT_ITEM,
+            self::RANDOM_PLAY_MODE_SCENE_AND_SCRIPT_ITEM,
         ];
     }
 
@@ -185,6 +214,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         $this->container['repeatCount'] = isset($data['repeatCount']) ? $data['repeatCount'] : null;
         $this->container['autoPlayScript'] = isset($data['autoPlayScript']) ? $data['autoPlayScript'] : null;
         $this->container['playMode'] = isset($data['playMode']) ? $data['playMode'] : null;
+        $this->container['randomPlayMode'] = isset($data['randomPlayMode']) ? $data['randomPlayMode'] : null;
     }
 
     /**
@@ -214,6 +244,20 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['playMode']) && (mb_strlen($this->container['playMode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'playMode', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getRandomPlayModeAllowableValues();
+                if (!is_null($this->container['randomPlayMode']) && !in_array($this->container['randomPlayMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'randomPlayMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['randomPlayMode']) && (mb_strlen($this->container['randomPlayMode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'randomPlayMode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['randomPlayMode']) && (mb_strlen($this->container['randomPlayMode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'randomPlayMode', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -298,6 +342,30 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     public function setPlayMode($playMode)
     {
         $this->container['playMode'] = $playMode;
+        return $this;
+    }
+
+    /**
+    * Gets randomPlayMode
+    *  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    *
+    * @return string|null
+    */
+    public function getRandomPlayMode()
+    {
+        return $this->container['randomPlayMode'];
+    }
+
+    /**
+    * Sets randomPlayMode
+    *
+    * @param string|null $randomPlayMode 随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    *
+    * @return $this
+    */
+    public function setRandomPlayMode($randomPlayMode)
+    {
+        $this->container['randomPlayMode'] = $randomPlayMode;
         return $this;
     }
 

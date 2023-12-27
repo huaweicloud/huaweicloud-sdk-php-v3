@@ -23,7 +23,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -55,7 +55,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -108,7 +108,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -140,7 +140,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -172,7 +172,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -315,8 +315,8 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 256)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
@@ -439,7 +439,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ListDigitalHumanBusinessCardRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */

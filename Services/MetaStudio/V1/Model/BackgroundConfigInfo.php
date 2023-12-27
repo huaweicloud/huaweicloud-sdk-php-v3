@@ -21,11 +21,11 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。
+    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
     * humanPosition2d  humanPosition2d
     * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。
-    * backgroundConfig  背景文件的URL。
+    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
+    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
@@ -43,11 +43,11 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。
+    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
     * humanPosition2d  humanPosition2d
     * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。
-    * backgroundConfig  背景文件的URL。
+    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
+    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
@@ -86,11 +86,11 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。
+    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
     * humanPosition2d  humanPosition2d
     * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。
-    * backgroundConfig  背景文件的URL。
+    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
+    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
@@ -108,11 +108,11 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。
+    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
     * humanPosition2d  humanPosition2d
     * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。
-    * backgroundConfig  背景文件的URL。
+    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
+    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
@@ -130,11 +130,11 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。
+    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
     * humanPosition2d  humanPosition2d
     * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。
-    * backgroundConfig  背景文件的URL。
+    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
+    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
@@ -327,7 +327,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backgroundTitle
-    *  背景标题。
+    *  背景标题。 > * 分身数字人视频制作此参数不生效。
     *
     * @return string|null
     */
@@ -339,7 +339,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundTitle
     *
-    * @param string|null $backgroundTitle 背景标题。
+    * @param string|null $backgroundTitle 背景标题。 > * 分身数字人视频制作此参数不生效。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backgroundCoverUrl
-    *  视频文件封面图片的下载URL。  演示素材为视频时有效。
+    *  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundCoverUrl
     *
-    * @param string|null $backgroundCoverUrl 视频文件封面图片的下载URL。  演示素材为视频时有效。
+    * @param string|null $backgroundCoverUrl 视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backgroundConfig
-    *  背景文件的URL。
+    *  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     *
     * @return string
     */
@@ -435,7 +435,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundConfig
     *
-    * @param string $backgroundConfig 背景文件的URL。
+    * @param string $backgroundConfig 背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
     *
     * @return $this
     */

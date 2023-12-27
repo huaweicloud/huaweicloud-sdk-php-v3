@@ -39,6 +39,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
     * scannable  是否可扫描
+    * instanceName  企业实例名称
+    * instanceId  企业实例ID
+    * instanceUrl  企业镜像URL
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -63,6 +66,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'domainName' => 'string',
             'sharedStatus' => 'string',
             'scannable' => 'bool',
+            'instanceName' => 'string',
+            'instanceId' => 'string',
+            'instanceUrl' => 'string',
             'associationImages' => '\HuaweiCloud\SDK\Hss\V5\Model\AssociateImages[]'
     ];
 
@@ -87,6 +93,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
     * scannable  是否可扫描
+    * instanceName  企业实例名称
+    * instanceId  企业实例ID
+    * instanceUrl  企业镜像URL
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -111,6 +120,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         'domainName' => null,
         'sharedStatus' => null,
         'scannable' => 'int64',
+        'instanceName' => null,
+        'instanceId' => null,
+        'instanceUrl' => null,
         'associationImages' => null
     ];
 
@@ -156,6 +168,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
     * scannable  是否可扫描
+    * instanceName  企业实例名称
+    * instanceId  企业实例ID
+    * instanceUrl  企业镜像URL
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -180,6 +195,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'domainName' => 'domain_name',
             'sharedStatus' => 'shared_status',
             'scannable' => 'scannable',
+            'instanceName' => 'instance_name',
+            'instanceId' => 'instance_id',
+            'instanceUrl' => 'instance_url',
             'associationImages' => 'association_images'
     ];
 
@@ -204,6 +222,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
     * scannable  是否可扫描
+    * instanceName  企业实例名称
+    * instanceId  企业实例ID
+    * instanceUrl  企业镜像URL
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -228,6 +249,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'domainName' => 'setDomainName',
             'sharedStatus' => 'setSharedStatus',
             'scannable' => 'setScannable',
+            'instanceName' => 'setInstanceName',
+            'instanceId' => 'setInstanceId',
+            'instanceUrl' => 'setInstanceUrl',
             'associationImages' => 'setAssociationImages'
     ];
 
@@ -252,6 +276,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     * domainName  拥有者（共享镜像参数）
     * sharedStatus  共享镜像状态，包含如下2种。   - expired ：已过期。   - effective ：有效。
     * scannable  是否可扫描
+    * instanceName  企业实例名称
+    * instanceId  企业实例ID
+    * instanceUrl  企业镜像URL
     * associationImages  多架构关联镜像信息
     *
     * @var string[]
@@ -276,6 +303,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             'domainName' => 'getDomainName',
             'sharedStatus' => 'getSharedStatus',
             'scannable' => 'getScannable',
+            'instanceName' => 'getInstanceName',
+            'instanceId' => 'getInstanceId',
+            'instanceUrl' => 'getInstanceUrl',
             'associationImages' => 'getAssociationImages'
     ];
 
@@ -356,6 +386,9 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['sharedStatus'] = isset($data['sharedStatus']) ? $data['sharedStatus'] : null;
         $this->container['scannable'] = isset($data['scannable']) ? $data['scannable'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceUrl'] = isset($data['instanceUrl']) ? $data['instanceUrl'] : null;
         $this->container['associationImages'] = isset($data['associationImages']) ? $data['associationImages'] : null;
     }
 
@@ -468,6 +501,24 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sharedStatus']) && (mb_strlen($this->container['sharedStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sharedStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) > 256)) {
+                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['instanceUrl']) && (mb_strlen($this->container['instanceUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceUrl', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -936,6 +987,78 @@ class PrivateImageRepositoryInfo implements ModelInterface, ArrayAccess
     public function setScannable($scannable)
     {
         $this->container['scannable'] = $scannable;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  企业实例名称
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 企业实例名称
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  企业实例ID
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 企业实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceUrl
+    *  企业镜像URL
+    *
+    * @return string|null
+    */
+    public function getInstanceUrl()
+    {
+        return $this->container['instanceUrl'];
+    }
+
+    /**
+    * Sets instanceUrl
+    *
+    * @param string|null $instanceUrl 企业镜像URL
+    *
+    * @return $this
+    */
+    public function setInstanceUrl($instanceUrl)
+    {
+        $this->container['instanceUrl'] = $instanceUrl;
         return $this;
     }
 

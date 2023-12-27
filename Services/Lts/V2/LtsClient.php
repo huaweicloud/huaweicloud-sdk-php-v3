@@ -587,6 +587,74 @@ class LtsClient extends Client
     }
 
     /**
+     * 向指定流创建索引
+     *
+     * 向指定流创建索引
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLogStreamIndex($request)
+    {
+        return $this->createLogStreamIndexWithHttpInfo($request);
+    }
+
+    public function createLogStreamIndexWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/stream/{stream_id}/index/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\CreateLogStreamIndexResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\CreateLogStreamIndexRequest');
+    }
+
+    /**
      * 创建消息模板
      *
      * 该接口用于创建通知模板，目前每个帐户最多可以创建共100个通知模板，创建后名称不可修改。

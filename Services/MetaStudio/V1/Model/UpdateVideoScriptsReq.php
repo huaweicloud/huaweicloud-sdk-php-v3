@@ -20,66 +20,62 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scriptName  剧本名称。
+    * scriptName  剧本名称
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
-    * modelAssetId  数字人资产ID。
+    * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
-    * sceneAssetId  场景资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  剧本参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'scriptName' => 'string',
             'scriptDescription' => 'string',
-            'videoMakingType' => 'string',
-            'humanImage' => 'string',
             'modelAssetId' => 'string',
             'modelAssetType' => 'string',
-            'sceneAssetId' => 'string',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
-            'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]',
+            'sceneAssetId' => 'string',
             'privData' => 'string',
-            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig'
+            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scriptName  剧本名称。
+    * scriptName  剧本名称
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
-    * modelAssetId  数字人资产ID。
+    * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
-    * sceneAssetId  场景资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  剧本参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'scriptName' => null,
         'scriptDescription' => null,
-        'videoMakingType' => null,
-        'humanImage' => null,
         'modelAssetId' => null,
         'modelAssetType' => null,
-        'sceneAssetId' => null,
         'voiceConfig' => null,
         'videoConfig' => null,
-        'shootScripts' => null,
+        'sceneAssetId' => null,
         'privData' => null,
-        'backgroundMusicConfig' => null
+        'backgroundMusicConfig' => null,
+        'reviewConfig' => null,
+        'shootScripts' => null
     ];
 
     /**
@@ -105,98 +101,92 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scriptName  剧本名称。
+    * scriptName  剧本名称
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
-    * modelAssetId  数字人资产ID。
+    * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
-    * sceneAssetId  场景资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  剧本参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'scriptName' => 'script_name',
             'scriptDescription' => 'script_description',
-            'videoMakingType' => 'video_making_type',
-            'humanImage' => 'human_image',
             'modelAssetId' => 'model_asset_id',
             'modelAssetType' => 'model_asset_type',
-            'sceneAssetId' => 'scene_asset_id',
             'voiceConfig' => 'voice_config',
             'videoConfig' => 'video_config',
-            'shootScripts' => 'shoot_scripts',
+            'sceneAssetId' => 'scene_asset_id',
             'privData' => 'priv_data',
-            'backgroundMusicConfig' => 'background_music_config'
+            'backgroundMusicConfig' => 'background_music_config',
+            'reviewConfig' => 'review_config',
+            'shootScripts' => 'shoot_scripts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scriptName  剧本名称。
+    * scriptName  剧本名称
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
-    * modelAssetId  数字人资产ID。
+    * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
-    * sceneAssetId  场景资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  剧本参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'scriptName' => 'setScriptName',
             'scriptDescription' => 'setScriptDescription',
-            'videoMakingType' => 'setVideoMakingType',
-            'humanImage' => 'setHumanImage',
             'modelAssetId' => 'setModelAssetId',
             'modelAssetType' => 'setModelAssetType',
-            'sceneAssetId' => 'setSceneAssetId',
             'voiceConfig' => 'setVoiceConfig',
             'videoConfig' => 'setVideoConfig',
-            'shootScripts' => 'setShootScripts',
+            'sceneAssetId' => 'setSceneAssetId',
             'privData' => 'setPrivData',
-            'backgroundMusicConfig' => 'setBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'setBackgroundMusicConfig',
+            'reviewConfig' => 'setReviewConfig',
+            'shootScripts' => 'setShootScripts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scriptName  剧本名称。
+    * scriptName  剧本名称
     * scriptDescription  剧本描述。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
-    * modelAssetId  数字人资产ID。
+    * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
-    * sceneAssetId  场景资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * shootScripts  剧本参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * shootScripts  拍摄脚本列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'scriptName' => 'getScriptName',
             'scriptDescription' => 'getScriptDescription',
-            'videoMakingType' => 'getVideoMakingType',
-            'humanImage' => 'getHumanImage',
             'modelAssetId' => 'getModelAssetId',
             'modelAssetType' => 'getModelAssetType',
-            'sceneAssetId' => 'getSceneAssetId',
             'voiceConfig' => 'getVoiceConfig',
             'videoConfig' => 'getVideoConfig',
-            'shootScripts' => 'getShootScripts',
+            'sceneAssetId' => 'getSceneAssetId',
             'privData' => 'getPrivData',
-            'backgroundMusicConfig' => 'getBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'getBackgroundMusicConfig',
+            'reviewConfig' => 'getReviewConfig',
+            'shootScripts' => 'getShootScripts'
     ];
 
     /**
@@ -239,24 +229,9 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const VIDEO_MAKING_TYPE_MODEL = 'MODEL';
-    const VIDEO_MAKING_TYPE_PICTURE = 'PICTURE';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_3_D = 'HUMAN_MODEL_3D';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getVideoMakingTypeAllowableValues()
-    {
-        return [
-            self::VIDEO_MAKING_TYPE_MODEL,
-            self::VIDEO_MAKING_TYPE_PICTURE,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -289,16 +264,15 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     {
         $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['scriptDescription'] = isset($data['scriptDescription']) ? $data['scriptDescription'] : null;
-        $this->container['videoMakingType'] = isset($data['videoMakingType']) ? $data['videoMakingType'] : null;
-        $this->container['humanImage'] = isset($data['humanImage']) ? $data['humanImage'] : null;
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
         $this->container['modelAssetType'] = isset($data['modelAssetType']) ? $data['modelAssetType'] : null;
-        $this->container['sceneAssetId'] = isset($data['sceneAssetId']) ? $data['sceneAssetId'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
-        $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
+        $this->container['sceneAssetId'] = isset($data['sceneAssetId']) ? $data['sceneAssetId'] : null;
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
     }
 
     /**
@@ -320,20 +294,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['scriptDescription']) && (mb_strlen($this->container['scriptDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scriptDescription', the character length must be bigger than or equal to 0.";
-            }
-            $allowedValues = $this->getVideoMakingTypeAllowableValues();
-                if (!is_null($this->container['videoMakingType']) && !in_array($this->container['videoMakingType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'videoMakingType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['humanImage']) && (mb_strlen($this->container['humanImage']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['humanImage']) && (mb_strlen($this->container['humanImage']) < 1)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be smaller than or equal to 64.";
@@ -377,7 +337,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptName
-    *  剧本名称。
+    *  剧本名称
     *
     * @return string|null
     */
@@ -389,7 +349,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Sets scriptName
     *
-    * @param string|null $scriptName 剧本名称。
+    * @param string|null $scriptName 剧本名称
     *
     * @return $this
     */
@@ -424,56 +384,8 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets videoMakingType
-    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    *
-    * @return string|null
-    */
-    public function getVideoMakingType()
-    {
-        return $this->container['videoMakingType'];
-    }
-
-    /**
-    * Sets videoMakingType
-    *
-    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    *
-    * @return $this
-    */
-    public function setVideoMakingType($videoMakingType)
-    {
-        $this->container['videoMakingType'] = $videoMakingType;
-        return $this;
-    }
-
-    /**
-    * Gets humanImage
-    *  人物照片，需要Base64编码。
-    *
-    * @return string|null
-    */
-    public function getHumanImage()
-    {
-        return $this->container['humanImage'];
-    }
-
-    /**
-    * Sets humanImage
-    *
-    * @param string|null $humanImage 人物照片，需要Base64编码。
-    *
-    * @return $this
-    */
-    public function setHumanImage($humanImage)
-    {
-        $this->container['humanImage'] = $humanImage;
-        return $this;
-    }
-
-    /**
     * Gets modelAssetId
-    *  数字人资产ID。
+    *  数字人模型资产ID。
     *
     * @return string|null
     */
@@ -485,7 +397,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人资产ID。
+    * @param string|null $modelAssetId 数字人模型资产ID。
     *
     * @return $this
     */
@@ -516,30 +428,6 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     public function setModelAssetType($modelAssetType)
     {
         $this->container['modelAssetType'] = $modelAssetType;
-        return $this;
-    }
-
-    /**
-    * Gets sceneAssetId
-    *  场景资产ID。
-    *
-    * @return string|null
-    */
-    public function getSceneAssetId()
-    {
-        return $this->container['sceneAssetId'];
-    }
-
-    /**
-    * Sets sceneAssetId
-    *
-    * @param string|null $sceneAssetId 场景资产ID。
-    *
-    * @return $this
-    */
-    public function setSceneAssetId($sceneAssetId)
-    {
-        $this->container['sceneAssetId'] = $sceneAssetId;
         return $this;
     }
 
@@ -592,26 +480,26 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets shootScripts
-    *  剧本参数。
+    * Gets sceneAssetId
+    *  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]|null
+    * @return string|null
     */
-    public function getShootScripts()
+    public function getSceneAssetId()
     {
-        return $this->container['shootScripts'];
+        return $this->container['sceneAssetId'];
     }
 
     /**
-    * Sets shootScripts
+    * Sets sceneAssetId
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]|null $shootScripts 剧本参数。
+    * @param string|null $sceneAssetId 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
     *
     * @return $this
     */
-    public function setShootScripts($shootScripts)
+    public function setSceneAssetId($sceneAssetId)
     {
-        $this->container['shootScripts'] = $shootScripts;
+        $this->container['sceneAssetId'] = $sceneAssetId;
         return $this;
     }
 
@@ -660,6 +548,54 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     public function setBackgroundMusicConfig($backgroundMusicConfig)
     {
         $this->container['backgroundMusicConfig'] = $backgroundMusicConfig;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets shootScripts
+    *  拍摄脚本列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]|null
+    */
+    public function getShootScripts()
+    {
+        return $this->container['shootScripts'];
+    }
+
+    /**
+    * Sets shootScripts
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]|null $shootScripts 拍摄脚本列表。
+    *
+    * @return $this
+    */
+    public function setShootScripts($shootScripts)
+    {
+        $this->container['shootScripts'] = $shootScripts;
         return $this;
     }
 

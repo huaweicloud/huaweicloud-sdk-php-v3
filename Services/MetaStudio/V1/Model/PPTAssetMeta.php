@@ -22,6 +22,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * autoAnalysis  PPT是否需要自动解析。
     * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * errorInfo  errorInfo
     * pageCount  PPT页面总数。
     * pages  PPT页面图片。
     *
@@ -30,6 +31,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'autoAnalysis' => 'bool',
             'pptAnalysisStatus' => 'string',
+            'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'pageCount' => 'int',
             'pages' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PPTPageInfo[]'
     ];
@@ -38,6 +40,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * autoAnalysis  PPT是否需要自动解析。
     * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * errorInfo  errorInfo
     * pageCount  PPT页面总数。
     * pages  PPT页面图片。
     *
@@ -46,6 +49,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'autoAnalysis' => null,
         'pptAnalysisStatus' => null,
+        'errorInfo' => null,
         'pageCount' => null,
         'pages' => null
     ];
@@ -75,6 +79,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     * and the value is the original name
     * autoAnalysis  PPT是否需要自动解析。
     * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * errorInfo  errorInfo
     * pageCount  PPT页面总数。
     * pages  PPT页面图片。
     *
@@ -83,6 +88,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'autoAnalysis' => 'auto_analysis',
             'pptAnalysisStatus' => 'ppt_analysis_status',
+            'errorInfo' => 'error_info',
             'pageCount' => 'page_count',
             'pages' => 'pages'
     ];
@@ -91,6 +97,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * autoAnalysis  PPT是否需要自动解析。
     * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * errorInfo  errorInfo
     * pageCount  PPT页面总数。
     * pages  PPT页面图片。
     *
@@ -99,6 +106,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     protected static $setters = [
             'autoAnalysis' => 'setAutoAnalysis',
             'pptAnalysisStatus' => 'setPptAnalysisStatus',
+            'errorInfo' => 'setErrorInfo',
             'pageCount' => 'setPageCount',
             'pages' => 'setPages'
     ];
@@ -107,6 +115,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * autoAnalysis  PPT是否需要自动解析。
     * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * errorInfo  errorInfo
     * pageCount  PPT页面总数。
     * pages  PPT页面图片。
     *
@@ -115,6 +124,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     protected static $getters = [
             'autoAnalysis' => 'getAutoAnalysis',
             'pptAnalysisStatus' => 'getPptAnalysisStatus',
+            'errorInfo' => 'getErrorInfo',
             'pageCount' => 'getPageCount',
             'pages' => 'getPages'
     ];
@@ -202,6 +212,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     {
         $this->container['autoAnalysis'] = isset($data['autoAnalysis']) ? $data['autoAnalysis'] : null;
         $this->container['pptAnalysisStatus'] = isset($data['pptAnalysisStatus']) ? $data['pptAnalysisStatus'] : null;
+        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['pageCount'] = isset($data['pageCount']) ? $data['pageCount'] : null;
         $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
     }
@@ -293,6 +304,30 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     public function setPptAnalysisStatus($pptAnalysisStatus)
     {
         $this->container['pptAnalysisStatus'] = $pptAnalysisStatus;
+        return $this;
+    }
+
+    /**
+    * Gets errorInfo
+    *  errorInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null
+    */
+    public function getErrorInfo()
+    {
+        return $this->container['errorInfo'];
+    }
+
+    /**
+    * Sets errorInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null $errorInfo errorInfo
+    *
+    * @return $this
+    */
+    public function setErrorInfo($errorInfo)
+    {
+        $this->container['errorInfo'] = $errorInfo;
         return $this;
     }
 

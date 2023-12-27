@@ -21,57 +21,61 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * voiceAssetId  音色模型ID
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * audioFileDownloadUrl  语音驱动音频文件下载URL。
     * speed  语速。  取值范围[50,200]   默认值：100
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * parentJobId  关联父任务任务ID。
-    * autoMotion  是否生成智能动作数据。
     * styleId  风格化ID。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'voiceAssetId' => 'string',
+            'scriptType' => 'string',
             'text' => 'string',
+            'audioFileDownloadUrl' => 'string',
             'speed' => 'int',
             'pitch' => 'int',
             'volume' => 'int',
             'emotion' => 'string',
-            'parentJobId' => 'string',
-            'autoMotion' => 'bool',
             'styleId' => 'string',
-            'cameraPosition' => 'string'
+            'cameraPosition' => 'string',
+            'jobType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * voiceAssetId  音色模型ID
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * audioFileDownloadUrl  语音驱动音频文件下载URL。
     * speed  语速。  取值范围[50,200]   默认值：100
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * parentJobId  关联父任务任务ID。
-    * autoMotion  是否生成智能动作数据。
     * styleId  风格化ID。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'voiceAssetId' => null,
+        'scriptType' => null,
         'text' => null,
+        'audioFileDownloadUrl' => null,
         'speed' => 'int32',
         'pitch' => 'int32',
         'volume' => 'int32',
         'emotion' => null,
-        'parentJobId' => null,
-        'autoMotion' => null,
         'styleId' => null,
-        'cameraPosition' => null
+        'cameraPosition' => null,
+        'jobType' => null
     ];
 
     /**
@@ -98,85 +102,91 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * voiceAssetId  音色模型ID
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * audioFileDownloadUrl  语音驱动音频文件下载URL。
     * speed  语速。  取值范围[50,200]   默认值：100
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * parentJobId  关联父任务任务ID。
-    * autoMotion  是否生成智能动作数据。
     * styleId  风格化ID。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'voiceAssetId' => 'voice_asset_id',
+            'scriptType' => 'script_type',
             'text' => 'text',
+            'audioFileDownloadUrl' => 'audio_file_download_url',
             'speed' => 'speed',
             'pitch' => 'pitch',
             'volume' => 'volume',
             'emotion' => 'emotion',
-            'parentJobId' => 'parent_job_id',
-            'autoMotion' => 'auto_motion',
             'styleId' => 'style_id',
-            'cameraPosition' => 'camera_position'
+            'cameraPosition' => 'camera_position',
+            'jobType' => 'job_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * voiceAssetId  音色模型ID
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * audioFileDownloadUrl  语音驱动音频文件下载URL。
     * speed  语速。  取值范围[50,200]   默认值：100
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * parentJobId  关联父任务任务ID。
-    * autoMotion  是否生成智能动作数据。
     * styleId  风格化ID。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
     protected static $setters = [
             'voiceAssetId' => 'setVoiceAssetId',
+            'scriptType' => 'setScriptType',
             'text' => 'setText',
+            'audioFileDownloadUrl' => 'setAudioFileDownloadUrl',
             'speed' => 'setSpeed',
             'pitch' => 'setPitch',
             'volume' => 'setVolume',
             'emotion' => 'setEmotion',
-            'parentJobId' => 'setParentJobId',
-            'autoMotion' => 'setAutoMotion',
             'styleId' => 'setStyleId',
-            'cameraPosition' => 'setCameraPosition'
+            'cameraPosition' => 'setCameraPosition',
+            'jobType' => 'setJobType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * voiceAssetId  音色模型ID
+    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * audioFileDownloadUrl  语音驱动音频文件下载URL。
     * speed  语速。  取值范围[50,200]   默认值：100
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * parentJobId  关联父任务任务ID。
-    * autoMotion  是否生成智能动作数据。
     * styleId  风格化ID。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
     protected static $getters = [
             'voiceAssetId' => 'getVoiceAssetId',
+            'scriptType' => 'getScriptType',
             'text' => 'getText',
+            'audioFileDownloadUrl' => 'getAudioFileDownloadUrl',
             'speed' => 'getSpeed',
             'pitch' => 'getPitch',
             'volume' => 'getVolume',
             'emotion' => 'getEmotion',
-            'parentJobId' => 'getParentJobId',
-            'autoMotion' => 'getAutoMotion',
             'styleId' => 'getStyleId',
-            'cameraPosition' => 'getCameraPosition'
+            'cameraPosition' => 'getCameraPosition',
+            'jobType' => 'getJobType'
     ];
 
     /**
@@ -219,7 +229,37 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SCRIPT_TYPE_TEXT = 'TEXT';
+    const SCRIPT_TYPE_AUDIO = 'AUDIO';
+    const JOB_TYPE_REAL_JOB = 'REAL_JOB';
+    const JOB_TYPE_UNREAL_JOB = 'UNREAL_JOB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getScriptTypeAllowableValues()
+    {
+        return [
+            self::SCRIPT_TYPE_TEXT,
+            self::SCRIPT_TYPE_AUDIO,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE_REAL_JOB,
+            self::JOB_TYPE_UNREAL_JOB,
+        ];
+    }
 
 
     /**
@@ -238,15 +278,16 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['voiceAssetId'] = isset($data['voiceAssetId']) ? $data['voiceAssetId'] : null;
+        $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['audioFileDownloadUrl'] = isset($data['audioFileDownloadUrl']) ? $data['audioFileDownloadUrl'] : null;
         $this->container['speed'] = isset($data['speed']) ? $data['speed'] : null;
         $this->container['pitch'] = isset($data['pitch']) ? $data['pitch'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['emotion'] = isset($data['emotion']) ? $data['emotion'] : null;
-        $this->container['parentJobId'] = isset($data['parentJobId']) ? $data['parentJobId'] : null;
-        $this->container['autoMotion'] = isset($data['autoMotion']) ? $data['autoMotion'] : null;
         $this->container['styleId'] = isset($data['styleId']) ? $data['styleId'] : null;
         $this->container['cameraPosition'] = isset($data['cameraPosition']) ? $data['cameraPosition'] : null;
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
     }
 
     /**
@@ -269,14 +310,25 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
             if (!preg_match("/^[a-zA-Z0-9-_]+$/", $this->container['voiceAssetId'])) {
                 $invalidProperties[] = "invalid value for 'voiceAssetId', must be conform to the pattern /^[a-zA-Z0-9-_]+$/.";
             }
-        if ($this->container['text'] === null) {
-            $invalidProperties[] = "'text' can't be null";
-        }
-            if ((mb_strlen($this->container['text']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 2048.";
+            $allowedValues = $this->getScriptTypeAllowableValues();
+                if (!is_null($this->container['scriptType']) && !in_array($this->container['scriptType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'scriptType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if ((mb_strlen($this->container['text']) < 0)) {
+
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) > 131072)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 131072.";
+            }
+            if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) < 0)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['audioFileDownloadUrl']) && (mb_strlen($this->container['audioFileDownloadUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'audioFileDownloadUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['audioFileDownloadUrl']) && (mb_strlen($this->container['audioFileDownloadUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'audioFileDownloadUrl', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['speed']) && ($this->container['speed'] > 200)) {
                 $invalidProperties[] = "invalid value for 'speed', must be smaller than or equal to 200.";
@@ -305,16 +357,13 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['emotion']) && !preg_match("/^[a-zA-Z0-9-_]+$/", $this->container['emotion'])) {
                 $invalidProperties[] = "invalid value for 'emotion', must be conform to the pattern /^[a-zA-Z0-9-_]+$/.";
             }
-            if (!is_null($this->container['parentJobId']) && (mb_strlen($this->container['parentJobId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'parentJobId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['parentJobId']) && (mb_strlen($this->container['parentJobId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'parentJobId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['styleId']) && (mb_strlen($this->container['styleId']) > 64)) {
+        if ($this->container['styleId'] === null) {
+            $invalidProperties[] = "'styleId' can't be null";
+        }
+            if ((mb_strlen($this->container['styleId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'styleId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['styleId']) && (mb_strlen($this->container['styleId']) < 1)) {
+            if ((mb_strlen($this->container['styleId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'styleId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['cameraPosition']) && (mb_strlen($this->container['cameraPosition']) > 1024)) {
@@ -322,6 +371,20 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['cameraPosition']) && (mb_strlen($this->container['cameraPosition']) < 1)) {
                 $invalidProperties[] = "invalid value for 'cameraPosition', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -362,10 +425,34 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets scriptType
+    *  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    *
+    * @return string|null
+    */
+    public function getScriptType()
+    {
+        return $this->container['scriptType'];
+    }
+
+    /**
+    * Sets scriptType
+    *
+    * @param string|null $scriptType 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    *
+    * @return $this
+    */
+    public function setScriptType($scriptType)
+    {
+        $this->container['scriptType'] = $scriptType;
+        return $this;
+    }
+
+    /**
     * Gets text
     *  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     *
-    * @return string
+    * @return string|null
     */
     public function getText()
     {
@@ -375,13 +462,37 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Sets text
     *
-    * @param string $text HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
+    * @param string|null $text HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     *
     * @return $this
     */
     public function setText($text)
     {
         $this->container['text'] = $text;
+        return $this;
+    }
+
+    /**
+    * Gets audioFileDownloadUrl
+    *  语音驱动音频文件下载URL。
+    *
+    * @return string|null
+    */
+    public function getAudioFileDownloadUrl()
+    {
+        return $this->container['audioFileDownloadUrl'];
+    }
+
+    /**
+    * Sets audioFileDownloadUrl
+    *
+    * @param string|null $audioFileDownloadUrl 语音驱动音频文件下载URL。
+    *
+    * @return $this
+    */
+    public function setAudioFileDownloadUrl($audioFileDownloadUrl)
+    {
+        $this->container['audioFileDownloadUrl'] = $audioFileDownloadUrl;
         return $this;
     }
 
@@ -482,58 +593,10 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets parentJobId
-    *  关联父任务任务ID。
-    *
-    * @return string|null
-    */
-    public function getParentJobId()
-    {
-        return $this->container['parentJobId'];
-    }
-
-    /**
-    * Sets parentJobId
-    *
-    * @param string|null $parentJobId 关联父任务任务ID。
-    *
-    * @return $this
-    */
-    public function setParentJobId($parentJobId)
-    {
-        $this->container['parentJobId'] = $parentJobId;
-        return $this;
-    }
-
-    /**
-    * Gets autoMotion
-    *  是否生成智能动作数据。
-    *
-    * @return bool|null
-    */
-    public function getAutoMotion()
-    {
-        return $this->container['autoMotion'];
-    }
-
-    /**
-    * Sets autoMotion
-    *
-    * @param bool|null $autoMotion 是否生成智能动作数据。
-    *
-    * @return $this
-    */
-    public function setAutoMotion($autoMotion)
-    {
-        $this->container['autoMotion'] = $autoMotion;
-        return $this;
-    }
-
-    /**
     * Gets styleId
     *  风格化ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getStyleId()
     {
@@ -543,7 +606,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Sets styleId
     *
-    * @param string|null $styleId 风格化ID。
+    * @param string $styleId 风格化ID。
     *
     * @return $this
     */
@@ -574,6 +637,30 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     public function setCameraPosition($cameraPosition)
     {
         $this->container['cameraPosition'] = $cameraPosition;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
         return $this;
     }
 

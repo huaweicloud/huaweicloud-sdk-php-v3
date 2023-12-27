@@ -25,6 +25,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * contentDuration  语音驱动内容时长。  单位:秒。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
             'state' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
-            'contentDuration' => 'float'
+            'contentDuration' => 'float',
+            'jobType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * contentDuration  语音驱动内容时长。  单位:秒。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
         'state' => null,
         'startTime' => null,
         'endTime' => null,
-        'contentDuration' => 'float'
+        'contentDuration' => 'float',
+        'jobType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * contentDuration  语音驱动内容时长。  单位:秒。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
             'state' => 'state',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'contentDuration' => 'content_duration'
+            'contentDuration' => 'content_duration',
+            'jobType' => 'job_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * contentDuration  语音驱动内容时长。  单位:秒。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'contentDuration' => 'setContentDuration'
+            'contentDuration' => 'setContentDuration',
+            'jobType' => 'setJobType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
     * startTime  任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * endTime  任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
     * contentDuration  语音驱动内容时长。  单位:秒。
+    * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'contentDuration' => 'getContentDuration'
+            'contentDuration' => 'getContentDuration',
+            'jobType' => 'getJobType'
     ];
 
     /**
@@ -173,6 +183,8 @@ class TTSAJob implements ModelInterface, ArrayAccess
     const STATE_PROCESSING = 'PROCESSING';
     const STATE_SUCCEED = 'SUCCEED';
     const STATE_FAILED = 'FAILED';
+    const JOB_TYPE_REAL_JOB = 'REAL_JOB';
+    const JOB_TYPE_UNREAL_JOB = 'UNREAL_JOB';
     
 
     /**
@@ -187,6 +199,19 @@ class TTSAJob implements ModelInterface, ArrayAccess
             self::STATE_PROCESSING,
             self::STATE_SUCCEED,
             self::STATE_FAILED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE_REAL_JOB,
+            self::JOB_TYPE_UNREAL_JOB,
         ];
     }
 
@@ -211,6 +236,7 @@ class TTSAJob implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['contentDuration'] = isset($data['contentDuration']) ? $data['contentDuration'] : null;
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
     }
 
     /**
@@ -258,6 +284,20 @@ class TTSAJob implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['contentDuration']) && ($this->container['contentDuration'] < 0)) {
                 $invalidProperties[] = "invalid value for 'contentDuration', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -390,6 +430,30 @@ class TTSAJob implements ModelInterface, ArrayAccess
     public function setContentDuration($contentDuration)
     {
         $this->container['contentDuration'] = $contentDuration;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
         return $this;
     }
 

@@ -21,32 +21,24 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
-    * startTime  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    * endTime  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
     * shootScript  shootScript
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sequenceNo' => 'int',
-            'startTime' => 'float',
-            'endTime' => 'float',
             'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScript'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
-    * startTime  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    * endTime  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
     * shootScript  shootScript
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sequenceNo' => 'int32',
-        'startTime' => 'float',
-        'endTime' => 'float',
         'shootScript' => null
     ];
 
@@ -74,48 +66,36 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sequenceNo  剧本序号。
-    * startTime  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    * endTime  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
     * shootScript  shootScript
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sequenceNo' => 'sequence_no',
-            'startTime' => 'start_time',
-            'endTime' => 'end_time',
             'shootScript' => 'shoot_script'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sequenceNo  剧本序号。
-    * startTime  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    * endTime  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
     * shootScript  shootScript
     *
     * @var string[]
     */
     protected static $setters = [
             'sequenceNo' => 'setSequenceNo',
-            'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime',
             'shootScript' => 'setShootScript'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sequenceNo  剧本序号。
-    * startTime  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    * endTime  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
     * shootScript  shootScript
     *
     * @var string[]
     */
     protected static $getters = [
             'sequenceNo' => 'getSequenceNo',
-            'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime',
             'shootScript' => 'getShootScript'
     ];
 
@@ -178,8 +158,6 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
-        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['shootScript'] = isset($data['shootScript']) ? $data['shootScript'] : null;
     }
 
@@ -197,21 +175,6 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sequenceNo']) && ($this->container['sequenceNo'] < 0)) {
                 $invalidProperties[] = "invalid value for 'sequenceNo', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 2.592E+6)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 2.592E+6.";
-            }
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 2.592E+6)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 2.592E+6.";
-            }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
-            }
-        if ($this->container['shootScript'] === null) {
-            $invalidProperties[] = "'shootScript' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -251,58 +214,10 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets startTime
-    *  开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    *
-    * @return float|null
-    */
-    public function getStartTime()
-    {
-        return $this->container['startTime'];
-    }
-
-    /**
-    * Sets startTime
-    *
-    * @param float|null $startTime 开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-    *
-    * @return $this
-    */
-    public function setStartTime($startTime)
-    {
-        $this->container['startTime'] = $startTime;
-        return $this;
-    }
-
-    /**
-    * Gets endTime
-    *  结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
-    *
-    * @return float|null
-    */
-    public function getEndTime()
-    {
-        return $this->container['endTime'];
-    }
-
-    /**
-    * Sets endTime
-    *
-    * @param float|null $endTime 结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
-    *
-    * @return $this
-    */
-    public function setEndTime($endTime)
-    {
-        $this->container['endTime'] = $endTime;
-        return $this;
-    }
-
-    /**
     * Gets shootScript
     *  shootScript
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScript
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScript|null
     */
     public function getShootScript()
     {
@@ -312,7 +227,7 @@ class ShootScriptItem implements ModelInterface, ArrayAccess
     /**
     * Sets shootScript
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScript $shootScript shootScript
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScript|null $shootScript shootScript
     *
     * @return $this
     */

@@ -262,6 +262,9 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['shootScripts'] === null) {
+            $invalidProperties[] = "'shootScripts' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -448,7 +451,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * Gets shootScripts
     *  拍摄脚本列表。
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[]|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[]
     */
     public function getShootScripts()
     {
@@ -458,7 +461,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets shootScripts
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[]|null $shootScripts 拍摄脚本列表。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[] $shootScripts 拍摄脚本列表。
     *
     * @return $this
     */

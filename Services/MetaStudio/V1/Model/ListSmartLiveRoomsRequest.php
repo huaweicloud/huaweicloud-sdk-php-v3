@@ -23,15 +23,16 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomName  按直播间名称模糊查询。
     * dhId  按数字人形象ID查询。
     * modelName  按形象名称模糊查询。
-    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+    * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'modelName' => 'string',
             'liveState' => 'string',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'roomType' => 'string'
     ];
 
     /**
@@ -55,15 +57,16 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomName  按直播间名称模糊查询。
     * dhId  按数字人形象ID查询。
     * modelName  按形象名称模糊查询。
-    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+    * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         'modelName' => null,
         'liveState' => null,
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'roomType' => null
     ];
 
     /**
@@ -108,15 +112,16 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomName  按直播间名称模糊查询。
     * dhId  按数字人形象ID查询。
     * modelName  按形象名称模糊查询。
-    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+    * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'modelName' => 'model_name',
             'liveState' => 'live_state',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'roomType' => 'room_type'
     ];
 
     /**
@@ -140,15 +146,16 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomName  按直播间名称模糊查询。
     * dhId  按数字人形象ID查询。
     * modelName  按形象名称模糊查询。
-    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+    * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'modelName' => 'setModelName',
             'liveState' => 'setLiveState',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'roomType' => 'setRoomType'
     ];
 
     /**
@@ -172,15 +180,16 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomName  按直播间名称模糊查询。
     * dhId  按数字人形象ID查询。
     * modelName  按形象名称模糊查询。
-    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * liveState  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+    * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'modelName' => 'getModelName',
             'liveState' => 'getLiveState',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'roomType' => 'getRoomType'
     ];
 
     /**
@@ -269,6 +279,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         $this->container['liveState'] = isset($data['liveState']) ? $data['liveState'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
     }
 
     /**
@@ -350,6 +361,12 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['roomType']) && (mb_strlen($this->container['roomType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'roomType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['roomType']) && (mb_strlen($this->container['roomType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'roomType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -439,7 +456,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -451,7 +468,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */
@@ -583,7 +600,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets liveState
-    *  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    *  当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     *
     * @return string|null
     */
@@ -595,7 +612,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets liveState
     *
-    * @param string|null $liveState 当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+    * @param string|null $liveState 当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
     *
     * @return $this
     */
@@ -650,6 +667,30 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets roomType
+    *  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    *
+    * @return string|null
+    */
+    public function getRoomType()
+    {
+        return $this->container['roomType'];
+    }
+
+    /**
+    * Sets roomType
+    *
+    * @param string|null $roomType 按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    *
+    * @return $this
+    */
+    public function setRoomType($roomType)
+    {
+        $this->container['roomType'] = $roomType;
         return $this;
     }
 

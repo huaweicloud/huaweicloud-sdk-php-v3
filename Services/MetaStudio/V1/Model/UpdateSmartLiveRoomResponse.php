@@ -23,16 +23,23 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -46,10 +53,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'playPolicy' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlayPolicy',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
             'outputUrls' => 'string[]',
+            'streamKeys' => 'string[]',
+            'backupModelAssetIds' => 'string[]',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'roomId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
             'coverUrl' => 'string',
+            'roomState' => 'string',
+            'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'xRequestId' => 'string'
     ];
 
@@ -57,16 +71,23 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -80,10 +101,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'playPolicy' => null,
         'videoConfig' => null,
         'outputUrls' => null,
+        'streamKeys' => null,
+        'backupModelAssetIds' => null,
+        'liveEventCallbackConfig' => null,
+        'reviewConfig' => null,
+        'sharedConfig' => null,
         'roomId' => null,
         'createTime' => null,
         'updateTime' => null,
         'coverUrl' => null,
+        'roomState' => null,
+        'errorInfo' => null,
         'xRequestId' => null
     ];
 
@@ -112,16 +140,23 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -135,10 +170,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'playPolicy' => 'play_policy',
             'videoConfig' => 'video_config',
             'outputUrls' => 'output_urls',
+            'streamKeys' => 'stream_keys',
+            'backupModelAssetIds' => 'backup_model_asset_ids',
+            'liveEventCallbackConfig' => 'live_event_callback_config',
+            'reviewConfig' => 'review_config',
+            'sharedConfig' => 'shared_config',
             'roomId' => 'room_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'coverUrl' => 'cover_url',
+            'roomState' => 'room_state',
+            'errorInfo' => 'error_info',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -146,16 +188,23 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -169,10 +218,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'playPolicy' => 'setPlayPolicy',
             'videoConfig' => 'setVideoConfig',
             'outputUrls' => 'setOutputUrls',
+            'streamKeys' => 'setStreamKeys',
+            'backupModelAssetIds' => 'setBackupModelAssetIds',
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'reviewConfig' => 'setReviewConfig',
+            'sharedConfig' => 'setSharedConfig',
             'roomId' => 'setRoomId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'coverUrl' => 'setCoverUrl',
+            'roomState' => 'setRoomState',
+            'errorInfo' => 'setErrorInfo',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -180,16 +236,23 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -203,10 +266,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'playPolicy' => 'getPlayPolicy',
             'videoConfig' => 'getVideoConfig',
             'outputUrls' => 'getOutputUrls',
+            'streamKeys' => 'getStreamKeys',
+            'backupModelAssetIds' => 'getBackupModelAssetIds',
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'reviewConfig' => 'getReviewConfig',
+            'sharedConfig' => 'getSharedConfig',
             'roomId' => 'getRoomId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'coverUrl' => 'getCoverUrl',
+            'roomState' => 'getRoomState',
+            'errorInfo' => 'getErrorInfo',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -252,6 +322,10 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     }
     const ROOM_TYPE_NORMAL = 'NORMAL';
     const ROOM_TYPE_TEMP = 'TEMP';
+    const ROOM_TYPE_TEMPLATE = 'TEMPLATE';
+    const ROOM_STATE_ENABLE = 'ENABLE';
+    const ROOM_STATE_DISABLE = 'DISABLE';
+    const ROOM_STATE_BLOCKED = 'BLOCKED';
     
 
     /**
@@ -264,6 +338,21 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         return [
             self::ROOM_TYPE_NORMAL,
             self::ROOM_TYPE_TEMP,
+            self::ROOM_TYPE_TEMPLATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRoomStateAllowableValues()
+    {
+        return [
+            self::ROOM_STATE_ENABLE,
+            self::ROOM_STATE_DISABLE,
+            self::ROOM_STATE_BLOCKED,
         ];
     }
 
@@ -291,10 +380,17 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['playPolicy'] = isset($data['playPolicy']) ? $data['playPolicy'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['outputUrls'] = isset($data['outputUrls']) ? $data['outputUrls'] : null;
+        $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
+        $this->container['backupModelAssetIds'] = isset($data['backupModelAssetIds']) ? $data['backupModelAssetIds'] : null;
+        $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['roomState'] = isset($data['roomState']) ? $data['roomState'] : null;
+        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -358,6 +454,20 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getRoomStateAllowableValues();
+                if (!is_null($this->container['roomState']) && !in_array($this->container['roomState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'roomState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['roomState']) && (mb_strlen($this->container['roomState']) > 32)) {
+                $invalidProperties[] = "invalid value for 'roomState', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['roomState']) && (mb_strlen($this->container['roomState']) < 0)) {
+                $invalidProperties[] = "invalid value for 'roomState', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -423,7 +533,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomType
-    *  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    *  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @return string|null
     */
@@ -435,7 +545,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomType
     *
-    * @param string|null $roomType 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * @param string|null $roomType 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @return $this
     */
@@ -543,7 +653,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputUrls
-    *  视频推流第三方直播平台地址。
+    *  RTMP视频推流第三方直播平台地址。
     *
     * @return string[]|null
     */
@@ -555,13 +665,133 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets outputUrls
     *
-    * @param string[]|null $outputUrls 视频推流第三方直播平台地址。
+    * @param string[]|null $outputUrls RTMP视频推流第三方直播平台地址。
     *
     * @return $this
     */
     public function setOutputUrls($outputUrls)
     {
         $this->container['outputUrls'] = $outputUrls;
+        return $this;
+    }
+
+    /**
+    * Gets streamKeys
+    *  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return string[]|null
+    */
+    public function getStreamKeys()
+    {
+        return $this->container['streamKeys'];
+    }
+
+    /**
+    * Sets streamKeys
+    *
+    * @param string[]|null $streamKeys RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return $this
+    */
+    public function setStreamKeys($streamKeys)
+    {
+        $this->container['streamKeys'] = $streamKeys;
+        return $this;
+    }
+
+    /**
+    * Gets backupModelAssetIds
+    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return string[]|null
+    */
+    public function getBackupModelAssetIds()
+    {
+        return $this->container['backupModelAssetIds'];
+    }
+
+    /**
+    * Sets backupModelAssetIds
+    *
+    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return $this
+    */
+    public function setBackupModelAssetIds($backupModelAssetIds)
+    {
+        $this->container['backupModelAssetIds'] = $backupModelAssetIds;
+        return $this;
+    }
+
+    /**
+    * Gets liveEventCallbackConfig
+    *  liveEventCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    */
+    public function getLiveEventCallbackConfig()
+    {
+        return $this->container['liveEventCallbackConfig'];
+    }
+
+    /**
+    * Sets liveEventCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    *
+    * @return $this
+    */
+    public function setLiveEventCallbackConfig($liveEventCallbackConfig)
+    {
+        $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets sharedConfig
+    *  sharedConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null
+    */
+    public function getSharedConfig()
+    {
+        return $this->container['sharedConfig'];
+    }
+
+    /**
+    * Sets sharedConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null $sharedConfig sharedConfig
+    *
+    * @return $this
+    */
+    public function setSharedConfig($sharedConfig)
+    {
+        $this->container['sharedConfig'] = $sharedConfig;
         return $this;
     }
 
@@ -658,6 +888,54 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets roomState
+    *  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    *
+    * @return string|null
+    */
+    public function getRoomState()
+    {
+        return $this->container['roomState'];
+    }
+
+    /**
+    * Sets roomState
+    *
+    * @param string|null $roomState 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    *
+    * @return $this
+    */
+    public function setRoomState($roomState)
+    {
+        $this->container['roomState'] = $roomState;
+        return $this;
+    }
+
+    /**
+    * Gets errorInfo
+    *  errorInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null
+    */
+    public function getErrorInfo()
+    {
+        return $this->container['errorInfo'];
+    }
+
+    /**
+    * Sets errorInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null $errorInfo errorInfo
+    *
+    * @return $this
+    */
+    public function setErrorInfo($errorInfo)
+    {
+        $this->container['errorInfo'] = $errorInfo;
         return $this;
     }
 

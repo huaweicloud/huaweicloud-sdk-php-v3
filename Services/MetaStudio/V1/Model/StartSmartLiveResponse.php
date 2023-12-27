@@ -24,6 +24,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * jobId  直播任务ID。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * liveWarningInfo  开播风险告警列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -32,6 +34,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'liveEventReportUrl' => 'string',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'liveWarningInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveWarningItem[]',
             'xRequestId' => 'string'
     ];
 
@@ -40,6 +44,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * jobId  直播任务ID。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * liveWarningInfo  开播风险告警列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -48,6 +54,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
         'jobId' => null,
         'rtcRoomInfo' => null,
         'liveEventReportUrl' => null,
+        'liveEventCallbackConfig' => null,
+        'liveWarningInfo' => null,
         'xRequestId' => null
     ];
 
@@ -77,6 +85,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * jobId  直播任务ID。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * liveWarningInfo  开播风险告警列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,6 +95,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'rtcRoomInfo' => 'rtc_room_info',
             'liveEventReportUrl' => 'live_event_report_url',
+            'liveEventCallbackConfig' => 'live_event_callback_config',
+            'liveWarningInfo' => 'live_warning_info',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -93,6 +105,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * jobId  直播任务ID。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * liveWarningInfo  开播风险告警列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -101,6 +115,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'liveEventReportUrl' => 'setLiveEventReportUrl',
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'liveWarningInfo' => 'setLiveWarningInfo',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -109,6 +125,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     * jobId  直播任务ID。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * liveWarningInfo  开播风险告警列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -117,6 +135,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'liveEventReportUrl' => 'getLiveEventReportUrl',
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'liveWarningInfo' => 'getLiveWarningInfo',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -181,6 +201,8 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['liveEventReportUrl'] = isset($data['liveEventReportUrl']) ? $data['liveEventReportUrl'] : null;
+        $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['liveWarningInfo'] = isset($data['liveWarningInfo']) ? $data['liveWarningInfo'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -287,6 +309,54 @@ class StartSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setLiveEventReportUrl($liveEventReportUrl)
     {
         $this->container['liveEventReportUrl'] = $liveEventReportUrl;
+        return $this;
+    }
+
+    /**
+    * Gets liveEventCallbackConfig
+    *  liveEventCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    */
+    public function getLiveEventCallbackConfig()
+    {
+        return $this->container['liveEventCallbackConfig'];
+    }
+
+    /**
+    * Sets liveEventCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    *
+    * @return $this
+    */
+    public function setLiveEventCallbackConfig($liveEventCallbackConfig)
+    {
+        $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets liveWarningInfo
+    *  开播风险告警列表。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveWarningItem[]|null
+    */
+    public function getLiveWarningInfo()
+    {
+        return $this->container['liveWarningInfo'];
+    }
+
+    /**
+    * Sets liveWarningInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveWarningItem[]|null $liveWarningInfo 开播风险告警列表。
+    *
+    * @return $this
+    */
+    public function setLiveWarningInfo($liveWarningInfo)
+    {
+        $this->container['liveWarningInfo'] = $liveWarningInfo;
         return $this;
     }
 

@@ -345,6 +345,68 @@ class AadClient extends Client
     }
 
     /**
+     * 高防实例添加黑白名单
+     *
+     * 高防实例添加黑白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addBlackWhiteIpList($request)
+    {
+        return $this->addBlackWhiteIpListWithHttpInfo($request);
+    }
+
+    public function addBlackWhiteIpListWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/bwlist';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\AddBlackWhiteIpListResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\AddBlackWhiteIpListRequest');
+    }
+
+    /**
      * 策略添加黑白名单
      *
      * 策略添加黑白名单
@@ -611,6 +673,130 @@ class AadClient extends Client
     }
 
     /**
+     * 创建防护域名
+     *
+     * 创建防护域名
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAadDomain($request)
+    {
+        return $this->createAadDomainWithHttpInfo($request);
+    }
+
+    public function createAadDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/domains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\CreateAadDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\CreateAadDomainRequest');
+    }
+
+    /**
+     * 上传/修改域名对应证书
+     *
+     * 上传/修改域名对应证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCertificate($request)
+    {
+        return $this->createCertificateWithHttpInfo($request);
+    }
+
+    public function createCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/domains/certificate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\CreateCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\CreateCertificateRequest');
+    }
+
+    /**
      * 创建策略
      *
      * 创建策略
@@ -729,6 +915,68 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V1\Model\DeleteAlarmConfigResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V1\Model\DeleteAlarmConfigRequest');
+    }
+
+    /**
+     * 高防实例删除黑白名单
+     *
+     * 高防实例删除黑白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteBlackWhiteIpList($request)
+    {
+        return $this->deleteBlackWhiteIpListWithHttpInfo($request);
+    }
+
+    public function deleteBlackWhiteIpListWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/bwlist';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\DeleteBlackWhiteIpListResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\DeleteBlackWhiteIpListRequest');
     }
 
     /**
@@ -1444,6 +1692,65 @@ class AadClient extends Client
     }
 
     /**
+     * 查询高防回源IP段列表
+     *
+     * 查询高防回源IP段列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSourceIps($request)
+    {
+        return $this->listSourceIpsWithHttpInfo($request);
+    }
+
+    public function listSourceIpsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/source-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\ListSourceIpsResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\ListSourceIpsRequest');
+    }
+
+    /**
      * 查询可绑定的防护对象列表
      *
      * 查询可绑定的防护对象列表
@@ -1509,6 +1816,68 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V1\Model\ListUnboundProtectedIpResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V1\Model\ListUnboundProtectedIpRequest');
+    }
+
+    /**
+     * 修改域名WEB基础防护开关/CC防护开关
+     *
+     * 修改域名WEB基础防护开关/CC防护开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyDomainWebSwitch($request)
+    {
+        return $this->modifyDomainWebSwitchWithHttpInfo($request);
+    }
+
+    public function modifyDomainWebSwitchWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/domains/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\ModifyDomainWebSwitchResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\ModifyDomainWebSwitchRequest');
     }
 
     /**

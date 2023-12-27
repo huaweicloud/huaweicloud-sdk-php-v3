@@ -21,17 +21,17 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'object'
+            'authorization' => '\HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorization
-    *  委托授权信息。
+    *  authorization
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo|null
     */
     public function getAuthorization()
     {
@@ -187,7 +187,7 @@ class ShowAuthorizationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authorization
     *
-    * @param object|null $authorization 委托授权信息。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo|null $authorization authorization
     *
     * @return $this
     */

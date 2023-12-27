@@ -22,25 +22,23 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
-    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
-    * assetManageType  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
-    * xUserMePrivilege  玄天引擎测试用户字段。
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     *
     * @var string[]
@@ -59,10 +57,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'string',
             'sortDir' => 'string',
             'assetSource' => 'string',
-            'assetManageType' => 'string',
             'assetState' => 'string',
             'styleId' => 'string',
-            'xUserMePrivilege' => 'string',
             'renderEngine' => 'string',
             'sex' => 'string',
             'language' => 'string',
@@ -74,25 +70,23 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
-    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
-    * assetManageType  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
-    * xUserMePrivilege  玄天引擎测试用户字段。
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     *
     * @var string[]
@@ -111,10 +105,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         'sortKey' => null,
         'sortDir' => null,
         'assetSource' => null,
-        'assetManageType' => null,
         'assetState' => null,
         'styleId' => null,
-        'xUserMePrivilege' => null,
         'renderEngine' => null,
         'sex' => null,
         'language' => null,
@@ -147,25 +139,23 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
-    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
-    * assetManageType  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
-    * xUserMePrivilege  玄天引擎测试用户字段。
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     *
     * @var string[]
@@ -184,10 +174,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'assetSource' => 'asset_source',
-            'assetManageType' => 'asset_manage_type',
             'assetState' => 'asset_state',
             'styleId' => 'style_id',
-            'xUserMePrivilege' => 'X-User-MePrivilege',
             'renderEngine' => 'render_engine',
             'sex' => 'sex',
             'language' => 'language',
@@ -199,25 +187,23 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
-    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
-    * assetManageType  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
-    * xUserMePrivilege  玄天引擎测试用户字段。
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     *
     * @var string[]
@@ -236,10 +222,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'assetSource' => 'setAssetSource',
-            'assetManageType' => 'setAssetManageType',
             'assetState' => 'setAssetState',
             'styleId' => 'setStyleId',
-            'xUserMePrivilege' => 'setXUserMePrivilege',
             'renderEngine' => 'setRenderEngine',
             'sex' => 'setSex',
             'language' => 'setLanguage',
@@ -251,25 +235,23 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
     * startTime  起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
-    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * assetSource  资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
-    * assetManageType  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
-    * xUserMePrivilege  玄天引擎测试用户字段。
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
-    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
     *
     * @var string[]
@@ -288,10 +270,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'assetSource' => 'getAssetSource',
-            'assetManageType' => 'getAssetManageType',
             'assetState' => 'getAssetState',
             'styleId' => 'getStyleId',
-            'xUserMePrivilege' => 'getXUserMePrivilege',
             'renderEngine' => 'getRenderEngine',
             'sex' => 'getSex',
             'language' => 'getLanguage',
@@ -342,14 +322,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     const ASSET_SOURCE_SYSTEM = 'SYSTEM';
     const ASSET_SOURCE_CUSTOMIZATION = 'CUSTOMIZATION';
     const ASSET_SOURCE_ALL = 'ALL';
-    const ASSET_MANAGE_TYPE_UPLOAD = 'UPLOAD';
-    const ASSET_MANAGE_TYPE_UPLOADED = 'UPLOADED';
-    const ASSET_MANAGE_TYPE_UPLOADING = 'UPLOADING';
-    const ASSET_MANAGE_TYPE_UPLOAD_FAILED = 'UPLOAD_FAILED';
-    const ASSET_MANAGE_TYPE_DOWNLOAD = 'DOWNLOAD';
-    const ASSET_MANAGE_TYPE_COLLECTIO = 'COLLECTIO';
-    const ASSET_MANAGE_TYPE_DRAFT = 'DRAFT';
-    const ASSET_MANAGE_TYPE_RECYCLE = 'RECYCLE';
     
 
     /**
@@ -363,25 +335,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             self::ASSET_SOURCE_SYSTEM,
             self::ASSET_SOURCE_CUSTOMIZATION,
             self::ASSET_SOURCE_ALL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAssetManageTypeAllowableValues()
-    {
-        return [
-            self::ASSET_MANAGE_TYPE_UPLOAD,
-            self::ASSET_MANAGE_TYPE_UPLOADED,
-            self::ASSET_MANAGE_TYPE_UPLOADING,
-            self::ASSET_MANAGE_TYPE_UPLOAD_FAILED,
-            self::ASSET_MANAGE_TYPE_DOWNLOAD,
-            self::ASSET_MANAGE_TYPE_COLLECTIO,
-            self::ASSET_MANAGE_TYPE_DRAFT,
-            self::ASSET_MANAGE_TYPE_RECYCLE,
         ];
     }
 
@@ -414,10 +367,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['assetSource'] = isset($data['assetSource']) ? $data['assetSource'] : null;
-        $this->container['assetManageType'] = isset($data['assetManageType']) ? $data['assetManageType'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['styleId'] = isset($data['styleId']) ? $data['styleId'] : null;
-        $this->container['xUserMePrivilege'] = isset($data['xUserMePrivilege']) ? $data['xUserMePrivilege'] : null;
         $this->container['renderEngine'] = isset($data['renderEngine']) ? $data['renderEngine'] : null;
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
@@ -513,20 +464,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            $allowedValues = $this->getAssetManageTypeAllowableValues();
-                if (!is_null($this->container['assetManageType']) && !in_array($this->container['assetManageType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'assetManageType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['assetManageType']) && (mb_strlen($this->container['assetManageType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'assetManageType', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['assetManageType']) && (mb_strlen($this->container['assetManageType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'assetManageType', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['assetState']) && (mb_strlen($this->container['assetState']) > 512)) {
                 $invalidProperties[] = "invalid value for 'assetState', the character length must be smaller than or equal to 512.";
             }
@@ -538,12 +475,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['styleId']) && (mb_strlen($this->container['styleId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'styleId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['xUserMePrivilege']) && (mb_strlen($this->container['xUserMePrivilege']) > 256)) {
-                $invalidProperties[] = "invalid value for 'xUserMePrivilege', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['xUserMePrivilege']) && (mb_strlen($this->container['xUserMePrivilege']) < 1)) {
-                $invalidProperties[] = "invalid value for 'xUserMePrivilege', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['renderEngine']) && (mb_strlen($this->container['renderEngine']) > 128)) {
                 $invalidProperties[] = "invalid value for 'renderEngine', the character length must be smaller than or equal to 128.";
@@ -633,7 +564,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -645,7 +576,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */
@@ -801,7 +732,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetType
-    *  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    *  资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     *
     * @return string|null
     */
@@ -813,7 +744,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetType
     *
-    * @param string|null $assetType 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * @param string|null $assetType 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
     *
     * @return $this
     */
@@ -896,30 +827,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets assetManageType
-    *  资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
-    *
-    * @return string|null
-    */
-    public function getAssetManageType()
-    {
-        return $this->container['assetManageType'];
-    }
-
-    /**
-    * Sets assetManageType
-    *
-    * @param string|null $assetManageType 资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
-    *
-    * @return $this
-    */
-    public function setAssetManageType($assetManageType)
-    {
-        $this->container['assetManageType'] = $assetManageType;
-        return $this;
-    }
-
-    /**
     * Gets assetState
     *  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     *
@@ -964,30 +871,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function setStyleId($styleId)
     {
         $this->container['styleId'] = $styleId;
-        return $this;
-    }
-
-    /**
-    * Gets xUserMePrivilege
-    *  玄天引擎测试用户字段。
-    *
-    * @return string|null
-    */
-    public function getXUserMePrivilege()
-    {
-        return $this->container['xUserMePrivilege'];
-    }
-
-    /**
-    * Sets xUserMePrivilege
-    *
-    * @param string|null $xUserMePrivilege 玄天引擎测试用户字段。
-    *
-    * @return $this
-    */
-    public function setXUserMePrivilege($xUserMePrivilege)
-    {
-        $this->container['xUserMePrivilege'] = $xUserMePrivilege;
         return $this;
     }
 
@@ -1065,7 +948,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemProperty
-    *  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    *  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     *
     * @return string|null
     */
@@ -1077,7 +960,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets systemProperty
     *
-    * @param string|null $systemProperty 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
+    * @param string|null $systemProperty 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     *
     * @return $this
     */

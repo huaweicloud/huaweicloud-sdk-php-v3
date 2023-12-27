@@ -22,8 +22,10 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * assetName  资产名称。
     * assetDescription  资产描述。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
-    * assetOwner  项目ID。
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -35,6 +37,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetDescription' => 'string',
             'assetType' => 'string',
             'assetOwner' => 'string',
+            'isNeedGenerateCover' => 'bool',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]'
@@ -44,8 +48,10 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * assetName  资产名称。
     * assetDescription  资产描述。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
-    * assetOwner  项目ID。
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -57,6 +63,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'assetDescription' => null,
         'assetType' => null,
         'assetOwner' => null,
+        'isNeedGenerateCover' => null,
+        'reviewConfig' => null,
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null
@@ -87,8 +95,10 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * assetName  资产名称。
     * assetDescription  资产描述。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
-    * assetOwner  项目ID。
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -100,6 +110,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetDescription' => 'asset_description',
             'assetType' => 'asset_type',
             'assetOwner' => 'asset_owner',
+            'isNeedGenerateCover' => 'is_need_generate_cover',
+            'reviewConfig' => 'review_config',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties'
@@ -109,8 +121,10 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * assetName  资产名称。
     * assetDescription  资产描述。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
-    * assetOwner  项目ID。
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -122,6 +136,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetDescription' => 'setAssetDescription',
             'assetType' => 'setAssetType',
             'assetOwner' => 'setAssetOwner',
+            'isNeedGenerateCover' => 'setIsNeedGenerateCover',
+            'reviewConfig' => 'setReviewConfig',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties'
@@ -131,8 +147,10 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * assetName  资产名称。
     * assetDescription  资产描述。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
-    * assetOwner  项目ID。
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -144,6 +162,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetDescription' => 'getAssetDescription',
             'assetType' => 'getAssetType',
             'assetOwner' => 'getAssetOwner',
+            'isNeedGenerateCover' => 'getIsNeedGenerateCover',
+            'reviewConfig' => 'getReviewConfig',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties'
@@ -202,6 +222,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     const ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
     const ASSET_TYPE_BUSINESS_CARD_TEMPLET = 'BUSINESS_CARD_TEMPLET';
     const ASSET_TYPE_MUSIC = 'MUSIC';
+    const ASSET_TYPE_AUDIO = 'AUDIO';
     
 
     /**
@@ -225,6 +246,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             self::ASSET_TYPE_HUMAN_MODEL_2_D,
             self::ASSET_TYPE_BUSINESS_CARD_TEMPLET,
             self::ASSET_TYPE_MUSIC,
+            self::ASSET_TYPE_AUDIO,
         ];
     }
 
@@ -248,6 +270,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['assetDescription'] = isset($data['assetDescription']) ? $data['assetDescription'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['assetOwner'] = isset($data['assetOwner']) ? $data['assetOwner'] : null;
+        $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
@@ -357,7 +381,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetType
-    *  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    *  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     *
     * @return string
     */
@@ -369,7 +393,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetType
     *
-    * @param string $assetType 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * @param string $assetType 资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     *
     * @return $this
     */
@@ -381,7 +405,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetOwner
-    *  项目ID。
+    *  项目ID。 > * 仅管理员帐号可设置此参数。
     *
     * @return string|null
     */
@@ -393,13 +417,61 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetOwner
     *
-    * @param string|null $assetOwner 项目ID。
+    * @param string|null $assetOwner 项目ID。 > * 仅管理员帐号可设置此参数。
     *
     * @return $this
     */
     public function setAssetOwner($assetOwner)
     {
         $this->container['assetOwner'] = $assetOwner;
+        return $this;
+    }
+
+    /**
+    * Gets isNeedGenerateCover
+    *  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    *
+    * @return bool|null
+    */
+    public function getIsNeedGenerateCover()
+    {
+        return $this->container['isNeedGenerateCover'];
+    }
+
+    /**
+    * Sets isNeedGenerateCover
+    *
+    * @param bool|null $isNeedGenerateCover 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
+    *
+    * @return $this
+    */
+    public function setIsNeedGenerateCover($isNeedGenerateCover)
+    {
+        $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
         return $this;
     }
 

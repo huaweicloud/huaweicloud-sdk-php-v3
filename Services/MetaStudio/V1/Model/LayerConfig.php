@@ -20,7 +20,8 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+    * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -31,6 +32,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'layerType' => 'string',
+            'groupId' => 'string',
             'position' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig',
             'size' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerSizeConfig',
             'imageConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ImageLayerConfig',
@@ -40,7 +42,8 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+    * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -51,6 +54,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'layerType' => null,
+        'groupId' => null,
         'position' => null,
         'size' => null,
         'imageConfig' => null,
@@ -81,7 +85,8 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+    * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -92,6 +97,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'layerType' => 'layer_type',
+            'groupId' => 'group_id',
             'position' => 'position',
             'size' => 'size',
             'imageConfig' => 'image_config',
@@ -101,7 +107,8 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+    * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -112,6 +119,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'layerType' => 'setLayerType',
+            'groupId' => 'setGroupId',
             'position' => 'setPosition',
             'size' => 'setSize',
             'imageConfig' => 'setImageConfig',
@@ -121,7 +129,8 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+    * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -132,6 +141,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'layerType' => 'getLayerType',
+            'groupId' => 'getGroupId',
             'position' => 'getPosition',
             'size' => 'getSize',
             'imageConfig' => 'getImageConfig',
@@ -182,6 +192,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     const LAYER_TYPE_HUMAN = 'HUMAN';
     const LAYER_TYPE_IMAGE = 'IMAGE';
     const LAYER_TYPE_VIDEO = 'VIDEO';
+    const LAYER_TYPE_TEXT = 'TEXT';
     
 
     /**
@@ -195,6 +206,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
             self::LAYER_TYPE_HUMAN,
             self::LAYER_TYPE_IMAGE,
             self::LAYER_TYPE_VIDEO,
+            self::LAYER_TYPE_TEXT,
         ];
     }
 
@@ -215,6 +227,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['layerType'] = isset($data['layerType']) ? $data['layerType'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['imageConfig'] = isset($data['imageConfig']) ? $data['imageConfig'] : null;
@@ -241,6 +254,12 @@ class LayerConfig implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['position'] === null) {
             $invalidProperties[] = "'position' can't be null";
         }
@@ -260,7 +279,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets layerType
-    *  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    *  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
     *
     * @return string
     */
@@ -272,13 +291,37 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets layerType
     *
-    * @param string $layerType 图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * @param string $layerType 图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
     *
     * @return $this
     */
     public function setLayerType($layerType)
     {
         $this->container['layerType'] = $layerType;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

@@ -23,15 +23,13 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
     * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
-    * disableSystemWatermark  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'codec' => 'string',
             'bitrate' => 'int',
-            'frameRate' => 'string',
-            'disableSystemWatermark' => 'bool'
+            'frameRate' => 'string'
     ];
 
     /**
@@ -39,15 +37,13 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
     * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
-    * disableSystemWatermark  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'codec' => null,
         'bitrate' => null,
-        'frameRate' => 'string',
-        'disableSystemWatermark' => null
+        'frameRate' => 'string'
     ];
 
     /**
@@ -76,15 +72,13 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
     * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
-    * disableSystemWatermark  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'codec' => 'codec',
             'bitrate' => 'bitrate',
-            'frameRate' => 'frame_rate',
-            'disableSystemWatermark' => 'disable_system_watermark'
+            'frameRate' => 'frame_rate'
     ];
 
     /**
@@ -92,15 +86,13 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
     * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
-    * disableSystemWatermark  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
     *
     * @var string[]
     */
     protected static $setters = [
             'codec' => 'setCodec',
             'bitrate' => 'setBitrate',
-            'frameRate' => 'setFrameRate',
-            'disableSystemWatermark' => 'setDisableSystemWatermark'
+            'frameRate' => 'setFrameRate'
     ];
 
     /**
@@ -108,15 +100,13 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
     * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
-    * disableSystemWatermark  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
     *
     * @var string[]
     */
     protected static $getters = [
             'codec' => 'getCodec',
             'bitrate' => 'getBitrate',
-            'frameRate' => 'getFrameRate',
-            'disableSystemWatermark' => 'getDisableSystemWatermark'
+            'frameRate' => 'getFrameRate'
     ];
 
     /**
@@ -210,7 +200,6 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
-        $this->container['disableSystemWatermark'] = isset($data['disableSystemWatermark']) ? $data['disableSystemWatermark'] : null;
     }
 
     /**
@@ -335,30 +324,6 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     public function setFrameRate($frameRate)
     {
         $this->container['frameRate'] = $frameRate;
-        return $this;
-    }
-
-    /**
-    * Gets disableSystemWatermark
-    *  输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
-    *
-    * @return bool|null
-    */
-    public function getDisableSystemWatermark()
-    {
-        return $this->container['disableSystemWatermark'];
-    }
-
-    /**
-    * Sets disableSystemWatermark
-    *
-    * @param bool|null $disableSystemWatermark 输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
-    *
-    * @return $this
-    */
-    public function setDisableSystemWatermark($disableSystemWatermark)
-    {
-        $this->container['disableSystemWatermark'] = $disableSystemWatermark;
         return $this;
     }
 

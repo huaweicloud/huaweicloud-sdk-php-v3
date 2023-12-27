@@ -28,8 +28,8 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     * mail  电子邮件地址。
     * address  地址。
     * other1  其他信息1。可填写一些公司广告语等
-    * other2  其他信息1。可填写一些公司广告语等
-    * other3  其他信息1。可填写一些公司广告语等
+    * other2  其他信息2。可填写一些公司广告语等
+    * other3  其他信息3。可填写一些公司广告语等
     *
     * @var string[]
     */
@@ -56,8 +56,8 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     * mail  电子邮件地址。
     * address  地址。
     * other1  其他信息1。可填写一些公司广告语等
-    * other2  其他信息1。可填写一些公司广告语等
-    * other3  其他信息1。可填写一些公司广告语等
+    * other2  其他信息2。可填写一些公司广告语等
+    * other3  其他信息3。可填写一些公司广告语等
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     * mail  电子邮件地址。
     * address  地址。
     * other1  其他信息1。可填写一些公司广告语等
-    * other2  其他信息1。可填写一些公司广告语等
-    * other3  其他信息1。可填写一些公司广告语等
+    * other2  其他信息2。可填写一些公司广告语等
+    * other3  其他信息3。可填写一些公司广告语等
     *
     * @var string[]
     */
@@ -133,8 +133,8 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     * mail  电子邮件地址。
     * address  地址。
     * other1  其他信息1。可填写一些公司广告语等
-    * other2  其他信息1。可填写一些公司广告语等
-    * other3  其他信息1。可填写一些公司广告语等
+    * other2  其他信息2。可填写一些公司广告语等
+    * other3  其他信息3。可填写一些公司广告语等
     *
     * @var string[]
     */
@@ -161,8 +161,8 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     * mail  电子邮件地址。
     * address  地址。
     * other1  其他信息1。可填写一些公司广告语等
-    * other2  其他信息1。可填写一些公司广告语等
-    * other3  其他信息1。可填写一些公司广告语等
+    * other2  其他信息2。可填写一些公司广告语等
+    * other3  其他信息3。可填写一些公司广告语等
     *
     * @var string[]
     */
@@ -525,7 +525,7 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets other2
-    *  其他信息1。可填写一些公司广告语等
+    *  其他信息2。可填写一些公司广告语等
     *
     * @return string|null
     */
@@ -537,7 +537,7 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     /**
     * Sets other2
     *
-    * @param string|null $other2 其他信息1。可填写一些公司广告语等
+    * @param string|null $other2 其他信息2。可填写一些公司广告语等
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets other3
-    *  其他信息1。可填写一些公司广告语等
+    *  其他信息3。可填写一些公司广告语等
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class BusinessCardTextConfig implements ModelInterface, ArrayAccess
     /**
     * Sets other3
     *
-    * @param string|null $other3 其他信息1。可填写一些公司广告语等
+    * @param string|null $other3 其他信息3。可填写一些公司广告语等
     *
     * @return $this
     */

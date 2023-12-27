@@ -269,24 +269,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RETURN_DATA_MODE_BRIEF = 'brief';
-    const RETURN_DATA_MODE_INCLUDE_GROUP = 'include_group';
-    const RETURN_DATA_MODE_INCLUDE_GROUP_BACKEND = 'include_group_backend';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getReturnDataModeAllowableValues()
-    {
-        return [
-            self::RETURN_DATA_MODE_BRIEF,
-            self::RETURN_DATA_MODE_INCLUDE_GROUP,
-            self::RETURN_DATA_MODE_INCLUDE_GROUP_BACKEND,
-        ];
-    }
 
 
     /**
@@ -338,14 +321,6 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getReturnDataModeAllowableValues();
-                if (!is_null($this->container['returnDataMode']) && !in_array($this->container['returnDataMode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'returnDataMode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 

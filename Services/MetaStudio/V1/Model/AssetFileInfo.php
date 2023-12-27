@@ -27,6 +27,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileType  文件类型（默认提取文件后缀）。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
+    * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    * reason  审核失败原因
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'fileSize' => 'int',
             'fileType' => 'string',
             'assetFileCategory' => 'string',
-            'downloadUrl' => 'string'
+            'downloadUrl' => 'string',
+            'state' => 'string',
+            'reason' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileType  文件类型（默认提取文件后缀）。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
+    * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    * reason  审核失败原因
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         'fileSize' => 'int64',
         'fileType' => null,
         'assetFileCategory' => null,
-        'downloadUrl' => null
+        'downloadUrl' => null,
+        'state' => null,
+        'reason' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileType  文件类型（默认提取文件后缀）。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
+    * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    * reason  审核失败原因
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'fileSize' => 'file_size',
             'fileType' => 'file_type',
             'assetFileCategory' => 'asset_file_category',
-            'downloadUrl' => 'download_url'
+            'downloadUrl' => 'download_url',
+            'state' => 'state',
+            'reason' => 'reason'
     ];
 
     /**
@@ -114,6 +126,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileType  文件类型（默认提取文件后缀）。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
+    * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    * reason  审核失败原因
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'fileSize' => 'setFileSize',
             'fileType' => 'setFileType',
             'assetFileCategory' => 'setAssetFileCategory',
-            'downloadUrl' => 'setDownloadUrl'
+            'downloadUrl' => 'setDownloadUrl',
+            'state' => 'setState',
+            'reason' => 'setReason'
     ];
 
     /**
@@ -136,6 +152,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileType  文件类型（默认提取文件后缀）。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
+    * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    * reason  审核失败原因
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'fileSize' => 'getFileSize',
             'fileType' => 'getFileType',
             'assetFileCategory' => 'getAssetFileCategory',
-            'downloadUrl' => 'getDownloadUrl'
+            'downloadUrl' => 'getDownloadUrl',
+            'state' => 'getState',
+            'reason' => 'getReason'
     ];
 
     /**
@@ -189,7 +209,34 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATE_CREATING = 'CREATING';
+    const STATE_CREATED = 'CREATED';
+    const STATE_FAILED = 'FAILED';
+    const STATE_CANCELLED = 'CANCELLED';
+    const STATE_DELETING = 'DELETING';
+    const STATE_DELETED = 'DELETED';
+    const STATE_UPLOADED = 'UPLOADED';
+    const STATE_REVIEW = 'REVIEW';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_CREATING,
+            self::STATE_CREATED,
+            self::STATE_FAILED,
+            self::STATE_CANCELLED,
+            self::STATE_DELETING,
+            self::STATE_DELETED,
+            self::STATE_UPLOADED,
+            self::STATE_REVIEW,
+        ];
+    }
 
 
     /**
@@ -214,6 +261,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
         $this->container['assetFileCategory'] = isset($data['assetFileCategory']) ? $data['assetFileCategory'] : null;
         $this->container['downloadUrl'] = isset($data['downloadUrl']) ? $data['downloadUrl'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
     /**
@@ -268,6 +317,26 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['downloadUrl']) && (mb_strlen($this->container['downloadUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'downloadUrl', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 32)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 256)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -448,6 +517,54 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     public function setDownloadUrl($downloadUrl)
     {
         $this->container['downloadUrl'] = $downloadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets state
+    *  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    *
+    * @return string|null
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string|null $state 文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  审核失败原因
+    *
+    * @return string|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param string|null $reason 审核失败原因
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
         return $this;
     }
 

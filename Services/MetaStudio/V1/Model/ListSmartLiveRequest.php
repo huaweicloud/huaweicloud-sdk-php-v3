@@ -24,14 +24,14 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * createUntil  过滤创建时间<=输入时间的记录。
     *
     * @var string[]
     */
@@ -46,8 +46,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             'state' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
-            'createUntil' => 'string',
-            'createSince' => 'string'
+            'createSince' => 'string',
+            'createUntil' => 'string'
     ];
 
     /**
@@ -56,14 +56,14 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * createUntil  过滤创建时间<=输入时间的记录。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
         'state' => null,
         'sortKey' => null,
         'sortDir' => null,
-        'createUntil' => null,
-        'createSince' => null
+        'createSince' => null,
+        'createUntil' => null
     ];
 
     /**
@@ -109,14 +109,14 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * createUntil  过滤创建时间<=输入时间的记录。
     *
     * @var string[]
     */
@@ -131,8 +131,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             'state' => 'state',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'createUntil' => 'create_until',
-            'createSince' => 'create_since'
+            'createSince' => 'create_since',
+            'createUntil' => 'create_until'
     ];
 
     /**
@@ -141,14 +141,14 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * createUntil  过滤创建时间<=输入时间的记录。
     *
     * @var string[]
     */
@@ -163,8 +163,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'createUntil' => 'setCreateUntil',
-            'createSince' => 'setCreateSince'
+            'createSince' => 'setCreateSince',
+            'createUntil' => 'setCreateUntil'
     ];
 
     /**
@@ -173,14 +173,14 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
-    * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * createUntil  过滤创建时间<=输入时间的记录。
     *
     * @var string[]
     */
@@ -195,8 +195,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'createUntil' => 'getCreateUntil',
-            'createSince' => 'getCreateSince'
+            'createSince' => 'getCreateSince',
+            'createUntil' => 'getCreateUntil'
     ];
 
     /**
@@ -267,8 +267,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
+        $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
     }
 
     /**
@@ -324,8 +324,8 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 256)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
@@ -342,17 +342,17 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['createUntil']) && (mb_strlen($this->container['createUntil']) > 20)) {
-                $invalidProperties[] = "invalid value for 'createUntil', the character length must be smaller than or equal to 20.";
-            }
-            if (!is_null($this->container['createUntil']) && (mb_strlen($this->container['createUntil']) < 0)) {
-                $invalidProperties[] = "invalid value for 'createUntil', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createUntil']) && (mb_strlen($this->container['createUntil']) > 20)) {
+                $invalidProperties[] = "invalid value for 'createUntil', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['createUntil']) && (mb_strlen($this->container['createUntil']) < 0)) {
+                $invalidProperties[] = "invalid value for 'createUntil', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -466,7 +466,7 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */
@@ -609,30 +609,6 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createUntil
-    *  过滤创建时间<=输入时间的记录。
-    *
-    * @return string|null
-    */
-    public function getCreateUntil()
-    {
-        return $this->container['createUntil'];
-    }
-
-    /**
-    * Sets createUntil
-    *
-    * @param string|null $createUntil 过滤创建时间<=输入时间的记录。
-    *
-    * @return $this
-    */
-    public function setCreateUntil($createUntil)
-    {
-        $this->container['createUntil'] = $createUntil;
-        return $this;
-    }
-
-    /**
     * Gets createSince
     *  过滤创建时间>=输入时间的记录。
     *
@@ -653,6 +629,30 @@ class ListSmartLiveRequest implements ModelInterface, ArrayAccess
     public function setCreateSince($createSince)
     {
         $this->container['createSince'] = $createSince;
+        return $this;
+    }
+
+    /**
+    * Gets createUntil
+    *  过滤创建时间<=输入时间的记录。
+    *
+    * @return string|null
+    */
+    public function getCreateUntil()
+    {
+        return $this->container['createUntil'];
+    }
+
+    /**
+    * Sets createUntil
+    *
+    * @param string|null $createUntil 过滤创建时间<=输入时间的记录。
+    *
+    * @return $this
+    */
+    public function setCreateUntil($createUntil)
+    {
+        $this->container['createUntil'] = $createUntil;
         return $this;
     }
 

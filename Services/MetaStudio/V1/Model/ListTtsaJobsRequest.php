@@ -23,9 +23,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
     *
     * @var string[]
     */
@@ -33,9 +33,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'string',
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
+            'xAppUserId' => 'string',
             'offset' => 'int',
-            'limit' => 'int',
-            'xAppUserId' => 'string'
+            'limit' => 'int'
     ];
 
     /**
@@ -43,9 +43,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
     *
     * @var string[]
     */
@@ -53,9 +53,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
         'authorization' => null,
         'xSdkDate' => null,
         'xProjectId' => null,
+        'xAppUserId' => null,
         'offset' => 'uint32',
-        'limit' => 'uint32',
-        'xAppUserId' => null
+        'limit' => 'uint32'
     ];
 
     /**
@@ -84,9 +84,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
     *
     * @var string[]
     */
@@ -94,9 +94,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
+            'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
-            'limit' => 'limit',
-            'xAppUserId' => 'X-App-UserId'
+            'limit' => 'limit'
     ];
 
     /**
@@ -104,9 +104,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
     *
     * @var string[]
     */
@@ -114,9 +114,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
+            'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit',
-            'xAppUserId' => 'setXAppUserId'
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -124,9 +124,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
     *
     * @var string[]
     */
@@ -134,9 +134,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
+            'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit',
-            'xAppUserId' => 'getXAppUserId'
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -200,9 +200,9 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
     }
 
     /**
@@ -231,6 +231,12 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
@@ -242,12 +248,6 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -336,6 +336,30 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xAppUserId
+    *  第三方用户ID。 > *不允许输入中文。
+    *
+    * @return string|null
+    */
+    public function getXAppUserId()
+    {
+        return $this->container['xAppUserId'];
+    }
+
+    /**
+    * Sets xAppUserId
+    *
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
+    *
+    * @return $this
+    */
+    public function setXAppUserId($xAppUserId)
+    {
+        $this->container['xAppUserId'] = $xAppUserId;
+        return $this;
+    }
+
+    /**
     * Gets offset
     *  偏移量，表示从此偏移量开始查询。
     *
@@ -380,30 +404,6 @@ class ListTtsaJobsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
-    *
-    * @return string|null
-    */
-    public function getXAppUserId()
-    {
-        return $this->container['xAppUserId'];
-    }
-
-    /**
-    * Sets xAppUserId
-    *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
-    *
-    * @return $this
-    */
-    public function setXAppUserId($xAppUserId)
-    {
-        $this->container['xAppUserId'] = $xAppUserId;
         return $this;
     }
 

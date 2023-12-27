@@ -20,9 +20,11 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeWindow  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * layerConfig  layerConfig
     * replyTexts  回复话术集
+    * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     *
     * @var string[]
@@ -30,15 +32,19 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'timeWindow' => 'int',
             'replyMode' => 'string',
+            'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig',
             'replyTexts' => 'string[]',
+            'replyAudios' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]',
             'replyOrder' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeWindow  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * layerConfig  layerConfig
     * replyTexts  回复话术集
+    * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     *
     * @var string[]
@@ -46,7 +52,9 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'timeWindow' => null,
         'replyMode' => null,
+        'layerConfig' => null,
         'replyTexts' => null,
+        'replyAudios' => null,
         'replyOrder' => null
     ];
 
@@ -73,9 +81,11 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeWindow  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * layerConfig  layerConfig
     * replyTexts  回复话术集
+    * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     *
     * @var string[]
@@ -83,15 +93,19 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'timeWindow' => 'time_window',
             'replyMode' => 'reply_mode',
+            'layerConfig' => 'layer_config',
             'replyTexts' => 'reply_texts',
+            'replyAudios' => 'reply_audios',
             'replyOrder' => 'reply_order'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeWindow  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * layerConfig  layerConfig
     * replyTexts  回复话术集
+    * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     *
     * @var string[]
@@ -99,15 +113,19 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     protected static $setters = [
             'timeWindow' => 'setTimeWindow',
             'replyMode' => 'setReplyMode',
+            'layerConfig' => 'setLayerConfig',
             'replyTexts' => 'setReplyTexts',
+            'replyAudios' => 'setReplyAudios',
             'replyOrder' => 'setReplyOrder'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeWindow  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * layerConfig  layerConfig
     * replyTexts  回复话术集
+    * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     *
     * @var string[]
@@ -115,7 +133,9 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     protected static $getters = [
             'timeWindow' => 'getTimeWindow',
             'replyMode' => 'getReplyMode',
+            'layerConfig' => 'getLayerConfig',
             'replyTexts' => 'getReplyTexts',
+            'replyAudios' => 'getReplyAudios',
             'replyOrder' => 'getReplyOrder'
     ];
 
@@ -160,6 +180,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const REPLY_MODE_SYSTEM_REPLY = 'SYSTEM_REPLY';
+    const REPLY_MODE_CALLBACK = 'CALLBACK';
+    const REPLY_MODE_SHOW_LAYER = 'SHOW_LAYER';
     const REPLY_ORDER_RANDOM = 'RANDOM';
     const REPLY_ORDER_ORDER = 'ORDER';
     
@@ -173,6 +195,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     {
         return [
             self::REPLY_MODE_SYSTEM_REPLY,
+            self::REPLY_MODE_CALLBACK,
+            self::REPLY_MODE_SHOW_LAYER,
         ];
     }
 
@@ -207,7 +231,9 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     {
         $this->container['timeWindow'] = isset($data['timeWindow']) ? $data['timeWindow'] : null;
         $this->container['replyMode'] = isset($data['replyMode']) ? $data['replyMode'] : null;
+        $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['replyTexts'] = isset($data['replyTexts']) ? $data['replyTexts'] : null;
+        $this->container['replyAudios'] = isset($data['replyAudios']) ? $data['replyAudios'] : null;
         $this->container['replyOrder'] = isset($data['replyOrder']) ? $data['replyOrder'] : null;
     }
 
@@ -269,7 +295,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeWindow
-    *  处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
+    *  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     *
     * @return int|null
     */
@@ -281,7 +307,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets timeWindow
     *
-    * @param int|null $timeWindow 处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
+    * @param int|null $timeWindow 处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     *
     * @return $this
     */
@@ -293,7 +319,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyMode
-    *  回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    *  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     *
     * @return string|null
     */
@@ -305,13 +331,37 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyMode
     *
-    * @param string|null $replyMode 回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+    * @param string|null $replyMode 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     *
     * @return $this
     */
     public function setReplyMode($replyMode)
     {
         $this->container['replyMode'] = $replyMode;
+        return $this;
+    }
+
+    /**
+    * Gets layerConfig
+    *  layerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig|null
+    */
+    public function getLayerConfig()
+    {
+        return $this->container['layerConfig'];
+    }
+
+    /**
+    * Sets layerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig|null $layerConfig layerConfig
+    *
+    * @return $this
+    */
+    public function setLayerConfig($layerConfig)
+    {
+        $this->container['layerConfig'] = $layerConfig;
         return $this;
     }
 
@@ -336,6 +386,30 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     public function setReplyTexts($replyTexts)
     {
         $this->container['replyTexts'] = $replyTexts;
+        return $this;
+    }
+
+    /**
+    * Gets replyAudios
+    *  回复音频集。填写audio_url。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]|null
+    */
+    public function getReplyAudios()
+    {
+        return $this->container['replyAudios'];
+    }
+
+    /**
+    * Sets replyAudios
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]|null $replyAudios 回复音频集。填写audio_url。
+    *
+    * @return $this
+    */
+    public function setReplyAudios($replyAudios)
+    {
+        $this->container['replyAudios'] = $replyAudios;
         return $this;
     }
 

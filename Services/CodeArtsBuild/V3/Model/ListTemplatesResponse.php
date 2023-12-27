@@ -21,21 +21,21 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  查询模板结果
+    * result  result
     * error  返回错误信息
     * status  返回状态信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult[]',
+            'result' => '\HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult',
             'error' => 'string',
             'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  查询模板结果
+    * result  result
     * error  返回错误信息
     * status  返回状态信息
     *
@@ -70,7 +70,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  查询模板结果
+    * result  result
     * error  返回错误信息
     * status  返回状态信息
     *
@@ -84,7 +84,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  查询模板结果
+    * result  result
     * error  返回错误信息
     * status  返回状态信息
     *
@@ -98,7 +98,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  查询模板结果
+    * result  result
     * error  返回错误信息
     * status  返回状态信息
     *
@@ -197,9 +197,9 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  查询模板结果
+    *  result
     *
-    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult|null
     */
     public function getResult()
     {
@@ -209,7 +209,7 @@ class ListTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult[]|null $result 查询模板结果
+    * @param \HuaweiCloud\SDK\CodeArtsBuild\V3\Model\QueryTemplatesResult|null $result result
     *
     * @return $this
     */

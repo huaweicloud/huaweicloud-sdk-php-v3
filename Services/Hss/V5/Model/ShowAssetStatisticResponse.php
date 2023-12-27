@@ -33,6 +33,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
+    * coreConfFileNum  关键配置文件数量
+    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -48,7 +50,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'int',
             'webServiceNum' => 'int',
             'webAppNum' => 'int',
-            'databaseNum' => 'int'
+            'databaseNum' => 'int',
+            'coreConfFileNum' => 'int',
+            'environmentNum' => 'int'
     ];
 
     /**
@@ -65,6 +69,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
+    * coreConfFileNum  关键配置文件数量
+    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -80,7 +86,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         'kernelModuleNum' => 'int64',
         'webServiceNum' => 'int64',
         'webAppNum' => 'int64',
-        'databaseNum' => 'int64'
+        'databaseNum' => 'int64',
+        'coreConfFileNum' => 'int64',
+        'environmentNum' => 'int64'
     ];
 
     /**
@@ -118,6 +126,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
+    * coreConfFileNum  关键配置文件数量
+    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -133,7 +143,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'kernel_module_num',
             'webServiceNum' => 'web_service_num',
             'webAppNum' => 'web_app_num',
-            'databaseNum' => 'database_num'
+            'databaseNum' => 'database_num',
+            'coreConfFileNum' => 'core_conf_file_num',
+            'environmentNum' => 'environment_num'
     ];
 
     /**
@@ -150,6 +162,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
+    * coreConfFileNum  关键配置文件数量
+    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -165,7 +179,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'setKernelModuleNum',
             'webServiceNum' => 'setWebServiceNum',
             'webAppNum' => 'setWebAppNum',
-            'databaseNum' => 'setDatabaseNum'
+            'databaseNum' => 'setDatabaseNum',
+            'coreConfFileNum' => 'setCoreConfFileNum',
+            'environmentNum' => 'setEnvironmentNum'
     ];
 
     /**
@@ -182,6 +198,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
+    * coreConfFileNum  关键配置文件数量
+    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -197,7 +215,9 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'getKernelModuleNum',
             'webServiceNum' => 'getWebServiceNum',
             'webAppNum' => 'getWebAppNum',
-            'databaseNum' => 'getDatabaseNum'
+            'databaseNum' => 'getDatabaseNum',
+            'coreConfFileNum' => 'getCoreConfFileNum',
+            'environmentNum' => 'getEnvironmentNum'
     ];
 
     /**
@@ -270,6 +290,8 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         $this->container['webServiceNum'] = isset($data['webServiceNum']) ? $data['webServiceNum'] : null;
         $this->container['webAppNum'] = isset($data['webAppNum']) ? $data['webAppNum'] : null;
         $this->container['databaseNum'] = isset($data['databaseNum']) ? $data['databaseNum'] : null;
+        $this->container['coreConfFileNum'] = isset($data['coreConfFileNum']) ? $data['coreConfFileNum'] : null;
+        $this->container['environmentNum'] = isset($data['environmentNum']) ? $data['environmentNum'] : null;
     }
 
     /**
@@ -351,6 +373,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['databaseNum']) && ($this->container['databaseNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'databaseNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['coreConfFileNum']) && ($this->container['coreConfFileNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'coreConfFileNum', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['coreConfFileNum']) && ($this->container['coreConfFileNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'coreConfFileNum', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['environmentNum']) && ($this->container['environmentNum'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'environmentNum', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['environmentNum']) && ($this->container['environmentNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'environmentNum', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -651,6 +685,54 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     public function setDatabaseNum($databaseNum)
     {
         $this->container['databaseNum'] = $databaseNum;
+        return $this;
+    }
+
+    /**
+    * Gets coreConfFileNum
+    *  关键配置文件数量
+    *
+    * @return int|null
+    */
+    public function getCoreConfFileNum()
+    {
+        return $this->container['coreConfFileNum'];
+    }
+
+    /**
+    * Sets coreConfFileNum
+    *
+    * @param int|null $coreConfFileNum 关键配置文件数量
+    *
+    * @return $this
+    */
+    public function setCoreConfFileNum($coreConfFileNum)
+    {
+        $this->container['coreConfFileNum'] = $coreConfFileNum;
+        return $this;
+    }
+
+    /**
+    * Gets environmentNum
+    *  环境变量数量
+    *
+    * @return int|null
+    */
+    public function getEnvironmentNum()
+    {
+        return $this->container['environmentNum'];
+    }
+
+    /**
+    * Sets environmentNum
+    *
+    * @param int|null $environmentNum 环境变量数量
+    *
+    * @return $this
+    */
+    public function setEnvironmentNum($environmentNum)
+    {
+        $this->container['environmentNum'] = $environmentNum;
         return $this;
     }
 

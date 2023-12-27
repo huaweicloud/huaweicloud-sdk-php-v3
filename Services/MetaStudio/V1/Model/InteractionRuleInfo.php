@@ -20,38 +20,46 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleIndex  规则索引
     * ruleName  规则名称
     * enabled  是否启用
-    * eventType  事件类型
+    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     * hitCondition  hitCondition
     * trigger  trigger
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'ruleIndex' => 'string',
             'ruleName' => 'string',
             'enabled' => 'bool',
             'eventType' => 'int',
             'hitCondition' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HitCondition',
-            'trigger' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TriggerProcess'
+            'trigger' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TriggerProcess',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleIndex  规则索引
     * ruleName  规则名称
     * enabled  是否启用
-    * eventType  事件类型
+    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     * hitCondition  hitCondition
     * trigger  trigger
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'ruleIndex' => null,
         'ruleName' => null,
         'enabled' => null,
         'eventType' => null,
         'hitCondition' => null,
-        'trigger' => null
+        'trigger' => null,
+        'reviewConfig' => null
     ];
 
     /**
@@ -77,56 +85,68 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleIndex  规则索引
     * ruleName  规则名称
     * enabled  是否启用
-    * eventType  事件类型
+    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     * hitCondition  hitCondition
     * trigger  trigger
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'ruleIndex' => 'rule_index',
             'ruleName' => 'rule_name',
             'enabled' => 'enabled',
             'eventType' => 'event_type',
             'hitCondition' => 'hit_condition',
-            'trigger' => 'trigger'
+            'trigger' => 'trigger',
+            'reviewConfig' => 'review_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleIndex  规则索引
     * ruleName  规则名称
     * enabled  是否启用
-    * eventType  事件类型
+    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     * hitCondition  hitCondition
     * trigger  trigger
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $setters = [
+            'ruleIndex' => 'setRuleIndex',
             'ruleName' => 'setRuleName',
             'enabled' => 'setEnabled',
             'eventType' => 'setEventType',
             'hitCondition' => 'setHitCondition',
-            'trigger' => 'setTrigger'
+            'trigger' => 'setTrigger',
+            'reviewConfig' => 'setReviewConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleIndex  规则索引
     * ruleName  规则名称
     * enabled  是否启用
-    * eventType  事件类型
+    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     * hitCondition  hitCondition
     * trigger  trigger
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $getters = [
+            'ruleIndex' => 'getRuleIndex',
             'ruleName' => 'getRuleName',
             'enabled' => 'getEnabled',
             'eventType' => 'getEventType',
             'hitCondition' => 'getHitCondition',
-            'trigger' => 'getTrigger'
+            'trigger' => 'getTrigger',
+            'reviewConfig' => 'getReviewConfig'
     ];
 
     /**
@@ -187,11 +207,13 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['ruleIndex'] = isset($data['ruleIndex']) ? $data['ruleIndex'] : null;
         $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['hitCondition'] = isset($data['hitCondition']) ? $data['hitCondition'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
     }
 
     /**
@@ -202,6 +224,12 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['ruleIndex']) && (mb_strlen($this->container['ruleIndex']) > 64)) {
+                $invalidProperties[] = "invalid value for 'ruleIndex', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['ruleIndex']) && (mb_strlen($this->container['ruleIndex']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ruleIndex', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 256.";
             }
@@ -226,6 +254,30 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ruleIndex
+    *  规则索引
+    *
+    * @return string|null
+    */
+    public function getRuleIndex()
+    {
+        return $this->container['ruleIndex'];
+    }
+
+    /**
+    * Sets ruleIndex
+    *
+    * @param string|null $ruleIndex 规则索引
+    *
+    * @return $this
+    */
+    public function setRuleIndex($ruleIndex)
+    {
+        $this->container['ruleIndex'] = $ruleIndex;
+        return $this;
     }
 
     /**
@@ -278,7 +330,7 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型
+    *  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     *
     * @return int|null
     */
@@ -290,7 +342,7 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param int|null $eventType 事件类型
+    * @param int|null $eventType 事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
     *
     * @return $this
     */
@@ -345,6 +397,30 @@ class InteractionRuleInfo implements ModelInterface, ArrayAccess
     public function setTrigger($trigger)
     {
         $this->container['trigger'] = $trigger;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
         return $this;
     }
 

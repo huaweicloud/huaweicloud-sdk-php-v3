@@ -121,6 +121,7 @@ class ObjectSerializer
                     $deserialized[$key] = self::deserialize($value, $subClassType, null);
                 }
             }
+            return $deserialized;
         } elseif (0 === strcasecmp(substr($responseType, -2), '[]')) {
             $response = is_string($response) ? json_decode($response) : $response;
             $subClassType = substr($responseType, 0, -2);

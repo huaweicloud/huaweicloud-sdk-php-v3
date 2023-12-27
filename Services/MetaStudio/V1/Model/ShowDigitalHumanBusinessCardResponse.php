@@ -25,8 +25,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * cardTempletAssetId  数字人名片模板资产ID。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
+    * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
     * voiceAssetId  音色资产ID。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -37,8 +39,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             'cardTempletAssetId' => 'string',
             'cardTextConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BusinessCardTextConfig',
             'cardImageUrl' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BusinessCardImageUrl',
+            'introductionType' => 'string',
             'introductionText' => 'string',
             'voiceAssetId' => 'string',
+            'introductionAudioAssetId' => 'string',
             'gender' => 'string',
             'xRequestId' => 'string'
     ];
@@ -49,8 +53,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * cardTempletAssetId  数字人名片模板资产ID。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
+    * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
     * voiceAssetId  音色资产ID。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -61,8 +67,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
         'cardTempletAssetId' => null,
         'cardTextConfig' => null,
         'cardImageUrl' => null,
+        'introductionType' => null,
         'introductionText' => null,
         'voiceAssetId' => null,
+        'introductionAudioAssetId' => null,
         'gender' => null,
         'xRequestId' => null
     ];
@@ -94,8 +102,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * cardTempletAssetId  数字人名片模板资产ID。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
+    * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
     * voiceAssetId  音色资产ID。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -106,8 +116,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             'cardTempletAssetId' => 'card_templet_asset_id',
             'cardTextConfig' => 'card_text_config',
             'cardImageUrl' => 'card_image_url',
+            'introductionType' => 'introduction_type',
             'introductionText' => 'introduction_text',
             'voiceAssetId' => 'voice_asset_id',
+            'introductionAudioAssetId' => 'introduction_audio_asset_id',
             'gender' => 'gender',
             'xRequestId' => 'X-Request-Id'
     ];
@@ -118,8 +130,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * cardTempletAssetId  数字人名片模板资产ID。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
+    * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
     * voiceAssetId  音色资产ID。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -130,8 +144,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             'cardTempletAssetId' => 'setCardTempletAssetId',
             'cardTextConfig' => 'setCardTextConfig',
             'cardImageUrl' => 'setCardImageUrl',
+            'introductionType' => 'setIntroductionType',
             'introductionText' => 'setIntroductionText',
             'voiceAssetId' => 'setVoiceAssetId',
+            'introductionAudioAssetId' => 'setIntroductionAudioAssetId',
             'gender' => 'setGender',
             'xRequestId' => 'setXRequestId'
     ];
@@ -142,8 +158,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * cardTempletAssetId  数字人名片模板资产ID。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
+    * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
     * voiceAssetId  音色资产ID。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -154,8 +172,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             'cardTempletAssetId' => 'getCardTempletAssetId',
             'cardTextConfig' => 'getCardTextConfig',
             'cardImageUrl' => 'getCardImageUrl',
+            'introductionType' => 'getIntroductionType',
             'introductionText' => 'getIntroductionText',
             'voiceAssetId' => 'getVoiceAssetId',
+            'introductionAudioAssetId' => 'getIntroductionAudioAssetId',
             'gender' => 'getGender',
             'xRequestId' => 'getXRequestId'
     ];
@@ -200,9 +220,24 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     {
         return self::$openAPIModelName;
     }
+    const INTRODUCTION_TYPE_TEXT = 'TEXT';
+    const INTRODUCTION_TYPE_AUDIO = 'AUDIO';
     const GENDER_MALE = 'MALE';
     const GENDER_FEMALE = 'FEMALE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIntroductionTypeAllowableValues()
+    {
+        return [
+            self::INTRODUCTION_TYPE_TEXT,
+            self::INTRODUCTION_TYPE_AUDIO,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -237,8 +272,10 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
         $this->container['cardTempletAssetId'] = isset($data['cardTempletAssetId']) ? $data['cardTempletAssetId'] : null;
         $this->container['cardTextConfig'] = isset($data['cardTextConfig']) ? $data['cardTextConfig'] : null;
         $this->container['cardImageUrl'] = isset($data['cardImageUrl']) ? $data['cardImageUrl'] : null;
+        $this->container['introductionType'] = isset($data['introductionType']) ? $data['introductionType'] : null;
         $this->container['introductionText'] = isset($data['introductionText']) ? $data['introductionText'] : null;
         $this->container['voiceAssetId'] = isset($data['voiceAssetId']) ? $data['voiceAssetId'] : null;
+        $this->container['introductionAudioAssetId'] = isset($data['introductionAudioAssetId']) ? $data['introductionAudioAssetId'] : null;
         $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -257,6 +294,14 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             if (!is_null($this->container['cardTempletAssetId']) && (mb_strlen($this->container['cardTempletAssetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'cardTempletAssetId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getIntroductionTypeAllowableValues();
+                if (!is_null($this->container['introductionType']) && !in_array($this->container['introductionType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'introductionType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['introductionText']) && (mb_strlen($this->container['introductionText']) > 256)) {
                 $invalidProperties[] = "invalid value for 'introductionText', the character length must be smaller than or equal to 256.";
             }
@@ -268,6 +313,12 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['voiceAssetId']) && (mb_strlen($this->container['voiceAssetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'voiceAssetId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['introductionAudioAssetId']) && (mb_strlen($this->container['introductionAudioAssetId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'introductionAudioAssetId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['introductionAudioAssetId']) && (mb_strlen($this->container['introductionAudioAssetId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'introductionAudioAssetId', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getGenderAllowableValues();
                 if (!is_null($this->container['gender']) && !in_array($this->container['gender'], $allowedValues, true)) {
@@ -388,6 +439,30 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     }
 
     /**
+    * Gets introductionType
+    *  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
+    *
+    * @return string|null
+    */
+    public function getIntroductionType()
+    {
+        return $this->container['introductionType'];
+    }
+
+    /**
+    * Sets introductionType
+    *
+    * @param string|null $introductionType 自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
+    *
+    * @return $this
+    */
+    public function setIntroductionType($introductionType)
+    {
+        $this->container['introductionType'] = $introductionType;
+        return $this;
+    }
+
+    /**
     * Gets introductionText
     *  自我介绍文本，用于驱动数字人口型。
     *
@@ -432,6 +507,30 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     public function setVoiceAssetId($voiceAssetId)
     {
         $this->container['voiceAssetId'] = $voiceAssetId;
+        return $this;
+    }
+
+    /**
+    * Gets introductionAudioAssetId
+    *  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    *
+    * @return string|null
+    */
+    public function getIntroductionAudioAssetId()
+    {
+        return $this->container['introductionAudioAssetId'];
+    }
+
+    /**
+    * Sets introductionAudioAssetId
+    *
+    * @param string|null $introductionAudioAssetId 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    *
+    * @return $this
+    */
+    public function setIntroductionAudioAssetId($introductionAudioAssetId)
+    {
+        $this->container['introductionAudioAssetId'] = $introductionAudioAssetId;
         return $this;
     }
 

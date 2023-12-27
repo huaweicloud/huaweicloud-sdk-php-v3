@@ -58,7 +58,7 @@ class MetricData implements ModelInterface, ArrayAccess
         'min' => null,
         'sum' => null,
         'variance' => null,
-        'timestamp' => null,
+        'timestamp' => 'int64',
         'unit' => null
     ];
 

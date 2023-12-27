@@ -20,17 +20,17 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'object'
+            'authorization' => '\HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  委托授权信息。
+    * authorization  authorization
     *
     * @var string[]
     */
@@ -177,9 +177,9 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorization
-    *  委托授权信息。
+    *  authorization
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo
     */
     public function getAuthorization()
     {
@@ -189,7 +189,7 @@ class AuthorizeCsmsAndKmsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets authorization
     *
-    * @param object $authorization 委托授权信息。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\AgencyAuthorizeInfo $authorization authorization
     *
     * @return $this
     */

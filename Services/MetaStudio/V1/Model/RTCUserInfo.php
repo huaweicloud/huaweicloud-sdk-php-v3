@@ -20,7 +20,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
     * ctime  有效期。时间戳，单位：秒。
@@ -36,7 +36,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
     * ctime  有效期。时间戳，单位：秒。
@@ -73,7 +73,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
     * ctime  有效期。时间戳，单位：秒。
@@ -89,7 +89,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
     * ctime  有效期。时间戳，单位：秒。
@@ -105,7 +105,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * userType  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     * userId  RTC用户ID。
     * signature  RTC鉴权token。
     * ctime  有效期。时间戳，单位：秒。
@@ -163,6 +163,8 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     const USER_TYPE_ANIMATION = 'ANIMATION';
     const USER_TYPE_RENDER = 'RENDER';
     const USER_TYPE_PLAYER = 'PLAYER';
+    const USER_TYPE_INFERENCE_USER = 'INFERENCE_USER';
+    const USER_TYPE_END_USER = 'END_USER';
     
 
     /**
@@ -177,6 +179,8 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
             self::USER_TYPE_ANIMATION,
             self::USER_TYPE_RENDER,
             self::USER_TYPE_PLAYER,
+            self::USER_TYPE_INFERENCE_USER,
+            self::USER_TYPE_END_USER,
         ];
     }
 
@@ -252,7 +256,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userType
-    *  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    *  用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     *
     * @return string|null
     */
@@ -264,7 +268,7 @@ class RTCUserInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType 用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看
+    * @param string|null $userType 用户类型。 * CAPTURE: 直播助手，将摄像头获取视频流推送到RTC房间 * ANIMATION: VDS服务，从RTC房间拉视频流生成动作数据 * RENDER: 渲染服务，将动作数据渲染成数字人动画 * PLAYER: 普通观看方，可选择原始视频流或者数字人动画视频流观看 * INFERENCE_USER: 数字人推理端用户。从RTC房间接收音频流，并推送视频流到RTC房间 * END_USER: 端侧用户。从推送音频流到RTC房间，并从RTC房间接收视频流
     *
     * @return $this
     */

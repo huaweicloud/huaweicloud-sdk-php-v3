@@ -27,6 +27,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  类型
     * pid  进程ID
     * path  程序文件
+    * agentId  agent id
+    * containerId  容器id
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
             'port' => 'int',
             'type' => 'string',
             'pid' => 'int',
-            'path' => 'string'
+            'path' => 'string',
+            'agentId' => 'string',
+            'containerId' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  类型
     * pid  进程ID
     * path  程序文件
+    * agentId  agent id
+    * containerId  容器id
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
         'port' => null,
         'type' => null,
         'pid' => null,
-        'path' => null
+        'path' => null,
+        'agentId' => null,
+        'containerId' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  类型
     * pid  进程ID
     * path  程序文件
+    * agentId  agent id
+    * containerId  容器id
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
             'port' => 'port',
             'type' => 'type',
             'pid' => 'pid',
-            'path' => 'path'
+            'path' => 'path',
+            'agentId' => 'agent_id',
+            'containerId' => 'container_id'
     ];
 
     /**
@@ -114,6 +126,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  类型
     * pid  进程ID
     * path  程序文件
+    * agentId  agent id
+    * containerId  容器id
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'type' => 'setType',
             'pid' => 'setPid',
-            'path' => 'setPath'
+            'path' => 'setPath',
+            'agentId' => 'setAgentId',
+            'containerId' => 'setContainerId'
     ];
 
     /**
@@ -136,6 +152,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * type  类型
     * pid  进程ID
     * path  程序文件
+    * agentId  agent id
+    * containerId  容器id
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'type' => 'getType',
             'pid' => 'getPid',
-            'path' => 'getPath'
+            'path' => 'getPath',
+            'agentId' => 'getAgentId',
+            'containerId' => 'getContainerId'
     ];
 
     /**
@@ -214,6 +234,8 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['pid'] = isset($data['pid']) ? $data['pid'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
+        $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
+        $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
     }
 
     /**
@@ -265,6 +287,18 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 1)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -445,6 +479,54 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     public function setPath($path)
     {
         $this->container['path'] = $path;
+        return $this;
+    }
+
+    /**
+    * Gets agentId
+    *  agent id
+    *
+    * @return string|null
+    */
+    public function getAgentId()
+    {
+        return $this->container['agentId'];
+    }
+
+    /**
+    * Sets agentId
+    *
+    * @param string|null $agentId agent id
+    *
+    * @return $this
+    */
+    public function setAgentId($agentId)
+    {
+        $this->container['agentId'] = $agentId;
+        return $this;
+    }
+
+    /**
+    * Gets containerId
+    *  容器id
+    *
+    * @return string|null
+    */
+    public function getContainerId()
+    {
+        return $this->container['containerId'];
+    }
+
+    /**
+    * Sets containerId
+    *
+    * @param string|null $containerId 容器id
+    *
+    * @return $this
+    */
+    public function setContainerId($containerId)
+    {
+        $this->container['containerId'] = $containerId;
         return $this;
     }
 

@@ -21,14 +21,16 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
-    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -41,20 +43,24 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
             'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]',
             'outputAssetConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OutputAssetConfig',
-            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig'
+            'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
-    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         'videoConfig' => null,
         'shootScripts' => null,
         'outputAssetConfig' => null,
-        'backgroundMusicConfig' => null
+        'backgroundMusicConfig' => null,
+        'reviewConfig' => null,
+        'callbackConfig' => null
     ];
 
     /**
@@ -94,14 +102,16 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
-    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -114,20 +124,24 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'video_config',
             'shootScripts' => 'shoot_scripts',
             'outputAssetConfig' => 'output_asset_config',
-            'backgroundMusicConfig' => 'background_music_config'
+            'backgroundMusicConfig' => 'background_music_config',
+            'reviewConfig' => 'review_config',
+            'callbackConfig' => 'callback_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
-    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -140,20 +154,24 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'setVideoConfig',
             'shootScripts' => 'setShootScripts',
             'outputAssetConfig' => 'setOutputAssetConfig',
-            'backgroundMusicConfig' => 'setBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'setBackgroundMusicConfig',
+            'reviewConfig' => 'setReviewConfig',
+            'callbackConfig' => 'setCallbackConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
-    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * humanImage  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
+    * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'videoConfig' => 'getVideoConfig',
             'shootScripts' => 'getShootScripts',
             'outputAssetConfig' => 'getOutputAssetConfig',
-            'backgroundMusicConfig' => 'getBackgroundMusicConfig'
+            'backgroundMusicConfig' => 'getBackgroundMusicConfig',
+            'reviewConfig' => 'getReviewConfig',
+            'callbackConfig' => 'getCallbackConfig'
     ];
 
     /**
@@ -251,6 +271,8 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         $this->container['shootScripts'] = isset($data['shootScripts']) ? $data['shootScripts'] : null;
         $this->container['outputAssetConfig'] = isset($data['outputAssetConfig']) ? $data['outputAssetConfig'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
     }
 
     /**
@@ -327,7 +349,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets videoMakingType
-    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return string|null
     */
@@ -339,7 +361,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Sets videoMakingType
     *
-    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return $this
     */
@@ -375,7 +397,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets humanImage
-    *  人物照片，需要Base64编码。照片分辨率不超过1080P。
+    *  人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return string|null
     */
@@ -387,7 +409,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Sets humanImage
     *
-    * @param string|null $humanImage 人物照片，需要Base64编码。照片分辨率不超过1080P。
+    * @param string|null $humanImage 人物照片，需要Base64编码。照片分辨率不超过1080P。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return $this
     */
@@ -514,6 +536,54 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     public function setBackgroundMusicConfig($backgroundMusicConfig)
     {
         $this->container['backgroundMusicConfig'] = $backgroundMusicConfig;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets callbackConfig
+    *  callbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null
+    */
+    public function getCallbackConfig()
+    {
+        return $this->container['callbackConfig'];
+    }
+
+    /**
+    * Sets callbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null $callbackConfig callbackConfig
+    *
+    * @return $this
+    */
+    public function setCallbackConfig($callbackConfig)
+    {
+        $this->container['callbackConfig'] = $callbackConfig;
         return $this;
     }
 

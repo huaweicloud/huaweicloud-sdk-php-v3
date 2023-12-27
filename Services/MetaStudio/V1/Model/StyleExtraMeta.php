@@ -24,10 +24,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     * editEnable  是否支持模型编辑
     * editEngine  编辑使用引擎
     * modelId  照片建模算法调用的模型类型
-    * editValueItems  值可设置条目列表
-    * editColorItems  颜色可设置条目列表
-    * editComponents  可替换组件列表
-    * modellingAlgorithm  分类算法列表
     *
     * @var string[]
     */
@@ -35,11 +31,7 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
             'pictureModelingEnable' => 'bool',
             'editEnable' => 'bool',
             'editEngine' => 'string',
-            'modelId' => 'string',
-            'editValueItems' => 'map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditValueItems]',
-            'editColorItems' => 'map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditColorItems]',
-            'editComponents' => 'map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditComponents]',
-            'modellingAlgorithm' => 'map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaModellingAlgorithm]'
+            'modelId' => 'string'
     ];
 
     /**
@@ -48,10 +40,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     * editEnable  是否支持模型编辑
     * editEngine  编辑使用引擎
     * modelId  照片建模算法调用的模型类型
-    * editValueItems  值可设置条目列表
-    * editColorItems  颜色可设置条目列表
-    * editComponents  可替换组件列表
-    * modellingAlgorithm  分类算法列表
     *
     * @var string[]
     */
@@ -59,11 +47,7 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
         'pictureModelingEnable' => null,
         'editEnable' => null,
         'editEngine' => null,
-        'modelId' => null,
-        'editValueItems' => null,
-        'editColorItems' => null,
-        'editComponents' => null,
-        'modellingAlgorithm' => null
+        'modelId' => null
     ];
 
     /**
@@ -93,10 +77,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     * editEnable  是否支持模型编辑
     * editEngine  编辑使用引擎
     * modelId  照片建模算法调用的模型类型
-    * editValueItems  值可设置条目列表
-    * editColorItems  颜色可设置条目列表
-    * editComponents  可替换组件列表
-    * modellingAlgorithm  分类算法列表
     *
     * @var string[]
     */
@@ -104,11 +84,7 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
             'pictureModelingEnable' => 'picture_modeling_enable',
             'editEnable' => 'edit_enable',
             'editEngine' => 'edit_engine',
-            'modelId' => 'model_id',
-            'editValueItems' => 'edit_value_items',
-            'editColorItems' => 'edit_color_items',
-            'editComponents' => 'edit_components',
-            'modellingAlgorithm' => 'modelling_algorithm'
+            'modelId' => 'model_id'
     ];
 
     /**
@@ -117,10 +93,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     * editEnable  是否支持模型编辑
     * editEngine  编辑使用引擎
     * modelId  照片建模算法调用的模型类型
-    * editValueItems  值可设置条目列表
-    * editColorItems  颜色可设置条目列表
-    * editComponents  可替换组件列表
-    * modellingAlgorithm  分类算法列表
     *
     * @var string[]
     */
@@ -128,11 +100,7 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
             'pictureModelingEnable' => 'setPictureModelingEnable',
             'editEnable' => 'setEditEnable',
             'editEngine' => 'setEditEngine',
-            'modelId' => 'setModelId',
-            'editValueItems' => 'setEditValueItems',
-            'editColorItems' => 'setEditColorItems',
-            'editComponents' => 'setEditComponents',
-            'modellingAlgorithm' => 'setModellingAlgorithm'
+            'modelId' => 'setModelId'
     ];
 
     /**
@@ -141,10 +109,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     * editEnable  是否支持模型编辑
     * editEngine  编辑使用引擎
     * modelId  照片建模算法调用的模型类型
-    * editValueItems  值可设置条目列表
-    * editColorItems  颜色可设置条目列表
-    * editComponents  可替换组件列表
-    * modellingAlgorithm  分类算法列表
     *
     * @var string[]
     */
@@ -152,11 +116,7 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
             'pictureModelingEnable' => 'getPictureModelingEnable',
             'editEnable' => 'getEditEnable',
             'editEngine' => 'getEditEngine',
-            'modelId' => 'getModelId',
-            'editValueItems' => 'getEditValueItems',
-            'editColorItems' => 'getEditColorItems',
-            'editComponents' => 'getEditComponents',
-            'modellingAlgorithm' => 'getModellingAlgorithm'
+            'modelId' => 'getModelId'
     ];
 
     /**
@@ -221,10 +181,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
         $this->container['editEnable'] = isset($data['editEnable']) ? $data['editEnable'] : null;
         $this->container['editEngine'] = isset($data['editEngine']) ? $data['editEngine'] : null;
         $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
-        $this->container['editValueItems'] = isset($data['editValueItems']) ? $data['editValueItems'] : null;
-        $this->container['editColorItems'] = isset($data['editColorItems']) ? $data['editColorItems'] : null;
-        $this->container['editComponents'] = isset($data['editComponents']) ? $data['editComponents'] : null;
-        $this->container['modellingAlgorithm'] = isset($data['modellingAlgorithm']) ? $data['modellingAlgorithm'] : null;
     }
 
     /**
@@ -354,102 +310,6 @@ class StyleExtraMeta implements ModelInterface, ArrayAccess
     public function setModelId($modelId)
     {
         $this->container['modelId'] = $modelId;
-        return $this;
-    }
-
-    /**
-    * Gets editValueItems
-    *  值可设置条目列表
-    *
-    * @return map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditValueItems]|null
-    */
-    public function getEditValueItems()
-    {
-        return $this->container['editValueItems'];
-    }
-
-    /**
-    * Sets editValueItems
-    *
-    * @param map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditValueItems]|null $editValueItems 值可设置条目列表
-    *
-    * @return $this
-    */
-    public function setEditValueItems($editValueItems)
-    {
-        $this->container['editValueItems'] = $editValueItems;
-        return $this;
-    }
-
-    /**
-    * Gets editColorItems
-    *  颜色可设置条目列表
-    *
-    * @return map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditColorItems]|null
-    */
-    public function getEditColorItems()
-    {
-        return $this->container['editColorItems'];
-    }
-
-    /**
-    * Sets editColorItems
-    *
-    * @param map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditColorItems]|null $editColorItems 颜色可设置条目列表
-    *
-    * @return $this
-    */
-    public function setEditColorItems($editColorItems)
-    {
-        $this->container['editColorItems'] = $editColorItems;
-        return $this;
-    }
-
-    /**
-    * Gets editComponents
-    *  可替换组件列表
-    *
-    * @return map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditComponents]|null
-    */
-    public function getEditComponents()
-    {
-        return $this->container['editComponents'];
-    }
-
-    /**
-    * Sets editComponents
-    *
-    * @param map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaEditComponents]|null $editComponents 可替换组件列表
-    *
-    * @return $this
-    */
-    public function setEditComponents($editComponents)
-    {
-        $this->container['editComponents'] = $editComponents;
-        return $this;
-    }
-
-    /**
-    * Gets modellingAlgorithm
-    *  分类算法列表
-    *
-    * @return map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaModellingAlgorithm]|null
-    */
-    public function getModellingAlgorithm()
-    {
-        return $this->container['modellingAlgorithm'];
-    }
-
-    /**
-    * Sets modellingAlgorithm
-    *
-    * @param map[string,\HuaweiCloud\SDK\MetaStudio\V1\Model\StyleExtraMetaModellingAlgorithm]|null $modellingAlgorithm 分类算法列表
-    *
-    * @return $this
-    */
-    public function setModellingAlgorithm($modellingAlgorithm)
-    {
-        $this->container['modellingAlgorithm'] = $modellingAlgorithm;
         return $this;
     }
 

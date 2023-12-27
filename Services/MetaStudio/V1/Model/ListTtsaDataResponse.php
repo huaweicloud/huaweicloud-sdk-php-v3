@@ -22,6 +22,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
+    * startTime  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    * endTime  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    * isTail  是否为尾部(任务数据已全部生成，后续没有新的数据)
     * audio  音频数据，Base64编码，1秒内的数据。
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
@@ -32,6 +35,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string',
+            'isTail' => 'bool',
             'audio' => 'string',
             'blendshapes' => 'string[]',
             'animations' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AnimationItem[]',
@@ -42,6 +48,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
+    * startTime  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    * endTime  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    * isTail  是否为尾部(任务数据已全部生成，后续没有新的数据)
     * audio  音频数据，Base64编码，1秒内的数据。
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
@@ -52,6 +61,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'jobId' => null,
+        'startTime' => null,
+        'endTime' => null,
+        'isTail' => null,
         'audio' => null,
         'blendshapes' => null,
         'animations' => null,
@@ -83,6 +95,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID。
+    * startTime  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    * endTime  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    * isTail  是否为尾部(任务数据已全部生成，后续没有新的数据)
     * audio  音频数据，Base64编码，1秒内的数据。
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
@@ -93,6 +108,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'jobId' => 'jobId',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
+            'isTail' => 'is_tail',
             'audio' => 'audio',
             'blendshapes' => 'blendshapes',
             'animations' => 'animations',
@@ -103,6 +121,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
+    * startTime  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    * endTime  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    * isTail  是否为尾部(任务数据已全部生成，后续没有新的数据)
     * audio  音频数据，Base64编码，1秒内的数据。
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
@@ -113,6 +134,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'jobId' => 'setJobId',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
+            'isTail' => 'setIsTail',
             'audio' => 'setAudio',
             'blendshapes' => 'setBlendshapes',
             'animations' => 'setAnimations',
@@ -123,6 +147,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
+    * startTime  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    * endTime  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    * isTail  是否为尾部(任务数据已全部生成，后续没有新的数据)
     * audio  音频数据，Base64编码，1秒内的数据。
     * blendshapes  语音驱动的表情基数据。
     * animations  手工指定的动作库动作数据。
@@ -133,6 +160,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'jobId' => 'getJobId',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
+            'isTail' => 'getIsTail',
             'audio' => 'getAudio',
             'blendshapes' => 'getBlendshapes',
             'animations' => 'getAnimations',
@@ -199,6 +229,9 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['isTail'] = isset($data['isTail']) ? $data['isTail'] : null;
         $this->container['audio'] = isset($data['audio']) ? $data['audio'] : null;
         $this->container['blendshapes'] = isset($data['blendshapes']) ? $data['blendshapes'] : null;
         $this->container['animations'] = isset($data['animations']) ? $data['animations'] : null;
@@ -219,6 +252,18 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 20)) {
+                $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) < 20)) {
+                $invalidProperties[] = "invalid value for 'startTime', the character length must be bigger than or equal to 20.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) > 20)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 20)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 20.";
             }
             if (!is_null($this->container['audio']) && (mb_strlen($this->container['audio']) > 131072)) {
                 $invalidProperties[] = "invalid value for 'audio', the character length must be smaller than or equal to 131072.";
@@ -261,6 +306,78 @@ class ListTtsaDataResponse implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime 驱动任务开始时间，格式遵循：RFC 3339， 例 “2020-07-30T10:43:17Z”
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 驱动任务结束时间，格式遵循：RFC 3339， 例 “2020-07-30T10:45:17Z”
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets isTail
+    *  是否为尾部(任务数据已全部生成，后续没有新的数据)
+    *
+    * @return bool|null
+    */
+    public function getIsTail()
+    {
+        return $this->container['isTail'];
+    }
+
+    /**
+    * Sets isTail
+    *
+    * @param bool|null $isTail 是否为尾部(任务数据已全部生成，后续没有新的数据)
+    *
+    * @return $this
+    */
+    public function setIsTail($isTail)
+    {
+        $this->container['isTail'] = $isTail;
         return $this;
     }
 

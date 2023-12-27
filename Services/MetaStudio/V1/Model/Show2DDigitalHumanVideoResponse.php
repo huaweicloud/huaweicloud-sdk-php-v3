@@ -31,8 +31,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
@@ -75,8 +75,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
@@ -140,8 +140,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
@@ -184,8 +184,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
@@ -228,8 +228,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-    * humanImage  人物照片，需要Base64编码。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
@@ -720,7 +720,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets videoMakingType
-    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return string|null
     */
@@ -732,7 +732,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets videoMakingType
     *
-    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return $this
     */
@@ -744,7 +744,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets humanImage
-    *  人物照片，需要Base64编码。
+    *  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return string|null
     */
@@ -756,7 +756,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets humanImage
     *
-    * @param string|null $humanImage 人物照片，需要Base64编码。
+    * @param string|null $humanImage 人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return $this
     */

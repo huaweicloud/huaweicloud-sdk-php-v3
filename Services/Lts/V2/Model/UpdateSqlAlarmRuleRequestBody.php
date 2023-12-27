@@ -22,6 +22,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sqlAlarmRuleId  SQL告警id
     * sqlAlarmRuleName  SQL告警名称
+    * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -44,6 +45,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'sqlAlarmRuleId' => 'string',
             'sqlAlarmRuleName' => 'string',
+            'alarmRuleAlias' => 'string',
             'isCssSql' => 'bool',
             'sqlAlarmRuleDescription' => 'string',
             'sqlRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\SqlRequest[]',
@@ -66,6 +68,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * sqlAlarmRuleId  SQL告警id
     * sqlAlarmRuleName  SQL告警名称
+    * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -88,6 +91,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'sqlAlarmRuleId' => null,
         'sqlAlarmRuleName' => null,
+        'alarmRuleAlias' => null,
         'isCssSql' => null,
         'sqlAlarmRuleDescription' => null,
         'sqlRequests' => null,
@@ -131,6 +135,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sqlAlarmRuleId  SQL告警id
     * sqlAlarmRuleName  SQL告警名称
+    * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -153,6 +158,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'sqlAlarmRuleId' => 'sql_alarm_rule_id',
             'sqlAlarmRuleName' => 'sql_alarm_rule_name',
+            'alarmRuleAlias' => 'alarm_rule_alias',
             'isCssSql' => 'is_css_sql',
             'sqlAlarmRuleDescription' => 'sql_alarm_rule_description',
             'sqlRequests' => 'sql_requests',
@@ -175,6 +181,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * sqlAlarmRuleId  SQL告警id
     * sqlAlarmRuleName  SQL告警名称
+    * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -197,6 +204,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'sqlAlarmRuleId' => 'setSqlAlarmRuleId',
             'sqlAlarmRuleName' => 'setSqlAlarmRuleName',
+            'alarmRuleAlias' => 'setAlarmRuleAlias',
             'isCssSql' => 'setIsCssSql',
             'sqlAlarmRuleDescription' => 'setSqlAlarmRuleDescription',
             'sqlRequests' => 'setSqlRequests',
@@ -219,6 +227,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * sqlAlarmRuleId  SQL告警id
     * sqlAlarmRuleName  SQL告警名称
+    * alarmRuleAlias  规则名称
     * isCssSql  是否管道符sql查询
     * sqlAlarmRuleDescription  SQL告警信息描述
     * sqlRequests  SQL详细信息
@@ -241,6 +250,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'sqlAlarmRuleId' => 'getSqlAlarmRuleId',
             'sqlAlarmRuleName' => 'getSqlAlarmRuleName',
+            'alarmRuleAlias' => 'getAlarmRuleAlias',
             'isCssSql' => 'getIsCssSql',
             'sqlAlarmRuleDescription' => 'getSqlAlarmRuleDescription',
             'sqlRequests' => 'getSqlRequests',
@@ -384,6 +394,7 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['sqlAlarmRuleId'] = isset($data['sqlAlarmRuleId']) ? $data['sqlAlarmRuleId'] : null;
         $this->container['sqlAlarmRuleName'] = isset($data['sqlAlarmRuleName']) ? $data['sqlAlarmRuleName'] : null;
+        $this->container['alarmRuleAlias'] = isset($data['alarmRuleAlias']) ? $data['alarmRuleAlias'] : null;
         $this->container['isCssSql'] = isset($data['isCssSql']) ? $data['isCssSql'] : null;
         $this->container['sqlAlarmRuleDescription'] = isset($data['sqlAlarmRuleDescription']) ? $data['sqlAlarmRuleDescription'] : null;
         $this->container['sqlRequests'] = isset($data['sqlRequests']) ? $data['sqlRequests'] : null;
@@ -427,6 +438,12 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['sqlAlarmRuleName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sqlAlarmRuleName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmRuleAlias']) && (mb_strlen($this->container['alarmRuleAlias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmRuleAlias', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmRuleAlias']) && (mb_strlen($this->container['alarmRuleAlias']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmRuleAlias', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['sqlAlarmRuleDescription']) && (mb_strlen($this->container['sqlAlarmRuleDescription']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sqlAlarmRuleDescription', the character length must be smaller than or equal to 64.";
@@ -559,6 +576,30 @@ class UpdateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setSqlAlarmRuleName($sqlAlarmRuleName)
     {
         $this->container['sqlAlarmRuleName'] = $sqlAlarmRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets alarmRuleAlias
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getAlarmRuleAlias()
+    {
+        return $this->container['alarmRuleAlias'];
+    }
+
+    /**
+    * Sets alarmRuleAlias
+    *
+    * @param string|null $alarmRuleAlias 规则名称
+    *
+    * @return $this
+    */
+    public function setAlarmRuleAlias($alarmRuleAlias)
+    {
+        $this->container['alarmRuleAlias'] = $alarmRuleAlias;
         return $this;
     }
 

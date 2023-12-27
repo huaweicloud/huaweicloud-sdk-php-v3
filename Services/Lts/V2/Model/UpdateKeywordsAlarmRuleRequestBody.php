@@ -22,6 +22,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * keywordsAlarmRuleId  关键词告警规则id
     * keywordsAlarmRuleName  关键词告警名称
+    * alarmRuleAlias  规则名称
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -42,6 +43,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'keywordsAlarmRuleId' => 'string',
             'keywordsAlarmRuleName' => 'string',
+            'alarmRuleAlias' => 'string',
             'keywordsAlarmRuleDescription' => 'string',
             'keywordsRequests' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsRequest[]',
             'frequency' => '\HuaweiCloud\SDK\Lts\V2\Model\Frequency',
@@ -62,6 +64,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * keywordsAlarmRuleId  关键词告警规则id
     * keywordsAlarmRuleName  关键词告警名称
+    * alarmRuleAlias  规则名称
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -82,6 +85,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'keywordsAlarmRuleId' => null,
         'keywordsAlarmRuleName' => null,
+        'alarmRuleAlias' => null,
         'keywordsAlarmRuleDescription' => null,
         'keywordsRequests' => null,
         'frequency' => null,
@@ -123,6 +127,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * keywordsAlarmRuleId  关键词告警规则id
     * keywordsAlarmRuleName  关键词告警名称
+    * alarmRuleAlias  规则名称
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -143,6 +148,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'keywordsAlarmRuleId' => 'keywords_alarm_rule_id',
             'keywordsAlarmRuleName' => 'keywords_alarm_rule_name',
+            'alarmRuleAlias' => 'alarm_rule_alias',
             'keywordsAlarmRuleDescription' => 'keywords_alarm_rule_description',
             'keywordsRequests' => 'keywords_requests',
             'frequency' => 'frequency',
@@ -163,6 +169,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * keywordsAlarmRuleId  关键词告警规则id
     * keywordsAlarmRuleName  关键词告警名称
+    * alarmRuleAlias  规则名称
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -183,6 +190,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'keywordsAlarmRuleId' => 'setKeywordsAlarmRuleId',
             'keywordsAlarmRuleName' => 'setKeywordsAlarmRuleName',
+            'alarmRuleAlias' => 'setAlarmRuleAlias',
             'keywordsAlarmRuleDescription' => 'setKeywordsAlarmRuleDescription',
             'keywordsRequests' => 'setKeywordsRequests',
             'frequency' => 'setFrequency',
@@ -203,6 +211,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * keywordsAlarmRuleId  关键词告警规则id
     * keywordsAlarmRuleName  关键词告警名称
+    * alarmRuleAlias  规则名称
     * keywordsAlarmRuleDescription  关键词告警信息描述
     * keywordsRequests  关键词详细信息
     * frequency  frequency
@@ -223,6 +232,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'keywordsAlarmRuleId' => 'getKeywordsAlarmRuleId',
             'keywordsAlarmRuleName' => 'getKeywordsAlarmRuleName',
+            'alarmRuleAlias' => 'getAlarmRuleAlias',
             'keywordsAlarmRuleDescription' => 'getKeywordsAlarmRuleDescription',
             'keywordsRequests' => 'getKeywordsRequests',
             'frequency' => 'getFrequency',
@@ -364,6 +374,7 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['keywordsAlarmRuleId'] = isset($data['keywordsAlarmRuleId']) ? $data['keywordsAlarmRuleId'] : null;
         $this->container['keywordsAlarmRuleName'] = isset($data['keywordsAlarmRuleName']) ? $data['keywordsAlarmRuleName'] : null;
+        $this->container['alarmRuleAlias'] = isset($data['alarmRuleAlias']) ? $data['alarmRuleAlias'] : null;
         $this->container['keywordsAlarmRuleDescription'] = isset($data['keywordsAlarmRuleDescription']) ? $data['keywordsAlarmRuleDescription'] : null;
         $this->container['keywordsRequests'] = isset($data['keywordsRequests']) ? $data['keywordsRequests'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
@@ -405,6 +416,12 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['keywordsAlarmRuleName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'keywordsAlarmRuleName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alarmRuleAlias']) && (mb_strlen($this->container['alarmRuleAlias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmRuleAlias', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmRuleAlias']) && (mb_strlen($this->container['alarmRuleAlias']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmRuleAlias', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['keywordsAlarmRuleDescription']) && (mb_strlen($this->container['keywordsAlarmRuleDescription']) > 64)) {
                 $invalidProperties[] = "invalid value for 'keywordsAlarmRuleDescription', the character length must be smaller than or equal to 64.";
@@ -528,6 +545,30 @@ class UpdateKeywordsAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setKeywordsAlarmRuleName($keywordsAlarmRuleName)
     {
         $this->container['keywordsAlarmRuleName'] = $keywordsAlarmRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets alarmRuleAlias
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getAlarmRuleAlias()
+    {
+        return $this->container['alarmRuleAlias'];
+    }
+
+    /**
+    * Sets alarmRuleAlias
+    *
+    * @param string|null $alarmRuleAlias 规则名称
+    *
+    * @return $this
+    */
+    public function setAlarmRuleAlias($alarmRuleAlias)
+    {
+        $this->container['alarmRuleAlias'] = $alarmRuleAlias;
         return $this;
     }
 

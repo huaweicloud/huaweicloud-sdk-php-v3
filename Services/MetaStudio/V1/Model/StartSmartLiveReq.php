@@ -22,28 +22,40 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * liveEventCallbackConfig  liveEventCallbackConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
             'playPolicy' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlayPolicy',
-            'outputUrls' => 'string[]'
+            'outputUrls' => 'string[]',
+            'streamKeys' => 'string[]',
+            'interactionCallbackUrl' => 'string',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * liveEventCallbackConfig  liveEventCallbackConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'videoConfig' => null,
         'playPolicy' => null,
-        'outputUrls' => null
+        'outputUrls' => null,
+        'streamKeys' => null,
+        'interactionCallbackUrl' => null,
+        'liveEventCallbackConfig' => null
     ];
 
     /**
@@ -71,42 +83,60 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * liveEventCallbackConfig  liveEventCallbackConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'videoConfig' => 'video_config',
             'playPolicy' => 'play_policy',
-            'outputUrls' => 'output_urls'
+            'outputUrls' => 'output_urls',
+            'streamKeys' => 'stream_keys',
+            'interactionCallbackUrl' => 'interaction_callback_url',
+            'liveEventCallbackConfig' => 'live_event_callback_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * liveEventCallbackConfig  liveEventCallbackConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'videoConfig' => 'setVideoConfig',
             'playPolicy' => 'setPlayPolicy',
-            'outputUrls' => 'setOutputUrls'
+            'outputUrls' => 'setOutputUrls',
+            'streamKeys' => 'setStreamKeys',
+            'interactionCallbackUrl' => 'setInteractionCallbackUrl',
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * liveEventCallbackConfig  liveEventCallbackConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'videoConfig' => 'getVideoConfig',
             'playPolicy' => 'getPlayPolicy',
-            'outputUrls' => 'getOutputUrls'
+            'outputUrls' => 'getOutputUrls',
+            'streamKeys' => 'getStreamKeys',
+            'interactionCallbackUrl' => 'getInteractionCallbackUrl',
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig'
     ];
 
     /**
@@ -170,6 +200,9 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['playPolicy'] = isset($data['playPolicy']) ? $data['playPolicy'] : null;
         $this->container['outputUrls'] = isset($data['outputUrls']) ? $data['outputUrls'] : null;
+        $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
+        $this->container['interactionCallbackUrl'] = isset($data['interactionCallbackUrl']) ? $data['interactionCallbackUrl'] : null;
+        $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
     }
 
     /**
@@ -180,6 +213,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['interactionCallbackUrl']) && (mb_strlen($this->container['interactionCallbackUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'interactionCallbackUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['interactionCallbackUrl']) && (mb_strlen($this->container['interactionCallbackUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'interactionCallbackUrl', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -244,7 +283,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputUrls
-    *  视频推流第三方直播平台地址。
+    *  RTMP视频推流第三方直播平台地址。
     *
     * @return string[]|null
     */
@@ -256,13 +295,85 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     /**
     * Sets outputUrls
     *
-    * @param string[]|null $outputUrls 视频推流第三方直播平台地址。
+    * @param string[]|null $outputUrls RTMP视频推流第三方直播平台地址。
     *
     * @return $this
     */
     public function setOutputUrls($outputUrls)
     {
         $this->container['outputUrls'] = $outputUrls;
+        return $this;
+    }
+
+    /**
+    * Gets streamKeys
+    *  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return string[]|null
+    */
+    public function getStreamKeys()
+    {
+        return $this->container['streamKeys'];
+    }
+
+    /**
+    * Sets streamKeys
+    *
+    * @param string[]|null $streamKeys RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return $this
+    */
+    public function setStreamKeys($streamKeys)
+    {
+        $this->container['streamKeys'] = $streamKeys;
+        return $this;
+    }
+
+    /**
+    * Gets interactionCallbackUrl
+    *  互动回调URL，含鉴权信息。
+    *
+    * @return string|null
+    */
+    public function getInteractionCallbackUrl()
+    {
+        return $this->container['interactionCallbackUrl'];
+    }
+
+    /**
+    * Sets interactionCallbackUrl
+    *
+    * @param string|null $interactionCallbackUrl 互动回调URL，含鉴权信息。
+    *
+    * @return $this
+    */
+    public function setInteractionCallbackUrl($interactionCallbackUrl)
+    {
+        $this->container['interactionCallbackUrl'] = $interactionCallbackUrl;
+        return $this;
+    }
+
+    /**
+    * Gets liveEventCallbackConfig
+    *  liveEventCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    */
+    public function getLiveEventCallbackConfig()
+    {
+        return $this->container['liveEventCallbackConfig'];
+    }
+
+    /**
+    * Sets liveEventCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    *
+    * @return $this
+    */
+    public function setLiveEventCallbackConfig($liveEventCallbackConfig)
+    {
+        $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
         return $this;
     }
 

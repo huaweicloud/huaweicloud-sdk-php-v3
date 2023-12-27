@@ -22,9 +22,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
-    * ttsMode  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-    * externalVoiceMeta  externalVoiceMeta
+    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * speedRatio  语速缩放比例
+    * volumeRatio  音量缩放比例
     *
     * @var string[]
     */
@@ -32,17 +32,17 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'modelType' => 'string',
             'sex' => 'string',
             'language' => 'string',
-            'ttsMode' => 'string',
-            'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta'
+            'speedRatio' => 'float',
+            'volumeRatio' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
-    * ttsMode  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-    * externalVoiceMeta  externalVoiceMeta
+    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * speedRatio  语速缩放比例
+    * volumeRatio  音量缩放比例
     *
     * @var string[]
     */
@@ -50,8 +50,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'modelType' => null,
         'sex' => null,
         'language' => null,
-        'ttsMode' => null,
-        'externalVoiceMeta' => null
+        'speedRatio' => 'float',
+        'volumeRatio' => 'float'
     ];
 
     /**
@@ -79,9 +79,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * and the value is the original name
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
-    * ttsMode  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-    * externalVoiceMeta  externalVoiceMeta
+    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * speedRatio  语速缩放比例
+    * volumeRatio  音量缩放比例
     *
     * @var string[]
     */
@@ -89,17 +89,17 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'modelType' => 'model_type',
             'sex' => 'sex',
             'language' => 'language',
-            'ttsMode' => 'tts_mode',
-            'externalVoiceMeta' => 'external_voice_meta'
+            'speedRatio' => 'speed_ratio',
+            'volumeRatio' => 'volume_ratio'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
-    * ttsMode  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-    * externalVoiceMeta  externalVoiceMeta
+    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * speedRatio  语速缩放比例
+    * volumeRatio  音量缩放比例
     *
     * @var string[]
     */
@@ -107,17 +107,17 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'modelType' => 'setModelType',
             'sex' => 'setSex',
             'language' => 'setLanguage',
-            'ttsMode' => 'setTtsMode',
-            'externalVoiceMeta' => 'setExternalVoiceMeta'
+            'speedRatio' => 'setSpeedRatio',
+            'volumeRatio' => 'setVolumeRatio'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
-    * ttsMode  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-    * externalVoiceMeta  externalVoiceMeta
+    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * speedRatio  语速缩放比例
+    * volumeRatio  音量缩放比例
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'modelType' => 'getModelType',
             'sex' => 'getSex',
             'language' => 'getLanguage',
-            'ttsMode' => 'getTtsMode',
-            'externalVoiceMeta' => 'getExternalVoiceMeta'
+            'speedRatio' => 'getSpeedRatio',
+            'volumeRatio' => 'getVolumeRatio'
     ];
 
     /**
@@ -177,9 +177,30 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     const LANGUAGE_UNKNOW = 'UNKNOW';
     const LANGUAGE_CN = 'CN';
     const LANGUAGE_EN = 'EN';
-    const TTS_MODE_UNKNOW = 'UNKNOW';
-    const TTS_MODE_TTS_V1 = 'TTS_V1';
-    const TTS_MODE_TTS_V2 = 'TTS_V2';
+    const LANGUAGE_GER = 'GER';
+    const LANGUAGE_FR = 'fr';
+    const LANGUAGE_KR = 'Kr';
+    const LANGUAGE_POR = 'por';
+    const LANGUAGE_JPN = 'JPN';
+    const LANGUAGE_ITA = 'Ita';
+    const LANGUAGE_ESP = 'ESP';
+    const LANGUAGE_DBH = 'DBH';
+    const LANGUAGE_GT = 'GT';
+    const LANGUAGE_GXH = 'GXH';
+    const LANGUAGE_HBH = 'HBH';
+    const LANGUAGE_SXH = 'SXH';
+    const LANGUAGE_SCH = 'SCH';
+    const LANGUAGE_YY = 'YY';
+    const LANGUAGE_RUSSIAN = 'Russian';
+    const LANGUAGE_FILIPINO = 'Filipino';
+    const LANGUAGE_DUTCH = 'Dutch';
+    const LANGUAGE_INDONESIAN = 'Indonesian';
+    const LANGUAGE_VIETNAMESE = 'Vietnamese';
+    const LANGUAGE_ARABIC = 'Arabic';
+    const LANGUAGE_TURKISH = 'Turkish';
+    const LANGUAGE_MALAY = 'Malay';
+    const LANGUAGE_THAI = 'Thai';
+    const LANGUAGE_FINNISH = 'Finnish';
     
 
     /**
@@ -220,20 +241,30 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             self::LANGUAGE_UNKNOW,
             self::LANGUAGE_CN,
             self::LANGUAGE_EN,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTtsModeAllowableValues()
-    {
-        return [
-            self::TTS_MODE_UNKNOW,
-            self::TTS_MODE_TTS_V1,
-            self::TTS_MODE_TTS_V2,
+            self::LANGUAGE_GER,
+            self::LANGUAGE_FR,
+            self::LANGUAGE_KR,
+            self::LANGUAGE_POR,
+            self::LANGUAGE_JPN,
+            self::LANGUAGE_ITA,
+            self::LANGUAGE_ESP,
+            self::LANGUAGE_DBH,
+            self::LANGUAGE_GT,
+            self::LANGUAGE_GXH,
+            self::LANGUAGE_HBH,
+            self::LANGUAGE_SXH,
+            self::LANGUAGE_SCH,
+            self::LANGUAGE_YY,
+            self::LANGUAGE_RUSSIAN,
+            self::LANGUAGE_FILIPINO,
+            self::LANGUAGE_DUTCH,
+            self::LANGUAGE_INDONESIAN,
+            self::LANGUAGE_VIETNAMESE,
+            self::LANGUAGE_ARABIC,
+            self::LANGUAGE_TURKISH,
+            self::LANGUAGE_MALAY,
+            self::LANGUAGE_THAI,
+            self::LANGUAGE_FINNISH,
         ];
     }
 
@@ -256,8 +287,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['modelType'] = isset($data['modelType']) ? $data['modelType'] : null;
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['ttsMode'] = isset($data['ttsMode']) ? $data['ttsMode'] : null;
-        $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
+        $this->container['speedRatio'] = isset($data['speedRatio']) ? $data['speedRatio'] : null;
+        $this->container['volumeRatio'] = isset($data['volumeRatio']) ? $data['volumeRatio'] : null;
     }
 
     /**
@@ -310,19 +341,17 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getTtsModeAllowableValues();
-                if (!is_null($this->container['ttsMode']) && !in_array($this->container['ttsMode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'ttsMode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['speedRatio']) && ($this->container['speedRatio'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'speedRatio', must be smaller than or equal to 1E+2.";
             }
-
-            if (!is_null($this->container['ttsMode']) && (mb_strlen($this->container['ttsMode']) > 16)) {
-                $invalidProperties[] = "invalid value for 'ttsMode', the character length must be smaller than or equal to 16.";
+            if (!is_null($this->container['speedRatio']) && ($this->container['speedRatio'] < 0)) {
+                $invalidProperties[] = "invalid value for 'speedRatio', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['ttsMode']) && (mb_strlen($this->container['ttsMode']) < 1)) {
-                $invalidProperties[] = "invalid value for 'ttsMode', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['volumeRatio']) && ($this->container['volumeRatio'] > 1E+2)) {
+                $invalidProperties[] = "invalid value for 'volumeRatio', must be smaller than or equal to 1E+2.";
+            }
+            if (!is_null($this->container['volumeRatio']) && ($this->container['volumeRatio'] < 0)) {
+                $invalidProperties[] = "invalid value for 'volumeRatio', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -388,7 +417,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
+    *  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     *
     * @return string|null
     */
@@ -400,7 +429,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
+    * @param string|null $language 音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     *
     * @return $this
     */
@@ -411,50 +440,50 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ttsMode
-    *  自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
+    * Gets speedRatio
+    *  语速缩放比例
     *
-    * @return string|null
+    * @return float|null
     */
-    public function getTtsMode()
+    public function getSpeedRatio()
     {
-        return $this->container['ttsMode'];
+        return $this->container['speedRatio'];
     }
 
     /**
-    * Sets ttsMode
+    * Sets speedRatio
     *
-    * @param string|null $ttsMode 自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
+    * @param float|null $speedRatio 语速缩放比例
     *
     * @return $this
     */
-    public function setTtsMode($ttsMode)
+    public function setSpeedRatio($speedRatio)
     {
-        $this->container['ttsMode'] = $ttsMode;
+        $this->container['speedRatio'] = $speedRatio;
         return $this;
     }
 
     /**
-    * Gets externalVoiceMeta
-    *  externalVoiceMeta
+    * Gets volumeRatio
+    *  音量缩放比例
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta|null
+    * @return float|null
     */
-    public function getExternalVoiceMeta()
+    public function getVolumeRatio()
     {
-        return $this->container['externalVoiceMeta'];
+        return $this->container['volumeRatio'];
     }
 
     /**
-    * Sets externalVoiceMeta
+    * Sets volumeRatio
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta|null $externalVoiceMeta externalVoiceMeta
+    * @param float|null $volumeRatio 音量缩放比例
     *
     * @return $this
     */
-    public function setExternalVoiceMeta($externalVoiceMeta)
+    public function setVolumeRatio($volumeRatio)
     {
-        $this->container['externalVoiceMeta'] = $externalVoiceMeta;
+        $this->container['volumeRatio'] = $volumeRatio;
         return $this;
     }
 

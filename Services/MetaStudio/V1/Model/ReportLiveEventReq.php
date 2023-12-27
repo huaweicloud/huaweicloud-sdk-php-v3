@@ -22,24 +22,28 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  事件条目数。
     * events  事件内容。
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'events' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEvent[]'
+            'events' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEvent[]',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  事件条目数。
     * events  事件内容。
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'events' => null
+        'events' => null,
+        'reviewConfig' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  事件条目数。
     * events  事件内容。
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'events' => 'events'
+            'events' => 'events',
+            'reviewConfig' => 'review_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  事件条目数。
     * events  事件内容。
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'events' => 'setEvents'
+            'events' => 'setEvents',
+            'reviewConfig' => 'setReviewConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  事件条目数。
     * events  事件内容。
+    * reviewConfig  reviewConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'events' => 'getEvents'
+            'events' => 'getEvents',
+            'reviewConfig' => 'getReviewConfig'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
     }
 
     /**
@@ -237,6 +248,30 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     public function setEvents($events)
     {
         $this->container['events'] = $events;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
         return $this;
     }
 

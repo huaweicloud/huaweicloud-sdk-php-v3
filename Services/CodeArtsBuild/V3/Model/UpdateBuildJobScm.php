@@ -24,7 +24,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     * url  代码仓地址
     * repoId  repo的id
     * webUrl  代码仓http地址
-    * scmType  仓库类别，codehub还是github等等
+    * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
     * buildType  构建类别
     * depth  克隆深度
@@ -52,7 +52,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     * url  代码仓地址
     * repoId  repo的id
     * webUrl  代码仓http地址
-    * scmType  仓库类别，codehub还是github等等
+    * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
     * buildType  构建类别
     * depth  克隆深度
@@ -101,7 +101,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     * url  代码仓地址
     * repoId  repo的id
     * webUrl  代码仓http地址
-    * scmType  仓库类别，codehub还是github等等
+    * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
     * buildType  构建类别
     * depth  克隆深度
@@ -129,7 +129,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     * url  代码仓地址
     * repoId  repo的id
     * webUrl  代码仓http地址
-    * scmType  仓库类别，codehub还是github等等
+    * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
     * buildType  构建类别
     * depth  克隆深度
@@ -157,7 +157,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     * url  代码仓地址
     * repoId  repo的id
     * webUrl  代码仓http地址
-    * scmType  仓库类别，codehub还是github等等
+    * scmType  仓库类别，Repo、Github等
     * isAutoBuild  是否自动构建
     * buildType  构建类别
     * depth  克隆深度
@@ -375,7 +375,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
 
     /**
     * Gets scmType
-    *  仓库类别，codehub还是github等等
+    *  仓库类别，Repo、Github等
     *
     * @return string
     */
@@ -387,7 +387,7 @@ class UpdateBuildJobScm implements ModelInterface, ArrayAccess
     /**
     * Sets scmType
     *
-    * @param string $scmType 仓库类别，codehub还是github等等
+    * @param string $scmType 仓库类别，Repo、Github等
     *
     * @return $this
     */

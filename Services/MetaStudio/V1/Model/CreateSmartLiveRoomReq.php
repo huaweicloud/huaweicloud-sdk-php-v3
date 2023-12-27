@@ -22,12 +22,17 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -39,19 +44,29 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'interactionRules' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleInfo[]',
             'playPolicy' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlayPolicy',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
-            'outputUrls' => 'string[]'
+            'outputUrls' => 'string[]',
+            'streamKeys' => 'string[]',
+            'backupModelAssetIds' => 'string[]',
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -63,7 +78,12 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'interactionRules' => null,
         'playPolicy' => null,
         'videoConfig' => null,
-        'outputUrls' => null
+        'outputUrls' => null,
+        'streamKeys' => null,
+        'backupModelAssetIds' => null,
+        'liveEventCallbackConfig' => null,
+        'reviewConfig' => null,
+        'sharedConfig' => null
     ];
 
     /**
@@ -91,12 +111,17 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -108,19 +133,29 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'interactionRules' => 'interaction_rules',
             'playPolicy' => 'play_policy',
             'videoConfig' => 'video_config',
-            'outputUrls' => 'output_urls'
+            'outputUrls' => 'output_urls',
+            'streamKeys' => 'stream_keys',
+            'backupModelAssetIds' => 'backup_model_asset_ids',
+            'liveEventCallbackConfig' => 'live_event_callback_config',
+            'reviewConfig' => 'review_config',
+            'sharedConfig' => 'shared_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -132,19 +167,29 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'interactionRules' => 'setInteractionRules',
             'playPolicy' => 'setPlayPolicy',
             'videoConfig' => 'setVideoConfig',
-            'outputUrls' => 'setOutputUrls'
+            'outputUrls' => 'setOutputUrls',
+            'streamKeys' => 'setStreamKeys',
+            'backupModelAssetIds' => 'setBackupModelAssetIds',
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'reviewConfig' => 'setReviewConfig',
+            'sharedConfig' => 'setSharedConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * roomName  直播间名称
     * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  视频推流第三方直播平台地址。
+    * outputUrls  RTMP视频推流第三方直播平台地址。
+    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * liveEventCallbackConfig  liveEventCallbackConfig
+    * reviewConfig  reviewConfig
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -156,7 +201,12 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'interactionRules' => 'getInteractionRules',
             'playPolicy' => 'getPlayPolicy',
             'videoConfig' => 'getVideoConfig',
-            'outputUrls' => 'getOutputUrls'
+            'outputUrls' => 'getOutputUrls',
+            'streamKeys' => 'getStreamKeys',
+            'backupModelAssetIds' => 'getBackupModelAssetIds',
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'reviewConfig' => 'getReviewConfig',
+            'sharedConfig' => 'getSharedConfig'
     ];
 
     /**
@@ -201,6 +251,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     }
     const ROOM_TYPE_NORMAL = 'NORMAL';
     const ROOM_TYPE_TEMP = 'TEMP';
+    const ROOM_TYPE_TEMPLATE = 'TEMPLATE';
     
 
     /**
@@ -213,6 +264,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         return [
             self::ROOM_TYPE_NORMAL,
             self::ROOM_TYPE_TEMP,
+            self::ROOM_TYPE_TEMPLATE,
         ];
     }
 
@@ -240,6 +292,11 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['playPolicy'] = isset($data['playPolicy']) ? $data['playPolicy'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
         $this->container['outputUrls'] = isset($data['outputUrls']) ? $data['outputUrls'] : null;
+        $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
+        $this->container['backupModelAssetIds'] = isset($data['backupModelAssetIds']) ? $data['backupModelAssetIds'] : null;
+        $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
     }
 
     /**
@@ -343,7 +400,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomType
-    *  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    *  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @return string|null
     */
@@ -355,7 +412,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets roomType
     *
-    * @param string|null $roomType 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+    * @param string|null $roomType 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     *
     * @return $this
     */
@@ -463,7 +520,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputUrls
-    *  视频推流第三方直播平台地址。
+    *  RTMP视频推流第三方直播平台地址。
     *
     * @return string[]|null
     */
@@ -475,13 +532,133 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets outputUrls
     *
-    * @param string[]|null $outputUrls 视频推流第三方直播平台地址。
+    * @param string[]|null $outputUrls RTMP视频推流第三方直播平台地址。
     *
     * @return $this
     */
     public function setOutputUrls($outputUrls)
     {
         $this->container['outputUrls'] = $outputUrls;
+        return $this;
+    }
+
+    /**
+    * Gets streamKeys
+    *  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return string[]|null
+    */
+    public function getStreamKeys()
+    {
+        return $this->container['streamKeys'];
+    }
+
+    /**
+    * Sets streamKeys
+    *
+    * @param string[]|null $streamKeys RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *
+    * @return $this
+    */
+    public function setStreamKeys($streamKeys)
+    {
+        $this->container['streamKeys'] = $streamKeys;
+        return $this;
+    }
+
+    /**
+    * Gets backupModelAssetIds
+    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return string[]|null
+    */
+    public function getBackupModelAssetIds()
+    {
+        return $this->container['backupModelAssetIds'];
+    }
+
+    /**
+    * Sets backupModelAssetIds
+    *
+    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return $this
+    */
+    public function setBackupModelAssetIds($backupModelAssetIds)
+    {
+        $this->container['backupModelAssetIds'] = $backupModelAssetIds;
+        return $this;
+    }
+
+    /**
+    * Gets liveEventCallbackConfig
+    *  liveEventCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null
+    */
+    public function getLiveEventCallbackConfig()
+    {
+        return $this->container['liveEventCallbackConfig'];
+    }
+
+    /**
+    * Sets liveEventCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig|null $liveEventCallbackConfig liveEventCallbackConfig
+    *
+    * @return $this
+    */
+    public function setLiveEventCallbackConfig($liveEventCallbackConfig)
+    {
+        $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets reviewConfig
+    *  reviewConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null
+    */
+    public function getReviewConfig()
+    {
+        return $this->container['reviewConfig'];
+    }
+
+    /**
+    * Sets reviewConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig|null $reviewConfig reviewConfig
+    *
+    * @return $this
+    */
+    public function setReviewConfig($reviewConfig)
+    {
+        $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets sharedConfig
+    *  sharedConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null
+    */
+    public function getSharedConfig()
+    {
+        return $this->container['sharedConfig'];
+    }
+
+    /**
+    * Sets sharedConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null $sharedConfig sharedConfig
+    *
+    * @return $this
+    */
+    public function setSharedConfig($sharedConfig)
+    {
+        $this->container['sharedConfig'] = $sharedConfig;
         return $this;
     }
 

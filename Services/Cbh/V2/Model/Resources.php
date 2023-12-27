@@ -21,7 +21,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  实例ID。
-    * resourceDetail  资源详情。预留用于扩展，默认为空。
+    * resourceDetail  resourceDetail
     * tags  tags。
     * sysTags  sys_tags。
     * resourceName  资源名称。
@@ -30,7 +30,7 @@ class Resources implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
-            'resourceDetail' => 'object',
+            'resourceDetail' => '\HuaweiCloud\SDK\Cbh\V2\Model\InstanceDetail',
             'tags' => '\HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]',
             'sysTags' => '\HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]',
             'resourceName' => 'string'
@@ -39,7 +39,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  实例ID。
-    * resourceDetail  资源详情。预留用于扩展，默认为空。
+    * resourceDetail  resourceDetail
     * tags  tags。
     * sysTags  sys_tags。
     * resourceName  资源名称。
@@ -78,7 +78,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  实例ID。
-    * resourceDetail  资源详情。预留用于扩展，默认为空。
+    * resourceDetail  resourceDetail
     * tags  tags。
     * sysTags  sys_tags。
     * resourceName  资源名称。
@@ -96,7 +96,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  实例ID。
-    * resourceDetail  资源详情。预留用于扩展，默认为空。
+    * resourceDetail  resourceDetail
     * tags  tags。
     * sysTags  sys_tags。
     * resourceName  资源名称。
@@ -114,7 +114,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  实例ID。
-    * resourceDetail  资源详情。预留用于扩展，默认为空。
+    * resourceDetail  resourceDetail
     * tags  tags。
     * sysTags  sys_tags。
     * resourceName  资源名称。
@@ -269,9 +269,9 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDetail
-    *  资源详情。预留用于扩展，默认为空。
+    *  resourceDetail
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\InstanceDetail
     */
     public function getResourceDetail()
     {
@@ -281,7 +281,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param object $resourceDetail 资源详情。预留用于扩展，默认为空。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\InstanceDetail $resourceDetail resourceDetail
     *
     * @return $this
     */

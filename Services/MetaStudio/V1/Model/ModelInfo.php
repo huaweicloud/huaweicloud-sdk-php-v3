@@ -22,24 +22,28 @@ class ModelInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * modelAssetId  模型资产ID
     * assetName  资产名称
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'modelAssetId' => 'string',
-            'assetName' => 'string'
+            'assetName' => 'string',
+            'backupModelAssetIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * modelAssetId  模型资产ID
     * assetName  资产名称
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'modelAssetId' => null,
-        'assetName' => null
+        'assetName' => null,
+        'backupModelAssetIds' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ModelInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * modelAssetId  模型资产ID
     * assetName  资产名称
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'modelAssetId' => 'model_asset_id',
-            'assetName' => 'asset_name'
+            'assetName' => 'asset_name',
+            'backupModelAssetIds' => 'backup_model_asset_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * modelAssetId  模型资产ID
     * assetName  资产名称
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     *
     * @var string[]
     */
     protected static $setters = [
             'modelAssetId' => 'setModelAssetId',
-            'assetName' => 'setAssetName'
+            'assetName' => 'setAssetName',
+            'backupModelAssetIds' => 'setBackupModelAssetIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * modelAssetId  模型资产ID
     * assetName  资产名称
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     *
     * @var string[]
     */
     protected static $getters = [
             'modelAssetId' => 'getModelAssetId',
-            'assetName' => 'getAssetName'
+            'assetName' => 'getAssetName',
+            'backupModelAssetIds' => 'getBackupModelAssetIds'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ModelInfo implements ModelInterface, ArrayAccess
     {
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
+        $this->container['backupModelAssetIds'] = isset($data['backupModelAssetIds']) ? $data['backupModelAssetIds'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class ModelInfo implements ModelInterface, ArrayAccess
     public function setAssetName($assetName)
     {
         $this->container['assetName'] = $assetName;
+        return $this;
+    }
+
+    /**
+    * Gets backupModelAssetIds
+    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return string[]|null
+    */
+    public function getBackupModelAssetIds()
+    {
+        return $this->container['backupModelAssetIds'];
+    }
+
+    /**
+    * Sets backupModelAssetIds
+    *
+    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *
+    * @return $this
+    */
+    public function setBackupModelAssetIds($backupModelAssetIds)
+    {
+        $this->container['backupModelAssetIds'] = $backupModelAssetIds;
         return $this;
     }
 

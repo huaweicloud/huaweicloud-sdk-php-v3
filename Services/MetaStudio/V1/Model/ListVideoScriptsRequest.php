@@ -23,9 +23,12 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * name  按名称模糊查询。
+    * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -35,7 +38,10 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'name' => 'string',
+            'scriptCatalog' => 'string',
+            'viewMode' => 'string'
     ];
 
     /**
@@ -43,9 +49,12 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * name  按名称模糊查询。
+    * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -55,7 +64,10 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
         'xProjectId' => null,
         'xAppUserId' => null,
         'offset' => 'uint32',
-        'limit' => 'uint32'
+        'limit' => 'uint32',
+        'name' => null,
+        'scriptCatalog' => null,
+        'viewMode' => null
     ];
 
     /**
@@ -84,9 +96,12 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * name  按名称模糊查询。
+    * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -96,7 +111,10 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'name' => 'name',
+            'scriptCatalog' => 'script_catalog',
+            'viewMode' => 'view_mode'
     ];
 
     /**
@@ -104,9 +122,12 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * name  按名称模糊查询。
+    * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -116,7 +137,10 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'name' => 'setName',
+            'scriptCatalog' => 'setScriptCatalog',
+            'viewMode' => 'setViewMode'
     ];
 
     /**
@@ -124,9 +148,12 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。 > *不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * name  按名称模糊查询。
+    * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -136,7 +163,10 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'name' => 'getName',
+            'scriptCatalog' => 'getScriptCatalog',
+            'viewMode' => 'getViewMode'
     ];
 
     /**
@@ -179,7 +209,37 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SCRIPT_CATALOG_VIDEO_DRAFT = 'VIDEO_DRAFT';
+    const SCRIPT_CATALOG_SYSTEM_VIDEO_TEMPLET = 'SYSTEM_VIDEO_TEMPLET';
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getScriptCatalogAllowableValues()
+    {
+        return [
+            self::SCRIPT_CATALOG_VIDEO_DRAFT,
+            self::SCRIPT_CATALOG_SYSTEM_VIDEO_TEMPLET,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
+        ];
+    }
 
 
     /**
@@ -203,6 +263,9 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['scriptCatalog'] = isset($data['scriptCatalog']) ? $data['scriptCatalog'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
     }
 
     /**
@@ -249,6 +312,28 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getScriptCatalogAllowableValues();
+                if (!is_null($this->container['scriptCatalog']) && !in_array($this->container['scriptCatalog'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'scriptCatalog', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -337,7 +422,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。 > *不允许输入中文。
     *
     * @return string|null
     */
@@ -349,7 +434,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
     *
     * @return $this
     */
@@ -404,6 +489,78 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  按名称模糊查询。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 按名称模糊查询。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets scriptCatalog
+    *  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    *
+    * @return string|null
+    */
+    public function getScriptCatalog()
+    {
+        return $this->container['scriptCatalog'];
+    }
+
+    /**
+    * Sets scriptCatalog
+    *
+    * @param string|null $scriptCatalog 剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
+    *
+    * @return $this
+    */
+    public function setScriptCatalog($scriptCatalog)
+    {
+        $this->container['scriptCatalog'] = $scriptCatalog;
+        return $this;
+    }
+
+    /**
+    * Gets viewMode
+    *  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
         return $this;
     }
 

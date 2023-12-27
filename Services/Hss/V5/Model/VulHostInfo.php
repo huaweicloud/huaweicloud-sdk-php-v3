@@ -36,7 +36,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * groupId  服务器组id
     * groupName  服务器组名称
     * osType  操作系统
-    * assetValue  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
@@ -86,7 +86,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * groupId  服务器组id
     * groupName  服务器组名称
     * osType  操作系统
-    * assetValue  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
@@ -157,7 +157,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * groupId  服务器组id
     * groupName  服务器组名称
     * osType  操作系统
-    * assetValue  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
@@ -207,7 +207,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * groupId  服务器组id
     * groupName  服务器组名称
     * osType  操作系统
-    * assetValue  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
@@ -257,7 +257,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * groupId  服务器组id
     * groupName  服务器组名称
     * osType  操作系统
-    * assetValue  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
     * scanTime  扫描时间
@@ -886,7 +886,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return string|null
     */
@@ -898,7 +898,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种  important ：重要资产 common ：一般资产 test ：测试资产
+    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     *
     * @return $this
     */

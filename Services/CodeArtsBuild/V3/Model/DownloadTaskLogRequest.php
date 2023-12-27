@@ -21,7 +21,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * recordId  记录ID,36位数字、小写字母、'-'组组合。
-    * taskName  记录ID,36位数字、小写字母、'-'组组合。
+    * taskName  步骤名称
     * logLevel  日志等级 值为INFO | DEBUG。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * recordId  记录ID,36位数字、小写字母、'-'组组合。
-    * taskName  记录ID,36位数字、小写字母、'-'组组合。
+    * taskName  步骤名称
     * logLevel  日志等级 值为INFO | DEBUG。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * recordId  记录ID,36位数字、小写字母、'-'组组合。
-    * taskName  记录ID,36位数字、小写字母、'-'组组合。
+    * taskName  步骤名称
     * logLevel  日志等级 值为INFO | DEBUG。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * recordId  记录ID,36位数字、小写字母、'-'组组合。
-    * taskName  记录ID,36位数字、小写字母、'-'组组合。
+    * taskName  步骤名称
     * logLevel  日志等级 值为INFO | DEBUG。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * recordId  记录ID,36位数字、小写字母、'-'组组合。
-    * taskName  记录ID,36位数字、小写字母、'-'组组合。
+    * taskName  步骤名称
     * logLevel  日志等级 值为INFO | DEBUG。
     *
     * @var string[]
@@ -235,7 +235,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  记录ID,36位数字、小写字母、'-'组组合。
+    *  步骤名称
     *
     * @return string
     */
@@ -247,7 +247,7 @@ class DownloadTaskLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string $taskName 记录ID,36位数字、小写字母、'-'组组合。
+    * @param string $taskName 步骤名称
     *
     * @return $this
     */

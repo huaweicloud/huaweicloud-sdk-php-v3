@@ -26,8 +26,11 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetDescription  资产描述。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
+    * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * reason  冻结/解冻/失败 原因。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -44,6 +47,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'assetType' => 'string',
             'assetState' => 'string',
+            'failType' => 'string',
+            'reason' => 'string',
+            'isNeedGenerateCover' => 'bool',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
@@ -58,8 +64,11 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetDescription  资产描述。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
+    * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * reason  冻结/解冻/失败 原因。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -76,6 +85,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'assetType' => null,
         'assetState' => null,
+        'failType' => null,
+        'reason' => null,
+        'isNeedGenerateCover' => null,
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null,
@@ -111,8 +123,11 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetDescription  资产描述。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
+    * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * reason  冻结/解冻/失败 原因。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -129,6 +144,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'assetType' => 'asset_type',
             'assetState' => 'asset_state',
+            'failType' => 'fail_type',
+            'reason' => 'reason',
+            'isNeedGenerateCover' => 'is_need_generate_cover',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
@@ -143,8 +161,11 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetDescription  资产描述。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
+    * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * reason  冻结/解冻/失败 原因。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -161,6 +182,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'assetType' => 'setAssetType',
             'assetState' => 'setAssetState',
+            'failType' => 'setFailType',
+            'reason' => 'setReason',
+            'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
@@ -175,8 +199,11 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetDescription  资产描述。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
-    * assetType  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
+    * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    * reason  冻结/解冻/失败 原因。
+    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -193,6 +220,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'assetType' => 'getAssetType',
             'assetState' => 'getAssetState',
+            'failType' => 'getFailType',
+            'reason' => 'getReason',
+            'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
@@ -253,6 +283,7 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     const ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
     const ASSET_TYPE_BUSINESS_CARD_TEMPLET = 'BUSINESS_CARD_TEMPLET';
     const ASSET_TYPE_MUSIC = 'MUSIC';
+    const ASSET_TYPE_AUDIO = 'AUDIO';
     const ASSET_STATE_CREATING = 'CREATING';
     const ASSET_STATE_FAILED = 'FAILED';
     const ASSET_STATE_UNACTIVED = 'UNACTIVED';
@@ -260,6 +291,8 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     const ASSET_STATE_DELETING = 'DELETING';
     const ASSET_STATE_DELETED = 'DELETED';
     const ASSET_STATE_BLOCK = 'BLOCK';
+    const FAIL_TYPE_AUTOMATIC_REVIEW_REJECT = 'AUTOMATIC_REVIEW_REJECT';
+    const FAIL_TYPE_MANUAL_REVIEW_REJECT = 'MANUAL_REVIEW_REJECT';
     
 
     /**
@@ -283,6 +316,7 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             self::ASSET_TYPE_HUMAN_MODEL_2_D,
             self::ASSET_TYPE_BUSINESS_CARD_TEMPLET,
             self::ASSET_TYPE_MUSIC,
+            self::ASSET_TYPE_AUDIO,
         ];
     }
 
@@ -301,6 +335,19 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             self::ASSET_STATE_DELETING,
             self::ASSET_STATE_DELETED,
             self::ASSET_STATE_BLOCK,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getFailTypeAllowableValues()
+    {
+        return [
+            self::FAIL_TYPE_AUTOMATIC_REVIEW_REJECT,
+            self::FAIL_TYPE_MANUAL_REVIEW_REJECT,
         ];
     }
 
@@ -327,6 +374,9 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
+        $this->container['failType'] = isset($data['failType']) ? $data['failType'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
@@ -388,6 +438,20 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getFailTypeAllowableValues();
+                if (!is_null($this->container['failType']) && !in_array($this->container['failType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'failType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 256)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -524,7 +588,7 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetType
-    *  资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    *  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     *
     * @return string|null
     */
@@ -536,7 +600,7 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets assetType
     *
-    * @param string|null $assetType 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+    * @param string|null $assetType 资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     *
     * @return $this
     */
@@ -567,6 +631,78 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     public function setAssetState($assetState)
     {
         $this->container['assetState'] = $assetState;
+        return $this;
+    }
+
+    /**
+    * Gets failType
+    *  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    *
+    * @return string|null
+    */
+    public function getFailType()
+    {
+        return $this->container['failType'];
+    }
+
+    /**
+    * Sets failType
+    *
+    * @param string|null $failType 失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+    *
+    * @return $this
+    */
+    public function setFailType($failType)
+    {
+        $this->container['failType'] = $failType;
+        return $this;
+    }
+
+    /**
+    * Gets reason
+    *  冻结/解冻/失败 原因。
+    *
+    * @return string|null
+    */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+    * Sets reason
+    *
+    * @param string|null $reason 冻结/解冻/失败 原因。
+    *
+    * @return $this
+    */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
+    * Gets isNeedGenerateCover
+    *  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
+    *
+    * @return bool|null
+    */
+    public function getIsNeedGenerateCover()
+    {
+        return $this->container['isNeedGenerateCover'];
+    }
+
+    /**
+    * Sets isNeedGenerateCover
+    *
+    * @param bool|null $isNeedGenerateCover 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
+    *
+    * @return $this
+    */
+    public function setIsNeedGenerateCover($isNeedGenerateCover)
+    {
+        $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
         return $this;
     }
 
