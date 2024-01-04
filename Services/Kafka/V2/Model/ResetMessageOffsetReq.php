@@ -46,8 +46,8 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'topic' => null,
         'partition' => null,
-        'messageOffset' => null,
-        'timestamp' => null
+        'messageOffset' => 'int64',
+        'timestamp' => 'int64'
     ];
 
     /**

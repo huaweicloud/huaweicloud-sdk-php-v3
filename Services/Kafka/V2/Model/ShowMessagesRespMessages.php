@@ -49,7 +49,7 @@ class ShowMessagesRespMessages implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'topic' => null,
         'partition' => null,
-        'messageOffset' => null,
+        'messageOffset' => 'int64',
         'size' => null,
         'timestamp' => 'int64'
     ];

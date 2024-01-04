@@ -72,7 +72,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
         'size' => null,
         'timestamp' => 'int64',
         'hugeMessage' => null,
-        'messageOffset' => null,
+        'messageOffset' => 'int64',
         'messageId' => null,
         'appId' => null,
         'tag' => null

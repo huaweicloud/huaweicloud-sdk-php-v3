@@ -20,8 +20,8 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dimensions  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
-    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * dimensions  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dimensions  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
-    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * dimensions  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dimensions  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
-    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * dimensions  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dimensions  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
-    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * dimensions  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dimensions  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
-    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * dimensions  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * namespace  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    *  指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\Dimension2[]
     */
@@ -209,7 +209,7 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\Dimension2[] $dimensions 指标维度列表。 维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\Dimension2[] $dimensions 指标维度列表。维度最多允许50个，单个维度为json对象，结构说明如下 dimension.name：长度最短为1，最大为32。 dimension.value：长度最短为1，最大为64。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    *  指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class MetricItemInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 指标命名空间。 namespace中不允许存在\":\"符号，取值范围 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
+    * @param string $namespace 指标命名空间。 namespace中不允许存在\":\"符号，取值范围格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_，总长度最短为3，最大为32，service不能为“PAAS”。
     *
     * @return $this
     */

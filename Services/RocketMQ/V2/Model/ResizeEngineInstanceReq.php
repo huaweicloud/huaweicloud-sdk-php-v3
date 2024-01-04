@@ -24,6 +24,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newStorageSpace  当oper_type类型是storage或horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
+    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'operType' => 'string',
             'newStorageSpace' => 'int',
             'newProductId' => 'string',
-            'newBrokerNum' => 'int'
+            'newBrokerNum' => 'int',
+            'publicipId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newStorageSpace  当oper_type类型是storage或horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
+    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
         'operType' => null,
         'newStorageSpace' => 'int32',
         'newProductId' => null,
-        'newBrokerNum' => 'int32'
+        'newBrokerNum' => 'int32',
+        'publicipId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newStorageSpace  当oper_type类型是storage或horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
+    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'operType' => 'oper_type',
             'newStorageSpace' => 'new_storage_space',
             'newProductId' => 'new_product_id',
-            'newBrokerNum' => 'new_broker_num'
+            'newBrokerNum' => 'new_broker_num',
+            'publicipId' => 'publicip_id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newStorageSpace  当oper_type类型是storage或horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
+    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'operType' => 'setOperType',
             'newStorageSpace' => 'setNewStorageSpace',
             'newProductId' => 'setNewProductId',
-            'newBrokerNum' => 'setNewBrokerNum'
+            'newBrokerNum' => 'setNewBrokerNum',
+            'publicipId' => 'setPublicipId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     * newStorageSpace  当oper_type类型是storage或horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
+    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
             'operType' => 'getOperType',
             'newStorageSpace' => 'getNewStorageSpace',
             'newProductId' => 'getNewProductId',
-            'newBrokerNum' => 'getNewBrokerNum'
+            'newBrokerNum' => 'getNewBrokerNum',
+            'publicipId' => 'getPublicipId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
         $this->container['newStorageSpace'] = isset($data['newStorageSpace']) ? $data['newStorageSpace'] : null;
         $this->container['newProductId'] = isset($data['newProductId']) ? $data['newProductId'] : null;
         $this->container['newBrokerNum'] = isset($data['newBrokerNum']) ? $data['newBrokerNum'] : null;
+        $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     public function setNewBrokerNum($newBrokerNum)
     {
         $this->container['newBrokerNum'] = $newBrokerNum;
+        return $this;
+    }
+
+    /**
+    * Gets publicipId
+    *  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    *
+    * @return string|null
+    */
+    public function getPublicipId()
+    {
+        return $this->container['publicipId'];
+    }
+
+    /**
+    * Sets publicipId
+    *
+    * @param string|null $publicipId 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    *
+    * @return $this
+    */
+    public function setPublicipId($publicipId)
+    {
+        $this->container['publicipId'] = $publicipId;
         return $this;
     }
 

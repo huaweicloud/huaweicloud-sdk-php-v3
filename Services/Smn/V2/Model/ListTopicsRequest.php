@@ -24,8 +24,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
-    * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
+    * fuzzyDisplayName  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'name' => 'string',
             'fuzzyName' => 'string',
-            'topicId' => 'string'
+            'topicId' => 'string',
+            'fuzzyDisplayName' => 'string'
     ];
 
     /**
@@ -44,8 +46,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
-    * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
+    * fuzzyDisplayName  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'name' => null,
         'fuzzyName' => null,
-        'topicId' => null
+        'topicId' => null,
+        'fuzzyDisplayName' => null
     ];
 
     /**
@@ -85,8 +89,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
-    * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
+    * fuzzyDisplayName  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'name' => 'name',
             'fuzzyName' => 'fuzzy_name',
-            'topicId' => 'topic_id'
+            'topicId' => 'topic_id',
+            'fuzzyDisplayName' => 'fuzzy_display_name'
     ];
 
     /**
@@ -105,8 +111,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
-    * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
+    * fuzzyDisplayName  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'name' => 'setName',
             'fuzzyName' => 'setFuzzyName',
-            'topicId' => 'setTopicId'
+            'topicId' => 'setTopicId',
+            'fuzzyDisplayName' => 'setFuzzyDisplayName'
     ];
 
     /**
@@ -125,8 +133,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
-    * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * fuzzyName  检索的主题名称，模糊匹配。
     * topicId  检索的主题ID，完全匹配。
+    * fuzzyDisplayName  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'name' => 'getName',
             'fuzzyName' => 'getFuzzyName',
-            'topicId' => 'getTopicId'
+            'topicId' => 'getTopicId',
+            'fuzzyDisplayName' => 'getFuzzyDisplayName'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['fuzzyName'] = isset($data['fuzzyName']) ? $data['fuzzyName'] : null;
         $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
+        $this->container['fuzzyDisplayName'] = isset($data['fuzzyDisplayName']) ? $data['fuzzyDisplayName'] : null;
     }
 
     /**
@@ -213,6 +224,9 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['fuzzyName']) && !preg_match("/^[-_a-zA-Z0-9]{0,255}$/", $this->container['fuzzyName'])) {
+                $invalidProperties[] = "invalid value for 'fuzzyName', must be conform to the pattern /^[-_a-zA-Z0-9]{0,255}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -325,7 +339,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fuzzyName
-    *  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    *  检索的主题名称，模糊匹配。
     *
     * @return string|null
     */
@@ -337,7 +351,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fuzzyName
     *
-    * @param string|null $fuzzyName 检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * @param string|null $fuzzyName 检索的主题名称，模糊匹配。
     *
     * @return $this
     */
@@ -368,6 +382,30 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     public function setTopicId($topicId)
     {
         $this->container['topicId'] = $topicId;
+        return $this;
+    }
+
+    /**
+    * Gets fuzzyDisplayName
+    *  检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
+    *
+    * @return string|null
+    */
+    public function getFuzzyDisplayName()
+    {
+        return $this->container['fuzzyDisplayName'];
+    }
+
+    /**
+    * Sets fuzzyDisplayName
+    *
+    * @param string|null $fuzzyDisplayName 检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
+    *
+    * @return $this
+    */
+    public function setFuzzyDisplayName($fuzzyDisplayName)
+    {
+        $this->container['fuzzyDisplayName'] = $fuzzyDisplayName;
         return $this;
     }
 

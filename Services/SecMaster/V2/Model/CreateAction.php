@@ -214,16 +214,22 @@ class CreateAction implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['actionType']) && (mb_strlen($this->container['actionType']) > 64)) {
+        if ($this->container['actionType'] === null) {
+            $invalidProperties[] = "'actionType' can't be null";
+        }
+            if ((mb_strlen($this->container['actionType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'actionType', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['actionType']) && (mb_strlen($this->container['actionType']) < 0)) {
+            if ((mb_strlen($this->container['actionType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'actionType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['actionId']) && (mb_strlen($this->container['actionId']) > 64)) {
+        if ($this->container['actionId'] === null) {
+            $invalidProperties[] = "'actionId' can't be null";
+        }
+            if ((mb_strlen($this->container['actionId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'actionId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['actionId']) && (mb_strlen($this->container['actionId']) < 32)) {
+            if ((mb_strlen($this->container['actionId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'actionId', the character length must be bigger than or equal to 32.";
             }
             if (!is_null($this->container['sortOrder']) && (mb_strlen($this->container['sortOrder']) > 64)) {
@@ -298,7 +304,7 @@ class CreateAction implements ModelInterface, ArrayAccess
     * Gets actionType
     *  类型，默认AOP_WORKFLOW.
     *
-    * @return string|null
+    * @return string
     */
     public function getActionType()
     {
@@ -308,7 +314,7 @@ class CreateAction implements ModelInterface, ArrayAccess
     /**
     * Sets actionType
     *
-    * @param string|null $actionType 类型，默认AOP_WORKFLOW.
+    * @param string $actionType 类型，默认AOP_WORKFLOW.
     *
     * @return $this
     */
@@ -322,7 +328,7 @@ class CreateAction implements ModelInterface, ArrayAccess
     * Gets actionId
     *  剧本动作ID
     *
-    * @return string|null
+    * @return string
     */
     public function getActionId()
     {
@@ -332,7 +338,7 @@ class CreateAction implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string|null $actionId 剧本动作ID
+    * @param string $actionId 剧本动作ID
     *
     * @return $this
     */

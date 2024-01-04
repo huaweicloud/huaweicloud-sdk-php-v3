@@ -21,10 +21,10 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleName  规则名称
+    * ruleName  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     * projectId  项目ID
     * userName  子账号名称
-    * desc  规则描述
+    * desc  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     * type  规则类型。\"1\"：通知，\"2\"：用户
     * notificationTemplate  消息模板
     * createTime  创建时间
@@ -49,10 +49,10 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleName  规则名称
+    * ruleName  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     * projectId  项目ID
     * userName  子账号名称
-    * desc  规则描述
+    * desc  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     * type  规则类型。\"1\"：通知，\"2\"：用户
     * notificationTemplate  消息模板
     * createTime  创建时间
@@ -98,10 +98,10 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleName  规则名称
+    * ruleName  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     * projectId  项目ID
     * userName  子账号名称
-    * desc  规则描述
+    * desc  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     * type  规则类型。\"1\"：通知，\"2\"：用户
     * notificationTemplate  消息模板
     * createTime  创建时间
@@ -126,10 +126,10 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleName  规则名称
+    * ruleName  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     * projectId  项目ID
     * userName  子账号名称
-    * desc  规则描述
+    * desc  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     * type  规则类型。\"1\"：通知，\"2\"：用户
     * notificationTemplate  消息模板
     * createTime  创建时间
@@ -154,10 +154,10 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleName  规则名称
+    * ruleName  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     * projectId  项目ID
     * userName  子账号名称
-    * desc  规则描述
+    * desc  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     * type  规则类型。\"1\"：通知，\"2\"：用户
     * notificationTemplate  消息模板
     * createTime  创建时间
@@ -220,8 +220,8 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE__1 = '\"1\"';
-    const TYPE__2 = '\"2\"';
+    const TYPE__1 = '1';
+    const TYPE__2 = '2';
     
 
     /**
@@ -273,11 +273,11 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) > 100)) {
+                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) < 3)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 3.";
+            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
@@ -294,8 +294,8 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'desc', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) < 1)) {
-                $invalidProperties[] = "invalid value for 'desc', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'desc', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -351,7 +351,7 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  规则名称
+    *  规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名称
+    * @param string|null $ruleName 规则名称 只含有汉字数字、字母、下划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  规则描述
+    *  规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ShowActionRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 规则描述
+    * @param string|null $desc 规则描述。规则描述长度为0到1024个字符，并且只能是数字、字母、特殊字符（_*）、空格和中文组成，不能以下划线开头和结尾。
     *
     * @return $this
     */

@@ -573,6 +573,71 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 集群备份
+     *
+     * 集群备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createClusterMasterSnapshotAsync($request)
+    {
+        return $this->createClusterMasterSnapshotAsyncWithHttpInfo($request);
+    }
+    
+    public function createClusterMasterSnapshotAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3.1/projects/{project_id}/clusters/{cluster_id}/operation/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateClusterMasterSnapshotResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateClusterMasterSnapshotRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取集群证书
      *
      * 该API用于获取指定集群的证书信息。
@@ -857,6 +922,142 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 集群升级后确认
+     *
+     * 集群升级后确认，该接口建议配合Console使用，主要用于升级步骤完成后，客户确认集群状态和业务正常后做反馈。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPostCheckAsync($request)
+    {
+        return $this->createPostCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function createPostCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/postcheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreatePostCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreatePostCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群升级前检查
+     *
+     * 集群升级前检查
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPreCheckAsync($request)
+    {
+        return $this->createPreCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function createPreCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreatePreCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreatePreCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建模板实例
      *
      * 创建模板实例
@@ -921,6 +1122,75 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateReleaseResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateReleaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启集群升级流程引导任务
+     *
+     * 该API用于创建一个集群升级流程引导任务。请在调用本接口完成引导任务创建之后，通过集群升级前检查开始检查任务。
+     * 升级流程任务用于控制集群升级任务的执行流程，执行流程为 升级前检查 &#x3D;&gt; 集群升级 &#x3D;&gt; 升级后检查。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createUpgradeWorkFlowAsync($request)
+    {
+        return $this->createUpgradeWorkFlowAsyncWithHttpInfo($request);
+    }
+    
+    public function createUpgradeWorkFlowAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateUpgradeWorkFlowResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateUpgradeWorkFlowRequest',
             $asyncRequest = true);
     }
 
@@ -1766,6 +2036,195 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 获取集群备份任务详情列表
+     *
+     * 获取集群备份任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterMasterSnapshotTasksAsync($request)
+    {
+        return $this->listClusterMasterSnapshotTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listClusterMasterSnapshotTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3.1/projects/{project_id}/clusters/{cluster_id}/operation/snapshot/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterMasterSnapshotTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterMasterSnapshotTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级特性开关配置
+     *
+     * 获取集群升级特性开关配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterUpgradeFeatureGatesAsync($request)
+    {
+        return $this->listClusterUpgradeFeatureGatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listClusterUpgradeFeatureGatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/clusterupgradefeaturegates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterUpgradeFeatureGatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterUpgradeFeatureGatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级路径
+     *
+     * 获取集群升级路径
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterUpgradePathsAsync($request)
+    {
+        return $this->listClusterUpgradePathsAsyncWithHttpInfo($request);
+    }
+    
+    public function listClusterUpgradePathsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/clusterupgradepaths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterUpgradePathsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListClusterUpgradePathsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取指定项目下的集群
      *
      * 该API用于获取指定项目下所有集群的详细信息。
@@ -2041,6 +2500,71 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 获取集群升级前检查任务详情列表
+     *
+     * 获取集群升级前检查任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPreCheckTasksAsync($request)
+    {
+        return $this->listPreCheckTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listPreCheckTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListPreCheckTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListPreCheckTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取模板实例列表
      *
      * 获取模板实例列表
@@ -2108,6 +2632,136 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListReleasesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListReleasesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级任务详情列表
+     *
+     * 获取集群升级任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUpgradeClusterTasksAsync($request)
+    {
+        return $this->listUpgradeClusterTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listUpgradeClusterTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgrade/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListUpgradeClusterTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListUpgradeClusterTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取UpgradeWorkFlows列表
+     *
+     * 获取历史集群升级引导任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUpgradeWorkFlowsAsync($request)
+    {
+        return $this->listUpgradeWorkFlowsAsyncWithHttpInfo($request);
+    }
+    
+    public function listUpgradeWorkFlowsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListUpgradeWorkFlowsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListUpgradeWorkFlowsRequest',
             $asyncRequest = true);
     }
 
@@ -3063,6 +3717,71 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 获取集群升级相关信息
+     *
+     * 获取集群升级相关信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterUpgradeInfoAsync($request)
+    {
+        return $this->showClusterUpgradeInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showClusterUpgradeInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/upgradeinfo';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterUpgradeInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowClusterUpgradeInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取任务信息
      *
      * 该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。
@@ -3406,6 +4125,74 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 获取集群升级前检查任务详情
+     *
+     * 获取集群升级前检查任务详情，任务ID由调用集群检查API后从响应体中uid字段获取。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPreCheckAsync($request)
+    {
+        return $this->showPreCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function showPreCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowPreCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowPreCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询CCE服务下的资源配额
      *
      * 该API用于查询CCE服务下的资源配额。
@@ -3676,6 +4463,74 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowUpgradeClusterTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowUpgradeClusterTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定集群升级引导任务详情
+     *
+     * 该API用于通过升级引导任务ID获取任务的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUpgradeWorkFlowAsync($request)
+    {
+        return $this->showUpgradeWorkFlowAsyncWithHttpInfo($request);
+    }
+    
+    public function showUpgradeWorkFlowAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows/{upgrade_workflow_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['upgradeWorkflowId'] !== null) {
+            $pathParams['upgrade_workflow_id'] = $localVarParams['upgradeWorkflowId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowUpgradeWorkFlowResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowUpgradeWorkFlowRequest',
             $asyncRequest = true);
     }
 
@@ -4520,6 +5375,78 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeClusterResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新指定集群升级引导任务状态
+     *
+     * 该API用于更新指定集群升级引导任务状态，当前仅适用于取消升级流程
+     * 调用该API时升级流程引导任务状态不能为进行中(running) 已完成(success) 已取消(cancel),升级子任务状态不能为running(进行中) init(已初始化) pause(任务被暂停) queue(队列中)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeWorkFlowUpdateAsync($request)
+    {
+        return $this->upgradeWorkFlowUpdateAsyncWithHttpInfo($request);
+    }
+    
+    public function upgradeWorkFlowUpdateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows/{upgrade_workflow_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['upgradeWorkflowId'] !== null) {
+            $pathParams['upgrade_workflow_id'] = $localVarParams['upgradeWorkflowId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PATCH',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlowUpdateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlowUpdateRequest',
             $asyncRequest = true);
     }
 

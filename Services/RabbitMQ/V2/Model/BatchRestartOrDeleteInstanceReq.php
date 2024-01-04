@@ -21,7 +21,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instances  实例的ID列表。
-    * action  对实例的操作：restart、delete
+    * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instances  实例的ID列表。
-    * action  对实例的操作：restart、delete
+    * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instances  实例的ID列表。
-    * action  对实例的操作：restart、delete
+    * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instances  实例的ID列表。
-    * action  对实例的操作：restart、delete
+    * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instances  实例的ID列表。
-    * action  对实例的操作：restart、delete
+    * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
     *
     * @var string[]
@@ -149,7 +149,6 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_RESTART = 'restart';
     const ACTION_DELETE = 'delete';
     const ALL_FAILURE_RABBITMQ = 'rabbitmq';
     
@@ -162,7 +161,6 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     public function getActionAllowableValues()
     {
         return [
-            self::ACTION_RESTART,
             self::ACTION_DELETE,
         ];
     }
@@ -267,7 +265,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  对实例的操作：restart、delete
+    *  对实例的操作：delete
     *
     * @return string
     */
@@ -279,7 +277,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 对实例的操作：restart、delete
+    * @param string $action 对实例的操作：delete
     *
     * @return $this
     */

@@ -50,8 +50,8 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
         'partition' => null,
         'lag' => 'int64',
         'topic' => null,
-        'messageCurrentOffset' => null,
-        'messageLogEndOffset' => null
+        'messageCurrentOffset' => 'int64',
+        'messageLogEndOffset' => 'int64'
     ];
 
     /**

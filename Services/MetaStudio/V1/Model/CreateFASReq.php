@@ -22,24 +22,28 @@ class CreateFASReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * audioFileDownloadUrl  语音驱动音频文件下载URL，格式为AAC或者MP3
     * frameRate  期望的输出帧率
+    * emotion  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'audioFileDownloadUrl' => 'string',
-            'frameRate' => 'int'
+            'frameRate' => 'int',
+            'emotion' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * audioFileDownloadUrl  语音驱动音频文件下载URL，格式为AAC或者MP3
     * frameRate  期望的输出帧率
+    * emotion  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'audioFileDownloadUrl' => null,
-        'frameRate' => 'int32'
+        'frameRate' => 'int32',
+        'emotion' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateFASReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * audioFileDownloadUrl  语音驱动音频文件下载URL，格式为AAC或者MP3
     * frameRate  期望的输出帧率
+    * emotion  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'audioFileDownloadUrl' => 'audio_file_download_url',
-            'frameRate' => 'frame_rate'
+            'frameRate' => 'frame_rate',
+            'emotion' => 'emotion'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * audioFileDownloadUrl  语音驱动音频文件下载URL，格式为AAC或者MP3
     * frameRate  期望的输出帧率
+    * emotion  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
     *
     * @var string[]
     */
     protected static $setters = [
             'audioFileDownloadUrl' => 'setAudioFileDownloadUrl',
-            'frameRate' => 'setFrameRate'
+            'frameRate' => 'setFrameRate',
+            'emotion' => 'setEmotion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * audioFileDownloadUrl  语音驱动音频文件下载URL，格式为AAC或者MP3
     * frameRate  期望的输出帧率
+    * emotion  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
     *
     * @var string[]
     */
     protected static $getters = [
             'audioFileDownloadUrl' => 'getAudioFileDownloadUrl',
-            'frameRate' => 'getFrameRate'
+            'frameRate' => 'getFrameRate',
+            'emotion' => 'getEmotion'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateFASReq implements ModelInterface, ArrayAccess
     {
         $this->container['audioFileDownloadUrl'] = isset($data['audioFileDownloadUrl']) ? $data['audioFileDownloadUrl'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
+        $this->container['emotion'] = isset($data['emotion']) ? $data['emotion'] : null;
     }
 
     /**
@@ -186,6 +197,12 @@ class CreateFASReq implements ModelInterface, ArrayAccess
             }
             if (($this->container['frameRate'] < 15)) {
                 $invalidProperties[] = "invalid value for 'frameRate', must be bigger than or equal to 15.";
+            }
+            if (!is_null($this->container['emotion']) && ($this->container['emotion'] > 3)) {
+                $invalidProperties[] = "invalid value for 'emotion', must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['emotion']) && ($this->container['emotion'] < 0)) {
+                $invalidProperties[] = "invalid value for 'emotion', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -246,6 +263,30 @@ class CreateFASReq implements ModelInterface, ArrayAccess
     public function setFrameRate($frameRate)
     {
         $this->container['frameRate'] = $frameRate;
+        return $this;
+    }
+
+    /**
+    * Gets emotion
+    *  情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
+    *
+    * @return int|null
+    */
+    public function getEmotion()
+    {
+        return $this->container['emotion'];
+    }
+
+    /**
+    * Sets emotion
+    *
+    * @param int|null $emotion 情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
+    *
+    * @return $this
+    */
+    public function setEmotion($emotion)
+    {
+        $this->container['emotion'] = $emotion;
         return $this;
     }
 

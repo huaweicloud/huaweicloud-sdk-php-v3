@@ -25,6 +25,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
+    * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'protocol' => 'string',
             'status' => 'int',
-            'endpoint' => 'string'
+            'endpoint' => 'string',
+            'fuzzyRemark' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
+    * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'protocol' => null,
         'status' => null,
-        'endpoint' => null
+        'endpoint' => null,
+        'fuzzyRemark' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
+    * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'protocol' => 'protocol',
             'status' => 'status',
-            'endpoint' => 'endpoint'
+            'endpoint' => 'endpoint',
+            'fuzzyRemark' => 'fuzzy_remark'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
+    * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'protocol' => 'setProtocol',
             'status' => 'setStatus',
-            'endpoint' => 'setEndpoint'
+            'endpoint' => 'setEndpoint',
+            'fuzzyRemark' => 'setFuzzyRemark'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     * protocol  协议名称， 枚举值：http、https、sms、email、functionstage、dms、application。
     * status  状态。 0：未确认 1：已确认 2：不需要确认 3：已取消确认 4：已经删除。
     * endpoint  订阅终端。
+    * fuzzyRemark  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'protocol' => 'getProtocol',
             'status' => 'getStatus',
-            'endpoint' => 'getEndpoint'
+            'endpoint' => 'getEndpoint',
+            'fuzzyRemark' => 'getFuzzyRemark'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
+        $this->container['fuzzyRemark'] = isset($data['fuzzyRemark']) ? $data['fuzzyRemark'] : null;
     }
 
     /**
@@ -202,6 +213,9 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['fuzzyRemark']) && !preg_match("/^[^+]$/", $this->container['fuzzyRemark'])) {
+                $invalidProperties[] = "invalid value for 'fuzzyRemark', must be conform to the pattern /^[^+]$/.";
+            }
         return $invalidProperties;
     }
 
@@ -333,6 +347,30 @@ class ListSubscriptionsRequest implements ModelInterface, ArrayAccess
     public function setEndpoint($endpoint)
     {
         $this->container['endpoint'] = $endpoint;
+        return $this;
+    }
+
+    /**
+    * Gets fuzzyRemark
+    *  检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
+    *
+    * @return string|null
+    */
+    public function getFuzzyRemark()
+    {
+        return $this->container['fuzzyRemark'];
+    }
+
+    /**
+    * Sets fuzzyRemark
+    *
+    * @param string|null $fuzzyRemark 检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
+    *
+    * @return $this
+    */
+    public function setFuzzyRemark($fuzzyRemark)
+    {
+        $this->container['fuzzyRemark'] = $fuzzyRemark;
         return $this;
     }
 

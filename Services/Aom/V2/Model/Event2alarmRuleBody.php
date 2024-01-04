@@ -16,23 +16,26 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'event2alarmRuleBody';
+    protected static $openAPIModelName = 'Event2alarmRuleBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userId  用户项目id
-    * name  规则名称
-    * description  规则描述
+    * name  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * description  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     * createTime  创建时间
     * updateTime  更新时间
     * resourceProvider  事件源
     * metadata  metadata
     * enable  规则是否启用
     * triggerPolicies  触发策略
-    * alarmType  告警类型
+    * alarmType  告警类型。notification：直接告警。denoising：告警降噪。
     * actionRule  告警行动规则
     * inhibitRule  告警抑制规则
-    * routeGroupRule  告警静默规则
+    * routeGroupRule  告警分组规则
+    * eventNames  事件名称
+    * migrated  是否迁移到2.0
+    * topics  smn信息
     *
     * @var string[]
     */
@@ -49,24 +52,30 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
             'alarmType' => 'string',
             'actionRule' => 'string',
             'inhibitRule' => 'string',
-            'routeGroupRule' => 'string'
+            'routeGroupRule' => 'string',
+            'eventNames' => 'string[]',
+            'migrated' => 'bool',
+            'topics' => '\HuaweiCloud\SDK\Aom\V2\Model\SmnTopics[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userId  用户项目id
-    * name  规则名称
-    * description  规则描述
+    * name  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * description  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     * createTime  创建时间
     * updateTime  更新时间
     * resourceProvider  事件源
     * metadata  metadata
     * enable  规则是否启用
     * triggerPolicies  触发策略
-    * alarmType  告警类型
+    * alarmType  告警类型。notification：直接告警。denoising：告警降噪。
     * actionRule  告警行动规则
     * inhibitRule  告警抑制规则
-    * routeGroupRule  告警静默规则
+    * routeGroupRule  告警分组规则
+    * eventNames  事件名称
+    * migrated  是否迁移到2.0
+    * topics  smn信息
     *
     * @var string[]
     */
@@ -83,7 +92,10 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
         'alarmType' => null,
         'actionRule' => null,
         'inhibitRule' => null,
-        'routeGroupRule' => null
+        'routeGroupRule' => null,
+        'eventNames' => null,
+        'migrated' => null,
+        'topics' => null
     ];
 
     /**
@@ -110,18 +122,21 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userId  用户项目id
-    * name  规则名称
-    * description  规则描述
+    * name  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * description  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     * createTime  创建时间
     * updateTime  更新时间
     * resourceProvider  事件源
     * metadata  metadata
     * enable  规则是否启用
     * triggerPolicies  触发策略
-    * alarmType  告警类型
+    * alarmType  告警类型。notification：直接告警。denoising：告警降噪。
     * actionRule  告警行动规则
     * inhibitRule  告警抑制规则
-    * routeGroupRule  告警静默规则
+    * routeGroupRule  告警分组规则
+    * eventNames  事件名称
+    * migrated  是否迁移到2.0
+    * topics  smn信息
     *
     * @var string[]
     */
@@ -138,24 +153,30 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
             'alarmType' => 'alarm_type',
             'actionRule' => 'action_rule',
             'inhibitRule' => 'inhibit_rule',
-            'routeGroupRule' => 'route_group_rule'
+            'routeGroupRule' => 'route_group_rule',
+            'eventNames' => 'event_names',
+            'migrated' => 'migrated',
+            'topics' => 'topics'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userId  用户项目id
-    * name  规则名称
-    * description  规则描述
+    * name  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * description  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     * createTime  创建时间
     * updateTime  更新时间
     * resourceProvider  事件源
     * metadata  metadata
     * enable  规则是否启用
     * triggerPolicies  触发策略
-    * alarmType  告警类型
+    * alarmType  告警类型。notification：直接告警。denoising：告警降噪。
     * actionRule  告警行动规则
     * inhibitRule  告警抑制规则
-    * routeGroupRule  告警静默规则
+    * routeGroupRule  告警分组规则
+    * eventNames  事件名称
+    * migrated  是否迁移到2.0
+    * topics  smn信息
     *
     * @var string[]
     */
@@ -172,24 +193,30 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
             'alarmType' => 'setAlarmType',
             'actionRule' => 'setActionRule',
             'inhibitRule' => 'setInhibitRule',
-            'routeGroupRule' => 'setRouteGroupRule'
+            'routeGroupRule' => 'setRouteGroupRule',
+            'eventNames' => 'setEventNames',
+            'migrated' => 'setMigrated',
+            'topics' => 'setTopics'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userId  用户项目id
-    * name  规则名称
-    * description  规则描述
+    * name  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * description  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     * createTime  创建时间
     * updateTime  更新时间
     * resourceProvider  事件源
     * metadata  metadata
     * enable  规则是否启用
     * triggerPolicies  触发策略
-    * alarmType  告警类型
+    * alarmType  告警类型。notification：直接告警。denoising：告警降噪。
     * actionRule  告警行动规则
     * inhibitRule  告警抑制规则
-    * routeGroupRule  告警静默规则
+    * routeGroupRule  告警分组规则
+    * eventNames  事件名称
+    * migrated  是否迁移到2.0
+    * topics  smn信息
     *
     * @var string[]
     */
@@ -206,7 +233,10 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
             'alarmType' => 'getAlarmType',
             'actionRule' => 'getActionRule',
             'inhibitRule' => 'getInhibitRule',
-            'routeGroupRule' => 'getRouteGroupRule'
+            'routeGroupRule' => 'getRouteGroupRule',
+            'eventNames' => 'getEventNames',
+            'migrated' => 'getMigrated',
+            'topics' => 'getTopics'
     ];
 
     /**
@@ -249,7 +279,22 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ALARM_TYPE_NOTIFICATION = 'notification';
+    const ALARM_TYPE_DENOISING = 'denoising';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAlarmTypeAllowableValues()
+    {
+        return [
+            self::ALARM_TYPE_NOTIFICATION,
+            self::ALARM_TYPE_DENOISING,
+        ];
+    }
 
 
     /**
@@ -280,6 +325,9 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
         $this->container['actionRule'] = isset($data['actionRule']) ? $data['actionRule'] : null;
         $this->container['inhibitRule'] = isset($data['inhibitRule']) ? $data['inhibitRule'] : null;
         $this->container['routeGroupRule'] = isset($data['routeGroupRule']) ? $data['routeGroupRule'] : null;
+        $this->container['eventNames'] = isset($data['eventNames']) ? $data['eventNames'] : null;
+        $this->container['migrated'] = isset($data['migrated']) ? $data['migrated'] : null;
+        $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
     }
 
     /**
@@ -347,6 +395,14 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
         if ($this->container['alarmType'] === null) {
             $invalidProperties[] = "'alarmType' can't be null";
         }
+            $allowedValues = $this->getAlarmTypeAllowableValues();
+                if (!is_null($this->container['alarmType']) && !in_array($this->container['alarmType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'alarmType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if ((mb_strlen($this->container['alarmType']) > 32)) {
                 $invalidProperties[] = "invalid value for 'alarmType', the character length must be smaller than or equal to 32.";
             }
@@ -414,7 +470,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
     *
     * @return string
     */
@@ -426,7 +482,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name 规则名称。规则名称包含大小写字母，数字，特殊字符（_-）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
     *
     * @return $this
     */
@@ -438,7 +494,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  规则描述
+    *  规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     *
     * @return string|null
     */
@@ -450,7 +506,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 规则描述
+    * @param string|null $description 规则描述。描述包含大小写字母，数字，特殊字符（_-<>=,.）和汉字组成，不能以下划线、中划线开头结尾，最大长度为1024。
     *
     * @return $this
     */
@@ -606,7 +662,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型
+    *  告警类型。notification：直接告警。denoising：告警降噪。
     *
     * @return string
     */
@@ -618,7 +674,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string $alarmType 告警类型
+    * @param string $alarmType 告警类型。notification：直接告警。denoising：告警降噪。
     *
     * @return $this
     */
@@ -678,7 +734,7 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets routeGroupRule
-    *  告警静默规则
+    *  告警分组规则
     *
     * @return string|null
     */
@@ -690,13 +746,85 @@ class Event2alarmRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets routeGroupRule
     *
-    * @param string|null $routeGroupRule 告警静默规则
+    * @param string|null $routeGroupRule 告警分组规则
     *
     * @return $this
     */
     public function setRouteGroupRule($routeGroupRule)
     {
         $this->container['routeGroupRule'] = $routeGroupRule;
+        return $this;
+    }
+
+    /**
+    * Gets eventNames
+    *  事件名称
+    *
+    * @return string[]|null
+    */
+    public function getEventNames()
+    {
+        return $this->container['eventNames'];
+    }
+
+    /**
+    * Sets eventNames
+    *
+    * @param string[]|null $eventNames 事件名称
+    *
+    * @return $this
+    */
+    public function setEventNames($eventNames)
+    {
+        $this->container['eventNames'] = $eventNames;
+        return $this;
+    }
+
+    /**
+    * Gets migrated
+    *  是否迁移到2.0
+    *
+    * @return bool|null
+    */
+    public function getMigrated()
+    {
+        return $this->container['migrated'];
+    }
+
+    /**
+    * Sets migrated
+    *
+    * @param bool|null $migrated 是否迁移到2.0
+    *
+    * @return $this
+    */
+    public function setMigrated($migrated)
+    {
+        $this->container['migrated'] = $migrated;
+        return $this;
+    }
+
+    /**
+    * Gets topics
+    *  smn信息
+    *
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\SmnTopics[]|null
+    */
+    public function getTopics()
+    {
+        return $this->container['topics'];
+    }
+
+    /**
+    * Sets topics
+    *
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\SmnTopics[]|null $topics smn信息
+    *
+    * @return $this
+    */
+    public function setTopics($topics)
+    {
+        $this->container['topics'] = $topics;
         return $this;
     }
 

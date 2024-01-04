@@ -576,6 +576,74 @@ class SFSTurboAsyncClient extends Client
     }
 
     /**
+     * 创建并绑定ldap配置
+     *
+     * 创建并绑定ldap配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLdapConfigAsync($request)
+    {
+        return $this->createLdapConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function createLdapConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/ldap';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateLdapConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\CreateLdapConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建权限规则
      *
      * 创建权限规则
@@ -1054,6 +1122,71 @@ class SFSTurboAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsTaskResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteFsTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除ldap配置
+     *
+     * 删除ldap配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLdapConfigAsync($request)
+    {
+        return $this->deleteLdapConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteLdapConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/ldap';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteLdapConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteLdapConfigRequest',
             $asyncRequest = true);
     }
 
@@ -2223,6 +2356,136 @@ class SFSTurboAsyncClient extends Client
     }
 
     /**
+     * 查询job的状态详情
+     *
+     * 查询job的执行状态。 可用于查询SFS Turbo异步API的执行状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showJobDetailAsync($request)
+    {
+        return $this->showJobDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showJobDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sfs-turbo/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowJobDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowJobDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询Ldap的配置
+     *
+     * 查询Ldap的配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLdapConfigAsync($request)
+    {
+        return $this->showLdapConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showLdapConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/ldap';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowLdapConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShowLdapConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询文件系统的某一个权限规则
      *
      * 查询文件系统的某一个权限规则
@@ -2553,6 +2816,74 @@ class SFSTurboAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateHpcShareResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateHpcShareRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改ldap配置
+     *
+     * 修改ldap配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLdapConfigAsync($request)
+    {
+        return $this->updateLdapConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLdapConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/fs/ldap';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateLdapConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateLdapConfigRequest',
             $asyncRequest = true);
     }
 

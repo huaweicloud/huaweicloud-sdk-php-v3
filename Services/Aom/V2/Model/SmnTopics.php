@@ -16,7 +16,7 @@ class SmnTopics implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'smn_topics';
+    protected static $openAPIModelName = 'SmnTopics';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

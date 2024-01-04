@@ -158,12 +158,6 @@ class ListNotifiedHistoriesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['eventSn']) && (mb_strlen($this->container['eventSn']) > 200)) {
-                $invalidProperties[] = "invalid value for 'eventSn', the character length must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['eventSn']) && (mb_strlen($this->container['eventSn']) < 0)) {
-                $invalidProperties[] = "invalid value for 'eventSn', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 

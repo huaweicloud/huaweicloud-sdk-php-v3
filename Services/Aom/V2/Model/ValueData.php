@@ -21,9 +21,9 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * metricName  指标名称。长度1~255。
-    * type  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * type  数据的类型。取值范围只能是\"int\"或\"float\"。
     * unit  数据的单位。长度不超过32个字符。
-    * value  指标数据的值。 取值范围 有效的数值类型。
+    * value  指标数据的值。取值范围有效的数值类型。
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * metricName  指标名称。长度1~255。
-    * type  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * type  数据的类型。取值范围只能是\"int\"或\"float\"。
     * unit  数据的单位。长度不超过32个字符。
-    * value  指标数据的值。 取值范围 有效的数值类型。
+    * value  指标数据的值。取值范围有效的数值类型。
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class ValueData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * metricName  指标名称。长度1~255。
-    * type  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * type  数据的类型。取值范围只能是\"int\"或\"float\"。
     * unit  数据的单位。长度不超过32个字符。
-    * value  指标数据的值。 取值范围 有效的数值类型。
+    * value  指标数据的值。取值范围有效的数值类型。
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * metricName  指标名称。长度1~255。
-    * type  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * type  数据的类型。取值范围只能是\"int\"或\"float\"。
     * unit  数据的单位。长度不超过32个字符。
-    * value  指标数据的值。 取值范围 有效的数值类型。
+    * value  指标数据的值。取值范围有效的数值类型。
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * metricName  指标名称。长度1~255。
-    * type  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * type  数据的类型。取值范围只能是\"int\"或\"float\"。
     * unit  数据的单位。长度不超过32个字符。
-    * value  指标数据的值。 取值范围 有效的数值类型。
+    * value  指标数据的值。取值范围有效的数值类型。
     *
     * @var string[]
     */
@@ -263,7 +263,7 @@ class ValueData implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    *  数据的类型。取值范围只能是\"int\"或\"float\"。
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 数据的类型。 取值范围 只能是\"int\"或\"float\"。
+    * @param string|null $type 数据的类型。取值范围只能是\"int\"或\"float\"。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ValueData implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  指标数据的值。 取值范围 有效的数值类型。
+    *  指标数据的值。取值范围有效的数值类型。
     *
     * @return double
     */
@@ -323,7 +323,7 @@ class ValueData implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double $value 指标数据的值。 取值范围 有效的数值类型。
+    * @param double $value 指标数据的值。取值范围有效的数值类型。
     *
     * @return $this
     */

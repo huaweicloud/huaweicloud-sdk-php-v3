@@ -16,7 +16,7 @@ class Event2alarmRuleBodyMetadata implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'event2alarmRuleBody_metadata';
+    protected static $openAPIModelName = 'Event2alarmRuleBody_metadata';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

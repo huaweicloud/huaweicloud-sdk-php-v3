@@ -20,7 +20,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmRules  阈值规则列表
+    * alarmRules  要删除的规则名称
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmRules  阈值规则列表
+    * alarmRules  要删除的规则名称
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmRules  阈值规则列表
+    * alarmRules  要删除的规则名称
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmRules  阈值规则列表
+    * alarmRules  要删除的规则名称
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmRules  阈值规则列表
+    * alarmRules  要删除的规则名称
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRules
-    *  阈值规则列表
+    *  要删除的规则名称
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class DeleteAlarmRulesBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRules
     *
-    * @param string[] $alarmRules 阈值规则列表
+    * @param string[] $alarmRules 要删除的规则名称
     *
     * @return $this
     */

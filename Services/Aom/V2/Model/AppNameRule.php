@@ -20,7 +20,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nameType  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * nameType  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     * args  输入值。
     * value  服务名(仅nameType为cmdLineHash时填写)。
     *
@@ -34,7 +34,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nameType  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * nameType  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     * args  输入值。
     * value  服务名(仅nameType为cmdLineHash时填写)。
     *
@@ -69,7 +69,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nameType  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * nameType  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     * args  输入值。
     * value  服务名(仅nameType为cmdLineHash时填写)。
     *
@@ -83,7 +83,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nameType  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * nameType  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     * args  输入值。
     * value  服务名(仅nameType为cmdLineHash时填写)。
     *
@@ -97,7 +97,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nameType  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * nameType  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     * args  输入值。
     * value  服务名(仅nameType为cmdLineHash时填写)。
     *
@@ -202,7 +202,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameType
-    *  取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    *  取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class AppNameRule implements ModelInterface, ArrayAccess
     /**
     * Sets nameType
     *
-    * @param string $nameType 取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
+    * @param string $nameType 取值类型。从cmdLineHash、cmdLine、env、str里面选取。
     *
     * @return $this
     */

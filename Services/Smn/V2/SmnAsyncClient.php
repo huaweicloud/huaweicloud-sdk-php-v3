@@ -93,6 +93,74 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 导入订阅
+     *
+     * 为指定的Topic添加订阅者，订阅者信息来源为订阅用户列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addSubscriptionFromSubscriptionUserAsync($request)
+    {
+        return $this->addSubscriptionFromSubscriptionUserAsyncWithHttpInfo($request);
+    }
+    
+    public function addSubscriptionFromSubscriptionUserAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions/from-subscription-users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\AddSubscriptionFromSubscriptionUserResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\AddSubscriptionFromSubscriptionUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量添加删除资源标签
      *
      * 为指定实例批量添加或删除标签。一个资源上最多有10个标签。
@@ -163,6 +231,201 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\BatchCreateOrDeleteResourceTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\BatchCreateOrDeleteResourceTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量创建订阅过滤策略
+     *
+     * 创建订阅者的消息过滤策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateSubscriptionsFilterPolicesAsync($request)
+    {
+        return $this->batchCreateSubscriptionsFilterPolicesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateSubscriptionsFilterPolicesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/subscriptions/filter_polices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\BatchCreateSubscriptionsFilterPolicesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\BatchCreateSubscriptionsFilterPolicesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除订阅过滤策略
+     *
+     * 删除订阅者的消息过滤策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSubscriptionsFilterPolicesAsync($request)
+    {
+        return $this->batchDeleteSubscriptionsFilterPolicesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteSubscriptionsFilterPolicesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/subscriptions/filter_polices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\BatchDeleteSubscriptionsFilterPolicesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\BatchDeleteSubscriptionsFilterPolicesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量更新订阅过滤策略
+     *
+     * 更新订阅者的消息过滤策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateSubscriptionsFilterPolicesAsync($request)
+    {
+        return $this->batchUpdateSubscriptionsFilterPolicesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdateSubscriptionsFilterPolicesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/subscriptions/filter_polices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\BatchUpdateSubscriptionsFilterPolicesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\BatchUpdateSubscriptionsFilterPolicesRequest',
             $asyncRequest = true);
     }
 
@@ -1355,6 +1618,9 @@ class SmnAsyncClient extends Client
         if ($localVarParams['endpoint'] !== null) {
             $queryParams['endpoint'] = $localVarParams['endpoint'];
         }
+        if ($localVarParams['fuzzyRemark'] !== null) {
+            $queryParams['fuzzy_remark'] = $localVarParams['fuzzyRemark'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1422,6 +1688,9 @@ class SmnAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['fuzzyRemark'] !== null) {
+            $queryParams['fuzzy_remark'] = $localVarParams['fuzzyRemark'];
         }
         if ($localVarParams['topicUrn'] !== null) {
             $pathParams['topic_urn'] = $localVarParams['topicUrn'];
@@ -1639,6 +1908,9 @@ class SmnAsyncClient extends Client
         if ($localVarParams['topicId'] !== null) {
             $queryParams['topic_id'] = $localVarParams['topicId'];
         }
+        if ($localVarParams['fuzzyDisplayName'] !== null) {
+            $queryParams['fuzzy_display_name'] = $localVarParams['fuzzyDisplayName'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1795,6 +2067,74 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 发布探测消息
+     *
+     * 基于主题发送http/https探测消息，探测当前http/https 终端是否可用，SMN出口是否能够正常访问该终端。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function publishHttpDetectAsync($request)
+    {
+        return $this->publishHttpDetectAsyncWithHttpInfo($request);
+    }
+    
+    public function publishHttpDetectAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/detection';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\PublishHttpDetectResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\PublishHttpDetectRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 消息发布
      *
      * 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。三种消息发送方式
@@ -1868,6 +2208,74 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\PublishMessageResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\PublishMessageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取http探测结果
+     *
+     * 根据http探测发送返回的task_id查询探测结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHttpDetectResultAsync($request)
+    {
+        return $this->showHttpDetectResultAsyncWithHttpInfo($request);
+    }
+    
+    public function showHttpDetectResultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/detection/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ShowHttpDetectResultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ShowHttpDetectResultRequest',
             $asyncRequest = true);
     }
 

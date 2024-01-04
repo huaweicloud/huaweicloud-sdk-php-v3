@@ -22,7 +22,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * version  版本
     * environment  environment
-    * datasource  datasource
+    * dataSource  dataSource
     * firstObservedTime  Update time
     * lastObservedTime  Update time
     * createTime  Create time
@@ -32,7 +32,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sourceUrl  事件URL链接
     * count  事件发生次数
     * confidence  置信度
-    * serverity  严重性等级
+    * severity  严重性等级
     * criticality  关键性，是指事件涉及的资源的重要性级别。
     * alertType  事件分类
     * networkList  network_list
@@ -49,7 +49,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * simulation  是否为调试事件.
     * actor  委托人
     * owner  The name, display only
-    * cteator  The name, display only
+    * creator  The name, display only
     * closeReason  关闭原因
     * closeComment  关闭原因
     * malware  malware
@@ -66,7 +66,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'version' => 'string',
             'environment' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspEnvironment',
-            'datasource' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource',
+            'dataSource' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource',
             'firstObservedTime' => 'string',
             'lastObservedTime' => 'string',
             'createTime' => 'string',
@@ -76,7 +76,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sourceUrl' => 'string',
             'count' => 'int',
             'confidence' => 'int',
-            'serverity' => 'string',
+            'severity' => 'string',
             'criticality' => 'int',
             'alertType' => 'object',
             'networkList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspNetworkList[]',
@@ -93,7 +93,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'simulation' => 'string',
             'actor' => 'string',
             'owner' => 'string',
-            'cteator' => 'string',
+            'creator' => 'string',
             'closeReason' => 'string',
             'closeComment' => 'string',
             'malware' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspMalware',
@@ -110,7 +110,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * version  版本
     * environment  environment
-    * datasource  datasource
+    * dataSource  dataSource
     * firstObservedTime  Update time
     * lastObservedTime  Update time
     * createTime  Create time
@@ -120,7 +120,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sourceUrl  事件URL链接
     * count  事件发生次数
     * confidence  置信度
-    * serverity  严重性等级
+    * severity  严重性等级
     * criticality  关键性，是指事件涉及的资源的重要性级别。
     * alertType  事件分类
     * networkList  network_list
@@ -137,7 +137,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * simulation  是否为调试事件.
     * actor  委托人
     * owner  The name, display only
-    * cteator  The name, display only
+    * creator  The name, display only
     * closeReason  关闭原因
     * closeComment  关闭原因
     * malware  malware
@@ -154,7 +154,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'version' => null,
         'environment' => null,
-        'datasource' => null,
+        'dataSource' => null,
         'firstObservedTime' => null,
         'lastObservedTime' => null,
         'createTime' => null,
@@ -164,7 +164,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         'sourceUrl' => null,
         'count' => null,
         'confidence' => null,
-        'serverity' => null,
+        'severity' => null,
         'criticality' => null,
         'alertType' => null,
         'networkList' => null,
@@ -181,7 +181,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         'simulation' => null,
         'actor' => null,
         'owner' => null,
-        'cteator' => null,
+        'creator' => null,
         'closeReason' => null,
         'closeComment' => null,
         'malware' => null,
@@ -219,7 +219,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * version  版本
     * environment  environment
-    * datasource  datasource
+    * dataSource  dataSource
     * firstObservedTime  Update time
     * lastObservedTime  Update time
     * createTime  Create time
@@ -229,7 +229,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sourceUrl  事件URL链接
     * count  事件发生次数
     * confidence  置信度
-    * serverity  严重性等级
+    * severity  严重性等级
     * criticality  关键性，是指事件涉及的资源的重要性级别。
     * alertType  事件分类
     * networkList  network_list
@@ -246,7 +246,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * simulation  是否为调试事件.
     * actor  委托人
     * owner  The name, display only
-    * cteator  The name, display only
+    * creator  The name, display only
     * closeReason  关闭原因
     * closeComment  关闭原因
     * malware  malware
@@ -263,7 +263,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'version' => 'version',
             'environment' => 'environment',
-            'datasource' => 'datasource',
+            'dataSource' => 'data_source',
             'firstObservedTime' => 'first_observed_time',
             'lastObservedTime' => 'last_observed_time',
             'createTime' => 'create_time',
@@ -273,7 +273,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sourceUrl' => 'source_url',
             'count' => 'count',
             'confidence' => 'confidence',
-            'serverity' => 'serverity',
+            'severity' => 'severity',
             'criticality' => 'criticality',
             'alertType' => 'alert_type',
             'networkList' => 'network_list',
@@ -290,7 +290,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'simulation' => 'simulation',
             'actor' => 'actor',
             'owner' => 'owner',
-            'cteator' => 'cteator',
+            'creator' => 'creator',
             'closeReason' => 'close_reason',
             'closeComment' => 'close_comment',
             'malware' => 'malware',
@@ -307,7 +307,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * version  版本
     * environment  environment
-    * datasource  datasource
+    * dataSource  dataSource
     * firstObservedTime  Update time
     * lastObservedTime  Update time
     * createTime  Create time
@@ -317,7 +317,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sourceUrl  事件URL链接
     * count  事件发生次数
     * confidence  置信度
-    * serverity  严重性等级
+    * severity  严重性等级
     * criticality  关键性，是指事件涉及的资源的重要性级别。
     * alertType  事件分类
     * networkList  network_list
@@ -334,7 +334,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * simulation  是否为调试事件.
     * actor  委托人
     * owner  The name, display only
-    * cteator  The name, display only
+    * creator  The name, display only
     * closeReason  关闭原因
     * closeComment  关闭原因
     * malware  malware
@@ -351,7 +351,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     protected static $setters = [
             'version' => 'setVersion',
             'environment' => 'setEnvironment',
-            'datasource' => 'setDatasource',
+            'dataSource' => 'setDataSource',
             'firstObservedTime' => 'setFirstObservedTime',
             'lastObservedTime' => 'setLastObservedTime',
             'createTime' => 'setCreateTime',
@@ -361,7 +361,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sourceUrl' => 'setSourceUrl',
             'count' => 'setCount',
             'confidence' => 'setConfidence',
-            'serverity' => 'setServerity',
+            'severity' => 'setSeverity',
             'criticality' => 'setCriticality',
             'alertType' => 'setAlertType',
             'networkList' => 'setNetworkList',
@@ -378,7 +378,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'simulation' => 'setSimulation',
             'actor' => 'setActor',
             'owner' => 'setOwner',
-            'cteator' => 'setCteator',
+            'creator' => 'setCreator',
             'closeReason' => 'setCloseReason',
             'closeComment' => 'setCloseComment',
             'malware' => 'setMalware',
@@ -395,7 +395,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * version  版本
     * environment  environment
-    * datasource  datasource
+    * dataSource  dataSource
     * firstObservedTime  Update time
     * lastObservedTime  Update time
     * createTime  Create time
@@ -405,7 +405,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * sourceUrl  事件URL链接
     * count  事件发生次数
     * confidence  置信度
-    * serverity  严重性等级
+    * severity  严重性等级
     * criticality  关键性，是指事件涉及的资源的重要性级别。
     * alertType  事件分类
     * networkList  network_list
@@ -422,7 +422,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * simulation  是否为调试事件.
     * actor  委托人
     * owner  The name, display only
-    * cteator  The name, display only
+    * creator  The name, display only
     * closeReason  关闭原因
     * closeComment  关闭原因
     * malware  malware
@@ -439,7 +439,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     protected static $getters = [
             'version' => 'getVersion',
             'environment' => 'getEnvironment',
-            'datasource' => 'getDatasource',
+            'dataSource' => 'getDataSource',
             'firstObservedTime' => 'getFirstObservedTime',
             'lastObservedTime' => 'getLastObservedTime',
             'createTime' => 'getCreateTime',
@@ -449,7 +449,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sourceUrl' => 'getSourceUrl',
             'count' => 'getCount',
             'confidence' => 'getConfidence',
-            'serverity' => 'getServerity',
+            'severity' => 'getSeverity',
             'criticality' => 'getCriticality',
             'alertType' => 'getAlertType',
             'networkList' => 'getNetworkList',
@@ -466,7 +466,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'simulation' => 'getSimulation',
             'actor' => 'getActor',
             'owner' => 'getOwner',
-            'cteator' => 'getCteator',
+            'creator' => 'getCreator',
             'closeReason' => 'getCloseReason',
             'closeComment' => 'getCloseComment',
             'malware' => 'getMalware',
@@ -539,7 +539,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     {
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['environment'] = isset($data['environment']) ? $data['environment'] : null;
-        $this->container['datasource'] = isset($data['datasource']) ? $data['datasource'] : null;
+        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['firstObservedTime'] = isset($data['firstObservedTime']) ? $data['firstObservedTime'] : null;
         $this->container['lastObservedTime'] = isset($data['lastObservedTime']) ? $data['lastObservedTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -549,7 +549,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         $this->container['sourceUrl'] = isset($data['sourceUrl']) ? $data['sourceUrl'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
-        $this->container['serverity'] = isset($data['serverity']) ? $data['serverity'] : null;
+        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['criticality'] = isset($data['criticality']) ? $data['criticality'] : null;
         $this->container['alertType'] = isset($data['alertType']) ? $data['alertType'] : null;
         $this->container['networkList'] = isset($data['networkList']) ? $data['networkList'] : null;
@@ -566,7 +566,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         $this->container['simulation'] = isset($data['simulation']) ? $data['simulation'] : null;
         $this->container['actor'] = isset($data['actor']) ? $data['actor'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['cteator'] = isset($data['cteator']) ? $data['cteator'] : null;
+        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
         $this->container['closeReason'] = isset($data['closeReason']) ? $data['closeReason'] : null;
         $this->container['closeComment'] = isset($data['closeComment']) ? $data['closeComment'] : null;
         $this->container['malware'] = isset($data['malware']) ? $data['malware'] : null;
@@ -647,11 +647,11 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['confidence']) && ($this->container['confidence'] < 0)) {
                 $invalidProperties[] = "invalid value for 'confidence', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['serverity']) && (mb_strlen($this->container['serverity']) > 64)) {
-                $invalidProperties[] = "invalid value for 'serverity', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 64)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['serverity']) && (mb_strlen($this->container['serverity']) < 1)) {
-                $invalidProperties[] = "invalid value for 'serverity', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['criticality']) && ($this->container['criticality'] > 5)) {
                 $invalidProperties[] = "invalid value for 'criticality', must be smaller than or equal to 5.";
@@ -719,11 +719,11 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) < 0)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['cteator']) && (mb_strlen($this->container['cteator']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'cteator', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['creator']) && (mb_strlen($this->container['creator']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'creator', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['cteator']) && (mb_strlen($this->container['cteator']) < 0)) {
-                $invalidProperties[] = "invalid value for 'cteator', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['creator']) && (mb_strlen($this->container['creator']) < 0)) {
+                $invalidProperties[] = "invalid value for 'creator', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['closeReason']) && (mb_strlen($this->container['closeReason']) > 64)) {
                 $invalidProperties[] = "invalid value for 'closeReason', the character length must be smaller than or equal to 64.";
@@ -812,26 +812,26 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets datasource
-    *  datasource
+    * Gets dataSource
+    *  dataSource
     *
     * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource|null
     */
-    public function getDatasource()
+    public function getDataSource()
     {
-        return $this->container['datasource'];
+        return $this->container['dataSource'];
     }
 
     /**
-    * Sets datasource
+    * Sets dataSource
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource|null $datasource datasource
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource|null $dataSource dataSource
     *
     * @return $this
     */
-    public function setDatasource($datasource)
+    public function setDataSource($dataSource)
     {
-        $this->container['datasource'] = $datasource;
+        $this->container['dataSource'] = $dataSource;
         return $this;
     }
 
@@ -1052,26 +1052,26 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serverity
+    * Gets severity
     *  严重性等级
     *
     * @return string|null
     */
-    public function getServerity()
+    public function getSeverity()
     {
-        return $this->container['serverity'];
+        return $this->container['severity'];
     }
 
     /**
-    * Sets serverity
+    * Sets severity
     *
-    * @param string|null $serverity 严重性等级
+    * @param string|null $severity 严重性等级
     *
     * @return $this
     */
-    public function setServerity($serverity)
+    public function setSeverity($severity)
     {
-        $this->container['serverity'] = $serverity;
+        $this->container['severity'] = $severity;
         return $this;
     }
 
@@ -1460,26 +1460,26 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cteator
+    * Gets creator
     *  The name, display only
     *
     * @return string|null
     */
-    public function getCteator()
+    public function getCreator()
     {
-        return $this->container['cteator'];
+        return $this->container['creator'];
     }
 
     /**
-    * Sets cteator
+    * Sets creator
     *
-    * @param string|null $cteator The name, display only
+    * @param string|null $creator The name, display only
     *
     * @return $this
     */
-    public function setCteator($cteator)
+    public function setCreator($creator)
     {
-        $this->container['cteator'] = $cteator;
+        $this->container['creator'] = $creator;
         return $this;
     }
 

@@ -2995,6 +2995,133 @@ class MpcClient extends Client
     }
 
     /**
+     * 租户查询服务开通状态信息
+     *
+     * 租户查询媒体转码服务开通状态信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTenantAccessInfo($request)
+    {
+        return $this->showTenantAccessInfoWithHttpInfo($request);
+    }
+
+    public function showTenantAccessInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/tenant/access';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mpc\V1\Model\ShowTenantAccessInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Mpc\V1\Model\ShowTenantAccessInfoRequest');
+    }
+
+    /**
+     * 租户开通媒体转码服务
+     *
+     * 租户开通媒体转码服务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTenantAccessInfo($request)
+    {
+        return $this->updateTenantAccessInfoWithHttpInfo($request);
+    }
+
+    public function updateTenantAccessInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/tenant/access';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mpc\V1\Model\UpdateTenantAccessInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Mpc\V1\Model\UpdateTenantAccessInfoRequest');
+    }
+
+    /**
      * 新建截图任务
      *
      * 新建截图任务，视频截图将从首帧开始，按设置的时间间隔截图，最后截取末帧。

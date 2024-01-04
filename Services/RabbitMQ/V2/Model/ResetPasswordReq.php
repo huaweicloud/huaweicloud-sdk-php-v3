@@ -20,7 +20,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newPassword  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * newPassword  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newPassword  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * newPassword  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newPassword  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * newPassword  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newPassword  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * newPassword  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newPassword  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * newPassword  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets newPassword
-    *  8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    *  8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ResetPasswordReq implements ModelInterface, ArrayAccess
     /**
     * Sets newPassword
     *
-    * @param string|null $newPassword 8-32个字符。 至少包含以下字符中的3种： - 大写字母 - 小写字母 - 数字 - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
+    * @param string|null $newPassword 8-32个字符。  至少包含以下字符中的3种：  - 大写字母  - 小写字母  - 数字  - 特殊字符`~!@#$%^&*()-_=+\\\\|[{}];:\\'\\\",<.>/?  和空格，并且不能以-开头。
     *
     * @return $this
     */

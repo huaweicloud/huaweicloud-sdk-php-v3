@@ -21,7 +21,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  此参数在请求实体中，采用json字符串格式。
+    * body  body
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  此参数在请求实体中，采用json字符串格式。
+    * body  body
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  此参数在请求实体中，采用json字符串格式。
+    * body  body
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  此参数在请求实体中，采用json字符串格式。
+    * body  body
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  此参数在请求实体中，采用json字符串格式。
+    * body  body
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets body
-    *  此参数在请求实体中，采用json字符串格式。
+    *  body
     *
     * @return object|null
     */
@@ -187,7 +187,7 @@ class ListStructuredLogsWithTimeRangeResponse implements ModelInterface, ArrayAc
     /**
     * Sets body
     *
-    * @param object|null $body 此参数在请求实体中，采用json字符串格式。
+    * @param object|null $body body
     *
     * @return $this
     */

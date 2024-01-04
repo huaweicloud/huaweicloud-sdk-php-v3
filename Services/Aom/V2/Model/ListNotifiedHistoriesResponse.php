@@ -21,26 +21,22 @@ class ListNotifiedHistoriesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventSn  告警流水号
-    * notifications  通知结果
+    * notifiedHistories  通知历史列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'eventSn' => 'string',
-            'notifications' => '\HuaweiCloud\SDK\Aom\V2\Model\Notifications[]'
+            'notifiedHistories' => '\HuaweiCloud\SDK\Aom\V2\Model\NotifiedHistoriesResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventSn  告警流水号
-    * notifications  通知结果
+    * notifiedHistories  通知历史列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'eventSn' => null,
-        'notifications' => null
+        'notifiedHistories' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListNotifiedHistoriesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventSn  告警流水号
-    * notifications  通知结果
+    * notifiedHistories  通知历史列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'eventSn' => 'event_sn',
-            'notifications' => 'notifications'
+            'notifiedHistories' => 'notified_histories'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventSn  告警流水号
-    * notifications  通知结果
+    * notifiedHistories  通知历史列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'eventSn' => 'setEventSn',
-            'notifications' => 'setNotifications'
+            'notifiedHistories' => 'setNotifiedHistories'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventSn  告警流水号
-    * notifications  通知结果
+    * notifiedHistories  通知历史列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'eventSn' => 'getEventSn',
-            'notifications' => 'getNotifications'
+            'notifiedHistories' => 'getNotifiedHistories'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ListNotifiedHistoriesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['eventSn'] = isset($data['eventSn']) ? $data['eventSn'] : null;
-        $this->container['notifications'] = isset($data['notifications']) ? $data['notifications'] : null;
+        $this->container['notifiedHistories'] = isset($data['notifiedHistories']) ? $data['notifiedHistories'] : null;
     }
 
     /**
@@ -170,12 +159,6 @@ class ListNotifiedHistoriesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['eventSn']) && (mb_strlen($this->container['eventSn']) > 19)) {
-                $invalidProperties[] = "invalid value for 'eventSn', the character length must be smaller than or equal to 19.";
-            }
-            if (!is_null($this->container['eventSn']) && (mb_strlen($this->container['eventSn']) < 19)) {
-                $invalidProperties[] = "invalid value for 'eventSn', the character length must be bigger than or equal to 19.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +174,26 @@ class ListNotifiedHistoriesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets eventSn
-    *  告警流水号
+    * Gets notifiedHistories
+    *  通知历史列表。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\NotifiedHistoriesResult[]|null
     */
-    public function getEventSn()
+    public function getNotifiedHistories()
     {
-        return $this->container['eventSn'];
+        return $this->container['notifiedHistories'];
     }
 
     /**
-    * Sets eventSn
+    * Sets notifiedHistories
     *
-    * @param string|null $eventSn 告警流水号
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\NotifiedHistoriesResult[]|null $notifiedHistories 通知历史列表。
     *
     * @return $this
     */
-    public function setEventSn($eventSn)
+    public function setNotifiedHistories($notifiedHistories)
     {
-        $this->container['eventSn'] = $eventSn;
-        return $this;
-    }
-
-    /**
-    * Gets notifications
-    *  通知结果
-    *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\Notifications[]|null
-    */
-    public function getNotifications()
-    {
-        return $this->container['notifications'];
-    }
-
-    /**
-    * Sets notifications
-    *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\Notifications[]|null $notifications 通知结果
-    *
-    * @return $this
-    */
-    public function setNotifications($notifications)
-    {
-        $this->container['notifications'] = $notifications;
+        $this->container['notifiedHistories'] = $notifiedHistories;
         return $this;
     }
 

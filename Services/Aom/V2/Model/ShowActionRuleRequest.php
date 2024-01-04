@@ -161,11 +161,11 @@ class ShowActionRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['ruleName'] === null) {
             $invalidProperties[] = "'ruleName' can't be null";
         }
-            if ((mb_strlen($this->container['ruleName']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['ruleName']) > 100)) {
+                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 100.";
             }
-            if ((mb_strlen($this->container['ruleName']) < 3)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 3.";
+            if ((mb_strlen($this->container['ruleName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

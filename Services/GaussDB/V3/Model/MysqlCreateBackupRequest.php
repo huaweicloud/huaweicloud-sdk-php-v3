@@ -21,7 +21,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID，严格匹配UUID规则。
-    * name  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * name  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID，严格匹配UUID规则。
-    * name  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * name  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID，严格匹配UUID规则。
-    * name  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * name  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID，严格匹配UUID规则。
-    * name  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * name  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID，严格匹配UUID规则。
-    * name  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * name  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    *  备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class MysqlCreateBackupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 备份名称。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * @param string $name 备份名称。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     *
     * @return $this
     */

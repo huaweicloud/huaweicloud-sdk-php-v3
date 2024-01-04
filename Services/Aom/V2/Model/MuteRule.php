@@ -22,9 +22,9 @@ class MuteRule implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * createTime  创建时间
     * desc  规则描述
-    * match  规则的匹配条件
+    * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
-    * name  规则名称
+    * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     * timezone  时区
     * updateTime  修改时间
     * userId  用户ID
@@ -46,9 +46,9 @@ class MuteRule implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * createTime  创建时间
     * desc  规则描述
-    * match  规则的匹配条件
+    * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
-    * name  规则名称
+    * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     * timezone  时区
     * updateTime  修改时间
     * userId  用户ID
@@ -91,9 +91,9 @@ class MuteRule implements ModelInterface, ArrayAccess
     * and the value is the original name
     * createTime  创建时间
     * desc  规则描述
-    * match  规则的匹配条件
+    * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
-    * name  规则名称
+    * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     * timezone  时区
     * updateTime  修改时间
     * userId  用户ID
@@ -115,9 +115,9 @@ class MuteRule implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * createTime  创建时间
     * desc  规则描述
-    * match  规则的匹配条件
+    * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
-    * name  规则名称
+    * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     * timezone  时区
     * updateTime  修改时间
     * userId  用户ID
@@ -139,9 +139,9 @@ class MuteRule implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * createTime  创建时间
     * desc  规则描述
-    * match  规则的匹配条件
+    * match  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     * muteConfig  muteConfig
-    * name  规则名称
+    * name  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     * timezone  时区
     * updateTime  修改时间
     * userId  用户ID
@@ -347,7 +347,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets match
-    *  规则的匹配条件
+    *  规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\Match[][]
     */
@@ -359,7 +359,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets match
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\Match[][] $match 规则的匹配条件
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\Match[][] $match 规则的匹配条件。串行条件和并行条件的最大数量限制为10。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class MuteRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class MuteRule implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name 规则名称。名称包含大小写字母、数字、特殊字符（_）、不能以下划线开头或结尾，最大长度为100。
     *
     * @return $this
     */

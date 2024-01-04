@@ -22,7 +22,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * flavorRef  代理规格码。
     * nodeNum  代理实例节点数，取值整数2-32。
-    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
@@ -44,7 +44,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * flavorRef  代理规格码。
     * nodeNum  代理实例节点数，取值整数2-32。
-    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
@@ -87,7 +87,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * flavorRef  代理规格码。
     * nodeNum  代理实例节点数，取值整数2-32。
-    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
@@ -109,7 +109,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * flavorRef  代理规格码。
     * nodeNum  代理实例节点数，取值整数2-32。
-    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
@@ -131,7 +131,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * flavorRef  代理规格码。
     * nodeNum  代理实例节点数，取值整数2-32。
-    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * proxyName  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
@@ -317,7 +317,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyName
-    *  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    *  代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets proxyName
     *
-    * @param string|null $proxyName 代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
+    * @param string|null $proxyName 代理实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     *
     * @return $this
     */

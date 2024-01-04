@@ -170,12 +170,6 @@ class AddMetricDataResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 12)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 12.";
-            }
-            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) < 12)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 12.";
-            }
         return $invalidProperties;
     }
 

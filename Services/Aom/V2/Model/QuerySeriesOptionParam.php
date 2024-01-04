@@ -20,9 +20,9 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * namespace  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
-    * metricName  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
-    * dimensions  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * namespace  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
+    * metricName  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
+    * dimensions  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * namespace  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
-    * metricName  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
-    * dimensions  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * namespace  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
+    * metricName  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
+    * dimensions  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * namespace  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
-    * metricName  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
-    * dimensions  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * namespace  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
+    * metricName  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
+    * dimensions  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * namespace  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
-    * metricName  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
-    * dimensions  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * namespace  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
+    * metricName  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
+    * dimensions  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * namespace  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
-    * metricName  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
-    * dimensions  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * namespace  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
+    * metricName  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
+    * dimensions  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
+    *  时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 时间序列命名空间。 取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。 PAAS.CONTAINER：应用时间序列命名空间； PAAS.NODE：节点时间序列命名空间； PAAS.SLA：SLA时间序列命名空间； PAAS.AGGR：集群时间序列命名空间； CUSTOMMETRICS：自定义时间序列命名空间。
+    * @param string $namespace 时间序列命名空间。取值范围：PAAS.CONTAINER、PAAS.NODE、PAAS.SLA、PAAS.AGGR、CUSTOMMETRICS等。PAAS.CONTAINER：应用时间序列命名空间；PAAS.NODE：节点时间序列命名空间；PAAS.SLA：SLA时间序列命名空间；PAAS.AGGR：集群时间序列命名空间；CUSTOMMETRICS：自定义时间序列命名空间。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
+    *  时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string|null $metricName 时间序列名称，名称长度取值范围为1~255个字符。 取值范围： AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等： cpuUage：cpu使用率； cpuCoreUsed：cpu内核占用； 用户上报的自定义时间序列名称。
+    * @param string|null $metricName 时间序列名称，名称长度取值范围为1~255个字符。取值范围：AOM提供的基础时间序列名称，cpuUsage、cpuCoreUsed等：cpuUsage：cpu使用率；cpuCoreUsed：cpu内核占用；用户上报的自定义时间序列名称。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    *  时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\DimensionSeries[]|null
     */
@@ -259,7 +259,7 @@ class QuerySeriesOptionParam implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\DimensionSeries[]|null $dimensions 时间序列维度列表。 可通过/v2/{project_id}/series接口中namespace+metric_name， 查询当前监控的时间序列名称的时间序列维度列表。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\DimensionSeries[]|null $dimensions 时间序列维度列表。可通过/v2/{project_id}/series接口中namespace+metric_name，查询当前监控的时间序列名称的时间序列维度列表。
     *
     * @return $this
     */

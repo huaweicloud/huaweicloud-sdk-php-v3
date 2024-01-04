@@ -21,21 +21,25 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
+    * forceDisconnect  **参数说明**: 是否将AMQP/MQTT连接断开
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'type' => 'string'
+            'type' => 'string',
+            'forceDisconnect' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
+    * forceDisconnect  **参数说明**: 是否将AMQP/MQTT连接断开
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'forceDisconnect' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
+    * forceDisconnect  **参数说明**: 是否将AMQP/MQTT连接断开
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'type' => 'type'
+            'type' => 'type',
+            'forceDisconnect' => 'force_disconnect'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
+    * forceDisconnect  **参数说明**: 是否将AMQP/MQTT连接断开
     *
     * @var string[]
     */
     protected static $setters = [
-            'type' => 'setType'
+            'type' => 'setType',
+            'forceDisconnect' => 'setForceDisconnect'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
+    * forceDisconnect  **参数说明**: 是否将AMQP/MQTT连接断开
     *
     * @var string[]
     */
     protected static $getters = [
-            'type' => 'getType'
+            'type' => 'getType',
+            'forceDisconnect' => 'getForceDisconnect'
     ];
 
     /**
@@ -148,6 +158,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['forceDisconnect'] = isset($data['forceDisconnect']) ? $data['forceDisconnect'] : null;
     }
 
     /**
@@ -202,6 +213,30 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets forceDisconnect
+    *  **参数说明**: 是否将AMQP/MQTT连接断开
+    *
+    * @return bool|null
+    */
+    public function getForceDisconnect()
+    {
+        return $this->container['forceDisconnect'];
+    }
+
+    /**
+    * Sets forceDisconnect
+    *
+    * @param bool|null $forceDisconnect **参数说明**: 是否将AMQP/MQTT连接断开
+    *
+    * @return $this
+    */
+    public function setForceDisconnect($forceDisconnect)
+    {
+        $this->container['forceDisconnect'] = $forceDisconnect;
         return $this;
     }
 

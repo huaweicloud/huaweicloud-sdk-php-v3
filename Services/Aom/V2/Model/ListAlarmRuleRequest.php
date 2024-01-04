@@ -21,7 +21,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * offset  分页信息。
-    * limit  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * limit  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * offset  分页信息。
-    * limit  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * limit  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * offset  分页信息。
-    * limit  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * limit  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  分页信息。
-    * limit  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * limit  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * offset  分页信息。
-    * limit  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * limit  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    *  用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ListAlarmRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
+    * @param int|null $limit 用于限制结果数据条数。 取值范围(0,1000]，默认值为1000。
     *
     * @return $this
     */

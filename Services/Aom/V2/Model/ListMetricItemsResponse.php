@@ -27,7 +27,7 @@ class ListMetricItemsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'metaData' => '\HuaweiCloud\SDK\Aom\V2\Model\MetaData',
+            'metaData' => '\HuaweiCloud\SDK\Aom\V2\Model\MetaDataSeries',
             'metrics' => '\HuaweiCloud\SDK\Aom\V2\Model\MetricItemResultAPI[]'
     ];
 
@@ -188,7 +188,7 @@ class ListMetricItemsResponse implements ModelInterface, ArrayAccess
     * Gets metaData
     *  metaData
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetaData|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\MetaDataSeries|null
     */
     public function getMetaData()
     {
@@ -198,7 +198,7 @@ class ListMetricItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metaData
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetaData|null $metaData metaData
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\MetaDataSeries|null $metaData metaData
     *
     * @return $this
     */

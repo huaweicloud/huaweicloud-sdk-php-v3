@@ -21,8 +21,8 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * checkContent  匹配值。
-    * checkMode  匹配条件。 contain、equals
-    * checkType  匹配类型。 cmdLine、env、scope
+    * checkMode  匹配条件。contain、equals
+    * checkType  匹配类型。cmdLine、env、scope
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * checkContent  匹配值。
-    * checkMode  匹配条件。 contain、equals
-    * checkType  匹配类型。 cmdLine、env、scope
+    * checkMode  匹配条件。contain、equals
+    * checkType  匹配类型。cmdLine、env、scope
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * checkContent  匹配值。
-    * checkMode  匹配条件。 contain、equals
-    * checkType  匹配类型。 cmdLine、env、scope
+    * checkMode  匹配条件。contain、equals
+    * checkType  匹配类型。cmdLine、env、scope
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * checkContent  匹配值。
-    * checkMode  匹配条件。 contain、equals
-    * checkType  匹配类型。 cmdLine、env、scope
+    * checkMode  匹配条件。contain、equals
+    * checkType  匹配类型。cmdLine、env、scope
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * checkContent  匹配值。
-    * checkMode  匹配条件。 contain、equals
-    * checkType  匹配类型。 cmdLine、env、scope
+    * checkMode  匹配条件。contain、equals
+    * checkType  匹配类型。cmdLine、env、scope
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkMode
-    *  匹配条件。 contain、equals
+    *  匹配条件。contain、equals
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Sets checkMode
     *
-    * @param string $checkMode 匹配条件。 contain、equals
+    * @param string $checkMode 匹配条件。contain、equals
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  匹配类型。 cmdLine、env、scope
+    *  匹配类型。cmdLine、env、scope
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DiscoveryRule implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string $checkType 匹配类型。 cmdLine、env、scope
+    * @param string $checkType 匹配类型。cmdLine、env、scope
     *
     * @return $this
     */

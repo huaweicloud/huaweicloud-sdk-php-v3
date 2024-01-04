@@ -21,7 +21,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  - 长度为1~128个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
-    * value  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * value  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  - 长度为1~128个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
-    * value  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * value  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  - 长度为1~128个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
-    * value  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * value  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  - 长度为1~128个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
-    * value  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * value  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  标签键。  - 不能为空。  - 对于同一个实例，Key值唯一。  - 长度为1~128个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
-    * value  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * value  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class TagEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    *  标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class TagEntity implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 标签值。  - 长度为0~255个字符（中文也可以输入128个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
+    * @param string|null $value 标签值。  - 长度为0~255个字符（中文也可以输入255个字符）。  - 由任意语种字母、数字、空格和字符组成，字符仅支持_ . : = + - @  - 首尾字符不能为空格。
     *
     * @return $this
     */

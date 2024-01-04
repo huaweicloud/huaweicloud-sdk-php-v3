@@ -20,7 +20,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * voiceAssetId  音色模型ID
+    * voiceAssetId  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。
@@ -28,7 +28,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -50,7 +50,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * voiceAssetId  音色模型ID
+    * voiceAssetId  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。
@@ -58,7 +58,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -101,7 +101,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * voiceAssetId  音色模型ID
+    * voiceAssetId  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。
@@ -109,7 +109,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -131,7 +131,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * voiceAssetId  音色模型ID
+    * voiceAssetId  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。
@@ -139,7 +139,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -161,7 +161,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * voiceAssetId  音色模型ID
+    * voiceAssetId  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * text  HTML格式的台词，可包含动作。最多2048个字符。 > * HTML格式举例：\\<speak>大家好<insert-action id=\\\"14cc7bbcde4982aab82f9d9af9e0f743\\\"/>，非常高兴给大家介绍MetaStudio。\\</speak> > * insert-action id通过查询资产列表接口获取，查询时asset_type=ANIMATION > * 多音字标签：\\<phoneme ph=\\\"拼音\\\">汉字\\</phoneme>，南京\\<phoneme ph=\\\"shi4 zhang3\\\">市长\\</phoneme>江大桥。 > * 停顿标签：\\<break/>，中方一贯主张\\<break/>维护国家主权平等，不干涉他国内政\\<break time=\\\"300ms\\\"/>是联合国宪章\\<break time=\\\"500ms\\\"/>最重要的原则。
     * audioFileDownloadUrl  语音驱动音频文件下载URL。
@@ -169,7 +169,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -402,7 +402,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceAssetId
-    *  音色模型ID
+    *  音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     *
     * @return string
     */
@@ -414,7 +414,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Sets voiceAssetId
     *
-    * @param string $voiceAssetId 音色模型ID
+    * @param string $voiceAssetId 音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets styleId
-    *  风格化ID。
+    *  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     *
     * @return string
     */
@@ -606,7 +606,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Sets styleId
     *
-    * @param string $styleId 风格化ID。
+    * @param string $styleId 风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
     *
     * @return $this
     */

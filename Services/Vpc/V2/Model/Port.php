@@ -43,6 +43,7 @@ class Port implements ModelInterface, ArrayAccess
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
     * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * ipv6BandwidthId  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceType' => 'string',
             'portSecurityEnabled' => 'bool',
             'zoneId' => 'string',
-            'enableEfi' => 'bool'
+            'enableEfi' => 'bool',
+            'ipv6BandwidthId' => 'string'
     ];
 
     /**
@@ -97,6 +99,7 @@ class Port implements ModelInterface, ArrayAccess
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
     * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * ipv6BandwidthId  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class Port implements ModelInterface, ArrayAccess
         'instanceType' => null,
         'portSecurityEnabled' => null,
         'zoneId' => null,
-        'enableEfi' => null
+        'enableEfi' => null,
+        'ipv6BandwidthId' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class Port implements ModelInterface, ArrayAccess
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
     * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * ipv6BandwidthId  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceType' => 'instance_type',
             'portSecurityEnabled' => 'port_security_enabled',
             'zoneId' => 'zone_id',
-            'enableEfi' => 'enable_efi'
+            'enableEfi' => 'enable_efi',
+            'ipv6BandwidthId' => 'ipv6_bandwidth_id'
     ];
 
     /**
@@ -226,6 +232,7 @@ class Port implements ModelInterface, ArrayAccess
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
     * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * ipv6BandwidthId  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceType' => 'setInstanceType',
             'portSecurityEnabled' => 'setPortSecurityEnabled',
             'zoneId' => 'setZoneId',
-            'enableEfi' => 'setEnableEfi'
+            'enableEfi' => 'setEnableEfi',
+            'ipv6BandwidthId' => 'setIpv6BandwidthId'
     ];
 
     /**
@@ -280,6 +288,7 @@ class Port implements ModelInterface, ArrayAccess
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
     * zoneId  功能说明：port所属的可用分区
     * enableEfi  功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+    * ipv6BandwidthId  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class Port implements ModelInterface, ArrayAccess
             'instanceType' => 'getInstanceType',
             'portSecurityEnabled' => 'getPortSecurityEnabled',
             'zoneId' => 'getZoneId',
-            'enableEfi' => 'getEnableEfi'
+            'enableEfi' => 'getEnableEfi',
+            'ipv6BandwidthId' => 'getIpv6BandwidthId'
     ];
 
     /**
@@ -426,6 +436,7 @@ class Port implements ModelInterface, ArrayAccess
         $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
         $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
         $this->container['enableEfi'] = isset($data['enableEfi']) ? $data['enableEfi'] : null;
+        $this->container['ipv6BandwidthId'] = isset($data['ipv6BandwidthId']) ? $data['ipv6BandwidthId'] : null;
     }
 
     /**
@@ -526,6 +537,9 @@ class Port implements ModelInterface, ArrayAccess
         }
         if ($this->container['enableEfi'] === null) {
             $invalidProperties[] = "'enableEfi' can't be null";
+        }
+        if ($this->container['ipv6BandwidthId'] === null) {
+            $invalidProperties[] = "'ipv6BandwidthId' can't be null";
         }
         return $invalidProperties;
     }
@@ -1090,6 +1104,30 @@ class Port implements ModelInterface, ArrayAccess
     public function setEnableEfi($enableEfi)
     {
         $this->container['enableEfi'] = $enableEfi;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6BandwidthId
+    *  功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
+    *
+    * @return string
+    */
+    public function getIpv6BandwidthId()
+    {
+        return $this->container['ipv6BandwidthId'];
+    }
+
+    /**
+    * Sets ipv6BandwidthId
+    *
+    * @param string $ipv6BandwidthId 功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
+    *
+    * @return $this
+    */
+    public function setIpv6BandwidthId($ipv6BandwidthId)
+    {
+        $this->container['ipv6BandwidthId'] = $ipv6BandwidthId;
         return $this;
     }
 

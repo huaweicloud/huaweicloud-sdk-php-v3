@@ -20,16 +20,19 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appType  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * appType  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     * attrList  属性列表(暂不使用,可不传)。 cmdLine、env
     * detectLog  是否开启日志采集。 true、false
-    * discoveryRule  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * discoveryRule  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     * isDefaultRule  是否为默认规则。 true、false
-    * isDetect  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * isDetect  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     * logFileFix  日志文件的后缀。 log、trace、out
-    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     * nameRule  nameRule
-    * priority  规则优先级。 1~9999的整数字符串,默认取值为9999
+    * priority  规则优先级。1~9999的整数字符串，默认取值为9999
+    * dataSource  数据源
+    * editable  是否支持编辑 true、false
+    * aomMetricRelabelConfigs  指标配置
     *
     * @var string[]
     */
@@ -43,21 +46,27 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
             'logFileFix' => 'string[]',
             'logPathRule' => '\HuaweiCloud\SDK\Aom\V2\Model\LogPathRule[]',
             'nameRule' => '\HuaweiCloud\SDK\Aom\V2\Model\NameRule',
-            'priority' => 'int'
+            'priority' => 'int',
+            'dataSource' => 'string',
+            'editable' => 'string',
+            'aomMetricRelabelConfigs' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appType  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * appType  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     * attrList  属性列表(暂不使用,可不传)。 cmdLine、env
     * detectLog  是否开启日志采集。 true、false
-    * discoveryRule  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * discoveryRule  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     * isDefaultRule  是否为默认规则。 true、false
-    * isDetect  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * isDetect  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     * logFileFix  日志文件的后缀。 log、trace、out
-    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     * nameRule  nameRule
-    * priority  规则优先级。 1~9999的整数字符串,默认取值为9999
+    * priority  规则优先级。1~9999的整数字符串，默认取值为9999
+    * dataSource  数据源
+    * editable  是否支持编辑 true、false
+    * aomMetricRelabelConfigs  指标配置
     *
     * @var string[]
     */
@@ -71,7 +80,10 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
         'logFileFix' => null,
         'logPathRule' => null,
         'nameRule' => null,
-        'priority' => 'int32'
+        'priority' => 'int32',
+        'dataSource' => null,
+        'editable' => null,
+        'aomMetricRelabelConfigs' => null
     ];
 
     /**
@@ -97,16 +109,19 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appType  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * appType  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     * attrList  属性列表(暂不使用,可不传)。 cmdLine、env
     * detectLog  是否开启日志采集。 true、false
-    * discoveryRule  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * discoveryRule  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     * isDefaultRule  是否为默认规则。 true、false
-    * isDetect  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * isDetect  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     * logFileFix  日志文件的后缀。 log、trace、out
-    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     * nameRule  nameRule
-    * priority  规则优先级。 1~9999的整数字符串,默认取值为9999
+    * priority  规则优先级。1~9999的整数字符串，默认取值为9999
+    * dataSource  数据源
+    * editable  是否支持编辑 true、false
+    * aomMetricRelabelConfigs  指标配置
     *
     * @var string[]
     */
@@ -120,21 +135,27 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
             'logFileFix' => 'logFileFix',
             'logPathRule' => 'logPathRule',
             'nameRule' => 'nameRule',
-            'priority' => 'priority'
+            'priority' => 'priority',
+            'dataSource' => 'dataSource',
+            'editable' => 'editable',
+            'aomMetricRelabelConfigs' => 'aom_metric_relabel_configs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appType  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * appType  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     * attrList  属性列表(暂不使用,可不传)。 cmdLine、env
     * detectLog  是否开启日志采集。 true、false
-    * discoveryRule  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * discoveryRule  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     * isDefaultRule  是否为默认规则。 true、false
-    * isDetect  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * isDetect  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     * logFileFix  日志文件的后缀。 log、trace、out
-    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     * nameRule  nameRule
-    * priority  规则优先级。 1~9999的整数字符串,默认取值为9999
+    * priority  规则优先级。1~9999的整数字符串，默认取值为9999
+    * dataSource  数据源
+    * editable  是否支持编辑 true、false
+    * aomMetricRelabelConfigs  指标配置
     *
     * @var string[]
     */
@@ -148,21 +169,27 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
             'logFileFix' => 'setLogFileFix',
             'logPathRule' => 'setLogPathRule',
             'nameRule' => 'setNameRule',
-            'priority' => 'setPriority'
+            'priority' => 'setPriority',
+            'dataSource' => 'setDataSource',
+            'editable' => 'setEditable',
+            'aomMetricRelabelConfigs' => 'setAomMetricRelabelConfigs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appType  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * appType  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     * attrList  属性列表(暂不使用,可不传)。 cmdLine、env
     * detectLog  是否开启日志采集。 true、false
-    * discoveryRule  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * discoveryRule  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     * isDefaultRule  是否为默认规则。 true、false
-    * isDetect  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * isDetect  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     * logFileFix  日志文件的后缀。 log、trace、out
-    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * logPathRule  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     * nameRule  nameRule
-    * priority  规则优先级。 1~9999的整数字符串,默认取值为9999
+    * priority  规则优先级。1~9999的整数字符串，默认取值为9999
+    * dataSource  数据源
+    * editable  是否支持编辑 true、false
+    * aomMetricRelabelConfigs  指标配置
     *
     * @var string[]
     */
@@ -176,7 +203,10 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
             'logFileFix' => 'getLogFileFix',
             'logPathRule' => 'getLogPathRule',
             'nameRule' => 'getNameRule',
-            'priority' => 'getPriority'
+            'priority' => 'getPriority',
+            'dataSource' => 'getDataSource',
+            'editable' => 'getEditable',
+            'aomMetricRelabelConfigs' => 'getAomMetricRelabelConfigs'
     ];
 
     /**
@@ -247,6 +277,9 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
         $this->container['logPathRule'] = isset($data['logPathRule']) ? $data['logPathRule'] : null;
         $this->container['nameRule'] = isset($data['nameRule']) ? $data['nameRule'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
+        $this->container['editable'] = isset($data['editable']) ? $data['editable'] : null;
+        $this->container['aomMetricRelabelConfigs'] = isset($data['aomMetricRelabelConfigs']) ? $data['aomMetricRelabelConfigs'] : null;
     }
 
     /**
@@ -297,7 +330,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    *  服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     *
     * @return string
     */
@@ -309,7 +342,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param string $appType 服务类型,用于标记服务的分类,仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java,Python。按作用分类可填写collector(采集),database(数据库)等。
+    * @param string $appType 服务类型，用于标记服务的分类，仅用于规则分类和界面展示。可以填写任意字段,如按技术栈分类可填写Java，Python。按作用分类可填写collector(采集)，database(数据库)等。
     *
     * @return $this
     */
@@ -369,7 +402,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets discoveryRule
-    *  规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    *  规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\DiscoveryRule[]
     */
@@ -381,7 +414,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets discoveryRule
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\DiscoveryRule[] $discoveryRule 规则发现部分,数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain,checkContent格式为[“xxx”]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain,checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals,checkContent格式为节点ID数组[\"hostId1”,”hostId2”],表示规则仅会在这些节点上生效(如果不指定节点范围,规则将下发到该项目所有的节点)。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\DiscoveryRule[] $discoveryRule 规则发现部分，数组中有多个对象时表示需要同时满足所有条件的进程才会被匹配到。 checkType为cmdLine时checkMode填contain，checkContent格式为[\"xxx\"]表示进程命令行参数中需要包含xxx。checkType为env时checkMode填contain，checkContent格式为 [\"k1\",\"v1\"]表示进程环境变量中需要包含名为k1值为v1的环境变量。checkType为scope时checkMode填equals，checkContent格式为节点ID数组[\"hostId1\",\"hostId2\"]，表示规则仅会在这些节点上生效(如果不指定节点范围，规则将下发到该项目所有的节点)。
     *
     * @return $this
     */
@@ -417,7 +450,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDetect
-    *  是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    *  是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     *
     * @return string
     */
@@ -429,7 +462,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets isDetect
     *
-    * @param string $isDetect 是否为规则预探测场景(预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程)。 true、false
+    * @param string $isDetect 是否为规则预探测场景（预探测场景不会保存规则,仅用于规则下发之前验证该规则能否有效发现节点上的进程）。true、false
     *
     * @return $this
     */
@@ -465,7 +498,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets logPathRule
-    *  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    *  日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\LogPathRule[]|null
     */
@@ -477,7 +510,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets logPathRule
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\LogPathRule[]|null $logPathRule 日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时,args格式为[\"00001\"],value格式为[\"/xxx/xx.log\"],表示当启动命令是00001时,日志路径为/xxx/xx.log。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\LogPathRule[]|null $logPathRule 日志路径配置规则。 当cmdLineHash为固定字符串时,指定日志路径或者日志文件。否则只采集进程当前打开的以.log和.trace结尾的文件。nameType取值cmdLineHash时，args格式为[\"00001\"]，value格式为[\"/xxx/xx.log\"]，表示当启动命令是00001时,日志路径为/xxx/xx.log。
     *
     * @return $this
     */
@@ -513,7 +546,7 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  规则优先级。 1~9999的整数字符串,默认取值为9999
+    *  规则优先级。1~9999的整数字符串，默认取值为9999
     *
     * @return int
     */
@@ -525,13 +558,85 @@ class AppRulesSpec implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 规则优先级。 1~9999的整数字符串,默认取值为9999
+    * @param int $priority 规则优先级。1~9999的整数字符串，默认取值为9999
     *
     * @return $this
     */
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets dataSource
+    *  数据源
+    *
+    * @return string|null
+    */
+    public function getDataSource()
+    {
+        return $this->container['dataSource'];
+    }
+
+    /**
+    * Sets dataSource
+    *
+    * @param string|null $dataSource 数据源
+    *
+    * @return $this
+    */
+    public function setDataSource($dataSource)
+    {
+        $this->container['dataSource'] = $dataSource;
+        return $this;
+    }
+
+    /**
+    * Gets editable
+    *  是否支持编辑 true、false
+    *
+    * @return string|null
+    */
+    public function getEditable()
+    {
+        return $this->container['editable'];
+    }
+
+    /**
+    * Sets editable
+    *
+    * @param string|null $editable 是否支持编辑 true、false
+    *
+    * @return $this
+    */
+    public function setEditable($editable)
+    {
+        $this->container['editable'] = $editable;
+        return $this;
+    }
+
+    /**
+    * Gets aomMetricRelabelConfigs
+    *  指标配置
+    *
+    * @return object|null
+    */
+    public function getAomMetricRelabelConfigs()
+    {
+        return $this->container['aomMetricRelabelConfigs'];
+    }
+
+    /**
+    * Sets aomMetricRelabelConfigs
+    *
+    * @param object|null $aomMetricRelabelConfigs 指标配置
+    *
+    * @return $this
+    */
+    public function setAomMetricRelabelConfigs($aomMetricRelabelConfigs)
+    {
+        $this->container['aomMetricRelabelConfigs'] = $aomMetricRelabelConfigs;
         return $this;
     }
 

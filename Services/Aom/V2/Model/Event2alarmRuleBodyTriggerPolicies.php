@@ -16,13 +16,13 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'event2alarmRuleBody_trigger_policies';
+    protected static $openAPIModelName = 'Event2alarmRuleBody_trigger_policies';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  自增编号
     * name  事件名称
-    * triggerType  触发类型
+    * triggerType  触发类型。accumulative: 累计触发，immediately: 立即触发
     * period  触发周期
     * operator  比较符
     * count  触发次数
@@ -44,7 +44,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  自增编号
     * name  事件名称
-    * triggerType  触发类型
+    * triggerType  触发类型。accumulative: 累计触发，immediately: 立即触发
     * period  触发周期
     * operator  比较符
     * count  触发次数
@@ -87,7 +87,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  自增编号
     * name  事件名称
-    * triggerType  触发类型
+    * triggerType  触发类型。accumulative: 累计触发，immediately: 立即触发
     * period  触发周期
     * operator  比较符
     * count  触发次数
@@ -109,7 +109,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  自增编号
     * name  事件名称
-    * triggerType  触发类型
+    * triggerType  触发类型。accumulative: 累计触发，immediately: 立即触发
     * period  触发周期
     * operator  比较符
     * count  触发次数
@@ -131,7 +131,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  自增编号
     * name  事件名称
-    * triggerType  触发类型
+    * triggerType  触发类型。accumulative: 累计触发，immediately: 立即触发
     * period  触发周期
     * operator  比较符
     * count  触发次数
@@ -190,7 +190,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TRIGGER_TYPE_ACCUMULATIVE = 'accumulative';
-    const TRIGGER_TYPE_NOTIFICATION = 'notification';
+    const TRIGGER_TYPE_IMMEDIATELY = 'immediately';
     
 
     /**
@@ -202,7 +202,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     {
         return [
             self::TRIGGER_TYPE_ACCUMULATIVE,
-            self::TRIGGER_TYPE_NOTIFICATION,
+            self::TRIGGER_TYPE_IMMEDIATELY,
         ];
     }
 
@@ -268,8 +268,8 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
             if (!is_null($this->container['period']) && ($this->container['period'] > 86400)) {
                 $invalidProperties[] = "invalid value for 'period', must be smaller than or equal to 86400.";
             }
-            if (!is_null($this->container['period']) && ($this->container['period'] < 0)) {
-                $invalidProperties[] = "invalid value for 'period', must be bigger than or equal to 0.";
+            if (!is_null($this->container['period']) && ($this->container['period'] < 1)) {
+                $invalidProperties[] = "invalid value for 'period', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['operator']) && (mb_strlen($this->container['operator']) > 8)) {
                 $invalidProperties[] = "invalid value for 'operator', the character length must be smaller than or equal to 8.";
@@ -280,8 +280,8 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
             if (!is_null($this->container['count']) && ($this->container['count'] > 100)) {
                 $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
-                $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
+            if (!is_null($this->container['count']) && ($this->container['count'] < 1)) {
+                $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) > 32)) {
                 $invalidProperties[] = "invalid value for 'level', the character length must be smaller than or equal to 32.";
@@ -353,7 +353,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerType
-    *  触发类型
+    *  触发类型。accumulative: 累计触发，immediately: 立即触发
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class Event2alarmRuleBodyTriggerPolicies implements ModelInterface, ArrayAccess
     /**
     * Sets triggerType
     *
-    * @param string|null $triggerType 触发类型
+    * @param string|null $triggerType 触发类型。accumulative: 累计触发，immediately: 立即触发
     *
     * @return $this
     */

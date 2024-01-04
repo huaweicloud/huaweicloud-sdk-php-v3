@@ -21,22 +21,22 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * responses  指定集群配置项列表返回体，非实际返回参数
+    * body  获取指定集群配置项列表返回体
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'responses' => 'map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]'
+            'body' => 'map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * responses  指定集群配置项列表返回体，非实际返回参数
+    * body  获取指定集群配置项列表返回体
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'responses' => null
+        'body' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * responses  指定集群配置项列表返回体，非实际返回参数
+    * body  获取指定集群配置项列表返回体
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'responses' => 'responses'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * responses  指定集群配置项列表返回体，非实际返回参数
+    * body  获取指定集群配置项列表返回体
     *
     * @var string[]
     */
     protected static $setters = [
-            'responses' => 'setResponses'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * responses  指定集群配置项列表返回体，非实际返回参数
+    * body  获取指定集群配置项列表返回体
     *
     * @var string[]
     */
     protected static $getters = [
-            'responses' => 'getResponses'
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
     */
     public function __construct(array $data = null)
     {
-        $this->container['responses'] = isset($data['responses']) ? $data['responses'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ShowClusterConfigurationDetailsResponse implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets responses
-    *  指定集群配置项列表返回体，非实际返回参数
+    * Gets body
+    *  获取指定集群配置项列表返回体
     *
     * @return map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null
     */
-    public function getResponses()
+    public function getBody()
     {
-        return $this->container['responses'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets responses
+    * Sets body
     *
-    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null $responses 指定集群配置项列表返回体，非实际返回参数
+    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\PackageOptions[]]|null $body 获取指定集群配置项列表返回体
     *
     * @return $this
     */
-    public function setResponses($responses)
+    public function setBody($body)
     {
-        $this->container['responses'] = $responses;
+        $this->container['body'] = $body;
         return $this;
     }
 

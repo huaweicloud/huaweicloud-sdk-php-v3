@@ -20,7 +20,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appRulesIds  发现规则ID,传多个时以逗号分隔。
+    * appRulesIds  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appRulesIds  发现规则ID,传多个时以逗号分隔。
+    * appRulesIds  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appRulesIds  发现规则ID,传多个时以逗号分隔。
+    * appRulesIds  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appRulesIds  发现规则ID,传多个时以逗号分隔。
+    * appRulesIds  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appRulesIds  发现规则ID,传多个时以逗号分隔。
+    * appRulesIds  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appRulesIds
-    *  发现规则ID,传多个时以逗号分隔。
+    *  发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class DeleteserviceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appRulesIds
     *
-    * @param string[] $appRulesIds 发现规则ID,传多个时以逗号分隔。
+    * @param string[] $appRulesIds 发现规则ID，传多个时以逗号分隔。不允许为空。
     *
     * @return $this
     */

@@ -24,13 +24,15 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
+    * id  id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appRules' => '\HuaweiCloud\SDK\Aom\V2\Model\AppRules[]',
             'errorCode' => 'string',
-            'errorMessage' => 'string'
+            'errorMessage' => 'string',
+            'id' => 'string[]'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
+    * id  id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'appRules' => null,
         'errorCode' => null,
-        'errorMessage' => null
+        'errorMessage' => null,
+        'id' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
+    * id  id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appRules' => 'appRules',
             'errorCode' => 'errorCode',
-            'errorMessage' => 'errorMessage'
+            'errorMessage' => 'errorMessage',
+            'id' => 'id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
+    * id  id
     *
     * @var string[]
     */
     protected static $setters = [
             'appRules' => 'setAppRules',
             'errorCode' => 'setErrorCode',
-            'errorMessage' => 'setErrorMessage'
+            'errorMessage' => 'setErrorMessage',
+            'id' => 'setId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
+    * id  id
     *
     * @var string[]
     */
     protected static $getters = [
             'appRules' => 'getAppRules',
             'errorCode' => 'getErrorCode',
-            'errorMessage' => 'getErrorMessage'
+            'errorMessage' => 'getErrorMessage',
+            'id' => 'getId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
         $this->container['appRules'] = isset($data['appRules']) ? $data['appRules'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     public function setErrorMessage($errorMessage)
     {
         $this->container['errorMessage'] = $errorMessage;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  id
+    *
+    * @return string[]|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string[]|null $id id
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

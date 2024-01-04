@@ -21,7 +21,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  维度名称。
-    * value  指标数据的值。
+    * value  维度取值。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  维度名称。
-    * value  指标数据的值。
+    * value  维度取值。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  维度名称。
-    * value  指标数据的值。
+    * value  维度取值。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  维度名称。
-    * value  指标数据的值。
+    * value  维度取值。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  维度名称。
-    * value  指标数据的值。
+    * value  维度取值。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  指标数据的值。
+    *  维度取值。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Dimension2 implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 指标数据的值。
+    * @param string $value 维度取值。
     *
     * @return $this
     */

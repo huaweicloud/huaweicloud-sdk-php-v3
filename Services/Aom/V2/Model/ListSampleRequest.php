@@ -20,7 +20,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * fillValue  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     * body  body
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fillValue
-    *  用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    *  用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListSampleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fillValue
     *
-    * @param string|null $fillValue 用于对查询到的时序数据进行断点插值，默认值为-1。 -1：断点处使用-1进行表示。 0 ：断点处使用0进行表示。 null：断点处使用null进行表示。 average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
+    * @param string|null $fillValue 用于对查询到的时序数据进行断点插值，默认值为-1。-1：断点处使用-1进行表示。0 ：断点处使用0进行表示。null：断点处使用null进行表示。average：断点处使用前后邻近的有效数据的平均值进行表示，如果不存在有效数据则使用null进行表示。
     *
     * @return $this
     */

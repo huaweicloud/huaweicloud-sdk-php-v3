@@ -20,7 +20,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * inventoryId  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * inventoryId  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     * metricItems  当URI参数中的type取值不为“inventory”时，就通过该数组传递的参数信息进行指标查询。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * inventoryId  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * inventoryId  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     * metricItems  当URI参数中的type取值不为“inventory”时，就通过该数组传递的参数信息进行指标查询。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * inventoryId  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * inventoryId  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     * metricItems  当URI参数中的type取值不为“inventory”时，就通过该数组传递的参数信息进行指标查询。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * inventoryId  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * inventoryId  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     * metricItems  当URI参数中的type取值不为“inventory”时，就通过该数组传递的参数信息进行指标查询。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * inventoryId  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * inventoryId  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     * metricItems  当URI参数中的type取值不为“inventory”时，就通过该数组传递的参数信息进行指标查询。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets inventoryId
-    *  资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    *  资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class MetricAPIQueryItemParam implements ModelInterface, ArrayAccess
     /**
     * Sets inventoryId
     *
-    * @param string|null $inventoryId 资源编号,格式为resType_resId。其中resType部分的枚举值为：host, application, instance, container, process, network, storage, volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
+    * @param string|null $inventoryId 资源编号，格式为resType_resId。其中resType部分的枚举值为：host，application，instance， container，process，network，storage， volume。当URI参数中的type取值为“inventory”时，通过该参数查询关联的指标，不再使用metricItems数组中的信息。
     *
     * @return $this
     */

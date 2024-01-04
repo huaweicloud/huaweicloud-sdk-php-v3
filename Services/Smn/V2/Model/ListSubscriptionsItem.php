@@ -27,6 +27,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * endpoint  接受消息的接入点。
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
+    * filterPolices  filterPolices
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'owner' => 'string',
             'endpoint' => 'string',
             'remark' => 'string',
-            'status' => 'int'
+            'status' => 'int',
+            'filterPolices' => '\HuaweiCloud\SDK\Smn\V2\Model\SubscriptionsFilterPolicy[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * endpoint  接受消息的接入点。
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
+    * filterPolices  filterPolices
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
         'owner' => null,
         'endpoint' => null,
         'remark' => null,
-        'status' => null
+        'status' => null,
+        'filterPolices' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * endpoint  接受消息的接入点。
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
+    * filterPolices  filterPolices
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'owner' => 'owner',
             'endpoint' => 'endpoint',
             'remark' => 'remark',
-            'status' => 'status'
+            'status' => 'status',
+            'filterPolices' => 'filter_polices'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * endpoint  接受消息的接入点。
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
+    * filterPolices  filterPolices
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'owner' => 'setOwner',
             'endpoint' => 'setEndpoint',
             'remark' => 'setRemark',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'filterPolices' => 'setFilterPolices'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * endpoint  接受消息的接入点。
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
+    * filterPolices  filterPolices
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'owner' => 'getOwner',
             'endpoint' => 'getEndpoint',
             'remark' => 'getRemark',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'filterPolices' => 'getFilterPolices'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['filterPolices'] = isset($data['filterPolices']) ? $data['filterPolices'] : null;
     }
 
     /**
@@ -424,6 +435,30 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets filterPolices
+    *  filterPolices
+    *
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\SubscriptionsFilterPolicy[]|null
+    */
+    public function getFilterPolices()
+    {
+        return $this->container['filterPolices'];
+    }
+
+    /**
+    * Sets filterPolices
+    *
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\SubscriptionsFilterPolicy[]|null $filterPolices filterPolices
+    *
+    * @return $this
+    */
+    public function setFilterPolices($filterPolices)
+    {
+        $this->container['filterPolices'] = $filterPolices;
         return $this;
     }
 

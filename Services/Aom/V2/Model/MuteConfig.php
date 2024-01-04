@@ -23,13 +23,13 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * endsAt  静默规则结束时间
     * scope  当type为每周或者每月时，scope不能为空
     * startsAt  静默规则开始时间
-    * type  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * type  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'endsAt' => 'int',
-            'scope' => 'string[]',
+            'scope' => 'int[]',
             'startsAt' => 'int',
             'type' => 'string'
     ];
@@ -39,13 +39,13 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * endsAt  静默规则结束时间
     * scope  当type为每周或者每月时，scope不能为空
     * startsAt  静默规则开始时间
-    * type  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * type  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'endsAt' => 'int64',
-        'scope' => null,
+        'scope' => 'int32',
         'startsAt' => 'int64',
         'type' => null
     ];
@@ -76,7 +76,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * endsAt  静默规则结束时间
     * scope  当type为每周或者每月时，scope不能为空
     * startsAt  静默规则开始时间
-    * type  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * type  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * endsAt  静默规则结束时间
     * scope  当type为每周或者每月时，scope不能为空
     * startsAt  静默规则开始时间
-    * type  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * type  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * endsAt  静默规则结束时间
     * scope  当type为每周或者每月时，scope不能为空
     * startsAt  静默规则开始时间
-    * type  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * type  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     * Gets scope
     *  当type为每周或者每月时，scope不能为空
     *
-    * @return string[]|null
+    * @return int[]|null
     */
     public function getScope()
     {
@@ -294,7 +294,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string[]|null $scope 当type为每周或者每月时，scope不能为空
+    * @param int[]|null $scope 当type为每周或者每月时，scope不能为空
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    *  静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @return string
     */
@@ -342,7 +342,7 @@ class MuteConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 静默规则生效时间种类。FIXED:固定方式统计,DAILY:按日合计,WEEKLY:按周统计,MONTHLY:按月统计
+    * @param string $type 静默规则生效时间种类。FIXED：固定方式统计，DAILY：按日合计，WEEKLY：按周统计，MONTHLY：按月统计
     *
     * @return $this
     */

@@ -7788,6 +7788,139 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询任务完成情况
+     *
+     * 查询任务完成情况
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFactoryTaskCompletion($request)
+    {
+        return $this->listFactoryTaskCompletionWithHttpInfo($request);
+    }
+
+    public function listFactoryTaskCompletionWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/factory/monitor/task-completion-data';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListFactoryTaskCompletionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListFactoryTaskCompletionRequest');
+    }
+
+    /**
+     * 查询实例运行状态
+     *
+     * 查询实例运行状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFactoryTaskOverview($request)
+    {
+        return $this->listFactoryTaskOverviewWithHttpInfo($request);
+    }
+
+    public function listFactoryTaskOverviewWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/factory/monitor/task-statistics-overview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['isOwn'] !== null) {
+            $queryParams['is_own'] = $localVarParams['isOwn'];
+        }
+        if ($localVarParams['queryDays'] !== null) {
+            $queryParams['query_days'] = $localVarParams['queryDays'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListFactoryTaskOverviewResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListFactoryTaskOverviewRequest');
+    }
+
+    /**
      * 获取任务执行结果列表
      *
      * 获取任务执行结果列表

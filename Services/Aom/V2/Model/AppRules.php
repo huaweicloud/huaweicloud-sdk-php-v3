@@ -20,14 +20,15 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * createTime  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * createTime  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     * enable  true、false 规则是否启用。
-    * eventName  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
-    * hostid  主机ID(暂不使用,传空即可)。
+    * eventName  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
+    * hostid  主机ID（暂不使用，传空即可）。
     * id  创建时填空，修改时填规则ID。
-    * name  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
-    * projectid  租户从IAM申请到的projectid,一般为32位字符串。
+    * name  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
+    * projectid  租户从IAM申请到的projectid，一般为32位字符串。
     * spec  spec
+    * desc  自定义描述信息
     *
     * @var string[]
     */
@@ -39,19 +40,21 @@ class AppRules implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'projectid' => 'string',
-            'spec' => '\HuaweiCloud\SDK\Aom\V2\Model\AppRulesSpec'
+            'spec' => '\HuaweiCloud\SDK\Aom\V2\Model\AppRulesSpec',
+            'desc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * createTime  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * createTime  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     * enable  true、false 规则是否启用。
-    * eventName  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
-    * hostid  主机ID(暂不使用,传空即可)。
+    * eventName  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
+    * hostid  主机ID（暂不使用，传空即可）。
     * id  创建时填空，修改时填规则ID。
-    * name  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
-    * projectid  租户从IAM申请到的projectid,一般为32位字符串。
+    * name  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
+    * projectid  租户从IAM申请到的projectid，一般为32位字符串。
     * spec  spec
+    * desc  自定义描述信息
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class AppRules implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'projectid' => null,
-        'spec' => null
+        'spec' => null,
+        'desc' => null
     ];
 
     /**
@@ -89,14 +93,15 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * createTime  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * createTime  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     * enable  true、false 规则是否启用。
-    * eventName  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
-    * hostid  主机ID(暂不使用,传空即可)。
+    * eventName  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
+    * hostid  主机ID（暂不使用，传空即可）。
     * id  创建时填空，修改时填规则ID。
-    * name  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
-    * projectid  租户从IAM申请到的projectid,一般为32位字符串。
+    * name  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
+    * projectid  租户从IAM申请到的projectid，一般为32位字符串。
     * spec  spec
+    * desc  自定义描述信息
     *
     * @var string[]
     */
@@ -108,19 +113,21 @@ class AppRules implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'projectid' => 'projectid',
-            'spec' => 'spec'
+            'spec' => 'spec',
+            'desc' => 'desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * createTime  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * createTime  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     * enable  true、false 规则是否启用。
-    * eventName  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
-    * hostid  主机ID(暂不使用,传空即可)。
+    * eventName  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
+    * hostid  主机ID（暂不使用，传空即可）。
     * id  创建时填空，修改时填规则ID。
-    * name  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
-    * projectid  租户从IAM申请到的projectid,一般为32位字符串。
+    * name  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
+    * projectid  租户从IAM申请到的projectid，一般为32位字符串。
     * spec  spec
+    * desc  自定义描述信息
     *
     * @var string[]
     */
@@ -132,19 +139,21 @@ class AppRules implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'projectid' => 'setProjectid',
-            'spec' => 'setSpec'
+            'spec' => 'setSpec',
+            'desc' => 'setDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * createTime  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * createTime  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     * enable  true、false 规则是否启用。
-    * eventName  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
-    * hostid  主机ID(暂不使用,传空即可)。
+    * eventName  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
+    * hostid  主机ID（暂不使用，传空即可）。
     * id  创建时填空，修改时填规则ID。
-    * name  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
-    * projectid  租户从IAM申请到的projectid,一般为32位字符串。
+    * name  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
+    * projectid  租户从IAM申请到的projectid，一般为32位字符串。
     * spec  spec
+    * desc  自定义描述信息
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class AppRules implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'projectid' => 'getProjectid',
-            'spec' => 'getSpec'
+            'spec' => 'getSpec',
+            'desc' => 'getDesc'
     ];
 
     /**
@@ -225,6 +235,7 @@ class AppRules implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectid'] = isset($data['projectid']) ? $data['projectid'] : null;
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
     }
 
     /**
@@ -269,7 +280,7 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    *  规则创建时间(创建时不传，修改时传查询返回的createTime)。
     *
     * @return string|null
     */
@@ -281,7 +292,7 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 规则创建时间(创建时不传,修改时传查询返回的createTime)。
+    * @param string|null $createTime 规则创建时间(创建时不传，修改时传查询返回的createTime)。
     *
     * @return $this
     */
@@ -317,7 +328,7 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
+    *  aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
     *
     * @return string
     */
@@ -329,7 +340,7 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string $eventName aom_inventory_rules_event 规则事件名称,对于服务发现固定 为\"aom_inventory_rules_event\"。
+    * @param string $eventName aom_inventory_rules_event规则事件名称，对于服务发现固定为\"aom_inventory_rules_event\"。
     *
     * @return $this
     */
@@ -341,7 +352,7 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostid
-    *  主机ID(暂不使用,传空即可)。
+    *  主机ID（暂不使用，传空即可）。
     *
     * @return string[]|null
     */
@@ -353,7 +364,7 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Sets hostid
     *
-    * @param string[]|null $hostid 主机ID(暂不使用,传空即可)。
+    * @param string[]|null $hostid 主机ID（暂不使用，传空即可）。
     *
     * @return $this
     */
@@ -389,7 +400,7 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
+    *  规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
     *
     * @return string
     */
@@ -401,7 +412,7 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称。 字符长度小于64位,以小写字母(a-z)开头,只能包含0-9/a-z/-,不能以-结尾。
+    * @param string $name 规则名称。 字符长度为4到63位，以小写字母a-z开头，只能包含0-9/a-z/-，不能以-结尾。
     *
     * @return $this
     */
@@ -413,7 +424,7 @@ class AppRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectid
-    *  租户从IAM申请到的projectid,一般为32位字符串。
+    *  租户从IAM申请到的projectid，一般为32位字符串。
     *
     * @return string
     */
@@ -425,7 +436,7 @@ class AppRules implements ModelInterface, ArrayAccess
     /**
     * Sets projectid
     *
-    * @param string $projectid 租户从IAM申请到的projectid,一般为32位字符串。
+    * @param string $projectid 租户从IAM申请到的projectid，一般为32位字符串。
     *
     * @return $this
     */
@@ -456,6 +467,30 @@ class AppRules implements ModelInterface, ArrayAccess
     public function setSpec($spec)
     {
         $this->container['spec'] = $spec;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  自定义描述信息
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 自定义描述信息
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
         return $this;
     }
 

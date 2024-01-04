@@ -21,7 +21,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
-    * order  排序方式枚举值。asc代表正序，desc代表倒叙。
+    * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
-    * order  排序方式枚举值。asc代表正序，desc代表倒叙。
+    * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
-    * order  排序方式枚举值。asc代表正序，desc代表倒叙。
+    * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
-    * order  排序方式枚举值。asc代表正序，desc代表倒叙。
+    * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * orderBy  排序字段列表。会根据列表中定义顺序对返回列表最排序。
-    * order  排序方式枚举值。asc代表正序，desc代表倒叙。
+    * order  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  排序方式枚举值。asc代表正序，desc代表倒叙。
+    *  排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class EventQueryParam2Sort implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 排序方式枚举值。asc代表正序，desc代表倒叙。
+    * @param string|null $order 排序方式枚举值。asc代表正序，desc代表倒序。
     *
     * @return $this
     */

@@ -20,17 +20,17 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyPara  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * policyPara  policyPara
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policyPara' => '\HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy[]'
+            'policyPara' => '\HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyPara  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * policyPara  policyPara
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyPara  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * policyPara  policyPara
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyPara  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * policyPara  policyPara
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyPara  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * policyPara  policyPara
     *
     * @var string[]
     */
@@ -177,9 +177,9 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyPara
-    *  备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    *  policyPara
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy[]
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy
     */
     public function getPolicyPara()
     {
@@ -189,7 +189,7 @@ class SetOffSiteBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyPara
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy[] $policyPara 备份策略对象，包括备份类型、备份保留天数、目标区域ID和目标project ID。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\OffSiteBackupPolicy $policyPara policyPara
     *
     * @return $this
     */

@@ -26,6 +26,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     * messageTemplateName  消息模板名称，可通过[查询消息模板列表](ListMessageTemplates.xml)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  至少设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
     * tags  tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
     * timeToLive  指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
+    * messageAttributes  消息属性列表
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
             'messageStructure' => 'string',
             'messageTemplateName' => 'string',
             'tags' => 'map[string,string]',
-            'timeToLive' => 'string'
+            'timeToLive' => 'string',
+            'messageAttributes' => '\HuaweiCloud\SDK\Smn\V2\Model\MessageAttribute[]'
     ];
 
     /**
@@ -46,6 +48,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     * messageTemplateName  消息模板名称，可通过[查询消息模板列表](ListMessageTemplates.xml)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  至少设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
     * tags  tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
     * timeToLive  指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
+    * messageAttributes  消息属性列表
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
         'messageStructure' => null,
         'messageTemplateName' => null,
         'tags' => null,
-        'timeToLive' => null
+        'timeToLive' => null,
+        'messageAttributes' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     * messageTemplateName  消息模板名称，可通过[查询消息模板列表](ListMessageTemplates.xml)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  至少设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
     * tags  tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
     * timeToLive  指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
+    * messageAttributes  消息属性列表
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
             'messageStructure' => 'message_structure',
             'messageTemplateName' => 'message_template_name',
             'tags' => 'tags',
-            'timeToLive' => 'time_to_live'
+            'timeToLive' => 'time_to_live',
+            'messageAttributes' => 'message_attributes'
     ];
 
     /**
@@ -107,6 +113,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     * messageTemplateName  消息模板名称，可通过[查询消息模板列表](ListMessageTemplates.xml)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  至少设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
     * tags  tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
     * timeToLive  指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
+    * messageAttributes  消息属性列表
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
             'messageStructure' => 'setMessageStructure',
             'messageTemplateName' => 'setMessageTemplateName',
             'tags' => 'setTags',
-            'timeToLive' => 'setTimeToLive'
+            'timeToLive' => 'setTimeToLive',
+            'messageAttributes' => 'setMessageAttributes'
     ];
 
     /**
@@ -127,6 +135,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     * messageTemplateName  消息模板名称，可通过[查询消息模板列表](ListMessageTemplates.xml)获取名称。  说明： 三种消息发送方式:  message  message_structure  message_template_name  至少设置其中一个，如果同时设置，生效的优先级为 message_structure > message_template_name > message。
     * tags  tag以及替换tag的参数组成的字典。消息模板中的标签对应的值。使用消息模板方式的消息发布必须携带该参数。字典中的key为消息模板中的参数名称，不超过21个字符。字典中的value为消息模板中的参数被替换后的值，不超过1KB。
     * timeToLive  指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
+    * messageAttributes  消息属性列表
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
             'messageStructure' => 'getMessageStructure',
             'messageTemplateName' => 'getMessageTemplateName',
             'tags' => 'getTags',
-            'timeToLive' => 'getTimeToLive'
+            'timeToLive' => 'getTimeToLive',
+            'messageAttributes' => 'getMessageAttributes'
     ];
 
     /**
@@ -203,6 +213,7 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
         $this->container['messageTemplateName'] = isset($data['messageTemplateName']) ? $data['messageTemplateName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['timeToLive'] = isset($data['timeToLive']) ? $data['timeToLive'] : null;
+        $this->container['messageAttributes'] = isset($data['messageAttributes']) ? $data['messageAttributes'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class PublishMessageRequestBody implements ModelInterface, ArrayAccess
     public function setTimeToLive($timeToLive)
     {
         $this->container['timeToLive'] = $timeToLive;
+        return $this;
+    }
+
+    /**
+    * Gets messageAttributes
+    *  消息属性列表
+    *
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\MessageAttribute[]|null
+    */
+    public function getMessageAttributes()
+    {
+        return $this->container['messageAttributes'];
+    }
+
+    /**
+    * Sets messageAttributes
+    *
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\MessageAttribute[]|null $messageAttributes 消息属性列表
+    *
+    * @return $this
+    */
+    public function setMessageAttributes($messageAttributes)
+    {
+        $this->container['messageAttributes'] = $messageAttributes;
         return $this;
     }
 

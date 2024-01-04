@@ -16,7 +16,7 @@ class MetaData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'metaData';
+    protected static $openAPIModelName = 'MetaData';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -28,7 +28,7 @@ class MetaData implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'start' => 'int',
+            'start' => 'string',
             'total' => 'int'
     ];
 
@@ -42,7 +42,7 @@ class MetaData implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'count' => 'int32',
-        'start' => 'int64',
+        'start' => null,
         'total' => 'int32'
     ];
 
@@ -222,7 +222,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * Gets start
     *  下一个开始的标记，用于分页，null表示无更多数据。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getStart()
     {
@@ -232,7 +232,7 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 下一个开始的标记，用于分页，null表示无更多数据。
+    * @param string|null $start 下一个开始的标记，用于分页，null表示无更多数据。
     *
     * @return $this
     */

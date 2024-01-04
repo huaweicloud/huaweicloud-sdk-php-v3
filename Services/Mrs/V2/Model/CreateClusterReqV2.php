@@ -51,6 +51,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     * addJobs  创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
     * logUri  集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
     * componentConfigs  集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
+    * smnNotify  smnNotify
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
             'bootstrapScripts' => '\HuaweiCloud\SDK\Mrs\V2\Model\BootstrapScript[]',
             'addJobs' => '\HuaweiCloud\SDK\Mrs\V2\Model\AddJobsReqV11[]',
             'logUri' => 'string',
-            'componentConfigs' => '\HuaweiCloud\SDK\Mrs\V2\Model\ComponentConfig[]'
+            'componentConfigs' => '\HuaweiCloud\SDK\Mrs\V2\Model\ComponentConfig[]',
+            'smnNotify' => '\HuaweiCloud\SDK\Mrs\V2\Model\SmnNotify'
     ];
 
     /**
@@ -121,6 +123,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     * addJobs  创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
     * logUri  集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
     * componentConfigs  集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
+    * smnNotify  smnNotify
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
         'bootstrapScripts' => null,
         'addJobs' => null,
         'logUri' => null,
-        'componentConfigs' => null
+        'componentConfigs' => null,
+        'smnNotify' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     * addJobs  创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
     * logUri  集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
     * componentConfigs  集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
+    * smnNotify  smnNotify
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
             'bootstrapScripts' => 'bootstrap_scripts',
             'addJobs' => 'add_jobs',
             'logUri' => 'log_uri',
-            'componentConfigs' => 'component_configs'
+            'componentConfigs' => 'component_configs',
+            'smnNotify' => 'smn_notify'
     ];
 
     /**
@@ -282,6 +288,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     * addJobs  创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
     * logUri  集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
     * componentConfigs  集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
+    * smnNotify  smnNotify
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
             'bootstrapScripts' => 'setBootstrapScripts',
             'addJobs' => 'setAddJobs',
             'logUri' => 'setLogUri',
-            'componentConfigs' => 'setComponentConfigs'
+            'componentConfigs' => 'setComponentConfigs',
+            'smnNotify' => 'setSmnNotify'
     ];
 
     /**
@@ -352,6 +360,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     * addJobs  创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
     * logUri  集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
     * componentConfigs  集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
+    * smnNotify  smnNotify
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
             'bootstrapScripts' => 'getBootstrapScripts',
             'addJobs' => 'getAddJobs',
             'logUri' => 'getLogUri',
-            'componentConfigs' => 'getComponentConfigs'
+            'componentConfigs' => 'getComponentConfigs',
+            'smnNotify' => 'getSmnNotify'
     ];
 
     /**
@@ -493,6 +503,7 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
         $this->container['addJobs'] = isset($data['addJobs']) ? $data['addJobs'] : null;
         $this->container['logUri'] = isset($data['logUri']) ? $data['logUri'] : null;
         $this->container['componentConfigs'] = isset($data['componentConfigs']) ? $data['componentConfigs'] : null;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
     }
 
     /**
@@ -1308,6 +1319,30 @@ class CreateClusterReqV2 implements ModelInterface, ArrayAccess
     public function setComponentConfigs($componentConfigs)
     {
         $this->container['componentConfigs'] = $componentConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets smnNotify
+    *  smnNotify
+    *
+    * @return \HuaweiCloud\SDK\Mrs\V2\Model\SmnNotify|null
+    */
+    public function getSmnNotify()
+    {
+        return $this->container['smnNotify'];
+    }
+
+    /**
+    * Sets smnNotify
+    *
+    * @param \HuaweiCloud\SDK\Mrs\V2\Model\SmnNotify|null $smnNotify smnNotify
+    *
+    * @return $this
+    */
+    public function setSmnNotify($smnNotify)
+    {
+        $this->container['smnNotify'] = $smnNotify;
         return $this;
     }
 

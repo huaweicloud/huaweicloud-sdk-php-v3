@@ -24,6 +24,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     * description  模板实例描述
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * version  模板实例版本号
     * parameters  parameters
     * values  values
     *
@@ -34,6 +35,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
             'description' => 'string',
             'name' => 'string',
             'namespace' => 'string',
+            'version' => 'string',
             'parameters' => '\HuaweiCloud\SDK\Cce\V3\Model\ReleaseReqBodyParams',
             'values' => '\HuaweiCloud\SDK\Cce\V3\Model\CreateReleaseReqBodyValues'
     ];
@@ -44,6 +46,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     * description  模板实例描述
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * version  模板实例版本号
     * parameters  parameters
     * values  values
     *
@@ -54,6 +57,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
         'description' => null,
         'name' => null,
         'namespace' => null,
+        'version' => null,
         'parameters' => null,
         'values' => null
     ];
@@ -85,6 +89,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     * description  模板实例描述
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * version  模板实例版本号
     * parameters  parameters
     * values  values
     *
@@ -95,6 +100,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
             'description' => 'description',
             'name' => 'name',
             'namespace' => 'namespace',
+            'version' => 'version',
             'parameters' => 'parameters',
             'values' => 'values'
     ];
@@ -105,6 +111,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     * description  模板实例描述
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * version  模板实例版本号
     * parameters  parameters
     * values  values
     *
@@ -115,6 +122,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'name' => 'setName',
             'namespace' => 'setNamespace',
+            'version' => 'setVersion',
             'parameters' => 'setParameters',
             'values' => 'setValues'
     ];
@@ -125,6 +133,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     * description  模板实例描述
     * name  模板实例名称
     * namespace  模板实例所在的命名空间
+    * version  模板实例版本号
     * parameters  parameters
     * values  values
     *
@@ -135,6 +144,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'name' => 'getName',
             'namespace' => 'getNamespace',
+            'version' => 'getVersion',
             'parameters' => 'getParameters',
             'values' => 'getValues'
     ];
@@ -201,6 +211,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['values'] = isset($data['values']) ? $data['values'] : null;
     }
@@ -221,6 +232,9 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
         }
         if ($this->container['namespace'] === null) {
             $invalidProperties[] = "'namespace' can't be null";
+        }
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
         }
         if ($this->container['values'] === null) {
             $invalidProperties[] = "'values' can't be null";
@@ -332,6 +346,30 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     public function setNamespace($namespace)
     {
         $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  模板实例版本号
+    *
+    * @return string
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string $version 模板实例版本号
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

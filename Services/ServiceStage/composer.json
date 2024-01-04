@@ -8,7 +8,7 @@
     "api",
     "servicestage"
   ],
-  "version": "3.1.71",
+  "version": "3.1.72",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.1.71"
+    "huaweicloud/huaweicloud-sdk-core": "3.1.72"
   },
   "autoload": {
     "psr-4": {

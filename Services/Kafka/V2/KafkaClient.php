@@ -2347,6 +2347,79 @@ class KafkaClient extends Client
     }
 
     /**
+     * 重置消费组消费进度到指定位置
+     *
+     * Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。
+     * 
+     * 停止待重置消费组客户端，然后等待一段时间（即ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间，默认为1000毫秒）后，服务端才认为此消费组客户端已下线。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetMessageOffsetWithEngine($request)
+    {
+        return $this->resetMessageOffsetWithEngineWithHttpInfo($request);
+    }
+
+    public function resetMessageOffsetWithEngineWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{engine}/{project_id}/instances/{instance_id}/groups/{group}/reset-message-offset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engine'] !== null) {
+            $pathParams['engine'] = $localVarParams['engine'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['group'] !== null) {
+            $pathParams['group'] = $localVarParams['group'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ResetMessageOffsetWithEngineResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ResetMessageOffsetWithEngineRequest');
+    }
+
+    /**
      * 重置密码
      *
      * 重置密码（只针对开通SSL的实例）。

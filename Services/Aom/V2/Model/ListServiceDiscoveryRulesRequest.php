@@ -20,7 +20,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * id  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * id  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * id  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * id  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * id  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    *  具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ListServiceDiscoveryRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 具体的服务发现规则ID,可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
+    * @param string|null $id 具体的服务发现规则ID，可以精确匹配到一条服务发现规则。不传时返回project下所有服务发现规则的列表。
     *
     * @return $this
     */

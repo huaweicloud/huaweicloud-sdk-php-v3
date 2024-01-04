@@ -25,16 +25,16 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     * alarmAdvice  告警清除建议。
     * alarmDescription  阈值规则描述。
     * alarmLevel  告警级别。1：紧急，2：重要，3：一般，4：提示。
-    * alarmRuleName  阈值规则名称。
-    * comparisonOperator  超限条件。
+    * alarmRuleName  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * comparisonOperator  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     * dimensions  时间序列维度。
     * evaluationPeriods  间隔周期。
-    * idTurnOn  阈值规则是否启用。
+    * isTurnOn  阈值规则是否启用。
     * insufficientDataActions  数据不足通知列表。
     * metricName  时间序列名称。名称长度取值范围为1~255个字符。
     * namespace  时间序列命名空间。
     * okActions  正常状态通知列表。
-    * period  统计周期。
+    * period  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     * statistic  统计方式。
     * threshold  超限值。
     * unit  时间序列单位
@@ -51,7 +51,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
             'comparisonOperator' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Aom\V2\Model\Dimension[]',
             'evaluationPeriods' => 'int',
-            'idTurnOn' => 'bool',
+            'isTurnOn' => 'bool',
             'insufficientDataActions' => 'string[]',
             'metricName' => 'string',
             'namespace' => 'string',
@@ -69,16 +69,16 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     * alarmAdvice  告警清除建议。
     * alarmDescription  阈值规则描述。
     * alarmLevel  告警级别。1：紧急，2：重要，3：一般，4：提示。
-    * alarmRuleName  阈值规则名称。
-    * comparisonOperator  超限条件。
+    * alarmRuleName  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * comparisonOperator  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     * dimensions  时间序列维度。
     * evaluationPeriods  间隔周期。
-    * idTurnOn  阈值规则是否启用。
+    * isTurnOn  阈值规则是否启用。
     * insufficientDataActions  数据不足通知列表。
     * metricName  时间序列名称。名称长度取值范围为1~255个字符。
     * namespace  时间序列命名空间。
     * okActions  正常状态通知列表。
-    * period  统计周期。
+    * period  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     * statistic  统计方式。
     * threshold  超限值。
     * unit  时间序列单位
@@ -95,7 +95,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
         'comparisonOperator' => null,
         'dimensions' => null,
         'evaluationPeriods' => 'int32',
-        'idTurnOn' => null,
+        'isTurnOn' => null,
         'insufficientDataActions' => null,
         'metricName' => null,
         'namespace' => null,
@@ -134,16 +134,16 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     * alarmAdvice  告警清除建议。
     * alarmDescription  阈值规则描述。
     * alarmLevel  告警级别。1：紧急，2：重要，3：一般，4：提示。
-    * alarmRuleName  阈值规则名称。
-    * comparisonOperator  超限条件。
+    * alarmRuleName  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * comparisonOperator  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     * dimensions  时间序列维度。
     * evaluationPeriods  间隔周期。
-    * idTurnOn  阈值规则是否启用。
+    * isTurnOn  阈值规则是否启用。
     * insufficientDataActions  数据不足通知列表。
     * metricName  时间序列名称。名称长度取值范围为1~255个字符。
     * namespace  时间序列命名空间。
     * okActions  正常状态通知列表。
-    * period  统计周期。
+    * period  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     * statistic  统计方式。
     * threshold  超限值。
     * unit  时间序列单位
@@ -160,7 +160,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
             'comparisonOperator' => 'comparison_operator',
             'dimensions' => 'dimensions',
             'evaluationPeriods' => 'evaluation_periods',
-            'idTurnOn' => 'id_turn_on',
+            'isTurnOn' => 'is_turn_on',
             'insufficientDataActions' => 'insufficient_data_actions',
             'metricName' => 'metric_name',
             'namespace' => 'namespace',
@@ -178,16 +178,16 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     * alarmAdvice  告警清除建议。
     * alarmDescription  阈值规则描述。
     * alarmLevel  告警级别。1：紧急，2：重要，3：一般，4：提示。
-    * alarmRuleName  阈值规则名称。
-    * comparisonOperator  超限条件。
+    * alarmRuleName  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * comparisonOperator  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     * dimensions  时间序列维度。
     * evaluationPeriods  间隔周期。
-    * idTurnOn  阈值规则是否启用。
+    * isTurnOn  阈值规则是否启用。
     * insufficientDataActions  数据不足通知列表。
     * metricName  时间序列名称。名称长度取值范围为1~255个字符。
     * namespace  时间序列命名空间。
     * okActions  正常状态通知列表。
-    * period  统计周期。
+    * period  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     * statistic  统计方式。
     * threshold  超限值。
     * unit  时间序列单位
@@ -204,7 +204,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
             'comparisonOperator' => 'setComparisonOperator',
             'dimensions' => 'setDimensions',
             'evaluationPeriods' => 'setEvaluationPeriods',
-            'idTurnOn' => 'setIdTurnOn',
+            'isTurnOn' => 'setIsTurnOn',
             'insufficientDataActions' => 'setInsufficientDataActions',
             'metricName' => 'setMetricName',
             'namespace' => 'setNamespace',
@@ -222,16 +222,16 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     * alarmAdvice  告警清除建议。
     * alarmDescription  阈值规则描述。
     * alarmLevel  告警级别。1：紧急，2：重要，3：一般，4：提示。
-    * alarmRuleName  阈值规则名称。
-    * comparisonOperator  超限条件。
+    * alarmRuleName  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
+    * comparisonOperator  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     * dimensions  时间序列维度。
     * evaluationPeriods  间隔周期。
-    * idTurnOn  阈值规则是否启用。
+    * isTurnOn  阈值规则是否启用。
     * insufficientDataActions  数据不足通知列表。
     * metricName  时间序列名称。名称长度取值范围为1~255个字符。
     * namespace  时间序列命名空间。
     * okActions  正常状态通知列表。
-    * period  统计周期。
+    * period  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     * statistic  统计方式。
     * threshold  超限值。
     * unit  时间序列单位
@@ -248,7 +248,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
             'comparisonOperator' => 'getComparisonOperator',
             'dimensions' => 'getDimensions',
             'evaluationPeriods' => 'getEvaluationPeriods',
-            'idTurnOn' => 'getIdTurnOn',
+            'isTurnOn' => 'getIsTurnOn',
             'insufficientDataActions' => 'getInsufficientDataActions',
             'metricName' => 'getMetricName',
             'namespace' => 'getNamespace',
@@ -303,6 +303,14 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     const ALARM_LEVEL_2 = 2;
     const ALARM_LEVEL_3 = 3;
     const ALARM_LEVEL_4 = 4;
+    const COMPARISON_OPERATOR_LESS_THAN = '<';
+    const COMPARISON_OPERATOR_GREATER_THAN = '>';
+    const COMPARISON_OPERATOR_LESS_THAN_OR_EQUAL_TO = '<=';
+    const COMPARISON_OPERATOR_GREATER_THAN_OR_EQUAL_TO = '>=';
+    const PERIOD_60000 = 60000;
+    const PERIOD_300000 = 300000;
+    const PERIOD_900000 = 900000;
+    const PERIOD_36000000 = 36000000;
     const STATISTIC_MAXIMUM = 'maximum';
     const STATISTIC_MINIMUM = 'minimum';
     const STATISTIC_AVERAGE = 'average';
@@ -322,6 +330,36 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
             self::ALARM_LEVEL_2,
             self::ALARM_LEVEL_3,
             self::ALARM_LEVEL_4,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getComparisonOperatorAllowableValues()
+    {
+        return [
+            self::COMPARISON_OPERATOR_LESS_THAN,
+            self::COMPARISON_OPERATOR_GREATER_THAN,
+            self::COMPARISON_OPERATOR_LESS_THAN_OR_EQUAL_TO,
+            self::COMPARISON_OPERATOR_GREATER_THAN_OR_EQUAL_TO,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPeriodAllowableValues()
+    {
+        return [
+            self::PERIOD_60000,
+            self::PERIOD_300000,
+            self::PERIOD_900000,
+            self::PERIOD_36000000,
         ];
     }
 
@@ -366,7 +404,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
         $this->container['comparisonOperator'] = isset($data['comparisonOperator']) ? $data['comparisonOperator'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
         $this->container['evaluationPeriods'] = isset($data['evaluationPeriods']) ? $data['evaluationPeriods'] : null;
-        $this->container['idTurnOn'] = isset($data['idTurnOn']) ? $data['idTurnOn'] : null;
+        $this->container['isTurnOn'] = isset($data['isTurnOn']) ? $data['isTurnOn'] : null;
         $this->container['insufficientDataActions'] = isset($data['insufficientDataActions']) ? $data['insufficientDataActions'] : null;
         $this->container['metricName'] = isset($data['metricName']) ? $data['metricName'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
@@ -385,6 +423,18 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['alarmAdvice']) && (mb_strlen($this->container['alarmAdvice']) > 255)) {
+                $invalidProperties[] = "invalid value for 'alarmAdvice', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['alarmAdvice']) && (mb_strlen($this->container['alarmAdvice']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alarmAdvice', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['alarmLevel'] === null) {
             $invalidProperties[] = "'alarmLevel' can't be null";
         }
@@ -402,12 +452,26 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
         if ($this->container['comparisonOperator'] === null) {
             $invalidProperties[] = "'comparisonOperator' can't be null";
         }
+            $allowedValues = $this->getComparisonOperatorAllowableValues();
+                if (!is_null($this->container['comparisonOperator']) && !in_array($this->container['comparisonOperator'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'comparisonOperator', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['dimensions'] === null) {
             $invalidProperties[] = "'dimensions' can't be null";
         }
         if ($this->container['evaluationPeriods'] === null) {
             $invalidProperties[] = "'evaluationPeriods' can't be null";
         }
+            if (($this->container['evaluationPeriods'] >= 5)) {
+                $invalidProperties[] = "invalid value for 'evaluationPeriods', must be smaller than 5.";
+            }
+            if (($this->container['evaluationPeriods'] <= 1)) {
+                $invalidProperties[] = "invalid value for 'evaluationPeriods', must be bigger than 1.";
+            }
         if ($this->container['metricName'] === null) {
             $invalidProperties[] = "'metricName' can't be null";
         }
@@ -417,6 +481,14 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
         if ($this->container['period'] === null) {
             $invalidProperties[] = "'period' can't be null";
         }
+            $allowedValues = $this->getPeriodAllowableValues();
+                if (!is_null($this->container['period']) && !in_array($this->container['period'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'period', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['statistic'] === null) {
             $invalidProperties[] = "'statistic' can't be null";
         }
@@ -570,7 +642,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmRuleName
-    *  阈值规则名称。
+    *  阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
     *
     * @return string
     */
@@ -582,7 +654,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     /**
     * Sets alarmRuleName
     *
-    * @param string $alarmRuleName 阈值规则名称。
+    * @param string $alarmRuleName 阈值规则名称。规则名称包含大小写字母、数字、特殊字符（-_）和汉字组成，不能以特殊字符开头或结尾，最大长度为100。
     *
     * @return $this
     */
@@ -594,7 +666,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets comparisonOperator
-    *  超限条件。
+    *  超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     *
     * @return string
     */
@@ -606,7 +678,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     /**
     * Sets comparisonOperator
     *
-    * @param string $comparisonOperator 超限条件。
+    * @param string $comparisonOperator 超限条件。<：小于阈值。>：大于阈值。<=：小于等于阈值。>=：大于等于阈值。
     *
     * @return $this
     */
@@ -665,26 +737,26 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets idTurnOn
+    * Gets isTurnOn
     *  阈值规则是否启用。
     *
     * @return bool|null
     */
-    public function getIdTurnOn()
+    public function getIsTurnOn()
     {
-        return $this->container['idTurnOn'];
+        return $this->container['isTurnOn'];
     }
 
     /**
-    * Sets idTurnOn
+    * Sets isTurnOn
     *
-    * @param bool|null $idTurnOn 阈值规则是否启用。
+    * @param bool|null $isTurnOn 阈值规则是否启用。
     *
     * @return $this
     */
-    public function setIdTurnOn($idTurnOn)
+    public function setIsTurnOn($isTurnOn)
     {
-        $this->container['idTurnOn'] = $idTurnOn;
+        $this->container['isTurnOn'] = $isTurnOn;
         return $this;
     }
 
@@ -786,7 +858,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  统计周期。
+    *  统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     *
     * @return int
     */
@@ -798,7 +870,7 @@ class AlarmRuleParam implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param int $period 统计周期。
+    * @param int $period 统计周期。60000：一分钟。300000：五分钟。900000：十五分钟。3600000：一小时。
     *
     * @return $this
     */

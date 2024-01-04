@@ -20,8 +20,8 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appNameRule  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
-    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * appNameRule  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
+    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appNameRule  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
-    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * appNameRule  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
+    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class NameRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appNameRule  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
-    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * appNameRule  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
+    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appNameRule  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
-    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * appNameRule  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
+    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appNameRule  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
-    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * appNameRule  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
+    * applicationNameRule  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets appNameRule
-    *  服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
+    *  服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\AppNameRule[]
     */
@@ -203,7 +203,7 @@ class NameRule implements ModelInterface, ArrayAccess
     /**
     * Sets appNameRule
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\AppNameRule[] $appNameRule 服务命名部分,数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,服务名称为ser。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\AppNameRule[] $appNameRule 服务命名部分，数组中有多个对象时表示将每个对象抽取到的字符串拼接作为服务的名称。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为[\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，服务名称为ser。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class NameRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets applicationNameRule
-    *  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    *  应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @return \HuaweiCloud\SDK\Aom\V2\Model\ApplicationNameRule[]
     */
@@ -227,7 +227,7 @@ class NameRule implements ModelInterface, ArrayAccess
     /**
     * Sets applicationNameRule
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\ApplicationNameRule[] $applicationNameRule 应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"],表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"],表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时,args格式为[\"fix\"],表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时,args格式为[\"0001\"],value格式为[\"ser\"],表示当启动命令是0001时,应用名称为ser。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\ApplicationNameRule[] $applicationNameRule 应用命名部分。 nameType取值cmdLine时args格式为[\"start\",\"end\"]，表示抽取命令行中start、end之间的字符。 nameType取值cmdLine时args格式为 [\"aa\"]，表示抽取环境变量名为aa对应的环境变量值。 nameType取值str时，args格式为[\"fix\"]，表示服务名称最后拼接固定文字fix。 nameType取值cmdLineHash时，args格式为[\"0001\"]，value格式为[\"ser\"]，表示当启动命令是0001时，应用名称为ser。
     *
     * @return $this
     */
