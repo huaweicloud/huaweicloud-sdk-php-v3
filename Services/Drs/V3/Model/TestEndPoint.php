@@ -40,6 +40,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     * projectId  用户所处region的projectId。
     * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
     * kafkaSecurityConfig  kafkaSecurityConfig
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class TestEndPoint implements ModelInterface, ArrayAccess
             'region' => 'string',
             'projectId' => 'string',
             'dbName' => 'string',
-            'kafkaSecurityConfig' => '\HuaweiCloud\SDK\Drs\V3\Model\KafkaSecurity'
+            'kafkaSecurityConfig' => '\HuaweiCloud\SDK\Drs\V3\Model\KafkaSecurity',
+            'customizedDns' => '\HuaweiCloud\SDK\Drs\V3\Model\CustomizedDns'
     ];
 
     /**
@@ -88,6 +90,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     * projectId  用户所处region的projectId。
     * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
     * kafkaSecurityConfig  kafkaSecurityConfig
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class TestEndPoint implements ModelInterface, ArrayAccess
         'region' => null,
         'projectId' => null,
         'dbName' => null,
-        'kafkaSecurityConfig' => null
+        'kafkaSecurityConfig' => null,
+        'customizedDns' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     * projectId  用户所处region的projectId。
     * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
     * kafkaSecurityConfig  kafkaSecurityConfig
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class TestEndPoint implements ModelInterface, ArrayAccess
             'region' => 'region',
             'projectId' => 'project_id',
             'dbName' => 'db_name',
-            'kafkaSecurityConfig' => 'kafka_security_config'
+            'kafkaSecurityConfig' => 'kafka_security_config',
+            'customizedDns' => 'customized_dns'
     ];
 
     /**
@@ -205,6 +211,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     * projectId  用户所处region的projectId。
     * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
     * kafkaSecurityConfig  kafkaSecurityConfig
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class TestEndPoint implements ModelInterface, ArrayAccess
             'region' => 'setRegion',
             'projectId' => 'setProjectId',
             'dbName' => 'setDbName',
-            'kafkaSecurityConfig' => 'setKafkaSecurityConfig'
+            'kafkaSecurityConfig' => 'setKafkaSecurityConfig',
+            'customizedDns' => 'setCustomizedDns'
     ];
 
     /**
@@ -253,6 +261,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     * projectId  用户所处region的projectId。
     * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
     * kafkaSecurityConfig  kafkaSecurityConfig
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class TestEndPoint implements ModelInterface, ArrayAccess
             'region' => 'getRegion',
             'projectId' => 'getProjectId',
             'dbName' => 'getDbName',
-            'kafkaSecurityConfig' => 'getKafkaSecurityConfig'
+            'kafkaSecurityConfig' => 'getKafkaSecurityConfig',
+            'customizedDns' => 'getCustomizedDns'
     ];
 
     /**
@@ -414,6 +424,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
         $this->container['kafkaSecurityConfig'] = isset($data['kafkaSecurityConfig']) ? $data['kafkaSecurityConfig'] : null;
+        $this->container['customizedDns'] = isset($data['customizedDns']) ? $data['customizedDns'] : null;
     }
 
     /**
@@ -960,6 +971,30 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     public function setKafkaSecurityConfig($kafkaSecurityConfig)
     {
         $this->container['kafkaSecurityConfig'] = $kafkaSecurityConfig;
+        return $this;
+    }
+
+    /**
+    * Gets customizedDns
+    *  customizedDns
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\CustomizedDns|null
+    */
+    public function getCustomizedDns()
+    {
+        return $this->container['customizedDns'];
+    }
+
+    /**
+    * Sets customizedDns
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\CustomizedDns|null $customizedDns customizedDns
+    *
+    * @return $this
+    */
+    public function setCustomizedDns($customizedDns)
+    {
+        $this->container['customizedDns'] = $customizedDns;
         return $this;
     }
 

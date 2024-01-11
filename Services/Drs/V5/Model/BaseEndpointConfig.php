@@ -21,21 +21,25 @@ class BaseEndpointConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isTargetReadonly  目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
+    * nodeNum  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isTargetReadonly' => 'bool'
+            'isTargetReadonly' => 'bool',
+            'nodeNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isTargetReadonly  目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
+    * nodeNum  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isTargetReadonly' => null
+        'isTargetReadonly' => null,
+        'nodeNum' => 'int32'
     ];
 
     /**
@@ -62,31 +66,37 @@ class BaseEndpointConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isTargetReadonly  目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
+    * nodeNum  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isTargetReadonly' => 'is_target_readonly'
+            'isTargetReadonly' => 'is_target_readonly',
+            'nodeNum' => 'node_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isTargetReadonly  目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
+    * nodeNum  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
     *
     * @var string[]
     */
     protected static $setters = [
-            'isTargetReadonly' => 'setIsTargetReadonly'
+            'isTargetReadonly' => 'setIsTargetReadonly',
+            'nodeNum' => 'setNodeNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isTargetReadonly  目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
+    * nodeNum  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
     *
     * @var string[]
     */
     protected static $getters = [
-            'isTargetReadonly' => 'getIsTargetReadonly'
+            'isTargetReadonly' => 'getIsTargetReadonly',
+            'nodeNum' => 'getNodeNum'
     ];
 
     /**
@@ -148,6 +158,7 @@ class BaseEndpointConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['isTargetReadonly'] = isset($data['isTargetReadonly']) ? $data['isTargetReadonly'] : null;
+        $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
     }
 
     /**
@@ -158,6 +169,12 @@ class BaseEndpointConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] > 16)) {
+                $invalidProperties[] = "invalid value for 'nodeNum', must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeNum', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -193,6 +210,30 @@ class BaseEndpointConfig implements ModelInterface, ArrayAccess
     public function setIsTargetReadonly($isTargetReadonly)
     {
         $this->container['isTargetReadonly'] = $isTargetReadonly;
+        return $this;
+    }
+
+    /**
+    * Gets nodeNum
+    *  Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
+    *
+    * @return int|null
+    */
+    public function getNodeNum()
+    {
+        return $this->container['nodeNum'];
+    }
+
+    /**
+    * Sets nodeNum
+    *
+    * @param int|null $nodeNum Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
+    *
+    * @return $this
+    */
+    public function setNodeNum($nodeNum)
+    {
+        $this->container['nodeNum'] = $nodeNum;
         return $this;
     }
 

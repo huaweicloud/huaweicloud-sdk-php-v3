@@ -26,6 +26,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'int',
             'ipSet' => 'string[]',
             'maxCapacity' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'ipExtraSet' => '\HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]'
     ];
 
     /**
@@ -46,6 +48,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
         'ipVersion' => 'int32',
         'ipSet' => null,
         'maxCapacity' => 'int32',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'ipExtraSet' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'ip_version',
             'ipSet' => 'ip_set',
             'maxCapacity' => 'max_capacity',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'ipExtraSet' => 'ip_extra_set'
     ];
 
     /**
@@ -107,6 +113,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'setIpVersion',
             'ipSet' => 'setIpSet',
             'maxCapacity' => 'setMaxCapacity',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'ipExtraSet' => 'setIpExtraSet'
     ];
 
     /**
@@ -127,6 +135,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'getIpVersion',
             'ipSet' => 'getIpSet',
             'maxCapacity' => 'getMaxCapacity',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'ipExtraSet' => 'getIpExtraSet'
     ];
 
     /**
@@ -203,6 +213,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
         $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['ipExtraSet'] = isset($data['ipExtraSet']) ? $data['ipExtraSet'] : null;
     }
 
     /**
@@ -374,6 +385,30 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets ipExtraSet
+    *  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]|null
+    */
+    public function getIpExtraSet()
+    {
+        return $this->container['ipExtraSet'];
+    }
+
+    /**
+    * Sets ipExtraSet
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]|null $ipExtraSet 功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
+    *
+    * @return $this
+    */
+    public function setIpExtraSet($ipExtraSet)
+    {
+        $this->container['ipExtraSet'] = $ipExtraSet;
         return $this;
     }
 

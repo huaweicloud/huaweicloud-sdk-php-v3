@@ -20,7 +20,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -194,7 +194,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class BatchDeleteSecurityDataClassificationRuleRequest implements ModelInterface
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

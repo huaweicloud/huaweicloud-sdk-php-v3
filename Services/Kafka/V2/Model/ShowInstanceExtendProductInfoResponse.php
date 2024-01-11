@@ -21,7 +21,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * hourly  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets hourly
-    *  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    *  表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null
     */
@@ -198,7 +198,7 @@ class ShowInstanceExtendProductInfoResponse implements ModelInterface, ArrayAcce
     /**
     * Sets hourly
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null $hourly 表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespHourly[]|null $hourly 表示[按需付费的](tag:hws,hws_hk,hws_ocb,ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。
     *
     * @return $this
     */

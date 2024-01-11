@@ -2935,6 +2935,9 @@ class RdsClient extends Client
         if ($localVarParams['datastoreType'] !== null) {
             $queryParams['datastore_type'] = $localVarParams['datastoreType'];
         }
+        if ($localVarParams['epsId'] !== null) {
+            $queryParams['eps_id'] = $localVarParams['epsId'];
+        }
         if ($localVarParams['vpcId'] !== null) {
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
         }

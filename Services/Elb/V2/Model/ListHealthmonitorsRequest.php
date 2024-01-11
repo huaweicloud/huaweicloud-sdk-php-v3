@@ -327,8 +327,8 @@ class ListHealthmonitorsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'domainName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['urlPath']) && (mb_strlen($this->container['urlPath']) > 255)) {
-                $invalidProperties[] = "invalid value for 'urlPath', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['urlPath']) && (mb_strlen($this->container['urlPath']) > 80)) {
+                $invalidProperties[] = "invalid value for 'urlPath', the character length must be smaller than or equal to 80.";
             }
             if (!is_null($this->container['urlPath']) && (mb_strlen($this->container['urlPath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'urlPath', the character length must be bigger than or equal to 0.";

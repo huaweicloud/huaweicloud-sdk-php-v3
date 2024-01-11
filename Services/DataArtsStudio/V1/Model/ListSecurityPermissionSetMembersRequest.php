@@ -21,7 +21,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * permissionSetId  权限集id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * limit  limit
     * offset  offset
     * memberName  成员名称
@@ -45,7 +45,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * permissionSetId  权限集id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * limit  limit
     * offset  offset
     * memberName  成员名称
@@ -90,7 +90,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * permissionSetId  权限集id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * limit  limit
     * offset  offset
     * memberName  成员名称
@@ -114,7 +114,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * permissionSetId  权限集id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * limit  limit
     * offset  offset
     * memberName  成员名称
@@ -138,7 +138,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * permissionSetId  权限集id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * limit  limit
     * offset  offset
     * memberName  成员名称
@@ -359,7 +359,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -371,7 +371,7 @@ class ListSecurityPermissionSetMembersRequest implements ModelInterface, ArrayAc
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

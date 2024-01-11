@@ -21,7 +21,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * attributes  属性
-    * connection  数据连接
+    * connection  connection
     * displayText  展示文档
     * guid  资产guid
     * typeName  类型名称
@@ -32,7 +32,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'attributes' => 'object',
-            'connection' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection[]',
+            'connection' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection',
             'displayText' => 'string',
             'guid' => 'string',
             'typeName' => 'string',
@@ -43,7 +43,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * attributes  属性
-    * connection  数据连接
+    * connection  connection
     * displayText  展示文档
     * guid  资产guid
     * typeName  类型名称
@@ -86,7 +86,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * attributes  属性
-    * connection  数据连接
+    * connection  connection
     * displayText  展示文档
     * guid  资产guid
     * typeName  类型名称
@@ -108,7 +108,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * attributes  属性
-    * connection  数据连接
+    * connection  connection
     * displayText  展示文档
     * guid  资产guid
     * typeName  类型名称
@@ -130,7 +130,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * attributes  属性
-    * connection  数据连接
+    * connection  connection
     * displayText  展示文档
     * guid  资产guid
     * typeName  类型名称
@@ -264,9 +264,9 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
 
     /**
     * Gets connection
-    *  数据连接
+    *  connection
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection[]|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection|null
     */
     public function getConnection()
     {
@@ -276,7 +276,7 @@ class OpenEntityHeader implements ModelInterface, ArrayAccess
     /**
     * Sets connection
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection[]|null $connection 数据连接
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\Connection|null $connection connection
     *
     * @return $this
     */

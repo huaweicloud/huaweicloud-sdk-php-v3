@@ -29,6 +29,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     * description  后端云服务器组的描述信息
     * adminStateUp  后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
     * sessionPersistence  sessionPersistence
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'adminStateUp' => 'bool',
-            'sessionPersistence' => '\HuaweiCloud\SDK\Elb\V2\Model\SessionPersistence'
+            'sessionPersistence' => '\HuaweiCloud\SDK\Elb\V2\Model\SessionPersistence',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     * description  后端云服务器组的描述信息
     * adminStateUp  后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
     * sessionPersistence  sessionPersistence
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'adminStateUp' => null,
-        'sessionPersistence' => null
+        'sessionPersistence' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     * description  后端云服务器组的描述信息
     * adminStateUp  后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
     * sessionPersistence  sessionPersistence
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'adminStateUp' => 'admin_state_up',
-            'sessionPersistence' => 'session_persistence'
+            'sessionPersistence' => 'session_persistence',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -128,6 +140,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     * description  后端云服务器组的描述信息
     * adminStateUp  后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
     * sessionPersistence  sessionPersistence
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'adminStateUp' => 'setAdminStateUp',
-            'sessionPersistence' => 'setSessionPersistence'
+            'sessionPersistence' => 'setSessionPersistence',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -154,6 +170,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     * description  后端云服务器组的描述信息
     * adminStateUp  后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
     * sessionPersistence  sessionPersistence
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'adminStateUp' => 'getAdminStateUp',
-            'sessionPersistence' => 'getSessionPersistence'
+            'sessionPersistence' => 'getSessionPersistence',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -212,6 +232,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     const PROTOCOL_UDP = 'UDP';
     const PROTOCOL_TCP = 'TCP';
     const PROTOCOL_HTTP = 'HTTP';
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
 
     /**
@@ -225,6 +247,19 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             self::PROTOCOL_UDP,
             self::PROTOCOL_TCP,
             self::PROTOCOL_HTTP,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
         ];
     }
 
@@ -253,6 +288,8 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['sessionPersistence'] = isset($data['sessionPersistence']) ? $data['sessionPersistence'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -295,6 +332,14 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -522,6 +567,54 @@ class CreatePoolReq implements ModelInterface, ArrayAccess
     public function setSessionPersistence($sessionPersistence)
     {
         $this->container['sessionPersistence'] = $sessionPersistence;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

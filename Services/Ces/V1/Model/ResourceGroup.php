@@ -191,12 +191,6 @@ class ResourceGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['eventType']) && ($this->container['eventType'] > 1)) {
-                $invalidProperties[] = "invalid value for 'eventType', must be smaller than or equal to 1.";
-            }
-            if (!is_null($this->container['eventType']) && ($this->container['eventType'] < 0)) {
-                $invalidProperties[] = "invalid value for 'eventType', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 

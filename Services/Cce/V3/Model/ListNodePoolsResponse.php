@@ -30,7 +30,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'kind' => 'string',
             'apiVersion' => 'string',
-            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePool[]'
+            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     * Gets items
     *  /
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePool[]|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]|null
     */
     public function getItems()
     {
@@ -257,7 +257,7 @@ class ListNodePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePool[]|null $items /
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolResp[]|null $items /
     *
     * @return $this
     */

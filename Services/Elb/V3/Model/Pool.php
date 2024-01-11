@@ -42,6 +42,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class Pool implements ModelInterface, ArrayAccess
             'type' => 'string',
             'protectionStatus' => 'string',
             'protectionReason' => 'string',
-            'anyPortEnable' => 'bool'
+            'anyPortEnable' => 'bool',
+            'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain'
     ];
 
     /**
@@ -94,6 +96,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class Pool implements ModelInterface, ArrayAccess
         'type' => null,
         'protectionStatus' => null,
         'protectionReason' => null,
-        'anyPortEnable' => null
+        'anyPortEnable' => null,
+        'connectionDrain' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class Pool implements ModelInterface, ArrayAccess
             'type' => 'type',
             'protectionStatus' => 'protection_status',
             'protectionReason' => 'protection_reason',
-            'anyPortEnable' => 'any_port_enable'
+            'anyPortEnable' => 'any_port_enable',
+            'connectionDrain' => 'connection_drain'
     ];
 
     /**
@@ -219,6 +225,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class Pool implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'protectionStatus' => 'setProtectionStatus',
             'protectionReason' => 'setProtectionReason',
-            'anyPortEnable' => 'setAnyPortEnable'
+            'anyPortEnable' => 'setAnyPortEnable',
+            'connectionDrain' => 'setConnectionDrain'
     ];
 
     /**
@@ -271,6 +279,7 @@ class Pool implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class Pool implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'protectionStatus' => 'getProtectionStatus',
             'protectionReason' => 'getProtectionReason',
-            'anyPortEnable' => 'getAnyPortEnable'
+            'anyPortEnable' => 'getAnyPortEnable',
+            'connectionDrain' => 'getConnectionDrain'
     ];
 
     /**
@@ -394,6 +404,7 @@ class Pool implements ModelInterface, ArrayAccess
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
+        $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
     }
 
     /**
@@ -1008,6 +1019,30 @@ class Pool implements ModelInterface, ArrayAccess
     public function setAnyPortEnable($anyPortEnable)
     {
         $this->container['anyPortEnable'] = $anyPortEnable;
+        return $this;
+    }
+
+    /**
+    * Gets connectionDrain
+    *  connectionDrain
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null
+    */
+    public function getConnectionDrain()
+    {
+        return $this->container['connectionDrain'];
+    }
+
+    /**
+    * Sets connectionDrain
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null $connectionDrain connectionDrain
+    *
+    * @return $this
+    */
+    public function setConnectionDrain($connectionDrain)
+    {
+        $this->container['connectionDrain'] = $connectionDrain;
         return $this;
     }
 

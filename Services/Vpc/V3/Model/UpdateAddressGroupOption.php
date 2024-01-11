@@ -24,6 +24,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'ipSet' => 'string[]',
-            'maxCapacity' => 'int'
+            'maxCapacity' => 'int',
+            'ipExtraSet' => '\HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'ipSet' => null,
-        'maxCapacity' => 'int32'
+        'maxCapacity' => 'int32',
+        'ipExtraSet' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'ipSet' => 'ip_set',
-            'maxCapacity' => 'max_capacity'
+            'maxCapacity' => 'max_capacity',
+            'ipExtraSet' => 'ip_extra_set'
     ];
 
     /**
@@ -93,6 +99,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'ipSet' => 'setIpSet',
-            'maxCapacity' => 'setMaxCapacity'
+            'maxCapacity' => 'setMaxCapacity',
+            'ipExtraSet' => 'setIpExtraSet'
     ];
 
     /**
@@ -109,6 +117,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    * ipExtraSet  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'ipSet' => 'getIpSet',
-            'maxCapacity' => 'getMaxCapacity'
+            'maxCapacity' => 'getMaxCapacity',
+            'ipExtraSet' => 'getIpExtraSet'
     ];
 
     /**
@@ -181,6 +191,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
         $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
+        $this->container['ipExtraSet'] = isset($data['ipExtraSet']) ? $data['ipExtraSet'] : null;
     }
 
     /**
@@ -304,6 +315,30 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     public function setMaxCapacity($maxCapacity)
     {
         $this->container['maxCapacity'] = $maxCapacity;
+        return $this;
+    }
+
+    /**
+    * Gets ipExtraSet
+    *  功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]|null
+    */
+    public function getIpExtraSet()
+    {
+        return $this->container['ipExtraSet'];
+    }
+
+    /**
+    * Sets ipExtraSet
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetOption[]|null $ipExtraSet 功能说明：IP地址组包含的IP列表及其备注信息 约束：ip数量限制默认20, 与ip_set参数只能二选一
+    *
+    * @return $this
+    */
+    public function setIpExtraSet($ipExtraSet)
+    {
+        $this->container['ipExtraSet'] = $ipExtraSet;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     * creator  创建者
     * limit  分页时每页的条数,最大值为100
     * offset  分页偏移量
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     * creator  创建者
     * limit  分页时每页的条数,最大值为100
     * offset  分页偏移量
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     * creator  创建者
     * limit  分页时每页的条数,最大值为100
     * offset  分页偏移量
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     * creator  创建者
     * limit  分页时每页的条数,最大值为100
     * offset  分页偏移量
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     * creator  创建者
     * limit  分页时每页的条数,最大值为100
     * offset  分页偏移量
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -387,7 +387,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -399,7 +399,7 @@ class ListQualityTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

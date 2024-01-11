@@ -40,6 +40,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * projectId  监听器所在的项目ID。
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -63,7 +65,9 @@ class ListenerResp implements ModelInterface, ArrayAccess
             'updatedAt' => 'string',
             'insertHeaders' => '\HuaweiCloud\SDK\Elb\V2\Model\InsertHeader',
             'projectId' => 'string',
-            'tlsCiphersPolicy' => 'string'
+            'tlsCiphersPolicy' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -88,6 +92,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * projectId  监听器所在的项目ID。
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -111,7 +117,9 @@ class ListenerResp implements ModelInterface, ArrayAccess
         'updatedAt' => null,
         'insertHeaders' => null,
         'projectId' => null,
-        'tlsCiphersPolicy' => null
+        'tlsCiphersPolicy' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -157,6 +165,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * projectId  监听器所在的项目ID。
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -180,7 +190,9 @@ class ListenerResp implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'insertHeaders' => 'insert_headers',
             'projectId' => 'project_id',
-            'tlsCiphersPolicy' => 'tls_ciphers_policy'
+            'tlsCiphersPolicy' => 'tls_ciphers_policy',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -205,6 +217,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * projectId  监听器所在的项目ID。
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -228,7 +242,9 @@ class ListenerResp implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'insertHeaders' => 'setInsertHeaders',
             'projectId' => 'setProjectId',
-            'tlsCiphersPolicy' => 'setTlsCiphersPolicy'
+            'tlsCiphersPolicy' => 'setTlsCiphersPolicy',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -253,6 +269,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * projectId  监听器所在的项目ID。
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -276,7 +294,9 @@ class ListenerResp implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'insertHeaders' => 'getInsertHeaders',
             'projectId' => 'getProjectId',
-            'tlsCiphersPolicy' => 'getTlsCiphersPolicy'
+            'tlsCiphersPolicy' => 'getTlsCiphersPolicy',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -323,6 +343,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
     const PROTOCOL_TCP = 'TCP';
     const PROTOCOL_HTTP = 'HTTP';
     const PROTOCOL_TERMINATED_HTTPS = 'TERMINATED_HTTPS';
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
 
     /**
@@ -337,6 +359,19 @@ class ListenerResp implements ModelInterface, ArrayAccess
             self::PROTOCOL_TCP,
             self::PROTOCOL_HTTP,
             self::PROTOCOL_TERMINATED_HTTPS,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
         ];
     }
 
@@ -376,6 +411,8 @@ class ListenerResp implements ModelInterface, ArrayAccess
         $this->container['insertHeaders'] = isset($data['insertHeaders']) ? $data['insertHeaders'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['tlsCiphersPolicy'] = isset($data['tlsCiphersPolicy']) ? $data['tlsCiphersPolicy'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -493,6 +530,26 @@ class ListenerResp implements ModelInterface, ArrayAccess
         if ($this->container['tlsCiphersPolicy'] === null) {
             $invalidProperties[] = "'tlsCiphersPolicy' can't be null";
         }
+        if ($this->container['protectionStatus'] === null) {
+            $invalidProperties[] = "'protectionStatus' can't be null";
+        }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['protectionReason'] === null) {
+            $invalidProperties[] = "'protectionReason' can't be null";
+        }
+            if ((mb_strlen($this->container['protectionReason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['protectionReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -984,6 +1041,54 @@ class ListenerResp implements ModelInterface, ArrayAccess
     public function setTlsCiphersPolicy($tlsCiphersPolicy)
     {
         $this->container['tlsCiphersPolicy'] = $tlsCiphersPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return string
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因。 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string $protectionReason 设置保护的原因。 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

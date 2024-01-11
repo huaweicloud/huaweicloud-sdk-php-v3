@@ -31,6 +31,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
     * adminStateUp  监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
             'sniContainerRefs' => 'string[]',
             'insertHeaders' => '\HuaweiCloud\SDK\Elb\V2\Model\InsertHeader',
             'tlsCiphersPolicy' => 'string',
-            'adminStateUp' => 'bool'
+            'adminStateUp' => 'bool',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -61,6 +65,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
     * adminStateUp  监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
         'sniContainerRefs' => null,
         'insertHeaders' => null,
         'tlsCiphersPolicy' => null,
-        'adminStateUp' => null
+        'adminStateUp' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
     * adminStateUp  监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
             'sniContainerRefs' => 'sni_container_refs',
             'insertHeaders' => 'insert_headers',
             'tlsCiphersPolicy' => 'tls_ciphers_policy',
-            'adminStateUp' => 'admin_state_up'
+            'adminStateUp' => 'admin_state_up',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -142,6 +154,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
     * adminStateUp  监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
             'sniContainerRefs' => 'setSniContainerRefs',
             'insertHeaders' => 'setInsertHeaders',
             'tlsCiphersPolicy' => 'setTlsCiphersPolicy',
-            'adminStateUp' => 'setAdminStateUp'
+            'adminStateUp' => 'setAdminStateUp',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -172,6 +188,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
     * adminStateUp  监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
             'sniContainerRefs' => 'getSniContainerRefs',
             'insertHeaders' => 'getInsertHeaders',
             'tlsCiphersPolicy' => 'getTlsCiphersPolicy',
-            'adminStateUp' => 'getAdminStateUp'
+            'adminStateUp' => 'getAdminStateUp',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -229,7 +249,22 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
+        ];
+    }
 
 
     /**
@@ -258,6 +293,8 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
         $this->container['insertHeaders'] = isset($data['insertHeaders']) ? $data['insertHeaders'] : null;
         $this->container['tlsCiphersPolicy'] = isset($data['tlsCiphersPolicy']) ? $data['tlsCiphersPolicy'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -283,6 +320,14 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['connectionLimit']) && ($this->container['connectionLimit'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'connectionLimit', must be smaller than or equal to 2147483647.";
             }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -558,6 +603,54 @@ class UpdateListenerReq implements ModelInterface, ArrayAccess
     public function setAdminStateUp($adminStateUp)
     {
         $this->container['adminStateUp'] = $adminStateUp;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

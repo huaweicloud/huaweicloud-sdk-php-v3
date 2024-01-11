@@ -34,6 +34,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'string',
             'members' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlaveMemberOption[]',
             'healthmonitor' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateMasterSlaveHealthMonitorOption',
-            'anyPortEnable' => 'bool'
+            'anyPortEnable' => 'bool',
+            'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain'
     ];
 
     /**
@@ -70,6 +72,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
         'ipVersion' => null,
         'members' => null,
         'healthmonitor' => null,
-        'anyPortEnable' => null
+        'anyPortEnable' => null,
+        'connectionDrain' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'ip_version',
             'members' => 'members',
             'healthmonitor' => 'healthmonitor',
-            'anyPortEnable' => 'any_port_enable'
+            'anyPortEnable' => 'any_port_enable',
+            'connectionDrain' => 'connection_drain'
     ];
 
     /**
@@ -163,6 +169,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'setIpVersion',
             'members' => 'setMembers',
             'healthmonitor' => 'setHealthmonitor',
-            'anyPortEnable' => 'setAnyPortEnable'
+            'anyPortEnable' => 'setAnyPortEnable',
+            'connectionDrain' => 'setConnectionDrain'
     ];
 
     /**
@@ -199,6 +207,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'getIpVersion',
             'members' => 'getMembers',
             'healthmonitor' => 'getHealthmonitor',
-            'anyPortEnable' => 'getAnyPortEnable'
+            'anyPortEnable' => 'getAnyPortEnable',
+            'connectionDrain' => 'getConnectionDrain'
     ];
 
     /**
@@ -291,6 +301,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
         $this->container['healthmonitor'] = isset($data['healthmonitor']) ? $data['healthmonitor'] : null;
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
+        $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
     }
 
     /**
@@ -720,6 +731,30 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     public function setAnyPortEnable($anyPortEnable)
     {
         $this->container['anyPortEnable'] = $anyPortEnable;
+        return $this;
+    }
+
+    /**
+    * Gets connectionDrain
+    *  connectionDrain
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null
+    */
+    public function getConnectionDrain()
+    {
+        return $this->container['connectionDrain'];
+    }
+
+    /**
+    * Sets connectionDrain
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null $connectionDrain connectionDrain
+    *
+    * @return $this
+    */
+    public function setConnectionDrain($connectionDrain)
+    {
+        $this->container['connectionDrain'] = $connectionDrain;
         return $this;
     }
 

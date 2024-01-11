@@ -25,7 +25,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     * status  任务状态。取值： - CREATING：创建中。 - CREATE_FAILED：创建失败。 - CONFIGURATION：配置中。 - STARTJOBING：启动中。 - WAITING_FOR_START：等待启动中。 - START_JOB_FAILED：任务启动失败。 - FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化。 - FULL_TRANSFER_FAILED：全量迁移失败 灾备场景为初始化失败。 - FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成。 - INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中。 - INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常。 - RELEASE_RESOURCE_STARTED：结束任务中。 - RELEASE_RESOURCE_FAILED：结束任务失败。 - RELEASE_RESOURCE_COMPLETE：已结束。 - CHANGE_JOB_STARTED：任务变更中。 - CHANGE_JOB_FAILED：任务变更失败。 - CHILD_TRANSFER_STARTING：子任务启动中。 - CHILD_TRANSFER_STARTED：子任务迁移中。 - CHILD_TRANSFER_COMPLETE：子任务迁移完成。 - CHILD_TRANSFER_FAILED：子任务迁移失败。 - RELEASE_CHILD_TRANSFER_STARTED：子任务结束中。 - RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束。
     * description  任务描述。
     * createTime  任务创建时间。
-    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     * netType  网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
     * chargingMode  计费模式。取值： - period：包周期。 - on_demand：按需。
     * billingTag  是否计费。
@@ -73,7 +73,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     * status  任务状态。取值： - CREATING：创建中。 - CREATE_FAILED：创建失败。 - CONFIGURATION：配置中。 - STARTJOBING：启动中。 - WAITING_FOR_START：等待启动中。 - START_JOB_FAILED：任务启动失败。 - FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化。 - FULL_TRANSFER_FAILED：全量迁移失败 灾备场景为初始化失败。 - FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成。 - INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中。 - INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常。 - RELEASE_RESOURCE_STARTED：结束任务中。 - RELEASE_RESOURCE_FAILED：结束任务失败。 - RELEASE_RESOURCE_COMPLETE：已结束。 - CHANGE_JOB_STARTED：任务变更中。 - CHANGE_JOB_FAILED：任务变更失败。 - CHILD_TRANSFER_STARTING：子任务启动中。 - CHILD_TRANSFER_STARTED：子任务迁移中。 - CHILD_TRANSFER_COMPLETE：子任务迁移完成。 - CHILD_TRANSFER_FAILED：子任务迁移失败。 - RELEASE_CHILD_TRANSFER_STARTED：子任务结束中。 - RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束。
     * description  任务描述。
     * createTime  任务创建时间。
-    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     * netType  网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
     * chargingMode  计费模式。取值： - period：包周期。 - on_demand：按需。
     * billingTag  是否计费。
@@ -142,7 +142,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     * status  任务状态。取值： - CREATING：创建中。 - CREATE_FAILED：创建失败。 - CONFIGURATION：配置中。 - STARTJOBING：启动中。 - WAITING_FOR_START：等待启动中。 - START_JOB_FAILED：任务启动失败。 - FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化。 - FULL_TRANSFER_FAILED：全量迁移失败 灾备场景为初始化失败。 - FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成。 - INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中。 - INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常。 - RELEASE_RESOURCE_STARTED：结束任务中。 - RELEASE_RESOURCE_FAILED：结束任务失败。 - RELEASE_RESOURCE_COMPLETE：已结束。 - CHANGE_JOB_STARTED：任务变更中。 - CHANGE_JOB_FAILED：任务变更失败。 - CHILD_TRANSFER_STARTING：子任务启动中。 - CHILD_TRANSFER_STARTED：子任务迁移中。 - CHILD_TRANSFER_COMPLETE：子任务迁移完成。 - CHILD_TRANSFER_FAILED：子任务迁移失败。 - RELEASE_CHILD_TRANSFER_STARTED：子任务结束中。 - RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束。
     * description  任务描述。
     * createTime  任务创建时间。
-    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     * netType  网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
     * chargingMode  计费模式。取值： - period：包周期。 - on_demand：按需。
     * billingTag  是否计费。
@@ -190,7 +190,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     * status  任务状态。取值： - CREATING：创建中。 - CREATE_FAILED：创建失败。 - CONFIGURATION：配置中。 - STARTJOBING：启动中。 - WAITING_FOR_START：等待启动中。 - START_JOB_FAILED：任务启动失败。 - FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化。 - FULL_TRANSFER_FAILED：全量迁移失败 灾备场景为初始化失败。 - FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成。 - INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中。 - INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常。 - RELEASE_RESOURCE_STARTED：结束任务中。 - RELEASE_RESOURCE_FAILED：结束任务失败。 - RELEASE_RESOURCE_COMPLETE：已结束。 - CHANGE_JOB_STARTED：任务变更中。 - CHANGE_JOB_FAILED：任务变更失败。 - CHILD_TRANSFER_STARTING：子任务启动中。 - CHILD_TRANSFER_STARTED：子任务迁移中。 - CHILD_TRANSFER_COMPLETE：子任务迁移完成。 - CHILD_TRANSFER_FAILED：子任务迁移失败。 - RELEASE_CHILD_TRANSFER_STARTED：子任务结束中。 - RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束。
     * description  任务描述。
     * createTime  任务创建时间。
-    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     * netType  网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
     * chargingMode  计费模式。取值： - period：包周期。 - on_demand：按需。
     * billingTag  是否计费。
@@ -238,7 +238,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     * status  任务状态。取值： - CREATING：创建中。 - CREATE_FAILED：创建失败。 - CONFIGURATION：配置中。 - STARTJOBING：启动中。 - WAITING_FOR_START：等待启动中。 - START_JOB_FAILED：任务启动失败。 - FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化。 - FULL_TRANSFER_FAILED：全量迁移失败 灾备场景为初始化失败。 - FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成。 - INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中。 - INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常。 - RELEASE_RESOURCE_STARTED：结束任务中。 - RELEASE_RESOURCE_FAILED：结束任务失败。 - RELEASE_RESOURCE_COMPLETE：已结束。 - CHANGE_JOB_STARTED：任务变更中。 - CHANGE_JOB_FAILED：任务变更失败。 - CHILD_TRANSFER_STARTING：子任务启动中。 - CHILD_TRANSFER_STARTED：子任务迁移中。 - CHILD_TRANSFER_COMPLETE：子任务迁移完成。 - CHILD_TRANSFER_FAILED：子任务迁移失败。 - RELEASE_CHILD_TRANSFER_STARTED：子任务结束中。 - RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束。
     * description  任务描述。
     * createTime  任务创建时间。
-    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * engineType  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     * netType  网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
     * chargingMode  计费模式。取值： - period：包周期。 - on_demand：按需。
     * billingTag  是否计费。
@@ -342,6 +342,8 @@ class JobListResp implements ModelInterface, ArrayAccess
     const STATUS_RELEASE_CHILD_TRANSFER_STARTED = 'RELEASE_CHILD_TRANSFER_STARTED';
     const STATUS_RELEASE_CHILD_TRANSFER_COMPLETE = 'RELEASE_CHILD_TRANSFER_COMPLETE';
     const ENGINE_TYPE_ORACLE_TO_GAUSSDBV5 = 'oracle-to-gaussdbv5';
+    const ENGINE_TYPE_REDIS_TO_GAUSSREDIS = 'redis-to-gaussredis';
+    const ENGINE_TYPE_REDISCLUSTER_TO_GAUSSREDIS = 'rediscluster-to-gaussredis';
     const NET_TYPE_EIP = 'eip';
     const NET_TYPE_VPC = 'vpc';
     const NET_TYPE_VPN = 'vpn';
@@ -407,6 +409,8 @@ class JobListResp implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_TYPE_ORACLE_TO_GAUSSDBV5,
+            self::ENGINE_TYPE_REDIS_TO_GAUSSREDIS,
+            self::ENGINE_TYPE_REDISCLUSTER_TO_GAUSSREDIS,
         ];
     }
 
@@ -819,7 +823,7 @@ class JobListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineType
-    *  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    *  引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     *
     * @return string
     */
@@ -831,7 +835,7 @@ class JobListResp implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param string $engineType 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+    * @param string $engineType 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
     *
     * @return $this
     */

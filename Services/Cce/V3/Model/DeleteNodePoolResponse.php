@@ -34,7 +34,7 @@ class DeleteNodePoolResponse implements ModelInterface, ArrayAccess
             'apiVersion' => 'string',
             'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadata',
             'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpec',
-            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus'
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\DeleteNodePoolStatus'
     ];
 
     /**
@@ -317,7 +317,7 @@ class DeleteNodePoolResponse implements ModelInterface, ArrayAccess
     * Gets status
     *  status
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\DeleteNodePoolStatus|null
     */
     public function getStatus()
     {
@@ -327,7 +327,7 @@ class DeleteNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null $status status
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\DeleteNodePoolStatus|null $status status
     *
     * @return $this
     */

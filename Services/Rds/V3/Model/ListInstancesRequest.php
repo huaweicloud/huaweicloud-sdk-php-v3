@@ -26,6 +26,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
     * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
+    * epsId  企业项目id。
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -41,6 +42,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'type' => 'string',
             'datastoreType' => 'string',
+            'epsId' => 'string',
             'vpcId' => 'string',
             'subnetId' => 'string',
             'offset' => 'int',
@@ -56,6 +58,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
     * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
+    * epsId  企业项目id。
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -71,6 +74,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'type' => null,
         'datastoreType' => null,
+        'epsId' => null,
         'vpcId' => null,
         'subnetId' => null,
         'offset' => null,
@@ -107,6 +111,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
     * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
+    * epsId  企业项目id。
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -122,6 +127,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'type' => 'type',
             'datastoreType' => 'datastore_type',
+            'epsId' => 'eps_id',
             'vpcId' => 'vpc_id',
             'subnetId' => 'subnet_id',
             'offset' => 'offset',
@@ -137,6 +143,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
     * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
+    * epsId  企业项目id。
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -152,6 +159,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'type' => 'setType',
             'datastoreType' => 'setDatastoreType',
+            'epsId' => 'setEpsId',
             'vpcId' => 'setVpcId',
             'subnetId' => 'setSubnetId',
             'offset' => 'setOffset',
@@ -167,6 +175,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * name  实例名称。  “\\*”为系统保留字符，如果name是以“\\*”起始，表示按照\\*后面的值模糊匹配，否则，按照name精确匹配查询。不能只传入“\\*”。
     * type  按照实例类型查询。取值Single、Ha、Replica，分别对应于单实例、主备实例和只读实例。
     * datastoreType  数据库类型，区分大小写。 - MySQL - PostgreSQL - SQLServer - MariaDB
+    * epsId  企业项目id。
     * vpcId  虚拟私有云ID。
     * subnetId  子网ID。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -182,6 +191,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'type' => 'getType',
             'datastoreType' => 'getDatastoreType',
+            'epsId' => 'getEpsId',
             'vpcId' => 'getVpcId',
             'subnetId' => 'getSubnetId',
             'offset' => 'getOffset',
@@ -304,6 +314,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
+        $this->container['epsId'] = isset($data['epsId']) ? $data['epsId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -498,6 +509,30 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function setDatastoreType($datastoreType)
     {
         $this->container['datastoreType'] = $datastoreType;
+        return $this;
+    }
+
+    /**
+    * Gets epsId
+    *  企业项目id。
+    *
+    * @return string|null
+    */
+    public function getEpsId()
+    {
+        return $this->container['epsId'];
+    }
+
+    /**
+    * Sets epsId
+    *
+    * @param string|null $epsId 企业项目id。
+    *
+    * @return $this
+    */
+    public function setEpsId($epsId)
+    {
+        $this->container['epsId'] = $epsId;
         return $this;
     }
 

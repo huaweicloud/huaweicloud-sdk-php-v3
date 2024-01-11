@@ -26,7 +26,7 @@ class Policy implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
-    * count  次数
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
     *
@@ -52,7 +52,7 @@ class Policy implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
-    * count  次数
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
     *
@@ -65,7 +65,7 @@ class Policy implements ModelInterface, ArrayAccess
         'comparisonOperator' => null,
         'value' => 'double',
         'unit' => null,
-        'count' => null,
+        'count' => 'int32',
         'suppressDuration' => null,
         'level' => null
     ];
@@ -99,7 +99,7 @@ class Policy implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
-    * count  次数
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
     *
@@ -125,7 +125,7 @@ class Policy implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
-    * count  次数
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
     *
@@ -151,7 +151,7 @@ class Policy implements ModelInterface, ArrayAccess
     * comparisonOperator  告警阈值的比较条件，支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
     * value  阈值
     * unit  单位
-    * count  次数
+    * count  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     * suppressDuration  告警抑制时间，单位为秒，对应页面上创建告警规则时告警策略最后一个字段，该字段主要为解决告警频繁的问题，0代表不抑制，满足条件即告警；300代表满足告警触发条件后每5分钟告警一次；
     * level  告警级别, 1为紧急，2为重要，3为次要，4为提示
     *
@@ -294,8 +294,8 @@ class Policy implements ModelInterface, ArrayAccess
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
         }
-            if (($this->container['count'] > 100)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 100.";
+            if (($this->container['count'] > 180)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 180.";
             }
             if (($this->container['count'] < 1)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 1.";
@@ -472,7 +472,7 @@ class Policy implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  次数
+    *  告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return int
     */
@@ -484,7 +484,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count 次数
+    * @param int $count 告警连续触发次数，事件告警时参数值为1~180（包括1和180）；指标告警和站点告警时，次数采用枚举值，枚举值分别为：1、2、3、4、5、10、15、30、60、90、120、180
     *
     * @return $this
     */

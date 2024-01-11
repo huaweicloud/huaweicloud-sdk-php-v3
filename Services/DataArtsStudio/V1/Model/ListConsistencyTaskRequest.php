@@ -28,7 +28,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     * creator  创建人
     * limit  分页条数,最大值为100
     * offset  分页偏移量,最小值0
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     * creator  创建人
     * limit  分页条数,最大值为100
     * offset  分页偏移量,最小值0
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     * creator  创建人
     * limit  分页条数,最大值为100
     * offset  分页偏移量,最小值0
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     * creator  创建人
     * limit  分页条数,最大值为100
     * offset  分页偏移量,最小值0
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     * creator  创建人
     * limit  分页条数,最大值为100
     * offset  分页偏移量,最小值0
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     *
     * @var string[]
     */
@@ -497,7 +497,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -509,7 +509,7 @@ class ListConsistencyTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

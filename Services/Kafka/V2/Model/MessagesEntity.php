@@ -25,7 +25,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     * key  消息key。
     * value  消息内容。
     * size  消息大小。
-    * timestamp  topic名称。
+    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     * hugeMessage  大数据标识。
     * messageOffset  消息偏移量。
     * messageId  消息ID。
@@ -55,7 +55,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     * key  消息key。
     * value  消息内容。
     * size  消息大小。
-    * timestamp  topic名称。
+    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     * hugeMessage  大数据标识。
     * messageOffset  消息偏移量。
     * messageId  消息ID。
@@ -106,7 +106,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     * key  消息key。
     * value  消息内容。
     * size  消息大小。
-    * timestamp  topic名称。
+    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     * hugeMessage  大数据标识。
     * messageOffset  消息偏移量。
     * messageId  消息ID。
@@ -136,7 +136,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     * key  消息key。
     * value  消息内容。
     * size  消息大小。
-    * timestamp  topic名称。
+    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     * hugeMessage  大数据标识。
     * messageOffset  消息偏移量。
     * messageId  消息ID。
@@ -166,7 +166,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     * key  消息key。
     * value  消息内容。
     * size  消息大小。
-    * timestamp  topic名称。
+    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     * hugeMessage  大数据标识。
     * messageOffset  消息偏移量。
     * messageId  消息ID。
@@ -404,7 +404,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  topic名称。
+    *  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp topic名称。
+    * @param int|null $timestamp 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
     *
     * @return $this
     */

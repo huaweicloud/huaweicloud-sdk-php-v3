@@ -20,7 +20,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -28,6 +28,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     * vpc  vpc
     * config  config
     * ssl  ssl
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -39,12 +40,13 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
             'cloud' => '\HuaweiCloud\SDK\Drs\V5\Model\CloudBaseInfo',
             'vpc' => '\HuaweiCloud\SDK\Drs\V5\Model\CloudVpcInfo',
             'config' => '\HuaweiCloud\SDK\Drs\V5\Model\BaseEndpointConfig',
-            'ssl' => '\HuaweiCloud\SDK\Drs\V5\Model\EndpointSslConfig'
+            'ssl' => '\HuaweiCloud\SDK\Drs\V5\Model\EndpointSslConfig',
+            'customizedDns' => '\HuaweiCloud\SDK\Drs\V5\Model\CustomizedDns'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -52,6 +54,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     * vpc  vpc
     * config  config
     * ssl  ssl
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
         'cloud' => null,
         'vpc' => null,
         'config' => null,
-        'ssl' => null
+        'ssl' => null,
+        'customizedDns' => null
     ];
 
     /**
@@ -89,7 +93,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -97,6 +101,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     * vpc  vpc
     * config  config
     * ssl  ssl
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -108,12 +113,13 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
             'cloud' => 'cloud',
             'vpc' => 'vpc',
             'config' => 'config',
-            'ssl' => 'ssl'
+            'ssl' => 'ssl',
+            'customizedDns' => 'customized_dns'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -121,6 +127,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     * vpc  vpc
     * config  config
     * ssl  ssl
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -132,12 +139,13 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
             'cloud' => 'setCloud',
             'vpc' => 'setVpc',
             'config' => 'setConfig',
-            'ssl' => 'setSsl'
+            'ssl' => 'setSsl',
+            'customizedDns' => 'setCustomizedDns'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -145,6 +153,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     * vpc  vpc
     * config  config
     * ssl  ssl
+    * customizedDns  customizedDns
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
             'cloud' => 'getCloud',
             'vpc' => 'getVpc',
             'config' => 'getConfig',
-            'ssl' => 'getSsl'
+            'ssl' => 'getSsl',
+            'customizedDns' => 'getCustomizedDns'
     ];
 
     /**
@@ -201,6 +211,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     }
     const DB_TYPE_ORACLE = 'oracle';
     const DB_TYPE_GAUSSDBV5 = 'gaussdbv5';
+    const DB_TYPE_REDIS = 'redis';
+    const DB_TYPE_REDISCLUSTER = 'rediscluster';
+    const DB_TYPE_GAUSSREDIS = 'gaussredis';
     const ENDPOINT_TYPE_OFFLINE = 'offline';
     const ENDPOINT_TYPE_ECS = 'ecs';
     const ENDPOINT_TYPE_CLOUD = 'cloud';
@@ -218,6 +231,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
         return [
             self::DB_TYPE_ORACLE,
             self::DB_TYPE_GAUSSDBV5,
+            self::DB_TYPE_REDIS,
+            self::DB_TYPE_REDISCLUSTER,
+            self::DB_TYPE_GAUSSREDIS,
         ];
     }
 
@@ -272,6 +288,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
         $this->container['vpc'] = isset($data['vpc']) ? $data['vpc'] : null;
         $this->container['config'] = isset($data['config']) ? $data['config'] : null;
         $this->container['ssl'] = isset($data['ssl']) ? $data['ssl'] : null;
+        $this->container['customizedDns'] = isset($data['customizedDns']) ? $data['customizedDns'] : null;
     }
 
     /**
@@ -334,7 +351,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     *
     * @return string
     */
@@ -346,7 +363,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
     *
     * @return $this
     */
@@ -521,6 +538,30 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     public function setSsl($ssl)
     {
         $this->container['ssl'] = $ssl;
+        return $this;
+    }
+
+    /**
+    * Gets customizedDns
+    *  customizedDns
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\CustomizedDns|null
+    */
+    public function getCustomizedDns()
+    {
+        return $this->container['customizedDns'];
+    }
+
+    /**
+    * Sets customizedDns
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\CustomizedDns|null $customizedDns customizedDns
+    *
+    * @return $this
+    */
+    public function setCustomizedDns($customizedDns)
+    {
+        $this->container['customizedDns'] = $customizedDns;
         return $this;
     }
 

@@ -34,7 +34,7 @@ class CreateNodePoolResponse implements ModelInterface, ArrayAccess
             'apiVersion' => 'string',
             'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolMetadata',
             'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolSpec',
-            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus'
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\CreateNodePoolStatus'
     ];
 
     /**
@@ -317,7 +317,7 @@ class CreateNodePoolResponse implements ModelInterface, ArrayAccess
     * Gets status
     *  status
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\CreateNodePoolStatus|null
     */
     public function getStatus()
     {
@@ -327,7 +327,7 @@ class CreateNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolStatus|null $status status
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\CreateNodePoolStatus|null $status status
     *
     * @return $this
     */

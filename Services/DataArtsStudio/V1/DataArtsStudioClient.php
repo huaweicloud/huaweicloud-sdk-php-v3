@@ -4828,6 +4828,229 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 导入主题
+     *
+     * 用于导入主题
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importCatalogs($request)
+    {
+        return $this->importCatalogsWithHttpInfo($request);
+    }
+
+    public function importCatalogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/design/catalogs/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['actionId'] !== null) {
+            $queryParams['action-id'] = $localVarParams['actionId'];
+        }
+        if ($localVarParams['skipExist'] !== null) {
+            $queryParams['skip-exist'] = $localVarParams['skipExist'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'response']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'response'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportCatalogsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportCatalogsRequest');
+    }
+
+    /**
+     * 血缘导入
+     *
+     * 血缘查询
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importLineage($request)
+    {
+        return $this->importLineageWithHttpInfo($request);
+    }
+
+    public function importLineageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/lineage/import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportLineageResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportLineageRequest');
+    }
+
+    /**
+     * 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+     *
+     * 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importModels($request)
+    {
+        return $this->importModelsWithHttpInfo($request);
+    }
+
+    public function importModelsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/design/models/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['actionId'] !== null) {
+            $queryParams['action-id'] = $localVarParams['actionId'];
+        }
+        if ($localVarParams['modelId'] !== null) {
+            $queryParams['model_id'] = $localVarParams['modelId'];
+        }
+        if ($localVarParams['directoryId'] !== null) {
+            $queryParams['directory_id'] = $localVarParams['directoryId'];
+        }
+        if ($localVarParams['skipExist'] !== null) {
+            $queryParams['skip-exist'] = $localVarParams['skipExist'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'response']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'response'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportModelsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ImportModelsRequest');
+    }
+
+    /**
      * 查询导入结果
      *
      * 查询导入excel的处理结果
@@ -5216,6 +5439,104 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListAllStandardsResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListAllStandardsRequest');
+    }
+
+    /**
+     * 查询多种类型的表信息
+     *
+     * 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllTables($request)
+    {
+        return $this->listAllTablesWithHttpInfo($request);
+    }
+
+    public function listAllTablesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/design/all-tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['createBy'] !== null) {
+            $queryParams['create_by'] = $localVarParams['createBy'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['syncStatus'] !== null) {
+            $queryParams['sync_status'] = $localVarParams['syncStatus'];
+        }
+        if ($localVarParams['syncKey'] !== null) {
+            $queryParams['sync_key'] = $localVarParams['syncKey'];
+        }
+        if ($localVarParams['bizCatalogId'] !== null) {
+            $queryParams['biz_catalog_id'] = $localVarParams['bizCatalogId'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['bizCatalogIdList'] !== null) {
+            $queryParams['biz_catalog_id_list'] = $localVarParams['bizCatalogIdList'];
+        }
+        if ($localVarParams['bizTypeList'] !== null) {
+            $queryParams['biz_type_list'] = $localVarParams['bizTypeList'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'response']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'response'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListAllTablesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListAllTablesRequest');
     }
 
     /**

@@ -249,8 +249,8 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 32)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

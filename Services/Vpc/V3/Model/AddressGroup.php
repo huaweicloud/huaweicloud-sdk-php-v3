@@ -33,6 +33,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
+    * ipExtraSet  功能说明：地址组包含的地址集及其备注信息
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'status' => 'string',
-            'statusMessage' => 'string'
+            'statusMessage' => 'string',
+            'ipExtraSet' => '\HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetRespOption[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
+    * ipExtraSet  功能说明：地址组包含的地址集及其备注信息
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class AddressGroup implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'tags' => null,
         'status' => null,
-        'statusMessage' => null
+        'statusMessage' => null,
+        'ipExtraSet' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
+    * ipExtraSet  功能说明：地址组包含的地址集及其备注信息
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
             'status' => 'status',
-            'statusMessage' => 'status_message'
+            'statusMessage' => 'status_message',
+            'ipExtraSet' => 'ip_extra_set'
     ];
 
     /**
@@ -156,6 +162,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
+    * ipExtraSet  功能说明：地址组包含的地址集及其备注信息
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
             'status' => 'setStatus',
-            'statusMessage' => 'setStatusMessage'
+            'statusMessage' => 'setStatusMessage',
+            'ipExtraSet' => 'setIpExtraSet'
     ];
 
     /**
@@ -190,6 +198,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * tags  IP地址组资源标签
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
+    * ipExtraSet  功能说明：地址组包含的地址集及其备注信息
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
             'status' => 'getStatus',
-            'statusMessage' => 'getStatusMessage'
+            'statusMessage' => 'getStatusMessage',
+            'ipExtraSet' => 'getIpExtraSet'
     ];
 
     /**
@@ -280,6 +290,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
+        $this->container['ipExtraSet'] = isset($data['ipExtraSet']) ? $data['ipExtraSet'] : null;
     }
 
     /**
@@ -343,6 +354,9 @@ class AddressGroup implements ModelInterface, ArrayAccess
         }
         if ($this->container['statusMessage'] === null) {
             $invalidProperties[] = "'statusMessage' can't be null";
+        }
+        if ($this->container['ipExtraSet'] === null) {
+            $invalidProperties[] = "'ipExtraSet' can't be null";
         }
         return $invalidProperties;
     }
@@ -667,6 +681,30 @@ class AddressGroup implements ModelInterface, ArrayAccess
     public function setStatusMessage($statusMessage)
     {
         $this->container['statusMessage'] = $statusMessage;
+        return $this;
+    }
+
+    /**
+    * Gets ipExtraSet
+    *  功能说明：地址组包含的地址集及其备注信息
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetRespOption[]
+    */
+    public function getIpExtraSet()
+    {
+        return $this->container['ipExtraSet'];
+    }
+
+    /**
+    * Sets ipExtraSet
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\IpExtraSetRespOption[] $ipExtraSet 功能说明：地址组包含的地址集及其备注信息
+    *
+    * @return $this
+    */
+    public function setIpExtraSet($ipExtraSet)
+    {
+        $this->container['ipExtraSet'] = $ipExtraSet;
         return $this;
     }
 

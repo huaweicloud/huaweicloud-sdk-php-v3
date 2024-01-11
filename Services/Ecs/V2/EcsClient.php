@@ -3333,6 +3333,71 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询指定云服务器网卡信息
+     *
+     * 根据网卡ID，查询云服务器网卡信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function novaShowServerInterface($request)
+    {
+        return $this->novaShowServerInterfaceWithHttpInfo($request);
+    }
+
+    public function novaShowServerInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/{project_id}/servers/{server_id}/os-interface/{port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowServerInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowServerInterfaceRequest');
+    }
+
+    /**
      * 管理云服务器自动恢复动作
      *
      * 配置、删除云服务器自动恢复动作。

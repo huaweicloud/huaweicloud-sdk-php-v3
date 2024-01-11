@@ -22,7 +22,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * restoreTime  恢复时间戳
     * restoreTables  表信息
-    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * restoreTime  恢复时间戳
     * restoreTables  表信息
-    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * restoreTime  恢复时间戳
     * restoreTables  表信息
-    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * restoreTime  恢复时间戳
     * restoreTables  表信息
-    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * restoreTime  恢复时间戳
     * restoreTables  表信息
-    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFastRestore
-    *  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    *  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @return bool|null
     */
@@ -262,7 +262,7 @@ class RestoreTablesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isFastRestore
     *
-    * @param bool|null $isFastRestore 是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用急速恢复。 如果实例使用了XA事务，则不可使用极速恢复！使用恢复会导致恢复失败！
+    * @param bool|null $isFastRestore 是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     *
     * @return $this
     */

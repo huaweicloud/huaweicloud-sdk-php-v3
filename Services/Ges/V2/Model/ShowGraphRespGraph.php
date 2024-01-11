@@ -63,6 +63,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * expandTime  图扩副本的时间。
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -109,7 +110,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'originGraphSizeTypeIndex' => 'string',
             'expandTime' => 'string',
             'resizeTime' => 'string',
-            'enableMultiLabel' => 'bool'
+            'enableMultiLabel' => 'bool',
+            'capacityRatio' => 'int'
     ];
 
     /**
@@ -157,6 +159,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * expandTime  图扩副本的时间。
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -203,7 +206,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         'originGraphSizeTypeIndex' => null,
         'expandTime' => null,
         'resizeTime' => null,
-        'enableMultiLabel' => null
+        'enableMultiLabel' => null,
+        'capacityRatio' => 'int32'
     ];
 
     /**
@@ -272,6 +276,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * expandTime  图扩副本的时间。
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -318,7 +323,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'originGraphSizeTypeIndex' => 'origin_graph_size_type_index',
             'expandTime' => 'expand_time',
             'resizeTime' => 'resize_time',
-            'enableMultiLabel' => 'enable_multi_label'
+            'enableMultiLabel' => 'enable_multi_label',
+            'capacityRatio' => 'capacity_ratio'
     ];
 
     /**
@@ -366,6 +372,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * expandTime  图扩副本的时间。
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -412,7 +419,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'originGraphSizeTypeIndex' => 'setOriginGraphSizeTypeIndex',
             'expandTime' => 'setExpandTime',
             'resizeTime' => 'setResizeTime',
-            'enableMultiLabel' => 'setEnableMultiLabel'
+            'enableMultiLabel' => 'setEnableMultiLabel',
+            'capacityRatio' => 'setCapacityRatio'
     ];
 
     /**
@@ -460,6 +468,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * expandTime  图扩副本的时间。
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -506,7 +515,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'originGraphSizeTypeIndex' => 'getOriginGraphSizeTypeIndex',
             'expandTime' => 'getExpandTime',
             'resizeTime' => 'getResizeTime',
-            'enableMultiLabel' => 'getEnableMultiLabel'
+            'enableMultiLabel' => 'getEnableMultiLabel',
+            'capacityRatio' => 'getCapacityRatio'
     ];
 
     /**
@@ -610,6 +620,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         $this->container['expandTime'] = isset($data['expandTime']) ? $data['expandTime'] : null;
         $this->container['resizeTime'] = isset($data['resizeTime']) ? $data['resizeTime'] : null;
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
+        $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
     }
 
     /**
@@ -1663,6 +1674,30 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     public function setEnableMultiLabel($enableMultiLabel)
     {
         $this->container['enableMultiLabel'] = $enableMultiLabel;
+        return $this;
+    }
+
+    /**
+    * Gets capacityRatio
+    *  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    *
+    * @return int|null
+    */
+    public function getCapacityRatio()
+    {
+        return $this->container['capacityRatio'];
+    }
+
+    /**
+    * Sets capacityRatio
+    *
+    * @param int|null $capacityRatio 图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    *
+    * @return $this
+    */
+    public function setCapacityRatio($capacityRatio)
+    {
+        $this->container['capacityRatio'] = $capacityRatio;
         return $this;
     }
 

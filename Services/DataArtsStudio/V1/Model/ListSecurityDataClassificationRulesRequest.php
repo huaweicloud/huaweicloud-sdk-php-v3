@@ -20,7 +20,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * offset  查询偏移
     * limit  查询一页限制
     * secrecyLevel  密级
@@ -50,7 +50,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * offset  查询偏移
     * limit  查询一页限制
     * secrecyLevel  密级
@@ -101,7 +101,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * offset  查询偏移
     * limit  查询一页限制
     * secrecyLevel  密级
@@ -131,7 +131,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * offset  查询偏移
     * limit  查询一页限制
     * secrecyLevel  密级
@@ -161,7 +161,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * offset  查询偏移
     * limit  查询一页限制
     * secrecyLevel  密级
@@ -366,7 +366,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -378,7 +378,7 @@ class ListSecurityDataClassificationRulesRequest implements ModelInterface, Arra
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

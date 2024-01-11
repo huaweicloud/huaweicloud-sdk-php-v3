@@ -58,8 +58,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * endpointService  endpointService
     * endpointServices  终端节点服务列表
     * nodeIps  nodeIps
+    * nodeIpv6Ips  nodeIpv6Ips
+    * publicIpv6Ips  实例IPV6出公网IP
     * publicips  公网入口地址列表
     * privateips  私网入口地址列表
+    * unreliableIps  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    * enableFullstackIpv6  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
     * isReleasable  实例是否可释放 - true：可释放 - false：不可释放
     * ingressBandwidthChargingMode  入公网带宽计费模式
     *
@@ -103,8 +107,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
             'endpointService' => '\HuaweiCloud\SDK\Apig\V2\Model\EndpointService',
             'endpointServices' => '\HuaweiCloud\SDK\Apig\V2\Model\EndpointService[]',
             'nodeIps' => '\HuaweiCloud\SDK\Apig\V2\Model\NodeIps',
+            'nodeIpv6Ips' => '\HuaweiCloud\SDK\Apig\V2\Model\NodeIps',
+            'publicIpv6Ips' => 'string[]',
             'publicips' => '\HuaweiCloud\SDK\Apig\V2\Model\IpDetails[]',
             'privateips' => '\HuaweiCloud\SDK\Apig\V2\Model\IpDetails[]',
+            'unreliableIps' => 'string[]',
+            'enableFullstackIpv6' => 'bool',
             'isReleasable' => 'bool',
             'ingressBandwidthChargingMode' => 'string'
     ];
@@ -148,8 +156,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * endpointService  endpointService
     * endpointServices  终端节点服务列表
     * nodeIps  nodeIps
+    * nodeIpv6Ips  nodeIpv6Ips
+    * publicIpv6Ips  实例IPV6出公网IP
     * publicips  公网入口地址列表
     * privateips  私网入口地址列表
+    * unreliableIps  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    * enableFullstackIpv6  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
     * isReleasable  实例是否可释放 - true：可释放 - false：不可释放
     * ingressBandwidthChargingMode  入公网带宽计费模式
     *
@@ -193,8 +205,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
         'endpointService' => null,
         'endpointServices' => null,
         'nodeIps' => null,
+        'nodeIpv6Ips' => null,
+        'publicIpv6Ips' => null,
         'publicips' => null,
         'privateips' => null,
+        'unreliableIps' => null,
+        'enableFullstackIpv6' => null,
         'isReleasable' => null,
         'ingressBandwidthChargingMode' => null
     ];
@@ -259,8 +275,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * endpointService  endpointService
     * endpointServices  终端节点服务列表
     * nodeIps  nodeIps
+    * nodeIpv6Ips  nodeIpv6Ips
+    * publicIpv6Ips  实例IPV6出公网IP
     * publicips  公网入口地址列表
     * privateips  私网入口地址列表
+    * unreliableIps  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    * enableFullstackIpv6  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
     * isReleasable  实例是否可释放 - true：可释放 - false：不可释放
     * ingressBandwidthChargingMode  入公网带宽计费模式
     *
@@ -304,8 +324,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
             'endpointService' => 'endpoint_service',
             'endpointServices' => 'endpoint_services',
             'nodeIps' => 'node_ips',
+            'nodeIpv6Ips' => 'node_ipv6_ips',
+            'publicIpv6Ips' => 'public_ipv6_ips',
             'publicips' => 'publicips',
             'privateips' => 'privateips',
+            'unreliableIps' => 'unreliable_ips',
+            'enableFullstackIpv6' => 'enable_fullstack_ipv6',
             'isReleasable' => 'is_releasable',
             'ingressBandwidthChargingMode' => 'ingress_bandwidth_charging_mode'
     ];
@@ -349,8 +373,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * endpointService  endpointService
     * endpointServices  终端节点服务列表
     * nodeIps  nodeIps
+    * nodeIpv6Ips  nodeIpv6Ips
+    * publicIpv6Ips  实例IPV6出公网IP
     * publicips  公网入口地址列表
     * privateips  私网入口地址列表
+    * unreliableIps  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    * enableFullstackIpv6  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
     * isReleasable  实例是否可释放 - true：可释放 - false：不可释放
     * ingressBandwidthChargingMode  入公网带宽计费模式
     *
@@ -394,8 +422,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
             'endpointService' => 'setEndpointService',
             'endpointServices' => 'setEndpointServices',
             'nodeIps' => 'setNodeIps',
+            'nodeIpv6Ips' => 'setNodeIpv6Ips',
+            'publicIpv6Ips' => 'setPublicIpv6Ips',
             'publicips' => 'setPublicips',
             'privateips' => 'setPrivateips',
+            'unreliableIps' => 'setUnreliableIps',
+            'enableFullstackIpv6' => 'setEnableFullstackIpv6',
             'isReleasable' => 'setIsReleasable',
             'ingressBandwidthChargingMode' => 'setIngressBandwidthChargingMode'
     ];
@@ -439,8 +471,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     * endpointService  endpointService
     * endpointServices  终端节点服务列表
     * nodeIps  nodeIps
+    * nodeIpv6Ips  nodeIpv6Ips
+    * publicIpv6Ips  实例IPV6出公网IP
     * publicips  公网入口地址列表
     * privateips  私网入口地址列表
+    * unreliableIps  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    * enableFullstackIpv6  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
     * isReleasable  实例是否可释放 - true：可释放 - false：不可释放
     * ingressBandwidthChargingMode  入公网带宽计费模式
     *
@@ -484,8 +520,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
             'endpointService' => 'getEndpointService',
             'endpointServices' => 'getEndpointServices',
             'nodeIps' => 'getNodeIps',
+            'nodeIpv6Ips' => 'getNodeIpv6Ips',
+            'publicIpv6Ips' => 'getPublicIpv6Ips',
             'publicips' => 'getPublicips',
             'privateips' => 'getPrivateips',
+            'unreliableIps' => 'getUnreliableIps',
+            'enableFullstackIpv6' => 'getEnableFullstackIpv6',
             'isReleasable' => 'getIsReleasable',
             'ingressBandwidthChargingMode' => 'getIngressBandwidthChargingMode'
     ];
@@ -826,8 +866,12 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
         $this->container['endpointService'] = isset($data['endpointService']) ? $data['endpointService'] : null;
         $this->container['endpointServices'] = isset($data['endpointServices']) ? $data['endpointServices'] : null;
         $this->container['nodeIps'] = isset($data['nodeIps']) ? $data['nodeIps'] : null;
+        $this->container['nodeIpv6Ips'] = isset($data['nodeIpv6Ips']) ? $data['nodeIpv6Ips'] : null;
+        $this->container['publicIpv6Ips'] = isset($data['publicIpv6Ips']) ? $data['publicIpv6Ips'] : null;
         $this->container['publicips'] = isset($data['publicips']) ? $data['publicips'] : null;
         $this->container['privateips'] = isset($data['privateips']) ? $data['privateips'] : null;
+        $this->container['unreliableIps'] = isset($data['unreliableIps']) ? $data['unreliableIps'] : null;
+        $this->container['enableFullstackIpv6'] = isset($data['enableFullstackIpv6']) ? $data['enableFullstackIpv6'] : null;
         $this->container['isReleasable'] = isset($data['isReleasable']) ? $data['isReleasable'] : null;
         $this->container['ingressBandwidthChargingMode'] = isset($data['ingressBandwidthChargingMode']) ? $data['ingressBandwidthChargingMode'] : null;
     }
@@ -1789,6 +1833,54 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets nodeIpv6Ips
+    *  nodeIpv6Ips
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\NodeIps|null
+    */
+    public function getNodeIpv6Ips()
+    {
+        return $this->container['nodeIpv6Ips'];
+    }
+
+    /**
+    * Sets nodeIpv6Ips
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\NodeIps|null $nodeIpv6Ips nodeIpv6Ips
+    *
+    * @return $this
+    */
+    public function setNodeIpv6Ips($nodeIpv6Ips)
+    {
+        $this->container['nodeIpv6Ips'] = $nodeIpv6Ips;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpv6Ips
+    *  实例IPV6出公网IP
+    *
+    * @return string[]|null
+    */
+    public function getPublicIpv6Ips()
+    {
+        return $this->container['publicIpv6Ips'];
+    }
+
+    /**
+    * Sets publicIpv6Ips
+    *
+    * @param string[]|null $publicIpv6Ips 实例IPV6出公网IP
+    *
+    * @return $this
+    */
+    public function setPublicIpv6Ips($publicIpv6Ips)
+    {
+        $this->container['publicIpv6Ips'] = $publicIpv6Ips;
+        return $this;
+    }
+
+    /**
     * Gets publicips
     *  公网入口地址列表
     *
@@ -1833,6 +1925,54 @@ class ShowDetailsOfInstanceV2Response implements ModelInterface, ArrayAccess
     public function setPrivateips($privateips)
     {
         $this->container['privateips'] = $privateips;
+        return $this;
+    }
+
+    /**
+    * Gets unreliableIps
+    *  不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    *
+    * @return string[]|null
+    */
+    public function getUnreliableIps()
+    {
+        return $this->container['unreliableIps'];
+    }
+
+    /**
+    * Sets unreliableIps
+    *
+    * @param string[]|null $unreliableIps 不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+    *
+    * @return $this
+    */
+    public function setUnreliableIps($unreliableIps)
+    {
+        $this->container['unreliableIps'] = $unreliableIps;
+        return $this;
+    }
+
+    /**
+    * Gets enableFullstackIpv6
+    *  实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
+    *
+    * @return bool|null
+    */
+    public function getEnableFullstackIpv6()
+    {
+        return $this->container['enableFullstackIpv6'];
+    }
+
+    /**
+    * Sets enableFullstackIpv6
+    *
+    * @param bool|null $enableFullstackIpv6 实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
+    *
+    * @return $this
+    */
+    public function setEnableFullstackIpv6($enableFullstackIpv6)
+    {
+        $this->container['enableFullstackIpv6'] = $enableFullstackIpv6;
         return $this;
     }
 

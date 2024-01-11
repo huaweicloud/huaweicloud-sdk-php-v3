@@ -36,6 +36,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+    * sysLockSourceService  用于标识SMB服务
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -58,6 +59,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'autoExpand' => 'bool',
             'smnNotify' => 'bool',
             'threshold' => 'int',
+            'sysLockSourceService' => 'string',
             'updatedAt' => 'string',
             'version' => 'string'
     ];
@@ -80,6 +82,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+    * sysLockSourceService  用于标识SMB服务
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -102,6 +105,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         'autoExpand' => null,
         'smnNotify' => null,
         'threshold' => 'int32',
+        'sysLockSourceService' => null,
         'updatedAt' => null,
         'version' => null
     ];
@@ -145,6 +149,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+    * sysLockSourceService  用于标识SMB服务
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -167,6 +172,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'autoExpand' => 'auto_expand',
             'smnNotify' => 'smn_notify',
             'threshold' => 'threshold',
+            'sysLockSourceService' => 'sys_lock_source_service',
             'updatedAt' => 'updated_at',
             'version' => 'version'
     ];
@@ -189,6 +195,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+    * sysLockSourceService  用于标识SMB服务
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -211,6 +218,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'autoExpand' => 'setAutoExpand',
             'smnNotify' => 'setSmnNotify',
             'threshold' => 'setThreshold',
+            'sysLockSourceService' => 'setSysLockSourceService',
             'updatedAt' => 'setUpdatedAt',
             'version' => 'setVersion'
     ];
@@ -233,6 +241,7 @@ class VaultGet implements ModelInterface, ArrayAccess
     * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）。
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
+    * sysLockSourceService  用于标识SMB服务
     * updatedAt  更新时间,例如:\"2020-02-05T10:38:34.209782\"
     * version  版本
     *
@@ -255,6 +264,7 @@ class VaultGet implements ModelInterface, ArrayAccess
             'autoExpand' => 'getAutoExpand',
             'smnNotify' => 'getSmnNotify',
             'threshold' => 'getThreshold',
+            'sysLockSourceService' => 'getSysLockSourceService',
             'updatedAt' => 'getUpdatedAt',
             'version' => 'getVersion'
     ];
@@ -333,6 +343,7 @@ class VaultGet implements ModelInterface, ArrayAccess
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
+        $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
@@ -785,6 +796,30 @@ class VaultGet implements ModelInterface, ArrayAccess
     public function setThreshold($threshold)
     {
         $this->container['threshold'] = $threshold;
+        return $this;
+    }
+
+    /**
+    * Gets sysLockSourceService
+    *  用于标识SMB服务
+    *
+    * @return string|null
+    */
+    public function getSysLockSourceService()
+    {
+        return $this->container['sysLockSourceService'];
+    }
+
+    /**
+    * Sets sysLockSourceService
+    *
+    * @param string|null $sysLockSourceService 用于标识SMB服务
+    *
+    * @return $this
+    */
+    public function setSysLockSourceService($sysLockSourceService)
+    {
+        $this->container['sysLockSourceService'] = $sysLockSourceService;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     * Array of property to type mappings. Used for (de)serialization
     * permissionSetId  权限集id
     * permissionId  权限id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     * Array of property to format mappings. Used for (de)serialization
     * permissionSetId  权限集id
     * permissionId  权限id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     * and the value is the original name
     * permissionSetId  权限集id
     * permissionId  权限id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     * Array of attributes to setter functions (for deserialization of responses)
     * permissionSetId  权限集id
     * permissionId  权限id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     * Array of attributes to getter functions (for serialization of requests)
     * permissionSetId  权限集id
     * permissionId  权限id
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * body  body
     *
     * @var string[]
@@ -282,7 +282,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class UpdateSecurityPermissionSetPermissionRequest implements ModelInterface, Ar
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

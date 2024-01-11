@@ -37,6 +37,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'string',
             'protectionStatus' => 'string',
             'protectionReason' => 'string',
-            'anyPortEnable' => 'bool'
+            'anyPortEnable' => 'bool',
+            'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain'
     ];
 
     /**
@@ -79,6 +81,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
         'ipVersion' => null,
         'protectionStatus' => null,
         'protectionReason' => null,
-        'anyPortEnable' => null
+        'anyPortEnable' => null,
+        'connectionDrain' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'ip_version',
             'protectionStatus' => 'protection_status',
             'protectionReason' => 'protection_reason',
-            'anyPortEnable' => 'any_port_enable'
+            'anyPortEnable' => 'any_port_enable',
+            'connectionDrain' => 'connection_drain'
     ];
 
     /**
@@ -184,6 +190,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'setIpVersion',
             'protectionStatus' => 'setProtectionStatus',
             'protectionReason' => 'setProtectionReason',
-            'anyPortEnable' => 'setAnyPortEnable'
+            'anyPortEnable' => 'setAnyPortEnable',
+            'connectionDrain' => 'setConnectionDrain'
     ];
 
     /**
@@ -226,6 +234,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+    * connectionDrain  connectionDrain
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
             'ipVersion' => 'getIpVersion',
             'protectionStatus' => 'getProtectionStatus',
             'protectionReason' => 'getProtectionReason',
-            'anyPortEnable' => 'getAnyPortEnable'
+            'anyPortEnable' => 'getAnyPortEnable',
+            'connectionDrain' => 'getConnectionDrain'
     ];
 
     /**
@@ -339,6 +349,7 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
         $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
+        $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
     }
 
     /**
@@ -845,6 +856,30 @@ class CreatePoolOption implements ModelInterface, ArrayAccess
     public function setAnyPortEnable($anyPortEnable)
     {
         $this->container['anyPortEnable'] = $anyPortEnable;
+        return $this;
+    }
+
+    /**
+    * Gets connectionDrain
+    *  connectionDrain
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null
+    */
+    public function getConnectionDrain()
+    {
+        return $this->container['connectionDrain'];
+    }
+
+    /**
+    * Sets connectionDrain
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain|null $connectionDrain connectionDrain
+    *
+    * @return $this
+    */
+    public function setConnectionDrain($connectionDrain)
+    {
+        $this->container['connectionDrain'] = $connectionDrain;
         return $this;
     }
 

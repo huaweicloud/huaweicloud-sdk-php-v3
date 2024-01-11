@@ -29,7 +29,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
     * dssPoolId  专属存储池ID
     * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  tags
+    * tags  标签列表
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * subnetId  指定子网ID，用于集群网络配置。
     * securityGroupId  指定安全组ID，用于集群网络配置。
@@ -53,7 +53,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
             'dbPort' => 'int',
             'dssPoolId' => 'string',
             'availabilityZones' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\Dws\V2\Model\Tags',
+            'tags' => '\HuaweiCloud\SDK\Dws\V2\Model\Tags[]',
             'vpcId' => 'string',
             'subnetId' => 'string',
             'securityGroupId' => 'string',
@@ -77,7 +77,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
     * dssPoolId  专属存储池ID
     * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  tags
+    * tags  标签列表
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * subnetId  指定子网ID，用于集群网络配置。
     * securityGroupId  指定安全组ID，用于集群网络配置。
@@ -146,7 +146,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
     * dssPoolId  专属存储池ID
     * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  tags
+    * tags  标签列表
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * subnetId  指定子网ID，用于集群网络配置。
     * securityGroupId  指定安全组ID，用于集群网络配置。
@@ -194,7 +194,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
     * dssPoolId  专属存储池ID
     * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  tags
+    * tags  标签列表
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * subnetId  指定子网ID，用于集群网络配置。
     * securityGroupId  指定安全组ID，用于集群网络配置。
@@ -242,7 +242,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * dbPort  集群数据库端口，取值范围为8000~30000，默认值：8000。
     * dssPoolId  专属存储池ID
     * availabilityZones  可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
-    * tags  tags
+    * tags  标签列表
     * vpcId  指定虚拟私有云ID，用于集群网络配置。
     * subnetId  指定子网ID，用于集群网络配置。
     * securityGroupId  指定安全组ID，用于集群网络配置。
@@ -632,9 +632,9 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  标签列表
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\Tags|null
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\Tags[]|null
     */
     public function getTags()
     {
@@ -644,7 +644,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags|null $tags tags
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags[]|null $tags 标签列表
     *
     * @return $this
     */

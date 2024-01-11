@@ -38,6 +38,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * memberInstanceId  后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'listenerId' => 'string[]',
             'memberInstanceId' => 'string[]',
             'vpcId' => 'string[]',
-            'type' => 'string[]'
+            'type' => 'string[]',
+            'connectionDrain' => 'bool'
     ];
 
     /**
@@ -82,6 +84,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * memberInstanceId  后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
         'listenerId' => null,
         'memberInstanceId' => null,
         'vpcId' => null,
-        'type' => null
+        'type' => null,
+        'connectionDrain' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * memberInstanceId  后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'listenerId' => 'listener_id',
             'memberInstanceId' => 'member_instance_id',
             'vpcId' => 'vpc_id',
-            'type' => 'type'
+            'type' => 'type',
+            'connectionDrain' => 'connection_drain'
     ];
 
     /**
@@ -191,6 +197,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * memberInstanceId  后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'listenerId' => 'setListenerId',
             'memberInstanceId' => 'setMemberInstanceId',
             'vpcId' => 'setVpcId',
-            'type' => 'setType'
+            'type' => 'setType',
+            'connectionDrain' => 'setConnectionDrain'
     ];
 
     /**
@@ -235,6 +243,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * memberInstanceId  后端云服务器ID。仅用于查询条件，不作为响应参数字段。  支持多值查询，查询条件格式：*member_instance_id=xxx&member_instance_id=xxx*。
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'listenerId' => 'getListenerId',
             'memberInstanceId' => 'getMemberInstanceId',
             'vpcId' => 'getVpcId',
-            'type' => 'getType'
+            'type' => 'getType',
+            'connectionDrain' => 'getConnectionDrain'
     ];
 
     /**
@@ -335,6 +345,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
         $this->container['memberInstanceId'] = isset($data['memberInstanceId']) ? $data['memberInstanceId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
     }
 
     /**
@@ -794,6 +805,30 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets connectionDrain
+    *  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+    *
+    * @return bool|null
+    */
+    public function getConnectionDrain()
+    {
+        return $this->container['connectionDrain'];
+    }
+
+    /**
+    * Sets connectionDrain
+    *
+    * @param bool|null $connectionDrain 查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+    *
+    * @return $this
+    */
+    public function setConnectionDrain($connectionDrain)
+    {
+        $this->container['connectionDrain'] = $connectionDrain;
         return $this;
     }
 

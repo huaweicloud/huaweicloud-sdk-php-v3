@@ -30,11 +30,12 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     * type  健康检查类型
     * expectedCodes  期望HTTP响应状态码，指定下列值：单值，例如200；列表，例如200，202；区间，例如200-204。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * domainName  功能说明：健康检查测试member健康状态时，发送的http请求的域名。仅当type为HTTP时生效。使用说明：默认为空，表示使用负载均衡器的vip作为http请求的目的地址。以数字或字母开头，只能包含数字、字母、’-’、’.’。
-    * urlPath  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * urlPath  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     * httpMethod  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * delay  健康检查间隔，单位秒
     * maxRetries  最大重试次数
     * pools  健康检查关联的后端云服务器组列表
+    * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
             'httpMethod' => 'string',
             'delay' => 'int',
             'maxRetries' => 'int',
-            'pools' => '\HuaweiCloud\SDK\Elb\V2\Model\ResourceList[]'
+            'pools' => '\HuaweiCloud\SDK\Elb\V2\Model\ResourceList[]',
+            'maxRetriesDown' => 'int'
     ];
 
     /**
@@ -68,11 +70,12 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     * type  健康检查类型
     * expectedCodes  期望HTTP响应状态码，指定下列值：单值，例如200；列表，例如200，202；区间，例如200-204。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * domainName  功能说明：健康检查测试member健康状态时，发送的http请求的域名。仅当type为HTTP时生效。使用说明：默认为空，表示使用负载均衡器的vip作为http请求的目的地址。以数字或字母开头，只能包含数字、字母、’-’、’.’。
-    * urlPath  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * urlPath  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     * httpMethod  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * delay  健康检查间隔，单位秒
     * maxRetries  最大重试次数
     * pools  健康检查关联的后端云服务器组列表
+    * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
         'httpMethod' => null,
         'delay' => 'int32',
         'maxRetries' => 'int32',
-        'pools' => null
+        'pools' => null,
+        'maxRetriesDown' => 'int32'
     ];
 
     /**
@@ -127,11 +131,12 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     * type  健康检查类型
     * expectedCodes  期望HTTP响应状态码，指定下列值：单值，例如200；列表，例如200，202；区间，例如200-204。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * domainName  功能说明：健康检查测试member健康状态时，发送的http请求的域名。仅当type为HTTP时生效。使用说明：默认为空，表示使用负载均衡器的vip作为http请求的目的地址。以数字或字母开头，只能包含数字、字母、’-’、’.’。
-    * urlPath  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * urlPath  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     * httpMethod  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * delay  健康检查间隔，单位秒
     * maxRetries  最大重试次数
     * pools  健康检查关联的后端云服务器组列表
+    * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
             'httpMethod' => 'http_method',
             'delay' => 'delay',
             'maxRetries' => 'max_retries',
-            'pools' => 'pools'
+            'pools' => 'pools',
+            'maxRetriesDown' => 'max_retries_down'
     ];
 
     /**
@@ -165,11 +171,12 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     * type  健康检查类型
     * expectedCodes  期望HTTP响应状态码，指定下列值：单值，例如200；列表，例如200，202；区间，例如200-204。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * domainName  功能说明：健康检查测试member健康状态时，发送的http请求的域名。仅当type为HTTP时生效。使用说明：默认为空，表示使用负载均衡器的vip作为http请求的目的地址。以数字或字母开头，只能包含数字、字母、’-’、’.’。
-    * urlPath  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * urlPath  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     * httpMethod  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * delay  健康检查间隔，单位秒
     * maxRetries  最大重试次数
     * pools  健康检查关联的后端云服务器组列表
+    * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
             'httpMethod' => 'setHttpMethod',
             'delay' => 'setDelay',
             'maxRetries' => 'setMaxRetries',
-            'pools' => 'setPools'
+            'pools' => 'setPools',
+            'maxRetriesDown' => 'setMaxRetriesDown'
     ];
 
     /**
@@ -203,11 +211,12 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     * type  健康检查类型
     * expectedCodes  期望HTTP响应状态码，指定下列值：单值，例如200；列表，例如200，202；区间，例如200-204。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * domainName  功能说明：健康检查测试member健康状态时，发送的http请求的域名。仅当type为HTTP时生效。使用说明：默认为空，表示使用负载均衡器的vip作为http请求的目的地址。以数字或字母开头，只能包含数字、字母、’-’、’.’。
-    * urlPath  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * urlPath  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     * httpMethod  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
     * delay  健康检查间隔，单位秒
     * maxRetries  最大重试次数
     * pools  健康检查关联的后端云服务器组列表
+    * maxRetriesDown  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
             'httpMethod' => 'getHttpMethod',
             'delay' => 'getDelay',
             'maxRetries' => 'getMaxRetries',
-            'pools' => 'getPools'
+            'pools' => 'getPools',
+            'maxRetriesDown' => 'getMaxRetriesDown'
     ];
 
     /**
@@ -319,6 +329,7 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
         $this->container['maxRetries'] = isset($data['maxRetries']) ? $data['maxRetries'] : null;
         $this->container['pools'] = isset($data['pools']) ? $data['pools'] : null;
+        $this->container['maxRetriesDown'] = isset($data['maxRetriesDown']) ? $data['maxRetriesDown'] : null;
     }
 
     /**
@@ -412,8 +423,8 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
         if ($this->container['urlPath'] === null) {
             $invalidProperties[] = "'urlPath' can't be null";
         }
-            if ((mb_strlen($this->container['urlPath']) > 16)) {
-                $invalidProperties[] = "invalid value for 'urlPath', the character length must be smaller than or equal to 16.";
+            if ((mb_strlen($this->container['urlPath']) > 80)) {
+                $invalidProperties[] = "invalid value for 'urlPath', the character length must be smaller than or equal to 80.";
             }
             if ((mb_strlen($this->container['urlPath']) < 1)) {
                 $invalidProperties[] = "invalid value for 'urlPath', the character length must be bigger than or equal to 1.";
@@ -441,6 +452,9 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
             }
         if ($this->container['pools'] === null) {
             $invalidProperties[] = "'pools' can't be null";
+        }
+        if ($this->container['maxRetriesDown'] === null) {
+            $invalidProperties[] = "'maxRetriesDown' can't be null";
         }
         return $invalidProperties;
     }
@@ -698,7 +712,7 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets urlPath
-    *  HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    *  健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     *
     * @return string
     */
@@ -710,7 +724,7 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     /**
     * Sets urlPath
     *
-    * @param string $urlPath HTTP方法，可以为GET、HEAD、POST、PUT、DELETE、TRACE、OPTIONS、CONNECT、PATCH。仅当type为HTTP时生效。该字段为预留字段，暂未启用。
+    * @param string $urlPath 健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。 支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+  使用说明：当type为HTTP/HTTPS时生效。
     *
     * @return $this
     */
@@ -813,6 +827,30 @@ class HealthmonitorResp implements ModelInterface, ArrayAccess
     public function setPools($pools)
     {
         $this->container['pools'] = $pools;
+        return $this;
+    }
+
+    /**
+    * Gets maxRetriesDown
+    *  健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
+    *
+    * @return int
+    */
+    public function getMaxRetriesDown()
+    {
+        return $this->container['maxRetriesDown'];
+    }
+
+    /**
+    * Sets maxRetriesDown
+    *
+    * @param int $maxRetriesDown 健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
+    *
+    * @return $this
+    */
+    public function setMaxRetriesDown($maxRetriesDown)
+    {
+        $this->container['maxRetriesDown'] = $maxRetriesDown;
         return $this;
     }
 

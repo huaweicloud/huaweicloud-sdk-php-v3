@@ -33,6 +33,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * protocol  后端云服务器组的后端协议。
     * lbAlgorithm  后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class PoolResp implements ModelInterface, ArrayAccess
             'healthmonitorId' => 'string',
             'sessionPersistence' => '\HuaweiCloud\SDK\Elb\V2\Model\SessionPersistence',
             'protocol' => 'string',
-            'lbAlgorithm' => 'string'
+            'lbAlgorithm' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -67,6 +71,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * protocol  后端云服务器组的后端协议。
     * lbAlgorithm  后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class PoolResp implements ModelInterface, ArrayAccess
         'healthmonitorId' => null,
         'sessionPersistence' => null,
         'protocol' => null,
-        'lbAlgorithm' => null
+        'lbAlgorithm' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * protocol  后端云服务器组的后端协议。
     * lbAlgorithm  后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class PoolResp implements ModelInterface, ArrayAccess
             'healthmonitorId' => 'healthmonitor_id',
             'sessionPersistence' => 'session_persistence',
             'protocol' => 'protocol',
-            'lbAlgorithm' => 'lb_algorithm'
+            'lbAlgorithm' => 'lb_algorithm',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -156,6 +168,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * protocol  后端云服务器组的后端协议。
     * lbAlgorithm  后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class PoolResp implements ModelInterface, ArrayAccess
             'healthmonitorId' => 'setHealthmonitorId',
             'sessionPersistence' => 'setSessionPersistence',
             'protocol' => 'setProtocol',
-            'lbAlgorithm' => 'setLbAlgorithm'
+            'lbAlgorithm' => 'setLbAlgorithm',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -190,6 +206,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     * sessionPersistence  sessionPersistence
     * protocol  后端云服务器组的后端协议。
     * lbAlgorithm  后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class PoolResp implements ModelInterface, ArrayAccess
             'healthmonitorId' => 'getHealthmonitorId',
             'sessionPersistence' => 'getSessionPersistence',
             'protocol' => 'getProtocol',
-            'lbAlgorithm' => 'getLbAlgorithm'
+            'lbAlgorithm' => 'getLbAlgorithm',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -255,6 +275,8 @@ class PoolResp implements ModelInterface, ArrayAccess
     const LB_ALGORITHM_ROUND_ROBIN = 'ROUND_ROBIN';
     const LB_ALGORITHM_LEAST_CONNECTIONS = 'LEAST_CONNECTIONS';
     const LB_ALGORITHM_SOURCE_IP = 'SOURCE_IP';
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
 
     /**
@@ -282,6 +304,19 @@ class PoolResp implements ModelInterface, ArrayAccess
             self::LB_ALGORITHM_ROUND_ROBIN,
             self::LB_ALGORITHM_LEAST_CONNECTIONS,
             self::LB_ALGORITHM_SOURCE_IP,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
         ];
     }
 
@@ -314,6 +349,8 @@ class PoolResp implements ModelInterface, ArrayAccess
         $this->container['sessionPersistence'] = isset($data['sessionPersistence']) ? $data['sessionPersistence'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['lbAlgorithm'] = isset($data['lbAlgorithm']) ? $data['lbAlgorithm'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -403,6 +440,26 @@ class PoolResp implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['protectionStatus'] === null) {
+            $invalidProperties[] = "'protectionStatus' can't be null";
+        }
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['protectionReason'] === null) {
+            $invalidProperties[] = "'protectionReason' can't be null";
+        }
+            if ((mb_strlen($this->container['protectionReason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['protectionReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -726,6 +783,54 @@ class PoolResp implements ModelInterface, ArrayAccess
     public function setLbAlgorithm($lbAlgorithm)
     {
         $this->container['lbAlgorithm'] = $lbAlgorithm;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return string
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

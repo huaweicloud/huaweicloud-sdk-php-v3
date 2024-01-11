@@ -158,6 +158,9 @@ class BatchDeleteGroupReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['groupIds'] === null) {
+            $invalidProperties[] = "'groupIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class BatchDeleteGroupReq implements ModelInterface, ArrayAccess
     * Gets groupIds
     *  所有需要删除的消费组ID。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getGroupIds()
     {
@@ -186,7 +189,7 @@ class BatchDeleteGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets groupIds
     *
-    * @param string[]|null $groupIds 所有需要删除的消费组ID。
+    * @param string[] $groupIds 所有需要删除的消费组ID。
     *
     * @return $this
     */

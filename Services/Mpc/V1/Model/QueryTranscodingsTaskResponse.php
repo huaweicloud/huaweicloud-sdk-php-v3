@@ -22,6 +22,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  任务ID。
     * status  任务执行状态。
+    * progress  任务执行进度百分比, 取值范围：[0, 100]。
     * createTime  转码任务启动时间
     * endTime  转码任务结束时间
     * transTemplateId  转码任务对应的转码模板ID
@@ -43,6 +44,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'taskId' => 'string',
             'status' => 'string',
+            'progress' => 'int',
             'createTime' => 'string',
             'endTime' => 'string',
             'transTemplateId' => 'int[]',
@@ -64,6 +66,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskId  任务ID。
     * status  任务执行状态。
+    * progress  任务执行进度百分比, 取值范围：[0, 100]。
     * createTime  转码任务启动时间
     * endTime  转码任务结束时间
     * transTemplateId  转码任务对应的转码模板ID
@@ -85,6 +88,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'taskId' => null,
         'status' => null,
+        'progress' => 'int32',
         'createTime' => null,
         'endTime' => null,
         'transTemplateId' => null,
@@ -127,6 +131,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  任务ID。
     * status  任务执行状态。
+    * progress  任务执行进度百分比, 取值范围：[0, 100]。
     * createTime  转码任务启动时间
     * endTime  转码任务结束时间
     * transTemplateId  转码任务对应的转码模板ID
@@ -148,6 +153,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'taskId' => 'task_id',
             'status' => 'status',
+            'progress' => 'progress',
             'createTime' => 'create_time',
             'endTime' => 'end_time',
             'transTemplateId' => 'trans_template_id',
@@ -169,6 +175,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  任务ID。
     * status  任务执行状态。
+    * progress  任务执行进度百分比, 取值范围：[0, 100]。
     * createTime  转码任务启动时间
     * endTime  转码任务结束时间
     * transTemplateId  转码任务对应的转码模板ID
@@ -190,6 +197,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'taskId' => 'setTaskId',
             'status' => 'setStatus',
+            'progress' => 'setProgress',
             'createTime' => 'setCreateTime',
             'endTime' => 'setEndTime',
             'transTemplateId' => 'setTransTemplateId',
@@ -211,6 +219,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  任务ID。
     * status  任务执行状态。
+    * progress  任务执行进度百分比, 取值范围：[0, 100]。
     * createTime  转码任务启动时间
     * endTime  转码任务结束时间
     * transTemplateId  转码任务对应的转码模板ID
@@ -232,6 +241,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'taskId' => 'getTaskId',
             'status' => 'getStatus',
+            'progress' => 'getProgress',
             'createTime' => 'getCreateTime',
             'endTime' => 'getEndTime',
             'transTemplateId' => 'getTransTemplateId',
@@ -334,6 +344,7 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     {
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['transTemplateId'] = isset($data['transTemplateId']) ? $data['transTemplateId'] : null;
@@ -378,6 +389,12 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['progress']) && ($this->container['progress'] > 100)) {
+                $invalidProperties[] = "invalid value for 'progress', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['progress']) && ($this->container['progress'] < 0)) {
+                $invalidProperties[] = "invalid value for 'progress', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 32)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 32.";
@@ -480,6 +497,30 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets progress
+    *  任务执行进度百分比, 取值范围：[0, 100]。
+    *
+    * @return int|null
+    */
+    public function getProgress()
+    {
+        return $this->container['progress'];
+    }
+
+    /**
+    * Sets progress
+    *
+    * @param int|null $progress 任务执行进度百分比, 取值范围：[0, 100]。
+    *
+    * @return $this
+    */
+    public function setProgress($progress)
+    {
+        $this->container['progress'] = $progress;
         return $this;
     }
 

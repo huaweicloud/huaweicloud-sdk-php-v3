@@ -191,8 +191,8 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['topic'] === null) {
-            $invalidProperties[] = "'topic' can't be null";
+        if ($this->container['partition'] === null) {
+            $invalidProperties[] = "'partition' can't be null";
         }
         return $invalidProperties;
     }
@@ -212,7 +212,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     * Gets topic
     *  topic名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getTopic()
     {
@@ -222,7 +222,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic topic名称。
+    * @param string|null $topic topic名称。
     *
     * @return $this
     */
@@ -236,7 +236,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     * Gets partition
     *  分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     *
-    * @return int|null
+    * @return int
     */
     public function getPartition()
     {
@@ -246,7 +246,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区编号，默认值为-1，若传入值为-1，则重置所有分区。
+    * @param int $partition 分区编号，默认值为-1，若传入值为-1，则重置所有分区。
     *
     * @return $this
     */

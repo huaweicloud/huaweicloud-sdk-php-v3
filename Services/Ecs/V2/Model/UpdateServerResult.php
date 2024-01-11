@@ -40,6 +40,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     * description  弹性云服务器的描述信息。
     * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data（编码过后的信息）。
     * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
@@ -65,6 +66,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
             'description' => 'string',
             'tags' => 'string[]',
             'status' => 'string',
+            'osExtSrvAttRuserData' => 'string',
             'osExtSrvAttRhostname' => 'string'
     ];
 
@@ -90,6 +92,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     * description  弹性云服务器的描述信息。
     * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data（编码过后的信息）。
     * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
@@ -115,6 +118,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
         'description' => null,
         'tags' => null,
         'status' => null,
+        'osExtSrvAttRuserData' => null,
         'osExtSrvAttRhostname' => null
     ];
 
@@ -161,6 +165,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     * description  弹性云服务器的描述信息。
     * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data（编码过后的信息）。
     * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
@@ -186,6 +191,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
             'description' => 'description',
             'tags' => 'tags',
             'status' => 'status',
+            'osExtSrvAttRuserData' => 'OS-EXT-SRV-ATTR:user_data',
             'osExtSrvAttRhostname' => 'OS-EXT-SRV-ATTR:hostname'
     ];
 
@@ -211,6 +217,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     * description  弹性云服务器的描述信息。
     * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data（编码过后的信息）。
     * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
@@ -236,6 +243,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'tags' => 'setTags',
             'status' => 'setStatus',
+            'osExtSrvAttRuserData' => 'setOsExtSrvAttRuserData',
             'osExtSrvAttRhostname' => 'setOsExtSrvAttRhostname'
     ];
 
@@ -261,6 +269,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     * description  弹性云服务器的描述信息。
     * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data（编码过后的信息）。
     * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
@@ -286,6 +295,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'tags' => 'getTags',
             'status' => 'getStatus',
+            'osExtSrvAttRuserData' => 'getOsExtSrvAttRuserData',
             'osExtSrvAttRhostname' => 'getOsExtSrvAttRhostname'
     ];
 
@@ -367,6 +377,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['osExtSrvAttRuserData'] = isset($data['osExtSrvAttRuserData']) ? $data['osExtSrvAttRuserData'] : null;
         $this->container['osExtSrvAttRhostname'] = isset($data['osExtSrvAttRhostname']) ? $data['osExtSrvAttRhostname'] : null;
     }
 
@@ -923,6 +934,30 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets osExtSrvAttRuserData
+    *  创建弹性云服务器时指定的user_data（编码过后的信息）。
+    *
+    * @return string|null
+    */
+    public function getOsExtSrvAttRuserData()
+    {
+        return $this->container['osExtSrvAttRuserData'];
+    }
+
+    /**
+    * Sets osExtSrvAttRuserData
+    *
+    * @param string|null $osExtSrvAttRuserData 创建弹性云服务器时指定的user_data（编码过后的信息）。
+    *
+    * @return $this
+    */
+    public function setOsExtSrvAttRuserData($osExtSrvAttRuserData)
+    {
+        $this->container['osExtSrvAttRuserData'] = $osExtSrvAttRuserData;
         return $this;
     }
 

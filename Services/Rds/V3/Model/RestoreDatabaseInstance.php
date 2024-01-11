@@ -22,6 +22,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * restoreTime  恢复时间
     * instanceId  实例ID
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     * databases  库信息
     *
     * @var string[]
@@ -29,6 +30,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'restoreTime' => 'int',
             'instanceId' => 'string',
+            'isFastRestore' => 'bool',
             'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\RestoreDatabaseInfo[]'
     ];
 
@@ -36,6 +38,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * restoreTime  恢复时间
     * instanceId  实例ID
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     * databases  库信息
     *
     * @var string[]
@@ -43,6 +46,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'restoreTime' => 'int64',
         'instanceId' => null,
+        'isFastRestore' => null,
         'databases' => null
     ];
 
@@ -71,6 +75,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * restoreTime  恢复时间
     * instanceId  实例ID
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     * databases  库信息
     *
     * @var string[]
@@ -78,6 +83,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'restoreTime' => 'restore_time',
             'instanceId' => 'instance_id',
+            'isFastRestore' => 'is_fast_restore',
             'databases' => 'databases'
     ];
 
@@ -85,6 +91,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * restoreTime  恢复时间
     * instanceId  实例ID
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     * databases  库信息
     *
     * @var string[]
@@ -92,6 +99,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     protected static $setters = [
             'restoreTime' => 'setRestoreTime',
             'instanceId' => 'setInstanceId',
+            'isFastRestore' => 'setIsFastRestore',
             'databases' => 'setDatabases'
     ];
 
@@ -99,6 +107,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * restoreTime  恢复时间
     * instanceId  实例ID
+    * isFastRestore  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
     * databases  库信息
     *
     * @var string[]
@@ -106,6 +115,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     protected static $getters = [
             'restoreTime' => 'getRestoreTime',
             'instanceId' => 'getInstanceId',
+            'isFastRestore' => 'getIsFastRestore',
             'databases' => 'getDatabases'
     ];
 
@@ -169,6 +179,7 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     {
         $this->container['restoreTime'] = isset($data['restoreTime']) ? $data['restoreTime'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['isFastRestore'] = isset($data['isFastRestore']) ? $data['isFastRestore'] : null;
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
     }
 
@@ -248,6 +259,30 @@ class RestoreDatabaseInstance implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets isFastRestore
+    *  是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
+    *
+    * @return bool|null
+    */
+    public function getIsFastRestore()
+    {
+        return $this->container['isFastRestore'];
+    }
+
+    /**
+    * Sets isFastRestore
+    *
+    * @param bool|null $isFastRestore 是否使用极速恢复，可先根据”获取实例是否能使用极速恢复“接口判断本次恢复是否能使用极速恢复。 如果实例使用了XA事务，采用极速恢复的方式会导致恢复失败！
+    *
+    * @return $this
+    */
+    public function setIsFastRestore($isFastRestore)
+    {
+        $this->container['isFastRestore'] = $isFastRestore;
         return $this;
     }
 

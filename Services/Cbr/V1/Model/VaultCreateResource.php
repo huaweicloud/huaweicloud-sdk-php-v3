@@ -43,6 +43,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
+    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'string',
             'demandBilling' => 'bool',
             'cbcDeleteCount' => 'int',
-            'frozen' => 'bool'
+            'frozen' => 'bool',
+            'sysLockSourceService' => 'string'
     ];
 
     /**
@@ -97,6 +99,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
+    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         'backupNamePrefix' => null,
         'demandBilling' => null,
         'cbcDeleteCount' => 'int32',
-        'frozen' => null
+        'frozen' => null,
+        'sysLockSourceService' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
+    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'backup_name_prefix',
             'demandBilling' => 'demand_billing',
             'cbcDeleteCount' => 'cbc_delete_count',
-            'frozen' => 'frozen'
+            'frozen' => 'frozen',
+            'sysLockSourceService' => 'sys_lock_source_service'
     ];
 
     /**
@@ -226,6 +232,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
+    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'setBackupNamePrefix',
             'demandBilling' => 'setDemandBilling',
             'cbcDeleteCount' => 'setCbcDeleteCount',
-            'frozen' => 'setFrozen'
+            'frozen' => 'setFrozen',
+            'sysLockSourceService' => 'setSysLockSourceService'
     ];
 
     /**
@@ -280,6 +288,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * demandBilling  是否允许使用超出存储库容量
     * cbcDeleteCount  存储库删除次数
     * frozen  存储库是否冻结
+    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'backupNamePrefix' => 'getBackupNamePrefix',
             'demandBilling' => 'getDemandBilling',
             'cbcDeleteCount' => 'getCbcDeleteCount',
-            'frozen' => 'getFrozen'
+            'frozen' => 'getFrozen',
+            'sysLockSourceService' => 'getSysLockSourceService'
     ];
 
     /**
@@ -390,6 +400,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : null;
         $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : null;
         $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
+        $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
     }
 
     /**
@@ -1011,6 +1022,30 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     public function setFrozen($frozen)
     {
         $this->container['frozen'] = $frozen;
+        return $this;
+    }
+
+    /**
+    * Gets sysLockSourceService
+    *  用于标识SMB服务
+    *
+    * @return string|null
+    */
+    public function getSysLockSourceService()
+    {
+        return $this->container['sysLockSourceService'];
+    }
+
+    /**
+    * Sets sysLockSourceService
+    *
+    * @param string|null $sysLockSourceService 用于标识SMB服务
+    *
+    * @return $this
+    */
+    public function setSysLockSourceService($sysLockSourceService)
+    {
+        $this->container['sysLockSourceService'] = $sysLockSourceService;
         return $this;
     }
 

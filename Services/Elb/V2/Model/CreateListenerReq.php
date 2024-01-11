@@ -32,7 +32,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * defaultPoolId  监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。
     * defaultTlsContainerRef  监听器使用的服务器证书ID。当protocol参数为TERMINATED_HTTPS时，为必选字段
     * clientCaTlsContainerRef  监听器使用的CA证书ID。
-    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
     *
@@ -70,7 +70,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * defaultPoolId  监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。
     * defaultTlsContainerRef  监听器使用的服务器证书ID。当protocol参数为TERMINATED_HTTPS时，为必选字段
     * clientCaTlsContainerRef  监听器使用的CA证书ID。
-    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
     *
@@ -129,7 +129,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * defaultPoolId  监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。
     * defaultTlsContainerRef  监听器使用的服务器证书ID。当protocol参数为TERMINATED_HTTPS时，为必选字段
     * clientCaTlsContainerRef  监听器使用的CA证书ID。
-    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
     *
@@ -167,7 +167,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * defaultPoolId  监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。
     * defaultTlsContainerRef  监听器使用的服务器证书ID。当protocol参数为TERMINATED_HTTPS时，为必选字段
     * clientCaTlsContainerRef  监听器使用的CA证书ID。
-    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
     *
@@ -205,7 +205,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * defaultPoolId  监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。当该字段为null时，表示监听器无默认的后端云服务器组。
     * defaultTlsContainerRef  监听器使用的服务器证书ID。当protocol参数为TERMINATED_HTTPS时，为必选字段
     * clientCaTlsContainerRef  监听器使用的CA证书ID。
-    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
     *
@@ -706,7 +706,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sniContainerRefs
-    *  监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    *  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     *
     * @return string[]|null
     */
@@ -718,7 +718,7 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     /**
     * Sets sniContainerRefs
     *
-    * @param string[]|null $sniContainerRefs 监听器使用的SNI证书（带域名的服务器证书）ID的列表。 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
+    * @param string[]|null $sniContainerRefs 监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     *
     * @return $this
     */

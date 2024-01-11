@@ -875,7 +875,7 @@ class KafkaClient extends Client
     /**
      * 创建实例
      *
-     * [创建按需计费类型的Kafka实例。](tag:sbc,hk_sbc,cmcc)[创建kafka实例。](tag:otc)
+     * 创建按需计费类型的Kafka实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2365,7 +2365,7 @@ class KafkaClient extends Client
 
     public function resetMessageOffsetWithEngineWithHttpInfo($request)
     {
-        $resourcePath = '/v2/{engine}/{project_id}/instances/{instance_id}/groups/{group}/reset-message-offset';
+        $resourcePath = '/v2/kafka/{project_id}/instances/{instance_id}/groups/{group}/reset-message-offset';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2378,9 +2378,6 @@ class KafkaClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['engine'] !== null) {
-            $pathParams['engine'] = $localVarParams['engine'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];

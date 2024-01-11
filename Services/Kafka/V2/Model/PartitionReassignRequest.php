@@ -22,24 +22,32 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * reassignments  重平衡分配方案。
     * throttle  重平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'reassignments' => '\HuaweiCloud\SDK\Kafka\V2\Model\PartitionReassignEntity[]',
-            'throttle' => 'int'
+            'throttle' => 'int',
+            'isSchedule' => 'bool',
+            'executeAt' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * reassignments  重平衡分配方案。
     * throttle  重平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'reassignments' => null,
-        'throttle' => 'int32'
+        'throttle' => 'int32',
+        'isSchedule' => null,
+        'executeAt' => 'int64'
     ];
 
     /**
@@ -67,36 +75,48 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * reassignments  重平衡分配方案。
     * throttle  重平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'reassignments' => 'reassignments',
-            'throttle' => 'throttle'
+            'throttle' => 'throttle',
+            'isSchedule' => 'is_schedule',
+            'executeAt' => 'execute_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * reassignments  重平衡分配方案。
     * throttle  重平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
     *
     * @var string[]
     */
     protected static $setters = [
             'reassignments' => 'setReassignments',
-            'throttle' => 'setThrottle'
+            'throttle' => 'setThrottle',
+            'isSchedule' => 'setIsSchedule',
+            'executeAt' => 'setExecuteAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * reassignments  重平衡分配方案。
     * throttle  重平衡门限值。
+    * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
     *
     * @var string[]
     */
     protected static $getters = [
             'reassignments' => 'getReassignments',
-            'throttle' => 'getThrottle'
+            'throttle' => 'getThrottle',
+            'isSchedule' => 'getIsSchedule',
+            'executeAt' => 'getExecuteAt'
     ];
 
     /**
@@ -159,6 +179,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     {
         $this->container['reassignments'] = isset($data['reassignments']) ? $data['reassignments'] : null;
         $this->container['throttle'] = isset($data['throttle']) ? $data['throttle'] : null;
+        $this->container['isSchedule'] = isset($data['isSchedule']) ? $data['isSchedule'] : null;
+        $this->container['executeAt'] = isset($data['executeAt']) ? $data['executeAt'] : null;
     }
 
     /**
@@ -231,6 +253,54 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     public function setThrottle($throttle)
     {
         $this->container['throttle'] = $throttle;
+        return $this;
+    }
+
+    /**
+    * Gets isSchedule
+    *  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    *
+    * @return bool|null
+    */
+    public function getIsSchedule()
+    {
+        return $this->container['isSchedule'];
+    }
+
+    /**
+    * Sets isSchedule
+    *
+    * @param bool|null $isSchedule 是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
+    *
+    * @return $this
+    */
+    public function setIsSchedule($isSchedule)
+    {
+        $this->container['isSchedule'] = $isSchedule;
+        return $this;
+    }
+
+    /**
+    * Gets executeAt
+    *  定时时间，格式为Unix时间戳，单位为毫秒
+    *
+    * @return int|null
+    */
+    public function getExecuteAt()
+    {
+        return $this->container['executeAt'];
+    }
+
+    /**
+    * Sets executeAt
+    *
+    * @param int|null $executeAt 定时时间，格式为Unix时间戳，单位为毫秒
+    *
+    * @return $this
+    */
+    public function setExecuteAt($executeAt)
+    {
+        $this->container['executeAt'] = $executeAt;
         return $this;
     }
 

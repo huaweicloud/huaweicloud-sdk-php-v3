@@ -20,7 +20,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎。
     * instanceId  实例ID。
     * group  消费组名称。
     * body  body
@@ -28,7 +27,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'engine' => 'string',
             'instanceId' => 'string',
             'group' => 'string',
             'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ResetMessageOffsetReq'
@@ -36,7 +34,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎。
     * instanceId  实例ID。
     * group  消费组名称。
     * body  body
@@ -44,7 +41,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'engine' => null,
         'instanceId' => null,
         'group' => null,
         'body' => null
@@ -73,7 +69,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎。
     * instanceId  实例ID。
     * group  消费组名称。
     * body  body
@@ -81,7 +76,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'engine' => 'engine',
             'instanceId' => 'instance_id',
             'group' => 'group',
             'body' => 'body'
@@ -89,7 +83,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎。
     * instanceId  实例ID。
     * group  消费组名称。
     * body  body
@@ -97,7 +90,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
             'group' => 'setGroup',
             'body' => 'setBody'
@@ -105,7 +97,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎。
     * instanceId  实例ID。
     * group  消费组名称。
     * body  body
@@ -113,7 +104,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
             'group' => 'getGroup',
             'body' => 'getBody'
@@ -177,7 +167,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -191,9 +180,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['engine'] === null) {
-            $invalidProperties[] = "'engine' can't be null";
-        }
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -212,30 +198,6 @@ class ResetMessageOffsetWithEngineRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets engine
-    *  引擎。
-    *
-    * @return string
-    */
-    public function getEngine()
-    {
-        return $this->container['engine'];
-    }
-
-    /**
-    * Sets engine
-    *
-    * @param string $engine 引擎。
-    *
-    * @return $this
-    */
-    public function setEngine($engine)
-    {
-        $this->container['engine'] = $engine;
-        return $this;
     }
 
     /**

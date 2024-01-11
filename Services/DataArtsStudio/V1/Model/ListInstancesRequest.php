@@ -20,7 +20,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * name  规则名称
     * taskType  任务实例类型 QUALITY_TASK:质量作业 CONSISTENCY_TASK:对账作业
     * runStatus  状态, RUNNING:运行中,FAILED:失败,ALARMING:报警,SUCCESS:正常,SUSPENDING:暂停中,UNKNOWN:未定义
@@ -46,7 +46,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * name  规则名称
     * taskType  任务实例类型 QUALITY_TASK:质量作业 CONSISTENCY_TASK:对账作业
     * runStatus  状态, RUNNING:运行中,FAILED:失败,ALARMING:报警,SUCCESS:正常,SUSPENDING:暂停中,UNKNOWN:未定义
@@ -93,7 +93,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * name  规则名称
     * taskType  任务实例类型 QUALITY_TASK:质量作业 CONSISTENCY_TASK:对账作业
     * runStatus  状态, RUNNING:运行中,FAILED:失败,ALARMING:报警,SUCCESS:正常,SUSPENDING:暂停中,UNKNOWN:未定义
@@ -119,7 +119,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * name  规则名称
     * taskType  任务实例类型 QUALITY_TASK:质量作业 CONSISTENCY_TASK:对账作业
     * runStatus  状态, RUNNING:运行中,FAILED:失败,ALARMING:报警,SUCCESS:正常,SUSPENDING:暂停中,UNKNOWN:未定义
@@ -145,7 +145,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  workspace 信息
+    * workspace  DataArts Studio工作空间ID
     * name  规则名称
     * taskType  任务实例类型 QUALITY_TASK:质量作业 CONSISTENCY_TASK:对账作业
     * runStatus  状态, RUNNING:运行中,FAILED:失败,ALARMING:报警,SUCCESS:正常,SUSPENDING:暂停中,UNKNOWN:未定义
@@ -340,7 +340,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  workspace 信息
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -352,7 +352,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace workspace 信息
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */

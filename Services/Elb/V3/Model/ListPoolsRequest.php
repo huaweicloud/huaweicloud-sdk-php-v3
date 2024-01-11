@@ -41,6 +41,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'string[]',
             'vpcId' => 'string[]',
             'type' => 'string[]',
-            'protectionStatus' => 'string[]'
+            'protectionStatus' => 'string[]',
+            'connectionDrain' => 'bool'
     ];
 
     /**
@@ -91,6 +93,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
         'memberInstanceId' => null,
         'vpcId' => null,
         'type' => null,
-        'protectionStatus' => null
+        'protectionStatus' => null,
+        'connectionDrain' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'member_instance_id',
             'vpcId' => 'vpc_id',
             'type' => 'type',
-            'protectionStatus' => 'protection_status'
+            'protectionStatus' => 'protection_status',
+            'connectionDrain' => 'connection_drain'
     ];
 
     /**
@@ -212,6 +218,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'setMemberInstanceId',
             'vpcId' => 'setVpcId',
             'type' => 'setType',
-            'protectionStatus' => 'setProtectionStatus'
+            'protectionStatus' => 'setProtectionStatus',
+            'connectionDrain' => 'setConnectionDrain'
     ];
 
     /**
@@ -262,6 +270,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  后端云服务器组关联的虚拟私有云的ID。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
     * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * connectionDrain  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'getMemberInstanceId',
             'vpcId' => 'getVpcId',
             'type' => 'getType',
-            'protectionStatus' => 'getProtectionStatus'
+            'protectionStatus' => 'getProtectionStatus',
+            'connectionDrain' => 'getConnectionDrain'
     ];
 
     /**
@@ -368,6 +378,7 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
     }
 
     /**
@@ -899,6 +910,30 @@ class ListPoolsRequest implements ModelInterface, ArrayAccess
     public function setProtectionStatus($protectionStatus)
     {
         $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets connectionDrain
+    *  查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+    *
+    * @return bool|null
+    */
+    public function getConnectionDrain()
+    {
+        return $this->container['connectionDrain'];
+    }
+
+    /**
+    * Sets connectionDrain
+    *
+    * @param bool|null $connectionDrain 查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+    *
+    * @return $this
+    */
+    public function setConnectionDrain($connectionDrain)
+    {
+        $this->container['connectionDrain'] = $connectionDrain;
         return $this;
     }
 

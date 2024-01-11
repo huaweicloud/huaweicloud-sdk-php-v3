@@ -667,6 +667,71 @@ class GesClient extends Client
     }
 
     /**
+     * 导出备份
+     *
+     * 导出备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportBackup2($request)
+    {
+        return $this->exportBackup2WithHttpInfo($request);
+    }
+
+    public function exportBackup2WithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/graphs/{graph_id}/backups/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['graphId'] !== null) {
+            $pathParams['graph_id'] = $localVarParams['graphId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ges\V2\Model\ExportBackup2Response',
+            $requestType='\HuaweiCloud\SDK\Ges\V2\Model\ExportBackup2Request');
+    }
+
+    /**
      * 导出图
      *
      * 导出图。
@@ -729,6 +794,71 @@ class GesClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ges\V2\Model\ExportGraph2Response',
             $requestType='\HuaweiCloud\SDK\Ges\V2\Model\ExportGraph2Request');
+    }
+
+    /**
+     * 导入备份
+     *
+     * 导入备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importBackup2($request)
+    {
+        return $this->importBackup2WithHttpInfo($request);
+    }
+
+    public function importBackup2WithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/graphs/{graph_id}/backups/import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['graphId'] !== null) {
+            $pathParams['graph_id'] = $localVarParams['graphId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ges\V2\Model\ImportBackup2Response',
+            $requestType='\HuaweiCloud\SDK\Ges\V2\Model\ImportBackup2Request');
     }
 
     /**

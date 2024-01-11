@@ -28,6 +28,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * provider  负载均衡器的供应者名称。只支持vlb
     * adminStateUp  负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'vipAddress' => 'string',
             'provider' => 'string',
             'adminStateUp' => 'bool',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * provider  负载均衡器的供应者名称。只支持vlb
     * adminStateUp  负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
         'vipAddress' => null,
         'provider' => null,
         'adminStateUp' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * provider  负载均衡器的供应者名称。只支持vlb
     * adminStateUp  负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'vipAddress' => 'vip_address',
             'provider' => 'provider',
             'adminStateUp' => 'admin_state_up',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -121,6 +133,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * provider  负载均衡器的供应者名称。只支持vlb
     * adminStateUp  负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'vipAddress' => 'setVipAddress',
             'provider' => 'setProvider',
             'adminStateUp' => 'setAdminStateUp',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -145,6 +161,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     * provider  负载均衡器的供应者名称。只支持vlb
     * adminStateUp  负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
     * enterpriseProjectId  企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
             'vipAddress' => 'getVipAddress',
             'provider' => 'getProvider',
             'adminStateUp' => 'getAdminStateUp',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -200,6 +220,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const PROVIDER_VLB = 'vlb';
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
 
     /**
@@ -211,6 +233,19 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     {
         return [
             self::PROVIDER_VLB,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
         ];
     }
 
@@ -238,6 +273,8 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -273,6 +310,14 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['provider']) && !in_array($this->container['provider'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'provider', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -480,6 +525,54 @@ class CreateLoadbalancerReq implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

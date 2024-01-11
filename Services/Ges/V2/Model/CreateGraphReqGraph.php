@@ -40,6 +40,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'bool',
             'productType' => 'string',
             'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\CreateGraphReqGraphVertexIdType',
-            'enableMultiLabel' => 'bool'
+            'enableMultiLabel' => 'bool',
+            'capacityRatio' => 'int'
     ];
 
     /**
@@ -88,6 +90,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         'enableHttps' => null,
         'productType' => null,
         'vertexIdType' => null,
-        'enableMultiLabel' => null
+        'enableMultiLabel' => null,
+        'capacityRatio' => 'int32'
     ];
 
     /**
@@ -157,6 +161,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'enable_https',
             'productType' => 'product_type',
             'vertexIdType' => 'vertex_id_type',
-            'enableMultiLabel' => 'enable_multi_label'
+            'enableMultiLabel' => 'enable_multi_label',
+            'capacityRatio' => 'capacity_ratio'
     ];
 
     /**
@@ -205,6 +211,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'setEnableHttps',
             'productType' => 'setProductType',
             'vertexIdType' => 'setVertexIdType',
-            'enableMultiLabel' => 'setEnableMultiLabel'
+            'enableMultiLabel' => 'setEnableMultiLabel',
+            'capacityRatio' => 'setCapacityRatio'
     ];
 
     /**
@@ -253,6 +261,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * productType  图产品类型，取值为InMemory和Persistence，默认为InMemory，当graph_size_type_index取值为\"6\"时，默认为Persistence。  - InMemory：内存版 - Persistence：持久化版
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
+    * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'enableHttps' => 'getEnableHttps',
             'productType' => 'getProductType',
             'vertexIdType' => 'getVertexIdType',
-            'enableMultiLabel' => 'getEnableMultiLabel'
+            'enableMultiLabel' => 'getEnableMultiLabel',
+            'capacityRatio' => 'getCapacityRatio'
     ];
 
     /**
@@ -357,6 +367,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
         $this->container['vertexIdType'] = isset($data['vertexIdType']) ? $data['vertexIdType'] : null;
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
+        $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
     }
 
     /**
@@ -879,6 +890,30 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     public function setEnableMultiLabel($enableMultiLabel)
     {
         $this->container['enableMultiLabel'] = $enableMultiLabel;
+        return $this;
+    }
+
+    /**
+    * Gets capacityRatio
+    *  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    *
+    * @return int|null
+    */
+    public function getCapacityRatio()
+    {
+        return $this->container['capacityRatio'];
+    }
+
+    /**
+    * Sets capacityRatio
+    *
+    * @param int|null $capacityRatio 图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    *
+    * @return $this
+    */
+    public function setCapacityRatio($capacityRatio)
+    {
+        $this->container['capacityRatio'] = $capacityRatio;
         return $this;
     }
 
