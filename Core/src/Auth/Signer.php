@@ -183,7 +183,7 @@ class Signer
         if ($date) {
             $t = date_create_from_format(BasicDateFormat, $r->headerParams[HeaderXDate], timezone_open("UTC"));
         }
-        if (!@$t) {
+        if (empty($t)) {
             $t = date_create(null, timezone_open("UTC"));
             $r->headerParams[HeaderXDate] = date_format($t, BasicDateFormat);
         }

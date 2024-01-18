@@ -23,7 +23,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     * remoteWriteUrl  Prometheus实例remote-write地址。
     * remoteReadUrl  Prometheus实例remote-read地址。
     * promHttpApiEndpoint  Prometheus实例调用url。
-    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     * regionId  Prometheus实例所属的region。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     * remoteWriteUrl  Prometheus实例remote-write地址。
     * remoteReadUrl  Prometheus实例remote-read地址。
     * promHttpApiEndpoint  Prometheus实例调用url。
-    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     * regionId  Prometheus实例所属的region。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     * remoteWriteUrl  Prometheus实例remote-write地址。
     * remoteReadUrl  Prometheus实例remote-read地址。
     * promHttpApiEndpoint  Prometheus实例调用url。
-    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     * regionId  Prometheus实例所属的region。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     * remoteWriteUrl  Prometheus实例remote-write地址。
     * remoteReadUrl  Prometheus实例remote-read地址。
     * promHttpApiEndpoint  Prometheus实例调用url。
-    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     * regionId  Prometheus实例所属的region。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     * remoteWriteUrl  Prometheus实例remote-write地址。
     * remoteReadUrl  Prometheus实例remote-read地址。
     * promHttpApiEndpoint  Prometheus实例调用url。
-    * dashboardId  Prometheus实例关联dashboard的dashboard id。
+    * dashboardId  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     * regionId  Prometheus实例所属的region。
     *
     * @var string[]
@@ -290,7 +290,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  Prometheus实例关联dashboard的dashboard id。
+    *  Prometheus实例关联dashboard的dashboard id（目前未使用）。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class PromConfigModel implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId Prometheus实例关联dashboard的dashboard id。
+    * @param string|null $dashboardId Prometheus实例关联dashboard的dashboard id（目前未使用）。
     *
     * @return $this
     */

@@ -23,13 +23,15 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * clusterId  集群ID
     * jobName  作业名称
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
             'clusterId' => 'string',
-            'jobName' => 'string'
+            'jobName' => 'string',
+            'body' => '\HuaweiCloud\SDK\Cdm\V1\Model\CdmStartJobReq'
     ];
 
     /**
@@ -37,13 +39,15 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * clusterId  集群ID
     * jobName  作业名称
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
         'clusterId' => null,
-        'jobName' => null
+        'jobName' => null,
+        'body' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * clusterId  集群ID
     * jobName  作业名称
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'clusterId' => 'cluster_id',
-            'jobName' => 'job_name'
+            'jobName' => 'job_name',
+            'body' => 'body'
     ];
 
     /**
@@ -86,13 +92,15 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * clusterId  集群ID
     * jobName  作业名称
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
             'clusterId' => 'setClusterId',
-            'jobName' => 'setJobName'
+            'jobName' => 'setJobName',
+            'body' => 'setBody'
     ];
 
     /**
@@ -100,13 +108,15 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * clusterId  集群ID
     * jobName  作业名称
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
             'clusterId' => 'getClusterId',
-            'jobName' => 'getJobName'
+            'jobName' => 'getJobName',
+            'body' => 'getBody'
     ];
 
     /**
@@ -170,6 +180,7 @@ class StartJobRequest implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['jobName'] = isset($data['jobName']) ? $data['jobName'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class StartJobRequest implements ModelInterface, ArrayAccess
     public function setJobName($jobName)
     {
         $this->container['jobName'] = $jobName;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Cdm\V1\Model\CdmStartJobReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Cdm\V1\Model\CdmStartJobReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

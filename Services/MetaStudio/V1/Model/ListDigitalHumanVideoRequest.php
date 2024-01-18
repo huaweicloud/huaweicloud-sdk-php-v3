@@ -23,7 +23,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -33,6 +33,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createUntil' => 'string',
             'createSince' => 'string',
             'scriptId' => 'string',
-            'assetName' => 'string'
+            'assetName' => 'string',
+            'jobType' => 'string'
     ];
 
     /**
@@ -57,7 +59,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -67,6 +69,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         'createUntil' => null,
         'createSince' => null,
         'scriptId' => null,
-        'assetName' => null
+        'assetName' => null,
+        'jobType' => null
     ];
 
     /**
@@ -112,7 +116,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -122,6 +126,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createUntil' => 'create_until',
             'createSince' => 'create_since',
             'scriptId' => 'script_id',
-            'assetName' => 'asset_name'
+            'assetName' => 'asset_name',
+            'jobType' => 'job_type'
     ];
 
     /**
@@ -146,7 +152,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -156,6 +162,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createUntil' => 'setCreateUntil',
             'createSince' => 'setCreateSince',
             'scriptId' => 'setScriptId',
-            'assetName' => 'setAssetName'
+            'assetName' => 'setAssetName',
+            'jobType' => 'setJobType'
     ];
 
     /**
@@ -180,7 +188,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -190,6 +198,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createUntil' => 'getCreateUntil',
             'createSince' => 'getCreateSince',
             'scriptId' => 'getScriptId',
-            'assetName' => 'getAssetName'
+            'assetName' => 'getAssetName',
+            'jobType' => 'getJobType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
     }
 
     /**
@@ -367,6 +378,12 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetName']) && (mb_strlen($this->container['assetName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -456,7 +473,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > *不允许输入中文。
+    *  第三方用户ID。 > * 不允许输入中文。
     *
     * @return string|null
     */
@@ -468,7 +485,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
     *
     * @return $this
     */
@@ -691,6 +708,30 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     public function setAssetName($assetName)
     {
         $this->container['assetName'] = $assetName;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
         return $this;
     }
 

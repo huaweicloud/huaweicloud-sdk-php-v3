@@ -20,8 +20,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promId  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
     *
@@ -36,8 +36,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promId  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
     *
@@ -73,8 +73,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promId  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
     *
@@ -89,8 +89,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promId  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
     *
@@ -105,8 +105,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promId  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
     *
@@ -169,8 +169,9 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     const PROM_TYPE_ACROSS_ACCOUNT = 'ACROSS_ACCOUNT';
     const CCE_CLUSTER_ENABLE_TRUE = 'true';
     const CCE_CLUSTER_ENABLE_FALSE = 'false';
-    const PROM_STATUS_TRUE = 'true';
-    const PROM_STATUS_FALSE = 'false';
+    const PROM_STATUS_DELETED = 'DELETED';
+    const PROM_STATUS_NORMAL = 'NORMAL';
+    const PROM_STATUS_ALL = 'ALL';
     
 
     /**
@@ -213,8 +214,9 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     public function getPromStatusAllowableValues()
     {
         return [
-            self::PROM_STATUS_TRUE,
-            self::PROM_STATUS_FALSE,
+            self::PROM_STATUS_DELETED,
+            self::PROM_STATUS_NORMAL,
+            self::PROM_STATUS_ALL,
         ];
     }
 
@@ -288,7 +290,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promId
-    *  Prometheus实例id。
+    *  Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
     *
     * @return string|null
     */
@@ -300,7 +302,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promId
     *
-    * @param string|null $promId Prometheus实例id。
+    * @param string|null $promId Prometheus实例id(prom_id与prom_type同时存在时，仅prom_id生效)。
     *
     * @return $this
     */
@@ -312,7 +314,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  Prometheus实例类型。
+    *  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     *
     * @return string|null
     */
@@ -324,7 +326,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string|null $promType Prometheus实例类型。
+    * @param string|null $promType Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     *
     * @return $this
     */

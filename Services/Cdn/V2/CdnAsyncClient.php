@@ -425,6 +425,95 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 查询统计TOP100 referer数据明细
+     *
+     * - 查询TOP100 referer数据。
+     * 
+     * - 支持查询90天内的数据。
+     * 
+     * - 查询跨度不能超过31天。
+     * 
+     * - 单租户调用频率：2次/s。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCdnDomainTopRefersAsync($request)
+    {
+        return $this->listCdnDomainTopRefersAsyncWithHttpInfo($request);
+    }
+    
+    public function listCdnDomainTopRefersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/statistics/top-refers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['serviceArea'] !== null) {
+            $queryParams['service_area'] = $localVarParams['serviceArea'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['includeRatio'] !== null) {
+            $queryParams['include_ratio'] = $localVarParams['includeRatio'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopRefersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListCdnDomainTopRefersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询加速域名
      *
      * 查询加速域名。

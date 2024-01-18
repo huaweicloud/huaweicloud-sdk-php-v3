@@ -32,7 +32,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string',
+            'status' => 'int',
             'projectId' => 'string',
             'clusterId' => 'string',
             'planId' => 'string',
@@ -265,7 +265,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     * Gets status
     *  计划状态。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStatus()
     {
@@ -275,7 +275,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 计划状态。
+    * @param int|null $status 计划状态。
     *
     * @return $this
     */

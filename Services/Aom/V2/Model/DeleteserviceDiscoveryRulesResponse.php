@@ -23,7 +23,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseStatus
-    *  响应状态码。
+    *  响应状态码（不再使用）。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets responseStatus
     *
-    * @param int|null $responseStatus 响应状态码。
+    * @param int|null $responseStatus 响应状态码（不再使用）。
     *
     * @return $this
     */

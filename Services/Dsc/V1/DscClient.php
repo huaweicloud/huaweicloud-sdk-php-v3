@@ -1034,6 +1034,68 @@ class DscClient extends Client
     }
 
     /**
+     * 删除扫描任务
+     *
+     * 删除扫描任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteScanJob($request)
+    {
+        return $this->deleteScanJobWithHttpInfo($request);
+    }
+
+    public function deleteScanJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sdg/scan/job/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dsc\V1\Model\DeleteScanJobResponse',
+            $requestType='\HuaweiCloud\SDK\Dsc\V1\Model\DeleteScanJobRequest');
+    }
+
+    /**
      * 查看资产列表
      *
      * 查询数据资产扫描授权列表

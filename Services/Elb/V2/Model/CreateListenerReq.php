@@ -35,6 +35,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
             'clientCaTlsContainerRef' => 'string',
             'sniContainerRefs' => 'string[]',
             'insertHeaders' => '\HuaweiCloud\SDK\Elb\V2\Model\InsertHeader',
-            'tlsCiphersPolicy' => 'string'
+            'tlsCiphersPolicy' => 'string',
+            'protectionStatus' => 'string',
+            'protectionReason' => 'string'
     ];
 
     /**
@@ -73,6 +77,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
         'clientCaTlsContainerRef' => null,
         'sniContainerRefs' => null,
         'insertHeaders' => null,
-        'tlsCiphersPolicy' => null
+        'tlsCiphersPolicy' => null,
+        'protectionStatus' => null,
+        'protectionReason' => null
     ];
 
     /**
@@ -132,6 +140,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
             'clientCaTlsContainerRef' => 'client_ca_tls_container_ref',
             'sniContainerRefs' => 'sni_container_refs',
             'insertHeaders' => 'insert_headers',
-            'tlsCiphersPolicy' => 'tls_ciphers_policy'
+            'tlsCiphersPolicy' => 'tls_ciphers_policy',
+            'protectionStatus' => 'protection_status',
+            'protectionReason' => 'protection_reason'
     ];
 
     /**
@@ -170,6 +182,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
             'clientCaTlsContainerRef' => 'setClientCaTlsContainerRef',
             'sniContainerRefs' => 'setSniContainerRefs',
             'insertHeaders' => 'setInsertHeaders',
-            'tlsCiphersPolicy' => 'setTlsCiphersPolicy'
+            'tlsCiphersPolicy' => 'setTlsCiphersPolicy',
+            'protectionStatus' => 'setProtectionStatus',
+            'protectionReason' => 'setProtectionReason'
     ];
 
     /**
@@ -208,6 +224,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     * sniContainerRefs  监听器使用的SNI证书（带域名的服务器证书）ID的列表，最大支持50个sni证书 该字段不为空列表时，SNI特性开启。该字段为空列表时，SNI特性关闭。
     * insertHeaders  insertHeaders
     * tlsCiphersPolicy  监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+    * protectionStatus  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * protectionReason  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
             'clientCaTlsContainerRef' => 'getClientCaTlsContainerRef',
             'sniContainerRefs' => 'getSniContainerRefs',
             'insertHeaders' => 'getInsertHeaders',
-            'tlsCiphersPolicy' => 'getTlsCiphersPolicy'
+            'tlsCiphersPolicy' => 'getTlsCiphersPolicy',
+            'protectionStatus' => 'getProtectionStatus',
+            'protectionReason' => 'getProtectionReason'
     ];
 
     /**
@@ -277,6 +297,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     const TLS_CIPHERS_POLICY_TLS_1_1 = 'tls-1-1';
     const TLS_CIPHERS_POLICY_TLS_1_2 = 'tls-1-2';
     const TLS_CIPHERS_POLICY_TLS_1_2_STRICT = 'tls-1-2-strict';
+    const PROTECTION_STATUS_NON_PROTECTION = 'nonProtection';
+    const PROTECTION_STATUS_CONSOLE_PROTECTION = 'consoleProtection';
     
 
     /**
@@ -306,6 +328,19 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
             self::TLS_CIPHERS_POLICY_TLS_1_1,
             self::TLS_CIPHERS_POLICY_TLS_1_2,
             self::TLS_CIPHERS_POLICY_TLS_1_2_STRICT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectionStatusAllowableValues()
+    {
+        return [
+            self::PROTECTION_STATUS_NON_PROTECTION,
+            self::PROTECTION_STATUS_CONSOLE_PROTECTION,
         ];
     }
 
@@ -340,6 +375,8 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
         $this->container['sniContainerRefs'] = isset($data['sniContainerRefs']) ? $data['sniContainerRefs'] : null;
         $this->container['insertHeaders'] = isset($data['insertHeaders']) ? $data['insertHeaders'] : null;
         $this->container['tlsCiphersPolicy'] = isset($data['tlsCiphersPolicy']) ? $data['tlsCiphersPolicy'] : null;
+        $this->container['protectionStatus'] = isset($data['protectionStatus']) ? $data['protectionStatus'] : null;
+        $this->container['protectionReason'] = isset($data['protectionReason']) ? $data['protectionReason'] : null;
     }
 
     /**
@@ -402,6 +439,20 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getProtectionStatusAllowableValues();
+                if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectionStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) > 255)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protectionReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -773,6 +824,54 @@ class CreateListenerReq implements ModelInterface, ArrayAccess
     public function setTlsCiphersPolicy($tlsCiphersPolicy)
     {
         $this->container['tlsCiphersPolicy'] = $tlsCiphersPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets protectionStatus
+    *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return string|null
+    */
+    public function getProtectionStatus()
+    {
+        return $this->container['protectionStatus'];
+    }
+
+    /**
+    * Sets protectionStatus
+    *
+    * @param string|null $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    *
+    * @return $this
+    */
+    public function setProtectionStatus($protectionStatus)
+    {
+        $this->container['protectionStatus'] = $protectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets protectionReason
+    *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return string|null
+    */
+    public function getProtectionReason()
+    {
+        return $this->container['protectionReason'];
+    }
+
+    /**
+    * Sets protectionReason
+    *
+    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    *
+    * @return $this
+    */
+    public function setProtectionReason($protectionReason)
+    {
+        $this->container['protectionReason'] = $protectionReason;
         return $this;
     }
 

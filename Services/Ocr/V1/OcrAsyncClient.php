@@ -1240,11 +1240,11 @@ class OcrAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json', 'application/json-1']
+                ['*/*', 'application/json', 'application/json-1', 'applocation/json-2']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json', 'application/json-1'],
+                ['*/*', 'application/json', 'application/json-1', 'applocation/json-2'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2319,6 +2319,74 @@ class OcrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeRealEstateCertificateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeRealEstateCertificateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 印章识别
+     *
+     * 检测和识别合同文件或常用票据中的印章，并可擦除和提取图片中的印章，通过JSON格式返回印章检测、识别、擦除和提取的结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeSealAsync($request)
+    {
+        return $this->recognizeSealAsyncWithHttpInfo($request);
+    }
+    
+    public function recognizeSealAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/seal';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeSealResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeSealRequest',
             $asyncRequest = true);
     }
 

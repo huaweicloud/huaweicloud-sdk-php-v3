@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aom\V2\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ApplicationModel implements ModelInterface, ArrayAccess
+class ShowLineageBulkRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ApplicationModel';
+    protected static $openAPIModelName = 'ShowLineageBulkRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appId  应用id。
-    * appName  应用名称。
-    * appType  应用来源。
+    * instance  实例id
+    * offset  分页参数偏移量，默认值0
+    * limit  分页参每页数量，默认值100
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'appId' => 'string',
-            'appName' => 'string',
-            'appType' => 'string'
+            'instance' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appId  应用id。
-    * appName  应用名称。
-    * appType  应用来源。
+    * instance  实例id
+    * offset  分页参数偏移量，默认值0
+    * limit  分页参每页数量，默认值100
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'appId' => null,
-        'appName' => null,
-        'appType' => null
+        'instance' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -69,44 +69,44 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appId  应用id。
-    * appName  应用名称。
-    * appType  应用来源。
+    * instance  实例id
+    * offset  分页参数偏移量，默认值0
+    * limit  分页参每页数量，默认值100
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'appId' => 'app_id',
-            'appName' => 'app_name',
-            'appType' => 'app_type'
+            'instance' => 'instance',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appId  应用id。
-    * appName  应用名称。
-    * appType  应用来源。
+    * instance  实例id
+    * offset  分页参数偏移量，默认值0
+    * limit  分页参每页数量，默认值100
     *
     * @var string[]
     */
     protected static $setters = [
-            'appId' => 'setAppId',
-            'appName' => 'setAppName',
-            'appType' => 'setAppType'
+            'instance' => 'setInstance',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appId  应用id。
-    * appName  应用名称。
-    * appType  应用来源。
+    * instance  实例id
+    * offset  分页参数偏移量，默认值0
+    * limit  分页参每页数量，默认值100
     *
     * @var string[]
     */
     protected static $getters = [
-            'appId' => 'getAppId',
-            'appName' => 'getAppName',
-            'appType' => 'getAppType'
+            'instance' => 'getInstance',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -167,9 +167,9 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
+        $this->container['instance'] = isset($data['instance']) ? $data['instance'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -180,6 +180,15 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instance'] === null) {
+            $invalidProperties[] = "'instance' can't be null";
+        }
+            if ((mb_strlen($this->container['instance']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instance', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['instance']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instance', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -195,74 +204,74 @@ class ApplicationModel implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets appId
-    *  应用id。
+    * Gets instance
+    *  实例id
     *
-    * @return string|null
+    * @return string
     */
-    public function getAppId()
+    public function getInstance()
     {
-        return $this->container['appId'];
+        return $this->container['instance'];
     }
 
     /**
-    * Sets appId
+    * Sets instance
     *
-    * @param string|null $appId 应用id。
+    * @param string $instance 实例id
     *
     * @return $this
     */
-    public function setAppId($appId)
+    public function setInstance($instance)
     {
-        $this->container['appId'] = $appId;
+        $this->container['instance'] = $instance;
         return $this;
     }
 
     /**
-    * Gets appName
-    *  应用名称。
+    * Gets offset
+    *  分页参数偏移量，默认值0
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getAppName()
+    public function getOffset()
     {
-        return $this->container['appName'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets appName
+    * Sets offset
     *
-    * @param string|null $appName 应用名称。
+    * @param int|null $offset 分页参数偏移量，默认值0
     *
     * @return $this
     */
-    public function setAppName($appName)
+    public function setOffset($offset)
     {
-        $this->container['appName'] = $appName;
+        $this->container['offset'] = $offset;
         return $this;
     }
 
     /**
-    * Gets appType
-    *  应用来源。
+    * Gets limit
+    *  分页参每页数量，默认值100
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getAppType()
+    public function getLimit()
     {
-        return $this->container['appType'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets appType
+    * Sets limit
     *
-    * @param string|null $appType 应用来源。
+    * @param int|null $limit 分页参每页数量，默认值100
     *
     * @return $this
     */
-    public function setAppType($appType)
+    public function setLimit($limit)
     {
-        $this->container['appType'] = $appType;
+        $this->container['limit'] = $limit;
         return $this;
     }
 

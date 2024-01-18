@@ -24,7 +24,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
     * voiceName  声音名称。
@@ -50,7 +50,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
     * voiceName  声音名称。
@@ -97,7 +97,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
     * voiceName  声音名称。
@@ -123,7 +123,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
     * voiceName  声音名称。
@@ -149,7 +149,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * state  任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING
     * jobId  任务id。
     * voiceName  声音名称。
@@ -412,7 +412,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > *不允许输入中文。
+    *  第三方用户ID。 > * 不允许输入中文。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
     *
     * @return $this
     */

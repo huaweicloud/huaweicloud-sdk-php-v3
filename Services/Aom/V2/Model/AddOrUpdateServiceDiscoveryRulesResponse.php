@@ -23,28 +23,36 @@ class AddOrUpdateServiceDiscoveryRulesResponse implements ModelInterface, ArrayA
     * Array of property to type mappings. Used for (de)serialization
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
+    * results  服务发现规则详细信息列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'errorCode' => 'string',
             'errorMessage' => 'string',
-            'responseStatus' => 'int'
+            'responseStatus' => 'int',
+            'id' => 'string[]',
+            'results' => 'map[string,string][]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
+    * results  服务发现规则详细信息列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'errorCode' => null,
         'errorMessage' => null,
-        'responseStatus' => 'int32'
+        'responseStatus' => 'int32',
+        'id' => null,
+        'results' => null
     ];
 
     /**
@@ -72,42 +80,54 @@ class AddOrUpdateServiceDiscoveryRulesResponse implements ModelInterface, ArrayA
     * and the value is the original name
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
+    * results  服务发现规则详细信息列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'errorCode' => 'errorCode',
             'errorMessage' => 'errorMessage',
-            'responseStatus' => 'responseStatus'
+            'responseStatus' => 'responseStatus',
+            'id' => 'id',
+            'results' => 'results'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
+    * results  服务发现规则详细信息列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'errorCode' => 'setErrorCode',
             'errorMessage' => 'setErrorMessage',
-            'responseStatus' => 'setResponseStatus'
+            'responseStatus' => 'setResponseStatus',
+            'id' => 'setId',
+            'results' => 'setResults'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * errorCode  响应码。
     * errorMessage  响应信息描述。
-    * responseStatus  响应状态码。
+    * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
+    * results  服务发现规则详细信息列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'errorCode' => 'getErrorCode',
             'errorMessage' => 'getErrorMessage',
-            'responseStatus' => 'getResponseStatus'
+            'responseStatus' => 'getResponseStatus',
+            'id' => 'getId',
+            'results' => 'getResults'
     ];
 
     /**
@@ -171,6 +191,8 @@ class AddOrUpdateServiceDiscoveryRulesResponse implements ModelInterface, ArrayA
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['responseStatus'] = isset($data['responseStatus']) ? $data['responseStatus'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
 
     /**
@@ -245,7 +267,7 @@ class AddOrUpdateServiceDiscoveryRulesResponse implements ModelInterface, ArrayA
 
     /**
     * Gets responseStatus
-    *  响应状态码。
+    *  响应状态码（不再使用）。
     *
     * @return int|null
     */
@@ -257,13 +279,61 @@ class AddOrUpdateServiceDiscoveryRulesResponse implements ModelInterface, ArrayA
     /**
     * Sets responseStatus
     *
-    * @param int|null $responseStatus 响应状态码。
+    * @param int|null $responseStatus 响应状态码（不再使用）。
     *
     * @return $this
     */
     public function setResponseStatus($responseStatus)
     {
         $this->container['responseStatus'] = $responseStatus;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  服务发现规则id列表，多AZ配置同步时使用。
+    *
+    * @return string[]|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string[]|null $id 服务发现规则id列表，多AZ配置同步时使用。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets results
+    *  服务发现规则详细信息列表。
+    *
+    * @return map[string,string][]|null
+    */
+    public function getResults()
+    {
+        return $this->container['results'];
+    }
+
+    /**
+    * Sets results
+    *
+    * @param map[string,string][]|null $results 服务发现规则详细信息列表。
+    *
+    * @return $this
+    */
+    public function setResults($results)
+    {
+        $this->container['results'] = $results;
         return $this;
     }
 

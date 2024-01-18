@@ -22,21 +22,29 @@ class CreateLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws)
+    * loadbalancerId  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'loadbalancer' => '\HuaweiCloud\SDK\Elb\V2\Model\LoadbalancerResp'
+            'loadbalancer' => '\HuaweiCloud\SDK\Elb\V2\Model\LoadbalancerResp',
+            'orderId' => 'string',
+            'loadbalancerId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws)
+    * loadbalancerId  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'loadbalancer' => null
+        'loadbalancer' => null,
+        'orderId' => null,
+        'loadbalancerId' => null
     ];
 
     /**
@@ -63,31 +71,43 @@ class CreateLoadbalancerResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * loadbalancer  loadbalancer
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws)
+    * loadbalancerId  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'loadbalancer' => 'loadbalancer'
+            'loadbalancer' => 'loadbalancer',
+            'orderId' => 'order_id',
+            'loadbalancerId' => 'loadbalancer_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancer  loadbalancer
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws)
+    * loadbalancerId  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
     *
     * @var string[]
     */
     protected static $setters = [
-            'loadbalancer' => 'setLoadbalancer'
+            'loadbalancer' => 'setLoadbalancer',
+            'orderId' => 'setOrderId',
+            'loadbalancerId' => 'setLoadbalancerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancer  loadbalancer
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws)
+    * loadbalancerId  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
     *
     * @var string[]
     */
     protected static $getters = [
-            'loadbalancer' => 'getLoadbalancer'
+            'loadbalancer' => 'getLoadbalancer',
+            'orderId' => 'getOrderId',
+            'loadbalancerId' => 'getLoadbalancerId'
     ];
 
     /**
@@ -149,6 +169,8 @@ class CreateLoadbalancerResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['loadbalancer'] = isset($data['loadbalancer']) ? $data['loadbalancer'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
     }
 
     /**
@@ -194,6 +216,54 @@ class CreateLoadbalancerResponse implements ModelInterface, ArrayAccess
     public function setLoadbalancer($loadbalancer)
     {
         $this->container['loadbalancer'] = $loadbalancer;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单号[（包周期场景返回该字段）](tag:hws)
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单号[（包周期场景返回该字段）](tag:hws)
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerId
+    *  负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerId()
+    {
+        return $this->container['loadbalancerId'];
+    }
+
+    /**
+    * Sets loadbalancerId
+    *
+    * @param string|null $loadbalancerId 负载均衡器的ID[（包周期场景返回该字段）](tag:hws)
+    *
+    * @return $this
+    */
+    public function setLoadbalancerId($loadbalancerId)
+    {
+        $this->container['loadbalancerId'] = $loadbalancerId;
         return $this;
     }
 

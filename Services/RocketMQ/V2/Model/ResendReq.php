@@ -21,6 +21,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * group  Group ID。
+    * topic  消息所属topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -28,6 +29,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'group' => 'string',
+            'topic' => 'string',
             'clientId' => 'string',
             'msgIdList' => 'string[]'
     ];
@@ -35,6 +37,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * group  Group ID。
+    * topic  消息所属topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -42,6 +45,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'group' => null,
+        'topic' => null,
         'clientId' => null,
         'msgIdList' => null
     ];
@@ -70,6 +74,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * group  Group ID。
+    * topic  消息所属topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -77,6 +82,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'group' => 'group',
+            'topic' => 'topic',
             'clientId' => 'client_id',
             'msgIdList' => 'msg_id_list'
     ];
@@ -84,6 +90,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * group  Group ID。
+    * topic  消息所属topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -91,6 +98,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'group' => 'setGroup',
+            'topic' => 'setTopic',
             'clientId' => 'setClientId',
             'msgIdList' => 'setMsgIdList'
     ];
@@ -98,6 +106,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * group  Group ID。
+    * topic  消息所属topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -105,6 +114,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'group' => 'getGroup',
+            'topic' => 'getTopic',
             'clientId' => 'getClientId',
             'msgIdList' => 'getMsgIdList'
     ];
@@ -168,6 +178,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
+        $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
         $this->container['msgIdList'] = isset($data['msgIdList']) ? $data['msgIdList'] : null;
     }
@@ -215,6 +226,30 @@ class ResendReq implements ModelInterface, ArrayAccess
     public function setGroup($group)
     {
         $this->container['group'] = $group;
+        return $this;
+    }
+
+    /**
+    * Gets topic
+    *  消息所属topic。
+    *
+    * @return string|null
+    */
+    public function getTopic()
+    {
+        return $this->container['topic'];
+    }
+
+    /**
+    * Sets topic
+    *
+    * @param string|null $topic 消息所属topic。
+    *
+    * @return $this
+    */
+    public function setTopic($topic)
+    {
+        $this->container['topic'] = $topic;
         return $this;
     }
 

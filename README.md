@@ -18,7 +18,7 @@ This document introduces how to obtain and use Huawei Cloud Php SDK.
 - To use Huawei Cloud Php SDK to access the APIs of specific service, please make sure you do have activated the
   service in [Huawei Cloud console](https://console.huaweicloud.com/?locale=en-us) if needed.
 
-- Huawei Cloud Php SDK requires **PHP 5.6** or later, run command `php --version` to check the version of Php.
+- Huawei Cloud Php SDK requires **PHP 5.6, PHP6, PHP7 **, but not support PHP8. Please run command `php --version` to check the version of Php before run php sdk code.
 
 ## Install Php SDK
 
@@ -38,7 +38,7 @@ After installing, you need to require Composer's autoloader:
 ``` php
 require 'path/to/vendor/autoload.php';
 ```
-    
+
 ## Code example
 
 - The following example shows how to query a list of IAM in a specific region, you need to substitute your real `{Service}Client` for `IamClient` in actual use.
@@ -144,8 +144,9 @@ $config = HttpConfig::getDefaultConfig();
 $config->setProxyProtocol('http');
 $config->setProxyHost('proxy.huawei.com');
 $config->setProxyPort(8080);
-$config->setProxyUser('username');
-$config->setProxyPassword('password');
+// In this example, username and password are stored in environment variables. Please configure the environment variables PROXY_USERNAME and PROXY_PASSWORD before running this example.
+$config->setProxyUser(getenv('PROXY_USERNAME'));
+$config->setProxyPassword(getenv('PROXY_PASSWORD'));
 ```
 
 #### 1.3 Timeout Configuration [:top:](#user-manual-top)

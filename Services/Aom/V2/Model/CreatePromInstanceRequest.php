@@ -25,7 +25,7 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel'
+            'body' => '\HuaweiCloud\SDK\Aom\V2\Model\PromInstanceRequestModel'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceRequestModel|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel|null $body body
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceRequestModel|null $body body
     *
     * @return $this
     */

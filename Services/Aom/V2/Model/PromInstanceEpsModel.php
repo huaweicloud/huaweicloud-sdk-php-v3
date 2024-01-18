@@ -22,10 +22,8 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * promVersion  Prometheus实例版本号。
-    * cceSpec  CCE场景特殊字段。
-    * promConfig  promConfig
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
     * promStatus  Prometheus实例状态。
@@ -35,7 +33,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
-    * application  application
     *
     * @var string[]
     */
@@ -44,8 +41,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'promId' => 'string',
             'promType' => 'string',
             'promVersion' => 'string',
-            'cceSpec' => 'string',
-            'promConfig' => '\HuaweiCloud\SDK\Aom\V2\Model\PromConfigModel',
             'promCreateTimestamp' => 'int',
             'promUpdateTimestamp' => 'int',
             'promStatus' => 'string',
@@ -54,18 +49,15 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'int',
             'deletedTime' => 'int',
             'promSpecConfig' => '\HuaweiCloud\SDK\Aom\V2\Model\PromConfigModel',
-            'cceSpecConfig' => 'string',
-            'application' => '\HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel'
+            'cceSpecConfig' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * promVersion  Prometheus实例版本号。
-    * cceSpec  CCE场景特殊字段。
-    * promConfig  promConfig
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
     * promStatus  Prometheus实例状态。
@@ -75,7 +67,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
-    * application  application
     *
     * @var string[]
     */
@@ -84,8 +75,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         'promId' => null,
         'promType' => null,
         'promVersion' => null,
-        'cceSpec' => null,
-        'promConfig' => null,
         'promCreateTimestamp' => 'int64',
         'promUpdateTimestamp' => 'int64',
         'promStatus' => null,
@@ -94,8 +83,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         'isDeletedTag' => 'int64',
         'deletedTime' => 'int64',
         'promSpecConfig' => null,
-        'cceSpecConfig' => null,
-        'application' => null
+        'cceSpecConfig' => null
     ];
 
     /**
@@ -123,10 +111,8 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * and the value is the original name
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * promVersion  Prometheus实例版本号。
-    * cceSpec  CCE场景特殊字段。
-    * promConfig  promConfig
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
     * promStatus  Prometheus实例状态。
@@ -136,7 +122,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
-    * application  application
     *
     * @var string[]
     */
@@ -145,8 +130,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'promId' => 'prom_id',
             'promType' => 'prom_type',
             'promVersion' => 'prom_version',
-            'cceSpec' => 'cce_spec',
-            'promConfig' => 'prom_config',
             'promCreateTimestamp' => 'prom_create_timestamp',
             'promUpdateTimestamp' => 'prom_update_timestamp',
             'promStatus' => 'prom_status',
@@ -155,18 +138,15 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'is_deleted_tag',
             'deletedTime' => 'deleted_time',
             'promSpecConfig' => 'prom_spec_config',
-            'cceSpecConfig' => 'cce_spec_config',
-            'application' => 'application'
+            'cceSpecConfig' => 'cce_spec_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * promVersion  Prometheus实例版本号。
-    * cceSpec  CCE场景特殊字段。
-    * promConfig  promConfig
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
     * promStatus  Prometheus实例状态。
@@ -176,7 +156,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
-    * application  application
     *
     * @var string[]
     */
@@ -185,8 +164,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'promId' => 'setPromId',
             'promType' => 'setPromType',
             'promVersion' => 'setPromVersion',
-            'cceSpec' => 'setCceSpec',
-            'promConfig' => 'setPromConfig',
             'promCreateTimestamp' => 'setPromCreateTimestamp',
             'promUpdateTimestamp' => 'setPromUpdateTimestamp',
             'promStatus' => 'setPromStatus',
@@ -195,18 +172,15 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'setIsDeletedTag',
             'deletedTime' => 'setDeletedTime',
             'promSpecConfig' => 'setPromSpecConfig',
-            'cceSpecConfig' => 'setCceSpecConfig',
-            'application' => 'setApplication'
+            'cceSpecConfig' => 'setCceSpecConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * promName  Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
     * promId  Prometheus实例id。
-    * promType  Prometheus实例类型。
+    * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * promVersion  Prometheus实例版本号。
-    * cceSpec  CCE场景特殊字段。
-    * promConfig  promConfig
     * promCreateTimestamp  Prometheus实例创建时间戳。
     * promUpdateTimestamp  Prometheus实例更新时间戳。
     * promStatus  Prometheus实例状态。
@@ -216,7 +190,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     * deletedTime  删除时间。
     * promSpecConfig  promSpecConfig
     * cceSpecConfig  Prometheus实例所属CCE特殊配置。
-    * application  application
     *
     * @var string[]
     */
@@ -225,8 +198,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'promId' => 'getPromId',
             'promType' => 'getPromType',
             'promVersion' => 'getPromVersion',
-            'cceSpec' => 'getCceSpec',
-            'promConfig' => 'getPromConfig',
             'promCreateTimestamp' => 'getPromCreateTimestamp',
             'promUpdateTimestamp' => 'getPromUpdateTimestamp',
             'promStatus' => 'getPromStatus',
@@ -235,8 +206,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             'isDeletedTag' => 'getIsDeletedTag',
             'deletedTime' => 'getDeletedTime',
             'promSpecConfig' => 'getPromSpecConfig',
-            'cceSpecConfig' => 'getCceSpecConfig',
-            'application' => 'getApplication'
+            'cceSpecConfig' => 'getCceSpecConfig'
     ];
 
     /**
@@ -287,6 +257,9 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     const PROM_TYPE_KUBERNETES = 'KUBERNETES';
     const PROM_TYPE_CLOUD_SERVICE = 'CLOUD_SERVICE';
     const PROM_TYPE_ACROSS_ACCOUNT = 'ACROSS_ACCOUNT';
+    const PROM_STATUS_DELETED = 'DELETED';
+    const PROM_STATUS_NORMAL = 'NORMAL';
+    const PROM_STATUS_ALL = 'ALL';
     
 
     /**
@@ -305,6 +278,20 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
             self::PROM_TYPE_KUBERNETES,
             self::PROM_TYPE_CLOUD_SERVICE,
             self::PROM_TYPE_ACROSS_ACCOUNT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPromStatusAllowableValues()
+    {
+        return [
+            self::PROM_STATUS_DELETED,
+            self::PROM_STATUS_NORMAL,
+            self::PROM_STATUS_ALL,
         ];
     }
 
@@ -328,8 +315,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         $this->container['promId'] = isset($data['promId']) ? $data['promId'] : null;
         $this->container['promType'] = isset($data['promType']) ? $data['promType'] : null;
         $this->container['promVersion'] = isset($data['promVersion']) ? $data['promVersion'] : null;
-        $this->container['cceSpec'] = isset($data['cceSpec']) ? $data['cceSpec'] : null;
-        $this->container['promConfig'] = isset($data['promConfig']) ? $data['promConfig'] : null;
         $this->container['promCreateTimestamp'] = isset($data['promCreateTimestamp']) ? $data['promCreateTimestamp'] : null;
         $this->container['promUpdateTimestamp'] = isset($data['promUpdateTimestamp']) ? $data['promUpdateTimestamp'] : null;
         $this->container['promStatus'] = isset($data['promStatus']) ? $data['promStatus'] : null;
@@ -339,7 +324,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
         $this->container['deletedTime'] = isset($data['deletedTime']) ? $data['deletedTime'] : null;
         $this->container['promSpecConfig'] = isset($data['promSpecConfig']) ? $data['promSpecConfig'] : null;
         $this->container['cceSpecConfig'] = isset($data['cceSpecConfig']) ? $data['cceSpecConfig'] : null;
-        $this->container['application'] = isset($data['application']) ? $data['application'] : null;
     }
 
     /**
@@ -360,6 +344,14 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['promType']) && !in_array($this->container['promType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'promType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPromStatusAllowableValues();
+                if (!is_null($this->container['promStatus']) && !in_array($this->container['promStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'promStatus', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -428,7 +420,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets promType
-    *  Prometheus实例类型。
+    *  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     *
     * @return string
     */
@@ -440,7 +432,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     /**
     * Sets promType
     *
-    * @param string $promType Prometheus实例类型。
+    * @param string $promType Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     *
     * @return $this
     */
@@ -471,54 +463,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     public function setPromVersion($promVersion)
     {
         $this->container['promVersion'] = $promVersion;
-        return $this;
-    }
-
-    /**
-    * Gets cceSpec
-    *  CCE场景特殊字段。
-    *
-    * @return string|null
-    */
-    public function getCceSpec()
-    {
-        return $this->container['cceSpec'];
-    }
-
-    /**
-    * Sets cceSpec
-    *
-    * @param string|null $cceSpec CCE场景特殊字段。
-    *
-    * @return $this
-    */
-    public function setCceSpec($cceSpec)
-    {
-        $this->container['cceSpec'] = $cceSpec;
-        return $this;
-    }
-
-    /**
-    * Gets promConfig
-    *  promConfig
-    *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromConfigModel|null
-    */
-    public function getPromConfig()
-    {
-        return $this->container['promConfig'];
-    }
-
-    /**
-    * Sets promConfig
-    *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromConfigModel|null $promConfig promConfig
-    *
-    * @return $this
-    */
-    public function setPromConfig($promConfig)
-    {
-        $this->container['promConfig'] = $promConfig;
         return $this;
     }
 
@@ -735,30 +679,6 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     public function setCceSpecConfig($cceSpecConfig)
     {
         $this->container['cceSpecConfig'] = $cceSpecConfig;
-        return $this;
-    }
-
-    /**
-    * Gets application
-    *  application
-    *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel|null
-    */
-    public function getApplication()
-    {
-        return $this->container['application'];
-    }
-
-    /**
-    * Sets application
-    *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\ApplicationModel|null $application application
-    *
-    * @return $this
-    */
-    public function setApplication($application)
-    {
-        $this->container['application'] = $application;
         return $this;
     }
 

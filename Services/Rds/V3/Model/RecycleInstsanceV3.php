@@ -36,6 +36,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     * retainedUntil  保留时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * recycleBackupId  备份id
     * recycleStatus  备份状态 取值范围如下，区分大小写: - BUILDING 备份中，不能进行重建 - COMPLETED，标识备份完成，可以重建
+    * isServerless  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'retainedUntil' => 'string',
             'recycleBackupId' => 'string',
-            'recycleStatus' => 'string'
+            'recycleStatus' => 'string',
+            'isServerless' => 'bool'
     ];
 
     /**
@@ -76,6 +78,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     * retainedUntil  保留时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * recycleBackupId  备份id
     * recycleStatus  备份状态 取值范围如下，区分大小写: - BUILDING 备份中，不能进行重建 - COMPLETED，标识备份完成，可以重建
+    * isServerless  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'retainedUntil' => null,
         'recycleBackupId' => null,
-        'recycleStatus' => null
+        'recycleStatus' => null,
+        'isServerless' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     * retainedUntil  保留时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * recycleBackupId  备份id
     * recycleStatus  备份状态 取值范围如下，区分大小写: - BUILDING 备份中，不能进行重建 - COMPLETED，标识备份完成，可以重建
+    * isServerless  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'retainedUntil' => 'retained_until',
             'recycleBackupId' => 'recycle_backup_id',
-            'recycleStatus' => 'recycle_status'
+            'recycleStatus' => 'recycle_status',
+            'isServerless' => 'is_serverless'
     ];
 
     /**
@@ -177,6 +183,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     * retainedUntil  保留时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * recycleBackupId  备份id
     * recycleStatus  备份状态 取值范围如下，区分大小写: - BUILDING 备份中，不能进行重建 - COMPLETED，标识备份完成，可以重建
+    * isServerless  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'retainedUntil' => 'setRetainedUntil',
             'recycleBackupId' => 'setRecycleBackupId',
-            'recycleStatus' => 'setRecycleStatus'
+            'recycleStatus' => 'setRecycleStatus',
+            'isServerless' => 'setIsServerless'
     ];
 
     /**
@@ -217,6 +225,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     * retainedUntil  保留时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * recycleBackupId  备份id
     * recycleStatus  备份状态 取值范围如下，区分大小写: - BUILDING 备份中，不能进行重建 - COMPLETED，标识备份完成，可以重建
+    * isServerless  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'retainedUntil' => 'getRetainedUntil',
             'recycleBackupId' => 'getRecycleBackupId',
-            'recycleStatus' => 'getRecycleStatus'
+            'recycleStatus' => 'getRecycleStatus',
+            'isServerless' => 'getIsServerless'
     ];
 
     /**
@@ -313,6 +323,7 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
         $this->container['retainedUntil'] = isset($data['retainedUntil']) ? $data['retainedUntil'] : null;
         $this->container['recycleBackupId'] = isset($data['recycleBackupId']) ? $data['recycleBackupId'] : null;
         $this->container['recycleStatus'] = isset($data['recycleStatus']) ? $data['recycleStatus'] : null;
+        $this->container['isServerless'] = isset($data['isServerless']) ? $data['isServerless'] : null;
     }
 
     /**
@@ -718,6 +729,30 @@ class RecycleInstsanceV3 implements ModelInterface, ArrayAccess
     public function setRecycleStatus($recycleStatus)
     {
         $this->container['recycleStatus'] = $recycleStatus;
+        return $this;
+    }
+
+    /**
+    * Gets isServerless
+    *  是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
+    *
+    * @return bool|null
+    */
+    public function getIsServerless()
+    {
+        return $this->container['isServerless'];
+    }
+
+    /**
+    * Sets isServerless
+    *
+    * @param bool|null $isServerless 是否为serverless实例 - false 不是serverless实例 - true 是serverless实例
+    *
+    * @return $this
+    */
+    public function setIsServerless($isServerless)
+    {
+        $this->container['isServerless'] = $isServerless;
         return $this;
     }
 

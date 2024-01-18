@@ -22,7 +22,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * assetId  资产ID。
     * body  body
     *
@@ -40,7 +40,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * assetId  资产ID。
     * body  body
     *
@@ -79,7 +79,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * assetId  资产ID。
     * body  body
     *
@@ -97,7 +97,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * assetId  资产ID。
     * body  body
     *
@@ -115,7 +115,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > *不允许输入中文。
+    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * assetId  资产ID。
     * body  body
     *
@@ -293,7 +293,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > *不允许输入中文。
+    *  第三方用户ID。 > * 不允许输入中文。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class UpdateDigitalAssetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > *不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
     *
     * @return $this
     */

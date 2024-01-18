@@ -22,21 +22,29 @@ class ShowAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * allAuditLogAction  审计记录的所有操作类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'keepDays' => 'int'
+            'keepDays' => 'int',
+            'auditTypes' => 'string[]',
+            'allAuditLogAction' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * allAuditLogAction  审计记录的所有操作类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'keepDays' => null
+        'keepDays' => null,
+        'auditTypes' => null,
+        'allAuditLogAction' => null
     ];
 
     /**
@@ -63,31 +71,43 @@ class ShowAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * allAuditLogAction  审计记录的所有操作类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'keepDays' => 'keep_days'
+            'keepDays' => 'keep_days',
+            'auditTypes' => 'audit_types',
+            'allAuditLogAction' => 'all_audit_log_action'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * allAuditLogAction  审计记录的所有操作类型。
     *
     * @var string[]
     */
     protected static $setters = [
-            'keepDays' => 'setKeepDays'
+            'keepDays' => 'setKeepDays',
+            'auditTypes' => 'setAuditTypes',
+            'allAuditLogAction' => 'setAllAuditLogAction'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * allAuditLogAction  审计记录的所有操作类型。
     *
     * @var string[]
     */
     protected static $getters = [
-            'keepDays' => 'getKeepDays'
+            'keepDays' => 'getKeepDays',
+            'auditTypes' => 'getAuditTypes',
+            'allAuditLogAction' => 'getAllAuditLogAction'
     ];
 
     /**
@@ -149,6 +169,8 @@ class ShowAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
+        $this->container['auditTypes'] = isset($data['auditTypes']) ? $data['auditTypes'] : null;
+        $this->container['allAuditLogAction'] = isset($data['allAuditLogAction']) ? $data['allAuditLogAction'] : null;
     }
 
     /**
@@ -159,6 +181,12 @@ class ShowAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['allAuditLogAction']) && (mb_strlen($this->container['allAuditLogAction']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'allAuditLogAction', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['allAuditLogAction']) && (mb_strlen($this->container['allAuditLogAction']) < 0)) {
+                $invalidProperties[] = "invalid value for 'allAuditLogAction', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -194,6 +222,54 @@ class ShowAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     public function setKeepDays($keepDays)
     {
         $this->container['keepDays'] = $keepDays;
+        return $this;
+    }
+
+    /**
+    * Gets auditTypes
+    *  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    *
+    * @return string[]|null
+    */
+    public function getAuditTypes()
+    {
+        return $this->container['auditTypes'];
+    }
+
+    /**
+    * Sets auditTypes
+    *
+    * @param string[]|null $auditTypes 审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    *
+    * @return $this
+    */
+    public function setAuditTypes($auditTypes)
+    {
+        $this->container['auditTypes'] = $auditTypes;
+        return $this;
+    }
+
+    /**
+    * Gets allAuditLogAction
+    *  审计记录的所有操作类型。
+    *
+    * @return string|null
+    */
+    public function getAllAuditLogAction()
+    {
+        return $this->container['allAuditLogAction'];
+    }
+
+    /**
+    * Sets allAuditLogAction
+    *
+    * @param string|null $allAuditLogAction 审计记录的所有操作类型。
+    *
+    * @return $this
+    */
+    public function setAllAuditLogAction($allAuditLogAction)
+    {
+        $this->container['allAuditLogAction'] = $allAuditLogAction;
         return $this;
     }
 

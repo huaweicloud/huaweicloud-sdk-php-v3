@@ -440,9 +440,6 @@ class PoolResp implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['protectionStatus'] === null) {
-            $invalidProperties[] = "'protectionStatus' can't be null";
-        }
             $allowedValues = $this->getProtectionStatusAllowableValues();
                 if (!is_null($this->container['protectionStatus']) && !in_array($this->container['protectionStatus'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -451,13 +448,10 @@ class PoolResp implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['protectionReason'] === null) {
-            $invalidProperties[] = "'protectionReason' can't be null";
-        }
-            if ((mb_strlen($this->container['protectionReason']) > 255)) {
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) > 255)) {
                 $invalidProperties[] = "invalid value for 'protectionReason', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['protectionReason']) < 0)) {
+            if (!is_null($this->container['protectionReason']) && (mb_strlen($this->container['protectionReason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'protectionReason', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -790,7 +784,7 @@ class PoolResp implements ModelInterface, ArrayAccess
     * Gets protectionStatus
     *  修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     *
-    * @return string
+    * @return string|null
     */
     public function getProtectionStatus()
     {
@@ -800,7 +794,7 @@ class PoolResp implements ModelInterface, ArrayAccess
     /**
     * Sets protectionStatus
     *
-    * @param string $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+    * @param string|null $protectionStatus 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     *
     * @return $this
     */
@@ -814,7 +808,7 @@ class PoolResp implements ModelInterface, ArrayAccess
     * Gets protectionReason
     *  设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
-    * @return string
+    * @return string|null
     */
     public function getProtectionReason()
     {
@@ -824,7 +818,7 @@ class PoolResp implements ModelInterface, ArrayAccess
     /**
     * Sets protectionReason
     *
-    * @param string $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+    * @param string|null $protectionReason 设置保护的原因 >仅当protection_status为consoleProtection时有效。
     *
     * @return $this
     */

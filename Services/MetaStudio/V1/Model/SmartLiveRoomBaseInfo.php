@@ -260,6 +260,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     const LAST_JOB_STATUS_SUCCEED = 'SUCCEED';
     const LAST_JOB_STATUS_FAILED = 'FAILED';
     const LAST_JOB_STATUS_CANCELED = 'CANCELED';
+    const LAST_JOB_STATUS_BLOCKED = 'BLOCKED';
     
 
     /**
@@ -303,6 +304,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             self::LAST_JOB_STATUS_SUCCEED,
             self::LAST_JOB_STATUS_FAILED,
             self::LAST_JOB_STATUS_CANCELED,
+            self::LAST_JOB_STATUS_BLOCKED,
         ];
     }
 

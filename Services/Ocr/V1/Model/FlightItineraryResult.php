@@ -37,6 +37,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * agentCode  销售单位代号。
     * issueOrganization  填开单位。
     * issueDate  填开日期。
+    * tax  增值税税额
+    * taxRate  增值税税率
+    * buyerName  购买方名称
+    * buyerId  购买方纳税人识别号
+    * number  发票号码
+    * internationalFlag  国内国际标签
+    * issueStatus  开具状态
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -60,6 +67,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'agentCode' => 'string',
             'issueOrganization' => 'string',
             'issueDate' => 'string',
+            'tax' => 'string',
+            'taxRate' => 'string',
+            'buyerName' => 'string',
+            'buyerId' => 'string',
+            'number' => 'string',
+            'internationalFlag' => 'string',
+            'issueStatus' => 'string',
             'itineraryList' => '\HuaweiCloud\SDK\Ocr\V1\Model\ItineraryList[]',
             'confidence' => 'object'
     ];
@@ -83,6 +97,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * agentCode  销售单位代号。
     * issueOrganization  填开单位。
     * issueDate  填开日期。
+    * tax  增值税税额
+    * taxRate  增值税税率
+    * buyerName  购买方名称
+    * buyerId  购买方纳税人识别号
+    * number  发票号码
+    * internationalFlag  国内国际标签
+    * issueStatus  开具状态
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -106,6 +127,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
         'agentCode' => null,
         'issueOrganization' => null,
         'issueDate' => null,
+        'tax' => null,
+        'taxRate' => null,
+        'buyerName' => null,
+        'buyerId' => null,
+        'number' => null,
+        'internationalFlag' => null,
+        'issueStatus' => null,
         'itineraryList' => null,
         'confidence' => null
     ];
@@ -150,6 +178,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * agentCode  销售单位代号。
     * issueOrganization  填开单位。
     * issueDate  填开日期。
+    * tax  增值税税额
+    * taxRate  增值税税率
+    * buyerName  购买方名称
+    * buyerId  购买方纳税人识别号
+    * number  发票号码
+    * internationalFlag  国内国际标签
+    * issueStatus  开具状态
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -173,6 +208,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'agentCode' => 'agent_code',
             'issueOrganization' => 'issue_organization',
             'issueDate' => 'issue_date',
+            'tax' => 'tax',
+            'taxRate' => 'tax_rate',
+            'buyerName' => 'buyer_name',
+            'buyerId' => 'buyer_id',
+            'number' => 'number',
+            'internationalFlag' => 'international_flag',
+            'issueStatus' => 'issue_status',
             'itineraryList' => 'itinerary_list',
             'confidence' => 'confidence'
     ];
@@ -196,6 +238,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * agentCode  销售单位代号。
     * issueOrganization  填开单位。
     * issueDate  填开日期。
+    * tax  增值税税额
+    * taxRate  增值税税率
+    * buyerName  购买方名称
+    * buyerId  购买方纳税人识别号
+    * number  发票号码
+    * internationalFlag  国内国际标签
+    * issueStatus  开具状态
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -219,6 +268,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'agentCode' => 'setAgentCode',
             'issueOrganization' => 'setIssueOrganization',
             'issueDate' => 'setIssueDate',
+            'tax' => 'setTax',
+            'taxRate' => 'setTaxRate',
+            'buyerName' => 'setBuyerName',
+            'buyerId' => 'setBuyerId',
+            'number' => 'setNumber',
+            'internationalFlag' => 'setInternationalFlag',
+            'issueStatus' => 'setIssueStatus',
             'itineraryList' => 'setItineraryList',
             'confidence' => 'setConfidence'
     ];
@@ -242,6 +298,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     * agentCode  销售单位代号。
     * issueOrganization  填开单位。
     * issueDate  填开日期。
+    * tax  增值税税额
+    * taxRate  增值税税率
+    * buyerName  购买方名称
+    * buyerId  购买方纳税人识别号
+    * number  发票号码
+    * internationalFlag  国内国际标签
+    * issueStatus  开具状态
     * itineraryList  机票行程列表。
     * confidence  相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
     *
@@ -265,6 +328,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
             'agentCode' => 'getAgentCode',
             'issueOrganization' => 'getIssueOrganization',
             'issueDate' => 'getIssueDate',
+            'tax' => 'getTax',
+            'taxRate' => 'getTaxRate',
+            'buyerName' => 'getBuyerName',
+            'buyerId' => 'getBuyerId',
+            'number' => 'getNumber',
+            'internationalFlag' => 'getInternationalFlag',
+            'issueStatus' => 'getIssueStatus',
             'itineraryList' => 'getItineraryList',
             'confidence' => 'getConfidence'
     ];
@@ -344,6 +414,13 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
         $this->container['agentCode'] = isset($data['agentCode']) ? $data['agentCode'] : null;
         $this->container['issueOrganization'] = isset($data['issueOrganization']) ? $data['issueOrganization'] : null;
         $this->container['issueDate'] = isset($data['issueDate']) ? $data['issueDate'] : null;
+        $this->container['tax'] = isset($data['tax']) ? $data['tax'] : null;
+        $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
+        $this->container['buyerName'] = isset($data['buyerName']) ? $data['buyerName'] : null;
+        $this->container['buyerId'] = isset($data['buyerId']) ? $data['buyerId'] : null;
+        $this->container['number'] = isset($data['number']) ? $data['number'] : null;
+        $this->container['internationalFlag'] = isset($data['internationalFlag']) ? $data['internationalFlag'] : null;
+        $this->container['issueStatus'] = isset($data['issueStatus']) ? $data['issueStatus'] : null;
         $this->container['itineraryList'] = isset($data['itineraryList']) ? $data['itineraryList'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
@@ -775,6 +852,174 @@ class FlightItineraryResult implements ModelInterface, ArrayAccess
     public function setIssueDate($issueDate)
     {
         $this->container['issueDate'] = $issueDate;
+        return $this;
+    }
+
+    /**
+    * Gets tax
+    *  增值税税额
+    *
+    * @return string|null
+    */
+    public function getTax()
+    {
+        return $this->container['tax'];
+    }
+
+    /**
+    * Sets tax
+    *
+    * @param string|null $tax 增值税税额
+    *
+    * @return $this
+    */
+    public function setTax($tax)
+    {
+        $this->container['tax'] = $tax;
+        return $this;
+    }
+
+    /**
+    * Gets taxRate
+    *  增值税税率
+    *
+    * @return string|null
+    */
+    public function getTaxRate()
+    {
+        return $this->container['taxRate'];
+    }
+
+    /**
+    * Sets taxRate
+    *
+    * @param string|null $taxRate 增值税税率
+    *
+    * @return $this
+    */
+    public function setTaxRate($taxRate)
+    {
+        $this->container['taxRate'] = $taxRate;
+        return $this;
+    }
+
+    /**
+    * Gets buyerName
+    *  购买方名称
+    *
+    * @return string|null
+    */
+    public function getBuyerName()
+    {
+        return $this->container['buyerName'];
+    }
+
+    /**
+    * Sets buyerName
+    *
+    * @param string|null $buyerName 购买方名称
+    *
+    * @return $this
+    */
+    public function setBuyerName($buyerName)
+    {
+        $this->container['buyerName'] = $buyerName;
+        return $this;
+    }
+
+    /**
+    * Gets buyerId
+    *  购买方纳税人识别号
+    *
+    * @return string|null
+    */
+    public function getBuyerId()
+    {
+        return $this->container['buyerId'];
+    }
+
+    /**
+    * Sets buyerId
+    *
+    * @param string|null $buyerId 购买方纳税人识别号
+    *
+    * @return $this
+    */
+    public function setBuyerId($buyerId)
+    {
+        $this->container['buyerId'] = $buyerId;
+        return $this;
+    }
+
+    /**
+    * Gets number
+    *  发票号码
+    *
+    * @return string|null
+    */
+    public function getNumber()
+    {
+        return $this->container['number'];
+    }
+
+    /**
+    * Sets number
+    *
+    * @param string|null $number 发票号码
+    *
+    * @return $this
+    */
+    public function setNumber($number)
+    {
+        $this->container['number'] = $number;
+        return $this;
+    }
+
+    /**
+    * Gets internationalFlag
+    *  国内国际标签
+    *
+    * @return string|null
+    */
+    public function getInternationalFlag()
+    {
+        return $this->container['internationalFlag'];
+    }
+
+    /**
+    * Sets internationalFlag
+    *
+    * @param string|null $internationalFlag 国内国际标签
+    *
+    * @return $this
+    */
+    public function setInternationalFlag($internationalFlag)
+    {
+        $this->container['internationalFlag'] = $internationalFlag;
+        return $this;
+    }
+
+    /**
+    * Gets issueStatus
+    *  开具状态
+    *
+    * @return string|null
+    */
+    public function getIssueStatus()
+    {
+        return $this->container['issueStatus'];
+    }
+
+    /**
+    * Sets issueStatus
+    *
+    * @param string|null $issueStatus 开具状态
+    *
+    * @return $this
+    */
+    public function setIssueStatus($issueStatus)
+    {
+        $this->container['issueStatus'] = $issueStatus;
         return $this;
     }
 

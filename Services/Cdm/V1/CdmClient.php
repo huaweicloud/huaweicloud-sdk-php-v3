@@ -1091,6 +1091,9 @@ class CdmClient extends Client
         if ($localVarParams['jobName'] !== null) {
             $pathParams['job_name'] = $localVarParams['jobName'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1098,7 +1101,7 @@ class CdmClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['*/*', 'application/json'],
-                []
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(

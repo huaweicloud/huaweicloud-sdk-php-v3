@@ -21,28 +21,24 @@ class IpDetails implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ipAddress  IP地址
-    * ipv6Address  IPV6地址
     * bandwidthSize  带宽大小
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ipAddress' => 'string',
-            'ipv6Address' => 'string',
             'bandwidthSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ipAddress  IP地址
-    * ipv6Address  IPV6地址
     * bandwidthSize  带宽大小
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ipAddress' => null,
-        'ipv6Address' => null,
         'bandwidthSize' => 'int32'
     ];
 
@@ -70,42 +66,36 @@ class IpDetails implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ipAddress  IP地址
-    * ipv6Address  IPV6地址
     * bandwidthSize  带宽大小
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ipAddress' => 'ip_address',
-            'ipv6Address' => 'ipv6_address',
             'bandwidthSize' => 'bandwidth_size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ipAddress  IP地址
-    * ipv6Address  IPV6地址
     * bandwidthSize  带宽大小
     *
     * @var string[]
     */
     protected static $setters = [
             'ipAddress' => 'setIpAddress',
-            'ipv6Address' => 'setIpv6Address',
             'bandwidthSize' => 'setBandwidthSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ipAddress  IP地址
-    * ipv6Address  IPV6地址
     * bandwidthSize  带宽大小
     *
     * @var string[]
     */
     protected static $getters = [
             'ipAddress' => 'getIpAddress',
-            'ipv6Address' => 'getIpv6Address',
             'bandwidthSize' => 'getBandwidthSize'
     ];
 
@@ -168,7 +158,6 @@ class IpDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
-        $this->container['ipv6Address'] = isset($data['ipv6Address']) ? $data['ipv6Address'] : null;
         $this->container['bandwidthSize'] = isset($data['bandwidthSize']) ? $data['bandwidthSize'] : null;
     }
 
@@ -215,30 +204,6 @@ class IpDetails implements ModelInterface, ArrayAccess
     public function setIpAddress($ipAddress)
     {
         $this->container['ipAddress'] = $ipAddress;
-        return $this;
-    }
-
-    /**
-    * Gets ipv6Address
-    *  IPV6地址
-    *
-    * @return string|null
-    */
-    public function getIpv6Address()
-    {
-        return $this->container['ipv6Address'];
-    }
-
-    /**
-    * Sets ipv6Address
-    *
-    * @param string|null $ipv6Address IPV6地址
-    *
-    * @return $this
-    */
-    public function setIpv6Address($ipv6Address)
-    {
-        $this->container['ipv6Address'] = $ipv6Address;
         return $this;
     }
 

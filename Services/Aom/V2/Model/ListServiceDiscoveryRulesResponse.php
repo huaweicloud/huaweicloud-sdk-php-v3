@@ -24,7 +24,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
-    * id  id
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
@@ -40,7 +40,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
-    * id  id
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
@@ -77,7 +77,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
-    * id  id
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
@@ -93,7 +93,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
-    * id  id
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
@@ -109,7 +109,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * appRules  查询结果规则信息。
     * errorCode  响应码,AOM_INVENTORY_2000000代表正常返回。
     * errorMessage  响应信息描述。
-    * id  id
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
@@ -280,7 +280,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @return string[]|null
     */
@@ -292,7 +292,7 @@ class ListServiceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 服务发现规则id列表，多AZ配置同步时使用。
     *
     * @return $this
     */

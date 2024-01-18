@@ -13382,6 +13382,77 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 资产详情(邀测)
+     *
+     * 资产详情接口，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDataDetailAsync($request)
+    {
+        return $this->showDataDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function showDataDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/datamap/entities/guid/{guid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['ignoreRelationships'] !== null) {
+            $queryParams['ignore_relationships'] = $localVarParams['ignoreRelationships'];
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams['instance'] = $localVarParams['instance'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 资产信息
      *
      * 查询概要
@@ -13591,6 +13662,92 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataconnectionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataconnectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 资产血缘(邀测)
+     *
+     * 资产血缘接口，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDatamapLineageAsync($request)
+    {
+        return $this->showDatamapLineageAsyncWithHttpInfo($request);
+    }
+    
+    public function showDatamapLineageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/datamap/lineage/guid/{guid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['relationshipTypes'] !== null) {
+            $queryParams['relationship_types'] = $localVarParams['relationshipTypes'];
+        }
+        if ($localVarParams['relationshipTypeCategories'] !== null) {
+            $queryParams['relationship_type_categories'] = $localVarParams['relationshipTypeCategories'];
+        }
+        if ($localVarParams['relatedEntityTypes'] !== null) {
+            $queryParams['related_entity_types'] = $localVarParams['relatedEntityTypes'];
+        }
+        if ($localVarParams['extendProcessDataFlow'] !== null) {
+            $queryParams['extend_process_data_flow'] = $localVarParams['extendProcessDataFlow'];
+        }
+        if ($localVarParams['includeParentEntity'] !== null) {
+            $queryParams['include_parent_entity'] = $localVarParams['includeParentEntity'];
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams['instance'] = $localVarParams['instance'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDatamapLineageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDatamapLineageRequest',
             $asyncRequest = true);
     }
 
@@ -14261,6 +14418,92 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 产出信息(邀测)
+     *
+     * 查询表相关的作业算子运行实例信息，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstanceInfosAsync($request)
+    {
+        return $this->showInstanceInfosAsyncWithHttpInfo($request);
+    }
+    
+    public function showInstanceInfosAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/datamap/node/{task_id}/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $queryParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($localVarParams['jobName'] !== null) {
+            $queryParams['job_name'] = $localVarParams['jobName'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams['instance'] = $localVarParams['instance'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowInstanceInfosResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowInstanceInfosRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取任务日志
      *
      * 获取任务日志
@@ -14477,6 +14720,77 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 批量血缘(邀测)
+     *
+     * 批量血缘接口，根据作业算子分页批量查询血缘。该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLineageBulkAsync($request)
+    {
+        return $this->showLineageBulkAsyncWithHttpInfo($request);
+    }
+    
+    public function showLineageBulkAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/datamap/lineage/bulk';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams['instance'] = $localVarParams['instance'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowLineageBulkResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowLineageBulkRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取消息详情
      *
      * 获取消息详情
@@ -14680,6 +14994,74 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowMetricTreeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowMetricTreeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 表关联作业算子列表(邀测)
+     *
+     * 查询表相关的作业算子列表，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showNodesAsync($request)
+    {
+        return $this->showNodesAsyncWithHttpInfo($request);
+    }
+    
+    public function showNodesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/datamap/table/{guid}/node';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instance'] !== null) {
+            $headerParams['instance'] = $localVarParams['instance'];
+        }
+        if ($localVarParams['guid'] !== null) {
+            $pathParams['guid'] = $localVarParams['guid'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowNodesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowNodesRequest',
             $asyncRequest = true);
     }
 

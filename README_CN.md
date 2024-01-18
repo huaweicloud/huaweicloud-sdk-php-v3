@@ -20,7 +20,7 @@
 - 要使用华为云 Php SDK 访问指定服务的 API
   ，您需要确认已在 [华为云控制台](https://console.huaweicloud.com/console/?locale=zh-cn&region=cn-north-4#/home) 开通当前服务。
 
-- 华为云 Php SDK 支持 **PHP 5.6** 及以上版本，可执行 `php --version` 检查当前 Php 的版本信息。
+- 华为云 Php SDK 支持 **PHP 5.6、PHP6、PHP7**版本，不支持PHP8 版本，在运行前可执行 `php --version` 检查当前 Php 的版本信息，如果安装了PHP其他语言的版本，运行PHP SDK可能会报错。
 
 ## SDK 获取和安装
 
@@ -143,8 +143,9 @@ $config = HttpConfig::getDefaultConfig();
 $config->setProxyProtocol('http');
 $config->setProxyHost('proxy.huawei.com');
 $config->setProxyPort(8080);
-$config->setProxyUser('username');
-$config->setProxyPassword('password');
+// 本示例中的账号和密码保存在环境变量中，运行本示例前请先在本地环境中配置环境变量PROXY_USERNAME和PROXY_PASSWORD
+$config->setProxyUser(getenv('PROXY_USERNAME'));
+$config->setProxyPassword(getenv('PROXY_PASSWORD'));
 ```
 
 #### 1.3 超时配置 [:top:](#用户手册-top)

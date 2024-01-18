@@ -26,7 +26,7 @@ class CreatePromInstanceResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'prometheus' => '\HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]'
+            'prometheus' => '\HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsCreateModel[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class CreatePromInstanceResponse implements ModelInterface, ArrayAccess
     * Gets prometheus
     *  Prometheus实例名称列表。
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsCreateModel[]|null
     */
     public function getPrometheus()
     {
@@ -187,7 +187,7 @@ class CreatePromInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets prometheus
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsModel[]|null $prometheus Prometheus实例名称列表。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\PromInstanceEpsCreateModel[]|null $prometheus Prometheus实例名称列表。
     *
     * @return $this
     */

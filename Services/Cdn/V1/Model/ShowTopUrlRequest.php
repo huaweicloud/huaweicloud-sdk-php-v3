@@ -24,7 +24,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * startTime  查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * endTime  查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名。如果域名在查询时间段内无数据，结果将不返回该域名的信息。
-    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     * statType  参数类型支持：flux(流量),req_num(请求总数)。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * startTime  查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * endTime  查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名。如果域名在查询时间段内无数据，结果将不返回该域名的信息。
-    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     * statType  参数类型支持：flux(流量),req_num(请求总数)。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * startTime  查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * endTime  查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名。如果域名在查询时间段内无数据，结果将不返回该域名的信息。
-    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     * statType  参数类型支持：flux(流量),req_num(请求总数)。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * startTime  查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * endTime  查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名。如果域名在查询时间段内无数据，结果将不返回该域名的信息。
-    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     * statType  参数类型支持：flux(流量),req_num(请求总数)。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * startTime  查询起始时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * endTime  查询结束时间戳（单位：毫秒）。该时间戳的取值在转化为日期格式后须满足以下格式：XXXX-XX-XX 00:00:00
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com，all表示查询名下全部域名。如果域名在查询时间段内无数据，结果将不返回该域名的信息。
-    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * serviceArea  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     * statType  参数类型支持：flux(流量),req_num(请求总数)。
     *
     * @var string[]
@@ -181,6 +181,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     }
     const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
     const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
+    const SERVICE_AREA__GLOBAL = 'global';
     const STAT_TYPE_FLUX = 'flux';
     const STAT_TYPE_REQ_NUM = 'req_num';
     
@@ -195,6 +196,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
         return [
             self::SERVICE_AREA_MAINLAND_CHINA,
             self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
+            self::SERVICE_AREA__GLOBAL,
         ];
     }
 
@@ -383,7 +385,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    *  mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     *
     * @return string|null
     */
@@ -395,7 +397,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * @param string|null $serviceArea mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为global(全球)。
     *
     * @return $this
     */
