@@ -29,7 +29,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * hwpassthrough  数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
     * extendparam  extendparam
     * clusterType  云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-    * clusterId  数据镜像的ID，UUID格式。
+    * clusterId  云服务器数据盘对应的存储池的ID。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
     * deleteOnTermination  数据盘随实例释放策略。  true：数据盘随实例释放。 false：数据盘不随实例释放。 默认值：false。
@@ -63,7 +63,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * hwpassthrough  数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
     * extendparam  extendparam
     * clusterType  云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-    * clusterId  数据镜像的ID，UUID格式。
+    * clusterId  云服务器数据盘对应的存储池的ID。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
     * deleteOnTermination  数据盘随实例释放策略。  true：数据盘随实例释放。 false：数据盘不随实例释放。 默认值：false。
@@ -118,7 +118,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * hwpassthrough  数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
     * extendparam  extendparam
     * clusterType  云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-    * clusterId  数据镜像的ID，UUID格式。
+    * clusterId  云服务器数据盘对应的存储池的ID。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
     * deleteOnTermination  数据盘随实例释放策略。  true：数据盘随实例释放。 false：数据盘不随实例释放。 默认值：false。
@@ -152,7 +152,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * hwpassthrough  数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
     * extendparam  extendparam
     * clusterType  云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-    * clusterId  数据镜像的ID，UUID格式。
+    * clusterId  云服务器数据盘对应的存储池的ID。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
     * deleteOnTermination  数据盘随实例释放策略。  true：数据盘随实例释放。 false：数据盘不随实例释放。 默认值：false。
@@ -186,7 +186,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * hwpassthrough  数据卷是否使用SCSI锁。  - true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。 - false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。 - 该字段不存在时，云硬盘默认为VBD类型。  > 说明： >  > 此参数为boolean类型，若传入非boolean类型字符，程序将按照【false】方式处理。
     * extendparam  extendparam
     * clusterType  云服务器数据盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
-    * clusterId  数据镜像的ID，UUID格式。
+    * clusterId  云服务器数据盘对应的存储池的ID。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
     * deleteOnTermination  数据盘随实例释放策略。  true：数据盘随实例释放。 false：数据盘不随实例释放。 默认值：false。
@@ -592,7 +592,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  数据镜像的ID，UUID格式。
+    *  云服务器数据盘对应的存储池的ID。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 数据镜像的ID，UUID格式。
+    * @param string|null $clusterId 云服务器数据盘对应的存储池的ID。
     *
     * @return $this
     */

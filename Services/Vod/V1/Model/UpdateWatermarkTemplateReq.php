@@ -322,6 +322,9 @@ class UpdateWatermarkTemplateReq implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
             $allowedValues = $this->getPositionAllowableValues();
                 if (!is_null($this->container['position']) && !in_array($this->container['position'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -388,7 +391,7 @@ class UpdateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * Gets name
     *  水印模板名称<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -398,7 +401,7 @@ class UpdateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 水印模板名称<br/>
+    * @param string $name 水印模板名称<br/>
     *
     * @return $this
     */

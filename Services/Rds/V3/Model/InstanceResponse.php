@@ -61,6 +61,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * alias  实例的备注信息。
     * maxIops  实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
     * expirationTime  实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -105,7 +106,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'associatedWithDdm' => 'bool',
             'alias' => 'string',
             'maxIops' => 'int',
-            'expirationTime' => 'string'
+            'expirationTime' => 'string',
+            'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfoResponse'
     ];
 
     /**
@@ -151,6 +153,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * alias  实例的备注信息。
     * maxIops  实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
     * expirationTime  实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -195,7 +198,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
         'associatedWithDdm' => null,
         'alias' => null,
         'maxIops' => 'int64',
-        'expirationTime' => null
+        'expirationTime' => null,
+        'serverlessInfo' => null
     ];
 
     /**
@@ -262,6 +266,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * alias  实例的备注信息。
     * maxIops  实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
     * expirationTime  实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -306,7 +311,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'associatedWithDdm' => 'associated_with_ddm',
             'alias' => 'alias',
             'maxIops' => 'max_iops',
-            'expirationTime' => 'expiration_time'
+            'expirationTime' => 'expiration_time',
+            'serverlessInfo' => 'serverless_info'
     ];
 
     /**
@@ -352,6 +358,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * alias  实例的备注信息。
     * maxIops  实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
     * expirationTime  实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -396,7 +403,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'associatedWithDdm' => 'setAssociatedWithDdm',
             'alias' => 'setAlias',
             'maxIops' => 'setMaxIops',
-            'expirationTime' => 'setExpirationTime'
+            'expirationTime' => 'setExpirationTime',
+            'serverlessInfo' => 'setServerlessInfo'
     ];
 
     /**
@@ -442,6 +450,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * alias  实例的备注信息。
     * maxIops  实例磁盘的最大IOPS值。  当前该字段仅对于SQL Server引擎实例返回。
     * expirationTime  实例的到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  仅包周期场景返回。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -486,7 +495,8 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'associatedWithDdm' => 'getAssociatedWithDdm',
             'alias' => 'getAlias',
             'maxIops' => 'getMaxIops',
-            'expirationTime' => 'getExpirationTime'
+            'expirationTime' => 'getExpirationTime',
+            'serverlessInfo' => 'getServerlessInfo'
     ];
 
     /**
@@ -588,6 +598,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['maxIops'] = isset($data['maxIops']) ? $data['maxIops'] : null;
         $this->container['expirationTime'] = isset($data['expirationTime']) ? $data['expirationTime'] : null;
+        $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
     }
 
     /**
@@ -1677,6 +1688,30 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     public function setExpirationTime($expirationTime)
     {
         $this->container['expirationTime'] = $expirationTime;
+        return $this;
+    }
+
+    /**
+    * Gets serverlessInfo
+    *  serverlessInfo
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfoResponse|null
+    */
+    public function getServerlessInfo()
+    {
+        return $this->container['serverlessInfo'];
+    }
+
+    /**
+    * Sets serverlessInfo
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfoResponse|null $serverlessInfo serverlessInfo
+    *
+    * @return $this
+    */
+    public function setServerlessInfo($serverlessInfo)
+    {
+        $this->container['serverlessInfo'] = $serverlessInfo;
         return $this;
     }
 

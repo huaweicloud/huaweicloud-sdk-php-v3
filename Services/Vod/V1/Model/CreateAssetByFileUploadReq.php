@@ -45,7 +45,7 @@ class CreateAssetByFileUploadReq implements ModelInterface, ArrayAccess
             'description' => 'string',
             'videoName' => 'string',
             'videoType' => 'string',
-            'categoryId' => 'string',
+            'categoryId' => 'int',
             'videoMd5' => 'string',
             'coverType' => 'string',
             'coverMd5' => 'string',
@@ -509,7 +509,7 @@ class CreateAssetByFileUploadReq implements ModelInterface, ArrayAccess
     * Gets categoryId
     *  媒资分类ID。  您可以调用[创建媒资分类](https://support.huaweicloud.com/api-vod/vod_04_0028.html)接口或在点播控制台的[分类设置](https://support.huaweicloud.com/usermanual-vod/vod010006.html)中创建对应的媒资分类，并获取分类ID。  > 若不设置或者设置为-1，则上传的音视频归类到系统预置的“其它”分类中。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCategoryId()
     {
@@ -519,7 +519,7 @@ class CreateAssetByFileUploadReq implements ModelInterface, ArrayAccess
     /**
     * Sets categoryId
     *
-    * @param string|null $categoryId 媒资分类ID。  您可以调用[创建媒资分类](https://support.huaweicloud.com/api-vod/vod_04_0028.html)接口或在点播控制台的[分类设置](https://support.huaweicloud.com/usermanual-vod/vod010006.html)中创建对应的媒资分类，并获取分类ID。  > 若不设置或者设置为-1，则上传的音视频归类到系统预置的“其它”分类中。
+    * @param int|null $categoryId 媒资分类ID。  您可以调用[创建媒资分类](https://support.huaweicloud.com/api-vod/vod_04_0028.html)接口或在点播控制台的[分类设置](https://support.huaweicloud.com/usermanual-vod/vod010006.html)中创建对应的媒资分类，并获取分类ID。  > 若不设置或者设置为-1，则上传的音视频归类到系统预置的“其它”分类中。
     *
     * @return $this
     */

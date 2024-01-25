@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aad\V1\Model;
+namespace HuaweiCloud\SDK\Cse\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateCertificateResponse implements ModelInterface, ArrayAccess
+class CreateHttp2RpcRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,24 +16,34 @@ class CreateCertificateResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateCertificateResponse';
+    protected static $openAPIModelName = 'CreateHttp2RpcRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * gatewayId  网关实例id
+    * accept  该字段内容填为 \"application/json\"
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'gatewayId' => 'string',
+            'accept' => 'string',
+            'body' => '\HuaweiCloud\SDK\Cse\V1\Model\Http2Rpc'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * gatewayId  网关实例id
+    * accept  该字段内容填为 \"application/json\"
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'gatewayId' => null,
+        'accept' => null,
+        'body' => null
     ];
 
     /**
@@ -60,29 +69,44 @@ class CreateCertificateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * gatewayId  网关实例id
+    * accept  该字段内容填为 \"application/json\"
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'gatewayId' => 'gateway_id',
+            'accept' => 'Accept',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * gatewayId  网关实例id
+    * accept  该字段内容填为 \"application/json\"
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'gatewayId' => 'setGatewayId',
+            'accept' => 'setAccept',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * gatewayId  网关实例id
+    * accept  该字段内容填为 \"application/json\"
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'gatewayId' => 'getGatewayId',
+            'accept' => 'getAccept',
+            'body' => 'getBody'
     ];
 
     /**
@@ -143,6 +167,9 @@ class CreateCertificateResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
+        $this->container['accept'] = isset($data['accept']) ? $data['accept'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -153,6 +180,9 @@ class CreateCertificateResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['gatewayId'] === null) {
+            $invalidProperties[] = "'gatewayId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -165,6 +195,78 @@ class CreateCertificateResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets gatewayId
+    *  网关实例id
+    *
+    * @return string
+    */
+    public function getGatewayId()
+    {
+        return $this->container['gatewayId'];
+    }
+
+    /**
+    * Sets gatewayId
+    *
+    * @param string $gatewayId 网关实例id
+    *
+    * @return $this
+    */
+    public function setGatewayId($gatewayId)
+    {
+        $this->container['gatewayId'] = $gatewayId;
+        return $this;
+    }
+
+    /**
+    * Gets accept
+    *  该字段内容填为 \"application/json\"
+    *
+    * @return string|null
+    */
+    public function getAccept()
+    {
+        return $this->container['accept'];
+    }
+
+    /**
+    * Sets accept
+    *
+    * @param string|null $accept 该字段内容填为 \"application/json\"
+    *
+    * @return $this
+    */
+    public function setAccept($accept)
+    {
+        $this->container['accept'] = $accept;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\Http2Rpc|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\Http2Rpc|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
+        return $this;
     }
 
     /**

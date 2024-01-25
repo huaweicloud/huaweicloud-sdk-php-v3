@@ -20,9 +20,9 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * urlDomain  后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     * remark  描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  请求方式，后端类型为GRPC时请求方式固定为POST
     * version  web后端版本，字符长度不超过16
@@ -48,9 +48,9 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * urlDomain  后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     * remark  描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  请求方式，后端类型为GRPC时请求方式固定为POST
     * version  web后端版本，字符长度不超过16
@@ -97,9 +97,9 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * urlDomain  后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     * remark  描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  请求方式，后端类型为GRPC时请求方式固定为POST
     * version  web后端版本，字符长度不超过16
@@ -125,9 +125,9 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * urlDomain  后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     * remark  描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  请求方式，后端类型为GRPC时请求方式固定为POST
     * version  web后端版本，字符长度不超过16
@@ -153,9 +153,9 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * urlDomain  后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * reqProtocol  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     * remark  描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  请求方式，后端类型为GRPC时请求方式固定为POST
     * version  web后端版本，字符长度不超过16
@@ -221,6 +221,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
     }
     const REQ_PROTOCOL_HTTP = 'HTTP';
     const REQ_PROTOCOL_HTTPS = 'HTTPS';
+    const REQ_PROTOCOL_GRPC = 'GRPC';
     const REQ_PROTOCOL_GRPCS = 'GRPCS';
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
@@ -242,6 +243,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
         return [
             self::REQ_PROTOCOL_HTTP,
             self::REQ_PROTOCOL_HTTPS,
+            self::REQ_PROTOCOL_GRPC,
             self::REQ_PROTOCOL_GRPCS,
         ];
     }
@@ -348,7 +350,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizerId
-    *  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    *  后端自定义认证对象的ID
     *
     * @return string|null
     */
@@ -360,7 +362,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets authorizerId
     *
-    * @param string|null $authorizerId 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * @param string|null $authorizerId 后端自定义认证对象的ID
     *
     * @return $this
     */
@@ -396,7 +398,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqProtocol
-    *  请求协议，后端类型为GRPC时请求协议可选GRPCS
+    *  请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     *
     * @return string
     */
@@ -408,7 +410,7 @@ class BackendApiBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqProtocol
     *
-    * @param string $reqProtocol 请求协议，后端类型为GRPC时请求协议可选GRPCS
+    * @param string $reqProtocol 请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
     *
     * @return $this
     */

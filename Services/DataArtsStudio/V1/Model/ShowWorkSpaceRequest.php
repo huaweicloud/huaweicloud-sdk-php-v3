@@ -172,8 +172,8 @@ class ShowWorkSpaceRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-            if (!preg_match("/^[a-z0-9]{32}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9]{32}$/.";
+            if (!preg_match("/^[a-z0-9\\\\-]{32,36}$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9\\\\-]{32,36}$/.";
             }
         if ($this->container['workspaceId'] === null) {
             $invalidProperties[] = "'workspaceId' can't be null";

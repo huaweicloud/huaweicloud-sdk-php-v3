@@ -21,6 +21,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * assetId  媒资ID。
+    * hlsStorageType  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
     * templateGroupName  转码模板组名称。   若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。
     * autoEncrypt  是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
     * thumbnail  thumbnail
@@ -30,6 +31,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'assetId' => 'string',
+            'hlsStorageType' => 'string',
             'templateGroupName' => 'string',
             'autoEncrypt' => 'int',
             'thumbnail' => '\HuaweiCloud\SDK\Vod\V1\Model\Thumbnail',
@@ -39,6 +41,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * assetId  媒资ID。
+    * hlsStorageType  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
     * templateGroupName  转码模板组名称。   若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。
     * autoEncrypt  是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
     * thumbnail  thumbnail
@@ -48,6 +51,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'assetId' => null,
+        'hlsStorageType' => null,
         'templateGroupName' => null,
         'autoEncrypt' => null,
         'thumbnail' => null,
@@ -78,6 +82,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * assetId  媒资ID。
+    * hlsStorageType  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
     * templateGroupName  转码模板组名称。   若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。
     * autoEncrypt  是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
     * thumbnail  thumbnail
@@ -87,6 +92,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'assetId' => 'asset_id',
+            'hlsStorageType' => 'hls_storage_type',
             'templateGroupName' => 'template_group_name',
             'autoEncrypt' => 'auto_encrypt',
             'thumbnail' => 'thumbnail',
@@ -96,6 +102,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  媒资ID。
+    * hlsStorageType  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
     * templateGroupName  转码模板组名称。   若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。
     * autoEncrypt  是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
     * thumbnail  thumbnail
@@ -105,6 +112,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'assetId' => 'setAssetId',
+            'hlsStorageType' => 'setHlsStorageType',
             'templateGroupName' => 'setTemplateGroupName',
             'autoEncrypt' => 'setAutoEncrypt',
             'thumbnail' => 'setThumbnail',
@@ -114,6 +122,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  媒资ID。
+    * hlsStorageType  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
     * templateGroupName  转码模板组名称。   若不为空，则使用指定的转码模板对上传的音视频进行转码，您可以在视频点播控制台配置转码模板，具体请参见[转码设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0072.html)。
     * autoEncrypt  是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
     * thumbnail  thumbnail
@@ -123,6 +132,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'assetId' => 'getAssetId',
+            'hlsStorageType' => 'getHlsStorageType',
             'templateGroupName' => 'getTemplateGroupName',
             'autoEncrypt' => 'getAutoEncrypt',
             'thumbnail' => 'getThumbnail',
@@ -169,7 +179,22 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const HLS_STORAGE_TYPE_COMPOSITE = 'composite';
+    const HLS_STORAGE_TYPE_SEPARATE = 'separate';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHlsStorageTypeAllowableValues()
+    {
+        return [
+            self::HLS_STORAGE_TYPE_COMPOSITE,
+            self::HLS_STORAGE_TYPE_SEPARATE,
+        ];
+    }
 
 
     /**
@@ -188,6 +213,7 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['hlsStorageType'] = isset($data['hlsStorageType']) ? $data['hlsStorageType'] : null;
         $this->container['templateGroupName'] = isset($data['templateGroupName']) ? $data['templateGroupName'] : null;
         $this->container['autoEncrypt'] = isset($data['autoEncrypt']) ? $data['autoEncrypt'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
@@ -205,6 +231,14 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
         if ($this->container['assetId'] === null) {
             $invalidProperties[] = "'assetId' can't be null";
         }
+            $allowedValues = $this->getHlsStorageTypeAllowableValues();
+                if (!is_null($this->container['hlsStorageType']) && !in_array($this->container['hlsStorageType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hlsStorageType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['templateGroupName']) && (mb_strlen($this->container['templateGroupName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'templateGroupName', the character length must be smaller than or equal to 128.";
             }
@@ -243,6 +277,30 @@ class AssetProcessReq implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets hlsStorageType
+    *  hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
+    *
+    * @return string|null
+    */
+    public function getHlsStorageType()
+    {
+        return $this->container['hlsStorageType'];
+    }
+
+    /**
+    * Sets hlsStorageType
+    *
+    * @param string|null $hlsStorageType hls的音视频流存储方式。  取值如下： - composite：存储在同一文件中。 - separate：存储在不同文件中。
+    *
+    * @return $this
+    */
+    public function setHlsStorageType($hlsStorageType)
+    {
+        $this->container['hlsStorageType'] = $hlsStorageType;
         return $this;
     }
 

@@ -2795,11 +2795,11 @@ class OcrClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['*/*', 'application/json', 'application/json-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['*/*', 'application/json', 'application/json-1'],
                 ['application/json;charset=UTF-8']
             );
         }

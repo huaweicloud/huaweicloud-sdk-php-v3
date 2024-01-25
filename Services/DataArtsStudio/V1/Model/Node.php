@@ -21,7 +21,7 @@ class Node implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
-    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     * location  location
     * preNodeNames  本节点依赖的前面的节点名称列表。
     * conditions  节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
@@ -57,7 +57,7 @@ class Node implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
-    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     * location  location
     * preNodeNames  本节点依赖的前面的节点名称列表。
     * conditions  节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
@@ -114,7 +114,7 @@ class Node implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
-    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     * location  location
     * preNodeNames  本节点依赖的前面的节点名称列表。
     * conditions  节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
@@ -150,7 +150,7 @@ class Node implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
-    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     * location  location
     * preNodeNames  本节点依赖的前面的节点名称列表。
     * conditions  节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
@@ -186,7 +186,7 @@ class Node implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
-    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * type  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     * location  location
     * preNodeNames  本节点依赖的前面的节点名称列表。
     * conditions  节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
@@ -276,6 +276,7 @@ class Node implements ModelInterface, ArrayAccess
     const TYPE_MRS_SPARK = 'MRSSpark';
     const TYPE_MAP_REDUCE = 'MapReduce';
     const TYPE_MRS_FLINK = 'MRSFlink';
+    const TYPE_MRS_FLINK_JOB = 'MRSFlinkJob';
     const TYPE_MRS_HETU_ENGINE = 'MRSHetuEngine';
     const FAIL_POLICY_FAIL = 'FAIL';
     const FAIL_POLICY_IGNORE = 'IGNORE';
@@ -308,6 +309,7 @@ class Node implements ModelInterface, ArrayAccess
             self::TYPE_MRS_SPARK,
             self::TYPE_MAP_REDUCE,
             self::TYPE_MRS_FLINK,
+            self::TYPE_MRS_FLINK_JOB,
             self::TYPE_MRS_HETU_ENGINE,
         ];
     }
@@ -462,7 +464,7 @@ class Node implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    *  节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     *
     * @return string
     */
@@ -474,7 +476,7 @@ class Node implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+    * @param string $type 节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
     *
     * @return $this
     */

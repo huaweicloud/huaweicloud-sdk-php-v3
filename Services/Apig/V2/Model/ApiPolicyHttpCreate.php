@@ -21,7 +21,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
@@ -30,7 +30,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
     *
@@ -55,7 +55,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
@@ -64,7 +64,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
     *
@@ -110,7 +110,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
@@ -119,7 +119,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
     *
@@ -144,7 +144,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
@@ -153,7 +153,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
     *
@@ -178,7 +178,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
@@ -187,7 +187,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
     * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
     *
@@ -251,6 +251,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     }
     const REQ_PROTOCOL_HTTP = 'HTTP';
     const REQ_PROTOCOL_HTTPS = 'HTTPS';
+    const REQ_PROTOCOL_GRPC = 'GRPC';
     const REQ_PROTOCOL_GRPCS = 'GRPCS';
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
@@ -276,6 +277,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
         return [
             self::REQ_PROTOCOL_HTTP,
             self::REQ_PROTOCOL_HTTPS,
+            self::REQ_PROTOCOL_GRPC,
             self::REQ_PROTOCOL_GRPCS,
         ];
     }
@@ -466,7 +468,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqProtocol
-    *  请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    *  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     *
     * @return string
     */
@@ -478,7 +480,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets reqProtocol
     *
-    * @param string $reqProtocol 请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+    * @param string $reqProtocol 请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
     *
     * @return $this
     */
@@ -682,7 +684,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizerId
-    *  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    *  后端自定义认证对象的ID
     *
     * @return string|null
     */
@@ -694,7 +696,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets authorizerId
     *
-    * @param string|null $authorizerId 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * @param string|null $authorizerId 后端自定义认证对象的ID
     *
     * @return $this
     */

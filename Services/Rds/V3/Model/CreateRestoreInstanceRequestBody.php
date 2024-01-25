@@ -45,6 +45,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
     * unchangeableParam  unchangeableParam
+    * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
     * @var string[]
@@ -75,6 +76,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'string',
             'tags' => '\HuaweiCloud\SDK\Rds\V3\Model\TagWithKeyValue[]',
             'unchangeableParam' => '\HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam',
+            'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo',
             'dryRun' => 'bool'
     ];
 
@@ -105,6 +107,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
     * unchangeableParam  unchangeableParam
+    * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
     * @var string[]
@@ -135,6 +138,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         'collation' => null,
         'tags' => null,
         'unchangeableParam' => null,
+        'serverlessInfo' => null,
         'dryRun' => null
     ];
 
@@ -186,6 +190,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
     * unchangeableParam  unchangeableParam
+    * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
     * @var string[]
@@ -216,6 +221,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'collation',
             'tags' => 'tags',
             'unchangeableParam' => 'unchangeable_param',
+            'serverlessInfo' => 'serverless_info',
             'dryRun' => 'dry_run'
     ];
 
@@ -246,6 +252,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
     * unchangeableParam  unchangeableParam
+    * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
     * @var string[]
@@ -276,6 +283,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'setCollation',
             'tags' => 'setTags',
             'unchangeableParam' => 'setUnchangeableParam',
+            'serverlessInfo' => 'setServerlessInfo',
             'dryRun' => 'setDryRun'
     ];
 
@@ -306,6 +314,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
     * unchangeableParam  unchangeableParam
+    * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
     * @var string[]
@@ -336,6 +345,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'collation' => 'getCollation',
             'tags' => 'getTags',
             'unchangeableParam' => 'getUnchangeableParam',
+            'serverlessInfo' => 'getServerlessInfo',
             'dryRun' => 'getDryRun'
     ];
 
@@ -422,6 +432,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['collation'] = isset($data['collation']) ? $data['collation'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['unchangeableParam'] = isset($data['unchangeableParam']) ? $data['unchangeableParam'] : null;
+        $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
         $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
@@ -1071,6 +1082,30 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setUnchangeableParam($unchangeableParam)
     {
         $this->container['unchangeableParam'] = $unchangeableParam;
+        return $this;
+    }
+
+    /**
+    * Gets serverlessInfo
+    *  serverlessInfo
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo|null
+    */
+    public function getServerlessInfo()
+    {
+        return $this->container['serverlessInfo'];
+    }
+
+    /**
+    * Sets serverlessInfo
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo|null $serverlessInfo serverlessInfo
+    *
+    * @return $this
+    */
+    public function setServerlessInfo($serverlessInfo)
+    {
+        $this->container['serverlessInfo'] = $serverlessInfo;
         return $this;
     }
 

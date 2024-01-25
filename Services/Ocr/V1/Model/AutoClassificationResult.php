@@ -24,6 +24,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => '\HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResultStatus',
             'content' => 'object',
             'type' => 'string',
-            'location' => 'int[][]'
+            'location' => 'int[][]',
+            'sealMark' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
         'status' => null,
         'content' => null,
         'type' => null,
-        'location' => 'int32'
+        'location' => 'int32',
+        'sealMark' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'status',
             'content' => 'content',
             'type' => 'type',
-            'location' => 'location'
+            'location' => 'location',
+            'sealMark' => 'seal_mark'
     ];
 
     /**
@@ -93,6 +99,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'content' => 'setContent',
             'type' => 'setType',
-            'location' => 'setLocation'
+            'location' => 'setLocation',
+            'sealMark' => 'setSealMark'
     ];
 
     /**
@@ -109,6 +117,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * sealMark  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'content' => 'getContent',
             'type' => 'getType',
-            'location' => 'getLocation'
+            'location' => 'getLocation',
+            'sealMark' => 'getSealMark'
     ];
 
     /**
@@ -181,6 +191,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['sealMark'] = isset($data['sealMark']) ? $data['sealMark'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     public function setLocation($location)
     {
         $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets sealMark
+    *  对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
+    *
+    * @return bool|null
+    */
+    public function getSealMark()
+    {
+        return $this->container['sealMark'];
+    }
+
+    /**
+    * Sets sealMark
+    *
+    * @param bool|null $sealMark 对应票证中是否含有印章。可选值包括： -  true：该票证中含有印章。 -  false：该票证中不含有印章。
+    *
+    * @return $this
+    */
+    public function setSealMark($sealMark)
+    {
+        $this->container['sealMark'] = $sealMark;
         return $this;
     }
 

@@ -47,6 +47,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * unchangeableParam  unchangeableParam
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -77,7 +78,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Rds\V3\Model\TagWithKeyValue[]',
             'unchangeableParam' => '\HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam',
             'dryRun' => 'bool',
-            'count' => 'int'
+            'count' => 'int',
+            'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo'
     ];
 
     /**
@@ -109,6 +111,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * unchangeableParam  unchangeableParam
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -139,7 +142,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         'tags' => null,
         'unchangeableParam' => null,
         'dryRun' => null,
-        'count' => 'int32'
+        'count' => 'int32',
+        'serverlessInfo' => null
     ];
 
     /**
@@ -192,6 +196,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * unchangeableParam  unchangeableParam
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -222,7 +227,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'unchangeableParam' => 'unchangeable_param',
             'dryRun' => 'dry_run',
-            'count' => 'count'
+            'count' => 'count',
+            'serverlessInfo' => 'serverless_info'
     ];
 
     /**
@@ -254,6 +260,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * unchangeableParam  unchangeableParam
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -284,7 +291,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'unchangeableParam' => 'setUnchangeableParam',
             'dryRun' => 'setDryRun',
-            'count' => 'setCount'
+            'count' => 'setCount',
+            'serverlessInfo' => 'setServerlessInfo'
     ];
 
     /**
@@ -316,6 +324,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * unchangeableParam  unchangeableParam
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     * count  批量创建实例的数量，取值范围为1~50。
+    * serverlessInfo  serverlessInfo
     *
     * @var string[]
     */
@@ -346,7 +355,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'unchangeableParam' => 'getUnchangeableParam',
             'dryRun' => 'getDryRun',
-            'count' => 'getCount'
+            'count' => 'getCount',
+            'serverlessInfo' => 'getServerlessInfo'
     ];
 
     /**
@@ -434,6 +444,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         $this->container['unchangeableParam'] = isset($data['unchangeableParam']) ? $data['unchangeableParam'] : null;
         $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
     }
 
     /**
@@ -1130,6 +1141,30 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     public function setCount($count)
     {
         $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets serverlessInfo
+    *  serverlessInfo
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo|null
+    */
+    public function getServerlessInfo()
+    {
+        return $this->container['serverlessInfo'];
+    }
+
+    /**
+    * Sets serverlessInfo
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo|null $serverlessInfo serverlessInfo
+    *
+    * @return $this
+    */
+    public function setServerlessInfo($serverlessInfo)
+    {
+        $this->container['serverlessInfo'] = $serverlessInfo;
         return $this;
     }
 

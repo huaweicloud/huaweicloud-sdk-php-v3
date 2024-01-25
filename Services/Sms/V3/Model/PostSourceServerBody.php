@@ -49,6 +49,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
+    * startType  启动方式，可以取值MANUAL、MGC或者空。
     *
     * @var string[]
     */
@@ -81,7 +82,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'kernelVersion' => 'string',
             'migrationCycle' => 'string',
             'state' => 'string',
-            'oemSystem' => 'bool'
+            'oemSystem' => 'bool',
+            'startType' => 'string'
     ];
 
     /**
@@ -115,6 +117,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
+    * startType  启动方式，可以取值MANUAL、MGC或者空。
     *
     * @var string[]
     */
@@ -147,7 +150,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         'kernelVersion' => null,
         'migrationCycle' => null,
         'state' => null,
-        'oemSystem' => null
+        'oemSystem' => null,
+        'startType' => null
     ];
 
     /**
@@ -202,6 +206,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
+    * startType  启动方式，可以取值MANUAL、MGC或者空。
     *
     * @var string[]
     */
@@ -234,7 +239,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'kernelVersion' => 'kernel_version',
             'migrationCycle' => 'migration_cycle',
             'state' => 'state',
-            'oemSystem' => 'oem_system'
+            'oemSystem' => 'oem_system',
+            'startType' => 'start_type'
     ];
 
     /**
@@ -268,6 +274,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
+    * startType  启动方式，可以取值MANUAL、MGC或者空。
     *
     * @var string[]
     */
@@ -300,7 +307,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'kernelVersion' => 'setKernelVersion',
             'migrationCycle' => 'setMigrationCycle',
             'state' => 'setState',
-            'oemSystem' => 'setOemSystem'
+            'oemSystem' => 'setOemSystem',
+            'startType' => 'setStartType'
     ];
 
     /**
@@ -334,6 +342,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
+    * startType  启动方式，可以取值MANUAL、MGC或者空。
     *
     * @var string[]
     */
@@ -366,7 +375,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'kernelVersion' => 'getKernelVersion',
             'migrationCycle' => 'getMigrationCycle',
             'state' => 'getState',
-            'oemSystem' => 'getOemSystem'
+            'oemSystem' => 'getOemSystem',
+            'startType' => 'getStartType'
     ];
 
     /**
@@ -433,6 +443,9 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     const STATE_CLONING = 'cloning';
     const STATE_CUTOVERING = 'cutovering';
     const STATE_FINISHED = 'finished';
+    const START_TYPE_MANUAL = 'MANUAL';
+    const START_TYPE_MGC = 'MGC';
+    const START_TYPE_EMPTY = '';
     
 
     /**
@@ -514,6 +527,20 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStartTypeAllowableValues()
+    {
+        return [
+            self::START_TYPE_MANUAL,
+            self::START_TYPE_MGC,
+            self::START_TYPE_EMPTY,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -559,6 +586,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         $this->container['migrationCycle'] = isset($data['migrationCycle']) ? $data['migrationCycle'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['oemSystem'] = isset($data['oemSystem']) ? $data['oemSystem'] : null;
+        $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
     }
 
     /**
@@ -723,6 +751,14 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getStartTypeAllowableValues();
+                if (!is_null($this->container['startType']) && !in_array($this->container['startType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'startType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1430,6 +1466,30 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     public function setOemSystem($oemSystem)
     {
         $this->container['oemSystem'] = $oemSystem;
+        return $this;
+    }
+
+    /**
+    * Gets startType
+    *  启动方式，可以取值MANUAL、MGC或者空。
+    *
+    * @return string|null
+    */
+    public function getStartType()
+    {
+        return $this->container['startType'];
+    }
+
+    /**
+    * Sets startType
+    *
+    * @param string|null $startType 启动方式，可以取值MANUAL、MGC或者空。
+    *
+    * @return $this
+    */
+    public function setStartType($startType)
+    {
+        $this->container['startType'] = $startType;
         return $this;
     }
 

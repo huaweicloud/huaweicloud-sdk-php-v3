@@ -169,8 +169,8 @@ class ListWorkspaceRolesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-z0-9]{32}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9]{32}$/.";
+            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-z0-9\\\\-]{32,36}$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9\\\\-]{32,36}$/.";
             }
             if (!is_null($this->container['workspaceId']) && !preg_match("/^[a-z0-9]{32}$/", $this->container['workspaceId'])) {
                 $invalidProperties[] = "invalid value for 'workspaceId', must be conform to the pattern /^[a-z0-9]{32}$/.";

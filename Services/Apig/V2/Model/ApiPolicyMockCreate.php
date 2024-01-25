@@ -25,7 +25,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
-    * authorizerId  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * authorizerId  后端自定义认证对象的ID
     *
     * @var string[]
     */
@@ -390,7 +390,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizerId
-    *  后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    *  后端自定义认证对象的ID
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class ApiPolicyMockCreate implements ModelInterface, ArrayAccess
     /**
     * Sets authorizerId
     *
-    * @param string|null $authorizerId 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+    * @param string|null $authorizerId 后端自定义认证对象的ID
     *
     * @return $this
     */

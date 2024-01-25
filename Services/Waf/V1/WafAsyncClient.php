@@ -4179,6 +4179,9 @@ class WafAsyncClient extends Client
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

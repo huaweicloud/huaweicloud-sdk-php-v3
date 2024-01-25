@@ -21,6 +21,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * from  起始时间（13位毫秒时间戳），需要和to同时使用
     * to  结束时间（13位毫秒时间戳），需要和from同时使用
@@ -32,6 +33,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'contentType' => 'string',
+            'xLanguage' => 'string',
             'enterpriseProjectId' => 'string',
             'from' => 'int',
             'to' => 'int',
@@ -43,6 +45,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * from  起始时间（13位毫秒时间戳），需要和to同时使用
     * to  结束时间（13位毫秒时间戳），需要和from同时使用
@@ -54,6 +57,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'contentType' => null,
+        'xLanguage' => null,
         'enterpriseProjectId' => null,
         'from' => 'int64',
         'to' => 'int64',
@@ -86,6 +90,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * from  起始时间（13位毫秒时间戳），需要和to同时使用
     * to  结束时间（13位毫秒时间戳），需要和from同时使用
@@ -97,6 +102,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
+            'xLanguage' => 'X-Language',
             'enterpriseProjectId' => 'enterprise_project_id',
             'from' => 'from',
             'to' => 'to',
@@ -108,6 +114,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * from  起始时间（13位毫秒时间戳），需要和to同时使用
     * to  结束时间（13位毫秒时间戳），需要和from同时使用
@@ -119,6 +126,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'contentType' => 'setContentType',
+            'xLanguage' => 'setXLanguage',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'from' => 'setFrom',
             'to' => 'setTo',
@@ -130,6 +138,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * from  起始时间（13位毫秒时间戳），需要和to同时使用
     * to  结束时间（13位毫秒时间戳），需要和from同时使用
@@ -141,6 +150,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'contentType' => 'getContentType',
+            'xLanguage' => 'getXLanguage',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'from' => 'getFrom',
             'to' => 'getTo',
@@ -208,6 +218,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
@@ -268,6 +279,30 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets xLanguage
+    *  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 

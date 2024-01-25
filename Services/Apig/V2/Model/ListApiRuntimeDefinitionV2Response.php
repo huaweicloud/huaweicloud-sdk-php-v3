@@ -27,7 +27,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     * reqProtocol  API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
     * reqMethod  API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
-    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
@@ -97,7 +97,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     * reqProtocol  API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
     * reqMethod  API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
-    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
@@ -188,7 +188,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     * reqProtocol  API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
     * reqMethod  API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
-    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
@@ -258,7 +258,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     * reqProtocol  API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
     * reqMethod  API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
-    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
@@ -328,7 +328,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     * reqProtocol  API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
     * reqMethod  API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
     * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
-    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * authType  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     * authOpt  authOpt
     * cors  是否支持跨域 - TRUE：支持 - FALSE：不支持
     * matchMode  API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
@@ -865,7 +865,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    *  API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     *
     * @return string
     */
@@ -877,7 +877,7 @@ class ListApiRuntimeDefinitionV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string $authType API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+    * @param string $authType API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
     *
     * @return $this
     */

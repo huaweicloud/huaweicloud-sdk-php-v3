@@ -2503,6 +2503,9 @@ class RdsClient extends Client
         if ($localVarParams['specCode'] !== null) {
             $queryParams['spec_code'] = $localVarParams['specCode'];
         }
+        if ($localVarParams['isServerless'] !== null) {
+            $queryParams['is_serverless'] = $localVarParams['isServerless'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }

@@ -24,6 +24,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * databaseName  数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
     * versionName  数据库版本号，获取方法请参见5.1查询数据库引擎的版本。（可输入小版本号）
     * specCode  规格编码
+    * isServerless  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'databaseName' => 'string',
             'versionName' => 'string',
-            'specCode' => 'string'
+            'specCode' => 'string',
+            'isServerless' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * databaseName  数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
     * versionName  数据库版本号，获取方法请参见5.1查询数据库引擎的版本。（可输入小版本号）
     * specCode  规格编码
+    * isServerless  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'databaseName' => null,
         'versionName' => null,
-        'specCode' => null
+        'specCode' => null,
+        'isServerless' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * databaseName  数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
     * versionName  数据库版本号，获取方法请参见5.1查询数据库引擎的版本。（可输入小版本号）
     * specCode  规格编码
+    * isServerless  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'databaseName' => 'database_name',
             'versionName' => 'version_name',
-            'specCode' => 'spec_code'
+            'specCode' => 'spec_code',
+            'isServerless' => 'is_serverless'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * databaseName  数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
     * versionName  数据库版本号，获取方法请参见5.1查询数据库引擎的版本。（可输入小版本号）
     * specCode  规格编码
+    * isServerless  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'databaseName' => 'setDatabaseName',
             'versionName' => 'setVersionName',
-            'specCode' => 'setSpecCode'
+            'specCode' => 'setSpecCode',
+            'isServerless' => 'setIsServerless'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     * databaseName  数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
     * versionName  数据库版本号，获取方法请参见5.1查询数据库引擎的版本。（可输入小版本号）
     * specCode  规格编码
+    * isServerless  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'databaseName' => 'getDatabaseName',
             'versionName' => 'getVersionName',
-            'specCode' => 'getSpecCode'
+            'specCode' => 'getSpecCode',
+            'isServerless' => 'getIsServerless'
     ];
 
     /**
@@ -200,6 +210,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['versionName'] = isset($data['versionName']) ? $data['versionName'] : null;
         $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
+        $this->container['isServerless'] = isset($data['isServerless']) ? $data['isServerless'] : null;
     }
 
     /**
@@ -328,6 +339,30 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     public function setSpecCode($specCode)
     {
         $this->container['specCode'] = $specCode;
+        return $this;
+    }
+
+    /**
+    * Gets isServerless
+    *  是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
+    *
+    * @return string|null
+    */
+    public function getIsServerless()
+    {
+        return $this->container['isServerless'];
+    }
+
+    /**
+    * Sets isServerless
+    *
+    * @param string|null $isServerless 是否查询serverless规格。取值范围如下，区分大小写： true：查询serverless规格 false：查询非serverless规格 默认值 false。
+    *
+    * @return $this
+    */
+    public function setIsServerless($isServerless)
+    {
+        $this->container['isServerless'] = $isServerless;
         return $this;
     }
 

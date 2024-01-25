@@ -1661,6 +1661,645 @@ class CseAsyncClient extends Client
     }
 
     /**
+     * 创建http转rpc方法
+     *
+     * 创建http转rpc方法。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHttp2RpcAsync($request)
+    {
+        return $this->createHttp2RpcAsyncWithHttpInfo($request);
+    }
+    
+    public function createHttp2RpcAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/http2Rpcs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\CreateHttp2RpcResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\CreateHttp2RpcRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建插件
+     *
+     * 创建插件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPluginAsync($request)
+    {
+        return $this->createPluginAsyncWithHttpInfo($request);
+    }
+    
+    public function createPluginAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/plugins';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\CreatePluginResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\CreatePluginRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除http转rpc方法
+     *
+     * 删除http转rpc方法。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHttp2RpcAsync($request)
+    {
+        return $this->deleteHttp2RpcAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteHttp2RpcAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/http2Rpcs/{http2Rpc_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['http2RpcId'] !== null) {
+            $pathParams['http2_rpc_id'] = $localVarParams['http2RpcId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteHttp2RpcResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeleteHttp2RpcRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除插件
+     *
+     * 删除插件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePluginAsync($request)
+    {
+        return $this->deletePluginAsyncWithHttpInfo($request);
+    }
+    
+    public function deletePluginAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/plugins/{plugin_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['pluginId'] !== null) {
+            $pathParams['plugin_id'] = $localVarParams['pluginId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\DeletePluginResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\DeletePluginRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改http转rpc方法
+     *
+     * 修改http转rpc方法。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyHttp2RpcAsync($request)
+    {
+        return $this->modifyHttp2RpcAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyHttp2RpcAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/http2Rpcs/{http2Rpc_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['http2RpcId'] !== null) {
+            $pathParams['http2_rpc_id'] = $localVarParams['http2RpcId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ModifyHttp2RpcResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ModifyHttp2RpcRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改插件
+     *
+     * 修改插件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyPluginAsync($request)
+    {
+        return $this->modifyPluginAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyPluginAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/plugins/{plugin_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['pluginId'] !== null) {
+            $pathParams['plugin_id'] = $localVarParams['pluginId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ModifyPluginResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ModifyPluginRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询http2rpc资源列表
+     *
+     * 查询http转rpc资源列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showHttp2RpcsAsync($request)
+    {
+        return $this->showHttp2RpcsAsyncWithHttpInfo($request);
+    }
+    
+    public function showHttp2RpcsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/http2Rpcs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ShowHttp2RpcsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ShowHttp2RpcsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询插件列表
+     *
+     * 查询插件列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPluginsAsync($request)
+    {
+        return $this->showPluginsAsyncWithHttpInfo($request);
+    }
+    
+    public function showPluginsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/plugins';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ShowPluginsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ShowPluginsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询单个插件
+     *
+     * 查询单个插件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSinglePluginAsync($request)
+    {
+        return $this->showSinglePluginAsyncWithHttpInfo($request);
+    }
+    
+    public function showSinglePluginAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/gateways/{gateway_id}/plugins/{plugin_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accept'] !== null) {
+            $headerParams['accept'] = $localVarParams['accept'];
+        }
+        if ($localVarParams['gatewayId'] !== null) {
+            $pathParams['gateway_id'] = $localVarParams['gatewayId'];
+        }
+        if ($localVarParams['pluginId'] !== null) {
+            $pathParams['plugin_id'] = $localVarParams['pluginId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ShowSinglePluginResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ShowSinglePluginRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建nacos命名空间
      *
      * 创建nacos命名空间。

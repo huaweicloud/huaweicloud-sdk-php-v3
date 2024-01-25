@@ -2610,6 +2610,9 @@ class RdsAsyncClient extends Client
         if ($localVarParams['specCode'] !== null) {
             $queryParams['spec_code'] = $localVarParams['specCode'];
         }
+        if ($localVarParams['isServerless'] !== null) {
+            $queryParams['is_serverless'] = $localVarParams['isServerless'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }

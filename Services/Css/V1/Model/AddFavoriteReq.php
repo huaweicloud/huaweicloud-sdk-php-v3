@@ -20,7 +20,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  自定义模板名称。
+    * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * template  template
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  自定义模板名称。
+    * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * template  template
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  自定义模板名称。
+    * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * template  template
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  自定义模板名称。
+    * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * template  template
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  自定义模板名称。
+    * name  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     * template  template
     *
     * @var string[]
@@ -191,7 +191,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  自定义模板名称。
+    *  配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AddFavoriteReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 自定义模板名称。
+    * @param string $name 配置文件名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
     *
     * @return $this
     */

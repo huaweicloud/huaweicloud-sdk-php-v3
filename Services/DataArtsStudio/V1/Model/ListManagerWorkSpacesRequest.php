@@ -183,8 +183,8 @@ class ListManagerWorkSpacesRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-            if (!preg_match("/^[a-z0-9]{32}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9]{32}$/.";
+            if (!preg_match("/^[a-z0-9\\\\-]{32,36}$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-z0-9\\\\-]{32,36}$/.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";

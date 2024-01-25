@@ -22,24 +22,28 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'priorities' => 'int[]',
-            'isAutoPay' => 'string'
+            'isAutoPay' => 'string',
+            'availabilityZones' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'priorities' => 'int32',
-        'isAutoPay' => null
+        'isAutoPay' => null,
+        'availabilityZones' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'priorities' => 'priorities',
-            'isAutoPay' => 'is_auto_pay'
+            'isAutoPay' => 'is_auto_pay',
+            'availabilityZones' => 'availability_zones'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
     */
     protected static $setters = [
             'priorities' => 'setPriorities',
-            'isAutoPay' => 'setIsAutoPay'
+            'isAutoPay' => 'setIsAutoPay',
+            'availabilityZones' => 'setAvailabilityZones'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
     */
     protected static $getters = [
             'priorities' => 'getPriorities',
-            'isAutoPay' => 'getIsAutoPay'
+            'isAutoPay' => 'getIsAutoPay',
+            'availabilityZones' => 'getAvailabilityZones'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     {
         $this->container['priorities'] = isset($data['priorities']) ? $data['priorities'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['availabilityZones'] = isset($data['availabilityZones']) ? $data['availabilityZones'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZones
+    *  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
+    *
+    * @return string[]|null
+    */
+    public function getAvailabilityZones()
+    {
+        return $this->container['availabilityZones'];
+    }
+
+    /**
+    * Sets availabilityZones
+    *
+    * @param string[]|null $availabilityZones 可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZones($availabilityZones)
+    {
+        $this->container['availabilityZones'] = $availabilityZones;
         return $this;
     }
 

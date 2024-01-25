@@ -24,13 +24,15 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * errorCode  响应码。
     * errorMessage  响应信息描述。
     * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'errorCode' => 'string',
             'errorMessage' => 'string',
-            'responseStatus' => 'int'
+            'responseStatus' => 'int',
+            'id' => 'string[]'
     ];
 
     /**
@@ -38,13 +40,15 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * errorCode  响应码。
     * errorMessage  响应信息描述。
     * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'errorCode' => null,
         'errorMessage' => null,
-        'responseStatus' => 'int32'
+        'responseStatus' => 'int32',
+        'id' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * errorCode  响应码。
     * errorMessage  响应信息描述。
     * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'errorCode' => 'errorCode',
             'errorMessage' => 'errorMessage',
-            'responseStatus' => 'responseStatus'
+            'responseStatus' => 'responseStatus',
+            'id' => 'id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * errorCode  响应码。
     * errorMessage  响应信息描述。
     * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
     protected static $setters = [
             'errorCode' => 'setErrorCode',
             'errorMessage' => 'setErrorMessage',
-            'responseStatus' => 'setResponseStatus'
+            'responseStatus' => 'setResponseStatus',
+            'id' => 'setId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     * errorCode  响应码。
     * errorMessage  响应信息描述。
     * responseStatus  响应状态码（不再使用）。
+    * id  服务发现规则id列表，多AZ配置同步时使用。
     *
     * @var string[]
     */
     protected static $getters = [
             'errorCode' => 'getErrorCode',
             'errorMessage' => 'getErrorMessage',
-            'responseStatus' => 'getResponseStatus'
+            'responseStatus' => 'getResponseStatus',
+            'id' => 'getId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['responseStatus'] = isset($data['responseStatus']) ? $data['responseStatus'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class DeleteserviceDiscoveryRulesResponse implements ModelInterface, ArrayAccess
     public function setResponseStatus($responseStatus)
     {
         $this->container['responseStatus'] = $responseStatus;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  服务发现规则id列表，多AZ配置同步时使用。
+    *
+    * @return string[]|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string[]|null $id 服务发现规则id列表，多AZ配置同步时使用。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

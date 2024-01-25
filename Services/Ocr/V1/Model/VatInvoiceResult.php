@@ -54,8 +54,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
+    * province  省。
+    * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    * belongNumber  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    * belongPages  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    * belongCurrentPage  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    * belongRemarks  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    * belongIssueDate  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    * salesMark  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    * belongSumAmount  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSumTax  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalAmount  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalTax  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
     *
     * @var string[]
     */
@@ -94,8 +112,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'string',
             'sellerSeal' => 'string[]',
             'itemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\ItemList[]',
+            'province' => 'string',
+            'city' => 'string',
             'confidence' => 'object',
-            'textLocation' => 'object'
+            'textLocation' => 'object',
+            'belongBuyerName' => 'string',
+            'belongSellerName' => 'string',
+            'belongVatCode' => 'string',
+            'belongNumber' => 'string',
+            'belongPages' => 'string',
+            'belongCurrentPage' => 'string',
+            'belongRemarks' => 'string',
+            'belongIssueDate' => 'string',
+            'salesMark' => 'bool',
+            'belongSumAmount' => 'string',
+            'belongSumTax' => 'string',
+            'belongSubtotalAmount' => 'string',
+            'belongSubtotalTax' => 'string',
+            'belongDiscountAmount' => 'string',
+            'belongDiscountTax' => 'string',
+            'belongItemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\BelongItemList[]'
     ];
 
     /**
@@ -134,8 +170,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
+    * province  省。
+    * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    * belongNumber  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    * belongPages  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    * belongCurrentPage  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    * belongRemarks  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    * belongIssueDate  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    * salesMark  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    * belongSumAmount  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSumTax  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalAmount  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalTax  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
     *
     * @var string[]
     */
@@ -174,8 +228,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         'issuer' => null,
         'sellerSeal' => null,
         'itemList' => null,
+        'province' => null,
+        'city' => null,
         'confidence' => null,
-        'textLocation' => null
+        'textLocation' => null,
+        'belongBuyerName' => null,
+        'belongSellerName' => null,
+        'belongVatCode' => null,
+        'belongNumber' => null,
+        'belongPages' => null,
+        'belongCurrentPage' => null,
+        'belongRemarks' => null,
+        'belongIssueDate' => null,
+        'salesMark' => null,
+        'belongSumAmount' => null,
+        'belongSumTax' => null,
+        'belongSubtotalAmount' => null,
+        'belongSubtotalTax' => null,
+        'belongDiscountAmount' => null,
+        'belongDiscountTax' => null,
+        'belongItemList' => null
     ];
 
     /**
@@ -235,8 +307,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
+    * province  省。
+    * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    * belongNumber  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    * belongPages  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    * belongCurrentPage  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    * belongRemarks  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    * belongIssueDate  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    * salesMark  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    * belongSumAmount  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSumTax  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalAmount  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalTax  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
     *
     * @var string[]
     */
@@ -275,8 +365,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'issuer',
             'sellerSeal' => 'seller_seal',
             'itemList' => 'item_list',
+            'province' => 'province',
+            'city' => 'city',
             'confidence' => 'confidence',
-            'textLocation' => 'text_location'
+            'textLocation' => 'text_location',
+            'belongBuyerName' => 'belong_buyer_name',
+            'belongSellerName' => 'belong_seller_name',
+            'belongVatCode' => 'belong_vat_code',
+            'belongNumber' => 'belong_number',
+            'belongPages' => 'belong_pages',
+            'belongCurrentPage' => 'belong_current_page',
+            'belongRemarks' => 'belong_remarks',
+            'belongIssueDate' => 'belong_issue_date',
+            'salesMark' => 'sales_mark',
+            'belongSumAmount' => 'belong_sum_amount',
+            'belongSumTax' => 'belong_sum_tax',
+            'belongSubtotalAmount' => 'belong_subtotal_amount',
+            'belongSubtotalTax' => 'belong_subtotal_tax',
+            'belongDiscountAmount' => 'belong_discount_amount',
+            'belongDiscountTax' => 'belong_discount_tax',
+            'belongItemList' => 'belong_item_list'
     ];
 
     /**
@@ -315,8 +423,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
+    * province  省。
+    * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    * belongNumber  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    * belongPages  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    * belongCurrentPage  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    * belongRemarks  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    * belongIssueDate  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    * salesMark  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    * belongSumAmount  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSumTax  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalAmount  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalTax  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
     *
     * @var string[]
     */
@@ -355,8 +481,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'setIssuer',
             'sellerSeal' => 'setSellerSeal',
             'itemList' => 'setItemList',
+            'province' => 'setProvince',
+            'city' => 'setCity',
             'confidence' => 'setConfidence',
-            'textLocation' => 'setTextLocation'
+            'textLocation' => 'setTextLocation',
+            'belongBuyerName' => 'setBelongBuyerName',
+            'belongSellerName' => 'setBelongSellerName',
+            'belongVatCode' => 'setBelongVatCode',
+            'belongNumber' => 'setBelongNumber',
+            'belongPages' => 'setBelongPages',
+            'belongCurrentPage' => 'setBelongCurrentPage',
+            'belongRemarks' => 'setBelongRemarks',
+            'belongIssueDate' => 'setBelongIssueDate',
+            'salesMark' => 'setSalesMark',
+            'belongSumAmount' => 'setBelongSumAmount',
+            'belongSumTax' => 'setBelongSumTax',
+            'belongSubtotalAmount' => 'setBelongSubtotalAmount',
+            'belongSubtotalTax' => 'setBelongSubtotalTax',
+            'belongDiscountAmount' => 'setBelongDiscountAmount',
+            'belongDiscountTax' => 'setBelongDiscountTax',
+            'belongItemList' => 'setBelongItemList'
     ];
 
     /**
@@ -395,8 +539,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * issuer  开票人。 当“advanced_mode”设置为“true”时才返回。
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
+    * province  省。
+    * city  市。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongSellerName  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    * belongVatCode  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    * belongNumber  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    * belongPages  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    * belongCurrentPage  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    * belongRemarks  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    * belongIssueDate  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    * salesMark  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    * belongSumAmount  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSumTax  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalAmount  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    * belongSubtotalTax  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountAmount  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    * belongDiscountTax  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    * belongItemList  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
     *
     * @var string[]
     */
@@ -435,8 +597,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'getIssuer',
             'sellerSeal' => 'getSellerSeal',
             'itemList' => 'getItemList',
+            'province' => 'getProvince',
+            'city' => 'getCity',
             'confidence' => 'getConfidence',
-            'textLocation' => 'getTextLocation'
+            'textLocation' => 'getTextLocation',
+            'belongBuyerName' => 'getBelongBuyerName',
+            'belongSellerName' => 'getBelongSellerName',
+            'belongVatCode' => 'getBelongVatCode',
+            'belongNumber' => 'getBelongNumber',
+            'belongPages' => 'getBelongPages',
+            'belongCurrentPage' => 'getBelongCurrentPage',
+            'belongRemarks' => 'getBelongRemarks',
+            'belongIssueDate' => 'getBelongIssueDate',
+            'salesMark' => 'getSalesMark',
+            'belongSumAmount' => 'getBelongSumAmount',
+            'belongSumTax' => 'getBelongSumTax',
+            'belongSubtotalAmount' => 'getBelongSubtotalAmount',
+            'belongSubtotalTax' => 'getBelongSubtotalTax',
+            'belongDiscountAmount' => 'getBelongDiscountAmount',
+            'belongDiscountTax' => 'getBelongDiscountTax',
+            'belongItemList' => 'getBelongItemList'
     ];
 
     /**
@@ -531,8 +711,26 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['issuer'] = isset($data['issuer']) ? $data['issuer'] : null;
         $this->container['sellerSeal'] = isset($data['sellerSeal']) ? $data['sellerSeal'] : null;
         $this->container['itemList'] = isset($data['itemList']) ? $data['itemList'] : null;
+        $this->container['province'] = isset($data['province']) ? $data['province'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['belongBuyerName'] = isset($data['belongBuyerName']) ? $data['belongBuyerName'] : null;
+        $this->container['belongSellerName'] = isset($data['belongSellerName']) ? $data['belongSellerName'] : null;
+        $this->container['belongVatCode'] = isset($data['belongVatCode']) ? $data['belongVatCode'] : null;
+        $this->container['belongNumber'] = isset($data['belongNumber']) ? $data['belongNumber'] : null;
+        $this->container['belongPages'] = isset($data['belongPages']) ? $data['belongPages'] : null;
+        $this->container['belongCurrentPage'] = isset($data['belongCurrentPage']) ? $data['belongCurrentPage'] : null;
+        $this->container['belongRemarks'] = isset($data['belongRemarks']) ? $data['belongRemarks'] : null;
+        $this->container['belongIssueDate'] = isset($data['belongIssueDate']) ? $data['belongIssueDate'] : null;
+        $this->container['salesMark'] = isset($data['salesMark']) ? $data['salesMark'] : null;
+        $this->container['belongSumAmount'] = isset($data['belongSumAmount']) ? $data['belongSumAmount'] : null;
+        $this->container['belongSumTax'] = isset($data['belongSumTax']) ? $data['belongSumTax'] : null;
+        $this->container['belongSubtotalAmount'] = isset($data['belongSubtotalAmount']) ? $data['belongSubtotalAmount'] : null;
+        $this->container['belongSubtotalTax'] = isset($data['belongSubtotalTax']) ? $data['belongSubtotalTax'] : null;
+        $this->container['belongDiscountAmount'] = isset($data['belongDiscountAmount']) ? $data['belongDiscountAmount'] : null;
+        $this->container['belongDiscountTax'] = isset($data['belongDiscountTax']) ? $data['belongDiscountTax'] : null;
+        $this->container['belongItemList'] = isset($data['belongItemList']) ? $data['belongItemList'] : null;
     }
 
     /**
@@ -1374,6 +1572,54 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets province
+    *  省。
+    *
+    * @return string|null
+    */
+    public function getProvince()
+    {
+        return $this->container['province'];
+    }
+
+    /**
+    * Sets province
+    *
+    * @param string|null $province 省。
+    *
+    * @return $this
+    */
+    public function setProvince($province)
+    {
+        $this->container['province'] = $province;
+        return $this;
+    }
+
+    /**
+    * Gets city
+    *  市。
+    *
+    * @return string|null
+    */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+    * Sets city
+    *
+    * @param string|null $city 市。
+    *
+    * @return $this
+    */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
+        return $this;
+    }
+
+    /**
     * Gets confidence
     *  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     *
@@ -1418,6 +1664,390 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets belongBuyerName
+    *  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongBuyerName()
+    {
+        return $this->container['belongBuyerName'];
+    }
+
+    /**
+    * Sets belongBuyerName
+    *
+    * @param string|null $belongBuyerName 销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongBuyerName($belongBuyerName)
+    {
+        $this->container['belongBuyerName'] = $belongBuyerName;
+        return $this;
+    }
+
+    /**
+    * Gets belongSellerName
+    *  销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongSellerName()
+    {
+        return $this->container['belongSellerName'];
+    }
+
+    /**
+    * Sets belongSellerName
+    *
+    * @param string|null $belongSellerName 销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongSellerName($belongSellerName)
+    {
+        $this->container['belongSellerName'] = $belongSellerName;
+        return $this;
+    }
+
+    /**
+    * Gets belongVatCode
+    *  所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongVatCode()
+    {
+        return $this->container['belongVatCode'];
+    }
+
+    /**
+    * Sets belongVatCode
+    *
+    * @param string|null $belongVatCode 所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongVatCode($belongVatCode)
+    {
+        $this->container['belongVatCode'] = $belongVatCode;
+        return $this;
+    }
+
+    /**
+    * Gets belongNumber
+    *  销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongNumber()
+    {
+        return $this->container['belongNumber'];
+    }
+
+    /**
+    * Sets belongNumber
+    *
+    * @param string|null $belongNumber 销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongNumber($belongNumber)
+    {
+        $this->container['belongNumber'] = $belongNumber;
+        return $this;
+    }
+
+    /**
+    * Gets belongPages
+    *  销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongPages()
+    {
+        return $this->container['belongPages'];
+    }
+
+    /**
+    * Sets belongPages
+    *
+    * @param string|null $belongPages 销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongPages($belongPages)
+    {
+        $this->container['belongPages'] = $belongPages;
+        return $this;
+    }
+
+    /**
+    * Gets belongCurrentPage
+    *  销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongCurrentPage()
+    {
+        return $this->container['belongCurrentPage'];
+    }
+
+    /**
+    * Sets belongCurrentPage
+    *
+    * @param string|null $belongCurrentPage 销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongCurrentPage($belongCurrentPage)
+    {
+        $this->container['belongCurrentPage'] = $belongCurrentPage;
+        return $this;
+    }
+
+    /**
+    * Gets belongRemarks
+    *  销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongRemarks()
+    {
+        return $this->container['belongRemarks'];
+    }
+
+    /**
+    * Sets belongRemarks
+    *
+    * @param string|null $belongRemarks 销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongRemarks($belongRemarks)
+    {
+        $this->container['belongRemarks'] = $belongRemarks;
+        return $this;
+    }
+
+    /**
+    * Gets belongIssueDate
+    *  销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongIssueDate()
+    {
+        return $this->container['belongIssueDate'];
+    }
+
+    /**
+    * Sets belongIssueDate
+    *
+    * @param string|null $belongIssueDate 销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongIssueDate($belongIssueDate)
+    {
+        $this->container['belongIssueDate'] = $belongIssueDate;
+        return $this;
+    }
+
+    /**
+    * Gets salesMark
+    *  是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    *
+    * @return bool|null
+    */
+    public function getSalesMark()
+    {
+        return $this->container['salesMark'];
+    }
+
+    /**
+    * Sets salesMark
+    *
+    * @param bool|null $salesMark 是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+    *
+    * @return $this
+    */
+    public function setSalesMark($salesMark)
+    {
+        $this->container['salesMark'] = $salesMark;
+        return $this;
+    }
+
+    /**
+    * Gets belongSumAmount
+    *  销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongSumAmount()
+    {
+        return $this->container['belongSumAmount'];
+    }
+
+    /**
+    * Sets belongSumAmount
+    *
+    * @param string|null $belongSumAmount 销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongSumAmount($belongSumAmount)
+    {
+        $this->container['belongSumAmount'] = $belongSumAmount;
+        return $this;
+    }
+
+    /**
+    * Gets belongSumTax
+    *  销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongSumTax()
+    {
+        return $this->container['belongSumTax'];
+    }
+
+    /**
+    * Sets belongSumTax
+    *
+    * @param string|null $belongSumTax 销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongSumTax($belongSumTax)
+    {
+        $this->container['belongSumTax'] = $belongSumTax;
+        return $this;
+    }
+
+    /**
+    * Gets belongSubtotalAmount
+    *  销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongSubtotalAmount()
+    {
+        return $this->container['belongSubtotalAmount'];
+    }
+
+    /**
+    * Sets belongSubtotalAmount
+    *
+    * @param string|null $belongSubtotalAmount 销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongSubtotalAmount($belongSubtotalAmount)
+    {
+        $this->container['belongSubtotalAmount'] = $belongSubtotalAmount;
+        return $this;
+    }
+
+    /**
+    * Gets belongSubtotalTax
+    *  销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongSubtotalTax()
+    {
+        return $this->container['belongSubtotalTax'];
+    }
+
+    /**
+    * Sets belongSubtotalTax
+    *
+    * @param string|null $belongSubtotalTax 销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongSubtotalTax($belongSubtotalTax)
+    {
+        $this->container['belongSubtotalTax'] = $belongSubtotalTax;
+        return $this;
+    }
+
+    /**
+    * Gets belongDiscountAmount
+    *  销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongDiscountAmount()
+    {
+        return $this->container['belongDiscountAmount'];
+    }
+
+    /**
+    * Sets belongDiscountAmount
+    *
+    * @param string|null $belongDiscountAmount 销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongDiscountAmount($belongDiscountAmount)
+    {
+        $this->container['belongDiscountAmount'] = $belongDiscountAmount;
+        return $this;
+    }
+
+    /**
+    * Gets belongDiscountTax
+    *  销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return string|null
+    */
+    public function getBelongDiscountTax()
+    {
+        return $this->container['belongDiscountTax'];
+    }
+
+    /**
+    * Sets belongDiscountTax
+    *
+    * @param string|null $belongDiscountTax 销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongDiscountTax($belongDiscountTax)
+    {
+        $this->container['belongDiscountTax'] = $belongDiscountTax;
+        return $this;
+    }
+
+    /**
+    * Gets belongItemList
+    *  销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\BelongItemList[]|null
+    */
+    public function getBelongItemList()
+    {
+        return $this->container['belongItemList'];
+    }
+
+    /**
+    * Sets belongItemList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\BelongItemList[]|null $belongItemList 销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+    *
+    * @return $this
+    */
+    public function setBelongItemList($belongItemList)
+    {
+        $this->container['belongItemList'] = $belongItemList;
         return $this;
     }
 

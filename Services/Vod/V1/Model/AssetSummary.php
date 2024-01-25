@@ -24,7 +24,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     * title  媒资标题。长度不超过128个字节，UTF-8编码。
     * description  媒资描述。长度不超过1024个字节。
     * duration  媒资时长。  单位：秒。
-    * durationMs  视频时长，单位毫秒。
     * size  媒资大小。  单位：字节。
     * originalUrl  原始播放url。
     * category  媒资分类名称。
@@ -44,7 +43,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
             'title' => 'string',
             'description' => 'string',
             'duration' => 'int',
-            'durationMs' => 'int',
             'size' => 'int',
             'originalUrl' => 'string',
             'category' => 'string',
@@ -64,7 +62,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     * title  媒资标题。长度不超过128个字节，UTF-8编码。
     * description  媒资描述。长度不超过1024个字节。
     * duration  媒资时长。  单位：秒。
-    * durationMs  视频时长，单位毫秒。
     * size  媒资大小。  单位：字节。
     * originalUrl  原始播放url。
     * category  媒资分类名称。
@@ -84,7 +81,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
         'title' => null,
         'description' => null,
         'duration' => null,
-        'durationMs' => 'int64',
         'size' => 'int64',
         'originalUrl' => null,
         'category' => null,
@@ -125,7 +121,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     * title  媒资标题。长度不超过128个字节，UTF-8编码。
     * description  媒资描述。长度不超过1024个字节。
     * duration  媒资时长。  单位：秒。
-    * durationMs  视频时长，单位毫秒。
     * size  媒资大小。  单位：字节。
     * originalUrl  原始播放url。
     * category  媒资分类名称。
@@ -145,7 +140,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
             'title' => 'title',
             'description' => 'description',
             'duration' => 'duration',
-            'durationMs' => 'duration_ms',
             'size' => 'size',
             'originalUrl' => 'original_url',
             'category' => 'category',
@@ -165,7 +159,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     * title  媒资标题。长度不超过128个字节，UTF-8编码。
     * description  媒资描述。长度不超过1024个字节。
     * duration  媒资时长。  单位：秒。
-    * durationMs  视频时长，单位毫秒。
     * size  媒资大小。  单位：字节。
     * originalUrl  原始播放url。
     * category  媒资分类名称。
@@ -185,7 +178,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
             'title' => 'setTitle',
             'description' => 'setDescription',
             'duration' => 'setDuration',
-            'durationMs' => 'setDurationMs',
             'size' => 'setSize',
             'originalUrl' => 'setOriginalUrl',
             'category' => 'setCategory',
@@ -205,7 +197,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     * title  媒资标题。长度不超过128个字节，UTF-8编码。
     * description  媒资描述。长度不超过1024个字节。
     * duration  媒资时长。  单位：秒。
-    * durationMs  视频时长，单位毫秒。
     * size  媒资大小。  单位：字节。
     * originalUrl  原始播放url。
     * category  媒资分类名称。
@@ -225,7 +216,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
             'title' => 'getTitle',
             'description' => 'getDescription',
             'duration' => 'getDuration',
-            'durationMs' => 'getDurationMs',
             'size' => 'getSize',
             'originalUrl' => 'getOriginalUrl',
             'category' => 'getCategory',
@@ -385,7 +375,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
-        $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['originalUrl'] = isset($data['originalUrl']) ? $data['originalUrl'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
@@ -567,30 +556,6 @@ class AssetSummary implements ModelInterface, ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
-        return $this;
-    }
-
-    /**
-    * Gets durationMs
-    *  视频时长，单位毫秒。
-    *
-    * @return int|null
-    */
-    public function getDurationMs()
-    {
-        return $this->container['durationMs'];
-    }
-
-    /**
-    * Sets durationMs
-    *
-    * @param int|null $durationMs 视频时长，单位毫秒。
-    *
-    * @return $this
-    */
-    public function setDurationMs($durationMs)
-    {
-        $this->container['durationMs'] = $durationMs;
         return $this;
     }
 

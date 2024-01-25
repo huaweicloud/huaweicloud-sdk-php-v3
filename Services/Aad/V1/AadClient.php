@@ -735,68 +735,6 @@ class AadClient extends Client
     }
 
     /**
-     * 上传/修改域名对应证书
-     *
-     * 上传/修改域名对应证书
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createCertificate($request)
-    {
-        return $this->createCertificateWithHttpInfo($request);
-    }
-
-    public function createCertificateWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/aad/external/domains/certificate';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\CreateCertificateResponse',
-            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\CreateCertificateRequest');
-    }
-
-    /**
      * 创建策略
      *
      * 创建策略
@@ -1878,6 +1816,68 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V1\Model\ModifyDomainWebSwitchResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V1\Model\ModifyDomainWebSwitchRequest');
+    }
+
+    /**
+     * 上传/修改域名对应证书
+     *
+     * 上传/修改域名对应证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setCertForDomain($request)
+    {
+        return $this->setCertForDomainWithHttpInfo($request);
+    }
+
+    public function setCertForDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/aad/external/domains/certificate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\SetCertForDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\SetCertForDomainRequest');
     }
 
     /**
