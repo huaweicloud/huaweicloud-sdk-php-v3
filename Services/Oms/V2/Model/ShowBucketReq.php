@@ -20,10 +20,11 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * filePath  目标桶中需要查询的对象文件路径，/结尾
     * ak  源端桶的AK（最大长度100个字符）
     * sk  源端桶的SK（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
@@ -37,6 +38,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             'filePath' => 'string',
             'ak' => 'string',
             'sk' => 'string',
+            'jsonAuthFile' => 'string',
             'dataCenter' => 'string',
             'pageSize' => 'int',
             'behindFilename' => 'string',
@@ -46,10 +48,11 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * filePath  目标桶中需要查询的对象文件路径，/结尾
     * ak  源端桶的AK（最大长度100个字符）
     * sk  源端桶的SK（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
@@ -63,6 +66,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
         'filePath' => null,
         'ak' => null,
         'sk' => null,
+        'jsonAuthFile' => null,
         'dataCenter' => null,
         'pageSize' => 'int32',
         'behindFilename' => null,
@@ -93,10 +97,11 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * filePath  目标桶中需要查询的对象文件路径，/结尾
     * ak  源端桶的AK（最大长度100个字符）
     * sk  源端桶的SK（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
@@ -110,6 +115,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             'filePath' => 'file_path',
             'ak' => 'ak',
             'sk' => 'sk',
+            'jsonAuthFile' => 'json_auth_file',
             'dataCenter' => 'data_center',
             'pageSize' => 'page_size',
             'behindFilename' => 'behind_filename',
@@ -119,10 +125,11 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * filePath  目标桶中需要查询的对象文件路径，/结尾
     * ak  源端桶的AK（最大长度100个字符）
     * sk  源端桶的SK（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
@@ -136,6 +143,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             'filePath' => 'setFilePath',
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'jsonAuthFile' => 'setJsonAuthFile',
             'dataCenter' => 'setDataCenter',
             'pageSize' => 'setPageSize',
             'behindFilename' => 'setBehindFilename',
@@ -145,10 +153,11 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * filePath  目标桶中需要查询的对象文件路径，/结尾
     * ak  源端桶的AK（最大长度100个字符）
     * sk  源端桶的SK（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
@@ -162,6 +171,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             'filePath' => 'getFilePath',
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'jsonAuthFile' => 'getJsonAuthFile',
             'dataCenter' => 'getDataCenter',
             'pageSize' => 'getPageSize',
             'behindFilename' => 'getBehindFilename',
@@ -231,6 +241,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
         $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['dataCenter'] = isset($data['dataCenter']) ? $data['dataCenter'] : null;
         $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
         $this->container['behindFilename'] = isset($data['behindFilename']) ? $data['behindFilename'] : null;
@@ -255,8 +266,8 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['cloudType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cloudType', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud|HEC)$/", $this->container['cloudType'])) {
-                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud|HEC)$/.";
+            if (!preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Google|Qiniu|URLSource|UCloud|HEC)$/", $this->container['cloudType'])) {
+                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Google|Qiniu|URLSource|UCloud|HEC)$/.";
             }
         if ($this->container['filePath'] === null) {
             $invalidProperties[] = "'filePath' can't be null";
@@ -284,6 +295,12 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['dataCenter'] === null) {
             $invalidProperties[] = "'dataCenter' can't be null";
@@ -349,7 +366,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudType
-    *  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    *  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     *
     * @return string
     */
@@ -361,7 +378,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     /**
     * Sets cloudType
     *
-    * @param string $cloudType 云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * @param string $cloudType 云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     *
     * @return $this
     */
@@ -440,6 +457,30 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets jsonAuthFile
+    *  用于谷歌云Cloud Storage鉴权
+    *
+    * @return string|null
+    */
+    public function getJsonAuthFile()
+    {
+        return $this->container['jsonAuthFile'];
+    }
+
+    /**
+    * Sets jsonAuthFile
+    *
+    * @param string|null $jsonAuthFile 用于谷歌云Cloud Storage鉴权
+    *
+    * @return $this
+    */
+    public function setJsonAuthFile($jsonAuthFile)
+    {
+        $this->container['jsonAuthFile'] = $jsonAuthFile;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'outputUrls' => 'string[]',
             'streamKeys' => 'string[]',
             'interactionCallbackUrl' => 'string',
-            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig'
+            'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'viewMode' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         'outputUrls' => null,
         'streamKeys' => null,
         'interactionCallbackUrl' => null,
-        'liveEventCallbackConfig' => null
+        'liveEventCallbackConfig' => null,
+        'viewMode' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'outputUrls' => 'output_urls',
             'streamKeys' => 'stream_keys',
             'interactionCallbackUrl' => 'interaction_callback_url',
-            'liveEventCallbackConfig' => 'live_event_callback_config'
+            'liveEventCallbackConfig' => 'live_event_callback_config',
+            'viewMode' => 'view_mode'
     ];
 
     /**
@@ -107,6 +113,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'outputUrls' => 'setOutputUrls',
             'streamKeys' => 'setStreamKeys',
             'interactionCallbackUrl' => 'setInteractionCallbackUrl',
-            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig'
+            'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'viewMode' => 'setViewMode'
     ];
 
     /**
@@ -127,6 +135,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'outputUrls' => 'getOutputUrls',
             'streamKeys' => 'getStreamKeys',
             'interactionCallbackUrl' => 'getInteractionCallbackUrl',
-            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig'
+            'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'viewMode' => 'getViewMode'
     ];
 
     /**
@@ -179,7 +189,22 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
+        ];
+    }
 
 
     /**
@@ -203,6 +228,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
         $this->container['interactionCallbackUrl'] = isset($data['interactionCallbackUrl']) ? $data['interactionCallbackUrl'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
     }
 
     /**
@@ -219,6 +245,14 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['interactionCallbackUrl']) && (mb_strlen($this->container['interactionCallbackUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'interactionCallbackUrl', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -374,6 +408,30 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     public function setLiveEventCallbackConfig($liveEventCallbackConfig)
     {
         $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets viewMode
+    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
         return $this;
     }
 

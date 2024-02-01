@@ -26,7 +26,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * chargingMode  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
@@ -66,7 +66,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * chargingMode  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
@@ -127,7 +127,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * chargingMode  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
@@ -167,7 +167,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * chargingMode  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
@@ -207,7 +207,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * chargingMode  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
     * isAutoRenew  是否自动续订。 - 1，自动续订 - 0，不自动续订  默认值为“0”
@@ -582,7 +582,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    *  计费模式。 - 0 包周期计费。
     *
     * @return int
     */
@@ -594,7 +594,7 @@ class CBHInstances implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int $chargingMode 计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+    * @param int $chargingMode 计费模式。 - 0 包周期计费。
     *
     * @return $this
     */

@@ -20,38 +20,46 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * order  展示顺序
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'order' => 'int',
             'modelType' => 'string',
             'sex' => 'string',
             'language' => 'string',
             'speedRatio' => 'float',
-            'volumeRatio' => 'float'
+            'volumeRatio' => 'float',
+            'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * order  展示顺序
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'order' => null,
         'modelType' => null,
         'sex' => null,
         'language' => null,
         'speedRatio' => 'float',
-        'volumeRatio' => 'float'
+        'volumeRatio' => 'float',
+        'externalVoiceMeta' => null
     ];
 
     /**
@@ -77,56 +85,68 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * order  展示顺序
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'order' => 'order',
             'modelType' => 'model_type',
             'sex' => 'sex',
             'language' => 'language',
             'speedRatio' => 'speed_ratio',
-            'volumeRatio' => 'volume_ratio'
+            'volumeRatio' => 'volume_ratio',
+            'externalVoiceMeta' => 'external_voice_meta'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * order  展示顺序
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
     */
     protected static $setters = [
+            'order' => 'setOrder',
             'modelType' => 'setModelType',
             'sex' => 'setSex',
             'language' => 'setLanguage',
             'speedRatio' => 'setSpeedRatio',
-            'volumeRatio' => 'setVolumeRatio'
+            'volumeRatio' => 'setVolumeRatio',
+            'externalVoiceMeta' => 'setExternalVoiceMeta'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * order  展示顺序
     * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
     * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
     */
     protected static $getters = [
+            'order' => 'getOrder',
             'modelType' => 'getModelType',
             'sex' => 'getSex',
             'language' => 'getLanguage',
             'speedRatio' => 'getSpeedRatio',
-            'volumeRatio' => 'getVolumeRatio'
+            'volumeRatio' => 'getVolumeRatio',
+            'externalVoiceMeta' => 'getExternalVoiceMeta'
     ];
 
     /**
@@ -284,11 +304,13 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['modelType'] = isset($data['modelType']) ? $data['modelType'] : null;
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['speedRatio'] = isset($data['speedRatio']) ? $data['speedRatio'] : null;
         $this->container['volumeRatio'] = isset($data['volumeRatio']) ? $data['volumeRatio'] : null;
+        $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
     }
 
     /**
@@ -299,6 +321,12 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['order']) && ($this->container['order'] > 32767)) {
+                $invalidProperties[] = "invalid value for 'order', must be smaller than or equal to 32767.";
+            }
+            if (!is_null($this->container['order']) && ($this->container['order'] < 0)) {
+                $invalidProperties[] = "invalid value for 'order', must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getModelTypeAllowableValues();
                 if (!is_null($this->container['modelType']) && !in_array($this->container['modelType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -365,6 +393,30 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets order
+    *  展示顺序
+    *
+    * @return int|null
+    */
+    public function getOrder()
+    {
+        return $this->container['order'];
+    }
+
+    /**
+    * Sets order
+    *
+    * @param int|null $order 展示顺序
+    *
+    * @return $this
+    */
+    public function setOrder($order)
+    {
+        $this->container['order'] = $order;
+        return $this;
     }
 
     /**
@@ -484,6 +536,30 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function setVolumeRatio($volumeRatio)
     {
         $this->container['volumeRatio'] = $volumeRatio;
+        return $this;
+    }
+
+    /**
+    * Gets externalVoiceMeta
+    *  externalVoiceMeta
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta|null
+    */
+    public function getExternalVoiceMeta()
+    {
+        return $this->container['externalVoiceMeta'];
+    }
+
+    /**
+    * Sets externalVoiceMeta
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta|null $externalVoiceMeta externalVoiceMeta
+    *
+    * @return $this
+    */
+    public function setExternalVoiceMeta($externalVoiceMeta)
+    {
+        $this->container['externalVoiceMeta'] = $externalVoiceMeta;
         return $this;
     }
 

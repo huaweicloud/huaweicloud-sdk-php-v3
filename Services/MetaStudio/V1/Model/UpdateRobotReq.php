@@ -21,11 +21,13 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
+    * thirdPartyModelConfig  thirdPartyModelConfig
     *
     * @var string[]
     */
@@ -33,19 +35,23 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'appType' => 'int',
             'concurrency' => 'int',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'huaweiEiCbs' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HuaweiEiCbs',
             'iflytekAiuiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekAiuiConfig',
-            'iflytekSpark' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekSpark'
+            'iflytekSpark' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekSpark',
+            'thirdPartyModelConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ThirdPartyModelConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
+    * thirdPartyModelConfig  thirdPartyModelConfig
     *
     * @var string[]
     */
@@ -53,9 +59,11 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
         'name' => null,
         'appType' => null,
         'concurrency' => null,
+        'language' => null,
         'huaweiEiCbs' => null,
         'iflytekAiuiConfig' => null,
-        'iflytekSpark' => null
+        'iflytekSpark' => null,
+        'thirdPartyModelConfig' => null
     ];
 
     /**
@@ -82,11 +90,13 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
+    * thirdPartyModelConfig  thirdPartyModelConfig
     *
     * @var string[]
     */
@@ -94,19 +104,23 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'appType' => 'app_type',
             'concurrency' => 'concurrency',
+            'language' => 'language',
             'huaweiEiCbs' => 'huawei_ei_cbs',
             'iflytekAiuiConfig' => 'iflytek_aiui_config',
-            'iflytekSpark' => 'iflytek_spark'
+            'iflytekSpark' => 'iflytek_spark',
+            'thirdPartyModelConfig' => 'third_party_model_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
+    * thirdPartyModelConfig  thirdPartyModelConfig
     *
     * @var string[]
     */
@@ -114,19 +128,23 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'appType' => 'setAppType',
             'concurrency' => 'setConcurrency',
+            'language' => 'setLanguage',
             'huaweiEiCbs' => 'setHuaweiEiCbs',
             'iflytekAiuiConfig' => 'setIflytekAiuiConfig',
-            'iflytekSpark' => 'setIflytekSpark'
+            'iflytekSpark' => 'setIflytekSpark',
+            'thirdPartyModelConfig' => 'setThirdPartyModelConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
+    * thirdPartyModelConfig  thirdPartyModelConfig
     *
     * @var string[]
     */
@@ -134,9 +152,11 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'appType' => 'getAppType',
             'concurrency' => 'getConcurrency',
+            'language' => 'getLanguage',
             'huaweiEiCbs' => 'getHuaweiEiCbs',
             'iflytekAiuiConfig' => 'getIflytekAiuiConfig',
-            'iflytekSpark' => 'getIflytekSpark'
+            'iflytekSpark' => 'getIflytekSpark',
+            'thirdPartyModelConfig' => 'getThirdPartyModelConfig'
     ];
 
     /**
@@ -200,9 +220,11 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['huaweiEiCbs'] = isset($data['huaweiEiCbs']) ? $data['huaweiEiCbs'] : null;
         $this->container['iflytekAiuiConfig'] = isset($data['iflytekAiuiConfig']) ? $data['iflytekAiuiConfig'] : null;
         $this->container['iflytekSpark'] = isset($data['iflytekSpark']) ? $data['iflytekSpark'] : null;
+        $this->container['thirdPartyModelConfig'] = isset($data['thirdPartyModelConfig']) ? $data['thirdPartyModelConfig'] : null;
     }
 
     /**
@@ -213,8 +235,8 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 30)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 30.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 32)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
@@ -271,7 +293,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     *
     * @return int|null
     */
@@ -283,7 +305,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     *
     * @return $this
     */
@@ -314,6 +336,30 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 
@@ -386,6 +432,30 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     public function setIflytekSpark($iflytekSpark)
     {
         $this->container['iflytekSpark'] = $iflytekSpark;
+        return $this;
+    }
+
+    /**
+    * Gets thirdPartyModelConfig
+    *  thirdPartyModelConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ThirdPartyModelConfig|null
+    */
+    public function getThirdPartyModelConfig()
+    {
+        return $this->container['thirdPartyModelConfig'];
+    }
+
+    /**
+    * Sets thirdPartyModelConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ThirdPartyModelConfig|null $thirdPartyModelConfig thirdPartyModelConfig
+    *
+    * @return $this
+    */
+    public function setThirdPartyModelConfig($thirdPartyModelConfig)
+    {
+        $this->container['thirdPartyModelConfig'] = $thirdPartyModelConfig;
         return $this;
     }
 

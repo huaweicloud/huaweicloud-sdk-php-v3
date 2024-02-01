@@ -33,6 +33,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'backupModelAssetIds' => 'string[]',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
-            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig'
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
+            'viewMode' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'backupModelAssetIds' => null,
         'liveEventCallbackConfig' => null,
         'reviewConfig' => null,
-        'sharedConfig' => null
+        'sharedConfig' => null,
+        'viewMode' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'backupModelAssetIds' => 'backup_model_asset_ids',
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'reviewConfig' => 'review_config',
-            'sharedConfig' => 'shared_config'
+            'sharedConfig' => 'shared_config',
+            'viewMode' => 'view_mode'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'backupModelAssetIds' => 'setBackupModelAssetIds',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'reviewConfig' => 'setReviewConfig',
-            'sharedConfig' => 'setSharedConfig'
+            'sharedConfig' => 'setSharedConfig',
+            'viewMode' => 'setViewMode'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'backupModelAssetIds' => 'getBackupModelAssetIds',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'reviewConfig' => 'getReviewConfig',
-            'sharedConfig' => 'getSharedConfig'
+            'sharedConfig' => 'getSharedConfig',
+            'viewMode' => 'getViewMode'
     ];
 
     /**
@@ -252,6 +262,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     const ROOM_TYPE_NORMAL = 'NORMAL';
     const ROOM_TYPE_TEMP = 'TEMP';
     const ROOM_TYPE_TEMPLATE = 'TEMPLATE';
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     
 
     /**
@@ -265,6 +277,19 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             self::ROOM_TYPE_NORMAL,
             self::ROOM_TYPE_TEMP,
             self::ROOM_TYPE_TEMPLATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
         ];
     }
 
@@ -297,6 +322,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
     }
 
     /**
@@ -336,6 +362,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['roomType']) && (mb_strlen($this->container['roomType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomType', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -659,6 +693,30 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function setSharedConfig($sharedConfig)
     {
         $this->container['sharedConfig'] = $sharedConfig;
+        return $this;
+    }
+
+    /**
+    * Gets viewMode
+    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
         return $this;
     }
 

@@ -215,7 +215,7 @@ class CbhClient extends Client
     }
 
     /**
-     * 删除故障和按需云堡垒机实例
+     * 删除故障云堡垒机实例
      *
      * 删除云堡垒机故障实例。
      * 

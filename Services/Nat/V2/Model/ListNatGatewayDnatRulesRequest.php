@@ -34,6 +34,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'string[]',
             'portId' => 'string',
             'privateIp' => 'string',
-            'protocol' => 'string[]'
+            'protocol' => 'string[]',
+            'marker' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
         'natGatewayId' => null,
         'portId' => null,
         'privateIp' => null,
-        'protocol' => null
+        'protocol' => null,
+        'marker' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'nat_gateway_id',
             'portId' => 'port_id',
             'privateIp' => 'private_ip',
-            'protocol' => 'protocol'
+            'protocol' => 'protocol',
+            'marker' => 'marker'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'setNatGatewayId',
             'portId' => 'setPortId',
             'privateIp' => 'setPrivateIp',
-            'protocol' => 'setProtocol'
+            'protocol' => 'setProtocol',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'getNatGatewayId',
             'portId' => 'getPortId',
             'privateIp' => 'getPrivateIp',
-            'protocol' => 'getProtocol'
+            'protocol' => 'getProtocol',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -314,6 +324,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -731,6 +742,30 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     public function setProtocol($protocol)
     {
         $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

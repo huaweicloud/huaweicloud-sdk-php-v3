@@ -24,12 +24,16 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * robotId  应用ID。
     * name  应用名称。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * llmUrl  第三方语言模型地址。
+    * isStream  是否采用流式响应。
+    * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -40,10 +44,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'string',
             'appType' => 'int',
             'concurrency' => 'int',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'createTime' => 'string',
             'updateTime' => 'string',
             'region' => 'int',
             'cbsProjectId' => 'string',
+            'llmUrl' => 'string',
+            'isStream' => 'bool',
+            'chatRounds' => 'int',
             'xRequestId' => 'string'
     ];
 
@@ -52,12 +60,16 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * robotId  应用ID。
     * name  应用名称。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * llmUrl  第三方语言模型地址。
+    * isStream  是否采用流式响应。
+    * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -68,10 +80,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         'appId' => null,
         'appType' => null,
         'concurrency' => null,
+        'language' => null,
         'createTime' => null,
         'updateTime' => null,
         'region' => null,
         'cbsProjectId' => null,
+        'llmUrl' => null,
+        'isStream' => null,
+        'chatRounds' => null,
         'xRequestId' => null
     ];
 
@@ -101,12 +117,16 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * robotId  应用ID。
     * name  应用名称。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * llmUrl  第三方语言模型地址。
+    * isStream  是否采用流式响应。
+    * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -117,10 +137,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'app_id',
             'appType' => 'app_type',
             'concurrency' => 'concurrency',
+            'language' => 'language',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'region' => 'region',
             'cbsProjectId' => 'cbs_project_id',
+            'llmUrl' => 'llm_url',
+            'isStream' => 'is_stream',
+            'chatRounds' => 'chat_rounds',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -129,12 +153,16 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * robotId  应用ID。
     * name  应用名称。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * llmUrl  第三方语言模型地址。
+    * isStream  是否采用流式响应。
+    * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -145,10 +173,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'setAppId',
             'appType' => 'setAppType',
             'concurrency' => 'setConcurrency',
+            'language' => 'setLanguage',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'region' => 'setRegion',
             'cbsProjectId' => 'setCbsProjectId',
+            'llmUrl' => 'setLlmUrl',
+            'isStream' => 'setIsStream',
+            'chatRounds' => 'setChatRounds',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -157,12 +189,16 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * robotId  应用ID。
     * name  应用名称。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     * concurrency  对话的并发数
+    * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * llmUrl  第三方语言模型地址。
+    * isStream  是否采用流式响应。
+    * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -173,10 +209,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'getAppId',
             'appType' => 'getAppType',
             'concurrency' => 'getConcurrency',
+            'language' => 'getLanguage',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'region' => 'getRegion',
             'cbsProjectId' => 'getCbsProjectId',
+            'llmUrl' => 'getLlmUrl',
+            'isStream' => 'getIsStream',
+            'chatRounds' => 'getChatRounds',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -243,10 +283,14 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['cbsProjectId'] = isset($data['cbsProjectId']) ? $data['cbsProjectId'] : null;
+        $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
+        $this->container['isStream'] = isset($data['isStream']) ? $data['isStream'] : null;
+        $this->container['chatRounds'] = isset($data['chatRounds']) ? $data['chatRounds'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -264,8 +308,8 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 30)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 30.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 32)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
@@ -311,6 +355,18 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['cbsProjectId']) && (mb_strlen($this->container['cbsProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'cbsProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['llmUrl']) && (mb_strlen($this->container['llmUrl']) > 512)) {
+                $invalidProperties[] = "invalid value for 'llmUrl', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['llmUrl']) && (mb_strlen($this->container['llmUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'llmUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['chatRounds']) && ($this->container['chatRounds'] > 10)) {
+                $invalidProperties[] = "invalid value for 'chatRounds', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['chatRounds']) && ($this->container['chatRounds'] < 1)) {
+                $invalidProperties[] = "invalid value for 'chatRounds', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -400,7 +456,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     *
     * @return int|null
     */
@@ -412,7 +468,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
     *
     * @return $this
     */
@@ -443,6 +499,30 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setConcurrency($concurrency)
     {
         $this->container['concurrency'] = $concurrency;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 
@@ -539,6 +619,78 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setCbsProjectId($cbsProjectId)
     {
         $this->container['cbsProjectId'] = $cbsProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets llmUrl
+    *  第三方语言模型地址。
+    *
+    * @return string|null
+    */
+    public function getLlmUrl()
+    {
+        return $this->container['llmUrl'];
+    }
+
+    /**
+    * Sets llmUrl
+    *
+    * @param string|null $llmUrl 第三方语言模型地址。
+    *
+    * @return $this
+    */
+    public function setLlmUrl($llmUrl)
+    {
+        $this->container['llmUrl'] = $llmUrl;
+        return $this;
+    }
+
+    /**
+    * Gets isStream
+    *  是否采用流式响应。
+    *
+    * @return bool|null
+    */
+    public function getIsStream()
+    {
+        return $this->container['isStream'];
+    }
+
+    /**
+    * Sets isStream
+    *
+    * @param bool|null $isStream 是否采用流式响应。
+    *
+    * @return $this
+    */
+    public function setIsStream($isStream)
+    {
+        $this->container['isStream'] = $isStream;
+        return $this;
+    }
+
+    /**
+    * Gets chatRounds
+    *  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    *
+    * @return int|null
+    */
+    public function getChatRounds()
+    {
+        return $this->container['chatRounds'];
+    }
+
+    /**
+    * Sets chatRounds
+    *
+    * @param int|null $chatRounds 支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    *
+    * @return $this
+    */
+    public function setChatRounds($chatRounds)
+    {
+        $this->container['chatRounds'] = $chatRounds;
         return $this;
     }
 

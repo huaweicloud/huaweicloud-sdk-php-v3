@@ -32,6 +32,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'string[]',
             'networkId' => 'string',
             'sourceType' => 'int',
-            'status' => 'string'
+            'status' => 'string',
+            'marker' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
         'natGatewayId' => null,
         'networkId' => null,
         'sourceType' => 'int32',
-        'status' => null
+        'status' => null,
+        'marker' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'nat_gateway_id',
             'networkId' => 'network_id',
             'sourceType' => 'source_type',
-            'status' => 'status'
+            'status' => 'status',
+            'marker' => 'marker'
     ];
 
     /**
@@ -149,6 +155,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'setNatGatewayId',
             'networkId' => 'setNetworkId',
             'sourceType' => 'setSourceType',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -181,6 +189,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * networkId  规则使用的网络id。与cidr参数二选一。
     * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             'natGatewayId' => 'getNatGatewayId',
             'networkId' => 'getNetworkId',
             'sourceType' => 'getSourceType',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -292,6 +302,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
         $this->container['networkId'] = isset($data['networkId']) ? $data['networkId'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -657,6 +668,30 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

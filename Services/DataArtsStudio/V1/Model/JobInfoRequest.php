@@ -290,7 +290,8 @@ class JobInfoRequest implements ModelInterface, ArrayAccess
     const SINGLE_NODE_JOB_TYPE_ASSIGNMENT = 'ASSIGNMENT';
     const SINGLE_NODE_JOB_TYPE_BRANCH = 'BRANCH';
     const SINGLE_NODE_JOB_TYPE_MERGE = 'MERGE';
-    const SINGLE_NODE_JOB_TYPE_DATA_MIGRATION = 'DataMigration';
+    const SINGLE_NODE_JOB_TYPE_NORMAL_JOB = 'NormalJob';
+    const SINGLE_NODE_JOB_TYPE_ONE_CLICK = 'OneClick';
     const SINGLE_NODE_JOB_TYPE_MRS_FLINK = 'MrsFlink';
     const SINGLE_NODE_JOB_TYPE_FLINK_SQL = 'FlinkSQL';
     const SINGLE_NODE_JOB_TYPE_FLINK_JAR = 'FlinkJar';
@@ -330,7 +331,8 @@ class JobInfoRequest implements ModelInterface, ArrayAccess
             self::SINGLE_NODE_JOB_TYPE_ASSIGNMENT,
             self::SINGLE_NODE_JOB_TYPE_BRANCH,
             self::SINGLE_NODE_JOB_TYPE_MERGE,
-            self::SINGLE_NODE_JOB_TYPE_DATA_MIGRATION,
+            self::SINGLE_NODE_JOB_TYPE_NORMAL_JOB,
+            self::SINGLE_NODE_JOB_TYPE_ONE_CLICK,
             self::SINGLE_NODE_JOB_TYPE_MRS_FLINK,
             self::SINGLE_NODE_JOB_TYPE_FLINK_SQL,
             self::SINGLE_NODE_JOB_TYPE_FLINK_JAR,

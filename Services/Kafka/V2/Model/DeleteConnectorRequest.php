@@ -21,21 +21,25 @@ class DeleteConnectorRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'body' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DeleteConnectorRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,6 +158,7 @@ class DeleteConnectorRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class DeleteConnectorRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return object|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param object|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -22,24 +22,28 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keepDays' => 'int',
-            'reserveAuditlogs' => 'bool'
+            'reserveAuditlogs' => 'bool',
+            'auditTypes' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keepDays' => null,
-        'reserveAuditlogs' => null
+        'reserveAuditlogs' => null,
+        'auditTypes' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keepDays' => 'keep_days',
-            'reserveAuditlogs' => 'reserve_auditlogs'
+            'reserveAuditlogs' => 'reserve_auditlogs',
+            'auditTypes' => 'audit_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
     *
     * @var string[]
     */
     protected static $setters = [
             'keepDays' => 'setKeepDays',
-            'reserveAuditlogs' => 'setReserveAuditlogs'
+            'reserveAuditlogs' => 'setReserveAuditlogs',
+            'auditTypes' => 'setAuditTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
     *
     * @var string[]
     */
     protected static $getters = [
             'keepDays' => 'getKeepDays',
-            'reserveAuditlogs' => 'getReserveAuditlogs'
+            'reserveAuditlogs' => 'getReserveAuditlogs',
+            'auditTypes' => 'getAuditTypes'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
         $this->container['reserveAuditlogs'] = isset($data['reserveAuditlogs']) ? $data['reserveAuditlogs'] : null;
+        $this->container['auditTypes'] = isset($data['auditTypes']) ? $data['auditTypes'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     public function setReserveAuditlogs($reserveAuditlogs)
     {
         $this->container['reserveAuditlogs'] = $reserveAuditlogs;
+        return $this;
+    }
+
+    /**
+    * Gets auditTypes
+    *  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    *
+    * @return string[]|null
+    */
+    public function getAuditTypes()
+    {
+        return $this->container['auditTypes'];
+    }
+
+    /**
+    * Sets auditTypes
+    *
+    * @param string[]|null $auditTypes 审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    *
+    * @return $this
+    */
+    public function setAuditTypes($auditTypes)
+    {
+        $this->container['auditTypes'] = $auditTypes;
         return $this;
     }
 

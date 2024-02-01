@@ -25,11 +25,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetType' => 'string',
             'assetState' => 'string',
             'assetOwner' => 'string',
-            'isNeedGenerateCover' => 'bool',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
-            'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]'
+            'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig'
     ];
 
     /**
@@ -53,11 +53,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -67,11 +67,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'assetType' => null,
         'assetState' => null,
         'assetOwner' => null,
-        'isNeedGenerateCover' => null,
         'reviewConfig' => null,
         'tags' => null,
         'assetExtraMeta' => null,
-        'systemProperties' => null
+        'systemProperties' => null,
+        'sharedConfig' => null
     ];
 
     /**
@@ -102,11 +102,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -116,11 +116,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetType' => 'asset_type',
             'assetState' => 'asset_state',
             'assetOwner' => 'asset_owner',
-            'isNeedGenerateCover' => 'is_need_generate_cover',
             'reviewConfig' => 'review_config',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
-            'systemProperties' => 'system_properties'
+            'systemProperties' => 'system_properties',
+            'sharedConfig' => 'shared_config'
     ];
 
     /**
@@ -130,11 +130,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -144,11 +144,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetType' => 'setAssetType',
             'assetState' => 'setAssetState',
             'assetOwner' => 'setAssetOwner',
-            'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'reviewConfig' => 'setReviewConfig',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
-            'systemProperties' => 'setSystemProperties'
+            'systemProperties' => 'setSystemProperties',
+            'sharedConfig' => 'setSharedConfig'
     ];
 
     /**
@@ -158,11 +158,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员帐号可设置此参数。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * reviewConfig  reviewConfig
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
+    * sharedConfig  sharedConfig
     *
     * @var string[]
     */
@@ -172,11 +172,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetType' => 'getAssetType',
             'assetState' => 'getAssetState',
             'assetOwner' => 'getAssetOwner',
-            'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'reviewConfig' => 'getReviewConfig',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
-            'systemProperties' => 'getSystemProperties'
+            'systemProperties' => 'getSystemProperties',
+            'sharedConfig' => 'getSharedConfig'
     ];
 
     /**
@@ -296,11 +296,11 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['assetOwner'] = isset($data['assetOwner']) ? $data['assetOwner'] : null;
-        $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
+        $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
     }
 
     /**
@@ -480,30 +480,6 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isNeedGenerateCover
-    *  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
-    *
-    * @return bool|null
-    */
-    public function getIsNeedGenerateCover()
-    {
-        return $this->container['isNeedGenerateCover'];
-    }
-
-    /**
-    * Sets isNeedGenerateCover
-    *
-    * @param bool|null $isNeedGenerateCover 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
-    *
-    * @return $this
-    */
-    public function setIsNeedGenerateCover($isNeedGenerateCover)
-    {
-        $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
-        return $this;
-    }
-
-    /**
     * Gets reviewConfig
     *  reviewConfig
     *
@@ -596,6 +572,30 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setSystemProperties($systemProperties)
     {
         $this->container['systemProperties'] = $systemProperties;
+        return $this;
+    }
+
+    /**
+    * Gets sharedConfig
+    *  sharedConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null
+    */
+    public function getSharedConfig()
+    {
+        return $this->container['sharedConfig'];
+    }
+
+    /**
+    * Sets sharedConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null $sharedConfig sharedConfig
+    *
+    * @return $this
+    */
+    public function setSharedConfig($sharedConfig)
+    {
+        $this->container['sharedConfig'] = $sharedConfig;
         return $this;
     }
 

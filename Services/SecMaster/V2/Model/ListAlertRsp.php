@@ -671,6 +671,12 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be smaller than or equal to 64.";
             }

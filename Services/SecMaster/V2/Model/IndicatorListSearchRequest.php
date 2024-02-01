@@ -27,8 +27,8 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
-    * fromDate  查询起始时间
-    * toDate  查询截止时间
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
-    * fromDate  查询起始时间
-    * toDate  查询截止时间
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @var string[]
     */
@@ -100,8 +100,8 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
-    * fromDate  查询起始时间
-    * toDate  查询截止时间
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @var string[]
     */
@@ -126,8 +126,8 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
-    * fromDate  查询起始时间
-    * toDate  查询截止时间
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @var string[]
     */
@@ -152,8 +152,8 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     * offset  request offset, from 0
     * limit  request limit size
     * sortBy  sort by property, create_time.
-    * fromDate  查询起始时间
-    * toDate  查询截止时间
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @var string[]
     */
@@ -481,7 +481,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromDate
-    *  查询起始时间
+    *  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fromDate
     *
-    * @param string|null $fromDate 查询起始时间
+    * @param string|null $fromDate 查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets toDate
-    *  查询截止时间
+    *  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @return string|null
     */
@@ -517,7 +517,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets toDate
     *
-    * @param string|null $toDate 查询截止时间
+    * @param string|null $toDate 查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
     *
     * @return $this
     */

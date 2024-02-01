@@ -33,6 +33,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  当源端为腾讯云时，需要填写此参数。
     * sourceCdn  sourceCdn
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象最后修改时间晚于源端对象最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 transmission：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
@@ -53,6 +54,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'bool',
             'enableKms' => 'bool',
             'enableRestore' => 'bool',
+            'dstStoragePolicy' => 'string',
             'appId' => 'string',
             'sourceCdn' => '\HuaweiCloud\SDK\Oms\V2\Model\SourceCdnReq',
             'consistencyCheck' => 'string'
@@ -73,6 +75,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  当源端为腾讯云时，需要填写此参数。
     * sourceCdn  sourceCdn
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象最后修改时间晚于源端对象最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 transmission：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
@@ -93,6 +96,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
         'enableMetadataMigration' => null,
         'enableKms' => null,
         'enableRestore' => null,
+        'dstStoragePolicy' => null,
         'appId' => null,
         'sourceCdn' => null,
         'consistencyCheck' => null
@@ -134,6 +138,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  当源端为腾讯云时，需要填写此参数。
     * sourceCdn  sourceCdn
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象最后修改时间晚于源端对象最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 transmission：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
@@ -154,6 +159,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'enable_metadata_migration',
             'enableKms' => 'enable_kms',
             'enableRestore' => 'enable_restore',
+            'dstStoragePolicy' => 'dst_storage_policy',
             'appId' => 'app_id',
             'sourceCdn' => 'source_cdn',
             'consistencyCheck' => 'consistency_check'
@@ -174,6 +180,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  当源端为腾讯云时，需要填写此参数。
     * sourceCdn  sourceCdn
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象最后修改时间晚于源端对象最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 transmission：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
@@ -194,6 +201,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'setEnableMetadataMigration',
             'enableKms' => 'setEnableKms',
             'enableRestore' => 'setEnableRestore',
+            'dstStoragePolicy' => 'setDstStoragePolicy',
             'appId' => 'setAppId',
             'sourceCdn' => 'setSourceCdn',
             'consistencyCheck' => 'setConsistencyCheck'
@@ -214,6 +222,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  当源端为腾讯云时，需要填写此参数。
     * sourceCdn  sourceCdn
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象最后修改时间晚于源端对象最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 transmission：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
@@ -234,6 +243,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'getEnableMetadataMigration',
             'enableKms' => 'getEnableKms',
             'enableRestore' => 'getEnableRestore',
+            'dstStoragePolicy' => 'getDstStoragePolicy',
             'appId' => 'getAppId',
             'sourceCdn' => 'getSourceCdn',
             'consistencyCheck' => 'getConsistencyCheck'
@@ -279,10 +289,31 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DST_STORAGE_POLICY_STANDARD = 'STANDARD';
+    const DST_STORAGE_POLICY_IA = 'IA';
+    const DST_STORAGE_POLICY_ARCHIVE = 'ARCHIVE';
+    const DST_STORAGE_POLICY_DEEP_ARCHIVE = 'DEEP_ARCHIVE';
+    const DST_STORAGE_POLICY_SRC_STORAGE_MAPPING = 'SRC_STORAGE_MAPPING';
     const CONSISTENCY_CHECK_SIZE_LAST_MODIFIED = 'size_last_modified';
     const CONSISTENCY_CHECK_CRC64 = 'crc64';
     const CONSISTENCY_CHECK_TRANSMISSION = 'transmission';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDstStoragePolicyAllowableValues()
+    {
+        return [
+            self::DST_STORAGE_POLICY_STANDARD,
+            self::DST_STORAGE_POLICY_IA,
+            self::DST_STORAGE_POLICY_ARCHIVE,
+            self::DST_STORAGE_POLICY_DEEP_ARCHIVE,
+            self::DST_STORAGE_POLICY_SRC_STORAGE_MAPPING,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -327,6 +358,7 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
+        $this->container['dstStoragePolicy'] = isset($data['dstStoragePolicy']) ? $data['dstStoragePolicy'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['sourceCdn'] = isset($data['sourceCdn']) ? $data['sourceCdn'] : null;
         $this->container['consistencyCheck'] = isset($data['consistencyCheck']) ? $data['consistencyCheck'] : null;
@@ -447,6 +479,20 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            $allowedValues = $this->getDstStoragePolicyAllowableValues();
+                if (!is_null($this->container['dstStoragePolicy']) && !in_array($this->container['dstStoragePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'dstStoragePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['dstStoragePolicy']) && (mb_strlen($this->container['dstStoragePolicy']) > 128)) {
+                $invalidProperties[] = "invalid value for 'dstStoragePolicy', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['dstStoragePolicy']) && (mb_strlen($this->container['dstStoragePolicy']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dstStoragePolicy', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 255.";
@@ -788,6 +834,30 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     public function setEnableRestore($enableRestore)
     {
         $this->container['enableRestore'] = $enableRestore;
+        return $this;
+    }
+
+    /**
+    * Gets dstStoragePolicy
+    *  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
+    *
+    * @return string|null
+    */
+    public function getDstStoragePolicy()
+    {
+        return $this->container['dstStoragePolicy'];
+    }
+
+    /**
+    * Sets dstStoragePolicy
+    *
+    * @param string|null $dstStoragePolicy 目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
+    *
+    * @return $this
+    */
+    public function setDstStoragePolicy($dstStoragePolicy)
+    {
+        $this->container['dstStoragePolicy'] = $dstStoragePolicy;
         return $this;
     }
 

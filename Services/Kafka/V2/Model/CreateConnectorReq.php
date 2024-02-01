@@ -20,9 +20,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specification  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
-    * nodeCnt  转储节点数量。不能小于2个。 默认是2个。
-    * specCode  转储节点规格编码。
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specification  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
-    * nodeCnt  转储节点数量。不能小于2个。 默认是2个。
-    * specCode  转储节点规格编码。
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specification  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
-    * nodeCnt  转储节点数量。不能小于2个。 默认是2个。
-    * specCode  转储节点规格编码。
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specification  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
-    * nodeCnt  转储节点数量。不能小于2个。 默认是2个。
-    * specCode  转储节点规格编码。
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specification  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
-    * nodeCnt  转储节点数量。不能小于2个。 默认是2个。
-    * specCode  转储节点规格编码。
+    * specification  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+    * nodeCnt  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * specCode  转储节点规格编码。仅老规格实例需要填写。
     *
     * @var string[]
     */
@@ -207,9 +207,6 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['specCode'] === null) {
-            $invalidProperties[] = "'specCode' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,7 +223,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
+    *  部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
     *
     * @return string|null
     */
@@ -238,7 +235,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string|null $specification 部署connector的规格，基准带宽，表示单位时间内传送的最大数据量，单位Byte/秒。  取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  可以不填，则默认跟当前实例的规格是一致。  第一阶段实现先不填，保持和当前实例规格一致，后面再扩展可以选择不同的规格。
+    * @param string|null $specification 部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
     *
     * @return $this
     */
@@ -250,7 +247,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeCnt
-    *  转储节点数量。不能小于2个。 默认是2个。
+    *  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     *
     * @return string|null
     */
@@ -262,7 +259,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeCnt
     *
-    * @param string|null $nodeCnt 转储节点数量。不能小于2个。 默认是2个。
+    * @param string|null $nodeCnt Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     *
     * @return $this
     */
@@ -274,9 +271,9 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCode
-    *  转储节点规格编码。
+    *  转储节点规格编码。仅老规格实例需要填写。
     *
-    * @return string
+    * @return string|null
     */
     public function getSpecCode()
     {
@@ -286,7 +283,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Sets specCode
     *
-    * @param string $specCode 转储节点规格编码。
+    * @param string|null $specCode 转储节点规格编码。仅老规格实例需要填写。
     *
     * @return $this
     */

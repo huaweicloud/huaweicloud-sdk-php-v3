@@ -20,9 +20,10 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -31,14 +32,16 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'cloudType' => 'string',
             'ak' => 'string',
             'sk' => 'string',
+            'jsonAuthFile' => 'string',
             'appId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
         'cloudType' => null,
         'ak' => null,
         'sk' => null,
+        'jsonAuthFile' => null,
         'appId' => null
     ];
 
@@ -73,9 +77,10 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -84,14 +89,16 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'cloudType' => 'cloud_type',
             'ak' => 'ak',
             'sk' => 'sk',
+            'jsonAuthFile' => 'json_auth_file',
             'appId' => 'app_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -100,14 +107,16 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'cloudType' => 'setCloudType',
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'jsonAuthFile' => 'setJsonAuthFile',
             'appId' => 'setAppId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  当源端为腾讯云时，会返回此参数。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             'cloudType' => 'getCloudType',
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'jsonAuthFile' => 'getJsonAuthFile',
             'appId' => 'getAppId'
     ];
 
@@ -180,6 +190,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
         $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
     }
 
@@ -200,8 +211,8 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['cloudType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cloudType', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud|HEC)$/", $this->container['cloudType'])) {
-                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud|HEC)$/.";
+            if (!preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|Google|URLSource|UCloud|HEC)$/", $this->container['cloudType'])) {
+                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|Google|URLSource|UCloud|HEC)$/.";
             }
             if (!is_null($this->container['ak']) && (mb_strlen($this->container['ak']) > 100)) {
                 $invalidProperties[] = "invalid value for 'ak', the character length must be smaller than or equal to 100.";
@@ -220,6 +231,12 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 255.";
@@ -246,7 +263,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudType
-    *  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    *  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     *
     * @return string
     */
@@ -258,7 +275,7 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     /**
     * Sets cloudType
     *
-    * @param string $cloudType 云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
+    * @param string $cloudType 云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 Google: 谷歌云 URLSource：URL HEC：HEC
     *
     * @return $this
     */
@@ -313,6 +330,30 @@ class ListBucketsReq implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets jsonAuthFile
+    *  用于谷歌云Cloud Storage鉴权
+    *
+    * @return string|null
+    */
+    public function getJsonAuthFile()
+    {
+        return $this->container['jsonAuthFile'];
+    }
+
+    /**
+    * Sets jsonAuthFile
+    *
+    * @param string|null $jsonAuthFile 用于谷歌云Cloud Storage鉴权
+    *
+    * @return $this
+    */
+    public function setJsonAuthFile($jsonAuthFile)
+    {
+        $this->container['jsonAuthFile'] = $jsonAuthFile;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'topic' => 'string',
-            'timestamp' => 'float'
+            'timestamp' => 'string'
     ];
 
     /**
@@ -217,7 +217,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     * Gets timestamp
     *  重置的时间。
     *
-    * @return float
+    * @return string
     */
     public function getTimestamp()
     {
@@ -227,7 +227,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param float $timestamp 重置的时间。
+    * @param string $timestamp 重置的时间。
     *
     * @return $this
     */

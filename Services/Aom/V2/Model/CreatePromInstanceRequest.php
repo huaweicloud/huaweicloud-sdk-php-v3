@@ -20,21 +20,25 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * region  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'region' => 'string',
             'body' => '\HuaweiCloud\SDK\Aom\V2\Model\PromInstanceRequestModel'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * region  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'region' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * region  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'region' => 'region',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * region  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'region' => 'setRegion',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * region  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'region' => 'getRegion',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +169,9 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['region'] === null) {
+            $invalidProperties[] = "'region' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -170,6 +184,30 @@ class CreatePromInstanceRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets region
+    *  Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
+    *
+    * @return string
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string $region Prometheus实例所属Region，一般为承载REST服务端点的服务器域名或IP，不同服务不同区域的名称不同。
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
+        return $this;
     }
 
     /**

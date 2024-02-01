@@ -24,13 +24,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
+    * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -43,13 +43,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'assetId' => 'string',
             'assetName' => 'string',
             'assetDescription' => 'string',
+            'appUserId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
             'assetType' => 'string',
             'assetState' => 'string',
             'failType' => 'string',
             'reason' => 'string',
-            'isNeedGenerateCover' => 'bool',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
@@ -62,13 +62,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
+    * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -81,13 +81,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
         'assetId' => null,
         'assetName' => null,
         'assetDescription' => null,
+        'appUserId' => null,
         'createTime' => null,
         'updateTime' => null,
         'assetType' => null,
         'assetState' => null,
         'failType' => null,
         'reason' => null,
-        'isNeedGenerateCover' => null,
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null,
@@ -121,13 +121,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
+    * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -140,13 +140,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'assetId' => 'asset_id',
             'assetName' => 'asset_name',
             'assetDescription' => 'asset_description',
+            'appUserId' => 'app_user_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'assetType' => 'asset_type',
             'assetState' => 'asset_state',
             'failType' => 'fail_type',
             'reason' => 'reason',
-            'isNeedGenerateCover' => 'is_need_generate_cover',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
@@ -159,13 +159,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
+    * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -178,13 +178,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'assetId' => 'setAssetId',
             'assetName' => 'setAssetName',
             'assetDescription' => 'setAssetDescription',
+            'appUserId' => 'setAppUserId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'assetType' => 'setAssetType',
             'assetState' => 'setAssetState',
             'failType' => 'setFailType',
             'reason' => 'setReason',
-            'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
@@ -197,13 +197,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
+    * appUserId  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
     * createTime  资产创建时间。
     * updateTime  资产更新时间。
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * isNeedGenerateCover  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
     * tags  标签列表。
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
@@ -216,13 +216,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             'assetId' => 'getAssetId',
             'assetName' => 'getAssetName',
             'assetDescription' => 'getAssetDescription',
+            'appUserId' => 'getAppUserId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'assetType' => 'getAssetType',
             'assetState' => 'getAssetState',
             'failType' => 'getFailType',
             'reason' => 'getReason',
-            'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
@@ -370,13 +370,13 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetDescription'] = isset($data['assetDescription']) ? $data['assetDescription'] : null;
+        $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['failType'] = isset($data['failType']) ? $data['failType'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
@@ -409,6 +409,12 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetDescription']) && (mb_strlen($this->container['assetDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetDescription', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
@@ -535,6 +541,30 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     public function setAssetDescription($assetDescription)
     {
         $this->container['assetDescription'] = $assetDescription;
+        return $this;
+    }
+
+    /**
+    * Gets appUserId
+    *  第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
+    *
+    * @return string|null
+    */
+    public function getAppUserId()
+    {
+        return $this->container['appUserId'];
+    }
+
+    /**
+    * Sets appUserId
+    *
+    * @param string|null $appUserId 第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
+    *
+    * @return $this
+    */
+    public function setAppUserId($appUserId)
+    {
+        $this->container['appUserId'] = $appUserId;
         return $this;
     }
 
@@ -679,30 +709,6 @@ class ShowAssetResponse implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
-        return $this;
-    }
-
-    /**
-    * Gets isNeedGenerateCover
-    *  是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
-    *
-    * @return bool|null
-    */
-    public function getIsNeedGenerateCover()
-    {
-        return $this->container['isNeedGenerateCover'];
-    }
-
-    /**
-    * Sets isNeedGenerateCover
-    *
-    * @param bool|null $isNeedGenerateCover 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
-    *
-    * @return $this
-    */
-    public function setIsNeedGenerateCover($isNeedGenerateCover)
-    {
-        $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
         return $this;
     }
 

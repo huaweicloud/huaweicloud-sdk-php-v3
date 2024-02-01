@@ -21,9 +21,9 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
-    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  开发者应用作为资产权属的可选字段。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     *
@@ -41,9 +41,9 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
-    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  开发者应用作为资产权属的可选字段。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     *
@@ -82,9 +82,9 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
-    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  开发者应用作为资产权属的可选字段。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     *
@@ -102,9 +102,9 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
-    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  开发者应用作为资产权属的可选字段。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     *
@@ -122,9 +122,9 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
-    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  开发者应用作为资产权属的可选字段。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     *
@@ -219,11 +219,11 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
                 $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 16)) {
-                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 16.";
+            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
+                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) < 16)) {
-                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be bigger than or equal to 16.";
+            if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
@@ -289,7 +289,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xSdkDate
-    *  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    *  使用AK/SK方式认证时必选，请求的发生时间。
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xSdkDate
     *
-    * @param string|null $xSdkDate 使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
+    * @param string|null $xSdkDate 使用AK/SK方式认证时必选，请求的发生时间。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  开发者应用作为资产权属的可选字段。
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
     *
     * @return $this
     */

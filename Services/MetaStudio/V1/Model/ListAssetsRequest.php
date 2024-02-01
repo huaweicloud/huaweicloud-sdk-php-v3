@@ -40,6 +40,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
+    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
@@ -63,7 +66,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sex' => 'string',
             'language' => 'string',
             'systemProperty' => 'string',
-            'actionEditable' => 'bool'
+            'actionEditable' => 'bool',
+            'isMovable' => 'bool',
+            'voiceProvider' => 'string',
+            'role' => 'string'
     ];
 
     /**
@@ -88,6 +94,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
+    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
@@ -111,7 +120,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         'sex' => null,
         'language' => null,
         'systemProperty' => null,
-        'actionEditable' => null
+        'actionEditable' => null,
+        'isMovable' => null,
+        'voiceProvider' => null,
+        'role' => null
     ];
 
     /**
@@ -157,6 +169,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
+    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
@@ -180,7 +195,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sex' => 'sex',
             'language' => 'language',
             'systemProperty' => 'system_property',
-            'actionEditable' => 'action_editable'
+            'actionEditable' => 'action_editable',
+            'isMovable' => 'is_movable',
+            'voiceProvider' => 'voice_provider',
+            'role' => 'role'
     ];
 
     /**
@@ -205,6 +223,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
+    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
@@ -228,7 +249,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sex' => 'setSex',
             'language' => 'setLanguage',
             'systemProperty' => 'setSystemProperty',
-            'actionEditable' => 'setActionEditable'
+            'actionEditable' => 'setActionEditable',
+            'isMovable' => 'setIsMovable',
+            'voiceProvider' => 'setVoiceProvider',
+            'role' => 'setRole'
     ];
 
     /**
@@ -253,6 +277,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
+    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
@@ -276,7 +303,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'sex' => 'getSex',
             'language' => 'getLanguage',
             'systemProperty' => 'getSystemProperty',
-            'actionEditable' => 'getActionEditable'
+            'actionEditable' => 'getActionEditable',
+            'isMovable' => 'getIsMovable',
+            'voiceProvider' => 'getVoiceProvider',
+            'role' => 'getRole'
     ];
 
     /**
@@ -322,6 +352,8 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     const ASSET_SOURCE_SYSTEM = 'SYSTEM';
     const ASSET_SOURCE_CUSTOMIZATION = 'CUSTOMIZATION';
     const ASSET_SOURCE_ALL = 'ALL';
+    const ROLE_SHARER = 'SHARER';
+    const ROLE_SHAREE = 'SHAREE';
     
 
     /**
@@ -335,6 +367,19 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             self::ASSET_SOURCE_SYSTEM,
             self::ASSET_SOURCE_CUSTOMIZATION,
             self::ASSET_SOURCE_ALL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRoleAllowableValues()
+    {
+        return [
+            self::ROLE_SHARER,
+            self::ROLE_SHAREE,
         ];
     }
 
@@ -374,6 +419,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['systemProperty'] = isset($data['systemProperty']) ? $data['systemProperty'] : null;
         $this->container['actionEditable'] = isset($data['actionEditable']) ? $data['actionEditable'] : null;
+        $this->container['isMovable'] = isset($data['isMovable']) ? $data['isMovable'] : null;
+        $this->container['voiceProvider'] = isset($data['voiceProvider']) ? $data['voiceProvider'] : null;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
     }
 
     /**
@@ -500,6 +548,20 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['systemProperty']) && (mb_strlen($this->container['systemProperty']) < 1)) {
                 $invalidProperties[] = "invalid value for 'systemProperty', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['voiceProvider']) && (mb_strlen($this->container['voiceProvider']) > 128)) {
+                $invalidProperties[] = "invalid value for 'voiceProvider', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['voiceProvider']) && (mb_strlen($this->container['voiceProvider']) < 1)) {
+                $invalidProperties[] = "invalid value for 'voiceProvider', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getRoleAllowableValues();
+                if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'role', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -991,6 +1053,78 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function setActionEditable($actionEditable)
     {
         $this->container['actionEditable'] = $actionEditable;
+        return $this;
+    }
+
+    /**
+    * Gets isMovable
+    *  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    *
+    * @return bool|null
+    */
+    public function getIsMovable()
+    {
+        return $this->container['isMovable'];
+    }
+
+    /**
+    * Sets isMovable
+    *
+    * @param bool|null $isMovable 分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    *
+    * @return $this
+    */
+    public function setIsMovable($isMovable)
+    {
+        $this->container['isMovable'] = $isMovable;
+        return $this;
+    }
+
+    /**
+    * Gets voiceProvider
+    *  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    *
+    * @return string|null
+    */
+    public function getVoiceProvider()
+    {
+        return $this->container['voiceProvider'];
+    }
+
+    /**
+    * Sets voiceProvider
+    *
+    * @param string|null $voiceProvider 可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    *
+    * @return $this
+    */
+    public function setVoiceProvider($voiceProvider)
+    {
+        $this->container['voiceProvider'] = $voiceProvider;
+        return $this;
+    }
+
+    /**
+    * Gets role
+    *  角色。 SHARER：共享方，SHAREE：被共享方
+    *
+    * @return string|null
+    */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+    * Sets role
+    *
+    * @param string|null $role 角色。 SHARER：共享方，SHAREE：被共享方
+    *
+    * @return $this
+    */
+    public function setRole($role)
+    {
+        $this->container['role'] = $role;
         return $this;
     }
 

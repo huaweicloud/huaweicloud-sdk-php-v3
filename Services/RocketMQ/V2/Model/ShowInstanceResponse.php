@@ -29,7 +29,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -38,7 +38,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * subnetName  子网名称。
-    * subnetCidr  子网路由。
+    * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     * availableZones  IO未售罄的可用区列表。
     * userId  用户ID。
     * userName  用户名。
@@ -64,13 +64,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * nodeNum  节点数。
     * newSpecBillingEnable  是否启用新规格计费。
     * enableAcl  是否开启访问控制列表。
-    * brokerNum  节点数。
+    * brokerNum  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     * namesrvAddress  元数据地址。
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
-    * grpcAddress  grpc连接地址。
-    * publicGrpcAddress  公网grpc连接地址。
+    * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -143,7 +143,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -152,7 +152,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * subnetName  子网名称。
-    * subnetCidr  子网路由。
+    * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     * availableZones  IO未售罄的可用区列表。
     * userId  用户ID。
     * userName  用户名。
@@ -178,13 +178,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * nodeNum  节点数。
     * newSpecBillingEnable  是否启用新规格计费。
     * enableAcl  是否开启访问控制列表。
-    * brokerNum  节点数。
+    * brokerNum  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     * namesrvAddress  元数据地址。
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
-    * grpcAddress  grpc连接地址。
-    * publicGrpcAddress  公网grpc连接地址。
+    * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -278,7 +278,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -287,7 +287,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * subnetName  子网名称。
-    * subnetCidr  子网路由。
+    * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     * availableZones  IO未售罄的可用区列表。
     * userId  用户ID。
     * userName  用户名。
@@ -313,13 +313,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * nodeNum  节点数。
     * newSpecBillingEnable  是否启用新规格计费。
     * enableAcl  是否开启访问控制列表。
-    * brokerNum  节点数。
+    * brokerNum  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     * namesrvAddress  元数据地址。
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
-    * grpcAddress  grpc连接地址。
-    * publicGrpcAddress  公网grpc连接地址。
+    * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -392,7 +392,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -401,7 +401,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * subnetName  子网名称。
-    * subnetCidr  子网路由。
+    * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     * availableZones  IO未售罄的可用区列表。
     * userId  用户ID。
     * userName  用户名。
@@ -427,13 +427,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * nodeNum  节点数。
     * newSpecBillingEnable  是否启用新规格计费。
     * enableAcl  是否开启访问控制列表。
-    * brokerNum  节点数。
+    * brokerNum  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     * namesrvAddress  元数据地址。
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
-    * grpcAddress  grpc连接地址。
-    * publicGrpcAddress  公网grpc连接地址。
+    * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -506,7 +506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -515,7 +515,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * subnetName  子网名称。
-    * subnetCidr  子网路由。
+    * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     * availableZones  IO未售罄的可用区列表。
     * userId  用户ID。
     * userName  用户名。
@@ -541,13 +541,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * nodeNum  节点数。
     * newSpecBillingEnable  是否启用新规格计费。
     * enableAcl  是否开启访问控制列表。
-    * brokerNum  节点数。
+    * brokerNum  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     * namesrvAddress  元数据地址。
     * brokerAddress  业务数据地址。
     * publicNamesrvAddress  公网元数据地址。
     * publicBrokerAddress  公网业务数据地址。
-    * grpcAddress  grpc连接地址。
-    * publicGrpcAddress  公网grpc连接地址。
+    * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -962,7 +962,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    *  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     *
     * @return int|null
     */
@@ -974,7 +974,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+    * @param int|null $chargingMode [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     *
     * @return $this
     */
@@ -1178,7 +1178,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidr
-    *  子网路由。
+    *  子网路由（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return string|null
     */
@@ -1190,7 +1190,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidr
     *
-    * @param string|null $subnetCidr 子网路由。
+    * @param string|null $subnetCidr 子网路由（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return $this
     */
@@ -1802,7 +1802,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerNum
-    *  节点数。
+    *  节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     *
     * @return int|null
     */
@@ -1814,7 +1814,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokerNum
     *
-    * @param int|null $brokerNum 节点数。
+    * @param int|null $brokerNum 节点数（仅RocketMQ 4.8.0版本会显示此字段）。
     *
     * @return $this
     */
@@ -1922,7 +1922,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets grpcAddress
-    *  grpc连接地址。
+    *  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return string|null
     */
@@ -1934,7 +1934,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets grpcAddress
     *
-    * @param string|null $grpcAddress grpc连接地址。
+    * @param string|null $grpcAddress grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return $this
     */
@@ -1946,7 +1946,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicGrpcAddress
-    *  公网grpc连接地址。
+    *  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return string|null
     */
@@ -1958,7 +1958,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicGrpcAddress
     *
-    * @param string|null $publicGrpcAddress 公网grpc连接地址。
+    * @param string|null $publicGrpcAddress 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     *
     * @return $this
     */

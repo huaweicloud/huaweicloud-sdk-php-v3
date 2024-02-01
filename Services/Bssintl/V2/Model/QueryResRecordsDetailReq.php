@@ -34,6 +34,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则此参数无效。如果method取值为sub_customer，则此参数不能为空。
     * statisticType  统计类型。默认值为1。 1：按账期2：按天
+    * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     *
     * @var string[]
     */
@@ -51,7 +54,10 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'method' => 'string',
             'subCustomerId' => 'string',
-            'statisticType' => 'int'
+            'statisticType' => 'int',
+            'queryType' => 'string',
+            'billCycleBegin' => 'string',
+            'billCycleEnd' => 'string'
     ];
 
     /**
@@ -70,6 +76,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则此参数无效。如果method取值为sub_customer，则此参数不能为空。
     * statisticType  统计类型。默认值为1。 1：按账期2：按天
+    * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     *
     * @var string[]
     */
@@ -87,7 +96,10 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'method' => null,
         'subCustomerId' => null,
-        'statisticType' => 'int32'
+        'statisticType' => 'int32',
+        'queryType' => null,
+        'billCycleBegin' => null,
+        'billCycleEnd' => null
     ];
 
     /**
@@ -127,6 +139,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则此参数无效。如果method取值为sub_customer，则此参数不能为空。
     * statisticType  统计类型。默认值为1。 1：按账期2：按天
+    * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     *
     * @var string[]
     */
@@ -144,7 +159,10 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'method' => 'method',
             'subCustomerId' => 'sub_customer_id',
-            'statisticType' => 'statistic_type'
+            'statisticType' => 'statistic_type',
+            'queryType' => 'query_type',
+            'billCycleBegin' => 'bill_cycle_begin',
+            'billCycleEnd' => 'bill_cycle_end'
     ];
 
     /**
@@ -163,6 +181,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则此参数无效。如果method取值为sub_customer，则此参数不能为空。
     * statisticType  统计类型。默认值为1。 1：按账期2：按天
+    * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     *
     * @var string[]
     */
@@ -180,7 +201,10 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'method' => 'setMethod',
             'subCustomerId' => 'setSubCustomerId',
-            'statisticType' => 'setStatisticType'
+            'statisticType' => 'setStatisticType',
+            'queryType' => 'setQueryType',
+            'billCycleBegin' => 'setBillCycleBegin',
+            'billCycleEnd' => 'setBillCycleEnd'
     ];
 
     /**
@@ -199,6 +223,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则此参数无效。如果method取值为sub_customer，则此参数不能为空。
     * statisticType  统计类型。默认值为1。 1：按账期2：按天
+    * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     *
     * @var string[]
     */
@@ -216,7 +243,10 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'method' => 'getMethod',
             'subCustomerId' => 'getSubCustomerId',
-            'statisticType' => 'getStatisticType'
+            'statisticType' => 'getStatisticType',
+            'queryType' => 'getQueryType',
+            'billCycleBegin' => 'getBillCycleBegin',
+            'billCycleEnd' => 'getBillCycleEnd'
     ];
 
     /**
@@ -291,6 +321,9 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
         $this->container['method'] = isset($data['method']) ? $data['method'] : null;
         $this->container['subCustomerId'] = isset($data['subCustomerId']) ? $data['subCustomerId'] : null;
         $this->container['statisticType'] = isset($data['statisticType']) ? $data['statisticType'] : null;
+        $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
+        $this->container['billCycleBegin'] = isset($data['billCycleBegin']) ? $data['billCycleBegin'] : null;
+        $this->container['billCycleEnd'] = isset($data['billCycleEnd']) ? $data['billCycleEnd'] : null;
     }
 
     /**
@@ -381,6 +414,24 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] < 1)) {
                 $invalidProperties[] = "invalid value for 'statisticType', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) > 9)) {
+                $invalidProperties[] = "invalid value for 'queryType', the character length must be smaller than or equal to 9.";
+            }
+            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'queryType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['billCycleBegin']) && (mb_strlen($this->container['billCycleBegin']) > 10)) {
+                $invalidProperties[] = "invalid value for 'billCycleBegin', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['billCycleBegin']) && (mb_strlen($this->container['billCycleBegin']) < 0)) {
+                $invalidProperties[] = "invalid value for 'billCycleBegin', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['billCycleEnd']) && (mb_strlen($this->container['billCycleEnd']) > 10)) {
+                $invalidProperties[] = "invalid value for 'billCycleEnd', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['billCycleEnd']) && (mb_strlen($this->container['billCycleEnd']) < 0)) {
+                $invalidProperties[] = "invalid value for 'billCycleEnd', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -729,6 +780,78 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     public function setStatisticType($statisticType)
     {
         $this->container['statisticType'] = $statisticType;
+        return $this;
+    }
+
+    /**
+    * Gets queryType
+    *  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    *
+    * @return string|null
+    */
+    public function getQueryType()
+    {
+        return $this->container['queryType'];
+    }
+
+    /**
+    * Sets queryType
+    *
+    * @param string|null $queryType |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+    *
+    * @return $this
+    */
+    public function setQueryType($queryType)
+    {
+        $this->container['queryType'] = $queryType;
+        return $this;
+    }
+
+    /**
+    * Gets billCycleBegin
+    *  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    *
+    * @return string|null
+    */
+    public function getBillCycleBegin()
+    {
+        return $this->container['billCycleBegin'];
+    }
+
+    /**
+    * Sets billCycleBegin
+    *
+    * @param string|null $billCycleBegin |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    *
+    * @return $this
+    */
+    public function setBillCycleBegin($billCycleBegin)
+    {
+        $this->container['billCycleBegin'] = $billCycleBegin;
+        return $this;
+    }
+
+    /**
+    * Gets billCycleEnd
+    *  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    *
+    * @return string|null
+    */
+    public function getBillCycleEnd()
+    {
+        return $this->container['billCycleEnd'];
+    }
+
+    /**
+    * Sets billCycleEnd
+    *
+    * @param string|null $billCycleEnd |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    *
+    * @return $this
+    */
+    public function setBillCycleEnd($billCycleEnd)
+    {
+        $this->container['billCycleEnd'] = $billCycleEnd;
         return $this;
     }
 

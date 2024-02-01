@@ -21,6 +21,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  数字人直播任务ID。
+    * roomId  直播间ID
+    * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -33,11 +35,14 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
+    * coverUrl  直播间封面图UR
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
+            'roomId' => 'string',
+            'roomName' => 'string',
             'state' => 'string',
             'duration' => 'float',
             'startTime' => 'string',
@@ -49,12 +54,15 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'string',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'streamDuration' => 'float',
-            'blockReason' => 'string'
+            'blockReason' => 'string',
+            'coverUrl' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  数字人直播任务ID。
+    * roomId  直播间ID
+    * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -67,11 +75,14 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
+    * coverUrl  直播间封面图UR
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
+        'roomId' => null,
+        'roomName' => null,
         'state' => null,
         'duration' => 'float',
         'startTime' => null,
@@ -83,7 +94,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         'liveEventReportUrl' => null,
         'liveEventCallbackConfig' => null,
         'streamDuration' => 'float',
-        'blockReason' => null
+        'blockReason' => null,
+        'coverUrl' => null
     ];
 
     /**
@@ -110,6 +122,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  数字人直播任务ID。
+    * roomId  直播间ID
+    * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -122,11 +136,14 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
+    * coverUrl  直播间封面图UR
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
+            'roomId' => 'room_id',
+            'roomName' => 'room_name',
             'state' => 'state',
             'duration' => 'duration',
             'startTime' => 'start_time',
@@ -138,12 +155,15 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'live_event_report_url',
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'streamDuration' => 'stream_duration',
-            'blockReason' => 'block_reason'
+            'blockReason' => 'block_reason',
+            'coverUrl' => 'cover_url'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  数字人直播任务ID。
+    * roomId  直播间ID
+    * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -156,11 +176,14 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
+    * coverUrl  直播间封面图UR
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
+            'roomId' => 'setRoomId',
+            'roomName' => 'setRoomName',
             'state' => 'setState',
             'duration' => 'setDuration',
             'startTime' => 'setStartTime',
@@ -172,12 +195,15 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'setLiveEventReportUrl',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'streamDuration' => 'setStreamDuration',
-            'blockReason' => 'setBlockReason'
+            'blockReason' => 'setBlockReason',
+            'coverUrl' => 'setCoverUrl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  数字人直播任务ID。
+    * roomId  直播间ID
+    * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
     * duration  数字人直播时长，单位秒。
     * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -190,11 +216,14 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
+    * coverUrl  直播间封面图UR
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
+            'roomId' => 'getRoomId',
+            'roomName' => 'getRoomName',
             'state' => 'getState',
             'duration' => 'getDuration',
             'startTime' => 'getStartTime',
@@ -206,7 +235,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'liveEventReportUrl' => 'getLiveEventReportUrl',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'streamDuration' => 'getStreamDuration',
-            'blockReason' => 'getBlockReason'
+            'blockReason' => 'getBlockReason',
+            'coverUrl' => 'getCoverUrl'
     ];
 
     /**
@@ -289,6 +319,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['roomName'] = isset($data['roomName']) ? $data['roomName'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -301,6 +333,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
         $this->container['streamDuration'] = isset($data['streamDuration']) ? $data['streamDuration'] : null;
         $this->container['blockReason'] = isset($data['blockReason']) ? $data['blockReason'] : null;
+        $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
     }
 
     /**
@@ -316,6 +349,18 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['roomName']) && (mb_strlen($this->container['roomName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'roomName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['roomName']) && (mb_strlen($this->container['roomName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roomName', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getStateAllowableValues();
                 if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
@@ -379,6 +424,12 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             if (!is_null($this->container['blockReason']) && (mb_strlen($this->container['blockReason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'blockReason', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'coverUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -414,6 +465,54 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets roomId
+    *  直播间ID
+    *
+    * @return string|null
+    */
+    public function getRoomId()
+    {
+        return $this->container['roomId'];
+    }
+
+    /**
+    * Sets roomId
+    *
+    * @param string|null $roomId 直播间ID
+    *
+    * @return $this
+    */
+    public function setRoomId($roomId)
+    {
+        $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
+    * Gets roomName
+    *  直播间名称
+    *
+    * @return string|null
+    */
+    public function getRoomName()
+    {
+        return $this->container['roomName'];
+    }
+
+    /**
+    * Sets roomName
+    *
+    * @param string|null $roomName 直播间名称
+    *
+    * @return $this
+    */
+    public function setRoomName($roomName)
+    {
+        $this->container['roomName'] = $roomName;
         return $this;
     }
 
@@ -702,6 +801,30 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     public function setBlockReason($blockReason)
     {
         $this->container['blockReason'] = $blockReason;
+        return $this;
+    }
+
+    /**
+    * Gets coverUrl
+    *  直播间封面图UR
+    *
+    * @return string|null
+    */
+    public function getCoverUrl()
+    {
+        return $this->container['coverUrl'];
+    }
+
+    /**
+    * Sets coverUrl
+    *
+    * @param string|null $coverUrl 直播间封面图UR
+    *
+    * @return $this
+    */
+    public function setCoverUrl($coverUrl)
+    {
+        $this->container['coverUrl'] = $coverUrl;
         return $this;
     }
 

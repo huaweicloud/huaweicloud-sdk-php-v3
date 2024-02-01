@@ -34,6 +34,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -58,6 +59,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
+            'viewMode' => 'string',
             'roomId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -82,6 +84,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -106,6 +109,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'liveEventCallbackConfig' => null,
         'reviewConfig' => null,
         'sharedConfig' => null,
+        'viewMode' => null,
         'roomId' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -151,6 +155,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -175,6 +180,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'reviewConfig' => 'review_config',
             'sharedConfig' => 'shared_config',
+            'viewMode' => 'view_mode',
             'roomId' => 'room_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -199,6 +205,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -223,6 +230,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'reviewConfig' => 'setReviewConfig',
             'sharedConfig' => 'setSharedConfig',
+            'viewMode' => 'setViewMode',
             'roomId' => 'setRoomId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -247,6 +255,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -271,6 +280,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'reviewConfig' => 'getReviewConfig',
             'sharedConfig' => 'getSharedConfig',
+            'viewMode' => 'getViewMode',
             'roomId' => 'getRoomId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -323,6 +333,8 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     const ROOM_TYPE_NORMAL = 'NORMAL';
     const ROOM_TYPE_TEMP = 'TEMP';
     const ROOM_TYPE_TEMPLATE = 'TEMPLATE';
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     const ROOM_STATE_ENABLE = 'ENABLE';
     const ROOM_STATE_DISABLE = 'DISABLE';
     const ROOM_STATE_BLOCKED = 'BLOCKED';
@@ -339,6 +351,19 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             self::ROOM_TYPE_NORMAL,
             self::ROOM_TYPE_TEMP,
             self::ROOM_TYPE_TEMPLATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
         ];
     }
 
@@ -385,6 +410,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -431,6 +457,14 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['roomType']) && (mb_strlen($this->container['roomType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomType', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
             }
@@ -792,6 +826,30 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setSharedConfig($sharedConfig)
     {
         $this->container['sharedConfig'] = $sharedConfig;
+        return $this;
+    }
+
+    /**
+    * Gets viewMode
+    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
         return $this;
     }
 

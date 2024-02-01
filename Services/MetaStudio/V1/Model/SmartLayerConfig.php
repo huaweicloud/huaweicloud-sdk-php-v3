@@ -21,6 +21,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -30,6 +31,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'layerType' => 'string',
+            'assetId' => 'string',
             'position' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig',
             'size' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerSizeConfig',
             'imageConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartImageLayerConfig',
@@ -39,6 +41,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -48,6 +51,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'layerType' => null,
+        'assetId' => null,
         'position' => null,
         'size' => null,
         'imageConfig' => null,
@@ -78,6 +82,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -87,6 +92,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'layerType' => 'layer_type',
+            'assetId' => 'asset_id',
             'position' => 'position',
             'size' => 'size',
             'imageConfig' => 'image_config',
@@ -96,6 +102,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -105,6 +112,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'layerType' => 'setLayerType',
+            'assetId' => 'setAssetId',
             'position' => 'setPosition',
             'size' => 'setSize',
             'imageConfig' => 'setImageConfig',
@@ -114,6 +122,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
@@ -123,6 +132,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'layerType' => 'getLayerType',
+            'assetId' => 'getAssetId',
             'position' => 'getPosition',
             'size' => 'getSize',
             'imageConfig' => 'getImageConfig',
@@ -203,6 +213,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['layerType'] = isset($data['layerType']) ? $data['layerType'] : null;
+        $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['imageConfig'] = isset($data['imageConfig']) ? $data['imageConfig'] : null;
@@ -228,6 +239,12 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['position'] === null) {
             $invalidProperties[] = "'position' can't be null";
         }
@@ -266,6 +283,30 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     public function setLayerType($layerType)
     {
         $this->container['layerType'] = $layerType;
+        return $this;
+    }
+
+    /**
+    * Gets assetId
+    *  图层所需资产的资产id，外部资产信息无需填写
+    *
+    * @return string|null
+    */
+    public function getAssetId()
+    {
+        return $this->container['assetId'];
+    }
+
+    /**
+    * Sets assetId
+    *
+    * @param string|null $assetId 图层所需资产的资产id，外部资产信息无需填写
+    *
+    * @return $this
+    */
+    public function setAssetId($assetId)
+    {
+        $this->container['assetId'] = $assetId;
         return $this;
     }
 

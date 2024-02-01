@@ -6523,7 +6523,7 @@ class DliClient extends Client
             $queryParams['from'] = $localVarParams['from'];
         }
         if ($localVarParams['jobName'] !== null) {
-            $queryParams['job-name'] = $localVarParams['jobName'];
+            $queryParams['job_name'] = $localVarParams['jobName'];
         }
         if ($localVarParams['jobId'] !== null) {
             $queryParams['job-id'] = $localVarParams['jobId'];

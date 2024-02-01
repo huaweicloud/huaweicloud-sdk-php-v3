@@ -22,24 +22,28 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
+    * loopCount  循环播放视频次数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'videoUrl' => 'string',
-            'videoCoverUrl' => 'string'
+            'videoCoverUrl' => 'string',
+            'loopCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
+    * loopCount  循环播放视频次数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'videoUrl' => null,
-        'videoCoverUrl' => null
+        'videoCoverUrl' => null,
+        'loopCount' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
+    * loopCount  循环播放视频次数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'videoUrl' => 'video_url',
-            'videoCoverUrl' => 'video_cover_url'
+            'videoCoverUrl' => 'video_cover_url',
+            'loopCount' => 'loop_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
+    * loopCount  循环播放视频次数。
     *
     * @var string[]
     */
     protected static $setters = [
             'videoUrl' => 'setVideoUrl',
-            'videoCoverUrl' => 'setVideoCoverUrl'
+            'videoCoverUrl' => 'setVideoCoverUrl',
+            'loopCount' => 'setLoopCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
+    * loopCount  循环播放视频次数。
     *
     * @var string[]
     */
     protected static $getters = [
             'videoUrl' => 'getVideoUrl',
-            'videoCoverUrl' => 'getVideoCoverUrl'
+            'videoCoverUrl' => 'getVideoCoverUrl',
+            'loopCount' => 'getLoopCount'
     ];
 
     /**
@@ -159,6 +169,7 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     {
         $this->container['videoUrl'] = isset($data['videoUrl']) ? $data['videoUrl'] : null;
         $this->container['videoCoverUrl'] = isset($data['videoCoverUrl']) ? $data['videoCoverUrl'] : null;
+        $this->container['loopCount'] = isset($data['loopCount']) ? $data['loopCount'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['videoCoverUrl']) && (mb_strlen($this->container['videoCoverUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'videoCoverUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['loopCount']) && ($this->container['loopCount'] > 100)) {
+                $invalidProperties[] = "invalid value for 'loopCount', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['loopCount']) && ($this->container['loopCount'] < -1)) {
+                $invalidProperties[] = "invalid value for 'loopCount', must be bigger than or equal to -1.";
             }
         return $invalidProperties;
     }
@@ -240,6 +257,30 @@ class VideoLayerConfig implements ModelInterface, ArrayAccess
     public function setVideoCoverUrl($videoCoverUrl)
     {
         $this->container['videoCoverUrl'] = $videoCoverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets loopCount
+    *  循环播放视频次数。
+    *
+    * @return int|null
+    */
+    public function getLoopCount()
+    {
+        return $this->container['loopCount'];
+    }
+
+    /**
+    * Sets loopCount
+    *
+    * @param int|null $loopCount 循环播放视频次数。
+    *
+    * @return $this
+    */
+    public function setLoopCount($loopCount)
+    {
+        $this->container['loopCount'] = $loopCount;
         return $this;
     }
 

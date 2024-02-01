@@ -26,7 +26,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
+    * createdAt  创建时间戳。
+    * permissions  权限集。
+    * consumeOrderly  是否按序消费。
     *
     * @var string[]
     */
@@ -36,8 +38,10 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'brokers' => 'string[]',
             'name' => 'string',
             'groupDesc' => 'string',
-            'retryMaxTime' => 'float',
-            'fromBeginning' => 'bool'
+            'retryMaxTime' => 'int',
+            'createdAt' => 'string',
+            'permissions' => 'string[]',
+            'consumeOrderly' => 'bool'
     ];
 
     /**
@@ -48,7 +52,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
+    * createdAt  创建时间戳。
+    * permissions  权限集。
+    * consumeOrderly  是否按序消费。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         'name' => null,
         'groupDesc' => null,
         'retryMaxTime' => null,
-        'fromBeginning' => null
+        'createdAt' => null,
+        'permissions' => null,
+        'consumeOrderly' => null
     ];
 
     /**
@@ -91,7 +99,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
+    * createdAt  创建时间戳。
+    * permissions  权限集。
+    * consumeOrderly  是否按序消费。
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'name' => 'name',
             'groupDesc' => 'group_desc',
             'retryMaxTime' => 'retry_max_time',
-            'fromBeginning' => 'from_beginning'
+            'createdAt' => 'createdAt',
+            'permissions' => 'permissions',
+            'consumeOrderly' => 'consume_orderly'
     ];
 
     /**
@@ -113,7 +125,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
+    * createdAt  创建时间戳。
+    * permissions  权限集。
+    * consumeOrderly  是否按序消费。
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'groupDesc' => 'setGroupDesc',
             'retryMaxTime' => 'setRetryMaxTime',
-            'fromBeginning' => 'setFromBeginning'
+            'createdAt' => 'setCreatedAt',
+            'permissions' => 'setPermissions',
+            'consumeOrderly' => 'setConsumeOrderly'
     ];
 
     /**
@@ -135,7 +151,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     * groupDesc  消费组描述，长度0~200个字符。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
+    * createdAt  创建时间戳。
+    * permissions  权限集。
+    * consumeOrderly  是否按序消费。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'groupDesc' => 'getGroupDesc',
             'retryMaxTime' => 'getRetryMaxTime',
-            'fromBeginning' => 'getFromBeginning'
+            'createdAt' => 'getCreatedAt',
+            'permissions' => 'getPermissions',
+            'consumeOrderly' => 'getConsumeOrderly'
     ];
 
     /**
@@ -213,7 +233,9 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
-        $this->container['fromBeginning'] = isset($data['fromBeginning']) ? $data['fromBeginning'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+        $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
     }
 
     /**
@@ -368,7 +390,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * Gets retryMaxTime
     *  最大重试次数，取值范围为1~16。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getRetryMaxTime()
     {
@@ -378,7 +400,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param float|null $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int|null $retryMaxTime 最大重试次数，取值范围为1~16。
     *
     * @return $this
     */
@@ -389,26 +411,74 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fromBeginning
-    *  是否重头消费。
+    * Gets createdAt
+    *  创建时间戳。
     *
-    * @return bool|null
+    * @return string|null
     */
-    public function getFromBeginning()
+    public function getCreatedAt()
     {
-        return $this->container['fromBeginning'];
+        return $this->container['createdAt'];
     }
 
     /**
-    * Sets fromBeginning
+    * Sets createdAt
     *
-    * @param bool|null $fromBeginning 是否重头消费。
+    * @param string|null $createdAt 创建时间戳。
     *
     * @return $this
     */
-    public function setFromBeginning($fromBeginning)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['fromBeginning'] = $fromBeginning;
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets permissions
+    *  权限集。
+    *
+    * @return string[]|null
+    */
+    public function getPermissions()
+    {
+        return $this->container['permissions'];
+    }
+
+    /**
+    * Sets permissions
+    *
+    * @param string[]|null $permissions 权限集。
+    *
+    * @return $this
+    */
+    public function setPermissions($permissions)
+    {
+        $this->container['permissions'] = $permissions;
+        return $this;
+    }
+
+    /**
+    * Gets consumeOrderly
+    *  是否按序消费。
+    *
+    * @return bool|null
+    */
+    public function getConsumeOrderly()
+    {
+        return $this->container['consumeOrderly'];
+    }
+
+    /**
+    * Sets consumeOrderly
+    *
+    * @param bool|null $consumeOrderly 是否按序消费。
+    *
+    * @return $this
+    */
+    public function setConsumeOrderly($consumeOrderly)
+    {
+        $this->container['consumeOrderly'] = $consumeOrderly;
         return $this;
     }
 

@@ -186,8 +186,8 @@ class ListTaskGroupRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

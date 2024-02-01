@@ -31,6 +31,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'internalNetworkId' => 'string',
             'routerId' => 'string',
-            'limit' => 'int'
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
         'adminStateUp' => null,
         'internalNetworkId' => null,
         'routerId' => null,
-        'limit' => null
+        'limit' => null,
+        'marker' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'admin_state_up',
             'internalNetworkId' => 'internal_network_id',
             'routerId' => 'router_id',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'setAdminStateUp',
             'internalNetworkId' => 'setInternalNetworkId',
             'routerId' => 'setRouterId',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'getAdminStateUp',
             'internalNetworkId' => 'getInternalNetworkId',
             'routerId' => 'getRouterId',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -298,6 +308,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
         $this->container['internalNetworkId'] = isset($data['internalNetworkId']) ? $data['internalNetworkId'] : null;
         $this->container['routerId'] = isset($data['routerId']) ? $data['routerId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -631,6 +642,30 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

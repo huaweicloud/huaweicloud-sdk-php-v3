@@ -23,6 +23,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * state  任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
     * duration  数字人视频内容时长。
@@ -31,7 +32,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
@@ -45,6 +46,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'jobId' => 'string',
             'state' => 'string',
+            'jobType' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
             'duration' => 'float',
@@ -67,6 +69,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * state  任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
     * duration  数字人视频内容时长。
@@ -75,7 +78,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
@@ -89,6 +92,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'jobId' => null,
         'state' => null,
+        'jobType' => null,
         'startTime' => null,
         'endTime' => null,
         'duration' => 'float',
@@ -132,6 +136,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * state  任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
     * duration  数字人视频内容时长。
@@ -140,7 +145,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
@@ -154,6 +159,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'jobId' => 'job_id',
             'state' => 'state',
+            'jobType' => 'job_type',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'duration' => 'duration',
@@ -176,6 +182,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * state  任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
     * duration  数字人视频内容时长。
@@ -184,7 +191,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
@@ -198,6 +205,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'jobId' => 'setJobId',
             'state' => 'setState',
+            'jobType' => 'setJobType',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'duration' => 'setDuration',
@@ -220,6 +228,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * state  任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+    * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
     * duration  数字人视频内容时长。
@@ -228,7 +237,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * createTime  任务创建时间。
     * lastupdateTime  任务更新时间。
     * scriptId  剧本ID。
-    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * modelAssetId  分身数字人模型资产ID。
     * voiceConfig  voiceConfig
@@ -242,6 +251,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'jobId' => 'getJobId',
             'state' => 'getState',
+            'jobType' => 'getJobType',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'duration' => 'getDuration',
@@ -305,6 +315,8 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     const STATE_SUCCEED = 'SUCCEED';
     const STATE_FAILED = 'FAILED';
     const STATE_CANCELED = 'CANCELED';
+    const JOB_TYPE__2_D_DIGITAL_HUMAN_VIDEO = '2D_DIGITAL_HUMAN_VIDEO';
+    const JOB_TYPE_DIGITAL_HUMAN_PHOTO_VIDEO = 'DIGITAL_HUMAN_PHOTO_VIDEO';
     const VIDEO_MAKING_TYPE_MODEL = 'MODEL';
     const VIDEO_MAKING_TYPE_PICTURE = 'PICTURE';
     
@@ -322,6 +334,19 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
             self::STATE_SUCCEED,
             self::STATE_FAILED,
             self::STATE_CANCELED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobTypeAllowableValues()
+    {
+        return [
+            self::JOB_TYPE__2_D_DIGITAL_HUMAN_VIDEO,
+            self::JOB_TYPE_DIGITAL_HUMAN_PHOTO_VIDEO,
         ];
     }
 
@@ -356,6 +381,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
@@ -407,6 +433,20 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['state']) < 1)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getJobTypeAllowableValues();
+                if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 20.";
@@ -523,6 +563,30 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
         return $this;
     }
 
@@ -720,7 +784,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets videoMakingType
-    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    *  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return string|null
     */
@@ -732,7 +796,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets videoMakingType
     *
-    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+    * @param string|null $videoMakingType 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     *
     * @return $this
     */

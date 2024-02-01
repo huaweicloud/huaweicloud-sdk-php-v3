@@ -23,13 +23,15 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     * resourceAdd  新增资源数
     * resourceUpdate  更新资源数
     * resourceDelete  删除资源数
+    * resourceImport  导入资源数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceAdd' => 'int',
             'resourceUpdate' => 'int',
-            'resourceDelete' => 'int'
+            'resourceDelete' => 'int',
+            'resourceImport' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     * resourceAdd  新增资源数
     * resourceUpdate  更新资源数
     * resourceDelete  删除资源数
+    * resourceImport  导入资源数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceAdd' => null,
         'resourceUpdate' => null,
-        'resourceDelete' => null
+        'resourceDelete' => null,
+        'resourceImport' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     * resourceAdd  新增资源数
     * resourceUpdate  更新资源数
     * resourceDelete  删除资源数
+    * resourceImport  导入资源数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceAdd' => 'resource_add',
             'resourceUpdate' => 'resource_update',
-            'resourceDelete' => 'resource_delete'
+            'resourceDelete' => 'resource_delete',
+            'resourceImport' => 'resource_import'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     * resourceAdd  新增资源数
     * resourceUpdate  更新资源数
     * resourceDelete  删除资源数
+    * resourceImport  导入资源数
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceAdd' => 'setResourceAdd',
             'resourceUpdate' => 'setResourceUpdate',
-            'resourceDelete' => 'setResourceDelete'
+            'resourceDelete' => 'setResourceDelete',
+            'resourceImport' => 'setResourceImport'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     * resourceAdd  新增资源数
     * resourceUpdate  更新资源数
     * resourceDelete  删除资源数
+    * resourceImport  导入资源数
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceAdd' => 'getResourceAdd',
             'resourceUpdate' => 'getResourceUpdate',
-            'resourceDelete' => 'getResourceDelete'
+            'resourceDelete' => 'getResourceDelete',
+            'resourceImport' => 'getResourceImport'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
         $this->container['resourceAdd'] = isset($data['resourceAdd']) ? $data['resourceAdd'] : null;
         $this->container['resourceUpdate'] = isset($data['resourceUpdate']) ? $data['resourceUpdate'] : null;
         $this->container['resourceDelete'] = isset($data['resourceDelete']) ? $data['resourceDelete'] : null;
+        $this->container['resourceImport'] = isset($data['resourceImport']) ? $data['resourceImport'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class ExecutionPlanSummary implements ModelInterface, ArrayAccess
     public function setResourceDelete($resourceDelete)
     {
         $this->container['resourceDelete'] = $resourceDelete;
+        return $this;
+    }
+
+    /**
+    * Gets resourceImport
+    *  导入资源数
+    *
+    * @return int|null
+    */
+    public function getResourceImport()
+    {
+        return $this->container['resourceImport'];
+    }
+
+    /**
+    * Sets resourceImport
+    *
+    * @param int|null $resourceImport 导入资源数
+    *
+    * @return $this
+    */
+    public function setResourceImport($resourceImport)
+    {
+        $this->container['resourceImport'] = $resourceImport;
         return $this;
     }
 

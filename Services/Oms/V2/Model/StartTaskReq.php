@@ -22,6 +22,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
@@ -34,6 +35,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'srcAk' => 'string',
             'srcSk' => 'string',
+            'jsonAuthFile' => 'string',
             'srcSecurityToken' => 'string',
             'dstAk' => 'string',
             'dstSk' => 'string',
@@ -46,6 +48,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
@@ -58,6 +61,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'srcAk' => null,
         'srcSk' => null,
+        'jsonAuthFile' => null,
         'srcSecurityToken' => null,
         'dstAk' => null,
         'dstSk' => null,
@@ -91,6 +95,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
@@ -103,6 +108,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'srcAk' => 'src_ak',
             'srcSk' => 'src_sk',
+            'jsonAuthFile' => 'json_auth_file',
             'srcSecurityToken' => 'src_security_token',
             'dstAk' => 'dst_ak',
             'dstSk' => 'dst_sk',
@@ -115,6 +121,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
@@ -127,6 +134,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'srcAk' => 'setSrcAk',
             'srcSk' => 'setSrcSk',
+            'jsonAuthFile' => 'setJsonAuthFile',
             'srcSecurityToken' => 'setSrcSecurityToken',
             'dstAk' => 'setDstAk',
             'dstSk' => 'setDstSk',
@@ -139,6 +147,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * srcAk  源端节点AK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * srcSecurityToken  源端节点临时Token
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
@@ -151,6 +160,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'srcAk' => 'getSrcAk',
             'srcSk' => 'getSrcSk',
+            'jsonAuthFile' => 'getJsonAuthFile',
             'srcSecurityToken' => 'getSrcSecurityToken',
             'dstAk' => 'getDstAk',
             'dstSk' => 'getDstSk',
@@ -219,6 +229,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     {
         $this->container['srcAk'] = isset($data['srcAk']) ? $data['srcAk'] : null;
         $this->container['srcSk'] = isset($data['srcSk']) ? $data['srcSk'] : null;
+        $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['srcSecurityToken'] = isset($data['srcSecurityToken']) ? $data['srcSecurityToken'] : null;
         $this->container['dstAk'] = isset($data['dstAk']) ? $data['dstAk'] : null;
         $this->container['dstSk'] = isset($data['dstSk']) ? $data['dstSk'] : null;
@@ -252,6 +263,12 @@ class StartTaskReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['srcSk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['srcSk'])) {
                 $invalidProperties[] = "invalid value for 'srcSk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['srcSecurityToken']) && (mb_strlen($this->container['srcSecurityToken']) > 16384)) {
                 $invalidProperties[] = "invalid value for 'srcSecurityToken', the character length must be smaller than or equal to 16384.";
@@ -363,6 +380,30 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     public function setSrcSk($srcSk)
     {
         $this->container['srcSk'] = $srcSk;
+        return $this;
+    }
+
+    /**
+    * Gets jsonAuthFile
+    *  用于谷歌云Cloud Storage鉴权
+    *
+    * @return string|null
+    */
+    public function getJsonAuthFile()
+    {
+        return $this->container['jsonAuthFile'];
+    }
+
+    /**
+    * Sets jsonAuthFile
+    *
+    * @param string|null $jsonAuthFile 用于谷歌云Cloud Storage鉴权
+    *
+    * @return $this
+    */
+    public function setJsonAuthFile($jsonAuthFile)
+    {
+        $this->container['jsonAuthFile'] = $jsonAuthFile;
         return $this;
     }
 

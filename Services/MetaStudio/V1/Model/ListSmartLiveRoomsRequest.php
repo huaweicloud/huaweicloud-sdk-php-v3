@@ -33,6 +33,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'liveState' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
-            'roomType' => 'string'
+            'roomType' => 'string',
+            'templateOwnType' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         'liveState' => null,
         'startTime' => null,
         'endTime' => null,
-        'roomType' => null
+        'roomType' => null,
+        'templateOwnType' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'liveState' => 'live_state',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'roomType' => 'room_type'
+            'roomType' => 'room_type',
+            'templateOwnType' => 'template_own_type'
     ];
 
     /**
@@ -156,6 +162,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'liveState' => 'setLiveState',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'roomType' => 'setRoomType'
+            'roomType' => 'setRoomType',
+            'templateOwnType' => 'setTemplateOwnType'
     ];
 
     /**
@@ -190,6 +198,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     * startTime  最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     * roomType  按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * templateOwnType  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             'liveState' => 'getLiveState',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'roomType' => 'getRoomType'
+            'roomType' => 'getRoomType',
+            'templateOwnType' => 'getTemplateOwnType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
+        $this->container['templateOwnType'] = isset($data['templateOwnType']) ? $data['templateOwnType'] : null;
     }
 
     /**
@@ -367,6 +378,12 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['roomType']) && (mb_strlen($this->container['roomType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['templateOwnType']) && (mb_strlen($this->container['templateOwnType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'templateOwnType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['templateOwnType']) && (mb_strlen($this->container['templateOwnType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'templateOwnType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -691,6 +708,30 @@ class ListSmartLiveRoomsRequest implements ModelInterface, ArrayAccess
     public function setRoomType($roomType)
     {
         $this->container['roomType'] = $roomType;
+        return $this;
+    }
+
+    /**
+    * Gets templateOwnType
+    *  按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    *
+    * @return string|null
+    */
+    public function getTemplateOwnType()
+    {
+        return $this->container['templateOwnType'];
+    }
+
+    /**
+    * Sets templateOwnType
+    *
+    * @param string|null $templateOwnType 按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
+    *
+    * @return $this
+    */
+    public function setTemplateOwnType($templateOwnType)
+    {
+        $this->container['templateOwnType'] = $templateOwnType;
         return $this;
     }
 

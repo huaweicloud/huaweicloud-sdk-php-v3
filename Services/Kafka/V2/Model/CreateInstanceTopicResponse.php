@@ -21,25 +21,21 @@ class CreateInstanceTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  topic名称。
     * name  topic名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
             'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  topic名称。
     * name  topic名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
         'name' => null
     ];
 
@@ -66,37 +62,31 @@ class CreateInstanceTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  topic名称。
     * name  topic名称。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
             'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  topic名称。
     * name  topic名称。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
             'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  topic名称。
     * name  topic名称。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
             'name' => 'getName'
     ];
 
@@ -158,7 +148,6 @@ class CreateInstanceTopicResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
@@ -170,12 +159,6 @@ class CreateInstanceTopicResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 200)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 3)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 3.";
-            }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 200)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 200.";
             }
@@ -194,30 +177,6 @@ class CreateInstanceTopicResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets id
-    *  topic名称。
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id topic名称。
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
     }
 
     /**

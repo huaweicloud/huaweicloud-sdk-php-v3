@@ -21,6 +21,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * recent  查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
     * from  起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
@@ -34,6 +35,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'contentType' => 'string',
+            'xLanguage' => 'string',
             'enterpriseProjectId' => 'string',
             'recent' => 'string',
             'from' => 'int',
@@ -47,6 +49,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * recent  查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
     * from  起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
@@ -60,6 +63,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'contentType' => null,
+        'xLanguage' => null,
         'enterpriseProjectId' => null,
         'recent' => null,
         'from' => 'int64',
@@ -94,6 +98,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * recent  查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
     * from  起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
@@ -107,6 +112,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
+            'xLanguage' => 'X-Language',
             'enterpriseProjectId' => 'enterprise_project_id',
             'recent' => 'recent',
             'from' => 'from',
@@ -120,6 +126,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * recent  查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
     * from  起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
@@ -133,6 +140,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'contentType' => 'setContentType',
+            'xLanguage' => 'setXLanguage',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'recent' => 'setRecent',
             'from' => 'setFrom',
@@ -146,6 +154,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  内容类型
+    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * recent  查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
     * from  起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
@@ -159,6 +168,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'contentType' => 'getContentType',
+            'xLanguage' => 'getXLanguage',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'recent' => 'getRecent',
             'from' => 'getFrom',
@@ -249,6 +259,7 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['recent'] = isset($data['recent']) ? $data['recent'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
@@ -313,6 +324,30 @@ class ListEventRequest implements ModelInterface, ArrayAccess
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets xLanguage
+    *  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 

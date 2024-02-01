@@ -24,8 +24,8 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     * offset  偏移量
     * sortBy  排序字段：create_time | update_time
     * order  排序方式：DESC | ASC
-    * fromDate  搜索开始时间
-    * toDate  搜索结束时间
+    * fromDate  搜索开始时间，例如：2023-02-20T00:00:00.000Z
+    * toDate  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     * condition  condition
     *
     * @var string[]
@@ -46,8 +46,8 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     * offset  偏移量
     * sortBy  排序字段：create_time | update_time
     * order  排序方式：DESC | ASC
-    * fromDate  搜索开始时间
-    * toDate  搜索结束时间
+    * fromDate  搜索开始时间，例如：2023-02-20T00:00:00.000Z
+    * toDate  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     * condition  condition
     *
     * @var string[]
@@ -89,8 +89,8 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     * offset  偏移量
     * sortBy  排序字段：create_time | update_time
     * order  排序方式：DESC | ASC
-    * fromDate  搜索开始时间
-    * toDate  搜索结束时间
+    * fromDate  搜索开始时间，例如：2023-02-20T00:00:00.000Z
+    * toDate  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     * condition  condition
     *
     * @var string[]
@@ -111,8 +111,8 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     * offset  偏移量
     * sortBy  排序字段：create_time | update_time
     * order  排序方式：DESC | ASC
-    * fromDate  搜索开始时间
-    * toDate  搜索结束时间
+    * fromDate  搜索开始时间，例如：2023-02-20T00:00:00.000Z
+    * toDate  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     * condition  condition
     *
     * @var string[]
@@ -133,8 +133,8 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     * offset  偏移量
     * sortBy  排序字段：create_time | update_time
     * order  排序方式：DESC | ASC
-    * fromDate  搜索开始时间
-    * toDate  搜索结束时间
+    * fromDate  搜索开始时间，例如：2023-02-20T00:00:00.000Z
+    * toDate  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     * condition  condition
     *
     * @var string[]
@@ -395,7 +395,7 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromDate
-    *  搜索开始时间
+    *  搜索开始时间，例如：2023-02-20T00:00:00.000Z
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     /**
     * Sets fromDate
     *
-    * @param string|null $fromDate 搜索开始时间
+    * @param string|null $fromDate 搜索开始时间，例如：2023-02-20T00:00:00.000Z
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
 
     /**
     * Gets toDate
-    *  搜索结束时间
+    *  搜索结束时间，例如：2023-02-27T23:59:59.999Z
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class DataobjectSearch implements ModelInterface, ArrayAccess
     /**
     * Sets toDate
     *
-    * @param string|null $toDate 搜索结束时间
+    * @param string|null $toDate 搜索结束时间，例如：2023-02-27T23:59:59.999Z
     *
     * @return $this
     */

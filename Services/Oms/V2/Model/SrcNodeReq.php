@@ -20,10 +20,11 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
@@ -37,6 +38,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'string',
             'ak' => 'string',
             'sk' => 'string',
+            'jsonAuthFile' => 'string',
             'securityToken' => 'string',
             'appId' => 'string',
             'bucket' => 'string',
@@ -46,10 +48,11 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
@@ -63,6 +66,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         'region' => null,
         'ak' => null,
         'sk' => null,
+        'jsonAuthFile' => null,
         'securityToken' => null,
         'appId' => null,
         'bucket' => null,
@@ -93,10 +97,11 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
@@ -110,6 +115,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'region',
             'ak' => 'ak',
             'sk' => 'sk',
+            'jsonAuthFile' => 'json_auth_file',
             'securityToken' => 'security_token',
             'appId' => 'app_id',
             'bucket' => 'bucket',
@@ -119,10 +125,11 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
@@ -136,6 +143,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'setRegion',
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'jsonAuthFile' => 'setJsonAuthFile',
             'securityToken' => 'setSecurityToken',
             'appId' => 'setAppId',
             'bucket' => 'setBucket',
@@ -145,10 +153,11 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域，task_type为非url_list时，本参数为必选。
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * securityToken  源端桶的临时Token（最大长度16384个字符）
     * appId  当源端为腾讯云时，需要填写此参数。
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
@@ -162,6 +171,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'region' => 'getRegion',
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'jsonAuthFile' => 'getJsonAuthFile',
             'securityToken' => 'getSecurityToken',
             'appId' => 'getAppId',
             'bucket' => 'getBucket',
@@ -231,6 +241,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['securityToken'] = isset($data['securityToken']) ? $data['securityToken'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
@@ -246,8 +257,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['cloudType']) && !preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud)$/", $this->container['cloudType'])) {
-                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|URLSource|UCloud)$/.";
+            if (!is_null($this->container['cloudType']) && !preg_match("/^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|Google|URLSource|UCloud)$/", $this->container['cloudType'])) {
+                $invalidProperties[] = "invalid value for 'cloudType', must be conform to the pattern /^(AWS|Azure|Aliyun|Tencent|HuaweiCloud|QingCloud|KingsoftCloud|Baidu|Qiniu|Google|URLSource|UCloud)$/.";
             }
             if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 100)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 100.";
@@ -275,6 +286,12 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['securityToken']) && (mb_strlen($this->container['securityToken']) > 16384)) {
                 $invalidProperties[] = "invalid value for 'securityToken', the character length must be smaller than or equal to 16384.";
@@ -319,7 +336,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudType
-    *  源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    *  源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return string|null
     */
@@ -331,7 +348,7 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     /**
     * Sets cloudType
     *
-    * @param string|null $cloudType 源端云服务提供商，task_type为非url_list时，本参数为URLSource且必选。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * @param string|null $cloudType 源端云服务提供商，task_type为非url_list时，本参数为URLSource。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、Google、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return $this
     */
@@ -410,6 +427,30 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets jsonAuthFile
+    *  用于谷歌云Cloud Storage鉴权
+    *
+    * @return string|null
+    */
+    public function getJsonAuthFile()
+    {
+        return $this->container['jsonAuthFile'];
+    }
+
+    /**
+    * Sets jsonAuthFile
+    *
+    * @param string|null $jsonAuthFile 用于谷歌云Cloud Storage鉴权
+    *
+    * @return $this
+    */
+    public function setJsonAuthFile($jsonAuthFile)
+    {
+        $this->container['jsonAuthFile'] = $jsonAuthFile;
         return $this;
     }
 

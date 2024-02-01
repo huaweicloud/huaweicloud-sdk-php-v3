@@ -22,24 +22,28 @@ class ListFile implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * listFileKey  对象列表文件或URL列表文件对象名。
     * obsBucket  存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
+    * listFileNum  存放对象列表文件的数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'listFileKey' => 'string',
-            'obsBucket' => 'string'
+            'obsBucket' => 'string',
+            'listFileNum' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * listFileKey  对象列表文件或URL列表文件对象名。
     * obsBucket  存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
+    * listFileNum  存放对象列表文件的数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'listFileKey' => null,
-        'obsBucket' => null
+        'obsBucket' => null,
+        'listFileNum' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListFile implements ModelInterface, ArrayAccess
     * and the value is the original name
     * listFileKey  对象列表文件或URL列表文件对象名。
     * obsBucket  存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
+    * listFileNum  存放对象列表文件的数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'listFileKey' => 'list_file_key',
-            'obsBucket' => 'obs_bucket'
+            'obsBucket' => 'obs_bucket',
+            'listFileNum' => 'list_file_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * listFileKey  对象列表文件或URL列表文件对象名。
     * obsBucket  存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
+    * listFileNum  存放对象列表文件的数量
     *
     * @var string[]
     */
     protected static $setters = [
             'listFileKey' => 'setListFileKey',
-            'obsBucket' => 'setObsBucket'
+            'obsBucket' => 'setObsBucket',
+            'listFileNum' => 'setListFileNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * listFileKey  对象列表文件或URL列表文件对象名。
     * obsBucket  存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
+    * listFileNum  存放对象列表文件的数量
     *
     * @var string[]
     */
     protected static $getters = [
             'listFileKey' => 'getListFileKey',
-            'obsBucket' => 'getObsBucket'
+            'obsBucket' => 'getObsBucket',
+            'listFileNum' => 'getListFileNum'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListFile implements ModelInterface, ArrayAccess
     {
         $this->container['listFileKey'] = isset($data['listFileKey']) ? $data['listFileKey'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
+        $this->container['listFileNum'] = isset($data['listFileNum']) ? $data['listFileNum'] : null;
     }
 
     /**
@@ -189,6 +200,12 @@ class ListFile implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['obsBucket'])) {
                 $invalidProperties[] = "invalid value for 'obsBucket', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['listFileNum']) && (mb_strlen($this->container['listFileNum']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'listFileNum', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['listFileNum']) && (mb_strlen($this->container['listFileNum']) < 0)) {
+                $invalidProperties[] = "invalid value for 'listFileNum', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -249,6 +266,30 @@ class ListFile implements ModelInterface, ArrayAccess
     public function setObsBucket($obsBucket)
     {
         $this->container['obsBucket'] = $obsBucket;
+        return $this;
+    }
+
+    /**
+    * Gets listFileNum
+    *  存放对象列表文件的数量
+    *
+    * @return string|null
+    */
+    public function getListFileNum()
+    {
+        return $this->container['listFileNum'];
+    }
+
+    /**
+    * Sets listFileNum
+    *
+    * @param string|null $listFileNum 存放对象列表文件的数量
+    *
+    * @return $this
+    */
+    public function setListFileNum($listFileNum)
+    {
+        $this->container['listFileNum'] = $listFileNum;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     * rowsSent  结果行数量。
     * rowsExamined  扫描的行数量。
     * database  所属数据库。
-    * users  帐号。
+    * users  账号。
     * querySample  执行语法。
     * type  语句类型。
     * startTime  发生时间，UTC时间。
@@ -61,7 +61,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     * rowsSent  结果行数量。
     * rowsExamined  扫描的行数量。
     * database  所属数据库。
-    * users  帐号。
+    * users  账号。
     * querySample  执行语法。
     * type  语句类型。
     * startTime  发生时间，UTC时间。
@@ -116,7 +116,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     * rowsSent  结果行数量。
     * rowsExamined  扫描的行数量。
     * database  所属数据库。
-    * users  帐号。
+    * users  账号。
     * querySample  执行语法。
     * type  语句类型。
     * startTime  发生时间，UTC时间。
@@ -150,7 +150,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     * rowsSent  结果行数量。
     * rowsExamined  扫描的行数量。
     * database  所属数据库。
-    * users  帐号。
+    * users  账号。
     * querySample  执行语法。
     * type  语句类型。
     * startTime  发生时间，UTC时间。
@@ -184,7 +184,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     * rowsSent  结果行数量。
     * rowsExamined  扫描的行数量。
     * database  所属数据库。
-    * users  帐号。
+    * users  账号。
     * querySample  执行语法。
     * type  语句类型。
     * startTime  发生时间，UTC时间。
@@ -474,7 +474,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  帐号。
+    *  账号。
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class LtsLogSlowDetail implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param string|null $users 帐号。
+    * @param string|null $users 账号。
     *
     * @return $this
     */

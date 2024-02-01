@@ -21,10 +21,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * roomId  直播间ID
+    * projectId  租户id
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
+    * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
     * modelInfos  数字人模型信息
@@ -38,10 +40,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'roomId' => 'string',
+            'projectId' => 'string',
             'roomName' => 'string',
             'roomType' => 'string',
             'roomState' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'roomDescription' => 'string',
             'coverUrl' => 'string',
             'modelInfos' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ModelInfo[]',
@@ -55,10 +59,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * roomId  直播间ID
+    * projectId  租户id
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
+    * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
     * modelInfos  数字人模型信息
@@ -72,10 +78,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'roomId' => null,
+        'projectId' => null,
         'roomName' => null,
         'roomType' => null,
         'roomState' => null,
         'errorInfo' => null,
+        'sharedConfig' => null,
         'roomDescription' => null,
         'coverUrl' => null,
         'modelInfos' => null,
@@ -110,10 +118,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * roomId  直播间ID
+    * projectId  租户id
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
+    * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
     * modelInfos  数字人模型信息
@@ -127,10 +137,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'roomId' => 'room_id',
+            'projectId' => 'project_id',
             'roomName' => 'room_name',
             'roomType' => 'room_type',
             'roomState' => 'room_state',
             'errorInfo' => 'error_info',
+            'sharedConfig' => 'shared_config',
             'roomDescription' => 'room_description',
             'coverUrl' => 'cover_url',
             'modelInfos' => 'model_infos',
@@ -144,10 +156,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * roomId  直播间ID
+    * projectId  租户id
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
+    * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
     * modelInfos  数字人模型信息
@@ -161,10 +175,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'roomId' => 'setRoomId',
+            'projectId' => 'setProjectId',
             'roomName' => 'setRoomName',
             'roomType' => 'setRoomType',
             'roomState' => 'setRoomState',
             'errorInfo' => 'setErrorInfo',
+            'sharedConfig' => 'setSharedConfig',
             'roomDescription' => 'setRoomDescription',
             'coverUrl' => 'setCoverUrl',
             'modelInfos' => 'setModelInfos',
@@ -178,10 +194,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * roomId  直播间ID
+    * projectId  租户id
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
+    * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
     * modelInfos  数字人模型信息
@@ -195,10 +213,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'roomId' => 'getRoomId',
+            'projectId' => 'getProjectId',
             'roomName' => 'getRoomName',
             'roomType' => 'getRoomType',
             'roomState' => 'getRoomState',
             'errorInfo' => 'getErrorInfo',
+            'sharedConfig' => 'getSharedConfig',
             'roomDescription' => 'getRoomDescription',
             'coverUrl' => 'getCoverUrl',
             'modelInfos' => 'getModelInfos',
@@ -325,10 +345,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['roomName'] = isset($data['roomName']) ? $data['roomName'] : null;
         $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
         $this->container['roomState'] = isset($data['roomState']) ? $data['roomState'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
+        $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['roomDescription'] = isset($data['roomDescription']) ? $data['roomDescription'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['modelInfos'] = isset($data['modelInfos']) ? $data['modelInfos'] : null;
@@ -352,6 +374,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['roomName']) && (mb_strlen($this->container['roomName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'roomName', the character length must be smaller than or equal to 256.";
@@ -470,6 +498,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets projectId
+    *  租户id
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 租户id
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
     * Gets roomName
     *  直播间名称
     *
@@ -562,6 +614,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setErrorInfo($errorInfo)
     {
         $this->container['errorInfo'] = $errorInfo;
+        return $this;
+    }
+
+    /**
+    * Gets sharedConfig
+    *  sharedConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null
+    */
+    public function getSharedConfig()
+    {
+        return $this->container['sharedConfig'];
+    }
+
+    /**
+    * Sets sharedConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null $sharedConfig sharedConfig
+    *
+    * @return $this
+    */
+    public function setSharedConfig($sharedConfig)
+    {
+        $this->container['sharedConfig'] = $sharedConfig;
         return $this;
     }
 

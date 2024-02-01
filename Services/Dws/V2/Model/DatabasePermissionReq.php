@@ -26,6 +26,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     * revokeList  撤销权限列表 is_grant为false时必填
     * roleList  被授权角色列表
     * objectList  权限所属对象列表
+    * allObject  schema下所有数据库对象权限，默认false
     * cascade  撤销权限是否级联撤销 默认 true
     * database  数据库名称
     * schema  模式名称
@@ -40,6 +41,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
             'revokeList' => '\HuaweiCloud\SDK\Dws\V2\Model\Revoke[]',
             'roleList' => 'string[]',
             'objectList' => 'object',
+            'allObject' => 'bool',
             'cascade' => 'bool',
             'database' => 'string',
             'schema' => 'string',
@@ -54,6 +56,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     * revokeList  撤销权限列表 is_grant为false时必填
     * roleList  被授权角色列表
     * objectList  权限所属对象列表
+    * allObject  schema下所有数据库对象权限，默认false
     * cascade  撤销权限是否级联撤销 默认 true
     * database  数据库名称
     * schema  模式名称
@@ -68,6 +71,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
         'revokeList' => null,
         'roleList' => null,
         'objectList' => null,
+        'allObject' => null,
         'cascade' => null,
         'database' => null,
         'schema' => null,
@@ -103,6 +107,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     * revokeList  撤销权限列表 is_grant为false时必填
     * roleList  被授权角色列表
     * objectList  权限所属对象列表
+    * allObject  schema下所有数据库对象权限，默认false
     * cascade  撤销权限是否级联撤销 默认 true
     * database  数据库名称
     * schema  模式名称
@@ -117,6 +122,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
             'revokeList' => 'revoke_list',
             'roleList' => 'role_list',
             'objectList' => 'object_list',
+            'allObject' => 'all_object',
             'cascade' => 'cascade',
             'database' => 'database',
             'schema' => 'schema',
@@ -131,6 +137,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     * revokeList  撤销权限列表 is_grant为false时必填
     * roleList  被授权角色列表
     * objectList  权限所属对象列表
+    * allObject  schema下所有数据库对象权限，默认false
     * cascade  撤销权限是否级联撤销 默认 true
     * database  数据库名称
     * schema  模式名称
@@ -145,6 +152,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
             'revokeList' => 'setRevokeList',
             'roleList' => 'setRoleList',
             'objectList' => 'setObjectList',
+            'allObject' => 'setAllObject',
             'cascade' => 'setCascade',
             'database' => 'setDatabase',
             'schema' => 'setSchema',
@@ -159,6 +167,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     * revokeList  撤销权限列表 is_grant为false时必填
     * roleList  被授权角色列表
     * objectList  权限所属对象列表
+    * allObject  schema下所有数据库对象权限，默认false
     * cascade  撤销权限是否级联撤销 默认 true
     * database  数据库名称
     * schema  模式名称
@@ -173,6 +182,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
             'revokeList' => 'getRevokeList',
             'roleList' => 'getRoleList',
             'objectList' => 'getObjectList',
+            'allObject' => 'getAllObject',
             'cascade' => 'getCascade',
             'database' => 'getDatabase',
             'schema' => 'getSchema',
@@ -243,6 +253,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
         $this->container['revokeList'] = isset($data['revokeList']) ? $data['revokeList'] : null;
         $this->container['roleList'] = isset($data['roleList']) ? $data['roleList'] : null;
         $this->container['objectList'] = isset($data['objectList']) ? $data['objectList'] : null;
+        $this->container['allObject'] = isset($data['allObject']) ? $data['allObject'] : null;
         $this->container['cascade'] = isset($data['cascade']) ? $data['cascade'] : null;
         $this->container['database'] = isset($data['database']) ? $data['database'] : null;
         $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
@@ -427,6 +438,30 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     public function setObjectList($objectList)
     {
         $this->container['objectList'] = $objectList;
+        return $this;
+    }
+
+    /**
+    * Gets allObject
+    *  schema下所有数据库对象权限，默认false
+    *
+    * @return bool|null
+    */
+    public function getAllObject()
+    {
+        return $this->container['allObject'];
+    }
+
+    /**
+    * Sets allObject
+    *
+    * @param bool|null $allObject schema下所有数据库对象权限，默认false
+    *
+    * @return $this
+    */
+    public function setAllObject($allObject)
+    {
+        $this->container['allObject'] = $allObject;
         return $this;
     }
 

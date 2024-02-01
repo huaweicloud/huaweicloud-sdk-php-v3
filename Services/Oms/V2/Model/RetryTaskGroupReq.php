@@ -22,6 +22,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * srcAk  源端ak（最大长度100个字符）
     * srcSk  源端sk（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
     * sourceCdnAuthenticationKey  cdn鉴权秘钥
@@ -32,6 +33,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'srcAk' => 'string',
             'srcSk' => 'string',
+            'jsonAuthFile' => 'string',
             'dstAk' => 'string',
             'dstSk' => 'string',
             'sourceCdnAuthenticationKey' => 'string',
@@ -42,6 +44,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * srcAk  源端ak（最大长度100个字符）
     * srcSk  源端sk（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
     * sourceCdnAuthenticationKey  cdn鉴权秘钥
@@ -52,6 +55,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'srcAk' => null,
         'srcSk' => null,
+        'jsonAuthFile' => null,
         'dstAk' => null,
         'dstSk' => null,
         'sourceCdnAuthenticationKey' => null,
@@ -83,6 +87,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * srcAk  源端ak（最大长度100个字符）
     * srcSk  源端sk（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
     * sourceCdnAuthenticationKey  cdn鉴权秘钥
@@ -93,6 +98,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'srcAk' => 'src_ak',
             'srcSk' => 'src_sk',
+            'jsonAuthFile' => 'json_auth_file',
             'dstAk' => 'dst_ak',
             'dstSk' => 'dst_sk',
             'sourceCdnAuthenticationKey' => 'source_cdn_authentication_key',
@@ -103,6 +109,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * srcAk  源端ak（最大长度100个字符）
     * srcSk  源端sk（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
     * sourceCdnAuthenticationKey  cdn鉴权秘钥
@@ -113,6 +120,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'srcAk' => 'setSrcAk',
             'srcSk' => 'setSrcSk',
+            'jsonAuthFile' => 'setJsonAuthFile',
             'dstAk' => 'setDstAk',
             'dstSk' => 'setDstSk',
             'sourceCdnAuthenticationKey' => 'setSourceCdnAuthenticationKey',
@@ -123,6 +131,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * srcAk  源端ak（最大长度100个字符）
     * srcSk  源端sk（最大长度100个字符）
+    * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
     * sourceCdnAuthenticationKey  cdn鉴权秘钥
@@ -133,6 +142,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'srcAk' => 'getSrcAk',
             'srcSk' => 'getSrcSk',
+            'jsonAuthFile' => 'getJsonAuthFile',
             'dstAk' => 'getDstAk',
             'dstSk' => 'getDstSk',
             'sourceCdnAuthenticationKey' => 'getSourceCdnAuthenticationKey',
@@ -199,6 +209,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     {
         $this->container['srcAk'] = isset($data['srcAk']) ? $data['srcAk'] : null;
         $this->container['srcSk'] = isset($data['srcSk']) ? $data['srcSk'] : null;
+        $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['dstAk'] = isset($data['dstAk']) ? $data['dstAk'] : null;
         $this->container['dstSk'] = isset($data['dstSk']) ? $data['dstSk'] : null;
         $this->container['sourceCdnAuthenticationKey'] = isset($data['sourceCdnAuthenticationKey']) ? $data['sourceCdnAuthenticationKey'] : null;
@@ -230,6 +241,12 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['srcSk']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['srcSk'])) {
                 $invalidProperties[] = "invalid value for 'srcSk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) < 0)) {
+                $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['dstAk']) && (mb_strlen($this->container['dstAk']) > 100)) {
                 $invalidProperties[] = "invalid value for 'dstAk', the character length must be smaller than or equal to 100.";
@@ -317,6 +334,30 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     public function setSrcSk($srcSk)
     {
         $this->container['srcSk'] = $srcSk;
+        return $this;
+    }
+
+    /**
+    * Gets jsonAuthFile
+    *  用于谷歌云Cloud Storage鉴权
+    *
+    * @return string|null
+    */
+    public function getJsonAuthFile()
+    {
+        return $this->container['jsonAuthFile'];
+    }
+
+    /**
+    * Sets jsonAuthFile
+    *
+    * @param string|null $jsonAuthFile 用于谷歌云Cloud Storage鉴权
+    *
+    * @return $this
+    */
+    public function setJsonAuthFile($jsonAuthFile)
+    {
+        $this->container['jsonAuthFile'] = $jsonAuthFile;
         return $this;
     }
 

@@ -24,6 +24,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'customerId' => 'string',
             'budgetAmount' => 'double',
             'cancelPartnerFrozen' => 'string',
-            'indirectPartnerId' => 'string'
+            'indirectPartnerId' => 'string',
+            'budgetType' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
         'customerId' => null,
         'budgetAmount' => 'double',
         'cancelPartnerFrozen' => null,
-        'indirectPartnerId' => null
+        'indirectPartnerId' => null,
+        'budgetType' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'customerId' => 'customer_id',
             'budgetAmount' => 'budget_amount',
             'cancelPartnerFrozen' => 'cancel_partner_frozen',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'indirectPartnerId' => 'indirect_partner_id',
+            'budgetType' => 'budget_type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'customerId' => 'setCustomerId',
             'budgetAmount' => 'setBudgetAmount',
             'cancelPartnerFrozen' => 'setCancelPartnerFrozen',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'indirectPartnerId' => 'setIndirectPartnerId',
+            'budgetType' => 'setBudgetType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             'customerId' => 'getCustomerId',
             'budgetAmount' => 'getBudgetAmount',
             'cancelPartnerFrozen' => 'getCancelPartnerFrozen',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'indirectPartnerId' => 'getIndirectPartnerId',
+            'budgetType' => 'getBudgetType'
     ];
 
     /**
@@ -159,7 +169,22 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const BUDGET_TYPE_MONTHLY = 'MONTHLY';
+    const BUDGET_TYPE_PACKAGE = 'PACKAGE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBudgetTypeAllowableValues()
+    {
+        return [
+            self::BUDGET_TYPE_MONTHLY,
+            self::BUDGET_TYPE_PACKAGE,
+        ];
+    }
 
 
     /**
@@ -181,6 +206,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
         $this->container['budgetAmount'] = isset($data['budgetAmount']) ? $data['budgetAmount'] : null;
         $this->container['cancelPartnerFrozen'] = isset($data['cancelPartnerFrozen']) ? $data['cancelPartnerFrozen'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
+        $this->container['budgetType'] = isset($data['budgetType']) ? $data['budgetType'] : null;
     }
 
     /**
@@ -221,6 +247,14 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getBudgetTypeAllowableValues();
+                if (!is_null($this->container['budgetType']) && !in_array($this->container['budgetType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'budgetType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -328,6 +362,30 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     public function setIndirectPartnerId($indirectPartnerId)
     {
         $this->container['indirectPartnerId'] = $indirectPartnerId;
+        return $this;
+    }
+
+    /**
+    * Gets budgetType
+    *  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    *
+    * @return string|null
+    */
+    public function getBudgetType()
+    {
+        return $this->container['budgetType'];
+    }
+
+    /**
+    * Sets budgetType
+    *
+    * @param string|null $budgetType |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    *
+    * @return $this
+    */
+    public function setBudgetType($budgetType)
+    {
+        $this->container['budgetType'] = $budgetType;
         return $this;
     }
 

@@ -414,11 +414,11 @@ class KafkaClient extends Client
     }
 
     /**
-     * 创建实例的转储节点
+     * 创建实例的Smart Connect节点
      *
-     * 创建实例的转储节点。
+     * 创建Smart Connect节点。
      * 
-     * **当前通过调用API，只支持按需实例创建转储节点。**
+     * **当前通过调用API，只支持按需实例创建Smart Connect节点。**
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1000,74 +1000,6 @@ class KafkaClient extends Client
     }
 
     /**
-     * 实例缩容
-     *
-     * 实例缩容
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createShrinkageJob($request)
-    {
-        return $this->createShrinkageJobWithHttpInfo($request);
-    }
-
-    public function createShrinkageJobWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{engine}/{project_id}/instances/{instance_id}/shrink';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['engine'] !== null) {
-            $pathParams['engine'] = $localVarParams['engine'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateShrinkageJobResponse',
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateShrinkageJobRequest');
-    }
-
-    /**
      * 创建转储任务
      *
      * 创建转储任务。
@@ -1231,6 +1163,9 @@ class KafkaClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1238,7 +1173,7 @@ class KafkaClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -4217,74 +4152,6 @@ class KafkaClient extends Client
     }
 
     /**
-     * 实例缩容前置检查
-     *
-     * 实例缩容前置检查。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showShrinkCheckResult($request)
-    {
-        return $this->showShrinkCheckResultWithHttpInfo($request);
-    }
-
-    public function showShrinkCheckResultWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{engine}/{project_id}/instances/{instance_id}/shrink-check';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['engine'] !== null) {
-            $pathParams['engine'] = $localVarParams['engine'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowShrinkCheckResultResponse',
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowShrinkCheckResultRequest');
-    }
-
-    /**
      * 查询单个转储任务
      *
      * 查询单个转储任务。
@@ -4884,73 +4751,6 @@ class KafkaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateKafkaUserClientQuotaTaskResponse',
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateKafkaUserClientQuotaTaskRequest');
-    }
-
-    /**
-     * 修改转储任务的配额
-     *
-     * 修改转储任务的配额。
-     * 
-     * 2022年9月前创建的实例支持调用此接口新增转储任务配额，2022年9月及以后创建的实例，转储任务配额默认为最大值，由于转储任务配额不支持减少，调用此接口修改转储任务配额会报错。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateSinkTaskQuota($request)
-    {
-        return $this->updateSinkTaskQuotaWithHttpInfo($request);
-    }
-
-    public function updateSinkTaskQuotaWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/connectors/{connector_id}/sink-tasks';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['connectorId'] !== null) {
-            $pathParams['connector_id'] = $localVarParams['connectorId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateSinkTaskQuotaResponse',
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateSinkTaskQuotaRequest');
     }
 
     /**

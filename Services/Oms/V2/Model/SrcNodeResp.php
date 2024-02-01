@@ -21,7 +21,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bucket  源端桶的名称。
-    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域。
     * appId  当源端为腾讯云时，会返回此参数。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
@@ -41,7 +41,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucket  源端桶的名称。
-    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域。
     * appId  当源端为腾讯云时，会返回此参数。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
@@ -82,7 +82,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bucket  源端桶的名称。
-    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域。
     * appId  当源端为腾讯云时，会返回此参数。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
@@ -102,7 +102,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucket  源端桶的名称。
-    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域。
     * appId  当源端为腾讯云时，会返回此参数。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
@@ -122,7 +122,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucket  源端桶的名称。
-    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * cloudType  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     * region  源端桶所处的区域。
     * appId  当源端为腾讯云时，会返回此参数。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
@@ -190,6 +190,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     const CLOUD_TYPE_QINIU = 'Qiniu';
     const CLOUD_TYPE_URL_SOURCE = 'URLSource';
     const CLOUD_TYPE_U_CLOUD = 'UCloud';
+    const CLOUD_TYPE_GOOGLE = 'Google';
     
 
     /**
@@ -211,6 +212,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
             self::CLOUD_TYPE_QINIU,
             self::CLOUD_TYPE_URL_SOURCE,
             self::CLOUD_TYPE_U_CLOUD,
+            self::CLOUD_TYPE_GOOGLE,
         ];
     }
 
@@ -321,7 +323,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudType
-    *  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    *  源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return string|null
     */
@@ -333,7 +335,7 @@ class SrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Sets cloudType
     *
-    * @param string|null $cloudType 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
+    * @param string|null $cloudType 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Google、Qiniu、URLSource或者UCloud。默认值为Aliyun。
     *
     * @return $this
     */

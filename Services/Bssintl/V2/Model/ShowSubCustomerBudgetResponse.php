@@ -25,6 +25,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
             'budgetAmount' => 'double',
             'usedAmount' => 'double',
             'measureId' => 'int',
-            'currency' => 'string'
+            'currency' => 'string',
+            'budgetType' => 'string'
     ];
 
     /**
@@ -41,6 +43,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
         'budgetAmount' => 'double',
         'usedAmount' => 'double',
         'measureId' => 'int32',
-        'currency' => null
+        'currency' => null,
+        'budgetType' => null
     ];
 
     /**
@@ -78,6 +82,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
             'budgetAmount' => 'budget_amount',
             'usedAmount' => 'used_amount',
             'measureId' => 'measure_id',
-            'currency' => 'currency'
+            'currency' => 'currency',
+            'budgetType' => 'budget_type'
     ];
 
     /**
@@ -94,6 +100,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
             'budgetAmount' => 'setBudgetAmount',
             'usedAmount' => 'setUsedAmount',
             'measureId' => 'setMeasureId',
-            'currency' => 'setCurrency'
+            'currency' => 'setCurrency',
+            'budgetType' => 'setBudgetType'
     ];
 
     /**
@@ -110,6 +118,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
+    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
             'budgetAmount' => 'getBudgetAmount',
             'usedAmount' => 'getUsedAmount',
             'measureId' => 'getMeasureId',
-            'currency' => 'getCurrency'
+            'currency' => 'getCurrency',
+            'budgetType' => 'getBudgetType'
     ];
 
     /**
@@ -160,7 +170,22 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const BUDGET_TYPE_MONTHLY = 'MONTHLY';
+    const BUDGET_TYPE_PACKAGE = 'PACKAGE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getBudgetTypeAllowableValues()
+    {
+        return [
+            self::BUDGET_TYPE_MONTHLY,
+            self::BUDGET_TYPE_PACKAGE,
+        ];
+    }
 
 
     /**
@@ -182,6 +207,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
         $this->container['usedAmount'] = isset($data['usedAmount']) ? $data['usedAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['budgetType'] = isset($data['budgetType']) ? $data['budgetType'] : null;
     }
 
     /**
@@ -192,6 +218,14 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getBudgetTypeAllowableValues();
+                if (!is_null($this->container['budgetType']) && !in_array($this->container['budgetType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'budgetType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -299,6 +333,30 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+        return $this;
+    }
+
+    /**
+    * Gets budgetType
+    *  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    *
+    * @return string|null
+    */
+    public function getBudgetType()
+    {
+        return $this->container['budgetType'];
+    }
+
+    /**
+    * Sets budgetType
+    *
+    * @param string|null $budgetType |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    *
+    * @return $this
+    */
+    public function setBudgetType($budgetType)
+    {
+        $this->container['budgetType'] = $budgetType;
         return $this;
     }
 

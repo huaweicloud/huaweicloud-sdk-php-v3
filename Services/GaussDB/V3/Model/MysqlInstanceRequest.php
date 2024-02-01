@@ -42,6 +42,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'lowerCaseTableNames' => 'int',
             'enterpriseProjectId' => 'string',
             'dedicatedResourceId' => 'string',
-            'restorePoint' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlRestorePoint'
+            'restorePoint' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlRestorePoint',
+            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo'
     ];
 
     /**
@@ -94,6 +96,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
         'lowerCaseTableNames' => 'int32',
         'enterpriseProjectId' => null,
         'dedicatedResourceId' => null,
-        'restorePoint' => null
+        'restorePoint' => null,
+        'tdeInfo' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'lowerCaseTableNames' => 'lower_case_table_names',
             'enterpriseProjectId' => 'enterprise_project_id',
             'dedicatedResourceId' => 'dedicated_resource_id',
-            'restorePoint' => 'restore_point'
+            'restorePoint' => 'restore_point',
+            'tdeInfo' => 'tde_info'
     ];
 
     /**
@@ -219,6 +225,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'lowerCaseTableNames' => 'setLowerCaseTableNames',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'dedicatedResourceId' => 'setDedicatedResourceId',
-            'restorePoint' => 'setRestorePoint'
+            'restorePoint' => 'setRestorePoint',
+            'tdeInfo' => 'setTdeInfo'
     ];
 
     /**
@@ -271,6 +279,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'lowerCaseTableNames' => 'getLowerCaseTableNames',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'dedicatedResourceId' => 'getDedicatedResourceId',
-            'restorePoint' => 'getRestorePoint'
+            'restorePoint' => 'getRestorePoint',
+            'tdeInfo' => 'getTdeInfo'
     ];
 
     /**
@@ -379,6 +389,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['restorePoint'] = isset($data['restorePoint']) ? $data['restorePoint'] : null;
+        $this->container['tdeInfo'] = isset($data['tdeInfo']) ? $data['tdeInfo'] : null;
     }
 
     /**
@@ -958,6 +969,30 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     public function setRestorePoint($restorePoint)
     {
         $this->container['restorePoint'] = $restorePoint;
+        return $this;
+    }
+
+    /**
+    * Gets tdeInfo
+    *  tdeInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo|null
+    */
+    public function getTdeInfo()
+    {
+        return $this->container['tdeInfo'];
+    }
+
+    /**
+    * Sets tdeInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo|null $tdeInfo tdeInfo
+    *
+    * @return $this
+    */
+    public function setTdeInfo($tdeInfo)
+    {
+        $this->container['tdeInfo'] = $tdeInfo;
         return $this;
     }
 

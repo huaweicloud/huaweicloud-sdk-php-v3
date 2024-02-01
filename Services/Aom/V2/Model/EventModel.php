@@ -23,7 +23,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * startsAt  事件或者告警产生的时间，CST毫秒级时间戳。
     * endsAt  事件或者告警清除的时间，CST毫秒级时间戳，为0时表示未删除。
     * timeout  告警自动清除时间。毫秒数，例如一分钟则填写为60000。默认清除时间为3天,对应数字为 4320 * 1000（即：3天 * 24小时 * 60分钟 * 1000毫秒）。
-    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
@@ -35,8 +35,8 @@ class EventModel implements ModelInterface, ArrayAccess
             'endsAt' => 'int',
             'timeout' => 'int',
             'metadata' => 'map[string,string]',
-            'annotations' => 'map[string,string]',
-            'attachRule' => 'map[string,string]',
+            'annotations' => 'map[string,object]',
+            'attachRule' => 'map[string,object]',
             'id' => 'string'
     ];
 
@@ -45,7 +45,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * startsAt  事件或者告警产生的时间，CST毫秒级时间戳。
     * endsAt  事件或者告警清除的时间，CST毫秒级时间戳，为0时表示未删除。
     * timeout  告警自动清除时间。毫秒数，例如一分钟则填写为60000。默认清除时间为3天,对应数字为 4320 * 1000（即：3天 * 24小时 * 60分钟 * 1000毫秒）。
-    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
@@ -88,7 +88,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * startsAt  事件或者告警产生的时间，CST毫秒级时间戳。
     * endsAt  事件或者告警清除的时间，CST毫秒级时间戳，为0时表示未删除。
     * timeout  告警自动清除时间。毫秒数，例如一分钟则填写为60000。默认清除时间为3天,对应数字为 4320 * 1000（即：3天 * 24小时 * 60分钟 * 1000毫秒）。
-    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
@@ -110,7 +110,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * startsAt  事件或者告警产生的时间，CST毫秒级时间戳。
     * endsAt  事件或者告警清除的时间，CST毫秒级时间戳，为0时表示未删除。
     * timeout  告警自动清除时间。毫秒数，例如一分钟则填写为60000。默认清除时间为3天,对应数字为 4320 * 1000（即：3天 * 24小时 * 60分钟 * 1000毫秒）。
-    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
@@ -132,7 +132,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * startsAt  事件或者告警产生的时间，CST毫秒级时间戳。
     * endsAt  事件或者告警清除的时间，CST毫秒级时间戳，为0时表示未删除。
     * timeout  告警自动清除时间。毫秒数，例如一分钟则填写为60000。默认清除时间为3天,对应数字为 4320 * 1000（即：3天 * 24小时 * 60分钟 * 1000毫秒）。
-    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * metadata  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
@@ -312,7 +312,7 @@ class EventModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
-    *  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    *  事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     *
     * @return map[string,string]|null
     */
@@ -324,7 +324,7 @@ class EventModel implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param map[string,string]|null $metadata 事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为普通告警，alarm为告警事件；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
+    * @param map[string,string]|null $metadata 事件或者告警的详细信息，为键值对形式。必须字段为：  - event_name：事件或者告警名称,类型为String；  - event_severity：事件级别枚举值。类型为String，四种类型 \"Critical\", \"Major\", \"Minor\", \"Info\"；  - event_type：事件类别枚举值。类型为String，event为告警事件，alarm为普通告警；  - resource_provider：事件对应云服务名称。类型为String；  - resource_type：事件对应资源类型。类型为String；  - resource_id：事件对应资源信息。类型为String。
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * Gets annotations
     *  事件或者告警附加字段，可以为空。
     *
-    * @return map[string,string]|null
+    * @return map[string,object]|null
     */
     public function getAnnotations()
     {
@@ -348,7 +348,7 @@ class EventModel implements ModelInterface, ArrayAccess
     /**
     * Sets annotations
     *
-    * @param map[string,string]|null $annotations 事件或者告警附加字段，可以为空。
+    * @param map[string,object]|null $annotations 事件或者告警附加字段，可以为空。
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class EventModel implements ModelInterface, ArrayAccess
     * Gets attachRule
     *  事件或者告警预留字段，为空。
     *
-    * @return map[string,string]|null
+    * @return map[string,object]|null
     */
     public function getAttachRule()
     {
@@ -372,7 +372,7 @@ class EventModel implements ModelInterface, ArrayAccess
     /**
     * Sets attachRule
     *
-    * @param map[string,string]|null $attachRule 事件或者告警预留字段，为空。
+    * @param map[string,object]|null $attachRule 事件或者告警预留字段，为空。
     *
     * @return $this
     */

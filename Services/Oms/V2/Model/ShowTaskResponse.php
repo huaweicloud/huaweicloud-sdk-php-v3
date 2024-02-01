@@ -56,6 +56,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * successRecordErrorReason  迁移成功对象列表记录失败错误码，记录成功时为空
     * skipRecordErrorReason  迁移忽略对象列表记录失败错误码,记录记录成功时为空。
     * objectOverwriteMode  迁移前同名对象覆盖方式，用于迁移前判断源端与目的端有同名对象时，覆盖目的端或跳过迁移。默认SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE。 NO_OVERWRITE：不覆盖。迁移前源端对象与目的端对象同名时，不做对比直接跳过迁移。 SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE：大小/最后修改时间对比覆盖。默认配置。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象大小和最后修改时间，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。源端与目的端同名对象大小不相同，或目的端对象的最后修改时间晚于源端对象的最后修改时间(源端较新)，覆盖目的端。 CRC64_COMPARISON_OVERWRITE：CRC64对比覆盖。目前仅支持华为/阿里/腾讯。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象元数据中CRC64值是否相同，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE(大小/最后修改时间对比覆盖)来对比进行覆盖判断。 FULL_OVERWRITE：全覆盖。迁移前源端对象与目的端对象同名时，不做对比覆盖目的端。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
     *
@@ -97,6 +98,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'successRecordErrorReason' => 'string',
             'skipRecordErrorReason' => 'string',
             'objectOverwriteMode' => 'string',
+            'dstStoragePolicy' => 'string',
             'consistencyCheck' => 'string',
             'enableRequesterPays' => 'bool'
     ];
@@ -138,6 +140,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * successRecordErrorReason  迁移成功对象列表记录失败错误码，记录成功时为空
     * skipRecordErrorReason  迁移忽略对象列表记录失败错误码,记录记录成功时为空。
     * objectOverwriteMode  迁移前同名对象覆盖方式，用于迁移前判断源端与目的端有同名对象时，覆盖目的端或跳过迁移。默认SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE。 NO_OVERWRITE：不覆盖。迁移前源端对象与目的端对象同名时，不做对比直接跳过迁移。 SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE：大小/最后修改时间对比覆盖。默认配置。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象大小和最后修改时间，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。源端与目的端同名对象大小不相同，或目的端对象的最后修改时间晚于源端对象的最后修改时间(源端较新)，覆盖目的端。 CRC64_COMPARISON_OVERWRITE：CRC64对比覆盖。目前仅支持华为/阿里/腾讯。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象元数据中CRC64值是否相同，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE(大小/最后修改时间对比覆盖)来对比进行覆盖判断。 FULL_OVERWRITE：全覆盖。迁移前源端对象与目的端对象同名时，不做对比覆盖目的端。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
     *
@@ -179,6 +182,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'successRecordErrorReason' => null,
         'skipRecordErrorReason' => null,
         'objectOverwriteMode' => null,
+        'dstStoragePolicy' => null,
         'consistencyCheck' => null,
         'enableRequesterPays' => null
     ];
@@ -241,6 +245,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * successRecordErrorReason  迁移成功对象列表记录失败错误码，记录成功时为空
     * skipRecordErrorReason  迁移忽略对象列表记录失败错误码,记录记录成功时为空。
     * objectOverwriteMode  迁移前同名对象覆盖方式，用于迁移前判断源端与目的端有同名对象时，覆盖目的端或跳过迁移。默认SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE。 NO_OVERWRITE：不覆盖。迁移前源端对象与目的端对象同名时，不做对比直接跳过迁移。 SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE：大小/最后修改时间对比覆盖。默认配置。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象大小和最后修改时间，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。源端与目的端同名对象大小不相同，或目的端对象的最后修改时间晚于源端对象的最后修改时间(源端较新)，覆盖目的端。 CRC64_COMPARISON_OVERWRITE：CRC64对比覆盖。目前仅支持华为/阿里/腾讯。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象元数据中CRC64值是否相同，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE(大小/最后修改时间对比覆盖)来对比进行覆盖判断。 FULL_OVERWRITE：全覆盖。迁移前源端对象与目的端对象同名时，不做对比覆盖目的端。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
     *
@@ -282,6 +287,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'successRecordErrorReason' => 'success_record_error_reason',
             'skipRecordErrorReason' => 'skip_record_error_reason',
             'objectOverwriteMode' => 'object_overwrite_mode',
+            'dstStoragePolicy' => 'dst_storage_policy',
             'consistencyCheck' => 'consistency_check',
             'enableRequesterPays' => 'enable_requester_pays'
     ];
@@ -323,6 +329,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * successRecordErrorReason  迁移成功对象列表记录失败错误码，记录成功时为空
     * skipRecordErrorReason  迁移忽略对象列表记录失败错误码,记录记录成功时为空。
     * objectOverwriteMode  迁移前同名对象覆盖方式，用于迁移前判断源端与目的端有同名对象时，覆盖目的端或跳过迁移。默认SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE。 NO_OVERWRITE：不覆盖。迁移前源端对象与目的端对象同名时，不做对比直接跳过迁移。 SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE：大小/最后修改时间对比覆盖。默认配置。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象大小和最后修改时间，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。源端与目的端同名对象大小不相同，或目的端对象的最后修改时间晚于源端对象的最后修改时间(源端较新)，覆盖目的端。 CRC64_COMPARISON_OVERWRITE：CRC64对比覆盖。目前仅支持华为/阿里/腾讯。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象元数据中CRC64值是否相同，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE(大小/最后修改时间对比覆盖)来对比进行覆盖判断。 FULL_OVERWRITE：全覆盖。迁移前源端对象与目的端对象同名时，不做对比覆盖目的端。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
     *
@@ -364,6 +371,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'successRecordErrorReason' => 'setSuccessRecordErrorReason',
             'skipRecordErrorReason' => 'setSkipRecordErrorReason',
             'objectOverwriteMode' => 'setObjectOverwriteMode',
+            'dstStoragePolicy' => 'setDstStoragePolicy',
             'consistencyCheck' => 'setConsistencyCheck',
             'enableRequesterPays' => 'setEnableRequesterPays'
     ];
@@ -405,6 +413,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * successRecordErrorReason  迁移成功对象列表记录失败错误码，记录成功时为空
     * skipRecordErrorReason  迁移忽略对象列表记录失败错误码,记录记录成功时为空。
     * objectOverwriteMode  迁移前同名对象覆盖方式，用于迁移前判断源端与目的端有同名对象时，覆盖目的端或跳过迁移。默认SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE。 NO_OVERWRITE：不覆盖。迁移前源端对象与目的端对象同名时，不做对比直接跳过迁移。 SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE：大小/最后修改时间对比覆盖。默认配置。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象大小和最后修改时间，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。源端与目的端同名对象大小不相同，或目的端对象的最后修改时间晚于源端对象的最后修改时间(源端较新)，覆盖目的端。 CRC64_COMPARISON_OVERWRITE：CRC64对比覆盖。目前仅支持华为/阿里/腾讯。迁移前源端对象与目的端对象同名时，通过对比源端和目的端对象元数据中CRC64值是否相同，判断是否覆盖目的端，需满足源端/目的端对象的加密状态一致。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE(大小/最后修改时间对比覆盖)来对比进行覆盖判断。 FULL_OVERWRITE：全覆盖。迁移前源端对象与目的端对象同名时，不做对比覆盖目的端。
+    * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
     *
@@ -446,6 +455,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'successRecordErrorReason' => 'getSuccessRecordErrorReason',
             'skipRecordErrorReason' => 'getSkipRecordErrorReason',
             'objectOverwriteMode' => 'getObjectOverwriteMode',
+            'dstStoragePolicy' => 'getDstStoragePolicy',
             'consistencyCheck' => 'getConsistencyCheck',
             'enableRequesterPays' => 'getEnableRequesterPays'
     ];
@@ -501,6 +511,11 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     const OBJECT_OVERWRITE_MODE_SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE = 'SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE';
     const OBJECT_OVERWRITE_MODE_CRC64_COMPARISON_OVERWRITE = 'CRC64_COMPARISON_OVERWRITE';
     const OBJECT_OVERWRITE_MODE_FULL_OVERWRITE = 'FULL_OVERWRITE';
+    const DST_STORAGE_POLICY_STANDARD = 'STANDARD';
+    const DST_STORAGE_POLICY_IA = 'IA';
+    const DST_STORAGE_POLICY_ARCHIVE = 'ARCHIVE';
+    const DST_STORAGE_POLICY_DEEP_ARCHIVE = 'DEEP_ARCHIVE';
+    const DST_STORAGE_POLICY_SRC_STORAGE_MAPPING = 'SRC_STORAGE_MAPPING';
     const CONSISTENCY_CHECK_SIZE_LAST_MODIFIED = 'size_last_modified';
     const CONSISTENCY_CHECK_CRC64 = 'crc64';
     const CONSISTENCY_CHECK_NO_CHECK = 'no_check';
@@ -547,6 +562,22 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             self::OBJECT_OVERWRITE_MODE_SIZE_LAST_MODIFIED_COMPARISON_OVERWRITE,
             self::OBJECT_OVERWRITE_MODE_CRC64_COMPARISON_OVERWRITE,
             self::OBJECT_OVERWRITE_MODE_FULL_OVERWRITE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDstStoragePolicyAllowableValues()
+    {
+        return [
+            self::DST_STORAGE_POLICY_STANDARD,
+            self::DST_STORAGE_POLICY_IA,
+            self::DST_STORAGE_POLICY_ARCHIVE,
+            self::DST_STORAGE_POLICY_DEEP_ARCHIVE,
+            self::DST_STORAGE_POLICY_SRC_STORAGE_MAPPING,
         ];
     }
 
@@ -615,6 +646,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['successRecordErrorReason'] = isset($data['successRecordErrorReason']) ? $data['successRecordErrorReason'] : null;
         $this->container['skipRecordErrorReason'] = isset($data['skipRecordErrorReason']) ? $data['skipRecordErrorReason'] : null;
         $this->container['objectOverwriteMode'] = isset($data['objectOverwriteMode']) ? $data['objectOverwriteMode'] : null;
+        $this->container['dstStoragePolicy'] = isset($data['dstStoragePolicy']) ? $data['dstStoragePolicy'] : null;
         $this->container['consistencyCheck'] = isset($data['consistencyCheck']) ? $data['consistencyCheck'] : null;
         $this->container['enableRequesterPays'] = isset($data['enableRequesterPays']) ? $data['enableRequesterPays'] : null;
     }
@@ -771,6 +803,20 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getDstStoragePolicyAllowableValues();
+                if (!is_null($this->container['dstStoragePolicy']) && !in_array($this->container['dstStoragePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'dstStoragePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['dstStoragePolicy']) && (mb_strlen($this->container['dstStoragePolicy']) > 128)) {
+                $invalidProperties[] = "invalid value for 'dstStoragePolicy', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['dstStoragePolicy']) && (mb_strlen($this->container['dstStoragePolicy']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dstStoragePolicy', the character length must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getConsistencyCheckAllowableValues();
                 if (!is_null($this->container['consistencyCheck']) && !in_array($this->container['consistencyCheck'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1630,6 +1676,30 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setObjectOverwriteMode($objectOverwriteMode)
     {
         $this->container['objectOverwriteMode'] = $objectOverwriteMode;
+        return $this;
+    }
+
+    /**
+    * Gets dstStoragePolicy
+    *  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
+    *
+    * @return string|null
+    */
+    public function getDstStoragePolicy()
+    {
+        return $this->container['dstStoragePolicy'];
+    }
+
+    /**
+    * Sets dstStoragePolicy
+    *
+    * @param string|null $dstStoragePolicy 目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
+    *
+    * @return $this
+    */
+    public function setDstStoragePolicy($dstStoragePolicy)
+    {
+        $this->container['dstStoragePolicy'] = $dstStoragePolicy;
         return $this;
     }
 

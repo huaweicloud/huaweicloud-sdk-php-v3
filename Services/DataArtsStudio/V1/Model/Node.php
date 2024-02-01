@@ -278,6 +278,7 @@ class Node implements ModelInterface, ArrayAccess
     const TYPE_MRS_FLINK = 'MRSFlink';
     const TYPE_MRS_FLINK_JOB = 'MRSFlinkJob';
     const TYPE_MRS_HETU_ENGINE = 'MRSHetuEngine';
+    const TYPE_DATA_MIGRATION = 'DataMigration';
     const FAIL_POLICY_FAIL = 'FAIL';
     const FAIL_POLICY_IGNORE = 'IGNORE';
     const FAIL_POLICY_SUSPEND = 'SUSPEND';
@@ -311,6 +312,7 @@ class Node implements ModelInterface, ArrayAccess
             self::TYPE_MRS_FLINK,
             self::TYPE_MRS_FLINK_JOB,
             self::TYPE_MRS_HETU_ENGINE,
+            self::TYPE_DATA_MIGRATION,
         ];
     }
 

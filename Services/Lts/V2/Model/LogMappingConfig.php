@@ -191,6 +191,12 @@ class LogMappingConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['sourceLogGroupId'] === null) {
+            $invalidProperties[] = "'sourceLogGroupId' can't be null";
+        }
+        if ($this->container['targetLogGroupName'] === null) {
+            $invalidProperties[] = "'targetLogGroupName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +215,7 @@ class LogMappingConfig implements ModelInterface, ArrayAccess
     * Gets sourceLogGroupId
     *  源日志组ID
     *
-    * @return string|null
+    * @return string
     */
     public function getSourceLogGroupId()
     {
@@ -219,7 +225,7 @@ class LogMappingConfig implements ModelInterface, ArrayAccess
     /**
     * Sets sourceLogGroupId
     *
-    * @param string|null $sourceLogGroupId 源日志组ID
+    * @param string $sourceLogGroupId 源日志组ID
     *
     * @return $this
     */
@@ -257,7 +263,7 @@ class LogMappingConfig implements ModelInterface, ArrayAccess
     * Gets targetLogGroupName
     *  目标日志组名称
     *
-    * @return string|null
+    * @return string
     */
     public function getTargetLogGroupName()
     {
@@ -267,7 +273,7 @@ class LogMappingConfig implements ModelInterface, ArrayAccess
     /**
     * Sets targetLogGroupName
     *
-    * @param string|null $targetLogGroupName 目标日志组名称
+    * @param string $targetLogGroupName 目标日志组名称
     *
     * @return $this
     */

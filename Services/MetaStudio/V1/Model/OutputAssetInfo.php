@@ -23,7 +23,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     * assetId  输出视频资产ID。
     * assetName  输出视频资产名称。
     * coverUrl  视频封面URL。
-    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     * assetId  输出视频资产ID。
     * assetName  输出视频资产名称。
     * coverUrl  视频封面URL。
-    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     * assetId  输出视频资产ID。
     * assetName  输出视频资产名称。
     * coverUrl  视频封面URL。
-    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     * assetId  输出视频资产ID。
     * assetName  输出视频资产名称。
     * coverUrl  视频封面URL。
-    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     * assetId  输出视频资产ID。
     * assetName  输出视频资产名称。
     * coverUrl  视频封面URL。
-    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * previewVideoUrl  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @var string[]
     */
@@ -309,7 +309,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previewVideoUrl
-    *  预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    *  预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class OutputAssetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets previewVideoUrl
     *
-    * @param string|null $previewVideoUrl 预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+    * @param string|null $previewVideoUrl 预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
     *
     * @return $this
     */

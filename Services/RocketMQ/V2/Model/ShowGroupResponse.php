@@ -39,7 +39,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'brokers' => 'string[]',
             'name' => 'string',
             'groupDesc' => 'string',
-            'retryMaxTime' => 'float',
+            'retryMaxTime' => 'int',
             'appId' => 'string',
             'appName' => 'string',
             'permissions' => 'string[]'
@@ -385,7 +385,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * Gets retryMaxTime
     *  最大重试次数。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getRetryMaxTime()
     {
@@ -395,7 +395,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param float|null $retryMaxTime 最大重试次数。
+    * @param int|null $retryMaxTime 最大重试次数。
     *
     * @return $this
     */

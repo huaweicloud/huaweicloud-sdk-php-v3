@@ -114,7 +114,7 @@ class ListSparkJobsRequest implements ModelInterface, ArrayAccess
             'clusterName' => 'cluster_name',
             'end' => 'end',
             'from' => 'from',
-            'jobName' => 'job-name',
+            'jobName' => 'job_name',
             'jobId' => 'job-id',
             'order' => 'order',
             'queueName' => 'queue_name',

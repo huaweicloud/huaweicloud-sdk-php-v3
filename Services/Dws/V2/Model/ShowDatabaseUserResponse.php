@@ -21,6 +21,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  用户名称
     * login  是否可以登陆
     * createrole  创建角色权限
     * createdb  创建数据库权限
@@ -33,10 +34,14 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validBegin  角色生效时间
     * validUntil  角色过期时间
     * lock  是否锁定
+    * desc  描述
+    * userType  用户类型
+    * logicalCluster  所属逻辑集群
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'login' => 'bool',
             'createrole' => 'bool',
             'createdb' => 'bool',
@@ -48,11 +53,15 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
             'replication' => 'bool',
             'validBegin' => 'int',
             'validUntil' => 'int',
-            'lock' => 'bool'
+            'lock' => 'bool',
+            'desc' => 'string',
+            'userType' => 'string',
+            'logicalCluster' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  用户名称
     * login  是否可以登陆
     * createrole  创建角色权限
     * createdb  创建数据库权限
@@ -65,10 +74,14 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validBegin  角色生效时间
     * validUntil  角色过期时间
     * lock  是否锁定
+    * desc  描述
+    * userType  用户类型
+    * logicalCluster  所属逻辑集群
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'login' => null,
         'createrole' => null,
         'createdb' => null,
@@ -80,7 +93,10 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
         'replication' => null,
         'validBegin' => 'int64',
         'validUntil' => 'int64',
-        'lock' => null
+        'lock' => null,
+        'desc' => null,
+        'userType' => null,
+        'logicalCluster' => null
     ];
 
     /**
@@ -106,6 +122,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  用户名称
     * login  是否可以登陆
     * createrole  创建角色权限
     * createdb  创建数据库权限
@@ -118,10 +135,14 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validBegin  角色生效时间
     * validUntil  角色过期时间
     * lock  是否锁定
+    * desc  描述
+    * userType  用户类型
+    * logicalCluster  所属逻辑集群
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'login' => 'login',
             'createrole' => 'createrole',
             'createdb' => 'createdb',
@@ -133,11 +154,15 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
             'replication' => 'replication',
             'validBegin' => 'valid_begin',
             'validUntil' => 'valid_until',
-            'lock' => 'lock'
+            'lock' => 'lock',
+            'desc' => 'desc',
+            'userType' => 'user_type',
+            'logicalCluster' => 'logical_cluster'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  用户名称
     * login  是否可以登陆
     * createrole  创建角色权限
     * createdb  创建数据库权限
@@ -150,10 +175,14 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validBegin  角色生效时间
     * validUntil  角色过期时间
     * lock  是否锁定
+    * desc  描述
+    * userType  用户类型
+    * logicalCluster  所属逻辑集群
     *
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'login' => 'setLogin',
             'createrole' => 'setCreaterole',
             'createdb' => 'setCreatedb',
@@ -165,11 +194,15 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
             'replication' => 'setReplication',
             'validBegin' => 'setValidBegin',
             'validUntil' => 'setValidUntil',
-            'lock' => 'setLock'
+            'lock' => 'setLock',
+            'desc' => 'setDesc',
+            'userType' => 'setUserType',
+            'logicalCluster' => 'setLogicalCluster'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  用户名称
     * login  是否可以登陆
     * createrole  创建角色权限
     * createdb  创建数据库权限
@@ -182,10 +215,14 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validBegin  角色生效时间
     * validUntil  角色过期时间
     * lock  是否锁定
+    * desc  描述
+    * userType  用户类型
+    * logicalCluster  所属逻辑集群
     *
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'login' => 'getLogin',
             'createrole' => 'getCreaterole',
             'createdb' => 'getCreatedb',
@@ -197,7 +234,10 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
             'replication' => 'getReplication',
             'validBegin' => 'getValidBegin',
             'validUntil' => 'getValidUntil',
-            'lock' => 'getLock'
+            'lock' => 'getLock',
+            'desc' => 'getDesc',
+            'userType' => 'getUserType',
+            'logicalCluster' => 'getLogicalCluster'
     ];
 
     /**
@@ -258,6 +298,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
         $this->container['createrole'] = isset($data['createrole']) ? $data['createrole'] : null;
         $this->container['createdb'] = isset($data['createdb']) ? $data['createdb'] : null;
@@ -270,6 +311,9 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
         $this->container['validBegin'] = isset($data['validBegin']) ? $data['validBegin'] : null;
         $this->container['validUntil'] = isset($data['validUntil']) ? $data['validUntil'] : null;
         $this->container['lock'] = isset($data['lock']) ? $data['lock'] : null;
+        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
+        $this->container['userType'] = isset($data['userType']) ? $data['userType'] : null;
+        $this->container['logicalCluster'] = isset($data['logicalCluster']) ? $data['logicalCluster'] : null;
     }
 
     /**
@@ -292,6 +336,30 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  用户名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 用户名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**
@@ -579,6 +647,78 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     public function setLock($lock)
     {
         $this->container['lock'] = $lock;
+        return $this;
+    }
+
+    /**
+    * Gets desc
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDesc()
+    {
+        return $this->container['desc'];
+    }
+
+    /**
+    * Sets desc
+    *
+    * @param string|null $desc 描述
+    *
+    * @return $this
+    */
+    public function setDesc($desc)
+    {
+        $this->container['desc'] = $desc;
+        return $this;
+    }
+
+    /**
+    * Gets userType
+    *  用户类型
+    *
+    * @return string|null
+    */
+    public function getUserType()
+    {
+        return $this->container['userType'];
+    }
+
+    /**
+    * Sets userType
+    *
+    * @param string|null $userType 用户类型
+    *
+    * @return $this
+    */
+    public function setUserType($userType)
+    {
+        $this->container['userType'] = $userType;
+        return $this;
+    }
+
+    /**
+    * Gets logicalCluster
+    *  所属逻辑集群
+    *
+    * @return string|null
+    */
+    public function getLogicalCluster()
+    {
+        return $this->container['logicalCluster'];
+    }
+
+    /**
+    * Sets logicalCluster
+    *
+    * @param string|null $logicalCluster 所属逻辑集群
+    *
+    * @return $this
+    */
+    public function setLogicalCluster($logicalCluster)
+    {
+        $this->container['logicalCluster'] = $logicalCluster;
         return $this;
     }
 

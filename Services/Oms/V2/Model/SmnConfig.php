@@ -23,13 +23,15 @@ class SmnConfig implements ModelInterface, ArrayAccess
     * language  当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
     * topicUrn  迁移任务所绑定的SMN消息主题的urn号。
     * triggerConditions  SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
+    * messageTemplateName  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'language' => 'string',
             'topicUrn' => 'string',
-            'triggerConditions' => 'string[]'
+            'triggerConditions' => 'string[]',
+            'messageTemplateName' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SmnConfig implements ModelInterface, ArrayAccess
     * language  当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
     * topicUrn  迁移任务所绑定的SMN消息主题的urn号。
     * triggerConditions  SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
+    * messageTemplateName  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'language' => null,
         'topicUrn' => null,
-        'triggerConditions' => null
+        'triggerConditions' => null,
+        'messageTemplateName' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SmnConfig implements ModelInterface, ArrayAccess
     * language  当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
     * topicUrn  迁移任务所绑定的SMN消息主题的urn号。
     * triggerConditions  SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
+    * messageTemplateName  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'language' => 'language',
             'topicUrn' => 'topic_urn',
-            'triggerConditions' => 'trigger_conditions'
+            'triggerConditions' => 'trigger_conditions',
+            'messageTemplateName' => 'message_template_name'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SmnConfig implements ModelInterface, ArrayAccess
     * language  当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
     * topicUrn  迁移任务所绑定的SMN消息主题的urn号。
     * triggerConditions  SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
+    * messageTemplateName  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
     *
     * @var string[]
     */
     protected static $setters = [
             'language' => 'setLanguage',
             'topicUrn' => 'setTopicUrn',
-            'triggerConditions' => 'setTriggerConditions'
+            'triggerConditions' => 'setTriggerConditions',
+            'messageTemplateName' => 'setMessageTemplateName'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SmnConfig implements ModelInterface, ArrayAccess
     * language  当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
     * topicUrn  迁移任务所绑定的SMN消息主题的urn号。
     * triggerConditions  SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
+    * messageTemplateName  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
     *
     * @var string[]
     */
     protected static $getters = [
             'language' => 'getLanguage',
             'topicUrn' => 'getTopicUrn',
-            'triggerConditions' => 'getTriggerConditions'
+            'triggerConditions' => 'getTriggerConditions',
+            'messageTemplateName' => 'getMessageTemplateName'
     ];
 
     /**
@@ -185,6 +195,7 @@ class SmnConfig implements ModelInterface, ArrayAccess
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['triggerConditions'] = isset($data['triggerConditions']) ? $data['triggerConditions'] : null;
+        $this->container['messageTemplateName'] = isset($data['messageTemplateName']) ? $data['messageTemplateName'] : null;
     }
 
     /**
@@ -218,6 +229,9 @@ class SmnConfig implements ModelInterface, ArrayAccess
         if ($this->container['triggerConditions'] === null) {
             $invalidProperties[] = "'triggerConditions' can't be null";
         }
+            if (!is_null($this->container['messageTemplateName']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['messageTemplateName'])) {
+                $invalidProperties[] = "invalid value for 'messageTemplateName', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -301,6 +315,30 @@ class SmnConfig implements ModelInterface, ArrayAccess
     public function setTriggerConditions($triggerConditions)
     {
         $this->container['triggerConditions'] = $triggerConditions;
+        return $this;
+    }
+
+    /**
+    * Gets messageTemplateName
+    *  如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
+    *
+    * @return string|null
+    */
+    public function getMessageTemplateName()
+    {
+        return $this->container['messageTemplateName'];
+    }
+
+    /**
+    * Sets messageTemplateName
+    *
+    * @param string|null $messageTemplateName 如果设置此值，则表示用模板方式发送smn信息。 模板示例: {  “Task_Status”: \"\",     \"Task_Name\" : \"\",     \"Start_Time\": \"\",     \"Total_Time_Used\": \"\",     \"Transferred_Data\": \"\",     \"Average_Speed\": \"\",     \"Source_Bucket\": \"\",     \"Destination_Bucket\": \"\",     \"List_File_Bucket\": \"\",     \"List_File_Key\": \"\",     \"Success_object_list_path\": \"\",     \"Skip_object_list_path\": \"\",     \"Failed_object_list_path\": \"\" }
+    *
+    * @return $this
+    */
+    public function setMessageTemplateName($messageTemplateName)
+    {
+        $this->container['messageTemplateName'] = $messageTemplateName;
         return $this;
     }
 

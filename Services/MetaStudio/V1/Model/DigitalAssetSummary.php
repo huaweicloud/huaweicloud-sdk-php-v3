@@ -24,6 +24,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
+    * thumbnailUrl  缩略图路径。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetId' => 'string',
             'assetName' => 'string',
             'assetType' => 'string',
-            'coverUrl' => 'string'
+            'coverUrl' => 'string',
+            'thumbnailUrl' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
+    * thumbnailUrl  缩略图路径。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
         'assetId' => null,
         'assetName' => null,
         'assetType' => null,
-        'coverUrl' => null
+        'coverUrl' => null,
+        'thumbnailUrl' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
+    * thumbnailUrl  缩略图路径。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetId' => 'asset_id',
             'assetName' => 'asset_name',
             'assetType' => 'asset_type',
-            'coverUrl' => 'cover_url'
+            'coverUrl' => 'cover_url',
+            'thumbnailUrl' => 'thumbnail_url'
     ];
 
     /**
@@ -93,6 +99,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
+    * thumbnailUrl  缩略图路径。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetId' => 'setAssetId',
             'assetName' => 'setAssetName',
             'assetType' => 'setAssetType',
-            'coverUrl' => 'setCoverUrl'
+            'coverUrl' => 'setCoverUrl',
+            'thumbnailUrl' => 'setThumbnailUrl'
     ];
 
     /**
@@ -109,6 +117,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * assetName  资产名称。
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
+    * thumbnailUrl  缩略图路径。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             'assetId' => 'getAssetId',
             'assetName' => 'getAssetName',
             'assetType' => 'getAssetType',
-            'coverUrl' => 'getCoverUrl'
+            'coverUrl' => 'getCoverUrl',
+            'thumbnailUrl' => 'getThumbnailUrl'
     ];
 
     /**
@@ -218,6 +228,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
     }
 
     /**
@@ -253,6 +264,12 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['thumbnailUrl']) && (mb_strlen($this->container['thumbnailUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'thumbnailUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['thumbnailUrl']) && (mb_strlen($this->container['thumbnailUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'thumbnailUrl', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -361,6 +378,30 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets thumbnailUrl
+    *  缩略图路径。
+    *
+    * @return string|null
+    */
+    public function getThumbnailUrl()
+    {
+        return $this->container['thumbnailUrl'];
+    }
+
+    /**
+    * Sets thumbnailUrl
+    *
+    * @param string|null $thumbnailUrl 缩略图路径。
+    *
+    * @return $this
+    */
+    public function setThumbnailUrl($thumbnailUrl)
+    {
+        $this->container['thumbnailUrl'] = $thumbnailUrl;
         return $this;
     }
 

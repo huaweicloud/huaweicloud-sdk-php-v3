@@ -158,9 +158,6 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['server'] === null) {
-            $invalidProperties[] = "'server' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     * Gets server
     *  server
     *
-    * @return \HuaweiCloud\SDK\Cbh\V2\Model\CBHInstances
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\CBHInstances|null
     */
     public function getServer()
     {
@@ -189,7 +186,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets server
     *
-    * @param \HuaweiCloud\SDK\Cbh\V2\Model\CBHInstances $server server
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\CBHInstances|null $server server
     *
     * @return $this
     */

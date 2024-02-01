@@ -51,6 +51,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'maintenanceWindow' => 'string',
             'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTags[]',
             'dedicatedResourceId' => 'string',
-            'proxies' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyInfo[]'
+            'proxies' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyInfo[]',
+            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo'
     ];
 
     /**
@@ -121,6 +123,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
         'maintenanceWindow' => null,
         'tags' => null,
         'dedicatedResourceId' => null,
-        'proxies' => null
+        'proxies' => null,
+        'tdeInfo' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'maintenanceWindow' => 'maintenance_window',
             'tags' => 'tags',
             'dedicatedResourceId' => 'dedicated_resource_id',
-            'proxies' => 'proxies'
+            'proxies' => 'proxies',
+            'tdeInfo' => 'tde_info'
     ];
 
     /**
@@ -282,6 +288,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'maintenanceWindow' => 'setMaintenanceWindow',
             'tags' => 'setTags',
             'dedicatedResourceId' => 'setDedicatedResourceId',
-            'proxies' => 'setProxies'
+            'proxies' => 'setProxies',
+            'tdeInfo' => 'setTdeInfo'
     ];
 
     /**
@@ -352,6 +360,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * tags  实例标签。
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
+    * tdeInfo  tdeInfo
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'maintenanceWindow' => 'getMaintenanceWindow',
             'tags' => 'getTags',
             'dedicatedResourceId' => 'getDedicatedResourceId',
-            'proxies' => 'getProxies'
+            'proxies' => 'getProxies',
+            'tdeInfo' => 'getTdeInfo'
     ];
 
     /**
@@ -478,6 +488,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['proxies'] = isset($data['proxies']) ? $data['proxies'] : null;
+        $this->container['tdeInfo'] = isset($data['tdeInfo']) ? $data['tdeInfo'] : null;
     }
 
     /**
@@ -1252,6 +1263,30 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     public function setProxies($proxies)
     {
         $this->container['proxies'] = $proxies;
+        return $this;
+    }
+
+    /**
+    * Gets tdeInfo
+    *  tdeInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo|null
+    */
+    public function getTdeInfo()
+    {
+        return $this->container['tdeInfo'];
+    }
+
+    /**
+    * Sets tdeInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo|null $tdeInfo tdeInfo
+    *
+    * @return $this
+    */
+    public function setTdeInfo($tdeInfo)
+    {
+        $this->container['tdeInfo'] = $tdeInfo;
         return $this;
     }
 

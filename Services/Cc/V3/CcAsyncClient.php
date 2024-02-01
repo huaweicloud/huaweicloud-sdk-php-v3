@@ -3668,6 +3668,875 @@ class CcAsyncClient extends Client
     }
 
     /**
+     * 全域互联带宽绑定实例
+     *
+     * 全域互联带宽绑定实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateGlobalConnectionBandwidthInstanceAsync($request)
+    {
+        return $this->associateGlobalConnectionBandwidthInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function associateGlobalConnectionBandwidthInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/{id}/associate-instance';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\AssociateGlobalConnectionBandwidthInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\AssociateGlobalConnectionBandwidthInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建全域互联带宽
+     *
+     * 创建全域互联带宽。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createGlobalConnectionBandwidthAsync($request)
+    {
+        return $this->createGlobalConnectionBandwidthAsyncWithHttpInfo($request);
+    }
+    
+    public function createGlobalConnectionBandwidthAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateGlobalConnectionBandwidthResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateGlobalConnectionBandwidthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除全域互联带宽
+     *
+     * 删除全域互联带宽。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteGlobalConnectionBandwidthAsync($request)
+    {
+        return $this->deleteGlobalConnectionBandwidthAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteGlobalConnectionBandwidthAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteGlobalConnectionBandwidthResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteGlobalConnectionBandwidthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 全域互联带宽解绑实例
+     *
+     * 全域互联带宽解绑实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateGlobalConnectionBandwidthInstanceAsync($request)
+    {
+        return $this->disassociateGlobalConnectionBandwidthInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function disassociateGlobalConnectionBandwidthInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/{id}/disassociate-instance';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DisassociateGlobalConnectionBandwidthInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DisassociateGlobalConnectionBandwidthInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询全域互联带宽租户配置信息
+     *
+     * 查询全域互联带宽租户配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConnectionBandwidthConfigsAsync($request)
+    {
+        return $this->listGlobalConnectionBandwidthConfigsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalConnectionBandwidthConfigsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthConfigsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthConfigsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询线路等级列表
+     *
+     * 查询线路等级列表。
+     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConnectionBandwidthLineLevelsAsync($request)
+    {
+        return $this->listGlobalConnectionBandwidthLineLevelsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalConnectionBandwidthLineLevelsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/line-levels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['localArea'] !== null) {
+            $queryParams['local_area'] = $localVarParams['localArea'];
+        }
+        if ($localVarParams['remoteArea'] !== null) {
+            $queryParams['remote_area'] = $localVarParams['remoteArea'];
+        }
+        if ($localVarParams['levels'] !== null) {
+            $queryParams['levels'] = $localVarParams['levels'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthLineLevelsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthLineLevelsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询站点列表
+     *
+     * 查询站点列表。
+     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConnectionBandwidthSitesAsync($request)
+    {
+        return $this->listGlobalConnectionBandwidthSitesAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalConnectionBandwidthSitesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/sites';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['siteCode'] !== null) {
+            $queryParams['site_code'] = $localVarParams['siteCode'];
+        }
+        if ($localVarParams['siteType'] !== null) {
+            $queryParams['site_type'] = $localVarParams['siteType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthSitesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthSitesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询线路规格列表
+     *
+     * 查询线路规格列表。租户白名单控制，默认为空。
+     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConnectionBandwidthSpecCodesAsync($request)
+    {
+        return $this->listGlobalConnectionBandwidthSpecCodesAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalConnectionBandwidthSpecCodesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/spec-codes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['localArea'] !== null) {
+            $queryParams['local_area'] = $localVarParams['localArea'];
+        }
+        if ($localVarParams['remoteArea'] !== null) {
+            $queryParams['remote_area'] = $localVarParams['remoteArea'];
+        }
+        if ($localVarParams['level'] !== null) {
+            $queryParams['level'] = $localVarParams['level'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthSpecCodesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthSpecCodesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询全域互联带宽列表
+     *
+     * 查询全域互联带宽列表。
+     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConnectionBandwidthsAsync($request)
+    {
+        return $this->listGlobalConnectionBandwidthsAsyncWithHttpInfo($request);
+    }
+    
+    public function listGlobalConnectionBandwidthsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['bindingService'] !== null) {
+            $queryParams['binding_service'] = $localVarParams['bindingService'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['chargeMode'] !== null) {
+            $queryParams['charge_mode'] = $localVarParams['chargeMode'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListGlobalConnectionBandwidthsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询符合绑定条件的全域互联带宽列表
+     *
+     * 查询符合绑定条件的全域互联带宽列表。
+     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSupportBindingConnectionBandwidthsAsync($request)
+    {
+        return $this->listSupportBindingConnectionBandwidthsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSupportBindingConnectionBandwidthsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/support-bindings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['localArea'] !== null) {
+            $queryParams['local_area'] = $localVarParams['localArea'];
+        }
+        if ($localVarParams['remoteArea'] !== null) {
+            $queryParams['remote_area'] = $localVarParams['remoteArea'];
+        }
+        if ($localVarParams['bindingService'] !== null) {
+            $queryParams['binding_service'] = $localVarParams['bindingService'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListSupportBindingConnectionBandwidthsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListSupportBindingConnectionBandwidthsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询全域互联带宽详情
+     *
+     * 查询全域互联带宽详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showGlobalConnectionBandwidthAsync($request)
+    {
+        return $this->showGlobalConnectionBandwidthAsyncWithHttpInfo($request);
+    }
+    
+    public function showGlobalConnectionBandwidthAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowGlobalConnectionBandwidthResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowGlobalConnectionBandwidthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新全域互联带宽详情
+     *
+     * 更新全域互联带宽详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateGlobalConnectionBandwidthAsync($request)
+    {
+        return $this->updateGlobalConnectionBandwidthAsyncWithHttpInfo($request);
+    }
+    
+    public function updateGlobalConnectionBandwidthAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcb/gcbandwidths/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateGlobalConnectionBandwidthResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateGlobalConnectionBandwidthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建域间带宽实例
      *
      * 创建域间带宽实例。

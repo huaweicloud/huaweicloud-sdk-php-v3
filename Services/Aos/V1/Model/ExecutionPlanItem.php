@@ -28,6 +28,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     * providerName  该项目所属的provider名称。
     * mode  资源模式   * `DATA` - 指可以在模板解析期间运行和获取服务端数据的资源类型，不会操作基础设施组件   * `RESOURCE` - 指通过模板管理的由服务定义的基础设施组件抽象，可以是物理资源也可以是逻辑资源
     * drifted  当前资源的变更是否由偏差导致。  偏差，也叫漂移。指的是资源被资源编排服务创建以后，又经历过非资源编排服务触发的修改，如手动修改、调用SDK修改等，使得资源的配置与本服务所记录的资源的配置不一致。这种不一致便称为偏差。  当资源产生偏差以后： * 如果用户试图创建执行计划，则会提示用户产生偏差 * 如果用户直接部署，则偏差有可能被覆盖，资源编排服务只保证资源和模板最终一致。  资源的偏差有两种类型： * 资源定位属性被修改：如果是定位属性被修改，常见于删除后重建，此时资源已经不属于同一个资源。资源编排服务会认为此资源已经被删除，会尝试创建一个新的资源。 * 资源普通属性被修改：如果是普通属性被修改，则资源编排服务依然可以找到资源，但是下次部署会尝试修复偏差，即将资源保持和模板最终一致。  **注：资源编排服务团队极力推荐，如果资源是通过本服务创建的，请一直使用本服务进行维护和更新以确保资源和模板保持一致。建议非紧急事件以外的情况不要手动调整。**
+    * imported  当前资源的变更是否是导入的。
     * resourceId  资源的物理id，是唯一id，由为该资源提供服务的provider、云服务或其他服务提供方在资源部署的时候生成
     * attributes  执行计划项目中变更的属性，当无属性变更时为空列表。
     *
@@ -42,6 +43,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
             'providerName' => 'string',
             'mode' => 'string',
             'drifted' => 'bool',
+            'imported' => 'bool',
             'resourceId' => 'string',
             'attributes' => '\HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlanDiffAttribute[]'
     ];
@@ -56,6 +58,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     * providerName  该项目所属的provider名称。
     * mode  资源模式   * `DATA` - 指可以在模板解析期间运行和获取服务端数据的资源类型，不会操作基础设施组件   * `RESOURCE` - 指通过模板管理的由服务定义的基础设施组件抽象，可以是物理资源也可以是逻辑资源
     * drifted  当前资源的变更是否由偏差导致。  偏差，也叫漂移。指的是资源被资源编排服务创建以后，又经历过非资源编排服务触发的修改，如手动修改、调用SDK修改等，使得资源的配置与本服务所记录的资源的配置不一致。这种不一致便称为偏差。  当资源产生偏差以后： * 如果用户试图创建执行计划，则会提示用户产生偏差 * 如果用户直接部署，则偏差有可能被覆盖，资源编排服务只保证资源和模板最终一致。  资源的偏差有两种类型： * 资源定位属性被修改：如果是定位属性被修改，常见于删除后重建，此时资源已经不属于同一个资源。资源编排服务会认为此资源已经被删除，会尝试创建一个新的资源。 * 资源普通属性被修改：如果是普通属性被修改，则资源编排服务依然可以找到资源，但是下次部署会尝试修复偏差，即将资源保持和模板最终一致。  **注：资源编排服务团队极力推荐，如果资源是通过本服务创建的，请一直使用本服务进行维护和更新以确保资源和模板保持一致。建议非紧急事件以外的情况不要手动调整。**
+    * imported  当前资源的变更是否是导入的。
     * resourceId  资源的物理id，是唯一id，由为该资源提供服务的provider、云服务或其他服务提供方在资源部署的时候生成
     * attributes  执行计划项目中变更的属性，当无属性变更时为空列表。
     *
@@ -70,6 +73,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
         'providerName' => null,
         'mode' => null,
         'drifted' => null,
+        'imported' => null,
         'resourceId' => null,
         'attributes' => null
     ];
@@ -105,6 +109,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     * providerName  该项目所属的provider名称。
     * mode  资源模式   * `DATA` - 指可以在模板解析期间运行和获取服务端数据的资源类型，不会操作基础设施组件   * `RESOURCE` - 指通过模板管理的由服务定义的基础设施组件抽象，可以是物理资源也可以是逻辑资源
     * drifted  当前资源的变更是否由偏差导致。  偏差，也叫漂移。指的是资源被资源编排服务创建以后，又经历过非资源编排服务触发的修改，如手动修改、调用SDK修改等，使得资源的配置与本服务所记录的资源的配置不一致。这种不一致便称为偏差。  当资源产生偏差以后： * 如果用户试图创建执行计划，则会提示用户产生偏差 * 如果用户直接部署，则偏差有可能被覆盖，资源编排服务只保证资源和模板最终一致。  资源的偏差有两种类型： * 资源定位属性被修改：如果是定位属性被修改，常见于删除后重建，此时资源已经不属于同一个资源。资源编排服务会认为此资源已经被删除，会尝试创建一个新的资源。 * 资源普通属性被修改：如果是普通属性被修改，则资源编排服务依然可以找到资源，但是下次部署会尝试修复偏差，即将资源保持和模板最终一致。  **注：资源编排服务团队极力推荐，如果资源是通过本服务创建的，请一直使用本服务进行维护和更新以确保资源和模板保持一致。建议非紧急事件以外的情况不要手动调整。**
+    * imported  当前资源的变更是否是导入的。
     * resourceId  资源的物理id，是唯一id，由为该资源提供服务的provider、云服务或其他服务提供方在资源部署的时候生成
     * attributes  执行计划项目中变更的属性，当无属性变更时为空列表。
     *
@@ -119,6 +124,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
             'providerName' => 'provider_name',
             'mode' => 'mode',
             'drifted' => 'drifted',
+            'imported' => 'imported',
             'resourceId' => 'resource_id',
             'attributes' => 'attributes'
     ];
@@ -133,6 +139,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     * providerName  该项目所属的provider名称。
     * mode  资源模式   * `DATA` - 指可以在模板解析期间运行和获取服务端数据的资源类型，不会操作基础设施组件   * `RESOURCE` - 指通过模板管理的由服务定义的基础设施组件抽象，可以是物理资源也可以是逻辑资源
     * drifted  当前资源的变更是否由偏差导致。  偏差，也叫漂移。指的是资源被资源编排服务创建以后，又经历过非资源编排服务触发的修改，如手动修改、调用SDK修改等，使得资源的配置与本服务所记录的资源的配置不一致。这种不一致便称为偏差。  当资源产生偏差以后： * 如果用户试图创建执行计划，则会提示用户产生偏差 * 如果用户直接部署，则偏差有可能被覆盖，资源编排服务只保证资源和模板最终一致。  资源的偏差有两种类型： * 资源定位属性被修改：如果是定位属性被修改，常见于删除后重建，此时资源已经不属于同一个资源。资源编排服务会认为此资源已经被删除，会尝试创建一个新的资源。 * 资源普通属性被修改：如果是普通属性被修改，则资源编排服务依然可以找到资源，但是下次部署会尝试修复偏差，即将资源保持和模板最终一致。  **注：资源编排服务团队极力推荐，如果资源是通过本服务创建的，请一直使用本服务进行维护和更新以确保资源和模板保持一致。建议非紧急事件以外的情况不要手动调整。**
+    * imported  当前资源的变更是否是导入的。
     * resourceId  资源的物理id，是唯一id，由为该资源提供服务的provider、云服务或其他服务提供方在资源部署的时候生成
     * attributes  执行计划项目中变更的属性，当无属性变更时为空列表。
     *
@@ -147,6 +154,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
             'providerName' => 'setProviderName',
             'mode' => 'setMode',
             'drifted' => 'setDrifted',
+            'imported' => 'setImported',
             'resourceId' => 'setResourceId',
             'attributes' => 'setAttributes'
     ];
@@ -161,6 +169,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     * providerName  该项目所属的provider名称。
     * mode  资源模式   * `DATA` - 指可以在模板解析期间运行和获取服务端数据的资源类型，不会操作基础设施组件   * `RESOURCE` - 指通过模板管理的由服务定义的基础设施组件抽象，可以是物理资源也可以是逻辑资源
     * drifted  当前资源的变更是否由偏差导致。  偏差，也叫漂移。指的是资源被资源编排服务创建以后，又经历过非资源编排服务触发的修改，如手动修改、调用SDK修改等，使得资源的配置与本服务所记录的资源的配置不一致。这种不一致便称为偏差。  当资源产生偏差以后： * 如果用户试图创建执行计划，则会提示用户产生偏差 * 如果用户直接部署，则偏差有可能被覆盖，资源编排服务只保证资源和模板最终一致。  资源的偏差有两种类型： * 资源定位属性被修改：如果是定位属性被修改，常见于删除后重建，此时资源已经不属于同一个资源。资源编排服务会认为此资源已经被删除，会尝试创建一个新的资源。 * 资源普通属性被修改：如果是普通属性被修改，则资源编排服务依然可以找到资源，但是下次部署会尝试修复偏差，即将资源保持和模板最终一致。  **注：资源编排服务团队极力推荐，如果资源是通过本服务创建的，请一直使用本服务进行维护和更新以确保资源和模板保持一致。建议非紧急事件以外的情况不要手动调整。**
+    * imported  当前资源的变更是否是导入的。
     * resourceId  资源的物理id，是唯一id，由为该资源提供服务的provider、云服务或其他服务提供方在资源部署的时候生成
     * attributes  执行计划项目中变更的属性，当无属性变更时为空列表。
     *
@@ -175,6 +184,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
             'providerName' => 'getProviderName',
             'mode' => 'getMode',
             'drifted' => 'getDrifted',
+            'imported' => 'getImported',
             'resourceId' => 'getResourceId',
             'attributes' => 'getAttributes'
     ];
@@ -283,6 +293,7 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
         $this->container['providerName'] = isset($data['providerName']) ? $data['providerName'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['drifted'] = isset($data['drifted']) ? $data['drifted'] : null;
+        $this->container['imported'] = isset($data['imported']) ? $data['imported'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
     }
@@ -514,6 +525,30 @@ class ExecutionPlanItem implements ModelInterface, ArrayAccess
     public function setDrifted($drifted)
     {
         $this->container['drifted'] = $drifted;
+        return $this;
+    }
+
+    /**
+    * Gets imported
+    *  当前资源的变更是否是导入的。
+    *
+    * @return bool|null
+    */
+    public function getImported()
+    {
+        return $this->container['imported'];
+    }
+
+    /**
+    * Sets imported
+    *
+    * @param bool|null $imported 当前资源的变更是否是导入的。
+    *
+    * @return $this
+    */
+    public function setImported($imported)
+    {
+        $this->container['imported'] = $imported;
         return $this;
     }
 

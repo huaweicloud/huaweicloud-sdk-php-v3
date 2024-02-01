@@ -20,9 +20,9 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * providerName  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源。agency_name和agency_urn必须有且只有一个存在
-    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * providerName  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源。agency_name和agency_urn必须有且只有一个存在
-    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * providerName  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源。agency_name和agency_urn必须有且只有一个存在
-    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * providerName  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源。agency_name和agency_urn必须有且只有一个存在
-    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * providerName  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源。agency_name和agency_urn必须有且只有一个存在
-    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * agencyUrn  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerName
-    *  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    *  用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Sets providerName
     *
-    * @param string $providerName 用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
+    * @param string $providerName 用户使用的provider的名字。如果用户给予的provider_name含有重复的值，则返回400
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyUrn
-    *  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    *  委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Sets agencyUrn
     *
-    * @param string|null $agencyUrn 委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给与agency_urn，agency_name只支持接收普通委托名称，若给与了v5委托名称，则会在部署模板时失败。
+    * @param string|null $agencyUrn 委托URN  当用户定义Agency时，agency_name和agency_urn 必须有且只有一个存在。  推荐用户在使用v5委托时给予agency_urn，agency_name只支持接收普通委托名称，若给予了v5委托名称，则会在部署模板时失败。
     *
     * @return $this
     */

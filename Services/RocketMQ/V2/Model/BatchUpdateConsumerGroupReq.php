@@ -20,7 +20,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groups  消费组列表，当批量删除消费组时使用。
+    * groups  消费组列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groups  消费组列表，当批量删除消费组时使用。
+    * groups  消费组列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groups  消费组列表，当批量删除消费组时使用。
+    * groups  消费组列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groups  消费组列表，当批量删除消费组时使用。
+    * groups  消费组列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groups  消费组列表，当批量删除消费组时使用。
+    * groups  消费组列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  消费组列表，当批量删除消费组时使用。
+    *  消费组列表。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null
     */
@@ -186,7 +186,7 @@ class BatchUpdateConsumerGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null $groups 消费组列表，当批量删除消费组时使用。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]|null $groups 消费组列表。
     *
     * @return $this
     */

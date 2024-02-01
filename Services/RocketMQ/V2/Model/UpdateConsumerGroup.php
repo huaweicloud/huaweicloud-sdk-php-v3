@@ -34,7 +34,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'bool',
             'brokers' => 'string[]',
             'name' => 'string',
-            'retryMaxTime' => 'float',
+            'retryMaxTime' => 'int',
             'fromBeginning' => 'bool'
     ];
 
@@ -336,7 +336,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * Gets retryMaxTime
     *  最大重试次数，取值范围为1~16。
     *
-    * @return float
+    * @return int
     */
     public function getRetryMaxTime()
     {
@@ -346,7 +346,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param float $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int $retryMaxTime 最大重试次数，取值范围为1~16。
     *
     * @return $this
     */

@@ -214,6 +214,18 @@ class ListAlertRspProcess implements ModelInterface, ArrayAccess
             if (!is_null($this->container['processPath']) && (mb_strlen($this->container['processPath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'processPath', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['processPid']) && ($this->container['processPid'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'processPid', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['processPid']) && ($this->container['processPid'] < 0)) {
+                $invalidProperties[] = "invalid value for 'processPid', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['processUid']) && ($this->container['processUid'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'processUid', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['processUid']) && ($this->container['processUid'] < 0)) {
+                $invalidProperties[] = "invalid value for 'processUid', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['processCmdline']) && (mb_strlen($this->container['processCmdline']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'processCmdline', the character length must be smaller than or equal to 1024.";
             }

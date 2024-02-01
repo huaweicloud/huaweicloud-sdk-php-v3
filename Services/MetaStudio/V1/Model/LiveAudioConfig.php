@@ -20,24 +20,28 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * assetId  插入音频资产的资产id，外部资产信息无需填写
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'assetId' => 'string',
             'audioUrl' => 'string',
             'subtitleUrl' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * assetId  插入音频资产的资产id，外部资产信息无需填写
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'assetId' => null,
         'audioUrl' => null,
         'subtitleUrl' => null
     ];
@@ -65,36 +69,42 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * assetId  插入音频资产的资产id，外部资产信息无需填写
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'assetId' => 'asset_id',
             'audioUrl' => 'audio_url',
             'subtitleUrl' => 'subtitle_url'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * assetId  插入音频资产的资产id，外部资产信息无需填写
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
     * @var string[]
     */
     protected static $setters = [
+            'assetId' => 'setAssetId',
             'audioUrl' => 'setAudioUrl',
             'subtitleUrl' => 'setSubtitleUrl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * assetId  插入音频资产的资产id，外部资产信息无需填写
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
     * @var string[]
     */
     protected static $getters = [
+            'assetId' => 'getAssetId',
             'audioUrl' => 'getAudioUrl',
             'subtitleUrl' => 'getSubtitleUrl'
     ];
@@ -157,6 +167,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['audioUrl'] = isset($data['audioUrl']) ? $data['audioUrl'] : null;
         $this->container['subtitleUrl'] = isset($data['subtitleUrl']) ? $data['subtitleUrl'] : null;
     }
@@ -169,6 +180,12 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['audioUrl']) && (mb_strlen($this->container['audioUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'audioUrl', the character length must be smaller than or equal to 2048.";
             }
@@ -193,6 +210,30 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets assetId
+    *  插入音频资产的资产id，外部资产信息无需填写
+    *
+    * @return string|null
+    */
+    public function getAssetId()
+    {
+        return $this->container['assetId'];
+    }
+
+    /**
+    * Sets assetId
+    *
+    * @param string|null $assetId 插入音频资产的资产id，外部资产信息无需填写
+    *
+    * @return $this
+    */
+    public function setAssetId($assetId)
+    {
+        $this->container['assetId'] = $assetId;
+        return $this;
     }
 
     /**

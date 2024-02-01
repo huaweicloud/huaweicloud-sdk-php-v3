@@ -22,27 +22,27 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vpcId  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。  例如：03211ecf-xxxx-4306-xxxx-6e939bfxxxxx
     * subnetId  子网ID，字母数字下划线连接符组成。
-    * publicIp  云堡垒机实例弹性公网IP信息。可填写null值
+    * publicIp  publicIp
     * securityGroups  安全组信息。
-    * privateIp  私网IP信息。
+    * privateIp  privateIp
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'vpcId' => 'string',
             'subnetId' => 'string',
-            'publicIp' => 'object',
+            'publicIp' => '\HuaweiCloud\SDK\Cbh\V2\Model\PublicIp',
             'securityGroups' => '\HuaweiCloud\SDK\Cbh\V2\Model\SecurityGroup[]',
-            'privateIp' => 'object'
+            'privateIp' => '\HuaweiCloud\SDK\Cbh\V2\Model\PrivateIp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vpcId  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。  例如：03211ecf-xxxx-4306-xxxx-6e939bfxxxxx
     * subnetId  子网ID，字母数字下划线连接符组成。
-    * publicIp  云堡垒机实例弹性公网IP信息。可填写null值
+    * publicIp  publicIp
     * securityGroups  安全组信息。
-    * privateIp  私网IP信息。
+    * privateIp  privateIp
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vpcId  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。  例如：03211ecf-xxxx-4306-xxxx-6e939bfxxxxx
     * subnetId  子网ID，字母数字下划线连接符组成。
-    * publicIp  云堡垒机实例弹性公网IP信息。可填写null值
+    * publicIp  publicIp
     * securityGroups  安全组信息。
-    * privateIp  私网IP信息。
+    * privateIp  privateIp
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * vpcId  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。  例如：03211ecf-xxxx-4306-xxxx-6e939bfxxxxx
     * subnetId  子网ID，字母数字下划线连接符组成。
-    * publicIp  云堡垒机实例弹性公网IP信息。可填写null值
+    * publicIp  publicIp
     * securityGroups  安全组信息。
-    * privateIp  私网IP信息。
+    * privateIp  privateIp
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * vpcId  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。  例如：03211ecf-xxxx-4306-xxxx-6e939bfxxxxx
     * subnetId  子网ID，字母数字下划线连接符组成。
-    * publicIp  云堡垒机实例弹性公网IP信息。可填写null值
+    * publicIp  publicIp
     * securityGroups  安全组信息。
-    * privateIp  私网IP信息。
+    * privateIp  privateIp
     *
     * @var string[]
     */
@@ -290,9 +290,9 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  云堡垒机实例弹性公网IP信息。可填写null值
+    *  publicIp
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\PublicIp
     */
     public function getPublicIp()
     {
@@ -302,7 +302,7 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param object $publicIp 云堡垒机实例弹性公网IP信息。可填写null值
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\PublicIp $publicIp publicIp
     *
     * @return $this
     */
@@ -338,9 +338,9 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  私网IP信息。
+    *  privateIp
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\PrivateIp|null
     */
     public function getPrivateIp()
     {
@@ -350,7 +350,7 @@ class NetworkInfoCreate implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param object|null $privateIp 私网IP信息。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\PrivateIp|null $privateIp privateIp
     *
     * @return $this
     */

@@ -192,9 +192,6 @@ class CbsGetResourceIdTags implements ModelInterface, ArrayAccess
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
         }
-        if ($this->container['sysTags'] === null) {
-            $invalidProperties[] = "'sysTags' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -261,7 +258,7 @@ class CbsGetResourceIdTags implements ModelInterface, ArrayAccess
     * Gets sysTags
     *  系统标签列表  op_service权限可以访问，和tags二选一。  目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id  value是UUID或0,value为0表示默认企业项目。  现在仅支持create操作。
     *
-    * @return \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]|null
     */
     public function getSysTags()
     {
@@ -271,7 +268,7 @@ class CbsGetResourceIdTags implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[] $sysTags 系统标签列表  op_service权限可以访问，和tags二选一。  目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id  value是UUID或0,value为0表示默认企业项目。  现在仅支持create操作。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]|null $sysTags 系统标签列表  op_service权限可以访问，和tags二选一。  目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id  value是UUID或0,value为0表示默认企业项目。  现在仅支持create操作。
     *
     * @return $this
     */

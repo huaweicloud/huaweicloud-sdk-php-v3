@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class CcRegion {
 
-    public static $REGION = array("https://cc.myhuaweicloud.com"=>"cn-north-4","https://ccaas.cn-north-1.myhuaweicloud.com"=>"cn-north-1",);
+    public static $REGION = array("https://cc.myhuaweicloud.com"=>"cn-north-4",);
 
     public static function valueOf($regionId)
     {
