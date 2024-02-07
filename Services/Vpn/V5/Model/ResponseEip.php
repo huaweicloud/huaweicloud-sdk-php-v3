@@ -21,13 +21,13 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  功能说明：公网IP的唯一标识
-    * ipVersion  功能说明: 公网IP版本号  取值范围：4, 6
+    * ipVersion  功能说明: 公网IP版本号  取值范围：4
     * ipBillingInfo  功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
     * type  功能说明：EIP的类型  取值范围：5_bgp（全动态BGP），5_sbgp（静态BGP）  华南-广州：5_bgp、5_sbgp  华东-上海一：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp  中国-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  拉美-圣地亚哥：5_bgp  拉美-圣保罗一：5_bgp  拉美-墨西哥城一：5_bgp  拉美-布宜诺斯艾利一：5_bgp  拉美-利马一：5_bgp  拉美-圣地亚哥二： 5_bgp 约束：必须是系统具体支持的类型。
     * ipAddress  功能说明: 公网IPv4地址
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthId  功能说明：带宽ID
-    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
     *
@@ -49,13 +49,13 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  功能说明：公网IP的唯一标识
-    * ipVersion  功能说明: 公网IP版本号  取值范围：4, 6
+    * ipVersion  功能说明: 公网IP版本号  取值范围：4
     * ipBillingInfo  功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
     * type  功能说明：EIP的类型  取值范围：5_bgp（全动态BGP），5_sbgp（静态BGP）  华南-广州：5_bgp、5_sbgp  华东-上海一：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp  中国-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  拉美-圣地亚哥：5_bgp  拉美-圣保罗一：5_bgp  拉美-墨西哥城一：5_bgp  拉美-布宜诺斯艾利一：5_bgp  拉美-利马一：5_bgp  拉美-圣地亚哥二： 5_bgp 约束：必须是系统具体支持的类型。
     * ipAddress  功能说明: 公网IPv4地址
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthId  功能说明：带宽ID
-    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
     *
@@ -98,13 +98,13 @@ class ResponseEip implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  功能说明：公网IP的唯一标识
-    * ipVersion  功能说明: 公网IP版本号  取值范围：4, 6
+    * ipVersion  功能说明: 公网IP版本号  取值范围：4
     * ipBillingInfo  功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
     * type  功能说明：EIP的类型  取值范围：5_bgp（全动态BGP），5_sbgp（静态BGP）  华南-广州：5_bgp、5_sbgp  华东-上海一：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp  中国-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  拉美-圣地亚哥：5_bgp  拉美-圣保罗一：5_bgp  拉美-墨西哥城一：5_bgp  拉美-布宜诺斯艾利一：5_bgp  拉美-利马一：5_bgp  拉美-圣地亚哥二： 5_bgp 约束：必须是系统具体支持的类型。
     * ipAddress  功能说明: 公网IPv4地址
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthId  功能说明：带宽ID
-    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
     *
@@ -126,13 +126,13 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  功能说明：公网IP的唯一标识
-    * ipVersion  功能说明: 公网IP版本号  取值范围：4, 6
+    * ipVersion  功能说明: 公网IP版本号  取值范围：4
     * ipBillingInfo  功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
     * type  功能说明：EIP的类型  取值范围：5_bgp（全动态BGP），5_sbgp（静态BGP）  华南-广州：5_bgp、5_sbgp  华东-上海一：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp  中国-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  拉美-圣地亚哥：5_bgp  拉美-圣保罗一：5_bgp  拉美-墨西哥城一：5_bgp  拉美-布宜诺斯艾利一：5_bgp  拉美-利马一：5_bgp  拉美-圣地亚哥二： 5_bgp 约束：必须是系统具体支持的类型。
     * ipAddress  功能说明: 公网IPv4地址
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthId  功能说明：带宽ID
-    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
     *
@@ -154,13 +154,13 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  功能说明：公网IP的唯一标识
-    * ipVersion  功能说明: 公网IP版本号  取值范围：4, 6
+    * ipVersion  功能说明: 公网IP版本号  取值范围：4
     * ipBillingInfo  功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
     * type  功能说明：EIP的类型  取值范围：5_bgp（全动态BGP），5_sbgp（静态BGP）  华南-广州：5_bgp、5_sbgp  华东-上海一：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp  中国-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  拉美-圣地亚哥：5_bgp  拉美-圣保罗一：5_bgp  拉美-墨西哥城一：5_bgp  拉美-布宜诺斯艾利一：5_bgp  拉美-利马一：5_bgp  拉美-圣地亚哥二： 5_bgp 约束：必须是系统具体支持的类型。
     * ipAddress  功能说明: 公网IPv4地址
     * chargeMode  功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
     * bandwidthId  功能说明：带宽ID
-    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * bandwidthSize  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     * bandwidthName  带宽名称
     * bandwidthBillingInfo  带宽订单信息
     *
@@ -324,8 +324,8 @@ class ResponseEip implements ModelInterface, ArrayAccess
             if (!is_null($this->container['bandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['bandwidthId'])) {
                 $invalidProperties[] = "invalid value for 'bandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 1024)) {
-                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 1024.";
+            if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bandwidthSize', must be bigger than or equal to 1.";
@@ -385,7 +385,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  功能说明: 公网IP版本号  取值范围：4, 6
+    *  功能说明: 公网IP版本号  取值范围：4
     *
     * @return int|null
     */
@@ -397,7 +397,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion 功能说明: 公网IP版本号  取值范围：4, 6
+    * @param int|null $ipVersion 功能说明: 公网IP版本号  取值范围：4
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    *  带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     *
     * @return int|null
     */
@@ -541,7 +541,7 @@ class ResponseEip implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+    * @param int|null $bandwidthSize 带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
     *
     * @return $this
     */

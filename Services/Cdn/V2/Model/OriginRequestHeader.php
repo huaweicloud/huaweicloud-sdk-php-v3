@@ -21,7 +21,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。
-    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     * action  回源请求头设置类型。delete：删除，set：设置。同一个请求头字段只允许删除或者设置。设置：若原始回源请求中不存在该字段，先执行新增再执行设置。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。
-    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     * action  回源请求头设置类型。delete：删除，set：设置。同一个请求头字段只允许删除或者设置。设置：若原始回源请求中不存在该字段，先执行新增再执行设置。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。
-    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     * action  回源请求头设置类型。delete：删除，set：设置。同一个请求头字段只允许删除或者设置。设置：若原始回源请求中不存在该字段，先执行新增再执行设置。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。
-    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     * action  回源请求头设置类型。delete：删除，set：设置。同一个请求头字段只允许删除或者设置。设置：若原始回源请求中不存在该字段，先执行新增再执行设置。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。
-    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * value  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     * action  回源请求头设置类型。delete：删除，set：设置。同一个请求头字段只允许删除或者设置。设置：若原始回源请求中不存在该字段，先执行新增再执行设置。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    *  设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class OriginRequestHeader implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1~512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
+    * @param string|null $value 设置回源请求头参数的值。当为删除动作时，可不填。格式要求：长度1-512。不支持中文，不支持变量配置，如：$client_ip,$remote_port等。
     *
     * @return $this
     */

@@ -260,15 +260,6 @@ class UrlAuth implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if ($this->container['expireTime'] === null) {
-            $invalidProperties[] = "'expireTime' can't be null";
-        }
-        if ($this->container['timeFormat'] === null) {
-            $invalidProperties[] = "'timeFormat' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -311,7 +302,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * Gets type
     *  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -321,7 +312,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
+    * @param string|null $type 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     *
     * @return $this
     */
@@ -335,7 +326,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * Gets expireTime
     *  过期时间：范围：0-31536000单位为秒。
     *
-    * @return int
+    * @return int|null
     */
     public function getExpireTime()
     {
@@ -345,7 +336,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param int $expireTime 过期时间：范围：0-31536000单位为秒。
+    * @param int|null $expireTime 过期时间：范围：0-31536000单位为秒。
     *
     * @return $this
     */
@@ -503,7 +494,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * Gets timeFormat
     *  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
-    * @return string
+    * @return string|null
     */
     public function getTimeFormat()
     {
@@ -513,7 +504,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets timeFormat
     *
-    * @param string $timeFormat 时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * @param string|null $timeFormat 时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @return $this
     */

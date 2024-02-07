@@ -191,18 +191,6 @@ class Resource implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceId'] === null) {
-            $invalidProperties[] = "'resourceId' can't be null";
-        }
-        if ($this->container['resourceDetail'] === null) {
-            $invalidProperties[] = "'resourceDetail' can't be null";
-        }
-        if ($this->container['tags'] === null) {
-            $invalidProperties[] = "'tags' can't be null";
-        }
-        if ($this->container['resourceName'] === null) {
-            $invalidProperties[] = "'resourceName' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -221,7 +209,7 @@ class Resource implements ModelInterface, ArrayAccess
     * Gets resourceId
     *  resourceId
     *
-    * @return string
+    * @return string|null
     */
     public function getResourceId()
     {
@@ -231,7 +219,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId resourceId
+    * @param string|null $resourceId resourceId
     *
     * @return $this
     */
@@ -245,7 +233,7 @@ class Resource implements ModelInterface, ArrayAccess
     * Gets resourceDetail
     *  resourceDetail
     *
-    * @return object
+    * @return object|null
     */
     public function getResourceDetail()
     {
@@ -255,7 +243,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param object $resourceDetail resourceDetail
+    * @param object|null $resourceDetail resourceDetail
     *
     * @return $this
     */
@@ -269,7 +257,7 @@ class Resource implements ModelInterface, ArrayAccess
     * Gets tags
     *  tags
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null
     */
     public function getTags()
     {
@@ -279,7 +267,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[] $tags tags
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null $tags tags
     *
     * @return $this
     */
@@ -293,7 +281,7 @@ class Resource implements ModelInterface, ArrayAccess
     * Gets resourceName
     *  resourceName
     *
-    * @return string
+    * @return string|null
     */
     public function getResourceName()
     {
@@ -303,7 +291,7 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string $resourceName resourceName
+    * @param string|null $resourceName resourceName
     *
     * @return $this
     */

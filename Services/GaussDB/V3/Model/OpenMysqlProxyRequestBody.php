@@ -27,6 +27,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     * subnetId  数据库VPC下的子网ID。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'string',
             'routeMode' => 'int',
             'nodesReadWeight' => '\HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]',
-            'subnetId' => 'string'
+            'subnetId' => 'string',
+            'newNodeAutoAddStatus' => 'string',
+            'newNodeWeight' => 'int'
     ];
 
     /**
@@ -49,6 +53,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     * subnetId  数据库VPC下的子网ID。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         'proxyMode' => 'int32',
         'routeMode' => 'int32',
         'nodesReadWeight' => null,
-        'subnetId' => null
+        'subnetId' => null,
+        'newNodeAutoAddStatus' => null,
+        'newNodeWeight' => 'int32'
     ];
 
     /**
@@ -92,6 +100,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     * subnetId  数据库VPC下的子网ID。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'proxy_mode',
             'routeMode' => 'route_mode',
             'nodesReadWeight' => 'nodes_read_weight',
-            'subnetId' => 'subnet_id'
+            'subnetId' => 'subnet_id',
+            'newNodeAutoAddStatus' => 'new_node_auto_add_status',
+            'newNodeWeight' => 'new_node_weight'
     ];
 
     /**
@@ -114,6 +126,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     * subnetId  数据库VPC下的子网ID。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'setProxyMode',
             'routeMode' => 'setRouteMode',
             'nodesReadWeight' => 'setNodesReadWeight',
-            'subnetId' => 'setSubnetId'
+            'subnetId' => 'setSubnetId',
+            'newNodeAutoAddStatus' => 'setNewNodeAutoAddStatus',
+            'newNodeWeight' => 'setNewNodeWeight'
     ];
 
     /**
@@ -136,6 +152,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
     * subnetId  数据库VPC下的子网ID。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'getProxyMode',
             'routeMode' => 'getRouteMode',
             'nodesReadWeight' => 'getNodesReadWeight',
-            'subnetId' => 'getSubnetId'
+            'subnetId' => 'getSubnetId',
+            'newNodeAutoAddStatus' => 'getNewNodeAutoAddStatus',
+            'newNodeWeight' => 'getNewNodeWeight'
     ];
 
     /**
@@ -229,6 +249,8 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['nodesReadWeight'] = isset($data['nodesReadWeight']) ? $data['nodesReadWeight'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['newNodeAutoAddStatus'] = isset($data['newNodeAutoAddStatus']) ? $data['newNodeAutoAddStatus'] : null;
+        $this->container['newNodeWeight'] = isset($data['newNodeWeight']) ? $data['newNodeWeight'] : null;
     }
 
     /**
@@ -432,6 +454,54 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     public function setSubnetId($subnetId)
     {
         $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeAutoAddStatus
+    *  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    *
+    * @return string|null
+    */
+    public function getNewNodeAutoAddStatus()
+    {
+        return $this->container['newNodeAutoAddStatus'];
+    }
+
+    /**
+    * Sets newNodeAutoAddStatus
+    *
+    * @param string|null $newNodeAutoAddStatus 是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    *
+    * @return $this
+    */
+    public function setNewNodeAutoAddStatus($newNodeAutoAddStatus)
+    {
+        $this->container['newNodeAutoAddStatus'] = $newNodeAutoAddStatus;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeWeight
+    *  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
+    *
+    * @return int|null
+    */
+    public function getNewNodeWeight()
+    {
+        return $this->container['newNodeWeight'];
+    }
+
+    /**
+    * Sets newNodeWeight
+    *
+    * @param int|null $newNodeWeight 新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
+    *
+    * @return $this
+    */
+    public function setNewNodeWeight($newNodeWeight)
+    {
+        $this->container['newNodeWeight'] = $newNodeWeight;
         return $this;
     }
 

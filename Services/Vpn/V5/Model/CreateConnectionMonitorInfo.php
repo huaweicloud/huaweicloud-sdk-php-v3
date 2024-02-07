@@ -22,7 +22,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  VPN连接监控ID
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -42,7 +42,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  VPN连接监控ID
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -83,7 +83,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  VPN连接监控ID
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -103,7 +103,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  VPN连接监控ID
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -123,7 +123,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  VPN连接监控ID
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -277,7 +277,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  网关连通性，取值范围：gateway
+    *  监控类型，取值范围：gateway
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class CreateConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 网关连通性，取值范围：gateway
+    * @param string|null $type 监控类型，取值范围：gateway
     *
     * @return $this
     */

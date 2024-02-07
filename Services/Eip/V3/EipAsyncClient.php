@@ -731,6 +731,492 @@ class EipAsyncClient extends Client
     }
 
     /**
+     * 查询GEIP与实例绑定关系的租户列表
+     *
+     * 查询GEIP与实例绑定关系的租户列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProjectGeipBindingsAsync($request)
+    {
+        return $this->listProjectGeipBindingsAsyncWithHttpInfo($request);
+    }
+    
+    public function listProjectGeipBindingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/bindings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['geipId'] !== null) {
+            $queryParams['geip_id'] = $localVarParams['geipId'];
+        }
+        if ($localVarParams['geipIpAddress'] !== null) {
+            $queryParams['geip_ip_address'] = $localVarParams['geipIpAddress'];
+        }
+        if ($localVarParams['publicBorderGroup'] !== null) {
+            $queryParams['public_border_group'] = $localVarParams['publicBorderGroup'];
+        }
+        if ($localVarParams['instanceType'] !== null) {
+            $queryParams['instance_type'] = $localVarParams['instanceType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['instanceVpcId'] !== null) {
+            $queryParams['instance_vpc_id'] = $localVarParams['instanceVpcId'];
+        }
+        if ($localVarParams['gcbandwidthId'] !== null) {
+            $queryParams['gcbandwidth_id'] = $localVarParams['gcbandwidthId'];
+        }
+        if ($localVarParams['gcbandwidthAdminStatus'] !== null) {
+            $queryParams['gcbandwidth_admin_status'] = $localVarParams['gcbandwidthAdminStatus'];
+        }
+        if ($localVarParams['gcbandwidthSize'] !== null) {
+            $queryParams['gcbandwidth_size'] = $localVarParams['gcbandwidthSize'];
+        }
+        if ($localVarParams['gcbandwidthSlaLevel'] !== null) {
+            $queryParams['gcbandwidth_sla_level'] = $localVarParams['gcbandwidthSlaLevel'];
+        }
+        if ($localVarParams['gcbandwidthDscp'] !== null) {
+            $queryParams['gcbandwidth_dscp'] = $localVarParams['gcbandwidthDscp'];
+        }
+        if ($localVarParams['vnicPrivateIpAddress'] !== null) {
+            $queryParams['vnic_private_ip_address'] = $localVarParams['vnicPrivateIpAddress'];
+        }
+        if ($localVarParams['vnicVpcId'] !== null) {
+            $queryParams['vnic_vpc_id'] = $localVarParams['vnicVpcId'];
+        }
+        if ($localVarParams['vnicPortId'] !== null) {
+            $queryParams['vnic_port_id'] = $localVarParams['vnicPortId'];
+        }
+        if ($localVarParams['vnicDeviceId'] !== null) {
+            $queryParams['vnic_device_id'] = $localVarParams['vnicDeviceId'];
+        }
+        if ($localVarParams['vnicDeviceOwner'] !== null) {
+            $queryParams['vnic_device_owner'] = $localVarParams['vnicDeviceOwner'];
+        }
+        if ($localVarParams['vnicDeviceOwnerPrefixlike'] !== null) {
+            $queryParams['vnic_device_owner_prefixlike'] = $localVarParams['vnicDeviceOwnerPrefixlike'];
+        }
+        if ($localVarParams['vnicInstanceType'] !== null) {
+            $queryParams['vnic_instance_type'] = $localVarParams['vnicInstanceType'];
+        }
+        if ($localVarParams['vnicInstanceId'] !== null) {
+            $queryParams['vnic_instance_id'] = $localVarParams['vnicInstanceId'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListProjectGeipBindingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListProjectGeipBindingsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建虚拟igw
+     *
+     * 创建虚拟igw
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTenantVpcIgwAsync($request)
+    {
+        return $this->createTenantVpcIgwAsyncWithHttpInfo($request);
+    }
+    
+    public function createTenantVpcIgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/vpc-igws';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\CreateTenantVpcIgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\CreateTenantVpcIgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除虚拟igw
+     *
+     * 删除虚拟igw
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTenantVpcIgwAsync($request)
+    {
+        return $this->deleteTenantVpcIgwAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTenantVpcIgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/vpc-igws/{vpc_igw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpcIgwId'] !== null) {
+            $pathParams['vpc_igw_id'] = $localVarParams['vpcIgwId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DeleteTenantVpcIgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DeleteTenantVpcIgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定租户下的虚拟igw列表
+     *
+     * 查询指定租户下的虚拟igw列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTenantVpcIgwsAsync($request)
+    {
+        return $this->listTenantVpcIgwsAsyncWithHttpInfo($request);
+    }
+    
+    public function listTenantVpcIgwsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/vpc-igws';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListTenantVpcIgwsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListTenantVpcIgwsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询虚拟igw详情
+     *
+     * 查询虚拟igw详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInternalVpcIgwAsync($request)
+    {
+        return $this->showInternalVpcIgwAsyncWithHttpInfo($request);
+    }
+    
+    public function showInternalVpcIgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/vpc-igws/{vpc_igw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['vpcIgwId'] !== null) {
+            $pathParams['vpc_igw_id'] = $localVarParams['vpcIgwId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ShowInternalVpcIgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ShowInternalVpcIgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改虚拟igw
+     *
+     * 修改虚拟igw
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTenantVpcIgwAsync($request)
+    {
+        return $this->updateTenantVpcIgwAsyncWithHttpInfo($request);
+    }
+    
+    public function updateTenantVpcIgwAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/geip/vpc-igws/{vpc_igw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
+        if ($localVarParams['vpcIgwId'] !== null) {
+            $pathParams['vpc_igw_id'] = $localVarParams['vpcIgwId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateTenantVpcIgwResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateTenantVpcIgwRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 绑定弹性公网IP
      *
      * 绑定弹性公网IP

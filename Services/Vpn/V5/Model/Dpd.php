@@ -20,9 +20,9 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * interval  DPD检测间隔时长
-    * timeout  DPD检测间隔超时时间
-    * msg  DPD检测报文格式
+    * interval  对等体存活检测空闲时间
+    * timeout  对等体存活检测报文重传间隔
+    * msg  对等体存活检测报文格式
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * interval  DPD检测间隔时长
-    * timeout  DPD检测间隔超时时间
-    * msg  DPD检测报文格式
+    * interval  对等体存活检测空闲时间
+    * timeout  对等体存活检测报文重传间隔
+    * msg  对等体存活检测报文格式
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Dpd implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * interval  DPD检测间隔时长
-    * timeout  DPD检测间隔超时时间
-    * msg  DPD检测报文格式
+    * interval  对等体存活检测空闲时间
+    * timeout  对等体存活检测报文重传间隔
+    * msg  对等体存活检测报文格式
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * interval  DPD检测间隔时长
-    * timeout  DPD检测间隔超时时间
-    * msg  DPD检测报文格式
+    * interval  对等体存活检测空闲时间
+    * timeout  对等体存活检测报文重传间隔
+    * msg  对等体存活检测报文格式
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * interval  DPD检测间隔时长
-    * timeout  DPD检测间隔超时时间
-    * msg  DPD检测报文格式
+    * interval  对等体存活检测空闲时间
+    * timeout  对等体存活检测报文重传间隔
+    * msg  对等体存活检测报文格式
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Gets interval
-    *  DPD检测间隔时长
+    *  对等体存活检测空闲时间
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class Dpd implements ModelInterface, ArrayAccess
     /**
     * Sets interval
     *
-    * @param int|null $interval DPD检测间隔时长
+    * @param int|null $interval 对等体存活检测空闲时间
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  DPD检测间隔超时时间
+    *  对等体存活检测报文重传间隔
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class Dpd implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout DPD检测间隔超时时间
+    * @param int|null $timeout 对等体存活检测报文重传间隔
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class Dpd implements ModelInterface, ArrayAccess
 
     /**
     * Gets msg
-    *  DPD检测报文格式
+    *  对等体存活检测报文格式
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class Dpd implements ModelInterface, ArrayAccess
     /**
     * Sets msg
     *
-    * @param string|null $msg DPD检测报文格式
+    * @param string|null $msg 对等体存活检测报文格式
     *
     * @return $this
     */

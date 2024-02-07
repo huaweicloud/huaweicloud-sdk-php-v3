@@ -23,7 +23,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * id  VPN连接监控ID
     * status  status
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -45,7 +45,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * id  VPN连接监控ID
     * status  status
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -88,7 +88,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * id  VPN连接监控ID
     * status  status
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -110,7 +110,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * id  VPN连接监控ID
     * status  status
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -132,7 +132,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     * id  VPN连接监控ID
     * status  status
     * vpnConnectionId  VPN连接监控对应的VPN连接ID
-    * type  网关连通性，取值范围：gateway
+    * type  监控类型，取值范围：gateway
     * sourceIp  VPN连接监控的源地址
     * destinationIp  VPN连接监控的目的地址
     * protoType  预留字段，nqa使用的协议类型，目前使用默认值ICMP
@@ -312,7 +312,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  网关连通性，取值范围：gateway
+    *  监控类型，取值范围：gateway
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ConnectionMonitorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 网关连通性，取值范围：gateway
+    * @param string|null $type 监控类型，取值范围：gateway
     *
     * @return $this
     */

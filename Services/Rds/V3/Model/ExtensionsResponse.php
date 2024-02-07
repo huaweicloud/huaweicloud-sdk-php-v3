@@ -23,6 +23,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     * name  插件名称。
     * databaseName  数据库名称。
     * version  插件版本。
+    * versionUpdate  可更新插件版本
     * sharedPreloadLibraries  依赖预加载库。
     * created  是否创建。
     * description  插件描述。
@@ -33,6 +34,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
             'name' => 'string',
             'databaseName' => 'string',
             'version' => 'string',
+            'versionUpdate' => 'string',
             'sharedPreloadLibraries' => 'string',
             'created' => 'bool',
             'description' => 'string'
@@ -43,6 +45,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     * name  插件名称。
     * databaseName  数据库名称。
     * version  插件版本。
+    * versionUpdate  可更新插件版本
     * sharedPreloadLibraries  依赖预加载库。
     * created  是否创建。
     * description  插件描述。
@@ -53,6 +56,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
         'name' => null,
         'databaseName' => null,
         'version' => null,
+        'versionUpdate' => null,
         'sharedPreloadLibraries' => null,
         'created' => null,
         'description' => null
@@ -84,6 +88,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     * name  插件名称。
     * databaseName  数据库名称。
     * version  插件版本。
+    * versionUpdate  可更新插件版本
     * sharedPreloadLibraries  依赖预加载库。
     * created  是否创建。
     * description  插件描述。
@@ -94,6 +99,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
             'name' => 'name',
             'databaseName' => 'database_name',
             'version' => 'version',
+            'versionUpdate' => 'version_update',
             'sharedPreloadLibraries' => 'shared_preload_libraries',
             'created' => 'created',
             'description' => 'description'
@@ -104,6 +110,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     * name  插件名称。
     * databaseName  数据库名称。
     * version  插件版本。
+    * versionUpdate  可更新插件版本
     * sharedPreloadLibraries  依赖预加载库。
     * created  是否创建。
     * description  插件描述。
@@ -114,6 +121,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'databaseName' => 'setDatabaseName',
             'version' => 'setVersion',
+            'versionUpdate' => 'setVersionUpdate',
             'sharedPreloadLibraries' => 'setSharedPreloadLibraries',
             'created' => 'setCreated',
             'description' => 'setDescription'
@@ -124,6 +132,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     * name  插件名称。
     * databaseName  数据库名称。
     * version  插件版本。
+    * versionUpdate  可更新插件版本
     * sharedPreloadLibraries  依赖预加载库。
     * created  是否创建。
     * description  插件描述。
@@ -134,6 +143,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'databaseName' => 'getDatabaseName',
             'version' => 'getVersion',
+            'versionUpdate' => 'getVersionUpdate',
             'sharedPreloadLibraries' => 'getSharedPreloadLibraries',
             'created' => 'getCreated',
             'description' => 'getDescription'
@@ -200,6 +210,7 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['versionUpdate'] = isset($data['versionUpdate']) ? $data['versionUpdate'] : null;
         $this->container['sharedPreloadLibraries'] = isset($data['sharedPreloadLibraries']) ? $data['sharedPreloadLibraries'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -296,6 +307,30 @@ class ExtensionsResponse implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets versionUpdate
+    *  可更新插件版本
+    *
+    * @return string|null
+    */
+    public function getVersionUpdate()
+    {
+        return $this->container['versionUpdate'];
+    }
+
+    /**
+    * Sets versionUpdate
+    *
+    * @param string|null $versionUpdate 可更新插件版本
+    *
+    * @return $this
+    */
+    public function setVersionUpdate($versionUpdate)
+    {
+        $this->container['versionUpdate'] = $versionUpdate;
         return $this;
     }
 

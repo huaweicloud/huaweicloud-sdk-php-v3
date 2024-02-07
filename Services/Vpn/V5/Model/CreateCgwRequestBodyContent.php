@@ -245,10 +245,13 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['idValue']) && (mb_strlen($this->container['idValue']) > 128)) {
+        if ($this->container['idValue'] === null) {
+            $invalidProperties[] = "'idValue' can't be null";
+        }
+            if ((mb_strlen($this->container['idValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'idValue', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['idValue']) && (mb_strlen($this->container['idValue']) < 1)) {
+            if ((mb_strlen($this->container['idValue']) < 1)) {
                 $invalidProperties[] = "invalid value for 'idValue', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['bgpAsn']) && ($this->container['bgpAsn'] > 4294967295)) {
@@ -323,7 +326,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Gets idValue
     *  对端网关标识值
     *
-    * @return string|null
+    * @return string
     */
     public function getIdValue()
     {
@@ -333,7 +336,7 @@ class CreateCgwRequestBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets idValue
     *
-    * @param string|null $idValue 对端网关标识值
+    * @param string $idValue 对端网关标识值
     *
     * @return $this
     */

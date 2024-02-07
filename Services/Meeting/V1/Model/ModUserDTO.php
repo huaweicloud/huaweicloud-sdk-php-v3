@@ -26,7 +26,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     * country  [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
     * email  邮箱地址。
     * vmrId  个人会议ID，若不携带则后台默认生成。
-    * deptCode  个人会议ID，若不携带则后台默认生成。 默认值：1
+    * deptCode  部门编码，若不携带则默认根部门。 默认值：1
     * signature  签名。
     * title  职位。
     * desc  备注。
@@ -60,7 +60,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     * country  [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
     * email  邮箱地址。
     * vmrId  个人会议ID，若不携带则后台默认生成。
-    * deptCode  个人会议ID，若不携带则后台默认生成。 默认值：1
+    * deptCode  部门编码，若不携带则默认根部门。 默认值：1
     * signature  签名。
     * title  职位。
     * desc  备注。
@@ -115,7 +115,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     * country  [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
     * email  邮箱地址。
     * vmrId  个人会议ID，若不携带则后台默认生成。
-    * deptCode  个人会议ID，若不携带则后台默认生成。 默认值：1
+    * deptCode  部门编码，若不携带则默认根部门。 默认值：1
     * signature  签名。
     * title  职位。
     * desc  备注。
@@ -149,7 +149,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     * country  [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
     * email  邮箱地址。
     * vmrId  个人会议ID，若不携带则后台默认生成。
-    * deptCode  个人会议ID，若不携带则后台默认生成。 默认值：1
+    * deptCode  部门编码，若不携带则默认根部门。 默认值：1
     * signature  签名。
     * title  职位。
     * desc  备注。
@@ -183,7 +183,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     * country  [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
     * email  邮箱地址。
     * vmrId  个人会议ID，若不携带则后台默认生成。
-    * deptCode  个人会议ID，若不携带则后台默认生成。 默认值：1
+    * deptCode  部门编码，若不携带则默认根部门。 默认值：1
     * signature  签名。
     * title  职位。
     * desc  备注。
@@ -509,7 +509,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets deptCode
-    *  个人会议ID，若不携带则后台默认生成。 默认值：1
+    *  部门编码，若不携带则默认根部门。 默认值：1
     *
     * @return string|null
     */
@@ -521,7 +521,7 @@ class ModUserDTO implements ModelInterface, ArrayAccess
     /**
     * Sets deptCode
     *
-    * @param string|null $deptCode 个人会议ID，若不携带则后台默认生成。 默认值：1
+    * @param string|null $deptCode 部门编码，若不携带则默认根部门。 默认值：1
     *
     * @return $this
     */

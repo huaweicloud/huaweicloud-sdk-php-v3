@@ -26,7 +26,7 @@ class ShowDomainDetailByNameResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => '\HuaweiCloud\SDK\Cdn\V2\Model\DomainsWithPort'
+            'domain' => '\HuaweiCloud\SDK\Cdn\V2\Model\DomainsDetail'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowDomainDetailByNameResponse implements ModelInterface, ArrayAccess
     * Gets domain
     *  domain
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\DomainsWithPort|null
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\DomainsDetail|null
     */
     public function getDomain()
     {
@@ -187,7 +187,7 @@ class ShowDomainDetailByNameResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\DomainsWithPort|null $domain domain
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\DomainsDetail|null $domain domain
     *
     * @return $this
     */

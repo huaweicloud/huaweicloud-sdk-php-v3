@@ -224,23 +224,11 @@ class FuncVpc implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['vpcName'] === null) {
-            $invalidProperties[] = "'vpcName' can't be null";
-        }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
         }
-        if ($this->container['subnetName'] === null) {
-            $invalidProperties[] = "'subnetName' can't be null";
-        }
         if ($this->container['subnetId'] === null) {
             $invalidProperties[] = "'subnetId' can't be null";
-        }
-        if ($this->container['cidr'] === null) {
-            $invalidProperties[] = "'cidr' can't be null";
-        }
-        if ($this->container['gateway'] === null) {
-            $invalidProperties[] = "'gateway' can't be null";
         }
         return $invalidProperties;
     }
@@ -260,7 +248,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * Gets vpcName
     *  虚拟私有云名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getVpcName()
     {
@@ -270,7 +258,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     /**
     * Sets vpcName
     *
-    * @param string $vpcName 虚拟私有云名称。
+    * @param string|null $vpcName 虚拟私有云名称。
     *
     * @return $this
     */
@@ -308,7 +296,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * Gets subnetName
     *  子网名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getSubnetName()
     {
@@ -318,7 +306,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     /**
     * Sets subnetName
     *
-    * @param string $subnetName 子网名称。
+    * @param string|null $subnetName 子网名称。
     *
     * @return $this
     */
@@ -356,7 +344,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * Gets cidr
     *  子网掩码。
     *
-    * @return string
+    * @return string|null
     */
     public function getCidr()
     {
@@ -366,7 +354,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string $cidr 子网掩码。
+    * @param string|null $cidr 子网掩码。
     *
     * @return $this
     */
@@ -380,7 +368,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * Gets gateway
     *  网关。
     *
-    * @return string
+    * @return string|null
     */
     public function getGateway()
     {
@@ -390,7 +378,7 @@ class FuncVpc implements ModelInterface, ArrayAccess
     /**
     * Sets gateway
     *
-    * @param string $gateway 网关。
+    * @param string|null $gateway 网关。
     *
     * @return $this
     */

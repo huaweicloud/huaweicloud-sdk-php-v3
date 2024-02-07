@@ -22,8 +22,8 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  网关名称
     * localSubnets  本端子网
-    * eipId1  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
-    * eipId2  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
+    * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
     *
     * @var string[]
@@ -40,8 +40,8 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  网关名称
     * localSubnets  本端子网
-    * eipId1  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
-    * eipId2  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
+    * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
     *
     * @var string[]
@@ -79,8 +79,8 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  网关名称
     * localSubnets  本端子网
-    * eipId1  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
-    * eipId2  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
+    * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  网关名称
     * localSubnets  本端子网
-    * eipId1  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
-    * eipId2  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
+    * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
     *
     * @var string[]
@@ -115,8 +115,8 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  网关名称
     * localSubnets  本端子网
-    * eipId1  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
-    * eipId2  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * eipId1  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
+    * eipId2  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     * policyTemplate  policyTemplate
     *
     * @var string[]
@@ -293,7 +293,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipId1
-    *  主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
+    *  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets eipId1
     *
-    * @param string|null $eipId1 主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
+    * @param string|null $eipId1 有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipId2
-    *  备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    *  有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class UpdateVgwRequestBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets eipId2
     *
-    * @param string|null $eipId2 备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+    * @param string|null $eipId2 有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
     *
     * @return $this
     */

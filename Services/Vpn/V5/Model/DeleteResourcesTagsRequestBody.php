@@ -158,6 +158,9 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  tags
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -186,7 +189,7 @@ class DeleteResourcesTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\ResourceTag[] $tags tags
     *
     * @return $this
     */

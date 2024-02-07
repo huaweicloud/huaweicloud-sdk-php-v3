@@ -21,7 +21,7 @@ class Hsts implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  状态，on：打开，off：关闭。
-    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     * includeSubdomains  包含子域名，on：包含，off：不包含。   > status参数为on时，必传。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class Hsts implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  状态，on：打开，off：关闭。
-    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     * includeSubdomains  包含子域名，on：包含，off：不包含。   > status参数为on时，必传。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class Hsts implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  状态，on：打开，off：关闭。
-    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     * includeSubdomains  包含子域名，on：包含，off：不包含。   > status参数为on时，必传。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class Hsts implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  状态，on：打开，off：关闭。
-    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     * includeSubdomains  包含子域名，on：包含，off：不包含。   > status参数为on时，必传。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class Hsts implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  状态，on：打开，off：关闭。
-    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * maxAge  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     * includeSubdomains  包含子域名，on：包含，off：不包含。   > status参数为on时，必传。
     *
     * @var string[]
@@ -223,7 +223,7 @@ class Hsts implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxAge
-    *  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    *  过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class Hsts implements ModelInterface, ArrayAccess
     /**
     * Sets maxAge
     *
-    * @param int|null $maxAge 过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+    * @param int|null $maxAge 过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
     *
     * @return $this
     */

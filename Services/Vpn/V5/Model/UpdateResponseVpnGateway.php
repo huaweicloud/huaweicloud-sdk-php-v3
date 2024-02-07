@@ -28,11 +28,11 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
-    * accessPrivateIp1  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
-    * accessPrivateIp2  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * accessPrivateIp1  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
+    * accessPrivateIp2  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
@@ -46,6 +46,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -75,7 +76,8 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip2' => '\HuaweiCloud\SDK\Vpn\V5\Model\ResponseEip',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate'
+            'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate',
+            'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]'
     ];
 
     /**
@@ -88,11 +90,11 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
-    * accessPrivateIp1  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
-    * accessPrivateIp2  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * accessPrivateIp1  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
+    * accessPrivateIp2  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
@@ -106,6 +108,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
         'eip2' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'policyTemplate' => null
+        'policyTemplate' => null,
+        'tags' => null
     ];
 
     /**
@@ -169,11 +173,11 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
-    * accessPrivateIp1  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
-    * accessPrivateIp2  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * accessPrivateIp1  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
+    * accessPrivateIp2  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
@@ -187,6 +191,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -216,7 +221,8 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip2' => 'eip2',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'policyTemplate' => 'policy_template'
+            'policyTemplate' => 'policy_template',
+            'tags' => 'tags'
     ];
 
     /**
@@ -229,11 +235,11 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
-    * accessPrivateIp1  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
-    * accessPrivateIp2  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * accessPrivateIp1  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
+    * accessPrivateIp2  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
@@ -247,6 +253,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -276,7 +283,8 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip2' => 'setEip2',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'policyTemplate' => 'setPolicyTemplate'
+            'policyTemplate' => 'setPolicyTemplate',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -289,11 +297,11 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
-    * accessPrivateIp1  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
-    * accessPrivateIp2  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * accessPrivateIp1  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
+    * accessPrivateIp2  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     * bgpAsn  bgp所使用的asn号
     * flavor  VPN网关的规格类型
     * availabilityZoneIds  可用区列表
@@ -307,6 +315,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
             'eip2' => 'getEip2',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'policyTemplate' => 'getPolicyTemplate'
+            'policyTemplate' => 'getPolicyTemplate',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -453,6 +463,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['policyTemplate'] = isset($data['policyTemplate']) ? $data['policyTemplate'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -726,7 +737,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkType
-    *  VPN网关北向类型，默认为公网(public)
+    *  VPN网关的网络类型，默认为公网(public)
     *
     * @return string|null
     */
@@ -738,7 +749,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets networkType
     *
-    * @param string|null $networkType VPN网关北向类型，默认为公网(public)
+    * @param string|null $networkType VPN网关的网络类型，默认为公网(public)
     *
     * @return $this
     */
@@ -798,7 +809,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPrivateIp1
-    *  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+    *  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
     *
     * @return string|null
     */
@@ -810,7 +821,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets accessPrivateIp1
     *
-    * @param string|null $accessPrivateIp1 VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+    * @param string|null $accessPrivateIp1 私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
     *
     * @return $this
     */
@@ -822,7 +833,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPrivateIp2
-    *  VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    *  私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     *
     * @return string|null
     */
@@ -834,7 +845,7 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets accessPrivateIp2
     *
-    * @param string|null $accessPrivateIp2 VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+    * @param string|null $accessPrivateIp2 私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
     *
     * @return $this
     */
@@ -1153,6 +1164,30 @@ class UpdateResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setPolicyTemplate($policyTemplate)
     {
         $this->container['policyTemplate'] = $policyTemplate;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]|null $tags 标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

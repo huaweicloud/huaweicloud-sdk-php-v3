@@ -28,7 +28,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
     * bgpAsn  bgp所使用的asn号
@@ -39,6 +39,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * haMode  ha模式
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'usedConnectionGroup' => 'int',
             'enterpriseProjectId' => 'string',
             'haMode' => 'string',
-            'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate'
+            'policyTemplate' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyTemplate',
+            'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]'
     ];
 
     /**
@@ -74,7 +76,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
     * bgpAsn  bgp所使用的asn号
@@ -85,6 +87,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * haMode  ha模式
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
         'usedConnectionGroup' => 'int32',
         'enterpriseProjectId' => null,
         'haMode' => null,
-        'policyTemplate' => null
+        'policyTemplate' => null,
+        'tags' => null
     ];
 
     /**
@@ -141,7 +145,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
     * bgpAsn  bgp所使用的asn号
@@ -152,6 +156,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * haMode  ha模式
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'usedConnectionGroup' => 'used_connection_group',
             'enterpriseProjectId' => 'enterprise_project_id',
             'haMode' => 'ha_mode',
-            'policyTemplate' => 'policy_template'
+            'policyTemplate' => 'policy_template',
+            'tags' => 'tags'
     ];
 
     /**
@@ -187,7 +193,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
     * bgpAsn  bgp所使用的asn号
@@ -198,6 +204,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * haMode  ha模式
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'usedConnectionGroup' => 'setUsedConnectionGroup',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'haMode' => 'setHaMode',
-            'policyTemplate' => 'setPolicyTemplate'
+            'policyTemplate' => 'setPolicyTemplate',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -233,7 +241,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * vpcId  VPN网关所连接的VPC的ID
     * localSubnets  本端子网
     * connectSubnet  VPN网关所使用的VPC子网ID
-    * networkType  VPN网关北向类型，默认为公网(public)
+    * networkType  VPN网关的网络类型，默认为公网(public)
     * accessVpcId  VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
     * accessSubnetId  VPN网关北向接入VPC中的接入子网ID
     * bgpAsn  bgp所使用的asn号
@@ -244,6 +252,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID
     * haMode  ha模式
     * policyTemplate  policyTemplate
+    * tags  标签
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
             'usedConnectionGroup' => 'getUsedConnectionGroup',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'haMode' => 'getHaMode',
-            'policyTemplate' => 'getPolicyTemplate'
+            'policyTemplate' => 'getPolicyTemplate',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -376,6 +386,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['haMode'] = isset($data['haMode']) ? $data['haMode'] : null;
         $this->container['policyTemplate'] = isset($data['policyTemplate']) ? $data['policyTemplate'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -643,7 +654,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkType
-    *  VPN网关北向类型，默认为公网(public)
+    *  VPN网关的网络类型，默认为公网(public)
     *
     * @return string|null
     */
@@ -655,7 +666,7 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     /**
     * Sets networkType
     *
-    * @param string|null $networkType VPN网关北向类型，默认为公网(public)
+    * @param string|null $networkType VPN网关的网络类型，默认为公网(public)
     *
     * @return $this
     */
@@ -902,6 +913,30 @@ class CreateResponseVpnGateway implements ModelInterface, ArrayAccess
     public function setPolicyTemplate($policyTemplate)
     {
         $this->container['policyTemplate'] = $policyTemplate;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签
+    *
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]|null $tags 标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

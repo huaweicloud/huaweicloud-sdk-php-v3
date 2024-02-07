@@ -29,7 +29,7 @@ class UpdateVgwCertificateRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'vgwId' => 'string',
             'certificateId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayCertificateRequestBody'
+            'body' => '\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnGatewayCertificateRequestBody'
     ];
 
     /**
@@ -252,7 +252,7 @@ class UpdateVgwCertificateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayCertificateRequestBody|null
+    * @return \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnGatewayCertificateRequestBody|null
     */
     public function getBody()
     {
@@ -262,7 +262,7 @@ class UpdateVgwCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpn\V5\Model\VpnGatewayCertificateRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnGatewayCertificateRequestBody|null $body body
     *
     * @return $this
     */

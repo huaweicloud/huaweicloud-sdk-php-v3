@@ -43,6 +43,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
     * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    * newNodeAutoAddStatus  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    * newNodeWeight  新增节点的读权重。
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'balanceRouteModeEnabled' => 'bool',
             'consistenceMode' => 'string',
             'subnetId' => 'string',
-            'sslOption' => 'string'
+            'sslOption' => 'string',
+            'newNodeAutoAddStatus' => 'string',
+            'newNodeWeight' => 'int'
     ];
 
     /**
@@ -97,6 +101,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
     * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    * newNodeAutoAddStatus  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    * newNodeWeight  新增节点的读权重。
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'balanceRouteModeEnabled' => null,
         'consistenceMode' => null,
         'subnetId' => null,
-        'sslOption' => null
+        'sslOption' => null,
+        'newNodeAutoAddStatus' => null,
+        'newNodeWeight' => 'int32'
     ];
 
     /**
@@ -172,6 +180,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
     * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    * newNodeAutoAddStatus  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    * newNodeWeight  新增节点的读权重。
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'balanceRouteModeEnabled' => 'balance_route_mode_enabled',
             'consistenceMode' => 'consistence_mode',
             'subnetId' => 'subnet_id',
-            'sslOption' => 'ssl_option'
+            'sslOption' => 'ssl_option',
+            'newNodeAutoAddStatus' => 'new_node_auto_add_status',
+            'newNodeWeight' => 'new_node_weight'
     ];
 
     /**
@@ -226,6 +238,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
     * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    * newNodeAutoAddStatus  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    * newNodeWeight  新增节点的读权重。
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'balanceRouteModeEnabled' => 'setBalanceRouteModeEnabled',
             'consistenceMode' => 'setConsistenceMode',
             'subnetId' => 'setSubnetId',
-            'sslOption' => 'setSslOption'
+            'sslOption' => 'setSslOption',
+            'newNodeAutoAddStatus' => 'setNewNodeAutoAddStatus',
+            'newNodeWeight' => 'setNewNodeWeight'
     ];
 
     /**
@@ -280,6 +296,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * consistenceMode  一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性。 - global: 全局一致性。 - eventual: 最终一致性。
     * subnetId  数据库代理所属的子网ID。
     * sslOption  SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+    * newNodeAutoAddStatus  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    * newNodeWeight  新增节点的读权重。
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'balanceRouteModeEnabled' => 'getBalanceRouteModeEnabled',
             'consistenceMode' => 'getConsistenceMode',
             'subnetId' => 'getSubnetId',
-            'sslOption' => 'getSslOption'
+            'sslOption' => 'getSslOption',
+            'newNodeAutoAddStatus' => 'getNewNodeAutoAddStatus',
+            'newNodeWeight' => 'getNewNodeWeight'
     ];
 
     /**
@@ -390,6 +410,8 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['consistenceMode'] = isset($data['consistenceMode']) ? $data['consistenceMode'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['sslOption'] = isset($data['sslOption']) ? $data['sslOption'] : null;
+        $this->container['newNodeAutoAddStatus'] = isset($data['newNodeAutoAddStatus']) ? $data['newNodeAutoAddStatus'] : null;
+        $this->container['newNodeWeight'] = isset($data['newNodeWeight']) ? $data['newNodeWeight'] : null;
     }
 
     /**
@@ -963,6 +985,54 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function setSslOption($sslOption)
     {
         $this->container['sslOption'] = $sslOption;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeAutoAddStatus
+    *  新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    *
+    * @return string|null
+    */
+    public function getNewNodeAutoAddStatus()
+    {
+        return $this->container['newNodeAutoAddStatus'];
+    }
+
+    /**
+    * Sets newNodeAutoAddStatus
+    *
+    * @param string|null $newNodeAutoAddStatus 新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+    *
+    * @return $this
+    */
+    public function setNewNodeAutoAddStatus($newNodeAutoAddStatus)
+    {
+        $this->container['newNodeAutoAddStatus'] = $newNodeAutoAddStatus;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeWeight
+    *  新增节点的读权重。
+    *
+    * @return int|null
+    */
+    public function getNewNodeWeight()
+    {
+        return $this->container['newNodeWeight'];
+    }
+
+    /**
+    * Sets newNodeWeight
+    *
+    * @param int|null $newNodeWeight 新增节点的读权重。
+    *
+    * @return $this
+    */
+    public function setNewNodeWeight($newNodeWeight)
+    {
+        $this->container['newNodeWeight'] = $newNodeWeight;
         return $this;
     }
 

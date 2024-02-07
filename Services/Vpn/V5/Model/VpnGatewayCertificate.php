@@ -25,11 +25,11 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     * projectId  租户的项目ID
     * vgwId  VPN网关ID
     * status  网关证书状态
-    * issuer  签名证书颁发者，国密证书时为签名证书颁发者
-    * signatureAlgorithm  签名证书签名算法，国密证书时为签名证书签名算法
+    * issuer  证书颁发者，国密证书时为签名证书颁发者
+    * signatureAlgorithm  证书签名算法，国密证书时为签名证书签名算法
     * certificateSerialNumber  证书序列号，国密证书时为签名证书序列号
-    * certificateSubject  签名证书主题，国密证书时为签名证书主题
-    * certificateExpireTime  签名证书过期时间，国密证书时为签名证书过期时间
+    * certificateSubject  证书主题，国密证书时为签名证书主题
+    * certificateExpireTime  证书过期时间，国密证书时为签名证书过期时间
     * certificateChainSerialNumber  CA证书序列号
     * certificateChainSubject  CA证书主题
     * certificateChainExpireTime  CA证书过期时间
@@ -69,11 +69,11 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     * projectId  租户的项目ID
     * vgwId  VPN网关ID
     * status  网关证书状态
-    * issuer  签名证书颁发者，国密证书时为签名证书颁发者
-    * signatureAlgorithm  签名证书签名算法，国密证书时为签名证书签名算法
+    * issuer  证书颁发者，国密证书时为签名证书颁发者
+    * signatureAlgorithm  证书签名算法，国密证书时为签名证书签名算法
     * certificateSerialNumber  证书序列号，国密证书时为签名证书序列号
-    * certificateSubject  签名证书主题，国密证书时为签名证书主题
-    * certificateExpireTime  签名证书过期时间，国密证书时为签名证书过期时间
+    * certificateSubject  证书主题，国密证书时为签名证书主题
+    * certificateExpireTime  证书过期时间，国密证书时为签名证书过期时间
     * certificateChainSerialNumber  CA证书序列号
     * certificateChainSubject  CA证书主题
     * certificateChainExpireTime  CA证书过期时间
@@ -134,11 +134,11 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     * projectId  租户的项目ID
     * vgwId  VPN网关ID
     * status  网关证书状态
-    * issuer  签名证书颁发者，国密证书时为签名证书颁发者
-    * signatureAlgorithm  签名证书签名算法，国密证书时为签名证书签名算法
+    * issuer  证书颁发者，国密证书时为签名证书颁发者
+    * signatureAlgorithm  证书签名算法，国密证书时为签名证书签名算法
     * certificateSerialNumber  证书序列号，国密证书时为签名证书序列号
-    * certificateSubject  签名证书主题，国密证书时为签名证书主题
-    * certificateExpireTime  签名证书过期时间，国密证书时为签名证书过期时间
+    * certificateSubject  证书主题，国密证书时为签名证书主题
+    * certificateExpireTime  证书过期时间，国密证书时为签名证书过期时间
     * certificateChainSerialNumber  CA证书序列号
     * certificateChainSubject  CA证书主题
     * certificateChainExpireTime  CA证书过期时间
@@ -178,11 +178,11 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     * projectId  租户的项目ID
     * vgwId  VPN网关ID
     * status  网关证书状态
-    * issuer  签名证书颁发者，国密证书时为签名证书颁发者
-    * signatureAlgorithm  签名证书签名算法，国密证书时为签名证书签名算法
+    * issuer  证书颁发者，国密证书时为签名证书颁发者
+    * signatureAlgorithm  证书签名算法，国密证书时为签名证书签名算法
     * certificateSerialNumber  证书序列号，国密证书时为签名证书序列号
-    * certificateSubject  签名证书主题，国密证书时为签名证书主题
-    * certificateExpireTime  签名证书过期时间，国密证书时为签名证书过期时间
+    * certificateSubject  证书主题，国密证书时为签名证书主题
+    * certificateExpireTime  证书过期时间，国密证书时为签名证书过期时间
     * certificateChainSerialNumber  CA证书序列号
     * certificateChainSubject  CA证书主题
     * certificateChainExpireTime  CA证书过期时间
@@ -222,11 +222,11 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     * projectId  租户的项目ID
     * vgwId  VPN网关ID
     * status  网关证书状态
-    * issuer  签名证书颁发者，国密证书时为签名证书颁发者
-    * signatureAlgorithm  签名证书签名算法，国密证书时为签名证书签名算法
+    * issuer  证书颁发者，国密证书时为签名证书颁发者
+    * signatureAlgorithm  证书签名算法，国密证书时为签名证书签名算法
     * certificateSerialNumber  证书序列号，国密证书时为签名证书序列号
-    * certificateSubject  签名证书主题，国密证书时为签名证书主题
-    * certificateExpireTime  签名证书过期时间，国密证书时为签名证书过期时间
+    * certificateSubject  证书主题，国密证书时为签名证书主题
+    * certificateExpireTime  证书过期时间，国密证书时为签名证书过期时间
     * certificateChainSerialNumber  CA证书序列号
     * certificateChainSubject  CA证书主题
     * certificateChainExpireTime  CA证书过期时间
@@ -542,7 +542,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuer
-    *  签名证书颁发者，国密证书时为签名证书颁发者
+    *  证书颁发者，国密证书时为签名证书颁发者
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     /**
     * Sets issuer
     *
-    * @param string|null $issuer 签名证书颁发者，国密证书时为签名证书颁发者
+    * @param string|null $issuer 证书颁发者，国密证书时为签名证书颁发者
     *
     * @return $this
     */
@@ -566,7 +566,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
 
     /**
     * Gets signatureAlgorithm
-    *  签名证书签名算法，国密证书时为签名证书签名算法
+    *  证书签名算法，国密证书时为签名证书签名算法
     *
     * @return string|null
     */
@@ -578,7 +578,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     /**
     * Sets signatureAlgorithm
     *
-    * @param string|null $signatureAlgorithm 签名证书签名算法，国密证书时为签名证书签名算法
+    * @param string|null $signatureAlgorithm 证书签名算法，国密证书时为签名证书签名算法
     *
     * @return $this
     */
@@ -614,7 +614,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateSubject
-    *  签名证书主题，国密证书时为签名证书主题
+    *  证书主题，国密证书时为签名证书主题
     *
     * @return string|null
     */
@@ -626,7 +626,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     /**
     * Sets certificateSubject
     *
-    * @param string|null $certificateSubject 签名证书主题，国密证书时为签名证书主题
+    * @param string|null $certificateSubject 证书主题，国密证书时为签名证书主题
     *
     * @return $this
     */
@@ -638,7 +638,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateExpireTime
-    *  签名证书过期时间，国密证书时为签名证书过期时间
+    *  证书过期时间，国密证书时为签名证书过期时间
     *
     * @return \DateTime|null
     */
@@ -650,7 +650,7 @@ class VpnGatewayCertificate implements ModelInterface, ArrayAccess
     /**
     * Sets certificateExpireTime
     *
-    * @param \DateTime|null $certificateExpireTime 签名证书过期时间，国密证书时为签名证书过期时间
+    * @param \DateTime|null $certificateExpireTime 证书过期时间，国密证书时为签名证书过期时间
     *
     * @return $this
     */
