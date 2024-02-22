@@ -43,8 +43,8 @@ class ShowWidgetResponse implements ModelInterface, ArrayAccess
             'thresholdEnabled' => 'bool',
             'view' => 'string',
             'metricDisplayMode' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties',
-            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation',
+            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties',
+            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation',
             'unit' => 'string',
             'createTime' => 'int'
     ];
@@ -531,7 +531,7 @@ class ShowWidgetResponse implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null
     */
     public function getProperties()
     {
@@ -541,7 +541,7 @@ class ShowWidgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null $properties properties
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null $properties properties
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class ShowWidgetResponse implements ModelInterface, ArrayAccess
     * Gets location
     *  location
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null
     */
     public function getLocation()
     {
@@ -565,7 +565,7 @@ class ShowWidgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation|null $location location
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null $location location
     *
     * @return $this
     */

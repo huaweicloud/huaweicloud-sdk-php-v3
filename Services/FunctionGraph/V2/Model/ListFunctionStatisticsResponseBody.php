@@ -26,6 +26,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     * maxDuration  最大时延，单位毫秒
     * minDuration  最小时延，单位毫秒
     * rejectCount  被拒绝次数
+    * functionErrorCount  函数错误次数
+    * systemErrorCount  系统错误次数
+    * reservedInstanceNum  预留实例指标
+    * concurrencyNum  弹性实例指标
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
             'failCount' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
             'maxDuration' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
             'minDuration' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
-            'rejectCount' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]'
+            'rejectCount' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
+            'functionErrorCount' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
+            'systemErrorCount' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
+            'reservedInstanceNum' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]',
+            'concurrencyNum' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]'
     ];
 
     /**
@@ -46,6 +54,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     * maxDuration  最大时延，单位毫秒
     * minDuration  最小时延，单位毫秒
     * rejectCount  被拒绝次数
+    * functionErrorCount  函数错误次数
+    * systemErrorCount  系统错误次数
+    * reservedInstanceNum  预留实例指标
+    * concurrencyNum  弹性实例指标
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
         'failCount' => null,
         'maxDuration' => null,
         'minDuration' => null,
-        'rejectCount' => null
+        'rejectCount' => null,
+        'functionErrorCount' => null,
+        'systemErrorCount' => null,
+        'reservedInstanceNum' => null,
+        'concurrencyNum' => null
     ];
 
     /**
@@ -87,6 +103,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     * maxDuration  最大时延，单位毫秒
     * minDuration  最小时延，单位毫秒
     * rejectCount  被拒绝次数
+    * functionErrorCount  函数错误次数
+    * systemErrorCount  系统错误次数
+    * reservedInstanceNum  预留实例指标
+    * concurrencyNum  弹性实例指标
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
             'failCount' => 'fail_count',
             'maxDuration' => 'max_duration',
             'minDuration' => 'min_duration',
-            'rejectCount' => 'reject_count'
+            'rejectCount' => 'reject_count',
+            'functionErrorCount' => 'function_error_count',
+            'systemErrorCount' => 'system_error_count',
+            'reservedInstanceNum' => 'reserved_instance_num',
+            'concurrencyNum' => 'concurrency_num'
     ];
 
     /**
@@ -107,6 +131,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     * maxDuration  最大时延，单位毫秒
     * minDuration  最小时延，单位毫秒
     * rejectCount  被拒绝次数
+    * functionErrorCount  函数错误次数
+    * systemErrorCount  系统错误次数
+    * reservedInstanceNum  预留实例指标
+    * concurrencyNum  弹性实例指标
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
             'failCount' => 'setFailCount',
             'maxDuration' => 'setMaxDuration',
             'minDuration' => 'setMinDuration',
-            'rejectCount' => 'setRejectCount'
+            'rejectCount' => 'setRejectCount',
+            'functionErrorCount' => 'setFunctionErrorCount',
+            'systemErrorCount' => 'setSystemErrorCount',
+            'reservedInstanceNum' => 'setReservedInstanceNum',
+            'concurrencyNum' => 'setConcurrencyNum'
     ];
 
     /**
@@ -127,6 +159,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     * maxDuration  最大时延，单位毫秒
     * minDuration  最小时延，单位毫秒
     * rejectCount  被拒绝次数
+    * functionErrorCount  函数错误次数
+    * systemErrorCount  系统错误次数
+    * reservedInstanceNum  预留实例指标
+    * concurrencyNum  弹性实例指标
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
             'failCount' => 'getFailCount',
             'maxDuration' => 'getMaxDuration',
             'minDuration' => 'getMinDuration',
-            'rejectCount' => 'getRejectCount'
+            'rejectCount' => 'getRejectCount',
+            'functionErrorCount' => 'getFunctionErrorCount',
+            'systemErrorCount' => 'getSystemErrorCount',
+            'reservedInstanceNum' => 'getReservedInstanceNum',
+            'concurrencyNum' => 'getConcurrencyNum'
     ];
 
     /**
@@ -203,6 +243,10 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
         $this->container['maxDuration'] = isset($data['maxDuration']) ? $data['maxDuration'] : null;
         $this->container['minDuration'] = isset($data['minDuration']) ? $data['minDuration'] : null;
         $this->container['rejectCount'] = isset($data['rejectCount']) ? $data['rejectCount'] : null;
+        $this->container['functionErrorCount'] = isset($data['functionErrorCount']) ? $data['functionErrorCount'] : null;
+        $this->container['systemErrorCount'] = isset($data['systemErrorCount']) ? $data['systemErrorCount'] : null;
+        $this->container['reservedInstanceNum'] = isset($data['reservedInstanceNum']) ? $data['reservedInstanceNum'] : null;
+        $this->container['concurrencyNum'] = isset($data['concurrencyNum']) ? $data['concurrencyNum'] : null;
     }
 
     /**
@@ -368,6 +412,102 @@ class ListFunctionStatisticsResponseBody implements ModelInterface, ArrayAccess
     public function setRejectCount($rejectCount)
     {
         $this->container['rejectCount'] = $rejectCount;
+        return $this;
+    }
+
+    /**
+    * Gets functionErrorCount
+    *  函数错误次数
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null
+    */
+    public function getFunctionErrorCount()
+    {
+        return $this->container['functionErrorCount'];
+    }
+
+    /**
+    * Sets functionErrorCount
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null $functionErrorCount 函数错误次数
+    *
+    * @return $this
+    */
+    public function setFunctionErrorCount($functionErrorCount)
+    {
+        $this->container['functionErrorCount'] = $functionErrorCount;
+        return $this;
+    }
+
+    /**
+    * Gets systemErrorCount
+    *  系统错误次数
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null
+    */
+    public function getSystemErrorCount()
+    {
+        return $this->container['systemErrorCount'];
+    }
+
+    /**
+    * Sets systemErrorCount
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null $systemErrorCount 系统错误次数
+    *
+    * @return $this
+    */
+    public function setSystemErrorCount($systemErrorCount)
+    {
+        $this->container['systemErrorCount'] = $systemErrorCount;
+        return $this;
+    }
+
+    /**
+    * Gets reservedInstanceNum
+    *  预留实例指标
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null
+    */
+    public function getReservedInstanceNum()
+    {
+        return $this->container['reservedInstanceNum'];
+    }
+
+    /**
+    * Sets reservedInstanceNum
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null $reservedInstanceNum 预留实例指标
+    *
+    * @return $this
+    */
+    public function setReservedInstanceNum($reservedInstanceNum)
+    {
+        $this->container['reservedInstanceNum'] = $reservedInstanceNum;
+        return $this;
+    }
+
+    /**
+    * Gets concurrencyNum
+    *  弹性实例指标
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null
+    */
+    public function getConcurrencyNum()
+    {
+        return $this->container['concurrencyNum'];
+    }
+
+    /**
+    * Sets concurrencyNum
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\SlaReportsValue[]|null $concurrencyNum 弹性实例指标
+    *
+    * @return $this
+    */
+    public function setConcurrencyNum($concurrencyNum)
+    {
+        $this->container['concurrencyNum'] = $concurrencyNum;
         return $this;
     }
 

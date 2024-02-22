@@ -195,15 +195,21 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 131)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 131)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 131.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['name'])) {
+            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
             }
+        if ($this->container['filterType'] === null) {
+            $invalidProperties[] = "'filterType' can't be null";
+        }
             $allowedValues = $this->getFilterTypeAllowableValues();
                 if (!is_null($this->container['filterType']) && !in_array($this->container['filterType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -230,7 +236,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     * Gets name
     *  维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -240,7 +246,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+    * @param string $name 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
     *
     * @return $this
     */
@@ -254,7 +260,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     * Gets filterType
     *  资源类型, all_instances: 全部资源, specific_instances: 指定资源
     *
-    * @return string|null
+    * @return string
     */
     public function getFilterType()
     {
@@ -264,7 +270,7 @@ class DimensionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filterType
     *
-    * @param string|null $filterType 资源类型, all_instances: 全部资源, specific_instances: 指定资源
+    * @param string $filterType 资源类型, all_instances: 全部资源, specific_instances: 指定资源
     *
     * @return $this
     */

@@ -37,6 +37,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * issueDate  开票时间
+    * discountMark  打折标识
+    * serialNumber  电子客票号
+    * taxAmount  税金价格
+    * taxRate  税率
+    * airConditioning  是否是空调车厢
+    * originalInvoiceNumber  原发票号码
+    * unifiedSocialCreditCode  统一社会信用号码
+    * buyerName  购买方名称
+    * totalAmountExcludingTax  不含税价格
+    * invoiceNumber  发票号码
+    * sealMark  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    * title  标题
+    * area  地区
+    * receiptNumber  收据编码
+    * amountInFigures  小写票据金额
+    * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -60,6 +78,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'string',
             'logId' => 'string',
             'saleLocation' => 'string',
+            'invoiceStyle' => 'string',
+            'issueDate' => 'string',
+            'discountMark' => 'string',
+            'serialNumber' => 'string',
+            'taxAmount' => 'string',
+            'taxRate' => 'string',
+            'airConditioning' => 'string',
+            'originalInvoiceNumber' => 'string',
+            'unifiedSocialCreditCode' => 'string',
+            'buyerName' => 'string',
+            'totalAmountExcludingTax' => 'string',
+            'invoiceNumber' => 'string',
+            'sealMark' => 'bool',
+            'title' => 'string',
+            'area' => 'string',
+            'receiptNumber' => 'string',
+            'amountInFigures' => 'string',
+            'amountInWords' => 'string',
             'confidence' => 'object',
             'textLocation' => 'object'
     ];
@@ -83,6 +119,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * issueDate  开票时间
+    * discountMark  打折标识
+    * serialNumber  电子客票号
+    * taxAmount  税金价格
+    * taxRate  税率
+    * airConditioning  是否是空调车厢
+    * originalInvoiceNumber  原发票号码
+    * unifiedSocialCreditCode  统一社会信用号码
+    * buyerName  购买方名称
+    * totalAmountExcludingTax  不含税价格
+    * invoiceNumber  发票号码
+    * sealMark  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    * title  标题
+    * area  地区
+    * receiptNumber  收据编码
+    * amountInFigures  小写票据金额
+    * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -106,6 +160,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
         'name' => null,
         'logId' => null,
         'saleLocation' => null,
+        'invoiceStyle' => null,
+        'issueDate' => null,
+        'discountMark' => null,
+        'serialNumber' => null,
+        'taxAmount' => null,
+        'taxRate' => null,
+        'airConditioning' => null,
+        'originalInvoiceNumber' => null,
+        'unifiedSocialCreditCode' => null,
+        'buyerName' => null,
+        'totalAmountExcludingTax' => null,
+        'invoiceNumber' => null,
+        'sealMark' => null,
+        'title' => null,
+        'area' => null,
+        'receiptNumber' => null,
+        'amountInFigures' => null,
+        'amountInWords' => null,
         'confidence' => null,
         'textLocation' => null
     ];
@@ -150,6 +222,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * issueDate  开票时间
+    * discountMark  打折标识
+    * serialNumber  电子客票号
+    * taxAmount  税金价格
+    * taxRate  税率
+    * airConditioning  是否是空调车厢
+    * originalInvoiceNumber  原发票号码
+    * unifiedSocialCreditCode  统一社会信用号码
+    * buyerName  购买方名称
+    * totalAmountExcludingTax  不含税价格
+    * invoiceNumber  发票号码
+    * sealMark  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    * title  标题
+    * area  地区
+    * receiptNumber  收据编码
+    * amountInFigures  小写票据金额
+    * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -173,6 +263,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'name',
             'logId' => 'log_id',
             'saleLocation' => 'sale_location',
+            'invoiceStyle' => 'invoice_style',
+            'issueDate' => 'issue_date',
+            'discountMark' => 'discount_mark',
+            'serialNumber' => 'serial_number',
+            'taxAmount' => 'tax_amount',
+            'taxRate' => 'tax_rate',
+            'airConditioning' => 'air_conditioning',
+            'originalInvoiceNumber' => 'original_invoice_number',
+            'unifiedSocialCreditCode' => 'unified_social_credit_code',
+            'buyerName' => 'buyer_name',
+            'totalAmountExcludingTax' => 'total_amount_excluding_tax',
+            'invoiceNumber' => 'invoice_number',
+            'sealMark' => 'seal_mark',
+            'title' => 'title',
+            'area' => 'area',
+            'receiptNumber' => 'receipt_number',
+            'amountInFigures' => 'amount_in_figures',
+            'amountInWords' => 'amount_in_words',
             'confidence' => 'confidence',
             'textLocation' => 'text_location'
     ];
@@ -196,6 +304,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * issueDate  开票时间
+    * discountMark  打折标识
+    * serialNumber  电子客票号
+    * taxAmount  税金价格
+    * taxRate  税率
+    * airConditioning  是否是空调车厢
+    * originalInvoiceNumber  原发票号码
+    * unifiedSocialCreditCode  统一社会信用号码
+    * buyerName  购买方名称
+    * totalAmountExcludingTax  不含税价格
+    * invoiceNumber  发票号码
+    * sealMark  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    * title  标题
+    * area  地区
+    * receiptNumber  收据编码
+    * amountInFigures  小写票据金额
+    * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -219,6 +345,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'logId' => 'setLogId',
             'saleLocation' => 'setSaleLocation',
+            'invoiceStyle' => 'setInvoiceStyle',
+            'issueDate' => 'setIssueDate',
+            'discountMark' => 'setDiscountMark',
+            'serialNumber' => 'setSerialNumber',
+            'taxAmount' => 'setTaxAmount',
+            'taxRate' => 'setTaxRate',
+            'airConditioning' => 'setAirConditioning',
+            'originalInvoiceNumber' => 'setOriginalInvoiceNumber',
+            'unifiedSocialCreditCode' => 'setUnifiedSocialCreditCode',
+            'buyerName' => 'setBuyerName',
+            'totalAmountExcludingTax' => 'setTotalAmountExcludingTax',
+            'invoiceNumber' => 'setInvoiceNumber',
+            'sealMark' => 'setSealMark',
+            'title' => 'setTitle',
+            'area' => 'setArea',
+            'receiptNumber' => 'setReceiptNumber',
+            'amountInFigures' => 'setAmountInFigures',
+            'amountInWords' => 'setAmountInWords',
             'confidence' => 'setConfidence',
             'textLocation' => 'setTextLocation'
     ];
@@ -242,6 +386,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * name  车票持有人姓名。
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
+    * invoiceStyle  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    * issueDate  开票时间
+    * discountMark  打折标识
+    * serialNumber  电子客票号
+    * taxAmount  税金价格
+    * taxRate  税率
+    * airConditioning  是否是空调车厢
+    * originalInvoiceNumber  原发票号码
+    * unifiedSocialCreditCode  统一社会信用号码
+    * buyerName  购买方名称
+    * totalAmountExcludingTax  不含税价格
+    * invoiceNumber  发票号码
+    * sealMark  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    * title  标题
+    * area  地区
+    * receiptNumber  收据编码
+    * amountInFigures  小写票据金额
+    * amountInWords  大写票据金额
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -265,6 +427,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'logId' => 'getLogId',
             'saleLocation' => 'getSaleLocation',
+            'invoiceStyle' => 'getInvoiceStyle',
+            'issueDate' => 'getIssueDate',
+            'discountMark' => 'getDiscountMark',
+            'serialNumber' => 'getSerialNumber',
+            'taxAmount' => 'getTaxAmount',
+            'taxRate' => 'getTaxRate',
+            'airConditioning' => 'getAirConditioning',
+            'originalInvoiceNumber' => 'getOriginalInvoiceNumber',
+            'unifiedSocialCreditCode' => 'getUnifiedSocialCreditCode',
+            'buyerName' => 'getBuyerName',
+            'totalAmountExcludingTax' => 'getTotalAmountExcludingTax',
+            'invoiceNumber' => 'getInvoiceNumber',
+            'sealMark' => 'getSealMark',
+            'title' => 'getTitle',
+            'area' => 'getArea',
+            'receiptNumber' => 'getReceiptNumber',
+            'amountInFigures' => 'getAmountInFigures',
+            'amountInWords' => 'getAmountInWords',
             'confidence' => 'getConfidence',
             'textLocation' => 'getTextLocation'
     ];
@@ -344,6 +524,24 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['saleLocation'] = isset($data['saleLocation']) ? $data['saleLocation'] : null;
+        $this->container['invoiceStyle'] = isset($data['invoiceStyle']) ? $data['invoiceStyle'] : null;
+        $this->container['issueDate'] = isset($data['issueDate']) ? $data['issueDate'] : null;
+        $this->container['discountMark'] = isset($data['discountMark']) ? $data['discountMark'] : null;
+        $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
+        $this->container['taxAmount'] = isset($data['taxAmount']) ? $data['taxAmount'] : null;
+        $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
+        $this->container['airConditioning'] = isset($data['airConditioning']) ? $data['airConditioning'] : null;
+        $this->container['originalInvoiceNumber'] = isset($data['originalInvoiceNumber']) ? $data['originalInvoiceNumber'] : null;
+        $this->container['unifiedSocialCreditCode'] = isset($data['unifiedSocialCreditCode']) ? $data['unifiedSocialCreditCode'] : null;
+        $this->container['buyerName'] = isset($data['buyerName']) ? $data['buyerName'] : null;
+        $this->container['totalAmountExcludingTax'] = isset($data['totalAmountExcludingTax']) ? $data['totalAmountExcludingTax'] : null;
+        $this->container['invoiceNumber'] = isset($data['invoiceNumber']) ? $data['invoiceNumber'] : null;
+        $this->container['sealMark'] = isset($data['sealMark']) ? $data['sealMark'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['area'] = isset($data['area']) ? $data['area'] : null;
+        $this->container['receiptNumber'] = isset($data['receiptNumber']) ? $data['receiptNumber'] : null;
+        $this->container['amountInFigures'] = isset($data['amountInFigures']) ? $data['amountInFigures'] : null;
+        $this->container['amountInWords'] = isset($data['amountInWords']) ? $data['amountInWords'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
@@ -775,6 +973,438 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     public function setSaleLocation($saleLocation)
     {
         $this->container['saleLocation'] = $saleLocation;
+        return $this;
+    }
+
+    /**
+    * Gets invoiceStyle
+    *  类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    *
+    * @return string|null
+    */
+    public function getInvoiceStyle()
+    {
+        return $this->container['invoiceStyle'];
+    }
+
+    /**
+    * Sets invoiceStyle
+    *
+    * @param string|null $invoiceStyle 类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+    *
+    * @return $this
+    */
+    public function setInvoiceStyle($invoiceStyle)
+    {
+        $this->container['invoiceStyle'] = $invoiceStyle;
+        return $this;
+    }
+
+    /**
+    * Gets issueDate
+    *  开票时间
+    *
+    * @return string|null
+    */
+    public function getIssueDate()
+    {
+        return $this->container['issueDate'];
+    }
+
+    /**
+    * Sets issueDate
+    *
+    * @param string|null $issueDate 开票时间
+    *
+    * @return $this
+    */
+    public function setIssueDate($issueDate)
+    {
+        $this->container['issueDate'] = $issueDate;
+        return $this;
+    }
+
+    /**
+    * Gets discountMark
+    *  打折标识
+    *
+    * @return string|null
+    */
+    public function getDiscountMark()
+    {
+        return $this->container['discountMark'];
+    }
+
+    /**
+    * Sets discountMark
+    *
+    * @param string|null $discountMark 打折标识
+    *
+    * @return $this
+    */
+    public function setDiscountMark($discountMark)
+    {
+        $this->container['discountMark'] = $discountMark;
+        return $this;
+    }
+
+    /**
+    * Gets serialNumber
+    *  电子客票号
+    *
+    * @return string|null
+    */
+    public function getSerialNumber()
+    {
+        return $this->container['serialNumber'];
+    }
+
+    /**
+    * Sets serialNumber
+    *
+    * @param string|null $serialNumber 电子客票号
+    *
+    * @return $this
+    */
+    public function setSerialNumber($serialNumber)
+    {
+        $this->container['serialNumber'] = $serialNumber;
+        return $this;
+    }
+
+    /**
+    * Gets taxAmount
+    *  税金价格
+    *
+    * @return string|null
+    */
+    public function getTaxAmount()
+    {
+        return $this->container['taxAmount'];
+    }
+
+    /**
+    * Sets taxAmount
+    *
+    * @param string|null $taxAmount 税金价格
+    *
+    * @return $this
+    */
+    public function setTaxAmount($taxAmount)
+    {
+        $this->container['taxAmount'] = $taxAmount;
+        return $this;
+    }
+
+    /**
+    * Gets taxRate
+    *  税率
+    *
+    * @return string|null
+    */
+    public function getTaxRate()
+    {
+        return $this->container['taxRate'];
+    }
+
+    /**
+    * Sets taxRate
+    *
+    * @param string|null $taxRate 税率
+    *
+    * @return $this
+    */
+    public function setTaxRate($taxRate)
+    {
+        $this->container['taxRate'] = $taxRate;
+        return $this;
+    }
+
+    /**
+    * Gets airConditioning
+    *  是否是空调车厢
+    *
+    * @return string|null
+    */
+    public function getAirConditioning()
+    {
+        return $this->container['airConditioning'];
+    }
+
+    /**
+    * Sets airConditioning
+    *
+    * @param string|null $airConditioning 是否是空调车厢
+    *
+    * @return $this
+    */
+    public function setAirConditioning($airConditioning)
+    {
+        $this->container['airConditioning'] = $airConditioning;
+        return $this;
+    }
+
+    /**
+    * Gets originalInvoiceNumber
+    *  原发票号码
+    *
+    * @return string|null
+    */
+    public function getOriginalInvoiceNumber()
+    {
+        return $this->container['originalInvoiceNumber'];
+    }
+
+    /**
+    * Sets originalInvoiceNumber
+    *
+    * @param string|null $originalInvoiceNumber 原发票号码
+    *
+    * @return $this
+    */
+    public function setOriginalInvoiceNumber($originalInvoiceNumber)
+    {
+        $this->container['originalInvoiceNumber'] = $originalInvoiceNumber;
+        return $this;
+    }
+
+    /**
+    * Gets unifiedSocialCreditCode
+    *  统一社会信用号码
+    *
+    * @return string|null
+    */
+    public function getUnifiedSocialCreditCode()
+    {
+        return $this->container['unifiedSocialCreditCode'];
+    }
+
+    /**
+    * Sets unifiedSocialCreditCode
+    *
+    * @param string|null $unifiedSocialCreditCode 统一社会信用号码
+    *
+    * @return $this
+    */
+    public function setUnifiedSocialCreditCode($unifiedSocialCreditCode)
+    {
+        $this->container['unifiedSocialCreditCode'] = $unifiedSocialCreditCode;
+        return $this;
+    }
+
+    /**
+    * Gets buyerName
+    *  购买方名称
+    *
+    * @return string|null
+    */
+    public function getBuyerName()
+    {
+        return $this->container['buyerName'];
+    }
+
+    /**
+    * Sets buyerName
+    *
+    * @param string|null $buyerName 购买方名称
+    *
+    * @return $this
+    */
+    public function setBuyerName($buyerName)
+    {
+        $this->container['buyerName'] = $buyerName;
+        return $this;
+    }
+
+    /**
+    * Gets totalAmountExcludingTax
+    *  不含税价格
+    *
+    * @return string|null
+    */
+    public function getTotalAmountExcludingTax()
+    {
+        return $this->container['totalAmountExcludingTax'];
+    }
+
+    /**
+    * Sets totalAmountExcludingTax
+    *
+    * @param string|null $totalAmountExcludingTax 不含税价格
+    *
+    * @return $this
+    */
+    public function setTotalAmountExcludingTax($totalAmountExcludingTax)
+    {
+        $this->container['totalAmountExcludingTax'] = $totalAmountExcludingTax;
+        return $this;
+    }
+
+    /**
+    * Gets invoiceNumber
+    *  发票号码
+    *
+    * @return string|null
+    */
+    public function getInvoiceNumber()
+    {
+        return $this->container['invoiceNumber'];
+    }
+
+    /**
+    * Sets invoiceNumber
+    *
+    * @param string|null $invoiceNumber 发票号码
+    *
+    * @return $this
+    */
+    public function setInvoiceNumber($invoiceNumber)
+    {
+        $this->container['invoiceNumber'] = $invoiceNumber;
+        return $this;
+    }
+
+    /**
+    * Gets sealMark
+    *  是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    *
+    * @return bool|null
+    */
+    public function getSealMark()
+    {
+        return $this->container['sealMark'];
+    }
+
+    /**
+    * Sets sealMark
+    *
+    * @param bool|null $sealMark 是否有印章，True表示有印章，False表示不含印章，字段默认为False
+    *
+    * @return $this
+    */
+    public function setSealMark($sealMark)
+    {
+        $this->container['sealMark'] = $sealMark;
+        return $this;
+    }
+
+    /**
+    * Gets title
+    *  标题
+    *
+    * @return string|null
+    */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+    * Sets title
+    *
+    * @param string|null $title 标题
+    *
+    * @return $this
+    */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
+        return $this;
+    }
+
+    /**
+    * Gets area
+    *  地区
+    *
+    * @return string|null
+    */
+    public function getArea()
+    {
+        return $this->container['area'];
+    }
+
+    /**
+    * Sets area
+    *
+    * @param string|null $area 地区
+    *
+    * @return $this
+    */
+    public function setArea($area)
+    {
+        $this->container['area'] = $area;
+        return $this;
+    }
+
+    /**
+    * Gets receiptNumber
+    *  收据编码
+    *
+    * @return string|null
+    */
+    public function getReceiptNumber()
+    {
+        return $this->container['receiptNumber'];
+    }
+
+    /**
+    * Sets receiptNumber
+    *
+    * @param string|null $receiptNumber 收据编码
+    *
+    * @return $this
+    */
+    public function setReceiptNumber($receiptNumber)
+    {
+        $this->container['receiptNumber'] = $receiptNumber;
+        return $this;
+    }
+
+    /**
+    * Gets amountInFigures
+    *  小写票据金额
+    *
+    * @return string|null
+    */
+    public function getAmountInFigures()
+    {
+        return $this->container['amountInFigures'];
+    }
+
+    /**
+    * Sets amountInFigures
+    *
+    * @param string|null $amountInFigures 小写票据金额
+    *
+    * @return $this
+    */
+    public function setAmountInFigures($amountInFigures)
+    {
+        $this->container['amountInFigures'] = $amountInFigures;
+        return $this;
+    }
+
+    /**
+    * Gets amountInWords
+    *  大写票据金额
+    *
+    * @return string|null
+    */
+    public function getAmountInWords()
+    {
+        return $this->container['amountInWords'];
+    }
+
+    /**
+    * Sets amountInWords
+    *
+    * @param string|null $amountInWords 大写票据金额
+    *
+    * @return $this
+    */
+    public function setAmountInWords($amountInWords)
+    {
+        $this->container['amountInWords'] = $amountInWords;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  被停止的请求id
-    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  被停止的请求id
-    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  被停止的请求id
-    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  被停止的请求id
-    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  被停止的请求id
-    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * type  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    *  停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class CancelAsyncInvocationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接杀死runtime。
+    * @param string|null $type 停止的类型 支持recursive, force。 recursive: 停止正在调用的子函数。 force: 直接终止runtime。
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ces\V2\Model;
+namespace HuaweiCloud\SDK\FunctionGraph\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
+class VersionStrategyRules implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BaseWidgetInfo_properties';
+    protected static $openAPIModelName = 'VersionStrategyRules';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * ruleType  参数类型。
+    * param  规则参数名, 只支持大小写字母，数字，下划线，中划线。
+    * op  规则匹配操作符，目前仅需支持 = 或者in。
+    * value  规则值，如果op为in，则为逗号分隔的多值字符串
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'filter' => 'string',
-            'topN' => 'int',
-            'order' => 'string'
+            'ruleType' => 'string',
+            'param' => 'string',
+            'op' => 'string',
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * ruleType  参数类型。
+    * param  规则参数名, 只支持大小写字母，数字，下划线，中划线。
+    * op  规则匹配操作符，目前仅需支持 = 或者in。
+    * value  规则值，如果op为in，则为逗号分隔的多值字符串
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'filter' => null,
-        'topN' => 'int32',
-        'order' => null
+        'ruleType' => null,
+        'param' => null,
+        'op' => null,
+        'value' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * ruleType  参数类型。
+    * param  规则参数名, 只支持大小写字母，数字，下划线，中划线。
+    * op  规则匹配操作符，目前仅需支持 = 或者in。
+    * value  规则值，如果op为in，则为逗号分隔的多值字符串
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'filter' => 'filter',
-            'topN' => 'topN',
-            'order' => 'order'
+            'ruleType' => 'rule_type',
+            'param' => 'param',
+            'op' => 'op',
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * ruleType  参数类型。
+    * param  规则参数名, 只支持大小写字母，数字，下划线，中划线。
+    * op  规则匹配操作符，目前仅需支持 = 或者in。
+    * value  规则值，如果op为in，则为逗号分隔的多值字符串
     *
     * @var string[]
     */
     protected static $setters = [
-            'filter' => 'setFilter',
-            'topN' => 'setTopN',
-            'order' => 'setOrder'
+            'ruleType' => 'setRuleType',
+            'param' => 'setParam',
+            'op' => 'setOp',
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  聚合类型，目前只有TopN这一种类型
-    * topN  Top值前N个
-    * order  排序字段，asc正序，desc倒序
+    * ruleType  参数类型。
+    * param  规则参数名, 只支持大小写字母，数字，下划线，中划线。
+    * op  规则匹配操作符，目前仅需支持 = 或者in。
+    * value  规则值，如果op为in，则为逗号分隔的多值字符串
     *
     * @var string[]
     */
     protected static $getters = [
-            'filter' => 'getFilter',
-            'topN' => 'getTopN',
-            'order' => 'getOrder'
+            'ruleType' => 'getRuleType',
+            'param' => 'getParam',
+            'op' => 'getOp',
+            'value' => 'getValue'
     ];
 
     /**
@@ -149,9 +159,10 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const FILTER_TOP_N = 'topN';
-    const ORDER_ASC = 'asc';
-    const ORDER_DESC = 'desc';
+    const RULE_TYPE_HEADER = 'header';
+    const RULE_TYPE_COOKIE = 'cookie';
+    const OP_IN = 'in';
+    const OP_EQUAL = '=';
     
 
     /**
@@ -159,10 +170,11 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getFilterAllowableValues()
+    public function getRuleTypeAllowableValues()
     {
         return [
-            self::FILTER_TOP_N,
+            self::RULE_TYPE_HEADER,
+            self::RULE_TYPE_COOKIE,
         ];
     }
 
@@ -171,11 +183,11 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getOrderAllowableValues()
+    public function getOpAllowableValues()
     {
         return [
-            self::ORDER_ASC,
-            self::ORDER_DESC,
+            self::OP_IN,
+            self::OP_EQUAL,
         ];
     }
 
@@ -195,9 +207,10 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
-        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : null;
-        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['ruleType'] = isset($data['ruleType']) ? $data['ruleType'] : null;
+        $this->container['param'] = isset($data['param']) ? $data['param'] : null;
+        $this->container['op'] = isset($data['op']) ? $data['op'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -208,24 +221,18 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getFilterAllowableValues();
-                if (!is_null($this->container['filter']) && !in_array($this->container['filter'], $allowedValues, true)) {
+            $allowedValues = $this->getRuleTypeAllowableValues();
+                if (!is_null($this->container['ruleType']) && !in_array($this->container['ruleType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'filter', must be one of '%s'",
+                "invalid value for 'ruleType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
 
-            if (!is_null($this->container['topN']) && ($this->container['topN'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'topN', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['topN']) && ($this->container['topN'] < 1)) {
-                $invalidProperties[] = "invalid value for 'topN', must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getOrderAllowableValues();
-                if (!is_null($this->container['order']) && !in_array($this->container['order'], $allowedValues, true)) {
+            $allowedValues = $this->getOpAllowableValues();
+                if (!is_null($this->container['op']) && !in_array($this->container['op'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'order', must be one of '%s'",
+                "invalid value for 'op', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -245,74 +252,98 @@ class BaseWidgetInfoProperties implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets filter
-    *  聚合类型，目前只有TopN这一种类型
+    * Gets ruleType
+    *  参数类型。
     *
     * @return string|null
     */
-    public function getFilter()
+    public function getRuleType()
     {
-        return $this->container['filter'];
+        return $this->container['ruleType'];
     }
 
     /**
-    * Sets filter
+    * Sets ruleType
     *
-    * @param string|null $filter 聚合类型，目前只有TopN这一种类型
+    * @param string|null $ruleType 参数类型。
     *
     * @return $this
     */
-    public function setFilter($filter)
+    public function setRuleType($ruleType)
     {
-        $this->container['filter'] = $filter;
+        $this->container['ruleType'] = $ruleType;
         return $this;
     }
 
     /**
-    * Gets topN
-    *  Top值前N个
+    * Gets param
+    *  规则参数名, 只支持大小写字母，数字，下划线，中划线。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTopN()
+    public function getParam()
     {
-        return $this->container['topN'];
+        return $this->container['param'];
     }
 
     /**
-    * Sets topN
+    * Sets param
     *
-    * @param int|null $topN Top值前N个
+    * @param string|null $param 规则参数名, 只支持大小写字母，数字，下划线，中划线。
     *
     * @return $this
     */
-    public function setTopN($topN)
+    public function setParam($param)
     {
-        $this->container['topN'] = $topN;
+        $this->container['param'] = $param;
         return $this;
     }
 
     /**
-    * Gets order
-    *  排序字段，asc正序，desc倒序
+    * Gets op
+    *  规则匹配操作符，目前仅需支持 = 或者in。
     *
     * @return string|null
     */
-    public function getOrder()
+    public function getOp()
     {
-        return $this->container['order'];
+        return $this->container['op'];
     }
 
     /**
-    * Sets order
+    * Sets op
     *
-    * @param string|null $order 排序字段，asc正序，desc倒序
+    * @param string|null $op 规则匹配操作符，目前仅需支持 = 或者in。
     *
     * @return $this
     */
-    public function setOrder($order)
+    public function setOp($op)
     {
-        $this->container['order'] = $order;
+        $this->container['op'] = $op;
+        return $this;
+    }
+
+    /**
+    * Gets value
+    *  规则值，如果op为in，则为逗号分隔的多值字符串
+    *
+    * @return string|null
+    */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+    * Sets value
+    *
+    * @param string|null $value 规则值，如果op为in，则为逗号分隔的多值字符串
+    *
+    * @return $this
+    */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
         return $this;
     }
 

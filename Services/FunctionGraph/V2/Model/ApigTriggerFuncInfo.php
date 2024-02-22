@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class MetricConfig implements ModelInterface, ArrayAccess
+class ApigTriggerFuncInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,38 @@ class MetricConfig implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'MetricConfig';
+    protected static $openAPIModelName = 'ApigTriggerFuncInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  流量配置名称
-    * type  流量配置类型，当前只支持预留实例使用率一种类型
-    * threshold  流量阈值
-    * min  流量最小值
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * invocationType  调用函数执行方式。 - sync：同步执行 - async：异步执行
+    * timeout  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
+    * version  函数版本信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'type' => 'string',
-            'threshold' => 'int',
-            'min' => 'int'
+            'functionUrn' => 'string',
+            'invocationType' => 'string',
+            'timeout' => 'int',
+            'version' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  流量配置名称
-    * type  流量配置类型，当前只支持预留实例使用率一种类型
-    * threshold  流量阈值
-    * min  流量最小值
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * invocationType  调用函数执行方式。 - sync：同步执行 - async：异步执行
+    * timeout  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
+    * version  函数版本信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
-        'type' => null,
-        'threshold' => 'int32',
-        'min' => 'int32'
+        'functionUrn' => null,
+        'invocationType' => null,
+        'timeout' => 'int32',
+        'version' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class MetricConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  流量配置名称
-    * type  流量配置类型，当前只支持预留实例使用率一种类型
-    * threshold  流量阈值
-    * min  流量最小值
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * invocationType  调用函数执行方式。 - sync：同步执行 - async：异步执行
+    * timeout  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
+    * version  函数版本信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
-            'type' => 'type',
-            'threshold' => 'threshold',
-            'min' => 'min'
+            'functionUrn' => 'function_urn',
+            'invocationType' => 'invocation_type',
+            'timeout' => 'timeout',
+            'version' => 'version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  流量配置名称
-    * type  流量配置类型，当前只支持预留实例使用率一种类型
-    * threshold  流量阈值
-    * min  流量最小值
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * invocationType  调用函数执行方式。 - sync：同步执行 - async：异步执行
+    * timeout  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
+    * version  函数版本信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
-            'type' => 'setType',
-            'threshold' => 'setThreshold',
-            'min' => 'setMin'
+            'functionUrn' => 'setFunctionUrn',
+            'invocationType' => 'setInvocationType',
+            'timeout' => 'setTimeout',
+            'version' => 'setVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  流量配置名称
-    * type  流量配置类型，当前只支持预留实例使用率一种类型
-    * threshold  流量阈值
-    * min  流量最小值
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * invocationType  调用函数执行方式。 - sync：同步执行 - async：异步执行
+    * timeout  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
+    * version  函数版本信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
-            'type' => 'getType',
-            'threshold' => 'getThreshold',
-            'min' => 'getMin'
+            'functionUrn' => 'getFunctionUrn',
+            'invocationType' => 'getInvocationType',
+            'timeout' => 'getTimeout',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -159,7 +159,8 @@ class MetricConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_CONCURRENCY = 'Concurrency';
+    const INVOCATION_TYPE_SYNC = 'sync';
+    const INVOCATION_TYPE_ASYNC = 'async';
     
 
     /**
@@ -167,10 +168,11 @@ class MetricConfig implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getTypeAllowableValues()
+    public function getInvocationTypeAllowableValues()
     {
         return [
-            self::TYPE_CONCURRENCY,
+            self::INVOCATION_TYPE_SYNC,
+            self::INVOCATION_TYPE_ASYNC,
         ];
     }
 
@@ -190,10 +192,10 @@ class MetricConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
-        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
+        $this->container['functionUrn'] = isset($data['functionUrn']) ? $data['functionUrn'] : null;
+        $this->container['invocationType'] = isset($data['invocationType']) ? $data['invocationType'] : null;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -204,14 +206,23 @@ class MetricConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $allowedValues = $this->getInvocationTypeAllowableValues();
+                if (!is_null($this->container['invocationType']) && !in_array($this->container['invocationType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value for 'invocationType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
 
+        if ($this->container['timeout'] === null) {
+            $invalidProperties[] = "'timeout' can't be null";
+        }
+            if (($this->container['timeout'] > 60000)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be smaller than or equal to 60000.";
+            }
+            if (($this->container['timeout'] < 1)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -227,98 +238,98 @@ class MetricConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  流量配置名称
+    * Gets functionUrn
+    *  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return string|null
     */
-    public function getName()
+    public function getFunctionUrn()
     {
-        return $this->container['name'];
+        return $this->container['functionUrn'];
     }
 
     /**
-    * Sets name
+    * Sets functionUrn
     *
-    * @param string|null $name 流量配置名称
+    * @param string|null $functionUrn 函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setFunctionUrn($functionUrn)
     {
-        $this->container['name'] = $name;
+        $this->container['functionUrn'] = $functionUrn;
         return $this;
     }
 
     /**
-    * Gets type
-    *  流量配置类型，当前只支持预留实例使用率一种类型
+    * Gets invocationType
+    *  调用函数执行方式。 - sync：同步执行 - async：异步执行
     *
     * @return string|null
     */
-    public function getType()
+    public function getInvocationType()
     {
-        return $this->container['type'];
+        return $this->container['invocationType'];
     }
 
     /**
-    * Sets type
+    * Sets invocationType
     *
-    * @param string|null $type 流量配置类型，当前只支持预留实例使用率一种类型
+    * @param string|null $invocationType 调用函数执行方式。 - sync：同步执行 - async：异步执行
     *
     * @return $this
     */
-    public function setType($type)
+    public function setInvocationType($invocationType)
     {
-        $this->container['type'] = $type;
+        $this->container['invocationType'] = $invocationType;
         return $this;
     }
 
     /**
-    * Gets threshold
-    *  流量阈值
+    * Gets timeout
+    *  API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
     *
-    * @return int|null
+    * @return int
     */
-    public function getThreshold()
+    public function getTimeout()
     {
-        return $this->container['threshold'];
+        return $this->container['timeout'];
     }
 
     /**
-    * Sets threshold
+    * Sets timeout
     *
-    * @param int|null $threshold 流量阈值
+    * @param int $timeout API网关请求函数服务的超时时间（毫秒）。APIG触发器此参数必填。
     *
     * @return $this
     */
-    public function setThreshold($threshold)
+    public function setTimeout($timeout)
     {
-        $this->container['threshold'] = $threshold;
+        $this->container['timeout'] = $timeout;
         return $this;
     }
 
     /**
-    * Gets min
-    *  流量最小值
+    * Gets version
+    *  函数版本信息。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getMin()
+    public function getVersion()
     {
-        return $this->container['min'];
+        return $this->container['version'];
     }
 
     /**
-    * Sets min
+    * Sets version
     *
-    * @param int|null $min 流量最小值
+    * @param string|null $version 函数版本信息。
     *
     * @return $this
     */
-    public function setMin($min)
+    public function setVersion($version)
     {
-        $this->container['min'] = $min;
+        $this->container['version'] = $version;
         return $this;
     }
 

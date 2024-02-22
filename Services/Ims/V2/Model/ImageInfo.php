@@ -78,6 +78,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
@@ -141,6 +142,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'sequenceNum' => 'string',
             'activeAt' => 'string',
             'supportAgentList' => 'string',
+            'imageDisplayname' => 'string',
             'supportAmd' => 'string'
     ];
 
@@ -204,6 +206,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
@@ -267,6 +270,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
         'sequenceNum' => null,
         'activeAt' => null,
         'supportAgentList' => null,
+        'imageDisplayname' => null,
         'supportAmd' => null
     ];
 
@@ -351,6 +355,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
@@ -414,6 +419,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'sequenceNum' => '__sequence_num',
             'activeAt' => 'active_at',
             'supportAgentList' => '__support_agent_list',
+            'imageDisplayname' => '__image_displayname',
             'supportAmd' => '__support_amd'
     ];
 
@@ -477,6 +483,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
@@ -540,6 +547,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'sequenceNum' => 'setSequenceNum',
             'activeAt' => 'setActiveAt',
             'supportAgentList' => 'setSupportAgentList',
+            'imageDisplayname' => 'setImageDisplayname',
             'supportAmd' => 'setSupportAmd'
     ];
 
@@ -603,6 +611,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * imageDisplayname  对外展示名称。
     * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
@@ -666,6 +675,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'sequenceNum' => 'getSequenceNum',
             'activeAt' => 'getActiveAt',
             'supportAgentList' => 'getSupportAgentList',
+            'imageDisplayname' => 'getImageDisplayname',
             'supportAmd' => 'getSupportAmd'
     ];
 
@@ -997,6 +1007,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
         $this->container['sequenceNum'] = isset($data['sequenceNum']) ? $data['sequenceNum'] : null;
         $this->container['activeAt'] = isset($data['activeAt']) ? $data['activeAt'] : null;
         $this->container['supportAgentList'] = isset($data['supportAgentList']) ? $data['supportAgentList'] : null;
+        $this->container['imageDisplayname'] = isset($data['imageDisplayname']) ? $data['imageDisplayname'] : null;
         $this->container['supportAmd'] = isset($data['supportAmd']) ? $data['supportAmd'] : null;
     }
 
@@ -2585,6 +2596,30 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function setSupportAgentList($supportAgentList)
     {
         $this->container['supportAgentList'] = $supportAgentList;
+        return $this;
+    }
+
+    /**
+    * Gets imageDisplayname
+    *  对外展示名称。
+    *
+    * @return string|null
+    */
+    public function getImageDisplayname()
+    {
+        return $this->container['imageDisplayname'];
+    }
+
+    /**
+    * Sets imageDisplayname
+    *
+    * @param string|null $imageDisplayname 对外展示名称。
+    *
+    * @return $this
+    */
+    public function setImageDisplayname($imageDisplayname)
+    {
+        $this->container['imageDisplayname'] = $imageDisplayname;
         return $this;
     }
 

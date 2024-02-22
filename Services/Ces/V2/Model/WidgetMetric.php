@@ -202,22 +202,31 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
+        if ($this->container['namespace'] === null) {
+            $invalidProperties[] = "'namespace' can't be null";
+        }
+            if ((mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) < 3)) {
+            if ((mb_strlen($this->container['namespace']) < 3)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be bigger than or equal to 3.";
             }
-            if (!is_null($this->container['namespace']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
+            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
             }
-            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) > 96)) {
+        if ($this->container['dimensions'] === null) {
+            $invalidProperties[] = "'dimensions' can't be null";
+        }
+        if ($this->container['metricName'] === null) {
+            $invalidProperties[] = "'metricName' can't be null";
+        }
+            if ((mb_strlen($this->container['metricName']) > 96)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be smaller than or equal to 96.";
             }
-            if (!is_null($this->container['metricName']) && (mb_strlen($this->container['metricName']) < 1)) {
+            if ((mb_strlen($this->container['metricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'metricName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['metricName']) && !preg_match("/^([A-Za-z]){1}([0-9A-Za-z]|_|-)*$/", $this->container['metricName'])) {
+            if (!preg_match("/^([A-Za-z]){1}([0-9A-Za-z]|_|-)*$/", $this->container['metricName'])) {
                 $invalidProperties[] = "invalid value for 'metricName', must be conform to the pattern /^([A-Za-z]){1}([0-9A-Za-z]|_|-)*$/.";
             }
         return $invalidProperties;
@@ -238,7 +247,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * Gets namespace
     *  服务维度
     *
-    * @return string|null
+    * @return string
     */
     public function getNamespace()
     {
@@ -248,7 +257,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 服务维度
+    * @param string $namespace 服务维度
     *
     * @return $this
     */
@@ -262,7 +271,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * Gets dimensions
     *  dimensions
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\DimensionInfo|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\DimensionInfo
     */
     public function getDimensions()
     {
@@ -272,7 +281,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\DimensionInfo|null $dimensions dimensions
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\DimensionInfo $dimensions dimensions
     *
     * @return $this
     */
@@ -286,7 +295,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     * Gets metricName
     *  指标名称
     *
-    * @return string|null
+    * @return string
     */
     public function getMetricName()
     {
@@ -296,7 +305,7 @@ class WidgetMetric implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string|null $metricName 指标名称
+    * @param string $metricName 指标名称
     *
     * @return $this
     */

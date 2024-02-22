@@ -191,13 +191,16 @@ class ExtraInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['originMetricName']) && (mb_strlen($this->container['originMetricName']) > 4096)) {
+        if ($this->container['originMetricName'] === null) {
+            $invalidProperties[] = "'originMetricName' can't be null";
+        }
+            if ((mb_strlen($this->container['originMetricName']) > 4096)) {
                 $invalidProperties[] = "invalid value for 'originMetricName', the character length must be smaller than or equal to 4096.";
             }
-            if (!is_null($this->container['originMetricName']) && (mb_strlen($this->container['originMetricName']) < 1)) {
+            if ((mb_strlen($this->container['originMetricName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'originMetricName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['originMetricName']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/", $this->container['originMetricName'])) {
+            if (!preg_match("/^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/", $this->container['originMetricName'])) {
                 $invalidProperties[] = "invalid value for 'originMetricName', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-|~|\\.|\/|:)*$/.";
             }
             if (!is_null($this->container['metricPrefix']) && (mb_strlen($this->container['metricPrefix']) > 4096)) {
@@ -242,7 +245,7 @@ class ExtraInfo implements ModelInterface, ArrayAccess
     * Gets originMetricName
     *  指标名称
     *
-    * @return string|null
+    * @return string
     */
     public function getOriginMetricName()
     {
@@ -252,7 +255,7 @@ class ExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Sets originMetricName
     *
-    * @param string|null $originMetricName 指标名称
+    * @param string $originMetricName 指标名称
     *
     * @return $this
     */

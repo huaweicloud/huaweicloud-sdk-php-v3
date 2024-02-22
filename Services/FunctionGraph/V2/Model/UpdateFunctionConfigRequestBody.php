@@ -22,25 +22,25 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * funcName  函数名称。
     * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
     * extendConfig  函数扩展配置。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
-    * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
     * networkController  networkController
@@ -50,6 +50,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * domainNames  内网域名配置。
     * restoreHookHandler  函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.xxx.demo.Test.restoreHook
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -83,32 +86,35 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'bool',
             'domainNames' => 'string',
             'restoreHookHandler' => 'string',
-            'restoreHookTimeout' => 'int'
+            'restoreHookTimeout' => 'int',
+            'heartbeatHandler' => 'string',
+            'enableClassIsolation' => 'bool',
+            'gpuType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * funcName  函数名称。
     * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
     * extendConfig  函数扩展配置。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
-    * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
     * networkController  networkController
@@ -118,6 +124,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * domainNames  内网域名配置。
     * restoreHookHandler  函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.xxx.demo.Test.restoreHook
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -151,7 +160,10 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'enableAuthInHeader' => null,
         'domainNames' => null,
         'restoreHookHandler' => null,
-        'restoreHookTimeout' => 'int32'
+        'restoreHookTimeout' => 'int32',
+        'heartbeatHandler' => null,
+        'enableClassIsolation' => null,
+        'gpuType' => null
     ];
 
     /**
@@ -179,25 +191,25 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * funcName  函数名称。
     * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
     * extendConfig  函数扩展配置。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
-    * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
     * networkController  networkController
@@ -207,6 +219,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * domainNames  内网域名配置。
     * restoreHookHandler  函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.xxx.demo.Test.restoreHook
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -240,32 +255,35 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'enable_auth_in_header',
             'domainNames' => 'domain_names',
             'restoreHookHandler' => 'restore_hook_handler',
-            'restoreHookTimeout' => 'restore_hook_timeout'
+            'restoreHookTimeout' => 'restore_hook_timeout',
+            'heartbeatHandler' => 'heartbeat_handler',
+            'enableClassIsolation' => 'enable_class_isolation',
+            'gpuType' => 'gpu_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * funcName  函数名称。
     * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
     * extendConfig  函数扩展配置。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
-    * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
     * networkController  networkController
@@ -275,6 +293,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * domainNames  内网域名配置。
     * restoreHookHandler  函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.xxx.demo.Test.restoreHook
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -308,32 +329,35 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'setEnableAuthInHeader',
             'domainNames' => 'setDomainNames',
             'restoreHookHandler' => 'setRestoreHookHandler',
-            'restoreHookTimeout' => 'setRestoreHookTimeout'
+            'restoreHookTimeout' => 'setRestoreHookTimeout',
+            'heartbeatHandler' => 'setHeartbeatHandler',
+            'enableClassIsolation' => 'setEnableClassIsolation',
+            'gpuType' => 'setGpuType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * funcName  函数名称。
     * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * strategyConfig  strategyConfig
     * customImage  customImage
     * extendConfig  函数扩展配置。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
-    * ephemeralStorage  临时存储大小, 默认512M, 支持配置10G。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * logConfig  logConfig
     * networkController  networkController
@@ -343,6 +367,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * domainNames  内网域名配置。
     * restoreHookHandler  函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.xxx.demo.Test.restoreHook
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -376,7 +403,10 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'enableAuthInHeader' => 'getEnableAuthInHeader',
             'domainNames' => 'getDomainNames',
             'restoreHookHandler' => 'getRestoreHookHandler',
-            'restoreHookTimeout' => 'getRestoreHookTimeout'
+            'restoreHookTimeout' => 'getRestoreHookTimeout',
+            'heartbeatHandler' => 'getHeartbeatHandler',
+            'enableClassIsolation' => 'getEnableClassIsolation',
+            'gpuType' => 'getGpuType'
     ];
 
     /**
@@ -514,6 +544,9 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['domainNames'] = isset($data['domainNames']) ? $data['domainNames'] : null;
         $this->container['restoreHookHandler'] = isset($data['restoreHookHandler']) ? $data['restoreHookHandler'] : null;
         $this->container['restoreHookTimeout'] = isset($data['restoreHookTimeout']) ? $data['restoreHookTimeout'] : null;
+        $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
+        $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
+        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
     }
 
     /**
@@ -611,7 +644,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    *  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return int
     */
@@ -623,7 +656,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int $timeout 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * @param int $timeout 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return $this
     */
@@ -755,7 +788,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets xrole
-    *  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    *  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     *
     * @return string|null
     */
@@ -767,7 +800,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets xrole
     *
-    * @param string|null $xrole 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * @param string|null $xrole 函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     *
     * @return $this
     */
@@ -779,7 +812,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets appXrole
-    *  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    *  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     *
     * @return string|null
     */
@@ -791,7 +824,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets appXrole
     *
-    * @param string|null $appXrole 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * @param string|null $appXrole 函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     *
     * @return $this
     */
@@ -947,7 +980,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets initializerHandler
-    *  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    *  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     *
     * @return string|null
     */
@@ -959,7 +992,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets initializerHandler
     *
-    * @param string|null $initializerHandler 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * @param string|null $initializerHandler 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     *
     * @return $this
     */
@@ -971,7 +1004,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets initializerTimeout
-    *  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    *  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     *
     * @return int|null
     */
@@ -983,7 +1016,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets initializerTimeout
     *
-    * @param int|null $initializerTimeout 初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * @param int|null $initializerTimeout 初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     *
     * @return $this
     */
@@ -1043,7 +1076,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ephemeralStorage
-    *  临时存储大小, 默认512M, 支持配置10G。
+    *  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     *
     * @return int|null
     */
@@ -1055,7 +1088,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ephemeralStorage
     *
-    * @param int|null $ephemeralStorage 临时存储大小, 默认512M, 支持配置10G。
+    * @param int|null $ephemeralStorage 临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     *
     * @return $this
     */
@@ -1278,6 +1311,78 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setRestoreHookTimeout($restoreHookTimeout)
     {
         $this->container['restoreHookTimeout'] = $restoreHookTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets heartbeatHandler
+    *  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    *
+    * @return string|null
+    */
+    public function getHeartbeatHandler()
+    {
+        return $this->container['heartbeatHandler'];
+    }
+
+    /**
+    * Sets heartbeatHandler
+    *
+    * @param string|null $heartbeatHandler 心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    *
+    * @return $this
+    */
+    public function setHeartbeatHandler($heartbeatHandler)
+    {
+        $this->container['heartbeatHandler'] = $heartbeatHandler;
+        return $this;
+    }
+
+    /**
+    * Gets enableClassIsolation
+    *  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    *
+    * @return bool|null
+    */
+    public function getEnableClassIsolation()
+    {
+        return $this->container['enableClassIsolation'];
+    }
+
+    /**
+    * Sets enableClassIsolation
+    *
+    * @param bool|null $enableClassIsolation 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    *
+    * @return $this
+    */
+    public function setEnableClassIsolation($enableClassIsolation)
+    {
+        $this->container['enableClassIsolation'] = $enableClassIsolation;
+        return $this;
+    }
+
+    /**
+    * Gets gpuType
+    *  显卡类型。
+    *
+    * @return string|null
+    */
+    public function getGpuType()
+    {
+        return $this->container['gpuType'];
+    }
+
+    /**
+    * Sets gpuType
+    *
+    * @param string|null $gpuType 显卡类型。
+    *
+    * @return $this
+    */
+    public function setGpuType($gpuType)
+    {
+        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 

@@ -21,17 +21,19 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  依赖包ID。
+    * id  依赖包版本ID。
     * owner  依赖包拥有者。
     * link  依赖包在obs的存储地址。
-    * runtime  运行时语言。
-    * etag  依赖包唯一标志。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * etag  依赖包唯一标志（MD5校验值）。
     * size  依赖包大小。
     * name  依赖包名。
     * description  依赖包描述。
     * fileName  依赖包文件名。
     * version  依赖包版本号
     * lastModified  依赖包更新时间
+    * depId  依赖包ID
+    * downloadLink  依赖包文件临时下载链接
     *
     * @var string[]
     */
@@ -46,22 +48,26 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'fileName' => 'string',
             'version' => 'int',
-            'lastModified' => 'int'
+            'lastModified' => 'int',
+            'depId' => 'string',
+            'downloadLink' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  依赖包ID。
+    * id  依赖包版本ID。
     * owner  依赖包拥有者。
     * link  依赖包在obs的存储地址。
-    * runtime  运行时语言。
-    * etag  依赖包唯一标志。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * etag  依赖包唯一标志（MD5校验值）。
     * size  依赖包大小。
     * name  依赖包名。
     * description  依赖包描述。
     * fileName  依赖包文件名。
     * version  依赖包版本号
     * lastModified  依赖包更新时间
+    * depId  依赖包ID
+    * downloadLink  依赖包文件临时下载链接
     *
     * @var string[]
     */
@@ -76,7 +82,9 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'fileName' => null,
         'version' => 'int64',
-        'lastModified' => 'int64'
+        'lastModified' => 'int64',
+        'depId' => null,
+        'downloadLink' => null
     ];
 
     /**
@@ -102,17 +110,19 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  依赖包ID。
+    * id  依赖包版本ID。
     * owner  依赖包拥有者。
     * link  依赖包在obs的存储地址。
-    * runtime  运行时语言。
-    * etag  依赖包唯一标志。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * etag  依赖包唯一标志（MD5校验值）。
     * size  依赖包大小。
     * name  依赖包名。
     * description  依赖包描述。
     * fileName  依赖包文件名。
     * version  依赖包版本号
     * lastModified  依赖包更新时间
+    * depId  依赖包ID
+    * downloadLink  依赖包文件临时下载链接
     *
     * @var string[]
     */
@@ -127,22 +137,26 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'fileName' => 'file_name',
             'version' => 'version',
-            'lastModified' => 'last_modified'
+            'lastModified' => 'last_modified',
+            'depId' => 'dep_id',
+            'downloadLink' => 'download_link'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  依赖包ID。
+    * id  依赖包版本ID。
     * owner  依赖包拥有者。
     * link  依赖包在obs的存储地址。
-    * runtime  运行时语言。
-    * etag  依赖包唯一标志。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * etag  依赖包唯一标志（MD5校验值）。
     * size  依赖包大小。
     * name  依赖包名。
     * description  依赖包描述。
     * fileName  依赖包文件名。
     * version  依赖包版本号
     * lastModified  依赖包更新时间
+    * depId  依赖包ID
+    * downloadLink  依赖包文件临时下载链接
     *
     * @var string[]
     */
@@ -157,22 +171,26 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'fileName' => 'setFileName',
             'version' => 'setVersion',
-            'lastModified' => 'setLastModified'
+            'lastModified' => 'setLastModified',
+            'depId' => 'setDepId',
+            'downloadLink' => 'setDownloadLink'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  依赖包ID。
+    * id  依赖包版本ID。
     * owner  依赖包拥有者。
     * link  依赖包在obs的存储地址。
-    * runtime  运行时语言。
-    * etag  依赖包唯一标志。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * etag  依赖包唯一标志（MD5校验值）。
     * size  依赖包大小。
     * name  依赖包名。
     * description  依赖包描述。
     * fileName  依赖包文件名。
     * version  依赖包版本号
     * lastModified  依赖包更新时间
+    * depId  依赖包ID
+    * downloadLink  依赖包文件临时下载链接
     *
     * @var string[]
     */
@@ -187,7 +205,9 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'fileName' => 'getFileName',
             'version' => 'getVersion',
-            'lastModified' => 'getLastModified'
+            'lastModified' => 'getLastModified',
+            'depId' => 'getDepId',
+            'downloadLink' => 'getDownloadLink'
     ];
 
     /**
@@ -230,7 +250,56 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RUNTIME_JAVA8 = 'Java8';
+    const RUNTIME_JAVA11 = 'Java11';
+    const RUNTIME_NODE_JS6_10 = 'Node.js6.10';
+    const RUNTIME_NODE_JS8_10 = 'Node.js8.10';
+    const RUNTIME_NODE_JS10_16 = 'Node.js10.16';
+    const RUNTIME_NODE_JS12_13 = 'Node.js12.13';
+    const RUNTIME_NODE_JS14_18 = 'Node.js14.18';
+    const RUNTIME_PYTHON2_7 = 'Python2.7';
+    const RUNTIME_PYTHON3_6 = 'Python3.6';
+    const RUNTIME_GO1_8 = 'Go1.8';
+    const RUNTIME_GO1_X = 'Go1.x';
+    const RUNTIME_C__NET_CORE_2_0 = 'C#(.NET Core 2.0)';
+    const RUNTIME_C__NET_CORE_2_1 = 'C#(.NET Core 2.1)';
+    const RUNTIME_C__NET_CORE_3_1 = 'C#(.NET Core 3.1)';
+    const RUNTIME_CUSTOM = 'Custom';
+    const RUNTIME_PHP7_3 = 'PHP7.3';
+    const RUNTIME_PYTHON3_9 = 'Python3.9';
+    const RUNTIME_HTTP = 'http';
+    const RUNTIME_CUSTOM_IMAGE = 'Custom Image';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRuntimeAllowableValues()
+    {
+        return [
+            self::RUNTIME_JAVA8,
+            self::RUNTIME_JAVA11,
+            self::RUNTIME_NODE_JS6_10,
+            self::RUNTIME_NODE_JS8_10,
+            self::RUNTIME_NODE_JS10_16,
+            self::RUNTIME_NODE_JS12_13,
+            self::RUNTIME_NODE_JS14_18,
+            self::RUNTIME_PYTHON2_7,
+            self::RUNTIME_PYTHON3_6,
+            self::RUNTIME_GO1_8,
+            self::RUNTIME_GO1_X,
+            self::RUNTIME_C__NET_CORE_2_0,
+            self::RUNTIME_C__NET_CORE_2_1,
+            self::RUNTIME_C__NET_CORE_3_1,
+            self::RUNTIME_CUSTOM,
+            self::RUNTIME_PHP7_3,
+            self::RUNTIME_PYTHON3_9,
+            self::RUNTIME_HTTP,
+            self::RUNTIME_CUSTOM_IMAGE,
+        ];
+    }
 
 
     /**
@@ -259,6 +328,8 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
         $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['lastModified'] = isset($data['lastModified']) ? $data['lastModified'] : null;
+        $this->container['depId'] = isset($data['depId']) ? $data['depId'] : null;
+        $this->container['downloadLink'] = isset($data['downloadLink']) ? $data['downloadLink'] : null;
     }
 
     /**
@@ -269,6 +340,14 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getRuntimeAllowableValues();
+                if (!is_null($this->container['runtime']) && !in_array($this->container['runtime'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'runtime', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -285,7 +364,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  依赖包ID。
+    *  依赖包版本ID。
     *
     * @return string|null
     */
@@ -297,7 +376,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 依赖包ID。
+    * @param string|null $id 依赖包版本ID。
     *
     * @return $this
     */
@@ -357,7 +436,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtime
-    *  运行时语言。
+    *  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return string|null
     */
@@ -369,7 +448,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runtime
     *
-    * @param string|null $runtime 运行时语言。
+    * @param string|null $runtime FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return $this
     */
@@ -381,7 +460,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets etag
-    *  依赖包唯一标志。
+    *  依赖包唯一标志（MD5校验值）。
     *
     * @return string|null
     */
@@ -393,7 +472,7 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets etag
     *
-    * @param string|null $etag 依赖包唯一标志。
+    * @param string|null $etag 依赖包唯一标志（MD5校验值）。
     *
     * @return $this
     */
@@ -544,6 +623,54 @@ class ShowDependencyVersionResponse implements ModelInterface, ArrayAccess
     public function setLastModified($lastModified)
     {
         $this->container['lastModified'] = $lastModified;
+        return $this;
+    }
+
+    /**
+    * Gets depId
+    *  依赖包ID
+    *
+    * @return string|null
+    */
+    public function getDepId()
+    {
+        return $this->container['depId'];
+    }
+
+    /**
+    * Sets depId
+    *
+    * @param string|null $depId 依赖包ID
+    *
+    * @return $this
+    */
+    public function setDepId($depId)
+    {
+        $this->container['depId'] = $depId;
+        return $this;
+    }
+
+    /**
+    * Gets downloadLink
+    *  依赖包文件临时下载链接
+    *
+    * @return string|null
+    */
+    public function getDownloadLink()
+    {
+        return $this->container['downloadLink'];
+    }
+
+    /**
+    * Sets downloadLink
+    *
+    * @param string|null $downloadLink 依赖包文件临时下载链接
+    *
+    * @return $this
+    */
+    public function setDownloadLink($downloadLink)
+    {
+        $this->container['downloadLink'] = $downloadLink;
         return $this;
     }
 

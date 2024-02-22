@@ -71,8 +71,8 @@ class ServerDetails implements ModelInterface, ArrayAccess
             'id' => 'string',
             'userId' => 'string',
             'name' => 'string',
-            'created' => '\DateTime',
-            'updated' => '\DateTime',
+            'created' => 'string',
+            'updated' => 'string',
             'tenantId' => 'string',
             'hostId' => 'string',
             'addresses' => 'map[string,\HuaweiCloud\SDK\Bms\V1\Model\AddressInfo[]]',
@@ -167,8 +167,8 @@ class ServerDetails implements ModelInterface, ArrayAccess
         'id' => 'uuid',
         'userId' => null,
         'name' => null,
-        'created' => 'date-time',
-        'updated' => 'date-time',
+        'created' => null,
+        'updated' => null,
         'tenantId' => null,
         'hostId' => null,
         'addresses' => null,
@@ -882,7 +882,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     * Gets created
     *  裸金属服务器创建时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreated()
     {
@@ -892,7 +892,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param \DateTime|null $created 裸金属服务器创建时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z
+    * @param string|null $created 裸金属服务器创建时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z
     *
     * @return $this
     */
@@ -906,7 +906,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     * Gets updated
     *  裸金属服务器更新时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T04:30:52Z
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getUpdated()
     {
@@ -916,7 +916,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param \DateTime|null $updated 裸金属服务器更新时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T04:30:52Z
+    * @param string|null $updated 裸金属服务器更新时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T04:30:52Z
     *
     * @return $this
     */

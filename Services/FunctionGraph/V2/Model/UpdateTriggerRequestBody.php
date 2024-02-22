@@ -27,7 +27,7 @@ class UpdateTriggerRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'triggerStatus' => 'string',
-            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventData[]'
+            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateriggerEventData[]'
     ];
 
     /**
@@ -234,7 +234,7 @@ class UpdateTriggerRequestBody implements ModelInterface, ArrayAccess
     * Gets eventData
     *  触发器更新事件
     *
-    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventData[]|null
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateriggerEventData[]|null
     */
     public function getEventData()
     {
@@ -244,7 +244,7 @@ class UpdateTriggerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets eventData
     *
-    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventData[]|null $eventData 触发器更新事件
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\UpdateriggerEventData[]|null $eventData 触发器更新事件
     *
     * @return $this
     */

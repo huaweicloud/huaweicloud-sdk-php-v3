@@ -23,7 +23,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     * triggerId  触发器ID。
     * triggerTypeCode  触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
     * triggerStatus  \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
-    * eventData  触发器源事件。
+    * eventData  eventData
     * lastUpdatedTime  最后更新时间。
     * createdTime  触发器创建时间。
     *
@@ -33,7 +33,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
             'triggerId' => 'string',
             'triggerTypeCode' => 'string',
             'triggerStatus' => 'string',
-            'eventData' => 'object',
+            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody',
             'lastUpdatedTime' => '\DateTime',
             'createdTime' => '\DateTime'
     ];
@@ -43,7 +43,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     * triggerId  触发器ID。
     * triggerTypeCode  触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
     * triggerStatus  \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
-    * eventData  触发器源事件。
+    * eventData  eventData
     * lastUpdatedTime  最后更新时间。
     * createdTime  触发器创建时间。
     *
@@ -84,7 +84,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     * triggerId  触发器ID。
     * triggerTypeCode  触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
     * triggerStatus  \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
-    * eventData  触发器源事件。
+    * eventData  eventData
     * lastUpdatedTime  最后更新时间。
     * createdTime  触发器创建时间。
     *
@@ -104,7 +104,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     * triggerId  触发器ID。
     * triggerTypeCode  触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
     * triggerStatus  \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
-    * eventData  触发器源事件。
+    * eventData  eventData
     * lastUpdatedTime  最后更新时间。
     * createdTime  触发器创建时间。
     *
@@ -124,7 +124,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     * triggerId  触发器ID。
     * triggerTypeCode  触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
     * triggerStatus  \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
-    * eventData  触发器源事件。
+    * eventData  eventData
     * lastUpdatedTime  最后更新时间。
     * createdTime  触发器创建时间。
     *
@@ -393,9 +393,9 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventData
-    *  触发器源事件。
+    *  eventData
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody
     */
     public function getEventData()
     {
@@ -405,7 +405,7 @@ class ListFunctionTriggerResult implements ModelInterface, ArrayAccess
     /**
     * Sets eventData
     *
-    * @param object $eventData 触发器源事件。
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody $eventData eventData
     *
     * @return $this
     */

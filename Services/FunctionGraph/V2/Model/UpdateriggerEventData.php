@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ces\V2\Model;
+namespace HuaweiCloud\SDK\FunctionGraph\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
+class UpdateriggerEventData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,38 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BaseWidgetInfo_location';
+    protected static $openAPIModelName = 'UpdateriggerEventData';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * isSerial  串行处理数据
+    * maxFetchBytes  最大字节数
+    * pollingInterval  拉取周期
+    * pollingUnit  拉取周期单位
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'top' => 'int',
-            'left' => 'int',
-            'width' => 'int',
-            'height' => 'int'
+            'isSerial' => 'bool',
+            'maxFetchBytes' => 'int',
+            'pollingInterval' => 'int',
+            'pollingUnit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * isSerial  串行处理数据
+    * maxFetchBytes  最大字节数
+    * pollingInterval  拉取周期
+    * pollingUnit  拉取周期单位
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'top' => null,
-        'left' => null,
-        'width' => null,
-        'height' => null
+        'isSerial' => 'true',
+        'maxFetchBytes' => 'integer',
+        'pollingInterval' => 'integer',
+        'pollingUnit' => 'ms'
     ];
 
     /**
@@ -73,50 +73,50 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * isSerial  串行处理数据
+    * maxFetchBytes  最大字节数
+    * pollingInterval  拉取周期
+    * pollingUnit  拉取周期单位
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'top' => 'top',
-            'left' => 'left',
-            'width' => 'width',
-            'height' => 'height'
+            'isSerial' => 'is_serial',
+            'maxFetchBytes' => 'max_fetch_bytes',
+            'pollingInterval' => 'polling_interval',
+            'pollingUnit' => 'polling_unit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * isSerial  串行处理数据
+    * maxFetchBytes  最大字节数
+    * pollingInterval  拉取周期
+    * pollingUnit  拉取周期单位
     *
     * @var string[]
     */
     protected static $setters = [
-            'top' => 'setTop',
-            'left' => 'setLeft',
-            'width' => 'setWidth',
-            'height' => 'setHeight'
+            'isSerial' => 'setIsSerial',
+            'maxFetchBytes' => 'setMaxFetchBytes',
+            'pollingInterval' => 'setPollingInterval',
+            'pollingUnit' => 'setPollingUnit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * isSerial  串行处理数据
+    * maxFetchBytes  最大字节数
+    * pollingInterval  拉取周期
+    * pollingUnit  拉取周期单位
     *
     * @var string[]
     */
     protected static $getters = [
-            'top' => 'getTop',
-            'left' => 'getLeft',
-            'width' => 'getWidth',
-            'height' => 'getHeight'
+            'isSerial' => 'getIsSerial',
+            'maxFetchBytes' => 'getMaxFetchBytes',
+            'pollingInterval' => 'getPollingInterval',
+            'pollingUnit' => 'getPollingUnit'
     ];
 
     /**
@@ -159,7 +159,22 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const POLLING_UNIT_MS = 'ms';
+    const POLLING_UNIT_S = 's';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPollingUnitAllowableValues()
+    {
+        return [
+            self::POLLING_UNIT_MS,
+            self::POLLING_UNIT_S,
+        ];
+    }
 
 
     /**
@@ -177,10 +192,10 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['top'] = isset($data['top']) ? $data['top'] : null;
-        $this->container['left'] = isset($data['left']) ? $data['left'] : null;
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
+        $this->container['isSerial'] = isset($data['isSerial']) ? $data['isSerial'] : null;
+        $this->container['maxFetchBytes'] = isset($data['maxFetchBytes']) ? $data['maxFetchBytes'] : null;
+        $this->container['pollingInterval'] = isset($data['pollingInterval']) ? $data['pollingInterval'] : null;
+        $this->container['pollingUnit'] = isset($data['pollingUnit']) ? $data['pollingUnit'] : null;
     }
 
     /**
@@ -191,30 +206,14 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['top']) && ($this->container['top'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'top', must be smaller than or equal to 2147483647.";
+            $allowedValues = $this->getPollingUnitAllowableValues();
+                if (!is_null($this->container['pollingUnit']) && !in_array($this->container['pollingUnit'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'pollingUnit', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['top']) && ($this->container['top'] < 0)) {
-                $invalidProperties[] = "invalid value for 'top', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['left']) && ($this->container['left'] > 9)) {
-                $invalidProperties[] = "invalid value for 'left', must be smaller than or equal to 9.";
-            }
-            if (!is_null($this->container['left']) && ($this->container['left'] < 0)) {
-                $invalidProperties[] = "invalid value for 'left', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['width']) && ($this->container['width'] > 12)) {
-                $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 12.";
-            }
-            if (!is_null($this->container['width']) && ($this->container['width'] < 3)) {
-                $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 3.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] < 3)) {
-                $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 3.";
-            }
+
         return $invalidProperties;
     }
 
@@ -230,98 +229,98 @@ class BaseWidgetInfoLocation implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets top
-    *  监控视图的上坐标
+    * Gets isSerial
+    *  串行处理数据
     *
-    * @return int|null
+    * @return bool|null
     */
-    public function getTop()
+    public function getIsSerial()
     {
-        return $this->container['top'];
+        return $this->container['isSerial'];
     }
 
     /**
-    * Sets top
+    * Sets isSerial
     *
-    * @param int|null $top 监控视图的上坐标
+    * @param bool|null $isSerial 串行处理数据
     *
     * @return $this
     */
-    public function setTop($top)
+    public function setIsSerial($isSerial)
     {
-        $this->container['top'] = $top;
+        $this->container['isSerial'] = $isSerial;
         return $this;
     }
 
     /**
-    * Gets left
-    *  监控视图的左坐标
+    * Gets maxFetchBytes
+    *  最大字节数
     *
     * @return int|null
     */
-    public function getLeft()
+    public function getMaxFetchBytes()
     {
-        return $this->container['left'];
+        return $this->container['maxFetchBytes'];
     }
 
     /**
-    * Sets left
+    * Sets maxFetchBytes
     *
-    * @param int|null $left 监控视图的左坐标
+    * @param int|null $maxFetchBytes 最大字节数
     *
     * @return $this
     */
-    public function setLeft($left)
+    public function setMaxFetchBytes($maxFetchBytes)
     {
-        $this->container['left'] = $left;
+        $this->container['maxFetchBytes'] = $maxFetchBytes;
         return $this;
     }
 
     /**
-    * Gets width
-    *  监控视图图表宽度
+    * Gets pollingInterval
+    *  拉取周期
     *
     * @return int|null
     */
-    public function getWidth()
+    public function getPollingInterval()
     {
-        return $this->container['width'];
+        return $this->container['pollingInterval'];
     }
 
     /**
-    * Sets width
+    * Sets pollingInterval
     *
-    * @param int|null $width 监控视图图表宽度
+    * @param int|null $pollingInterval 拉取周期
     *
     * @return $this
     */
-    public function setWidth($width)
+    public function setPollingInterval($pollingInterval)
     {
-        $this->container['width'] = $width;
+        $this->container['pollingInterval'] = $pollingInterval;
         return $this;
     }
 
     /**
-    * Gets height
-    *  监控视图图表高度
+    * Gets pollingUnit
+    *  拉取周期单位
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getHeight()
+    public function getPollingUnit()
     {
-        return $this->container['height'];
+        return $this->container['pollingUnit'];
     }
 
     /**
-    * Sets height
+    * Sets pollingUnit
     *
-    * @param int|null $height 监控视图图表高度
+    * @param string|null $pollingUnit 拉取周期单位
     *
     * @return $this
     */
-    public function setHeight($height)
+    public function setPollingUnit($pollingUnit)
     {
-        $this->container['height'] = $height;
+        $this->container['pollingUnit'] = $pollingUnit;
         return $this;
     }
 

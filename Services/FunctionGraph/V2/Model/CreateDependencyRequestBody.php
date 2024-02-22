@@ -23,7 +23,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
     * dependType  导入类型，目前支持obs和zip。
-    * runtime  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
     *
@@ -43,7 +43,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
     * dependType  导入类型，目前支持obs和zip。
-    * runtime  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
     *
@@ -84,7 +84,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
     * dependType  导入类型，目前支持obs和zip。
-    * runtime  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
     *
@@ -104,7 +104,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
     * dependType  导入类型，目前支持obs和zip。
-    * runtime  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
     *
@@ -124,7 +124,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     * dependFile  depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
     * dependLink  depend_type为obs类型时，依赖包在obs的存储地址。
     * dependType  导入类型，目前支持obs和zip。
-    * runtime  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     * name  依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
     * description  依赖包描述，不超过512个字符。
     *
@@ -193,10 +193,11 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     const RUNTIME_C__NET_CORE_2_0 = 'C#(.NET Core 2.0)';
     const RUNTIME_C__NET_CORE_2_1 = 'C#(.NET Core 2.1)';
     const RUNTIME_C__NET_CORE_3_1 = 'C#(.NET Core 3.1)';
+    const RUNTIME_CUSTOM = 'Custom';
     const RUNTIME_PHP7_3 = 'PHP7.3';
     const RUNTIME_PYTHON3_9 = 'Python3.9';
-    const RUNTIME_CUSTOM = 'Custom';
     const RUNTIME_HTTP = 'http';
+    const RUNTIME_CUSTOM_IMAGE = 'Custom Image';
     
 
     /**
@@ -221,10 +222,11 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
             self::RUNTIME_C__NET_CORE_2_0,
             self::RUNTIME_C__NET_CORE_2_1,
             self::RUNTIME_C__NET_CORE_3_1,
+            self::RUNTIME_CUSTOM,
             self::RUNTIME_PHP7_3,
             self::RUNTIME_PYTHON3_9,
-            self::RUNTIME_CUSTOM,
             self::RUNTIME_HTTP,
+            self::RUNTIME_CUSTOM_IMAGE,
         ];
     }
 
@@ -365,7 +367,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtime
-    *  运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    *  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return string
     */
@@ -377,7 +379,7 @@ class CreateDependencyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets runtime
     *
-    * @param string $runtime 运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
+    * @param string $runtime FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return $this
     */

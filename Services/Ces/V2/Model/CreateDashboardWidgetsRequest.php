@@ -27,7 +27,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'dashboardId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfo[]'
+            'body' => 'object[]'
     ];
 
     /**
@@ -217,7 +217,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfo[]|null
+    * @return object[]|null
     */
     public function getBody()
     {
@@ -227,7 +227,7 @@ class CreateDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfo[]|null $body body
+    * @param object[]|null $body body
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListFunctionsRequest implements ModelInterface, ArrayAccess
+class VersionStrategy implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListFunctionsRequest';
+    protected static $openAPIModelName = 'VersionStrategy';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * rules  规则列表
+    * combineType  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'marker' => 'string',
-            'maxitems' => 'string',
-            'packageName' => 'string'
+            'rules' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategyRules[]',
+            'combineType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * rules  规则列表
+    * combineType  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'marker' => null,
-        'maxitems' => null,
-        'packageName' => null
+        'rules' => null,
+        'combineType' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * rules  规则列表
+    * combineType  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'marker' => 'marker',
-            'maxitems' => 'maxitems',
-            'packageName' => 'package_name'
+            'rules' => 'rules',
+            'combineType' => 'combine_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * rules  规则列表
+    * combineType  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @var string[]
     */
     protected static $setters = [
-            'marker' => 'setMarker',
-            'maxitems' => 'setMaxitems',
-            'packageName' => 'setPackageName'
+            'rules' => 'setRules',
+            'combineType' => 'setCombineType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * rules  规则列表
+    * combineType  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @var string[]
     */
     protected static $getters = [
-            'marker' => 'getMarker',
-            'maxitems' => 'getMaxitems',
-            'packageName' => 'getPackageName'
+            'rules' => 'getRules',
+            'combineType' => 'getCombineType'
     ];
 
     /**
@@ -149,7 +139,22 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const COMBINE_TYPE__AND = 'and';
+    const COMBINE_TYPE__OR = 'or';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCombineTypeAllowableValues()
+    {
+        return [
+            self::COMBINE_TYPE__AND,
+            self::COMBINE_TYPE__OR,
+        ];
+    }
 
 
     /**
@@ -167,9 +172,8 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['maxitems'] = isset($data['maxitems']) ? $data['maxitems'] : null;
-        $this->container['packageName'] = isset($data['packageName']) ? $data['packageName'] : null;
+        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
+        $this->container['combineType'] = isset($data['combineType']) ? $data['combineType'] : null;
     }
 
     /**
@@ -180,6 +184,14 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getCombineTypeAllowableValues();
+                if (!is_null($this->container['combineType']) && !in_array($this->container['combineType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'combineType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -195,74 +207,50 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets marker
-    *  上一次查询到的最后的记录位置。
+    * Gets rules
+    *  规则列表
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategyRules[]|null
     */
-    public function getMarker()
+    public function getRules()
     {
-        return $this->container['marker'];
+        return $this->container['rules'];
     }
 
     /**
-    * Sets marker
+    * Sets rules
     *
-    * @param string|null $marker 上一次查询到的最后的记录位置。
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategyRules[]|null $rules 规则列表
     *
     * @return $this
     */
-    public function setMarker($marker)
+    public function setRules($rules)
     {
-        $this->container['marker'] = $marker;
+        $this->container['rules'] = $rules;
         return $this;
     }
 
     /**
-    * Gets maxitems
-    *  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
+    * Gets combineType
+    *  所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @return string|null
     */
-    public function getMaxitems()
+    public function getCombineType()
     {
-        return $this->container['maxitems'];
+        return $this->container['combineType'];
     }
 
     /**
-    * Sets maxitems
+    * Sets combineType
     *
-    * @param string|null $maxitems 每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
+    * @param string|null $combineType 所有规则聚合方式。and：所有规则都满足，or：满足其中一个
     *
     * @return $this
     */
-    public function setMaxitems($maxitems)
+    public function setCombineType($combineType)
     {
-        $this->container['maxitems'] = $maxitems;
-        return $this;
-    }
-
-    /**
-    * Gets packageName
-    *  自定义分组名称。
-    *
-    * @return string|null
-    */
-    public function getPackageName()
-    {
-        return $this->container['packageName'];
-    }
-
-    /**
-    * Sets packageName
-    *
-    * @param string|null $packageName 自定义分组名称。
-    *
-    * @return $this
-    */
-    public function setPackageName($packageName)
-    {
-        $this->container['packageName'] = $packageName;
+        $this->container['combineType'] = $combineType;
         return $this;
     }
 

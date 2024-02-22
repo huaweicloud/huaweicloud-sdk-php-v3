@@ -205,9 +205,6 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['enterpriseProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseProjectId' can't be null";
-        }
         if ($this->container['chargeInfo'] === null) {
             $invalidProperties[] = "'chargeInfo' can't be null";
         }
@@ -253,7 +250,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  企业项目ID，租户未开启企业项目时传0
     *
-    * @return string
+    * @return string|null
     */
     public function getEnterpriseProjectId()
     {
@@ -263,7 +260,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 企业项目ID，租户未开启企业项目时传0
+    * @param string|null $enterpriseProjectId 企业项目ID，租户未开启企业项目时传0
     *
     * @return $this
     */

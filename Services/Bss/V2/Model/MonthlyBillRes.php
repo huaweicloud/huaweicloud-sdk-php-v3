@@ -53,7 +53,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
-    * id  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -147,7 +147,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
-    * id  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -262,7 +262,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
-    * id  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -356,7 +356,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
-    * id  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -450,7 +450,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * rootResourceId  根资源标识。
     * parentResourceId  父资源标识。
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
-    * id  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
     * subServiceTypeCode  该字段为预留字段。
     * subServiceTypeName  该字段为预留字段。
@@ -1452,7 +1452,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    *  唯一标识。 该字段为预留字段。
     *
     * @return string|null
     */
@@ -1464,7 +1464,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 唯一标识。 账单类型为1，2，3，4，8时，存在唯一标识其它场景下，不存在唯一标识。 该字段为预留字段。
+    * @param string|null $id 唯一标识。 该字段为预留字段。
     *
     * @return $this
     */

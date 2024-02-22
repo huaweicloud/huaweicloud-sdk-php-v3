@@ -23,13 +23,17 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     * routeMode  数据库代理路由模式。  取值范围： - 0，表示权重负载模式。 - 1，表示负载均衡模式（数据库主节点不接受读请求）。 - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * masterWeight  主节点权重： - 如果路由模式为0，取值为0~1000。 - 如果路由模式为1，取值为0。 - 如果路由模式为2，取值为1。
     * readonlyNodes  只读节点权重配置信息。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'routeMode' => 'int',
             'masterWeight' => 'int',
-            'readonlyNodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyProxyRouteWeightReadonlyNode[]'
+            'readonlyNodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ModifyProxyRouteWeightReadonlyNode[]',
+            'newNodeAutoAddStatus' => 'string',
+            'newNodeWeight' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     * routeMode  数据库代理路由模式。  取值范围： - 0，表示权重负载模式。 - 1，表示负载均衡模式（数据库主节点不接受读请求）。 - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * masterWeight  主节点权重： - 如果路由模式为0，取值为0~1000。 - 如果路由模式为1，取值为0。 - 如果路由模式为2，取值为1。
     * readonlyNodes  只读节点权重配置信息。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'routeMode' => 'int32',
         'masterWeight' => 'int32',
-        'readonlyNodes' => null
+        'readonlyNodes' => null,
+        'newNodeAutoAddStatus' => null,
+        'newNodeWeight' => 'int32'
     ];
 
     /**
@@ -72,13 +80,17 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     * routeMode  数据库代理路由模式。  取值范围： - 0，表示权重负载模式。 - 1，表示负载均衡模式（数据库主节点不接受读请求）。 - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * masterWeight  主节点权重： - 如果路由模式为0，取值为0~1000。 - 如果路由模式为1，取值为0。 - 如果路由模式为2，取值为1。
     * readonlyNodes  只读节点权重配置信息。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'routeMode' => 'route_mode',
             'masterWeight' => 'master_weight',
-            'readonlyNodes' => 'readonly_nodes'
+            'readonlyNodes' => 'readonly_nodes',
+            'newNodeAutoAddStatus' => 'new_node_auto_add_status',
+            'newNodeWeight' => 'new_node_weight'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     * routeMode  数据库代理路由模式。  取值范围： - 0，表示权重负载模式。 - 1，表示负载均衡模式（数据库主节点不接受读请求）。 - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * masterWeight  主节点权重： - 如果路由模式为0，取值为0~1000。 - 如果路由模式为1，取值为0。 - 如果路由模式为2，取值为1。
     * readonlyNodes  只读节点权重配置信息。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
     protected static $setters = [
             'routeMode' => 'setRouteMode',
             'masterWeight' => 'setMasterWeight',
-            'readonlyNodes' => 'setReadonlyNodes'
+            'readonlyNodes' => 'setReadonlyNodes',
+            'newNodeAutoAddStatus' => 'setNewNodeAutoAddStatus',
+            'newNodeWeight' => 'setNewNodeWeight'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     * routeMode  数据库代理路由模式。  取值范围： - 0，表示权重负载模式。 - 1，表示负载均衡模式（数据库主节点不接受读请求）。 - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * masterWeight  主节点权重： - 如果路由模式为0，取值为0~1000。 - 如果路由模式为1，取值为0。 - 如果路由模式为2，取值为1。
     * readonlyNodes  只读节点权重配置信息。
+    * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
     * @var string[]
     */
     protected static $getters = [
             'routeMode' => 'getRouteMode',
             'masterWeight' => 'getMasterWeight',
-            'readonlyNodes' => 'getReadonlyNodes'
+            'readonlyNodes' => 'getReadonlyNodes',
+            'newNodeAutoAddStatus' => 'getNewNodeAutoAddStatus',
+            'newNodeWeight' => 'getNewNodeWeight'
     ];
 
     /**
@@ -170,6 +190,8 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['masterWeight'] = isset($data['masterWeight']) ? $data['masterWeight'] : null;
         $this->container['readonlyNodes'] = isset($data['readonlyNodes']) ? $data['readonlyNodes'] : null;
+        $this->container['newNodeAutoAddStatus'] = isset($data['newNodeAutoAddStatus']) ? $data['newNodeAutoAddStatus'] : null;
+        $this->container['newNodeWeight'] = isset($data['newNodeWeight']) ? $data['newNodeWeight'] : null;
     }
 
     /**
@@ -266,6 +288,54 @@ class ModifyGaussMySqlProxyRouteModeRequestBody implements ModelInterface, Array
     public function setReadonlyNodes($readonlyNodes)
     {
         $this->container['readonlyNodes'] = $readonlyNodes;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeAutoAddStatus
+    *  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    *
+    * @return string|null
+    */
+    public function getNewNodeAutoAddStatus()
+    {
+        return $this->container['newNodeAutoAddStatus'];
+    }
+
+    /**
+    * Sets newNodeAutoAddStatus
+    *
+    * @param string|null $newNodeAutoAddStatus 是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
+    *
+    * @return $this
+    */
+    public function setNewNodeAutoAddStatus($newNodeAutoAddStatus)
+    {
+        $this->container['newNodeAutoAddStatus'] = $newNodeAutoAddStatus;
+        return $this;
+    }
+
+    /**
+    * Gets newNodeWeight
+    *  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
+    *
+    * @return int|null
+    */
+    public function getNewNodeWeight()
+    {
+        return $this->container['newNodeWeight'];
+    }
+
+    /**
+    * Sets newNodeWeight
+    *
+    * @param int|null $newNodeWeight 新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
+    *
+    * @return $this
+    */
+    public function setNewNodeWeight($newNodeWeight)
+    {
+        $this->container['newNodeWeight'] = $newNodeWeight;
         return $this;
     }
 

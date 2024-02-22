@@ -205,6 +205,12 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
         if ($this->container['chargeMode'] === null) {
             $invalidProperties[] = "'chargeMode' can't be null";
         }
+        if ($this->container['isAutoRenew'] === null) {
+            $invalidProperties[] = "'isAutoRenew' can't be null";
+        }
+        if ($this->container['isAutoPay'] === null) {
+            $invalidProperties[] = "'isAutoPay' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -295,7 +301,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     * Gets isAutoRenew
     *  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsAutoRenew()
     {
@@ -305,7 +311,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool|null $isAutoRenew 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
+    * @param bool $isAutoRenew 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
     *
     * @return $this
     */
@@ -319,7 +325,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     * Gets isAutoPay
     *  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsAutoPay()
     {
@@ -329,7 +335,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * @param bool $isAutoPay 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败后会生成订单成功(该订单应付金额是优惠后金额)、但订单状态为“待支付”，等待客户手动支付(手动支付时，客户还可以修改系统自动选择的折扣和优惠券) false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
     *
     * @return $this
     */

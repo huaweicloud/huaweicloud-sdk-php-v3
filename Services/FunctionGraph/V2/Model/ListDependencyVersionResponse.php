@@ -28,7 +28,7 @@ class ListDependencyVersionResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dependencies' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependenciesResult[]',
+            'dependencies' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependencyVersionsResult[]',
             'nextMarker' => 'int',
             'count' => 'int'
     ];
@@ -199,7 +199,7 @@ class ListDependencyVersionResponse implements ModelInterface, ArrayAccess
     * Gets dependencies
     *  依赖包列表
     *
-    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependenciesResult[]|null
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependencyVersionsResult[]|null
     */
     public function getDependencies()
     {
@@ -209,7 +209,7 @@ class ListDependencyVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dependencies
     *
-    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependenciesResult[]|null $dependencies 依赖包列表
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\ListDependencyVersionsResult[]|null $dependencies 依赖包列表
     *
     * @return $this
     */

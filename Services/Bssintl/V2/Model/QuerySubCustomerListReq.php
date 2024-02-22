@@ -28,6 +28,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
@@ -41,6 +42,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'associationType' => 'string',
             'associatedOnBegin' => 'string',
             'associatedOnEnd' => 'string',
+            'customerId' => 'string',
             'indirectPartnerId' => 'string'
     ];
 
@@ -54,6 +56,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
@@ -67,6 +70,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         'associationType' => null,
         'associatedOnBegin' => null,
         'associatedOnEnd' => null,
+        'customerId' => null,
         'indirectPartnerId' => null
     ];
 
@@ -101,6 +105,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
@@ -114,6 +119,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'associationType' => 'association_type',
             'associatedOnBegin' => 'associated_on_begin',
             'associatedOnEnd' => 'associated_on_end',
+            'customerId' => 'customer_id',
             'indirectPartnerId' => 'indirect_partner_id'
     ];
 
@@ -127,6 +133,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
@@ -140,6 +147,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'associationType' => 'setAssociationType',
             'associatedOnBegin' => 'setAssociatedOnBegin',
             'associatedOnEnd' => 'setAssociatedOnEnd',
+            'customerId' => 'setCustomerId',
             'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
@@ -153,6 +161,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
@@ -166,6 +175,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'associationType' => 'getAssociationType',
             'associatedOnBegin' => 'getAssociatedOnBegin',
             'associatedOnEnd' => 'getAssociatedOnEnd',
+            'customerId' => 'getCustomerId',
             'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
@@ -235,6 +245,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
         $this->container['associatedOnBegin'] = isset($data['associatedOnBegin']) ? $data['associatedOnBegin'] : null;
         $this->container['associatedOnEnd'] = isset($data['associatedOnEnd']) ? $data['associatedOnEnd'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
@@ -293,6 +304,12 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['associatedOnEnd']) && (mb_strlen($this->container['associatedOnEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'associatedOnEnd', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
@@ -503,6 +520,30 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     public function setAssociatedOnEnd($associatedOnEnd)
     {
         $this->container['associatedOnEnd'] = $associatedOnEnd;
+        return $this;
+    }
+
+    /**
+    * Gets customerId
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    *
+    * @return string|null
+    */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+    * Sets customerId
+    *
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id，或者可以从创建客户接口的响应获取domain_id。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    *
+    * @return $this
+    */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
         return $this;
     }
 

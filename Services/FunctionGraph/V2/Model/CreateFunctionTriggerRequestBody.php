@@ -23,7 +23,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     * triggerTypeCode  触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
     * triggerStatus  触发器状态，取值为ACTIVE,DISABLED。
     * eventTypeCode  消息代码。
-    * eventData  事件结构体。
+    * eventData  eventData
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
             'triggerTypeCode' => 'string',
             'triggerStatus' => 'string',
             'eventTypeCode' => 'string',
-            'eventData' => 'object'
+            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody'
     ];
 
     /**
@@ -39,7 +39,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     * triggerTypeCode  触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
     * triggerStatus  触发器状态，取值为ACTIVE,DISABLED。
     * eventTypeCode  消息代码。
-    * eventData  事件结构体。
+    * eventData  eventData
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     * triggerTypeCode  触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
     * triggerStatus  触发器状态，取值为ACTIVE,DISABLED。
     * eventTypeCode  消息代码。
-    * eventData  事件结构体。
+    * eventData  eventData
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     * triggerTypeCode  触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
     * triggerStatus  触发器状态，取值为ACTIVE,DISABLED。
     * eventTypeCode  消息代码。
-    * eventData  事件结构体。
+    * eventData  eventData
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     * triggerTypeCode  触发器类型。  - TIMER: 定时触发器。 - APIG: APIGW触发器。 - CTS: 云审计触发器，需要先开通云审计服务。 - DDS: 文档数据库触发器，需要开启函数vpc。 - DMS: 分布式消息服务触发器，需要配置dms委托。 - DIS: 数据接入服务触发器，需要配置dis委托。 - LTS: 云审计日志服务触发器，需要配置lts委托。 - OBS: 对象存储服务触发器。 - KAFKA: 专享版本kafka触发器。
     * triggerStatus  触发器状态，取值为ACTIVE,DISABLED。
     * eventTypeCode  消息代码。
-    * eventData  事件结构体。
+    * eventData  eventData
     *
     * @var string[]
     */
@@ -359,9 +359,9 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventData
-    *  事件结构体。
+    *  eventData
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody
     */
     public function getEventData()
     {
@@ -371,7 +371,7 @@ class CreateFunctionTriggerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets eventData
     *
-    * @param object $eventData 事件结构体。
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody $eventData eventData
     *
     * @return $this
     */

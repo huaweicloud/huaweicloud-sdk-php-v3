@@ -26,7 +26,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     * description  别名描述信息。
     * lastModified  别名最后修改时间。
     * aliasUrn  版本别名唯一标识。
-    * additionalVersionWeights  灰度版本信息
+    * additionalVersionWeights  百分比灰度配置信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'lastModified' => '\DateTime',
             'aliasUrn' => 'string',
-            'additionalVersionWeights' => 'map[string,int]'
+            'additionalVersionWeights' => 'map[string,int]',
+            'additionalVersionStrategy' => 'map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]'
     ];
 
     /**
@@ -46,7 +48,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     * description  别名描述信息。
     * lastModified  别名最后修改时间。
     * aliasUrn  版本别名唯一标识。
-    * additionalVersionWeights  灰度版本信息
+    * additionalVersionWeights  百分比灰度配置信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'lastModified' => 'date-time',
         'aliasUrn' => null,
-        'additionalVersionWeights' => 'int64'
+        'additionalVersionWeights' => null,
+        'additionalVersionStrategy' => null
     ];
 
     /**
@@ -87,7 +91,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     * description  别名描述信息。
     * lastModified  别名最后修改时间。
     * aliasUrn  版本别名唯一标识。
-    * additionalVersionWeights  灰度版本信息
+    * additionalVersionWeights  百分比灰度配置信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'lastModified' => 'last_modified',
             'aliasUrn' => 'alias_urn',
-            'additionalVersionWeights' => 'additional_version_weights'
+            'additionalVersionWeights' => 'additional_version_weights',
+            'additionalVersionStrategy' => 'additional_version_strategy'
     ];
 
     /**
@@ -107,7 +113,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     * description  别名描述信息。
     * lastModified  别名最后修改时间。
     * aliasUrn  版本别名唯一标识。
-    * additionalVersionWeights  灰度版本信息
+    * additionalVersionWeights  百分比灰度配置信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'lastModified' => 'setLastModified',
             'aliasUrn' => 'setAliasUrn',
-            'additionalVersionWeights' => 'setAdditionalVersionWeights'
+            'additionalVersionWeights' => 'setAdditionalVersionWeights',
+            'additionalVersionStrategy' => 'setAdditionalVersionStrategy'
     ];
 
     /**
@@ -127,7 +135,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     * description  别名描述信息。
     * lastModified  别名最后修改时间。
     * aliasUrn  版本别名唯一标识。
-    * additionalVersionWeights  灰度版本信息
+    * additionalVersionWeights  百分比灰度配置信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'lastModified' => 'getLastModified',
             'aliasUrn' => 'getAliasUrn',
-            'additionalVersionWeights' => 'getAdditionalVersionWeights'
+            'additionalVersionWeights' => 'getAdditionalVersionWeights',
+            'additionalVersionStrategy' => 'getAdditionalVersionStrategy'
     ];
 
     /**
@@ -204,6 +214,7 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
         $this->container['lastModified'] = isset($data['lastModified']) ? $data['lastModified'] : null;
         $this->container['aliasUrn'] = isset($data['aliasUrn']) ? $data['aliasUrn'] : null;
         $this->container['additionalVersionWeights'] = isset($data['additionalVersionWeights']) ? $data['additionalVersionWeights'] : null;
+        $this->container['additionalVersionStrategy'] = isset($data['additionalVersionStrategy']) ? $data['additionalVersionStrategy'] : null;
     }
 
     /**
@@ -350,7 +361,7 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets additionalVersionWeights
-    *  灰度版本信息
+    *  百分比灰度配置信息
     *
     * @return map[string,int]|null
     */
@@ -362,13 +373,37 @@ class CreateVersionAliasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets additionalVersionWeights
     *
-    * @param map[string,int]|null $additionalVersionWeights 灰度版本信息
+    * @param map[string,int]|null $additionalVersionWeights 百分比灰度配置信息
     *
     * @return $this
     */
     public function setAdditionalVersionWeights($additionalVersionWeights)
     {
         $this->container['additionalVersionWeights'] = $additionalVersionWeights;
+        return $this;
+    }
+
+    /**
+    * Gets additionalVersionStrategy
+    *  指定规则灰度策略信息
+    *
+    * @return map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]|null
+    */
+    public function getAdditionalVersionStrategy()
+    {
+        return $this->container['additionalVersionStrategy'];
+    }
+
+    /**
+    * Sets additionalVersionStrategy
+    *
+    * @param map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]|null $additionalVersionStrategy 指定规则灰度策略信息
+    *
+    * @return $this
+    */
+    public function setAdditionalVersionStrategy($additionalVersionStrategy)
+    {
+        $this->container['additionalVersionStrategy'] = $additionalVersionStrategy;
         return $this;
     }
 

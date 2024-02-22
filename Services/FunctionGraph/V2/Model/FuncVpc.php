@@ -20,6 +20,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  域名id。
+    * namespace  租户的project id。
     * vpcName  虚拟私有云名称。
     * vpcId  虚拟私有云唯一标识。
     * subnetName  子网名称。
@@ -31,6 +33,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'domainId' => 'string',
+            'namespace' => 'string',
             'vpcName' => 'string',
             'vpcId' => 'string',
             'subnetName' => 'string',
@@ -42,6 +46,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  域名id。
+    * namespace  租户的project id。
     * vpcName  虚拟私有云名称。
     * vpcId  虚拟私有云唯一标识。
     * subnetName  子网名称。
@@ -53,6 +59,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'domainId' => null,
+        'namespace' => null,
         'vpcName' => null,
         'vpcId' => null,
         'subnetName' => null,
@@ -85,6 +93,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  域名id。
+    * namespace  租户的project id。
     * vpcName  虚拟私有云名称。
     * vpcId  虚拟私有云唯一标识。
     * subnetName  子网名称。
@@ -96,6 +106,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'domainId' => 'domain_id',
+            'namespace' => 'namespace',
             'vpcName' => 'vpc_name',
             'vpcId' => 'vpc_id',
             'subnetName' => 'subnet_name',
@@ -107,6 +119,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  域名id。
+    * namespace  租户的project id。
     * vpcName  虚拟私有云名称。
     * vpcId  虚拟私有云唯一标识。
     * subnetName  子网名称。
@@ -118,6 +132,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'domainId' => 'setDomainId',
+            'namespace' => 'setNamespace',
             'vpcName' => 'setVpcName',
             'vpcId' => 'setVpcId',
             'subnetName' => 'setSubnetName',
@@ -129,6 +145,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  域名id。
+    * namespace  租户的project id。
     * vpcName  虚拟私有云名称。
     * vpcId  虚拟私有云唯一标识。
     * subnetName  子网名称。
@@ -140,6 +158,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'domainId' => 'getDomainId',
+            'namespace' => 'getNamespace',
             'vpcName' => 'getVpcName',
             'vpcId' => 'getVpcId',
             'subnetName' => 'getSubnetName',
@@ -207,6 +227,8 @@ class FuncVpc implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['vpcName'] = isset($data['vpcName']) ? $data['vpcName'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['subnetName'] = isset($data['subnetName']) ? $data['subnetName'] : null;
@@ -242,6 +264,54 @@ class FuncVpc implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets domainId
+    *  域名id。
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId 域名id。
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets namespace
+    *  租户的project id。
+    *
+    * @return string|null
+    */
+    public function getNamespace()
+    {
+        return $this->container['namespace'];
+    }
+
+    /**
+    * Sets namespace
+    *
+    * @param string|null $namespace 租户的project id。
+    *
+    * @return $this
+    */
+    public function setNamespace($namespace)
+    {
+        $this->container['namespace'] = $namespace;
+        return $this;
     }
 
     /**

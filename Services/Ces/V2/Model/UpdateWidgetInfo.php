@@ -41,8 +41,8 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
             'thresholdEnabled' => 'bool',
             'view' => 'string',
             'metricDisplayMode' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties',
-            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation',
+            'properties' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties',
+            'location' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation',
             'unit' => 'string'
     ];
 
@@ -287,7 +287,10 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['widgetId']) && !preg_match("/^wg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['widgetId'])) {
+        if ($this->container['widgetId'] === null) {
+            $invalidProperties[] = "'widgetId' can't be null";
+        }
+            if (!preg_match("/^wg([a-z]|[A-Z]|[0-9]){22}$/", $this->container['widgetId'])) {
                 $invalidProperties[] = "invalid value for 'widgetId', must be conform to the pattern /^wg([a-z]|[A-Z]|[0-9]){22}$/.";
             }
             if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 128)) {
@@ -345,7 +348,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * Gets widgetId
     *  视图id
     *
-    * @return string|null
+    * @return string
     */
     public function getWidgetId()
     {
@@ -355,7 +358,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets widgetId
     *
-    * @param string|null $widgetId 视图id
+    * @param string $widgetId 视图id
     *
     * @return $this
     */
@@ -513,7 +516,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null
     */
     public function getProperties()
     {
@@ -523,7 +526,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoProperties|null $properties properties
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoProperties|null $properties properties
     *
     * @return $this
     */
@@ -537,7 +540,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     * Gets location
     *  location
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null
     */
     public function getLocation()
     {
@@ -547,7 +550,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BaseWidgetInfoLocation|null $location location
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfoLocation|null $location location
     *
     * @return $this
     */

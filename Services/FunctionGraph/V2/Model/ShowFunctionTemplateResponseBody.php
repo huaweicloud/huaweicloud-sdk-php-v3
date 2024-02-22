@@ -29,7 +29,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     * handler  模板函数执行入口
     * codeType  代码类型
     * code  代码文件
-    * timeout  超时时间
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * memorySize  内存大小
     * triggerMetadataList  触发信息列表
     * tempDetail  tempDetail
@@ -73,7 +73,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     * handler  模板函数执行入口
     * codeType  代码类型
     * code  代码文件
-    * timeout  超时时间
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * memorySize  内存大小
     * triggerMetadataList  触发信息列表
     * tempDetail  tempDetail
@@ -138,7 +138,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     * handler  模板函数执行入口
     * codeType  代码类型
     * code  代码文件
-    * timeout  超时时间
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * memorySize  内存大小
     * triggerMetadataList  触发信息列表
     * tempDetail  tempDetail
@@ -182,7 +182,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     * handler  模板函数执行入口
     * codeType  代码类型
     * code  代码文件
-    * timeout  超时时间
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * memorySize  内存大小
     * triggerMetadataList  触发信息列表
     * tempDetail  tempDetail
@@ -226,7 +226,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     * handler  模板函数执行入口
     * codeType  代码类型
     * code  代码文件
-    * timeout  超时时间
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * memorySize  内存大小
     * triggerMetadataList  触发信息列表
     * tempDetail  tempDetail
@@ -577,7 +577,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  超时时间
+    *  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return int|null
     */
@@ -589,7 +589,7 @@ class ShowFunctionTemplateResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 超时时间
+    * @param int|null $timeout 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return $this
     */

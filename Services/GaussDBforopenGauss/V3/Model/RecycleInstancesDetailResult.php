@@ -23,13 +23,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * haMode  部署形态。
+    * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
     * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * deletedAt  删除时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * volumeType  磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
+    * volumeSize  磁盘大小
     * dataVip  数据vip。
     * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectName  企业项目名称
+    * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
     * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
@@ -40,13 +44,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'haMode' => 'string',
+            'engineName' => 'string',
             'engineVersion' => 'string',
             'payModel' => 'string',
             'createdAt' => 'string',
             'deletedAt' => 'string',
             'volumeType' => 'string',
+            'volumeSize' => 'string',
             'dataVip' => 'string',
             'enterpriseProjectId' => 'string',
+            'enterpriseProjectName' => 'string',
+            'backupLevel' => 'string',
             'recycleBackupId' => 'string',
             'recycleStatus' => 'string',
             'mode' => 'string'
@@ -57,13 +65,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * haMode  部署形态。
+    * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
     * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * deletedAt  删除时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * volumeType  磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
+    * volumeSize  磁盘大小
     * dataVip  数据vip。
     * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectName  企业项目名称
+    * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
     * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
@@ -74,13 +86,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'haMode' => null,
+        'engineName' => null,
         'engineVersion' => null,
         'payModel' => null,
         'createdAt' => null,
         'deletedAt' => null,
         'volumeType' => null,
+        'volumeSize' => null,
         'dataVip' => null,
         'enterpriseProjectId' => null,
+        'enterpriseProjectName' => null,
+        'backupLevel' => null,
         'recycleBackupId' => null,
         'recycleStatus' => null,
         'mode' => null
@@ -112,13 +128,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * haMode  部署形态。
+    * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
     * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * deletedAt  删除时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * volumeType  磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
+    * volumeSize  磁盘大小
     * dataVip  数据vip。
     * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectName  企业项目名称
+    * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
     * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
@@ -129,13 +149,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'haMode' => 'ha_mode',
+            'engineName' => 'engine_name',
             'engineVersion' => 'engine_version',
             'payModel' => 'pay_model',
             'createdAt' => 'created_at',
             'deletedAt' => 'deleted_at',
             'volumeType' => 'volume_type',
+            'volumeSize' => 'volume_size',
             'dataVip' => 'data_vip',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'enterpriseProjectName' => 'enterprise_project_name',
+            'backupLevel' => 'backup_level',
             'recycleBackupId' => 'recycle_backup_id',
             'recycleStatus' => 'recycle_status',
             'mode' => 'mode'
@@ -146,13 +170,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * haMode  部署形态。
+    * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
     * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * deletedAt  删除时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * volumeType  磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
+    * volumeSize  磁盘大小
     * dataVip  数据vip。
     * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectName  企业项目名称
+    * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
     * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
@@ -163,13 +191,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'haMode' => 'setHaMode',
+            'engineName' => 'setEngineName',
             'engineVersion' => 'setEngineVersion',
             'payModel' => 'setPayModel',
             'createdAt' => 'setCreatedAt',
             'deletedAt' => 'setDeletedAt',
             'volumeType' => 'setVolumeType',
+            'volumeSize' => 'setVolumeSize',
             'dataVip' => 'setDataVip',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'enterpriseProjectName' => 'setEnterpriseProjectName',
+            'backupLevel' => 'setBackupLevel',
             'recycleBackupId' => 'setRecycleBackupId',
             'recycleStatus' => 'setRecycleStatus',
             'mode' => 'setMode'
@@ -180,13 +212,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * id  实例ID。
     * name  实例名称。
     * haMode  部署形态。
+    * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
     * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * deletedAt  删除时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * volumeType  磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
+    * volumeSize  磁盘大小
     * dataVip  数据vip。
     * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectName  企业项目名称
+    * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
     * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
@@ -197,13 +233,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'haMode' => 'getHaMode',
+            'engineName' => 'getEngineName',
             'engineVersion' => 'getEngineVersion',
             'payModel' => 'getPayModel',
             'createdAt' => 'getCreatedAt',
             'deletedAt' => 'getDeletedAt',
             'volumeType' => 'getVolumeType',
+            'volumeSize' => 'getVolumeSize',
             'dataVip' => 'getDataVip',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'enterpriseProjectName' => 'getEnterpriseProjectName',
+            'backupLevel' => 'getBackupLevel',
             'recycleBackupId' => 'getRecycleBackupId',
             'recycleStatus' => 'getRecycleStatus',
             'mode' => 'getMode'
@@ -349,13 +389,17 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['haMode'] = isset($data['haMode']) ? $data['haMode'] : null;
+        $this->container['engineName'] = isset($data['engineName']) ? $data['engineName'] : null;
         $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
         $this->container['payModel'] = isset($data['payModel']) ? $data['payModel'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['deletedAt'] = isset($data['deletedAt']) ? $data['deletedAt'] : null;
         $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
+        $this->container['volumeSize'] = isset($data['volumeSize']) ? $data['volumeSize'] : null;
         $this->container['dataVip'] = isset($data['dataVip']) ? $data['dataVip'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
+        $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['recycleBackupId'] = isset($data['recycleBackupId']) ? $data['recycleBackupId'] : null;
         $this->container['recycleStatus'] = isset($data['recycleStatus']) ? $data['recycleStatus'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
@@ -535,6 +579,30 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets engineName
+    *  引擎名称
+    *
+    * @return string|null
+    */
+    public function getEngineName()
+    {
+        return $this->container['engineName'];
+    }
+
+    /**
+    * Sets engineName
+    *
+    * @param string|null $engineName 引擎名称
+    *
+    * @return $this
+    */
+    public function setEngineName($engineName)
+    {
+        $this->container['engineName'] = $engineName;
+        return $this;
+    }
+
+    /**
     * Gets engineVersion
     *  引擎版本号。
     *
@@ -655,6 +723,30 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets volumeSize
+    *  磁盘大小
+    *
+    * @return string|null
+    */
+    public function getVolumeSize()
+    {
+        return $this->container['volumeSize'];
+    }
+
+    /**
+    * Sets volumeSize
+    *
+    * @param string|null $volumeSize 磁盘大小
+    *
+    * @return $this
+    */
+    public function setVolumeSize($volumeSize)
+    {
+        $this->container['volumeSize'] = $volumeSize;
+        return $this;
+    }
+
+    /**
     * Gets dataVip
     *  数据vip。
     *
@@ -699,6 +791,54 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectName
+    *  企业项目名称
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectName()
+    {
+        return $this->container['enterpriseProjectName'];
+    }
+
+    /**
+    * Sets enterpriseProjectName
+    *
+    * @param string|null $enterpriseProjectName 企业项目名称
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectName($enterpriseProjectName)
+    {
+        $this->container['enterpriseProjectName'] = $enterpriseProjectName;
+        return $this;
+    }
+
+    /**
+    * Gets backupLevel
+    *  备份级别
+    *
+    * @return string|null
+    */
+    public function getBackupLevel()
+    {
+        return $this->container['backupLevel'];
+    }
+
+    /**
+    * Sets backupLevel
+    *
+    * @param string|null $backupLevel 备份级别
+    *
+    * @return $this
+    */
+    public function setBackupLevel($backupLevel)
+    {
+        $this->container['backupLevel'] = $backupLevel;
         return $this;
     }
 

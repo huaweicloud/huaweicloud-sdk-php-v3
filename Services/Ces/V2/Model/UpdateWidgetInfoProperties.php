@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\FunctionGraph\V2\Model;
+namespace HuaweiCloud\SDK\Ces\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TriggerEventData implements ModelInterface, ArrayAccess
+class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,34 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TriggerEventData';
+    protected static $openAPIModelName = 'UpdateWidgetInfo_properties';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSerial  串行处理数据
-    * maxFetchBytes  最大字节数
-    * pollingInterval  拉取周期
-    * pollingUnit  拉取周期单位
+    * filter  聚合类型，目前只有TopN这一种类型
+    * topN  Top值前N个
+    * order  排序字段，asc正序，desc倒序
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSerial' => 'bool',
-            'maxFetchBytes' => 'int',
-            'pollingInterval' => 'int',
-            'pollingUnit' => 'string'
+            'filter' => 'string',
+            'topN' => 'int',
+            'order' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSerial  串行处理数据
-    * maxFetchBytes  最大字节数
-    * pollingInterval  拉取周期
-    * pollingUnit  拉取周期单位
+    * filter  聚合类型，目前只有TopN这一种类型
+    * topN  Top值前N个
+    * order  排序字段，asc正序，desc倒序
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isSerial' => 'true',
-        'maxFetchBytes' => 'integer',
-        'pollingInterval' => 'integer',
-        'pollingUnit' => 'ms'
+        'filter' => null,
+        'topN' => 'int32',
+        'order' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSerial  串行处理数据
-    * maxFetchBytes  最大字节数
-    * pollingInterval  拉取周期
-    * pollingUnit  拉取周期单位
+    * filter  聚合类型，目前只有TopN这一种类型
+    * topN  Top值前N个
+    * order  排序字段，asc正序，desc倒序
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isSerial' => 'is_serial',
-            'maxFetchBytes' => 'max_fetch_bytes',
-            'pollingInterval' => 'polling_interval',
-            'pollingUnit' => 'polling_unit'
+            'filter' => 'filter',
+            'topN' => 'topN',
+            'order' => 'order'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSerial  串行处理数据
-    * maxFetchBytes  最大字节数
-    * pollingInterval  拉取周期
-    * pollingUnit  拉取周期单位
+    * filter  聚合类型，目前只有TopN这一种类型
+    * topN  Top值前N个
+    * order  排序字段，asc正序，desc倒序
     *
     * @var string[]
     */
     protected static $setters = [
-            'isSerial' => 'setIsSerial',
-            'maxFetchBytes' => 'setMaxFetchBytes',
-            'pollingInterval' => 'setPollingInterval',
-            'pollingUnit' => 'setPollingUnit'
+            'filter' => 'setFilter',
+            'topN' => 'setTopN',
+            'order' => 'setOrder'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSerial  串行处理数据
-    * maxFetchBytes  最大字节数
-    * pollingInterval  拉取周期
-    * pollingUnit  拉取周期单位
+    * filter  聚合类型，目前只有TopN这一种类型
+    * topN  Top值前N个
+    * order  排序字段，asc正序，desc倒序
     *
     * @var string[]
     */
     protected static $getters = [
-            'isSerial' => 'getIsSerial',
-            'maxFetchBytes' => 'getMaxFetchBytes',
-            'pollingInterval' => 'getPollingInterval',
-            'pollingUnit' => 'getPollingUnit'
+            'filter' => 'getFilter',
+            'topN' => 'getTopN',
+            'order' => 'getOrder'
     ];
 
     /**
@@ -159,8 +149,9 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const POLLING_UNIT_MS = 'ms';
-    const POLLING_UNIT_S = 's';
+    const FILTER_TOP_N = 'topN';
+    const ORDER_ASC = 'asc';
+    const ORDER_DESC = 'desc';
     
 
     /**
@@ -168,11 +159,23 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getPollingUnitAllowableValues()
+    public function getFilterAllowableValues()
     {
         return [
-            self::POLLING_UNIT_MS,
-            self::POLLING_UNIT_S,
+            self::FILTER_TOP_N,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOrderAllowableValues()
+    {
+        return [
+            self::ORDER_ASC,
+            self::ORDER_DESC,
         ];
     }
 
@@ -192,10 +195,9 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isSerial'] = isset($data['isSerial']) ? $data['isSerial'] : null;
-        $this->container['maxFetchBytes'] = isset($data['maxFetchBytes']) ? $data['maxFetchBytes'] : null;
-        $this->container['pollingInterval'] = isset($data['pollingInterval']) ? $data['pollingInterval'] : null;
-        $this->container['pollingUnit'] = isset($data['pollingUnit']) ? $data['pollingUnit'] : null;
+        $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
+        $this->container['topN'] = isset($data['topN']) ? $data['topN'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
     }
 
     /**
@@ -206,10 +208,24 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getPollingUnitAllowableValues();
-                if (!is_null($this->container['pollingUnit']) && !in_array($this->container['pollingUnit'], $allowedValues, true)) {
+            $allowedValues = $this->getFilterAllowableValues();
+                if (!is_null($this->container['filter']) && !in_array($this->container['filter'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'pollingUnit', must be one of '%s'",
+                "invalid value for 'filter', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['topN']) && ($this->container['topN'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'topN', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['topN']) && ($this->container['topN'] < 1)) {
+                $invalidProperties[] = "invalid value for 'topN', must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getOrderAllowableValues();
+                if (!is_null($this->container['order']) && !in_array($this->container['order'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'order', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -229,98 +245,74 @@ class TriggerEventData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isSerial
-    *  串行处理数据
-    *
-    * @return bool|null
-    */
-    public function getIsSerial()
-    {
-        return $this->container['isSerial'];
-    }
-
-    /**
-    * Sets isSerial
-    *
-    * @param bool|null $isSerial 串行处理数据
-    *
-    * @return $this
-    */
-    public function setIsSerial($isSerial)
-    {
-        $this->container['isSerial'] = $isSerial;
-        return $this;
-    }
-
-    /**
-    * Gets maxFetchBytes
-    *  最大字节数
-    *
-    * @return int|null
-    */
-    public function getMaxFetchBytes()
-    {
-        return $this->container['maxFetchBytes'];
-    }
-
-    /**
-    * Sets maxFetchBytes
-    *
-    * @param int|null $maxFetchBytes 最大字节数
-    *
-    * @return $this
-    */
-    public function setMaxFetchBytes($maxFetchBytes)
-    {
-        $this->container['maxFetchBytes'] = $maxFetchBytes;
-        return $this;
-    }
-
-    /**
-    * Gets pollingInterval
-    *  拉取周期
-    *
-    * @return int|null
-    */
-    public function getPollingInterval()
-    {
-        return $this->container['pollingInterval'];
-    }
-
-    /**
-    * Sets pollingInterval
-    *
-    * @param int|null $pollingInterval 拉取周期
-    *
-    * @return $this
-    */
-    public function setPollingInterval($pollingInterval)
-    {
-        $this->container['pollingInterval'] = $pollingInterval;
-        return $this;
-    }
-
-    /**
-    * Gets pollingUnit
-    *  拉取周期单位
+    * Gets filter
+    *  聚合类型，目前只有TopN这一种类型
     *
     * @return string|null
     */
-    public function getPollingUnit()
+    public function getFilter()
     {
-        return $this->container['pollingUnit'];
+        return $this->container['filter'];
     }
 
     /**
-    * Sets pollingUnit
+    * Sets filter
     *
-    * @param string|null $pollingUnit 拉取周期单位
+    * @param string|null $filter 聚合类型，目前只有TopN这一种类型
     *
     * @return $this
     */
-    public function setPollingUnit($pollingUnit)
+    public function setFilter($filter)
     {
-        $this->container['pollingUnit'] = $pollingUnit;
+        $this->container['filter'] = $filter;
+        return $this;
+    }
+
+    /**
+    * Gets topN
+    *  Top值前N个
+    *
+    * @return int|null
+    */
+    public function getTopN()
+    {
+        return $this->container['topN'];
+    }
+
+    /**
+    * Sets topN
+    *
+    * @param int|null $topN Top值前N个
+    *
+    * @return $this
+    */
+    public function setTopN($topN)
+    {
+        $this->container['topN'] = $topN;
+        return $this;
+    }
+
+    /**
+    * Gets order
+    *  排序字段，asc正序，desc倒序
+    *
+    * @return string|null
+    */
+    public function getOrder()
+    {
+        return $this->container['order'];
+    }
+
+    /**
+    * Sets order
+    *
+    * @param string|null $order 排序字段，asc正序，desc倒序
+    *
+    * @return $this
+    */
+    public function setOrder($order)
+    {
+        $this->container['order'] = $order;
         return $this;
     }
 

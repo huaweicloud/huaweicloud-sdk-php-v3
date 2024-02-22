@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\FunctionGraph\V2\Model;
+namespace HuaweiCloud\SDK\Ces\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListFunctionsRequest implements ModelInterface, ArrayAccess
+class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListFunctionsRequest';
+    protected static $openAPIModelName = 'UpdateWidgetInfo_location';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * top  监控视图的上坐标
+    * left  监控视图的左坐标
+    * width  监控视图图表宽度
+    * height  监控视图图表高度
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'marker' => 'string',
-            'maxitems' => 'string',
-            'packageName' => 'string'
+            'top' => 'int',
+            'left' => 'int',
+            'width' => 'int',
+            'height' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * top  监控视图的上坐标
+    * left  监控视图的左坐标
+    * width  监控视图图表宽度
+    * height  监控视图图表高度
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'marker' => null,
-        'maxitems' => null,
-        'packageName' => null
+        'top' => null,
+        'left' => null,
+        'width' => null,
+        'height' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * top  监控视图的上坐标
+    * left  监控视图的左坐标
+    * width  监控视图图表宽度
+    * height  监控视图图表高度
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'marker' => 'marker',
-            'maxitems' => 'maxitems',
-            'packageName' => 'package_name'
+            'top' => 'top',
+            'left' => 'left',
+            'width' => 'width',
+            'height' => 'height'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * top  监控视图的上坐标
+    * left  监控视图的左坐标
+    * width  监控视图图表宽度
+    * height  监控视图图表高度
     *
     * @var string[]
     */
     protected static $setters = [
-            'marker' => 'setMarker',
-            'maxitems' => 'setMaxitems',
-            'packageName' => 'setPackageName'
+            'top' => 'setTop',
+            'left' => 'setLeft',
+            'width' => 'setWidth',
+            'height' => 'setHeight'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * marker  上一次查询到的最后的记录位置。
-    * maxitems  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-    * packageName  自定义分组名称。
+    * top  监控视图的上坐标
+    * left  监控视图的左坐标
+    * width  监控视图图表宽度
+    * height  监控视图图表高度
     *
     * @var string[]
     */
     protected static $getters = [
-            'marker' => 'getMarker',
-            'maxitems' => 'getMaxitems',
-            'packageName' => 'getPackageName'
+            'top' => 'getTop',
+            'left' => 'getLeft',
+            'width' => 'getWidth',
+            'height' => 'getHeight'
     ];
 
     /**
@@ -167,9 +177,10 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['maxitems'] = isset($data['maxitems']) ? $data['maxitems'] : null;
-        $this->container['packageName'] = isset($data['packageName']) ? $data['packageName'] : null;
+        $this->container['top'] = isset($data['top']) ? $data['top'] : null;
+        $this->container['left'] = isset($data['left']) ? $data['left'] : null;
+        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
+        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
     }
 
     /**
@@ -180,6 +191,42 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['top'] === null) {
+            $invalidProperties[] = "'top' can't be null";
+        }
+            if (($this->container['top'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'top', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['top'] < 0)) {
+                $invalidProperties[] = "invalid value for 'top', must be bigger than or equal to 0.";
+            }
+        if ($this->container['left'] === null) {
+            $invalidProperties[] = "'left' can't be null";
+        }
+            if (($this->container['left'] > 9)) {
+                $invalidProperties[] = "invalid value for 'left', must be smaller than or equal to 9.";
+            }
+            if (($this->container['left'] < 0)) {
+                $invalidProperties[] = "invalid value for 'left', must be bigger than or equal to 0.";
+            }
+        if ($this->container['width'] === null) {
+            $invalidProperties[] = "'width' can't be null";
+        }
+            if (($this->container['width'] > 12)) {
+                $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 12.";
+            }
+            if (($this->container['width'] < 3)) {
+                $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 3.";
+            }
+        if ($this->container['height'] === null) {
+            $invalidProperties[] = "'height' can't be null";
+        }
+            if (($this->container['height'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 2147483647.";
+            }
+            if (($this->container['height'] < 3)) {
+                $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 3.";
+            }
         return $invalidProperties;
     }
 
@@ -195,74 +242,98 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets marker
-    *  上一次查询到的最后的记录位置。
+    * Gets top
+    *  监控视图的上坐标
     *
-    * @return string|null
+    * @return int
     */
-    public function getMarker()
+    public function getTop()
     {
-        return $this->container['marker'];
+        return $this->container['top'];
     }
 
     /**
-    * Sets marker
+    * Sets top
     *
-    * @param string|null $marker 上一次查询到的最后的记录位置。
+    * @param int $top 监控视图的上坐标
     *
     * @return $this
     */
-    public function setMarker($marker)
+    public function setTop($top)
     {
-        $this->container['marker'] = $marker;
+        $this->container['top'] = $top;
         return $this;
     }
 
     /**
-    * Gets maxitems
-    *  每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
+    * Gets left
+    *  监控视图的左坐标
     *
-    * @return string|null
+    * @return int
     */
-    public function getMaxitems()
+    public function getLeft()
     {
-        return $this->container['maxitems'];
+        return $this->container['left'];
     }
 
     /**
-    * Sets maxitems
+    * Sets left
     *
-    * @param string|null $maxitems 每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
+    * @param int $left 监控视图的左坐标
     *
     * @return $this
     */
-    public function setMaxitems($maxitems)
+    public function setLeft($left)
     {
-        $this->container['maxitems'] = $maxitems;
+        $this->container['left'] = $left;
         return $this;
     }
 
     /**
-    * Gets packageName
-    *  自定义分组名称。
+    * Gets width
+    *  监控视图图表宽度
     *
-    * @return string|null
+    * @return int
     */
-    public function getPackageName()
+    public function getWidth()
     {
-        return $this->container['packageName'];
+        return $this->container['width'];
     }
 
     /**
-    * Sets packageName
+    * Sets width
     *
-    * @param string|null $packageName 自定义分组名称。
+    * @param int $width 监控视图图表宽度
     *
     * @return $this
     */
-    public function setPackageName($packageName)
+    public function setWidth($width)
     {
-        $this->container['packageName'] = $packageName;
+        $this->container['width'] = $width;
+        return $this;
+    }
+
+    /**
+    * Gets height
+    *  监控视图图表高度
+    *
+    * @return int
+    */
+    public function getHeight()
+    {
+        return $this->container['height'];
+    }
+
+    /**
+    * Sets height
+    *
+    * @param int $height 监控视图图表高度
+    *
+    * @return $this
+    */
+    public function setHeight($height)
+    {
+        $this->container['height'] = $height;
         return $this;
     }
 

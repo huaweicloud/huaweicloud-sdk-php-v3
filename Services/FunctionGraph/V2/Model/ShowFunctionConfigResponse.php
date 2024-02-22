@@ -29,13 +29,13 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * namespace  租户的project id。
     * projectName  租户的project name。
     * package  函数所属的分组Package，用于用户针对函数的自定义分组。
-    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
-    * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * codeSize  函数大小，单位：字节。
@@ -44,30 +44,39 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * digest  函数代码SHA512 hash值，用于判断函数是否变化。
     * version  函数版本号，由系统自动生成，规则：vYYYYMMDD-HHMMSS（v+年月日-时分秒）。
     * imageName  函数版本的内部标识。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * lastModified  函数最后一次更新时间。
-    * ephemeralStorage  临时存储大小。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * longTime  是否允许进行长时间超时设置。
     * logGroupId  自定义日志查询组id
     * logStreamId  自定义日志查询流id
-    * type  v2表示为公测版本,v1为原来版本。
+    * type  v2表示为正式版本,v1为废弃版本。
+    * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否允许动态内存配置
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isBridgeFunction  是否为bridge函数
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
+    * reservedInstanceIdleMode  是否开启预留实例闲置模式
+    * apigRouteEnable  是否配置下沉apig路由规则。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
+    * allowEphemeralStorage  是否支持配置临时存储。
+    * networkController  networkController
     *
     * @var string[]
     */
@@ -115,10 +124,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'logGroupId' => 'string',
             'logStreamId' => 'string',
             'type' => 'string',
+            'enableCloudDebug' => 'string',
             'enableDynamicMemory' => 'bool',
             'isStatefulFunction' => 'bool',
+            'isBridgeFunction' => 'bool',
             'enableAuthInHeader' => 'bool',
-            'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage'
+            'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage',
+            'reservedInstanceIdleMode' => 'bool',
+            'apigRouteEnable' => 'bool',
+            'heartbeatHandler' => 'string',
+            'enableClassIsolation' => 'bool',
+            'gpuType' => 'string',
+            'allowEphemeralStorage' => 'bool',
+            'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig'
     ];
 
     /**
@@ -131,13 +149,13 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * namespace  租户的project id。
     * projectName  租户的project name。
     * package  函数所属的分组Package，用于用户针对函数的自定义分组。
-    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
-    * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * codeSize  函数大小，单位：字节。
@@ -146,30 +164,39 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * digest  函数代码SHA512 hash值，用于判断函数是否变化。
     * version  函数版本号，由系统自动生成，规则：vYYYYMMDD-HHMMSS（v+年月日-时分秒）。
     * imageName  函数版本的内部标识。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * lastModified  函数最后一次更新时间。
-    * ephemeralStorage  临时存储大小。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * longTime  是否允许进行长时间超时设置。
     * logGroupId  自定义日志查询组id
     * logStreamId  自定义日志查询流id
-    * type  v2表示为公测版本,v1为原来版本。
+    * type  v2表示为正式版本,v1为废弃版本。
+    * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否允许动态内存配置
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isBridgeFunction  是否为bridge函数
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
+    * reservedInstanceIdleMode  是否开启预留实例闲置模式
+    * apigRouteEnable  是否配置下沉apig路由规则。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
+    * allowEphemeralStorage  是否支持配置临时存储。
+    * networkController  networkController
     *
     * @var string[]
     */
@@ -217,10 +244,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'logGroupId' => null,
         'logStreamId' => null,
         'type' => null,
+        'enableCloudDebug' => null,
         'enableDynamicMemory' => null,
         'isStatefulFunction' => null,
+        'isBridgeFunction' => null,
         'enableAuthInHeader' => null,
-        'customImage' => null
+        'customImage' => null,
+        'reservedInstanceIdleMode' => null,
+        'apigRouteEnable' => null,
+        'heartbeatHandler' => null,
+        'enableClassIsolation' => null,
+        'gpuType' => null,
+        'allowEphemeralStorage' => null,
+        'networkController' => null
     ];
 
     /**
@@ -254,13 +290,13 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * namespace  租户的project id。
     * projectName  租户的project name。
     * package  函数所属的分组Package，用于用户针对函数的自定义分组。
-    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
-    * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * codeSize  函数大小，单位：字节。
@@ -269,30 +305,39 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * digest  函数代码SHA512 hash值，用于判断函数是否变化。
     * version  函数版本号，由系统自动生成，规则：vYYYYMMDD-HHMMSS（v+年月日-时分秒）。
     * imageName  函数版本的内部标识。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * lastModified  函数最后一次更新时间。
-    * ephemeralStorage  临时存储大小。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * longTime  是否允许进行长时间超时设置。
     * logGroupId  自定义日志查询组id
     * logStreamId  自定义日志查询流id
-    * type  v2表示为公测版本,v1为原来版本。
+    * type  v2表示为正式版本,v1为废弃版本。
+    * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否允许动态内存配置
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isBridgeFunction  是否为bridge函数
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
+    * reservedInstanceIdleMode  是否开启预留实例闲置模式
+    * apigRouteEnable  是否配置下沉apig路由规则。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
+    * allowEphemeralStorage  是否支持配置临时存储。
+    * networkController  networkController
     *
     * @var string[]
     */
@@ -340,10 +385,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'logGroupId' => 'log_group_id',
             'logStreamId' => 'log_stream_id',
             'type' => 'type',
+            'enableCloudDebug' => 'enable_cloud_debug',
             'enableDynamicMemory' => 'enable_dynamic_memory',
             'isStatefulFunction' => 'is_stateful_function',
+            'isBridgeFunction' => 'is_bridge_function',
             'enableAuthInHeader' => 'enable_auth_in_header',
-            'customImage' => 'custom_image'
+            'customImage' => 'custom_image',
+            'reservedInstanceIdleMode' => 'reserved_instance_idle_mode',
+            'apigRouteEnable' => 'apig_route_enable',
+            'heartbeatHandler' => 'heartbeat_handler',
+            'enableClassIsolation' => 'enable_class_isolation',
+            'gpuType' => 'gpu_type',
+            'allowEphemeralStorage' => 'allow_ephemeral_storage',
+            'networkController' => 'network_controller'
     ];
 
     /**
@@ -356,13 +410,13 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * namespace  租户的project id。
     * projectName  租户的project name。
     * package  函数所属的分组Package，用于用户针对函数的自定义分组。
-    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
-    * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * codeSize  函数大小，单位：字节。
@@ -371,30 +425,39 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * digest  函数代码SHA512 hash值，用于判断函数是否变化。
     * version  函数版本号，由系统自动生成，规则：vYYYYMMDD-HHMMSS（v+年月日-时分秒）。
     * imageName  函数版本的内部标识。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * lastModified  函数最后一次更新时间。
-    * ephemeralStorage  临时存储大小。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * longTime  是否允许进行长时间超时设置。
     * logGroupId  自定义日志查询组id
     * logStreamId  自定义日志查询流id
-    * type  v2表示为公测版本,v1为原来版本。
+    * type  v2表示为正式版本,v1为废弃版本。
+    * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否允许动态内存配置
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isBridgeFunction  是否为bridge函数
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
+    * reservedInstanceIdleMode  是否开启预留实例闲置模式
+    * apigRouteEnable  是否配置下沉apig路由规则。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
+    * allowEphemeralStorage  是否支持配置临时存储。
+    * networkController  networkController
     *
     * @var string[]
     */
@@ -442,10 +505,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'logGroupId' => 'setLogGroupId',
             'logStreamId' => 'setLogStreamId',
             'type' => 'setType',
+            'enableCloudDebug' => 'setEnableCloudDebug',
             'enableDynamicMemory' => 'setEnableDynamicMemory',
             'isStatefulFunction' => 'setIsStatefulFunction',
+            'isBridgeFunction' => 'setIsBridgeFunction',
             'enableAuthInHeader' => 'setEnableAuthInHeader',
-            'customImage' => 'setCustomImage'
+            'customImage' => 'setCustomImage',
+            'reservedInstanceIdleMode' => 'setReservedInstanceIdleMode',
+            'apigRouteEnable' => 'setApigRouteEnable',
+            'heartbeatHandler' => 'setHeartbeatHandler',
+            'enableClassIsolation' => 'setEnableClassIsolation',
+            'gpuType' => 'setGpuType',
+            'allowEphemeralStorage' => 'setAllowEphemeralStorage',
+            'networkController' => 'setNetworkController'
     ];
 
     /**
@@ -458,13 +530,13 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * namespace  租户的project id。
     * projectName  租户的project name。
     * package  函数所属的分组Package，用于用户针对函数的自定义分组。
-    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
-    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * runtime  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+    * timeout  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
-    * codeType  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * codeSize  函数大小，单位：字节。
@@ -473,30 +545,39 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * digest  函数代码SHA512 hash值，用于判断函数是否变化。
     * version  函数版本号，由系统自动生成，规则：vYYYYMMDD-HHMMSS（v+年月日-时分秒）。
     * imageName  函数版本的内部标识。
-    * xrole  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-    * appXrole  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
+    * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * lastModified  函数最后一次更新时间。
-    * ephemeralStorage  临时存储大小。
+    * ephemeralStorage  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     * funcVpc  funcVpc
     * mountConfig  mountConfig
     * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     * strategyConfig  strategyConfig
     * dependencies  函数依赖代码包列表。
-    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
     * preStopTimeout  初始化超时时间，超时函数将被强行停止，范围1～90秒。
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
     * longTime  是否允许进行长时间超时设置。
     * logGroupId  自定义日志查询组id
     * logStreamId  自定义日志查询流id
-    * type  v2表示为公测版本,v1为原来版本。
+    * type  v2表示为正式版本,v1为废弃版本。
+    * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否允许动态内存配置
     * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isBridgeFunction  是否为bridge函数
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
+    * reservedInstanceIdleMode  是否开启预留实例闲置模式
+    * apigRouteEnable  是否配置下沉apig路由规则。
+    * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    * gpuType  显卡类型。
+    * allowEphemeralStorage  是否支持配置临时存储。
+    * networkController  networkController
     *
     * @var string[]
     */
@@ -544,10 +625,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'logGroupId' => 'getLogGroupId',
             'logStreamId' => 'getLogStreamId',
             'type' => 'getType',
+            'enableCloudDebug' => 'getEnableCloudDebug',
             'enableDynamicMemory' => 'getEnableDynamicMemory',
             'isStatefulFunction' => 'getIsStatefulFunction',
+            'isBridgeFunction' => 'getIsBridgeFunction',
             'enableAuthInHeader' => 'getEnableAuthInHeader',
-            'customImage' => 'getCustomImage'
+            'customImage' => 'getCustomImage',
+            'reservedInstanceIdleMode' => 'getReservedInstanceIdleMode',
+            'apigRouteEnable' => 'getApigRouteEnable',
+            'heartbeatHandler' => 'getHeartbeatHandler',
+            'enableClassIsolation' => 'getEnableClassIsolation',
+            'gpuType' => 'getGpuType',
+            'allowEphemeralStorage' => 'getAllowEphemeralStorage',
+            'networkController' => 'getNetworkController'
     ];
 
     /**
@@ -608,10 +698,12 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     const RUNTIME_PYTHON3_9 = 'Python3.9';
     const RUNTIME_CUSTOM = 'Custom';
     const RUNTIME_HTTP = 'http';
+    const RUNTIME_CUSTOM_IMAGE = 'Custom Image';
     const CODE_TYPE_INLINE = 'inline';
     const CODE_TYPE_ZIP = 'zip';
     const CODE_TYPE_OBS = 'obs';
     const CODE_TYPE_JAR = 'jar';
+    const CODE_TYPE_CUSTOM_IMAGE_SWR = 'Custom-Image-Swr';
     const TYPE_V1 = 'v1';
     const TYPE_V2 = 'v2';
     
@@ -642,6 +734,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             self::RUNTIME_PYTHON3_9,
             self::RUNTIME_CUSTOM,
             self::RUNTIME_HTTP,
+            self::RUNTIME_CUSTOM_IMAGE,
         ];
     }
 
@@ -657,6 +750,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             self::CODE_TYPE_ZIP,
             self::CODE_TYPE_OBS,
             self::CODE_TYPE_JAR,
+            self::CODE_TYPE_CUSTOM_IMAGE_SWR,
         ];
     }
 
@@ -732,10 +826,19 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['enableCloudDebug'] = isset($data['enableCloudDebug']) ? $data['enableCloudDebug'] : null;
         $this->container['enableDynamicMemory'] = isset($data['enableDynamicMemory']) ? $data['enableDynamicMemory'] : null;
         $this->container['isStatefulFunction'] = isset($data['isStatefulFunction']) ? $data['isStatefulFunction'] : null;
+        $this->container['isBridgeFunction'] = isset($data['isBridgeFunction']) ? $data['isBridgeFunction'] : null;
         $this->container['enableAuthInHeader'] = isset($data['enableAuthInHeader']) ? $data['enableAuthInHeader'] : null;
         $this->container['customImage'] = isset($data['customImage']) ? $data['customImage'] : null;
+        $this->container['reservedInstanceIdleMode'] = isset($data['reservedInstanceIdleMode']) ? $data['reservedInstanceIdleMode'] : null;
+        $this->container['apigRouteEnable'] = isset($data['apigRouteEnable']) ? $data['apigRouteEnable'] : null;
+        $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
+        $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
+        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
+        $this->container['allowEphemeralStorage'] = isset($data['allowEphemeralStorage']) ? $data['allowEphemeralStorage'] : null;
+        $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
     }
 
     /**
@@ -978,7 +1081,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtime
-    *  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
+    *  FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return string|null
     */
@@ -990,7 +1093,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runtime
     *
-    * @param string|null $runtime FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
+    * @param string|null $runtime FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
     *
     * @return $this
     */
@@ -1002,7 +1105,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    *  函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return int|null
     */
@@ -1014,7 +1117,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+    * @param int|null $timeout 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
     *
     * @return $this
     */
@@ -1122,7 +1225,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeType
-    *  函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    *  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     *
     * @return string|null
     */
@@ -1134,7 +1237,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets codeType
     *
-    * @param string|null $codeType 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+    * @param string|null $codeType 函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     *
     * @return $this
     */
@@ -1338,7 +1441,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets xrole
-    *  函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    *  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     *
     * @return string|null
     */
@@ -1350,7 +1453,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets xrole
     *
-    * @param string|null $xrole 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * @param string|null $xrole 函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     *
     * @return $this
     */
@@ -1362,7 +1465,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appXrole
-    *  函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    *  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     *
     * @return string|null
     */
@@ -1374,7 +1477,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appXrole
     *
-    * @param string|null $appXrole 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+    * @param string|null $appXrole 函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     *
     * @return $this
     */
@@ -1434,7 +1537,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ephemeralStorage
-    *  临时存储大小。
+    *  临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     *
     * @return int|null
     */
@@ -1446,7 +1549,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ephemeralStorage
     *
-    * @param int|null $ephemeralStorage 临时存储大小。
+    * @param int|null $ephemeralStorage 临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
     *
     * @return $this
     */
@@ -1602,7 +1705,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets initializerHandler
-    *  函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    *  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     *
     * @return string|null
     */
@@ -1614,7 +1717,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets initializerHandler
     *
-    * @param string|null $initializerHandler 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+    * @param string|null $initializerHandler 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     *
     * @return $this
     */
@@ -1626,7 +1729,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets initializerTimeout
-    *  初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    *  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     *
     * @return int|null
     */
@@ -1638,7 +1741,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets initializerTimeout
     *
-    * @param int|null $initializerTimeout 初始化超时时间，超时函数将被强行停止，范围1～300秒。
+    * @param int|null $initializerTimeout 初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     *
     * @return $this
     */
@@ -1794,7 +1897,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  v2表示为公测版本,v1为原来版本。
+    *  v2表示为正式版本,v1为废弃版本。
     *
     * @return string|null
     */
@@ -1806,13 +1909,37 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type v2表示为公测版本,v1为原来版本。
+    * @param string|null $type v2表示为正式版本,v1为废弃版本。
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets enableCloudDebug
+    *  是否启用cloud debug功能
+    *
+    * @return string|null
+    */
+    public function getEnableCloudDebug()
+    {
+        return $this->container['enableCloudDebug'];
+    }
+
+    /**
+    * Sets enableCloudDebug
+    *
+    * @param string|null $enableCloudDebug 是否启用cloud debug功能
+    *
+    * @return $this
+    */
+    public function setEnableCloudDebug($enableCloudDebug)
+    {
+        $this->container['enableCloudDebug'] = $enableCloudDebug;
         return $this;
     }
 
@@ -1865,6 +1992,30 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isBridgeFunction
+    *  是否为bridge函数
+    *
+    * @return bool|null
+    */
+    public function getIsBridgeFunction()
+    {
+        return $this->container['isBridgeFunction'];
+    }
+
+    /**
+    * Sets isBridgeFunction
+    *
+    * @param bool|null $isBridgeFunction 是否为bridge函数
+    *
+    * @return $this
+    */
+    public function setIsBridgeFunction($isBridgeFunction)
+    {
+        $this->container['isBridgeFunction'] = $isBridgeFunction;
+        return $this;
+    }
+
+    /**
     * Gets enableAuthInHeader
     *  是否允许在请求头中添加鉴权信息
     *
@@ -1909,6 +2060,174 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setCustomImage($customImage)
     {
         $this->container['customImage'] = $customImage;
+        return $this;
+    }
+
+    /**
+    * Gets reservedInstanceIdleMode
+    *  是否开启预留实例闲置模式
+    *
+    * @return bool|null
+    */
+    public function getReservedInstanceIdleMode()
+    {
+        return $this->container['reservedInstanceIdleMode'];
+    }
+
+    /**
+    * Sets reservedInstanceIdleMode
+    *
+    * @param bool|null $reservedInstanceIdleMode 是否开启预留实例闲置模式
+    *
+    * @return $this
+    */
+    public function setReservedInstanceIdleMode($reservedInstanceIdleMode)
+    {
+        $this->container['reservedInstanceIdleMode'] = $reservedInstanceIdleMode;
+        return $this;
+    }
+
+    /**
+    * Gets apigRouteEnable
+    *  是否配置下沉apig路由规则。
+    *
+    * @return bool|null
+    */
+    public function getApigRouteEnable()
+    {
+        return $this->container['apigRouteEnable'];
+    }
+
+    /**
+    * Sets apigRouteEnable
+    *
+    * @param bool|null $apigRouteEnable 是否配置下沉apig路由规则。
+    *
+    * @return $this
+    */
+    public function setApigRouteEnable($apigRouteEnable)
+    {
+        $this->container['apigRouteEnable'] = $apigRouteEnable;
+        return $this;
+    }
+
+    /**
+    * Gets heartbeatHandler
+    *  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    *
+    * @return string|null
+    */
+    public function getHeartbeatHandler()
+    {
+        return $this->container['heartbeatHandler'];
+    }
+
+    /**
+    * Sets heartbeatHandler
+    *
+    * @param string|null $heartbeatHandler 心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+    *
+    * @return $this
+    */
+    public function setHeartbeatHandler($heartbeatHandler)
+    {
+        $this->container['heartbeatHandler'] = $heartbeatHandler;
+        return $this;
+    }
+
+    /**
+    * Gets enableClassIsolation
+    *  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    *
+    * @return bool|null
+    */
+    public function getEnableClassIsolation()
+    {
+        return $this->container['enableClassIsolation'];
+    }
+
+    /**
+    * Sets enableClassIsolation
+    *
+    * @param bool|null $enableClassIsolation 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+    *
+    * @return $this
+    */
+    public function setEnableClassIsolation($enableClassIsolation)
+    {
+        $this->container['enableClassIsolation'] = $enableClassIsolation;
+        return $this;
+    }
+
+    /**
+    * Gets gpuType
+    *  显卡类型。
+    *
+    * @return string|null
+    */
+    public function getGpuType()
+    {
+        return $this->container['gpuType'];
+    }
+
+    /**
+    * Sets gpuType
+    *
+    * @param string|null $gpuType 显卡类型。
+    *
+    * @return $this
+    */
+    public function setGpuType($gpuType)
+    {
+        $this->container['gpuType'] = $gpuType;
+        return $this;
+    }
+
+    /**
+    * Gets allowEphemeralStorage
+    *  是否支持配置临时存储。
+    *
+    * @return bool|null
+    */
+    public function getAllowEphemeralStorage()
+    {
+        return $this->container['allowEphemeralStorage'];
+    }
+
+    /**
+    * Sets allowEphemeralStorage
+    *
+    * @param bool|null $allowEphemeralStorage 是否支持配置临时存储。
+    *
+    * @return $this
+    */
+    public function setAllowEphemeralStorage($allowEphemeralStorage)
+    {
+        $this->container['allowEphemeralStorage'] = $allowEphemeralStorage;
+        return $this;
+    }
+
+    /**
+    * Gets networkController
+    *  networkController
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig|null
+    */
+    public function getNetworkController()
+    {
+        return $this->container['networkController'];
+    }
+
+    /**
+    * Sets networkController
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig|null $networkController networkController
+    *
+    * @return $this
+    */
+    public function setNetworkController($networkController)
+    {
+        $this->container['networkController'] = $networkController;
         return $this;
     }
 
