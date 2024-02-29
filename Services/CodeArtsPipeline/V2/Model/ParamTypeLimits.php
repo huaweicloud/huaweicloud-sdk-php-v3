@@ -23,7 +23,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     * disable  是否废弃
     * name  语言名字
     * displayname  语言展示名字
-    * id  规则集ID
+    * id  策略ID
     * language  扫描语言
     *
     * @var string[]
@@ -41,7 +41,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     * disable  是否废弃
     * name  语言名字
     * displayname  语言展示名字
-    * id  规则集ID
+    * id  策略ID
     * language  扫描语言
     *
     * @var string[]
@@ -80,7 +80,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     * disable  是否废弃
     * name  语言名字
     * displayname  语言展示名字
-    * id  规则集ID
+    * id  策略ID
     * language  扫描语言
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     * disable  是否废弃
     * name  语言名字
     * displayname  语言展示名字
-    * id  规则集ID
+    * id  策略ID
     * language  扫描语言
     *
     * @var string[]
@@ -116,7 +116,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     * disable  是否废弃
     * name  语言名字
     * displayname  语言展示名字
-    * id  规则集ID
+    * id  策略ID
     * language  扫描语言
     *
     * @var string[]
@@ -305,7 +305,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则集ID
+    *  策略ID
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class ParamTypeLimits implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规则集ID
+    * @param string $id 策略ID
     *
     * @return $this
     */

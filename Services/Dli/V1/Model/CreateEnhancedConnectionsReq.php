@@ -23,6 +23,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     * name  连接名称。长度64，数字字母下划线组成。
     * destVpcId  对应服务的vpc的ID。
     * destNetworkId  对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
+    * elasticResourcePools  弹性资源池列表。
     * queues  需要使用跨源的队列列表。
     * hosts  用户自定义主机信息，最大支持2万条记录。
     * routetableId  对应服务的子网关联的路由表。
@@ -34,6 +35,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'destVpcId' => 'string',
             'destNetworkId' => 'string',
+            'elasticResourcePools' => 'string[]',
             'queues' => 'string[]',
             'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionsHost[]',
             'routetableId' => 'string',
@@ -45,6 +47,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     * name  连接名称。长度64，数字字母下划线组成。
     * destVpcId  对应服务的vpc的ID。
     * destNetworkId  对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
+    * elasticResourcePools  弹性资源池列表。
     * queues  需要使用跨源的队列列表。
     * hosts  用户自定义主机信息，最大支持2万条记录。
     * routetableId  对应服务的子网关联的路由表。
@@ -56,6 +59,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
         'name' => null,
         'destVpcId' => null,
         'destNetworkId' => null,
+        'elasticResourcePools' => null,
         'queues' => null,
         'hosts' => null,
         'routetableId' => null,
@@ -88,6 +92,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     * name  连接名称。长度64，数字字母下划线组成。
     * destVpcId  对应服务的vpc的ID。
     * destNetworkId  对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
+    * elasticResourcePools  弹性资源池列表。
     * queues  需要使用跨源的队列列表。
     * hosts  用户自定义主机信息，最大支持2万条记录。
     * routetableId  对应服务的子网关联的路由表。
@@ -99,6 +104,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'destVpcId' => 'dest_vpc_id',
             'destNetworkId' => 'dest_network_id',
+            'elasticResourcePools' => 'elastic_resource_pools',
             'queues' => 'queues',
             'hosts' => 'hosts',
             'routetableId' => 'routetable_id',
@@ -110,6 +116,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     * name  连接名称。长度64，数字字母下划线组成。
     * destVpcId  对应服务的vpc的ID。
     * destNetworkId  对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
+    * elasticResourcePools  弹性资源池列表。
     * queues  需要使用跨源的队列列表。
     * hosts  用户自定义主机信息，最大支持2万条记录。
     * routetableId  对应服务的子网关联的路由表。
@@ -121,6 +128,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'destVpcId' => 'setDestVpcId',
             'destNetworkId' => 'setDestNetworkId',
+            'elasticResourcePools' => 'setElasticResourcePools',
             'queues' => 'setQueues',
             'hosts' => 'setHosts',
             'routetableId' => 'setRoutetableId',
@@ -132,6 +140,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     * name  连接名称。长度64，数字字母下划线组成。
     * destVpcId  对应服务的vpc的ID。
     * destNetworkId  对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
+    * elasticResourcePools  弹性资源池列表。
     * queues  需要使用跨源的队列列表。
     * hosts  用户自定义主机信息，最大支持2万条记录。
     * routetableId  对应服务的子网关联的路由表。
@@ -143,6 +152,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'destVpcId' => 'getDestVpcId',
             'destNetworkId' => 'getDestNetworkId',
+            'elasticResourcePools' => 'getElasticResourcePools',
             'queues' => 'getQueues',
             'hosts' => 'getHosts',
             'routetableId' => 'getRoutetableId',
@@ -210,6 +220,7 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['destVpcId'] = isset($data['destVpcId']) ? $data['destVpcId'] : null;
         $this->container['destNetworkId'] = isset($data['destNetworkId']) ? $data['destNetworkId'] : null;
+        $this->container['elasticResourcePools'] = isset($data['elasticResourcePools']) ? $data['elasticResourcePools'] : null;
         $this->container['queues'] = isset($data['queues']) ? $data['queues'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['routetableId'] = isset($data['routetableId']) ? $data['routetableId'] : null;
@@ -316,6 +327,30 @@ class CreateEnhancedConnectionsReq implements ModelInterface, ArrayAccess
     public function setDestNetworkId($destNetworkId)
     {
         $this->container['destNetworkId'] = $destNetworkId;
+        return $this;
+    }
+
+    /**
+    * Gets elasticResourcePools
+    *  弹性资源池列表。
+    *
+    * @return string[]|null
+    */
+    public function getElasticResourcePools()
+    {
+        return $this->container['elasticResourcePools'];
+    }
+
+    /**
+    * Sets elasticResourcePools
+    *
+    * @param string[]|null $elasticResourcePools 弹性资源池列表。
+    *
+    * @return $this
+    */
+    public function setElasticResourcePools($elasticResourcePools)
+    {
+        $this->container['elasticResourcePools'] = $elasticResourcePools;
         return $this;
     }
 

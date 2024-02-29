@@ -23,13 +23,17 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
     * tags  标签字段信息
+    * logStreamNameAlias  日志流名称别名
+    * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logStreamName' => 'string',
             'ttlInDays' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]',
+            'logStreamNameAlias' => 'string',
+            'enterpriseProjectName' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
     * tags  标签字段信息
+    * logStreamNameAlias  日志流名称别名
+    * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logStreamName' => null,
         'ttlInDays' => null,
-        'tags' => null
+        'tags' => null,
+        'logStreamNameAlias' => null,
+        'enterpriseProjectName' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
     * tags  标签字段信息
+    * logStreamNameAlias  日志流名称别名
+    * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logStreamName' => 'log_stream_name',
             'ttlInDays' => 'ttl_in_days',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'logStreamNameAlias' => 'log_stream_name_alias',
+            'enterpriseProjectName' => 'enterprise_project_name'
     ];
 
     /**
@@ -86,13 +98,17 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
     * tags  标签字段信息
+    * logStreamNameAlias  日志流名称别名
+    * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
     *
     * @var string[]
     */
     protected static $setters = [
             'logStreamName' => 'setLogStreamName',
             'ttlInDays' => 'setTtlInDays',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'logStreamNameAlias' => 'setLogStreamNameAlias',
+            'enterpriseProjectName' => 'setEnterpriseProjectName'
     ];
 
     /**
@@ -100,13 +116,17 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * logStreamName  需要创建的日志流名称。
     * ttlInDays  日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
     * tags  标签字段信息
+    * logStreamNameAlias  日志流名称别名
+    * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
     *
     * @var string[]
     */
     protected static $getters = [
             'logStreamName' => 'getLogStreamName',
             'ttlInDays' => 'getTtlInDays',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'logStreamNameAlias' => 'getLogStreamNameAlias',
+            'enterpriseProjectName' => 'getEnterpriseProjectName'
     ];
 
     /**
@@ -170,6 +190,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
+        $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
     }
 
     /**
@@ -194,6 +216,18 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] < 1)) {
                 $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['logStreamNameAlias']) && (mb_strlen($this->container['logStreamNameAlias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'logStreamNameAlias', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['logStreamNameAlias']) && (mb_strlen($this->container['logStreamNameAlias']) < 1)) {
+                $invalidProperties[] = "invalid value for 'logStreamNameAlias', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectName']) && (mb_strlen($this->container['enterpriseProjectName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectName', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['enterpriseProjectName']) && (mb_strlen($this->container['enterpriseProjectName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -278,6 +312,54 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamNameAlias
+    *  日志流名称别名
+    *
+    * @return string|null
+    */
+    public function getLogStreamNameAlias()
+    {
+        return $this->container['logStreamNameAlias'];
+    }
+
+    /**
+    * Sets logStreamNameAlias
+    *
+    * @param string|null $logStreamNameAlias 日志流名称别名
+    *
+    * @return $this
+    */
+    public function setLogStreamNameAlias($logStreamNameAlias)
+    {
+        $this->container['logStreamNameAlias'] = $logStreamNameAlias;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectName
+    *  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectName()
+    {
+        return $this->container['enterpriseProjectName'];
+    }
+
+    /**
+    * Sets enterpriseProjectName
+    *
+    * @param string|null $enterpriseProjectName 企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectName($enterpriseProjectName)
+    {
+        $this->container['enterpriseProjectName'] = $enterpriseProjectName;
         return $this;
     }
 

@@ -25,7 +25,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
     * messageContent  **参数说明**：短信或邮件的内容。
-    * messageTitle  **参数说明**：短信或邮件的主题。
+    * messageTemplateName  **参数说明**：SMN服务对应的模板名称。
+    * messageTitle  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @var string[]
     */
@@ -35,6 +36,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
             'themeName' => 'string',
             'topicUrn' => 'string',
             'messageContent' => 'string',
+            'messageTemplateName' => 'string',
             'messageTitle' => 'string'
     ];
 
@@ -45,7 +47,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
     * messageContent  **参数说明**：短信或邮件的内容。
-    * messageTitle  **参数说明**：短信或邮件的主题。
+    * messageTemplateName  **参数说明**：SMN服务对应的模板名称。
+    * messageTitle  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @var string[]
     */
@@ -55,6 +58,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
         'themeName' => null,
         'topicUrn' => null,
         'messageContent' => null,
+        'messageTemplateName' => null,
         'messageTitle' => null
     ];
 
@@ -86,7 +90,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
     * messageContent  **参数说明**：短信或邮件的内容。
-    * messageTitle  **参数说明**：短信或邮件的主题。
+    * messageTemplateName  **参数说明**：SMN服务对应的模板名称。
+    * messageTitle  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @var string[]
     */
@@ -96,6 +101,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
             'themeName' => 'theme_name',
             'topicUrn' => 'topic_urn',
             'messageContent' => 'message_content',
+            'messageTemplateName' => 'message_template_name',
             'messageTitle' => 'message_title'
     ];
 
@@ -106,7 +112,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
     * messageContent  **参数说明**：短信或邮件的内容。
-    * messageTitle  **参数说明**：短信或邮件的主题。
+    * messageTemplateName  **参数说明**：SMN服务对应的模板名称。
+    * messageTitle  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @var string[]
     */
@@ -116,6 +123,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
             'themeName' => 'setThemeName',
             'topicUrn' => 'setTopicUrn',
             'messageContent' => 'setMessageContent',
+            'messageTemplateName' => 'setMessageTemplateName',
             'messageTitle' => 'setMessageTitle'
     ];
 
@@ -126,7 +134,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
     * messageContent  **参数说明**：短信或邮件的内容。
-    * messageTitle  **参数说明**：短信或邮件的主题。
+    * messageTemplateName  **参数说明**：SMN服务对应的模板名称。
+    * messageTitle  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @var string[]
     */
@@ -136,6 +145,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
             'themeName' => 'getThemeName',
             'topicUrn' => 'getTopicUrn',
             'messageContent' => 'getMessageContent',
+            'messageTemplateName' => 'getMessageTemplateName',
             'messageTitle' => 'getMessageTitle'
     ];
 
@@ -202,6 +212,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
         $this->container['themeName'] = isset($data['themeName']) ? $data['themeName'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['messageContent'] = isset($data['messageContent']) ? $data['messageContent'] : null;
+        $this->container['messageTemplateName'] = isset($data['messageTemplateName']) ? $data['messageTemplateName'] : null;
         $this->container['messageTitle'] = isset($data['messageTitle']) ? $data['messageTitle'] : null;
     }
 
@@ -234,18 +245,15 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['topicUrn']) > 256)) {
                 $invalidProperties[] = "invalid value for 'topicUrn', the character length must be smaller than or equal to 256.";
             }
-        if ($this->container['messageContent'] === null) {
-            $invalidProperties[] = "'messageContent' can't be null";
-        }
-            if ((mb_strlen($this->container['messageContent']) > 1024)) {
+            if (!is_null($this->container['messageContent']) && (mb_strlen($this->container['messageContent']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'messageContent', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['messageTemplateName']) && !preg_match("/^[a-zA-Z0-9][a-zA-Z0-9-_]{0,63}$/", $this->container['messageTemplateName'])) {
+                $invalidProperties[] = "invalid value for 'messageTemplateName', must be conform to the pattern /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,63}$/.";
             }
         if ($this->container['messageTitle'] === null) {
             $invalidProperties[] = "'messageTitle' can't be null";
         }
-            if ((mb_strlen($this->container['messageTitle']) > 256)) {
-                $invalidProperties[] = "invalid value for 'messageTitle', the character length must be smaller than or equal to 256.";
-            }
         return $invalidProperties;
     }
 
@@ -360,7 +368,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * Gets messageContent
     *  **参数说明**：短信或邮件的内容。
     *
-    * @return string
+    * @return string|null
     */
     public function getMessageContent()
     {
@@ -370,7 +378,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageContent
     *
-    * @param string $messageContent **参数说明**：短信或邮件的内容。
+    * @param string|null $messageContent **参数说明**：短信或邮件的内容。
     *
     * @return $this
     */
@@ -381,8 +389,32 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets messageTemplateName
+    *  **参数说明**：SMN服务对应的模板名称。
+    *
+    * @return string|null
+    */
+    public function getMessageTemplateName()
+    {
+        return $this->container['messageTemplateName'];
+    }
+
+    /**
+    * Sets messageTemplateName
+    *
+    * @param string|null $messageTemplateName **参数说明**：SMN服务对应的模板名称。
+    *
+    * @return $this
+    */
+    public function setMessageTemplateName($messageTemplateName)
+    {
+        $this->container['messageTemplateName'] = $messageTemplateName;
+        return $this;
+    }
+
+    /**
     * Gets messageTitle
-    *  **参数说明**：短信或邮件的主题。
+    *  **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @return string
     */
@@ -394,7 +426,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageTitle
     *
-    * @param string $messageTitle **参数说明**：短信或邮件的主题。
+    * @param string $messageTitle **参数说明**：短信或邮件的主题。最大长度支持UTF-8编码后的521个字节。
     *
     * @return $this
     */

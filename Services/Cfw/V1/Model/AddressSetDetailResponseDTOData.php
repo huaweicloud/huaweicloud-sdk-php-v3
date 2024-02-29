@@ -23,6 +23,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -31,6 +32,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'addressSetType' => 'int',
             'addressType' => 'int'
     ];
 
@@ -39,6 +41,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -47,6 +50,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'description' => null,
+        'addressSetType' => 'int32',
         'addressType' => 'int32'
     ];
 
@@ -76,6 +80,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -84,6 +89,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'description' => 'description',
+            'addressSetType' => 'address_set_type',
             'addressType' => 'address_type'
     ];
 
@@ -92,6 +98,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -100,6 +107,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'addressSetType' => 'setAddressSetType',
             'addressType' => 'setAddressType'
     ];
 
@@ -108,6 +116,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -116,6 +125,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'addressSetType' => 'getAddressSetType',
             'addressType' => 'getAddressType'
     ];
 
@@ -195,6 +205,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
     }
 
@@ -297,6 +308,30 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets addressSetType
+    *  地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return int|null
+    */
+    public function getAddressSetType()
+    {
+        return $this->container['addressSetType'];
+    }
+
+    /**
+    * Sets addressSetType
+    *
+    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return $this
+    */
+    public function setAddressSetType($addressSetType)
+    {
+        $this->container['addressSetType'] = $addressSetType;
         return $this;
     }
 

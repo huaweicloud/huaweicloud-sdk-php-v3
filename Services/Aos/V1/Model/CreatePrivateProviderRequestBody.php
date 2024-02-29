@@ -211,8 +211,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['providerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'providerName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[0-9a-z][0-9a-z-]*[0-9a-z]$/", $this->container['providerName'])) {
-                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z][0-9a-z-]*[0-9a-z]$/.";
+            if (!preg_match("/^[0-9a-z][0-9a-z-]*[0-9a-z]*$/", $this->container['providerName'])) {
+                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z][0-9a-z-]*[0-9a-z]*$/.";
             }
             if (!is_null($this->container['providerDescription']) && (mb_strlen($this->container['providerDescription']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'providerDescription', the character length must be smaller than or equal to 1024.";
@@ -238,8 +238,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['functionGraphUrn']) && (mb_strlen($this->container['functionGraphUrn']) < 32)) {
                 $invalidProperties[] = "invalid value for 'functionGraphUrn', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['functionGraphUrn']) && !preg_match("/urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/", $this->container['functionGraphUrn'])) {
-                $invalidProperties[] = "invalid value for 'functionGraphUrn', must be conform to the pattern /urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/.";
+            if (!is_null($this->container['functionGraphUrn']) && !preg_match("/^urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/", $this->container['functionGraphUrn'])) {
+                $invalidProperties[] = "invalid value for 'functionGraphUrn', must be conform to the pattern /^urn:fss:.+:[A-Za-z0-9]{3,64}:function:default:[A-Za-z][A-Za-z0-9_-]{0,58}[A-Za-z0-9]:([A-Za-z0-9][A-Za-z0-9_.-]{0,40}|![A-Za-z][A-Za-z0-9_-]{0,61})[A-Za-z0-9]$/.";
             }
         return $invalidProperties;
     }

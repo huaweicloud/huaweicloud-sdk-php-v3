@@ -20,7 +20,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     * extendEipCount  扩展EIP数量，仅包周期场景下生效
     * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效
     * extendVpcCount  扩展VPC数量，仅包周期场景下生效
@@ -36,7 +36,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     * extendEipCount  扩展EIP数量，仅包周期场景下生效
     * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效
     * extendVpcCount  扩展VPC数量，仅包周期场景下生效
@@ -73,7 +73,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     * extendEipCount  扩展EIP数量，仅包周期场景下生效
     * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效
     * extendVpcCount  扩展VPC数量，仅包周期场景下生效
@@ -89,7 +89,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     * extendEipCount  扩展EIP数量，仅包周期场景下生效
     * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效
     * extendVpcCount  扩展VPC数量，仅包周期场景下生效
@@ -105,7 +105,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * version  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     * extendEipCount  扩展EIP数量，仅包周期场景下生效
     * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效
     * extendVpcCount  扩展VPC数量，仅包周期场景下生效
@@ -161,7 +161,6 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     }
     const VERSION_STANDARD = 'Standard';
     const VERSION_PROFESSIONAL = 'Professional';
-    const VERSION_PLATINUM = 'Platinum';
     
 
     /**
@@ -174,7 +173,6 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
         return [
             self::VERSION_STANDARD,
             self::VERSION_PROFESSIONAL,
-            self::VERSION_PLATINUM,
         ];
     }
 
@@ -250,7 +248,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    *  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     *
     * @return string|null
     */
@@ -262,7 +260,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * @param string|null $version 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     *
     * @return $this
     */

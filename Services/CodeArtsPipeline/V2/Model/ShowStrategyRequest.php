@@ -20,7 +20,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     * domainId  租户ID
     * cloudProjectId  项目ID
     *
@@ -34,7 +34,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     * domainId  租户ID
     * cloudProjectId  项目ID
     *
@@ -69,7 +69,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     * domainId  租户ID
     * cloudProjectId  项目ID
     *
@@ -83,7 +83,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     * domainId  租户ID
     * cloudProjectId  项目ID
     *
@@ -97,7 +97,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     * domainId  租户ID
     * cloudProjectId  项目ID
     *
@@ -202,7 +202,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSetId
-    *  规则集ID
+    *  策略ID
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class ShowStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSetId
     *
-    * @param string $ruleSetId 规则集ID
+    * @param string $ruleSetId 策略ID
     *
     * @return $this
     */

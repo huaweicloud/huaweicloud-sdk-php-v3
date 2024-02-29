@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Kafka\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
+class DeleteConnectorTaskResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,24 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AssociateHealthCheckReq';
+    protected static $openAPIModelName = 'DeleteConnectorTaskResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'healthCheckId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'healthCheckId' => null
     ];
 
     /**
@@ -61,32 +60,29 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'healthCheckId' => 'health_check_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'healthCheckId' => 'setHealthCheckId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'healthCheckId' => 'getHealthCheckId'
     ];
 
     /**
@@ -147,7 +143,6 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['healthCheckId'] = isset($data['healthCheckId']) ? $data['healthCheckId'] : null;
     }
 
     /**
@@ -158,9 +153,6 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['healthCheckId'] === null) {
-            $invalidProperties[] = "'healthCheckId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -173,30 +165,6 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets healthCheckId
-    *  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
-    *
-    * @return string
-    */
-    public function getHealthCheckId()
-    {
-        return $this->container['healthCheckId'];
-    }
-
-    /**
-    * Sets healthCheckId
-    *
-    * @param string $healthCheckId 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
-    *
-    * @return $this
-    */
-    public function setHealthCheckId($healthCheckId)
-    {
-        $this->container['healthCheckId'] = $healthCheckId;
-        return $this;
     }
 
     /**

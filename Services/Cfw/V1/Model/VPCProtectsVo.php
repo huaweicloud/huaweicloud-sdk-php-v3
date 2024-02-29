@@ -26,6 +26,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     * protectVpcs  防护VPC
     * selfProtectVpcs  本项目防护VPC
     * otherProtectVpcs  其他项目防护VPC
+    * totalAssets  所有资产数量
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
             'otherTotal' => 'int',
             'protectVpcs' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]',
             'selfProtectVpcs' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]',
-            'otherProtectVpcs' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]'
+            'otherProtectVpcs' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]',
+            'totalAssets' => 'int'
     ];
 
     /**
@@ -46,6 +48,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     * protectVpcs  防护VPC
     * selfProtectVpcs  本项目防护VPC
     * otherProtectVpcs  其他项目防护VPC
+    * totalAssets  所有资产数量
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
         'otherTotal' => 'int32',
         'protectVpcs' => null,
         'selfProtectVpcs' => null,
-        'otherProtectVpcs' => null
+        'otherProtectVpcs' => null,
+        'totalAssets' => 'int32'
     ];
 
     /**
@@ -87,6 +91,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     * protectVpcs  防护VPC
     * selfProtectVpcs  本项目防护VPC
     * otherProtectVpcs  其他项目防护VPC
+    * totalAssets  所有资产数量
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
             'otherTotal' => 'other_total',
             'protectVpcs' => 'protect_vpcs',
             'selfProtectVpcs' => 'self_protect_vpcs',
-            'otherProtectVpcs' => 'other_protect_vpcs'
+            'otherProtectVpcs' => 'other_protect_vpcs',
+            'totalAssets' => 'total_assets'
     ];
 
     /**
@@ -107,6 +113,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     * protectVpcs  防护VPC
     * selfProtectVpcs  本项目防护VPC
     * otherProtectVpcs  其他项目防护VPC
+    * totalAssets  所有资产数量
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
             'otherTotal' => 'setOtherTotal',
             'protectVpcs' => 'setProtectVpcs',
             'selfProtectVpcs' => 'setSelfProtectVpcs',
-            'otherProtectVpcs' => 'setOtherProtectVpcs'
+            'otherProtectVpcs' => 'setOtherProtectVpcs',
+            'totalAssets' => 'setTotalAssets'
     ];
 
     /**
@@ -127,6 +135,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     * protectVpcs  防护VPC
     * selfProtectVpcs  本项目防护VPC
     * otherProtectVpcs  其他项目防护VPC
+    * totalAssets  所有资产数量
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
             'otherTotal' => 'getOtherTotal',
             'protectVpcs' => 'getProtectVpcs',
             'selfProtectVpcs' => 'getSelfProtectVpcs',
-            'otherProtectVpcs' => 'getOtherProtectVpcs'
+            'otherProtectVpcs' => 'getOtherProtectVpcs',
+            'totalAssets' => 'getTotalAssets'
     ];
 
     /**
@@ -203,6 +213,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
         $this->container['protectVpcs'] = isset($data['protectVpcs']) ? $data['protectVpcs'] : null;
         $this->container['selfProtectVpcs'] = isset($data['selfProtectVpcs']) ? $data['selfProtectVpcs'] : null;
         $this->container['otherProtectVpcs'] = isset($data['otherProtectVpcs']) ? $data['otherProtectVpcs'] : null;
+        $this->container['totalAssets'] = isset($data['totalAssets']) ? $data['totalAssets'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     public function setOtherProtectVpcs($otherProtectVpcs)
     {
         $this->container['otherProtectVpcs'] = $otherProtectVpcs;
+        return $this;
+    }
+
+    /**
+    * Gets totalAssets
+    *  所有资产数量
+    *
+    * @return int|null
+    */
+    public function getTotalAssets()
+    {
+        return $this->container['totalAssets'];
+    }
+
+    /**
+    * Sets totalAssets
+    *
+    * @param int|null $totalAssets 所有资产数量
+    *
+    * @return $this
+    */
+    public function setTotalAssets($totalAssets)
+    {
+        $this->container['totalAssets'] = $totalAssets;
         return $this;
     }
 

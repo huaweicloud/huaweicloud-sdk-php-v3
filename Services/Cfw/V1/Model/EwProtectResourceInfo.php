@@ -27,6 +27,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
     * protectedResourceMode  防护资源模式
+    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceNatName' => 'string',
             'protectedResourceNatId' => 'string',
             'protectedResourceProjectId' => 'string',
-            'protectedResourceMode' => 'string'
+            'protectedResourceMode' => 'string',
+            'status' => 'int'
     ];
 
     /**
@@ -49,6 +51,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
     * protectedResourceMode  防护资源模式
+    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
         'protectedResourceNatName' => null,
         'protectedResourceNatId' => null,
         'protectedResourceProjectId' => null,
-        'protectedResourceMode' => null
+        'protectedResourceMode' => null,
+        'status' => 'int32'
     ];
 
     /**
@@ -92,6 +96,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
     * protectedResourceMode  防护资源模式
+    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceNatName' => 'protected_resource_nat_name',
             'protectedResourceNatId' => 'protected_resource_nat_id',
             'protectedResourceProjectId' => 'protected_resource_project_id',
-            'protectedResourceMode' => 'protected_resource_mode'
+            'protectedResourceMode' => 'protected_resource_mode',
+            'status' => 'status'
     ];
 
     /**
@@ -114,6 +120,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
     * protectedResourceMode  防护资源模式
+    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceNatName' => 'setProtectedResourceNatName',
             'protectedResourceNatId' => 'setProtectedResourceNatId',
             'protectedResourceProjectId' => 'setProtectedResourceProjectId',
-            'protectedResourceMode' => 'setProtectedResourceMode'
+            'protectedResourceMode' => 'setProtectedResourceMode',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -136,6 +144,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     * protectedResourceNatId  防护资源nat网关id
     * protectedResourceProjectId  防护资源租户id
     * protectedResourceMode  防护资源模式
+    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
             'protectedResourceNatName' => 'getProtectedResourceNatName',
             'protectedResourceNatId' => 'getProtectedResourceNatId',
             'protectedResourceProjectId' => 'getProtectedResourceProjectId',
-            'protectedResourceMode' => 'getProtectedResourceMode'
+            'protectedResourceMode' => 'getProtectedResourceMode',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -214,6 +224,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
         $this->container['protectedResourceNatId'] = isset($data['protectedResourceNatId']) ? $data['protectedResourceNatId'] : null;
         $this->container['protectedResourceProjectId'] = isset($data['protectedResourceProjectId']) ? $data['protectedResourceProjectId'] : null;
         $this->container['protectedResourceMode'] = isset($data['protectedResourceMode']) ? $data['protectedResourceMode'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -412,6 +423,30 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     public function setProtectedResourceMode($protectedResourceMode)
     {
         $this->container['protectedResourceMode'] = $protectedResourceMode;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  防护VPC的防护状态，0表示已关联，1表示未关联。
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 防护VPC的防护状态，0表示已关联，1表示未关联。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

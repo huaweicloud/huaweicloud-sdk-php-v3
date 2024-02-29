@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
+class DeployFactoryPackagesRequestBody implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AssociateHealthCheckResponse';
+    protected static $openAPIModelName = 'DeployFactoryPackagesRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * packageIds  发布包ID
+    * startupMode  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'healthCheckId' => 'string'
+            'packageIds' => 'string[]',
+            'startupMode' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * packageIds  发布包ID
+    * startupMode  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'healthCheckId' => null
+        'packageIds' => null,
+        'startupMode' => 'int32'
     ];
 
     /**
@@ -62,32 +65,38 @@ class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * packageIds  发布包ID
+    * startupMode  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'healthCheckId' => 'health_check_id'
+            'packageIds' => 'package_ids',
+            'startupMode' => 'startup_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * packageIds  发布包ID
+    * startupMode  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
     *
     * @var string[]
     */
     protected static $setters = [
-            'healthCheckId' => 'setHealthCheckId'
+            'packageIds' => 'setPackageIds',
+            'startupMode' => 'setStartupMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * packageIds  发布包ID
+    * startupMode  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
     *
     * @var string[]
     */
     protected static $getters = [
-            'healthCheckId' => 'getHealthCheckId'
+            'packageIds' => 'getPackageIds',
+            'startupMode' => 'getStartupMode'
     ];
 
     /**
@@ -148,7 +157,8 @@ class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['healthCheckId'] = isset($data['healthCheckId']) ? $data['healthCheckId'] : null;
+        $this->container['packageIds'] = isset($data['packageIds']) ? $data['packageIds'] : null;
+        $this->container['startupMode'] = isset($data['startupMode']) ? $data['startupMode'] : null;
     }
 
     /**
@@ -159,6 +169,9 @@ class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['packageIds'] === null) {
+            $invalidProperties[] = "'packageIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,26 +187,50 @@ class AssociateHealthCheckResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets healthCheckId
-    *  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * Gets packageIds
+    *  发布包ID
     *
-    * @return string|null
+    * @return string[]
     */
-    public function getHealthCheckId()
+    public function getPackageIds()
     {
-        return $this->container['healthCheckId'];
+        return $this->container['packageIds'];
     }
 
     /**
-    * Sets healthCheckId
+    * Sets packageIds
     *
-    * @param string|null $healthCheckId 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * @param string[] $packageIds 发布包ID
     *
     * @return $this
     */
-    public function setHealthCheckId($healthCheckId)
+    public function setPackageIds($packageIds)
     {
-        $this->container['healthCheckId'] = $healthCheckId;
+        $this->container['packageIds'] = $packageIds;
+        return $this;
+    }
+
+    /**
+    * Gets startupMode
+    *  发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
+    *
+    * @return int|null
+    */
+    public function getStartupMode()
+    {
+        return $this->container['startupMode'];
+    }
+
+    /**
+    * Sets startupMode
+    *
+    * @param int|null $startupMode 发布后是否立即启动作业。取值范围为0和1，默认为1, 1：发布成功后立即启动作业 0：不立即启动
+    *
+    * @return $this
+    */
+    public function setStartupMode($startupMode)
+    {
+        $this->container['startupMode'] = $startupMode;
         return $this;
     }
 

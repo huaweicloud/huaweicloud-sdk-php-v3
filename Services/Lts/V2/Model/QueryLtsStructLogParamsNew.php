@@ -194,8 +194,8 @@ class QueryLtsStructLogParamsNew implements ModelInterface, ArrayAccess
         if ($this->container['query'] === null) {
             $invalidProperties[] = "'query' can't be null";
         }
-            if ((mb_strlen($this->container['query']) > 100)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 100.";
+            if ((mb_strlen($this->container['query']) > 102400)) {
+                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 102400.";
             }
             if ((mb_strlen($this->container['query']) < 0)) {
                 $invalidProperties[] = "invalid value for 'query', the character length must be bigger than or equal to 0.";

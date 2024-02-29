@@ -22,7 +22,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作
-    * ruleIds  规则列表
+    * ruleIds  规则ID列表
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作
-    * ruleIds  规则列表
+    * ruleIds  规则ID列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作
-    * ruleIds  规则列表
+    * ruleIds  规则ID列表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作
-    * ruleIds  规则列表
+    * ruleIds  规则ID列表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * action  动作
-    * ruleIds  规则列表
+    * ruleIds  规则ID列表
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIds
-    *  规则列表
+    *  规则ID列表
     *
     * @return string[]
     */
@@ -265,7 +265,7 @@ class UpdateSecurityPolciesActionDto implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIds
     *
-    * @param string[] $ruleIds 规则列表
+    * @param string[] $ruleIds 规则ID列表
     *
     * @return $this
     */

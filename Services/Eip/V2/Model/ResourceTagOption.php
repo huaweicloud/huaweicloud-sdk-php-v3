@@ -175,11 +175,17 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) > 36)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
             }
+            if (!preg_match("/^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/.";
+            }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
             if ((mb_strlen($this->container['value']) > 43)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
+            }
+            if (!preg_match("/^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/.";
             }
         return $invalidProperties;
     }

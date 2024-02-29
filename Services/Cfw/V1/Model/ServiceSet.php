@@ -23,8 +23,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     * refCount  引用次数
     * status  状态
+    * projectId  项目id
+    * protocols  协议类型列表
     *
     * @var string[]
     */
@@ -32,8 +35,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'setId' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'serviceSetType' => 'int',
             'refCount' => 'int',
-            'status' => 'string'
+            'status' => 'string',
+            'projectId' => 'string',
+            'protocols' => 'int[]'
     ];
 
     /**
@@ -41,8 +47,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     * refCount  引用次数
     * status  状态
+    * projectId  项目id
+    * protocols  协议类型列表
     *
     * @var string[]
     */
@@ -50,8 +59,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
         'setId' => null,
         'name' => null,
         'description' => null,
+        'serviceSetType' => 'int32',
         'refCount' => 'int32',
-        'status' => null
+        'status' => null,
+        'projectId' => null,
+        'protocols' => 'int32'
     ];
 
     /**
@@ -80,8 +92,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     * refCount  引用次数
     * status  状态
+    * projectId  项目id
+    * protocols  协议类型列表
     *
     * @var string[]
     */
@@ -89,8 +104,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'setId' => 'set_id',
             'name' => 'name',
             'description' => 'description',
+            'serviceSetType' => 'service_set_type',
             'refCount' => 'ref_count',
-            'status' => 'status'
+            'status' => 'status',
+            'projectId' => 'project_id',
+            'protocols' => 'protocols'
     ];
 
     /**
@@ -98,8 +116,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     * refCount  引用次数
     * status  状态
+    * projectId  项目id
+    * protocols  协议类型列表
     *
     * @var string[]
     */
@@ -107,8 +128,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'setId' => 'setSetId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'serviceSetType' => 'setServiceSetType',
             'refCount' => 'setRefCount',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'projectId' => 'setProjectId',
+            'protocols' => 'setProtocols'
     ];
 
     /**
@@ -116,8 +140,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     * refCount  引用次数
     * status  状态
+    * projectId  项目id
+    * protocols  协议类型列表
     *
     * @var string[]
     */
@@ -125,8 +152,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'setId' => 'getSetId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'serviceSetType' => 'getServiceSetType',
             'refCount' => 'getRefCount',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'projectId' => 'getProjectId',
+            'protocols' => 'getProtocols'
     ];
 
     /**
@@ -190,8 +220,11 @@ class ServiceSet implements ModelInterface, ArrayAccess
         $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['serviceSetType'] = isset($data['serviceSetType']) ? $data['serviceSetType'] : null;
         $this->container['refCount'] = isset($data['refCount']) ? $data['refCount'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['protocols'] = isset($data['protocols']) ? $data['protocols'] : null;
     }
 
     /**
@@ -289,6 +322,30 @@ class ServiceSet implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets serviceSetType
+    *  服务组类型，0表示自定义服务组，1表示预定义服务组
+    *
+    * @return int|null
+    */
+    public function getServiceSetType()
+    {
+        return $this->container['serviceSetType'];
+    }
+
+    /**
+    * Sets serviceSetType
+    *
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示预定义服务组
+    *
+    * @return $this
+    */
+    public function setServiceSetType($serviceSetType)
+    {
+        $this->container['serviceSetType'] = $serviceSetType;
+        return $this;
+    }
+
+    /**
     * Gets refCount
     *  引用次数
     *
@@ -333,6 +390,54 @@ class ServiceSet implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  项目id
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 项目id
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets protocols
+    *  协议类型列表
+    *
+    * @return int[]|null
+    */
+    public function getProtocols()
+    {
+        return $this->container['protocols'];
+    }
+
+    /**
+    * Sets protocols
+    *
+    * @param int[]|null $protocols 协议类型列表
+    *
+    * @return $this
+    */
+    public function setProtocols($protocols)
+    {
+        $this->container['protocols'] = $protocols;
         return $this;
     }
 

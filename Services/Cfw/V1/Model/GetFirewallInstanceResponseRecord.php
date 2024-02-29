@@ -30,6 +30,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
+    * isAvailableObs  是否支持obs
+    * isSupportThreatTags  是否支持威胁标签
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
@@ -51,6 +53,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'protectObjects' => '\HuaweiCloud\SDK\Cfw\V1\Model\ProtectObjectVO[]',
             'status' => 'int',
             'isOldFirewallInstance' => 'bool',
+            'isAvailableObs' => 'bool',
+            'isSupportThreatTags' => 'bool',
             'supportIpv6' => 'bool',
             'featureToggle' => 'map[string,bool]',
             'resources' => '\HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]',
@@ -72,6 +76,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
+    * isAvailableObs  是否支持obs
+    * isSupportThreatTags  是否支持威胁标签
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
@@ -93,6 +99,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         'protectObjects' => null,
         'status' => 'int32',
         'isOldFirewallInstance' => null,
+        'isAvailableObs' => null,
+        'isSupportThreatTags' => null,
         'supportIpv6' => null,
         'featureToggle' => null,
         'resources' => null,
@@ -135,6 +143,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
+    * isAvailableObs  是否支持obs
+    * isSupportThreatTags  是否支持威胁标签
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
@@ -156,6 +166,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'protectObjects' => 'protect_objects',
             'status' => 'status',
             'isOldFirewallInstance' => 'is_old_firewall_instance',
+            'isAvailableObs' => 'is_available_obs',
+            'isSupportThreatTags' => 'is_support_threat_tags',
             'supportIpv6' => 'support_ipv6',
             'featureToggle' => 'feature_toggle',
             'resources' => 'resources',
@@ -177,6 +189,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
+    * isAvailableObs  是否支持obs
+    * isSupportThreatTags  是否支持威胁标签
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
@@ -198,6 +212,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'protectObjects' => 'setProtectObjects',
             'status' => 'setStatus',
             'isOldFirewallInstance' => 'setIsOldFirewallInstance',
+            'isAvailableObs' => 'setIsAvailableObs',
+            'isSupportThreatTags' => 'setIsSupportThreatTags',
             'supportIpv6' => 'setSupportIpv6',
             'featureToggle' => 'setFeatureToggle',
             'resources' => 'setResources',
@@ -219,6 +235,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
+    * isAvailableObs  是否支持obs
+    * isSupportThreatTags  是否支持威胁标签
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
@@ -240,6 +258,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'protectObjects' => 'getProtectObjects',
             'status' => 'getStatus',
             'isOldFirewallInstance' => 'getIsOldFirewallInstance',
+            'isAvailableObs' => 'getIsAvailableObs',
+            'isSupportThreatTags' => 'getIsSupportThreatTags',
             'supportIpv6' => 'getSupportIpv6',
             'featureToggle' => 'getFeatureToggle',
             'resources' => 'getResources',
@@ -354,6 +374,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         $this->container['protectObjects'] = isset($data['protectObjects']) ? $data['protectObjects'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['isOldFirewallInstance'] = isset($data['isOldFirewallInstance']) ? $data['isOldFirewallInstance'] : null;
+        $this->container['isAvailableObs'] = isset($data['isAvailableObs']) ? $data['isAvailableObs'] : null;
+        $this->container['isSupportThreatTags'] = isset($data['isSupportThreatTags']) ? $data['isSupportThreatTags'] : null;
         $this->container['supportIpv6'] = isset($data['supportIpv6']) ? $data['supportIpv6'] : null;
         $this->container['featureToggle'] = isset($data['featureToggle']) ? $data['featureToggle'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
@@ -630,6 +652,54 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     public function setIsOldFirewallInstance($isOldFirewallInstance)
     {
         $this->container['isOldFirewallInstance'] = $isOldFirewallInstance;
+        return $this;
+    }
+
+    /**
+    * Gets isAvailableObs
+    *  是否支持obs
+    *
+    * @return bool|null
+    */
+    public function getIsAvailableObs()
+    {
+        return $this->container['isAvailableObs'];
+    }
+
+    /**
+    * Sets isAvailableObs
+    *
+    * @param bool|null $isAvailableObs 是否支持obs
+    *
+    * @return $this
+    */
+    public function setIsAvailableObs($isAvailableObs)
+    {
+        $this->container['isAvailableObs'] = $isAvailableObs;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportThreatTags
+    *  是否支持威胁标签
+    *
+    * @return bool|null
+    */
+    public function getIsSupportThreatTags()
+    {
+        return $this->container['isSupportThreatTags'];
+    }
+
+    /**
+    * Sets isSupportThreatTags
+    *
+    * @param bool|null $isSupportThreatTags 是否支持威胁标签
+    *
+    * @return $this
+    */
+    public function setIsSupportThreatTags($isSupportThreatTags)
+    {
+        $this->container['isSupportThreatTags'] = $isSupportThreatTags;
         return $this;
     }
 

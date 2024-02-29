@@ -22,7 +22,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  状态
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  状态
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  状态
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  状态
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  状态
-    * ruleSetId  规则集ID
+    * ruleSetId  策略ID
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSetId
-    *  规则集ID
+    *  策略ID
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class UpdateStrategyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSetId
     *
-    * @param string|null $ruleSetId 规则集ID
+    * @param string|null $ruleSetId 策略ID
     *
     * @return $this
     */

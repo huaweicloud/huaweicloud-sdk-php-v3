@@ -20,62 +20,26 @@ class PipelineSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scmType  源码仓类型
-    * hookFlag  是否配置Webhook
-    * defaultBranch  默认分支
-    * trigger  webhook配置数据
-    * alias  代码仓别名
-    * displayName  代码仓显示名
-    * repoName  源码仓名称
-    * repoId  代码仓ID
-    * repoOwner  代码仓所有者
-    * gitUrl  代码仓访问地址
-    * webUrl  代码仓Web页面地址
+    * type  流水线源类型
+    * params  params
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'scmType' => 'string',
-            'hookFlag' => 'string',
-            'defaultBranch' => 'string',
-            'trigger' => 'string',
-            'alias' => 'string',
-            'displayName' => 'string',
-            'repoName' => 'string',
-            'repoId' => 'string',
-            'repoOwner' => 'string',
-            'gitUrl' => 'string',
-            'webUrl' => 'string'
+            'type' => 'string',
+            'params' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSourceParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scmType  源码仓类型
-    * hookFlag  是否配置Webhook
-    * defaultBranch  默认分支
-    * trigger  webhook配置数据
-    * alias  代码仓别名
-    * displayName  代码仓显示名
-    * repoName  源码仓名称
-    * repoId  代码仓ID
-    * repoOwner  代码仓所有者
-    * gitUrl  代码仓访问地址
-    * webUrl  代码仓Web页面地址
+    * type  流水线源类型
+    * params  params
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'scmType' => null,
-        'hookFlag' => null,
-        'defaultBranch' => null,
-        'trigger' => null,
-        'alias' => null,
-        'displayName' => null,
-        'repoName' => null,
-        'repoId' => null,
-        'repoOwner' => null,
-        'gitUrl' => null,
-        'webUrl' => null
+        'type' => null,
+        'params' => null
     ];
 
     /**
@@ -101,92 +65,38 @@ class PipelineSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scmType  源码仓类型
-    * hookFlag  是否配置Webhook
-    * defaultBranch  默认分支
-    * trigger  webhook配置数据
-    * alias  代码仓别名
-    * displayName  代码仓显示名
-    * repoName  源码仓名称
-    * repoId  代码仓ID
-    * repoOwner  代码仓所有者
-    * gitUrl  代码仓访问地址
-    * webUrl  代码仓Web页面地址
+    * type  流水线源类型
+    * params  params
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'scmType' => 'scmType',
-            'hookFlag' => 'hookFlag',
-            'defaultBranch' => 'defaultBranch',
-            'trigger' => 'trigger',
-            'alias' => 'alias',
-            'displayName' => 'displayName',
-            'repoName' => 'repoName',
-            'repoId' => 'repoId',
-            'repoOwner' => 'repoOwner',
-            'gitUrl' => 'gitUrl',
-            'webUrl' => 'webUrl'
+            'type' => 'type',
+            'params' => 'params'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scmType  源码仓类型
-    * hookFlag  是否配置Webhook
-    * defaultBranch  默认分支
-    * trigger  webhook配置数据
-    * alias  代码仓别名
-    * displayName  代码仓显示名
-    * repoName  源码仓名称
-    * repoId  代码仓ID
-    * repoOwner  代码仓所有者
-    * gitUrl  代码仓访问地址
-    * webUrl  代码仓Web页面地址
+    * type  流水线源类型
+    * params  params
     *
     * @var string[]
     */
     protected static $setters = [
-            'scmType' => 'setScmType',
-            'hookFlag' => 'setHookFlag',
-            'defaultBranch' => 'setDefaultBranch',
-            'trigger' => 'setTrigger',
-            'alias' => 'setAlias',
-            'displayName' => 'setDisplayName',
-            'repoName' => 'setRepoName',
-            'repoId' => 'setRepoId',
-            'repoOwner' => 'setRepoOwner',
-            'gitUrl' => 'setGitUrl',
-            'webUrl' => 'setWebUrl'
+            'type' => 'setType',
+            'params' => 'setParams'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scmType  源码仓类型
-    * hookFlag  是否配置Webhook
-    * defaultBranch  默认分支
-    * trigger  webhook配置数据
-    * alias  代码仓别名
-    * displayName  代码仓显示名
-    * repoName  源码仓名称
-    * repoId  代码仓ID
-    * repoOwner  代码仓所有者
-    * gitUrl  代码仓访问地址
-    * webUrl  代码仓Web页面地址
+    * type  流水线源类型
+    * params  params
     *
     * @var string[]
     */
     protected static $getters = [
-            'scmType' => 'getScmType',
-            'hookFlag' => 'getHookFlag',
-            'defaultBranch' => 'getDefaultBranch',
-            'trigger' => 'getTrigger',
-            'alias' => 'getAlias',
-            'displayName' => 'getDisplayName',
-            'repoName' => 'getRepoName',
-            'repoId' => 'getRepoId',
-            'repoOwner' => 'getRepoOwner',
-            'gitUrl' => 'getGitUrl',
-            'webUrl' => 'getWebUrl'
+            'type' => 'getType',
+            'params' => 'getParams'
     ];
 
     /**
@@ -247,17 +157,8 @@ class PipelineSource implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['scmType'] = isset($data['scmType']) ? $data['scmType'] : null;
-        $this->container['hookFlag'] = isset($data['hookFlag']) ? $data['hookFlag'] : null;
-        $this->container['defaultBranch'] = isset($data['defaultBranch']) ? $data['defaultBranch'] : null;
-        $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
-        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['repoName'] = isset($data['repoName']) ? $data['repoName'] : null;
-        $this->container['repoId'] = isset($data['repoId']) ? $data['repoId'] : null;
-        $this->container['repoOwner'] = isset($data['repoOwner']) ? $data['repoOwner'] : null;
-        $this->container['gitUrl'] = isset($data['gitUrl']) ? $data['gitUrl'] : null;
-        $this->container['webUrl'] = isset($data['webUrl']) ? $data['webUrl'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['params'] = isset($data['params']) ? $data['params'] : null;
     }
 
     /**
@@ -268,39 +169,6 @@ class PipelineSource implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['scmType'] === null) {
-            $invalidProperties[] = "'scmType' can't be null";
-        }
-        if ($this->container['hookFlag'] === null) {
-            $invalidProperties[] = "'hookFlag' can't be null";
-        }
-        if ($this->container['defaultBranch'] === null) {
-            $invalidProperties[] = "'defaultBranch' can't be null";
-        }
-        if ($this->container['trigger'] === null) {
-            $invalidProperties[] = "'trigger' can't be null";
-        }
-        if ($this->container['alias'] === null) {
-            $invalidProperties[] = "'alias' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['repoName'] === null) {
-            $invalidProperties[] = "'repoName' can't be null";
-        }
-        if ($this->container['repoId'] === null) {
-            $invalidProperties[] = "'repoId' can't be null";
-        }
-        if ($this->container['repoOwner'] === null) {
-            $invalidProperties[] = "'repoOwner' can't be null";
-        }
-        if ($this->container['gitUrl'] === null) {
-            $invalidProperties[] = "'gitUrl' can't be null";
-        }
-        if ($this->container['webUrl'] === null) {
-            $invalidProperties[] = "'webUrl' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -316,266 +184,50 @@ class PipelineSource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets scmType
-    *  源码仓类型
+    * Gets type
+    *  流水线源类型
     *
-    * @return string
+    * @return string|null
     */
-    public function getScmType()
+    public function getType()
     {
-        return $this->container['scmType'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets scmType
+    * Sets type
     *
-    * @param string $scmType 源码仓类型
+    * @param string|null $type 流水线源类型
     *
     * @return $this
     */
-    public function setScmType($scmType)
+    public function setType($type)
     {
-        $this->container['scmType'] = $scmType;
+        $this->container['type'] = $type;
         return $this;
     }
 
     /**
-    * Gets hookFlag
-    *  是否配置Webhook
+    * Gets params
+    *  params
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSourceParam|null
     */
-    public function getHookFlag()
+    public function getParams()
     {
-        return $this->container['hookFlag'];
+        return $this->container['params'];
     }
 
     /**
-    * Sets hookFlag
+    * Sets params
     *
-    * @param string $hookFlag 是否配置Webhook
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineSourceParam|null $params params
     *
     * @return $this
     */
-    public function setHookFlag($hookFlag)
+    public function setParams($params)
     {
-        $this->container['hookFlag'] = $hookFlag;
-        return $this;
-    }
-
-    /**
-    * Gets defaultBranch
-    *  默认分支
-    *
-    * @return string
-    */
-    public function getDefaultBranch()
-    {
-        return $this->container['defaultBranch'];
-    }
-
-    /**
-    * Sets defaultBranch
-    *
-    * @param string $defaultBranch 默认分支
-    *
-    * @return $this
-    */
-    public function setDefaultBranch($defaultBranch)
-    {
-        $this->container['defaultBranch'] = $defaultBranch;
-        return $this;
-    }
-
-    /**
-    * Gets trigger
-    *  webhook配置数据
-    *
-    * @return string
-    */
-    public function getTrigger()
-    {
-        return $this->container['trigger'];
-    }
-
-    /**
-    * Sets trigger
-    *
-    * @param string $trigger webhook配置数据
-    *
-    * @return $this
-    */
-    public function setTrigger($trigger)
-    {
-        $this->container['trigger'] = $trigger;
-        return $this;
-    }
-
-    /**
-    * Gets alias
-    *  代码仓别名
-    *
-    * @return string
-    */
-    public function getAlias()
-    {
-        return $this->container['alias'];
-    }
-
-    /**
-    * Sets alias
-    *
-    * @param string $alias 代码仓别名
-    *
-    * @return $this
-    */
-    public function setAlias($alias)
-    {
-        $this->container['alias'] = $alias;
-        return $this;
-    }
-
-    /**
-    * Gets displayName
-    *  代码仓显示名
-    *
-    * @return string
-    */
-    public function getDisplayName()
-    {
-        return $this->container['displayName'];
-    }
-
-    /**
-    * Sets displayName
-    *
-    * @param string $displayName 代码仓显示名
-    *
-    * @return $this
-    */
-    public function setDisplayName($displayName)
-    {
-        $this->container['displayName'] = $displayName;
-        return $this;
-    }
-
-    /**
-    * Gets repoName
-    *  源码仓名称
-    *
-    * @return string
-    */
-    public function getRepoName()
-    {
-        return $this->container['repoName'];
-    }
-
-    /**
-    * Sets repoName
-    *
-    * @param string $repoName 源码仓名称
-    *
-    * @return $this
-    */
-    public function setRepoName($repoName)
-    {
-        $this->container['repoName'] = $repoName;
-        return $this;
-    }
-
-    /**
-    * Gets repoId
-    *  代码仓ID
-    *
-    * @return string
-    */
-    public function getRepoId()
-    {
-        return $this->container['repoId'];
-    }
-
-    /**
-    * Sets repoId
-    *
-    * @param string $repoId 代码仓ID
-    *
-    * @return $this
-    */
-    public function setRepoId($repoId)
-    {
-        $this->container['repoId'] = $repoId;
-        return $this;
-    }
-
-    /**
-    * Gets repoOwner
-    *  代码仓所有者
-    *
-    * @return string
-    */
-    public function getRepoOwner()
-    {
-        return $this->container['repoOwner'];
-    }
-
-    /**
-    * Sets repoOwner
-    *
-    * @param string $repoOwner 代码仓所有者
-    *
-    * @return $this
-    */
-    public function setRepoOwner($repoOwner)
-    {
-        $this->container['repoOwner'] = $repoOwner;
-        return $this;
-    }
-
-    /**
-    * Gets gitUrl
-    *  代码仓访问地址
-    *
-    * @return string
-    */
-    public function getGitUrl()
-    {
-        return $this->container['gitUrl'];
-    }
-
-    /**
-    * Sets gitUrl
-    *
-    * @param string $gitUrl 代码仓访问地址
-    *
-    * @return $this
-    */
-    public function setGitUrl($gitUrl)
-    {
-        $this->container['gitUrl'] = $gitUrl;
-        return $this;
-    }
-
-    /**
-    * Gets webUrl
-    *  代码仓Web页面地址
-    *
-    * @return string
-    */
-    public function getWebUrl()
-    {
-        return $this->container['webUrl'];
-    }
-
-    /**
-    * Sets webUrl
-    *
-    * @param string $webUrl 代码仓Web页面地址
-    *
-    * @return $this
-    */
-    public function setWebUrl($webUrl)
-    {
-        $this->container['webUrl'] = $webUrl;
+        $this->container['params'] = $params;
         return $this;
     }
 

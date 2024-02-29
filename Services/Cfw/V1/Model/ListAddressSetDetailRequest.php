@@ -24,6 +24,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     * setId  地址组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'setId' => 'string',
             'enterpriseProjectId' => 'string',
-            'fwInstanceId' => 'string'
+            'fwInstanceId' => 'string',
+            'queryAddressSetType' => 'int'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     * setId  地址组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'setId' => null,
         'enterpriseProjectId' => null,
-        'fwInstanceId' => null
+        'fwInstanceId' => null,
+        'queryAddressSetType' => 'int32'
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     * setId  地址组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'setId' => 'set_id',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'fwInstanceId' => 'fw_instance_id'
+            'fwInstanceId' => 'fw_instance_id',
+            'queryAddressSetType' => 'query_address_set_type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     * setId  地址组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'setId' => 'setSetId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'fwInstanceId' => 'setFwInstanceId'
+            'fwInstanceId' => 'setFwInstanceId',
+            'queryAddressSetType' => 'setQueryAddressSetType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     * setId  地址组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'setId' => 'getSetId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'fwInstanceId' => 'getFwInstanceId'
+            'fwInstanceId' => 'getFwInstanceId',
+            'queryAddressSetType' => 'getQueryAddressSetType'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
         $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
+        $this->container['queryAddressSetType'] = isset($data['queryAddressSetType']) ? $data['queryAddressSetType'] : null;
     }
 
     /**
@@ -304,6 +315,30 @@ class ListAddressSetDetailRequest implements ModelInterface, ArrayAccess
     public function setFwInstanceId($fwInstanceId)
     {
         $this->container['fwInstanceId'] = $fwInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets queryAddressSetType
+    *  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return int|null
+    */
+    public function getQueryAddressSetType()
+    {
+        return $this->container['queryAddressSetType'];
+    }
+
+    /**
+    * Sets queryAddressSetType
+    *
+    * @param int|null $queryAddressSetType 查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return $this
+    */
+    public function setQueryAddressSetType($queryAddressSetType)
+    {
+        $this->container['queryAddressSetType'] = $queryAddressSetType;
         return $this;
     }
 

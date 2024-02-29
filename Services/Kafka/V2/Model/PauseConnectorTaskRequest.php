@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Kafka\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
+class PauseConnectorTaskRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DisassociateHealthCheckResponse';
+    protected static $openAPIModelName = 'PauseConnectorTaskRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * instanceId  实例ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'healthCheckId' => 'string'
+            'instanceId' => 'string',
+            'taskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * instanceId  实例ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'healthCheckId' => null
+        'instanceId' => null,
+        'taskId' => null
     ];
 
     /**
@@ -62,32 +65,38 @@ class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * instanceId  实例ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'healthCheckId' => 'health_check_id'
+            'instanceId' => 'instance_id',
+            'taskId' => 'task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * instanceId  实例ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'healthCheckId' => 'setHealthCheckId'
+            'instanceId' => 'setInstanceId',
+            'taskId' => 'setTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * healthCheckId  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * instanceId  实例ID。
+    * taskId  Smart Connect任务ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'healthCheckId' => 'getHealthCheckId'
+            'instanceId' => 'getInstanceId',
+            'taskId' => 'getTaskId'
     ];
 
     /**
@@ -148,7 +157,8 @@ class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['healthCheckId'] = isset($data['healthCheckId']) ? $data['healthCheckId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
     }
 
     /**
@@ -159,6 +169,12 @@ class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['taskId'] === null) {
+            $invalidProperties[] = "'taskId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,26 +190,50 @@ class DisassociateHealthCheckResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets healthCheckId
-    *  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * Gets instanceId
+    *  实例ID。
     *
-    * @return string|null
+    * @return string
     */
-    public function getHealthCheckId()
+    public function getInstanceId()
     {
-        return $this->container['healthCheckId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets healthCheckId
+    * Sets instanceId
     *
-    * @param string|null $healthCheckId 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * @param string $instanceId 实例ID。
     *
     * @return $this
     */
-    public function setHealthCheckId($healthCheckId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['healthCheckId'] = $healthCheckId;
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets taskId
+    *  Smart Connect任务ID。
+    *
+    * @return string
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string $taskId Smart Connect任务ID。
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
         return $this;
     }
 

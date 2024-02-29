@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
+class ListFactoryReleasePackagesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,29 +16,33 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DisassociateHealthCheckRequest';
+    protected static $openAPIModelName = 'ListFactoryReleasePackagesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetId  Record Set关联健康检查。
+    * workspace  工作空间ID，默认查询default空间
+    * contentType  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recordsetId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq'
+            'workspace' => 'string',
+            'contentType' => 'string',
+            'body' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListReleasePackagesRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetId  Record Set关联健康检查。
+    * workspace  工作空间ID，默认查询default空间
+    * contentType  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recordsetId' => null,
+        'workspace' => null,
+        'contentType' => null,
         'body' => null
     ];
 
@@ -65,37 +69,43 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetId  Record Set关联健康检查。
+    * workspace  工作空间ID，默认查询default空间
+    * contentType  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recordsetId' => 'recordset_id',
+            'workspace' => 'workspace',
+            'contentType' => 'Content-Type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetId  Record Set关联健康检查。
+    * workspace  工作空间ID，默认查询default空间
+    * contentType  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'recordsetId' => 'setRecordsetId',
+            'workspace' => 'setWorkspace',
+            'contentType' => 'setContentType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetId  Record Set关联健康检查。
+    * workspace  工作空间ID，默认查询default空间
+    * contentType  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'recordsetId' => 'getRecordsetId',
+            'workspace' => 'getWorkspace',
+            'contentType' => 'getContentType',
             'body' => 'getBody'
     ];
 
@@ -157,7 +167,8 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recordsetId'] = isset($data['recordsetId']) ? $data['recordsetId'] : null;
+        $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -169,9 +180,6 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['recordsetId'] === null) {
-            $invalidProperties[] = "'recordsetId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,26 +195,50 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recordsetId
-    *  Record Set关联健康检查。
+    * Gets workspace
+    *  工作空间ID，默认查询default空间
     *
-    * @return string
+    * @return string|null
     */
-    public function getRecordsetId()
+    public function getWorkspace()
     {
-        return $this->container['recordsetId'];
+        return $this->container['workspace'];
     }
 
     /**
-    * Sets recordsetId
+    * Sets workspace
     *
-    * @param string $recordsetId Record Set关联健康检查。
+    * @param string|null $workspace 工作空间ID，默认查询default空间
     *
     * @return $this
     */
-    public function setRecordsetId($recordsetId)
+    public function setWorkspace($workspace)
     {
-        $this->container['recordsetId'] = $recordsetId;
+        $this->container['workspace'] = $workspace;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 有Body体的情况下必须，无Body体的情况下则无需填写和校验，默认值：application/json
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
         return $this;
     }
 
@@ -214,7 +246,7 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListReleasePackagesRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +256,7 @@ class DisassociateHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq|null $body body
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListReleasePackagesRequestBody|null $body body
     *
     * @return $this
     */

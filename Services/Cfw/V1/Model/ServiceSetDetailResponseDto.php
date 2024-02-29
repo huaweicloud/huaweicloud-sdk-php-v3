@@ -23,13 +23,15 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'serviceSetType' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'description' => null
+        'description' => null,
+        'serviceSetType' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'description' => 'description'
+            'description' => 'description',
+            'serviceSetType' => 'service_set_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'serviceSetType' => 'setServiceSetType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'serviceSetType' => 'getServiceSetType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['serviceSetType'] = isset($data['serviceSetType']) ? $data['serviceSetType'] : null;
     }
 
     /**
@@ -278,6 +289,30 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets serviceSetType
+    *  服务组类型，0表示自定义服务组，1表示预定义服务组
+    *
+    * @return int|null
+    */
+    public function getServiceSetType()
+    {
+        return $this->container['serviceSetType'];
+    }
+
+    /**
+    * Sets serviceSetType
+    *
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示预定义服务组
+    *
+    * @return $this
+    */
+    public function setServiceSetType($serviceSetType)
+    {
+        $this->container['serviceSetType'] = $serviceSetType;
         return $this;
     }
 

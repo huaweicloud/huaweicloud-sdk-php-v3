@@ -20,7 +20,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  规则集名称
+    * name  策略名称
     * rules  规则集合
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  规则集名称
+    * name  策略名称
     * rules  规则集合
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  规则集名称
+    * name  策略名称
     * rules  规则集合
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  规则集名称
+    * name  策略名称
     * rules  规则集合
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  规则集名称
+    * name  策略名称
     * rules  规则集合
     *
     * @var string[]
@@ -194,7 +194,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则集名称
+    *  策略名称
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class CreateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则集名称
+    * @param string $name 策略名称
     *
     * @return $this
     */

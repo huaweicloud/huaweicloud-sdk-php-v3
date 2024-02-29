@@ -25,6 +25,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'refCount' => 'int',
             'description' => 'string',
             'name' => 'string',
-            'addressType' => 'int'
+            'addressType' => 'int',
+            'objectId' => 'string',
+            'addressSetType' => 'int'
     ];
 
     /**
@@ -43,6 +47,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
         'refCount' => null,
         'description' => null,
         'name' => null,
-        'addressType' => 'int32'
+        'addressType' => 'int32',
+        'objectId' => null,
+        'addressSetType' => 'int32'
     ];
 
     /**
@@ -82,6 +90,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'refCount' => 'ref_count',
             'description' => 'description',
             'name' => 'name',
-            'addressType' => 'address_type'
+            'addressType' => 'address_type',
+            'objectId' => 'object_id',
+            'addressSetType' => 'address_set_type'
     ];
 
     /**
@@ -100,6 +112,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'refCount' => 'setRefCount',
             'description' => 'setDescription',
             'name' => 'setName',
-            'addressType' => 'setAddressType'
+            'addressType' => 'setAddressType',
+            'objectId' => 'setObjectId',
+            'addressSetType' => 'setAddressSetType'
     ];
 
     /**
@@ -118,6 +134,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'refCount' => 'getRefCount',
             'description' => 'getDescription',
             'name' => 'getName',
-            'addressType' => 'getAddressType'
+            'addressType' => 'getAddressType',
+            'objectId' => 'getObjectId',
+            'addressSetType' => 'getAddressSetType'
     ];
 
     /**
@@ -192,6 +212,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
+        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     public function setAddressType($addressType)
     {
         $this->container['addressType'] = $addressType;
+        return $this;
+    }
+
+    /**
+    * Gets objectId
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getObjectId()
+    {
+        return $this->container['objectId'];
+    }
+
+    /**
+    * Sets objectId
+    *
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setObjectId($objectId)
+    {
+        $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets addressSetType
+    *  地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return int|null
+    */
+    public function getAddressSetType()
+    {
+        return $this->container['addressSetType'];
+    }
+
+    /**
+    * Sets addressSetType
+    *
+    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示预定义地址组
+    *
+    * @return $this
+    */
+    public function setAddressSetType($addressSetType)
+    {
+        $this->container['addressSetType'] = $addressSetType;
         return $this;
     }
 

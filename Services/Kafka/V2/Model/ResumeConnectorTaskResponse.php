@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Kafka\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
+class ResumeConnectorTaskResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,24 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AssociateHealthCheckRequest';
+    protected static $openAPIModelName = 'ResumeConnectorTaskResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetId  待查询的recordset ID。
-    * body  body
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recordsetId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetId  待查询的recordset ID。
-    * body  body
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recordsetId' => null,
-        'body' => null
     ];
 
     /**
@@ -65,38 +60,29 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetId  待查询的recordset ID。
-    * body  body
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recordsetId' => 'recordset_id',
-            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetId  待查询的recordset ID。
-    * body  body
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'recordsetId' => 'setRecordsetId',
-            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetId  待查询的recordset ID。
-    * body  body
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'recordsetId' => 'getRecordsetId',
-            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +143,6 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recordsetId'] = isset($data['recordsetId']) ? $data['recordsetId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,9 +153,6 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['recordsetId'] === null) {
-            $invalidProperties[] = "'recordsetId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -184,54 +165,6 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets recordsetId
-    *  待查询的recordset ID。
-    *
-    * @return string
-    */
-    public function getRecordsetId()
-    {
-        return $this->container['recordsetId'];
-    }
-
-    /**
-    * Sets recordsetId
-    *
-    * @param string $recordsetId 待查询的recordset ID。
-    *
-    * @return $this
-    */
-    public function setRecordsetId($recordsetId)
-    {
-        $this->container['recordsetId'] = $recordsetId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckReq|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
-        return $this;
     }
 
     /**

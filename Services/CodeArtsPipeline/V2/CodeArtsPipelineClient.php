@@ -930,9 +930,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 创建规则集
+     * 创建策略
      *
-     * 创建规则集
+     * 创建策略
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1447,9 +1447,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 删除规则集
+     * 删除策略
      *
-     * 删除规则集
+     * 删除策略
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2256,7 +2256,7 @@ class CodeArtsPipelineClient extends Client
     /**
      * 获取规则模板实例列表
      *
-     * 获取规则集列表
+     * 获取策略列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2544,9 +2544,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 获取规则集列表
+     * 获取策略列表
      *
-     * 获取规则集列表
+     * 获取策略列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4143,9 +4143,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 获取规则集详情
+     * 获取策略详情
      *
-     * 获取规则集详情
+     * 获取策略详情
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4474,9 +4474,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 开关规则集
+     * 开关策略
      *
-     * 修改规则集状态
+     * 修改策略状态
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4935,9 +4935,9 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 修改规则集
+     * 修改策略
      *
-     * 修改规则集
+     * 修改策略
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

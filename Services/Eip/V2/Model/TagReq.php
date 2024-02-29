@@ -175,6 +175,9 @@ class TagReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) > 127)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 127.";
             }
+            if (!preg_match("/^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/.";
+            }
         if ($this->container['values'] === null) {
             $invalidProperties[] = "'values' can't be null";
         }

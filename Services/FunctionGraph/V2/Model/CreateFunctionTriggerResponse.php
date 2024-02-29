@@ -34,7 +34,7 @@ class CreateFunctionTriggerResponse implements ModelInterface, ArrayAccess
             'triggerId' => 'string',
             'triggerTypeCode' => 'string',
             'triggerStatus' => 'string',
-            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody',
+            'eventData' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody',
             'lastUpdatedTime' => '\DateTime',
             'createdTime' => '\DateTime'
     ];
@@ -378,7 +378,7 @@ class CreateFunctionTriggerResponse implements ModelInterface, ArrayAccess
     * Gets eventData
     *  eventData
     *
-    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody|null
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody|null
     */
     public function getEventData()
     {
@@ -388,7 +388,7 @@ class CreateFunctionTriggerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventData
     *
-    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataRequestBody|null $eventData eventData
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\TriggerEventDataResponseBody|null $eventData eventData
     *
     * @return $this
     */

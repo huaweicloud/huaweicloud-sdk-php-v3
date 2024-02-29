@@ -40,7 +40,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
             'rowCount' => 'int',
             'inputSize' => 'int',
             'schema' => 'object[]',
-            'rows' => 'string[][]'
+            'rows' => 'object[][]'
     ];
 
     /**
@@ -453,7 +453,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
     * Gets rows
     *  作业结果集。
     *
-    * @return string[][]|null
+    * @return object[][]|null
     */
     public function getRows()
     {
@@ -463,7 +463,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rows
     *
-    * @param string[][]|null $rows 作业结果集。
+    * @param object[][]|null $rows 作业结果集。
     *
     * @return $this
     */

@@ -1752,6 +1752,9 @@ class CfwClient extends Client
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
         }
+        if ($localVarParams['queryAddressSetType'] !== null) {
+            $queryParams['query_address_set_type'] = $localVarParams['queryAddressSetType'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1840,6 +1843,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['queryAddressSetType'] !== null) {
+            $queryParams['query_address_set_type'] = $localVarParams['queryAddressSetType'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

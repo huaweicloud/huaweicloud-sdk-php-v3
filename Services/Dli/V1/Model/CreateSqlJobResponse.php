@@ -37,7 +37,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'jobType' => 'string',
             'schema' => 'object[]',
-            'rows' => 'string[][]',
+            'rows' => 'object[][]',
             'jobMode' => 'string'
     ];
 
@@ -394,7 +394,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     * Gets rows
     *  当语句类型为DDL时，直接返回其执行结果。
     *
-    * @return string[][]|null
+    * @return object[][]|null
     */
     public function getRows()
     {
@@ -404,7 +404,7 @@ class CreateSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rows
     *
-    * @param string[][]|null $rows 当语句类型为DDL时，直接返回其执行结果。
+    * @param object[][]|null $rows 当语句类型为DDL时，直接返回其执行结果。
     *
     * @return $this
     */

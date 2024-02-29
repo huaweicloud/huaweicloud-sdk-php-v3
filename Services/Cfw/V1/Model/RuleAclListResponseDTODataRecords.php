@@ -37,6 +37,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * destination  destination
     * service  service
     * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  创建时间
+    * lastOpenTime  最后开启时间
     * tag  tag
     *
     * @var string[]
@@ -59,6 +61,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
             'type' => 'int',
+            'createdDate' => 'string',
+            'lastOpenTime' => 'string',
             'tag' => '\HuaweiCloud\SDK\Cfw\V1\Model\TagsVO'
     ];
 
@@ -81,6 +85,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * destination  destination
     * service  service
     * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  创建时间
+    * lastOpenTime  最后开启时间
     * tag  tag
     *
     * @var string[]
@@ -103,6 +109,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         'destination' => null,
         'service' => null,
         'type' => 'int32',
+        'createdDate' => null,
+        'lastOpenTime' => null,
         'tag' => null
     ];
 
@@ -146,6 +154,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * destination  destination
     * service  service
     * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  创建时间
+    * lastOpenTime  最后开启时间
     * tag  tag
     *
     * @var string[]
@@ -168,6 +178,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'destination' => 'destination',
             'service' => 'service',
             'type' => 'type',
+            'createdDate' => 'created_date',
+            'lastOpenTime' => 'last_open_time',
             'tag' => 'tag'
     ];
 
@@ -190,6 +202,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * destination  destination
     * service  service
     * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  创建时间
+    * lastOpenTime  最后开启时间
     * tag  tag
     *
     * @var string[]
@@ -212,6 +226,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'destination' => 'setDestination',
             'service' => 'setService',
             'type' => 'setType',
+            'createdDate' => 'setCreatedDate',
+            'lastOpenTime' => 'setLastOpenTime',
             'tag' => 'setTag'
     ];
 
@@ -234,6 +250,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * destination  destination
     * service  service
     * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  创建时间
+    * lastOpenTime  最后开启时间
     * tag  tag
     *
     * @var string[]
@@ -256,6 +274,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'destination' => 'getDestination',
             'service' => 'getService',
             'type' => 'getType',
+            'createdDate' => 'getCreatedDate',
+            'lastOpenTime' => 'getLastOpenTime',
             'tag' => 'getTag'
     ];
 
@@ -366,6 +386,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['lastOpenTime'] = isset($data['lastOpenTime']) ? $data['lastOpenTime'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
@@ -815,6 +837,54 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets createdDate
+    *  创建时间
+    *
+    * @return string|null
+    */
+    public function getCreatedDate()
+    {
+        return $this->container['createdDate'];
+    }
+
+    /**
+    * Sets createdDate
+    *
+    * @param string|null $createdDate 创建时间
+    *
+    * @return $this
+    */
+    public function setCreatedDate($createdDate)
+    {
+        $this->container['createdDate'] = $createdDate;
+        return $this;
+    }
+
+    /**
+    * Gets lastOpenTime
+    *  最后开启时间
+    *
+    * @return string|null
+    */
+    public function getLastOpenTime()
+    {
+        return $this->container['lastOpenTime'];
+    }
+
+    /**
+    * Sets lastOpenTime
+    *
+    * @param string|null $lastOpenTime 最后开启时间
+    *
+    * @return $this
+    */
+    public function setLastOpenTime($lastOpenTime)
+    {
+        $this->container['lastOpenTime'] = $lastOpenTime;
         return $this;
     }
 

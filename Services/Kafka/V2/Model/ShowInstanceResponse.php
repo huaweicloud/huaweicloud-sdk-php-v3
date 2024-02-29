@@ -80,6 +80,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
     * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
+    * connectorNodeNum  connector节点数量。
     * connectorId  转储任务ID。
     * restEnable  是否开启Kafka rest功能。
     * restConnectAddress  Kafka rest连接地址。
@@ -164,6 +165,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'bool',
             'ipv6ConnectAddresses' => 'string[]',
             'connectorEnable' => 'bool',
+            'connectorNodeNum' => 'int',
             'connectorId' => 'string',
             'restEnable' => 'bool',
             'restConnectAddress' => 'string',
@@ -248,6 +250,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
     * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
+    * connectorNodeNum  connector节点数量。
     * connectorId  转储任务ID。
     * restEnable  是否开启Kafka rest功能。
     * restConnectAddress  Kafka rest连接地址。
@@ -332,6 +335,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'ipv6Enable' => null,
         'ipv6ConnectAddresses' => null,
         'connectorEnable' => null,
+        'connectorNodeNum' => null,
         'connectorId' => null,
         'restEnable' => null,
         'restConnectAddress' => null,
@@ -437,6 +441,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
     * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
+    * connectorNodeNum  connector节点数量。
     * connectorId  转储任务ID。
     * restEnable  是否开启Kafka rest功能。
     * restConnectAddress  Kafka rest连接地址。
@@ -521,6 +526,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'ipv6_enable',
             'ipv6ConnectAddresses' => 'ipv6_connect_addresses',
             'connectorEnable' => 'connector_enable',
+            'connectorNodeNum' => 'connector_node_num',
             'connectorId' => 'connector_id',
             'restEnable' => 'rest_enable',
             'restConnectAddress' => 'rest_connect_address',
@@ -605,6 +611,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
     * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
+    * connectorNodeNum  connector节点数量。
     * connectorId  转储任务ID。
     * restEnable  是否开启Kafka rest功能。
     * restConnectAddress  Kafka rest连接地址。
@@ -689,6 +696,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'setIpv6Enable',
             'ipv6ConnectAddresses' => 'setIpv6ConnectAddresses',
             'connectorEnable' => 'setConnectorEnable',
+            'connectorNodeNum' => 'setConnectorNodeNum',
             'connectorId' => 'setConnectorId',
             'restEnable' => 'setRestEnable',
             'restConnectAddress' => 'setRestConnectAddress',
@@ -773,6 +781,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
     * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
+    * connectorNodeNum  connector节点数量。
     * connectorId  转储任务ID。
     * restEnable  是否开启Kafka rest功能。
     * restConnectAddress  Kafka rest连接地址。
@@ -857,6 +866,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'getIpv6Enable',
             'ipv6ConnectAddresses' => 'getIpv6ConnectAddresses',
             'connectorEnable' => 'getConnectorEnable',
+            'connectorNodeNum' => 'getConnectorNodeNum',
             'connectorId' => 'getConnectorId',
             'restEnable' => 'getRestEnable',
             'restConnectAddress' => 'getRestConnectAddress',
@@ -1042,6 +1052,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6ConnectAddresses'] = isset($data['ipv6ConnectAddresses']) ? $data['ipv6ConnectAddresses'] : null;
         $this->container['connectorEnable'] = isset($data['connectorEnable']) ? $data['connectorEnable'] : null;
+        $this->container['connectorNodeNum'] = isset($data['connectorNodeNum']) ? $data['connectorNodeNum'] : null;
         $this->container['connectorId'] = isset($data['connectorId']) ? $data['connectorId'] : null;
         $this->container['restEnable'] = isset($data['restEnable']) ? $data['restEnable'] : null;
         $this->container['restConnectAddress'] = isset($data['restConnectAddress']) ? $data['restConnectAddress'] : null;
@@ -2516,6 +2527,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setConnectorEnable($connectorEnable)
     {
         $this->container['connectorEnable'] = $connectorEnable;
+        return $this;
+    }
+
+    /**
+    * Gets connectorNodeNum
+    *  connector节点数量。
+    *
+    * @return int|null
+    */
+    public function getConnectorNodeNum()
+    {
+        return $this->container['connectorNodeNum'];
+    }
+
+    /**
+    * Sets connectorNodeNum
+    *
+    * @param int|null $connectorNodeNum connector节点数量。
+    *
+    * @return $this
+    */
+    public function setConnectorNodeNum($connectorNodeNum)
+    {
+        $this->container['connectorNodeNum'] = $connectorNodeNum;
         return $this;
     }
 

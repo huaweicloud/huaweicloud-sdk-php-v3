@@ -22,24 +22,28 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * failEipIdList  修改eip防护状态失败列表。
+    * id  ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'objectId' => 'string',
-            'failEipIdList' => 'string[]'
+            'failEipIdList' => 'string[]',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * failEipIdList  修改eip防护状态失败列表。
+    * id  ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'objectId' => null,
-        'failEipIdList' => null
+        'failEipIdList' => null,
+        'id' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * failEipIdList  修改eip防护状态失败列表。
+    * id  ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'objectId' => 'object_id',
-            'failEipIdList' => 'fail_eip_id_list'
+            'failEipIdList' => 'fail_eip_id_list',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * failEipIdList  修改eip防护状态失败列表。
+    * id  ID
     *
     * @var string[]
     */
     protected static $setters = [
             'objectId' => 'setObjectId',
-            'failEipIdList' => 'setFailEipIdList'
+            'failEipIdList' => 'setFailEipIdList',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * failEipIdList  修改eip防护状态失败列表。
+    * id  ID
     *
     * @var string[]
     */
     protected static $getters = [
             'objectId' => 'getObjectId',
-            'failEipIdList' => 'getFailEipIdList'
+            'failEipIdList' => 'getFailEipIdList',
+            'id' => 'getId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     {
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['failEipIdList'] = isset($data['failEipIdList']) ? $data['failEipIdList'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     public function setFailEipIdList($failEipIdList)
     {
         $this->container['failEipIdList'] = $failEipIdList;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

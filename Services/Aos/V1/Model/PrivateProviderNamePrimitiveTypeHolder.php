@@ -167,8 +167,8 @@ class PrivateProviderNamePrimitiveTypeHolder implements ModelInterface, ArrayAcc
             if ((mb_strlen($this->container['providerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'providerName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[0-9a-z][0-9a-z-]*[0-9a-z]$/", $this->container['providerName'])) {
-                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z][0-9a-z-]*[0-9a-z]$/.";
+            if (!preg_match("/^[0-9a-z][0-9a-z-]*[0-9a-z]*$/", $this->container['providerName'])) {
+                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z][0-9a-z-]*[0-9a-z]*$/.";
             }
         return $invalidProperties;
     }

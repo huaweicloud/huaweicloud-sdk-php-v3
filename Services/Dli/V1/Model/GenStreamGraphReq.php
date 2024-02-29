@@ -21,6 +21,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sqlBody  SQL
+    * flinkVersion  flink版本。可以为空，也可以填写1.10或1.12。
     * cuNumber  CU总数
     * managerCuNumber  管理单元CU数量
     * parallelNumber  最大并行度
@@ -36,6 +37,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sqlBody' => 'string',
+            'flinkVersion' => 'string',
             'cuNumber' => 'int',
             'managerCuNumber' => 'int',
             'parallelNumber' => 'int',
@@ -51,6 +53,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sqlBody  SQL
+    * flinkVersion  flink版本。可以为空，也可以填写1.10或1.12。
     * cuNumber  CU总数
     * managerCuNumber  管理单元CU数量
     * parallelNumber  最大并行度
@@ -66,6 +69,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'sqlBody' => null,
+        'flinkVersion' => null,
         'cuNumber' => 'int32',
         'managerCuNumber' => 'int32',
         'parallelNumber' => 'int32',
@@ -102,6 +106,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sqlBody  SQL
+    * flinkVersion  flink版本。可以为空，也可以填写1.10或1.12。
     * cuNumber  CU总数
     * managerCuNumber  管理单元CU数量
     * parallelNumber  最大并行度
@@ -117,6 +122,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'sqlBody' => 'sql_body',
+            'flinkVersion' => 'flink_version',
             'cuNumber' => 'cu_number',
             'managerCuNumber' => 'manager_cu_number',
             'parallelNumber' => 'parallel_number',
@@ -132,6 +138,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sqlBody  SQL
+    * flinkVersion  flink版本。可以为空，也可以填写1.10或1.12。
     * cuNumber  CU总数
     * managerCuNumber  管理单元CU数量
     * parallelNumber  最大并行度
@@ -147,6 +154,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'sqlBody' => 'setSqlBody',
+            'flinkVersion' => 'setFlinkVersion',
             'cuNumber' => 'setCuNumber',
             'managerCuNumber' => 'setManagerCuNumber',
             'parallelNumber' => 'setParallelNumber',
@@ -162,6 +170,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sqlBody  SQL
+    * flinkVersion  flink版本。可以为空，也可以填写1.10或1.12。
     * cuNumber  CU总数
     * managerCuNumber  管理单元CU数量
     * parallelNumber  最大并行度
@@ -177,6 +186,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'sqlBody' => 'getSqlBody',
+            'flinkVersion' => 'getFlinkVersion',
             'cuNumber' => 'getCuNumber',
             'managerCuNumber' => 'getManagerCuNumber',
             'parallelNumber' => 'getParallelNumber',
@@ -248,6 +258,7 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sqlBody'] = isset($data['sqlBody']) ? $data['sqlBody'] : null;
+        $this->container['flinkVersion'] = isset($data['flinkVersion']) ? $data['flinkVersion'] : null;
         $this->container['cuNumber'] = isset($data['cuNumber']) ? $data['cuNumber'] : null;
         $this->container['managerCuNumber'] = isset($data['managerCuNumber']) ? $data['managerCuNumber'] : null;
         $this->container['parallelNumber'] = isset($data['parallelNumber']) ? $data['parallelNumber'] : null;
@@ -321,6 +332,30 @@ class GenStreamGraphReq implements ModelInterface, ArrayAccess
     public function setSqlBody($sqlBody)
     {
         $this->container['sqlBody'] = $sqlBody;
+        return $this;
+    }
+
+    /**
+    * Gets flinkVersion
+    *  flink版本。可以为空，也可以填写1.10或1.12。
+    *
+    * @return string|null
+    */
+    public function getFlinkVersion()
+    {
+        return $this->container['flinkVersion'];
+    }
+
+    /**
+    * Sets flinkVersion
+    *
+    * @param string|null $flinkVersion flink版本。可以为空，也可以填写1.10或1.12。
+    *
+    * @return $this
+    */
+    public function setFlinkVersion($flinkVersion)
+    {
+        $this->container['flinkVersion'] = $flinkVersion;
         return $this;
     }
 

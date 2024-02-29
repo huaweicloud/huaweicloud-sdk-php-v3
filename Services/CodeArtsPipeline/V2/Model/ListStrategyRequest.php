@@ -26,7 +26,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     * includeTenantRuleSet  是否包含租户级规则
     * name  策略名称，用于模糊查询
     * isValid  是否有效
-    * type  规则集类型
+    * type  策略类型
     * cloudProjectId  项目ID
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     * includeTenantRuleSet  是否包含租户级规则
     * name  策略名称，用于模糊查询
     * isValid  是否有效
-    * type  规则集类型
+    * type  策略类型
     * cloudProjectId  项目ID
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     * includeTenantRuleSet  是否包含租户级规则
     * name  策略名称，用于模糊查询
     * isValid  是否有效
-    * type  规则集类型
+    * type  策略类型
     * cloudProjectId  项目ID
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     * includeTenantRuleSet  是否包含租户级规则
     * name  策略名称，用于模糊查询
     * isValid  是否有效
-    * type  规则集类型
+    * type  策略类型
     * cloudProjectId  项目ID
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     * includeTenantRuleSet  是否包含租户级规则
     * name  策略名称，用于模糊查询
     * isValid  是否有效
-    * type  规则集类型
+    * type  策略类型
     * cloudProjectId  项目ID
     *
     * @var string[]
@@ -407,7 +407,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则集类型
+    *  策略类型
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class ListStrategyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 规则集类型
+    * @param string|null $type 策略类型
     *
     * @return $this
     */
