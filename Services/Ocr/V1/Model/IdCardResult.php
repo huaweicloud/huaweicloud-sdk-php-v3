@@ -31,6 +31,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段，当输入身份证背面时返回为空列表。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
     * detectCopyResult  身份证图像是否黑白复印件告警结果。 - true：表示身份证图片是复印件。 - false”表示身份证图片是原件。 仅在输入参数detect_copy为true时，返回该字段。
@@ -58,6 +60,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'string',
             'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult',
             'textLocation' => 'object',
+            'portraitImage' => 'string',
+            'adjustedImage' => 'string',
             'portraitLocation' => 'int[][]',
             'detectReproduceResult' => 'bool',
             'detectCopyResult' => 'bool',
@@ -85,6 +89,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段，当输入身份证背面时返回为空列表。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
     * detectCopyResult  身份证图像是否黑白复印件告警结果。 - true：表示身份证图片是复印件。 - false”表示身份证图片是原件。 仅在输入参数detect_copy为true时，返回该字段。
@@ -112,6 +118,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         'validTo' => null,
         'verificationResult' => null,
         'textLocation' => null,
+        'portraitImage' => null,
+        'adjustedImage' => null,
         'portraitLocation' => 'int32',
         'detectReproduceResult' => null,
         'detectCopyResult' => null,
@@ -160,6 +168,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段，当输入身份证背面时返回为空列表。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
     * detectCopyResult  身份证图像是否黑白复印件告警结果。 - true：表示身份证图片是复印件。 - false”表示身份证图片是原件。 仅在输入参数detect_copy为true时，返回该字段。
@@ -187,6 +197,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'valid_to',
             'verificationResult' => 'verification_result',
             'textLocation' => 'text_location',
+            'portraitImage' => 'portrait_image',
+            'adjustedImage' => 'adjusted_image',
             'portraitLocation' => 'portrait_location',
             'detectReproduceResult' => 'detect_reproduce_result',
             'detectCopyResult' => 'detect_copy_result',
@@ -214,6 +226,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段，当输入身份证背面时返回为空列表。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
     * detectCopyResult  身份证图像是否黑白复印件告警结果。 - true：表示身份证图片是复印件。 - false”表示身份证图片是原件。 仅在输入参数detect_copy为true时，返回该字段。
@@ -241,6 +255,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'setValidTo',
             'verificationResult' => 'setVerificationResult',
             'textLocation' => 'setTextLocation',
+            'portraitImage' => 'setPortraitImage',
+            'adjustedImage' => 'setAdjustedImage',
             'portraitLocation' => 'setPortraitLocation',
             'detectReproduceResult' => 'setDetectReproduceResult',
             'detectCopyResult' => 'setDetectCopyResult',
@@ -268,6 +284,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段，当输入身份证背面时返回为空列表。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
     * detectCopyResult  身份证图像是否黑白复印件告警结果。 - true：表示身份证图片是复印件。 - false”表示身份证图片是原件。 仅在输入参数detect_copy为true时，返回该字段。
@@ -295,6 +313,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'getValidTo',
             'verificationResult' => 'getVerificationResult',
             'textLocation' => 'getTextLocation',
+            'portraitImage' => 'getPortraitImage',
+            'adjustedImage' => 'getAdjustedImage',
             'portraitLocation' => 'getPortraitLocation',
             'detectReproduceResult' => 'getDetectReproduceResult',
             'detectCopyResult' => 'getDetectCopyResult',
@@ -378,6 +398,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['portraitImage'] = isset($data['portraitImage']) ? $data['portraitImage'] : null;
+        $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
         $this->container['portraitLocation'] = isset($data['portraitLocation']) ? $data['portraitLocation'] : null;
         $this->container['detectReproduceResult'] = isset($data['detectReproduceResult']) ? $data['detectReproduceResult'] : null;
         $this->container['detectCopyResult'] = isset($data['detectCopyResult']) ? $data['detectCopyResult'] : null;
@@ -675,6 +697,54 @@ class IdCardResult implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets portraitImage
+    *  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    *
+    * @return string|null
+    */
+    public function getPortraitImage()
+    {
+        return $this->container['portraitImage'];
+    }
+
+    /**
+    * Sets portraitImage
+    *
+    * @param string|null $portraitImage 身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    *
+    * @return $this
+    */
+    public function setPortraitImage($portraitImage)
+    {
+        $this->container['portraitImage'] = $portraitImage;
+        return $this;
+    }
+
+    /**
+    * Gets adjustedImage
+    *  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return string|null
+    */
+    public function getAdjustedImage()
+    {
+        return $this->container['adjustedImage'];
+    }
+
+    /**
+    * Sets adjustedImage
+    *
+    * @param string|null $adjustedImage 身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setAdjustedImage($adjustedImage)
+    {
+        $this->container['adjustedImage'] = $adjustedImage;
         return $this;
     }
 

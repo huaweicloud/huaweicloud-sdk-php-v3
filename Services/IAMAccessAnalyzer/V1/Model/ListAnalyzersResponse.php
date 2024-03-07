@@ -21,7 +21,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * analyzers  analyzers
+    * analyzers  分析器列表信息。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * analyzers  analyzers
+    * analyzers  分析器列表信息。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * analyzers  analyzers
+    * analyzers  分析器列表信息。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * analyzers  analyzers
+    * analyzers  分析器列表信息。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * analyzers  analyzers
+    * analyzers  分析器列表信息。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets analyzers
-    *  analyzers
+    *  分析器列表信息。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerSummary[]|null
     */
@@ -198,7 +198,7 @@ class ListAnalyzersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets analyzers
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerSummary[]|null $analyzers analyzers
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerSummary[]|null $analyzers 分析器列表信息。
     *
     * @return $this
     */

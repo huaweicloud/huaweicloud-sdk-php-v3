@@ -1276,6 +1276,74 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 新增SQL限流
+     *
+     * 新增SQL限流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSqlLimitAsync($request)
+    {
+        return $this->createSqlLimitAsyncWithHttpInfo($request);
+    }
+    
+    public function createSqlLimitAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/sql-limit';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\CreateSqlLimitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\CreateSqlLimitRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取扩展日志下载信息
      *
      * 获取扩展日志下载信息
@@ -1824,6 +1892,74 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteRdSforMySqlProxyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteRdSforMySqlProxyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除SQL限流
+     *
+     * 删除SQL限流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSqlLimitAsync($request)
+    {
+        return $this->deleteSqlLimitAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteSqlLimitAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/sql-limit';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteSqlLimitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteSqlLimitRequest',
             $asyncRequest = true);
     }
 
@@ -5039,6 +5175,80 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 查询SQL限流列表
+     *
+     * 查询SQL限流列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlLimitAsync($request)
+    {
+        return $this->listSqlLimitAsyncWithHttpInfo($request);
+    }
+    
+    public function listSqlLimitAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/sql-limit';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['dbName'] !== null) {
+            $queryParams['db_name'] = $localVarParams['dbName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListSqlLimitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListSqlLimitRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取SSL证书下载地址
      *
      * 获取SSL证书下载地址
@@ -7771,6 +7981,71 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 查询实例磁盘空间使用量
+     *
+     * 查询实例磁盘空间使用量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStorageUsedSpaceAsync($request)
+    {
+        return $this->showStorageUsedSpaceAsyncWithHttpInfo($request);
+    }
+    
+    public function showStorageUsedSpaceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/storage-used-space';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ShowStorageUsedSpaceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ShowStorageUsedSpaceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 根据实例id查询sqlserver TDE状态
      *
      * 根据实例id查询sqlserver TDE状态
@@ -8605,6 +8880,74 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 开启/关闭/禁用所有SQL限流
+     *
+     * 开启/关闭/禁用所有SQL限流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchSqlLimitAsync($request)
+    {
+        return $this->switchSqlLimitAsyncWithHttpInfo($request);
+    }
+    
+    public function switchSqlLimitAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/sql-limit/switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSqlLimitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSqlLimitRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置SSL数据加密
      *
      * 设置SSL数据加密。
@@ -9308,6 +9651,74 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\UpdatePostgresqlInstanceAliasResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\UpdatePostgresqlInstanceAliasRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改SQL限流
+     *
+     * 修改SQL限流
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSqlLimitAsync($request)
+    {
+        return $this->updateSqlLimitAsyncWithHttpInfo($request);
+    }
+    
+    public function updateSqlLimitAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/sql-limit/update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\UpdateSqlLimitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\UpdateSqlLimitRequest',
             $asyncRequest = true);
     }
 

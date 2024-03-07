@@ -21,10 +21,10 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * findingDetails  一条本地化消息提供了如何解决该问题的指导。
-    * findingType  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
-    * issueCode  问题码提供了与此查找结果关联的问题的标识符。
-    * learnMoreLink  指向与此查找结果关联的相关文档的链接。
-    * locations  策略文档中与查找结果相关的位置列表。
+    * findingType  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
+    * issueCode  问题码提供了与此校验结果关联的问题的标识符。
+    * learnMoreLink  指向与此校验结果关联的相关文档的链接。
+    * locations  策略文档中与校验结果相关的位置列表。
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * findingDetails  一条本地化消息提供了如何解决该问题的指导。
-    * findingType  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
-    * issueCode  问题码提供了与此查找结果关联的问题的标识符。
-    * learnMoreLink  指向与此查找结果关联的相关文档的链接。
-    * locations  策略文档中与查找结果相关的位置列表。
+    * findingType  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
+    * issueCode  问题码提供了与此校验结果关联的问题的标识符。
+    * learnMoreLink  指向与此校验结果关联的相关文档的链接。
+    * locations  策略文档中与校验结果相关的位置列表。
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * findingDetails  一条本地化消息提供了如何解决该问题的指导。
-    * findingType  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
-    * issueCode  问题码提供了与此查找结果关联的问题的标识符。
-    * learnMoreLink  指向与此查找结果关联的相关文档的链接。
-    * locations  策略文档中与查找结果相关的位置列表。
+    * findingType  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
+    * issueCode  问题码提供了与此校验结果关联的问题的标识符。
+    * learnMoreLink  指向与此校验结果关联的相关文档的链接。
+    * locations  策略文档中与校验结果相关的位置列表。
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * findingDetails  一条本地化消息提供了如何解决该问题的指导。
-    * findingType  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
-    * issueCode  问题码提供了与此查找结果关联的问题的标识符。
-    * learnMoreLink  指向与此查找结果关联的相关文档的链接。
-    * locations  策略文档中与查找结果相关的位置列表。
+    * findingType  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
+    * issueCode  问题码提供了与此校验结果关联的问题的标识符。
+    * learnMoreLink  指向与此校验结果关联的相关文档的链接。
+    * locations  策略文档中与校验结果相关的位置列表。
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * findingDetails  一条本地化消息提供了如何解决该问题的指导。
-    * findingType  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
-    * issueCode  问题码提供了与此查找结果关联的问题的标识符。
-    * learnMoreLink  指向与此查找结果关联的相关文档的链接。
-    * locations  策略文档中与查找结果相关的位置列表。
+    * findingType  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
+    * issueCode  问题码提供了与此校验结果关联的问题的标识符。
+    * learnMoreLink  指向与此校验结果关联的相关文档的链接。
+    * locations  策略文档中与校验结果相关的位置列表。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets findingType
-    *  影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
+    *  影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Sets findingType
     *
-    * @param string $findingType 影响级别。  安全警告：策略允许的范围过大。  错误：策略不符合策略语法规则。  警告：非安全问题，策略不符合策略编写最佳实践。  建议：改进策略，不影响访问范围。
+    * @param string $findingType 影响级别。  安全：策略存在安全风险，可能是允许访问的权限过于宽松等导致。  错误：存在策略无法运行的错误，如语法错误、参数错误等。存在错误的情况下策略无法创建。  警告：存在策略无法运行的警告，如参数取值类型不匹配等。存在警告的情况下策略可以创建。  建议：不影响策略运行，但策略可能不能达到预期的效果。如存在空数组、空对象条件等。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets issueCode
-    *  问题码提供了与此查找结果关联的问题的标识符。
+    *  问题码提供了与此校验结果关联的问题的标识符。
     *
     * @return string
     */
@@ -320,7 +320,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Sets issueCode
     *
-    * @param string $issueCode 问题码提供了与此查找结果关联的问题的标识符。
+    * @param string $issueCode 问题码提供了与此校验结果关联的问题的标识符。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets learnMoreLink
-    *  指向与此查找结果关联的相关文档的链接。
+    *  指向与此校验结果关联的相关文档的链接。
     *
     * @return string
     */
@@ -344,7 +344,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Sets learnMoreLink
     *
-    * @param string $learnMoreLink 指向与此查找结果关联的相关文档的链接。
+    * @param string $learnMoreLink 指向与此校验结果关联的相关文档的链接。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets locations
-    *  策略文档中与查找结果相关的位置列表。
+    *  策略文档中与校验结果相关的位置列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Location[]
     */
@@ -368,7 +368,7 @@ class ValidatePolicyFinding implements ModelInterface, ArrayAccess
     /**
     * Sets locations
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Location[] $locations 策略文档中与查找结果相关的位置列表。
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Location[] $locations 策略文档中与校验结果相关的位置列表。
     *
     * @return $this
     */

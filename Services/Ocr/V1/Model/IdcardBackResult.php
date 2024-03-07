@@ -23,6 +23,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
@@ -41,6 +42,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
             'issue' => 'string',
             'validFrom' => 'string',
             'validTo' => 'string',
+            'adjustedImage' => 'string',
             'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardBackVerificationResult',
             'textLocation' => 'object',
             'detectReproduceResult' => 'bool',
@@ -59,6 +61,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
@@ -77,6 +80,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
         'issue' => null,
         'validFrom' => null,
         'validTo' => null,
+        'adjustedImage' => null,
         'verificationResult' => null,
         'textLocation' => null,
         'detectReproduceResult' => null,
@@ -116,6 +120,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
@@ -134,6 +139,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
             'issue' => 'issue',
             'validFrom' => 'valid_from',
             'validTo' => 'valid_to',
+            'adjustedImage' => 'adjusted_image',
             'verificationResult' => 'verification_result',
             'textLocation' => 'text_location',
             'detectReproduceResult' => 'detect_reproduce_result',
@@ -152,6 +158,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
@@ -170,6 +177,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
             'issue' => 'setIssue',
             'validFrom' => 'setValidFrom',
             'validTo' => 'setValidTo',
+            'adjustedImage' => 'setAdjustedImage',
             'verificationResult' => 'setVerificationResult',
             'textLocation' => 'setTextLocation',
             'detectReproduceResult' => 'setDetectReproduceResult',
@@ -188,6 +196,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * detectReproduceResult  身份证图像是否翻拍告警结果。 - true：表示身份证图片经过翻拍。 - false：表示身份证图片未经过翻拍。 仅在输入参数detect_reproduce为true时，返回该字段。
@@ -206,6 +215,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
             'issue' => 'getIssue',
             'validFrom' => 'getValidFrom',
             'validTo' => 'getValidTo',
+            'adjustedImage' => 'getAdjustedImage',
             'verificationResult' => 'getVerificationResult',
             'textLocation' => 'getTextLocation',
             'detectReproduceResult' => 'getDetectReproduceResult',
@@ -280,6 +290,7 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
         $this->container['issue'] = isset($data['issue']) ? $data['issue'] : null;
         $this->container['validFrom'] = isset($data['validFrom']) ? $data['validFrom'] : null;
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
+        $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
         $this->container['detectReproduceResult'] = isset($data['detectReproduceResult']) ? $data['detectReproduceResult'] : null;
@@ -384,6 +395,30 @@ class IdcardBackResult implements ModelInterface, ArrayAccess
     public function setValidTo($validTo)
     {
         $this->container['validTo'] = $validTo;
+        return $this;
+    }
+
+    /**
+    * Gets adjustedImage
+    *  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return string|null
+    */
+    public function getAdjustedImage()
+    {
+        return $this->container['adjustedImage'];
+    }
+
+    /**
+    * Sets adjustedImage
+    *
+    * @param string|null $adjustedImage 身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setAdjustedImage($adjustedImage)
+    {
+        $this->container['adjustedImage'] = $adjustedImage;
         return $this;
     }
 

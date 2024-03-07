@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Dli\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
+class AuthorizationPrivilege implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,38 @@ class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateDeleteConnectorOrderRequest';
+    protected static $openAPIModelName = 'AuthorizationPrivilege';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * body  body
+    * object  授权对象，和赋权API中的“object”对应。
+    * isAdmin  判断用户是否为管理员。
+    * userName  用户名称，即该用户在当前数据库上有权限。
+    * privileges  该用户在数据库上的权限。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ConnectorOrderRequestBody'
+            'object' => 'string',
+            'isAdmin' => 'bool',
+            'userName' => 'string',
+            'privileges' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * body  body
+    * object  授权对象，和赋权API中的“object”对应。
+    * isAdmin  判断用户是否为管理员。
+    * userName  用户名称，即该用户在当前数据库上有权限。
+    * privileges  该用户在数据库上的权限。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'body' => null
+        'object' => null,
+        'isAdmin' => null,
+        'userName' => null,
+        'privileges' => null
     ];
 
     /**
@@ -65,38 +73,50 @@ class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * body  body
+    * object  授权对象，和赋权API中的“object”对应。
+    * isAdmin  判断用户是否为管理员。
+    * userName  用户名称，即该用户在当前数据库上有权限。
+    * privileges  该用户在数据库上的权限。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
-            'body' => 'body'
+            'object' => 'object',
+            'isAdmin' => 'is_admin',
+            'userName' => 'user_name',
+            'privileges' => 'privileges'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * body  body
+    * object  授权对象，和赋权API中的“object”对应。
+    * isAdmin  判断用户是否为管理员。
+    * userName  用户名称，即该用户在当前数据库上有权限。
+    * privileges  该用户在数据库上的权限。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'body' => 'setBody'
+            'object' => 'setObject',
+            'isAdmin' => 'setIsAdmin',
+            'userName' => 'setUserName',
+            'privileges' => 'setPrivileges'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * body  body
+    * object  授权对象，和赋权API中的“object”对应。
+    * isAdmin  判断用户是否为管理员。
+    * userName  用户名称，即该用户在当前数据库上有权限。
+    * privileges  该用户在数据库上的权限。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'body' => 'getBody'
+            'object' => 'getObject',
+            'isAdmin' => 'getIsAdmin',
+            'userName' => 'getUserName',
+            'privileges' => 'getPrivileges'
     ];
 
     /**
@@ -157,8 +177,10 @@ class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['object'] = isset($data['object']) ? $data['object'] : null;
+        $this->container['isAdmin'] = isset($data['isAdmin']) ? $data['isAdmin'] : null;
+        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['privileges'] = isset($data['privileges']) ? $data['privileges'] : null;
     }
 
     /**
@@ -169,15 +191,6 @@ class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
-            if ((mb_strlen($this->container['instanceId']) > 100)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 100.";
-            }
-            if ((mb_strlen($this->container['instanceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -193,50 +206,98 @@ class CreateDeleteConnectorOrderRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  实例ID。
+    * Gets object
+    *  授权对象，和赋权API中的“object”对应。
     *
-    * @return string
+    * @return string|null
     */
-    public function getInstanceId()
+    public function getObject()
     {
-        return $this->container['instanceId'];
+        return $this->container['object'];
     }
 
     /**
-    * Sets instanceId
+    * Sets object
     *
-    * @param string $instanceId 实例ID。
+    * @param string|null $object 授权对象，和赋权API中的“object”对应。
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setObject($object)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['object'] = $object;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets isAdmin
+    *  判断用户是否为管理员。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ConnectorOrderRequestBody|null
+    * @return bool|null
     */
-    public function getBody()
+    public function getIsAdmin()
     {
-        return $this->container['body'];
+        return $this->container['isAdmin'];
     }
 
     /**
-    * Sets body
+    * Sets isAdmin
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ConnectorOrderRequestBody|null $body body
+    * @param bool|null $isAdmin 判断用户是否为管理员。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setIsAdmin($isAdmin)
     {
-        $this->container['body'] = $body;
+        $this->container['isAdmin'] = $isAdmin;
+        return $this;
+    }
+
+    /**
+    * Gets userName
+    *  用户名称，即该用户在当前数据库上有权限。
+    *
+    * @return string|null
+    */
+    public function getUserName()
+    {
+        return $this->container['userName'];
+    }
+
+    /**
+    * Sets userName
+    *
+    * @param string|null $userName 用户名称，即该用户在当前数据库上有权限。
+    *
+    * @return $this
+    */
+    public function setUserName($userName)
+    {
+        $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets privileges
+    *  该用户在数据库上的权限。
+    *
+    * @return string[]|null
+    */
+    public function getPrivileges()
+    {
+        return $this->container['privileges'];
+    }
+
+    /**
+    * Sets privileges
+    *
+    * @param string[]|null $privileges 该用户在数据库上的权限。
+    *
+    * @return $this
+    */
+    public function setPrivileges($privileges)
+    {
+        $this->container['privileges'] = $privileges;
         return $this;
     }
 

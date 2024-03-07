@@ -21,7 +21,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * body  body
     *
     * @var string[]
@@ -244,7 +244,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPreviewId
-    *  分析预览的唯一标识符。
+    *  访问预览的唯一标识符。
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessPreviewId
     *
-    * @param string $accessPreviewId 分析预览的唯一标识符。
+    * @param string $accessPreviewId 访问预览的唯一标识符。
     *
     * @return $this
     */

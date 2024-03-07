@@ -92,7 +92,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
             'flavorRef' => 'string',
             'cpu' => 'string',
             'mem' => 'string',
-            'volume' => '\HuaweiCloud\SDK\Rds\V3\Model\Volume',
+            'volume' => '\HuaweiCloud\SDK\Rds\V3\Model\VolumeForInstanceResponse',
             'region' => 'string',
             'vpcId' => 'string',
             'subnetId' => 'string',
@@ -1335,7 +1335,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     * Gets volume
     *  volume
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\Volume
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\VolumeForInstanceResponse
     */
     public function getVolume()
     {
@@ -1345,7 +1345,7 @@ class InstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\Volume $volume volume
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\VolumeForInstanceResponse $volume volume
     *
     * @return $this
     */

@@ -22,21 +22,29 @@ class UpdateSslSwitchResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  DCS任务ID。
+    * instanceId  实例ID。
+    * result  执行结果。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'instanceId' => 'string',
+            'result' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  DCS任务ID。
+    * instanceId  实例ID。
+    * result  执行结果。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'instanceId' => null,
+        'result' => null
     ];
 
     /**
@@ -63,31 +71,43 @@ class UpdateSslSwitchResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  DCS任务ID。
+    * instanceId  实例ID。
+    * result  执行结果。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'instanceId' => 'instance_id',
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  DCS任务ID。
+    * instanceId  实例ID。
+    * result  执行结果。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'instanceId' => 'setInstanceId',
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  DCS任务ID。
+    * instanceId  实例ID。
+    * result  执行结果。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'instanceId' => 'getInstanceId',
+            'result' => 'getResult'
     ];
 
     /**
@@ -149,6 +169,8 @@ class UpdateSslSwitchResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -194,6 +216,54 @@ class UpdateSslSwitchResponse implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets result
+    *  执行结果。
+    *
+    * @return string|null
+    */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+    * Sets result
+    *
+    * @param string|null $result 执行结果。
+    *
+    * @return $this
+    */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
         return $this;
     }
 

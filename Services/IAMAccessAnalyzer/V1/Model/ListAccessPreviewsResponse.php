@@ -21,7 +21,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessPreviews  accessPreviews
+    * accessPreviews  访问预览列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessPreviews  accessPreviews
+    * accessPreviews  访问预览列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessPreviews  accessPreviews
+    * accessPreviews  访问预览列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessPreviews  accessPreviews
+    * accessPreviews  访问预览列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessPreviews  accessPreviews
+    * accessPreviews  访问预览列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPreviews
-    *  accessPreviews
+    *  访问预览列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AccessPreviewSummary[]|null
     */
@@ -198,7 +198,7 @@ class ListAccessPreviewsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessPreviews
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AccessPreviewSummary[]|null $accessPreviews accessPreviews
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AccessPreviewSummary[]|null $accessPreviews 访问预览列表。
     *
     * @return $this
     */

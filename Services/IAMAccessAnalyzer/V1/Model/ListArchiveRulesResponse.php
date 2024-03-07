@@ -21,7 +21,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * archiveRules  archiveRules
+    * archiveRules  为指定分析器创建的存档规则的列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * archiveRules  archiveRules
+    * archiveRules  为指定分析器创建的存档规则的列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * archiveRules  archiveRules
+    * archiveRules  为指定分析器创建的存档规则的列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * archiveRules  archiveRules
+    * archiveRules  为指定分析器创建的存档规则的列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * archiveRules  archiveRules
+    * archiveRules  为指定分析器创建的存档规则的列表。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets archiveRules
-    *  archiveRules
+    *  为指定分析器创建的存档规则的列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ArchiveRuleSummary[]|null
     */
@@ -198,7 +198,7 @@ class ListArchiveRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets archiveRules
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ArchiveRuleSummary[]|null $archiveRules archiveRules
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ArchiveRuleSummary[]|null $archiveRules 为指定分析器创建的存档规则的列表。
     *
     * @return $this
     */

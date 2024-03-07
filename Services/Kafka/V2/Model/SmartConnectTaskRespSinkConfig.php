@@ -50,7 +50,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
             'redisAddress' => 'string',
             'redisType' => 'string',
             'dcsInstanceId' => 'string',
-            'targetDb' => 'string',
+            'targetDb' => 'int',
             'consumerStrategy' => 'string',
             'destinationFileType' => 'string',
             'deliverTimeInterval' => 'int',
@@ -490,7 +490,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * Gets targetDb
     *  目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTargetDb()
     {
@@ -500,7 +500,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets targetDb
     *
-    * @param string|null $targetDb 目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
+    * @param int|null $targetDb 目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
     *
     * @return $this
     */

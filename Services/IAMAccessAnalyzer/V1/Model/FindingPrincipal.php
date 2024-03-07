@@ -20,8 +20,8 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * identifier  检索结果的身份的类型。
-    * type  检索结果的标识符。
+    * identifier  外部主体身份的标识符。
+    * type  外部主体身份的类型。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * identifier  检索结果的身份的类型。
-    * type  检索结果的标识符。
+    * identifier  外部主体身份的标识符。
+    * type  外部主体身份的类型。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * identifier  检索结果的身份的类型。
-    * type  检索结果的标识符。
+    * identifier  外部主体身份的标识符。
+    * type  外部主体身份的类型。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * identifier  检索结果的身份的类型。
-    * type  检索结果的标识符。
+    * identifier  外部主体身份的标识符。
+    * type  外部主体身份的类型。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * identifier  检索结果的身份的类型。
-    * type  检索结果的标识符。
+    * identifier  外部主体身份的标识符。
+    * type  外部主体身份的类型。
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Gets identifier
-    *  检索结果的身份的类型。
+    *  外部主体身份的标识符。
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
     /**
     * Sets identifier
     *
-    * @param string $identifier 检索结果的身份的类型。
+    * @param string $identifier 外部主体身份的标识符。
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  检索结果的标识符。
+    *  外部主体身份的类型。
     *
     * @return string
     */
@@ -264,7 +264,7 @@ class FindingPrincipal implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 检索结果的标识符。
+    * @param string $type 外部主体身份的类型。
     *
     * @return $this
     */

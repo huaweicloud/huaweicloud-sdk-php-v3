@@ -21,21 +21,25 @@ class ListWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'logicalClusterName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterId' => null
+        'clusterId' => null,
+        'logicalClusterName' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ListWorkloadQueueRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'logicalClusterName' => 'logical_cluster_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'logicalClusterName' => 'setLogicalClusterName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'logicalClusterName' => 'getLogicalClusterName'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ListWorkloadQueueRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['logicalClusterName'] = isset($data['logicalClusterName']) ? $data['logicalClusterName'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ListWorkloadQueueRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets logicalClusterName
+    *  逻辑集群名称。逻辑集群模式下该字段必填。
+    *
+    * @return string|null
+    */
+    public function getLogicalClusterName()
+    {
+        return $this->container['logicalClusterName'];
+    }
+
+    /**
+    * Sets logicalClusterName
+    *
+    * @param string|null $logicalClusterName 逻辑集群名称。逻辑集群模式下该字段必填。
+    *
+    * @return $this
+    */
+    public function setLogicalClusterName($logicalClusterName)
+    {
+        $this->container['logicalClusterName'] = $logicalClusterName;
         return $this;
     }
 

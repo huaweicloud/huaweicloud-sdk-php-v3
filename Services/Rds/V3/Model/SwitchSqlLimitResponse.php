@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateDeleteConnectorOrderResponse implements ModelInterface, ArrayAccess
+class SwitchSqlLimitResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,26 +17,26 @@ class CreateDeleteConnectorOrderResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateDeleteConnectorOrderResponse';
+    protected static $openAPIModelName = 'SwitchSqlLimitResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  返回cbc生成的订单id。
+    * resp  调用正常时，返回“successful”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'orderId' => 'string'
+            'resp' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  返回cbc生成的订单id。
+    * resp  调用正常时，返回“successful”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'orderId' => null
+        'resp' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class CreateDeleteConnectorOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  返回cbc生成的订单id。
+    * resp  调用正常时，返回“successful”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'orderId' => 'order_id'
+            'resp' => 'resp'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  返回cbc生成的订单id。
+    * resp  调用正常时，返回“successful”。
     *
     * @var string[]
     */
     protected static $setters = [
-            'orderId' => 'setOrderId'
+            'resp' => 'setResp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  返回cbc生成的订单id。
+    * resp  调用正常时，返回“successful”。
     *
     * @var string[]
     */
     protected static $getters = [
-            'orderId' => 'getOrderId'
+            'resp' => 'getResp'
     ];
 
     /**
@@ -148,7 +148,7 @@ class CreateDeleteConnectorOrderResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['resp'] = isset($data['resp']) ? $data['resp'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class CreateDeleteConnectorOrderResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets orderId
-    *  返回cbc生成的订单id。
+    * Gets resp
+    *  调用正常时，返回“successful”。
     *
     * @return string|null
     */
-    public function getOrderId()
+    public function getResp()
     {
-        return $this->container['orderId'];
+        return $this->container['resp'];
     }
 
     /**
-    * Sets orderId
+    * Sets resp
     *
-    * @param string|null $orderId 返回cbc生成的订单id。
+    * @param string|null $resp 调用正常时，返回“successful”。
     *
     * @return $this
     */
-    public function setOrderId($orderId)
+    public function setResp($resp)
     {
-        $this->container['orderId'] = $orderId;
+        $this->container['resp'] = $resp;
         return $this;
     }
 

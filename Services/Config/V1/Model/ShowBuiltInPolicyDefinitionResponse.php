@@ -23,6 +23,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  策略id
     * name  策略名字
+    * displayName  策略展示名
     * policyType  策略类型
     * description  策略描述
     * policyRuleType  策略语法类型
@@ -37,6 +38,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'displayName' => 'string',
             'policyType' => 'string',
             'description' => 'string',
             'policyRuleType' => 'string',
@@ -51,6 +53,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  策略id
     * name  策略名字
+    * displayName  策略展示名
     * policyType  策略类型
     * description  策略描述
     * policyRuleType  策略语法类型
@@ -65,6 +68,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'displayName' => null,
         'policyType' => null,
         'description' => null,
         'policyRuleType' => null,
@@ -100,6 +104,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  策略id
     * name  策略名字
+    * displayName  策略展示名
     * policyType  策略类型
     * description  策略描述
     * policyRuleType  策略语法类型
@@ -114,6 +119,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'displayName' => 'display_name',
             'policyType' => 'policy_type',
             'description' => 'description',
             'policyRuleType' => 'policy_rule_type',
@@ -128,6 +134,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  策略id
     * name  策略名字
+    * displayName  策略展示名
     * policyType  策略类型
     * description  策略描述
     * policyRuleType  策略语法类型
@@ -142,6 +149,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'displayName' => 'setDisplayName',
             'policyType' => 'setPolicyType',
             'description' => 'setDescription',
             'policyRuleType' => 'setPolicyRuleType',
@@ -156,6 +164,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  策略id
     * name  策略名字
+    * displayName  策略展示名
     * policyType  策略类型
     * description  策略描述
     * policyRuleType  策略语法类型
@@ -170,6 +179,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'displayName' => 'getDisplayName',
             'policyType' => 'getPolicyType',
             'description' => 'getDescription',
             'policyRuleType' => 'getPolicyRuleType',
@@ -240,6 +250,7 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
         $this->container['policyType'] = isset($data['policyType']) ? $data['policyType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyRuleType'] = isset($data['policyRuleType']) ? $data['policyRuleType'] : null;
@@ -317,6 +328,30 @@ class ShowBuiltInPolicyDefinitionResponse implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets displayName
+    *  策略展示名
+    *
+    * @return string|null
+    */
+    public function getDisplayName()
+    {
+        return $this->container['displayName'];
+    }
+
+    /**
+    * Sets displayName
+    *
+    * @param string|null $displayName 策略展示名
+    *
+    * @return $this
+    */
+    public function setDisplayName($displayName)
+    {
+        $this->container['displayName'] = $displayName;
         return $this;
     }
 

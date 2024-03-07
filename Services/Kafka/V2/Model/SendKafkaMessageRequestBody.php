@@ -29,7 +29,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'topic' => 'string',
             'body' => 'string',
-            'propertyList' => 'object[]'
+            'propertyList' => '\HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[]'
     ];
 
     /**
@@ -255,7 +255,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     * Gets propertyList
     *  topic的分区信息等
     *
-    * @return object[]
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[]
     */
     public function getPropertyList()
     {
@@ -265,7 +265,7 @@ class SendKafkaMessageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets propertyList
     *
-    * @param object[] $propertyList topic的分区信息等
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\SendKafkaMessageRequestBodyPropertyList[] $propertyList topic的分区信息等
     *
     * @return $this
     */

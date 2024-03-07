@@ -20,12 +20,12 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * createdAt  创建归档规则的时间。
-    * filters  filters
+    * createdAt  创建存档规则的时间。
+    * filters  匹配要返回的访问分析结果的筛选器。
     * id  存档规则的唯一标识符。
-    * name  创建归档规则的名称。
+    * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * createdAt  创建归档规则的时间。
-    * filters  filters
+    * createdAt  创建存档规则的时间。
+    * filters  匹配要返回的访问分析结果的筛选器。
     * id  存档规则的唯一标识符。
-    * name  创建归档规则的名称。
+    * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * createdAt  创建归档规则的时间。
-    * filters  filters
+    * createdAt  创建存档规则的时间。
+    * filters  匹配要返回的访问分析结果的筛选器。
     * id  存档规则的唯一标识符。
-    * name  创建归档规则的名称。
+    * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * createdAt  创建归档规则的时间。
-    * filters  filters
+    * createdAt  创建存档规则的时间。
+    * filters  匹配要返回的访问分析结果的筛选器。
     * id  存档规则的唯一标识符。
-    * name  创建归档规则的名称。
+    * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * createdAt  创建归档规则的时间。
-    * filters  filters
+    * createdAt  创建存档规则的时间。
+    * filters  匹配要返回的访问分析结果的筛选器。
     * id  存档规则的唯一标识符。
-    * name  创建归档规则的名称。
+    * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -268,7 +268,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建归档规则的时间。
+    *  创建存档规则的时间。
     *
     * @return \DateTime
     */
@@ -280,7 +280,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 创建归档规则的时间。
+    * @param \DateTime $createdAt 创建存档规则的时间。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets filters
-    *  filters
+    *  匹配要返回的访问分析结果的筛选器。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]
     */
@@ -304,7 +304,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Sets filters
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters filters
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters 匹配要返回的访问分析结果的筛选器。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建归档规则的名称。
+    *  创建存档规则的名称。
     *
     * @return string
     */
@@ -352,7 +352,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 创建归档规则的名称。
+    * @param string $name 创建存档规则的名称。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string
     */
@@ -400,7 +400,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string $urn 唯一的资源名称。
+    * @param string $urn 访问分析的唯一资源标识。
     *
     * @return $this
     */

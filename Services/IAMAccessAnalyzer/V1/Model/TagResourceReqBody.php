@@ -20,7 +20,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  tags
+    * tags  自定义标签列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  tags
+    * tags  自定义标签列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  tags
+    * tags  自定义标签列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  tags
+    * tags  自定义标签列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  tags
+    * tags  自定义标签列表。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  自定义标签列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]
     */
@@ -189,7 +189,7 @@ class TagResourceReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[] $tags tags
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[] $tags 自定义标签列表。
     *
     * @return $this
     */

@@ -26,6 +26,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     * ethnicity  民族。
     * address  地址。
     * number  身份证号。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段。
@@ -48,6 +50,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
             'ethnicity' => 'string',
             'address' => 'string',
             'number' => 'string',
+            'portraitImage' => 'string',
+            'adjustedImage' => 'string',
             'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardFrontVerificationResult',
             'textLocation' => 'object',
             'portraitLocation' => 'int[][]',
@@ -70,6 +74,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     * ethnicity  民族。
     * address  地址。
     * number  身份证号。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段。
@@ -92,6 +98,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
         'ethnicity' => null,
         'address' => null,
         'number' => null,
+        'portraitImage' => null,
+        'adjustedImage' => null,
         'verificationResult' => null,
         'textLocation' => null,
         'portraitLocation' => 'int32',
@@ -135,6 +143,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     * ethnicity  民族。
     * address  地址。
     * number  身份证号。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段。
@@ -157,6 +167,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
             'ethnicity' => 'ethnicity',
             'address' => 'address',
             'number' => 'number',
+            'portraitImage' => 'portrait_image',
+            'adjustedImage' => 'adjusted_image',
             'verificationResult' => 'verification_result',
             'textLocation' => 'text_location',
             'portraitLocation' => 'portrait_location',
@@ -179,6 +191,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     * ethnicity  民族。
     * address  地址。
     * number  身份证号。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段。
@@ -201,6 +215,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
             'ethnicity' => 'setEthnicity',
             'address' => 'setAddress',
             'number' => 'setNumber',
+            'portraitImage' => 'setPortraitImage',
+            'adjustedImage' => 'setAdjustedImage',
             'verificationResult' => 'setVerificationResult',
             'textLocation' => 'setTextLocation',
             'portraitLocation' => 'setPortraitLocation',
@@ -223,6 +239,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     * ethnicity  民族。
     * address  地址。
     * number  身份证号。
+    * portraitImage  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    * adjustedImage  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。
     * portraitLocation  身份证头像位置信息的结果。 仅在输入参数return_portrait_location为true时，返回该字段。
@@ -245,6 +263,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
             'ethnicity' => 'getEthnicity',
             'address' => 'getAddress',
             'number' => 'getNumber',
+            'portraitImage' => 'getPortraitImage',
+            'adjustedImage' => 'getAdjustedImage',
             'verificationResult' => 'getVerificationResult',
             'textLocation' => 'getTextLocation',
             'portraitLocation' => 'getPortraitLocation',
@@ -323,6 +343,8 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
         $this->container['ethnicity'] = isset($data['ethnicity']) ? $data['ethnicity'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
+        $this->container['portraitImage'] = isset($data['portraitImage']) ? $data['portraitImage'] : null;
+        $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
         $this->container['portraitLocation'] = isset($data['portraitLocation']) ? $data['portraitLocation'] : null;
@@ -500,6 +522,54 @@ class IdcardFrontResult implements ModelInterface, ArrayAccess
     public function setNumber($number)
     {
         $this->container['number'] = $number;
+        return $this;
+    }
+
+    /**
+    * Gets portraitImage
+    *  身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    *
+    * @return string|null
+    */
+    public function getPortraitImage()
+    {
+        return $this->container['portraitImage'];
+    }
+
+    /**
+    * Sets portraitImage
+    *
+    * @param string|null $portraitImage 身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+    *
+    * @return $this
+    */
+    public function setPortraitImage($portraitImage)
+    {
+        $this->container['portraitImage'] = $portraitImage;
+        return $this;
+    }
+
+    /**
+    * Gets adjustedImage
+    *  身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return string|null
+    */
+    public function getAdjustedImage()
+    {
+        return $this->container['adjustedImage'];
+    }
+
+    /**
+    * Sets adjustedImage
+    *
+    * @param string|null $adjustedImage 身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setAdjustedImage($adjustedImage)
+    {
+        $this->container['adjustedImage'] = $adjustedImage;
         return $this;
     }
 

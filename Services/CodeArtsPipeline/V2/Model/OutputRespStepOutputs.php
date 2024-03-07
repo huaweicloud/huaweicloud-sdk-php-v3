@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\CodeArtsPipeline\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
+class OutputRespStepOutputs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteSinkTaskRequest';
+    protected static $openAPIModelName = 'OutputResp_step_outputs';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
+    * stepRunId  stepRunId
+    * outputResult  outputResult
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'connectorId' => 'string',
-            'taskId' => 'string'
+            'stepRunId' => 'string',
+            'outputResult' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
+    * stepRunId  stepRunId
+    * outputResult  outputResult
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'connectorId' => null,
-        'taskId' => null
+        'stepRunId' => null,
+        'outputResult' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
+    * stepRunId  stepRunId
+    * outputResult  outputResult
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'connectorId' => 'connector_id',
-            'taskId' => 'task_id'
+            'stepRunId' => 'step_run_id',
+            'outputResult' => 'output_result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
+    * stepRunId  stepRunId
+    * outputResult  outputResult
     *
     * @var string[]
     */
     protected static $setters = [
-            'connectorId' => 'setConnectorId',
-            'taskId' => 'setTaskId'
+            'stepRunId' => 'setStepRunId',
+            'outputResult' => 'setOutputResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
+    * stepRunId  stepRunId
+    * outputResult  outputResult
     *
     * @var string[]
     */
     protected static $getters = [
-            'connectorId' => 'getConnectorId',
-            'taskId' => 'getTaskId'
+            'stepRunId' => 'getStepRunId',
+            'outputResult' => 'getOutputResult'
     ];
 
     /**
@@ -157,8 +157,8 @@ class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['connectorId'] = isset($data['connectorId']) ? $data['connectorId'] : null;
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['stepRunId'] = isset($data['stepRunId']) ? $data['stepRunId'] : null;
+        $this->container['outputResult'] = isset($data['outputResult']) ? $data['outputResult'] : null;
     }
 
     /**
@@ -169,12 +169,6 @@ class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['connectorId'] === null) {
-            $invalidProperties[] = "'connectorId' can't be null";
-        }
-        if ($this->container['taskId'] === null) {
-            $invalidProperties[] = "'taskId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,50 +184,50 @@ class DeleteSinkTaskRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connectorId
-    *  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * Gets stepRunId
+    *  stepRunId
     *
-    * @return string
+    * @return string|null
     */
-    public function getConnectorId()
+    public function getStepRunId()
     {
-        return $this->container['connectorId'];
+        return $this->container['stepRunId'];
     }
 
     /**
-    * Sets connectorId
+    * Sets stepRunId
     *
-    * @param string $connectorId 实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * @param string|null $stepRunId stepRunId
     *
     * @return $this
     */
-    public function setConnectorId($connectorId)
+    public function setStepRunId($stepRunId)
     {
-        $this->container['connectorId'] = $connectorId;
+        $this->container['stepRunId'] = $stepRunId;
         return $this;
     }
 
     /**
-    * Gets taskId
-    *  转储任务ID。
+    * Gets outputResult
+    *  outputResult
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]|null
     */
-    public function getTaskId()
+    public function getOutputResult()
     {
-        return $this->container['taskId'];
+        return $this->container['outputResult'];
     }
 
     /**
-    * Sets taskId
+    * Sets outputResult
     *
-    * @param string $taskId 转储任务ID。
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\OutputRespOutputResult[]|null $outputResult outputResult
     *
     * @return $this
     */
-    public function setTaskId($taskId)
+    public function setOutputResult($outputResult)
     {
-        $this->container['taskId'] = $taskId;
+        $this->container['outputResult'] = $outputResult;
         return $this;
     }
 

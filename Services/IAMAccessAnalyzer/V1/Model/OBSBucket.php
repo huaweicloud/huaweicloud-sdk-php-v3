@@ -20,8 +20,8 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bucketAcl  此ACL xml文件的string格式
-    * bucketPolicy  此策略的json格式策略文档。
+    * bucketAcl  桶ACL xml文件的string格式
+    * bucketPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bucketAcl  此ACL xml文件的string格式
-    * bucketPolicy  此策略的json格式策略文档。
+    * bucketAcl  桶ACL xml文件的string格式
+    * bucketPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class OBSBucket implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bucketAcl  此ACL xml文件的string格式
-    * bucketPolicy  此策略的json格式策略文档。
+    * bucketAcl  桶ACL xml文件的string格式
+    * bucketPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bucketAcl  此ACL xml文件的string格式
-    * bucketPolicy  此策略的json格式策略文档。
+    * bucketAcl  桶ACL xml文件的string格式
+    * bucketPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bucketAcl  此ACL xml文件的string格式
-    * bucketPolicy  此策略的json格式策略文档。
+    * bucketAcl  桶ACL xml文件的string格式
+    * bucketPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketAcl
-    *  此ACL xml文件的string格式
+    *  桶ACL xml文件的string格式
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class OBSBucket implements ModelInterface, ArrayAccess
     /**
     * Sets bucketAcl
     *
-    * @param string|null $bucketAcl 此ACL xml文件的string格式
+    * @param string|null $bucketAcl 桶ACL xml文件的string格式
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class OBSBucket implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketPolicy
-    *  此策略的json格式策略文档。
+    *  该策略JSON格式策略文档。
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class OBSBucket implements ModelInterface, ArrayAccess
     /**
     * Sets bucketPolicy
     *
-    * @param string|null $bucketPolicy 此策略的json格式策略文档。
+    * @param string|null $bucketPolicy 该策略JSON格式策略文档。
     *
     * @return $this
     */

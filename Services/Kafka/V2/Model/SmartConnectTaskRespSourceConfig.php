@@ -63,8 +63,8 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
             'securityProtocol' => 'string',
             'direction' => 'string',
             'syncConsumerOffsetsEnabled' => 'bool',
-            'replicationFactor' => 'string',
-            'taskNum' => 'string',
+            'replicationFactor' => 'int',
+            'taskNum' => 'int',
             'renameTopicEnable' => 'bool',
             'provenanceHeaderEnabled' => 'bool',
             'consumerStrategy' => 'string',
@@ -802,7 +802,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * Gets replicationFactor
     *  副本数。（仅源端类型为Kafka时会显示）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getReplicationFactor()
     {
@@ -812,7 +812,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets replicationFactor
     *
-    * @param string|null $replicationFactor 副本数。（仅源端类型为Kafka时会显示）
+    * @param int|null $replicationFactor 副本数。（仅源端类型为Kafka时会显示）
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * Gets taskNum
     *  任务数。（仅源端类型为Kafka时会显示）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTaskNum()
     {
@@ -836,7 +836,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets taskNum
     *
-    * @param string|null $taskNum 任务数。（仅源端类型为Kafka时会显示）
+    * @param int|null $taskNum 任务数。（仅源端类型为Kafka时会显示）
     *
     * @return $this
     */

@@ -549,6 +549,9 @@ class Job implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['jobType'] === null) {
+            $invalidProperties[] = "'jobType' can't be null";
+        }
             $allowedValues = $this->getJobTypeAllowableValues();
                 if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -572,12 +575,21 @@ class Job implements ModelInterface, ArrayAccess
         if ($this->container['fromConfigValues'] === null) {
             $invalidProperties[] = "'fromConfigValues' can't be null";
         }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 240)) {
+        if ($this->container['toConnectorName'] === null) {
+            $invalidProperties[] = "'toConnectorName' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 240)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 240.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['fromLinkName'] === null) {
+            $invalidProperties[] = "'fromLinkName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -596,7 +608,7 @@ class Job implements ModelInterface, ArrayAccess
     * Gets jobType
     *  作业类型： - NORMAL_JOB：表/文件迁移。 - BATCH_JOB：整库迁移。 - SCENARIO_JOB：场景迁移。
     *
-    * @return string|null
+    * @return string
     */
     public function getJobType()
     {
@@ -606,7 +618,7 @@ class Job implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型： - NORMAL_JOB：表/文件迁移。 - BATCH_JOB：整库迁移。 - SCENARIO_JOB：场景迁移。
+    * @param string $jobType 作业类型： - NORMAL_JOB：表/文件迁移。 - BATCH_JOB：整库迁移。 - SCENARIO_JOB：场景迁移。
     *
     * @return $this
     */
@@ -740,7 +752,7 @@ class Job implements ModelInterface, ArrayAccess
     * Gets toConnectorName
     *  目的端连接类型
     *
-    * @return string|null
+    * @return string
     */
     public function getToConnectorName()
     {
@@ -750,7 +762,7 @@ class Job implements ModelInterface, ArrayAccess
     /**
     * Sets toConnectorName
     *
-    * @param string|null $toConnectorName 目的端连接类型
+    * @param string $toConnectorName 目的端连接类型
     *
     * @return $this
     */
@@ -764,7 +776,7 @@ class Job implements ModelInterface, ArrayAccess
     * Gets name
     *  作业名称，长度在1到240个字符之间
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -774,7 +786,7 @@ class Job implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 作业名称，长度在1到240个字符之间
+    * @param string $name 作业名称，长度在1到240个字符之间
     *
     * @return $this
     */
@@ -788,7 +800,7 @@ class Job implements ModelInterface, ArrayAccess
     * Gets fromLinkName
     *  源连接名称
     *
-    * @return string|null
+    * @return string
     */
     public function getFromLinkName()
     {
@@ -798,7 +810,7 @@ class Job implements ModelInterface, ArrayAccess
     /**
     * Sets fromLinkName
     *
-    * @param string|null $fromLinkName 源连接名称
+    * @param string $fromLinkName 源连接名称
     *
     * @return $this
     */

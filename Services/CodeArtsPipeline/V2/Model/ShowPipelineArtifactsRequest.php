@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\CodeArtsPipeline\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
+class ShowPipelineArtifactsRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,24 +16,30 @@ class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteSinkTaskResponse';
+    protected static $openAPIModelName = 'ShowPipelineArtifactsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * pipelineId  流水线ID
+    * pipelineRunId  流水线运行实例ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'pipelineId' => 'string',
+            'pipelineRunId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * pipelineId  流水线ID
+    * pipelineRunId  流水线运行实例ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'pipelineId' => null,
+        'pipelineRunId' => null
     ];
 
     /**
@@ -60,29 +65,38 @@ class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * pipelineId  流水线ID
+    * pipelineRunId  流水线运行实例ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'pipelineId' => 'pipeline_id',
+            'pipelineRunId' => 'pipeline_run_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * pipelineId  流水线ID
+    * pipelineRunId  流水线运行实例ID
     *
     * @var string[]
     */
     protected static $setters = [
+            'pipelineId' => 'setPipelineId',
+            'pipelineRunId' => 'setPipelineRunId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * pipelineId  流水线ID
+    * pipelineRunId  流水线运行实例ID
     *
     * @var string[]
     */
     protected static $getters = [
+            'pipelineId' => 'getPipelineId',
+            'pipelineRunId' => 'getPipelineRunId'
     ];
 
     /**
@@ -143,6 +157,8 @@ class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
+        $this->container['pipelineRunId'] = isset($data['pipelineRunId']) ? $data['pipelineRunId'] : null;
     }
 
     /**
@@ -153,6 +169,24 @@ class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pipelineId'] === null) {
+            $invalidProperties[] = "'pipelineId' can't be null";
+        }
+            if ((mb_strlen($this->container['pipelineId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['pipelineId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineId', the character length must be bigger than or equal to 32.";
+            }
+        if ($this->container['pipelineRunId'] === null) {
+            $invalidProperties[] = "'pipelineRunId' can't be null";
+        }
+            if ((mb_strlen($this->container['pipelineRunId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineRunId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['pipelineRunId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineRunId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +199,54 @@ class DeleteSinkTaskResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets pipelineId
+    *  流水线ID
+    *
+    * @return string
+    */
+    public function getPipelineId()
+    {
+        return $this->container['pipelineId'];
+    }
+
+    /**
+    * Sets pipelineId
+    *
+    * @param string $pipelineId 流水线ID
+    *
+    * @return $this
+    */
+    public function setPipelineId($pipelineId)
+    {
+        $this->container['pipelineId'] = $pipelineId;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineRunId
+    *  流水线运行实例ID
+    *
+    * @return string
+    */
+    public function getPipelineRunId()
+    {
+        return $this->container['pipelineRunId'];
+    }
+
+    /**
+    * Sets pipelineRunId
+    *
+    * @param string $pipelineRunId 流水线运行实例ID
+    *
+    * @return $this
+    */
+    public function setPipelineRunId($pipelineRunId)
+    {
+        $this->container['pipelineRunId'] = $pipelineRunId;
+        return $this;
     }
 
     /**

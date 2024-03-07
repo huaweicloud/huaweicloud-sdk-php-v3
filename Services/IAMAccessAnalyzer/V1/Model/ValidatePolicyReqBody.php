@@ -20,7 +20,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyDocument  此策略的json格式策略文档。
+    * policyDocument  该策略JSON格式策略文档。
     * policyType  policyType
     * validatePolicyResourceType  validatePolicyResourceType
     *
@@ -34,7 +34,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyDocument  此策略的json格式策略文档。
+    * policyDocument  该策略JSON格式策略文档。
     * policyType  policyType
     * validatePolicyResourceType  validatePolicyResourceType
     *
@@ -69,7 +69,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyDocument  此策略的json格式策略文档。
+    * policyDocument  该策略JSON格式策略文档。
     * policyType  policyType
     * validatePolicyResourceType  validatePolicyResourceType
     *
@@ -83,7 +83,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyDocument  此策略的json格式策略文档。
+    * policyDocument  该策略JSON格式策略文档。
     * policyType  policyType
     * validatePolicyResourceType  validatePolicyResourceType
     *
@@ -97,7 +97,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyDocument  此策略的json格式策略文档。
+    * policyDocument  该策略JSON格式策略文档。
     * policyType  policyType
     * validatePolicyResourceType  validatePolicyResourceType
     *
@@ -208,7 +208,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyDocument
-    *  此策略的json格式策略文档。
+    *  该策略JSON格式策略文档。
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class ValidatePolicyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param string $policyDocument 此策略的json格式策略文档。
+    * @param string $policyDocument 该策略JSON格式策略文档。
     *
     * @return $this
     */

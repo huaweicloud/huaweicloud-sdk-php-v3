@@ -28,6 +28,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否经过翻拍功能  - false：关闭判断身份证图像是否经过翻拍功能
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否是复印件功能  - false : 关闭身份证图像是否是复印件功能
     * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    * returnPortraitImage  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    * returnAdjustedImage  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
     * detectTampering  身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
     * detectBorderIntegrity  身份证图像边框完整性告警功能开关，默认false，可选值如下：  - true ：打开身份证图像边框完整性告警功能 - false : 关闭身份证图像边框完整性告警功能
     * detectBlockingWithinBorder  身份证图像边框内部是否有异物遮挡的告警功能开关，默认false，可选值如下：  - true ：开启身份证边框内部异物遮挡告警功能 - false : 关闭身份证边框内部异物遮挡告警功能
@@ -46,6 +48,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'detectReproduce' => 'bool',
             'detectCopy' => 'bool',
             'returnPortraitLocation' => 'bool',
+            'returnPortraitImage' => 'bool',
+            'returnAdjustedImage' => 'bool',
             'detectTampering' => 'bool',
             'detectBorderIntegrity' => 'bool',
             'detectBlockingWithinBorder' => 'bool',
@@ -64,6 +68,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否经过翻拍功能  - false：关闭判断身份证图像是否经过翻拍功能
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否是复印件功能  - false : 关闭身份证图像是否是复印件功能
     * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    * returnPortraitImage  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    * returnAdjustedImage  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
     * detectTampering  身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
     * detectBorderIntegrity  身份证图像边框完整性告警功能开关，默认false，可选值如下：  - true ：打开身份证图像边框完整性告警功能 - false : 关闭身份证图像边框完整性告警功能
     * detectBlockingWithinBorder  身份证图像边框内部是否有异物遮挡的告警功能开关，默认false，可选值如下：  - true ：开启身份证边框内部异物遮挡告警功能 - false : 关闭身份证边框内部异物遮挡告警功能
@@ -82,6 +88,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         'detectReproduce' => null,
         'detectCopy' => null,
         'returnPortraitLocation' => null,
+        'returnPortraitImage' => null,
+        'returnAdjustedImage' => null,
         'detectTampering' => null,
         'detectBorderIntegrity' => null,
         'detectBlockingWithinBorder' => null,
@@ -121,6 +129,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否经过翻拍功能  - false：关闭判断身份证图像是否经过翻拍功能
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否是复印件功能  - false : 关闭身份证图像是否是复印件功能
     * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    * returnPortraitImage  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    * returnAdjustedImage  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
     * detectTampering  身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
     * detectBorderIntegrity  身份证图像边框完整性告警功能开关，默认false，可选值如下：  - true ：打开身份证图像边框完整性告警功能 - false : 关闭身份证图像边框完整性告警功能
     * detectBlockingWithinBorder  身份证图像边框内部是否有异物遮挡的告警功能开关，默认false，可选值如下：  - true ：开启身份证边框内部异物遮挡告警功能 - false : 关闭身份证边框内部异物遮挡告警功能
@@ -139,6 +149,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'detectReproduce' => 'detect_reproduce',
             'detectCopy' => 'detect_copy',
             'returnPortraitLocation' => 'return_portrait_location',
+            'returnPortraitImage' => 'return_portrait_image',
+            'returnAdjustedImage' => 'return_adjusted_image',
             'detectTampering' => 'detect_tampering',
             'detectBorderIntegrity' => 'detect_border_integrity',
             'detectBlockingWithinBorder' => 'detect_blocking_within_border',
@@ -157,6 +169,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否经过翻拍功能  - false：关闭判断身份证图像是否经过翻拍功能
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否是复印件功能  - false : 关闭身份证图像是否是复印件功能
     * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    * returnPortraitImage  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    * returnAdjustedImage  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
     * detectTampering  身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
     * detectBorderIntegrity  身份证图像边框完整性告警功能开关，默认false，可选值如下：  - true ：打开身份证图像边框完整性告警功能 - false : 关闭身份证图像边框完整性告警功能
     * detectBlockingWithinBorder  身份证图像边框内部是否有异物遮挡的告警功能开关，默认false，可选值如下：  - true ：开启身份证边框内部异物遮挡告警功能 - false : 关闭身份证边框内部异物遮挡告警功能
@@ -175,6 +189,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'detectReproduce' => 'setDetectReproduce',
             'detectCopy' => 'setDetectCopy',
             'returnPortraitLocation' => 'setReturnPortraitLocation',
+            'returnPortraitImage' => 'setReturnPortraitImage',
+            'returnAdjustedImage' => 'setReturnAdjustedImage',
             'detectTampering' => 'setDetectTampering',
             'detectBorderIntegrity' => 'setDetectBorderIntegrity',
             'detectBlockingWithinBorder' => 'setDetectBlockingWithinBorder',
@@ -193,6 +209,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否经过翻拍功能  - false：关闭判断身份证图像是否经过翻拍功能
     * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：开启判断身份证图像是否是复印件功能  - false : 关闭身份证图像是否是复印件功能
     * returnPortraitLocation  返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+    * returnPortraitImage  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    * returnAdjustedImage  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
     * detectTampering  身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
     * detectBorderIntegrity  身份证图像边框完整性告警功能开关，默认false，可选值如下：  - true ：打开身份证图像边框完整性告警功能 - false : 关闭身份证图像边框完整性告警功能
     * detectBlockingWithinBorder  身份证图像边框内部是否有异物遮挡的告警功能开关，默认false，可选值如下：  - true ：开启身份证边框内部异物遮挡告警功能 - false : 关闭身份证边框内部异物遮挡告警功能
@@ -211,6 +229,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'detectReproduce' => 'getDetectReproduce',
             'detectCopy' => 'getDetectCopy',
             'returnPortraitLocation' => 'getReturnPortraitLocation',
+            'returnPortraitImage' => 'getReturnPortraitImage',
+            'returnAdjustedImage' => 'getReturnAdjustedImage',
             'detectTampering' => 'getDetectTampering',
             'detectBorderIntegrity' => 'getDetectBorderIntegrity',
             'detectBlockingWithinBorder' => 'getDetectBlockingWithinBorder',
@@ -285,6 +305,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['detectReproduce'] = isset($data['detectReproduce']) ? $data['detectReproduce'] : null;
         $this->container['detectCopy'] = isset($data['detectCopy']) ? $data['detectCopy'] : null;
         $this->container['returnPortraitLocation'] = isset($data['returnPortraitLocation']) ? $data['returnPortraitLocation'] : null;
+        $this->container['returnPortraitImage'] = isset($data['returnPortraitImage']) ? $data['returnPortraitImage'] : null;
+        $this->container['returnAdjustedImage'] = isset($data['returnAdjustedImage']) ? $data['returnAdjustedImage'] : null;
         $this->container['detectTampering'] = isset($data['detectTampering']) ? $data['detectTampering'] : null;
         $this->container['detectBorderIntegrity'] = isset($data['detectBorderIntegrity']) ? $data['detectBorderIntegrity'] : null;
         $this->container['detectBlockingWithinBorder'] = isset($data['detectBlockingWithinBorder']) ? $data['detectBlockingWithinBorder'] : null;
@@ -504,6 +526,54 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     public function setReturnPortraitLocation($returnPortraitLocation)
     {
         $this->container['returnPortraitLocation'] = $returnPortraitLocation;
+        return $this;
+    }
+
+    /**
+    * Gets returnPortraitImage
+    *  返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    *
+    * @return bool|null
+    */
+    public function getReturnPortraitImage()
+    {
+        return $this->container['returnPortraitImage'];
+    }
+
+    /**
+    * Sets returnPortraitImage
+    *
+    * @param bool|null $returnPortraitImage 返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+    *
+    * @return $this
+    */
+    public function setReturnPortraitImage($returnPortraitImage)
+    {
+        $this->container['returnPortraitImage'] = $returnPortraitImage;
+        return $this;
+    }
+
+    /**
+    * Gets returnAdjustedImage
+    *  返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
+    *
+    * @return bool|null
+    */
+    public function getReturnAdjustedImage()
+    {
+        return $this->container['returnAdjustedImage'];
+    }
+
+    /**
+    * Sets returnAdjustedImage
+    *
+    * @param bool|null $returnAdjustedImage 返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
+    *
+    * @return $this
+    */
+    public function setReturnAdjustedImage($returnAdjustedImage)
+    {
+        $this->container['returnAdjustedImage'] = $returnAdjustedImage;
         return $this;
     }
 

@@ -20,10 +20,10 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * user  用户名
-    * client  客户端ID
-    * userDefault  是否使用用户默认设置（是则表示对全部用户限流）。
-    * clientDefault  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * user  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * client  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * userDefault  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
+    * clientDefault  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * user  用户名
-    * client  客户端ID
-    * userDefault  是否使用用户默认设置（是则表示对全部用户限流）。
-    * clientDefault  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * user  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * client  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * userDefault  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
+    * clientDefault  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * user  用户名
-    * client  客户端ID
-    * userDefault  是否使用用户默认设置（是则表示对全部用户限流）。
-    * clientDefault  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * user  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * client  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * userDefault  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
+    * clientDefault  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * user  用户名
-    * client  客户端ID
-    * userDefault  是否使用用户默认设置（是则表示对全部用户限流）。
-    * clientDefault  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * user  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * client  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * userDefault  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
+    * clientDefault  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * user  用户名
-    * client  客户端ID
-    * userDefault  是否使用用户默认设置（是则表示对全部用户限流）。
-    * clientDefault  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * user  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * client  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
+    * userDefault  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
+    * clientDefault  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  用户名
+    *  用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 用户名
+    * @param string|null $user 用户名。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets client
-    *  客户端ID
+    *  客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets client
     *
-    * @param string|null $client 客户端ID
+    * @param string|null $client 客户端ID。  不对全部用户/客户端限流时，用户名和客户端ID不能同时为空。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets userDefault
-    *  是否使用用户默认设置（是则表示对全部用户限流）。
+    *  是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
     *
     * @return bool|null
     */
@@ -267,7 +267,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets userDefault
     *
-    * @param bool|null $userDefault 是否使用用户默认设置（是则表示对全部用户限流）。
+    * @param bool|null $userDefault 是否使用用户默认设置。   - 是，表示对全部用户限流。此时不能同时设置用户名。   - 否，表示对特定用户限流。此时需要设置用户名。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientDefault
-    *  是否使用客户端默认设置（是则表示对全部客户端限流）。
+    *  是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @return bool|null
     */
@@ -291,7 +291,7 @@ class DeleteKafkaUserClientQuotaTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets clientDefault
     *
-    * @param bool|null $clientDefault 是否使用客户端默认设置（是则表示对全部客户端限流）。
+    * @param bool|null $clientDefault 是否使用客户端默认设置。   - 是，表示对全部客户端限流。此时不能设置客户端ID。   - 否，表示对特定客户端限流。此时需要设置客户端ID。
     *
     * @return $this
     */

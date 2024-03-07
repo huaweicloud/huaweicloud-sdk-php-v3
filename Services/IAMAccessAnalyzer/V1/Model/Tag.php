@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标记的密钥标识符或名称。
-    * value  与标记键关联的字符串值。
+    * key  标签键。
+    * value  与标签键关联的字符串值。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标记的密钥标识符或名称。
-    * value  与标记键关联的字符串值。
+    * key  标签键。
+    * value  与标签键关联的字符串值。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标记的密钥标识符或名称。
-    * value  与标记键关联的字符串值。
+    * key  标签键。
+    * value  与标签键关联的字符串值。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标记的密钥标识符或名称。
-    * value  与标记键关联的字符串值。
+    * key  标签键。
+    * value  与标签键关联的字符串值。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标记的密钥标识符或名称。
-    * value  与标记键关联的字符串值。
+    * key  标签键。
+    * value  与标签键关联的字符串值。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标记的密钥标识符或名称。
+    *  标签键。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标记的密钥标识符或名称。
+    * @param string $key 标签键。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  与标记键关联的字符串值。
+    *  与标签键关联的字符串值。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 与标记键关联的字符串值。
+    * @param string $value 与标签键关联的字符串值。
     *
     * @return $this
     */

@@ -24,6 +24,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     * description  策略参数描述
     * allowedValues  策略参数允许值列表
     * defaultValue  策略参数默认值
+    * minimum  策略参数的最小值，当参数类型为Integer或Float时生效。
+    * maximum  策略参数的最大值，当参数类型为Integer或Float时生效。
+    * minItems  策略参数的最小项数，当参数类型为Array时生效。
+    * maxItems  策略参数的最大项数，当参数类型为Array时生效。
+    * minLength  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    * maxLength  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    * pattern  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
     * type  策略参数类型
     *
     * @var string[]
@@ -33,6 +40,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
             'description' => 'string',
             'allowedValues' => 'object[]',
             'defaultValue' => 'string',
+            'minimum' => 'float',
+            'maximum' => 'float',
+            'minItems' => 'int',
+            'maxItems' => 'int',
+            'minLength' => 'int',
+            'maxLength' => 'int',
+            'pattern' => 'string',
             'type' => 'string'
     ];
 
@@ -42,6 +56,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     * description  策略参数描述
     * allowedValues  策略参数允许值列表
     * defaultValue  策略参数默认值
+    * minimum  策略参数的最小值，当参数类型为Integer或Float时生效。
+    * maximum  策略参数的最大值，当参数类型为Integer或Float时生效。
+    * minItems  策略参数的最小项数，当参数类型为Array时生效。
+    * maxItems  策略参数的最大项数，当参数类型为Array时生效。
+    * minLength  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    * maxLength  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    * pattern  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
     * type  策略参数类型
     *
     * @var string[]
@@ -51,6 +72,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
         'description' => null,
         'allowedValues' => null,
         'defaultValue' => null,
+        'minimum' => 'float',
+        'maximum' => 'float',
+        'minItems' => null,
+        'maxItems' => null,
+        'minLength' => null,
+        'maxLength' => null,
+        'pattern' => null,
         'type' => null
     ];
 
@@ -81,6 +109,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     * description  策略参数描述
     * allowedValues  策略参数允许值列表
     * defaultValue  策略参数默认值
+    * minimum  策略参数的最小值，当参数类型为Integer或Float时生效。
+    * maximum  策略参数的最大值，当参数类型为Integer或Float时生效。
+    * minItems  策略参数的最小项数，当参数类型为Array时生效。
+    * maxItems  策略参数的最大项数，当参数类型为Array时生效。
+    * minLength  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    * maxLength  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    * pattern  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
     * type  策略参数类型
     *
     * @var string[]
@@ -90,6 +125,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
             'description' => 'description',
             'allowedValues' => 'allowed_values',
             'defaultValue' => 'default_value',
+            'minimum' => 'minimum',
+            'maximum' => 'maximum',
+            'minItems' => 'min_items',
+            'maxItems' => 'max_items',
+            'minLength' => 'min_length',
+            'maxLength' => 'max_length',
+            'pattern' => 'pattern',
             'type' => 'type'
     ];
 
@@ -99,6 +141,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     * description  策略参数描述
     * allowedValues  策略参数允许值列表
     * defaultValue  策略参数默认值
+    * minimum  策略参数的最小值，当参数类型为Integer或Float时生效。
+    * maximum  策略参数的最大值，当参数类型为Integer或Float时生效。
+    * minItems  策略参数的最小项数，当参数类型为Array时生效。
+    * maxItems  策略参数的最大项数，当参数类型为Array时生效。
+    * minLength  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    * maxLength  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    * pattern  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
     * type  策略参数类型
     *
     * @var string[]
@@ -108,6 +157,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'allowedValues' => 'setAllowedValues',
             'defaultValue' => 'setDefaultValue',
+            'minimum' => 'setMinimum',
+            'maximum' => 'setMaximum',
+            'minItems' => 'setMinItems',
+            'maxItems' => 'setMaxItems',
+            'minLength' => 'setMinLength',
+            'maxLength' => 'setMaxLength',
+            'pattern' => 'setPattern',
             'type' => 'setType'
     ];
 
@@ -117,6 +173,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     * description  策略参数描述
     * allowedValues  策略参数允许值列表
     * defaultValue  策略参数默认值
+    * minimum  策略参数的最小值，当参数类型为Integer或Float时生效。
+    * maximum  策略参数的最大值，当参数类型为Integer或Float时生效。
+    * minItems  策略参数的最小项数，当参数类型为Array时生效。
+    * maxItems  策略参数的最大项数，当参数类型为Array时生效。
+    * minLength  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    * maxLength  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    * pattern  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
     * type  策略参数类型
     *
     * @var string[]
@@ -126,6 +189,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'allowedValues' => 'getAllowedValues',
             'defaultValue' => 'getDefaultValue',
+            'minimum' => 'getMinimum',
+            'maximum' => 'getMaximum',
+            'minItems' => 'getMinItems',
+            'maxItems' => 'getMaxItems',
+            'minLength' => 'getMinLength',
+            'maxLength' => 'getMaxLength',
+            'pattern' => 'getPattern',
             'type' => 'getType'
     ];
 
@@ -214,6 +284,13 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['allowedValues'] = isset($data['allowedValues']) ? $data['allowedValues'] : null;
         $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
+        $this->container['minimum'] = isset($data['minimum']) ? $data['minimum'] : null;
+        $this->container['maximum'] = isset($data['maximum']) ? $data['maximum'] : null;
+        $this->container['minItems'] = isset($data['minItems']) ? $data['minItems'] : null;
+        $this->container['maxItems'] = isset($data['maxItems']) ? $data['maxItems'] : null;
+        $this->container['minLength'] = isset($data['minLength']) ? $data['minLength'] : null;
+        $this->container['maxLength'] = isset($data['maxLength']) ? $data['maxLength'] : null;
+        $this->container['pattern'] = isset($data['pattern']) ? $data['pattern'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
@@ -340,6 +417,174 @@ class PolicyParameterDefinition implements ModelInterface, ArrayAccess
     public function setDefaultValue($defaultValue)
     {
         $this->container['defaultValue'] = $defaultValue;
+        return $this;
+    }
+
+    /**
+    * Gets minimum
+    *  策略参数的最小值，当参数类型为Integer或Float时生效。
+    *
+    * @return float|null
+    */
+    public function getMinimum()
+    {
+        return $this->container['minimum'];
+    }
+
+    /**
+    * Sets minimum
+    *
+    * @param float|null $minimum 策略参数的最小值，当参数类型为Integer或Float时生效。
+    *
+    * @return $this
+    */
+    public function setMinimum($minimum)
+    {
+        $this->container['minimum'] = $minimum;
+        return $this;
+    }
+
+    /**
+    * Gets maximum
+    *  策略参数的最大值，当参数类型为Integer或Float时生效。
+    *
+    * @return float|null
+    */
+    public function getMaximum()
+    {
+        return $this->container['maximum'];
+    }
+
+    /**
+    * Sets maximum
+    *
+    * @param float|null $maximum 策略参数的最大值，当参数类型为Integer或Float时生效。
+    *
+    * @return $this
+    */
+    public function setMaximum($maximum)
+    {
+        $this->container['maximum'] = $maximum;
+        return $this;
+    }
+
+    /**
+    * Gets minItems
+    *  策略参数的最小项数，当参数类型为Array时生效。
+    *
+    * @return int|null
+    */
+    public function getMinItems()
+    {
+        return $this->container['minItems'];
+    }
+
+    /**
+    * Sets minItems
+    *
+    * @param int|null $minItems 策略参数的最小项数，当参数类型为Array时生效。
+    *
+    * @return $this
+    */
+    public function setMinItems($minItems)
+    {
+        $this->container['minItems'] = $minItems;
+        return $this;
+    }
+
+    /**
+    * Gets maxItems
+    *  策略参数的最大项数，当参数类型为Array时生效。
+    *
+    * @return int|null
+    */
+    public function getMaxItems()
+    {
+        return $this->container['maxItems'];
+    }
+
+    /**
+    * Sets maxItems
+    *
+    * @param int|null $maxItems 策略参数的最大项数，当参数类型为Array时生效。
+    *
+    * @return $this
+    */
+    public function setMaxItems($maxItems)
+    {
+        $this->container['maxItems'] = $maxItems;
+        return $this;
+    }
+
+    /**
+    * Gets minLength
+    *  策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    *
+    * @return int|null
+    */
+    public function getMinLength()
+    {
+        return $this->container['minLength'];
+    }
+
+    /**
+    * Sets minLength
+    *
+    * @param int|null $minLength 策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+    *
+    * @return $this
+    */
+    public function setMinLength($minLength)
+    {
+        $this->container['minLength'] = $minLength;
+        return $this;
+    }
+
+    /**
+    * Gets maxLength
+    *  策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    *
+    * @return int|null
+    */
+    public function getMaxLength()
+    {
+        return $this->container['maxLength'];
+    }
+
+    /**
+    * Sets maxLength
+    *
+    * @param int|null $maxLength 策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+    *
+    * @return $this
+    */
+    public function setMaxLength($maxLength)
+    {
+        $this->container['maxLength'] = $maxLength;
+        return $this;
+    }
+
+    /**
+    * Gets pattern
+    *  策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
+    *
+    * @return string|null
+    */
+    public function getPattern()
+    {
+        return $this->container['pattern'];
+    }
+
+    /**
+    * Sets pattern
+    *
+    * @param string|null $pattern 策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
+    *
+    * @return $this
+    */
+    public function setPattern($pattern)
+    {
+        $this->container['pattern'] = $pattern;
         return $this;
     }
 

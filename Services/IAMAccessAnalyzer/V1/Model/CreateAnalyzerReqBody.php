@@ -21,7 +21,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  分析器的名称。
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  分析器的名称。
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  分析器的名称。
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  分析器的名称。
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  分析器的名称。
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
     *
     * @var string[]
@@ -235,7 +235,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  自定义标签列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null
     */
@@ -247,7 +247,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null $tags 自定义标签列表。
     *
     * @return $this
     */

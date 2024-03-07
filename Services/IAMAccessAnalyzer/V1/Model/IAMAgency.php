@@ -20,7 +20,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * trustPolicy  此策略的json格式策略文档。
+    * trustPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * trustPolicy  此策略的json格式策略文档。
+    * trustPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * trustPolicy  此策略的json格式策略文档。
+    * trustPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * trustPolicy  此策略的json格式策略文档。
+    * trustPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * trustPolicy  此策略的json格式策略文档。
+    * trustPolicy  该策略JSON格式策略文档。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustPolicy
-    *  此策略的json格式策略文档。
+    *  该策略JSON格式策略文档。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class IAMAgency implements ModelInterface, ArrayAccess
     /**
     * Sets trustPolicy
     *
-    * @param string $trustPolicy 此策略的json格式策略文档。
+    * @param string $trustPolicy 该策略JSON格式策略文档。
     *
     * @return $this
     */

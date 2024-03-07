@@ -24,7 +24,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
-    * deviceUse  已使用大小
+    * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -38,7 +38,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             'blockSize' => 'int',
             'fileSystem' => 'string',
             'inodeSize' => 'int',
-            'deviceUse' => 'int',
+            'deviceUse' => 'string',
             'mountPoint' => 'string',
             'name' => 'string',
             'size' => 'int',
@@ -52,7 +52,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
-    * deviceUse  已使用大小
+    * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -66,7 +66,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
         'blockSize' => 'int64',
         'fileSystem' => null,
         'inodeSize' => 'int32',
-        'deviceUse' => 'int32',
+        'deviceUse' => null,
         'mountPoint' => null,
         'name' => null,
         'size' => 'int64',
@@ -101,7 +101,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
-    * deviceUse  已使用大小
+    * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -129,7 +129,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
-    * deviceUse  已使用大小
+    * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -157,7 +157,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
-    * deviceUse  已使用大小
+    * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -287,11 +287,11 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             if (($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['deviceUse']) && ($this->container['deviceUse'] > 4294967296)) {
-                $invalidProperties[] = "invalid value for 'deviceUse', must be smaller than or equal to 4294967296.";
+            if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) > 255)) {
+                $invalidProperties[] = "invalid value for 'deviceUse', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['deviceUse']) && ($this->container['deviceUse'] < 0)) {
-                $invalidProperties[] = "invalid value for 'deviceUse', must be bigger than or equal to 0.";
+            if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) < 0)) {
+                $invalidProperties[] = "invalid value for 'deviceUse', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['mountPoint'] === null) {
             $invalidProperties[] = "'mountPoint' can't be null";
@@ -450,9 +450,9 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceUse
-    *  已使用大小
+    *  分区类型，普通分区，启动分区，系统分区
     *
-    * @return int|null
+    * @return string|null
     */
     public function getDeviceUse()
     {
@@ -462,7 +462,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets deviceUse
     *
-    * @param int|null $deviceUse 已使用大小
+    * @param string|null $deviceUse 分区类型，普通分区，启动分区，系统分区
     *
     * @return $this
     */

@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowSinkTaskDetailRespTopicsInfo implements ModelInterface, ArrayAccess
+class ShowStorageUsedSpaceResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class ShowSinkTaskDetailRespTopicsInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowSinkTaskDetailResp_topics_info';
+    protected static $openAPIModelName = 'ShowStorageUsedSpaceResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partitions  分区列表。
+    * nodeId  节点id。
+    * used  磁盘空间使用量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'topic' => 'string',
-            'partitions' => '\HuaweiCloud\SDK\Kafka\V2\Model\ShowSinkTaskDetailRespPartitions[]'
+            'nodeId' => 'string',
+            'used' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic名称。
-    * partitions  分区列表。
+    * nodeId  节点id。
+    * used  磁盘空间使用量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'topic' => null,
-        'partitions' => null
+        'nodeId' => null,
+        'used' => null
     ];
 
     /**
@@ -65,38 +66,38 @@ class ShowSinkTaskDetailRespTopicsInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic名称。
-    * partitions  分区列表。
+    * nodeId  节点id。
+    * used  磁盘空间使用量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'topic' => 'topic',
-            'partitions' => 'partitions'
+            'nodeId' => 'node_id',
+            'used' => 'used'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic名称。
-    * partitions  分区列表。
+    * nodeId  节点id。
+    * used  磁盘空间使用量。
     *
     * @var string[]
     */
     protected static $setters = [
-            'topic' => 'setTopic',
-            'partitions' => 'setPartitions'
+            'nodeId' => 'setNodeId',
+            'used' => 'setUsed'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic名称。
-    * partitions  分区列表。
+    * nodeId  节点id。
+    * used  磁盘空间使用量。
     *
     * @var string[]
     */
     protected static $getters = [
-            'topic' => 'getTopic',
-            'partitions' => 'getPartitions'
+            'nodeId' => 'getNodeId',
+            'used' => 'getUsed'
     ];
 
     /**
@@ -157,8 +158,8 @@ class ShowSinkTaskDetailRespTopicsInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
-        $this->container['partitions'] = isset($data['partitions']) ? $data['partitions'] : null;
+        $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
+        $this->container['used'] = isset($data['used']) ? $data['used'] : null;
     }
 
     /**
@@ -184,50 +185,50 @@ class ShowSinkTaskDetailRespTopicsInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets topic
-    *  topic名称。
+    * Gets nodeId
+    *  节点id。
     *
     * @return string|null
     */
-    public function getTopic()
+    public function getNodeId()
     {
-        return $this->container['topic'];
+        return $this->container['nodeId'];
     }
 
     /**
-    * Sets topic
+    * Sets nodeId
     *
-    * @param string|null $topic topic名称。
+    * @param string|null $nodeId 节点id。
     *
     * @return $this
     */
-    public function setTopic($topic)
+    public function setNodeId($nodeId)
     {
-        $this->container['topic'] = $topic;
+        $this->container['nodeId'] = $nodeId;
         return $this;
     }
 
     /**
-    * Gets partitions
-    *  分区列表。
+    * Gets used
+    *  磁盘空间使用量。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowSinkTaskDetailRespPartitions[]|null
+    * @return string|null
     */
-    public function getPartitions()
+    public function getUsed()
     {
-        return $this->container['partitions'];
+        return $this->container['used'];
     }
 
     /**
-    * Sets partitions
+    * Sets used
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowSinkTaskDetailRespPartitions[]|null $partitions 分区列表。
+    * @param string|null $used 磁盘空间使用量。
     *
     * @return $this
     */
-    public function setPartitions($partitions)
+    public function setUsed($used)
     {
-        $this->container['partitions'] = $partitions;
+        $this->container['used'] = $used;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  要更新的调查结果的ID。
-    * resourceUrn  唯一的资源名称。
-    * status  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * ids  要更新的访问分析结果唯一标识符数组。
+    * resourceUrn  访问分析的唯一资源标识。
+    * status  要更新的访问分析结果状态。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  要更新的调查结果的ID。
-    * resourceUrn  唯一的资源名称。
-    * status  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * ids  要更新的访问分析结果唯一标识符数组。
+    * resourceUrn  访问分析的唯一资源标识。
+    * status  要更新的访问分析结果状态。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  要更新的调查结果的ID。
-    * resourceUrn  唯一的资源名称。
-    * status  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * ids  要更新的访问分析结果唯一标识符数组。
+    * resourceUrn  访问分析的唯一资源标识。
+    * status  要更新的访问分析结果状态。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  要更新的调查结果的ID。
-    * resourceUrn  唯一的资源名称。
-    * status  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * ids  要更新的访问分析结果唯一标识符数组。
+    * resourceUrn  访问分析的唯一资源标识。
+    * status  要更新的访问分析结果状态。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  要更新的调查结果的ID。
-    * resourceUrn  唯一的资源名称。
-    * status  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * ids  要更新的访问分析结果唯一标识符数组。
+    * resourceUrn  访问分析的唯一资源标识。
+    * status  要更新的访问分析结果状态。
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  要更新的调查结果的ID。
+    *  要更新的访问分析结果唯一标识符数组。
     *
     * @return string[]|null
     */
@@ -237,7 +237,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[]|null $ids 要更新的调查结果的ID。
+    * @param string[]|null $ids 要更新的访问分析结果唯一标识符数组。
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceUrn
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceUrn
     *
-    * @param string|null $resourceUrn 唯一的资源名称。
+    * @param string|null $resourceUrn 访问分析的唯一资源标识。
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    *  要更新的访问分析结果状态。
     *
     * @return string
     */
@@ -285,7 +285,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+    * @param string $status 要更新的访问分析结果状态。
     *
     * @return $this
     */

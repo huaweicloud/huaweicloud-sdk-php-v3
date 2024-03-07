@@ -21,7 +21,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * analyzerId  分析器的唯一标识符。
-    * findingId  要检索的结果的ID。
+    * findingId  访问分析结果的唯一标识符。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * analyzerId  分析器的唯一标识符。
-    * findingId  要检索的结果的ID。
+    * findingId  访问分析结果的唯一标识符。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * analyzerId  分析器的唯一标识符。
-    * findingId  要检索的结果的ID。
+    * findingId  访问分析结果的唯一标识符。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * analyzerId  分析器的唯一标识符。
-    * findingId  要检索的结果的ID。
+    * findingId  访问分析结果的唯一标识符。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * analyzerId  分析器的唯一标识符。
-    * findingId  要检索的结果的ID。
+    * findingId  访问分析结果的唯一标识符。
     *
     * @var string[]
     */
@@ -233,7 +233,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets findingId
-    *  要检索的结果的ID。
+    *  访问分析结果的唯一标识符。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class ShowFindingRequest implements ModelInterface, ArrayAccess
     /**
     * Sets findingId
     *
-    * @param string $findingId 要检索的结果的ID。
+    * @param string $findingId 访问分析结果的唯一标识符。
     *
     * @return $this
     */

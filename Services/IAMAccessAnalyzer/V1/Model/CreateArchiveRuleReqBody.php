@@ -20,8 +20,8 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filters  filters
-    * name  创建归档规则的名称。
+    * filters  匹配要返回的访问分析结果的筛选器。
+    * name  创建存档规则的名称。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filters  filters
-    * name  创建归档规则的名称。
+    * filters  匹配要返回的访问分析结果的筛选器。
+    * name  创建存档规则的名称。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filters  filters
-    * name  创建归档规则的名称。
+    * filters  匹配要返回的访问分析结果的筛选器。
+    * name  创建存档规则的名称。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filters  filters
-    * name  创建归档规则的名称。
+    * filters  匹配要返回的访问分析结果的筛选器。
+    * name  创建存档规则的名称。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filters  filters
-    * name  创建归档规则的名称。
+    * filters  匹配要返回的访问分析结果的筛选器。
+    * name  创建存档规则的名称。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets filters
-    *  filters
+    *  匹配要返回的访问分析结果的筛选器。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]
     */
@@ -212,7 +212,7 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets filters
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters filters
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters 匹配要返回的访问分析结果的筛选器。
     *
     * @return $this
     */
@@ -224,7 +224,7 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建归档规则的名称。
+    *  创建存档规则的名称。
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class CreateArchiveRuleReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 创建归档规则的名称。
+    * @param string $name 创建存档规则的名称。
     *
     * @return $this
     */

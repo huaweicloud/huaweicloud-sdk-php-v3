@@ -22,24 +22,28 @@ class ShowWorkloadQueueRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID
     * queueName  资源队列名
+    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'queueName' => 'string'
+            'queueName' => 'string',
+            'logicalClusterName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID
     * queueName  资源队列名
+    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'queueName' => null
+        'queueName' => null,
+        'logicalClusterName' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowWorkloadQueueRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  集群ID
     * queueName  资源队列名
+    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'queueName' => 'queue_name'
+            'queueName' => 'queue_name',
+            'logicalClusterName' => 'logical_cluster_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID
     * queueName  资源队列名
+    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'queueName' => 'setQueueName'
+            'queueName' => 'setQueueName',
+            'logicalClusterName' => 'setLogicalClusterName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID
     * queueName  资源队列名
+    * logicalClusterName  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'queueName' => 'getQueueName'
+            'queueName' => 'getQueueName',
+            'logicalClusterName' => 'getLogicalClusterName'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowWorkloadQueueRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
+        $this->container['logicalClusterName'] = isset($data['logicalClusterName']) ? $data['logicalClusterName'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class ShowWorkloadQueueRequest implements ModelInterface, ArrayAccess
     public function setQueueName($queueName)
     {
         $this->container['queueName'] = $queueName;
+        return $this;
+    }
+
+    /**
+    * Gets logicalClusterName
+    *  逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
+    *
+    * @return string|null
+    */
+    public function getLogicalClusterName()
+    {
+        return $this->container['logicalClusterName'];
+    }
+
+    /**
+    * Sets logicalClusterName
+    *
+    * @param string|null $logicalClusterName 逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
+    *
+    * @return $this
+    */
+    public function setLogicalClusterName($logicalClusterName)
+    {
+        $this->container['logicalClusterName'] = $logicalClusterName;
         return $this;
     }
 

@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\CodeArtsPipeline\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListSinkTasksResponse implements ModelInterface, ArrayAccess
+class OutputRespOutputResult implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,38 +16,30 @@ class ListSinkTasksResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListSinkTasksResponse';
+    protected static $openAPIModelName = 'OutputResp_output_result';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tasks  转储任务列表。
-    * totalNumber  转储任务总数。
-    * maxTasks  总的支持任务个数。
-    * quotaTasks  任务总数的配额。
+    * key  output名称
+    * value  output值
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tasks' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListSinkTasksRespTasks[]',
-            'totalNumber' => 'int',
-            'maxTasks' => 'int',
-            'quotaTasks' => 'int'
+            'key' => 'string',
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tasks  转储任务列表。
-    * totalNumber  转储任务总数。
-    * maxTasks  总的支持任务个数。
-    * quotaTasks  任务总数的配额。
+    * key  output名称
+    * value  output值
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tasks' => null,
-        'totalNumber' => null,
-        'maxTasks' => null,
-        'quotaTasks' => null
+        'key' => null,
+        'value' => null
     ];
 
     /**
@@ -74,50 +65,38 @@ class ListSinkTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tasks  转储任务列表。
-    * totalNumber  转储任务总数。
-    * maxTasks  总的支持任务个数。
-    * quotaTasks  任务总数的配额。
+    * key  output名称
+    * value  output值
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tasks' => 'tasks',
-            'totalNumber' => 'total_number',
-            'maxTasks' => 'max_tasks',
-            'quotaTasks' => 'quota_tasks'
+            'key' => 'key',
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tasks  转储任务列表。
-    * totalNumber  转储任务总数。
-    * maxTasks  总的支持任务个数。
-    * quotaTasks  任务总数的配额。
+    * key  output名称
+    * value  output值
     *
     * @var string[]
     */
     protected static $setters = [
-            'tasks' => 'setTasks',
-            'totalNumber' => 'setTotalNumber',
-            'maxTasks' => 'setMaxTasks',
-            'quotaTasks' => 'setQuotaTasks'
+            'key' => 'setKey',
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tasks  转储任务列表。
-    * totalNumber  转储任务总数。
-    * maxTasks  总的支持任务个数。
-    * quotaTasks  任务总数的配额。
+    * key  output名称
+    * value  output值
     *
     * @var string[]
     */
     protected static $getters = [
-            'tasks' => 'getTasks',
-            'totalNumber' => 'getTotalNumber',
-            'maxTasks' => 'getMaxTasks',
-            'quotaTasks' => 'getQuotaTasks'
+            'key' => 'getKey',
+            'value' => 'getValue'
     ];
 
     /**
@@ -178,10 +157,8 @@ class ListSinkTasksResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
-        $this->container['totalNumber'] = isset($data['totalNumber']) ? $data['totalNumber'] : null;
-        $this->container['maxTasks'] = isset($data['maxTasks']) ? $data['maxTasks'] : null;
-        $this->container['quotaTasks'] = isset($data['quotaTasks']) ? $data['quotaTasks'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -207,98 +184,50 @@ class ListSinkTasksResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets tasks
-    *  转储任务列表。
+    * Gets key
+    *  output名称
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListSinkTasksRespTasks[]|null
+    * @return string|null
     */
-    public function getTasks()
+    public function getKey()
     {
-        return $this->container['tasks'];
+        return $this->container['key'];
     }
 
     /**
-    * Sets tasks
+    * Sets key
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListSinkTasksRespTasks[]|null $tasks 转储任务列表。
+    * @param string|null $key output名称
     *
     * @return $this
     */
-    public function setTasks($tasks)
+    public function setKey($key)
     {
-        $this->container['tasks'] = $tasks;
+        $this->container['key'] = $key;
         return $this;
     }
 
     /**
-    * Gets totalNumber
-    *  转储任务总数。
+    * Gets value
+    *  output值
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTotalNumber()
+    public function getValue()
     {
-        return $this->container['totalNumber'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets totalNumber
+    * Sets value
     *
-    * @param int|null $totalNumber 转储任务总数。
+    * @param string|null $value output值
     *
     * @return $this
     */
-    public function setTotalNumber($totalNumber)
+    public function setValue($value)
     {
-        $this->container['totalNumber'] = $totalNumber;
-        return $this;
-    }
-
-    /**
-    * Gets maxTasks
-    *  总的支持任务个数。
-    *
-    * @return int|null
-    */
-    public function getMaxTasks()
-    {
-        return $this->container['maxTasks'];
-    }
-
-    /**
-    * Sets maxTasks
-    *
-    * @param int|null $maxTasks 总的支持任务个数。
-    *
-    * @return $this
-    */
-    public function setMaxTasks($maxTasks)
-    {
-        $this->container['maxTasks'] = $maxTasks;
-        return $this;
-    }
-
-    /**
-    * Gets quotaTasks
-    *  任务总数的配额。
-    *
-    * @return int|null
-    */
-    public function getQuotaTasks()
-    {
-        return $this->container['quotaTasks'];
-    }
-
-    /**
-    * Sets quotaTasks
-    *
-    * @param int|null $quotaTasks 任务总数的配额。
-    *
-    * @return $this
-    */
-    public function setQuotaTasks($quotaTasks)
-    {
-        $this->container['quotaTasks'] = $quotaTasks;
+        $this->container['value'] = $value;
         return $this;
     }
 

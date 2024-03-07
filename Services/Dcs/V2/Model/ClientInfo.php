@@ -22,6 +22,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  客户端ID
     * addr  客户端的地址和端口
+    * fd  套接字所使用的文件描述符。
     * name  客户端的名称
     * cmd  最近一次执行的命令
     * age  已连接时长（单位：秒）
@@ -37,12 +38,16 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * oll  输出列表包含的对象数量（当输出缓冲区没有剩余空间时，命令回复会以字符串对象的形式被入队到这个队列里）
     * omem  输出缓冲区和输出列表占用的内存总量
     * events  文件描述符事件
+    * network  客户端所使用的网络类型。
+    * peer  单机，主备和cluster实例地址和端口。
+    * user  客户端用户。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'addr' => 'string',
+            'fd' => 'string',
             'name' => 'string',
             'cmd' => 'string',
             'age' => 'int',
@@ -57,13 +62,17 @@ class ClientInfo implements ModelInterface, ArrayAccess
             'obl' => 'int',
             'oll' => 'int',
             'omem' => 'int',
-            'events' => 'string'
+            'events' => 'string',
+            'network' => 'string',
+            'peer' => 'string',
+            'user' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  客户端ID
     * addr  客户端的地址和端口
+    * fd  套接字所使用的文件描述符。
     * name  客户端的名称
     * cmd  最近一次执行的命令
     * age  已连接时长（单位：秒）
@@ -79,12 +88,16 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * oll  输出列表包含的对象数量（当输出缓冲区没有剩余空间时，命令回复会以字符串对象的形式被入队到这个队列里）
     * omem  输出缓冲区和输出列表占用的内存总量
     * events  文件描述符事件
+    * network  客户端所使用的网络类型。
+    * peer  单机，主备和cluster实例地址和端口。
+    * user  客户端用户。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'addr' => null,
+        'fd' => null,
         'name' => null,
         'cmd' => null,
         'age' => 'int32',
@@ -99,7 +112,10 @@ class ClientInfo implements ModelInterface, ArrayAccess
         'obl' => 'int32',
         'oll' => 'int32',
         'omem' => 'int32',
-        'events' => null
+        'events' => null,
+        'network' => null,
+        'peer' => null,
+        'user' => null
     ];
 
     /**
@@ -127,6 +143,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  客户端ID
     * addr  客户端的地址和端口
+    * fd  套接字所使用的文件描述符。
     * name  客户端的名称
     * cmd  最近一次执行的命令
     * age  已连接时长（单位：秒）
@@ -142,12 +159,16 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * oll  输出列表包含的对象数量（当输出缓冲区没有剩余空间时，命令回复会以字符串对象的形式被入队到这个队列里）
     * omem  输出缓冲区和输出列表占用的内存总量
     * events  文件描述符事件
+    * network  客户端所使用的网络类型。
+    * peer  单机，主备和cluster实例地址和端口。
+    * user  客户端用户。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'addr' => 'addr',
+            'fd' => 'fd',
             'name' => 'name',
             'cmd' => 'cmd',
             'age' => 'age',
@@ -162,13 +183,17 @@ class ClientInfo implements ModelInterface, ArrayAccess
             'obl' => 'obl',
             'oll' => 'oll',
             'omem' => 'omem',
-            'events' => 'events'
+            'events' => 'events',
+            'network' => 'network',
+            'peer' => 'peer',
+            'user' => 'user'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  客户端ID
     * addr  客户端的地址和端口
+    * fd  套接字所使用的文件描述符。
     * name  客户端的名称
     * cmd  最近一次执行的命令
     * age  已连接时长（单位：秒）
@@ -184,12 +209,16 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * oll  输出列表包含的对象数量（当输出缓冲区没有剩余空间时，命令回复会以字符串对象的形式被入队到这个队列里）
     * omem  输出缓冲区和输出列表占用的内存总量
     * events  文件描述符事件
+    * network  客户端所使用的网络类型。
+    * peer  单机，主备和cluster实例地址和端口。
+    * user  客户端用户。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'addr' => 'setAddr',
+            'fd' => 'setFd',
             'name' => 'setName',
             'cmd' => 'setCmd',
             'age' => 'setAge',
@@ -204,13 +233,17 @@ class ClientInfo implements ModelInterface, ArrayAccess
             'obl' => 'setObl',
             'oll' => 'setOll',
             'omem' => 'setOmem',
-            'events' => 'setEvents'
+            'events' => 'setEvents',
+            'network' => 'setNetwork',
+            'peer' => 'setPeer',
+            'user' => 'setUser'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  客户端ID
     * addr  客户端的地址和端口
+    * fd  套接字所使用的文件描述符。
     * name  客户端的名称
     * cmd  最近一次执行的命令
     * age  已连接时长（单位：秒）
@@ -226,12 +259,16 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * oll  输出列表包含的对象数量（当输出缓冲区没有剩余空间时，命令回复会以字符串对象的形式被入队到这个队列里）
     * omem  输出缓冲区和输出列表占用的内存总量
     * events  文件描述符事件
+    * network  客户端所使用的网络类型。
+    * peer  单机，主备和cluster实例地址和端口。
+    * user  客户端用户。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'addr' => 'getAddr',
+            'fd' => 'getFd',
             'name' => 'getName',
             'cmd' => 'getCmd',
             'age' => 'getAge',
@@ -246,7 +283,10 @@ class ClientInfo implements ModelInterface, ArrayAccess
             'obl' => 'getObl',
             'oll' => 'getOll',
             'omem' => 'getOmem',
-            'events' => 'getEvents'
+            'events' => 'getEvents',
+            'network' => 'getNetwork',
+            'peer' => 'getPeer',
+            'user' => 'getUser'
     ];
 
     /**
@@ -324,6 +364,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
+        $this->container['fd'] = isset($data['fd']) ? $data['fd'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['cmd'] = isset($data['cmd']) ? $data['cmd'] : null;
         $this->container['age'] = isset($data['age']) ? $data['age'] : null;
@@ -339,6 +380,9 @@ class ClientInfo implements ModelInterface, ArrayAccess
         $this->container['oll'] = isset($data['oll']) ? $data['oll'] : null;
         $this->container['omem'] = isset($data['omem']) ? $data['omem'] : null;
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
+        $this->container['network'] = isset($data['network']) ? $data['network'] : null;
+        $this->container['peer'] = isset($data['peer']) ? $data['peer'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -416,6 +460,30 @@ class ClientInfo implements ModelInterface, ArrayAccess
     public function setAddr($addr)
     {
         $this->container['addr'] = $addr;
+        return $this;
+    }
+
+    /**
+    * Gets fd
+    *  套接字所使用的文件描述符。
+    *
+    * @return string|null
+    */
+    public function getFd()
+    {
+        return $this->container['fd'];
+    }
+
+    /**
+    * Sets fd
+    *
+    * @param string|null $fd 套接字所使用的文件描述符。
+    *
+    * @return $this
+    */
+    public function setFd($fd)
+    {
+        $this->container['fd'] = $fd;
         return $this;
     }
 
@@ -776,6 +844,78 @@ class ClientInfo implements ModelInterface, ArrayAccess
     public function setEvents($events)
     {
         $this->container['events'] = $events;
+        return $this;
+    }
+
+    /**
+    * Gets network
+    *  客户端所使用的网络类型。
+    *
+    * @return string|null
+    */
+    public function getNetwork()
+    {
+        return $this->container['network'];
+    }
+
+    /**
+    * Sets network
+    *
+    * @param string|null $network 客户端所使用的网络类型。
+    *
+    * @return $this
+    */
+    public function setNetwork($network)
+    {
+        $this->container['network'] = $network;
+        return $this;
+    }
+
+    /**
+    * Gets peer
+    *  单机，主备和cluster实例地址和端口。
+    *
+    * @return string|null
+    */
+    public function getPeer()
+    {
+        return $this->container['peer'];
+    }
+
+    /**
+    * Sets peer
+    *
+    * @param string|null $peer 单机，主备和cluster实例地址和端口。
+    *
+    * @return $this
+    */
+    public function setPeer($peer)
+    {
+        $this->container['peer'] = $peer;
+        return $this;
+    }
+
+    /**
+    * Gets user
+    *  客户端用户。
+    *
+    * @return string|null
+    */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+    * Sets user
+    *
+    * @param string|null $user 客户端用户。
+    *
+    * @return $this
+    */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
         return $this;
     }
 

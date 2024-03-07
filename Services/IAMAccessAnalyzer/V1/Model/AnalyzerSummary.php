@@ -22,14 +22,14 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  唯一的资源名称。
-    * lastResourceAnalyzedAt  分析最近分析的资源的时间。
+    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
-    * status  分析器的状态
+    * status  分析器的状态。
     * statusReason  statusReason
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -50,14 +50,14 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  唯一的资源名称。
-    * lastResourceAnalyzedAt  分析最近分析的资源的时间。
+    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
-    * status  分析器的状态
+    * status  分析器的状态。
     * statusReason  statusReason
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -99,14 +99,14 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * and the value is the original name
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  唯一的资源名称。
-    * lastResourceAnalyzedAt  分析最近分析的资源的时间。
+    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
-    * status  分析器的状态
+    * status  分析器的状态。
     * statusReason  statusReason
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -127,14 +127,14 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  唯一的资源名称。
-    * lastResourceAnalyzedAt  分析最近分析的资源的时间。
+    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
-    * status  分析器的状态
+    * status  分析器的状态。
     * statusReason  statusReason
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -155,14 +155,14 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  唯一的资源名称。
-    * lastResourceAnalyzedAt  分析最近分析的资源的时间。
+    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
-    * status  分析器的状态
+    * status  分析器的状态。
     * statusReason  statusReason
-    * tags  tags
+    * tags  自定义标签列表。
     * type  type
-    * urn  唯一的资源名称。
+    * urn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -388,7 +388,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastAnalyzedResource
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets lastAnalyzedResource
     *
-    * @param string|null $lastAnalyzedResource 唯一的资源名称。
+    * @param string|null $lastAnalyzedResource 访问分析的唯一资源标识。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastResourceAnalyzedAt
-    *  分析最近分析的资源的时间。
+    *  最近一次分析资源的时间。
     *
     * @return \DateTime|null
     */
@@ -424,7 +424,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets lastResourceAnalyzedAt
     *
-    * @param \DateTime|null $lastResourceAnalyzedAt 分析最近分析的资源的时间。
+    * @param \DateTime|null $lastResourceAnalyzedAt 最近一次分析资源的时间。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  分析器的状态
+    *  分析器的状态。
     *
     * @return string
     */
@@ -472,7 +472,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 分析器的状态
+    * @param string $status 分析器的状态。
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  自定义标签列表。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null
     */
@@ -520,7 +520,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]|null $tags 自定义标签列表。
     *
     * @return $this
     */
@@ -556,7 +556,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string
     */
@@ -568,7 +568,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string $urn 唯一的资源名称。
+    * @param string $urn 访问分析的唯一资源标识。
     *
     * @return $this
     */

@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
+class UpdateDatabasesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateSinkTaskRequest';
+    protected static $openAPIModelName = 'UpdateDatabasesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * body  body
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'connectorId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\CreateSinkTaskReq'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * body  body
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'connectorId' => null,
-        'body' => null
+        'jobId' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * body  body
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'connectorId' => 'connector_id',
-            'body' => 'body'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * body  body
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'connectorId' => 'setConnectorId',
-            'body' => 'setBody'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * body  body
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'connectorId' => 'getConnectorId',
-            'body' => 'getBody'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -157,8 +148,7 @@ class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['connectorId'] = isset($data['connectorId']) ? $data['connectorId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -169,9 +159,6 @@ class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['connectorId'] === null) {
-            $invalidProperties[] = "'connectorId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +174,26 @@ class CreateSinkTaskRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connectorId
-    *  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * Gets jobId
+    *  任务ID。
     *
-    * @return string
+    * @return string|null
     */
-    public function getConnectorId()
+    public function getJobId()
     {
-        return $this->container['connectorId'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets connectorId
+    * Sets jobId
     *
-    * @param string $connectorId 实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * @param string|null $jobId 任务ID。
     *
     * @return $this
     */
-    public function setConnectorId($connectorId)
+    public function setJobId($jobId)
     {
-        $this->container['connectorId'] = $connectorId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\CreateSinkTaskReq|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\CreateSinkTaskReq|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

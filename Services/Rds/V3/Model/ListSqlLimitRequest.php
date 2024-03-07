@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
+class ListSqlLimitRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,38 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ConnectorOrderRequestBody';
+    protected static $openAPIModelName = 'ListSqlLimitRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  需要关闭connector的实例id，和请求路径上的一致。
-    * url  提交关闭connector订单后前端跳转的页面
+    * instanceId  实例ID
+    * dbName  数据库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'url' => 'string'
+            'dbName' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  需要关闭connector的实例id，和请求路径上的一致。
-    * url  提交关闭connector订单后前端跳转的页面
+    * instanceId  实例ID
+    * dbName  数据库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'url' => null
+        'dbName' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -65,38 +73,50 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  需要关闭connector的实例id，和请求路径上的一致。
-    * url  提交关闭connector订单后前端跳转的页面
+    * instanceId  实例ID
+    * dbName  数据库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'url' => 'url'
+            'dbName' => 'db_name',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  需要关闭connector的实例id，和请求路径上的一致。
-    * url  提交关闭connector订单后前端跳转的页面
+    * instanceId  实例ID
+    * dbName  数据库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'url' => 'setUrl'
+            'dbName' => 'setDbName',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  需要关闭connector的实例id，和请求路径上的一致。
-    * url  提交关闭connector订单后前端跳转的页面
+    * instanceId  实例ID
+    * dbName  数据库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'url' => 'getUrl'
+            'dbName' => 'getDbName',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -158,7 +178,9 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -171,6 +193,9 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['dbName'] === null) {
+            $invalidProperties[] = "'dbName' can't be null";
         }
         return $invalidProperties;
     }
@@ -188,7 +213,7 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  需要关闭connector的实例id，和请求路径上的一致。
+    *  实例ID
     *
     * @return string
     */
@@ -200,7 +225,7 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 需要关闭connector的实例id，和请求路径上的一致。
+    * @param string $instanceId 实例ID
     *
     * @return $this
     */
@@ -211,26 +236,74 @@ class ConnectorOrderRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets url
-    *  提交关闭connector订单后前端跳转的页面
+    * Gets dbName
+    *  数据库名称
     *
-    * @return string|null
+    * @return string
     */
-    public function getUrl()
+    public function getDbName()
     {
-        return $this->container['url'];
+        return $this->container['dbName'];
     }
 
     /**
-    * Sets url
+    * Sets dbName
     *
-    * @param string|null $url 提交关闭connector订单后前端跳转的页面
+    * @param string $dbName 数据库名称
     *
     * @return $this
     */
-    public function setUrl($url)
+    public function setDbName($dbName)
     {
-        $this->container['url'] = $url;
+        $this->container['dbName'] = $dbName;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

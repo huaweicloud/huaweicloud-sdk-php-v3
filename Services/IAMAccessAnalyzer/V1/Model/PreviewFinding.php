@@ -20,19 +20,19 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  访问信任区域内资源的外部主体。
-    * changeType  结果状态的变化
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * existingFindingId  要检索的结果的ID。
+    * action  允许外部主体使用的操作。
+    * changeType  结果状态的变化。
+    * condition  分析的策略语句中导致访问预览分析结果的条件。
+    * createdAt  生成预览访问分析结果的时间。
+    * existingFindingId  访问分析结果的唯一标识符。
     * existingFindingStatus  结果的当前状态。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resource  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
     *
     * @var string[]
@@ -56,19 +56,19 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  访问信任区域内资源的外部主体。
-    * changeType  结果状态的变化
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * existingFindingId  要检索的结果的ID。
+    * action  允许外部主体使用的操作。
+    * changeType  结果状态的变化。
+    * condition  分析的策略语句中导致访问预览分析结果的条件。
+    * createdAt  生成预览访问分析结果的时间。
+    * existingFindingId  访问分析结果的唯一标识符。
     * existingFindingStatus  结果的当前状态。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resource  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
     *
     * @var string[]
@@ -113,19 +113,19 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  访问信任区域内资源的外部主体。
-    * changeType  结果状态的变化
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * existingFindingId  要检索的结果的ID。
+    * action  允许外部主体使用的操作。
+    * changeType  结果状态的变化。
+    * condition  分析的策略语句中导致访问预览分析结果的条件。
+    * createdAt  生成预览访问分析结果的时间。
+    * existingFindingId  访问分析结果的唯一标识符。
     * existingFindingStatus  结果的当前状态。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resource  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
     *
     * @var string[]
@@ -149,19 +149,19 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  访问信任区域内资源的外部主体。
-    * changeType  结果状态的变化
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * existingFindingId  要检索的结果的ID。
+    * action  允许外部主体使用的操作。
+    * changeType  结果状态的变化。
+    * condition  分析的策略语句中导致访问预览分析结果的条件。
+    * createdAt  生成预览访问分析结果的时间。
+    * existingFindingId  访问分析结果的唯一标识符。
     * existingFindingStatus  结果的当前状态。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resource  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
     *
     * @var string[]
@@ -185,19 +185,19 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  访问信任区域内资源的外部主体。
-    * changeType  结果状态的变化
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * existingFindingId  要检索的结果的ID。
+    * action  允许外部主体使用的操作。
+    * changeType  结果状态的变化。
+    * condition  分析的策略语句中导致访问预览分析结果的条件。
+    * createdAt  生成预览访问分析结果的时间。
+    * existingFindingId  访问分析结果的唯一标识符。
     * existingFindingStatus  结果的当前状态。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resource  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
     *
     * @var string[]
@@ -455,7 +455,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  访问信任区域内资源的外部主体。
+    *  允许外部主体使用的操作。
     *
     * @return string[]
     */
@@ -467,7 +467,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string[] $action 访问信任区域内资源的外部主体。
+    * @param string[] $action 允许外部主体使用的操作。
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeType
-    *  结果状态的变化
+    *  结果状态的变化。
     *
     * @return string
     */
@@ -491,7 +491,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets changeType
     *
-    * @param string $changeType 结果状态的变化
+    * @param string $changeType 结果状态的变化。
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  condition
+    *  分析的策略语句中导致访问预览分析结果的条件。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]
     */
@@ -515,7 +515,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[] $condition condition
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[] $condition 分析的策略语句中导致访问预览分析结果的条件。
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  生成查找结果的时间。
+    *  生成预览访问分析结果的时间。
     *
     * @return \DateTime
     */
@@ -539,7 +539,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 生成查找结果的时间。
+    * @param \DateTime $createdAt 生成预览访问分析结果的时间。
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets existingFindingId
-    *  要检索的结果的ID。
+    *  访问分析结果的唯一标识符。
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets existingFindingId
     *
-    * @param string|null $existingFindingId 要检索的结果的ID。
+    * @param string|null $existingFindingId 访问分析结果的唯一标识符。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  要检索的结果的ID。
+    *  访问分析结果的唯一标识符。
     *
     * @return string
     */
@@ -611,7 +611,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 要检索的结果的ID。
+    * @param string $id 访问分析结果的唯一标识符。
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublic
-    *  表示生成查找结果的策略是否允许公共访问资源。
+    *  表示生成访问分析结果的策略是否允许公共访问资源。
     *
     * @return bool
     */
@@ -635,7 +635,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets isPublic
     *
-    * @param bool $isPublic 表示生成查找结果的策略是否允许公共访问资源。
+    * @param bool $isPublic 表示生成访问分析结果的策略是否允许公共访问资源。
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string
     */
@@ -683,7 +683,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string $resource 唯一的资源名称。
+    * @param string $resource 访问分析的唯一资源标识。
     *
     * @return $this
     */
@@ -695,7 +695,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的帐户ID。
+    *  拥有资源的账户ID。
     *
     * @return string
     */
@@ -707,7 +707,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的帐户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账户ID。
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  sources
+    *  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null
     */
@@ -755,7 +755,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null $sources sources
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null $sources 访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     *
     * @return $this
     */

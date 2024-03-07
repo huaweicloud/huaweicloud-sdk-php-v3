@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\CodeArtsPipeline\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListSinkTasksRequest implements ModelInterface, ArrayAccess
+class ArtifactHashCode implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ListSinkTasksRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListSinkTasksRequest';
+    protected static $openAPIModelName = 'Artifact_hash_code';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * hashType  哈希算法
+    * hashValue  哈希值
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'connectorId' => 'string'
+            'hashType' => 'string',
+            'hashValue' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * hashType  哈希算法
+    * hashValue  哈希值
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'connectorId' => null
+        'hashType' => null,
+        'hashValue' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ListSinkTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * hashType  哈希算法
+    * hashValue  哈希值
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'connectorId' => 'connector_id'
+            'hashType' => 'hash_type',
+            'hashValue' => 'hash_value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * hashType  哈希算法
+    * hashValue  哈希值
     *
     * @var string[]
     */
     protected static $setters = [
-            'connectorId' => 'setConnectorId'
+            'hashType' => 'setHashType',
+            'hashValue' => 'setHashValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * hashType  哈希算法
+    * hashValue  哈希值
     *
     * @var string[]
     */
     protected static $getters = [
-            'connectorId' => 'getConnectorId'
+            'hashType' => 'getHashType',
+            'hashValue' => 'getHashValue'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ListSinkTasksRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['connectorId'] = isset($data['connectorId']) ? $data['connectorId'] : null;
+        $this->container['hashType'] = isset($data['hashType']) ? $data['hashType'] : null;
+        $this->container['hashValue'] = isset($data['hashValue']) ? $data['hashValue'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class ListSinkTasksRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['connectorId'] === null) {
-            $invalidProperties[] = "'connectorId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +184,50 @@ class ListSinkTasksRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connectorId
-    *  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * Gets hashType
+    *  哈希算法
     *
-    * @return string
+    * @return string|null
     */
-    public function getConnectorId()
+    public function getHashType()
     {
-        return $this->container['connectorId'];
+        return $this->container['hashType'];
     }
 
     /**
-    * Sets connectorId
+    * Sets hashType
     *
-    * @param string $connectorId 实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * @param string|null $hashType 哈希算法
     *
     * @return $this
     */
-    public function setConnectorId($connectorId)
+    public function setHashType($hashType)
     {
-        $this->container['connectorId'] = $connectorId;
+        $this->container['hashType'] = $hashType;
+        return $this;
+    }
+
+    /**
+    * Gets hashValue
+    *  哈希值
+    *
+    * @return string|null
+    */
+    public function getHashValue()
+    {
+        return $this->container['hashValue'];
+    }
+
+    /**
+    * Sets hashValue
+    *
+    * @param string|null $hashValue 哈希值
+    *
+    * @return $this
+    */
+    public function setHashValue($hashValue)
+    {
+        $this->container['hashValue'] = $hashValue;
         return $this;
     }
 

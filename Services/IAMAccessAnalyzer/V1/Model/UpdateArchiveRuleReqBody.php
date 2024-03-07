@@ -20,7 +20,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets filters
-    *  filters
+    *  匹配要返回的访问分析结果的筛选器。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]
     */
@@ -189,7 +189,7 @@ class UpdateArchiveRuleReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets filters
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters filters
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[] $filters 匹配要返回的访问分析结果的筛选器。
     *
     * @return $this
     */

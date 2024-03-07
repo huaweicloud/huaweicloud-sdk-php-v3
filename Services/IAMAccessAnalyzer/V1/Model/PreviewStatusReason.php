@@ -20,7 +20,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  分析预览状态原因
+    * code  访问预览当前状态的原因。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  分析预览状态原因
+    * code  访问预览当前状态的原因。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  分析预览状态原因
+    * code  访问预览当前状态的原因。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  分析预览状态原因
+    * code  访问预览当前状态的原因。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  分析预览状态原因
+    * code  访问预览当前状态的原因。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  分析预览状态原因
+    *  访问预览当前状态的原因。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class PreviewStatusReason implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 分析预览状态原因
+    * @param string $code 访问预览当前状态的原因。
     *
     * @return $this
     */

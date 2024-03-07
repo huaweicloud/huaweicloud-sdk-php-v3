@@ -31,20 +31,18 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * diskEncryptionId  用于磁盘加密的密钥ID，默认为空。
     * flavorRef  规格码,取值范围：非空。 使用[查询数据库规格](https://support.huaweicloud.com/api-rds/rds_06_0002.html)接口响应消息中的 flavors字段中“spec_code”获取且对应az_status为“在售”状态。
     * volume  volume
-    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * availabilityZone  可用区ID。对于数据库实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
-    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
-    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
+    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * dataVip  指定实例的内网IP,目前仅支持设置IPv4地址。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找子网的网段，选择未被占用的IP。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询私有IP列表](https://support.huaweicloud.com/api-vpc/vpc_privateip_0003.html),选择“device_owner”为空的私有IP。
-    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * chargeInfo  chargeInfo
     * timeZone  时区。  - 不选择时，各个引擎时区如下：   - MySQL国内站、国际站默认为UTC时间。   - PostgreSQL国内站、国际站默认为UTC时间。   - Microsoft SQL Server国内站默认为China Standard Time，国际站默认为UTC时间。 - MySQL和PostgreSQL引擎选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。 - Microsoft SQL Server引擎选择填写时，请参见“创建数据库实例”接口[表10](https://support.huaweicloud.com/api-rds/rds_01_0002.html#rds_01_0002__table613473883617) 时区与UTC偏移量对照表，填写时区列字符串，如：China Standard Time。
     * dsspoolId  Dec用户专属存储ID，每个az配置的专属存储不同，Dec用户创建实例时，对于数据库实例类型不是单机或只读的实例，需要分别为实例所有节点指定dsspoolId，并用逗号隔开。 获取方法如下： - 方法1：登录专属分布式存储服务DSS的控制台界面，查看专属存储列表，选择符合条件的az下的专属dss的ID。 - 方法2：通过专属分布式存储服务DSS的API接口查询，具体操作可参考[获取专属存储详情列表](https://support.huaweicloud.com/api-dss/dss_02_1002.html)。
-    * replicaOfId  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
     * restorePoint  restorePoint
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
-    * unchangeableParam  unchangeableParam
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
@@ -71,11 +69,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ChargeInfo',
             'timeZone' => 'string',
             'dsspoolId' => 'string',
-            'replicaOfId' => 'string',
             'restorePoint' => '\HuaweiCloud\SDK\Rds\V3\Model\RestorePoint',
             'collation' => 'string',
             'tags' => '\HuaweiCloud\SDK\Rds\V3\Model\TagWithKeyValue[]',
-            'unchangeableParam' => '\HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam',
             'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo',
             'dryRun' => 'bool'
     ];
@@ -93,20 +89,18 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * diskEncryptionId  用于磁盘加密的密钥ID，默认为空。
     * flavorRef  规格码,取值范围：非空。 使用[查询数据库规格](https://support.huaweicloud.com/api-rds/rds_06_0002.html)接口响应消息中的 flavors字段中“spec_code”获取且对应az_status为“在售”状态。
     * volume  volume
-    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * availabilityZone  可用区ID。对于数据库实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
-    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
-    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
+    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * dataVip  指定实例的内网IP,目前仅支持设置IPv4地址。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找子网的网段，选择未被占用的IP。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询私有IP列表](https://support.huaweicloud.com/api-vpc/vpc_privateip_0003.html),选择“device_owner”为空的私有IP。
-    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * chargeInfo  chargeInfo
     * timeZone  时区。  - 不选择时，各个引擎时区如下：   - MySQL国内站、国际站默认为UTC时间。   - PostgreSQL国内站、国际站默认为UTC时间。   - Microsoft SQL Server国内站默认为China Standard Time，国际站默认为UTC时间。 - MySQL和PostgreSQL引擎选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。 - Microsoft SQL Server引擎选择填写时，请参见“创建数据库实例”接口[表10](https://support.huaweicloud.com/api-rds/rds_01_0002.html#rds_01_0002__table613473883617) 时区与UTC偏移量对照表，填写时区列字符串，如：China Standard Time。
     * dsspoolId  Dec用户专属存储ID，每个az配置的专属存储不同，Dec用户创建实例时，对于数据库实例类型不是单机或只读的实例，需要分别为实例所有节点指定dsspoolId，并用逗号隔开。 获取方法如下： - 方法1：登录专属分布式存储服务DSS的控制台界面，查看专属存储列表，选择符合条件的az下的专属dss的ID。 - 方法2：通过专属分布式存储服务DSS的API接口查询，具体操作可参考[获取专属存储详情列表](https://support.huaweicloud.com/api-dss/dss_02_1002.html)。
-    * replicaOfId  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
     * restorePoint  restorePoint
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
-    * unchangeableParam  unchangeableParam
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
@@ -133,11 +127,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         'chargeInfo' => null,
         'timeZone' => null,
         'dsspoolId' => null,
-        'replicaOfId' => null,
         'restorePoint' => null,
         'collation' => null,
         'tags' => null,
-        'unchangeableParam' => null,
         'serverlessInfo' => null,
         'dryRun' => null
     ];
@@ -176,20 +168,18 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * diskEncryptionId  用于磁盘加密的密钥ID，默认为空。
     * flavorRef  规格码,取值范围：非空。 使用[查询数据库规格](https://support.huaweicloud.com/api-rds/rds_06_0002.html)接口响应消息中的 flavors字段中“spec_code”获取且对应az_status为“在售”状态。
     * volume  volume
-    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * availabilityZone  可用区ID。对于数据库实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
-    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
-    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
+    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * dataVip  指定实例的内网IP,目前仅支持设置IPv4地址。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找子网的网段，选择未被占用的IP。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询私有IP列表](https://support.huaweicloud.com/api-vpc/vpc_privateip_0003.html),选择“device_owner”为空的私有IP。
-    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * chargeInfo  chargeInfo
     * timeZone  时区。  - 不选择时，各个引擎时区如下：   - MySQL国内站、国际站默认为UTC时间。   - PostgreSQL国内站、国际站默认为UTC时间。   - Microsoft SQL Server国内站默认为China Standard Time，国际站默认为UTC时间。 - MySQL和PostgreSQL引擎选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。 - Microsoft SQL Server引擎选择填写时，请参见“创建数据库实例”接口[表10](https://support.huaweicloud.com/api-rds/rds_01_0002.html#rds_01_0002__table613473883617) 时区与UTC偏移量对照表，填写时区列字符串，如：China Standard Time。
     * dsspoolId  Dec用户专属存储ID，每个az配置的专属存储不同，Dec用户创建实例时，对于数据库实例类型不是单机或只读的实例，需要分别为实例所有节点指定dsspoolId，并用逗号隔开。 获取方法如下： - 方法1：登录专属分布式存储服务DSS的控制台界面，查看专属存储列表，选择符合条件的az下的专属dss的ID。 - 方法2：通过专属分布式存储服务DSS的API接口查询，具体操作可参考[获取专属存储详情列表](https://support.huaweicloud.com/api-dss/dss_02_1002.html)。
-    * replicaOfId  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
     * restorePoint  restorePoint
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
-    * unchangeableParam  unchangeableParam
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
@@ -216,11 +206,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'charge_info',
             'timeZone' => 'time_zone',
             'dsspoolId' => 'dsspool_id',
-            'replicaOfId' => 'replica_of_id',
             'restorePoint' => 'restore_point',
             'collation' => 'collation',
             'tags' => 'tags',
-            'unchangeableParam' => 'unchangeable_param',
             'serverlessInfo' => 'serverless_info',
             'dryRun' => 'dry_run'
     ];
@@ -238,20 +226,18 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * diskEncryptionId  用于磁盘加密的密钥ID，默认为空。
     * flavorRef  规格码,取值范围：非空。 使用[查询数据库规格](https://support.huaweicloud.com/api-rds/rds_06_0002.html)接口响应消息中的 flavors字段中“spec_code”获取且对应az_status为“在售”状态。
     * volume  volume
-    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * availabilityZone  可用区ID。对于数据库实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
-    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
-    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
+    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * dataVip  指定实例的内网IP,目前仅支持设置IPv4地址。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找子网的网段，选择未被占用的IP。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询私有IP列表](https://support.huaweicloud.com/api-vpc/vpc_privateip_0003.html),选择“device_owner”为空的私有IP。
-    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * chargeInfo  chargeInfo
     * timeZone  时区。  - 不选择时，各个引擎时区如下：   - MySQL国内站、国际站默认为UTC时间。   - PostgreSQL国内站、国际站默认为UTC时间。   - Microsoft SQL Server国内站默认为China Standard Time，国际站默认为UTC时间。 - MySQL和PostgreSQL引擎选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。 - Microsoft SQL Server引擎选择填写时，请参见“创建数据库实例”接口[表10](https://support.huaweicloud.com/api-rds/rds_01_0002.html#rds_01_0002__table613473883617) 时区与UTC偏移量对照表，填写时区列字符串，如：China Standard Time。
     * dsspoolId  Dec用户专属存储ID，每个az配置的专属存储不同，Dec用户创建实例时，对于数据库实例类型不是单机或只读的实例，需要分别为实例所有节点指定dsspoolId，并用逗号隔开。 获取方法如下： - 方法1：登录专属分布式存储服务DSS的控制台界面，查看专属存储列表，选择符合条件的az下的专属dss的ID。 - 方法2：通过专属分布式存储服务DSS的API接口查询，具体操作可参考[获取专属存储详情列表](https://support.huaweicloud.com/api-dss/dss_02_1002.html)。
-    * replicaOfId  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
     * restorePoint  restorePoint
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
-    * unchangeableParam  unchangeableParam
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
@@ -278,11 +264,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'setChargeInfo',
             'timeZone' => 'setTimeZone',
             'dsspoolId' => 'setDsspoolId',
-            'replicaOfId' => 'setReplicaOfId',
             'restorePoint' => 'setRestorePoint',
             'collation' => 'setCollation',
             'tags' => 'setTags',
-            'unchangeableParam' => 'setUnchangeableParam',
             'serverlessInfo' => 'setServerlessInfo',
             'dryRun' => 'setDryRun'
     ];
@@ -300,20 +284,18 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * diskEncryptionId  用于磁盘加密的密钥ID，默认为空。
     * flavorRef  规格码,取值范围：非空。 使用[查询数据库规格](https://support.huaweicloud.com/api-rds/rds_06_0002.html)接口响应消息中的 flavors字段中“spec_code”获取且对应az_status为“在售”状态。
     * volume  volume
-    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * region  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * availabilityZone  可用区ID。对于数据库实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
-    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
-    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * vpcId  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
+    * subnetId  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * dataVip  指定实例的内网IP,目前仅支持设置IPv4地址。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找子网的网段，选择未被占用的IP。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询私有IP列表](https://support.huaweicloud.com/api-vpc/vpc_privateip_0003.html),选择“device_owner”为空的私有IP。
-    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * securityGroupId  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     * chargeInfo  chargeInfo
     * timeZone  时区。  - 不选择时，各个引擎时区如下：   - MySQL国内站、国际站默认为UTC时间。   - PostgreSQL国内站、国际站默认为UTC时间。   - Microsoft SQL Server国内站默认为China Standard Time，国际站默认为UTC时间。 - MySQL和PostgreSQL引擎选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。 - Microsoft SQL Server引擎选择填写时，请参见“创建数据库实例”接口[表10](https://support.huaweicloud.com/api-rds/rds_01_0002.html#rds_01_0002__table613473883617) 时区与UTC偏移量对照表，填写时区列字符串，如：China Standard Time。
     * dsspoolId  Dec用户专属存储ID，每个az配置的专属存储不同，Dec用户创建实例时，对于数据库实例类型不是单机或只读的实例，需要分别为实例所有节点指定dsspoolId，并用逗号隔开。 获取方法如下： - 方法1：登录专属分布式存储服务DSS的控制台界面，查看专属存储列表，选择符合条件的az下的专属dss的ID。 - 方法2：通过专属分布式存储服务DSS的API接口查询，具体操作可参考[获取专属存储详情列表](https://support.huaweicloud.com/api-dss/dss_02_1002.html)。
-    * replicaOfId  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
     * restorePoint  restorePoint
     * collation  仅限Microsoft SQL Server实例创建使用。对于MySQL和PostgreSQL实例，该参数无意义。取值范围：根据查询SQL Server可用字符集的字符集查询列表查询可设置的字符集。 取值范围：根据[查询SQL Server可用字符集](https://support.huaweicloud.com/api-rds/rds_05_0010.html)查询可设置的字符集。
     * tags  标签列表。单个实例总标签数上限20个。
-    * unchangeableParam  unchangeableParam
     * serverlessInfo  serverlessInfo
     * dryRun  是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
     *
@@ -340,11 +322,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
             'chargeInfo' => 'getChargeInfo',
             'timeZone' => 'getTimeZone',
             'dsspoolId' => 'getDsspoolId',
-            'replicaOfId' => 'getReplicaOfId',
             'restorePoint' => 'getRestorePoint',
             'collation' => 'getCollation',
             'tags' => 'getTags',
-            'unchangeableParam' => 'getUnchangeableParam',
             'serverlessInfo' => 'getServerlessInfo',
             'dryRun' => 'getDryRun'
     ];
@@ -427,11 +407,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['dsspoolId'] = isset($data['dsspoolId']) ? $data['dsspoolId'] : null;
-        $this->container['replicaOfId'] = isset($data['replicaOfId']) ? $data['replicaOfId'] : null;
         $this->container['restorePoint'] = isset($data['restorePoint']) ? $data['restorePoint'] : null;
         $this->container['collation'] = isset($data['collation']) ? $data['collation'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['unchangeableParam'] = isset($data['unchangeableParam']) ? $data['unchangeableParam'] : null;
         $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
         $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
@@ -447,29 +425,14 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['datastore'] === null) {
-            $invalidProperties[] = "'datastore' can't be null";
-        }
         if ($this->container['flavorRef'] === null) {
             $invalidProperties[] = "'flavorRef' can't be null";
         }
         if ($this->container['volume'] === null) {
             $invalidProperties[] = "'volume' can't be null";
         }
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
         if ($this->container['availabilityZone'] === null) {
             $invalidProperties[] = "'availabilityZone' can't be null";
-        }
-        if ($this->container['vpcId'] === null) {
-            $invalidProperties[] = "'vpcId' can't be null";
-        }
-        if ($this->container['subnetId'] === null) {
-            $invalidProperties[] = "'subnetId' can't be null";
-        }
-        if ($this->container['securityGroupId'] === null) {
-            $invalidProperties[] = "'securityGroupId' can't be null";
         }
         return $invalidProperties;
     }
@@ -513,7 +476,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     * Gets datastore
     *  datastore
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\Datastore
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\Datastore|null
     */
     public function getDatastore()
     {
@@ -523,7 +486,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\Datastore $datastore datastore
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\Datastore|null $datastore datastore
     *
     * @return $this
     */
@@ -751,9 +714,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    *  区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -763,7 +726,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region 区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+    * @param string|null $region 区域ID。创建主实例时必选，其它场景不可选。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
     * @return $this
     */
@@ -799,9 +762,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
+    *  虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
-    * @return string
+    * @return string|null
     */
     public function getVpcId()
     {
@@ -811,7 +774,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
+    * @param string|null $vpcId 虚拟私有云ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
     * @return $this
     */
@@ -823,9 +786,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    *  子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
-    * @return string
+    * @return string|null
     */
     public function getSubnetId()
     {
@@ -835,7 +798,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+    * @param string|null $subnetId 子网的网络ID信息。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
     * @return $this
     */
@@ -871,9 +834,9 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    *  安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
-    * @return string
+    * @return string|null
     */
     public function getSecurityGroupId()
     {
@@ -883,7 +846,7 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。
+    * @param string|null $securityGroupId 安全组ID。创建只读实例时不可选（只读实例的网络属性默认和主实例相同），其它场景必选。 获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询安全组列表](https://support.huaweicloud.com/api-vpc/vpc_sg01_0003.html)。 SQL Server数据库和PostgreSQL数据库备份恢复到新实例时为必填项。
     *
     * @return $this
     */
@@ -966,30 +929,6 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets replicaOfId
-    *  只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
-    *
-    * @return string|null
-    */
-    public function getReplicaOfId()
-    {
-        return $this->container['replicaOfId'];
-    }
-
-    /**
-    * Sets replicaOfId
-    *
-    * @param string|null $replicaOfId 只读实例的主实例ID。创建只读实例时必选，其它场景不可选。
-    *
-    * @return $this
-    */
-    public function setReplicaOfId($replicaOfId)
-    {
-        $this->container['replicaOfId'] = $replicaOfId;
-        return $this;
-    }
-
-    /**
     * Gets restorePoint
     *  restorePoint
     *
@@ -1058,30 +997,6 @@ class CreateRestoreInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets unchangeableParam
-    *  unchangeableParam
-    *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam|null
-    */
-    public function getUnchangeableParam()
-    {
-        return $this->container['unchangeableParam'];
-    }
-
-    /**
-    * Sets unchangeableParam
-    *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\UnchangeableParam|null $unchangeableParam unchangeableParam
-    *
-    * @return $this
-    */
-    public function setUnchangeableParam($unchangeableParam)
-    {
-        $this->container['unchangeableParam'] = $unchangeableParam;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     * limit  单页最大结果数。
     * marker  页面标记。
     *
@@ -34,7 +34,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     * limit  单页最大结果数。
     * marker  页面标记。
     *
@@ -69,7 +69,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     * limit  单页最大结果数。
     * marker  页面标记。
     *
@@ -83,7 +83,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     * limit  单页最大结果数。
     * marker  页面标记。
     *
@@ -97,7 +97,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filters  filters
+    * filters  匹配要返回的访问分析结果的筛选器。
     * limit  单页最大结果数。
     * marker  页面标记。
     *
@@ -211,7 +211,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets filters
-    *  filters
+    *  匹配要返回的访问分析结果的筛选器。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]|null
     */
@@ -223,7 +223,7 @@ class ListFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets filters
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]|null $filters filters
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingFilter[]|null $filters 匹配要返回的访问分析结果的筛选器。
     *
     * @return $this
     */

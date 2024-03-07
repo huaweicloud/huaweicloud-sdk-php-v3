@@ -67,8 +67,8 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
             'securityProtocol' => 'string',
             'direction' => 'string',
             'syncConsumerOffsetsEnabled' => 'bool',
-            'replicationFactor' => 'string',
-            'taskNum' => 'string',
+            'replicationFactor' => 'int',
+            'taskNum' => 'int',
             'renameTopicEnable' => 'bool',
             'provenanceHeaderEnabled' => 'bool',
             'consumerStrategy' => 'string',
@@ -872,7 +872,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * Gets replicationFactor
     *  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getReplicationFactor()
     {
@@ -882,7 +882,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets replicationFactor
     *
-    * @param string|null $replicationFactor 在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
+    * @param int|null $replicationFactor 在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     *
     * @return $this
     */
@@ -896,7 +896,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * Gets taskNum
     *  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTaskNum()
     {
@@ -906,7 +906,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets taskNum
     *
-    * @param string|null $taskNum 数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
+    * @param int|null $taskNum 数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
     *
     * @return $this
     */

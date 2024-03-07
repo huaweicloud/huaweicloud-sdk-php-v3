@@ -21,7 +21,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     *
     * @var string[]
     */
@@ -184,7 +184,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPreviewId
-    *  分析预览的唯一标识符。
+    *  访问预览的唯一标识符。
     *
     * @return string|null
     */
@@ -196,7 +196,7 @@ class CreateAccessPreviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessPreviewId
     *
-    * @param string|null $accessPreviewId 分析预览的唯一标识符。
+    * @param string|null $accessPreviewId 访问预览的唯一标识符。
     *
     * @return $this
     */

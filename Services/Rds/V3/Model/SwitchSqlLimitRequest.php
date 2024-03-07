@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
+class SwitchSqlLimitRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateSinkTaskResponse';
+    protected static $openAPIModelName = 'SwitchSqlLimitRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\SwitchSqlLimitControlReqV3'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,32 +65,38 @@ class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskId' => 'task_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'taskId' => 'setTaskId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'taskId' => 'getTaskId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,7 +157,8 @@ class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -159,6 +169,9 @@ class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,26 +187,50 @@ class CreateSinkTaskResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets taskId
-    *  任务ID。
+    * Gets instanceId
+    *  实例ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getTaskId()
+    public function getInstanceId()
     {
-        return $this->container['taskId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets taskId
+    * Sets instanceId
     *
-    * @param string|null $taskId 任务ID。
+    * @param string $instanceId 实例ID
     *
     * @return $this
     */
-    public function setTaskId($taskId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['taskId'] = $taskId;
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\SwitchSqlLimitControlReqV3|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\SwitchSqlLimitControlReqV3|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

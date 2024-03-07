@@ -245,9 +245,6 @@ class ListClientsRequest implements ModelInterface, ArrayAccess
         if ($this->container['nodeId'] === null) {
             $invalidProperties[] = "'nodeId' can't be null";
         }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }

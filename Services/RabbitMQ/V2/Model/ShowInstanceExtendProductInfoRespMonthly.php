@@ -21,7 +21,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     * values  产品规格列表。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     * values  产品规格列表。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     * values  产品规格列表。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     * values  产品规格列表。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     * values  产品规格列表。
     *
     * @var string[]
@@ -220,7 +220,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
 
     /**
     * Gets version
-    *  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    *  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ShowInstanceExtendProductInfoRespMonthly implements ModelInterface, ArrayA
     /**
     * Sets version
     *
-    * @param string|null $version 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+    * @param string|null $version 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
     *
     * @return $this
     */

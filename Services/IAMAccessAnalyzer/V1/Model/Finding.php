@@ -20,20 +20,20 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  访问信任区域内资源的外部主体。
+    * action  允许外部主体使用的操作。
     * analyzedAt  分析资源的时间。
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * condition  分析的策略语句中导致访问分析结果的条件。
+    * createdAt  生成访问分析结果的时间。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
+    * resource  访问分析的唯一资源标识。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
-    * updatedAt  更新调查结果的时间。
+    * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  访问信任区域内资源的外部主体。
+    * action  允许外部主体使用的操作。
     * analyzedAt  分析资源的时间。
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * condition  分析的策略语句中导致访问分析结果的条件。
+    * createdAt  生成访问分析结果的时间。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
+    * resource  访问分析的唯一资源标识。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
-    * updatedAt  更新调查结果的时间。
+    * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  访问信任区域内资源的外部主体。
+    * action  允许外部主体使用的操作。
     * analyzedAt  分析资源的时间。
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * condition  分析的策略语句中导致访问分析结果的条件。
+    * createdAt  生成访问分析结果的时间。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
+    * resource  访问分析的唯一资源标识。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
-    * updatedAt  更新调查结果的时间。
+    * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  访问信任区域内资源的外部主体。
+    * action  允许外部主体使用的操作。
     * analyzedAt  分析资源的时间。
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * condition  分析的策略语句中导致访问分析结果的条件。
+    * createdAt  生成访问分析结果的时间。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
+    * resource  访问分析的唯一资源标识。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
-    * updatedAt  更新调查结果的时间。
+    * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  访问信任区域内资源的外部主体。
+    * action  允许外部主体使用的操作。
     * analyzedAt  分析资源的时间。
-    * condition  condition
-    * createdAt  生成查找结果的时间。
-    * id  要检索的结果的ID。
-    * isPublic  表示生成查找结果的策略是否允许公共访问资源。
+    * condition  分析的策略语句中导致访问分析结果的条件。
+    * createdAt  生成访问分析结果的时间。
+    * id  访问分析结果的唯一标识符。
+    * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  唯一的资源名称。
+    * resource  访问分析的唯一资源标识。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
+    * resourceOwnerAccount  拥有资源的账户ID。
     * resourceType  resourceType
-    * sources  sources
+    * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
-    * updatedAt  更新调查结果的时间。
+    * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
     */
@@ -408,7 +408,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  访问信任区域内资源的外部主体。
+    *  允许外部主体使用的操作。
     *
     * @return string[]
     */
@@ -420,7 +420,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string[] $action 访问信任区域内资源的外部主体。
+    * @param string[] $action 允许外部主体使用的操作。
     *
     * @return $this
     */
@@ -456,7 +456,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  condition
+    *  分析的策略语句中导致访问分析结果的条件。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]
     */
@@ -468,7 +468,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[] $condition condition
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[] $condition 分析的策略语句中导致访问分析结果的条件。
     *
     * @return $this
     */
@@ -480,7 +480,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  生成查找结果的时间。
+    *  生成访问分析结果的时间。
     *
     * @return \DateTime
     */
@@ -492,7 +492,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 生成查找结果的时间。
+    * @param \DateTime $createdAt 生成访问分析结果的时间。
     *
     * @return $this
     */
@@ -504,7 +504,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  要检索的结果的ID。
+    *  访问分析结果的唯一标识符。
     *
     * @return string
     */
@@ -516,7 +516,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 要检索的结果的ID。
+    * @param string $id 访问分析结果的唯一标识符。
     *
     * @return $this
     */
@@ -528,7 +528,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublic
-    *  表示生成查找结果的策略是否允许公共访问资源。
+    *  表示生成访问分析结果的策略是否允许公共访问资源。
     *
     * @return bool
     */
@@ -540,7 +540,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets isPublic
     *
-    * @param bool $isPublic 表示生成查找结果的策略是否允许公共访问资源。
+    * @param bool $isPublic 表示生成访问分析结果的策略是否允许公共访问资源。
     *
     * @return $this
     */
@@ -576,7 +576,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string
     */
@@ -588,7 +588,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string $resource 唯一的资源名称。
+    * @param string $resource 访问分析的唯一资源标识。
     *
     * @return $this
     */
@@ -624,7 +624,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的帐户ID。
+    *  拥有资源的账户ID。
     *
     * @return string
     */
@@ -636,7 +636,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的帐户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账户ID。
     *
     * @return $this
     */
@@ -672,7 +672,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  sources
+    *  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null
     */
@@ -684,7 +684,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null $sources sources
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]|null $sources 访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     *
     * @return $this
     */
@@ -720,7 +720,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新调查结果的时间。
+    *  更新访问分析结果的时间。
     *
     * @return \DateTime
     */
@@ -732,7 +732,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime $updatedAt 更新调查结果的时间。
+    * @param \DateTime $updatedAt 更新访问分析结果的时间。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tagKeys  tagKeys
+    * tagKeys  待删除的标签键列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tagKeys  tagKeys
+    * tagKeys  待删除的标签键列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tagKeys  tagKeys
+    * tagKeys  待删除的标签键列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tagKeys  tagKeys
+    * tagKeys  待删除的标签键列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tagKeys  tagKeys
+    * tagKeys  待删除的标签键列表。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKeys
-    *  tagKeys
+    *  待删除的标签键列表。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class UntagResourceReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets tagKeys
     *
-    * @param string[] $tagKeys tagKeys
+    * @param string[] $tagKeys 待删除的标签键列表。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * analyzerId  分析器的唯一标识符。
     * configurations  configurations
-    * createdAt  createdAt
+    * createdAt  访问预览创建时间。
     * status  status
     * statusReason  statusReason
     *
@@ -40,10 +40,10 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * analyzerId  分析器的唯一标识符。
     * configurations  configurations
-    * createdAt  createdAt
+    * createdAt  访问预览创建时间。
     * status  status
     * statusReason  statusReason
     *
@@ -81,10 +81,10 @@ class AccessPreview implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * analyzerId  分析器的唯一标识符。
     * configurations  configurations
-    * createdAt  createdAt
+    * createdAt  访问预览创建时间。
     * status  status
     * statusReason  statusReason
     *
@@ -101,10 +101,10 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * analyzerId  分析器的唯一标识符。
     * configurations  configurations
-    * createdAt  createdAt
+    * createdAt  访问预览创建时间。
     * status  status
     * statusReason  statusReason
     *
@@ -121,10 +121,10 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessPreviewId  分析预览的唯一标识符。
+    * accessPreviewId  访问预览的唯一标识符。
     * analyzerId  分析器的唯一标识符。
     * configurations  configurations
-    * createdAt  createdAt
+    * createdAt  访问预览创建时间。
     * status  status
     * statusReason  statusReason
     *
@@ -262,7 +262,7 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessPreviewId
-    *  分析预览的唯一标识符。
+    *  访问预览的唯一标识符。
     *
     * @return string
     */
@@ -274,7 +274,7 @@ class AccessPreview implements ModelInterface, ArrayAccess
     /**
     * Sets accessPreviewId
     *
-    * @param string $accessPreviewId 分析预览的唯一标识符。
+    * @param string $accessPreviewId 访问预览的唯一标识符。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class AccessPreview implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  createdAt
+    *  访问预览创建时间。
     *
     * @return \DateTime
     */
@@ -346,7 +346,7 @@ class AccessPreview implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt createdAt
+    * @param \DateTime $createdAt 访问预览创建时间。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * findings  findings
+    * findings  可用于改进策略的可操作建议。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * findings  findings
+    * findings  可用于改进策略的可操作建议。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * findings  findings
+    * findings  可用于改进策略的可操作建议。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * findings  findings
+    * findings  可用于改进策略的可操作建议。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * findings  findings
+    * findings  可用于改进策略的可操作建议。
     * pageInfo  pageInfo
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets findings
-    *  findings
+    *  可用于改进策略的可操作建议。
     *
     * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ValidatePolicyFinding[]|null
     */
@@ -198,7 +198,7 @@ class ValidatePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets findings
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ValidatePolicyFinding[]|null $findings findings
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ValidatePolicyFinding[]|null $findings 可用于改进策略的可操作建议。
     *
     * @return $this
     */

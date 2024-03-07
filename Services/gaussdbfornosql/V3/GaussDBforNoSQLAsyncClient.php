@@ -6771,6 +6771,74 @@ class GaussDBforNoSQLAsyncClient extends Client
     }
 
     /**
+     * 操作GeminDB实例数据库
+     *
+     * 操作GeminDB实例数据库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDatabasesAsync($request)
+    {
+        return $this->updateDatabasesAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDatabasesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/databases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateDatabasesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateDatabasesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改高危命令
      *
      * 批量修改高危命令

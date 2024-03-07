@@ -95,8 +95,8 @@ class ServerDetails implements ModelInterface, ArrayAccess
             'osExtAZavailabilityZone' => 'string',
             'osDcFdiskConfig' => 'string',
             'fault' => '\HuaweiCloud\SDK\Bms\V1\Model\Fault',
-            'osSrvUsGlaunchedAt' => '\DateTime',
-            'osSrvUsGterminatedAt' => '\DateTime',
+            'osSrvUsGlaunchedAt' => 'string',
+            'osSrvUsGterminatedAt' => 'string',
             'osExtendedVolumesvolumesAttached' => '\HuaweiCloud\SDK\Bms\V1\Model\OsExtendedVolumesInfo[]',
             'description' => 'string',
             'hostStatus' => 'string',
@@ -191,8 +191,8 @@ class ServerDetails implements ModelInterface, ArrayAccess
         'osExtAZavailabilityZone' => null,
         'osDcFdiskConfig' => null,
         'fault' => null,
-        'osSrvUsGlaunchedAt' => 'date-time',
-        'osSrvUsGterminatedAt' => 'date-time',
+        'osSrvUsGlaunchedAt' => null,
+        'osSrvUsGterminatedAt' => null,
         'osExtendedVolumesvolumesAttached' => null,
         'description' => null,
         'hostStatus' => null,
@@ -1458,7 +1458,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     * Gets osSrvUsGlaunchedAt
     *  裸金属服务器启动时间。时间戳格式为ISO 8601，例如：2019-05-22T03:23:59.000000
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getOsSrvUsGlaunchedAt()
     {
@@ -1468,7 +1468,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets osSrvUsGlaunchedAt
     *
-    * @param \DateTime|null $osSrvUsGlaunchedAt 裸金属服务器启动时间。时间戳格式为ISO 8601，例如：2019-05-22T03:23:59.000000
+    * @param string|null $osSrvUsGlaunchedAt 裸金属服务器启动时间。时间戳格式为ISO 8601，例如：2019-05-22T03:23:59.000000
     *
     * @return $this
     */
@@ -1482,7 +1482,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     * Gets osSrvUsGterminatedAt
     *  裸金属服务器删除时间。时间戳格式为ISO 8601，例如：2019-05-22T04:23:59.000000
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getOsSrvUsGterminatedAt()
     {
@@ -1492,7 +1492,7 @@ class ServerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets osSrvUsGterminatedAt
     *
-    * @param \DateTime|null $osSrvUsGterminatedAt 裸金属服务器删除时间。时间戳格式为ISO 8601，例如：2019-05-22T04:23:59.000000
+    * @param string|null $osSrvUsGterminatedAt 裸金属服务器删除时间。时间戳格式为ISO 8601，例如：2019-05-22T04:23:59.000000
     *
     * @return $this
     */

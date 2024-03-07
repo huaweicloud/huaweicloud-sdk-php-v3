@@ -21,9 +21,9 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  topic
-    * body  body
-    * propertyList  propertyList
+    * topic  Kafka的topic
+    * body  消息内容
+    * propertyList  topic的分区信息等
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  topic
-    * body  body
-    * propertyList  propertyList
+    * topic  Kafka的topic
+    * body  消息内容
+    * propertyList  topic的分区信息等
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  topic
-    * body  body
-    * propertyList  propertyList
+    * topic  Kafka的topic
+    * body  消息内容
+    * propertyList  topic的分区信息等
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  topic
-    * body  body
-    * propertyList  propertyList
+    * topic  Kafka的topic
+    * body  消息内容
+    * propertyList  topic的分区信息等
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  topic
-    * body  body
-    * propertyList  propertyList
+    * topic  Kafka的topic
+    * body  消息内容
+    * propertyList  topic的分区信息等
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  topic
+    *  Kafka的topic
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic topic
+    * @param string|null $topic Kafka的topic
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  消息内容
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param string|null $body 消息内容
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertyList
-    *  propertyList
+    *  topic的分区信息等
     *
     * @return object[]|null
     */
@@ -257,7 +257,7 @@ class SendKafkaMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets propertyList
     *
-    * @param object[]|null $propertyList propertyList
+    * @param object[]|null $propertyList topic的分区信息等
     *
     * @return $this
     */

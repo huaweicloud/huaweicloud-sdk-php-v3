@@ -2952,6 +2952,15 @@ class ConfigClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['policyAssignmentName'] !== null) {
+            $queryParams['policy_assignment_name'] = $localVarParams['policyAssignmentName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -3560,6 +3569,9 @@ class ConfigClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyAssignmentId'] !== null) {
+            $queryParams['organization_policy_assignment_id'] = $localVarParams['organizationPolicyAssignmentId'];
         }
         if ($localVarParams['organizationPolicyAssignmentName'] !== null) {
             $queryParams['organization_policy_assignment_name'] = $localVarParams['organizationPolicyAssignmentName'];

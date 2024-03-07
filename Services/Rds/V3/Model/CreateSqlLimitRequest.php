@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
+class CreateSqlLimitRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,42 +16,30 @@ class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowSinkTaskDetailResp_partitions';
+    protected static $openAPIModelName = 'CreateSqlLimitRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * partitionId  分区ID。
-    * status  运行状态。
-    * lastTransferOffset  已转储的消息偏移量。
-    * logEndOffset  消息偏移量。
-    * lag  积压的消息数。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'partitionId' => 'string',
-            'status' => 'string',
-            'lastTransferOffset' => 'string',
-            'logEndOffset' => 'string',
-            'lag' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\CreateSqlLimitRuleReqV3'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * partitionId  分区ID。
-    * status  运行状态。
-    * lastTransferOffset  已转储的消息偏移量。
-    * logEndOffset  消息偏移量。
-    * lag  积压的消息数。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'partitionId' => null,
-        'status' => null,
-        'lastTransferOffset' => null,
-        'logEndOffset' => null,
-        'lag' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -77,56 +65,38 @@ class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * partitionId  分区ID。
-    * status  运行状态。
-    * lastTransferOffset  已转储的消息偏移量。
-    * logEndOffset  消息偏移量。
-    * lag  积压的消息数。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'partitionId' => 'partition_id',
-            'status' => 'status',
-            'lastTransferOffset' => 'last_transfer_offset',
-            'logEndOffset' => 'log_end_offset',
-            'lag' => 'lag'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * partitionId  分区ID。
-    * status  运行状态。
-    * lastTransferOffset  已转储的消息偏移量。
-    * logEndOffset  消息偏移量。
-    * lag  积压的消息数。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'partitionId' => 'setPartitionId',
-            'status' => 'setStatus',
-            'lastTransferOffset' => 'setLastTransferOffset',
-            'logEndOffset' => 'setLogEndOffset',
-            'lag' => 'setLag'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * partitionId  分区ID。
-    * status  运行状态。
-    * lastTransferOffset  已转储的消息偏移量。
-    * logEndOffset  消息偏移量。
-    * lag  积压的消息数。
+    * instanceId  实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'partitionId' => 'getPartitionId',
-            'status' => 'getStatus',
-            'lastTransferOffset' => 'getLastTransferOffset',
-            'logEndOffset' => 'getLogEndOffset',
-            'lag' => 'getLag'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -187,11 +157,8 @@ class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['partitionId'] = isset($data['partitionId']) ? $data['partitionId'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['lastTransferOffset'] = isset($data['lastTransferOffset']) ? $data['lastTransferOffset'] : null;
-        $this->container['logEndOffset'] = isset($data['logEndOffset']) ? $data['logEndOffset'] : null;
-        $this->container['lag'] = isset($data['lag']) ? $data['lag'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -202,6 +169,9 @@ class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -217,122 +187,50 @@ class ShowSinkTaskDetailRespPartitions implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets partitionId
-    *  分区ID。
+    * Gets instanceId
+    *  实例ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getPartitionId()
+    public function getInstanceId()
     {
-        return $this->container['partitionId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets partitionId
+    * Sets instanceId
     *
-    * @param string|null $partitionId 分区ID。
+    * @param string $instanceId 实例ID
     *
     * @return $this
     */
-    public function setPartitionId($partitionId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['partitionId'] = $partitionId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets status
-    *  运行状态。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\CreateSqlLimitRuleReqV3|null
     */
-    public function getStatus()
+    public function getBody()
     {
-        return $this->container['status'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets status
+    * Sets body
     *
-    * @param string|null $status 运行状态。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\CreateSqlLimitRuleReqV3|null $body body
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setBody($body)
     {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets lastTransferOffset
-    *  已转储的消息偏移量。
-    *
-    * @return string|null
-    */
-    public function getLastTransferOffset()
-    {
-        return $this->container['lastTransferOffset'];
-    }
-
-    /**
-    * Sets lastTransferOffset
-    *
-    * @param string|null $lastTransferOffset 已转储的消息偏移量。
-    *
-    * @return $this
-    */
-    public function setLastTransferOffset($lastTransferOffset)
-    {
-        $this->container['lastTransferOffset'] = $lastTransferOffset;
-        return $this;
-    }
-
-    /**
-    * Gets logEndOffset
-    *  消息偏移量。
-    *
-    * @return string|null
-    */
-    public function getLogEndOffset()
-    {
-        return $this->container['logEndOffset'];
-    }
-
-    /**
-    * Sets logEndOffset
-    *
-    * @param string|null $logEndOffset 消息偏移量。
-    *
-    * @return $this
-    */
-    public function setLogEndOffset($logEndOffset)
-    {
-        $this->container['logEndOffset'] = $logEndOffset;
-        return $this;
-    }
-
-    /**
-    * Gets lag
-    *  积压的消息数。
-    *
-    * @return string|null
-    */
-    public function getLag()
-    {
-        return $this->container['lag'];
-    }
-
-    /**
-    * Sets lag
-    *
-    * @param string|null $lag 积压的消息数。
-    *
-    * @return $this
-    */
-    public function setLag($lag)
-    {
-        $this->container['lag'] = $lag;
+        $this->container['body'] = $body;
         return $this;
     }
 

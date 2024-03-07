@@ -21,8 +21,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
-    * resourceUrn  唯一的资源名称。
+    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceUrn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
-    * resourceUrn  唯一的资源名称。
+    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceUrn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
-    * resourceUrn  唯一的资源名称。
+    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceUrn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
-    * resourceUrn  唯一的资源名称。
+    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceUrn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的帐户ID。
-    * resourceUrn  唯一的资源名称。
+    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceUrn  访问分析的唯一资源标识。
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的帐户ID。
+    *  拥有资源的账户ID。
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的帐户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账户ID。
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceUrn
-    *  唯一的资源名称。
+    *  访问分析的唯一资源标识。
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceUrn
     *
-    * @param string $resourceUrn 唯一的资源名称。
+    * @param string $resourceUrn 访问分析的唯一资源标识。
     *
     * @return $this
     */

@@ -219,6 +219,15 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
         if ($this->container['certificateId'] === null) {
             $invalidProperties[] = "'certificateId' can't be null";
         }
+            if ((mb_strlen($this->container['certificateId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'certificateId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['certificateId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'certificateId', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[a-f0-9-]{1,36}$/", $this->container['certificateId'])) {
+                $invalidProperties[] = "invalid value for 'certificateId', must be conform to the pattern /^[a-f0-9-]{1,36}$/.";
+            }
         if ($this->container['actionId'] === null) {
             $invalidProperties[] = "'actionId' can't be null";
         }

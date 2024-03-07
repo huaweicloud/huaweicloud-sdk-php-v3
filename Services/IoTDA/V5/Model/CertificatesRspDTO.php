@@ -25,6 +25,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
     * verifyCode  CA证书验证码。
+    * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    * templateId  绑定的自注册模板ID。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -37,6 +39,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
             'owner' => 'string',
             'status' => 'bool',
             'verifyCode' => 'string',
+            'provisionEnable' => 'bool',
+            'templateId' => 'string',
             'createDate' => 'string',
             'effectiveDate' => 'string',
             'expiryDate' => 'string'
@@ -49,6 +53,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
     * verifyCode  CA证书验证码。
+    * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    * templateId  绑定的自注册模板ID。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -61,6 +67,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
         'owner' => null,
         'status' => null,
         'verifyCode' => null,
+        'provisionEnable' => null,
+        'templateId' => null,
         'createDate' => null,
         'effectiveDate' => null,
         'expiryDate' => null
@@ -94,6 +102,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
     * verifyCode  CA证书验证码。
+    * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    * templateId  绑定的自注册模板ID。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -106,6 +116,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
             'owner' => 'owner',
             'status' => 'status',
             'verifyCode' => 'verify_code',
+            'provisionEnable' => 'provision_enable',
+            'templateId' => 'template_id',
             'createDate' => 'create_date',
             'effectiveDate' => 'effective_date',
             'expiryDate' => 'expiry_date'
@@ -118,6 +130,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
     * verifyCode  CA证书验证码。
+    * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    * templateId  绑定的自注册模板ID。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -130,6 +144,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
             'owner' => 'setOwner',
             'status' => 'setStatus',
             'verifyCode' => 'setVerifyCode',
+            'provisionEnable' => 'setProvisionEnable',
+            'templateId' => 'setTemplateId',
             'createDate' => 'setCreateDate',
             'effectiveDate' => 'setEffectiveDate',
             'expiryDate' => 'setExpiryDate'
@@ -142,6 +158,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
     * verifyCode  CA证书验证码。
+    * provisionEnable  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    * templateId  绑定的自注册模板ID。
     * createDate  创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * effectiveDate  CA证书生效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * expiryDate  CA证书失效日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
@@ -154,6 +172,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
             'owner' => 'getOwner',
             'status' => 'getStatus',
             'verifyCode' => 'getVerifyCode',
+            'provisionEnable' => 'getProvisionEnable',
+            'templateId' => 'getTemplateId',
             'createDate' => 'getCreateDate',
             'effectiveDate' => 'getEffectiveDate',
             'expiryDate' => 'getExpiryDate'
@@ -222,6 +242,8 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['verifyCode'] = isset($data['verifyCode']) ? $data['verifyCode'] : null;
+        $this->container['provisionEnable'] = isset($data['provisionEnable']) ? $data['provisionEnable'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['createDate'] = isset($data['createDate']) ? $data['createDate'] : null;
         $this->container['effectiveDate'] = isset($data['effectiveDate']) ? $data['effectiveDate'] : null;
         $this->container['expiryDate'] = isset($data['expiryDate']) ? $data['expiryDate'] : null;
@@ -366,6 +388,54 @@ class CertificatesRspDTO implements ModelInterface, ArrayAccess
     public function setVerifyCode($verifyCode)
     {
         $this->container['verifyCode'] = $verifyCode;
+        return $this;
+    }
+
+    /**
+    * Gets provisionEnable
+    *  是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    *
+    * @return bool|null
+    */
+    public function getProvisionEnable()
+    {
+        return $this->container['provisionEnable'];
+    }
+
+    /**
+    * Sets provisionEnable
+    *
+    * @param bool|null $provisionEnable 是否开启自注册能力，当为true时该功能必须配合自注册模板使用，true：是，false：否。
+    *
+    * @return $this
+    */
+    public function setProvisionEnable($provisionEnable)
+    {
+        $this->container['provisionEnable'] = $provisionEnable;
+        return $this;
+    }
+
+    /**
+    * Gets templateId
+    *  绑定的自注册模板ID。
+    *
+    * @return string|null
+    */
+    public function getTemplateId()
+    {
+        return $this->container['templateId'];
+    }
+
+    /**
+    * Sets templateId
+    *
+    * @param string|null $templateId 绑定的自注册模板ID。
+    *
+    * @return $this
+    */
+    public function setTemplateId($templateId)
+    {
+        $this->container['templateId'] = $templateId;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID。
-    * logicalClusterName  逻辑集群名称。
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     * workloadQueueName  工作负载队列名称。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID。
-    * logicalClusterName  逻辑集群名称。
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     * workloadQueueName  工作负载队列名称。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID。
-    * logicalClusterName  逻辑集群名称。
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     * workloadQueueName  工作负载队列名称。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID。
-    * logicalClusterName  逻辑集群名称。
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     * workloadQueueName  工作负载队列名称。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID。
-    * logicalClusterName  逻辑集群名称。
+    * logicalClusterName  逻辑集群名称。逻辑集群模式下该字段必填。
     * workloadQueueName  工作负载队列名称。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalClusterName
-    *  逻辑集群名称。
+    *  逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class DeleteWorkloadQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logicalClusterName
     *
-    * @param string|null $logicalClusterName 逻辑集群名称。
+    * @param string|null $logicalClusterName 逻辑集群名称。逻辑集群模式下该字段必填。
     *
     * @return $this
     */

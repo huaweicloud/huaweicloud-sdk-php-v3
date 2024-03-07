@@ -20,8 +20,8 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签\"键\"的标识符或名称。
-    * value  标签\"键\"对应的\"值\"。
+    * key  条件\"键\"的标识符或名称。
+    * value  条件\"键\"对应的\"值\"。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签\"键\"的标识符或名称。
-    * value  标签\"键\"对应的\"值\"。
+    * key  条件\"键\"的标识符或名称。
+    * value  条件\"键\"对应的\"值\"。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FindingCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签\"键\"的标识符或名称。
-    * value  标签\"键\"对应的\"值\"。
+    * key  条件\"键\"的标识符或名称。
+    * value  条件\"键\"对应的\"值\"。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签\"键\"的标识符或名称。
-    * value  标签\"键\"对应的\"值\"。
+    * key  条件\"键\"的标识符或名称。
+    * value  条件\"键\"对应的\"值\"。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签\"键\"的标识符或名称。
-    * value  标签\"键\"对应的\"值\"。
+    * key  条件\"键\"的标识符或名称。
+    * value  条件\"键\"对应的\"值\"。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签\"键\"的标识符或名称。
+    *  条件\"键\"的标识符或名称。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class FindingCondition implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签\"键\"的标识符或名称。
+    * @param string $key 条件\"键\"的标识符或名称。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class FindingCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签\"键\"对应的\"值\"。
+    *  条件\"键\"对应的\"值\"。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class FindingCondition implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 标签\"键\"对应的\"值\"。
+    * @param string $value 条件\"键\"对应的\"值\"。
     *
     * @return $this
     */

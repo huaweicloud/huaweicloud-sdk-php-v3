@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Kafka\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
+class DeleteSqlLimitRuleReqV3 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowSinkTaskDetailRequest';
+    protected static $openAPIModelName = 'DeleteSqlLimitRuleReqV3';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
-    * topicInfo  是否包含topic信息。默认是false。
+    * dbName  数据库名称。
+    * id  SQL限流ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'connectorId' => 'string',
-            'taskId' => 'string',
-            'topicInfo' => 'string'
+            'dbName' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
-    * topicInfo  是否包含topic信息。默认是false。
+    * dbName  数据库名称。
+    * id  SQL限流ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'connectorId' => null,
-        'taskId' => null,
-        'topicInfo' => null
+        'dbName' => null,
+        'id' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
-    * topicInfo  是否包含topic信息。默认是false。
+    * dbName  数据库名称。
+    * id  SQL限流ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'connectorId' => 'connector_id',
-            'taskId' => 'task_id',
-            'topicInfo' => 'topic-info'
+            'dbName' => 'db_name',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
-    * topicInfo  是否包含topic信息。默认是false。
+    * dbName  数据库名称。
+    * id  SQL限流ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'connectorId' => 'setConnectorId',
-            'taskId' => 'setTaskId',
-            'topicInfo' => 'setTopicInfo'
+            'dbName' => 'setDbName',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connectorId  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
-    * taskId  转储任务ID。
-    * topicInfo  是否包含topic信息。默认是false。
+    * dbName  数据库名称。
+    * id  SQL限流ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'connectorId' => 'getConnectorId',
-            'taskId' => 'getTaskId',
-            'topicInfo' => 'getTopicInfo'
+            'dbName' => 'getDbName',
+            'id' => 'getId'
     ];
 
     /**
@@ -149,22 +139,7 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TOPIC_INFO_TRUE = 'true';
-    const TOPIC_INFO_FALSE = 'false';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTopicInfoAllowableValues()
-    {
-        return [
-            self::TOPIC_INFO_TRUE,
-            self::TOPIC_INFO_FALSE,
-        ];
-    }
 
 
     /**
@@ -182,9 +157,8 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['connectorId'] = isset($data['connectorId']) ? $data['connectorId'] : null;
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
-        $this->container['topicInfo'] = isset($data['topicInfo']) ? $data['topicInfo'] : null;
+        $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -195,20 +169,12 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['connectorId'] === null) {
-            $invalidProperties[] = "'connectorId' can't be null";
+        if ($this->container['dbName'] === null) {
+            $invalidProperties[] = "'dbName' can't be null";
         }
-        if ($this->container['taskId'] === null) {
-            $invalidProperties[] = "'taskId' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-            $allowedValues = $this->getTopicInfoAllowableValues();
-                if (!is_null($this->container['topicInfo']) && !in_array($this->container['topicInfo'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'topicInfo', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -224,74 +190,50 @@ class ShowSinkTaskDetailRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connectorId
-    *  实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * Gets dbName
+    *  数据库名称。
     *
     * @return string
     */
-    public function getConnectorId()
+    public function getDbName()
     {
-        return $this->container['connectorId'];
+        return $this->container['dbName'];
     }
 
     /**
-    * Sets connectorId
+    * Sets dbName
     *
-    * @param string $connectorId 实例转储ID。  请参考[查询实例](ShowInstance.xml)返回的数据。
+    * @param string $dbName 数据库名称。
     *
     * @return $this
     */
-    public function setConnectorId($connectorId)
+    public function setDbName($dbName)
     {
-        $this->container['connectorId'] = $connectorId;
+        $this->container['dbName'] = $dbName;
         return $this;
     }
 
     /**
-    * Gets taskId
-    *  转储任务ID。
+    * Gets id
+    *  SQL限流ID。
     *
     * @return string
     */
-    public function getTaskId()
+    public function getId()
     {
-        return $this->container['taskId'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets taskId
+    * Sets id
     *
-    * @param string $taskId 转储任务ID。
+    * @param string $id SQL限流ID。
     *
     * @return $this
     */
-    public function setTaskId($taskId)
+    public function setId($id)
     {
-        $this->container['taskId'] = $taskId;
-        return $this;
-    }
-
-    /**
-    * Gets topicInfo
-    *  是否包含topic信息。默认是false。
-    *
-    * @return string|null
-    */
-    public function getTopicInfo()
-    {
-        return $this->container['topicInfo'];
-    }
-
-    /**
-    * Sets topicInfo
-    *
-    * @param string|null $topicInfo 是否包含topic信息。默认是false。
-    *
-    * @return $this
-    */
-    public function setTopicInfo($topicInfo)
-    {
-        $this->container['topicInfo'] = $topicInfo;
+        $this->container['id'] = $id;
         return $this;
     }
 

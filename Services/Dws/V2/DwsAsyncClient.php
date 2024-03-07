@@ -2873,9 +2873,9 @@ class DwsAsyncClient extends Client
     }
 
     /**
-     * 删除工作负载队列
+     * 删除资源池
      *
-     * 该接口用于删除工作负载队列。
+     * 该接口用于删除资源池。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7424,6 +7424,9 @@ class DwsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['logicalClusterName'] !== null) {
+            $queryParams['logical_cluster_name'] = $localVarParams['logicalClusterName'];
+        }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
@@ -9074,6 +9077,9 @@ class DwsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['logicalClusterName'] !== null) {
+            $queryParams['logical_cluster_name'] = $localVarParams['logicalClusterName'];
         }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
