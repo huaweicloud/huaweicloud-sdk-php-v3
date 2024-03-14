@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpcep\V1\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
+class CreateActiveCodeReq implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateEndpointServiceNameMode';
+    protected static $openAPIModelName = 'CreateActiveCodeReq';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpointServiceName  终端节点服务名称
+    * robotId  应用ID。
+    * roomId  智能交互对话ID。
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpointServiceName' => 'string'
+            'robotId' => 'string',
+            'roomId' => 'string',
+            'validPeriod' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpointServiceName  终端节点服务名称
+    * robotId  应用ID。
+    * roomId  智能交互对话ID。
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'endpointServiceName' => null
+        'robotId' => null,
+        'roomId' => null,
+        'validPeriod' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpointServiceName  终端节点服务名称
+    * robotId  应用ID。
+    * roomId  智能交互对话ID。
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpointServiceName' => 'endpoint_service_name'
+            'robotId' => 'robot_id',
+            'roomId' => 'room_id',
+            'validPeriod' => 'valid_period'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpointServiceName  终端节点服务名称
+    * robotId  应用ID。
+    * roomId  智能交互对话ID。
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'endpointServiceName' => 'setEndpointServiceName'
+            'robotId' => 'setRobotId',
+            'roomId' => 'setRoomId',
+            'validPeriod' => 'setValidPeriod'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpointServiceName  终端节点服务名称
+    * robotId  应用ID。
+    * roomId  智能交互对话ID。
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'endpointServiceName' => 'getEndpointServiceName'
+            'robotId' => 'getRobotId',
+            'roomId' => 'getRoomId',
+            'validPeriod' => 'getValidPeriod'
     ];
 
     /**
@@ -147,7 +167,9 @@ class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
+        $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['validPeriod'] = isset($data['validPeriod']) ? $data['validPeriod'] : null;
     }
 
     /**
@@ -158,11 +180,32 @@ class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) > 16)) {
-                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be smaller than or equal to 16.";
+        if ($this->container['robotId'] === null) {
+            $invalidProperties[] = "'robotId' can't be null";
+        }
+            if ((mb_strlen($this->container['robotId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'robotId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['robotId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['roomId'] === null) {
+            $invalidProperties[] = "'roomId' can't be null";
+        }
+            if ((mb_strlen($this->container['roomId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['roomId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['validPeriod'] === null) {
+            $invalidProperties[] = "'validPeriod' can't be null";
+        }
+            if (($this->container['validPeriod'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'validPeriod', must be smaller than or equal to 65535.";
+            }
+            if (($this->container['validPeriod'] < 0)) {
+                $invalidProperties[] = "invalid value for 'validPeriod', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -179,26 +222,74 @@ class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets endpointServiceName
-    *  终端节点服务名称
+    * Gets robotId
+    *  应用ID。
     *
-    * @return string|null
+    * @return string
     */
-    public function getEndpointServiceName()
+    public function getRobotId()
     {
-        return $this->container['endpointServiceName'];
+        return $this->container['robotId'];
     }
 
     /**
-    * Sets endpointServiceName
+    * Sets robotId
     *
-    * @param string|null $endpointServiceName 终端节点服务名称
+    * @param string $robotId 应用ID。
     *
     * @return $this
     */
-    public function setEndpointServiceName($endpointServiceName)
+    public function setRobotId($robotId)
     {
-        $this->container['endpointServiceName'] = $endpointServiceName;
+        $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets roomId
+    *  智能交互对话ID。
+    *
+    * @return string
+    */
+    public function getRoomId()
+    {
+        return $this->container['roomId'];
+    }
+
+    /**
+    * Sets roomId
+    *
+    * @param string $roomId 智能交互对话ID。
+    *
+    * @return $this
+    */
+    public function setRoomId($roomId)
+    {
+        $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
+    * Gets validPeriod
+    *  有效天数（0表示长期有效）。
+    *
+    * @return int
+    */
+    public function getValidPeriod()
+    {
+        return $this->container['validPeriod'];
+    }
+
+    /**
+    * Sets validPeriod
+    *
+    * @param int $validPeriod 有效天数（0表示长期有效）。
+    *
+    * @return $this
+    */
+    public function setValidPeriod($validPeriod)
+    {
+        $this->container['validPeriod'] = $validPeriod;
         return $this;
     }
 

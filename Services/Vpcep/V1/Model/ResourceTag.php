@@ -16,7 +16,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'resource_tag';
+    protected static $openAPIModelName = 'ResourceTag';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -172,6 +172,18 @@ class ResourceTag implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
+            if ((mb_strlen($this->container['key']) > 36)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['key']) < 1)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
+            }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

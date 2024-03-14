@@ -23,24 +23,28 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  总条数。
     * domains  域名信息
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'domains' => '\HuaweiCloud\SDK\Cdn\V1\Model\Domains[]'
+            'domains' => '\HuaweiCloud\SDK\Cdn\V1\Model\Domains[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  总条数。
     * domains  域名信息
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => null,
-        'domains' => null
+        'domains' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  总条数。
     * domains  域名信息
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'domains' => 'domains'
+            'domains' => 'domains',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  总条数。
     * domains  域名信息
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'domains' => 'setDomains'
+            'domains' => 'setDomains',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  总条数。
     * domains  域名信息
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'domains' => 'getDomains'
+            'domains' => 'getDomains',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['domains'] = isset($data['domains']) ? $data['domains'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListDomainsResponse implements ModelInterface, ArrayAccess
     public function setDomains($domains)
     {
         $this->container['domains'] = $domains;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -23,24 +23,28 @@ class CollectDbObjectsInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  查询结果id
     * status  查询状态
+    * jobId  任务ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  查询结果id
     * status  查询状态
+    * jobId  任务ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'status' => null
+        'status' => null,
+        'jobId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class CollectDbObjectsInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  查询结果id
     * status  查询状态
+    * jobId  任务ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'status' => 'status'
+            'status' => 'status',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  查询结果id
     * status  查询状态
+    * jobId  任务ID
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  查询结果id
     * status  查询状态
+    * jobId  任务ID
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -177,6 +187,7 @@ class CollectDbObjectsInfoResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -254,6 +265,30 @@ class CollectDbObjectsInfoResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  任务ID
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 任务ID
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

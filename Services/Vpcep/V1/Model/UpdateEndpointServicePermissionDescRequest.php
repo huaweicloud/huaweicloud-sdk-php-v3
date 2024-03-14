@@ -31,7 +31,7 @@ class UpdateEndpointServicePermissionDescRequest implements ModelInterface, Arra
             'projectId' => 'string',
             'vpcEndpointServiceId' => 'string',
             'permissionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdatePermissionDescRequest'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServicePermissionDescRequestBody'
     ];
 
     /**
@@ -308,7 +308,7 @@ class UpdateEndpointServicePermissionDescRequest implements ModelInterface, Arra
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdatePermissionDescRequest|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServicePermissionDescRequestBody|null
     */
     public function getBody()
     {
@@ -318,7 +318,7 @@ class UpdateEndpointServicePermissionDescRequest implements ModelInterface, Arra
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdatePermissionDescRequest|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServicePermissionDescRequestBody|null $body body
     *
     * @return $this
     */

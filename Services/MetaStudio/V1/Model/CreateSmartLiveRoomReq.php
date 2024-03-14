@@ -34,6 +34,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
-            'viewMode' => 'string'
+            'viewMode' => 'string',
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig'
     ];
 
     /**
@@ -70,6 +72,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'liveEventCallbackConfig' => null,
         'reviewConfig' => null,
         'sharedConfig' => null,
-        'viewMode' => null
+        'viewMode' => null,
+        'coStreamerConfig' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'live_event_callback_config',
             'reviewConfig' => 'review_config',
             'sharedConfig' => 'shared_config',
-            'viewMode' => 'view_mode'
+            'viewMode' => 'view_mode',
+            'coStreamerConfig' => 'co_streamer_config'
     ];
 
     /**
@@ -163,6 +169,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
             'reviewConfig' => 'setReviewConfig',
             'sharedConfig' => 'setSharedConfig',
-            'viewMode' => 'setViewMode'
+            'viewMode' => 'setViewMode',
+            'coStreamerConfig' => 'setCoStreamerConfig'
     ];
 
     /**
@@ -199,6 +207,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
             'reviewConfig' => 'getReviewConfig',
             'sharedConfig' => 'getSharedConfig',
-            'viewMode' => 'getViewMode'
+            'viewMode' => 'getViewMode',
+            'coStreamerConfig' => 'getCoStreamerConfig'
     ];
 
     /**
@@ -323,6 +333,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
+        $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
     }
 
     /**
@@ -717,6 +728,30 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function setViewMode($viewMode)
     {
         $this->container['viewMode'] = $viewMode;
+        return $this;
+    }
+
+    /**
+    * Gets coStreamerConfig
+    *  coStreamerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null
+    */
+    public function getCoStreamerConfig()
+    {
+        return $this->container['coStreamerConfig'];
+    }
+
+    /**
+    * Sets coStreamerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null $coStreamerConfig coStreamerConfig
+    *
+    * @return $this
+    */
+    public function setCoStreamerConfig($coStreamerConfig)
+    {
+        $this->container['coStreamerConfig'] = $coStreamerConfig;
         return $this;
     }
 

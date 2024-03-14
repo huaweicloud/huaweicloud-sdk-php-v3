@@ -22,21 +22,25 @@ class ShowDomainFullConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * configs  configs
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configs' => '\HuaweiCloud\SDK\Cdn\V1\Model\ConfigsGetBody'
+            'configs' => '\HuaweiCloud\SDK\Cdn\V1\Model\ConfigsGetBody',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * configs  configs
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configs' => null
+        'configs' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowDomainFullConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * configs  configs
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configs' => 'configs'
+            'configs' => 'configs',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * configs  configs
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'configs' => 'setConfigs'
+            'configs' => 'setConfigs',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * configs  configs
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'configs' => 'getConfigs'
+            'configs' => 'getConfigs',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowDomainFullConfigResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['configs'] = isset($data['configs']) ? $data['configs'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowDomainFullConfigResponse implements ModelInterface, ArrayAccess
     public function setConfigs($configs)
     {
         $this->container['configs'] = $configs;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

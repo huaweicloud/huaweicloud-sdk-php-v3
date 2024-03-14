@@ -22,21 +22,25 @@ class ShowIpInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * cdnIps  IP归属信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cdnIps' => '\HuaweiCloud\SDK\Cdn\V2\Model\CdnIps[]'
+            'cdnIps' => '\HuaweiCloud\SDK\Cdn\V2\Model\CdnIps[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * cdnIps  IP归属信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cdnIps' => null
+        'cdnIps' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowIpInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * cdnIps  IP归属信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cdnIps' => 'cdn_ips'
+            'cdnIps' => 'cdn_ips',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * cdnIps  IP归属信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'cdnIps' => 'setCdnIps'
+            'cdnIps' => 'setCdnIps',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * cdnIps  IP归属信息列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'cdnIps' => 'getCdnIps'
+            'cdnIps' => 'getCdnIps',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowIpInfoResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['cdnIps'] = isset($data['cdnIps']) ? $data['cdnIps'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowIpInfoResponse implements ModelInterface, ArrayAccess
     public function setCdnIps($cdnIps)
     {
         $this->container['cdnIps'] = $cdnIps;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

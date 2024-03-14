@@ -20,7 +20,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * action  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     * endpoints  终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * action  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     * endpoints  终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * action  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     * endpoints  终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * action  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     * endpoints  终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * action  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     * endpoints  终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
     *
     * @var string[]
@@ -195,12 +195,6 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['action']) > 32)) {
-                $invalidProperties[] = "invalid value for 'action', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['action']) < 1)) {
-                $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['endpoints'] === null) {
             $invalidProperties[] = "'endpoints' can't be null";
         }
@@ -220,7 +214,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    *  允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     *
     * @return string
     */
@@ -232,7 +226,7 @@ class AcceptOrRejectEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
+    * @param string $action 允许或拒绝连接。  - receive：允许连接。  - reject：拒绝连接。
     *
     * @return $this
     */

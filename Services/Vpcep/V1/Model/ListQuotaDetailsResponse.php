@@ -26,7 +26,7 @@ class ListQuotaDetailsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'quotas' => '\HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResp'
+            'quotas' => '\HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResponseBody'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListQuotaDetailsResponse implements ModelInterface, ArrayAccess
     * Gets quotas
     *  quotas
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResp|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResponseBody|null
     */
     public function getQuotas()
     {
@@ -187,7 +187,7 @@ class ListQuotaDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResp|null $quotas quotas
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\ResourcesResponseBody|null $quotas quotas
     *
     * @return $this
     */

@@ -22,21 +22,25 @@ class UpdatePrivateBucketAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  桶开启关闭状态（true：开启；false：关闭）
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'bool'
+            'status' => 'bool',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  桶开启关闭状态（true：开启；false：关闭）
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
+        'status' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdatePrivateBucketAccessResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  桶开启关闭状态（true：开启；false：关闭）
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
+            'status' => 'status',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  桶开启关闭状态（true：开启；false：关闭）
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  桶开启关闭状态（true：开启；false：关闭）
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdatePrivateBucketAccessResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdatePrivateBucketAccessResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

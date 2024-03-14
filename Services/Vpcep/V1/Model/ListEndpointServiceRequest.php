@@ -23,9 +23,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * endpointServiceName  终端节点服务的名称，支持大小写，前后模糊匹配。
     * id  终端节点服务的ID，唯一标识。
-    * status  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
@@ -49,9 +49,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * endpointServiceName  终端节点服务的名称，支持大小写，前后模糊匹配。
     * id  终端节点服务的ID，唯一标识。
-    * status  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
@@ -96,9 +96,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * endpointServiceName  终端节点服务的名称，支持大小写，前后模糊匹配。
     * id  终端节点服务的ID，唯一标识。
-    * status  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
@@ -122,9 +122,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * endpointServiceName  终端节点服务的名称，支持大小写，前后模糊匹配。
     * id  终端节点服务的ID，唯一标识。
-    * status  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
@@ -148,9 +148,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * endpointServiceName  终端节点服务的名称，支持大小写，前后模糊匹配。
     * id  终端节点服务的ID，唯一标识。
-    * status  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * status  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
@@ -298,6 +298,12 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be smaller than or equal to 128.";
             }
@@ -425,7 +431,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
+    *  终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     *
     * @return string|null
     */
@@ -437,7 +443,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 终端节点服务的状态。 ● creating：创建中 ● available：可连接 ● failed：失败 ● deleting：删除中
+    * @param string|null $status 终端节点服务的状态。  - creating：创建中  - available：可连接  - failed：失败  - deleting：删除中
     *
     * @return $this
     */
@@ -449,7 +455,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
+    *  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return string|null
     */
@@ -461,7 +467,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
+    * @param string|null $sortKey 查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return $this
     */
@@ -473,7 +479,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    *  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return string|null
     */
@@ -485,7 +491,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * @param string|null $sortDir 查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return $this
     */

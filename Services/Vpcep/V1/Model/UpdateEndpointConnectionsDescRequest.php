@@ -29,7 +29,7 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
     protected static $openAPITypes = [
             'projectId' => 'string',
             'vpcEndpointServiceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEpConnections'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointConnectionsDescRequestBody'
     ];
 
     /**
@@ -186,8 +186,8 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
             if ((mb_strlen($this->container['projectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['vpcEndpointServiceId'] === null) {
             $invalidProperties[] = "'vpcEndpointServiceId' can't be null";
@@ -195,8 +195,8 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
             if ((mb_strlen($this->container['vpcEndpointServiceId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['vpcEndpointServiceId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -264,7 +264,7 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEpConnections|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointConnectionsDescRequestBody|null
     */
     public function getBody()
     {
@@ -274,7 +274,7 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEpConnections|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointConnectionsDescRequestBody|null $body body
     *
     * @return $this
     */

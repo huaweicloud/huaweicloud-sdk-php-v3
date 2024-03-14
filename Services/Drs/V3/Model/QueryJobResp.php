@@ -77,6 +77,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
     * tags  DRS任务标签
+    * publicIpList  指定公网Ip的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -137,7 +140,10 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'objectInfos' => '\HuaweiCloud\SDK\Drs\V3\Model\DatabaseObjectInfo[]',
             'originalJobDirection' => 'string',
             'dataTransformation' => '\HuaweiCloud\SDK\Drs\V3\Model\GetDataTransformationResp',
-            'tags' => '\HuaweiCloud\SDK\Drs\V3\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Drs\V3\Model\Tag[]',
+            'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]',
+            'bindPublicIpState' => 'string',
+            'children' => '\HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]'
     ];
 
     /**
@@ -199,6 +205,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
     * tags  DRS任务标签
+    * publicIpList  指定公网Ip的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -259,7 +268,10 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         'objectInfos' => null,
         'originalJobDirection' => null,
         'dataTransformation' => null,
-        'tags' => null
+        'tags' => null,
+        'publicIpList' => null,
+        'bindPublicIpState' => null,
+        'children' => null
     ];
 
     /**
@@ -342,6 +354,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
     * tags  DRS任务标签
+    * publicIpList  指定公网Ip的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -402,7 +417,10 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'objectInfos' => 'object_infos',
             'originalJobDirection' => 'original_job_direction',
             'dataTransformation' => 'data_transformation',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'publicIpList' => 'public_ip_list',
+            'bindPublicIpState' => 'bind_public_ip_state',
+            'children' => 'children'
     ];
 
     /**
@@ -464,6 +482,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
     * tags  DRS任务标签
+    * publicIpList  指定公网Ip的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -524,7 +545,10 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'objectInfos' => 'setObjectInfos',
             'originalJobDirection' => 'setOriginalJobDirection',
             'dataTransformation' => 'setDataTransformation',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'publicIpList' => 'setPublicIpList',
+            'bindPublicIpState' => 'setBindPublicIpState',
+            'children' => 'setChildren'
     ];
 
     /**
@@ -586,6 +610,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
     * tags  DRS任务标签
+    * publicIpList  指定公网Ip的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -646,7 +673,10 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'objectInfos' => 'getObjectInfos',
             'originalJobDirection' => 'getOriginalJobDirection',
             'dataTransformation' => 'getDataTransformation',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'publicIpList' => 'getPublicIpList',
+            'bindPublicIpState' => 'getBindPublicIpState',
+            'children' => 'getChildren'
     ];
 
     /**
@@ -952,6 +982,9 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         $this->container['originalJobDirection'] = isset($data['originalJobDirection']) ? $data['originalJobDirection'] : null;
         $this->container['dataTransformation'] = isset($data['dataTransformation']) ? $data['dataTransformation'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
+        $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
+        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
 
     /**
@@ -2405,6 +2438,78 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpList
+    *  指定公网Ip的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null
+    */
+    public function getPublicIpList()
+    {
+        return $this->container['publicIpList'];
+    }
+
+    /**
+    * Sets publicIpList
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网Ip的信息
+    *
+    * @return $this
+    */
+    public function setPublicIpList($publicIpList)
+    {
+        $this->container['publicIpList'] = $publicIpList;
+        return $this;
+    }
+
+    /**
+    * Gets bindPublicIpState
+    *  是否成功绑定公网IP
+    *
+    * @return string|null
+    */
+    public function getBindPublicIpState()
+    {
+        return $this->container['bindPublicIpState'];
+    }
+
+    /**
+    * Sets bindPublicIpState
+    *
+    * @param string|null $bindPublicIpState 是否成功绑定公网IP
+    *
+    * @return $this
+    */
+    public function setBindPublicIpState($bindPublicIpState)
+    {
+        $this->container['bindPublicIpState'] = $bindPublicIpState;
+        return $this;
+    }
+
+    /**
+    * Gets children
+    *  多任务时，存在子任务绑定失败时，返回子任务的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]|null
+    */
+    public function getChildren()
+    {
+        return $this->container['children'];
+    }
+
+    /**
+    * Sets children
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]|null $children 多任务时，存在子任务绑定失败时，返回子任务的信息
+    *
+    * @return $this
+    */
+    public function setChildren($children)
+    {
+        $this->container['children'] = $children;
         return $this;
     }
 

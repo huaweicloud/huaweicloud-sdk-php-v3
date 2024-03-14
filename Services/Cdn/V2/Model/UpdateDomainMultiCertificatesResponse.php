@@ -22,21 +22,25 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * https  https
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'https' => '\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyContent'
+            'https' => '\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainMultiCertificatesResponseBodyContent',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * https  https
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'https' => null
+        'https' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * https  https
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'https' => 'https'
+            'https' => 'https',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * https  https
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'https' => 'setHttps'
+            'https' => 'setHttps',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * https  https
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'https' => 'getHttps'
+            'https' => 'getHttps',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdateDomainMultiCertificatesResponse implements ModelInterface, ArrayAcce
     public function setHttps($https)
     {
         $this->container['https'] = $https;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

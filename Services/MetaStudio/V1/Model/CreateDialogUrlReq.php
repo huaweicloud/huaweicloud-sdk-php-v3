@@ -20,8 +20,8 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomId  直播间ID。
-    * robotId  机器人ID。
+    * roomId  智能交互对话ID。
+    * robotId  应用ID。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomId  直播间ID。
-    * robotId  机器人ID。
+    * roomId  智能交互对话ID。
+    * robotId  应用ID。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomId  直播间ID。
-    * robotId  机器人ID。
+    * roomId  智能交互对话ID。
+    * robotId  应用ID。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomId  直播间ID。
-    * robotId  机器人ID。
+    * roomId  智能交互对话ID。
+    * robotId  应用ID。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomId  直播间ID。
-    * robotId  机器人ID。
+    * roomId  智能交互对话ID。
+    * robotId  应用ID。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomId
-    *  直播间ID。
+    *  智能交互对话ID。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
     /**
     * Sets roomId
     *
-    * @param string $roomId 直播间ID。
+    * @param string $roomId 智能交互对话ID。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets robotId
-    *  机器人ID。
+    *  应用ID。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class CreateDialogUrlReq implements ModelInterface, ArrayAccess
     /**
     * Sets robotId
     *
-    * @param string $robotId 机器人ID。
+    * @param string $robotId 应用ID。
     *
     * @return $this
     */

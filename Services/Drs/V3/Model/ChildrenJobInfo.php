@@ -269,7 +269,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
     const ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL_TO_TAURUS = 'cloudDataGuard-mysql-to-taurus';
     const JOB_DIRECTION_UP = 'up';
     const JOB_DIRECTION_DOWN = 'down';
-    const JOB_DIRECTION_NO_DBS = 'no-dbs';
+    const JOB_DIRECTION_NON_DBS = 'non-dbs';
     const NET_TYPE_VPC = 'vpc';
     const NET_TYPE_VPN = 'vpn';
     const NET_TYPE_EIP = 'eip';
@@ -347,7 +347,7 @@ class ChildrenJobInfo implements ModelInterface, ArrayAccess
         return [
             self::JOB_DIRECTION_UP,
             self::JOB_DIRECTION_DOWN,
-            self::JOB_DIRECTION_NO_DBS,
+            self::JOB_DIRECTION_NON_DBS,
         ];
     }
 

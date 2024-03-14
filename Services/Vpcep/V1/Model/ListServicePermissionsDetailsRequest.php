@@ -25,8 +25,8 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
-    * sortDir  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
-    * sortDir  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
-    * sortDir  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
-    * sortDir  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
-    * sortDir  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -439,7 +439,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets sortKey
-    *  查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
+    *  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
+    * @param string|null $sortKey 查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets sortDir
-    *  查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    *  查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * @param string|null $sortDir 查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return $this
     */

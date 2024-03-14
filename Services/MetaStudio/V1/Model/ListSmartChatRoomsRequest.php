@@ -26,7 +26,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * roomName  按智能交互对话直播间名称模糊查询。
+    * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
@@ -54,7 +54,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * roomName  按智能交互对话直播间名称模糊查询。
+    * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
@@ -103,7 +103,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * roomName  按智能交互对话直播间名称模糊查询。
+    * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
@@ -131,7 +131,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * roomName  按智能交互对话直播间名称模糊查询。
+    * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
@@ -159,7 +159,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * roomName  按智能交互对话直播间名称模糊查询。
+    * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
@@ -477,7 +477,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomName
-    *  按智能交互对话直播间名称模糊查询。
+    *  按智能交互对话名称模糊查询。
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets roomName
     *
-    * @param string|null $roomName 按智能交互对话直播间名称模糊查询。
+    * @param string|null $roomName 按智能交互对话名称模糊查询。
     *
     * @return $this
     */

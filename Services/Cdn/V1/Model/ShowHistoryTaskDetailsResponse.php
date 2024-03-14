@@ -31,6 +31,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * failed  处理失败的url个数。
     * total  历史任务的url个数。
     * fileType  文件类型，file：文件；directory：目录，默认是文件file,
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -44,7 +45,8 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
             'succeed' => 'int',
             'failed' => 'int',
             'total' => 'int',
-            'fileType' => 'string'
+            'fileType' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -59,6 +61,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * failed  处理失败的url个数。
     * total  历史任务的url个数。
     * fileType  文件类型，file：文件；directory：目录，默认是文件file,
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -72,7 +75,8 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
         'succeed' => 'int32',
         'failed' => 'int32',
         'total' => 'int32',
-        'fileType' => null
+        'fileType' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -108,6 +112,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * failed  处理失败的url个数。
     * total  历史任务的url个数。
     * fileType  文件类型，file：文件；directory：目录，默认是文件file,
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -121,7 +126,8 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
             'succeed' => 'succeed',
             'failed' => 'failed',
             'total' => 'total',
-            'fileType' => 'file_type'
+            'fileType' => 'file_type',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -136,6 +142,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * failed  处理失败的url个数。
     * total  历史任务的url个数。
     * fileType  文件类型，file：文件；directory：目录，默认是文件file,
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -149,7 +156,8 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
             'succeed' => 'setSucceed',
             'failed' => 'setFailed',
             'total' => 'setTotal',
-            'fileType' => 'setFileType'
+            'fileType' => 'setFileType',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -164,6 +172,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     * failed  处理失败的url个数。
     * total  历史任务的url个数。
     * fileType  文件类型，file：文件；directory：目录，默认是文件file,
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -177,7 +186,8 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
             'succeed' => 'getSucceed',
             'failed' => 'getFailed',
             'total' => 'getTotal',
-            'fileType' => 'getFileType'
+            'fileType' => 'getFileType',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -248,6 +258,7 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['fileType'] = isset($data['fileType']) ? $data['fileType'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -509,6 +520,30 @@ class ShowHistoryTaskDetailsResponse implements ModelInterface, ArrayAccess
     public function setFileType($fileType)
     {
         $this->container['fileType'] = $fileType;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

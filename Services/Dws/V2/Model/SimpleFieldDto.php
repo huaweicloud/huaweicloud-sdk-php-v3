@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpcep\V1\Model;
+namespace HuaweiCloud\SDK\Dws\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
+class SimpleFieldDto implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchRemovePermissionRequest';
+    protected static $openAPIModelName = 'SimpleFieldDto';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permissions  permissions
+    * columnName  指标表对应字段名称。
+    * columnType  指标表对应字段类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'permissions' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EpsRemovePermissionRequest[]'
+            'columnName' => 'string',
+            'columnType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permissions  permissions
+    * columnName  指标表对应字段名称。
+    * columnType  指标表对应字段类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'permissions' => null
+        'columnName' => null,
+        'columnType' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permissions  permissions
+    * columnName  指标表对应字段名称。
+    * columnType  指标表对应字段类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'permissions' => 'permissions'
+            'columnName' => 'column_name',
+            'columnType' => 'column_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permissions  permissions
+    * columnName  指标表对应字段名称。
+    * columnType  指标表对应字段类型。
     *
     * @var string[]
     */
     protected static $setters = [
-            'permissions' => 'setPermissions'
+            'columnName' => 'setColumnName',
+            'columnType' => 'setColumnType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permissions  permissions
+    * columnName  指标表对应字段名称。
+    * columnType  指标表对应字段类型。
     *
     * @var string[]
     */
     protected static $getters = [
-            'permissions' => 'getPermissions'
+            'columnName' => 'getColumnName',
+            'columnType' => 'getColumnType'
     ];
 
     /**
@@ -147,7 +157,8 @@ class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+        $this->container['columnName'] = isset($data['columnName']) ? $data['columnName'] : null;
+        $this->container['columnType'] = isset($data['columnType']) ? $data['columnType'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['permissions'] === null) {
-            $invalidProperties[] = "'permissions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +184,50 @@ class BatchRemovePermissionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets permissions
-    *  permissions
+    * Gets columnName
+    *  指标表对应字段名称。
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EpsRemovePermissionRequest[]
+    * @return string|null
     */
-    public function getPermissions()
+    public function getColumnName()
     {
-        return $this->container['permissions'];
+        return $this->container['columnName'];
     }
 
     /**
-    * Sets permissions
+    * Sets columnName
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsRemovePermissionRequest[] $permissions permissions
+    * @param string|null $columnName 指标表对应字段名称。
     *
     * @return $this
     */
-    public function setPermissions($permissions)
+    public function setColumnName($columnName)
     {
-        $this->container['permissions'] = $permissions;
+        $this->container['columnName'] = $columnName;
+        return $this;
+    }
+
+    /**
+    * Gets columnType
+    *  指标表对应字段类型。
+    *
+    * @return string|null
+    */
+    public function getColumnType()
+    {
+        return $this->container['columnType'];
+    }
+
+    /**
+    * Sets columnType
+    *
+    * @param string|null $columnType 指标表对应字段类型。
+    *
+    * @return $this
+    */
+    public function setColumnType($columnType)
+    {
+        $this->container['columnType'] = $columnType;
         return $this;
     }
 

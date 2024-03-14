@@ -47,6 +47,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
+    * publicIpList  指定公网IP的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -77,7 +80,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'supportImportFileResp' => '\HuaweiCloud\SDK\Drs\V5\Model\SupportImportFileResult',
             'instanceFeatures' => 'map[string,string]',
             'taskVersion' => 'string',
-            'connectionManagement' => '\HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement'
+            'connectionManagement' => '\HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement',
+            'publicIpList' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]',
+            'bindPublicIpState' => 'string',
+            'children' => '\HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]'
     ];
 
     /**
@@ -109,6 +115,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
+    * publicIpList  指定公网IP的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -139,7 +148,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'supportImportFileResp' => null,
         'instanceFeatures' => null,
         'taskVersion' => null,
-        'connectionManagement' => null
+        'connectionManagement' => null,
+        'publicIpList' => null,
+        'bindPublicIpState' => null,
+        'children' => null
     ];
 
     /**
@@ -192,6 +204,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
+    * publicIpList  指定公网IP的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -222,7 +237,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'supportImportFileResp' => 'support_import_file_resp',
             'instanceFeatures' => 'instance_features',
             'taskVersion' => 'task_version',
-            'connectionManagement' => 'connection_management'
+            'connectionManagement' => 'connection_management',
+            'publicIpList' => 'public_ip_list',
+            'bindPublicIpState' => 'bind_public_ip_state',
+            'children' => 'children'
     ];
 
     /**
@@ -254,6 +272,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
+    * publicIpList  指定公网IP的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -284,7 +305,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'supportImportFileResp' => 'setSupportImportFileResp',
             'instanceFeatures' => 'setInstanceFeatures',
             'taskVersion' => 'setTaskVersion',
-            'connectionManagement' => 'setConnectionManagement'
+            'connectionManagement' => 'setConnectionManagement',
+            'publicIpList' => 'setPublicIpList',
+            'bindPublicIpState' => 'setBindPublicIpState',
+            'children' => 'setChildren'
     ];
 
     /**
@@ -316,6 +340,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
+    * publicIpList  指定公网IP的信息
+    * bindPublicIpState  是否成功绑定公网IP
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     *
     * @var string[]
     */
@@ -346,7 +373,10 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'supportImportFileResp' => 'getSupportImportFileResp',
             'instanceFeatures' => 'getInstanceFeatures',
             'taskVersion' => 'getTaskVersion',
-            'connectionManagement' => 'getConnectionManagement'
+            'connectionManagement' => 'getConnectionManagement',
+            'publicIpList' => 'getPublicIpList',
+            'bindPublicIpState' => 'getBindPublicIpState',
+            'children' => 'getChildren'
     ];
 
     /**
@@ -434,6 +464,9 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['instanceFeatures'] = isset($data['instanceFeatures']) ? $data['instanceFeatures'] : null;
         $this->container['taskVersion'] = isset($data['taskVersion']) ? $data['taskVersion'] : null;
         $this->container['connectionManagement'] = isset($data['connectionManagement']) ? $data['connectionManagement'] : null;
+        $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
+        $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
+        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
 
     /**
@@ -1103,6 +1136,78 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function setConnectionManagement($connectionManagement)
     {
         $this->container['connectionManagement'] = $connectionManagement;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpList
+    *  指定公网IP的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null
+    */
+    public function getPublicIpList()
+    {
+        return $this->container['publicIpList'];
+    }
+
+    /**
+    * Sets publicIpList
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息
+    *
+    * @return $this
+    */
+    public function setPublicIpList($publicIpList)
+    {
+        $this->container['publicIpList'] = $publicIpList;
+        return $this;
+    }
+
+    /**
+    * Gets bindPublicIpState
+    *  是否成功绑定公网IP
+    *
+    * @return string|null
+    */
+    public function getBindPublicIpState()
+    {
+        return $this->container['bindPublicIpState'];
+    }
+
+    /**
+    * Sets bindPublicIpState
+    *
+    * @param string|null $bindPublicIpState 是否成功绑定公网IP
+    *
+    * @return $this
+    */
+    public function setBindPublicIpState($bindPublicIpState)
+    {
+        $this->container['bindPublicIpState'] = $bindPublicIpState;
+        return $this;
+    }
+
+    /**
+    * Gets children
+    *  多任务时，存在子任务绑定失败时，返回子任务的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]|null
+    */
+    public function getChildren()
+    {
+        return $this->container['children'];
+    }
+
+    /**
+    * Sets children
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]|null $children 多任务时，存在子任务绑定失败时，返回子任务的信息
+    *
+    * @return $this
+    */
+    public function setChildren($children)
+    {
+        $this->container['children'] = $children;
         return $this;
     }
 

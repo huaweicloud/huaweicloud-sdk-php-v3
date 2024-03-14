@@ -26,6 +26,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig',
             'replyTexts' => 'string[]',
             'replyAudios' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]',
-            'replyOrder' => 'string'
+            'replyOrder' => 'string',
+            'replyRole' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         'layerConfig' => null,
         'replyTexts' => null,
         'replyAudios' => null,
-        'replyOrder' => null
+        'replyOrder' => null,
+        'replyRole' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'layerConfig' => 'layer_config',
             'replyTexts' => 'reply_texts',
             'replyAudios' => 'reply_audios',
-            'replyOrder' => 'reply_order'
+            'replyOrder' => 'reply_order',
+            'replyRole' => 'reply_role'
     ];
 
     /**
@@ -107,6 +113,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'layerConfig' => 'setLayerConfig',
             'replyTexts' => 'setReplyTexts',
             'replyAudios' => 'setReplyAudios',
-            'replyOrder' => 'setReplyOrder'
+            'replyOrder' => 'setReplyOrder',
+            'replyRole' => 'setReplyRole'
     ];
 
     /**
@@ -127,6 +135,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'layerConfig' => 'getLayerConfig',
             'replyTexts' => 'getReplyTexts',
             'replyAudios' => 'getReplyAudios',
-            'replyOrder' => 'getReplyOrder'
+            'replyOrder' => 'getReplyOrder',
+            'replyRole' => 'getReplyRole'
     ];
 
     /**
@@ -184,6 +194,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     const REPLY_MODE_SHOW_LAYER = 'SHOW_LAYER';
     const REPLY_ORDER_RANDOM = 'RANDOM';
     const REPLY_ORDER_ORDER = 'ORDER';
+    const REPLY_ROLE_STREAMER = 'STREAMER';
+    const REPLY_ROLE_CO_STREAMER = 'CO_STREAMER';
     
 
     /**
@@ -213,6 +225,19 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getReplyRoleAllowableValues()
+    {
+        return [
+            self::REPLY_ROLE_STREAMER,
+            self::REPLY_ROLE_CO_STREAMER,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -235,6 +260,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         $this->container['replyTexts'] = isset($data['replyTexts']) ? $data['replyTexts'] : null;
         $this->container['replyAudios'] = isset($data['replyAudios']) ? $data['replyAudios'] : null;
         $this->container['replyOrder'] = isset($data['replyOrder']) ? $data['replyOrder'] : null;
+        $this->container['replyRole'] = isset($data['replyRole']) ? $data['replyRole'] : null;
     }
 
     /**
@@ -278,6 +304,20 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['replyOrder']) && (mb_strlen($this->container['replyOrder']) < 0)) {
                 $invalidProperties[] = "invalid value for 'replyOrder', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getReplyRoleAllowableValues();
+                if (!is_null($this->container['replyRole']) && !in_array($this->container['replyRole'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'replyRole', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['replyRole']) && (mb_strlen($this->container['replyRole']) > 32)) {
+                $invalidProperties[] = "invalid value for 'replyRole', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['replyRole']) && (mb_strlen($this->container['replyRole']) < 0)) {
+                $invalidProperties[] = "invalid value for 'replyRole', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -434,6 +474,30 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     public function setReplyOrder($replyOrder)
     {
         $this->container['replyOrder'] = $replyOrder;
+        return $this;
+    }
+
+    /**
+    * Gets replyRole
+    *  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    *
+    * @return string|null
+    */
+    public function getReplyRole()
+    {
+        return $this->container['replyRole'];
+    }
+
+    /**
+    * Sets replyRole
+    *
+    * @param string|null $replyRole 回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    *
+    * @return $this
+    */
+    public function setReplyRole($replyRole)
+    {
+        $this->container['replyRole'] = $replyRole;
         return $this;
     }
 

@@ -23,24 +23,28 @@ class ShowBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     * ipList  IP黑白名单列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'int',
-            'ipList' => 'string[]'
+            'ipList' => 'string[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     * ipList  IP黑白名单列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => 'int32',
-        'ipList' => null
+        'ipList' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ShowBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     * ipList  IP黑白名单列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'ipList' => 'ip_list'
+            'ipList' => 'ip_list',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     * ipList  IP黑白名单列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'ipList' => 'setIpList'
+            'ipList' => 'setIpList',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）。
     * ipList  IP黑白名单列表。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'ipList' => 'getIpList'
+            'ipList' => 'getIpList',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ShowBlackWhiteListResponse implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['ipList'] = isset($data['ipList']) ? $data['ipList'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ShowBlackWhiteListResponse implements ModelInterface, ArrayAccess
     public function setIpList($ipList)
     {
         $this->container['ipList'] = $ipList;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -25,6 +25,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * targetEndpoint  创建任务数据库信息体。
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'sourceEndpoint' => '\HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]',
             'targetEndpoint' => '\HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]',
             'periodOrder' => '\HuaweiCloud\SDK\Drs\V5\Model\PeriodOrderInfo',
-            'nodeInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeInfo'
+            'nodeInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobNodeInfo',
+            'publicIpList' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * targetEndpoint  创建任务数据库信息体。
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         'sourceEndpoint' => null,
         'targetEndpoint' => null,
         'periodOrder' => null,
-        'nodeInfo' => null
+        'nodeInfo' => null,
+        'publicIpList' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * targetEndpoint  创建任务数据库信息体。
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'sourceEndpoint' => 'source_endpoint',
             'targetEndpoint' => 'target_endpoint',
             'periodOrder' => 'period_order',
-            'nodeInfo' => 'node_info'
+            'nodeInfo' => 'node_info',
+            'publicIpList' => 'public_ip_list'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * targetEndpoint  创建任务数据库信息体。
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'sourceEndpoint' => 'setSourceEndpoint',
             'targetEndpoint' => 'setTargetEndpoint',
             'periodOrder' => 'setPeriodOrder',
-            'nodeInfo' => 'setNodeInfo'
+            'nodeInfo' => 'setNodeInfo',
+            'publicIpList' => 'setPublicIpList'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * targetEndpoint  创建任务数据库信息体。
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'sourceEndpoint' => 'getSourceEndpoint',
             'targetEndpoint' => 'getTargetEndpoint',
             'periodOrder' => 'getPeriodOrder',
-            'nodeInfo' => 'getNodeInfo'
+            'nodeInfo' => 'getNodeInfo',
+            'publicIpList' => 'getPublicIpList'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         $this->container['targetEndpoint'] = isset($data['targetEndpoint']) ? $data['targetEndpoint'] : null;
         $this->container['periodOrder'] = isset($data['periodOrder']) ? $data['periodOrder'] : null;
         $this->container['nodeInfo'] = isset($data['nodeInfo']) ? $data['nodeInfo'] : null;
+        $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
     }
 
     /**
@@ -345,6 +356,30 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     public function setNodeInfo($nodeInfo)
     {
         $this->container['nodeInfo'] = $nodeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpList
+    *  指定公网IP的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null
+    */
+    public function getPublicIpList()
+    {
+        return $this->container['publicIpList'];
+    }
+
+    /**
+    * Sets publicIpList
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息
+    *
+    * @return $this
+    */
+    public function setPublicIpList($publicIpList)
+    {
+        $this->container['publicIpList'] = $publicIpList;
         return $this;
     }
 

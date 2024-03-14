@@ -345,8 +345,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['introductionText']) && (mb_strlen($this->container['introductionText']) > 512)) {
-                $invalidProperties[] = "invalid value for 'introductionText', the character length must be smaller than or equal to 512.";
+            if (!is_null($this->container['introductionText']) && (mb_strlen($this->container['introductionText']) > 2000)) {
+                $invalidProperties[] = "invalid value for 'introductionText', the character length must be smaller than or equal to 2000.";
             }
             if (!is_null($this->container['introductionText']) && (mb_strlen($this->container['introductionText']) < 1)) {
                 $invalidProperties[] = "invalid value for 'introductionText', the character length must be bigger than or equal to 1.";

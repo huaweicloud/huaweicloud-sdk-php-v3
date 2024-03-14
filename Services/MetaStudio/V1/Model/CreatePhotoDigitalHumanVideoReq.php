@@ -244,8 +244,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         if ($this->container['humanImage'] === null) {
             $invalidProperties[] = "'humanImage' can't be null";
         }
-            if ((mb_strlen($this->container['humanImage']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 2147483647.";
+            if ((mb_strlen($this->container['humanImage']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 31457280.";
             }
             if ((mb_strlen($this->container['humanImage']) < 1)) {
                 $invalidProperties[] = "invalid value for 'humanImage', the character length must be bigger than or equal to 1.";

@@ -180,6 +180,18 @@ class ResourceInstance implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

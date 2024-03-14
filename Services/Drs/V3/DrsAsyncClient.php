@@ -1871,6 +1871,86 @@ class DrsAsyncClient extends Client
     }
 
     /**
+     * 查询可用的Node规格
+     *
+     * 查询可用的Node规格
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAvailableNodeTypesAsync($request)
+    {
+        return $this->listAvailableNodeTypesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAvailableNodeTypesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/node-type';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engineType'] !== null) {
+            $queryParams['engine_type'] = $localVarParams['engineType'];
+        }
+        if ($localVarParams['dbUseType'] !== null) {
+            $queryParams['db_use_type'] = $localVarParams['dbUseType'];
+        }
+        if ($localVarParams['jobDirection'] !== null) {
+            $queryParams['job_direction'] = $localVarParams['jobDirection'];
+        }
+        if ($localVarParams['isUseSelloutInfo'] !== null) {
+            $queryParams['is_use_sellout_info'] = $localVarParams['isUseSelloutInfo'];
+        }
+        if ($localVarParams['isMultiWrite'] !== null) {
+            $queryParams['is_multi_write'] = $localVarParams['isMultiWrite'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListAvailableNodeTypesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListAvailableNodeTypesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询规格未售罄的可用区
      *
      * 查询规格未售罄的可用区

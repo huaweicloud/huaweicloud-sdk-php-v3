@@ -22,21 +22,25 @@ class UpdateFollow302SwitchResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * followStatus  followStatus
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'followStatus' => '\HuaweiCloud\SDK\Cdn\V1\Model\Follow302StatusBody'
+            'followStatus' => '\HuaweiCloud\SDK\Cdn\V1\Model\Follow302StatusBody',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * followStatus  followStatus
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'followStatus' => null
+        'followStatus' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateFollow302SwitchResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * followStatus  followStatus
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'followStatus' => 'follow_status'
+            'followStatus' => 'follow_status',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * followStatus  followStatus
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'followStatus' => 'setFollowStatus'
+            'followStatus' => 'setFollowStatus',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * followStatus  followStatus
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'followStatus' => 'getFollowStatus'
+            'followStatus' => 'getFollowStatus',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateFollow302SwitchResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['followStatus'] = isset($data['followStatus']) ? $data['followStatus'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdateFollow302SwitchResponse implements ModelInterface, ArrayAccess
     public function setFollowStatus($followStatus)
     {
         $this->container['followStatus'] = $followStatus;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

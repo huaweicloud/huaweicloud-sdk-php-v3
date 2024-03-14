@@ -159,12 +159,6 @@ class UpdateEndpointServiceNameResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) > 16)) {
-                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be smaller than or equal to 16.";
-            }
-            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 

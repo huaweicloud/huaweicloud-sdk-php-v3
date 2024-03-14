@@ -25,8 +25,8 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * endpointServiceName  公共终端节点服务的名称，支持大小写以及模糊匹配。
     * id  公共终端节点服务的ID，唯一标识。
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * endpointServiceName  公共终端节点服务的名称，支持大小写以及模糊匹配。
     * id  公共终端节点服务的ID，唯一标识。
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * endpointServiceName  公共终端节点服务的名称，支持大小写以及模糊匹配。
     * id  公共终端节点服务的ID，唯一标识。
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * endpointServiceName  公共终端节点服务的名称，支持大小写以及模糊匹配。
     * id  公共终端节点服务的ID，唯一标识。
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * endpointServiceName  公共终端节点服务的名称，支持大小写以及模糊匹配。
     * id  公共终端节点服务的ID，唯一标识。
-    * sortKey  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @var string[]
     */
@@ -436,7 +436,7 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
+    *  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
+    * @param string|null $sortKey 查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    *  查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class ListServicePublicDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * @param string|null $sortDir 查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return $this
     */

@@ -23,11 +23,11 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点服务的ID，唯一标识。
     * serviceName  终端节点服务的名称。
-    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'serviceName' => 'string',
             'serviceType' => 'string',
-            'createdAt' => 'string',
+            'createdAt' => '\DateTime',
             'isCharge' => 'bool',
             'publicBorderGroup' => 'string',
             'enablePolicy' => 'bool'
@@ -45,11 +45,11 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点服务的ID，唯一标识。
     * serviceName  终端节点服务的名称。
-    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'serviceName' => null,
         'serviceType' => null,
-        'createdAt' => null,
+        'createdAt' => 'date-time',
         'isCharge' => null,
         'publicBorderGroup' => null,
         'enablePolicy' => null
@@ -88,11 +88,11 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  终端节点服务的ID，唯一标识。
     * serviceName  终端节点服务的名称。
-    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -110,11 +110,11 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点服务的ID，唯一标识。
     * serviceName  终端节点服务的名称。
-    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -132,11 +132,11 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点服务的ID，唯一标识。
     * serviceName  终端节点服务的名称。
-    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -190,20 +190,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SERVICE_TYPE__INTERFACE = 'interface';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getServiceTypeAllowableValues()
-    {
-        return [
-            self::SERVICE_TYPE__INTERFACE,
-        ];
-    }
 
 
     /**
@@ -238,14 +225,12 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getServiceTypeAllowableValues();
-                if (!is_null($this->container['serviceType']) && !in_array($this->container['serviceType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'serviceType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
             }
-
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -310,7 +295,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    *  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     *
     * @return string|null
     */
@@ -322,7 +307,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
+    * @param string|null $serviceType 终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     *
     * @return $this
     */
@@ -336,7 +321,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getCreatedAt()
     {
@@ -346,7 +331,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $createdAt 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -358,7 +343,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCharge
-    *  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    *  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     *
     * @return bool|null
     */
@@ -370,7 +355,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isCharge
     *
-    * @param bool|null $isCharge 连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * @param bool|null $isCharge 连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     *
     * @return $this
     */
@@ -406,7 +391,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePolicy
-    *  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    *  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return bool|null
     */
@@ -418,7 +403,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enablePolicy
     *
-    * @param bool|null $enablePolicy 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    * @param bool|null $enablePolicy 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return $this
     */

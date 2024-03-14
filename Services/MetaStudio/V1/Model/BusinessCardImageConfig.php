@@ -172,14 +172,14 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
         if ($this->container['humanImage'] === null) {
             $invalidProperties[] = "'humanImage' can't be null";
         }
-            if ((mb_strlen($this->container['humanImage']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 2147483647.";
+            if ((mb_strlen($this->container['humanImage']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'humanImage', the character length must be smaller than or equal to 31457280.";
             }
             if ((mb_strlen($this->container['humanImage']) < 1)) {
                 $invalidProperties[] = "invalid value for 'humanImage', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['logoImage']) && (mb_strlen($this->container['logoImage']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'logoImage', the character length must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['logoImage']) && (mb_strlen($this->container['logoImage']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'logoImage', the character length must be smaller than or equal to 31457280.";
             }
             if (!is_null($this->container['logoImage']) && (mb_strlen($this->container['logoImage']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logoImage', the character length must be bigger than or equal to 0.";

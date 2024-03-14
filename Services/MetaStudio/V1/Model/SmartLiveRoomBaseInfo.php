@@ -25,10 +25,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * errorInfo  errorInfo
     * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图URL
     * modelInfos  数字人模型信息
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -44,10 +46,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'roomName' => 'string',
             'roomType' => 'string',
             'roomState' => 'string',
+            'viewMode' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'roomDescription' => 'string',
             'coverUrl' => 'string',
+            'thumbnail' => 'string',
             'modelInfos' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ModelInfo[]',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -63,10 +67,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * errorInfo  errorInfo
     * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图URL
     * modelInfos  数字人模型信息
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -82,10 +88,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         'roomName' => null,
         'roomType' => null,
         'roomState' => null,
+        'viewMode' => null,
         'errorInfo' => null,
         'sharedConfig' => null,
         'roomDescription' => null,
         'coverUrl' => null,
+        'thumbnail' => null,
         'modelInfos' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -122,10 +130,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * errorInfo  errorInfo
     * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图URL
     * modelInfos  数字人模型信息
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -141,10 +151,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'roomName' => 'room_name',
             'roomType' => 'room_type',
             'roomState' => 'room_state',
+            'viewMode' => 'view_mode',
             'errorInfo' => 'error_info',
             'sharedConfig' => 'shared_config',
             'roomDescription' => 'room_description',
             'coverUrl' => 'cover_url',
+            'thumbnail' => 'thumbnail',
             'modelInfos' => 'model_infos',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -160,10 +172,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * errorInfo  errorInfo
     * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图URL
     * modelInfos  数字人模型信息
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -179,10 +193,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'roomName' => 'setRoomName',
             'roomType' => 'setRoomType',
             'roomState' => 'setRoomState',
+            'viewMode' => 'setViewMode',
             'errorInfo' => 'setErrorInfo',
             'sharedConfig' => 'setSharedConfig',
             'roomDescription' => 'setRoomDescription',
             'coverUrl' => 'setCoverUrl',
+            'thumbnail' => 'setThumbnail',
             'modelInfos' => 'setModelInfos',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -198,10 +214,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * roomName  直播间名称
     * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * errorInfo  errorInfo
     * sharedConfig  sharedConfig
     * roomDescription  直播间描述。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图URL
     * modelInfos  数字人模型信息
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -217,10 +235,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'roomName' => 'getRoomName',
             'roomType' => 'getRoomType',
             'roomState' => 'getRoomState',
+            'viewMode' => 'getViewMode',
             'errorInfo' => 'getErrorInfo',
             'sharedConfig' => 'getSharedConfig',
             'roomDescription' => 'getRoomDescription',
             'coverUrl' => 'getCoverUrl',
+            'thumbnail' => 'getThumbnail',
             'modelInfos' => 'getModelInfos',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -275,6 +295,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     const ROOM_STATE_ENABLE = 'ENABLE';
     const ROOM_STATE_DISABLE = 'DISABLE';
     const ROOM_STATE_BLOCKED = 'BLOCKED';
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     const LAST_JOB_STATUS_WAITING = 'WAITING';
     const LAST_JOB_STATUS_PROCESSING = 'PROCESSING';
     const LAST_JOB_STATUS_SUCCEED = 'SUCCEED';
@@ -316,6 +338,19 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getLastJobStatusAllowableValues()
     {
         return [
@@ -349,10 +384,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['roomName'] = isset($data['roomName']) ? $data['roomName'] : null;
         $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
         $this->container['roomState'] = isset($data['roomState']) ? $data['roomState'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['roomDescription'] = isset($data['roomDescription']) ? $data['roomDescription'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['modelInfos'] = isset($data['modelInfos']) ? $data['modelInfos'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -415,6 +452,14 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['roomState']) && (mb_strlen($this->container['roomState']) < 0)) {
                 $invalidProperties[] = "invalid value for 'roomState', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['roomDescription']) && (mb_strlen($this->container['roomDescription']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'roomDescription', the character length must be smaller than or equal to 1024.";
             }
@@ -426,6 +471,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['thumbnail']) && (mb_strlen($this->container['thumbnail']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'thumbnail', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['thumbnail']) && (mb_strlen($this->container['thumbnail']) < 0)) {
+                $invalidProperties[] = "invalid value for 'thumbnail', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
@@ -594,6 +645,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets viewMode
+    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
+        return $this;
+    }
+
+    /**
     * Gets errorInfo
     *  errorInfo
     *
@@ -686,6 +761,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets thumbnail
+    *  直播间封面图URL
+    *
+    * @return string|null
+    */
+    public function getThumbnail()
+    {
+        return $this->container['thumbnail'];
+    }
+
+    /**
+    * Sets thumbnail
+    *
+    * @param string|null $thumbnail 直播间封面图URL
+    *
+    * @return $this
+    */
+    public function setThumbnail($thumbnail)
+    {
+        $this->container['thumbnail'] = $thumbnail;
         return $this;
     }
 

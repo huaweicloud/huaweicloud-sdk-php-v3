@@ -193,6 +193,18 @@ class PortList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['clientPort']) && ($this->container['clientPort'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'clientPort', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['clientPort']) && ($this->container['clientPort'] < 1)) {
+                $invalidProperties[] = "invalid value for 'clientPort', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['serverPort']) && ($this->container['serverPort'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'serverPort', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['serverPort']) && ($this->container['serverPort'] < 1)) {
+                $invalidProperties[] = "invalid value for 'serverPort', must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getProtocolAllowableValues();
                 if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

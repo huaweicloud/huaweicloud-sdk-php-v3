@@ -22,21 +22,25 @@ class CreatePreheatingTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * preheatingTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'preheatingTask' => 'string'
+            'preheatingTask' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * preheatingTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'preheatingTask' => null
+        'preheatingTask' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CreatePreheatingTasksResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * preheatingTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'preheatingTask' => 'preheating_task'
+            'preheatingTask' => 'preheating_task',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * preheatingTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'preheatingTask' => 'setPreheatingTask'
+            'preheatingTask' => 'setPreheatingTask',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * preheatingTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'preheatingTask' => 'getPreheatingTask'
+            'preheatingTask' => 'getPreheatingTask',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreatePreheatingTasksResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['preheatingTask'] = isset($data['preheatingTask']) ? $data['preheatingTask'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class CreatePreheatingTasksResponse implements ModelInterface, ArrayAccess
     public function setPreheatingTask($preheatingTask)
     {
         $this->container['preheatingTask'] = $preheatingTask;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -23,24 +23,28 @@ class ShowCertificatesHttpsInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  查询结果总数
     * https  https配置。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'https' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsDetail[]'
+            'https' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsDetail[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  查询结果总数
     * https  https配置。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'https' => null
+        'https' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ShowCertificatesHttpsInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  查询结果总数
     * https  https配置。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'https' => 'https'
+            'https' => 'https',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  查询结果总数
     * https  https配置。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'https' => 'setHttps'
+            'https' => 'setHttps',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  查询结果总数
     * https  https配置。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'https' => 'getHttps'
+            'https' => 'getHttps',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ShowCertificatesHttpsInfoResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ShowCertificatesHttpsInfoResponse implements ModelInterface, ArrayAccess
     public function setHttps($https)
     {
         $this->container['https'] = $https;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -43,6 +43,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'masterAz' => 'string',
             'slaveAz' => 'string',
             'chargingMode' => 'string',
-            'periodOrder' => '\HuaweiCloud\SDK\Drs\V3\Model\PeriodOrderInfo'
+            'periodOrder' => '\HuaweiCloud\SDK\Drs\V3\Model\PeriodOrderInfo',
+            'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]'
     ];
 
     /**
@@ -97,6 +99,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         'masterAz' => null,
         'slaveAz' => null,
         'chargingMode' => null,
-        'periodOrder' => null
+        'periodOrder' => null,
+        'publicIpList' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'masterAz' => 'master_az',
             'slaveAz' => 'slave_az',
             'chargingMode' => 'charging_mode',
-            'periodOrder' => 'period_order'
+            'periodOrder' => 'period_order',
+            'publicIpList' => 'public_ip_list'
     ];
 
     /**
@@ -226,6 +232,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'masterAz' => 'setMasterAz',
             'slaveAz' => 'setSlaveAz',
             'chargingMode' => 'setChargingMode',
-            'periodOrder' => 'setPeriodOrder'
+            'periodOrder' => 'setPeriodOrder',
+            'publicIpList' => 'setPublicIpList'
     ];
 
     /**
@@ -280,6 +288,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
+    * publicIpList  指定公网IP的信息
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'masterAz' => 'getMasterAz',
             'slaveAz' => 'getSlaveAz',
             'chargingMode' => 'getChargingMode',
-            'periodOrder' => 'getPeriodOrder'
+            'periodOrder' => 'getPeriodOrder',
+            'publicIpList' => 'getPublicIpList'
     ];
 
     /**
@@ -513,6 +523,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         $this->container['slaveAz'] = isset($data['slaveAz']) ? $data['slaveAz'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['periodOrder'] = isset($data['periodOrder']) ? $data['periodOrder'] : null;
+        $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
     }
 
     /**
@@ -1187,6 +1198,30 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     public function setPeriodOrder($periodOrder)
     {
         $this->container['periodOrder'] = $periodOrder;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpList
+    *  指定公网IP的信息
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null
+    */
+    public function getPublicIpList()
+    {
+        return $this->container['publicIpList'];
+    }
+
+    /**
+    * Sets publicIpList
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息
+    *
+    * @return $this
+    */
+    public function setPublicIpList($publicIpList)
+    {
+        $this->container['publicIpList'] = $publicIpList;
         return $this;
     }
 

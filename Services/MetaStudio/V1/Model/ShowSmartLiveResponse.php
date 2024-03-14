@@ -37,6 +37,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图UR
+    * coStreamerConfig  coStreamerConfig
+    * liveJobLog  liveJobLog
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -58,6 +60,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'streamDuration' => 'float',
             'blockReason' => 'string',
             'coverUrl' => 'string',
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
+            'liveJobLog' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog',
             'xRequestId' => 'string'
     ];
 
@@ -79,6 +83,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图UR
+    * coStreamerConfig  coStreamerConfig
+    * liveJobLog  liveJobLog
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -100,6 +106,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         'streamDuration' => 'float',
         'blockReason' => null,
         'coverUrl' => null,
+        'coStreamerConfig' => null,
+        'liveJobLog' => null,
         'xRequestId' => null
     ];
 
@@ -142,6 +150,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图UR
+    * coStreamerConfig  coStreamerConfig
+    * liveJobLog  liveJobLog
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -163,6 +173,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'streamDuration' => 'stream_duration',
             'blockReason' => 'block_reason',
             'coverUrl' => 'cover_url',
+            'coStreamerConfig' => 'co_streamer_config',
+            'liveJobLog' => 'live_job_log',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -184,6 +196,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图UR
+    * coStreamerConfig  coStreamerConfig
+    * liveJobLog  liveJobLog
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -205,6 +219,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'streamDuration' => 'setStreamDuration',
             'blockReason' => 'setBlockReason',
             'coverUrl' => 'setCoverUrl',
+            'coStreamerConfig' => 'setCoStreamerConfig',
+            'liveJobLog' => 'setLiveJobLog',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -226,6 +242,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图UR
+    * coStreamerConfig  coStreamerConfig
+    * liveJobLog  liveJobLog
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -247,6 +265,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'streamDuration' => 'getStreamDuration',
             'blockReason' => 'getBlockReason',
             'coverUrl' => 'getCoverUrl',
+            'coStreamerConfig' => 'getCoStreamerConfig',
+            'liveJobLog' => 'getLiveJobLog',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -345,6 +365,8 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['streamDuration'] = isset($data['streamDuration']) ? $data['streamDuration'] : null;
         $this->container['blockReason'] = isset($data['blockReason']) ? $data['blockReason'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
+        $this->container['liveJobLog'] = isset($data['liveJobLog']) ? $data['liveJobLog'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -837,6 +859,54 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets coStreamerConfig
+    *  coStreamerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null
+    */
+    public function getCoStreamerConfig()
+    {
+        return $this->container['coStreamerConfig'];
+    }
+
+    /**
+    * Sets coStreamerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null $coStreamerConfig coStreamerConfig
+    *
+    * @return $this
+    */
+    public function setCoStreamerConfig($coStreamerConfig)
+    {
+        $this->container['coStreamerConfig'] = $coStreamerConfig;
+        return $this;
+    }
+
+    /**
+    * Gets liveJobLog
+    *  liveJobLog
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog|null
+    */
+    public function getLiveJobLog()
+    {
+        return $this->container['liveJobLog'];
+    }
+
+    /**
+    * Sets liveJobLog
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog|null $liveJobLog liveJobLog
+    *
+    * @return $this
+    */
+    public function setLiveJobLog($liveJobLog)
+    {
+        $this->container['liveJobLog'] = $liveJobLog;
         return $this;
     }
 

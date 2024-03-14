@@ -161,6 +161,12 @@ class EpsUpdatePermissionDesc implements ModelInterface, ArrayAccess
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
+            if ((mb_strlen($this->container['description']) > 256)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

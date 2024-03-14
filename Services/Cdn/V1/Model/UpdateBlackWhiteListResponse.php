@@ -24,13 +24,15 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * code  响应码，200：成功，400，失败。
     * result  响应结果。
     * data  响应体返回内容。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'code' => 'string',
             'result' => 'string',
-            'data' => 'object'
+            'data' => 'object',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -38,13 +40,15 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * code  响应码，200：成功，400，失败。
     * result  响应结果。
     * data  响应体返回内容。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'code' => null,
         'result' => null,
-        'data' => null
+        'data' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * code  响应码，200：成功，400，失败。
     * result  响应结果。
     * data  响应体返回内容。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'code' => 'code',
             'result' => 'result',
-            'data' => 'data'
+            'data' => 'data',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -87,13 +93,15 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * code  响应码，200：成功，400，失败。
     * result  响应结果。
     * data  响应体返回内容。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'code' => 'setCode',
             'result' => 'setResult',
-            'data' => 'setData'
+            'data' => 'setData',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -101,13 +109,15 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     * code  响应码，200：成功，400，失败。
     * result  响应结果。
     * data  响应体返回内容。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'code' => 'getCode',
             'result' => 'getResult',
-            'data' => 'getData'
+            'data' => 'getData',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -171,6 +181,7 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class UpdateBlackWhiteListResponse implements ModelInterface, ArrayAccess
     public function setData($data)
     {
         $this->container['data'] = $data;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

@@ -20,12 +20,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -50,12 +50,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -101,12 +101,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -131,12 +131,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -161,12 +161,12 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
@@ -320,7 +320,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomName
-    *  直播间名称
+    *  对话名称
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets roomName
     *
-    * @param string $roomName 直播间名称
+    * @param string $roomName 对话名称
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomDescription
-    *  直播间描述。
+    *  对话描述。
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets roomDescription
     *
-    * @param string|null $roomDescription 直播间描述。
+    * @param string|null $roomDescription 对话描述。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets robotId
-    *  机器人ID。
+    *  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
     * @return string
     */
@@ -452,7 +452,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets robotId
     *
-    * @param string $robotId 机器人ID。
+    * @param string $robotId 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
     * @return $this
     */

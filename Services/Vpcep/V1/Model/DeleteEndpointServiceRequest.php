@@ -172,9 +172,21 @@ class DeleteEndpointServiceRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['vpcEndpointServiceId'] === null) {
             $invalidProperties[] = "'vpcEndpointServiceId' can't be null";
         }
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

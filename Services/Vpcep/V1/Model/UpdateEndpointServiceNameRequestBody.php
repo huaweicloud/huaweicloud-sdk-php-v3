@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourcesResp implements ModelInterface, ArrayAccess
+class UpdateEndpointServiceNameRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class ResourcesResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourcesResp';
+    protected static $openAPIModelName = 'UpdateEndpointServiceNameRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源列表
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resources' => '\HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]'
+            'endpointServiceName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源列表
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resources' => null
+        'endpointServiceName' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class ResourcesResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源列表
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resources' => 'resources'
+            'endpointServiceName' => 'endpoint_service_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源列表
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'resources' => 'setResources'
+            'endpointServiceName' => 'setEndpointServiceName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源列表
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'resources' => 'getResources'
+            'endpointServiceName' => 'getEndpointServiceName'
     ];
 
     /**
@@ -147,7 +147,7 @@ class ResourcesResp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class ResourcesResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resources
-    *  资源列表
+    * Gets endpointServiceName
+    *  终端节点服务名称
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]|null
+    * @return string|null
     */
-    public function getResources()
+    public function getEndpointServiceName()
     {
-        return $this->container['resources'];
+        return $this->container['endpointServiceName'];
     }
 
     /**
-    * Sets resources
+    * Sets endpointServiceName
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]|null $resources 资源列表
+    * @param string|null $endpointServiceName 终端节点服务名称
     *
     * @return $this
     */
-    public function setResources($resources)
+    public function setEndpointServiceName($endpointServiceName)
     {
-        $this->container['resources'] = $resources;
+        $this->container['endpointServiceName'] = $endpointServiceName;
         return $this;
     }
 

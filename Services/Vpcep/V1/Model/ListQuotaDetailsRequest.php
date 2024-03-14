@@ -21,7 +21,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目ID。
-    * type  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目ID。
-    * type  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  项目ID。
-    * type  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目ID。
-    * type  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目ID。
-    * type  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @var string[]
     */
@@ -187,6 +187,12 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -235,7 +241,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    *  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return string|null
     */
@@ -247,7 +253,7 @@ class ListQuotaDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源类型。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * @param string|null $type 资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return $this
     */

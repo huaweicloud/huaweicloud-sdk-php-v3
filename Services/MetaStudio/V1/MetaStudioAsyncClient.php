@@ -25,6 +25,477 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
+     * 创建激活码
+     *
+     * 该接口用于创建激活码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createActiveCodeAsync($request)
+    {
+        return $this->createActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function createActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除激活码
+     *
+     * 该接口用于删除激活码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteActiveCodeAsync($request)
+    {
+        return $this->deleteActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\DeleteActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询激活码列表
+     *
+     * 该接口用于查询激活码列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listActiveCodeAsync($request)
+    {
+        return $this->listActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function listActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['robotId'] !== null) {
+            $queryParams['robot_id'] = $localVarParams['robotId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 重置激活码
+     *
+     * 该接口用于重置激活码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetActiveCodeAsync($request)
+    {
+        return $this->resetActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function resetActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code/{active_code_id}/reset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['activeCodeId'] !== null) {
+            $pathParams['active_code_id'] = $localVarParams['activeCodeId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ResetActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ResetActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询激活码详情
+     *
+     * 该接口用于查询激活码详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showActiveCodeAsync($request)
+    {
+        return $this->showActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function showActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code/{active_code_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['activeCodeId'] !== null) {
+            $pathParams['active_code_id'] = $localVarParams['activeCodeId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改激活码
+     *
+     * 该接口用于修改激活码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateActiveCodeAsync($request)
+    {
+        return $this->updateActiveCodeAsyncWithHttpInfo($request);
+    }
+    
+    public function updateActiveCodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-human-chat/active-code/{active_code_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['activeCodeId'] !== null) {
+            $pathParams['active_code_id'] = $localVarParams['activeCodeId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateActiveCodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\UpdateActiveCodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建对话链接
      *
      * 该接口用于创建对话链接。
@@ -338,6 +809,80 @@ class MetaStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\StopSmartChatJobResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\StopSmartChatJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 复制资产
+     *
+     * 该接口用于在Region B复制Region A的指定资产。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAssetbyReplicationInfoAsync($request)
+    {
+        return $this->createAssetbyReplicationInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function createAssetbyReplicationInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-assets-by-replication-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAssetbyReplicationInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateAssetbyReplicationInfoRequest',
             $asyncRequest = true);
     }
 
@@ -657,6 +1202,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['role'] !== null) {
             $queryParams['role'] = $localVarParams['role'];
         }
+        if ($localVarParams['xRealIp'] !== null) {
+            $headerParams['x_real_ip'] = $localVarParams['xRealIp'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }
@@ -846,6 +1394,80 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
+     * 查询资产复制信息
+     *
+     * 当需要将资产从A Region复制到B Region时，先要在A Region调用该接口用于查询资产复制信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAssetReplicationInfoAsync($request)
+    {
+        return $this->showAssetReplicationInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showAssetReplicationInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/digital-assets/{asset_id}/replication-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['assetId'] !== null) {
+            $pathParams['asset_id'] = $localVarParams['assetId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAssetReplicationInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowAssetReplicationInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 更新资产
      *
      * 该接口用于更新资产库中的媒体资产信息。
@@ -971,11 +1593,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 ['application/json']
             );
         }
@@ -1146,11 +1768,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -1303,11 +1925,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 ['application/json']
             );
         }
@@ -1566,7 +2188,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -1800,7 +2422,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -1877,7 +2499,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -2111,7 +2733,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 [],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -2180,12 +2802,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -2286,6 +2908,7 @@ class MetaStudioAsyncClient extends Client
      * 创建一次性鉴权码
      *
      * 该接口用于创建一次性鉴权码，有效期5分钟，鉴权码只能使用一次，每次使用后需要重新获取。
+     * &gt; 接口只能通过第三方后台调用，不能在浏览器前台直接调用，否则会有跨域问题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2487,11 +3110,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 ['multipart/form-data']
             );
         }
@@ -3079,9 +3702,9 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
-     * 创建智能交互对话直播间
+     * 创建智能交互对话
      *
-     * 该接口用于创建智能交互对话直播间。
+     * 该接口用于创建智能交互对话。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3156,9 +3779,9 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
-     * 删除智能交互对话直播间
+     * 删除智能交互对话
      *
-     * 该接口用于删除智能交互对话直播间。
+     * 该接口用于删除智能交互对话。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3233,9 +3856,9 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
-     * 查询智能交互对话直播间列表
+     * 查询智能交互对话列表
      *
-     * 该接口用于智能交互对话直播间列表。
+     * 该接口用于智能交互对话列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3325,9 +3948,9 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
-     * 查询智能交互对话直播间详情
+     * 查询智能交互对话详情
      *
-     * 该接口用于查询智能交互对话直播间详情。
+     * 该接口用于查询智能交互对话详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3402,9 +4025,9 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
-     * 更新智能交互对话直播间信息
+     * 更新智能交互对话信息
      *
-     * 该接口用于智能交互对话直播间信息。
+     * 该接口用于智能交互对话信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5107,11 +5730,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5179,12 +5802,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -5261,12 +5884,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -5343,12 +5966,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -5509,11 +6132,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5574,11 +6197,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5639,11 +6262,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5704,11 +6327,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5781,11 +6404,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -5858,12 +6481,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -6016,12 +6639,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -6123,11 +6746,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -6200,11 +6823,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -6281,12 +6904,12 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(
@@ -6488,11 +7111,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8'],
                 []
             );
         }
@@ -6885,11 +7508,11 @@ class MetaStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
+                ['application/json', 'application/json;charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json', 'application/json;charset=utf-8'],
                 ['application/json']
             );
         }
@@ -6970,7 +7593,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 [],
-                ['application/json;charset=utf-8']
+                ['application/json', 'application/json;charset=utf-8']
             );
         }
         $headers = array_merge(

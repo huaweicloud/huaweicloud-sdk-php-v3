@@ -22,21 +22,25 @@ class EnableDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domain  domain
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => '\HuaweiCloud\SDK\Cdn\V1\Model\DomainsWithPort'
+            'domain' => '\HuaweiCloud\SDK\Cdn\V1\Model\DomainsWithPort',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  domain
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domain' => null
+        'domain' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class EnableDomainResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domain  domain
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domain' => 'domain'
+            'domain' => 'domain',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  domain
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'domain' => 'setDomain'
+            'domain' => 'setDomain',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  domain
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'domain' => 'getDomain'
+            'domain' => 'getDomain',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class EnableDomainResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class EnableDomainResponse implements ModelInterface, ArrayAccess
     public function setDomain($domain)
     {
         $this->container['domain'] = $domain;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

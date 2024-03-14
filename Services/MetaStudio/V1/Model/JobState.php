@@ -17,6 +17,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const PROCESSING = 'PROCESSING';
     const RESULT_REVIEW = 'RESULT_REVIEW';
     const AUDIT_FAILED = 'AUDIT_FAILED';
+    const USER_RESULT_REVIEW = 'USER_RESULT_REVIEW';
+    const USER_REVIEW_REJECT = 'USER_REVIEW_REJECT';
     const FAILED = 'FAILED';
     const SUCCEED = 'SUCCEED';
     
@@ -34,6 +36,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::PROCESSING,
             self::RESULT_REVIEW,
             self::AUDIT_FAILED,
+            self::USER_RESULT_REVIEW,
+            self::USER_REVIEW_REJECT,
             self::FAILED,
             self::SUCCEED,
         ];

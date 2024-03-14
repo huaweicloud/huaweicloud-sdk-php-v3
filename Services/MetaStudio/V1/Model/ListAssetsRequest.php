@@ -20,6 +20,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
@@ -47,6 +48,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xRealIp' => 'string',
             'authorization' => 'string',
             'xSdkDate' => 'string',
             'xAppUserId' => 'string',
@@ -74,6 +76,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
@@ -101,6 +104,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xRealIp' => null,
         'authorization' => null,
         'xSdkDate' => null,
         'xAppUserId' => null,
@@ -149,6 +153,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
@@ -176,6 +181,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'xRealIp' => 'X-REAL-IP',
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'xAppUserId' => 'X-App-UserId',
@@ -203,6 +209,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
@@ -230,6 +237,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'xRealIp' => 'setXRealIp',
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'xAppUserId' => 'setXAppUserId',
@@ -257,6 +265,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xAppUserId  第三方用户ID。 > * 不允许输入中文。
@@ -284,6 +293,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'xRealIp' => 'getXRealIp',
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'xAppUserId' => 'getXAppUserId',
@@ -399,6 +409,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xRealIp'] = isset($data['xRealIp']) ? $data['xRealIp'] : null;
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
@@ -432,6 +443,12 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['xRealIp']) && (mb_strlen($this->container['xRealIp']) > 16384)) {
+                $invalidProperties[] = "invalid value for 'xRealIp', the character length must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['xRealIp']) && (mb_strlen($this->container['xRealIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'xRealIp', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
                 $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
             }
@@ -574,6 +591,30 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xRealIp
+    *  客户端IP
+    *
+    * @return string|null
+    */
+    public function getXRealIp()
+    {
+        return $this->container['xRealIp'];
+    }
+
+    /**
+    * Sets xRealIp
+    *
+    * @param string|null $xRealIp 客户端IP
+    *
+    * @return $this
+    */
+    public function setXRealIp($xRealIp)
+    {
+        $this->container['xRealIp'] = $xRealIp;
+        return $this;
     }
 
     /**

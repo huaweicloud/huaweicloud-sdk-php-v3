@@ -26,7 +26,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * description  终端节点连接描述。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'markerId' => 'int',
-            'createdAt' => 'string',
-            'updatedAt' => 'string',
+            'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime',
             'domainId' => 'string',
             'error' => '\HuaweiCloud\SDK\Vpcep\V1\Model\QueryError[]',
             'status' => 'string',
@@ -50,7 +50,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * description  终端节点连接描述。
     *
     * @var string[]
@@ -58,8 +58,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'markerId' => null,
-        'createdAt' => null,
-        'updatedAt' => null,
+        'createdAt' => 'date-time',
+        'updatedAt' => 'date-time',
         'domainId' => null,
         'error' => null,
         'status' => null,
@@ -95,7 +95,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * description  终端节点连接描述。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * description  终端节点连接描述。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * description  终端节点连接描述。
     *
     * @var string[]
@@ -199,30 +199,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const STATUS_PENDING_ACCEPTANCE = 'pendingAcceptance';
-    const STATUS_CREATING = 'creating';
-    const STATUS_ACCEPTED = 'accepted';
-    const STATUS_REJECTED = 'rejected';
-    const STATUS_FAILED = 'failed';
-    const STATUS_DELETING = 'deleting';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_PENDING_ACCEPTANCE,
-            self::STATUS_CREATING,
-            self::STATUS_ACCEPTED,
-            self::STATUS_REJECTED,
-            self::STATUS_FAILED,
-            self::STATUS_DELETING,
-        ];
-    }
 
 
     /**
@@ -258,14 +235,24 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
             }
-
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -332,7 +319,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getCreatedAt()
     {
@@ -342,7 +329,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -356,7 +343,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Gets updatedAt
     *  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getUpdatedAt()
     {
@@ -366,7 +353,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -426,7 +413,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    *  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     *
     * @return string|null
     */
@@ -438,7 +425,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * @param string|null $status 终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     *
     * @return $this
     */

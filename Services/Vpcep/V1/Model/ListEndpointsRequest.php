@@ -26,8 +26,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * limit  查询返回终端节点的数量限制，即每页返回的资源个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
@@ -52,8 +52,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * limit  查询返回终端节点的数量限制，即每页返回的资源个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
@@ -99,8 +99,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * limit  查询返回终端节点的数量限制，即每页返回的资源个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
@@ -125,8 +125,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * limit  查询返回终端节点的数量限制，即每页返回的资源个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
@@ -151,8 +151,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * limit  查询返回终端节点的数量限制，即每页返回的资源个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-    * sortKey  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
-    * sortDir  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
+    * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
@@ -209,7 +209,37 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SORT_KEY_CREATE_AT = 'create_at';
+    const SORT_KEY_UPDATE_AT = 'update_at';
+    const SORT_DIR_DESC = 'desc';
+    const SORT_DIR_ASC = 'asc';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortKeyAllowableValues()
+    {
+        return [
+            self::SORT_KEY_CREATE_AT,
+            self::SORT_KEY_UPDATE_AT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortDirAllowableValues()
+    {
+        return [
+            self::SORT_DIR_DESC,
+            self::SORT_DIR_ASC,
+        ];
+    }
 
 
     /**
@@ -282,6 +312,22 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getSortKeyAllowableValues();
+                if (!is_null($this->container['sortKey']) && !in_array($this->container['sortKey'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortKey', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getSortDirAllowableValues();
+                if (!is_null($this->container['sortDir']) && !in_array($this->container['sortDir'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortDir', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -442,7 +488,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
+    *  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     *
     * @return string|null
     */
@@ -454,7 +500,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
+    * @param string|null $sortKey 查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     *
     * @return $this
     */
@@ -466,7 +512,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    *  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return string|null
     */
@@ -478,7 +524,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+    * @param string|null $sortDir 查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
     *
     * @return $this
     */

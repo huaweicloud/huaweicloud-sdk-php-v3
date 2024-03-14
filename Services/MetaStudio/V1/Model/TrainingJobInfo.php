@@ -27,6 +27,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * sex  性别。 * FEMALE: 女性 * MALE: 是男性
     * language  语言。
     * state  state
+    * rejectTimes  本次任务中该状态出现的次数
     * assetId  当任务状态为成功时呈现,音色模型在资产库中的id。
     * jobFailedCode  当任务失败时呈现,失败错误码。
     * jobFailedReason  当任务失败时呈现,失败原因。
@@ -46,6 +47,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'sex' => 'string',
             'language' => 'string',
             'state' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobState',
+            'rejectTimes' => 'int',
             'assetId' => 'string',
             'jobFailedCode' => 'string',
             'jobFailedReason' => 'string',
@@ -65,6 +67,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * sex  性别。 * FEMALE: 女性 * MALE: 是男性
     * language  语言。
     * state  state
+    * rejectTimes  本次任务中该状态出现的次数
     * assetId  当任务状态为成功时呈现,音色模型在资产库中的id。
     * jobFailedCode  当任务失败时呈现,失败错误码。
     * jobFailedReason  当任务失败时呈现,失败原因。
@@ -84,6 +87,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'sex' => null,
         'language' => null,
         'state' => null,
+        'rejectTimes' => null,
         'assetId' => null,
         'jobFailedCode' => null,
         'jobFailedReason' => null,
@@ -124,6 +128,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * sex  性别。 * FEMALE: 女性 * MALE: 是男性
     * language  语言。
     * state  state
+    * rejectTimes  本次任务中该状态出现的次数
     * assetId  当任务状态为成功时呈现,音色模型在资产库中的id。
     * jobFailedCode  当任务失败时呈现,失败错误码。
     * jobFailedReason  当任务失败时呈现,失败原因。
@@ -143,6 +148,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'sex' => 'sex',
             'language' => 'language',
             'state' => 'state',
+            'rejectTimes' => 'reject_times',
             'assetId' => 'asset_id',
             'jobFailedCode' => 'job_failed_code',
             'jobFailedReason' => 'job_failed_reason',
@@ -162,6 +168,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * sex  性别。 * FEMALE: 女性 * MALE: 是男性
     * language  语言。
     * state  state
+    * rejectTimes  本次任务中该状态出现的次数
     * assetId  当任务状态为成功时呈现,音色模型在资产库中的id。
     * jobFailedCode  当任务失败时呈现,失败错误码。
     * jobFailedReason  当任务失败时呈现,失败原因。
@@ -181,6 +188,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'sex' => 'setSex',
             'language' => 'setLanguage',
             'state' => 'setState',
+            'rejectTimes' => 'setRejectTimes',
             'assetId' => 'setAssetId',
             'jobFailedCode' => 'setJobFailedCode',
             'jobFailedReason' => 'setJobFailedReason',
@@ -200,6 +208,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * sex  性别。 * FEMALE: 女性 * MALE: 是男性
     * language  语言。
     * state  state
+    * rejectTimes  本次任务中该状态出现的次数
     * assetId  当任务状态为成功时呈现,音色模型在资产库中的id。
     * jobFailedCode  当任务失败时呈现,失败错误码。
     * jobFailedReason  当任务失败时呈现,失败原因。
@@ -219,6 +228,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'sex' => 'getSex',
             'language' => 'getLanguage',
             'state' => 'getState',
+            'rejectTimes' => 'getRejectTimes',
             'assetId' => 'getAssetId',
             'jobFailedCode' => 'getJobFailedCode',
             'jobFailedReason' => 'getJobFailedReason',
@@ -294,6 +304,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['rejectTimes'] = isset($data['rejectTimes']) ? $data['rejectTimes'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['jobFailedCode'] = isset($data['jobFailedCode']) ? $data['jobFailedCode'] : null;
         $this->container['jobFailedReason'] = isset($data['jobFailedReason']) ? $data['jobFailedReason'] : null;
@@ -341,6 +352,12 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['rejectTimes']) && ($this->container['rejectTimes'] > 10)) {
+                $invalidProperties[] = "invalid value for 'rejectTimes', must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['rejectTimes']) && ($this->container['rejectTimes'] < 1)) {
+                $invalidProperties[] = "invalid value for 'rejectTimes', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'assetId', the character length must be smaller than or equal to 256.";
@@ -557,6 +574,30 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets rejectTimes
+    *  本次任务中该状态出现的次数
+    *
+    * @return int|null
+    */
+    public function getRejectTimes()
+    {
+        return $this->container['rejectTimes'];
+    }
+
+    /**
+    * Sets rejectTimes
+    *
+    * @param int|null $rejectTimes 本次任务中该状态出现的次数
+    *
+    * @return $this
+    */
+    public function setRejectTimes($rejectTimes)
+    {
+        $this->container['rejectTimes'] = $rejectTimes;
         return $this;
     }
 

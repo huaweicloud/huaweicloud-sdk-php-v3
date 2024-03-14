@@ -20,13 +20,14 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomId  智能交互对话直播间ID
-    * roomName  智能交互对话直播间名称
-    * roomDescription  智能交互对话直播间描述。
+    * roomId  智能交互对话ID
+    * roomName  智能交互对话名称
+    * roomDescription  智能交互对话描述。
     * robotId  机器人ID。
-    * coverUrl  直播间封面图URL
+    * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * concurrency  并发路数。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -40,19 +41,21 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'string',
             'modelInfos' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ModelInfo',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
+            'concurrency' => 'int',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomId  智能交互对话直播间ID
-    * roomName  智能交互对话直播间名称
-    * roomDescription  智能交互对话直播间描述。
+    * roomId  智能交互对话ID
+    * roomName  智能交互对话名称
+    * roomDescription  智能交互对话描述。
     * robotId  机器人ID。
-    * coverUrl  直播间封面图URL
+    * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * concurrency  并发路数。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -66,6 +69,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         'coverUrl' => null,
         'modelInfos' => null,
         'voiceConfig' => null,
+        'concurrency' => 'int32',
         'createTime' => null,
         'updateTime' => null
     ];
@@ -93,13 +97,14 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomId  智能交互对话直播间ID
-    * roomName  智能交互对话直播间名称
-    * roomDescription  智能交互对话直播间描述。
+    * roomId  智能交互对话ID
+    * roomName  智能交互对话名称
+    * roomDescription  智能交互对话描述。
     * robotId  机器人ID。
-    * coverUrl  直播间封面图URL
+    * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * concurrency  并发路数。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -113,19 +118,21 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'cover_url',
             'modelInfos' => 'model_infos',
             'voiceConfig' => 'voice_config',
+            'concurrency' => 'concurrency',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomId  智能交互对话直播间ID
-    * roomName  智能交互对话直播间名称
-    * roomDescription  智能交互对话直播间描述。
+    * roomId  智能交互对话ID
+    * roomName  智能交互对话名称
+    * roomDescription  智能交互对话描述。
     * robotId  机器人ID。
-    * coverUrl  直播间封面图URL
+    * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * concurrency  并发路数。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -139,19 +146,21 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'setCoverUrl',
             'modelInfos' => 'setModelInfos',
             'voiceConfig' => 'setVoiceConfig',
+            'concurrency' => 'setConcurrency',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomId  智能交互对话直播间ID
-    * roomName  智能交互对话直播间名称
-    * roomDescription  智能交互对话直播间描述。
+    * roomId  智能交互对话ID
+    * roomName  智能交互对话名称
+    * roomDescription  智能交互对话描述。
     * robotId  机器人ID。
-    * coverUrl  直播间封面图URL
+    * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
+    * concurrency  并发路数。
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -165,6 +174,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             'coverUrl' => 'getCoverUrl',
             'modelInfos' => 'getModelInfos',
             'voiceConfig' => 'getVoiceConfig',
+            'concurrency' => 'getConcurrency',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -234,6 +244,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['modelInfos'] = isset($data['modelInfos']) ? $data['modelInfos'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
+        $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -276,6 +287,12 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'concurrency', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
+                $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
             }
@@ -304,7 +321,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomId
-    *  智能交互对话直播间ID
+    *  智能交互对话ID
     *
     * @return string|null
     */
@@ -316,7 +333,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets roomId
     *
-    * @param string|null $roomId 智能交互对话直播间ID
+    * @param string|null $roomId 智能交互对话ID
     *
     * @return $this
     */
@@ -328,7 +345,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomName
-    *  智能交互对话直播间名称
+    *  智能交互对话名称
     *
     * @return string|null
     */
@@ -340,7 +357,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets roomName
     *
-    * @param string|null $roomName 智能交互对话直播间名称
+    * @param string|null $roomName 智能交互对话名称
     *
     * @return $this
     */
@@ -352,7 +369,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomDescription
-    *  智能交互对话直播间描述。
+    *  智能交互对话描述。
     *
     * @return string|null
     */
@@ -364,7 +381,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets roomDescription
     *
-    * @param string|null $roomDescription 智能交互对话直播间描述。
+    * @param string|null $roomDescription 智能交互对话描述。
     *
     * @return $this
     */
@@ -400,7 +417,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets coverUrl
-    *  直播间封面图URL
+    *  对话封面图URL
     *
     * @return string|null
     */
@@ -412,7 +429,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets coverUrl
     *
-    * @param string|null $coverUrl 直播间封面图URL
+    * @param string|null $coverUrl 对话封面图URL
     *
     * @return $this
     */
@@ -467,6 +484,30 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setVoiceConfig($voiceConfig)
     {
         $this->container['voiceConfig'] = $voiceConfig;
+        return $this;
+    }
+
+    /**
+    * Gets concurrency
+    *  并发路数。
+    *
+    * @return int|null
+    */
+    public function getConcurrency()
+    {
+        return $this->container['concurrency'];
+    }
+
+    /**
+    * Sets concurrency
+    *
+    * @param int|null $concurrency 并发路数。
+    *
+    * @return $this
+    */
+    public function setConcurrency($concurrency)
+    {
+        $this->container['concurrency'] = $concurrency;
         return $this;
     }
 

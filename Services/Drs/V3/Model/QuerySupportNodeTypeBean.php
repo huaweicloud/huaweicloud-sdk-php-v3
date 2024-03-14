@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpcep\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
+class QuerySupportNodeTypeBean implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchAddPermissionRequest';
+    protected static $openAPIModelName = 'QuerySupportNodeTypeBean';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permissions  终端节点服务白名单列表
-    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * nodeType  规格类型
+    * isSellout  是否售罄
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'permissions' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EpsAddPermissionRequest[]',
-            'permissionType' => 'string'
+            'nodeType' => 'string',
+            'isSellout' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permissions  终端节点服务白名单列表
-    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * nodeType  规格类型
+    * isSellout  是否售罄
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'permissions' => null,
-        'permissionType' => null
+        'nodeType' => null,
+        'isSellout' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permissions  终端节点服务白名单列表
-    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * nodeType  规格类型
+    * isSellout  是否售罄
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'permissions' => 'permissions',
-            'permissionType' => 'permission_type'
+            'nodeType' => 'node_type',
+            'isSellout' => 'is_sellout'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permissions  终端节点服务白名单列表
-    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * nodeType  规格类型
+    * isSellout  是否售罄
     *
     * @var string[]
     */
     protected static $setters = [
-            'permissions' => 'setPermissions',
-            'permissionType' => 'setPermissionType'
+            'nodeType' => 'setNodeType',
+            'isSellout' => 'setIsSellout'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permissions  终端节点服务白名单列表
-    * permissionType  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * nodeType  规格类型
+    * isSellout  是否售罄
     *
     * @var string[]
     */
     protected static $getters = [
-            'permissions' => 'getPermissions',
-            'permissionType' => 'getPermissionType'
+            'nodeType' => 'getNodeType',
+            'isSellout' => 'getIsSellout'
     ];
 
     /**
@@ -139,22 +139,7 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PERMISSION_TYPE_DOMAIN_ID = 'domainId';
-    const PERMISSION_TYPE_ORG_PATH = 'orgPath';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPermissionTypeAllowableValues()
-    {
-        return [
-            self::PERMISSION_TYPE_DOMAIN_ID,
-            self::PERMISSION_TYPE_ORG_PATH,
-        ];
-    }
 
 
     /**
@@ -172,8 +157,8 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
-        $this->container['permissionType'] = isset($data['permissionType']) ? $data['permissionType'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
+        $this->container['isSellout'] = isset($data['isSellout']) ? $data['isSellout'] : null;
     }
 
     /**
@@ -184,17 +169,6 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['permissions'] === null) {
-            $invalidProperties[] = "'permissions' can't be null";
-        }
-            $allowedValues = $this->getPermissionTypeAllowableValues();
-                if (!is_null($this->container['permissionType']) && !in_array($this->container['permissionType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'permissionType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -210,50 +184,50 @@ class BatchAddPermissionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets permissions
-    *  终端节点服务白名单列表
+    * Gets nodeType
+    *  规格类型
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EpsAddPermissionRequest[]
+    * @return string|null
     */
-    public function getPermissions()
+    public function getNodeType()
     {
-        return $this->container['permissions'];
+        return $this->container['nodeType'];
     }
 
     /**
-    * Sets permissions
+    * Sets nodeType
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsAddPermissionRequest[] $permissions 终端节点服务白名单列表
+    * @param string|null $nodeType 规格类型
     *
     * @return $this
     */
-    public function setPermissions($permissions)
+    public function setNodeType($nodeType)
     {
-        $this->container['permissions'] = $permissions;
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 
     /**
-    * Gets permissionType
-    *  终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * Gets isSellout
+    *  是否售罄
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getPermissionType()
+    public function getIsSellout()
     {
-        return $this->container['permissionType'];
+        return $this->container['isSellout'];
     }
 
     /**
-    * Sets permissionType
+    * Sets isSellout
     *
-    * @param string|null $permissionType 终端节点服务白名单类型。 ● domainId：基于账户ID配置终端节点服务白名单。 ● orgPath：基于账户所在组织路径配置终端节点服务白名单。
+    * @param bool|null $isSellout 是否售罄
     *
     * @return $this
     */
-    public function setPermissionType($permissionType)
+    public function setIsSellout($isSellout)
     {
-        $this->container['permissionType'] = $permissionType;
+        $this->container['isSellout'] = $isSellout;
         return $this;
     }
 

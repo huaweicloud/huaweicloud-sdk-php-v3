@@ -29,7 +29,7 @@ class UpdateEndpointServiceNameRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'projectId' => 'string',
             'vpcEndpointServiceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameMode'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameRequestBody'
     ];
 
     /**
@@ -183,9 +183,21 @@ class UpdateEndpointServiceNameRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['vpcEndpointServiceId'] === null) {
             $invalidProperties[] = "'vpcEndpointServiceId' can't be null";
         }
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -252,7 +264,7 @@ class UpdateEndpointServiceNameRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameMode|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameRequestBody|null
     */
     public function getBody()
     {
@@ -262,7 +274,7 @@ class UpdateEndpointServiceNameRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameMode|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameRequestBody|null $body body
     *
     * @return $this
     */

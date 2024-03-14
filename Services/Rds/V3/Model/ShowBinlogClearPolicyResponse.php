@@ -22,21 +22,25 @@ class ShowBinlogClearPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * binlogRetentionHours  binlog保留时长
+    * binlogClearType  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'binlogRetentionHours' => 'int'
+            'binlogRetentionHours' => 'int',
+            'binlogClearType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * binlogRetentionHours  binlog保留时长
+    * binlogClearType  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'binlogRetentionHours' => 'int32'
+        'binlogRetentionHours' => 'int32',
+        'binlogClearType' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowBinlogClearPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * binlogRetentionHours  binlog保留时长
+    * binlogClearType  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'binlogRetentionHours' => 'binlog_retention_hours'
+            'binlogRetentionHours' => 'binlog_retention_hours',
+            'binlogClearType' => 'binlog_clear_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * binlogRetentionHours  binlog保留时长
+    * binlogClearType  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
     *
     * @var string[]
     */
     protected static $setters = [
-            'binlogRetentionHours' => 'setBinlogRetentionHours'
+            'binlogRetentionHours' => 'setBinlogRetentionHours',
+            'binlogClearType' => 'setBinlogClearType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * binlogRetentionHours  binlog保留时长
+    * binlogClearType  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
     *
     * @var string[]
     */
     protected static $getters = [
-            'binlogRetentionHours' => 'getBinlogRetentionHours'
+            'binlogRetentionHours' => 'getBinlogRetentionHours',
+            'binlogClearType' => 'getBinlogClearType'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowBinlogClearPolicyResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['binlogRetentionHours'] = isset($data['binlogRetentionHours']) ? $data['binlogRetentionHours'] : null;
+        $this->container['binlogClearType'] = isset($data['binlogClearType']) ? $data['binlogClearType'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowBinlogClearPolicyResponse implements ModelInterface, ArrayAccess
     public function setBinlogRetentionHours($binlogRetentionHours)
     {
         $this->container['binlogRetentionHours'] = $binlogRetentionHours;
+        return $this;
+    }
+
+    /**
+    * Gets binlogClearType
+    *  二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
+    *
+    * @return string|null
+    */
+    public function getBinlogClearType()
+    {
+        return $this->container['binlogClearType'];
+    }
+
+    /**
+    * Sets binlogClearType
+    *
+    * @param string|null $binlogClearType 二进制日志保留策略,取值：time、fast - time:表示按时长保留二进制文件 - fast:表示快速清理,不保留二进制文件
+    *
+    * @return $this
+    */
+    public function setBinlogClearType($binlogClearType)
+    {
+        $this->container['binlogClearType'] = $binlogClearType;
         return $this;
     }
 

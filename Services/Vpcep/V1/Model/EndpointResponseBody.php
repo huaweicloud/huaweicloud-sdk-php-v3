@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class EndpointResp implements ModelInterface, ArrayAccess
+class EndpointResponseBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,18 +16,18 @@ class EndpointResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'EndpointResp';
+    protected static $openAPIModelName = 'EndpointResponseBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
-    * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
+    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
+    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数： 当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
     * vpcId  终端节点所在的VPC的ID。
@@ -38,7 +38,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * enableWhitelist  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
@@ -60,8 +60,8 @@ class EndpointResp implements ModelInterface, ArrayAccess
             'ip' => 'string',
             'vpcId' => 'string',
             'subnetId' => 'string',
-            'createdAt' => 'string',
-            'updatedAt' => 'string',
+            'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime',
             'projectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'error' => '\HuaweiCloud\SDK\Vpcep\V1\Model\QueryError[]',
@@ -77,13 +77,13 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
-    * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
+    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
+    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数： 当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
     * vpcId  终端节点所在的VPC的ID。
@@ -94,7 +94,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * enableWhitelist  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
@@ -116,8 +116,8 @@ class EndpointResp implements ModelInterface, ArrayAccess
         'ip' => null,
         'vpcId' => null,
         'subnetId' => null,
-        'createdAt' => null,
-        'updatedAt' => null,
+        'createdAt' => 'date-time',
+        'updatedAt' => 'date-time',
         'projectId' => null,
         'tags' => null,
         'error' => null,
@@ -154,13 +154,13 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
-    * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
+    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
+    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数： 当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
     * vpcId  终端节点所在的VPC的ID。
@@ -171,7 +171,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * enableWhitelist  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
@@ -210,13 +210,13 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
-    * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
+    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
+    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数： 当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
     * vpcId  终端节点所在的VPC的ID。
@@ -227,7 +227,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * enableWhitelist  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
@@ -266,13 +266,13 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
-    * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
+    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
+    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数： 当查询连接interface类型终端节点服务的终端节点时。 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
     * vpcId  终端节点所在的VPC的ID。
@@ -283,7 +283,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * enableWhitelist  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
@@ -359,45 +359,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SERVICE_TYPE__INTERFACE = 'interface';
-    const SERVICE_TYPE_GATEWAY = 'gateway';
-    const STATUS_PENDING_ACCEPTANCE = 'pendingAcceptance';
-    const STATUS_CREATING = 'creating';
-    const STATUS_ACCEPTED = 'accepted';
-    const STATUS_REJECTED = 'rejected';
-    const STATUS_FAILED = 'failed';
-    const STATUS_DELETING = 'deleting';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getServiceTypeAllowableValues()
-    {
-        return [
-            self::SERVICE_TYPE__INTERFACE,
-            self::SERVICE_TYPE_GATEWAY,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_PENDING_ACCEPTANCE,
-            self::STATUS_CREATING,
-            self::STATUS_ACCEPTED,
-            self::STATUS_REJECTED,
-            self::STATUS_FAILED,
-            self::STATUS_DELETING,
-        ];
-    }
 
 
     /**
@@ -449,22 +411,54 @@ class EndpointResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getServiceTypeAllowableValues();
-                if (!is_null($this->container['serviceType']) && !in_array($this->container['serviceType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'serviceType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
             }
-
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
-
+            if (!is_null($this->container['endpointServiceId']) && (mb_strlen($this->container['endpointServiceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'endpointServiceId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['endpointServiceId']) && (mb_strlen($this->container['endpointServiceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'endpointServiceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 64)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['subnetId']) && (mb_strlen($this->container['subnetId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'subnetId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['subnetId']) && (mb_strlen($this->container['subnetId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'subnetId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['endpointPoolId']) && (mb_strlen($this->container['endpointPoolId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'endpointPoolId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['endpointPoolId']) && (mb_strlen($this->container['endpointPoolId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'endpointPoolId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -505,7 +499,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    *  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     *
     * @return string|null
     */
@@ -517,7 +511,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * @param string|null $serviceType 终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     *
     * @return $this
     */
@@ -529,7 +523,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    *  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     *
     * @return string|null
     */
@@ -541,7 +535,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * @param string|null $status 终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     *
     * @return $this
     */
@@ -553,7 +547,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStatus
-    *  帐号状态。 ● frozen：冻结 ● active：解冻
+    *  帐号状态。  - frozen：冻结  - active：解冻
     *
     * @return string[]|null
     */
@@ -565,7 +559,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets activeStatus
     *
-    * @param string[]|null $activeStatus 帐号状态。 ● frozen：冻结 ● active：解冻
+    * @param string[]|null $activeStatus 帐号状态。  - frozen：冻结  - active：解冻
     *
     * @return $this
     */
@@ -649,7 +643,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableDns
-    *  是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    *  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return bool|null
     */
@@ -661,7 +655,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableDns
     *
-    * @param bool|null $enableDns 是否创建域名。 ● true：创建域名 ● false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * @param bool|null $enableDns 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return $this
     */
@@ -771,7 +765,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getCreatedAt()
     {
@@ -781,7 +775,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * @param \DateTime|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -795,7 +789,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Gets updatedAt
     *  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getUpdatedAt()
     {
@@ -805,7 +799,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * @param \DateTime|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -913,7 +907,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableWhitelist
-    *  是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    *  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     *
     * @return bool|null
     */
@@ -925,7 +919,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableWhitelist
     *
-    * @param bool|null $enableWhitelist 是否开启网络ACL隔离。 ● true：开启网络ACL隔离 ● false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * @param bool|null $enableWhitelist 是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     *
     * @return $this
     */

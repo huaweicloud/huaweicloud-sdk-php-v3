@@ -20,7 +20,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     * used  已创建的资源个数。 取值范围：0~quota数。
     * quota  资源的最大配额数。 取值范围：各类型资源默认配额数的最大值。
     *
@@ -34,7 +34,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     * used  已创建的资源个数。 取值范围：0~quota数。
     * quota  资源的最大配额数。 取值范围：各类型资源默认配额数的最大值。
     *
@@ -69,7 +69,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     * used  已创建的资源个数。 取值范围：0~quota数。
     * quota  资源的最大配额数。 取值范围：各类型资源默认配额数的最大值。
     *
@@ -83,7 +83,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     * used  已创建的资源个数。 取值范围：0~quota数。
     * quota  资源的最大配额数。 取值范围：各类型资源默认配额数的最大值。
     *
@@ -97,7 +97,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * type  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     * used  已创建的资源个数。 取值范围：0~quota数。
     * quota  资源的最大配额数。 取值范围：各类型资源默认配额数的最大值。
     *
@@ -149,22 +149,7 @@ class Quotas implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_ENDPOINT_SERVICE = 'endpoint_service';
-    const TYPE_ENDPOINT = 'endpoint';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_ENDPOINT_SERVICE,
-            self::TYPE_ENDPOINT,
-        ];
-    }
 
 
     /**
@@ -195,14 +180,12 @@ class Quotas implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['used']) && ($this->container['used'] < 0)) {
+                $invalidProperties[] = "invalid value for 'used', must be bigger than or equal to 0.";
             }
-
+            if (!is_null($this->container['quota']) && ($this->container['quota'] < 0)) {
+                $invalidProperties[] = "invalid value for 'quota', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -219,7 +202,7 @@ class Quotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    *  资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return string|null
     */
@@ -231,7 +214,7 @@ class Quotas implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源类型。支持根据资源类型过滤查询指定类型的配额。 ● endpoint_service：终端节点服务 ● endpoint：终端节点
+    * @param string|null $type 资源类型。支持根据资源类型过滤查询指定类型的配额。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return $this
     */

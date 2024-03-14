@@ -35,10 +35,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
@@ -60,10 +62,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'viewMode' => 'string',
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
             'roomId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
             'coverUrl' => 'string',
+            'thumbnail' => 'string',
             'roomState' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'xRequestId' => 'string'
@@ -85,10 +89,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
@@ -110,10 +116,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'reviewConfig' => null,
         'sharedConfig' => null,
         'viewMode' => null,
+        'coStreamerConfig' => null,
         'roomId' => null,
         'createTime' => null,
         'updateTime' => null,
         'coverUrl' => null,
+        'thumbnail' => null,
         'roomState' => null,
         'errorInfo' => null,
         'xRequestId' => null
@@ -156,10 +164,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
@@ -181,10 +191,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'review_config',
             'sharedConfig' => 'shared_config',
             'viewMode' => 'view_mode',
+            'coStreamerConfig' => 'co_streamer_config',
             'roomId' => 'room_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'coverUrl' => 'cover_url',
+            'thumbnail' => 'thumbnail',
             'roomState' => 'room_state',
             'errorInfo' => 'error_info',
             'xRequestId' => 'X-Request-Id'
@@ -206,10 +218,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
@@ -231,10 +245,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'setReviewConfig',
             'sharedConfig' => 'setSharedConfig',
             'viewMode' => 'setViewMode',
+            'coStreamerConfig' => 'setCoStreamerConfig',
             'roomId' => 'setRoomId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'coverUrl' => 'setCoverUrl',
+            'thumbnail' => 'setThumbnail',
             'roomState' => 'setRoomState',
             'errorInfo' => 'setErrorInfo',
             'xRequestId' => 'setXRequestId'
@@ -256,10 +272,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     * roomId  直播间ID
     * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * coverUrl  直播间封面图URL
+    * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
     * errorInfo  errorInfo
     * xRequestId  xRequestId
@@ -281,10 +299,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'reviewConfig' => 'getReviewConfig',
             'sharedConfig' => 'getSharedConfig',
             'viewMode' => 'getViewMode',
+            'coStreamerConfig' => 'getCoStreamerConfig',
             'roomId' => 'getRoomId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'coverUrl' => 'getCoverUrl',
+            'thumbnail' => 'getThumbnail',
             'roomState' => 'getRoomState',
             'errorInfo' => 'getErrorInfo',
             'xRequestId' => 'getXRequestId'
@@ -411,10 +431,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
+        $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
+        $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['roomState'] = isset($data['roomState']) ? $data['roomState'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
@@ -488,6 +510,12 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['coverUrl']) && (mb_strlen($this->container['coverUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'coverUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['thumbnail']) && (mb_strlen($this->container['thumbnail']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'thumbnail', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['thumbnail']) && (mb_strlen($this->container['thumbnail']) < 0)) {
+                $invalidProperties[] = "invalid value for 'thumbnail', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getRoomStateAllowableValues();
                 if (!is_null($this->container['roomState']) && !in_array($this->container['roomState'], $allowedValues, true)) {
@@ -854,6 +882,30 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets coStreamerConfig
+    *  coStreamerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null
+    */
+    public function getCoStreamerConfig()
+    {
+        return $this->container['coStreamerConfig'];
+    }
+
+    /**
+    * Sets coStreamerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null $coStreamerConfig coStreamerConfig
+    *
+    * @return $this
+    */
+    public function setCoStreamerConfig($coStreamerConfig)
+    {
+        $this->container['coStreamerConfig'] = $coStreamerConfig;
+        return $this;
+    }
+
+    /**
     * Gets roomId
     *  直播间ID
     *
@@ -946,6 +998,30 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setCoverUrl($coverUrl)
     {
         $this->container['coverUrl'] = $coverUrl;
+        return $this;
+    }
+
+    /**
+    * Gets thumbnail
+    *  直播间封面图新URL
+    *
+    * @return string|null
+    */
+    public function getThumbnail()
+    {
+        return $this->container['thumbnail'];
+    }
+
+    /**
+    * Sets thumbnail
+    *
+    * @param string|null $thumbnail 直播间封面图新URL
+    *
+    * @return $this
+    */
+    public function setThumbnail($thumbnail)
+    {
+        $this->container['thumbnail'] = $thumbnail;
         return $this;
     }
 

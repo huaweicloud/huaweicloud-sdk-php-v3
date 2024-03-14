@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateEpConnections implements ModelInterface, ArrayAccess
+class ResourcesResponseBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class UpdateEpConnections implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateEpConnections';
+    protected static $openAPIModelName = 'ResourcesResponseBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connections  连接管理描述字段列表
+    * resources  资源列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'connections' => '\HuaweiCloud\SDK\Vpcep\V1\Model\ConnectionsDesc[]'
+            'resources' => '\HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connections  连接管理描述字段列表
+    * resources  资源列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'connections' => null
+        'resources' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class UpdateEpConnections implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connections  连接管理描述字段列表
+    * resources  资源列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'connections' => 'connections'
+            'resources' => 'resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connections  连接管理描述字段列表
+    * resources  资源列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'connections' => 'setConnections'
+            'resources' => 'setResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connections  连接管理描述字段列表
+    * resources  资源列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'connections' => 'getConnections'
+            'resources' => 'getResources'
     ];
 
     /**
@@ -147,7 +147,7 @@ class UpdateEpConnections implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['connections'] = isset($data['connections']) ? $data['connections'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
     /**
@@ -158,9 +158,6 @@ class UpdateEpConnections implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['connections'] === null) {
-            $invalidProperties[] = "'connections' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +173,26 @@ class UpdateEpConnections implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets connections
-    *  连接管理描述字段列表
+    * Gets resources
+    *  资源列表
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\ConnectionsDesc[]
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]|null
     */
-    public function getConnections()
+    public function getResources()
     {
-        return $this->container['connections'];
+        return $this->container['resources'];
     }
 
     /**
-    * Sets connections
+    * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\ConnectionsDesc[] $connections 连接管理描述字段列表
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\Quotas[]|null $resources 资源列表
     *
     * @return $this
     */
-    public function setConnections($connections)
+    public function setResources($resources)
     {
-        $this->container['connections'] = $connections;
+        $this->container['resources'] = $resources;
         return $this;
     }
 

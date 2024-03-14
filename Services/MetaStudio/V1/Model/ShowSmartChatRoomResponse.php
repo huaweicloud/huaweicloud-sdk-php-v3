@@ -21,21 +21,21 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
-    * roomId  直播间ID
-    * createTime  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * coverUrl  直播间封面图URL
+    * roomId  对话ID。
+    * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * coverUrl  对话封面图URL
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -61,21 +61,21 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
-    * roomId  直播间ID
-    * createTime  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * coverUrl  直播间封面图URL
+    * roomId  对话ID。
+    * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * coverUrl  对话封面图URL
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -122,21 +122,21 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
-    * roomId  直播间ID
-    * createTime  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * coverUrl  直播间封面图URL
+    * roomId  对话ID。
+    * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * coverUrl  对话封面图URL
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -162,21 +162,21 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
-    * roomId  直播间ID
-    * createTime  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * coverUrl  直播间封面图URL
+    * roomId  对话ID。
+    * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * coverUrl  对话封面图URL
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -202,21 +202,21 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
+    * roomName  对话名称
+    * roomDescription  对话描述。
     * videoConfig  videoConfig
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
-    * robotId  机器人ID。
+    * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     * concurrency  并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
-    * roomId  直播间ID
-    * createTime  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * coverUrl  直播间封面图URL
+    * roomId  对话ID。
+    * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * coverUrl  对话封面图URL
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -400,7 +400,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomName
-    *  直播间名称
+    *  对话名称
     *
     * @return string
     */
@@ -412,7 +412,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomName
     *
-    * @param string $roomName 直播间名称
+    * @param string $roomName 对话名称
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomDescription
-    *  直播间描述。
+    *  对话描述。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomDescription
     *
-    * @param string|null $roomDescription 直播间描述。
+    * @param string|null $roomDescription 对话描述。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets robotId
-    *  机器人ID。
+    *  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
     * @return string
     */
@@ -532,7 +532,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets robotId
     *
-    * @param string $robotId 机器人ID。
+    * @param string $robotId 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomId
-    *  直播间ID
+    *  对话ID。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomId
     *
-    * @param string|null $roomId 直播间ID
+    * @param string|null $roomId 对话ID。
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
     * @return string|null
     */
@@ -700,7 +700,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $createTime 智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
     * @return string|null
     */
@@ -724,7 +724,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $updateTime 智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets coverUrl
-    *  直播间封面图URL
+    *  对话封面图URL
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets coverUrl
     *
-    * @param string|null $coverUrl 直播间封面图URL
+    * @param string|null $coverUrl 对话封面图URL
     *
     * @return $this
     */

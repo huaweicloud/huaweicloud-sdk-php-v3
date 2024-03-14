@@ -21,13 +21,15 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * commandId  控制命令ID
+    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     * result  命令执行结果
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'commandId' => 'string',
             'command' => 'string',
             'result' => 'string',
             'xRequestId' => 'string'
@@ -35,13 +37,15 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * commandId  控制命令ID
+    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     * result  命令执行结果
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'commandId' => null,
         'command' => null,
         'result' => null,
         'xRequestId' => null
@@ -70,13 +74,15 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * commandId  控制命令ID
+    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     * result  命令执行结果
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'commandId' => 'command_id',
             'command' => 'command',
             'result' => 'result',
             'xRequestId' => 'X-Request-Id'
@@ -84,13 +90,15 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * commandId  控制命令ID
+    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     * result  命令执行结果
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
+            'commandId' => 'setCommandId',
             'command' => 'setCommand',
             'result' => 'setResult',
             'xRequestId' => 'setXRequestId'
@@ -98,13 +106,15 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * commandId  控制命令ID
+    * command  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     * result  命令执行结果
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
+            'commandId' => 'getCommandId',
             'command' => 'getCommand',
             'result' => 'getResult',
             'xRequestId' => 'getXRequestId'
@@ -154,6 +164,8 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     const COMMAND_REWRITE_PLAY_SCRIPT = 'REWRITE_PLAY_SCRIPT';
     const COMMAND_INSERT_PLAY_AUDIO = 'INSERT_PLAY_AUDIO';
     const COMMAND_GET_CURRENT_PLAYING_SCRIPTS = 'GET_CURRENT_PLAYING_SCRIPTS';
+    const COMMAND_REWRITE_INTERACTION_RULES = 'REWRITE_INTERACTION_RULES';
+    const COMMAND_GET_LIVE_JOB_CONFIG_INFO = 'GET_LIVE_JOB_CONFIG_INFO';
     
 
     /**
@@ -168,6 +180,8 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
             self::COMMAND_REWRITE_PLAY_SCRIPT,
             self::COMMAND_INSERT_PLAY_AUDIO,
             self::COMMAND_GET_CURRENT_PLAYING_SCRIPTS,
+            self::COMMAND_REWRITE_INTERACTION_RULES,
+            self::COMMAND_GET_LIVE_JOB_CONFIG_INFO,
         ];
     }
 
@@ -187,6 +201,7 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['commandId'] = isset($data['commandId']) ? $data['commandId'] : null;
         $this->container['command'] = isset($data['command']) ? $data['command'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
@@ -200,6 +215,12 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['commandId']) && (mb_strlen($this->container['commandId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'commandId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['commandId']) && (mb_strlen($this->container['commandId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'commandId', the character length must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getCommandAllowableValues();
                 if (!is_null($this->container['command']) && !in_array($this->container['command'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -235,8 +256,32 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets commandId
+    *  控制命令ID
+    *
+    * @return string|null
+    */
+    public function getCommandId()
+    {
+        return $this->container['commandId'];
+    }
+
+    /**
+    * Sets commandId
+    *
+    * @param string|null $commandId 控制命令ID
+    *
+    * @return $this
+    */
+    public function setCommandId($commandId)
+    {
+        $this->container['commandId'] = $commandId;
+        return $this;
+    }
+
+    /**
     * Gets command
-    *  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    *  命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     *
     * @return string|null
     */
@@ -248,7 +293,7 @@ class ExecuteSmartLiveCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets command
     *
-    * @param string|null $command 命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构
+    * @param string|null $command 命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：ShootScript - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO: 插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_LIVE_JOB_CONFIG_INFO: 获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
     *
     * @return $this
     */

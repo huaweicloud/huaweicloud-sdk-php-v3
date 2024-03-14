@@ -21,28 +21,32 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  智能交互对话直播间总数。
-    * smartChatRooms  智能交互对话直播间列表。
+    * count  智能交互对话总数。
+    * countConcurrency  智能交互对话总并发路数。
+    * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
+            'countConcurrency' => 'int',
             'smartChatRooms' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatRoomBaseInfo[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  智能交互对话直播间总数。
-    * smartChatRooms  智能交互对话直播间列表。
+    * count  智能交互对话总数。
+    * countConcurrency  智能交互对话总并发路数。
+    * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => 'int32',
+        'countConcurrency' => 'int32',
         'smartChatRooms' => null,
         'xRequestId' => null
     ];
@@ -70,42 +74,48 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  智能交互对话直播间总数。
-    * smartChatRooms  智能交互对话直播间列表。
+    * count  智能交互对话总数。
+    * countConcurrency  智能交互对话总并发路数。
+    * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
+            'countConcurrency' => 'count_concurrency',
             'smartChatRooms' => 'smart_chat_rooms',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  智能交互对话直播间总数。
-    * smartChatRooms  智能交互对话直播间列表。
+    * count  智能交互对话总数。
+    * countConcurrency  智能交互对话总并发路数。
+    * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
+            'countConcurrency' => 'setCountConcurrency',
             'smartChatRooms' => 'setSmartChatRooms',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  智能交互对话直播间总数。
-    * smartChatRooms  智能交互对话直播间列表。
+    * count  智能交互对话总数。
+    * countConcurrency  智能交互对话总并发路数。
+    * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
+            'countConcurrency' => 'getCountConcurrency',
             'smartChatRooms' => 'getSmartChatRooms',
             'xRequestId' => 'getXRequestId'
     ];
@@ -169,6 +179,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['countConcurrency'] = isset($data['countConcurrency']) ? $data['countConcurrency'] : null;
         $this->container['smartChatRooms'] = isset($data['smartChatRooms']) ? $data['smartChatRooms'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -187,6 +198,12 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['countConcurrency']) && ($this->container['countConcurrency'] > 1024000)) {
+                $invalidProperties[] = "invalid value for 'countConcurrency', must be smaller than or equal to 1024000.";
+            }
+            if (!is_null($this->container['countConcurrency']) && ($this->container['countConcurrency'] < 0)) {
+                $invalidProperties[] = "invalid value for 'countConcurrency', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -203,7 +220,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  智能交互对话直播间总数。
+    *  智能交互对话总数。
     *
     * @return int|null
     */
@@ -215,7 +232,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 智能交互对话直播间总数。
+    * @param int|null $count 智能交互对话总数。
     *
     * @return $this
     */
@@ -226,8 +243,32 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets countConcurrency
+    *  智能交互对话总并发路数。
+    *
+    * @return int|null
+    */
+    public function getCountConcurrency()
+    {
+        return $this->container['countConcurrency'];
+    }
+
+    /**
+    * Sets countConcurrency
+    *
+    * @param int|null $countConcurrency 智能交互对话总并发路数。
+    *
+    * @return $this
+    */
+    public function setCountConcurrency($countConcurrency)
+    {
+        $this->container['countConcurrency'] = $countConcurrency;
+        return $this;
+    }
+
+    /**
     * Gets smartChatRooms
-    *  智能交互对话直播间列表。
+    *  智能交互对话列表。
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatRoomBaseInfo[]|null
     */
@@ -239,7 +280,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets smartChatRooms
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatRoomBaseInfo[]|null $smartChatRooms 智能交互对话直播间列表。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatRoomBaseInfo[]|null $smartChatRooms 智能交互对话列表。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本ID。
+    * status  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  版本ID。 - v1：当前主推版本
     * updated  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * version  支持的版本号。
     * minVersion  支持的微版本号。若该版本API不支持微版本，则为空。
@@ -32,7 +32,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'status' => 'string',
             'id' => 'string',
-            'updated' => 'string',
+            'updated' => '\DateTime',
             'version' => 'string',
             'minVersion' => 'string',
             'links' => '\HuaweiCloud\SDK\Vpcep\V1\Model\Link[]'
@@ -40,8 +40,8 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本ID。
+    * status  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  版本ID。 - v1：当前主推版本
     * updated  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * version  支持的版本号。
     * minVersion  支持的微版本号。若该版本API不支持微版本，则为空。
@@ -52,7 +52,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'status' => null,
         'id' => null,
-        'updated' => null,
+        'updated' => 'date-time',
         'version' => null,
         'minVersion' => null,
         'links' => null
@@ -81,8 +81,8 @@ class VersionObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本ID。
+    * status  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  版本ID。 - v1：当前主推版本
     * updated  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * version  支持的版本号。
     * minVersion  支持的微版本号。若该版本API不支持微版本，则为空。
@@ -101,8 +101,8 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本ID。
+    * status  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  版本ID。 - v1：当前主推版本
     * updated  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * version  支持的版本号。
     * minVersion  支持的微版本号。若该版本API不支持微版本，则为空。
@@ -121,8 +121,8 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
-    * id  版本ID。
+    * status  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * id  版本ID。 - v1：当前主推版本
     * updated  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * version  支持的版本号。
     * minVersion  支持的微版本号。若该版本API不支持微版本，则为空。
@@ -179,37 +179,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const STATUS_CURRENT = 'CURRENT';
-    const STATUS_SUPPORT = 'SUPPORT';
-    const STATUS_DEPRECATED = 'DEPRECATED';
-    const ID_V1 = 'v1';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_CURRENT,
-            self::STATUS_SUPPORT,
-            self::STATUS_DEPRECATED,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getIdAllowableValues()
-    {
-        return [
-            self::ID_V1,
-        ];
-    }
 
 
     /**
@@ -243,22 +213,12 @@ class VersionObject implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 16)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 16.";
             }
-
-            $allowedValues = $this->getIdAllowableValues();
-                if (!is_null($this->container['id']) && !in_array($this->container['id'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'id', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
-
         return $invalidProperties;
     }
 
@@ -275,7 +235,7 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    *  版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return string|null
     */
@@ -287,7 +247,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 版本状态。 ● CURRENT：表示该版本为主推版本。 ● SUPPORT：表示为老版本，但是现在还在继续支持。 ● DEPRECATED：表示为废弃版本，存在后续删除的可能。
+    * @param string|null $status 版本状态。   - CURRENT：表示该版本为主推版本。   - SUPPORT：表示为老版本，但是现在还在继续支持。   -DEPRECATED：表示为废弃版本，存在后续删除的可能。
     *
     * @return $this
     */
@@ -299,7 +259,7 @@ class VersionObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  版本ID。
+    *  版本ID。 - v1：当前主推版本
     *
     * @return string|null
     */
@@ -311,7 +271,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 版本ID。
+    * @param string|null $id 版本ID。 - v1：当前主推版本
     *
     * @return $this
     */
@@ -325,7 +285,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     * Gets updated
     *  版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getUpdated()
     {
@@ -335,7 +295,7 @@ class VersionObject implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $updated 版本发布时间。采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     *
     * @return $this
     */

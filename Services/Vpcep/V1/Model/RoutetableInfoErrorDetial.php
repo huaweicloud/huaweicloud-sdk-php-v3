@@ -169,6 +169,18 @@ class RoutetableInfoErrorDetial implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['errorMessage']) && (mb_strlen($this->container['errorMessage']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'errorMessage', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['errorMessage']) && (mb_strlen($this->container['errorMessage']) < 0)) {
+                $invalidProperties[] = "invalid value for 'errorMessage', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

@@ -22,21 +22,25 @@ class ShowCacheRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * cacheConfig  cacheConfig
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cacheConfig' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheConfig'
+            'cacheConfig' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheConfig',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * cacheConfig  cacheConfig
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cacheConfig' => null
+        'cacheConfig' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowCacheRulesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * cacheConfig  cacheConfig
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cacheConfig' => 'cache_config'
+            'cacheConfig' => 'cache_config',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * cacheConfig  cacheConfig
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'cacheConfig' => 'setCacheConfig'
+            'cacheConfig' => 'setCacheConfig',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * cacheConfig  cacheConfig
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'cacheConfig' => 'getCacheConfig'
+            'cacheConfig' => 'getCacheConfig',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowCacheRulesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['cacheConfig'] = isset($data['cacheConfig']) ? $data['cacheConfig'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowCacheRulesResponse implements ModelInterface, ArrayAccess
     public function setCacheConfig($cacheConfig)
     {
         $this->container['cacheConfig'] = $cacheConfig;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

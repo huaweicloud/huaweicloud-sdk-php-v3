@@ -22,21 +22,25 @@ class ShowResponseHeaderResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * headers  headers
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'headers' => '\HuaweiCloud\SDK\Cdn\V1\Model\HeaderMap'
+            'headers' => '\HuaweiCloud\SDK\Cdn\V1\Model\HeaderMap',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * headers  headers
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'headers' => null
+        'headers' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowResponseHeaderResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * headers  headers
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'headers' => 'headers'
+            'headers' => 'headers',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * headers  headers
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'headers' => 'setHeaders'
+            'headers' => 'setHeaders',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * headers  headers
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'headers' => 'getHeaders'
+            'headers' => 'getHeaders',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowResponseHeaderResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['headers'] = isset($data['headers']) ? $data['headers'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowResponseHeaderResponse implements ModelInterface, ArrayAccess
     public function setHeaders($headers)
     {
         $this->container['headers'] = $headers;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

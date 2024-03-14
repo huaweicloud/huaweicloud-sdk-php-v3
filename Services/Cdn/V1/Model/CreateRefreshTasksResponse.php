@@ -22,21 +22,25 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * refreshTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'refreshTask' => 'string'
+            'refreshTask' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * refreshTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'refreshTask' => null
+        'refreshTask' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * refreshTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'refreshTask' => 'refresh_task'
+            'refreshTask' => 'refresh_task',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * refreshTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'refreshTask' => 'setRefreshTask'
+            'refreshTask' => 'setRefreshTask',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * refreshTask  任务ID。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'refreshTask' => 'getRefreshTask'
+            'refreshTask' => 'getRefreshTask',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['refreshTask'] = isset($data['refreshTask']) ? $data['refreshTask'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class CreateRefreshTasksResponse implements ModelInterface, ArrayAccess
     public function setRefreshTask($refreshTask)
     {
         $this->container['refreshTask'] = $refreshTask;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

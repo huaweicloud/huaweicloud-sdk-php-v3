@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpcep\V1\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
+class UpdateActiveCodeReq implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdatePermissionDescRequest';
+    protected static $openAPIModelName = 'UpdateActiveCodeReq';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permission  permission
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'permission' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EpsUpdatePermissionDesc'
+            'validPeriod' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permission  permission
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'permission' => null
+        'validPeriod' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permission  permission
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'permission' => 'permission'
+            'validPeriod' => 'valid_period'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permission  permission
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'permission' => 'setPermission'
+            'validPeriod' => 'setValidPeriod'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permission  permission
+    * validPeriod  有效天数（0表示长期有效）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'permission' => 'getPermission'
+            'validPeriod' => 'getValidPeriod'
     ];
 
     /**
@@ -147,7 +147,7 @@ class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['validPeriod'] = isset($data['validPeriod']) ? $data['validPeriod'] : null;
     }
 
     /**
@@ -158,9 +158,12 @@ class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['permission'] === null) {
-            $invalidProperties[] = "'permission' can't be null";
-        }
+            if (!is_null($this->container['validPeriod']) && ($this->container['validPeriod'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'validPeriod', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['validPeriod']) && ($this->container['validPeriod'] < 0)) {
+                $invalidProperties[] = "invalid value for 'validPeriod', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -176,26 +179,26 @@ class UpdatePermissionDescRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets permission
-    *  permission
+    * Gets validPeriod
+    *  有效天数（0表示长期有效）。
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EpsUpdatePermissionDesc
+    * @return int|null
     */
-    public function getPermission()
+    public function getValidPeriod()
     {
-        return $this->container['permission'];
+        return $this->container['validPeriod'];
     }
 
     /**
-    * Sets permission
+    * Sets validPeriod
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsUpdatePermissionDesc $permission permission
+    * @param int|null $validPeriod 有效天数（0表示长期有效）。
     *
     * @return $this
     */
-    public function setPermission($permission)
+    public function setValidPeriod($validPeriod)
     {
-        $this->container['permission'] = $permission;
+        $this->container['validPeriod'] = $validPeriod;
         return $this;
     }
 

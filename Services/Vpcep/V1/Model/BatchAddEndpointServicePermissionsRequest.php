@@ -29,7 +29,7 @@ class BatchAddEndpointServicePermissionsRequest implements ModelInterface, Array
     protected static $openAPITypes = [
             'projectId' => 'string',
             'vpcEndpointServiceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddPermissionRequest'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddEndpointServicePermissionsRequestBody'
     ];
 
     /**
@@ -264,7 +264,7 @@ class BatchAddEndpointServicePermissionsRequest implements ModelInterface, Array
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddPermissionRequest|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddEndpointServicePermissionsRequestBody|null
     */
     public function getBody()
     {
@@ -274,7 +274,7 @@ class BatchAddEndpointServicePermissionsRequest implements ModelInterface, Array
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddPermissionRequest|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddEndpointServicePermissionsRequestBody|null $body body
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpoints' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResp[]',
+            'endpoints' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResponseBody[]',
             'totalCount' => 'int'
     ];
 
@@ -188,7 +188,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     * Gets endpoints
     *  终端节点列表。
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResp[]|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResponseBody[]|null
     */
     public function getEndpoints()
     {
@@ -198,7 +198,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResp[]|null $endpoints 终端节点列表。
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EndpointResponseBody[]|null $endpoints 终端节点列表。
     *
     * @return $this
     */

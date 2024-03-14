@@ -21,7 +21,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * permissions  permissions
+    * permissions  终端节点服务白名单
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * permissions  permissions
+    * permissions  终端节点服务白名单
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * permissions  permissions
+    * permissions  终端节点服务白名单
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * permissions  permissions
+    * permissions  终端节点服务白名单
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * permissions  permissions
+    * permissions  终端节点服务白名单
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
 
     /**
     * Gets permissions
-    *  permissions
+    *  终端节点服务白名单
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]|null
     */
@@ -187,7 +187,7 @@ class UpdateEndpointServicePermissionDescResponse implements ModelInterface, Arr
     /**
     * Sets permissions
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]|null $permissions permissions
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]|null $permissions 终端节点服务白名单
     *
     * @return $this
     */

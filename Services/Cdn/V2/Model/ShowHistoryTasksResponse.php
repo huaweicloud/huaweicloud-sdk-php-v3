@@ -23,24 +23,28 @@ class ShowHistoryTasksResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  总共的任务个数。
     * tasks  日志列表数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'tasks' => '\HuaweiCloud\SDK\Cdn\V2\Model\TasksObject[]'
+            'tasks' => '\HuaweiCloud\SDK\Cdn\V2\Model\TasksObject[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  总共的任务个数。
     * tasks  日志列表数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'tasks' => null
+        'tasks' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ShowHistoryTasksResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  总共的任务个数。
     * tasks  日志列表数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'tasks' => 'tasks'
+            'tasks' => 'tasks',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  总共的任务个数。
     * tasks  日志列表数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'tasks' => 'setTasks'
+            'tasks' => 'setTasks',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  总共的任务个数。
     * tasks  日志列表数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'tasks' => 'getTasks'
+            'tasks' => 'getTasks',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ShowHistoryTasksResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ShowHistoryTasksResponse implements ModelInterface, ArrayAccess
     public function setTasks($tasks)
     {
         $this->container['tasks'] = $tasks;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

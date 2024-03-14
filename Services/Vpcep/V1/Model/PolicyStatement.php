@@ -20,7 +20,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * effect  允许或拒绝，控制访问权限
+    * effect  Allow允许或Refuse拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -34,7 +34,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * effect  允许或拒绝，控制访问权限
+    * effect  Allow允许或Refuse拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -69,7 +69,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * effect  允许或拒绝，控制访问权限
+    * effect  Allow允许或Refuse拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -83,7 +83,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * effect  允许或拒绝，控制访问权限
+    * effect  Allow允许或Refuse拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -97,7 +97,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * effect  允许或拒绝，控制访问权限
+    * effect  Allow允许或Refuse拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -149,7 +149,22 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const EFFECT_ALLOW = 'Allow';
+    const EFFECT_REFUSE = 'Refuse';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEffectAllowableValues()
+    {
+        return [
+            self::EFFECT_ALLOW,
+            self::EFFECT_REFUSE,
+        ];
+    }
 
 
     /**
@@ -183,6 +198,14 @@ class PolicyStatement implements ModelInterface, ArrayAccess
         if ($this->container['effect'] === null) {
             $invalidProperties[] = "'effect' can't be null";
         }
+            $allowedValues = $this->getEffectAllowableValues();
+                if (!is_null($this->container['effect']) && !in_array($this->container['effect'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'effect', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
@@ -205,7 +228,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
-    *  允许或拒绝，控制访问权限
+    *  Allow允许或Refuse拒绝，控制访问权限
     *
     * @return string
     */
@@ -217,7 +240,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Sets effect
     *
-    * @param string $effect 允许或拒绝，控制访问权限
+    * @param string $effect Allow允许或Refuse拒绝，控制访问权限
     *
     * @return $this
     */

@@ -28,6 +28,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     * verifyDomainName  探测域名
     * fileVerifyFilename  探测文件名
     * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'domainName' => 'string',
             'verifyDomainName' => 'string',
             'fileVerifyFilename' => 'string',
-            'verifyContent' => 'string'
+            'verifyContent' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     * verifyDomainName  探测域名
     * fileVerifyFilename  探测文件名
     * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
         'domainName' => null,
         'verifyDomainName' => null,
         'fileVerifyFilename' => null,
-        'verifyContent' => null
+        'verifyContent' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     * verifyDomainName  探测域名
     * fileVerifyFilename  探测文件名
     * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'domainName' => 'domain_name',
             'verifyDomainName' => 'verify_domain_name',
             'fileVerifyFilename' => 'file_verify_filename',
-            'verifyContent' => 'verify_content'
+            'verifyContent' => 'verify_content',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     * verifyDomainName  探测域名
     * fileVerifyFilename  探测文件名
     * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'domainName' => 'setDomainName',
             'verifyDomainName' => 'setVerifyDomainName',
             'fileVerifyFilename' => 'setFileVerifyFilename',
-            'verifyContent' => 'setVerifyContent'
+            'verifyContent' => 'setVerifyContent',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     * verifyDomainName  探测域名
     * fileVerifyFilename  探测文件名
     * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'domainName' => 'getDomainName',
             'verifyDomainName' => 'getVerifyDomainName',
             'fileVerifyFilename' => 'getFileVerifyFilename',
-            'verifyContent' => 'getVerifyContent'
+            'verifyContent' => 'getVerifyContent',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
         $this->container['verifyDomainName'] = isset($data['verifyDomainName']) ? $data['verifyDomainName'] : null;
         $this->container['fileVerifyFilename'] = isset($data['fileVerifyFilename']) ? $data['fileVerifyFilename'] : null;
         $this->container['verifyContent'] = isset($data['verifyContent']) ? $data['verifyContent'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -404,6 +415,30 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     public function setVerifyContent($verifyContent)
     {
         $this->container['verifyContent'] = $verifyContent;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

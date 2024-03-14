@@ -21,7 +21,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
-    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     * startTime  数字人名片制作开始时间。
     * endTime  数字人名片制作结束时间。
     * outputAssetConfig  outputAssetConfig
@@ -47,7 +47,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
-    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     * startTime  数字人名片制作开始时间。
     * endTime  数字人名片制作结束时间。
     * outputAssetConfig  outputAssetConfig
@@ -94,7 +94,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID。
-    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     * startTime  数字人名片制作开始时间。
     * endTime  数字人名片制作结束时间。
     * outputAssetConfig  outputAssetConfig
@@ -120,7 +120,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
-    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     * startTime  数字人名片制作开始时间。
     * endTime  数字人名片制作结束时间。
     * outputAssetConfig  outputAssetConfig
@@ -146,7 +146,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
-    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * state  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     * startTime  数字人名片制作开始时间。
     * endTime  数字人名片制作结束时间。
     * outputAssetConfig  outputAssetConfig
@@ -214,6 +214,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     const STATE_SUCCEED = 'SUCCEED';
     const STATE_FAILED = 'FAILED';
     const STATE_CANCELED = 'CANCELED';
+    const STATE_BLOCK = 'BLOCK';
     const BUSINESS_CARD_TYPE__2_D_DIGITAL_HUMAN_CARD = '2D_DIGITAL_HUMAN_CARD';
     
 
@@ -230,6 +231,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
             self::STATE_SUCCEED,
             self::STATE_FAILED,
             self::STATE_CANCELED,
+            self::STATE_BLOCK,
         ];
     }
 
@@ -378,7 +380,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    *  任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     *
     * @return string
     */
@@ -390,7 +392,7 @@ class DigitalHumanBusinessCardJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+    * @param string $state 任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
     *
     * @return $this
     */

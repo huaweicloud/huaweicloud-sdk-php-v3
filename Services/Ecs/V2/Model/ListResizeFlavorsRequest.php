@@ -24,7 +24,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     * limit  单页面可显示的flavor条数最大值，默认是1000。
     * marker  以单页最后一条flavor的ID作为分页标记。
     * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sortKey  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     * sourceFlavorId  进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     * sourceFlavorName  进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     *
@@ -46,7 +46,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     * limit  单页面可显示的flavor条数最大值，默认是1000。
     * marker  以单页最后一条flavor的ID作为分页标记。
     * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sortKey  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     * sourceFlavorId  进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     * sourceFlavorName  进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     *
@@ -89,7 +89,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     * limit  单页面可显示的flavor条数最大值，默认是1000。
     * marker  以单页最后一条flavor的ID作为分页标记。
     * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sortKey  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     * sourceFlavorId  进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     * sourceFlavorName  进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     *
@@ -111,7 +111,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     * limit  单页面可显示的flavor条数最大值，默认是1000。
     * marker  以单页最后一条flavor的ID作为分页标记。
     * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sortKey  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     * sourceFlavorId  进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     * sourceFlavorName  进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     *
@@ -133,7 +133,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     * limit  单页面可显示的flavor条数最大值，默认是1000。
     * marker  以单页最后一条flavor的ID作为分页标记。
     * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sortKey  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     * sourceFlavorId  进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     * sourceFlavorName  进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
     *
@@ -390,7 +390,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    *  排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * @param string|null $sortKey 排序字段。默认值为“flavorid”。  key的取值范围：  - flavorid：表示规格ID。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     *
     * @return $this
     */

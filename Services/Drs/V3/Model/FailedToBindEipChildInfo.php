@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpcep\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAccess
+class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchAddOrRemoveResourceInstanceBody';
+    protected static $openAPIModelName = 'FailedToBindEipChildInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  标签列表，没有标签默认为空数组。
-    * action  操作标识：仅限于 create（创建） delete（删除）
+    * id  子任务ID
+    * name  子任务名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\ResourceTag[]',
-            'action' => 'string'
+            'id' => 'string',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  标签列表，没有标签默认为空数组。
-    * action  操作标识：仅限于 create（创建） delete（删除）
+    * id  子任务ID
+    * name  子任务名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'action' => null
+        'id' => null,
+        'name' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  标签列表，没有标签默认为空数组。
-    * action  操作标识：仅限于 create（创建） delete（删除）
+    * id  子任务ID
+    * name  子任务名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'action' => 'action'
+            'id' => 'id',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  标签列表，没有标签默认为空数组。
-    * action  操作标识：仅限于 create（创建） delete（删除）
+    * id  子任务ID
+    * name  子任务名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'action' => 'setAction'
+            'id' => 'setId',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  标签列表，没有标签默认为空数组。
-    * action  操作标识：仅限于 create（创建） delete（删除）
+    * id  子任务ID
+    * name  子任务名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'action' => 'getAction'
+            'id' => 'getId',
+            'name' => 'getName'
     ];
 
     /**
@@ -157,8 +157,8 @@ class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -169,9 +169,6 @@ class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['action'] === null) {
-            $invalidProperties[] = "'action' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +184,50 @@ class BatchAddOrRemoveResourceInstanceBody implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets tags
-    *  标签列表，没有标签默认为空数组。
+    * Gets id
+    *  子任务ID
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\ResourceTag[]|null
+    * @return string|null
     */
-    public function getTags()
+    public function getId()
     {
-        return $this->container['tags'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets tags
+    * Sets id
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\ResourceTag[]|null $tags 标签列表，没有标签默认为空数组。
+    * @param string|null $id 子任务ID
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setId($id)
     {
-        $this->container['tags'] = $tags;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets action
-    *  操作标识：仅限于 create（创建） delete（删除）
+    * Gets name
+    *  子任务名称
     *
-    * @return string
+    * @return string|null
     */
-    public function getAction()
+    public function getName()
     {
-        return $this->container['action'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets action
+    * Sets name
     *
-    * @param string $action 操作标识：仅限于 create（创建） delete（删除）
+    * @param string|null $name 子任务名称
     *
     * @return $this
     */
-    public function setAction($action)
+    public function setName($name)
     {
-        $this->container['action'] = $action;
+        $this->container['name'] = $name;
         return $this;
     }
 

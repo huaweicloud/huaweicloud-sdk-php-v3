@@ -20,6 +20,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * scriptId  剧本ID。
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
@@ -32,6 +33,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'scriptId' => 'string',
             'scriptName' => 'string',
             'scriptDescription' => 'string',
             'dhId' => 'string',
@@ -44,6 +46,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * scriptId  剧本ID。
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
@@ -56,6 +59,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'scriptId' => null,
         'scriptName' => null,
         'scriptDescription' => null,
         'dhId' => null,
@@ -89,6 +93,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * scriptId  剧本ID。
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
@@ -101,6 +106,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'scriptId' => 'script_id',
             'scriptName' => 'script_name',
             'scriptDescription' => 'script_description',
             'dhId' => 'dh_id',
@@ -113,6 +119,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * scriptId  剧本ID。
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
@@ -125,6 +132,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'scriptId' => 'setScriptId',
             'scriptName' => 'setScriptName',
             'scriptDescription' => 'setScriptDescription',
             'dhId' => 'setDhId',
@@ -137,6 +145,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * scriptId  剧本ID。
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
@@ -149,6 +158,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'scriptId' => 'getScriptId',
             'scriptName' => 'getScriptName',
             'scriptDescription' => 'getScriptDescription',
             'dhId' => 'getDhId',
@@ -217,6 +227,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['scriptDescription'] = isset($data['scriptDescription']) ? $data['scriptDescription'] : null;
         $this->container['dhId'] = isset($data['dhId']) ? $data['dhId'] : null;
@@ -235,6 +246,12 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['scriptId']) && (mb_strlen($this->container['scriptId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'scriptId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['scriptId']) && (mb_strlen($this->container['scriptId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scriptId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['scriptName'] === null) {
             $invalidProperties[] = "'scriptName' can't be null";
         }
@@ -277,6 +294,30 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets scriptId
+    *  剧本ID。
+    *
+    * @return string|null
+    */
+    public function getScriptId()
+    {
+        return $this->container['scriptId'];
+    }
+
+    /**
+    * Sets scriptId
+    *
+    * @param string|null $scriptId 剧本ID。
+    *
+    * @return $this
+    */
+    public function setScriptId($scriptId)
+    {
+        $this->container['scriptId'] = $scriptId;
+        return $this;
     }
 
     /**

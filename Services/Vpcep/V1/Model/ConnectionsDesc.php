@@ -172,9 +172,21 @@ class ConnectionsDesc implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+            if ((mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
+            if ((mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+            }
+            if ((mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

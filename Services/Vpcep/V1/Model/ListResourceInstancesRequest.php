@@ -21,7 +21,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
+    * resourceType  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
+    * resourceType  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
+    * resourceType  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
+    * resourceType  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
+    * resourceType  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     * body  body
     *
     * @var string[]
@@ -149,7 +149,22 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_ENDPOINT_SERVICE = 'endpoint_service';
+    const RESOURCE_TYPE_ENDPOINT = 'endpoint';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_ENDPOINT_SERVICE,
+            self::RESOURCE_TYPE_ENDPOINT,
+        ];
+    }
 
 
     /**
@@ -183,9 +198,23 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -226,7 +255,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型，值为：endpoint_service或endpoint。
+    *  资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     *
     * @return string
     */
@@ -238,7 +267,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型，值为：endpoint_service或endpoint。
+    * @param string $resourceType 资源类型，值为：endpoint_service或endpoint。 - endpoint_service：云服务器，适用于作为服务器使用。 - endpoint：虚拟IP，适用于作为虚IP场景使用
     *
     * @return $this
     */

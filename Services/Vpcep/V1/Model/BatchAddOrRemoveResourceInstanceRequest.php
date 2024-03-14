@@ -21,8 +21,8 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
-    * resourceId  资源ID，Endpoint ServiceID或Endpoint ID。
+    * resourceType  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
+    * resourceId  资源ID，Endpoint Service ID或Endpoint ID。
     * body  body
     *
     * @var string[]
@@ -31,14 +31,14 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
             'projectId' => 'string',
             'resourceType' => 'string',
             'resourceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceBody'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
-    * resourceId  资源ID，Endpoint ServiceID或Endpoint ID。
+    * resourceType  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
+    * resourceId  资源ID，Endpoint Service ID或Endpoint ID。
     * body  body
     *
     * @var string[]
@@ -74,8 +74,8 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
-    * resourceId  资源ID，Endpoint ServiceID或Endpoint ID。
+    * resourceType  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
+    * resourceId  资源ID，Endpoint Service ID或Endpoint ID。
     * body  body
     *
     * @var string[]
@@ -90,8 +90,8 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
-    * resourceId  资源ID，Endpoint ServiceID或Endpoint ID。
+    * resourceType  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
+    * resourceId  资源ID，Endpoint Service ID或Endpoint ID。
     * body  body
     *
     * @var string[]
@@ -106,8 +106,8 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目ID。
-    * resourceType  资源类型，值为：endpoint_service或endpoint。
-    * resourceId  资源ID，Endpoint ServiceID或Endpoint ID。
+    * resourceType  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
+    * resourceId  资源ID，Endpoint Service ID或Endpoint ID。
     * body  body
     *
     * @var string[]
@@ -159,7 +159,22 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_ENDPOINT_SERVICE = 'endpoint_service';
+    const RESOURCE_TYPE_ENDPOINT = 'endpoint';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_ENDPOINT_SERVICE,
+            self::RESOURCE_TYPE_ENDPOINT,
+        ];
+    }
 
 
     /**
@@ -194,12 +209,32 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['resourceId'] === null) {
             $invalidProperties[] = "'resourceId' can't be null";
         }
+            if ((mb_strlen($this->container['resourceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -240,7 +275,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceType
-    *  资源类型，值为：endpoint_service或endpoint。
+    *  资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return string
     */
@@ -252,7 +287,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型，值为：endpoint_service或endpoint。
+    * @param string $resourceType 资源类型。  - endpoint_service：终端节点服务  - endpoint：终端节点
     *
     * @return $this
     */
@@ -264,7 +299,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceId
-    *  资源ID，Endpoint ServiceID或Endpoint ID。
+    *  资源ID，Endpoint Service ID或Endpoint ID。
     *
     * @return string
     */
@@ -276,7 +311,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源ID，Endpoint ServiceID或Endpoint ID。
+    * @param string $resourceId 资源ID，Endpoint Service ID或Endpoint ID。
     *
     * @return $this
     */
@@ -290,7 +325,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceBody|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceRequestBody|null
     */
     public function getBody()
     {
@@ -300,7 +335,7 @@ class BatchAddOrRemoveResourceInstanceRequest implements ModelInterface, ArrayAc
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceBody|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceRequestBody|null $body body
     *
     * @return $this
     */

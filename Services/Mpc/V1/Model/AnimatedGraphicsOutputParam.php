@@ -226,6 +226,9 @@ class AnimatedGraphicsOutputParam implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['format'] === null) {
+            $invalidProperties[] = "'format' can't be null";
+        }
             $allowedValues = $this->getFormatAllowableValues();
                 if (!is_null($this->container['format']) && !in_array($this->container['format'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -234,10 +237,10 @@ class AnimatedGraphicsOutputParam implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['format']) && (mb_strlen($this->container['format']) > 16)) {
+            if ((mb_strlen($this->container['format']) > 16)) {
                 $invalidProperties[] = "invalid value for 'format', the character length must be smaller than or equal to 16.";
             }
-            if (!is_null($this->container['format']) && (mb_strlen($this->container['format']) < 0)) {
+            if ((mb_strlen($this->container['format']) < 0)) {
                 $invalidProperties[] = "invalid value for 'format', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['width'] === null) {
@@ -300,7 +303,7 @@ class AnimatedGraphicsOutputParam implements ModelInterface, ArrayAccess
     * Gets format
     *  动图格式，目前仅支持取值 gif
     *
-    * @return string|null
+    * @return string
     */
     public function getFormat()
     {
@@ -310,7 +313,7 @@ class AnimatedGraphicsOutputParam implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string|null $format 动图格式，目前仅支持取值 gif
+    * @param string $format 动图格式，目前仅支持取值 gif
     *
     * @return $this
     */

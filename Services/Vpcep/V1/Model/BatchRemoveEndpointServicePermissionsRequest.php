@@ -29,7 +29,7 @@ class BatchRemoveEndpointServicePermissionsRequest implements ModelInterface, Ar
     protected static $openAPITypes = [
             'projectId' => 'string',
             'vpcEndpointServiceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemovePermissionRequest'
+            'body' => '\HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemoveEndpointServicePermissionsRequestBody'
     ];
 
     /**
@@ -264,7 +264,7 @@ class BatchRemoveEndpointServicePermissionsRequest implements ModelInterface, Ar
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemovePermissionRequest|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemoveEndpointServicePermissionsRequestBody|null
     */
     public function getBody()
     {
@@ -274,7 +274,7 @@ class BatchRemoveEndpointServicePermissionsRequest implements ModelInterface, Ar
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemovePermissionRequest|null $body body
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemoveEndpointServicePermissionsRequestBody|null $body body
     *
     * @return $this
     */

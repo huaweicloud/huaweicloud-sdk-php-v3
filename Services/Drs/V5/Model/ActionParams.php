@@ -28,6 +28,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
+    * publicIpConfig  publicIpConfig
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'compareTaskParam' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareTaskParams',
             'isSyncReEdit' => 'bool',
-            'forceDelete' => 'bool'
+            'forceDelete' => 'bool',
+            'publicIpConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
+    * publicIpConfig  publicIpConfig
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ActionParams implements ModelInterface, ArrayAccess
         'startTime' => null,
         'compareTaskParam' => null,
         'isSyncReEdit' => null,
-        'forceDelete' => null
+        'forceDelete' => null,
+        'publicIpConfig' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
+    * publicIpConfig  publicIpConfig
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'compareTaskParam' => 'compare_task_param',
             'isSyncReEdit' => 'is_sync_re_edit',
-            'forceDelete' => 'force_delete'
+            'forceDelete' => 'force_delete',
+            'publicIpConfig' => 'public_ip_config'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
+    * publicIpConfig  publicIpConfig
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'compareTaskParam' => 'setCompareTaskParam',
             'isSyncReEdit' => 'setIsSyncReEdit',
-            'forceDelete' => 'setForceDelete'
+            'forceDelete' => 'setForceDelete',
+            'publicIpConfig' => 'setPublicIpConfig'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
+    * publicIpConfig  publicIpConfig
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'compareTaskParam' => 'getCompareTaskParam',
             'isSyncReEdit' => 'getIsSyncReEdit',
-            'forceDelete' => 'getForceDelete'
+            'forceDelete' => 'getForceDelete',
+            'publicIpConfig' => 'getPublicIpConfig'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ActionParams implements ModelInterface, ArrayAccess
         $this->container['compareTaskParam'] = isset($data['compareTaskParam']) ? $data['compareTaskParam'] : null;
         $this->container['isSyncReEdit'] = isset($data['isSyncReEdit']) ? $data['isSyncReEdit'] : null;
         $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
+        $this->container['publicIpConfig'] = isset($data['publicIpConfig']) ? $data['publicIpConfig'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class ActionParams implements ModelInterface, ArrayAccess
     public function setForceDelete($forceDelete)
     {
         $this->container['forceDelete'] = $forceDelete;
+        return $this;
+    }
+
+    /**
+    * Gets publicIpConfig
+    *  publicIpConfig
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig|null
+    */
+    public function getPublicIpConfig()
+    {
+        return $this->container['publicIpConfig'];
+    }
+
+    /**
+    * Sets publicIpConfig
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig|null $publicIpConfig publicIpConfig
+    *
+    * @return $this
+    */
+    public function setPublicIpConfig($publicIpConfig)
+    {
+        $this->container['publicIpConfig'] = $publicIpConfig;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  执行操作
-    * jobId  任务ID（集群模式 取父任务的任务id）
+    * action  需要执行的特定操作。
+    * jobId  任务ID（集群模式 取父任务的任务ID）。
     * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
     *
     * @var string[]
@@ -34,8 +34,8 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  执行操作
-    * jobId  任务ID（集群模式 取父任务的任务id）
+    * action  需要执行的特定操作。
+    * jobId  任务ID（集群模式 取父任务的任务ID）。
     * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
     *
     * @var string[]
@@ -69,8 +69,8 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  执行操作
-    * jobId  任务ID（集群模式 取父任务的任务id）
+    * action  需要执行的特定操作。
+    * jobId  任务ID（集群模式 取父任务的任务ID）。
     * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
     *
     * @var string[]
@@ -83,8 +83,8 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  执行操作
-    * jobId  任务ID（集群模式 取父任务的任务id）
+    * action  需要执行的特定操作。
+    * jobId  任务ID（集群模式 取父任务的任务ID）。
     * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
     *
     * @var string[]
@@ -97,8 +97,8 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  执行操作
-    * jobId  任务ID（集群模式 取父任务的任务id）
+    * action  需要执行的特定操作。
+    * jobId  任务ID（集群模式 取父任务的任务ID）。
     * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
     *
     * @var string[]
@@ -226,7 +226,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  执行操作
+    *  需要执行的特定操作。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 执行操作
+    * @param string $action 需要执行的特定操作。
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID（集群模式 取父任务的任务id）
+    *  任务ID（集群模式 取父任务的任务ID）。
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 任务ID（集群模式 取父任务的任务id）
+    * @param string $jobId 任务ID（集群模式 取父任务的任务ID）。
     *
     * @return $this
     */

@@ -27,6 +27,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'string[]',
             'interactionCallbackUrl' => 'string',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
-            'viewMode' => 'string'
+            'viewMode' => 'string',
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig'
     ];
 
     /**
@@ -49,6 +51,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         'streamKeys' => null,
         'interactionCallbackUrl' => null,
         'liveEventCallbackConfig' => null,
-        'viewMode' => null
+        'viewMode' => null,
+        'coStreamerConfig' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'stream_keys',
             'interactionCallbackUrl' => 'interaction_callback_url',
             'liveEventCallbackConfig' => 'live_event_callback_config',
-            'viewMode' => 'view_mode'
+            'viewMode' => 'view_mode',
+            'coStreamerConfig' => 'co_streamer_config'
     ];
 
     /**
@@ -114,6 +120,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'setStreamKeys',
             'interactionCallbackUrl' => 'setInteractionCallbackUrl',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
-            'viewMode' => 'setViewMode'
+            'viewMode' => 'setViewMode',
+            'coStreamerConfig' => 'setCoStreamerConfig'
     ];
 
     /**
@@ -136,6 +144,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'getStreamKeys',
             'interactionCallbackUrl' => 'getInteractionCallbackUrl',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
-            'viewMode' => 'getViewMode'
+            'viewMode' => 'getViewMode',
+            'coStreamerConfig' => 'getCoStreamerConfig'
     ];
 
     /**
@@ -229,6 +239,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         $this->container['interactionCallbackUrl'] = isset($data['interactionCallbackUrl']) ? $data['interactionCallbackUrl'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
+        $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
     }
 
     /**
@@ -432,6 +443,30 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     public function setViewMode($viewMode)
     {
         $this->container['viewMode'] = $viewMode;
+        return $this;
+    }
+
+    /**
+    * Gets coStreamerConfig
+    *  coStreamerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null
+    */
+    public function getCoStreamerConfig()
+    {
+        return $this->container['coStreamerConfig'];
+    }
+
+    /**
+    * Sets coStreamerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig|null $coStreamerConfig coStreamerConfig
+    *
+    * @return $this
+    */
+    public function setCoStreamerConfig($coStreamerConfig)
+    {
+        $this->container['coStreamerConfig'] = $coStreamerConfig;
         return $this;
     }
 

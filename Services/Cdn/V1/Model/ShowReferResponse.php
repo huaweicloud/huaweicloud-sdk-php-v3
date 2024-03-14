@@ -22,21 +22,25 @@ class ShowReferResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * referer  referer
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'referer' => '\HuaweiCloud\SDK\Cdn\V1\Model\RefererRsp'
+            'referer' => '\HuaweiCloud\SDK\Cdn\V1\Model\RefererRsp',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * referer  referer
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'referer' => null
+        'referer' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ShowReferResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * referer  referer
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'referer' => 'referer'
+            'referer' => 'referer',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * referer  referer
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'referer' => 'setReferer'
+            'referer' => 'setReferer',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * referer  referer
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'referer' => 'getReferer'
+            'referer' => 'getReferer',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowReferResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['referer'] = isset($data['referer']) ? $data['referer'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ShowReferResponse implements ModelInterface, ArrayAccess
     public function setReferer($referer)
     {
         $this->container['referer'] = $referer;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 
