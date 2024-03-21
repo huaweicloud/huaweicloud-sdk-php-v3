@@ -20,7 +20,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -46,7 +46,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -93,7 +93,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -119,7 +119,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -145,7 +145,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -322,7 +322,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -334,7 +334,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */

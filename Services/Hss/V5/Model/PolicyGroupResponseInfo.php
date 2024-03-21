@@ -22,7 +22,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  策略组名
     * groupId  策略组ID
-    * description  描述信息
+    * description  策略组的描述信息
     * deletable  是否允许删除该策略组
     * hostNum  关联服务器数
     * defaultGroup  是否是默认策略组
@@ -46,7 +46,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  策略组名
     * groupId  策略组ID
-    * description  描述信息
+    * description  策略组的描述信息
     * deletable  是否允许删除该策略组
     * hostNum  关联服务器数
     * defaultGroup  是否是默认策略组
@@ -91,7 +91,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  策略组名
     * groupId  策略组ID
-    * description  描述信息
+    * description  策略组的描述信息
     * deletable  是否允许删除该策略组
     * hostNum  关联服务器数
     * defaultGroup  是否是默认策略组
@@ -115,7 +115,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  策略组名
     * groupId  策略组ID
-    * description  描述信息
+    * description  策略组的描述信息
     * deletable  是否允许删除该策略组
     * hostNum  关联服务器数
     * defaultGroup  是否是默认策略组
@@ -139,7 +139,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  策略组名
     * groupId  策略组ID
-    * description  描述信息
+    * description  策略组的描述信息
     * deletable  是否允许删除该策略组
     * hostNum  关联服务器数
     * defaultGroup  是否是默认策略组
@@ -332,7 +332,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述信息
+    *  策略组的描述信息
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class PolicyGroupResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述信息
+    * @param string|null $description 策略组的描述信息
     *
     * @return $this
     */

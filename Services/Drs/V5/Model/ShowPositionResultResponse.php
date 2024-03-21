@@ -23,24 +23,28 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID
     * position  位点信息
+    * status  查询状态。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'position' => 'string'
+            'position' => 'string',
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID
     * position  位点信息
+    * status  查询状态。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
-        'position' => null
+        'position' => null,
+        'status' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID
     * position  位点信息
+    * status  查询状态。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
-            'position' => 'position'
+            'position' => 'position',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID
     * position  位点信息
+    * status  查询状态。
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
-            'position' => 'setPosition'
+            'position' => 'setPosition',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID
     * position  位点信息
+    * status  查询状态。
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
-            'position' => 'getPosition'
+            'position' => 'getPosition',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -140,7 +150,24 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_PENDING = 'pending';
+    const STATUS_FAILED = 'failed';
+    const STATUS_SUCCESS = 'success';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_PENDING,
+            self::STATUS_FAILED,
+            self::STATUS_SUCCESS,
+        ];
+    }
 
 
     /**
@@ -160,6 +187,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -170,6 +198,14 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -229,6 +265,30 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     public function setPosition($position)
     {
         $this->container['position'] = $position;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  查询状态。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 查询状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

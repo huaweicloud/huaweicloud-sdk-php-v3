@@ -57,7 +57,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否启用动态内存功能
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
     * reservedInstanceIdleMode  是否开启预留实例闲置模式
@@ -147,7 +147,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否启用动态内存功能
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
     * reservedInstanceIdleMode  是否开启预留实例闲置模式
@@ -258,7 +258,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否启用动态内存功能
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
     * reservedInstanceIdleMode  是否开启预留实例闲置模式
@@ -348,7 +348,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否启用动态内存功能
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
     * reservedInstanceIdleMode  是否开启预留实例闲置模式
@@ -438,7 +438,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     * enableCloudDebug  是否启用cloud debug功能
     * enableDynamicMemory  是否启用动态内存功能
     * enterpriseProjectId  企业项目ID，在企业用户创建函数时必填。
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
     * reservedInstanceIdleMode  是否开启预留实例闲置模式
@@ -1639,7 +1639,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isStatefulFunction
-    *  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    *  是否支持有状态，v2版本支持
     *
     * @return bool|null
     */
@@ -1651,7 +1651,7 @@ class ListFunctionVersionResult implements ModelInterface, ArrayAccess
     /**
     * Sets isStatefulFunction
     *
-    * @param bool|null $isStatefulFunction 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * @param bool|null $isStatefulFunction 是否支持有状态，v2版本支持
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -34,7 +34,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -69,7 +69,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -83,7 +83,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -97,7 +97,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -196,7 +196,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户ID
+    *  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ShowUserDisclaimerRecord implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户ID
+    * @param string|null $domainId - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     *
     * @return $this
     */

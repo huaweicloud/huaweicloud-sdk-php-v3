@@ -20,7 +20,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * verifyType  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifyType
-    *  校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    *  校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class VerifyDomainOwnerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets verifyType
     *
-    * @param string|null $verifyType 校验类型： - dns：DNS解析校验； - file：文件校验； - all：dns、file均校验，默认为all。
+    * @param string|null $verifyType 校验类型： - dns：DNS解析校验； - file：文件校验； - all：DNS与文件都会进行探测，默认为all。
     *
     * @return $this
     */

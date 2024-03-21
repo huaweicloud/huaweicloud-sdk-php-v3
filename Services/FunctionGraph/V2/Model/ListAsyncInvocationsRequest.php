@@ -20,7 +20,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * functionUrn  函数URN
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * requestId  需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
     * marker  本次查询起始位置，默认值0
     * limit  本次查询最大返回的数据条数，最大值500，默认值100
@@ -42,7 +42,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * functionUrn  函数URN
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * requestId  需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
     * marker  本次查询起始位置，默认值0
     * limit  本次查询最大返回的数据条数，最大值500，默认值100
@@ -85,7 +85,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * functionUrn  函数URN
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * requestId  需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
     * marker  本次查询起始位置，默认值0
     * limit  本次查询最大返回的数据条数，最大值500，默认值100
@@ -107,7 +107,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * functionUrn  函数URN
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * requestId  需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
     * marker  本次查询起始位置，默认值0
     * limit  本次查询最大返回的数据条数，最大值500，默认值100
@@ -129,7 +129,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * functionUrn  函数URN
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * requestId  需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
     * marker  本次查询起始位置，默认值0
     * limit  本次查询最大返回的数据条数，最大值500，默认值100
@@ -227,12 +227,6 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
         if ($this->container['functionUrn'] === null) {
             $invalidProperties[] = "'functionUrn' can't be null";
         }
-            if ((mb_strlen($this->container['functionUrn']) > 269)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be smaller than or equal to 269.";
-            }
-            if ((mb_strlen($this->container['functionUrn']) < 1)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 64.";
             }
@@ -273,7 +267,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets functionUrn
-    *  函数URN
+    *  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return string
     */
@@ -285,7 +279,7 @@ class ListAsyncInvocationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets functionUrn
     *
-    * @param string $functionUrn 函数URN
+    * @param string $functionUrn 函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
     * imageName  镜像名称 id
@@ -32,10 +32,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期
-    * endLatestUpdateTime  创建时间结束日期
-    * startLatestScanTime  最近一次扫描完成时间开始日期
-    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -68,7 +68,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
     * imageName  镜像名称 id
@@ -80,10 +80,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期
-    * endLatestUpdateTime  创建时间结束日期
-    * startLatestScanTime  最近一次扫描完成时间开始日期
-    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -137,7 +137,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
     * imageName  镜像名称 id
@@ -149,10 +149,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期
-    * endLatestUpdateTime  创建时间结束日期
-    * startLatestScanTime  最近一次扫描完成时间开始日期
-    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -185,7 +185,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
     * imageName  镜像名称 id
@@ -197,10 +197,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期
-    * endLatestUpdateTime  创建时间结束日期
-    * startLatestScanTime  最近一次扫描完成时间开始日期
-    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -233,7 +233,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
     * imageName  镜像名称 id
@@ -245,10 +245,10 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
-    * startLatestUpdateTime  创建时间开始日期
-    * endLatestUpdateTime  创建时间结束日期
-    * startLatestScanTime  最近一次扫描完成时间开始日期
-    * endLatestScanTime  最近一次扫描完成时间结束日期
+    * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
+    * endLatestUpdateTime  创建时间结束日期，时间单位 毫秒（ms）
+    * startLatestScanTime  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
+    * endLatestScanTime  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     * hasMaliciousFile  是否存在恶意文件
     * hasUnsafeSetting  是否存在基线检查
     * hasVul  是否存在软件漏洞
@@ -500,7 +500,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -512,7 +512,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -788,7 +788,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  创建时间开始日期
+    *  创建时间开始日期，时间单位 毫秒（ms）
     *
     * @return int|null
     */
@@ -800,7 +800,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 创建时间开始日期
+    * @param int|null $startLatestUpdateTime 创建时间开始日期，时间单位 毫秒（ms）
     *
     * @return $this
     */
@@ -812,7 +812,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  创建时间结束日期
+    *  创建时间结束日期，时间单位 毫秒（ms）
     *
     * @return int|null
     */
@@ -824,7 +824,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 创建时间结束日期
+    * @param int|null $endLatestUpdateTime 创建时间结束日期，时间单位 毫秒（ms）
     *
     * @return $this
     */
@@ -836,7 +836,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间开始日期
+    *  最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
     *
     * @return int|null
     */
@@ -848,7 +848,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期
+    * @param int|null $startLatestScanTime 最近一次扫描完成时间开始日期，时间单位 毫秒（ms）
     *
     * @return $this
     */
@@ -860,7 +860,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间结束日期
+    *  最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     *
     * @return int|null
     */
@@ -872,7 +872,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期
+    * @param int|null $endLatestScanTime 最近一次扫描完成时间结束日期，时间单位 毫秒（ms）
     *
     * @return $this
     */

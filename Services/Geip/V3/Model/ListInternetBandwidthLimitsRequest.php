@@ -20,11 +20,11 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * chargeMode  根据计费模式过滤
-    * type  根据全域公网带宽类型过滤
+    * chargeMode  chargeMode
+    * type  type
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * chargeMode  根据计费模式过滤
-    * type  根据全域公网带宽类型过滤
+    * chargeMode  chargeMode
+    * type  type
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * chargeMode  根据计费模式过滤
-    * type  根据全域公网带宽类型过滤
+    * chargeMode  chargeMode
+    * type  type
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * chargeMode  根据计费模式过滤
-    * type  根据全域公网带宽类型过滤
+    * chargeMode  chargeMode
+    * type  type
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * chargeMode  根据计费模式过滤
-    * type  根据全域公网带宽类型过滤
+    * chargeMode  chargeMode
+    * type  type
     *
     * @var string[]
     */
@@ -286,7 +286,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -298,7 +298,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  根据计费模式过滤
+    *  chargeMode
     *
     * @return string[]|null
     */
@@ -370,7 +370,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string[]|null $chargeMode 根据计费模式过滤
+    * @param string[]|null $chargeMode chargeMode
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  根据全域公网带宽类型过滤
+    *  type
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ListInternetBandwidthLimitsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 根据全域公网带宽类型过滤
+    * @param string|null $type type
     *
     * @return $this
     */

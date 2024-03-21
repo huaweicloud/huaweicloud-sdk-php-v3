@@ -20,14 +20,14 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  HSS的Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
     * appName  软件名称
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
+    * recentScanTime  最近扫描时间，用毫秒表示
     * containerId  容器id
     * containerName  容器名称
     *
@@ -48,14 +48,14 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  HSS的Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
     * appName  软件名称
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
+    * recentScanTime  最近扫描时间，用毫秒表示
     * containerId  容器id
     * containerName  容器名称
     *
@@ -97,14 +97,14 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
+    * agentId  HSS的Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
     * appName  软件名称
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
+    * recentScanTime  最近扫描时间，用毫秒表示
     * containerId  容器id
     * containerName  容器名称
     *
@@ -125,14 +125,14 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
+    * agentId  HSS的Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
     * appName  软件名称
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
+    * recentScanTime  最近扫描时间，用毫秒表示
     * containerId  容器id
     * containerName  容器名称
     *
@@ -153,14 +153,14 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
+    * agentId  HSS的Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
     * appName  软件名称
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  最近扫描时间
+    * updateTime  更新时间，最近一次更新的时间，用毫秒表示
+    * recentScanTime  最近扫描时间，用毫秒表示
     * containerId  容器id
     * containerName  容器名称
     *
@@ -333,7 +333,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  HSS的Agent ID
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId HSS的Agent ID
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，最近一次更新的时间，用毫秒表示
     *
     * @return int|null
     */
@@ -489,7 +489,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime 更新时间，最近一次更新的时间，用毫秒表示
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近扫描时间
+    *  最近扫描时间，用毫秒表示
     *
     * @return int|null
     */
@@ -513,7 +513,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近扫描时间
+    * @param int|null $recentScanTime 最近扫描时间，用毫秒表示
     *
     * @return $this
     */

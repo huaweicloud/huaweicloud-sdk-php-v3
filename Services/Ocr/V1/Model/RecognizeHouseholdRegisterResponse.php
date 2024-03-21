@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Geip\V3\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
+class RecognizeHouseholdRegisterResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchCreateV2RequestBody_sys_tags';
+    protected static $openAPIModelName = 'RecognizeHouseholdRegisterResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'result' => '\HuaweiCloud\SDK\Ocr\V1\Model\HouseholdRegisterResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'result' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'result' => 'getResult'
     ];
 
     /**
@@ -157,8 +148,7 @@ class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -169,24 +159,6 @@ class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-            if ((mb_strlen($this->container['key']) > 128)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['key']) < 1)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 255)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
-            }
-            if ((mb_strlen($this->container['value']) < 0)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +174,26 @@ class BatchCreateV2RequestBodySysTags implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * Gets result
+    *  调用成功时表示调用结果。  调用失败时无此字段。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\HouseholdRegisterResult[]|null
     */
-    public function getKey()
+    public function getResult()
     {
-        return $this->container['key'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets key
+    * Sets result
     *
-    * @param string $key 标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\HouseholdRegisterResult[]|null $result 调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setResult($result)
     {
-        $this->container['key'] = $key;
-        return $this;
-    }
-
-    /**
-    * Gets value
-    *  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
-    *
-    * @return string
-    */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-    * Sets value
-    *
-    * @param string $value 标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
-    *
-    * @return $this
-    */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['result'] = $result;
         return $this;
     }
 

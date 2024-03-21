@@ -20,7 +20,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * internetBandwidthId  全域公网带宽的ID
+    * internetBandwidthId  internetBandwidthId
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * internetBandwidthId  全域公网带宽的ID
+    * internetBandwidthId  internetBandwidthId
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * internetBandwidthId  全域公网带宽的ID
+    * internetBandwidthId  internetBandwidthId
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * internetBandwidthId  全域公网带宽的ID
+    * internetBandwidthId  internetBandwidthId
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * internetBandwidthId  全域公网带宽的ID
+    * internetBandwidthId  internetBandwidthId
     * body  body
     *
     * @var string[]
@@ -197,7 +197,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthId
-    *  全域公网带宽的ID
+    *  internetBandwidthId
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class UpdateInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthId
     *
-    * @param string $internetBandwidthId 全域公网带宽的ID
+    * @param string $internetBandwidthId internetBandwidthId
     *
     * @return $this
     */

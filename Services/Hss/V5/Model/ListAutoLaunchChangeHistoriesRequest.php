@@ -26,11 +26,11 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     * autoLaunchName  自启动项名称
     * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  企业项目
-    * sortKey  排序的key值
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  默认10
-    * offset  默认是0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * sortKey  排序的key值，目前只支持按照recent_scan_time排序
+    * sortDir  排序方式，默认为降序:   - asc ：升序   - desc ：降序
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -60,11 +60,11 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     * autoLaunchName  自启动项名称
     * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  企业项目
-    * sortKey  排序的key值
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  默认10
-    * offset  默认是0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * sortKey  排序的key值，目前只支持按照recent_scan_time排序
+    * sortDir  排序方式，默认为降序:   - asc ：升序   - desc ：降序
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -115,11 +115,11 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     * autoLaunchName  自启动项名称
     * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  企业项目
-    * sortKey  排序的key值
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  默认10
-    * offset  默认是0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * sortKey  排序的key值，目前只支持按照recent_scan_time排序
+    * sortDir  排序方式，默认为降序:   - asc ：升序   - desc ：降序
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -149,11 +149,11 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     * autoLaunchName  自启动项名称
     * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  企业项目
-    * sortKey  排序的key值
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  默认10
-    * offset  默认是0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * sortKey  排序的key值，目前只支持按照recent_scan_time排序
+    * sortDir  排序方式，默认为降序:   - asc ：升序   - desc ：降序
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -183,11 +183,11 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     * autoLaunchName  自启动项名称
     * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * variationType  变更类型:   - add ：新建   - delete ：删除   - modify ：修改
-    * enterpriseProjectId  企业项目
-    * sortKey  排序的key值
-    * sortDir  升序还是降序，默认升序，asc
-    * limit  默认10
-    * offset  默认是0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * sortKey  排序的key值，目前只支持按照recent_scan_time排序
+    * sortDir  排序方式，默认为降序:   - asc ：升序   - desc ：降序
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -528,7 +528,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -540,7 +540,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -552,7 +552,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets sortKey
-    *  排序的key值
+    *  排序的key值，目前只支持按照recent_scan_time排序
     *
     * @return string|null
     */
@@ -564,7 +564,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序的key值
+    * @param string|null $sortKey 排序的key值，目前只支持按照recent_scan_time排序
     *
     * @return $this
     */
@@ -576,7 +576,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets sortDir
-    *  升序还是降序，默认升序，asc
+    *  排序方式，默认为降序:   - asc ：升序   - desc ：降序
     *
     * @return string|null
     */
@@ -588,7 +588,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 升序还是降序，默认升序，asc
+    * @param string|null $sortDir 排序方式，默认为降序:   - asc ：升序   - desc ：降序
     *
     * @return $this
     */
@@ -600,7 +600,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets limit
-    *  默认10
+    *  每页显示数量，默认10
     *
     * @return int|null
     */
@@ -612,7 +612,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets limit
     *
-    * @param int|null $limit 默认10
+    * @param int|null $limit 每页显示数量，默认10
     *
     * @return $this
     */
@@ -624,7 +624,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets offset
-    *  默认是0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -636,7 +636,7 @@ class ListAutoLaunchChangeHistoriesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets offset
     *
-    * @param int|null $offset 默认是0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */

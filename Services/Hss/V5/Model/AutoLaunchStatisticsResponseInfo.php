@@ -21,8 +21,8 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  自启动项名称
-    * type  自启动项类型
-    * num  数量
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * num  当前自启动项的主机数量
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  自启动项名称
-    * type  自启动项类型
-    * num  数量
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * num  当前自启动项的主机数量
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  自启动项名称
-    * type  自启动项类型
-    * num  数量
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * num  当前自启动项的主机数量
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  自启动项名称
-    * type  自启动项类型
-    * num  数量
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * num  当前自启动项的主机数量
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  自启动项名称
-    * type  自启动项类型
-    * num  数量
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * num  当前自启动项的主机数量
     *
     * @var string[]
     */
@@ -238,7 +238,7 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自启动项类型
+    *  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 自启动项类型
+    * @param string|null $type 自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  数量
+    *  当前自启动项的主机数量
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class AutoLaunchStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 数量
+    * @param int|null $num 当前自启动项的主机数量
     *
     * @return $this
     */

@@ -249,7 +249,7 @@ class PromInstanceEpsModel implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROM_TYPE__DEFAULT = 'DEFAULT';
+    const PROM_TYPE__DEFAULT = 'default';
     const PROM_TYPE_ECS = 'ECS';
     const PROM_TYPE_VPC = 'VPC';
     const PROM_TYPE_CCE = 'CCE';

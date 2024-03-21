@@ -24,19 +24,19 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * extFields  在默认显示字段的基础上追加指定字段
+    * fields  fields
+    * extFields  extFields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
-    * type  根据全域公网带宽类型过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
+    * type  type
     *
     * @var string[]
     */
@@ -66,19 +66,19 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * extFields  在默认显示字段的基础上追加指定字段
+    * fields  fields
+    * extFields  extFields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
-    * type  根据全域公网带宽类型过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
+    * type  type
     *
     * @var string[]
     */
@@ -129,19 +129,19 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * extFields  在默认显示字段的基础上追加指定字段
+    * fields  fields
+    * extFields  extFields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
-    * type  根据全域公网带宽类型过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
+    * type  type
     *
     * @var string[]
     */
@@ -171,19 +171,19 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * extFields  在默认显示字段的基础上追加指定字段
+    * fields  fields
+    * extFields  extFields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
-    * type  根据全域公网带宽类型过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
+    * type  type
     *
     * @var string[]
     */
@@ -213,19 +213,19 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * extFields  在默认显示字段的基础上追加指定字段
+    * fields  fields
+    * extFields  extFields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
-    * type  根据全域公网带宽类型过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
+    * type  type
     *
     * @var string[]
     */
@@ -568,7 +568,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -580,7 +580,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets extFields
-    *  在默认显示字段的基础上追加指定字段
+    *  extFields
     *
     * @return string[]|null
     */
@@ -604,7 +604,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets extFields
     *
-    * @param string[]|null $extFields 在默认显示字段的基础上追加指定字段
+    * @param string[]|null $extFields extFields
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -676,7 +676,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  根据全域公网带宽大小过滤
+    *  size
     *
     * @return int[]|null
     */
@@ -700,7 +700,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int[]|null $size 根据全域公网带宽大小过滤
+    * @param int[]|null $size size
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称过滤
+    *  name
     *
     * @return string[]|null
     */
@@ -724,7 +724,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名称过滤
+    * @param string[]|null $name name
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameLike
-    *  根据名称模糊匹配
+    *  nameLike
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nameLike
     *
-    * @param string|null $nameLike 根据名称模糊匹配
+    * @param string|null $nameLike nameLike
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -772,7 +772,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据资源状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -796,7 +796,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据资源状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤
+    *  enterpriseProjectId
     *
     * @return string[]|null
     */
@@ -820,7 +820,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤
+    * @param string[]|null $enterpriseProjectId enterpriseProjectId
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  根据标签过滤
+    *  tags
     *
     * @return string[]|null
     */
@@ -844,7 +844,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 根据标签过滤
+    * @param string[]|null $tags tags
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  根据全域公网带宽类型过滤
+    *  type
     *
     * @return string[]|null
     */
@@ -868,7 +868,7 @@ class ListInternetBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type 根据全域公网带宽类型过滤
+    * @param string[]|null $type type
     *
     * @return $this
     */

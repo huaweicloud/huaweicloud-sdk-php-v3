@@ -21,17 +21,17 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleName  检查项
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleName  检查项（检查规则）名称
     * checkRuleId  检查项ID
-    * hostNum  影响服务器数量
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
     * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
-    * ruleParams  支持传递参数修复的检查项可传递参数的范围
+    * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
     */
@@ -53,17 +53,17 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleName  检查项
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleName  检查项（检查规则）名称
     * checkRuleId  检查项ID
-    * hostNum  影响服务器数量
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
     * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
-    * ruleParams  支持传递参数修复的检查项可传递参数的范围
+    * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
     */
@@ -106,17 +106,17 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleName  检查项
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleName  检查项（检查规则）名称
     * checkRuleId  检查项ID
-    * hostNum  影响服务器数量
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
     * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
-    * ruleParams  支持传递参数修复的检查项可传递参数的范围
+    * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
     */
@@ -138,17 +138,17 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleName  检查项
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleName  检查项（检查规则）名称
     * checkRuleId  检查项ID
-    * hostNum  影响服务器数量
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
     * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
-    * ruleParams  支持传递参数修复的检查项可传递参数的范围
+    * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
     */
@@ -170,17 +170,17 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleName  检查项
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleName  检查项（检查规则）名称
     * checkRuleId  检查项ID
-    * hostNum  影响服务器数量
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
     * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
-    * ruleParams  支持传递参数修复的检查项可传递参数的范围
+    * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
     */
@@ -379,7 +379,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  基线名称
+    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string|null $checkName 基线名称
+    * @param string|null $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  基线类型
+    *  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 基线类型
+    * @param string|null $checkType 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * @param string|null $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleName
-    *  检查项
+    *  检查项（检查规则）名称
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleName
     *
-    * @param string|null $checkRuleName 检查项
+    * @param string|null $checkRuleName 检查项（检查规则）名称
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  影响服务器数量
+    *  受影响的服务器的数量，进行了当前基线检测的服务器数量
     *
     * @return int|null
     */
@@ -511,7 +511,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 影响服务器数量
+    * @param int|null $hostNum 受影响的服务器的数量，进行了当前基线检测的服务器数量
     *
     * @return $this
     */
@@ -619,7 +619,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleParams
-    *  支持传递参数修复的检查项可传递参数的范围
+    *  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixParamInfo[]|null
     */
@@ -631,7 +631,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleParams
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixParamInfo[]|null $ruleParams 支持传递参数修复的检查项可传递参数的范围
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixParamInfo[]|null $ruleParams 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * totalNum  总数
+    * totalNum  配额总数
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * totalNum  总数
+    * totalNum  配额总数
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * totalNum  总数
+    * totalNum  配额总数
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * totalNum  总数
+    * totalNum  配额总数
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
-    * totalNum  总数
+    * totalNum  配额总数
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  配额总数
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class QuotaStatisticsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum 配额总数
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hostName  服务器名称
     * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number
+    * totalNum  total number of static WTPs
     * dataList  data list
     *
     * @var string[]
@@ -39,7 +39,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hostName  服务器名称
     * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number
+    * totalNum  total number of static WTPs
     * dataList  data list
     *
     * @var string[]
@@ -76,7 +76,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hostName  服务器名称
     * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number
+    * totalNum  total number of static WTPs
     * dataList  data list
     *
     * @var string[]
@@ -92,7 +92,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hostName  服务器名称
     * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number
+    * totalNum  total number of static WTPs
     * dataList  data list
     *
     * @var string[]
@@ -108,7 +108,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hostName  服务器名称
     * protectStatus  防护状态   - close : 未开启   - opened : 防护中
-    * totalNum  total number
+    * totalNum  total number of static WTPs
     * dataList  data list
     *
     * @var string[]
@@ -274,7 +274,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  total number
+    *  total number of static WTPs
     *
     * @return int|null
     */
@@ -286,7 +286,7 @@ class ListHostProtectHistoryInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number
+    * @param int|null $totalNum total number of static WTPs
     *
     * @return $this
     */

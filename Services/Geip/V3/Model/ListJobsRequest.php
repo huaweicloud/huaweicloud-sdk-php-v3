@@ -24,12 +24,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * action  根据action过滤
-    * status  根据job状态过滤
+    * id  id
+    * action  action
+    * status  status
     *
     * @var string[]
     */
@@ -52,12 +52,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * action  根据action过滤
-    * status  根据job状态过滤
+    * id  id
+    * action  action
+    * status  status
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * action  根据action过滤
-    * status  根据job状态过滤
+    * id  id
+    * action  action
+    * status  status
     *
     * @var string[]
     */
@@ -129,12 +129,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * action  根据action过滤
-    * status  根据job状态过滤
+    * id  id
+    * action  action
+    * status  status
     *
     * @var string[]
     */
@@ -157,12 +157,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * action  根据action过滤
-    * status  根据job状态过滤
+    * id  id
+    * action  action
+    * status  status
     *
     * @var string[]
     */
@@ -479,7 +479,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -491,7 +491,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -563,7 +563,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  根据action过滤
+    *  action
     *
     * @return string[]|null
     */
@@ -587,7 +587,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string[]|null $action 根据action过滤
+    * @param string[]|null $action action
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据job状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -611,7 +611,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据job状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */

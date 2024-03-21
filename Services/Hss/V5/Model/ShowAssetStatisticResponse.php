@@ -21,11 +21,11 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountNum  账号数量
+    * accountNum  主机账号数量
     * portNum  开放端口数量
     * processNum  进程数量
     * appNum  软件数量
-    * autoLaunchNum  自启动数量
+    * autoLaunchNum  自启动进程数量
     * webFrameworkNum  web框架数量
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
@@ -33,8 +33,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
-    * coreConfFileNum  关键配置文件数量
-    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -50,18 +48,16 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'int',
             'webServiceNum' => 'int',
             'webAppNum' => 'int',
-            'databaseNum' => 'int',
-            'coreConfFileNum' => 'int',
-            'environmentNum' => 'int'
+            'databaseNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountNum  账号数量
+    * accountNum  主机账号数量
     * portNum  开放端口数量
     * processNum  进程数量
     * appNum  软件数量
-    * autoLaunchNum  自启动数量
+    * autoLaunchNum  自启动进程数量
     * webFrameworkNum  web框架数量
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
@@ -69,8 +65,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
-    * coreConfFileNum  关键配置文件数量
-    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -86,9 +80,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         'kernelModuleNum' => 'int64',
         'webServiceNum' => 'int64',
         'webAppNum' => 'int64',
-        'databaseNum' => 'int64',
-        'coreConfFileNum' => 'int64',
-        'environmentNum' => 'int64'
+        'databaseNum' => 'int64'
     ];
 
     /**
@@ -114,11 +106,11 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountNum  账号数量
+    * accountNum  主机账号数量
     * portNum  开放端口数量
     * processNum  进程数量
     * appNum  软件数量
-    * autoLaunchNum  自启动数量
+    * autoLaunchNum  自启动进程数量
     * webFrameworkNum  web框架数量
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
@@ -126,8 +118,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
-    * coreConfFileNum  关键配置文件数量
-    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -143,18 +133,16 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'kernel_module_num',
             'webServiceNum' => 'web_service_num',
             'webAppNum' => 'web_app_num',
-            'databaseNum' => 'database_num',
-            'coreConfFileNum' => 'core_conf_file_num',
-            'environmentNum' => 'environment_num'
+            'databaseNum' => 'database_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountNum  账号数量
+    * accountNum  主机账号数量
     * portNum  开放端口数量
     * processNum  进程数量
     * appNum  软件数量
-    * autoLaunchNum  自启动数量
+    * autoLaunchNum  自启动进程数量
     * webFrameworkNum  web框架数量
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
@@ -162,8 +150,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
-    * coreConfFileNum  关键配置文件数量
-    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -179,18 +165,16 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'setKernelModuleNum',
             'webServiceNum' => 'setWebServiceNum',
             'webAppNum' => 'setWebAppNum',
-            'databaseNum' => 'setDatabaseNum',
-            'coreConfFileNum' => 'setCoreConfFileNum',
-            'environmentNum' => 'setEnvironmentNum'
+            'databaseNum' => 'setDatabaseNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountNum  账号数量
+    * accountNum  主机账号数量
     * portNum  开放端口数量
     * processNum  进程数量
     * appNum  软件数量
-    * autoLaunchNum  自启动数量
+    * autoLaunchNum  自启动进程数量
     * webFrameworkNum  web框架数量
     * webSiteNum  Web站点数量
     * jarPackageNum  Jar包数量
@@ -198,8 +182,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     * webServiceNum  web服务数量
     * webAppNum  web应用数量
     * databaseNum  数据库数量
-    * coreConfFileNum  关键配置文件数量
-    * environmentNum  环境变量数量
     *
     * @var string[]
     */
@@ -215,9 +197,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             'kernelModuleNum' => 'getKernelModuleNum',
             'webServiceNum' => 'getWebServiceNum',
             'webAppNum' => 'getWebAppNum',
-            'databaseNum' => 'getDatabaseNum',
-            'coreConfFileNum' => 'getCoreConfFileNum',
-            'environmentNum' => 'getEnvironmentNum'
+            'databaseNum' => 'getDatabaseNum'
     ];
 
     /**
@@ -290,8 +270,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
         $this->container['webServiceNum'] = isset($data['webServiceNum']) ? $data['webServiceNum'] : null;
         $this->container['webAppNum'] = isset($data['webAppNum']) ? $data['webAppNum'] : null;
         $this->container['databaseNum'] = isset($data['databaseNum']) ? $data['databaseNum'] : null;
-        $this->container['coreConfFileNum'] = isset($data['coreConfFileNum']) ? $data['coreConfFileNum'] : null;
-        $this->container['environmentNum'] = isset($data['environmentNum']) ? $data['environmentNum'] : null;
     }
 
     /**
@@ -374,18 +352,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['databaseNum']) && ($this->container['databaseNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'databaseNum', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['coreConfFileNum']) && ($this->container['coreConfFileNum'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'coreConfFileNum', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['coreConfFileNum']) && ($this->container['coreConfFileNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'coreConfFileNum', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['environmentNum']) && ($this->container['environmentNum'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'environmentNum', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['environmentNum']) && ($this->container['environmentNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'environmentNum', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -402,7 +368,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountNum
-    *  账号数量
+    *  主机账号数量
     *
     * @return int|null
     */
@@ -414,7 +380,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accountNum
     *
-    * @param int|null $accountNum 账号数量
+    * @param int|null $accountNum 主机账号数量
     *
     * @return $this
     */
@@ -498,7 +464,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoLaunchNum
-    *  自启动数量
+    *  自启动进程数量
     *
     * @return int|null
     */
@@ -510,7 +476,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets autoLaunchNum
     *
-    * @param int|null $autoLaunchNum 自启动数量
+    * @param int|null $autoLaunchNum 自启动进程数量
     *
     * @return $this
     */
@@ -685,54 +651,6 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     public function setDatabaseNum($databaseNum)
     {
         $this->container['databaseNum'] = $databaseNum;
-        return $this;
-    }
-
-    /**
-    * Gets coreConfFileNum
-    *  关键配置文件数量
-    *
-    * @return int|null
-    */
-    public function getCoreConfFileNum()
-    {
-        return $this->container['coreConfFileNum'];
-    }
-
-    /**
-    * Sets coreConfFileNum
-    *
-    * @param int|null $coreConfFileNum 关键配置文件数量
-    *
-    * @return $this
-    */
-    public function setCoreConfFileNum($coreConfFileNum)
-    {
-        $this->container['coreConfFileNum'] = $coreConfFileNum;
-        return $this;
-    }
-
-    /**
-    * Gets environmentNum
-    *  环境变量数量
-    *
-    * @return int|null
-    */
-    public function getEnvironmentNum()
-    {
-        return $this->container['environmentNum'];
-    }
-
-    /**
-    * Sets environmentNum
-    *
-    * @param int|null $environmentNum 环境变量数量
-    *
-    * @return $this
-    */
-    public function setEnvironmentNum($environmentNum)
-    {
-        $this->container['environmentNum'] = $environmentNum;
         return $this;
     }
 

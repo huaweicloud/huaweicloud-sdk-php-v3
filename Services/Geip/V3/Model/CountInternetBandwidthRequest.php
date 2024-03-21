@@ -20,14 +20,14 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  根据ID过滤
-    * size  根据全域公网带宽大小过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * status  根据资源状态过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * size  size
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * status  status
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -266,7 +266,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -278,7 +278,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  根据全域公网带宽大小过滤
+    *  size
     *
     * @return int[]|null
     */
@@ -302,7 +302,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int[]|null $size 根据全域公网带宽大小过滤
+    * @param int[]|null $size size
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称过滤
+    *  name
     *
     * @return string[]|null
     */
@@ -326,7 +326,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名称过滤
+    * @param string[]|null $name name
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameLike
-    *  根据名称模糊匹配
+    *  nameLike
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nameLike
     *
-    * @param string|null $nameLike 根据名称模糊匹配
+    * @param string|null $nameLike nameLike
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -374,7 +374,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -386,7 +386,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据资源状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -398,7 +398,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据资源状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */
@@ -410,7 +410,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤
+    *  enterpriseProjectId
     *
     * @return string[]|null
     */
@@ -422,7 +422,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤
+    * @param string[]|null $enterpriseProjectId enterpriseProjectId
     *
     * @return $this
     */
@@ -434,7 +434,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  根据标签过滤
+    *  tags
     *
     * @return string[]|null
     */
@@ -446,7 +446,7 @@ class CountInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 根据标签过滤
+    * @param string[]|null $tags tags
     *
     * @return $this
     */

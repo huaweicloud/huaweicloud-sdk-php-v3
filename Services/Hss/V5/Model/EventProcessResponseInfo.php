@@ -31,6 +31,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * processGid  进程组ID
     * processEgid  进程有效组ID
     * processEuid  进程有效用户ID
+    * ancestorProcessPath  祖父进程文件路径
+    * ancestorProcessPid  祖父进程id
+    * ancestorProcessCmdline  祖父进程文件命令行
     * parentProcessName  父进程名称
     * parentProcessPath  父进程文件路径
     * parentProcessPid  父进程id
@@ -71,6 +74,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'processGid' => 'int',
             'processEgid' => 'int',
             'processEuid' => 'int',
+            'ancestorProcessPath' => 'string',
+            'ancestorProcessPid' => 'int',
+            'ancestorProcessCmdline' => 'string',
             'parentProcessName' => 'string',
             'parentProcessPath' => 'string',
             'parentProcessPid' => 'int',
@@ -111,6 +117,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * processGid  进程组ID
     * processEgid  进程有效组ID
     * processEuid  进程有效用户ID
+    * ancestorProcessPath  祖父进程文件路径
+    * ancestorProcessPid  祖父进程id
+    * ancestorProcessCmdline  祖父进程文件命令行
     * parentProcessName  父进程名称
     * parentProcessPath  父进程文件路径
     * parentProcessPid  父进程id
@@ -151,6 +160,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
         'processGid' => 'int32',
         'processEgid' => 'int32',
         'processEuid' => 'int32',
+        'ancestorProcessPath' => null,
+        'ancestorProcessPid' => 'int32',
+        'ancestorProcessCmdline' => null,
         'parentProcessName' => null,
         'parentProcessPath' => null,
         'parentProcessPid' => 'int32',
@@ -212,6 +224,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * processGid  进程组ID
     * processEgid  进程有效组ID
     * processEuid  进程有效用户ID
+    * ancestorProcessPath  祖父进程文件路径
+    * ancestorProcessPid  祖父进程id
+    * ancestorProcessCmdline  祖父进程文件命令行
     * parentProcessName  父进程名称
     * parentProcessPath  父进程文件路径
     * parentProcessPid  父进程id
@@ -252,6 +267,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'processGid' => 'process_gid',
             'processEgid' => 'process_egid',
             'processEuid' => 'process_euid',
+            'ancestorProcessPath' => 'ancestor_process_path',
+            'ancestorProcessPid' => 'ancestor_process_pid',
+            'ancestorProcessCmdline' => 'ancestor_process_cmdline',
             'parentProcessName' => 'parent_process_name',
             'parentProcessPath' => 'parent_process_path',
             'parentProcessPid' => 'parent_process_pid',
@@ -292,6 +310,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * processGid  进程组ID
     * processEgid  进程有效组ID
     * processEuid  进程有效用户ID
+    * ancestorProcessPath  祖父进程文件路径
+    * ancestorProcessPid  祖父进程id
+    * ancestorProcessCmdline  祖父进程文件命令行
     * parentProcessName  父进程名称
     * parentProcessPath  父进程文件路径
     * parentProcessPid  父进程id
@@ -332,6 +353,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'processGid' => 'setProcessGid',
             'processEgid' => 'setProcessEgid',
             'processEuid' => 'setProcessEuid',
+            'ancestorProcessPath' => 'setAncestorProcessPath',
+            'ancestorProcessPid' => 'setAncestorProcessPid',
+            'ancestorProcessCmdline' => 'setAncestorProcessCmdline',
             'parentProcessName' => 'setParentProcessName',
             'parentProcessPath' => 'setParentProcessPath',
             'parentProcessPid' => 'setParentProcessPid',
@@ -372,6 +396,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * processGid  进程组ID
     * processEgid  进程有效组ID
     * processEuid  进程有效用户ID
+    * ancestorProcessPath  祖父进程文件路径
+    * ancestorProcessPid  祖父进程id
+    * ancestorProcessCmdline  祖父进程文件命令行
     * parentProcessName  父进程名称
     * parentProcessPath  父进程文件路径
     * parentProcessPid  父进程id
@@ -412,6 +439,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'processGid' => 'getProcessGid',
             'processEgid' => 'getProcessEgid',
             'processEuid' => 'getProcessEuid',
+            'ancestorProcessPath' => 'getAncestorProcessPath',
+            'ancestorProcessPid' => 'getAncestorProcessPid',
+            'ancestorProcessCmdline' => 'getAncestorProcessCmdline',
             'parentProcessName' => 'getParentProcessName',
             'parentProcessPath' => 'getParentProcessPath',
             'parentProcessPid' => 'getParentProcessPid',
@@ -508,6 +538,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
         $this->container['processGid'] = isset($data['processGid']) ? $data['processGid'] : null;
         $this->container['processEgid'] = isset($data['processEgid']) ? $data['processEgid'] : null;
         $this->container['processEuid'] = isset($data['processEuid']) ? $data['processEuid'] : null;
+        $this->container['ancestorProcessPath'] = isset($data['ancestorProcessPath']) ? $data['ancestorProcessPath'] : null;
+        $this->container['ancestorProcessPid'] = isset($data['ancestorProcessPid']) ? $data['ancestorProcessPid'] : null;
+        $this->container['ancestorProcessCmdline'] = isset($data['ancestorProcessCmdline']) ? $data['ancestorProcessCmdline'] : null;
         $this->container['parentProcessName'] = isset($data['parentProcessName']) ? $data['parentProcessName'] : null;
         $this->container['parentProcessPath'] = isset($data['parentProcessPath']) ? $data['parentProcessPath'] : null;
         $this->container['parentProcessPid'] = isset($data['parentProcessPid']) ? $data['parentProcessPid'] : null;
@@ -593,6 +626,18 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['processEuid']) && ($this->container['processEuid'] < 0)) {
                 $invalidProperties[] = "invalid value for 'processEuid', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ancestorProcessPath']) && !preg_match("/^.*$/", $this->container['ancestorProcessPath'])) {
+                $invalidProperties[] = "invalid value for 'ancestorProcessPath', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['ancestorProcessPid']) && ($this->container['ancestorProcessPid'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'ancestorProcessPid', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['ancestorProcessPid']) && ($this->container['ancestorProcessPid'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ancestorProcessPid', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ancestorProcessCmdline']) && !preg_match("/^.*$/", $this->container['ancestorProcessCmdline'])) {
+                $invalidProperties[] = "invalid value for 'ancestorProcessCmdline', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['parentProcessName']) && !preg_match("/^.*$/", $this->container['parentProcessName'])) {
                 $invalidProperties[] = "invalid value for 'parentProcessName', must be conform to the pattern /^.*$/.";
@@ -980,6 +1025,78 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     public function setProcessEuid($processEuid)
     {
         $this->container['processEuid'] = $processEuid;
+        return $this;
+    }
+
+    /**
+    * Gets ancestorProcessPath
+    *  祖父进程文件路径
+    *
+    * @return string|null
+    */
+    public function getAncestorProcessPath()
+    {
+        return $this->container['ancestorProcessPath'];
+    }
+
+    /**
+    * Sets ancestorProcessPath
+    *
+    * @param string|null $ancestorProcessPath 祖父进程文件路径
+    *
+    * @return $this
+    */
+    public function setAncestorProcessPath($ancestorProcessPath)
+    {
+        $this->container['ancestorProcessPath'] = $ancestorProcessPath;
+        return $this;
+    }
+
+    /**
+    * Gets ancestorProcessPid
+    *  祖父进程id
+    *
+    * @return int|null
+    */
+    public function getAncestorProcessPid()
+    {
+        return $this->container['ancestorProcessPid'];
+    }
+
+    /**
+    * Sets ancestorProcessPid
+    *
+    * @param int|null $ancestorProcessPid 祖父进程id
+    *
+    * @return $this
+    */
+    public function setAncestorProcessPid($ancestorProcessPid)
+    {
+        $this->container['ancestorProcessPid'] = $ancestorProcessPid;
+        return $this;
+    }
+
+    /**
+    * Gets ancestorProcessCmdline
+    *  祖父进程文件命令行
+    *
+    * @return string|null
+    */
+    public function getAncestorProcessCmdline()
+    {
+        return $this->container['ancestorProcessCmdline'];
+    }
+
+    /**
+    * Sets ancestorProcessCmdline
+    *
+    * @param string|null $ancestorProcessCmdline 祖父进程文件命令行
+    *
+    * @return $this
+    */
+    public function setAncestorProcessCmdline($ancestorProcessCmdline)
+    {
+        $this->container['ancestorProcessCmdline'] = $ancestorProcessCmdline;
         return $this;
     }
 

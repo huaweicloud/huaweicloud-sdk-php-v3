@@ -194,12 +194,6 @@ class ExportFunctionRequest implements ModelInterface, ArrayAccess
         if ($this->container['functionUrn'] === null) {
             $invalidProperties[] = "'functionUrn' can't be null";
         }
-            if ((mb_strlen($this->container['functionUrn']) > 269)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be smaller than or equal to 269.";
-            }
-            if ((mb_strlen($this->container['functionUrn']) < 1)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 

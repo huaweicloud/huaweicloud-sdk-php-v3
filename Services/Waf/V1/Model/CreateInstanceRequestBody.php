@@ -25,13 +25,14 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
-    * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+    * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'securityGroup' => 'string[]',
             'count' => 'int',
-            'resTenant' => 'bool'
+            'resTenant' => 'bool',
+            'antiAffinity' => 'bool'
     ];
 
     /**
@@ -57,13 +59,14 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
-    * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+    * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'securityGroup' => null,
         'count' => 'int32',
-        'resTenant' => null
+        'resTenant' => null,
+        'antiAffinity' => null
     ];
 
     /**
@@ -110,13 +114,14 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
-    * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+    * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'securityGroup' => 'security_group',
             'count' => 'count',
-            'resTenant' => 'res_tenant'
+            'resTenant' => 'res_tenant',
+            'antiAffinity' => 'anti_affinity'
     ];
 
     /**
@@ -142,13 +148,14 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
-    * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+    * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'securityGroup' => 'setSecurityGroup',
             'count' => 'setCount',
-            'resTenant' => 'setResTenant'
+            'resTenant' => 'setResTenant',
+            'antiAffinity' => 'setAntiAffinity'
     ];
 
     /**
@@ -174,13 +182,14 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
-    * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
     * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+    * antiAffinity  是否开启反亲和。仅资源租户独享实例支持该特性。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'securityGroup' => 'getSecurityGroup',
             'count' => 'getCount',
-            'resTenant' => 'getResTenant'
+            'resTenant' => 'getResTenant',
+            'antiAffinity' => 'getAntiAffinity'
     ];
 
     /**
@@ -269,6 +279,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['securityGroup'] = isset($data['securityGroup']) ? $data['securityGroup'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['resTenant'] = isset($data['resTenant']) ? $data['resTenant'] : null;
+        $this->container['antiAffinity'] = isset($data['antiAffinity']) ? $data['antiAffinity'] : null;
     }
 
     /**
@@ -293,9 +304,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         }
         if ($this->container['specification'] === null) {
             $invalidProperties[] = "'specification' can't be null";
-        }
-        if ($this->container['cpuFlavor'] === null) {
-            $invalidProperties[] = "'cpuFlavor' can't be null";
         }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
@@ -445,7 +453,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
+    *  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
     *
     * @return string
     */
@@ -457,7 +465,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string $specification 独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
+    * @param string $specification 独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
     *
     * @return $this
     */
@@ -469,9 +477,9 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuFlavor
-    *  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    *  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     *
-    * @return string
+    * @return string|null
     */
     public function getCpuFlavor()
     {
@@ -481,7 +489,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets cpuFlavor
     *
-    * @param string $cpuFlavor 独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
+    * @param string|null $cpuFlavor 独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
     *
     * @return $this
     */
@@ -608,6 +616,30 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setResTenant($resTenant)
     {
         $this->container['resTenant'] = $resTenant;
+        return $this;
+    }
+
+    /**
+    * Gets antiAffinity
+    *  是否开启反亲和。仅资源租户独享实例支持该特性。
+    *
+    * @return bool|null
+    */
+    public function getAntiAffinity()
+    {
+        return $this->container['antiAffinity'];
+    }
+
+    /**
+    * Sets antiAffinity
+    *
+    * @param bool|null $antiAffinity 是否开启反亲和。仅资源租户独享实例支持该特性。
+    *
+    * @return $this
+    */
+    public function setAntiAffinity($antiAffinity)
+    {
+        $this->container['antiAffinity'] = $antiAffinity;
         return $this;
     }
 

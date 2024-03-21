@@ -20,24 +20,24 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
-    * isp  线路
+    * id  全域公网带宽的ID
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * isp  全域弹性公网IP所属线路
     * ingressSize  全域公网带宽大小（入云方向）
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * description  用户自定义的资源描述
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * chargeMode  计费模式
     * ratio95peak  增强95保底率
     * freezenInfo  冻结原因
     * billingInfo  订单信息
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * status  状态
     * createdAt  创建时间
     * updatedAt  更新时间
     * isPrePaid  是否包周期
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * lockInfos  全域公网带宽资源的锁状态
     *
     * @var string[]
@@ -66,24 +66,24 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
-    * isp  线路
+    * id  全域公网带宽的ID
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * isp  全域弹性公网IP所属线路
     * ingressSize  全域公网带宽大小（入云方向）
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * description  用户自定义的资源描述
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * chargeMode  计费模式
     * ratio95peak  增强95保底率
     * freezenInfo  冻结原因
     * billingInfo  订单信息
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * status  状态
     * createdAt  创建时间
     * updatedAt  更新时间
     * isPrePaid  是否包周期
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * lockInfos  全域公网带宽资源的锁状态
     *
     * @var string[]
@@ -133,24 +133,24 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  资源名称
-    * isp  线路
+    * id  全域公网带宽的ID
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * isp  全域弹性公网IP所属线路
     * ingressSize  全域公网带宽大小（入云方向）
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * description  用户自定义的资源描述
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * chargeMode  计费模式
     * ratio95peak  增强95保底率
     * freezenInfo  冻结原因
     * billingInfo  订单信息
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * status  状态
     * createdAt  创建时间
     * updatedAt  更新时间
     * isPrePaid  是否包周期
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * lockInfos  全域公网带宽资源的锁状态
     *
     * @var string[]
@@ -179,24 +179,24 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  资源名称
-    * isp  线路
+    * id  全域公网带宽的ID
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * isp  全域弹性公网IP所属线路
     * ingressSize  全域公网带宽大小（入云方向）
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * description  用户自定义的资源描述
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * chargeMode  计费模式
     * ratio95peak  增强95保底率
     * freezenInfo  冻结原因
     * billingInfo  订单信息
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * status  状态
     * createdAt  创建时间
     * updatedAt  更新时间
     * isPrePaid  是否包周期
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * lockInfos  全域公网带宽资源的锁状态
     *
     * @var string[]
@@ -225,24 +225,24 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  资源名称
-    * isp  线路
+    * id  全域公网带宽的ID
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * isp  全域弹性公网IP所属线路
     * ingressSize  全域公网带宽大小（入云方向）
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * description  用户自定义的资源描述
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * chargeMode  计费模式
     * ratio95peak  增强95保底率
     * freezenInfo  冻结原因
     * billingInfo  订单信息
-    * domainId  租户ID
+    * domainId  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     * status  状态
     * createdAt  创建时间
     * updatedAt  更新时间
     * isPrePaid  是否包周期
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * lockInfos  全域公网带宽资源的锁状态
     *
     * @var string[]
@@ -371,6 +371,18 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -379,6 +391,12 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -395,7 +413,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域公网带宽的ID
     *
     * @return string|null
     */
@@ -407,7 +425,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域公网带宽的ID
     *
     * @return $this
     */
@@ -419,7 +437,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -431,7 +449,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -443,7 +461,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  线路
+    *  全域弹性公网IP所属线路
     *
     * @return string|null
     */
@@ -455,7 +473,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string|null $isp 线路
+    * @param string|null $isp 全域弹性公网IP所属线路
     *
     * @return $this
     */
@@ -539,7 +557,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  用户自定义的资源描述
+    *  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return string|null
     */
@@ -551,7 +569,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 用户自定义的资源描述
+    * @param string|null $description - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return $this
     */
@@ -659,7 +677,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户ID
+    *  - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     *
     * @return string|null
     */
@@ -671,7 +689,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户ID
+    * @param string|null $domainId - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
     *
     * @return $this
     */
@@ -803,7 +821,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  资源的企业项目id
+    *  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return string|null
     */
@@ -815,7 +833,7 @@ class UpdateInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 资源的企业项目id
+    * @param string|null $enterpriseProjectId - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return $this
     */

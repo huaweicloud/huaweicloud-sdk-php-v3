@@ -21,7 +21,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * concurrency  单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用
-    * concurrentNum  单实例最大并发数，v2版本才支持，取值-1到1000
+    * concurrentNum  单实例并发数，v2版本才支持，取值1到1000
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * concurrency  单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用
-    * concurrentNum  单实例最大并发数，v2版本才支持，取值-1到1000
+    * concurrentNum  单实例并发数，v2版本才支持，取值1到1000
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * concurrency  单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用
-    * concurrentNum  单实例最大并发数，v2版本才支持，取值-1到1000
+    * concurrentNum  单实例并发数，v2版本才支持，取值1到1000
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * concurrency  单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用
-    * concurrentNum  单实例最大并发数，v2版本才支持，取值-1到1000
+    * concurrentNum  单实例并发数，v2版本才支持，取值1到1000
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * concurrency  单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用
-    * concurrentNum  单实例最大并发数，v2版本才支持，取值-1到1000
+    * concurrentNum  单实例并发数，v2版本才支持，取值1到1000
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets concurrentNum
-    *  单实例最大并发数，v2版本才支持，取值-1到1000
+    *  单实例并发数，v2版本才支持，取值1到1000
     *
     * @return int
     */
@@ -227,7 +227,7 @@ class StrategyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets concurrentNum
     *
-    * @param int $concurrentNum 单实例最大并发数，v2版本才支持，取值-1到1000
+    * @param int $concurrentNum 单实例并发数，v2版本才支持，取值1到1000
     *
     * @return $this
     */

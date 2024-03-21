@@ -23,13 +23,15 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'version' => 'string',
             'description' => 'string',
-            'additionalVersionWeights' => 'map[string,int]'
+            'additionalVersionWeights' => 'map[string,int]',
+            'additionalVersionStrategy' => 'map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'version' => null,
         'description' => null,
-        'additionalVersionWeights' => null
+        'additionalVersionWeights' => null,
+        'additionalVersionStrategy' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'version' => 'version',
             'description' => 'description',
-            'additionalVersionWeights' => 'additional_version_weights'
+            'additionalVersionWeights' => 'additional_version_weights',
+            'additionalVersionStrategy' => 'additional_version_strategy'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
     protected static $setters = [
             'version' => 'setVersion',
             'description' => 'setDescription',
-            'additionalVersionWeights' => 'setAdditionalVersionWeights'
+            'additionalVersionWeights' => 'setAdditionalVersionWeights',
+            'additionalVersionStrategy' => 'setAdditionalVersionStrategy'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     * version  别名对应的版本名称。
     * description  别名描述信息。
     * additionalVersionWeights  灰度版本信息
+    * additionalVersionStrategy  指定规则灰度策略信息
     *
     * @var string[]
     */
     protected static $getters = [
             'version' => 'getVersion',
             'description' => 'getDescription',
-            'additionalVersionWeights' => 'getAdditionalVersionWeights'
+            'additionalVersionWeights' => 'getAdditionalVersionWeights',
+            'additionalVersionStrategy' => 'getAdditionalVersionStrategy'
     ];
 
     /**
@@ -170,6 +180,7 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['additionalVersionWeights'] = isset($data['additionalVersionWeights']) ? $data['additionalVersionWeights'] : null;
+        $this->container['additionalVersionStrategy'] = isset($data['additionalVersionStrategy']) ? $data['additionalVersionStrategy'] : null;
     }
 
     /**
@@ -266,6 +277,30 @@ class UpdateVersionAliasRequestBody implements ModelInterface, ArrayAccess
     public function setAdditionalVersionWeights($additionalVersionWeights)
     {
         $this->container['additionalVersionWeights'] = $additionalVersionWeights;
+        return $this;
+    }
+
+    /**
+    * Gets additionalVersionStrategy
+    *  指定规则灰度策略信息
+    *
+    * @return map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]|null
+    */
+    public function getAdditionalVersionStrategy()
+    {
+        return $this->container['additionalVersionStrategy'];
+    }
+
+    /**
+    * Sets additionalVersionStrategy
+    *
+    * @param map[string,\HuaweiCloud\SDK\FunctionGraph\V2\Model\VersionStrategy]|null $additionalVersionStrategy 指定规则灰度策略信息
+    *
+    * @return $this
+    */
+    public function setAdditionalVersionStrategy($additionalVersionStrategy)
+    {
+        $this->container['additionalVersionStrategy'] = $additionalVersionStrategy;
         return $this;
     }
 

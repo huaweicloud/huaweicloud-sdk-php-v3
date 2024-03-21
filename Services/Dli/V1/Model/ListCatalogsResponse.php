@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Geip\V3\Model;
+namespace HuaweiCloud\SDK\Dli\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implements ModelInterface, ArrayAccess
+class ListCatalogsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,34 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implemen
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AssociateInstanceGlobalEipRequestBody_global_eip_gc_bandwidth_info_tags';
+    protected static $openAPIModelName = 'ListCatalogsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  key
-    * value  value
+    * isSuccess  是否成功
+    * totalCount  catalog总数量
+    * catalogs  项目下所有catalog信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'isSuccess' => 'bool',
+            'totalCount' => 'int',
+            'catalogs' => '\HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  key
-    * value  value
+    * isSuccess  是否成功
+    * totalCount  catalog总数量
+    * catalogs  项目下所有catalog信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'isSuccess' => null,
+        'totalCount' => 'int64',
+        'catalogs' => null
     ];
 
     /**
@@ -65,38 +70,44 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implemen
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  key
-    * value  value
+    * isSuccess  是否成功
+    * totalCount  catalog总数量
+    * catalogs  项目下所有catalog信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'isSuccess' => 'is_success',
+            'totalCount' => 'total_count',
+            'catalogs' => 'catalogs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  key
-    * value  value
+    * isSuccess  是否成功
+    * totalCount  catalog总数量
+    * catalogs  项目下所有catalog信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'isSuccess' => 'setIsSuccess',
+            'totalCount' => 'setTotalCount',
+            'catalogs' => 'setCatalogs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  key
-    * value  value
+    * isSuccess  是否成功
+    * totalCount  catalog总数量
+    * catalogs  项目下所有catalog信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'isSuccess' => 'getIsSuccess',
+            'totalCount' => 'getTotalCount',
+            'catalogs' => 'getCatalogs'
     ];
 
     /**
@@ -157,8 +168,9 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implemen
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['catalogs'] = isset($data['catalogs']) ? $data['catalogs'] : null;
     }
 
     /**
@@ -169,30 +181,6 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implemen
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-            if ((mb_strlen($this->container['key']) > 128)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['key']) < 1)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/.";
-            }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 255)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
-            }
-            if ((mb_strlen($this->container['value']) < 0)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
-            }
-            if (!preg_match("/^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/.";
-            }
         return $invalidProperties;
     }
 
@@ -208,50 +196,74 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags implemen
     }
 
     /**
-    * Gets key
-    *  key
+    * Gets isSuccess
+    *  是否成功
     *
-    * @return string
+    * @return bool|null
     */
-    public function getKey()
+    public function getIsSuccess()
     {
-        return $this->container['key'];
+        return $this->container['isSuccess'];
     }
 
     /**
-    * Sets key
+    * Sets isSuccess
     *
-    * @param string $key key
+    * @param bool|null $isSuccess 是否成功
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setIsSuccess($isSuccess)
     {
-        $this->container['key'] = $key;
+        $this->container['isSuccess'] = $isSuccess;
         return $this;
     }
 
     /**
-    * Gets value
-    *  value
+    * Gets totalCount
+    *  catalog总数量
     *
-    * @return string
+    * @return int|null
     */
-    public function getValue()
+    public function getTotalCount()
     {
-        return $this->container['value'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets value
+    * Sets totalCount
     *
-    * @param string $value value
+    * @param int|null $totalCount catalog总数量
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setTotalCount($totalCount)
     {
-        $this->container['value'] = $value;
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets catalogs
+    *  项目下所有catalog信息
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]|null
+    */
+    public function getCatalogs()
+    {
+        return $this->container['catalogs'];
+    }
+
+    /**
+    * Sets catalogs
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]|null $catalogs 项目下所有catalog信息
+    *
+    * @return $this
+    */
+    public function setCatalogs($catalogs)
+    {
+        $this->container['catalogs'] = $catalogs;
         return $this;
     }
 

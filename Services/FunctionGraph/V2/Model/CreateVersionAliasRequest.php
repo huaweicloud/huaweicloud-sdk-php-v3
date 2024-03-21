@@ -20,7 +20,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * functionUrn  函数的URN。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * functionUrn  函数的URN。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * functionUrn  函数的URN。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * functionUrn  函数的URN。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * functionUrn  函数的URN。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets functionUrn
-    *  函数的URN。
+    *  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CreateVersionAliasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets functionUrn
     *
-    * @param string $functionUrn 函数的URN。
+    * @param string $functionUrn 函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return $this
     */

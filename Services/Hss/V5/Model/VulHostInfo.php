@@ -20,15 +20,16 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机id
+    * hostId  受漏洞影响的服务器id
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
-    * agentId  主机对应的agent id
-    * cveNum  漏洞cve数
-    * cveIdList  cve列表
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
+    * agentId  主机对应的Agent ID
+    * version  主机绑定的配额版本
+    * cveNum  漏洞cve总数
+    * cveIdList  漏洞对应的cve id列表
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复命令行
+    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     * appPath  应用软件的路径（只有应用漏洞有该字段）
     * regionName  地域
     * publicIp  服务器公网ip
@@ -39,8 +40,10 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
-    * scanTime  扫描时间
+    * scanTime  扫描时间，时间戳单位：毫秒
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -50,6 +53,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'hostIp' => 'string',
             'agentId' => 'string',
+            'version' => 'string',
             'cveNum' => 'int',
             'cveIdList' => 'string[]',
             'status' => 'string',
@@ -65,20 +69,23 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'bool',
             'firstScanTime' => 'int',
             'scanTime' => 'int',
-            'supportRestore' => 'bool'
+            'supportRestore' => 'bool',
+            'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]',
+            'repairPriority' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机id
+    * hostId  受漏洞影响的服务器id
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
-    * agentId  主机对应的agent id
-    * cveNum  漏洞cve数
-    * cveIdList  cve列表
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
+    * agentId  主机对应的Agent ID
+    * version  主机绑定的配额版本
+    * cveNum  漏洞cve总数
+    * cveIdList  漏洞对应的cve id列表
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复命令行
+    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     * appPath  应用软件的路径（只有应用漏洞有该字段）
     * regionName  地域
     * publicIp  服务器公网ip
@@ -89,8 +96,10 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
-    * scanTime  扫描时间
+    * scanTime  扫描时间，时间戳单位：毫秒
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -100,6 +109,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         'hostName' => null,
         'hostIp' => null,
         'agentId' => null,
+        'version' => null,
         'cveNum' => null,
         'cveIdList' => null,
         'status' => null,
@@ -115,7 +125,9 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         'isAffectBusiness' => null,
         'firstScanTime' => 'int64',
         'scanTime' => 'int64',
-        'supportRestore' => null
+        'supportRestore' => null,
+        'disabledOperateTypes' => null,
+        'repairPriority' => null
     ];
 
     /**
@@ -141,15 +153,16 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机id
+    * hostId  受漏洞影响的服务器id
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
-    * agentId  主机对应的agent id
-    * cveNum  漏洞cve数
-    * cveIdList  cve列表
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
+    * agentId  主机对应的Agent ID
+    * version  主机绑定的配额版本
+    * cveNum  漏洞cve总数
+    * cveIdList  漏洞对应的cve id列表
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复命令行
+    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     * appPath  应用软件的路径（只有应用漏洞有该字段）
     * regionName  地域
     * publicIp  服务器公网ip
@@ -160,8 +173,10 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
-    * scanTime  扫描时间
+    * scanTime  扫描时间，时间戳单位：毫秒
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -171,6 +186,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
             'agentId' => 'agent_id',
+            'version' => 'version',
             'cveNum' => 'cve_num',
             'cveIdList' => 'cve_id_list',
             'status' => 'status',
@@ -186,20 +202,23 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'is_affect_business',
             'firstScanTime' => 'first_scan_time',
             'scanTime' => 'scan_time',
-            'supportRestore' => 'support_restore'
+            'supportRestore' => 'support_restore',
+            'disabledOperateTypes' => 'disabled_operate_types',
+            'repairPriority' => 'repair_priority'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机id
+    * hostId  受漏洞影响的服务器id
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
-    * agentId  主机对应的agent id
-    * cveNum  漏洞cve数
-    * cveIdList  cve列表
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
+    * agentId  主机对应的Agent ID
+    * version  主机绑定的配额版本
+    * cveNum  漏洞cve总数
+    * cveIdList  漏洞对应的cve id列表
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复命令行
+    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     * appPath  应用软件的路径（只有应用漏洞有该字段）
     * regionName  地域
     * publicIp  服务器公网ip
@@ -210,8 +229,10 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
-    * scanTime  扫描时间
+    * scanTime  扫描时间，时间戳单位：毫秒
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -221,6 +242,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
             'agentId' => 'setAgentId',
+            'version' => 'setVersion',
             'cveNum' => 'setCveNum',
             'cveIdList' => 'setCveIdList',
             'status' => 'setStatus',
@@ -236,20 +258,23 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'setIsAffectBusiness',
             'firstScanTime' => 'setFirstScanTime',
             'scanTime' => 'setScanTime',
-            'supportRestore' => 'setSupportRestore'
+            'supportRestore' => 'setSupportRestore',
+            'disabledOperateTypes' => 'setDisabledOperateTypes',
+            'repairPriority' => 'setRepairPriority'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机id
+    * hostId  受漏洞影响的服务器id
     * severityLevel  危险程度   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
-    * agentId  主机对应的agent id
-    * cveNum  漏洞cve数
-    * cveIdList  cve列表
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
+    * agentId  主机对应的Agent ID
+    * version  主机绑定的配额版本
+    * cveNum  漏洞cve总数
+    * cveIdList  漏洞对应的cve id列表
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
-    * repairCmd  修复命令行
+    * repairCmd  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     * appPath  应用软件的路径（只有应用漏洞有该字段）
     * regionName  地域
     * publicIp  服务器公网ip
@@ -260,8 +285,10 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * isAffectBusiness  是否影响业务
     * firstScanTime  首次扫描时间
-    * scanTime  扫描时间
+    * scanTime  扫描时间，时间戳单位：毫秒
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  漏洞在当前主机上不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -271,6 +298,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
             'agentId' => 'getAgentId',
+            'version' => 'getVersion',
             'cveNum' => 'getCveNum',
             'cveIdList' => 'getCveIdList',
             'status' => 'getStatus',
@@ -286,7 +314,9 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'getIsAffectBusiness',
             'firstScanTime' => 'getFirstScanTime',
             'scanTime' => 'getScanTime',
-            'supportRestore' => 'getSupportRestore'
+            'supportRestore' => 'getSupportRestore',
+            'disabledOperateTypes' => 'getDisabledOperateTypes',
+            'repairPriority' => 'getRepairPriority'
     ];
 
     /**
@@ -352,6 +382,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
         $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['cveNum'] = isset($data['cveNum']) ? $data['cveNum'] : null;
         $this->container['cveIdList'] = isset($data['cveIdList']) ? $data['cveIdList'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -368,6 +399,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
         $this->container['scanTime'] = isset($data['scanTime']) ? $data['scanTime'] : null;
         $this->container['supportRestore'] = isset($data['supportRestore']) ? $data['supportRestore'] : null;
+        $this->container['disabledOperateTypes'] = isset($data['disabledOperateTypes']) ? $data['disabledOperateTypes'] : null;
+        $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
     }
 
     /**
@@ -407,6 +440,12 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['cveNum']) && ($this->container['cveNum'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'cveNum', must be smaller than or equal to 10000.";
@@ -486,6 +525,12 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scanTime']) && ($this->container['scanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'scanTime', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -502,7 +547,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  受漏洞影响的服务器id
     *
     * @return string|null
     */
@@ -514,7 +559,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId 受漏洞影响的服务器id
     *
     * @return $this
     */
@@ -550,7 +595,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  受影响资产名称
+    *  受影响主机名称
     *
     * @return string|null
     */
@@ -562,7 +607,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 受影响资产名称
+    * @param string|null $hostName 受影响主机名称
     *
     * @return $this
     */
@@ -574,7 +619,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  受影响资产ip
+    *  受影响主机ip
     *
     * @return string|null
     */
@@ -586,7 +631,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 受影响资产ip
+    * @param string|null $hostIp 受影响主机ip
     *
     * @return $this
     */
@@ -598,7 +643,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  主机对应的agent id
+    *  主机对应的Agent ID
     *
     * @return string|null
     */
@@ -610,7 +655,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId 主机对应的agent id
+    * @param string|null $agentId 主机对应的Agent ID
     *
     * @return $this
     */
@@ -621,8 +666,32 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets version
+    *  主机绑定的配额版本
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 主机绑定的配额版本
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
     * Gets cveNum
-    *  漏洞cve数
+    *  漏洞cve总数
     *
     * @return int|null
     */
@@ -634,7 +703,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveNum
     *
-    * @param int|null $cveNum 漏洞cve数
+    * @param int|null $cveNum 漏洞cve总数
     *
     * @return $this
     */
@@ -646,7 +715,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveIdList
-    *  cve列表
+    *  漏洞对应的cve id列表
     *
     * @return string[]|null
     */
@@ -658,7 +727,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveIdList
     *
-    * @param string[]|null $cveIdList cve列表
+    * @param string[]|null $cveIdList 漏洞对应的cve id列表
     *
     * @return $this
     */
@@ -694,7 +763,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairCmd
-    *  修复命令行
+    *  修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     *
     * @return string|null
     */
@@ -706,7 +775,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairCmd
     *
-    * @param string|null $repairCmd 修复命令行
+    * @param string|null $repairCmd 修复漏洞需要执行的命令行（只有Linux漏洞有该字段）
     *
     * @return $this
     */
@@ -958,7 +1027,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  扫描时间
+    *  扫描时间，时间戳单位：毫秒
     *
     * @return int|null
     */
@@ -970,7 +1039,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 扫描时间
+    * @param int|null $scanTime 扫描时间，时间戳单位：毫秒
     *
     * @return $this
     */
@@ -1001,6 +1070,54 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     public function setSupportRestore($supportRestore)
     {
         $this->container['supportRestore'] = $supportRestore;
+        return $this;
+    }
+
+    /**
+    * Gets disabledOperateTypes
+    *  漏洞在当前主机上不可进行的操作类型列表
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null
+    */
+    public function getDisabledOperateTypes()
+    {
+        return $this->container['disabledOperateTypes'];
+    }
+
+    /**
+    * Sets disabledOperateTypes
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null $disabledOperateTypes 漏洞在当前主机上不可进行的操作类型列表
+    *
+    * @return $this
+    */
+    public function setDisabledOperateTypes($disabledOperateTypes)
+    {
+        $this->container['disabledOperateTypes'] = $disabledOperateTypes;
+        return $this;
+    }
+
+    /**
+    * Gets repairPriority
+    *  修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return string|null
+    */
+    public function getRepairPriority()
+    {
+        return $this->container['repairPriority'];
+    }
+
+    /**
+    * Sets repairPriority
+    *
+    * @param string|null $repairPriority 修复优先级,包含如下  - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return $this
+    */
+    public function setRepairPriority($repairPriority)
+    {
+        $this->container['repairPriority'] = $repairPriority;
         return $this;
     }
 

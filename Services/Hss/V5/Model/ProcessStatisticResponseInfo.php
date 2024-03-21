@@ -20,7 +20,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  进程名称
+    * path  进程的可执行文件路径
     * num  进程数量
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  进程名称
+    * path  进程的可执行文件路径
     * num  进程数量
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  进程名称
+    * path  进程的可执行文件路径
     * num  进程数量
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  进程名称
+    * path  进程的可执行文件路径
     * num  进程数量
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  进程名称
+    * path  进程的可执行文件路径
     * num  进程数量
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  进程名称
+    *  进程的可执行文件路径
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ProcessStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 进程名称
+    * @param string|null $path 进程的可执行文件路径
     *
     * @return $this
     */

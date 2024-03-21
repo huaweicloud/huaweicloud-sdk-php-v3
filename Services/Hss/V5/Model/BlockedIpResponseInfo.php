@@ -20,7 +20,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
@@ -44,7 +44,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
@@ -89,7 +89,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
@@ -113,7 +113,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
@@ -137,7 +137,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * srcIp  攻击源IP
     * loginType  登录类型，包含如下: - \"mysql\" # mysql服务 - \"rdp\" # rdp服务服务 - \"ssh\" # ssh服务 - \"vsftp\" # vsftp服务
@@ -339,7 +339,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string
     */
@@ -351,7 +351,7 @@ class BlockedIpResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 服务器ID
+    * @param string $hostId 主机ID
     *
     * @return $this
     */

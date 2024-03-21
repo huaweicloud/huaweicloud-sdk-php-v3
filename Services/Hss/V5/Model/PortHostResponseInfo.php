@@ -25,13 +25,13 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * hostName  主机名称
     * laddr  监听ip
-    * path  程序文件路径
+    * path  进程可执行文件路径
     * pid  pid
     * port  端口
     * status  状态
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  agent id
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -57,13 +57,13 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * hostName  主机名称
     * laddr  监听ip
-    * path  程序文件路径
+    * path  进程可执行文件路径
     * pid  pid
     * port  端口
     * status  状态
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  agent id
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -110,13 +110,13 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * hostName  主机名称
     * laddr  监听ip
-    * path  程序文件路径
+    * path  进程可执行文件路径
     * pid  pid
     * port  端口
     * status  状态
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  agent id
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -142,13 +142,13 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * hostName  主机名称
     * laddr  监听ip
-    * path  程序文件路径
+    * path  进程可执行文件路径
     * pid  pid
     * port  端口
     * status  状态
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  agent id
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -174,13 +174,13 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * hostName  主机名称
     * laddr  监听ip
-    * path  程序文件路径
+    * path  进程可执行文件路径
     * pid  pid
     * port  端口
     * status  状态
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * containerName  容器名称
-    * agentId  agent id
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -487,7 +487,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  程序文件路径
+    *  进程可执行文件路径
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 程序文件路径
+    * @param string|null $path 进程可执行文件路径
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  端口类型：目前包括TCP，UDP两种
     *
     * @return string|null
     */
@@ -595,7 +595,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type 端口类型：目前包括TCP，UDP两种
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent id
+    *  Agent ID
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent id
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */

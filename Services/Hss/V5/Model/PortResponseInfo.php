@@ -22,12 +22,12 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hostId  主机id
     * laddr  监听ip
-    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     * port  端口号
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
-    * path  程序文件
-    * agentId  agent id
+    * path  进程可执行文件路径
+    * agentId  Agent ID
     * containerId  容器id
     *
     * @var string[]
@@ -48,12 +48,12 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hostId  主机id
     * laddr  监听ip
-    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     * port  端口号
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
-    * path  程序文件
-    * agentId  agent id
+    * path  进程可执行文件路径
+    * agentId  Agent ID
     * containerId  容器id
     *
     * @var string[]
@@ -95,12 +95,12 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hostId  主机id
     * laddr  监听ip
-    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     * port  端口号
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
-    * path  程序文件
-    * agentId  agent id
+    * path  进程可执行文件路径
+    * agentId  Agent ID
     * containerId  容器id
     *
     * @var string[]
@@ -121,12 +121,12 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hostId  主机id
     * laddr  监听ip
-    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     * port  端口号
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
-    * path  程序文件
-    * agentId  agent id
+    * path  进程可执行文件路径
+    * agentId  Agent ID
     * containerId  容器id
     *
     * @var string[]
@@ -147,12 +147,12 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hostId  主机id
     * laddr  监听ip
-    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * status  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     * port  端口号
-    * type  类型
+    * type  端口类型：目前包括TCP，UDP两种
     * pid  进程ID
-    * path  程序文件
-    * agentId  agent id
+    * path  进程可执行文件路径
+    * agentId  Agent ID
     * containerId  容器id
     *
     * @var string[]
@@ -364,7 +364,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    *  port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknow\" : 未知
+    * @param string|null $status port status, normal, danger or unknow   - \"normal\" : 正常   - \"danger\" : 危险   - \"unknown\" : 未知
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  端口类型：目前包括TCP，UDP两种
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type 端口类型：目前包括TCP，UDP两种
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  程序文件
+    *  进程可执行文件路径
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 程序文件
+    * @param string|null $path 进程可执行文件路径
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent id
+    *  Agent ID
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class PortResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent id
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */

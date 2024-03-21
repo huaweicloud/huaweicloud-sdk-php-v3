@@ -22,7 +22,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hostIdList  需要关闭勒索防护的主机ID列表
     * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hostIdList  需要关闭勒索防护的主机ID列表
     * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hostIdList  需要关闭勒索防护的主机ID列表
     * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hostIdList  需要关闭勒索防护的主机ID列表
     * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hostIdList  需要关闭勒索防护的主机ID列表
     * agentIdList  需要关闭勒索防护的agentID列表
-    * closeProtectionType  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * closeProtectionType  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @var string[]
     */
@@ -259,7 +259,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets closeProtectionType
-    *  关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    *  关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @return string
     */
@@ -271,7 +271,7 @@ class CloseProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets closeProtectionType
     *
-    * @param string $closeProtectionType 关闭防护类型，包含如下：   - close_all : 关闭所有防护   - close_anti : 关闭勒索防护   - close_backup : 关闭备份功能
+    * @param string $closeProtectionType 关闭防护类型，包含如下：   - close_anti : 关闭勒索防护；暂不支持关闭备份防护，若需要解绑存储库，请前往cbr服务进行操作。
     *
     * @return $this
     */

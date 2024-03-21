@@ -26,8 +26,8 @@ class BatchCreateV2RequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodyTags[]',
-            'sysTags' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodySysTags[]'
+            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]',
+            'sysTags' => '\HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]'
     ];
 
     /**
@@ -190,7 +190,7 @@ class BatchCreateV2RequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  全域弹性公网IP标签
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodyTags[]
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]
     */
     public function getTags()
     {
@@ -200,7 +200,7 @@ class BatchCreateV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodyTags[] $tags 全域弹性公网IP标签
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[] $tags 全域弹性公网IP标签
     *
     * @return $this
     */
@@ -214,7 +214,7 @@ class BatchCreateV2RequestBody implements ModelInterface, ArrayAccess
     * Gets sysTags
     *  系统标签
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodySysTags[]|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null
     */
     public function getSysTags()
     {
@@ -224,7 +224,7 @@ class BatchCreateV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateV2RequestBodySysTags[]|null $sysTags 系统标签
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null $sysTags 系统标签
     *
     * @return $this
     */

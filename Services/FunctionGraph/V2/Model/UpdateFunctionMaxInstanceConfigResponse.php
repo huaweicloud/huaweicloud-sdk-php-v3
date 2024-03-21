@@ -59,7 +59,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     *
     * @var string[]
@@ -147,7 +147,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     *
     * @var string[]
@@ -256,7 +256,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     *
     * @var string[]
@@ -344,7 +344,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     *
     * @var string[]
@@ -432,7 +432,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     *
     * @var string[]
@@ -1625,7 +1625,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets isStatefulFunction
-    *  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    *  是否支持有状态，v2版本支持
     *
     * @return bool|null
     */
@@ -1637,7 +1637,7 @@ class UpdateFunctionMaxInstanceConfigResponse implements ModelInterface, ArrayAc
     /**
     * Sets isStatefulFunction
     *
-    * @param bool|null $isStatefulFunction 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * @param bool|null $isStatefulFunction 是否支持有状态，v2版本支持
     *
     * @return $this
     */

@@ -20,12 +20,15 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * filePath  文件路径
     * hostName  服务器名称
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
+    * fileHash  文件hash,当前为sha256
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -33,21 +36,27 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'region' => 'string',
             'enterpriseProjectId' => 'string',
-            'lastDays' => 'int',
+            'filePath' => 'string',
             'hostName' => 'string',
-            'isolationStatus' => 'string',
+            'privateIp' => 'string',
+            'publicIp' => 'string',
+            'fileHash' => 'string',
+            'assetValue' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * filePath  文件路径
     * hostName  服务器名称
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
+    * fileHash  文件hash,当前为sha256
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -55,9 +64,12 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'region' => null,
         'enterpriseProjectId' => null,
-        'lastDays' => 'int32',
+        'filePath' => null,
         'hostName' => null,
-        'isolationStatus' => null,
+        'privateIp' => null,
+        'publicIp' => null,
+        'fileHash' => null,
+        'assetValue' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -85,12 +97,15 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * filePath  文件路径
     * hostName  服务器名称
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
+    * fileHash  文件hash,当前为sha256
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -98,21 +113,27 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'lastDays' => 'last_days',
+            'filePath' => 'file_path',
             'hostName' => 'host_name',
-            'isolationStatus' => 'isolation_status',
+            'privateIp' => 'private_ip',
+            'publicIp' => 'public_ip',
+            'fileHash' => 'file_hash',
+            'assetValue' => 'asset_value',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * filePath  文件路径
     * hostName  服务器名称
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
+    * fileHash  文件hash,当前为sha256
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -120,21 +141,27 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'lastDays' => 'setLastDays',
+            'filePath' => 'setFilePath',
             'hostName' => 'setHostName',
-            'isolationStatus' => 'setIsolationStatus',
+            'privateIp' => 'setPrivateIp',
+            'publicIp' => 'setPublicIp',
+            'fileHash' => 'setFileHash',
+            'assetValue' => 'setAssetValue',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * filePath  文件路径
     * hostName  服务器名称
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
+    * fileHash  文件hash,当前为sha256
+    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -142,9 +169,12 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'lastDays' => 'getLastDays',
+            'filePath' => 'getFilePath',
             'hostName' => 'getHostName',
-            'isolationStatus' => 'getIsolationStatus',
+            'privateIp' => 'getPrivateIp',
+            'publicIp' => 'getPublicIp',
+            'fileHash' => 'getFileHash',
+            'assetValue' => 'getAssetValue',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -209,9 +239,12 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     {
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['lastDays'] = isset($data['lastDays']) ? $data['lastDays'] : null;
+        $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
-        $this->container['isolationStatus'] = isset($data['isolationStatus']) ? $data['isolationStatus'] : null;
+        $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
+        $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
+        $this->container['fileHash'] = isset($data['fileHash']) ? $data['fileHash'] : null;
+        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -245,11 +278,8 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['lastDays']) && ($this->container['lastDays'] > 30)) {
-                $invalidProperties[] = "invalid value for 'lastDays', must be smaller than or equal to 30.";
-            }
-            if (!is_null($this->container['lastDays']) && ($this->container['lastDays'] < 1)) {
-                $invalidProperties[] = "invalid value for 'lastDays', must be bigger than or equal to 1.";
+            if (!is_null($this->container['filePath']) && !preg_match("/^.*$/", $this->container['filePath'])) {
+                $invalidProperties[] = "invalid value for 'filePath', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 64.";
@@ -260,11 +290,32 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['isolationStatus']) && (mb_strlen($this->container['isolationStatus']) > 32)) {
-                $invalidProperties[] = "invalid value for 'isolationStatus', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['isolationStatus']) && (mb_strlen($this->container['isolationStatus']) < 0)) {
-                $invalidProperties[] = "invalid value for 'isolationStatus', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
+                $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['publicIp']) && !preg_match("/^.*$/", $this->container['publicIp'])) {
+                $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['fileHash']) && !preg_match("/^.*$/", $this->container['fileHash'])) {
+                $invalidProperties[] = "invalid value for 'fileHash', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
@@ -294,7 +345,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -306,7 +357,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -318,7 +369,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -330,7 +381,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -341,26 +392,26 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets lastDays
-    *  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * Gets filePath
+    *  文件路径
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getLastDays()
+    public function getFilePath()
     {
-        return $this->container['lastDays'];
+        return $this->container['filePath'];
     }
 
     /**
-    * Sets lastDays
+    * Sets filePath
     *
-    * @param int|null $lastDays 查询时间范围天数，与自定义查询时间begin_time，end_time互斥
+    * @param string|null $filePath 文件路径
     *
     * @return $this
     */
-    public function setLastDays($lastDays)
+    public function setFilePath($filePath)
     {
-        $this->container['lastDays'] = $lastDays;
+        $this->container['filePath'] = $filePath;
         return $this;
     }
 
@@ -389,32 +440,104 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isolationStatus
-    *  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * Gets privateIp
+    *  服务器私有IP
     *
     * @return string|null
     */
-    public function getIsolationStatus()
+    public function getPrivateIp()
     {
-        return $this->container['isolationStatus'];
+        return $this->container['privateIp'];
     }
 
     /**
-    * Sets isolationStatus
+    * Sets privateIp
     *
-    * @param string|null $isolationStatus 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * @param string|null $privateIp 服务器私有IP
     *
     * @return $this
     */
-    public function setIsolationStatus($isolationStatus)
+    public function setPrivateIp($privateIp)
     {
-        $this->container['isolationStatus'] = $isolationStatus;
+        $this->container['privateIp'] = $privateIp;
+        return $this;
+    }
+
+    /**
+    * Gets publicIp
+    *  服务器公网IP
+    *
+    * @return string|null
+    */
+    public function getPublicIp()
+    {
+        return $this->container['publicIp'];
+    }
+
+    /**
+    * Sets publicIp
+    *
+    * @param string|null $publicIp 服务器公网IP
+    *
+    * @return $this
+    */
+    public function setPublicIp($publicIp)
+    {
+        $this->container['publicIp'] = $publicIp;
+        return $this;
+    }
+
+    /**
+    * Gets fileHash
+    *  文件hash,当前为sha256
+    *
+    * @return string|null
+    */
+    public function getFileHash()
+    {
+        return $this->container['fileHash'];
+    }
+
+    /**
+    * Sets fileHash
+    *
+    * @param string|null $fileHash 文件hash,当前为sha256
+    *
+    * @return $this
+    */
+    public function setFileHash($fileHash)
+    {
+        $this->container['fileHash'] = $fileHash;
+        return $this;
+    }
+
+    /**
+    * Gets assetValue
+    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *
+    * @return string|null
+    */
+    public function getAssetValue()
+    {
+        return $this->container['assetValue'];
+    }
+
+    /**
+    * Sets assetValue
+    *
+    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *
+    * @return $this
+    */
+    public function setAssetValue($assetValue)
+    {
+        $this->container['assetValue'] = $assetValue;
         return $this;
     }
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字
     *
     * @return int|null
     */
@@ -426,7 +549,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字
     *
     * @return $this
     */

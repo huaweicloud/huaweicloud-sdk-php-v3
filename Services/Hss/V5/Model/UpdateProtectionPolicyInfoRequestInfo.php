@@ -25,10 +25,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
-    * agentIdList  关联server
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * agentIdList  开启了此勒索防护策略的agent的id列表
+    * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
     *
@@ -55,10 +55,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
-    * agentIdList  关联server
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * agentIdList  开启了此勒索防护策略的agent的id列表
+    * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
     *
@@ -106,10 +106,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
-    * agentIdList  关联server
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * agentIdList  开启了此勒索防护策略的agent的id列表
+    * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
     *
@@ -136,10 +136,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
-    * agentIdList  关联server
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * agentIdList  开启了此勒索防护策略的agent的id列表
+    * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
     *
@@ -166,10 +166,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * protectionMode  防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录,多个目录请用英文分号隔开，最多支持填写20个防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
-    * agentIdList  关联server
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * agentIdList  开启了此勒索防护策略的agent的id列表
+    * operatingSystem  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
     * processWhitelist  进程白名单
     *
@@ -295,13 +295,10 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
             if ((mb_strlen($this->container['protectionMode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'protectionMode', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['baitProtectionStatus'] === null) {
-            $invalidProperties[] = "'baitProtectionStatus' can't be null";
-        }
-            if ((mb_strlen($this->container['baitProtectionStatus']) > 128)) {
+            if (!is_null($this->container['baitProtectionStatus']) && (mb_strlen($this->container['baitProtectionStatus']) > 128)) {
                 $invalidProperties[] = "invalid value for 'baitProtectionStatus', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['baitProtectionStatus']) < 0)) {
+            if (!is_null($this->container['baitProtectionStatus']) && (mb_strlen($this->container['baitProtectionStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'baitProtectionStatus', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['protectionDirectory'] === null) {
@@ -433,7 +430,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * Gets baitProtectionStatus
     *  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
-    * @return string
+    * @return string|null
     */
     public function getBaitProtectionStatus()
     {
@@ -443,7 +440,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets baitProtectionStatus
     *
-    * @param string $baitProtectionStatus 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
+    * @param string|null $baitProtectionStatus 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     *
     * @return $this
     */
@@ -479,7 +476,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets protectionType
-    *  防护文件类型
+    *  防护文件类型，例如：docx，txt，avi
     *
     * @return string
     */
@@ -491,7 +488,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets protectionType
     *
-    * @param string $protectionType 防护文件类型
+    * @param string $protectionType 防护文件类型，例如：docx，txt，avi
     *
     * @return $this
     */
@@ -527,7 +524,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets agentIdList
-    *  关联server
+    *  开启了此勒索防护策略的agent的id列表
     *
     * @return string[]|null
     */
@@ -539,7 +536,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets agentIdList
     *
-    * @param string[]|null $agentIdList 关联server
+    * @param string[]|null $agentIdList 开启了此勒索防护策略的agent的id列表
     *
     * @return $this
     */
@@ -551,7 +548,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets operatingSystem
-    *  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    *  支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     *
     * @return string
     */
@@ -563,7 +560,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets operatingSystem
     *
-    * @param string $operatingSystem 操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * @param string $operatingSystem 支持该策略的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     *
     * @return $this
     */

@@ -21,14 +21,14 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - safe ： 已通过 - unhandled : 未通过，且未忽略的 - ignored : 未通过，且已忽略的
-    * checkRuleName  检查项名称，支持模糊匹配
+    * checkRuleName  检查项（检查规则）名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - safe ： 已通过 - unhandled : 未通过，且未忽略的 - ignored : 未通过，且已忽略的
-    * checkRuleName  检查项名称，支持模糊匹配
+    * checkRuleName  检查项（检查规则）名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - safe ： 已通过 - unhandled : 未通过，且未忽略的 - ignored : 未通过，且已忽略的
-    * checkRuleName  检查项名称，支持模糊匹配
+    * checkRuleName  检查项（检查规则）名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - safe ： 已通过 - unhandled : 未通过，且未忽略的 - ignored : 未通过，且已忽略的
-    * checkRuleName  检查项名称，支持模糊匹配
+    * checkRuleName  检查项（检查规则）名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * resultType  结果类型，包含如下： - safe ： 已通过 - unhandled : 未通过，且未忽略的 - ignored : 未通过，且已忽略的
-    * checkRuleName  检查项名称，支持模糊匹配
+    * checkRuleName  检查项（检查规则）名称，支持模糊匹配
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -346,7 +346,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  基线名称
+    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return string
     */
@@ -358,7 +358,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string $checkName 基线名称
+    * @param string $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    *  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     *
     * @return string
     */
@@ -382,7 +382,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string $standard 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * @param string $standard 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleName
-    *  检查项名称，支持模糊匹配
+    *  检查项（检查规则）名称，支持模糊匹配
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleName
     *
-    * @param string|null $checkRuleName 检查项名称，支持模糊匹配
+    * @param string|null $checkRuleName 检查项（检查规则）名称，支持模糊匹配
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return int|null
     */
@@ -526,7 +526,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return $this
     */

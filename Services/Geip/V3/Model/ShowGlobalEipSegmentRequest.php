@@ -20,8 +20,8 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalEipSegmentId  global_eip_segment_id
-    * fields  只显示指定的字段
+    * globalEipSegmentId  globalEipSegmentId
+    * fields  fields
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalEipSegmentId  global_eip_segment_id
-    * fields  只显示指定的字段
+    * globalEipSegmentId  globalEipSegmentId
+    * fields  fields
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalEipSegmentId  global_eip_segment_id
-    * fields  只显示指定的字段
+    * globalEipSegmentId  globalEipSegmentId
+    * fields  fields
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalEipSegmentId  global_eip_segment_id
-    * fields  只显示指定的字段
+    * globalEipSegmentId  globalEipSegmentId
+    * fields  fields
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalEipSegmentId  global_eip_segment_id
-    * fields  只显示指定的字段
+    * globalEipSegmentId  globalEipSegmentId
+    * fields  fields
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipSegmentId
-    *  global_eip_segment_id
+    *  globalEipSegmentId
     *
     * @return string
     */
@@ -262,7 +262,7 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipSegmentId
     *
-    * @param string $globalEipSegmentId global_eip_segment_id
+    * @param string $globalEipSegmentId globalEipSegmentId
     *
     * @return $this
     */
@@ -274,7 +274,7 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -286,7 +286,7 @@ class ShowGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */

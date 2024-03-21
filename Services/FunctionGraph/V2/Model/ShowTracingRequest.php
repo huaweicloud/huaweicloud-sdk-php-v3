@@ -20,7 +20,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets functionUrn
-    *  函数的URN（Uniform Resource Name），唯一标识函数。
+    *  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowTracingRequest implements ModelInterface, ArrayAccess
     /**
     * Sets functionUrn
     *
-    * @param string $functionUrn 函数的URN（Uniform Resource Name），唯一标识函数。
+    * @param string $functionUrn 函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return $this
     */

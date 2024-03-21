@@ -260,18 +260,6 @@ class CreateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
-            if ((mb_strlen($this->container['floatingIpId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['floatingIpId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
-            }
         return $invalidProperties;
     }
 

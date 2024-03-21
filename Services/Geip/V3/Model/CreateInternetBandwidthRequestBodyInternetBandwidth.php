@@ -22,13 +22,13 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     * Array of property to type mappings. Used for (de)serialization
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
-    * isp  线路
+    * isp  全域弹性公网IP所属线路
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * type  全域公网带宽类型
     *
     * @var string[]
@@ -50,13 +50,13 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     * Array of property to format mappings. Used for (de)serialization
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
-    * isp  线路
+    * isp  全域弹性公网IP所属线路
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * type  全域公网带宽类型
     *
     * @var string[]
@@ -99,13 +99,13 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     * and the value is the original name
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
-    * isp  线路
+    * isp  全域弹性公网IP所属线路
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * type  全域公网带宽类型
     *
     * @var string[]
@@ -127,13 +127,13 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     * Array of attributes to setter functions (for deserialization of responses)
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
-    * isp  线路
+    * isp  全域弹性公网IP所属线路
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * type  全域公网带宽类型
     *
     * @var string[]
@@ -155,13 +155,13 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     * Array of attributes to getter functions (for serialization of requests)
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
-    * isp  线路
+    * isp  全域弹性公网IP所属线路
     * accessSite  接入点信息
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * tags  全域公网带宽标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * type  全域公网带宽类型
     *
     * @var string[]
@@ -311,8 +311,8 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
             if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
@@ -393,7 +393,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
 
     /**
     * Gets isp
-    *  线路
+    *  全域弹性公网IP所属线路
     *
     * @return string
     */
@@ -405,7 +405,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     /**
     * Sets isp
     *
-    * @param string $isp 线路
+    * @param string $isp 全域弹性公网IP所属线路
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
 
     /**
     * Gets description
-    *  用户自定义的资源描述
+    *  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     /**
     * Sets description
     *
-    * @param string|null $description 用户自定义的资源描述
+    * @param string|null $description - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
 
     /**
     * Gets enterpriseProjectId
-    *  资源的企业项目id
+    *  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class CreateInternetBandwidthRequestBodyInternetBandwidth implements ModelInterf
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 资源的企业项目id
+    * @param string|null $enterpriseProjectId - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return $this
     */

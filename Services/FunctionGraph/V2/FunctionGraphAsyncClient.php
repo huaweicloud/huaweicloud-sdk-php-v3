@@ -5675,11 +5675,11 @@ class FunctionGraphAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['action'] !== null) {
-            $pathParams['action'] = $localVarParams['action'];
-        }
         if ($localVarParams['functionUrn'] !== null) {
             $pathParams['function_urn'] = $localVarParams['functionUrn'];
+        }
+        if ($localVarParams['action'] !== null) {
+            $pathParams['action'] = $localVarParams['action'];
         }
 
         if ($multipart) {

@@ -20,8 +20,8 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * ipVersion  IPv4或IPv6
+    * id  全域弹性公网IP段支持的掩码的ID
+    * ipVersion  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     * mask  掩码长度
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -38,8 +38,8 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * ipVersion  IPv4或IPv6
+    * id  全域弹性公网IP段支持的掩码的ID
+    * ipVersion  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     * mask  掩码长度
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -77,8 +77,8 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * ipVersion  IPv4或IPv6
+    * id  全域弹性公网IP段支持的掩码的ID
+    * ipVersion  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     * mask  掩码长度
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -95,8 +95,8 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * ipVersion  IPv4或IPv6
+    * id  全域弹性公网IP段支持的掩码的ID
+    * ipVersion  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     * mask  掩码长度
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -113,8 +113,8 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * ipVersion  IPv4或IPv6
+    * id  全域弹性公网IP段支持的掩码的ID
+    * ipVersion  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     * mask  掩码长度
     * createdAt  创建时间
     * updatedAt  更新时间
@@ -169,7 +169,22 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const IP_VERSION_4 = 4;
+    const IP_VERSION_6 = 6;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_4,
+            self::IP_VERSION_6,
+        ];
+    }
 
 
     /**
@@ -202,6 +217,14 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -218,7 +241,7 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域弹性公网IP段支持的掩码的ID
     *
     * @return string|null
     */
@@ -230,7 +253,7 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域弹性公网IP段支持的掩码的ID
     *
     * @return $this
     */
@@ -242,7 +265,7 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  IPv4或IPv6
+    *  - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     *
     * @return int|null
     */
@@ -254,7 +277,7 @@ class ListSupportMasks implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion IPv4或IPv6
+    * @param int|null $ipVersion - 功能说明：全域弹性公网IP的版本 - 取值范围：4、6
     *
     * @return $this
     */

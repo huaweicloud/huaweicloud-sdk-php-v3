@@ -20,11 +20,11 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽的ID
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * tags  全域弹性公网IP标签
     * type  全域公网带宽类型
     *
@@ -36,17 +36,17 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
             'chargeMode' => 'string',
             'size' => 'int',
             'name' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]',
+            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]',
             'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽的ID
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * tags  全域弹性公网IP标签
     * type  全域公网带宽类型
     *
@@ -85,11 +85,11 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
+    * id  全域公网带宽的ID
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * tags  全域弹性公网IP标签
     * type  全域公网带宽类型
     *
@@ -107,11 +107,11 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
+    * id  全域公网带宽的ID
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * tags  全域弹性公网IP标签
     * type  全域公网带宽类型
     *
@@ -129,11 +129,11 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
+    * id  全域公网带宽的ID
     * ingressSize  全域公网带宽大小（入云方向）
     * chargeMode  计费模式
     * size  全域公网带宽大小（出云方向）
-    * name  资源名称
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * tags  全域弹性公网IP标签
     * type  全域公网带宽类型
     *
@@ -282,7 +282,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
 
     /**
     * Gets id
-    *  ID
+    *  全域公网带宽的ID
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域公网带宽的ID
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
     * Gets tags
     *  全域弹性公网IP标签
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null
     */
     public function getTags()
     {
@@ -414,7 +414,7 @@ class BatchCreateGlobalEipRequestBodyGlobalEipInternetBandwidthInfo implements M
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]|null $tags 全域弹性公网IP标签
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null $tags 全域弹性公网IP标签
     *
     * @return $this
     */

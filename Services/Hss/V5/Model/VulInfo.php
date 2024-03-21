@@ -23,16 +23,16 @@ class VulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  漏洞ID
     * labelList  漏洞标签
-    * repairNecessity  修复必要性
-    * severityLevel  漏洞级别
+    * repairNecessity  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * severityLevel  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostNum  受影响服务器台数
-    * unhandleHostNum  未处理服务器台数
-    * scanTime  最近扫描时间
-    * solutionDetail  解决方案
+    * unhandleHostNum  未处理主机台数，除已忽略和已修复的主机数量
+    * scanTime  最近扫描时间，时间戳单位：毫秒
+    * solutionDetail  修复漏洞的指导意见
     * url  URL链接
     * description  漏洞描述
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
-    * hostIdList  主机列表
+    * hostIdList  可处置该漏洞的主机列表
     * cveList  CVE列表
     * patchUrl  补丁地址
     * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
@@ -41,6 +41,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * fixedNum  修复数量
     * ignoredNum  忽略数量
     * verifyNum  验证数量
+    * repairPriorityList  修复优先级，每个修复优先级对应的主机数量
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class VulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'int',
             'fixedNum' => 'int',
             'ignoredNum' => 'int',
-            'verifyNum' => 'int'
+            'verifyNum' => 'int',
+            'repairPriorityList' => '\HuaweiCloud\SDK\Hss\V5\Model\RepairPriorityListInfo[]'
     ];
 
     /**
@@ -73,16 +75,16 @@ class VulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  漏洞ID
     * labelList  漏洞标签
-    * repairNecessity  修复必要性
-    * severityLevel  漏洞级别
+    * repairNecessity  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * severityLevel  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostNum  受影响服务器台数
-    * unhandleHostNum  未处理服务器台数
-    * scanTime  最近扫描时间
-    * solutionDetail  解决方案
+    * unhandleHostNum  未处理主机台数，除已忽略和已修复的主机数量
+    * scanTime  最近扫描时间，时间戳单位：毫秒
+    * solutionDetail  修复漏洞的指导意见
     * url  URL链接
     * description  漏洞描述
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
-    * hostIdList  主机列表
+    * hostIdList  可处置该漏洞的主机列表
     * cveList  CVE列表
     * patchUrl  补丁地址
     * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
@@ -91,6 +93,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * fixedNum  修复数量
     * ignoredNum  忽略数量
     * verifyNum  验证数量
+    * repairPriorityList  修复优先级，每个修复优先级对应的主机数量
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class VulInfo implements ModelInterface, ArrayAccess
         'repairSuccessNum' => 'int32',
         'fixedNum' => 'int64',
         'ignoredNum' => 'int64',
-        'verifyNum' => 'int32'
+        'verifyNum' => 'int32',
+        'repairPriorityList' => null
     ];
 
     /**
@@ -144,16 +148,16 @@ class VulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  漏洞ID
     * labelList  漏洞标签
-    * repairNecessity  修复必要性
-    * severityLevel  漏洞级别
+    * repairNecessity  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * severityLevel  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostNum  受影响服务器台数
-    * unhandleHostNum  未处理服务器台数
-    * scanTime  最近扫描时间
-    * solutionDetail  解决方案
+    * unhandleHostNum  未处理主机台数，除已忽略和已修复的主机数量
+    * scanTime  最近扫描时间，时间戳单位：毫秒
+    * solutionDetail  修复漏洞的指导意见
     * url  URL链接
     * description  漏洞描述
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
-    * hostIdList  主机列表
+    * hostIdList  可处置该漏洞的主机列表
     * cveList  CVE列表
     * patchUrl  补丁地址
     * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
@@ -162,6 +166,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * fixedNum  修复数量
     * ignoredNum  忽略数量
     * verifyNum  验证数量
+    * repairPriorityList  修复优先级，每个修复优先级对应的主机数量
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class VulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'repair_success_num',
             'fixedNum' => 'fixed_num',
             'ignoredNum' => 'ignored_num',
-            'verifyNum' => 'verify_num'
+            'verifyNum' => 'verify_num',
+            'repairPriorityList' => 'repair_priority_list'
     ];
 
     /**
@@ -194,16 +200,16 @@ class VulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  漏洞ID
     * labelList  漏洞标签
-    * repairNecessity  修复必要性
-    * severityLevel  漏洞级别
+    * repairNecessity  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * severityLevel  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostNum  受影响服务器台数
-    * unhandleHostNum  未处理服务器台数
-    * scanTime  最近扫描时间
-    * solutionDetail  解决方案
+    * unhandleHostNum  未处理主机台数，除已忽略和已修复的主机数量
+    * scanTime  最近扫描时间，时间戳单位：毫秒
+    * solutionDetail  修复漏洞的指导意见
     * url  URL链接
     * description  漏洞描述
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
-    * hostIdList  主机列表
+    * hostIdList  可处置该漏洞的主机列表
     * cveList  CVE列表
     * patchUrl  补丁地址
     * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
@@ -212,6 +218,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * fixedNum  修复数量
     * ignoredNum  忽略数量
     * verifyNum  验证数量
+    * repairPriorityList  修复优先级，每个修复优先级对应的主机数量
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class VulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'setRepairSuccessNum',
             'fixedNum' => 'setFixedNum',
             'ignoredNum' => 'setIgnoredNum',
-            'verifyNum' => 'setVerifyNum'
+            'verifyNum' => 'setVerifyNum',
+            'repairPriorityList' => 'setRepairPriorityList'
     ];
 
     /**
@@ -244,16 +252,16 @@ class VulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  漏洞ID
     * labelList  漏洞标签
-    * repairNecessity  修复必要性
-    * severityLevel  漏洞级别
+    * repairNecessity  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
+    * severityLevel  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     * hostNum  受影响服务器台数
-    * unhandleHostNum  未处理服务器台数
-    * scanTime  最近扫描时间
-    * solutionDetail  解决方案
+    * unhandleHostNum  未处理主机台数，除已忽略和已修复的主机数量
+    * scanTime  最近扫描时间，时间戳单位：毫秒
+    * solutionDetail  修复漏洞的指导意见
     * url  URL链接
     * description  漏洞描述
     * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞
-    * hostIdList  主机列表
+    * hostIdList  可处置该漏洞的主机列表
     * cveList  CVE列表
     * patchUrl  补丁地址
     * repairPriority  修复优先级 Critical 紧急 High 高 Medium 中 Low 低
@@ -262,6 +270,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     * fixedNum  修复数量
     * ignoredNum  忽略数量
     * verifyNum  验证数量
+    * repairPriorityList  修复优先级，每个修复优先级对应的主机数量
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class VulInfo implements ModelInterface, ArrayAccess
             'repairSuccessNum' => 'getRepairSuccessNum',
             'fixedNum' => 'getFixedNum',
             'ignoredNum' => 'getIgnoredNum',
-            'verifyNum' => 'getVerifyNum'
+            'verifyNum' => 'getVerifyNum',
+            'repairPriorityList' => 'getRepairPriorityList'
     ];
 
     /**
@@ -368,6 +378,7 @@ class VulInfo implements ModelInterface, ArrayAccess
         $this->container['fixedNum'] = isset($data['fixedNum']) ? $data['fixedNum'] : null;
         $this->container['ignoredNum'] = isset($data['ignoredNum']) ? $data['ignoredNum'] : null;
         $this->container['verifyNum'] = isset($data['verifyNum']) ? $data['verifyNum'] : null;
+        $this->container['repairPriorityList'] = isset($data['repairPriorityList']) ? $data['repairPriorityList'] : null;
     }
 
     /**
@@ -568,7 +579,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairNecessity
-    *  修复必要性
+    *  修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -580,7 +591,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairNecessity
     *
-    * @param string|null $repairNecessity 修复必要性
+    * @param string|null $repairNecessity 修复必要性   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -592,7 +603,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  漏洞级别
+    *  漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -604,7 +615,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 漏洞级别
+    * @param string|null $severityLevel 漏洞级别   - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危   - High : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危   - Medium : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危   - Low : 漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -640,7 +651,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unhandleHostNum
-    *  未处理服务器台数
+    *  未处理主机台数，除已忽略和已修复的主机数量
     *
     * @return int|null
     */
@@ -652,7 +663,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unhandleHostNum
     *
-    * @param int|null $unhandleHostNum 未处理服务器台数
+    * @param int|null $unhandleHostNum 未处理主机台数，除已忽略和已修复的主机数量
     *
     * @return $this
     */
@@ -664,7 +675,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  最近扫描时间
+    *  最近扫描时间，时间戳单位：毫秒
     *
     * @return int|null
     */
@@ -676,7 +687,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 最近扫描时间
+    * @param int|null $scanTime 最近扫描时间，时间戳单位：毫秒
     *
     * @return $this
     */
@@ -688,7 +699,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets solutionDetail
-    *  解决方案
+    *  修复漏洞的指导意见
     *
     * @return string|null
     */
@@ -700,7 +711,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets solutionDetail
     *
-    * @param string|null $solutionDetail 解决方案
+    * @param string|null $solutionDetail 修复漏洞的指导意见
     *
     * @return $this
     */
@@ -784,7 +795,7 @@ class VulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  主机列表
+    *  可处置该漏洞的主机列表
     *
     * @return string[]|null
     */
@@ -796,7 +807,7 @@ class VulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 主机列表
+    * @param string[]|null $hostIdList 可处置该漏洞的主机列表
     *
     * @return $this
     */
@@ -995,6 +1006,30 @@ class VulInfo implements ModelInterface, ArrayAccess
     public function setVerifyNum($verifyNum)
     {
         $this->container['verifyNum'] = $verifyNum;
+        return $this;
+    }
+
+    /**
+    * Gets repairPriorityList
+    *  修复优先级，每个修复优先级对应的主机数量
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\RepairPriorityListInfo[]|null
+    */
+    public function getRepairPriorityList()
+    {
+        return $this->container['repairPriorityList'];
+    }
+
+    /**
+    * Sets repairPriorityList
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\RepairPriorityListInfo[]|null $repairPriorityList 修复优先级，每个修复优先级对应的主机数量
+    *
+    * @return $this
+    */
+    public function setRepairPriorityList($repairPriorityList)
+    {
+        $this->container['repairPriorityList'] = $repairPriorityList;
         return $this;
     }
 

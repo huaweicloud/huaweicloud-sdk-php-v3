@@ -24,6 +24,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     * kvResult  kvResult
     * tableResult  tableResult
     * layoutResult  layoutResult
+    * formResult  formResult
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
             'ocrResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerOcrResult',
             'kvResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerKvResult',
             'tableResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerTableResult',
-            'layoutResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerLayoutResult'
+            'layoutResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerLayoutResult',
+            'formResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerFormResult'
     ];
 
     /**
@@ -40,6 +42,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     * kvResult  kvResult
     * tableResult  tableResult
     * layoutResult  layoutResult
+    * formResult  formResult
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
         'ocrResult' => null,
         'kvResult' => null,
         'tableResult' => null,
-        'layoutResult' => null
+        'layoutResult' => null,
+        'formResult' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     * kvResult  kvResult
     * tableResult  tableResult
     * layoutResult  layoutResult
+    * formResult  formResult
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
             'ocrResult' => 'ocr_result',
             'kvResult' => 'kv_result',
             'tableResult' => 'table_result',
-            'layoutResult' => 'layout_result'
+            'layoutResult' => 'layout_result',
+            'formResult' => 'form_result'
     ];
 
     /**
@@ -93,6 +99,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     * kvResult  kvResult
     * tableResult  tableResult
     * layoutResult  layoutResult
+    * formResult  formResult
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
             'ocrResult' => 'setOcrResult',
             'kvResult' => 'setKvResult',
             'tableResult' => 'setTableResult',
-            'layoutResult' => 'setLayoutResult'
+            'layoutResult' => 'setLayoutResult',
+            'formResult' => 'setFormResult'
     ];
 
     /**
@@ -109,6 +117,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     * kvResult  kvResult
     * tableResult  tableResult
     * layoutResult  layoutResult
+    * formResult  formResult
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
             'ocrResult' => 'getOcrResult',
             'kvResult' => 'getKvResult',
             'tableResult' => 'getTableResult',
-            'layoutResult' => 'getLayoutResult'
+            'layoutResult' => 'getLayoutResult',
+            'formResult' => 'getFormResult'
     ];
 
     /**
@@ -181,6 +191,7 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
         $this->container['kvResult'] = isset($data['kvResult']) ? $data['kvResult'] : null;
         $this->container['tableResult'] = isset($data['tableResult']) ? $data['tableResult'] : null;
         $this->container['layoutResult'] = isset($data['layoutResult']) ? $data['layoutResult'] : null;
+        $this->container['formResult'] = isset($data['formResult']) ? $data['formResult'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class SmartDocumentRecognizerResult implements ModelInterface, ArrayAccess
     public function setLayoutResult($layoutResult)
     {
         $this->container['layoutResult'] = $layoutResult;
+        return $this;
+    }
+
+    /**
+    * Gets formResult
+    *  formResult
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerFormResult|null
+    */
+    public function getFormResult()
+    {
+        return $this->container['formResult'];
+    }
+
+    /**
+    * Sets formResult
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerFormResult|null $formResult formResult
+    *
+    * @return $this
+    */
+    public function setFormResult($formResult)
+    {
+        $this->container['formResult'] = $formResult;
         return $this;
     }
 

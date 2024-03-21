@@ -20,8 +20,8 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * internetBandwidthId  全域公网带宽的ID
-    * fields  只显示指定的字段
+    * internetBandwidthId  internetBandwidthId
+    * fields  fields
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * internetBandwidthId  全域公网带宽的ID
-    * fields  只显示指定的字段
+    * internetBandwidthId  internetBandwidthId
+    * fields  fields
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * internetBandwidthId  全域公网带宽的ID
-    * fields  只显示指定的字段
+    * internetBandwidthId  internetBandwidthId
+    * fields  fields
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * internetBandwidthId  全域公网带宽的ID
-    * fields  只显示指定的字段
+    * internetBandwidthId  internetBandwidthId
+    * fields  fields
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * internetBandwidthId  全域公网带宽的ID
-    * fields  只显示指定的字段
+    * internetBandwidthId  internetBandwidthId
+    * fields  fields
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthId
-    *  全域公网带宽的ID
+    *  internetBandwidthId
     *
     * @return string
     */
@@ -258,7 +258,7 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthId
     *
-    * @param string $internetBandwidthId 全域公网带宽的ID
+    * @param string $internetBandwidthId internetBandwidthId
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -282,7 +282,7 @@ class ShowInternetBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */

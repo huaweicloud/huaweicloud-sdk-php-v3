@@ -20,17 +20,16 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  服务器ID
+    * agentId  Agent ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostIp  服务器ip
     * userName  用户名
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
-    * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
     * containerId  容器id
     * containerName  容器名称
@@ -48,7 +47,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userGroupName' => 'string',
             'userHomeDir' => 'string',
             'shell' => 'string',
-            'expireTime' => 'int',
             'recentScanTime' => 'int',
             'containerId' => 'string',
             'containerName' => 'string'
@@ -56,17 +54,16 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
-    * hostId  服务器ID
+    * agentId  Agent ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostIp  服务器ip
     * userName  用户名
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
-    * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
     * containerId  容器id
     * containerName  容器名称
@@ -84,7 +81,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         'userGroupName' => null,
         'userHomeDir' => null,
         'shell' => null,
-        'expireTime' => 'int64',
         'recentScanTime' => 'int64',
         'containerId' => null,
         'containerName' => null
@@ -113,17 +109,16 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
-    * hostId  服务器ID
+    * agentId  Agent ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostIp  服务器ip
     * userName  用户名
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
-    * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
     * containerId  容器id
     * containerName  容器名称
@@ -141,7 +136,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userGroupName' => 'user_group_name',
             'userHomeDir' => 'user_home_dir',
             'shell' => 'shell',
-            'expireTime' => 'expire_time',
             'recentScanTime' => 'recent_scan_time',
             'containerId' => 'container_id',
             'containerName' => 'container_name'
@@ -149,17 +143,16 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
-    * hostId  服务器ID
+    * agentId  Agent ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostIp  服务器ip
     * userName  用户名
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
-    * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
     * containerId  容器id
     * containerName  容器名称
@@ -177,7 +170,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userGroupName' => 'setUserGroupName',
             'userHomeDir' => 'setUserHomeDir',
             'shell' => 'setShell',
-            'expireTime' => 'setExpireTime',
             'recentScanTime' => 'setRecentScanTime',
             'containerId' => 'setContainerId',
             'containerName' => 'setContainerName'
@@ -185,17 +177,16 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
-    * hostId  服务器ID
+    * agentId  Agent ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostIp  服务器ip
     * userName  用户名
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
-    * expireTime  到期时间，采用时间戳，默认毫秒，
     * recentScanTime  最近扫描时间
     * containerId  容器id
     * containerName  容器名称
@@ -213,7 +204,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             'userGroupName' => 'getUserGroupName',
             'userHomeDir' => 'getUserHomeDir',
             'shell' => 'getShell',
-            'expireTime' => 'getExpireTime',
             'recentScanTime' => 'getRecentScanTime',
             'containerId' => 'getContainerId',
             'containerName' => 'getContainerName'
@@ -287,7 +277,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
         $this->container['userGroupName'] = isset($data['userGroupName']) ? $data['userGroupName'] : null;
         $this->container['userHomeDir'] = isset($data['userHomeDir']) ? $data['userHomeDir'] : null;
         $this->container['shell'] = isset($data['shell']) ? $data['shell'] : null;
-        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['recentScanTime'] = isset($data['recentScanTime']) ? $data['recentScanTime'] : null;
         $this->container['containerId'] = isset($data['containerId']) ? $data['containerId'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
@@ -349,12 +338,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['shell']) && (mb_strlen($this->container['shell']) < 1)) {
                 $invalidProperties[] = "invalid value for 'shell', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 4070880000000)) {
-                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 4070880000000.";
-            }
-            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['recentScanTime']) && ($this->container['recentScanTime'] > 4070880000000)) {
                 $invalidProperties[] = "invalid value for 'recentScanTime', must be smaller than or equal to 4070880000000.";
             }
@@ -389,7 +372,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  Agent ID
     *
     * @return string|null
     */
@@ -401,7 +384,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */
@@ -413,7 +396,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -425,7 +408,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -509,7 +492,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  是否有登陆权限
+    *  是否有登录权限
     *
     * @return bool|null
     */
@@ -521,7 +504,7 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission 是否有登陆权限
+    * @param bool|null $loginPermission 是否有登录权限
     *
     * @return $this
     */
@@ -624,30 +607,6 @@ class UserResponseInfo implements ModelInterface, ArrayAccess
     public function setShell($shell)
     {
         $this->container['shell'] = $shell;
-        return $this;
-    }
-
-    /**
-    * Gets expireTime
-    *  到期时间，采用时间戳，默认毫秒，
-    *
-    * @return int|null
-    */
-    public function getExpireTime()
-    {
-        return $this->container['expireTime'];
-    }
-
-    /**
-    * Sets expireTime
-    *
-    * @param int|null $expireTime 到期时间，采用时间戳，默认毫秒，
-    *
-    * @return $this
-    */
-    public function setExpireTime($expireTime)
-    {
-        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

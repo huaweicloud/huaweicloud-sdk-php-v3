@@ -20,8 +20,8 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目
-    * hostId  host id
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * hostId  Host ID
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业项目
-    * hostId  host id
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * hostId  Host ID
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业项目
-    * hostId  host id
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * hostId  Host ID
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业项目
-    * hostId  host id
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * hostId  Host ID
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业项目
-    * hostId  host id
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * hostId  Host ID
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -214,7 +214,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  host id
+    *  Host ID
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class ShowAssetStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId host id
+    * @param string|null $hostId Host ID
     *
     * @return $this
     */

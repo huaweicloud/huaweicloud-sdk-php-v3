@@ -20,11 +20,11 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * gcbId  骨干带宽id
-    * size  骨干带宽大小
+    * gcbId  骨干带宽的ID
+    * size  骨干带宽的大小
     * gcbType  骨干带宽类型（城域、区域和大区）
-    * adminState  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
-    * slaLevel  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * adminState  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
+    * slaLevel  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     * dscp  线路质量金银铜对应的DSCP值
     *
     * @var string[]
@@ -40,11 +40,11 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * gcbId  骨干带宽id
-    * size  骨干带宽大小
+    * gcbId  骨干带宽的ID
+    * size  骨干带宽的大小
     * gcbType  骨干带宽类型（城域、区域和大区）
-    * adminState  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
-    * slaLevel  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * adminState  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
+    * slaLevel  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     * dscp  线路质量金银铜对应的DSCP值
     *
     * @var string[]
@@ -81,11 +81,11 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * gcbId  骨干带宽id
-    * size  骨干带宽大小
+    * gcbId  骨干带宽的ID
+    * size  骨干带宽的大小
     * gcbType  骨干带宽类型（城域、区域和大区）
-    * adminState  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
-    * slaLevel  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * adminState  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
+    * slaLevel  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     * dscp  线路质量金银铜对应的DSCP值
     *
     * @var string[]
@@ -101,11 +101,11 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * gcbId  骨干带宽id
-    * size  骨干带宽大小
+    * gcbId  骨干带宽的ID
+    * size  骨干带宽的大小
     * gcbType  骨干带宽类型（城域、区域和大区）
-    * adminState  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
-    * slaLevel  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * adminState  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
+    * slaLevel  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     * dscp  线路质量金银铜对应的DSCP值
     *
     * @var string[]
@@ -121,11 +121,11 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * gcbId  骨干带宽id
-    * size  骨干带宽大小
+    * gcbId  骨干带宽的ID
+    * size  骨干带宽的大小
     * gcbType  骨干带宽类型（城域、区域和大区）
-    * adminState  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
-    * slaLevel  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * adminState  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
+    * slaLevel  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     * dscp  线路质量金银铜对应的DSCP值
     *
     * @var string[]
@@ -229,7 +229,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gcbId
-    *  骨干带宽id
+    *  骨干带宽的ID
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gcbId
     *
-    * @param string|null $gcbId 骨干带宽id
+    * @param string|null $gcbId 骨干带宽的ID
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  骨干带宽大小
+    *  骨干带宽的大小
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 骨干带宽大小
+    * @param int|null $size 骨干带宽的大小
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminState
-    *  骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
+    *  - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets adminState
     *
-    * @param string|null $adminState 骨干带宽状态，取值：NORMAL 正常、FREEZED 冻结
+    * @param string|null $adminState - 功能说明：骨干带宽状态 - 取值范围：NORMAL 正常、FREEZED 冻结
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets slaLevel
-    *  网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    *  - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class GlobalConnectionBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets slaLevel
     *
-    * @param string|null $slaLevel 网络服务等级。Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
+    * @param string|null $slaLevel - 功能说明：网络服务等级 - 取值范围：Pt - 铂金，Au - 金牌，Ag - 银牌，Cu - 铜牌
     *
     * @return $this
     */

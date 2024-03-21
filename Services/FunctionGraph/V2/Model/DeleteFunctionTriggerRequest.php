@@ -165,6 +165,7 @@ class DeleteFunctionTriggerRequest implements ModelInterface, ArrayAccess
     const TRIGGER_TYPE_CODE_APIC = 'APIC';
     const TRIGGER_TYPE_CODE_GAUSSMONGO = 'GAUSSMONGO';
     const TRIGGER_TYPE_CODE_EVENTGRID = 'EVENTGRID';
+    const TRIGGER_TYPE_CODE_IOTDA = 'IOTDA';
     
 
     /**
@@ -191,6 +192,7 @@ class DeleteFunctionTriggerRequest implements ModelInterface, ArrayAccess
             self::TRIGGER_TYPE_CODE_APIC,
             self::TRIGGER_TYPE_CODE_GAUSSMONGO,
             self::TRIGGER_TYPE_CODE_EVENTGRID,
+            self::TRIGGER_TYPE_CODE_IOTDA,
         ];
     }
 

@@ -23,13 +23,15 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     * switchOption  是否开启自动扩容,true为开启,false为关闭
     * limitSize  扩容上限，单位GB, 取值范围40~4000，需要大于等于实例当前存储空间总大小，switch_option为true必填
     * triggerThreshold  可用存储空间百分比，小于等于此值或者10GB时触发扩容，switch_option为true时必填
+    * stepPercent  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'switchOption' => 'bool',
             'limitSize' => 'int',
-            'triggerThreshold' => 'int'
+            'triggerThreshold' => 'int',
+            'stepPercent' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     * switchOption  是否开启自动扩容,true为开启,false为关闭
     * limitSize  扩容上限，单位GB, 取值范围40~4000，需要大于等于实例当前存储空间总大小，switch_option为true必填
     * triggerThreshold  可用存储空间百分比，小于等于此值或者10GB时触发扩容，switch_option为true时必填
+    * stepPercent  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'switchOption' => null,
         'limitSize' => 'int32',
-        'triggerThreshold' => 'int32'
+        'triggerThreshold' => 'int32',
+        'stepPercent' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     * switchOption  是否开启自动扩容,true为开启,false为关闭
     * limitSize  扩容上限，单位GB, 取值范围40~4000，需要大于等于实例当前存储空间总大小，switch_option为true必填
     * triggerThreshold  可用存储空间百分比，小于等于此值或者10GB时触发扩容，switch_option为true时必填
+    * stepPercent  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'switchOption' => 'switch_option',
             'limitSize' => 'limit_size',
-            'triggerThreshold' => 'trigger_threshold'
+            'triggerThreshold' => 'trigger_threshold',
+            'stepPercent' => 'step_percent'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     * switchOption  是否开启自动扩容,true为开启,false为关闭
     * limitSize  扩容上限，单位GB, 取值范围40~4000，需要大于等于实例当前存储空间总大小，switch_option为true必填
     * triggerThreshold  可用存储空间百分比，小于等于此值或者10GB时触发扩容，switch_option为true时必填
+    * stepPercent  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
     *
     * @var string[]
     */
     protected static $setters = [
             'switchOption' => 'setSwitchOption',
             'limitSize' => 'setLimitSize',
-            'triggerThreshold' => 'setTriggerThreshold'
+            'triggerThreshold' => 'setTriggerThreshold',
+            'stepPercent' => 'setStepPercent'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     * switchOption  是否开启自动扩容,true为开启,false为关闭
     * limitSize  扩容上限，单位GB, 取值范围40~4000，需要大于等于实例当前存储空间总大小，switch_option为true必填
     * triggerThreshold  可用存储空间百分比，小于等于此值或者10GB时触发扩容，switch_option为true时必填
+    * stepPercent  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
     *
     * @var string[]
     */
     protected static $getters = [
             'switchOption' => 'getSwitchOption',
             'limitSize' => 'getLimitSize',
-            'triggerThreshold' => 'getTriggerThreshold'
+            'triggerThreshold' => 'getTriggerThreshold',
+            'stepPercent' => 'getStepPercent'
     ];
 
     /**
@@ -187,6 +197,7 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
         $this->container['switchOption'] = isset($data['switchOption']) ? $data['switchOption'] : null;
         $this->container['limitSize'] = isset($data['limitSize']) ? $data['limitSize'] : null;
         $this->container['triggerThreshold'] = isset($data['triggerThreshold']) ? $data['triggerThreshold'] : null;
+        $this->container['stepPercent'] = isset($data['stepPercent']) ? $data['stepPercent'] : null;
     }
 
     /**
@@ -291,6 +302,30 @@ class CustomerModifyAutoEnlargePolicyReq implements ModelInterface, ArrayAccess
     public function setTriggerThreshold($triggerThreshold)
     {
         $this->container['triggerThreshold'] = $triggerThreshold;
+        return $this;
+    }
+
+    /**
+    * Gets stepPercent
+    *  每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
+    *
+    * @return int|null
+    */
+    public function getStepPercent()
+    {
+        return $this->container['stepPercent'];
+    }
+
+    /**
+    * Sets stepPercent
+    *
+    * @param int|null $stepPercent 每次自动扩容的百分比步长，取值范围5~50，开启自定义步长功能时必填
+    *
+    * @return $this
+    */
+    public function setStepPercent($stepPercent)
+    {
+        $this->container['stepPercent'] = $stepPercent;
         return $this;
     }
 

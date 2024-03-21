@@ -20,17 +20,17 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
-    * type  自启动项类型
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * hostId  host_id
     * hostName  弹性服务器名称
     * hostIp  主机IP
-    * path  路径
-    * hash  文件hash
+    * path  自启动项的路径
+    * hash  采用sha256算法生成的文件hash值
     * runUser  运行用户
     * name  自启动项名称
-    * recentScanTime  最近更新时间
+    * recentScanTime  最近更新时间，13位时间戳
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
-    * type  自启动项类型
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * hostId  host_id
     * hostName  弹性服务器名称
     * hostIp  主机IP
-    * path  路径
-    * hash  文件hash
+    * path  自启动项的路径
+    * hash  采用sha256算法生成的文件hash值
     * runUser  运行用户
     * name  自启动项名称
-    * recentScanTime  最近更新时间
+    * recentScanTime  最近更新时间，13位时间戳
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
-    * type  自启动项类型
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * hostId  host_id
     * hostName  弹性服务器名称
     * hostIp  主机IP
-    * path  路径
-    * hash  文件hash
+    * path  自启动项的路径
+    * hash  采用sha256算法生成的文件hash值
     * runUser  运行用户
     * name  自启动项名称
-    * recentScanTime  最近更新时间
+    * recentScanTime  最近更新时间，13位时间戳
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
-    * type  自启动项类型
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * hostId  host_id
     * hostName  弹性服务器名称
     * hostIp  主机IP
-    * path  路径
-    * hash  文件hash
+    * path  自启动项的路径
+    * hash  采用sha256算法生成的文件hash值
     * runUser  运行用户
     * name  自启动项名称
-    * recentScanTime  最近更新时间
+    * recentScanTime  最近更新时间，13位时间戳
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
-    * type  自启动项类型
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     * hostId  host_id
     * hostName  弹性服务器名称
     * hostIp  主机IP
-    * path  路径
-    * hash  文件hash
+    * path  自启动项的路径
+    * hash  采用sha256算法生成的文件hash值
     * runUser  运行用户
     * name  自启动项名称
-    * recentScanTime  最近更新时间
+    * recentScanTime  最近更新时间，13位时间戳
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  Agent ID
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自启动项类型
+    *  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return int|null
     */
@@ -410,7 +410,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 自启动项类型
+    * @param int|null $type 自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  路径
+    *  自启动项的路径
     *
     * @return string|null
     */
@@ -506,7 +506,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 路径
+    * @param string|null $path 自启动项的路径
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  文件hash
+    *  采用sha256算法生成的文件hash值
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 文件hash
+    * @param string|null $hash 采用sha256算法生成的文件hash值
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  最近更新时间
+    *  最近更新时间，13位时间戳
     *
     * @return int|null
     */
@@ -602,7 +602,7 @@ class AutoLaunchChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 最近更新时间
+    * @param int|null $recentScanTime 最近更新时间，13位时间戳
     *
     * @return $this
     */

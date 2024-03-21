@@ -21,7 +21,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isReserveGcb  解绑实例后是否保留GCB，false表示解绑实例后会同时删除GCB
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isReserveGcb  解绑实例后是否保留GCB，false表示解绑实例后会同时删除GCB
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isReserveGcb  解绑实例后是否保留GCB，false表示解绑实例后会同时删除GCB
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isReserveGcb  解绑实例后是否保留GCB，false表示解绑实例后会同时删除GCB
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isReserveGcb  解绑实例后是否保留GCB，false表示解绑实例后会同时删除GCB
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipId
-    *  global_eip_id
+    *  globalEipId
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class DisassociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipId
     *
-    * @param string $globalEipId global_eip_id
+    * @param string $globalEipId globalEipId
     *
     * @return $this
     */

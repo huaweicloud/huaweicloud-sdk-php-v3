@@ -200,18 +200,6 @@ class UpdateNatGatewaySnatRuleOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['natGatewayId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'natGatewayId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['publicIpAddress']) && (mb_strlen($this->container['publicIpAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'publicIpAddress', the character length must be smaller than or equal to 15.";
-            }
-            if (!is_null($this->container['publicIpAddress']) && (mb_strlen($this->container['publicIpAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'publicIpAddress', the character length must be bigger than or equal to 7.";
-            }
-            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
-            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }

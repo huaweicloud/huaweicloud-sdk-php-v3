@@ -21,7 +21,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  验证是否通过，true:通过，false:不通过
+    * result  验证是否通过，true：通过，false：不通过。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  验证是否通过，true:通过，false:不通过
+    * result  验证是否通过，true：通过，false：不通过。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  验证是否通过，true:通过，false:不通过
+    * result  验证是否通过，true：通过，false：不通过。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  验证是否通过，true:通过，false:不通过
+    * result  验证是否通过，true：通过，false：不通过。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  验证是否通过，true:通过，false:不通过
+    * result  验证是否通过，true：通过，false：不通过。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  验证是否通过，true:通过，false:不通过
+    *  验证是否通过，true：通过，false：不通过。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param bool|null $result 验证是否通过，true:通过，false:不通过
+    * @param bool|null $result 验证是否通过，true：通过，false：不通过。
     *
     * @return $this
     */

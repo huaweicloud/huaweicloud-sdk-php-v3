@@ -372,12 +372,6 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['floatingIpId'] === null) {
             $invalidProperties[] = "'floatingIpId' can't be null";
         }
-            if ((mb_strlen($this->container['floatingIpId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['floatingIpId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
-            }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
@@ -422,30 +416,12 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
         if ($this->container['floatingIpAddress'] === null) {
             $invalidProperties[] = "'floatingIpAddress' can't be null";
         }
-            if ((mb_strlen($this->container['floatingIpAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
-            }
-            if ((mb_strlen($this->container['floatingIpAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
-            }
         if ($this->container['globalEipId'] === null) {
             $invalidProperties[] = "'globalEipId' can't be null";
         }
-            if ((mb_strlen($this->container['globalEipId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['globalEipId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'globalEipId', the character length must be bigger than or equal to 36.";
-            }
         if ($this->container['globalEipAddress'] === null) {
             $invalidProperties[] = "'globalEipAddress' can't be null";
         }
-            if ((mb_strlen($this->container['globalEipAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be smaller than or equal to 15.";
-            }
-            if ((mb_strlen($this->container['globalEipAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'globalEipAddress', the character length must be bigger than or equal to 7.";
-            }
         return $invalidProperties;
     }
 

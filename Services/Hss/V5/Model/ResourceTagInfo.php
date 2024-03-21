@@ -169,16 +169,22 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 128)) {
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 128)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
+            if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 128)) {
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
+            if ((mb_strlen($this->container['value']) > 128)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
+            if ((mb_strlen($this->container['value']) < 1)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -199,7 +205,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     * Gets key
     *  键。最大长度128个unicode字符。 key不能为空
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -209,7 +215,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。最大长度128个unicode字符。 key不能为空
+    * @param string $key 键。最大长度128个unicode字符。 key不能为空
     *
     * @return $this
     */
@@ -223,7 +229,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     * Gets value
     *  值
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -233,7 +239,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值
+    * @param string $value 值
     *
     * @return $this
     */

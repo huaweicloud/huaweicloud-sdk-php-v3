@@ -21,7 +21,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bindingInstanceService  绑定接口可以加，标识请求是从哪个服务调过来的
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bindingInstanceService  绑定接口可以加，标识请求是从哪个服务调过来的
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bindingInstanceService  绑定接口可以加，标识请求是从哪个服务调过来的
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bindingInstanceService  绑定接口可以加，标识请求是从哪个服务调过来的
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bindingInstanceService  绑定接口可以加，标识请求是从哪个服务调过来的
-    * globalEipId  global_eip_id
+    * globalEipId  globalEipId
     * body  body
     *
     * @var string[]
@@ -232,7 +232,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipId
-    *  global_eip_id
+    *  globalEipId
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class AssociateInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipId
     *
-    * @param string $globalEipId global_eip_id
+    * @param string $globalEipId globalEipId
     *
     * @return $this
     */

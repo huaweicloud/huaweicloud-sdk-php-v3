@@ -20,13 +20,15 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * contentType  缺省值:application/json; charset=utf-8
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'contentType' => 'string',
             'region' => 'string',
             'enterpriseProjectId' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\SetRaspSwitchRequestInfo'
@@ -34,13 +36,15 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * contentType  缺省值:application/json; charset=utf-8
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'contentType' => null,
         'region' => null,
         'enterpriseProjectId' => null,
         'body' => null
@@ -69,13 +73,15 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * contentType  缺省值:application/json; charset=utf-8
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'contentType' => 'Content-Type',
             'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
             'body' => 'body'
@@ -83,13 +89,15 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * contentType  缺省值:application/json; charset=utf-8
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'contentType' => 'setContentType',
             'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'body' => 'setBody'
@@ -97,13 +105,15 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * contentType  缺省值:application/json; charset=utf-8
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'contentType' => 'getContentType',
             'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'body' => 'getBody'
@@ -167,6 +177,7 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -180,6 +191,12 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
@@ -210,6 +227,30 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets contentType
+    *  缺省值:application/json; charset=utf-8
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 缺省值:application/json; charset=utf-8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets region
     *  Region Id
     *
@@ -235,7 +276,7 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -247,7 +288,7 @@ class SetRaspSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */

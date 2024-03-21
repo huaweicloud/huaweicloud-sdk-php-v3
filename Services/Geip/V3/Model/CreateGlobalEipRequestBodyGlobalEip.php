@@ -20,13 +20,13 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * geipPoolName  全域弹性公网IP池子名称
     * accessSite  接入点信息
     * internetBandwidthId  全域公网带宽的ID
     * tags  全域弹性公网IP标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * geipPoolName  全域弹性公网IP池子名称
     * accessSite  接入点信息
     * internetBandwidthId  全域公网带宽的ID
     * tags  全域弹性公网IP标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * geipPoolName  全域弹性公网IP池子名称
     * accessSite  接入点信息
     * internetBandwidthId  全域公网带宽的ID
     * tags  全域弹性公网IP标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * geipPoolName  全域弹性公网IP池子名称
     * accessSite  接入点信息
     * internetBandwidthId  全域公网带宽的ID
     * tags  全域弹性公网IP标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源名称
-    * description  用户自定义的资源描述
+    * name  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     * geipPoolName  全域弹性公网IP池子名称
     * accessSite  接入点信息
     * internetBandwidthId  全域公网带宽的ID
     * tags  全域弹性公网IP标签
-    * enterpriseProjectId  资源的企业项目id
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @var string[]
     */
@@ -227,14 +227,14 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
@@ -294,7 +294,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -306,7 +306,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  用户自定义的资源描述
+    *  - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 用户自定义的资源描述
+    * @param string|null $description - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  资源的企业项目id
+    *  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class CreateGlobalEipRequestBodyGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 资源的企业项目id
+    * @param string|null $enterpriseProjectId - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return $this
     */

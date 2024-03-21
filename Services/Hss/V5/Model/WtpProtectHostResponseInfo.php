@@ -21,9 +21,10 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
+    * ipv6  私有IPv6地址
     * groupName  服务器组名称
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
@@ -31,7 +32,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
-    * lastDetectTime  最近检测时间
+    * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -42,6 +43,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'string',
             'publicIp' => 'string',
             'privateIp' => 'string',
+            'ipv6' => 'string',
             'groupName' => 'string',
             'osBit' => 'string',
             'osType' => 'string',
@@ -57,9 +59,10 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
+    * ipv6  私有IPv6地址
     * groupName  服务器组名称
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
@@ -67,7 +70,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
-    * lastDetectTime  最近检测时间
+    * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -78,6 +81,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         'hostId' => null,
         'publicIp' => null,
         'privateIp' => null,
+        'ipv6' => null,
         'groupName' => null,
         'osBit' => null,
         'osType' => null,
@@ -114,9 +118,10 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
+    * ipv6  私有IPv6地址
     * groupName  服务器组名称
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
@@ -124,7 +129,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
-    * lastDetectTime  最近检测时间
+    * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -135,6 +140,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'host_id',
             'publicIp' => 'public_ip',
             'privateIp' => 'private_ip',
+            'ipv6' => 'ipv6',
             'groupName' => 'group_name',
             'osBit' => 'os_bit',
             'osType' => 'os_type',
@@ -150,9 +156,10 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
+    * ipv6  私有IPv6地址
     * groupName  服务器组名称
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
@@ -160,7 +167,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
-    * lastDetectTime  最近检测时间
+    * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -171,6 +178,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'setHostId',
             'publicIp' => 'setPublicIp',
             'privateIp' => 'setPrivateIp',
+            'ipv6' => 'setIpv6',
             'groupName' => 'setGroupName',
             'osBit' => 'setOsBit',
             'osType' => 'setOsType',
@@ -186,9 +194,10 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
+    * ipv6  私有IPv6地址
     * groupName  服务器组名称
     * osBit  操作系统位数
     * osType  操作系统（linux，windows）
@@ -196,7 +205,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * raspProtectStatus  动态网页防篡改状态   - closed : 未开启   - opened : 防护中
     * antiTamperingTimes  已防御篡改攻击次数
     * detectTamperingTimes  已发现篡改攻击
-    * lastDetectTime  最近检测时间
+    * lastDetectTime  最近检测时间(ms)
     * scheduledShutdownStatus  定时关闭防护开关状态   - opened : 开启   - closed : 未开启
     * agentStatus  Agent状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     *
@@ -207,6 +216,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'getHostId',
             'publicIp' => 'getPublicIp',
             'privateIp' => 'getPrivateIp',
+            'ipv6' => 'getIpv6',
             'groupName' => 'getGroupName',
             'osBit' => 'getOsBit',
             'osType' => 'getOsType',
@@ -281,6 +291,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
+        $this->container['ipv6'] = isset($data['ipv6']) ? $data['ipv6'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['osBit'] = isset($data['osBit']) ? $data['osBit'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
@@ -324,6 +335,12 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 0)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) > 256)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 256.";
@@ -425,7 +442,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  云服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -437,7 +454,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 云服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -492,6 +509,30 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     public function setPrivateIp($privateIp)
     {
         $this->container['privateIp'] = $privateIp;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6
+    *  私有IPv6地址
+    *
+    * @return string|null
+    */
+    public function getIpv6()
+    {
+        return $this->container['ipv6'];
+    }
+
+    /**
+    * Sets ipv6
+    *
+    * @param string|null $ipv6 私有IPv6地址
+    *
+    * @return $this
+    */
+    public function setIpv6($ipv6)
+    {
+        $this->container['ipv6'] = $ipv6;
         return $this;
     }
 
@@ -665,7 +706,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastDetectTime
-    *  最近检测时间
+    *  最近检测时间(ms)
     *
     * @return int|null
     */
@@ -677,7 +718,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lastDetectTime
     *
-    * @param int|null $lastDetectTime 最近检测时间
+    * @param int|null $lastDetectTime 最近检测时间(ms)
     *
     * @return $this
     */

@@ -20,9 +20,11 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
-    * hostIp  服务器IP
+    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -31,14 +33,18 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'string',
             'hostName' => 'string',
             'hostIp' => 'string',
+            'privateIp' => 'string',
+            'publicIp' => 'string',
             'weakPwdAccounts' => '\HuaweiCloud\SDK\Hss\V5\Model\WeakPwdAccountInfoResponseInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
-    * hostIp  服务器IP
+    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -47,6 +53,8 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
         'hostId' => null,
         'hostName' => null,
         'hostIp' => null,
+        'privateIp' => null,
+        'publicIp' => null,
         'weakPwdAccounts' => null
     ];
 
@@ -73,9 +81,11 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
-    * hostIp  服务器IP
+    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -84,14 +94,18 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'host_id',
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
+            'privateIp' => 'private_ip',
+            'publicIp' => 'public_ip',
             'weakPwdAccounts' => 'weak_pwd_accounts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
-    * hostIp  服务器IP
+    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -100,14 +114,18 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'setHostId',
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
+            'privateIp' => 'setPrivateIp',
+            'publicIp' => 'setPublicIp',
             'weakPwdAccounts' => 'setWeakPwdAccounts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
-    * hostIp  服务器IP
+    * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
+    * privateIp  服务器私有IP
+    * publicIp  服务器公网IP
     * weakPwdAccounts  弱口令账号列表
     *
     * @var string[]
@@ -116,6 +134,8 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             'hostId' => 'getHostId',
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
+            'privateIp' => 'getPrivateIp',
+            'publicIp' => 'getPublicIp',
             'weakPwdAccounts' => 'getWeakPwdAccounts'
     ];
 
@@ -180,6 +200,8 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
+        $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
+        $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['weakPwdAccounts'] = isset($data['weakPwdAccounts']) ? $data['weakPwdAccounts'] : null;
     }
 
@@ -209,6 +231,18 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -225,7 +259,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -237,7 +271,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -273,7 +307,7 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  服务器IP
+    *  服务器IP（私有IP），为兼容用户使用，不删除此字段
     *
     * @return string|null
     */
@@ -285,13 +319,61 @@ class WeakPwdListInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 服务器IP
+    * @param string|null $hostIp 服务器IP（私有IP），为兼容用户使用，不删除此字段
     *
     * @return $this
     */
     public function setHostIp($hostIp)
     {
         $this->container['hostIp'] = $hostIp;
+        return $this;
+    }
+
+    /**
+    * Gets privateIp
+    *  服务器私有IP
+    *
+    * @return string|null
+    */
+    public function getPrivateIp()
+    {
+        return $this->container['privateIp'];
+    }
+
+    /**
+    * Sets privateIp
+    *
+    * @param string|null $privateIp 服务器私有IP
+    *
+    * @return $this
+    */
+    public function setPrivateIp($privateIp)
+    {
+        $this->container['privateIp'] = $privateIp;
+        return $this;
+    }
+
+    /**
+    * Gets publicIp
+    *  服务器公网IP
+    *
+    * @return string|null
+    */
+    public function getPublicIp()
+    {
+        return $this->container['publicIp'];
+    }
+
+    /**
+    * Sets publicIp
+    *
+    * @param string|null $publicIp 服务器公网IP
+    *
+    * @return $this
+    */
+    public function setPublicIp($publicIp)
+    {
+        $this->container['publicIp'] = $publicIp;
         return $this;
     }
 

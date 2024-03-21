@@ -21,7 +21,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  total number
+    * totalNum  total number of dynamic WTPs
     * dataList  data list
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  total number
+    * totalNum  total number of dynamic WTPs
     * dataList  data list
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  total number
+    * totalNum  total number of dynamic WTPs
     * dataList  data list
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  total number
+    * totalNum  total number of dynamic WTPs
     * dataList  data list
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  total number
+    * totalNum  total number of dynamic WTPs
     * dataList  data list
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets totalNum
-    *  total number
+    *  total number of dynamic WTPs
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListHostRaspProtectHistoryInfoResponse implements ModelInterface, ArrayAcc
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number
+    * @param int|null $totalNum total number of dynamic WTPs
     *
     * @return $this
     */

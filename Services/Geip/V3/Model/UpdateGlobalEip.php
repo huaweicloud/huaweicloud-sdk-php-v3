@@ -20,8 +20,8 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -185,7 +191,7 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域弹性公网IP的ID
     *
     * @return string|null
     */
@@ -197,7 +203,7 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域弹性公网IP的ID
     *
     * @return $this
     */
@@ -209,7 +215,7 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -221,7 +227,7 @@ class UpdateGlobalEip implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * content  测试事件content,为json字符串
+    * content  测试事件content，为json字符串的base64编码
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  测试事件content,为json字符串
+    *  测试事件content，为json字符串的base64编码
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class UpdateEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string $content 测试事件content,为json字符串
+    * @param string $content 测试事件content，为json字符串的base64编码
     *
     * @return $this
     */

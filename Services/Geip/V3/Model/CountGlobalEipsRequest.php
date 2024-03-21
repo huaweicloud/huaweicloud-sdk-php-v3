@@ -20,29 +20,29 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  根据ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * ipAddress  根据ip地址过滤
-    * ipv6Address  根据ipv6地址过滤
-    * freezen  根据是否冻结过滤
-    * polluted  根据是否污染过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * gcbBandwidthIsNull  根据是否绑定骨干带宽过滤
-    * status  根据资源状态过滤
-    * associateInstanceInfoRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInfoPublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInfoInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInfoInstanceType  根据绑定实例的类型过滤
-    * associateInstanceInfoInstanceId  根据绑定实例的ID过滤
-    * associateInstanceInfoProjectId  query by associate_instance_info.project_id
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * ipAddress  ipAddress
+    * ipv6Address  ipv6Address
+    * freezen  freezen
+    * polluted  polluted
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * gcbBandwidthIsNull  gcbBandwidthIsNull
+    * status  status
+    * associateInstanceInfoRegion  associateInstanceInfoRegion
+    * associateInstanceInfoPublicBorderGroup  associateInstanceInfoPublicBorderGroup
+    * associateInstanceInfoInstanceSite  associateInstanceInfoInstanceSite
+    * associateInstanceInfoInstanceType  associateInstanceInfoInstanceType
+    * associateInstanceInfoInstanceId  associateInstanceInfoInstanceId
+    * associateInstanceInfoProjectId  associateInstanceInfoProjectId
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -74,29 +74,29 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  根据ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * ipAddress  根据ip地址过滤
-    * ipv6Address  根据ipv6地址过滤
-    * freezen  根据是否冻结过滤
-    * polluted  根据是否污染过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * gcbBandwidthIsNull  根据是否绑定骨干带宽过滤
-    * status  根据资源状态过滤
-    * associateInstanceInfoRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInfoPublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInfoInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInfoInstanceType  根据绑定实例的类型过滤
-    * associateInstanceInfoInstanceId  根据绑定实例的ID过滤
-    * associateInstanceInfoProjectId  query by associate_instance_info.project_id
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * ipAddress  ipAddress
+    * ipv6Address  ipv6Address
+    * freezen  freezen
+    * polluted  polluted
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * gcbBandwidthIsNull  gcbBandwidthIsNull
+    * status  status
+    * associateInstanceInfoRegion  associateInstanceInfoRegion
+    * associateInstanceInfoPublicBorderGroup  associateInstanceInfoPublicBorderGroup
+    * associateInstanceInfoInstanceSite  associateInstanceInfoInstanceSite
+    * associateInstanceInfoInstanceType  associateInstanceInfoInstanceType
+    * associateInstanceInfoInstanceId  associateInstanceInfoInstanceId
+    * associateInstanceInfoProjectId  associateInstanceInfoProjectId
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -149,29 +149,29 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  根据ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * ipAddress  根据ip地址过滤
-    * ipv6Address  根据ipv6地址过滤
-    * freezen  根据是否冻结过滤
-    * polluted  根据是否污染过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * gcbBandwidthIsNull  根据是否绑定骨干带宽过滤
-    * status  根据资源状态过滤
-    * associateInstanceInfoRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInfoPublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInfoInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInfoInstanceType  根据绑定实例的类型过滤
-    * associateInstanceInfoInstanceId  根据绑定实例的ID过滤
-    * associateInstanceInfoProjectId  query by associate_instance_info.project_id
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * ipAddress  ipAddress
+    * ipv6Address  ipv6Address
+    * freezen  freezen
+    * polluted  polluted
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * gcbBandwidthIsNull  gcbBandwidthIsNull
+    * status  status
+    * associateInstanceInfoRegion  associateInstanceInfoRegion
+    * associateInstanceInfoPublicBorderGroup  associateInstanceInfoPublicBorderGroup
+    * associateInstanceInfoInstanceSite  associateInstanceInfoInstanceSite
+    * associateInstanceInfoInstanceType  associateInstanceInfoInstanceType
+    * associateInstanceInfoInstanceId  associateInstanceInfoInstanceId
+    * associateInstanceInfoProjectId  associateInstanceInfoProjectId
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -203,29 +203,29 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  根据ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * ipAddress  根据ip地址过滤
-    * ipv6Address  根据ipv6地址过滤
-    * freezen  根据是否冻结过滤
-    * polluted  根据是否污染过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * gcbBandwidthIsNull  根据是否绑定骨干带宽过滤
-    * status  根据资源状态过滤
-    * associateInstanceInfoRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInfoPublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInfoInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInfoInstanceType  根据绑定实例的类型过滤
-    * associateInstanceInfoInstanceId  根据绑定实例的ID过滤
-    * associateInstanceInfoProjectId  query by associate_instance_info.project_id
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * ipAddress  ipAddress
+    * ipv6Address  ipv6Address
+    * freezen  freezen
+    * polluted  polluted
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * gcbBandwidthIsNull  gcbBandwidthIsNull
+    * status  status
+    * associateInstanceInfoRegion  associateInstanceInfoRegion
+    * associateInstanceInfoPublicBorderGroup  associateInstanceInfoPublicBorderGroup
+    * associateInstanceInfoInstanceSite  associateInstanceInfoInstanceSite
+    * associateInstanceInfoInstanceType  associateInstanceInfoInstanceType
+    * associateInstanceInfoInstanceId  associateInstanceInfoInstanceId
+    * associateInstanceInfoProjectId  associateInstanceInfoProjectId
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -257,29 +257,29 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  根据ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * ipAddress  根据ip地址过滤
-    * ipv6Address  根据ipv6地址过滤
-    * freezen  根据是否冻结过滤
-    * polluted  根据是否污染过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * gcbBandwidthIsNull  根据是否绑定骨干带宽过滤
-    * status  根据资源状态过滤
-    * associateInstanceInfoRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInfoPublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInfoInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInfoInstanceType  根据绑定实例的类型过滤
-    * associateInstanceInfoInstanceId  根据绑定实例的ID过滤
-    * associateInstanceInfoProjectId  query by associate_instance_info.project_id
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * ipAddress  ipAddress
+    * ipv6Address  ipv6Address
+    * freezen  freezen
+    * polluted  polluted
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * gcbBandwidthIsNull  gcbBandwidthIsNull
+    * status  status
+    * associateInstanceInfoRegion  associateInstanceInfoRegion
+    * associateInstanceInfoPublicBorderGroup  associateInstanceInfoPublicBorderGroup
+    * associateInstanceInfoInstanceSite  associateInstanceInfoInstanceSite
+    * associateInstanceInfoInstanceType  associateInstanceInfoInstanceType
+    * associateInstanceInfoInstanceId  associateInstanceInfoInstanceId
+    * associateInstanceInfoProjectId  associateInstanceInfoProjectId
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -450,7 +450,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -462,7 +462,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthId
-    *  根据全域公网带宽的ID过滤
+    *  internetBandwidthId
     *
     * @return string[]|null
     */
@@ -486,7 +486,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthId
     *
-    * @param string[]|null $internetBandwidthId 根据全域公网带宽的ID过滤
+    * @param string[]|null $internetBandwidthId internetBandwidthId
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称过滤
+    *  name
     *
     * @return string[]|null
     */
@@ -510,7 +510,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名称过滤
+    * @param string[]|null $name name
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameLike
-    *  根据名称模糊匹配
+    *  nameLike
     *
     * @return string|null
     */
@@ -534,7 +534,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nameLike
     *
-    * @param string|null $nameLike 根据名称模糊匹配
+    * @param string|null $nameLike nameLike
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -558,7 +558,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets geipPoolName
-    *  根据全域弹性公网IP池名称过滤
+    *  geipPoolName
     *
     * @return string[]|null
     */
@@ -582,7 +582,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets geipPoolName
     *
-    * @param string[]|null $geipPoolName 根据全域弹性公网IP池名称过滤
+    * @param string[]|null $geipPoolName geipPoolName
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  根据运营商线路过滤
+    *  isp
     *
     * @return string[]|null
     */
@@ -606,7 +606,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 根据运营商线路过滤
+    * @param string[]|null $isp isp
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  根据IP版本过滤
+    *  ipVersion
     *
     * @return int[]|null
     */
@@ -630,7 +630,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int[]|null $ipVersion 根据IP版本过滤
+    * @param int[]|null $ipVersion ipVersion
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  根据ip地址过滤
+    *  ipAddress
     *
     * @return string[]|null
     */
@@ -654,7 +654,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string[]|null $ipAddress 根据ip地址过滤
+    * @param string[]|null $ipAddress ipAddress
     *
     * @return $this
     */
@@ -666,7 +666,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  根据ipv6地址过滤
+    *  ipv6Address
     *
     * @return string[]|null
     */
@@ -678,7 +678,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string[]|null $ipv6Address 根据ipv6地址过滤
+    * @param string[]|null $ipv6Address ipv6Address
     *
     * @return $this
     */
@@ -690,7 +690,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets freezen
-    *  根据是否冻结过滤
+    *  freezen
     *
     * @return bool[]|null
     */
@@ -702,7 +702,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets freezen
     *
-    * @param bool[]|null $freezen 根据是否冻结过滤
+    * @param bool[]|null $freezen freezen
     *
     * @return $this
     */
@@ -714,7 +714,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets polluted
-    *  根据是否污染过滤
+    *  polluted
     *
     * @return bool[]|null
     */
@@ -726,7 +726,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets polluted
     *
-    * @param bool[]|null $polluted 根据是否污染过滤
+    * @param bool[]|null $polluted polluted
     *
     * @return $this
     */
@@ -738,7 +738,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthIsNull
-    *  根据是否绑定全域公网带宽过滤
+    *  internetBandwidthIsNull
     *
     * @return bool[]|null
     */
@@ -750,7 +750,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthIsNull
     *
-    * @param bool[]|null $internetBandwidthIsNull 根据是否绑定全域公网带宽过滤
+    * @param bool[]|null $internetBandwidthIsNull internetBandwidthIsNull
     *
     * @return $this
     */
@@ -762,7 +762,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets gcbBandwidthIsNull
-    *  根据是否绑定骨干带宽过滤
+    *  gcbBandwidthIsNull
     *
     * @return bool[]|null
     */
@@ -774,7 +774,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets gcbBandwidthIsNull
     *
-    * @param bool[]|null $gcbBandwidthIsNull 根据是否绑定骨干带宽过滤
+    * @param bool[]|null $gcbBandwidthIsNull gcbBandwidthIsNull
     *
     * @return $this
     */
@@ -786,7 +786,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据资源状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -798,7 +798,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据资源状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */
@@ -810,7 +810,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoRegion
-    *  根据绑定实例所属的局点过滤
+    *  associateInstanceInfoRegion
     *
     * @return string[]|null
     */
@@ -822,7 +822,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoRegion
     *
-    * @param string[]|null $associateInstanceInfoRegion 根据绑定实例所属的局点过滤
+    * @param string[]|null $associateInstanceInfoRegion associateInstanceInfoRegion
     *
     * @return $this
     */
@@ -834,7 +834,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoPublicBorderGroup
-    *  根据绑定实例所属的边缘信息过滤
+    *  associateInstanceInfoPublicBorderGroup
     *
     * @return string[]|null
     */
@@ -846,7 +846,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoPublicBorderGroup
     *
-    * @param string[]|null $associateInstanceInfoPublicBorderGroup 根据绑定实例所属的边缘信息过滤
+    * @param string[]|null $associateInstanceInfoPublicBorderGroup associateInstanceInfoPublicBorderGroup
     *
     * @return $this
     */
@@ -858,7 +858,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoInstanceSite
-    *  根据绑定实例所在的站点过滤
+    *  associateInstanceInfoInstanceSite
     *
     * @return string[]|null
     */
@@ -870,7 +870,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoInstanceSite
     *
-    * @param string[]|null $associateInstanceInfoInstanceSite 根据绑定实例所在的站点过滤
+    * @param string[]|null $associateInstanceInfoInstanceSite associateInstanceInfoInstanceSite
     *
     * @return $this
     */
@@ -882,7 +882,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoInstanceType
-    *  根据绑定实例的类型过滤
+    *  associateInstanceInfoInstanceType
     *
     * @return string[]|null
     */
@@ -894,7 +894,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoInstanceType
     *
-    * @param string[]|null $associateInstanceInfoInstanceType 根据绑定实例的类型过滤
+    * @param string[]|null $associateInstanceInfoInstanceType associateInstanceInfoInstanceType
     *
     * @return $this
     */
@@ -906,7 +906,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoInstanceId
-    *  根据绑定实例的ID过滤
+    *  associateInstanceInfoInstanceId
     *
     * @return string[]|null
     */
@@ -918,7 +918,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoInstanceId
     *
-    * @param string[]|null $associateInstanceInfoInstanceId 根据绑定实例的ID过滤
+    * @param string[]|null $associateInstanceInfoInstanceId associateInstanceInfoInstanceId
     *
     * @return $this
     */
@@ -930,7 +930,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInfoProjectId
-    *  query by associate_instance_info.project_id
+    *  associateInstanceInfoProjectId
     *
     * @return string[]|null
     */
@@ -942,7 +942,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInfoProjectId
     *
-    * @param string[]|null $associateInstanceInfoProjectId query by associate_instance_info.project_id
+    * @param string[]|null $associateInstanceInfoProjectId associateInstanceInfoProjectId
     *
     * @return $this
     */
@@ -954,7 +954,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤
+    *  enterpriseProjectId
     *
     * @return string[]|null
     */
@@ -966,7 +966,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤
+    * @param string[]|null $enterpriseProjectId enterpriseProjectId
     *
     * @return $this
     */
@@ -978,7 +978,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  根据标签过滤
+    *  tags
     *
     * @return string[]|null
     */
@@ -990,7 +990,7 @@ class CountGlobalEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 根据标签过滤
+    * @param string[]|null $tags tags
     *
     * @return $this
     */

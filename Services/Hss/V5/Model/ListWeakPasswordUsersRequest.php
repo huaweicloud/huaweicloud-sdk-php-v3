@@ -26,7 +26,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     * userName  弱口令账号名称
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -426,7 +426,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return int|null
     */
@@ -438,7 +438,7 @@ class ListWeakPasswordUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return $this
     */

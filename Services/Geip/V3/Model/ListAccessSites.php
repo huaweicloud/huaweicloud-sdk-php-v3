@@ -20,8 +20,8 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  接入点的ID
+    * name  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * proxyRegion  pop站点托管的region(id)
     * iecAzCode  边缘站点az
     * enName  英文名称
@@ -44,8 +44,8 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  接入点的ID
+    * name  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * proxyRegion  pop站点托管的region(id)
     * iecAzCode  边缘站点az
     * enName  英文名称
@@ -89,8 +89,8 @@ class ListAccessSites implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  资源名称
+    * id  接入点的ID
+    * name  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * proxyRegion  pop站点托管的region(id)
     * iecAzCode  边缘站点az
     * enName  英文名称
@@ -113,8 +113,8 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  资源名称
+    * id  接入点的ID
+    * name  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * proxyRegion  pop站点托管的region(id)
     * iecAzCode  边缘站点az
     * enName  英文名称
@@ -137,8 +137,8 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  资源名称
+    * id  接入点的ID
+    * name  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * proxyRegion  pop站点托管的region(id)
     * iecAzCode  边缘站点az
     * enName  英文名称
@@ -235,6 +235,12 @@ class ListAccessSites implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -251,7 +257,7 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  接入点的ID
     *
     * @return string|null
     */
@@ -263,7 +269,7 @@ class ListAccessSites implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 接入点的ID
     *
     * @return $this
     */
@@ -275,7 +281,7 @@ class ListAccessSites implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -287,7 +293,7 @@ class ListAccessSites implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */

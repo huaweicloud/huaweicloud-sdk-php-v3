@@ -22,12 +22,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  region
     * quarkVpcEndpoint  quark后端地址
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
     * serviceType  服务类型
     * serviceId  服务id
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * instanceSite  绑定实例所在的站点
     *
     * @var string[]
@@ -48,12 +48,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * region  region
     * quarkVpcEndpoint  quark后端地址
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
     * serviceType  服务类型
     * serviceId  服务id
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * instanceSite  绑定实例所在的站点
     *
     * @var string[]
@@ -95,12 +95,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  region
     * quarkVpcEndpoint  quark后端地址
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
     * serviceType  服务类型
     * serviceId  服务id
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * instanceSite  绑定实例所在的站点
     *
     * @var string[]
@@ -121,12 +121,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * region  region
     * quarkVpcEndpoint  quark后端地址
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
     * serviceType  服务类型
     * serviceId  服务id
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * instanceSite  绑定实例所在的站点
     *
     * @var string[]
@@ -147,12 +147,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * region  region
     * quarkVpcEndpoint  quark后端地址
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
     * serviceType  服务类型
     * serviceId  服务id
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * instanceSite  绑定实例所在的站点
     *
     * @var string[]
@@ -246,6 +246,12 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -310,7 +316,7 @@ class InstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return string|null
     */
@@ -322,7 +328,7 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return $this
     */
@@ -430,7 +436,7 @@ class InstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  中心站点or边缘站点
+    *  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     *
     * @return string|null
     */
@@ -442,7 +448,7 @@ class InstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 中心站点or边缘站点
+    * @param string|null $publicBorderGroup - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     *
     * @return $this
     */

@@ -24,16 +24,16 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * accessSite  根据接入点过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * status  根据池子状态过滤
-    * type  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * id  id
+    * code  code
+    * accessSite  accessSite
+    * isp  isp
+    * ipVersion  ipVersion
+    * status  status
+    * type  type
     *
     * @var string[]
     */
@@ -60,16 +60,16 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * accessSite  根据接入点过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * status  根据池子状态过滤
-    * type  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * id  id
+    * code  code
+    * accessSite  accessSite
+    * isp  isp
+    * ipVersion  ipVersion
+    * status  status
+    * type  type
     *
     * @var string[]
     */
@@ -117,16 +117,16 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * accessSite  根据接入点过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * status  根据池子状态过滤
-    * type  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * id  id
+    * code  code
+    * accessSite  accessSite
+    * isp  isp
+    * ipVersion  ipVersion
+    * status  status
+    * type  type
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * accessSite  根据接入点过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * status  根据池子状态过滤
-    * type  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * id  id
+    * code  code
+    * accessSite  accessSite
+    * isp  isp
+    * ipVersion  ipVersion
+    * status  status
+    * type  type
     *
     * @var string[]
     */
@@ -189,16 +189,16 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * accessSite  根据接入点过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据IP版本过滤
-    * status  根据池子状态过滤
-    * type  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * id  id
+    * code  code
+    * accessSite  accessSite
+    * isp  isp
+    * ipVersion  ipVersion
+    * status  status
+    * type  type
     *
     * @var string[]
     */
@@ -542,7 +542,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -554,7 +554,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -614,7 +614,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -626,7 +626,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -638,7 +638,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  根据名称过滤
+    *  code
     *
     * @return string[]|null
     */
@@ -650,7 +650,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string[]|null $code 根据名称过滤
+    * @param string[]|null $code code
     *
     * @return $this
     */
@@ -662,7 +662,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -674,7 +674,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -686,7 +686,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  根据运营商线路过滤
+    *  isp
     *
     * @return string[]|null
     */
@@ -698,7 +698,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 根据运营商线路过滤
+    * @param string[]|null $isp isp
     *
     * @return $this
     */
@@ -710,7 +710,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  根据IP版本过滤
+    *  ipVersion
     *
     * @return string[]|null
     */
@@ -722,7 +722,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param string[]|null $ipVersion 根据IP版本过滤
+    * @param string[]|null $ipVersion ipVersion
     *
     * @return $this
     */
@@ -734,7 +734,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据池子状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -746,7 +746,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据池子状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */
@@ -758,7 +758,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    *  type
     *
     * @return string[]|null
     */
@@ -770,7 +770,7 @@ class ListGeipPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type 根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
+    * @param string[]|null $type type
     *
     * @return $this
     */

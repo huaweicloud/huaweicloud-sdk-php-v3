@@ -23,6 +23,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * name  应用名称
     * description  描述
+    * groupId  分组id
     * isDraft  是否为草稿
     * createType  创建类型，创建类型只有一个'template'，即根据模板创建
     * slaveClusterId  自定义slave资源池id
@@ -35,6 +36,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'groupId' => 'string',
             'isDraft' => 'bool',
             'createType' => 'string',
             'slaveClusterId' => 'string',
@@ -47,6 +49,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * name  应用名称
     * description  描述
+    * groupId  分组id
     * isDraft  是否为草稿
     * createType  创建类型，创建类型只有一个'template'，即根据模板创建
     * slaveClusterId  自定义slave资源池id
@@ -59,6 +62,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
         'projectId' => null,
         'name' => null,
         'description' => null,
+        'groupId' => null,
         'isDraft' => null,
         'createType' => null,
         'slaveClusterId' => null,
@@ -92,6 +96,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * name  应用名称
     * description  描述
+    * groupId  分组id
     * isDraft  是否为草稿
     * createType  创建类型，创建类型只有一个'template'，即根据模板创建
     * slaveClusterId  自定义slave资源池id
@@ -104,6 +109,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'name' => 'name',
             'description' => 'description',
+            'groupId' => 'group_id',
             'isDraft' => 'is_draft',
             'createType' => 'create_type',
             'slaveClusterId' => 'slave_cluster_id',
@@ -116,6 +122,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * name  应用名称
     * description  描述
+    * groupId  分组id
     * isDraft  是否为草稿
     * createType  创建类型，创建类型只有一个'template'，即根据模板创建
     * slaveClusterId  自定义slave资源池id
@@ -128,6 +135,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'groupId' => 'setGroupId',
             'isDraft' => 'setIsDraft',
             'createType' => 'setCreateType',
             'slaveClusterId' => 'setSlaveClusterId',
@@ -140,6 +148,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * name  应用名称
     * description  描述
+    * groupId  分组id
     * isDraft  是否为草稿
     * createType  创建类型，创建类型只有一个'template'，即根据模板创建
     * slaveClusterId  自定义slave资源池id
@@ -152,6 +161,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'groupId' => 'getGroupId',
             'isDraft' => 'getIsDraft',
             'createType' => 'getCreateType',
             'slaveClusterId' => 'getSlaveClusterId',
@@ -233,6 +243,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['isDraft'] = isset($data['isDraft']) ? $data['isDraft'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
         $this->container['slaveClusterId'] = isset($data['slaveClusterId']) ? $data['slaveClusterId'] : null;
@@ -366,6 +377,30 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

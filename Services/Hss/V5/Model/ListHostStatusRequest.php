@@ -34,7 +34,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * region  region id
+    * region  Region ID
     * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
@@ -98,7 +98,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * region  region id
+    * region  Region ID
     * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
@@ -183,7 +183,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * region  region id
+    * region  Region ID
     * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
@@ -247,7 +247,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * region  region id
+    * region  Region ID
     * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
@@ -311,7 +311,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
-    * region  region id
+    * region  Region ID
     * hasIntrusion  存在告警事件
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
@@ -939,7 +939,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string|null
     */
@@ -951,7 +951,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region region id
+    * @param string|null $region Region ID
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  受影响的云服务器台数
-    * dataList  受影响的云服务器台数信息
+    * totalNum  受影响的云服务器总数
+    * dataList  受影响的云服务器列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  受影响的云服务器台数
-    * dataList  受影响的云服务器台数信息
+    * totalNum  受影响的云服务器总数
+    * dataList  受影响的云服务器列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  受影响的云服务器台数
-    * dataList  受影响的云服务器台数信息
+    * totalNum  受影响的云服务器总数
+    * dataList  受影响的云服务器列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  受影响的云服务器台数
-    * dataList  受影响的云服务器台数信息
+    * totalNum  受影响的云服务器总数
+    * dataList  受影响的云服务器列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  受影响的云服务器台数
-    * dataList  受影响的云服务器台数信息
+    * totalNum  受影响的云服务器总数
+    * dataList  受影响的云服务器列表
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  受影响的云服务器台数
+    *  受影响的云服务器总数
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 受影响的云服务器台数
+    * @param int|null $totalNum 受影响的云服务器总数
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  受影响的云服务器台数信息
+    *  受影响的云服务器列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListVulHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfo[]|null $dataList 受影响的云服务器台数信息
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfo[]|null $dataList 受影响的云服务器列表
     *
     * @return $this
     */

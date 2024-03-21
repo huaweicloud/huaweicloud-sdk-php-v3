@@ -24,6 +24,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * type  文档区域类别，包含text、table、figure等类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
+    * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    * formId  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
             'location' => 'int[][]',
             'type' => 'string',
             'text' => 'string',
-            'wordsIds' => 'int[]'
+            'wordsIds' => 'int[]',
+            'tableId' => 'int',
+            'formId' => 'int'
     ];
 
     /**
@@ -40,6 +44,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * type  文档区域类别，包含text、table、figure等类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
+    * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    * formId  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
         'location' => 'int32',
         'type' => null,
         'text' => null,
-        'wordsIds' => 'int32'
+        'wordsIds' => 'int32',
+        'tableId' => 'int32',
+        'formId' => 'int32'
     ];
 
     /**
@@ -77,6 +85,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * type  文档区域类别，包含text、table、figure等类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
+    * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    * formId  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
             'location' => 'location',
             'type' => 'type',
             'text' => 'text',
-            'wordsIds' => 'words_ids'
+            'wordsIds' => 'words_ids',
+            'tableId' => 'table_id',
+            'formId' => 'form_id'
     ];
 
     /**
@@ -93,6 +105,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * type  文档区域类别，包含text、table、figure等类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
+    * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    * formId  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
             'location' => 'setLocation',
             'type' => 'setType',
             'text' => 'setText',
-            'wordsIds' => 'setWordsIds'
+            'wordsIds' => 'setWordsIds',
+            'tableId' => 'setTableId',
+            'formId' => 'setFormId'
     ];
 
     /**
@@ -109,6 +125,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * type  文档区域类别，包含text、table、figure等类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
+    * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    * formId  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
             'location' => 'getLocation',
             'type' => 'getType',
             'text' => 'getText',
-            'wordsIds' => 'getWordsIds'
+            'wordsIds' => 'getWordsIds',
+            'tableId' => 'getTableId',
+            'formId' => 'getFormId'
     ];
 
     /**
@@ -181,6 +201,8 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
         $this->container['wordsIds'] = isset($data['wordsIds']) ? $data['wordsIds'] : null;
+        $this->container['tableId'] = isset($data['tableId']) ? $data['tableId'] : null;
+        $this->container['formId'] = isset($data['formId']) ? $data['formId'] : null;
     }
 
     /**
@@ -298,6 +320,54 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     public function setWordsIds($wordsIds)
     {
         $this->container['wordsIds'] = $wordsIds;
+        return $this;
+    }
+
+    /**
+    * Gets tableId
+    *  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    *
+    * @return int|null
+    */
+    public function getTableId()
+    {
+        return $this->container['tableId'];
+    }
+
+    /**
+    * Sets tableId
+    *
+    * @param int|null $tableId 仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+    *
+    * @return $this
+    */
+    public function setTableId($tableId)
+    {
+        $this->container['tableId'] = $tableId;
+        return $this;
+    }
+
+    /**
+    * Gets formId
+    *  仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
+    *
+    * @return int|null
+    */
+    public function getFormId()
+    {
+        return $this->container['formId'];
+    }
+
+    /**
+    * Sets formId
+    *
+    * @param int|null $formId 仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
+    *
+    * @return $this
+    */
+    public function setFormId($formId)
+    {
+        $this->container['formId'] = $formId;
         return $this;
     }
 

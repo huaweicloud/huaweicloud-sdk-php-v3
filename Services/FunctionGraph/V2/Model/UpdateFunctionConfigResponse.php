@@ -63,7 +63,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
@@ -163,7 +163,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
@@ -284,7 +284,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
@@ -384,7 +384,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
@@ -484,7 +484,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     * logStreamId  自定义日志查询流id
     * type  v2表示为正式版本,v1为废弃版本。
     * enableDynamicMemory  是否启动动态内存配置
-    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * isStatefulFunction  是否支持有状态，v2版本支持
     * domainNames  函数配置的需要支持域名解析的内网域名。
     * enableAuthInHeader  是否允许在请求头中添加鉴权信息
     * customImage  customImage
@@ -1787,7 +1787,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isStatefulFunction
-    *  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    *  是否支持有状态，v2版本支持
     *
     * @return bool|null
     */
@@ -1799,7 +1799,7 @@ class UpdateFunctionConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isStatefulFunction
     *
-    * @param bool|null $isStatefulFunction 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * @param bool|null $isStatefulFunction 是否支持有状态，v2版本支持
     *
     * @return $this
     */

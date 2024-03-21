@@ -25,10 +25,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
-    * containerName  容器实例名称
-    * imageName  镜像名称
+    * containerName  容器实例名称，只有容器类型的告警有
+    * imageName  镜像名称，只有容器类型的告警有
     * hostName  服务器名称
-    * hostId  服务器ID
+    * hostId  主机ID
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -39,10 +39,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * attackPhase  攻击阶段，包含如下：   - reconnaissance : 侦查跟踪   - weaponization : 武器构建   - delivery : 载荷投递   - exploit : 漏洞利用   - installation : 安装植入   - command_and_control : 命令与控制   - actions : 目标达成
     * attackTag  攻击标识，包含如下：   - attack_success : 攻击成功   - attack_attempt : 攻击尝试   - attack_blocked : 攻击被阻断   - abnormal_behavior : 异常行为   - collapsible_host : 主机失陷   - system_vulnerability : 系统脆弱性
     * occurTime  发生时间，毫秒
-    * handleTime  处理时间，毫秒
+    * handleTime  处理时间，毫秒，已处理的告警才有
     * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
-    * handler  备注信息
+    * handleMethod  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * handler  备注信息，已处理的告警才有
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
     * forensicInfo  取证信息，json格式
@@ -117,10 +117,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
-    * containerName  容器实例名称
-    * imageName  镜像名称
+    * containerName  容器实例名称，只有容器类型的告警有
+    * imageName  镜像名称，只有容器类型的告警有
     * hostName  服务器名称
-    * hostId  服务器ID
+    * hostId  主机ID
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -131,10 +131,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * attackPhase  攻击阶段，包含如下：   - reconnaissance : 侦查跟踪   - weaponization : 武器构建   - delivery : 载荷投递   - exploit : 漏洞利用   - installation : 安装植入   - command_and_control : 命令与控制   - actions : 目标达成
     * attackTag  攻击标识，包含如下：   - attack_success : 攻击成功   - attack_attempt : 攻击尝试   - attack_blocked : 攻击被阻断   - abnormal_behavior : 异常行为   - collapsible_host : 主机失陷   - system_vulnerability : 系统脆弱性
     * occurTime  发生时间，毫秒
-    * handleTime  处理时间，毫秒
+    * handleTime  处理时间，毫秒，已处理的告警才有
     * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
-    * handler  备注信息
+    * handleMethod  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * handler  备注信息，已处理的告警才有
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
     * forensicInfo  取证信息，json格式
@@ -230,10 +230,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
-    * containerName  容器实例名称
-    * imageName  镜像名称
+    * containerName  容器实例名称，只有容器类型的告警有
+    * imageName  镜像名称，只有容器类型的告警有
     * hostName  服务器名称
-    * hostId  服务器ID
+    * hostId  主机ID
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -244,10 +244,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * attackPhase  攻击阶段，包含如下：   - reconnaissance : 侦查跟踪   - weaponization : 武器构建   - delivery : 载荷投递   - exploit : 漏洞利用   - installation : 安装植入   - command_and_control : 命令与控制   - actions : 目标达成
     * attackTag  攻击标识，包含如下：   - attack_success : 攻击成功   - attack_attempt : 攻击尝试   - attack_blocked : 攻击被阻断   - abnormal_behavior : 异常行为   - collapsible_host : 主机失陷   - system_vulnerability : 系统脆弱性
     * occurTime  发生时间，毫秒
-    * handleTime  处理时间，毫秒
+    * handleTime  处理时间，毫秒，已处理的告警才有
     * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
-    * handler  备注信息
+    * handleMethod  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * handler  备注信息，已处理的告警才有
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
     * forensicInfo  取证信息，json格式
@@ -322,10 +322,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
-    * containerName  容器实例名称
-    * imageName  镜像名称
+    * containerName  容器实例名称，只有容器类型的告警有
+    * imageName  镜像名称，只有容器类型的告警有
     * hostName  服务器名称
-    * hostId  服务器ID
+    * hostId  主机ID
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -336,10 +336,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * attackPhase  攻击阶段，包含如下：   - reconnaissance : 侦查跟踪   - weaponization : 武器构建   - delivery : 载荷投递   - exploit : 漏洞利用   - installation : 安装植入   - command_and_control : 命令与控制   - actions : 目标达成
     * attackTag  攻击标识，包含如下：   - attack_success : 攻击成功   - attack_attempt : 攻击尝试   - attack_blocked : 攻击被阻断   - abnormal_behavior : 异常行为   - collapsible_host : 主机失陷   - system_vulnerability : 系统脆弱性
     * occurTime  发生时间，毫秒
-    * handleTime  处理时间，毫秒
+    * handleTime  处理时间，毫秒，已处理的告警才有
     * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
-    * handler  备注信息
+    * handleMethod  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * handler  备注信息，已处理的告警才有
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
     * forensicInfo  取证信息，json格式
@@ -414,10 +414,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * eventName  事件名称
     * severity  威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
-    * containerName  容器实例名称
-    * imageName  镜像名称
+    * containerName  容器实例名称，只有容器类型的告警有
+    * imageName  镜像名称，只有容器类型的告警有
     * hostName  服务器名称
-    * hostId  服务器ID
+    * hostId  主机ID
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
@@ -428,10 +428,10 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     * attackPhase  攻击阶段，包含如下：   - reconnaissance : 侦查跟踪   - weaponization : 武器构建   - delivery : 载荷投递   - exploit : 漏洞利用   - installation : 安装植入   - command_and_control : 命令与控制   - actions : 目标达成
     * attackTag  攻击标识，包含如下：   - attack_success : 攻击成功   - attack_attempt : 攻击尝试   - attack_blocked : 攻击被阻断   - abnormal_behavior : 异常行为   - collapsible_host : 主机失陷   - system_vulnerability : 系统脆弱性
     * occurTime  发生时间，毫秒
-    * handleTime  处理时间，毫秒
+    * handleTime  处理时间，毫秒，已处理的告警才有
     * handleStatus  处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
-    * handler  备注信息
+    * handleMethod  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * handler  备注信息，已处理的告警才有
     * operateAcceptList  支持的处理操作
     * operateDetailList  操作详情信息列表（页面不展示）
     * forensicInfo  取证信息，json格式
@@ -868,7 +868,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器实例名称
+    *  容器实例名称，只有容器类型的告警有
     *
     * @return string|null
     */
@@ -880,7 +880,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器实例名称
+    * @param string|null $containerName 容器实例名称，只有容器类型的告警有
     *
     * @return $this
     */
@@ -892,7 +892,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  镜像名称，只有容器类型的告警有
     *
     * @return string|null
     */
@@ -904,7 +904,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName 镜像名称，只有容器类型的告警有
     *
     * @return $this
     */
@@ -940,7 +940,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -952,7 +952,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -1204,7 +1204,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleTime
-    *  处理时间，毫秒
+    *  处理时间，毫秒，已处理的告警才有
     *
     * @return int|null
     */
@@ -1216,7 +1216,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleTime
     *
-    * @param int|null $handleTime 处理时间，毫秒
+    * @param int|null $handleTime 处理时间，毫秒，已处理的告警才有
     *
     * @return $this
     */
@@ -1252,7 +1252,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleMethod
-    *  处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    *  处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
     *
     * @return string|null
     */
@@ -1264,7 +1264,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleMethod
     *
-    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
+    * @param string|null $handleMethod 处理方式，已处理的告警才有，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀
     *
     * @return $this
     */
@@ -1276,7 +1276,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handler
-    *  备注信息
+    *  备注信息，已处理的告警才有
     *
     * @return string|null
     */
@@ -1288,7 +1288,7 @@ class EventManagementResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handler
     *
-    * @param string|null $handler 备注信息
+    * @param string|null $handler 备注信息，已处理的告警才有
     *
     * @return $this
     */

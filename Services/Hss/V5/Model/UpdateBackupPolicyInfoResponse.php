@@ -21,26 +21,20 @@ class UpdateBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误编码,成功返回0
-    * errorDescription  错误描述，成功返回success
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'int',
-            'errorDescription' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误编码,成功返回0
-    * errorDescription  错误描述，成功返回success
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => 'int32',
-        'errorDescription' => null
     ];
 
     /**
@@ -66,38 +60,29 @@ class UpdateBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误编码,成功返回0
-    * errorDescription  错误描述，成功返回success
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'errorDescription' => 'error_description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误编码,成功返回0
-    * errorDescription  错误描述，成功返回success
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'errorDescription' => 'setErrorDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误编码,成功返回0
-    * errorDescription  错误描述，成功返回success
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'errorDescription' => 'getErrorDescription'
     ];
 
     /**
@@ -158,8 +143,6 @@ class UpdateBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorDescription'] = isset($data['errorDescription']) ? $data['errorDescription'] : null;
     }
 
     /**
@@ -170,18 +153,6 @@ class UpdateBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['errorCode']) && ($this->container['errorCode'] > 100)) {
-                $invalidProperties[] = "invalid value for 'errorCode', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['errorCode']) && ($this->container['errorCode'] < 0)) {
-                $invalidProperties[] = "invalid value for 'errorCode', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['errorDescription']) && (mb_strlen($this->container['errorDescription']) > 256)) {
-                $invalidProperties[] = "invalid value for 'errorDescription', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['errorDescription']) && (mb_strlen($this->container['errorDescription']) < 1)) {
-                $invalidProperties[] = "invalid value for 'errorDescription', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -194,54 +165,6 @@ class UpdateBackupPolicyInfoResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets errorCode
-    *  错误编码,成功返回0
-    *
-    * @return int|null
-    */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-    * Sets errorCode
-    *
-    * @param int|null $errorCode 错误编码,成功返回0
-    *
-    * @return $this
-    */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-        return $this;
-    }
-
-    /**
-    * Gets errorDescription
-    *  错误描述，成功返回success
-    *
-    * @return string|null
-    */
-    public function getErrorDescription()
-    {
-        return $this->container['errorDescription'];
-    }
-
-    /**
-    * Sets errorDescription
-    *
-    * @param string|null $errorDescription 错误描述，成功返回success
-    *
-    * @return $this
-    */
-    public function setErrorDescription($errorDescription)
-    {
-        $this->container['errorDescription'] = $errorDescription;
-        return $this;
     }
 
     /**

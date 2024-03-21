@@ -21,25 +21,21 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tags  标签对象列表
-    * sysTags  标签对象列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]',
-            'sysTags' => '\HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]'
+            'tags' => '\HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tags  标签对象列表
-    * sysTags  标签对象列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'sysTags' => null
+        'tags' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tags  标签对象列表
-    * sysTags  标签对象列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tags  标签对象列表
-    * sysTags  标签对象列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tags  标签对象列表
-    * sysTags  标签对象列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -158,7 +148,6 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +179,7 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签对象列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]
     */
     public function getTags()
     {
@@ -197,37 +189,13 @@ class BatchCreateTagsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]|null $tags 标签对象列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[] $tags 标签对象列表
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  标签对象列表
-    *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceTagInfo[]|null $sysTags 标签对象列表
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

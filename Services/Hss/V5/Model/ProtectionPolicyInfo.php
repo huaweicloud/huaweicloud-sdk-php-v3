@@ -26,12 +26,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录，选填
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
-    * runtimeDetectionDirectory  运行时检测目录，所有目录是/,现在为保留字段
+    * runtimeDetectionDirectory  运行时检测目录，现在为保留字段
     * countAssociatedServer  关联server个数
-    * operatingSystem  操作系统类型
+    * operatingSystem  操作系统类型。 - Linux - Windows
     * processWhitelist  进程白名单
     * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
@@ -62,12 +62,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录，选填
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
-    * runtimeDetectionDirectory  运行时检测目录，所有目录是/,现在为保留字段
+    * runtimeDetectionDirectory  运行时检测目录，现在为保留字段
     * countAssociatedServer  关联server个数
-    * operatingSystem  操作系统类型
+    * operatingSystem  操作系统类型。 - Linux - Windows
     * processWhitelist  进程白名单
     * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
@@ -119,12 +119,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录，选填
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
-    * runtimeDetectionDirectory  运行时检测目录，所有目录是/,现在为保留字段
+    * runtimeDetectionDirectory  运行时检测目录，现在为保留字段
     * countAssociatedServer  关联server个数
-    * operatingSystem  操作系统类型
+    * operatingSystem  操作系统类型。 - Linux - Windows
     * processWhitelist  进程白名单
     * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
@@ -155,12 +155,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录，选填
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
-    * runtimeDetectionDirectory  运行时检测目录，所有目录是/,现在为保留字段
+    * runtimeDetectionDirectory  运行时检测目录，现在为保留字段
     * countAssociatedServer  关联server个数
-    * operatingSystem  操作系统类型
+    * operatingSystem  操作系统类型。 - Linux - Windows
     * processWhitelist  进程白名单
     * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
@@ -191,12 +191,12 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     * baitProtectionStatus  是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。
     * deployMode  是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
     * protectionDirectory  防护目录
-    * protectionType  防护文件类型
+    * protectionType  防护文件类型，例如：docx，txt，avi
     * excludeDirectory  排除目录，选填
     * runtimeDetectionStatus  是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
-    * runtimeDetectionDirectory  运行时检测目录，所有目录是/,现在为保留字段
+    * runtimeDetectionDirectory  运行时检测目录，现在为保留字段
     * countAssociatedServer  关联server个数
-    * operatingSystem  操作系统类型
+    * operatingSystem  操作系统类型。 - Linux - Windows
     * processWhitelist  进程白名单
     * defaultPolicy  是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
     *
@@ -539,7 +539,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionType
-    *  防护文件类型
+    *  防护文件类型，例如：docx，txt，avi
     *
     * @return string|null
     */
@@ -551,7 +551,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionType
     *
-    * @param string|null $protectionType 防护文件类型
+    * @param string|null $protectionType 防护文件类型，例如：docx，txt，avi
     *
     * @return $this
     */
@@ -611,7 +611,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets runtimeDetectionDirectory
-    *  运行时检测目录，所有目录是/,现在为保留字段
+    *  运行时检测目录，现在为保留字段
     *
     * @return string|null
     */
@@ -623,7 +623,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeDetectionDirectory
     *
-    * @param string|null $runtimeDetectionDirectory 运行时检测目录，所有目录是/,现在为保留字段
+    * @param string|null $runtimeDetectionDirectory 运行时检测目录，现在为保留字段
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingSystem
-    *  操作系统类型
+    *  操作系统类型。 - Linux - Windows
     *
     * @return string|null
     */
@@ -671,7 +671,7 @@ class ProtectionPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operatingSystem
     *
-    * @param string|null $operatingSystem 操作系统类型
+    * @param string|null $operatingSystem 操作系统类型。 - Linux - Windows
     *
     * @return $this
     */

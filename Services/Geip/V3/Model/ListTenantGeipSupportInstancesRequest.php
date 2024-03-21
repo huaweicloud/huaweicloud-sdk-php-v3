@@ -20,8 +20,8 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessSite  接入点信息
-    * fields  只显示指定的字段
+    * accessSite  accessSite
+    * fields  fields
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessSite  接入点信息
-    * fields  只显示指定的字段
+    * accessSite  accessSite
+    * fields  fields
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessSite  接入点信息
-    * fields  只显示指定的字段
+    * accessSite  accessSite
+    * fields  fields
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessSite  接入点信息
-    * fields  只显示指定的字段
+    * accessSite  accessSite
+    * fields  fields
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessSite  接入点信息
-    * fields  只显示指定的字段
+    * accessSite  accessSite
+    * fields  fields
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets accessSite
-    *  接入点信息
+    *  accessSite
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
     /**
     * Sets accessSite
     *
-    * @param string $accessSite 接入点信息
+    * @param string $accessSite accessSite
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -255,7 +255,7 @@ class ListTenantGeipSupportInstancesRequest implements ModelInterface, ArrayAcce
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */

@@ -21,12 +21,12 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -43,12 +43,12 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -86,12 +86,12 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -108,12 +108,12 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -130,12 +130,12 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * checkName  基线名称
-    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -312,7 +312,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  基线名称
+    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return string
     */
@@ -324,7 +324,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string $checkName 基线名称
+    * @param string $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    *  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     *
     * @return string
     */
@@ -348,7 +348,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string $standard 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+    * @param string $standard 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     *
     * @return $this
     */
@@ -432,7 +432,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return int|null
     */
@@ -444,7 +444,7 @@ class ListRiskConfigHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return $this
     */

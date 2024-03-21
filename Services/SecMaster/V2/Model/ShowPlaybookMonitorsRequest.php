@@ -23,9 +23,9 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
     * playbookId  剧本ID
-    * startTime  开始时间
+    * startTime  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     * versionQueryType  统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
-    * endTime  结束时间
+    * endTime  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @var string[]
     */
@@ -43,9 +43,9 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
     * playbookId  剧本ID
-    * startTime  开始时间
+    * startTime  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     * versionQueryType  统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
-    * endTime  结束时间
+    * endTime  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
     * playbookId  剧本ID
-    * startTime  开始时间
+    * startTime  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     * versionQueryType  统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
-    * endTime  结束时间
+    * endTime  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
     * playbookId  剧本ID
-    * startTime  开始时间
+    * startTime  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     * versionQueryType  统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
-    * endTime  结束时间
+    * endTime  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @var string[]
     */
@@ -124,9 +124,9 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
     * playbookId  剧本ID
-    * startTime  开始时间
+    * startTime  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     * versionQueryType  统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
-    * endTime  结束时间
+    * endTime  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @var string[]
     */
@@ -376,7 +376,7 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @return string
     */
@@ -388,7 +388,7 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 开始时间
+    * @param string $startTime 开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @return string
     */
@@ -436,7 +436,7 @@ class ShowPlaybookMonitorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 结束时间
+    * @param string $endTime 结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
     *
     * @return $this
     */

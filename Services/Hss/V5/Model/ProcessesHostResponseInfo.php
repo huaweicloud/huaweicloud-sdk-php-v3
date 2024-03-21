@@ -20,12 +20,12 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hash  文件hash
+    * hash  path对应的sha256值
     * hostIp  主机ip
     * hostName  主机名称
     * launchParams  启动参数
     * launchTime  启动时间
-    * processPath  进程路径
+    * processPath  进程可执行文件路径
     * processPid  进程pid
     * runPermission  文件权限
     * containerId  容器id
@@ -48,12 +48,12 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hash  文件hash
+    * hash  path对应的sha256值
     * hostIp  主机ip
     * hostName  主机名称
     * launchParams  启动参数
     * launchTime  启动时间
-    * processPath  进程路径
+    * processPath  进程可执行文件路径
     * processPid  进程pid
     * runPermission  文件权限
     * containerId  容器id
@@ -97,12 +97,12 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hash  文件hash
+    * hash  path对应的sha256值
     * hostIp  主机ip
     * hostName  主机名称
     * launchParams  启动参数
     * launchTime  启动时间
-    * processPath  进程路径
+    * processPath  进程可执行文件路径
     * processPid  进程pid
     * runPermission  文件权限
     * containerId  容器id
@@ -125,12 +125,12 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hash  文件hash
+    * hash  path对应的sha256值
     * hostIp  主机ip
     * hostName  主机名称
     * launchParams  启动参数
     * launchTime  启动时间
-    * processPath  进程路径
+    * processPath  进程可执行文件路径
     * processPid  进程pid
     * runPermission  文件权限
     * containerId  容器id
@@ -153,12 +153,12 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hash  文件hash
+    * hash  path对应的sha256值
     * hostIp  主机ip
     * hostName  主机名称
     * launchParams  启动参数
     * launchTime  启动时间
-    * processPath  进程路径
+    * processPath  进程可执行文件路径
     * processPid  进程pid
     * runPermission  文件权限
     * containerId  容器id
@@ -333,7 +333,7 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  文件hash
+    *  path对应的sha256值
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 文件hash
+    * @param string|null $hash path对应的sha256值
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets processPath
-    *  进程路径
+    *  进程可执行文件路径
     *
     * @return string|null
     */
@@ -465,7 +465,7 @@ class ProcessesHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets processPath
     *
-    * @param string|null $processPath 进程路径
+    * @param string|null $processPath 进程可执行文件路径
     *
     * @return $this
     */

@@ -22,11 +22,11 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * hostIp  服务器ip
     * hostName  服务器名称
-    * alarmTime  告警时间
+    * alarmTime  动态网页防篡改的告警时间(ms)
     * threatType  威胁类型
     * alarmLevel  告警级别
-    * sourceIp  源IP
-    * attackedUrl  攻击URL
+    * sourceIp  攻击主机的源IP
+    * attackedUrl  攻击请求的URL
     *
     * @var string[]
     */
@@ -44,11 +44,11 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * hostIp  服务器ip
     * hostName  服务器名称
-    * alarmTime  告警时间
+    * alarmTime  动态网页防篡改的告警时间(ms)
     * threatType  威胁类型
     * alarmLevel  告警级别
-    * sourceIp  源IP
-    * attackedUrl  攻击URL
+    * sourceIp  攻击主机的源IP
+    * attackedUrl  攻击请求的URL
     *
     * @var string[]
     */
@@ -87,11 +87,11 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * hostIp  服务器ip
     * hostName  服务器名称
-    * alarmTime  告警时间
+    * alarmTime  动态网页防篡改的告警时间(ms)
     * threatType  威胁类型
     * alarmLevel  告警级别
-    * sourceIp  源IP
-    * attackedUrl  攻击URL
+    * sourceIp  攻击主机的源IP
+    * attackedUrl  攻击请求的URL
     *
     * @var string[]
     */
@@ -109,11 +109,11 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * hostIp  服务器ip
     * hostName  服务器名称
-    * alarmTime  告警时间
+    * alarmTime  动态网页防篡改的告警时间(ms)
     * threatType  威胁类型
     * alarmLevel  告警级别
-    * sourceIp  源IP
-    * attackedUrl  攻击URL
+    * sourceIp  攻击主机的源IP
+    * attackedUrl  攻击请求的URL
     *
     * @var string[]
     */
@@ -131,11 +131,11 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * hostIp  服务器ip
     * hostName  服务器名称
-    * alarmTime  告警时间
+    * alarmTime  动态网页防篡改的告警时间(ms)
     * threatType  威胁类型
     * alarmLevel  告警级别
-    * sourceIp  源IP
-    * attackedUrl  攻击URL
+    * sourceIp  攻击主机的源IP
+    * attackedUrl  攻击请求的URL
     *
     * @var string[]
     */
@@ -330,7 +330,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTime
-    *  告警时间
+    *  动态网页防篡改的告警时间(ms)
     *
     * @return int|null
     */
@@ -342,7 +342,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTime
     *
-    * @param int|null $alarmTime 告警时间
+    * @param int|null $alarmTime 动态网页防篡改的告警时间(ms)
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIp
-    *  源IP
+    *  攻击主机的源IP
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceIp
     *
-    * @param string|null $sourceIp 源IP
+    * @param string|null $sourceIp 攻击主机的源IP
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackedUrl
-    *  攻击URL
+    *  攻击请求的URL
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class HostRaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attackedUrl
     *
-    * @param string|null $attackedUrl 攻击URL
+    * @param string|null $attackedUrl 攻击请求的URL
     *
     * @return $this
     */

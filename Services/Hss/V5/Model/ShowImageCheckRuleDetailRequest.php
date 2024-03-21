@@ -20,7 +20,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -50,7 +50,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -101,7 +101,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -131,7 +131,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -161,7 +161,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * namespace  组织名称（没有镜像相关信息时，表示查询所有镜像）
@@ -374,7 +374,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -386,7 +386,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class BatchDeleteV2RequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodyTags[]',
-            'sysTags' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodySysTags[]'
+            'sysTags' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodyTags[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class BatchDeleteV2RequestBody implements ModelInterface, ArrayAccess
     * Gets sysTags
     *  系统标签
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodySysTags[]|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodyTags[]|null
     */
     public function getSysTags()
     {
@@ -224,7 +224,7 @@ class BatchDeleteV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodySysTags[]|null $sysTags 系统标签
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchDeleteV2RequestBodyTags[]|null $sysTags 系统标签
     *
     * @return $this
     */

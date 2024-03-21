@@ -21,13 +21,13 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
-    * alarmLevel  告警级别
+    * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     *
@@ -49,13 +49,13 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
-    * alarmLevel  告警级别
+    * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     *
@@ -98,13 +98,13 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
-    * alarmLevel  告警级别
+    * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     *
@@ -126,13 +126,13 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
-    * alarmLevel  告警级别
+    * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     *
@@ -154,13 +154,13 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
-    * alarmLevel  告警级别
+    * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     *
@@ -272,13 +272,10 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['hostId'] === null) {
-            $invalidProperties[] = "'hostId' can't be null";
-        }
-            if ((mb_strlen($this->container['hostId']) > 128)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['hostId']) < 0)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['startTime'] === null) {
@@ -375,7 +372,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -387,7 +384,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */
@@ -399,9 +396,9 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets hostId
-    *  Host Id
+    *  Host Id，为空时查所有主机
     *
-    * @return string
+    * @return string|null
     */
     public function getHostId()
     {
@@ -411,7 +408,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets hostId
     *
-    * @param string $hostId Host Id
+    * @param string|null $hostId Host Id，为空时查所有主机
     *
     * @return $this
     */
@@ -423,7 +420,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets startTime
-    *  起始时间
+    *  起始时间(ms)
     *
     * @return int
     */
@@ -435,7 +432,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets startTime
     *
-    * @param int $startTime 起始时间
+    * @param int $startTime 起始时间(ms)
     *
     * @return $this
     */
@@ -447,7 +444,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets endTime
-    *  终止时间
+    *  终止时间(ms)
     *
     * @return int
     */
@@ -459,7 +456,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets endTime
     *
-    * @param int $endTime 终止时间
+    * @param int $endTime 终止时间(ms)
     *
     * @return $this
     */
@@ -519,7 +516,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets alarmLevel
-    *  告警级别
+    *  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     *
     * @return int|null
     */
@@ -531,7 +528,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets alarmLevel
     *
-    * @param int|null $alarmLevel 告警级别
+    * @param int|null $alarmLevel 告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     *
     * @return $this
     */

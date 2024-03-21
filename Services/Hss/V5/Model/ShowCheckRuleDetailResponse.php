@@ -21,10 +21,10 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  描述
-    * reference  根据
-    * audit  审计描述
-    * remediation  修改建议
+    * description  当前检查项（检测规则）的描述
+    * reference  当前检查项（检测规则）的制定依据
+    * audit  当前检查项（检测规则）的审计描述
+    * remediation  当前检查项（检测规则）的修改建议
     * checkInfoList  检测用例信息
     *
     * @var string[]
@@ -39,10 +39,10 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  描述
-    * reference  根据
-    * audit  审计描述
-    * remediation  修改建议
+    * description  当前检查项（检测规则）的描述
+    * reference  当前检查项（检测规则）的制定依据
+    * audit  当前检查项（检测规则）的审计描述
+    * remediation  当前检查项（检测规则）的修改建议
     * checkInfoList  检测用例信息
     *
     * @var string[]
@@ -78,10 +78,10 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  描述
-    * reference  根据
-    * audit  审计描述
-    * remediation  修改建议
+    * description  当前检查项（检测规则）的描述
+    * reference  当前检查项（检测规则）的制定依据
+    * audit  当前检查项（检测规则）的审计描述
+    * remediation  当前检查项（检测规则）的修改建议
     * checkInfoList  检测用例信息
     *
     * @var string[]
@@ -96,10 +96,10 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  描述
-    * reference  根据
-    * audit  审计描述
-    * remediation  修改建议
+    * description  当前检查项（检测规则）的描述
+    * reference  当前检查项（检测规则）的制定依据
+    * audit  当前检查项（检测规则）的审计描述
+    * remediation  当前检查项（检测规则）的修改建议
     * checkInfoList  检测用例信息
     *
     * @var string[]
@@ -114,10 +114,10 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  描述
-    * reference  根据
-    * audit  审计描述
-    * remediation  修改建议
+    * description  当前检查项（检测规则）的描述
+    * reference  当前检查项（检测规则）的制定依据
+    * audit  当前检查项（检测规则）的审计描述
+    * remediation  当前检查项（检测规则）的修改建议
     * checkInfoList  检测用例信息
     *
     * @var string[]
@@ -243,7 +243,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  当前检查项（检测规则）的描述
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 当前检查项（检测规则）的描述
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets reference
-    *  根据
+    *  当前检查项（检测规则）的制定依据
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets reference
     *
-    * @param string|null $reference 根据
+    * @param string|null $reference 当前检查项（检测规则）的制定依据
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audit
-    *  审计描述
+    *  当前检查项（检测规则）的审计描述
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets audit
     *
-    * @param string|null $audit 审计描述
+    * @param string|null $audit 当前检查项（检测规则）的审计描述
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remediation
-    *  修改建议
+    *  当前检查项（检测规则）的修改建议
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class ShowCheckRuleDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remediation
     *
-    * @param string|null $remediation 修改建议
+    * @param string|null $remediation 当前检查项（检测规则）的修改建议
     *
     * @return $this
     */

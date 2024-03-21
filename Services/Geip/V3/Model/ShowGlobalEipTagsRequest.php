@@ -20,7 +20,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  全域弹性公网IP的id
+    * resourceId  resourceId
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  全域弹性公网IP的id
+    * resourceId  resourceId
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  全域弹性公网IP的id
+    * resourceId  resourceId
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  全域弹性公网IP的id
+    * resourceId  resourceId
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  全域弹性公网IP的id
+    * resourceId  resourceId
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  全域弹性公网IP的id
+    *  resourceId
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class ShowGlobalEipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 全域弹性公网IP的id
+    * @param string $resourceId resourceId
     *
     * @return $this
     */

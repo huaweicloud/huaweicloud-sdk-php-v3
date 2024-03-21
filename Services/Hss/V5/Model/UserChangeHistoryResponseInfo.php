@@ -22,17 +22,17 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * agentId  Agent ID
     * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * privateIp  服务器私有IP
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
     * userName  账号名称
     * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  变更时间
+    * recentScanTime  账号增加、修改、删除等操作的变更时间
     *
     * @var string[]
     */
@@ -56,17 +56,17 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * agentId  Agent ID
     * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * privateIp  服务器私有IP
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
     * userName  账号名称
     * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  变更时间
+    * recentScanTime  账号增加、修改、删除等操作的变更时间
     *
     * @var string[]
     */
@@ -111,17 +111,17 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * agentId  Agent ID
     * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * privateIp  服务器私有IP
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
     * userName  账号名称
     * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  变更时间
+    * recentScanTime  账号增加、修改、删除等操作的变更时间
     *
     * @var string[]
     */
@@ -145,17 +145,17 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  Agent ID
     * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * privateIp  服务器私有IP
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
     * userName  账号名称
     * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  变更时间
+    * recentScanTime  账号增加、修改、删除等操作的变更时间
     *
     * @var string[]
     */
@@ -179,17 +179,17 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  Agent ID
     * changeType  变更类型   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * privateIp  服务器私有IP
-    * loginPermission  是否有登陆权限
+    * loginPermission  是否有登录权限
     * rootPermission  是否有root权限
     * userGroupName  用户组
     * userHomeDir  用户目录
     * shell  用户启动shell
     * userName  账号名称
     * expireTime  到期时间，采用时间戳，默认毫秒，
-    * recentScanTime  变更时间
+    * recentScanTime  账号增加、修改、删除等操作的变更时间
     *
     * @var string[]
     */
@@ -420,7 +420,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -432,7 +432,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -492,7 +492,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  是否有登陆权限
+    *  是否有登录权限
     *
     * @return bool|null
     */
@@ -504,7 +504,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission 是否有登陆权限
+    * @param bool|null $loginPermission 是否有登录权限
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  变更时间
+    *  账号增加、修改、删除等操作的变更时间
     *
     * @return int|null
     */
@@ -672,7 +672,7 @@ class UserChangeHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 变更时间
+    * @param int|null $recentScanTime 账号增加、修改、删除等操作的变更时间
     *
     * @return $this
     */

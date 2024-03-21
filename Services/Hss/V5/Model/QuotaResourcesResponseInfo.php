@@ -24,7 +24,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
     * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
     * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
@@ -56,7 +56,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
     * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
     * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
@@ -109,7 +109,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
     * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
     * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
@@ -141,7 +141,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
     * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
     * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
@@ -173,7 +173,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * version  资源规格编码，包含如下:   - hss.version.basic : 基础版   - hss.version.advanced : 专业版   - hss.version.enterprise : 企业版   - hss.version.premium : 旗舰版   - hss.version.wtp : 网页防篡改版   - hss.version.container : 容器版
     * quotaStatus  配额状态   - normal : 正常   - expired : 已过期   - freeze : 已冻结
     * usedStatus  使用状态   - idle : 空闲   - used : 使用中
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * chargingMode  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     * tags  标签
@@ -457,7 +457,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */

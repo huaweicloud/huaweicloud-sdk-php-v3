@@ -262,9 +262,6 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['dataList'] === null) {
-            $invalidProperties[] = "'dataList' can't be null";
-        }
             if (!is_null($this->container['backupInfoId']) && (mb_strlen($this->container['backupInfoId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'backupInfoId', the character length must be smaller than or equal to 128.";
             }
@@ -385,7 +382,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     * Gets dataList
     *  漏洞列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]|null
     */
     public function getDataList()
     {
@@ -395,7 +392,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[] $dataList 漏洞列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]|null $dataList 漏洞列表
     *
     * @return $this
     */

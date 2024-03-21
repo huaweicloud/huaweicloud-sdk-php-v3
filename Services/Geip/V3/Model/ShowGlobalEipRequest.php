@@ -20,8 +20,8 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalEipId  global_eip_id
-    * fields  只显示指定的字段
+    * globalEipId  globalEipId
+    * fields  fields
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalEipId  global_eip_id
-    * fields  只显示指定的字段
+    * globalEipId  globalEipId
+    * fields  fields
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalEipId  global_eip_id
-    * fields  只显示指定的字段
+    * globalEipId  globalEipId
+    * fields  fields
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalEipId  global_eip_id
-    * fields  只显示指定的字段
+    * globalEipId  globalEipId
+    * fields  fields
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalEipId  global_eip_id
-    * fields  只显示指定的字段
+    * globalEipId  globalEipId
+    * fields  fields
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipId
-    *  global_eip_id
+    *  globalEipId
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipId
     *
-    * @param string $globalEipId global_eip_id
+    * @param string $globalEipId globalEipId
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -290,7 +290,7 @@ class ShowGlobalEipRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */

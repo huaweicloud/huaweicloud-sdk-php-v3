@@ -20,14 +20,14 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
-    * description  description
-    * type  type
-    * enterpriseProjectId  资源的企业项目id
+    * id  骨干带宽的ID
+    * name  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  骨干带宽描述信息
+    * type  骨干带宽类型
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * chargeMode  计费模式
-    * bandwidth  bandwidth
-    * size  大小
+    * bandwidth  域间带宽值
+    * size  域间带宽大小
     * localArea  骨干带宽的两端之一：A点
     * remoteArea  骨干带宽的两端之一：B点
     * tags  全域弹性公网IP标签
@@ -45,19 +45,19 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
             'size' => 'int',
             'localArea' => 'string',
             'remoteArea' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]'
+            'tags' => '\HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
-    * description  description
-    * type  type
-    * enterpriseProjectId  资源的企业项目id
+    * id  骨干带宽的ID
+    * name  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  骨干带宽描述信息
+    * type  骨干带宽类型
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * chargeMode  计费模式
-    * bandwidth  bandwidth
-    * size  大小
+    * bandwidth  域间带宽值
+    * size  域间带宽大小
     * localArea  骨干带宽的两端之一：A点
     * remoteArea  骨干带宽的两端之一：B点
     * tags  全域弹性公网IP标签
@@ -101,14 +101,14 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  资源名称
-    * description  description
-    * type  type
-    * enterpriseProjectId  资源的企业项目id
+    * id  骨干带宽的ID
+    * name  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  骨干带宽描述信息
+    * type  骨干带宽类型
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * chargeMode  计费模式
-    * bandwidth  bandwidth
-    * size  大小
+    * bandwidth  域间带宽值
+    * size  域间带宽大小
     * localArea  骨干带宽的两端之一：A点
     * remoteArea  骨干带宽的两端之一：B点
     * tags  全域弹性公网IP标签
@@ -131,14 +131,14 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  资源名称
-    * description  description
-    * type  type
-    * enterpriseProjectId  资源的企业项目id
+    * id  骨干带宽的ID
+    * name  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  骨干带宽描述信息
+    * type  骨干带宽类型
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * chargeMode  计费模式
-    * bandwidth  bandwidth
-    * size  大小
+    * bandwidth  域间带宽值
+    * size  域间带宽大小
     * localArea  骨干带宽的两端之一：A点
     * remoteArea  骨干带宽的两端之一：B点
     * tags  全域弹性公网IP标签
@@ -161,14 +161,14 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  资源名称
-    * description  description
-    * type  type
-    * enterpriseProjectId  资源的企业项目id
+    * id  骨干带宽的ID
+    * name  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  骨干带宽描述信息
+    * type  骨干带宽类型
+    * enterpriseProjectId  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * chargeMode  计费模式
-    * bandwidth  bandwidth
-    * size  大小
+    * bandwidth  域间带宽值
+    * size  域间带宽大小
     * localArea  骨干带宽的两端之一：A点
     * remoteArea  骨干带宽的两端之一：B点
     * tags  全域弹性公网IP标签
@@ -306,8 +306,8 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5A-Za-z0-9_.-]+$/.";
@@ -392,7 +392,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets id
-    *  ID
+    *  骨干带宽的ID
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 骨干带宽的ID
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets description
-    *  description
+    *  骨干带宽描述信息
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 骨干带宽描述信息
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets type
-    *  type
+    *  骨干带宽类型
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets type
     *
-    * @param string|null $type type
+    * @param string|null $type 骨干带宽类型
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets enterpriseProjectId
-    *  资源的企业项目id
+    *  - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 资源的企业项目id
+    * @param string|null $enterpriseProjectId - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets bandwidth
-    *  bandwidth
+    *  域间带宽值
     *
     * @return int|null
     */
@@ -548,7 +548,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth bandwidth
+    * @param int|null $bandwidth 域间带宽值
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
 
     /**
     * Gets size
-    *  大小
+    *  域间带宽大小
     *
     * @return int|null
     */
@@ -572,7 +572,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets size
     *
-    * @param int|null $size 大小
+    * @param int|null $size 域间带宽大小
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     * Gets tags
     *  全域弹性公网IP标签
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null
     */
     public function getTags()
     {
@@ -644,7 +644,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo implements M
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags[]|null $tags 全域弹性公网IP标签
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CreateGlobalEipRequestBodyGlobalEipTags[]|null $tags 全域弹性公网IP标签
     *
     * @return $this
     */

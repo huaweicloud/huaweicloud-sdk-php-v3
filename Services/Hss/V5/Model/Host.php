@@ -45,9 +45,9 @@ class Host implements ModelInterface, ArrayAccess
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * asset  资产风险
-    * vulnerability  漏洞风险
-    * baseline  基线风险
-    * intrusion  入侵风险
+    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * baseline  基线风险总数，包含配置风险、弱口令
+    * intrusion  入侵风险总数
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * labels  标签列表
     * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
@@ -129,9 +129,9 @@ class Host implements ModelInterface, ArrayAccess
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * asset  资产风险
-    * vulnerability  漏洞风险
-    * baseline  基线风险
-    * intrusion  入侵风险
+    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * baseline  基线风险总数，包含配置风险、弱口令
+    * intrusion  入侵风险总数
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * labels  标签列表
     * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
@@ -234,9 +234,9 @@ class Host implements ModelInterface, ArrayAccess
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * asset  资产风险
-    * vulnerability  漏洞风险
-    * baseline  基线风险
-    * intrusion  入侵风险
+    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * baseline  基线风险总数，包含配置风险、弱口令
+    * intrusion  入侵风险总数
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * labels  标签列表
     * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
@@ -318,9 +318,9 @@ class Host implements ModelInterface, ArrayAccess
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * asset  资产风险
-    * vulnerability  漏洞风险
-    * baseline  基线风险
-    * intrusion  入侵风险
+    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * baseline  基线风险总数，包含配置风险、弱口令
+    * intrusion  入侵风险总数
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * labels  标签列表
     * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
@@ -402,9 +402,9 @@ class Host implements ModelInterface, ArrayAccess
     * policyGroupId  策略组ID
     * policyGroupName  策略组名称
     * asset  资产风险
-    * vulnerability  漏洞风险
-    * baseline  基线风险
-    * intrusion  入侵风险
+    * vulnerability  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
+    * baseline  基线风险总数，包含配置风险、弱口令
+    * intrusion  入侵风险总数
     * assetValue  资产重要性，包含如下4种   - important ：重要资产   - common ：一般资产   - test ：测试资产
     * labels  标签列表
     * agentCreateTime  agent安装时间，采用时间戳，默认毫秒，
@@ -1385,7 +1385,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulnerability
-    *  漏洞风险
+    *  漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
     *
     * @return int|null
     */
@@ -1397,7 +1397,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets vulnerability
     *
-    * @param int|null $vulnerability 漏洞风险
+    * @param int|null $vulnerability 漏洞风险总数，包含Linux软件漏洞、Windows系统漏洞、Web-CMS漏洞、应用漏洞
     *
     * @return $this
     */
@@ -1409,7 +1409,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseline
-    *  基线风险
+    *  基线风险总数，包含配置风险、弱口令
     *
     * @return int|null
     */
@@ -1421,7 +1421,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets baseline
     *
-    * @param int|null $baseline 基线风险
+    * @param int|null $baseline 基线风险总数，包含配置风险、弱口令
     *
     * @return $this
     */
@@ -1433,7 +1433,7 @@ class Host implements ModelInterface, ArrayAccess
 
     /**
     * Gets intrusion
-    *  入侵风险
+    *  入侵风险总数
     *
     * @return int|null
     */
@@ -1445,7 +1445,7 @@ class Host implements ModelInterface, ArrayAccess
     /**
     * Sets intrusion
     *
-    * @param int|null $intrusion 入侵风险
+    * @param int|null $intrusion 入侵风险总数
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Geip\V3\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
+class ShowSecuritySecrecyLevelRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchCreateV2RequestBody_tags';
+    protected static $openAPIModelName = 'ShowSecuritySecrecyLevelRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * workspace  DataArts Studio工作空间ID
+    * id  密级id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'workspace' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * workspace  DataArts Studio工作空间ID
+    * id  密级id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'workspace' => null,
+        'id' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * workspace  DataArts Studio工作空间ID
+    * id  密级id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'workspace' => 'workspace',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * workspace  DataArts Studio工作空间ID
+    * id  密级id
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'workspace' => 'setWorkspace',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * workspace  DataArts Studio工作空间ID
+    * id  密级id
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'workspace' => 'getWorkspace',
+            'id' => 'getId'
     ];
 
     /**
@@ -157,8 +157,8 @@ class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -169,29 +169,23 @@ class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
+        if ($this->container['workspace'] === null) {
+            $invalidProperties[] = "'workspace' can't be null";
         }
-            if ((mb_strlen($this->container['key']) > 128)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['workspace']) > 128)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['key']) < 1)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['workspace']) < 1)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/.";
-            }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['value']) > 255)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['id']) > 128)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['value']) < 0)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
-            }
-            if (!preg_match("/^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/.";
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -208,50 +202,50 @@ class BatchCreateV2RequestBodyTags implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * Gets workspace
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
-    public function getKey()
+    public function getWorkspace()
     {
-        return $this->container['key'];
+        return $this->container['workspace'];
     }
 
     /**
-    * Sets key
+    * Sets workspace
     *
-    * @param string $key 标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setWorkspace($workspace)
     {
-        $this->container['key'] = $key;
+        $this->container['workspace'] = $workspace;
         return $this;
     }
 
     /**
-    * Gets value
-    *  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * Gets id
+    *  密级id
     *
     * @return string
     */
-    public function getValue()
+    public function getId()
     {
-        return $this->container['value'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets value
+    * Sets id
     *
-    * @param string $value 标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * @param string $id 密级id
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setId($id)
     {
-        $this->container['value'] = $value;
+        $this->container['id'] = $id;
         return $this;
     }
 

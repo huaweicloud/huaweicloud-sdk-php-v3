@@ -27,7 +27,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vpcId  VPC ID
     * cloudId  云主机ID
     * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID
+    * vmUuid  虚拟机UUID，即主机ID
     * containerId  容器ID
     * containerStatus  容器状态
     * podUid  pod uid
@@ -85,7 +85,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vpcId  VPC ID
     * cloudId  云主机ID
     * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID
+    * vmUuid  虚拟机UUID，即主机ID
     * containerId  容器ID
     * containerStatus  容器状态
     * podUid  pod uid
@@ -164,7 +164,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vpcId  VPC ID
     * cloudId  云主机ID
     * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID
+    * vmUuid  虚拟机UUID，即主机ID
     * containerId  容器ID
     * containerStatus  容器状态
     * podUid  pod uid
@@ -222,7 +222,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vpcId  VPC ID
     * cloudId  云主机ID
     * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID
+    * vmUuid  虚拟机UUID，即主机ID
     * containerId  容器ID
     * containerStatus  容器状态
     * podUid  pod uid
@@ -280,7 +280,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     * vpcId  VPC ID
     * cloudId  云主机ID
     * vmName  虚拟机名称
-    * vmUuid  虚拟机UUID
+    * vmUuid  虚拟机UUID，即主机ID
     * containerId  容器ID
     * containerStatus  容器状态
     * podUid  pod uid
@@ -681,7 +681,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vmUuid
-    *  虚拟机UUID
+    *  虚拟机UUID，即主机ID
     *
     * @return string|null
     */
@@ -693,7 +693,7 @@ class EventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vmUuid
     *
-    * @param string|null $vmUuid 虚拟机UUID
+    * @param string|null $vmUuid 虚拟机UUID，即主机ID
     *
     * @return $this
     */

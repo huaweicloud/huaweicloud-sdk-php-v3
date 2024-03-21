@@ -23,9 +23,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * hostName  服务器名称
     * hostIp  服务器IP地址
-    * hostId  服务器id，不赋值时，查租户所有主机
+    * hostId  主机id，不赋值时，查租户所有主机
     * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -43,9 +43,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * hostName  服务器名称
     * hostIp  服务器IP地址
-    * hostId  服务器id，不赋值时，查租户所有主机
+    * hostId  主机id，不赋值时，查租户所有主机
     * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * hostName  服务器名称
     * hostIp  服务器IP地址
-    * hostId  服务器id，不赋值时，查租户所有主机
+    * hostId  主机id，不赋值时，查租户所有主机
     * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * hostName  服务器名称
     * hostIp  服务器IP地址
-    * hostId  服务器id，不赋值时，查租户所有主机
+    * hostId  主机id，不赋值时，查租户所有主机
     * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -124,9 +124,9 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * hostName  服务器名称
     * hostIp  服务器IP地址
-    * hostId  服务器id，不赋值时，查租户所有主机
+    * hostId  主机id，不赋值时，查租户所有主机
     * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @var string[]
     */
@@ -337,7 +337,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器id，不赋值时，查租户所有主机
+    *  主机id，不赋值时，查租户所有主机
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器id，不赋值时，查租户所有主机
+    * @param string|null $hostId 主机id，不赋值时，查租户所有主机
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return int|null
     */
@@ -397,7 +397,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return $this
     */

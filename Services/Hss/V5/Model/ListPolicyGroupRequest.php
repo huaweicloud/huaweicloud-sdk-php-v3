@@ -20,11 +20,12 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
+    * containerMode  是否查询容器版策略
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'groupName' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'containerMode' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
+    * containerMode  是否查询容器版策略
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'groupName' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'containerMode' => null
     ];
 
     /**
@@ -77,11 +81,12 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
+    * containerMode  是否查询容器版策略
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'groupName' => 'group_name',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'containerMode' => 'container_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
+    * containerMode  是否查询容器版策略
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'groupName' => 'setGroupName',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'containerMode' => 'setContainerMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * groupName  策略组名
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
+    * containerMode  是否查询容器版策略
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'groupName' => 'getGroupName',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'containerMode' => 'getContainerMode'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['containerMode'] = isset($data['containerMode']) ? $data['containerMode'] : null;
     }
 
     /**
@@ -260,7 +271,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -272,7 +283,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -284,7 +295,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -296,7 +307,7 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -375,6 +386,30 @@ class ListPolicyGroupRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets containerMode
+    *  是否查询容器版策略
+    *
+    * @return bool|null
+    */
+    public function getContainerMode()
+    {
+        return $this->container['containerMode'];
+    }
+
+    /**
+    * Sets containerMode
+    *
+    * @param bool|null $containerMode 是否查询容器版策略
+    *
+    * @return $this
+    */
+    public function setContainerMode($containerMode)
+    {
+        $this->container['containerMode'] = $containerMode;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * occrTime  检测时间
+    * occrTime  静态网页防篡改的检测时间(ms)
     * filePath  被篡改文件路径
     * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性   - unknown: 未知
     * hostName  服务器名称
@@ -44,7 +44,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * occrTime  检测时间
+    * occrTime  静态网页防篡改的检测时间(ms)
     * filePath  被篡改文件路径
     * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性   - unknown: 未知
     * hostName  服务器名称
@@ -89,7 +89,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * occrTime  检测时间
+    * occrTime  静态网页防篡改的检测时间(ms)
     * filePath  被篡改文件路径
     * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性   - unknown: 未知
     * hostName  服务器名称
@@ -113,7 +113,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * occrTime  检测时间
+    * occrTime  静态网页防篡改的检测时间(ms)
     * filePath  被篡改文件路径
     * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性   - unknown: 未知
     * hostName  服务器名称
@@ -137,7 +137,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * occrTime  检测时间
+    * occrTime  静态网页防篡改的检测时间(ms)
     * filePath  被篡改文件路径
     * fileOperation  文件操作类型   - add: 新增   - delete: 删除   - modify: 修改内容   - attribute: 修改属性   - unknown: 未知
     * hostName  服务器名称
@@ -299,7 +299,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets occrTime
-    *  检测时间
+    *  静态网页防篡改的检测时间(ms)
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class HostProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets occrTime
     *
-    * @param int|null $occrTime 检测时间
+    * @param int|null $occrTime 静态网页防篡改的检测时间(ms)
     *
     * @return $this
     */

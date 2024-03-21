@@ -24,16 +24,16 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * instanceType  根据实例类型过滤
-    * publicBorderGroup  根据边缘信息过滤，中心站点or边缘站点
-    * accessSite  根据接入点过滤
-    * regionId  根据region_id过滤
-    * remoteEndpoint  query by remote_endpoint
-    * status  根据资源状态过滤
+    * id  id
+    * instanceType  instanceType
+    * publicBorderGroup  publicBorderGroup
+    * accessSite  accessSite
+    * regionId  regionId
+    * remoteEndpoint  remoteEndpoint
+    * status  status
     *
     * @var string[]
     */
@@ -60,16 +60,16 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * instanceType  根据实例类型过滤
-    * publicBorderGroup  根据边缘信息过滤，中心站点or边缘站点
-    * accessSite  根据接入点过滤
-    * regionId  根据region_id过滤
-    * remoteEndpoint  query by remote_endpoint
-    * status  根据资源状态过滤
+    * id  id
+    * instanceType  instanceType
+    * publicBorderGroup  publicBorderGroup
+    * accessSite  accessSite
+    * regionId  regionId
+    * remoteEndpoint  remoteEndpoint
+    * status  status
     *
     * @var string[]
     */
@@ -117,16 +117,16 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * instanceType  根据实例类型过滤
-    * publicBorderGroup  根据边缘信息过滤，中心站点or边缘站点
-    * accessSite  根据接入点过滤
-    * regionId  根据region_id过滤
-    * remoteEndpoint  query by remote_endpoint
-    * status  根据资源状态过滤
+    * id  id
+    * instanceType  instanceType
+    * publicBorderGroup  publicBorderGroup
+    * accessSite  accessSite
+    * regionId  regionId
+    * remoteEndpoint  remoteEndpoint
+    * status  status
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * instanceType  根据实例类型过滤
-    * publicBorderGroup  根据边缘信息过滤，中心站点or边缘站点
-    * accessSite  根据接入点过滤
-    * regionId  根据region_id过滤
-    * remoteEndpoint  query by remote_endpoint
-    * status  根据资源状态过滤
+    * id  id
+    * instanceType  instanceType
+    * publicBorderGroup  publicBorderGroup
+    * accessSite  accessSite
+    * regionId  regionId
+    * remoteEndpoint  remoteEndpoint
+    * status  status
     *
     * @var string[]
     */
@@ -189,16 +189,16 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * instanceType  根据实例类型过滤
-    * publicBorderGroup  根据边缘信息过滤，中心站点or边缘站点
-    * accessSite  根据接入点过滤
-    * regionId  根据region_id过滤
-    * remoteEndpoint  query by remote_endpoint
-    * status  根据资源状态过滤
+    * id  id
+    * instanceType  instanceType
+    * publicBorderGroup  publicBorderGroup
+    * accessSite  accessSite
+    * regionId  regionId
+    * remoteEndpoint  remoteEndpoint
+    * status  status
     *
     * @var string[]
     */
@@ -495,7 +495,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -507,7 +507,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -567,7 +567,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -579,7 +579,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  根据实例类型过滤
+    *  instanceType
     *
     * @return string[]|null
     */
@@ -603,7 +603,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string[]|null $instanceType 根据实例类型过滤
+    * @param string[]|null $instanceType instanceType
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  根据边缘信息过滤，中心站点or边缘站点
+    *  publicBorderGroup
     *
     * @return string[]|null
     */
@@ -627,7 +627,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string[]|null $publicBorderGroup 根据边缘信息过滤，中心站点or边缘站点
+    * @param string[]|null $publicBorderGroup publicBorderGroup
     *
     * @return $this
     */
@@ -639,7 +639,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -651,7 +651,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -663,7 +663,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  根据region_id过滤
+    *  regionId
     *
     * @return string[]|null
     */
@@ -675,7 +675,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string[]|null $regionId 根据region_id过滤
+    * @param string[]|null $regionId regionId
     *
     * @return $this
     */
@@ -687,7 +687,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteEndpoint
-    *  query by remote_endpoint
+    *  remoteEndpoint
     *
     * @return string[]|null
     */
@@ -699,7 +699,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets remoteEndpoint
     *
-    * @param string[]|null $remoteEndpoint query by remote_endpoint
+    * @param string[]|null $remoteEndpoint remoteEndpoint
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据资源状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -723,7 +723,7 @@ class ListSupportRegionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据资源状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */

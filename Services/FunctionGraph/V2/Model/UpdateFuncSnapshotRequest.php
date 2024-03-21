@@ -20,26 +20,26 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  禁用/启用
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  禁用/启用
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string',
-            'functionUrn' => 'string'
+            'functionUrn' => 'string',
+            'action' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  禁用/启用
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  禁用/启用
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null,
-        'functionUrn' => null
+        'functionUrn' => null,
+        'action' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  禁用/启用
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  禁用/启用
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action',
-            'functionUrn' => 'function_urn'
+            'functionUrn' => 'function_urn',
+            'action' => 'action'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  禁用/启用
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  禁用/启用
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction',
-            'functionUrn' => 'setFunctionUrn'
+            'functionUrn' => 'setFunctionUrn',
+            'action' => 'setAction'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  禁用/启用
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * action  禁用/启用
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction',
-            'functionUrn' => 'getFunctionUrn'
+            'functionUrn' => 'getFunctionUrn',
+            'action' => 'getAction'
     ];
 
     /**
@@ -172,8 +172,8 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['functionUrn'] = isset($data['functionUrn']) ? $data['functionUrn'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
     }
 
     /**
@@ -184,6 +184,9 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['functionUrn'] === null) {
+            $invalidProperties[] = "'functionUrn' can't be null";
+        }
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
@@ -195,9 +198,6 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['functionUrn'] === null) {
-            $invalidProperties[] = "'functionUrn' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -210,30 +210,6 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets action
-    *  禁用/启用
-    *
-    * @return string
-    */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-    * Sets action
-    *
-    * @param string $action 禁用/启用
-    *
-    * @return $this
-    */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
-        return $this;
     }
 
     /**
@@ -257,6 +233,30 @@ class UpdateFuncSnapshotRequest implements ModelInterface, ArrayAccess
     public function setFunctionUrn($functionUrn)
     {
         $this->container['functionUrn'] = $functionUrn;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  禁用/启用
+    *
+    * @return string
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string $action 禁用/启用
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽的ID
     * size  全域公网带宽大小（出云方向）
     *
     * @var string[]
@@ -32,7 +32,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽的ID
     * size  全域公网带宽大小（出云方向）
     *
     * @var string[]
@@ -65,7 +65,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
+    * id  全域公网带宽的ID
     * size  全域公网带宽大小（出云方向）
     *
     * @var string[]
@@ -77,7 +77,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
+    * id  全域公网带宽的ID
     * size  全域公网带宽大小（出云方向）
     *
     * @var string[]
@@ -89,7 +89,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
+    * id  全域公网带宽的ID
     * size  全域公网带宽大小（出云方向）
     *
     * @var string[]
@@ -185,7 +185,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域公网带宽的ID
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class InternetBandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域公网带宽的ID
     *
     * @return $this
     */

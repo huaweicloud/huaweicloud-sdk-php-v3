@@ -42,6 +42,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * appPath  软件路径
     * version  主机配额
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  该漏洞不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -67,7 +69,9 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'appVersion' => 'string',
             'appPath' => 'string',
             'version' => 'string',
-            'supportRestore' => 'bool'
+            'supportRestore' => 'bool',
+            'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]',
+            'repairPriority' => 'string'
     ];
 
     /**
@@ -94,6 +98,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * appPath  软件路径
     * version  主机配额
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  该漏洞不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -119,7 +125,9 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         'appVersion' => null,
         'appPath' => null,
         'version' => null,
-        'supportRestore' => null
+        'supportRestore' => null,
+        'disabledOperateTypes' => null,
+        'repairPriority' => null
     ];
 
     /**
@@ -167,6 +175,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * appPath  软件路径
     * version  主机配额
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  该漏洞不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -192,7 +202,9 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'appVersion' => 'app_version',
             'appPath' => 'app_path',
             'version' => 'version',
-            'supportRestore' => 'support_restore'
+            'supportRestore' => 'support_restore',
+            'disabledOperateTypes' => 'disabled_operate_types',
+            'repairPriority' => 'repair_priority'
     ];
 
     /**
@@ -219,6 +231,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * appPath  软件路径
     * version  主机配额
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  该漏洞不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -244,7 +258,9 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'appVersion' => 'setAppVersion',
             'appPath' => 'setAppPath',
             'version' => 'setVersion',
-            'supportRestore' => 'setSupportRestore'
+            'supportRestore' => 'setSupportRestore',
+            'disabledOperateTypes' => 'setDisabledOperateTypes',
+            'repairPriority' => 'setRepairPriority'
     ];
 
     /**
@@ -271,6 +287,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * appPath  软件路径
     * version  主机配额
     * supportRestore  是否可以回滚到修复漏洞时创建的备份
+    * disabledOperateTypes  该漏洞不可进行的操作类型列表
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -296,7 +314,9 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'appVersion' => 'getAppVersion',
             'appPath' => 'getAppPath',
             'version' => 'getVersion',
-            'supportRestore' => 'getSupportRestore'
+            'supportRestore' => 'getSupportRestore',
+            'disabledOperateTypes' => 'getDisabledOperateTypes',
+            'repairPriority' => 'getRepairPriority'
     ];
 
     /**
@@ -379,6 +399,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         $this->container['appPath'] = isset($data['appPath']) ? $data['appPath'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['supportRestore'] = isset($data['supportRestore']) ? $data['supportRestore'] : null;
+        $this->container['disabledOperateTypes'] = isset($data['disabledOperateTypes']) ? $data['disabledOperateTypes'] : null;
+        $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
     }
 
     /**
@@ -490,6 +512,12 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1030,6 +1058,54 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     public function setSupportRestore($supportRestore)
     {
         $this->container['supportRestore'] = $supportRestore;
+        return $this;
+    }
+
+    /**
+    * Gets disabledOperateTypes
+    *  该漏洞不可进行的操作类型列表
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null
+    */
+    public function getDisabledOperateTypes()
+    {
+        return $this->container['disabledOperateTypes'];
+    }
+
+    /**
+    * Sets disabledOperateTypes
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulHostInfoDisabledOperateTypes[]|null $disabledOperateTypes 该漏洞不可进行的操作类型列表
+    *
+    * @return $this
+    */
+    public function setDisabledOperateTypes($disabledOperateTypes)
+    {
+        $this->container['disabledOperateTypes'] = $disabledOperateTypes;
+        return $this;
+    }
+
+    /**
+    * Gets repairPriority
+    *  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return string|null
+    */
+    public function getRepairPriority()
+    {
+        return $this->container['repairPriority'];
+    }
+
+    /**
+    * Sets repairPriority
+    *
+    * @param string|null $repairPriority 修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return $this
+    */
+    public function setRepairPriority($repairPriority)
+    {
+        $this->container['repairPriority'] = $repairPriority;
         return $this;
     }
 

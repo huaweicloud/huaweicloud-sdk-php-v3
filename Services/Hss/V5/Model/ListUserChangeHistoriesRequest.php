@@ -25,10 +25,10 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     * rootPermission  是否有root权限
     * hostName  主机名称
     * privateIp  服务器私有IP
-    * changeType  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * limit  默认10
-    * offset  默认是0
-    * enterpriseProjectId  企业项目
+    * changeType  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -55,10 +55,10 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     * rootPermission  是否有root权限
     * hostName  主机名称
     * privateIp  服务器私有IP
-    * changeType  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * limit  默认10
-    * offset  默认是0
-    * enterpriseProjectId  企业项目
+    * changeType  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -106,10 +106,10 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     * rootPermission  是否有root权限
     * hostName  主机名称
     * privateIp  服务器私有IP
-    * changeType  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * limit  默认10
-    * offset  默认是0
-    * enterpriseProjectId  企业项目
+    * changeType  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -136,10 +136,10 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     * rootPermission  是否有root权限
     * hostName  主机名称
     * privateIp  服务器私有IP
-    * changeType  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * limit  默认10
-    * offset  默认是0
-    * enterpriseProjectId  企业项目
+    * changeType  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -166,10 +166,10 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     * rootPermission  是否有root权限
     * hostName  主机名称
     * privateIp  服务器私有IP
-    * changeType  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
-    * limit  默认10
-    * offset  默认是0
-    * enterpriseProjectId  企业项目
+    * changeType  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * startTime  变更开始时间，13位时间戳
     * endTime  变更结束时间，13位时间戳
     *
@@ -464,7 +464,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeType
-    *  变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    *  账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets changeType
     *
-    * @param string|null $changeType 变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
+    * @param string|null $changeType 账号变更类型:   - ADD ：添加   - DELETE ：删除   - MODIFY ： 修改
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  默认10
+    *  每页显示数量，默认10
     *
     * @return int|null
     */
@@ -500,7 +500,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 默认10
+    * @param int|null $limit 每页显示数量，默认10
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  默认是0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -524,7 +524,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 默认是0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class ListUserChangeHistoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */

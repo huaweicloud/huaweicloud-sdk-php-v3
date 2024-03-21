@@ -21,21 +21,25 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * promId  Prometheus实例id。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'promId' => 'string'
+            'promId' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * promId  Prometheus实例id。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'promId' => null
+        'promId' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * promId  Prometheus实例id。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'promId' => 'prom_id'
+            'promId' => 'prom_id',
+            'enterpriseProjectId' => 'Enterprise-Project-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * promId  Prometheus实例id。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
     protected static $setters = [
-            'promId' => 'setPromId'
+            'promId' => 'setPromId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * promId  Prometheus实例id。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
     protected static $getters = [
-            'promId' => 'getPromId'
+            'promId' => 'getPromId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['promId'] = isset($data['promId']) ? $data['promId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     public function setPromId($promId)
     {
         $this->container['promId'] = $promId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

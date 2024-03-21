@@ -21,7 +21,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  数据总量
+    * totalNum  受配置检测影响的服务器数据总量
     * dataList  数据列表
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  数据总量
+    * totalNum  受配置检测影响的服务器数据总量
     * dataList  数据列表
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  数据总量
+    * totalNum  受配置检测影响的服务器数据总量
     * dataList  数据列表
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  数据总量
+    * totalNum  受配置检测影响的服务器数据总量
     * dataList  数据列表
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  数据总量
+    * totalNum  受配置检测影响的服务器数据总量
     * dataList  数据列表
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  数据总量
+    *  受配置检测影响的服务器数据总量
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRiskConfigHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 数据总量
+    * @param int|null $totalNum 受配置检测影响的服务器数据总量
     *
     * @return $this
     */

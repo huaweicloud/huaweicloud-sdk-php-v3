@@ -24,6 +24,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
             'promId' => 'string',
             'promType' => 'string',
             'cceClusterEnable' => 'string',
-            'promStatus' => 'string'
+            'promStatus' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
         'promId' => null,
         'promType' => null,
         'cceClusterEnable' => null,
-        'promStatus' => null
+        'promStatus' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
             'promId' => 'prom_id',
             'promType' => 'prom_type',
             'cceClusterEnable' => 'cce_cluster_enable',
-            'promStatus' => 'prom_status'
+            'promStatus' => 'prom_status',
+            'enterpriseProjectId' => 'Enterprise-Project-Id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
             'promId' => 'setPromId',
             'promType' => 'setPromType',
             'cceClusterEnable' => 'setCceClusterEnable',
-            'promStatus' => 'setPromStatus'
+            'promStatus' => 'setPromStatus',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * promType  Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
     * cceClusterEnable  cce集群开关。
     * promStatus  Prometheus实例状态。
+    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
             'promId' => 'getPromId',
             'promType' => 'getPromType',
             'cceClusterEnable' => 'getCceClusterEnable',
-            'promStatus' => 'getPromStatus'
+            'promStatus' => 'getPromStatus',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -159,7 +169,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROM_TYPE__DEFAULT = 'DEFAULT';
+    const PROM_TYPE__DEFAULT = 'default';
     const PROM_TYPE_ECS = 'ECS';
     const PROM_TYPE_VPC = 'VPC';
     const PROM_TYPE_CCE = 'CCE';
@@ -240,6 +250,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
         $this->container['promType'] = isset($data['promType']) ? $data['promType'] : null;
         $this->container['cceClusterEnable'] = isset($data['cceClusterEnable']) ? $data['cceClusterEnable'] : null;
         $this->container['promStatus'] = isset($data['promStatus']) ? $data['promStatus'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -381,6 +392,30 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     public function setPromStatus($promStatus)
     {
         $this->container['promStatus'] = $promStatus;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

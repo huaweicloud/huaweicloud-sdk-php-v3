@@ -23,8 +23,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * floatingIpAddress  功能说明：弹性公网IP。
+    * floatingIpId  功能说明：弹性公网IP的id。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -40,8 +40,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             'adminStateUp' => 'bool',
             'cidr' => 'string',
             'limit' => 'int',
-            'floatingIpAddress' => 'string',
-            'floatingIpId' => 'string',
+            'floatingIpAddress' => 'string[]',
+            'floatingIpId' => 'string[]',
             'id' => 'string',
             'description' => 'string',
             'createdAt' => 'string',
@@ -57,8 +57,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * floatingIpAddress  功能说明：弹性公网IP。
+    * floatingIpId  功能说明：弹性公网IP的id。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -112,8 +112,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * floatingIpAddress  功能说明：弹性公网IP。
+    * floatingIpId  功能说明：弹性公网IP的id。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -146,8 +146,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * floatingIpAddress  功能说明：弹性公网IP。
+    * floatingIpId  功能说明：弹性公网IP的id。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -180,8 +180,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-    * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-    * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * floatingIpAddress  功能说明：弹性公网IP。
+    * floatingIpId  功能说明：弹性公网IP的id。
     * id  SNAT规则的ID。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -319,18 +319,6 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 15.";
-            }
-            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 7.";
-            }
-            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['floatingIpId']) && (mb_strlen($this->container['floatingIpId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'floatingIpId', the character length must be bigger than or equal to 36.";
-            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
@@ -457,9 +445,9 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpAddress
-    *  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    *  功能说明：弹性公网IP。
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFloatingIpAddress()
     {
@@ -469,7 +457,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingIpAddress
     *
-    * @param string|null $floatingIpAddress 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
+    * @param string[]|null $floatingIpAddress 功能说明：弹性公网IP。
     *
     * @return $this
     */
@@ -481,9 +469,9 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpId
-    *  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    *  功能说明：弹性公网IP的id。
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFloatingIpId()
     {
@@ -493,7 +481,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingIpId
     *
-    * @param string|null $floatingIpId 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+    * @param string[]|null $floatingIpId 功能说明：弹性公网IP的id。
     *
     * @return $this
     */

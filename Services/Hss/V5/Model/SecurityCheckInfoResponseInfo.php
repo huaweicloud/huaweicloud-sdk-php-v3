@@ -21,14 +21,14 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleNum  检查项数量
-    * failedRuleNum  风险项数量
-    * hostNum  影响的服务器数量
-    * scanTime  最新检测时间
-    * checkTypeDesc  基线描述信息
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * scanTime  最新检测时间(ms)
+    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleNum  检查项数量
-    * failedRuleNum  风险项数量
-    * hostNum  影响的服务器数量
-    * scanTime  最新检测时间
-    * checkTypeDesc  基线描述信息
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * scanTime  最新检测时间(ms)
+    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleNum  检查项数量
-    * failedRuleNum  风险项数量
-    * hostNum  影响的服务器数量
-    * scanTime  最新检测时间
-    * checkTypeDesc  基线描述信息
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * scanTime  最新检测时间(ms)
+    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleNum  检查项数量
-    * failedRuleNum  风险项数量
-    * hostNum  影响的服务器数量
-    * scanTime  最新检测时间
-    * checkTypeDesc  基线描述信息
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * scanTime  最新检测时间(ms)
+    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * severity  风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-    * checkName  基线名称
-    * checkType  基线类型
-    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-    * checkRuleNum  检查项数量
-    * failedRuleNum  风险项数量
-    * hostNum  影响的服务器数量
-    * scanTime  最新检测时间
-    * checkTypeDesc  基线描述信息
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkType  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
+    * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
+    * checkRuleNum  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
+    * failedRuleNum  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
+    * hostNum  受影响的服务器的数量，进行了当前基线检测的服务器数量
+    * scanTime  最新检测时间(ms)
+    * checkTypeDesc  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @var string[]
     */
@@ -340,7 +340,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  基线名称
+    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string|null $checkName 基线名称
+    * @param string|null $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  基线类型
+    *  配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 基线类型
+    * @param string|null $checkType 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    *  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+    * @param string|null $standard 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleNum
-    *  检查项数量
+    *  当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     *
     * @return int|null
     */
@@ -424,7 +424,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleNum
     *
-    * @param int|null $checkRuleNum 检查项数量
+    * @param int|null $checkRuleNum 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedRuleNum
-    *  风险项数量
+    *  未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     *
     * @return int|null
     */
@@ -448,7 +448,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets failedRuleNum
     *
-    * @param int|null $failedRuleNum 风险项数量
+    * @param int|null $failedRuleNum 未通过的检查项数量，check_rule_num中只要有一台主机没通过某个检查项，这个检查项就会被计算在failed_rule_num中
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  影响的服务器数量
+    *  受影响的服务器的数量，进行了当前基线检测的服务器数量
     *
     * @return int|null
     */
@@ -472,7 +472,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 影响的服务器数量
+    * @param int|null $hostNum 受影响的服务器的数量，进行了当前基线检测的服务器数量
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  最新检测时间
+    *  最新检测时间(ms)
     *
     * @return int|null
     */
@@ -496,7 +496,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 最新检测时间
+    * @param int|null $scanTime 最新检测时间(ms)
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkTypeDesc
-    *  基线描述信息
+    *  对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class SecurityCheckInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkTypeDesc
     *
-    * @param string|null $checkTypeDesc 基线描述信息
+    * @param string|null $checkTypeDesc 对配置检查（基线）类型的描述信息，概括当前基线包含的检查项是根据什么标准制定的，能够审计哪些方面的问题。
     *
     * @return $this
     */

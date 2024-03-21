@@ -21,7 +21,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  开启关闭状态
-    * hostIdList  HostId list
+    * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
     *
@@ -37,7 +37,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  开启关闭状态
-    * hostIdList  HostId list
+    * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
     *
@@ -74,7 +74,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  开启关闭状态
-    * hostIdList  HostId list
+    * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
     *
@@ -90,7 +90,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  开启关闭状态
-    * hostIdList  HostId list
+    * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
     *
@@ -106,7 +106,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  开启关闭状态
-    * hostIdList  HostId list
+    * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
     *
@@ -191,6 +191,12 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['hostIdList'] === null) {
+            $invalidProperties[] = "'hostIdList' can't be null";
+        }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 64.";
             }
@@ -221,7 +227,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     * Gets status
     *  开启关闭状态
     *
-    * @return bool|null
+    * @return bool
     */
     public function getStatus()
     {
@@ -231,7 +237,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 开启关闭状态
+    * @param bool $status 开启关闭状态
     *
     * @return $this
     */
@@ -243,9 +249,9 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  HostId list
+    *  主机ID数组，不能为空
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getHostIdList()
     {
@@ -255,7 +261,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList HostId list
+    * @param string[] $hostIdList 主机ID数组，不能为空
     *
     * @return $this
     */

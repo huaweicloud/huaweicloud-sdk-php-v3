@@ -20,9 +20,9 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * operatingSystem  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id或者create_protection_policy必填一项
-    * protectionPolicyId  防护策略ID,若选择已有策略防护,则该字段必选
+    * protectionPolicyId  勒索防护策略ID,若选择已有策略防护,则该字段必选
     * createProtectionPolicy  createProtectionPolicy
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
     * backupResources  backupResources
@@ -48,9 +48,9 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * operatingSystem  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id或者create_protection_policy必填一项
-    * protectionPolicyId  防护策略ID,若选择已有策略防护,则该字段必选
+    * protectionPolicyId  勒索防护策略ID,若选择已有策略防护,则该字段必选
     * createProtectionPolicy  createProtectionPolicy
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
     * backupResources  backupResources
@@ -97,9 +97,9 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * operatingSystem  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id或者create_protection_policy必填一项
-    * protectionPolicyId  防护策略ID,若选择已有策略防护,则该字段必选
+    * protectionPolicyId  勒索防护策略ID,若选择已有策略防护,则该字段必选
     * createProtectionPolicy  createProtectionPolicy
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
     * backupResources  backupResources
@@ -125,9 +125,9 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * operatingSystem  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id或者create_protection_policy必填一项
-    * protectionPolicyId  防护策略ID,若选择已有策略防护,则该字段必选
+    * protectionPolicyId  勒索防护策略ID,若选择已有策略防护,则该字段必选
     * createProtectionPolicy  createProtectionPolicy
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
     * backupResources  backupResources
@@ -153,9 +153,9 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * operatingSystem  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * ransomProtectionStatus  勒索防护是否开启，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启，protection_policy_id或者create_protection_policy必填一项
-    * protectionPolicyId  防护策略ID,若选择已有策略防护,则该字段必选
+    * protectionPolicyId  勒索防护策略ID,若选择已有策略防护,则该字段必选
     * createProtectionPolicy  createProtectionPolicy
     * backupProtectionStatus  是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
     * backupResources  backupResources
@@ -318,7 +318,7 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingSystem
-    *  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    *  需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     *
     * @return string
     */
@@ -330,7 +330,7 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operatingSystem
     *
-    * @param string $operatingSystem 操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
+    * @param string $operatingSystem 需要开启防护的主机的操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionPolicyId
-    *  防护策略ID,若选择已有策略防护,则该字段必选
+    *  勒索防护策略ID,若选择已有策略防护,则该字段必选
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class ProtectionInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionPolicyId
     *
-    * @param string|null $protectionPolicyId 防护策略ID,若选择已有策略防护,则该字段必选
+    * @param string|null $protectionPolicyId 勒索防护策略ID,若选择已有策略防护,则该字段必选
     *
     * @return $this
     */

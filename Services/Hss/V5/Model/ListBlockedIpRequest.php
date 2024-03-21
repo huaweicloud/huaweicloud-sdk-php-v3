@@ -20,13 +20,13 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
     * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -44,13 +44,13 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
     * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -89,13 +89,13 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
     * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -113,13 +113,13 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
     * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -137,13 +137,13 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
     * hostName  服务器名称
     * srcIp  攻击源IP
     * interceptStatus  拦截状态，包含如下:   - intercepted : 已拦截   - canceled : 已解除拦截   - cancelling : 待解除拦截
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字
     * limit  每页显示个数
     *
     * @var string[]
@@ -308,7 +308,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -320,7 +320,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字
     *
     * @return int|null
     */
@@ -464,7 +464,7 @@ class ListBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字
     *
     * @return $this
     */

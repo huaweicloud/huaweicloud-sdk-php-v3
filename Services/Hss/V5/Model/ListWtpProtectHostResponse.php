@@ -22,7 +22,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dataList  data list
-    * totalNum  total number
+    * totalNum  total number of WTP protected servers
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dataList  data list
-    * totalNum  total number
+    * totalNum  total number of WTP protected servers
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dataList  data list
-    * totalNum  total number
+    * totalNum  total number of WTP protected servers
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dataList  data list
-    * totalNum  total number
+    * totalNum  total number of WTP protected servers
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dataList  data list
-    * totalNum  total number
+    * totalNum  total number of WTP protected servers
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  total number
+    *  total number of WTP protected servers
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListWtpProtectHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number
+    * @param int|null $totalNum total number of WTP protected servers
     *
     * @return $this
     */

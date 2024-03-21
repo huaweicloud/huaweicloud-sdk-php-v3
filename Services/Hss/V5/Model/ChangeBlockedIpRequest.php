@@ -20,8 +20,8 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * region  Region ID
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
@@ -217,7 +217,7 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -241,7 +241,7 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class ChangeBlockedIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */

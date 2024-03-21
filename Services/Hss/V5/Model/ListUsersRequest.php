@@ -20,16 +20,16 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * userName  账号名称
-    * hostName  服务器名称
+    * hostName  主机名称
     * privateIp  服务器私有IP
-    * loginPermission  是否允许登陆
+    * loginPermission  是否允许登录
     * rootPermission  是否有root权限
-    * userGroup  用户组
+    * userGroup  主机用户组
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  默认10
-    * offset  默认是0
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -52,16 +52,16 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * userName  账号名称
-    * hostName  服务器名称
+    * hostName  主机名称
     * privateIp  服务器私有IP
-    * loginPermission  是否允许登陆
+    * loginPermission  是否允许登录
     * rootPermission  是否有root权限
-    * userGroup  用户组
+    * userGroup  主机用户组
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  默认10
-    * offset  默认是0
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -105,16 +105,16 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * hostId  主机ID
     * userName  账号名称
-    * hostName  服务器名称
+    * hostName  主机名称
     * privateIp  服务器私有IP
-    * loginPermission  是否允许登陆
+    * loginPermission  是否允许登录
     * rootPermission  是否有root权限
-    * userGroup  用户组
+    * userGroup  主机用户组
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  默认10
-    * offset  默认是0
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -137,16 +137,16 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * hostId  主机ID
     * userName  账号名称
-    * hostName  服务器名称
+    * hostName  主机名称
     * privateIp  服务器私有IP
-    * loginPermission  是否允许登陆
+    * loginPermission  是否允许登录
     * rootPermission  是否有root权限
-    * userGroup  用户组
+    * userGroup  主机用户组
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  默认10
-    * offset  默认是0
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -169,16 +169,16 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * hostId  主机ID
     * userName  账号名称
-    * hostName  服务器名称
+    * hostName  主机名称
     * privateIp  服务器私有IP
-    * loginPermission  是否允许登陆
+    * loginPermission  是否允许登录
     * rootPermission  是否有root权限
-    * userGroup  用户组
+    * userGroup  主机用户组
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  默认10
-    * offset  默认是0
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -349,7 +349,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  主机名称
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName 主机名称
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginPermission
-    *  是否允许登陆
+    *  是否允许登录
     *
     * @return bool|null
     */
@@ -457,7 +457,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets loginPermission
     *
-    * @param bool|null $loginPermission 是否允许登陆
+    * @param bool|null $loginPermission 是否允许登录
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userGroup
-    *  用户组
+    *  主机用户组
     *
     * @return string|null
     */
@@ -505,7 +505,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userGroup
     *
-    * @param string|null $userGroup 用户组
+    * @param string|null $userGroup 主机用户组
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  默认10
+    *  每页显示数量，默认10
     *
     * @return int|null
     */
@@ -553,7 +553,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 默认10
+    * @param int|null $limit 每页显示数量，默认10
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  默认是0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -577,7 +577,7 @@ class ListUsersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 默认是0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */

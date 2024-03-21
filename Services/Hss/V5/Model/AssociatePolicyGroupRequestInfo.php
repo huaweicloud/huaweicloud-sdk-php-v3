@@ -22,7 +22,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * targetPolicyGroupId  部署的目标策略组ID
     * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  服务器ID列表
+    * hostIdList  需要部署策略组的主机ID列表
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * targetPolicyGroupId  部署的目标策略组ID
     * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  服务器ID列表
+    * hostIdList  需要部署策略组的主机ID列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * targetPolicyGroupId  部署的目标策略组ID
     * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  服务器ID列表
+    * hostIdList  需要部署策略组的主机ID列表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * targetPolicyGroupId  部署的目标策略组ID
     * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  服务器ID列表
+    * hostIdList  需要部署策略组的主机ID列表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * targetPolicyGroupId  部署的目标策略组ID
     * operateAll  是否要对全量主机部署策略，如果为true的话，不需填写host_id_list，如果为false的话，需要填写host_id_list
-    * hostIdList  服务器ID列表
+    * hostIdList  需要部署策略组的主机ID列表
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器ID列表
+    *  需要部署策略组的主机ID列表
     *
     * @return string[]|null
     */
@@ -268,7 +268,7 @@ class AssociatePolicyGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList 服务器ID列表
+    * @param string[]|null $hostIdList 需要部署策略组的主机ID列表
     *
     * @return $this
     */

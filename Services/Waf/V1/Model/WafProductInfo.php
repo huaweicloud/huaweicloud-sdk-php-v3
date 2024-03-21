@@ -20,7 +20,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceSpecCode  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     * periodType  订购周期类型 month: 月；year: 年
     * periodNum  订购周期数
     *
@@ -34,7 +34,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceSpecCode  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     * periodType  订购周期类型 month: 月；year: 年
     * periodNum  订购周期数
     *
@@ -69,7 +69,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceSpecCode  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     * periodType  订购周期类型 month: 月；year: 年
     * periodNum  订购周期数
     *
@@ -83,7 +83,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceSpecCode  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     * periodType  订购周期类型 month: 月；year: 年
     * periodNum  订购周期数
     *
@@ -97,7 +97,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceSpecCode  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     * periodType  订购周期类型 month: 月；year: 年
     * periodNum  订购周期数
     *
@@ -196,7 +196,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    *  waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode waf规格   - detection: 入门   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+    * @param string|null $resourceSpecCode waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
     *
     * @return $this
     */

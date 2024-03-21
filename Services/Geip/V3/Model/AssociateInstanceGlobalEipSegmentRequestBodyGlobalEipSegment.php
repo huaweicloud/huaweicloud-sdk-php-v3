@@ -23,7 +23,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -43,7 +43,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -84,7 +84,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -104,7 +104,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -124,7 +124,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  项目ID
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -249,8 +249,8 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['projectId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['projectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
@@ -358,7 +358,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class AssociateInstanceGlobalEipSegmentRequestBodyGlobalEipSegment implements Mo
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return $this
     */

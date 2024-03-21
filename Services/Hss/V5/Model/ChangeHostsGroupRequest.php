@@ -20,8 +20,9 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
     * body  body
     *
     * @var string[]
@@ -29,13 +30,15 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'region' => 'string',
             'enterpriseProjectId' => 'string',
+            'contentType' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\ChangeHostsGroupRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'region' => null,
         'enterpriseProjectId' => null,
+        'contentType' => null,
         'body' => null
     ];
 
@@ -69,8 +73,9 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
     * body  body
     *
     * @var string[]
@@ -78,13 +83,15 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'contentType' => 'Content-Type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
     * body  body
     *
     * @var string[]
@@ -92,13 +99,15 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'contentType' => 'setContentType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region id
+    * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'contentType' => 'getContentType',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     {
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -201,6 +212,12 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -217,7 +234,7 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region id
+    *  Region ID
     *
     * @return string
     */
@@ -229,7 +246,7 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region id
+    * @param string $region Region ID
     *
     * @return $this
     */
@@ -260,6 +277,30 @@ class ChangeHostsGroupRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  缺省值:application/json; charset=utf-8
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 缺省值:application/json; charset=utf-8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
         return $this;
     }
 

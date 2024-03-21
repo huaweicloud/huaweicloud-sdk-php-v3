@@ -21,7 +21,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  参数名称
-    * default  参数默认值，不指定时按默认值生效
+    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
     * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  参数分类
@@ -41,7 +41,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  参数名称
-    * default  参数默认值，不指定时按默认值生效
+    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
     * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  参数分类
@@ -82,7 +82,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  参数名称
-    * default  参数默认值，不指定时按默认值生效
+    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
     * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  参数分类
@@ -102,7 +102,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  参数名称
-    * default  参数默认值，不指定时按默认值生效
+    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
     * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  参数分类
@@ -122,7 +122,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  参数名称
-    * default  参数默认值，不指定时按默认值生效
+    * default  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     * validAt  参数生效方式  - static：节点创建时生效，后续不可修改 - immediately：节点运行中时可以修改，修改后生效
     * empty  配置项是否可以为空  - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  参数分类
@@ -294,7 +294,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets default
-    *  参数默认值，不指定时按默认值生效
+    *  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     *
     * @return string
     */
@@ -306,7 +306,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param string $default 参数默认值，不指定时按默认值生效
+    * @param string $default 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类别，hss
-    * resourceId  资源ID
+    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     * key  待删除的key
     *
     * @var string[]
@@ -34,8 +34,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类别，hss
-    * resourceId  资源ID
+    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     * key  待删除的key
     *
     * @var string[]
@@ -69,8 +69,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类别，hss
-    * resourceId  资源ID
+    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     * key  待删除的key
     *
     * @var string[]
@@ -83,8 +83,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类别，hss
-    * resourceId  资源ID
+    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     * key  待删除的key
     *
     * @var string[]
@@ -97,8 +97,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类别，hss
-    * resourceId  资源ID
+    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     * key  待删除的key
     *
     * @var string[]
@@ -223,7 +223,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类别，hss
+    *  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类别，hss
+    * @param string $resourceType 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源ID
+    *  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源ID
+    * @param string $resourceId 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
     *
     * @return $this
     */

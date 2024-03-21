@@ -21,7 +21,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userName  弱口令账号名称
-    * serviceType  账号类型
+    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
     *
     * @var string[]
@@ -35,7 +35,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userName  弱口令账号名称
-    * serviceType  账号类型
+    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
     *
     * @var string[]
@@ -70,7 +70,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userName  弱口令账号名称
-    * serviceType  账号类型
+    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
     *
     * @var string[]
@@ -84,7 +84,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  弱口令账号名称
-    * serviceType  账号类型
+    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
     *
     * @var string[]
@@ -98,7 +98,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userName  弱口令账号名称
-    * serviceType  账号类型
+    * serviceType  账号类型，包含如下:   - system   - mysql   - redis
     * duration  弱口令使用时长，单位天
     *
     * @var string[]
@@ -238,7 +238,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  账号类型
+    *  账号类型，包含如下:   - system   - mysql   - redis
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class WeakPwdAccountInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 账号类型
+    * @param string|null $serviceType 账号类型，包含如下:   - system   - mysql   - redis
     *
     * @return $this
     */

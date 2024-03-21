@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Geip\V3\Model;
+namespace HuaweiCloud\SDK\Hss\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
+class FileMtime implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,24 @@ class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchDeleteV2RequestBody_sys_tags';
+    protected static $openAPIModelName = 'FileMtime';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
     ];
 
     /**
@@ -65,38 +59,29 @@ class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    * value  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
     ];
 
     /**
@@ -157,8 +142,6 @@ class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -169,21 +152,6 @@ class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-            if ((mb_strlen($this->container['key']) > 128)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['key']) < 1)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -196,54 +164,6 @@ class BatchDeleteV2RequestBodySysTags implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets key
-    *  标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    *
-    * @return string
-    */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-    * Sets key
-    *
-    * @param string $key 标签键，最大长度128个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。
-    *
-    * @return $this
-    */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
-        return $this;
-    }
-
-    /**
-    * Gets value
-    *  标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
-    *
-    * @return string|null
-    */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-    * Sets value
-    *
-    * @param string|null $value 标签值，最大长度255个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，点“.”，中文。
-    *
-    * @return $this
-    */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
-        return $this;
     }
 
     /**

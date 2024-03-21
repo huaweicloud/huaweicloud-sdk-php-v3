@@ -20,24 +20,28 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'contentType' => 'string',
             'enterpriseProjectId' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'contentType' => null,
         'enterpriseProjectId' => null,
         'body' => null
     ];
@@ -65,36 +69,42 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'contentType' => 'Content-Type',
             'enterpriseProjectId' => 'enterprise_project_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'contentType' => 'setContentType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * contentType  缺省值:application/json; charset=utf-8
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'contentType' => 'getContentType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'body' => 'getBody'
     ];
@@ -157,6 +167,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -169,6 +180,12 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
             }
@@ -190,8 +207,32 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets contentType
+    *  缺省值:application/json; charset=utf-8
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 缺省值:application/json; charset=utf-8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -203,7 +244,7 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */

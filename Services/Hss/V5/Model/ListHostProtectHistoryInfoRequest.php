@@ -21,10 +21,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
     * hostName  服务器名称
@@ -51,10 +51,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
     * hostName  服务器名称
@@ -102,10 +102,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
     * hostName  服务器名称
@@ -132,10 +132,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
     * hostName  服务器名称
@@ -162,10 +162,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region Id
-    * enterpriseProjectId  企业项目
-    * hostId  Host Id
-    * startTime  起始时间
-    * endTime  终止时间
+    * enterpriseProjectId  企业项目ID
+    * hostId  Host Id，为空时查所有主机
+    * startTime  起始时间(ms)
+    * endTime  终止时间(ms)
     * limit  limit
     * offset  offset
     * hostName  服务器名称
@@ -283,13 +283,10 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['hostId'] === null) {
-            $invalidProperties[] = "'hostId' can't be null";
-        }
-            if ((mb_strlen($this->container['hostId']) > 128)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['hostId']) < 0)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['startTime'] === null) {
@@ -392,7 +389,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -404,7 +401,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */
@@ -416,9 +413,9 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  Host Id
+    *  Host Id，为空时查所有主机
     *
-    * @return string
+    * @return string|null
     */
     public function getHostId()
     {
@@ -428,7 +425,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId Host Id
+    * @param string|null $hostId Host Id，为空时查所有主机
     *
     * @return $this
     */
@@ -440,7 +437,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间
+    *  起始时间(ms)
     *
     * @return int
     */
@@ -452,7 +449,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int $startTime 起始时间
+    * @param int $startTime 起始时间(ms)
     *
     * @return $this
     */
@@ -464,7 +461,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  终止时间
+    *  终止时间(ms)
     *
     * @return int
     */
@@ -476,7 +473,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 终止时间
+    * @param int $endTime 终止时间(ms)
     *
     * @return $this
     */

@@ -24,12 +24,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * ipVersion  根据IP版本过滤
-    * mask  根据掩码过滤
+    * id  id
+    * ipVersion  ipVersion
+    * mask  mask
     *
     * @var string[]
     */
@@ -52,12 +52,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * ipVersion  根据IP版本过滤
-    * mask  根据掩码过滤
+    * id  id
+    * ipVersion  ipVersion
+    * mask  mask
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * ipVersion  根据IP版本过滤
-    * mask  根据掩码过滤
+    * id  id
+    * ipVersion  ipVersion
+    * mask  mask
     *
     * @var string[]
     */
@@ -129,12 +129,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * ipVersion  根据IP版本过滤
-    * mask  根据掩码过滤
+    * id  id
+    * ipVersion  ipVersion
+    * mask  mask
     *
     * @var string[]
     */
@@ -157,12 +157,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * ipVersion  根据IP版本过滤
-    * mask  根据掩码过滤
+    * id  id
+    * ipVersion  ipVersion
+    * mask  mask
     *
     * @var string[]
     */
@@ -450,7 +450,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -462,7 +462,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -534,7 +534,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  根据IP版本过滤
+    *  ipVersion
     *
     * @return int[]|null
     */
@@ -558,7 +558,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int[]|null $ipVersion 根据IP版本过滤
+    * @param int[]|null $ipVersion ipVersion
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets mask
-    *  根据掩码过滤
+    *  mask
     *
     * @return int[]|null
     */
@@ -582,7 +582,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets mask
     *
-    * @param int[]|null $mask 根据掩码过滤
+    * @param int[]|null $mask mask
     *
     * @return $this
     */

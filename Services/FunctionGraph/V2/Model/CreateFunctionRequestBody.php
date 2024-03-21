@@ -34,10 +34,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
     * customImage  customImage
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
+    * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcCode  funcCode
+    * mountConfig  mountConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -46,6 +48,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
     * networkController  networkController
+    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * enableDynamicMemory  是否启动动态内存配置
     *
     * @var string[]
     */
@@ -64,10 +68,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'codeFilename' => 'string',
             'customImage' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\CustomImage',
             'userData' => 'string',
+            'encryptedUserData' => 'string',
             'xrole' => 'string',
             'appXrole' => 'string',
             'description' => 'string',
             'funcCode' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncCode',
+            'mountConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MountConfig',
             'initializerHandler' => 'string',
             'initializerTimeout' => 'int',
             'preStopHandler' => 'string',
@@ -75,7 +81,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'type' => 'string',
             'logConfig' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncLogConfig',
-            'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig'
+            'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
+            'isStatefulFunction' => 'bool',
+            'enableDynamicMemory' => 'bool'
     ];
 
     /**
@@ -94,10 +102,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
     * customImage  customImage
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
+    * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcCode  funcCode
+    * mountConfig  mountConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -106,6 +116,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
     * networkController  networkController
+    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * enableDynamicMemory  是否启动动态内存配置
     *
     * @var string[]
     */
@@ -124,10 +136,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'codeFilename' => null,
         'customImage' => null,
         'userData' => null,
+        'encryptedUserData' => null,
         'xrole' => null,
         'appXrole' => null,
         'description' => null,
         'funcCode' => null,
+        'mountConfig' => null,
         'initializerHandler' => null,
         'initializerTimeout' => 'int32',
         'preStopHandler' => null,
@@ -135,7 +149,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'type' => null,
         'logConfig' => null,
-        'networkController' => null
+        'networkController' => null,
+        'isStatefulFunction' => null,
+        'enableDynamicMemory' => null
     ];
 
     /**
@@ -175,10 +191,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
     * customImage  customImage
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
+    * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcCode  funcCode
+    * mountConfig  mountConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -187,6 +205,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
     * networkController  networkController
+    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * enableDynamicMemory  是否启动动态内存配置
     *
     * @var string[]
     */
@@ -205,10 +225,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'codeFilename' => 'code_filename',
             'customImage' => 'custom_image',
             'userData' => 'user_data',
+            'encryptedUserData' => 'encrypted_user_data',
             'xrole' => 'xrole',
             'appXrole' => 'app_xrole',
             'description' => 'description',
             'funcCode' => 'func_code',
+            'mountConfig' => 'mount_config',
             'initializerHandler' => 'initializer_handler',
             'initializerTimeout' => 'initializer_timeout',
             'preStopHandler' => 'pre_stop_handler',
@@ -216,7 +238,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'type' => 'type',
             'logConfig' => 'log_config',
-            'networkController' => 'network_controller'
+            'networkController' => 'network_controller',
+            'isStatefulFunction' => 'is_stateful_function',
+            'enableDynamicMemory' => 'enable_dynamic_memory'
     ];
 
     /**
@@ -235,10 +259,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
     * customImage  customImage
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
+    * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcCode  funcCode
+    * mountConfig  mountConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -247,6 +273,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
     * networkController  networkController
+    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * enableDynamicMemory  是否启动动态内存配置
     *
     * @var string[]
     */
@@ -265,10 +293,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'codeFilename' => 'setCodeFilename',
             'customImage' => 'setCustomImage',
             'userData' => 'setUserData',
+            'encryptedUserData' => 'setEncryptedUserData',
             'xrole' => 'setXrole',
             'appXrole' => 'setAppXrole',
             'description' => 'setDescription',
             'funcCode' => 'setFuncCode',
+            'mountConfig' => 'setMountConfig',
             'initializerHandler' => 'setInitializerHandler',
             'initializerTimeout' => 'setInitializerTimeout',
             'preStopHandler' => 'setPreStopHandler',
@@ -276,7 +306,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'type' => 'setType',
             'logConfig' => 'setLogConfig',
-            'networkController' => 'setNetworkController'
+            'networkController' => 'setNetworkController',
+            'isStatefulFunction' => 'setIsStatefulFunction',
+            'enableDynamicMemory' => 'setEnableDynamicMemory'
     ];
 
     /**
@@ -295,10 +327,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
     * customImage  customImage
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
+    * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     * appXrole  函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
     * description  函数描述。
     * funcCode  funcCode
+    * mountConfig  mountConfig
     * initializerHandler  函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
     * initializerTimeout  初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
     * preStopHandler  函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -307,6 +341,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * type  函数版本；部分局点只支持v1函数，缺省值则为v1
     * logConfig  logConfig
     * networkController  networkController
+    * isStatefulFunction  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    * enableDynamicMemory  是否启动动态内存配置
     *
     * @var string[]
     */
@@ -325,10 +361,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'codeFilename' => 'getCodeFilename',
             'customImage' => 'getCustomImage',
             'userData' => 'getUserData',
+            'encryptedUserData' => 'getEncryptedUserData',
             'xrole' => 'getXrole',
             'appXrole' => 'getAppXrole',
             'description' => 'getDescription',
             'funcCode' => 'getFuncCode',
+            'mountConfig' => 'getMountConfig',
             'initializerHandler' => 'getInitializerHandler',
             'initializerTimeout' => 'getInitializerTimeout',
             'preStopHandler' => 'getPreStopHandler',
@@ -336,7 +374,9 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'type' => 'getType',
             'logConfig' => 'getLogConfig',
-            'networkController' => 'getNetworkController'
+            'networkController' => 'getNetworkController',
+            'isStatefulFunction' => 'getIsStatefulFunction',
+            'enableDynamicMemory' => 'getEnableDynamicMemory'
     ];
 
     /**
@@ -494,10 +534,12 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['codeFilename'] = isset($data['codeFilename']) ? $data['codeFilename'] : null;
         $this->container['customImage'] = isset($data['customImage']) ? $data['customImage'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
+        $this->container['encryptedUserData'] = isset($data['encryptedUserData']) ? $data['encryptedUserData'] : null;
         $this->container['xrole'] = isset($data['xrole']) ? $data['xrole'] : null;
         $this->container['appXrole'] = isset($data['appXrole']) ? $data['appXrole'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['funcCode'] = isset($data['funcCode']) ? $data['funcCode'] : null;
+        $this->container['mountConfig'] = isset($data['mountConfig']) ? $data['mountConfig'] : null;
         $this->container['initializerHandler'] = isset($data['initializerHandler']) ? $data['initializerHandler'] : null;
         $this->container['initializerTimeout'] = isset($data['initializerTimeout']) ? $data['initializerTimeout'] : null;
         $this->container['preStopHandler'] = isset($data['preStopHandler']) ? $data['preStopHandler'] : null;
@@ -506,6 +548,8 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['logConfig'] = isset($data['logConfig']) ? $data['logConfig'] : null;
         $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
+        $this->container['isStatefulFunction'] = isset($data['isStatefulFunction']) ? $data['isStatefulFunction'] : null;
+        $this->container['enableDynamicMemory'] = isset($data['enableDynamicMemory']) ? $data['enableDynamicMemory'] : null;
     }
 
     /**
@@ -912,6 +956,30 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets encryptedUserData
+    *  用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
+    *
+    * @return string|null
+    */
+    public function getEncryptedUserData()
+    {
+        return $this->container['encryptedUserData'];
+    }
+
+    /**
+    * Sets encryptedUserData
+    *
+    * @param string|null $encryptedUserData 用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
+    *
+    * @return $this
+    */
+    public function setEncryptedUserData($encryptedUserData)
+    {
+        $this->container['encryptedUserData'] = $encryptedUserData;
+        return $this;
+    }
+
+    /**
     * Gets xrole
     *  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
     *
@@ -1004,6 +1072,30 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setFuncCode($funcCode)
     {
         $this->container['funcCode'] = $funcCode;
+        return $this;
+    }
+
+    /**
+    * Gets mountConfig
+    *  mountConfig
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\MountConfig|null
+    */
+    public function getMountConfig()
+    {
+        return $this->container['mountConfig'];
+    }
+
+    /**
+    * Sets mountConfig
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\MountConfig|null $mountConfig mountConfig
+    *
+    * @return $this
+    */
+    public function setMountConfig($mountConfig)
+    {
+        $this->container['mountConfig'] = $mountConfig;
         return $this;
     }
 
@@ -1196,6 +1288,54 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setNetworkController($networkController)
     {
         $this->container['networkController'] = $networkController;
+        return $this;
+    }
+
+    /**
+    * Gets isStatefulFunction
+    *  是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    *
+    * @return bool|null
+    */
+    public function getIsStatefulFunction()
+    {
+        return $this->container['isStatefulFunction'];
+    }
+
+    /**
+    * Sets isStatefulFunction
+    *
+    * @param bool|null $isStatefulFunction 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+    *
+    * @return $this
+    */
+    public function setIsStatefulFunction($isStatefulFunction)
+    {
+        $this->container['isStatefulFunction'] = $isStatefulFunction;
+        return $this;
+    }
+
+    /**
+    * Gets enableDynamicMemory
+    *  是否启动动态内存配置
+    *
+    * @return bool|null
+    */
+    public function getEnableDynamicMemory()
+    {
+        return $this->container['enableDynamicMemory'];
+    }
+
+    /**
+    * Sets enableDynamicMemory
+    *
+    * @param bool|null $enableDynamicMemory 是否启动动态内存配置
+    *
+    * @return $this
+    */
+    public function setEnableDynamicMemory($enableDynamicMemory)
+    {
+        $this->container['enableDynamicMemory'] = $enableDynamicMemory;
         return $this;
     }
 

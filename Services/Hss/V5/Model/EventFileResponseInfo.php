@@ -26,7 +26,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     * fileMtime  文件最后一次修改时间
     * fileAtime  文件最后一次访问时间
     * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash
+    * fileHash  文件hash,当前为sha256
     * fileMd5  文件md5
     * fileSha256  文件sha256
     * fileType  文件类型
@@ -76,7 +76,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     * fileMtime  文件最后一次修改时间
     * fileAtime  文件最后一次访问时间
     * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash
+    * fileHash  文件hash,当前为sha256
     * fileMd5  文件md5
     * fileSha256  文件sha256
     * fileType  文件类型
@@ -147,7 +147,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     * fileMtime  文件最后一次修改时间
     * fileAtime  文件最后一次访问时间
     * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash
+    * fileHash  文件hash,当前为sha256
     * fileMd5  文件md5
     * fileSha256  文件sha256
     * fileType  文件类型
@@ -197,7 +197,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     * fileMtime  文件最后一次修改时间
     * fileAtime  文件最后一次访问时间
     * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash
+    * fileHash  文件hash,当前为sha256
     * fileMd5  文件md5
     * fileSha256  文件sha256
     * fileType  文件类型
@@ -247,7 +247,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     * fileMtime  文件最后一次修改时间
     * fileAtime  文件最后一次访问时间
     * fileCtime  文件最后一次状态改变时间
-    * fileHash  文件hash
+    * fileHash  文件hash,当前为sha256
     * fileMd5  文件md5
     * fileSha256  文件sha256
     * fileType  文件类型
@@ -616,7 +616,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileHash
-    *  文件hash
+    *  文件hash,当前为sha256
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class EventFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileHash
     *
-    * @param string|null $fileHash 文件hash
+    * @param string|null $fileHash 文件hash,当前为sha256
     *
     * @return $this
     */

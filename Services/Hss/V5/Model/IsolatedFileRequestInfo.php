@@ -20,7 +20,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -36,7 +36,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -73,7 +73,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * hostId  主机ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -89,7 +89,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * hostId  主机ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -105,7 +105,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * hostId  主机ID
     * fileHash  文件哈希
     * filePath  文件路径
     * fileAttr  文件属性
@@ -225,7 +225,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class IsolatedFileRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */

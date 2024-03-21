@@ -20,18 +20,18 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP池的ID
+    * name  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * enName  英文名称
     * cnName  中文名称
     * status  状态
-    * isp  线路
-    * ipVersion  IPv4或IPv6
+    * isp  全域弹性公网IP所属线路
+    * ipVersion  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     * accessSite  接入点信息
     * type  类型
     * createdAt  创建时间
     * updatedAt  更新时间
-    * allowedBandwidthTypes  allowedBandwidthTypes
+    * allowedBandwidthTypes  地址池支持的全域公网带宽类型资源
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP池的ID
+    * name  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * enName  英文名称
     * cnName  中文名称
     * status  状态
-    * isp  线路
-    * ipVersion  IPv4或IPv6
+    * isp  全域弹性公网IP所属线路
+    * ipVersion  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     * accessSite  接入点信息
     * type  类型
     * createdAt  创建时间
     * updatedAt  更新时间
-    * allowedBandwidthTypes  allowedBandwidthTypes
+    * allowedBandwidthTypes  地址池支持的全域公网带宽类型资源
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP池的ID
+    * name  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * enName  英文名称
     * cnName  中文名称
     * status  状态
-    * isp  线路
-    * ipVersion  IPv4或IPv6
+    * isp  全域弹性公网IP所属线路
+    * ipVersion  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     * accessSite  接入点信息
     * type  类型
     * createdAt  创建时间
     * updatedAt  更新时间
-    * allowedBandwidthTypes  allowedBandwidthTypes
+    * allowedBandwidthTypes  地址池支持的全域公网带宽类型资源
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP池的ID
+    * name  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * enName  英文名称
     * cnName  中文名称
     * status  状态
-    * isp  线路
-    * ipVersion  IPv4或IPv6
+    * isp  全域弹性公网IP所属线路
+    * ipVersion  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     * accessSite  接入点信息
     * type  类型
     * createdAt  创建时间
     * updatedAt  更新时间
-    * allowedBandwidthTypes  allowedBandwidthTypes
+    * allowedBandwidthTypes  地址池支持的全域公网带宽类型资源
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * name  资源名称
+    * id  全域弹性公网IP池的ID
+    * name  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * enName  英文名称
     * cnName  中文名称
     * status  状态
-    * isp  线路
-    * ipVersion  IPv4或IPv6
+    * isp  全域弹性公网IP所属线路
+    * ipVersion  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     * accessSite  接入点信息
     * type  类型
     * createdAt  创建时间
     * updatedAt  更新时间
-    * allowedBandwidthTypes  allowedBandwidthTypes
+    * allowedBandwidthTypes  地址池支持的全域公网带宽类型资源
     *
     * @var string[]
     */
@@ -242,6 +242,8 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_INACTIVE = 'INACTIVE';
     const STATUS_SOLDOUT = 'SOLDOUT';
+    const IP_VERSION_4 = 4;
+    const IP_VERSION_6 = 6;
     
 
     /**
@@ -255,6 +257,19 @@ class ListGeipPools implements ModelInterface, ArrayAccess
             self::STATUS_ACTIVE,
             self::STATUS_INACTIVE,
             self::STATUS_SOLDOUT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_4,
+            self::IP_VERSION_6,
         ];
     }
 
@@ -296,10 +311,24 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -320,7 +349,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域弹性公网IP池的ID
     *
     * @return string|null
     */
@@ -332,7 +361,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域弹性公网IP池的ID
     *
     * @return $this
     */
@@ -344,7 +373,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -356,7 +385,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name - 功能说明：全域弹性公网IP池名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -440,7 +469,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  线路
+    *  全域弹性公网IP所属线路
     *
     * @return string|null
     */
@@ -452,7 +481,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string|null $isp 线路
+    * @param string|null $isp 全域弹性公网IP所属线路
     *
     * @return $this
     */
@@ -464,7 +493,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  IPv4或IPv6
+    *  - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     *
     * @return int|null
     */
@@ -476,7 +505,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion IPv4或IPv6
+    * @param int|null $ipVersion - 功能说明：全域弹性公网IP池的版本 - 取值范围：4、6
     *
     * @return $this
     */
@@ -584,7 +613,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowedBandwidthTypes
-    *  allowedBandwidthTypes
+    *  地址池支持的全域公网带宽类型资源
     *
     * @return \HuaweiCloud\SDK\Geip\V3\Model\AllowedBandwidthTypes[]|null
     */
@@ -596,7 +625,7 @@ class ListGeipPools implements ModelInterface, ArrayAccess
     /**
     * Sets allowedBandwidthTypes
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\AllowedBandwidthTypes[]|null $allowedBandwidthTypes allowedBandwidthTypes
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\AllowedBandwidthTypes[]|null $allowedBandwidthTypes 地址池支持的全域公网带宽类型资源
     *
     * @return $this
     */

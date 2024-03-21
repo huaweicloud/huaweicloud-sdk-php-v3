@@ -20,9 +20,9 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
+    * id  域弹性公网IP支持绑定的Region限制的ID
     * instanceType  支持绑定的实例类型
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * regionId  region_id
     * accessSite  access_site,后端实例所在的站点信息
     * status  状态
@@ -44,9 +44,9 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
+    * id  域弹性公网IP支持绑定的Region限制的ID
     * instanceType  支持绑定的实例类型
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * regionId  region_id
     * accessSite  access_site,后端实例所在的站点信息
     * status  状态
@@ -89,9 +89,9 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
+    * id  域弹性公网IP支持绑定的Region限制的ID
     * instanceType  支持绑定的实例类型
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * regionId  region_id
     * accessSite  access_site,后端实例所在的站点信息
     * status  状态
@@ -113,9 +113,9 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
+    * id  域弹性公网IP支持绑定的Region限制的ID
     * instanceType  支持绑定的实例类型
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * regionId  region_id
     * accessSite  access_site,后端实例所在的站点信息
     * status  状态
@@ -137,9 +137,9 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
+    * id  域弹性公网IP支持绑定的Region限制的ID
     * instanceType  支持绑定的实例类型
-    * publicBorderGroup  中心站点or边缘站点
+    * publicBorderGroup  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     * regionId  region_id
     * accessSite  access_site,后端实例所在的站点信息
     * status  状态
@@ -250,6 +250,12 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -274,7 +280,7 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  域弹性公网IP支持绑定的Region限制的ID
     *
     * @return string|null
     */
@@ -286,7 +292,7 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 域弹性公网IP支持绑定的Region限制的ID
     *
     * @return $this
     */
@@ -322,7 +328,7 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  中心站点or边缘站点
+    *  - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     *
     * @return string|null
     */
@@ -334,7 +340,7 @@ class ListSupportInstancesSupportRegions implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 中心站点or边缘站点
+    * @param string|null $publicBorderGroup - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ShowJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
+    * id  Job的ID
     * action  处理规则
     * status  状态
     * errorTask  error_task
@@ -44,7 +44,7 @@ class ShowJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
+    * id  Job的ID
     * action  处理规则
     * status  状态
     * errorTask  error_task
@@ -89,7 +89,7 @@ class ShowJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
+    * id  Job的ID
     * action  处理规则
     * status  状态
     * errorTask  error_task
@@ -113,7 +113,7 @@ class ShowJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
+    * id  Job的ID
     * action  处理规则
     * status  状态
     * errorTask  error_task
@@ -137,7 +137,7 @@ class ShowJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
+    * id  Job的ID
     * action  处理规则
     * status  状态
     * errorTask  error_task
@@ -251,7 +251,7 @@ class ShowJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  Job的ID
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ShowJob implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id Job的ID
     *
     * @return $this
     */

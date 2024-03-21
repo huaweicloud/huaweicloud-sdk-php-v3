@@ -20,7 +20,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽限制的ID
     * chargeMode  全域公网带宽的计费模式
     * minSize  该类型全域公网带宽可购买的最小size
     * extLimit  extLimit
@@ -40,7 +40,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
+    * id  全域公网带宽限制的ID
     * chargeMode  全域公网带宽的计费模式
     * minSize  该类型全域公网带宽可购买的最小size
     * extLimit  extLimit
@@ -81,7 +81,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
+    * id  全域公网带宽限制的ID
     * chargeMode  全域公网带宽的计费模式
     * minSize  该类型全域公网带宽可购买的最小size
     * extLimit  extLimit
@@ -101,7 +101,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
+    * id  全域公网带宽限制的ID
     * chargeMode  全域公网带宽的计费模式
     * minSize  该类型全域公网带宽可购买的最小size
     * extLimit  extLimit
@@ -121,7 +121,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
+    * id  全域公网带宽限制的ID
     * chargeMode  全域公网带宽的计费模式
     * minSize  该类型全域公网带宽可购买的最小size
     * extLimit  extLimit
@@ -229,7 +229,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  全域公网带宽限制的ID
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ListInternetBandwidthLimits implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 全域公网带宽限制的ID
     *
     * @return $this
     */

@@ -24,13 +24,13 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * proxyRegion  根据proxy_region过滤
-    * iecAzCode  根据iec_az_code过滤
+    * id  id
+    * code  code
+    * proxyRegion  proxyRegion
+    * iecAzCode  iecAzCode
     *
     * @var string[]
     */
@@ -54,13 +54,13 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * proxyRegion  根据proxy_region过滤
-    * iecAzCode  根据iec_az_code过滤
+    * id  id
+    * code  code
+    * proxyRegion  proxyRegion
+    * iecAzCode  iecAzCode
     *
     * @var string[]
     */
@@ -105,13 +105,13 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * proxyRegion  根据proxy_region过滤
-    * iecAzCode  根据iec_az_code过滤
+    * id  id
+    * code  code
+    * proxyRegion  proxyRegion
+    * iecAzCode  iecAzCode
     *
     * @var string[]
     */
@@ -135,13 +135,13 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * proxyRegion  根据proxy_region过滤
-    * iecAzCode  根据iec_az_code过滤
+    * id  id
+    * code  code
+    * proxyRegion  proxyRegion
+    * iecAzCode  iecAzCode
     *
     * @var string[]
     */
@@ -165,13 +165,13 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据ID过滤
-    * code  根据名称过滤
-    * proxyRegion  根据proxy_region过滤
-    * iecAzCode  根据iec_az_code过滤
+    * id  id
+    * code  code
+    * proxyRegion  proxyRegion
+    * iecAzCode  iecAzCode
     *
     * @var string[]
     */
@@ -448,7 +448,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -460,7 +460,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -532,7 +532,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  根据名称过滤
+    *  code
     *
     * @return string[]|null
     */
@@ -556,7 +556,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string[]|null $code 根据名称过滤
+    * @param string[]|null $code code
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyRegion
-    *  根据proxy_region过滤
+    *  proxyRegion
     *
     * @return string[]|null
     */
@@ -580,7 +580,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets proxyRegion
     *
-    * @param string[]|null $proxyRegion 根据proxy_region过滤
+    * @param string[]|null $proxyRegion proxyRegion
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets iecAzCode
-    *  根据iec_az_code过滤
+    *  iecAzCode
     *
     * @return string[]|null
     */
@@ -604,7 +604,7 @@ class ListAccessSitesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets iecAzCode
     *
-    * @param string[]|null $iecAzCode 根据iec_az_code过滤
+    * @param string[]|null $iecAzCode iecAzCode
     *
     * @return $this
     */

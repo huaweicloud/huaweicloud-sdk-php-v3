@@ -24,32 +24,32 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据资源ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据可分配的IP版本过滤
-    * cidr  根据分配的CIDR过滤
-    * cidrV6  根据分配的IPv6 CIDR过滤
-    * freezen  根据是否冻结过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * status  根据状态过滤
-    * associateInstanceRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInstanceType  根据绑定实例的类型过滤
-    * associateInstancePublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInstanceId  根据绑定实例的ID过滤
-    * associateInstanceProjectId  根据绑定实例所属的项目ID过滤
-    * associateInstanceServiceId  根据绑定实例所属的服务ID过滤
-    * associateInstanceServiceType  根据绑定实例的服务类型过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * cidr  cidr
+    * cidrV6  cidrV6
+    * freezen  freezen
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * status  status
+    * associateInstanceRegion  associateInstanceRegion
+    * associateInstanceInstanceType  associateInstanceInstanceType
+    * associateInstancePublicBorderGroup  associateInstancePublicBorderGroup
+    * associateInstanceInstanceSite  associateInstanceInstanceSite
+    * associateInstanceInstanceId  associateInstanceInstanceId
+    * associateInstanceProjectId  associateInstanceProjectId
+    * associateInstanceServiceId  associateInstanceServiceId
+    * associateInstanceServiceType  associateInstanceServiceType
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -92,32 +92,32 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据资源ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据可分配的IP版本过滤
-    * cidr  根据分配的CIDR过滤
-    * cidrV6  根据分配的IPv6 CIDR过滤
-    * freezen  根据是否冻结过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * status  根据状态过滤
-    * associateInstanceRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInstanceType  根据绑定实例的类型过滤
-    * associateInstancePublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInstanceId  根据绑定实例的ID过滤
-    * associateInstanceProjectId  根据绑定实例所属的项目ID过滤
-    * associateInstanceServiceId  根据绑定实例所属的服务ID过滤
-    * associateInstanceServiceType  根据绑定实例的服务类型过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * cidr  cidr
+    * cidrV6  cidrV6
+    * freezen  freezen
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * status  status
+    * associateInstanceRegion  associateInstanceRegion
+    * associateInstanceInstanceType  associateInstanceInstanceType
+    * associateInstancePublicBorderGroup  associateInstancePublicBorderGroup
+    * associateInstanceInstanceSite  associateInstanceInstanceSite
+    * associateInstanceInstanceId  associateInstanceInstanceId
+    * associateInstanceProjectId  associateInstanceProjectId
+    * associateInstanceServiceId  associateInstanceServiceId
+    * associateInstanceServiceType  associateInstanceServiceType
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -181,32 +181,32 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据资源ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据可分配的IP版本过滤
-    * cidr  根据分配的CIDR过滤
-    * cidrV6  根据分配的IPv6 CIDR过滤
-    * freezen  根据是否冻结过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * status  根据状态过滤
-    * associateInstanceRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInstanceType  根据绑定实例的类型过滤
-    * associateInstancePublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInstanceId  根据绑定实例的ID过滤
-    * associateInstanceProjectId  根据绑定实例所属的项目ID过滤
-    * associateInstanceServiceId  根据绑定实例所属的服务ID过滤
-    * associateInstanceServiceType  根据绑定实例的服务类型过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * cidr  cidr
+    * cidrV6  cidrV6
+    * freezen  freezen
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * status  status
+    * associateInstanceRegion  associateInstanceRegion
+    * associateInstanceInstanceType  associateInstanceInstanceType
+    * associateInstancePublicBorderGroup  associateInstancePublicBorderGroup
+    * associateInstanceInstanceSite  associateInstanceInstanceSite
+    * associateInstanceInstanceId  associateInstanceInstanceId
+    * associateInstanceProjectId  associateInstanceProjectId
+    * associateInstanceServiceId  associateInstanceServiceId
+    * associateInstanceServiceType  associateInstanceServiceType
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -249,32 +249,32 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据资源ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据可分配的IP版本过滤
-    * cidr  根据分配的CIDR过滤
-    * cidrV6  根据分配的IPv6 CIDR过滤
-    * freezen  根据是否冻结过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * status  根据状态过滤
-    * associateInstanceRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInstanceType  根据绑定实例的类型过滤
-    * associateInstancePublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInstanceId  根据绑定实例的ID过滤
-    * associateInstanceProjectId  根据绑定实例所属的项目ID过滤
-    * associateInstanceServiceId  根据绑定实例所属的服务ID过滤
-    * associateInstanceServiceType  根据绑定实例的服务类型过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * cidr  cidr
+    * cidrV6  cidrV6
+    * freezen  freezen
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * status  status
+    * associateInstanceRegion  associateInstanceRegion
+    * associateInstanceInstanceType  associateInstanceInstanceType
+    * associateInstancePublicBorderGroup  associateInstancePublicBorderGroup
+    * associateInstanceInstanceSite  associateInstanceInstanceSite
+    * associateInstanceInstanceId  associateInstanceInstanceId
+    * associateInstanceProjectId  associateInstanceProjectId
+    * associateInstanceServiceId  associateInstanceServiceId
+    * associateInstanceServiceType  associateInstanceServiceType
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -317,32 +317,32 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
+    * fields  fields
     * sortKey  按照sort_key指定的字段排序
     * sortDir  排序的方向，倒序或者正序
-    * id  根据资源ID过滤
-    * internetBandwidthId  根据全域公网带宽的ID过滤
-    * name  根据名称过滤
-    * nameLike  根据名称模糊匹配
-    * accessSite  根据接入点过滤
-    * geipPoolName  根据全域弹性公网IP池名称过滤
-    * isp  根据运营商线路过滤
-    * ipVersion  根据可分配的IP版本过滤
-    * cidr  根据分配的CIDR过滤
-    * cidrV6  根据分配的IPv6 CIDR过滤
-    * freezen  根据是否冻结过滤
-    * internetBandwidthIsNull  根据是否绑定全域公网带宽过滤
-    * status  根据状态过滤
-    * associateInstanceRegion  根据绑定实例所属的局点过滤
-    * associateInstanceInstanceType  根据绑定实例的类型过滤
-    * associateInstancePublicBorderGroup  根据绑定实例所属的边缘信息过滤
-    * associateInstanceInstanceSite  根据绑定实例所在的站点过滤
-    * associateInstanceInstanceId  根据绑定实例的ID过滤
-    * associateInstanceProjectId  根据绑定实例所属的项目ID过滤
-    * associateInstanceServiceId  根据绑定实例所属的服务ID过滤
-    * associateInstanceServiceType  根据绑定实例的服务类型过滤
-    * enterpriseProjectId  根据企业项目ID过滤
-    * tags  根据标签过滤
+    * id  id
+    * internetBandwidthId  internetBandwidthId
+    * name  name
+    * nameLike  nameLike
+    * accessSite  accessSite
+    * geipPoolName  geipPoolName
+    * isp  isp
+    * ipVersion  ipVersion
+    * cidr  cidr
+    * cidrV6  cidrV6
+    * freezen  freezen
+    * internetBandwidthIsNull  internetBandwidthIsNull
+    * status  status
+    * associateInstanceRegion  associateInstanceRegion
+    * associateInstanceInstanceType  associateInstanceInstanceType
+    * associateInstancePublicBorderGroup  associateInstancePublicBorderGroup
+    * associateInstanceInstanceSite  associateInstanceInstanceSite
+    * associateInstanceInstanceId  associateInstanceInstanceId
+    * associateInstanceProjectId  associateInstanceProjectId
+    * associateInstanceServiceId  associateInstanceServiceId
+    * associateInstanceServiceType  associateInstanceServiceType
+    * enterpriseProjectId  enterpriseProjectId
+    * tags  tags
     *
     * @var string[]
     */
@@ -715,7 +715,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -727,7 +727,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  根据资源ID过滤
+    *  id
     *
     * @return string[]|null
     */
@@ -799,7 +799,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id 根据资源ID过滤
+    * @param string[]|null $id id
     *
     * @return $this
     */
@@ -811,7 +811,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthId
-    *  根据全域公网带宽的ID过滤
+    *  internetBandwidthId
     *
     * @return string[]|null
     */
@@ -823,7 +823,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthId
     *
-    * @param string[]|null $internetBandwidthId 根据全域公网带宽的ID过滤
+    * @param string[]|null $internetBandwidthId internetBandwidthId
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  根据名称过滤
+    *  name
     *
     * @return string[]|null
     */
@@ -847,7 +847,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name 根据名称过滤
+    * @param string[]|null $name name
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameLike
-    *  根据名称模糊匹配
+    *  nameLike
     *
     * @return string|null
     */
@@ -871,7 +871,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nameLike
     *
-    * @param string|null $nameLike 根据名称模糊匹配
+    * @param string|null $nameLike nameLike
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessSite
-    *  根据接入点过滤
+    *  accessSite
     *
     * @return string[]|null
     */
@@ -895,7 +895,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessSite
     *
-    * @param string[]|null $accessSite 根据接入点过滤
+    * @param string[]|null $accessSite accessSite
     *
     * @return $this
     */
@@ -907,7 +907,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets geipPoolName
-    *  根据全域弹性公网IP池名称过滤
+    *  geipPoolName
     *
     * @return string[]|null
     */
@@ -919,7 +919,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets geipPoolName
     *
-    * @param string[]|null $geipPoolName 根据全域弹性公网IP池名称过滤
+    * @param string[]|null $geipPoolName geipPoolName
     *
     * @return $this
     */
@@ -931,7 +931,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  根据运营商线路过滤
+    *  isp
     *
     * @return string[]|null
     */
@@ -943,7 +943,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 根据运营商线路过滤
+    * @param string[]|null $isp isp
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  根据可分配的IP版本过滤
+    *  ipVersion
     *
     * @return int[]|null
     */
@@ -967,7 +967,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int[]|null $ipVersion 根据可分配的IP版本过滤
+    * @param int[]|null $ipVersion ipVersion
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
-    *  根据分配的CIDR过滤
+    *  cidr
     *
     * @return string[]|null
     */
@@ -991,7 +991,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string[]|null $cidr 根据分配的CIDR过滤
+    * @param string[]|null $cidr cidr
     *
     * @return $this
     */
@@ -1003,7 +1003,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrV6
-    *  根据分配的IPv6 CIDR过滤
+    *  cidrV6
     *
     * @return string[]|null
     */
@@ -1015,7 +1015,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cidrV6
     *
-    * @param string[]|null $cidrV6 根据分配的IPv6 CIDR过滤
+    * @param string[]|null $cidrV6 cidrV6
     *
     * @return $this
     */
@@ -1027,7 +1027,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets freezen
-    *  根据是否冻结过滤
+    *  freezen
     *
     * @return bool[]|null
     */
@@ -1039,7 +1039,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets freezen
     *
-    * @param bool[]|null $freezen 根据是否冻结过滤
+    * @param bool[]|null $freezen freezen
     *
     * @return $this
     */
@@ -1051,7 +1051,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets internetBandwidthIsNull
-    *  根据是否绑定全域公网带宽过滤
+    *  internetBandwidthIsNull
     *
     * @return bool[]|null
     */
@@ -1063,7 +1063,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets internetBandwidthIsNull
     *
-    * @param bool[]|null $internetBandwidthIsNull 根据是否绑定全域公网带宽过滤
+    * @param bool[]|null $internetBandwidthIsNull internetBandwidthIsNull
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  根据状态过滤
+    *  status
     *
     * @return string[]|null
     */
@@ -1087,7 +1087,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 根据状态过滤
+    * @param string[]|null $status status
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceRegion
-    *  根据绑定实例所属的局点过滤
+    *  associateInstanceRegion
     *
     * @return string[]|null
     */
@@ -1111,7 +1111,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceRegion
     *
-    * @param string[]|null $associateInstanceRegion 根据绑定实例所属的局点过滤
+    * @param string[]|null $associateInstanceRegion associateInstanceRegion
     *
     * @return $this
     */
@@ -1123,7 +1123,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInstanceType
-    *  根据绑定实例的类型过滤
+    *  associateInstanceInstanceType
     *
     * @return string[]|null
     */
@@ -1135,7 +1135,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInstanceType
     *
-    * @param string[]|null $associateInstanceInstanceType 根据绑定实例的类型过滤
+    * @param string[]|null $associateInstanceInstanceType associateInstanceInstanceType
     *
     * @return $this
     */
@@ -1147,7 +1147,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstancePublicBorderGroup
-    *  根据绑定实例所属的边缘信息过滤
+    *  associateInstancePublicBorderGroup
     *
     * @return string[]|null
     */
@@ -1159,7 +1159,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstancePublicBorderGroup
     *
-    * @param string[]|null $associateInstancePublicBorderGroup 根据绑定实例所属的边缘信息过滤
+    * @param string[]|null $associateInstancePublicBorderGroup associateInstancePublicBorderGroup
     *
     * @return $this
     */
@@ -1171,7 +1171,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInstanceSite
-    *  根据绑定实例所在的站点过滤
+    *  associateInstanceInstanceSite
     *
     * @return string[]|null
     */
@@ -1183,7 +1183,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInstanceSite
     *
-    * @param string[]|null $associateInstanceInstanceSite 根据绑定实例所在的站点过滤
+    * @param string[]|null $associateInstanceInstanceSite associateInstanceInstanceSite
     *
     * @return $this
     */
@@ -1195,7 +1195,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceInstanceId
-    *  根据绑定实例的ID过滤
+    *  associateInstanceInstanceId
     *
     * @return string[]|null
     */
@@ -1207,7 +1207,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceInstanceId
     *
-    * @param string[]|null $associateInstanceInstanceId 根据绑定实例的ID过滤
+    * @param string[]|null $associateInstanceInstanceId associateInstanceInstanceId
     *
     * @return $this
     */
@@ -1219,7 +1219,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceProjectId
-    *  根据绑定实例所属的项目ID过滤
+    *  associateInstanceProjectId
     *
     * @return string[]|null
     */
@@ -1231,7 +1231,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceProjectId
     *
-    * @param string[]|null $associateInstanceProjectId 根据绑定实例所属的项目ID过滤
+    * @param string[]|null $associateInstanceProjectId associateInstanceProjectId
     *
     * @return $this
     */
@@ -1243,7 +1243,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceServiceId
-    *  根据绑定实例所属的服务ID过滤
+    *  associateInstanceServiceId
     *
     * @return string[]|null
     */
@@ -1255,7 +1255,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceServiceId
     *
-    * @param string[]|null $associateInstanceServiceId 根据绑定实例所属的服务ID过滤
+    * @param string[]|null $associateInstanceServiceId associateInstanceServiceId
     *
     * @return $this
     */
@@ -1267,7 +1267,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceServiceType
-    *  根据绑定实例的服务类型过滤
+    *  associateInstanceServiceType
     *
     * @return string[]|null
     */
@@ -1279,7 +1279,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceServiceType
     *
-    * @param string[]|null $associateInstanceServiceType 根据绑定实例的服务类型过滤
+    * @param string[]|null $associateInstanceServiceType associateInstanceServiceType
     *
     * @return $this
     */
@@ -1291,7 +1291,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  根据企业项目ID过滤
+    *  enterpriseProjectId
     *
     * @return string[]|null
     */
@@ -1303,7 +1303,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string[]|null $enterpriseProjectId 根据企业项目ID过滤
+    * @param string[]|null $enterpriseProjectId enterpriseProjectId
     *
     * @return $this
     */
@@ -1315,7 +1315,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  根据标签过滤
+    *  tags
     *
     * @return string[]|null
     */
@@ -1327,7 +1327,7 @@ class ListGlobalEipSegmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 根据标签过滤
+    * @param string[]|null $tags tags
     *
     * @return $this
     */

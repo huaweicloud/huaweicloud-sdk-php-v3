@@ -21,7 +21,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * port  端口号
-    * type  类型
+    * type  端口类型
     * num  端口数量
     * status  危险类型:danger/unknown
     *
@@ -37,7 +37,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * port  端口号
-    * type  类型
+    * type  端口类型
     * num  端口数量
     * status  危险类型:danger/unknown
     *
@@ -74,7 +74,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * port  端口号
-    * type  类型
+    * type  端口类型
     * num  端口数量
     * status  危险类型:danger/unknown
     *
@@ -90,7 +90,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * port  端口号
-    * type  类型
+    * type  端口类型
     * num  端口数量
     * status  危险类型:danger/unknown
     *
@@ -106,7 +106,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * port  端口号
-    * type  类型
+    * type  端口类型
     * num  端口数量
     * status  危险类型:danger/unknown
     *
@@ -255,7 +255,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  端口类型
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PortStatisticResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type 端口类型
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * queueScalingPolicies  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
 
     /**
     * Gets queueScalingPolicies
-    *  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    *  该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @return \HuaweiCloud\SDK\Dli\V1\Model\QueueScalingPolicyInfo[]
     */
@@ -189,7 +189,7 @@ class UpdateElasticResourcePoolQueueScalingPolicyInfo implements ModelInterface,
     /**
     * Sets queueScalingPolicies
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueScalingPolicyInfo[] $queueScalingPolicies 该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueScalingPolicyInfo[] $queueScalingPolicies 该队列在该弹性资源池下的扩缩容策略信息。单条策略信息包含时间段、优先级和CU范围。 每个队列至少要配置一条时间段为[00:00, 24:00]的默认扩缩容策略。
     *
     * @return $this
     */

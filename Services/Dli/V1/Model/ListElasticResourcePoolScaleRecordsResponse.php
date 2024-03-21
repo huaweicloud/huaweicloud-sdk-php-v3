@@ -29,7 +29,7 @@ class ListElasticResourcePoolScaleRecordsResponse implements ModelInterface, Arr
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'items' => 'object[][]',
+            'items' => '\HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolScaleRecord[]',
             'xAuthToken' => 'string'
     ];
 
@@ -223,7 +223,7 @@ class ListElasticResourcePoolScaleRecordsResponse implements ModelInterface, Arr
     * Gets items
     *  数组中返回的数据
     *
-    * @return object[][]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolScaleRecord[]|null
     */
     public function getItems()
     {
@@ -233,7 +233,7 @@ class ListElasticResourcePoolScaleRecordsResponse implements ModelInterface, Arr
     /**
     * Sets items
     *
-    * @param object[][]|null $items 数组中返回的数据
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolScaleRecord[]|null $items 数组中返回的数据
     *
     * @return $this
     */

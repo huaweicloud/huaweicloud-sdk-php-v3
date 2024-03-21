@@ -21,13 +21,14 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dnsVerifyType  DNS探测类型
-    * dnsVerifyName  DNS记录名称
-    * fileVerifyUrl  文件探测地址
-    * domainName  域名
-    * verifyDomainName  探测域名
-    * fileVerifyFilename  探测文件名
-    * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyName  DNS解析主机记录名称。
+    * fileVerifyUrl  文件校验URL地址。
+    * domainName  加速域名。
+    * verifyDomainName  校验域名。
+    * fileVerifyFilename  文件校验的校验文件名。
+    * verifyContent  校验值，解析值或者文件内容。
+    * fileVerifyDomains  文件校验域名列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -40,18 +41,20 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'verifyDomainName' => 'string',
             'fileVerifyFilename' => 'string',
             'verifyContent' => 'string',
+            'fileVerifyDomains' => 'string[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dnsVerifyType  DNS探测类型
-    * dnsVerifyName  DNS记录名称
-    * fileVerifyUrl  文件探测地址
-    * domainName  域名
-    * verifyDomainName  探测域名
-    * fileVerifyFilename  探测文件名
-    * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyName  DNS解析主机记录名称。
+    * fileVerifyUrl  文件校验URL地址。
+    * domainName  加速域名。
+    * verifyDomainName  校验域名。
+    * fileVerifyFilename  文件校验的校验文件名。
+    * verifyContent  校验值，解析值或者文件内容。
+    * fileVerifyDomains  文件校验域名列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -64,6 +67,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
         'verifyDomainName' => null,
         'fileVerifyFilename' => null,
         'verifyContent' => null,
+        'fileVerifyDomains' => null,
         'xRequestId' => null
     ];
 
@@ -90,13 +94,14 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dnsVerifyType  DNS探测类型
-    * dnsVerifyName  DNS记录名称
-    * fileVerifyUrl  文件探测地址
-    * domainName  域名
-    * verifyDomainName  探测域名
-    * fileVerifyFilename  探测文件名
-    * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyName  DNS解析主机记录名称。
+    * fileVerifyUrl  文件校验URL地址。
+    * domainName  加速域名。
+    * verifyDomainName  校验域名。
+    * fileVerifyFilename  文件校验的校验文件名。
+    * verifyContent  校验值，解析值或者文件内容。
+    * fileVerifyDomains  文件校验域名列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -109,18 +114,20 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'verifyDomainName' => 'verify_domain_name',
             'fileVerifyFilename' => 'file_verify_filename',
             'verifyContent' => 'verify_content',
+            'fileVerifyDomains' => 'file_verify_domains',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dnsVerifyType  DNS探测类型
-    * dnsVerifyName  DNS记录名称
-    * fileVerifyUrl  文件探测地址
-    * domainName  域名
-    * verifyDomainName  探测域名
-    * fileVerifyFilename  探测文件名
-    * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyName  DNS解析主机记录名称。
+    * fileVerifyUrl  文件校验URL地址。
+    * domainName  加速域名。
+    * verifyDomainName  校验域名。
+    * fileVerifyFilename  文件校验的校验文件名。
+    * verifyContent  校验值，解析值或者文件内容。
+    * fileVerifyDomains  文件校验域名列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -133,18 +140,20 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'verifyDomainName' => 'setVerifyDomainName',
             'fileVerifyFilename' => 'setFileVerifyFilename',
             'verifyContent' => 'setVerifyContent',
+            'fileVerifyDomains' => 'setFileVerifyDomains',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dnsVerifyType  DNS探测类型
-    * dnsVerifyName  DNS记录名称
-    * fileVerifyUrl  文件探测地址
-    * domainName  域名
-    * verifyDomainName  探测域名
-    * fileVerifyFilename  探测文件名
-    * verifyContent  探测内容，DNS值或者文件内容，时间加uuid
+    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyName  DNS解析主机记录名称。
+    * fileVerifyUrl  文件校验URL地址。
+    * domainName  加速域名。
+    * verifyDomainName  校验域名。
+    * fileVerifyFilename  文件校验的校验文件名。
+    * verifyContent  校验值，解析值或者文件内容。
+    * fileVerifyDomains  文件校验域名列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -157,6 +166,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
             'verifyDomainName' => 'getVerifyDomainName',
             'fileVerifyFilename' => 'getFileVerifyFilename',
             'verifyContent' => 'getVerifyContent',
+            'fileVerifyDomains' => 'getFileVerifyDomains',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -225,6 +235,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
         $this->container['verifyDomainName'] = isset($data['verifyDomainName']) ? $data['verifyDomainName'] : null;
         $this->container['fileVerifyFilename'] = isset($data['fileVerifyFilename']) ? $data['fileVerifyFilename'] : null;
         $this->container['verifyContent'] = isset($data['verifyContent']) ? $data['verifyContent'] : null;
+        $this->container['fileVerifyDomains'] = isset($data['fileVerifyDomains']) ? $data['fileVerifyDomains'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -252,7 +263,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsVerifyType
-    *  DNS探测类型
+    *  DNS解析类型。
     *
     * @return string|null
     */
@@ -264,7 +275,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dnsVerifyType
     *
-    * @param string|null $dnsVerifyType DNS探测类型
+    * @param string|null $dnsVerifyType DNS解析类型。
     *
     * @return $this
     */
@@ -276,7 +287,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsVerifyName
-    *  DNS记录名称
+    *  DNS解析主机记录名称。
     *
     * @return string|null
     */
@@ -288,7 +299,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dnsVerifyName
     *
-    * @param string|null $dnsVerifyName DNS记录名称
+    * @param string|null $dnsVerifyName DNS解析主机记录名称。
     *
     * @return $this
     */
@@ -300,7 +311,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileVerifyUrl
-    *  文件探测地址
+    *  文件校验URL地址。
     *
     * @return string|null
     */
@@ -312,7 +323,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileVerifyUrl
     *
-    * @param string|null $fileVerifyUrl 文件探测地址
+    * @param string|null $fileVerifyUrl 文件校验URL地址。
     *
     * @return $this
     */
@@ -324,7 +335,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  域名
+    *  加速域名。
     *
     * @return string|null
     */
@@ -336,7 +347,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 域名
+    * @param string|null $domainName 加速域名。
     *
     * @return $this
     */
@@ -348,7 +359,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifyDomainName
-    *  探测域名
+    *  校验域名。
     *
     * @return string|null
     */
@@ -360,7 +371,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets verifyDomainName
     *
-    * @param string|null $verifyDomainName 探测域名
+    * @param string|null $verifyDomainName 校验域名。
     *
     * @return $this
     */
@@ -372,7 +383,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileVerifyFilename
-    *  探测文件名
+    *  文件校验的校验文件名。
     *
     * @return string|null
     */
@@ -384,7 +395,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileVerifyFilename
     *
-    * @param string|null $fileVerifyFilename 探测文件名
+    * @param string|null $fileVerifyFilename 文件校验的校验文件名。
     *
     * @return $this
     */
@@ -396,7 +407,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifyContent
-    *  探测内容，DNS值或者文件内容，时间加uuid
+    *  校验值，解析值或者文件内容。
     *
     * @return string|null
     */
@@ -408,13 +419,37 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets verifyContent
     *
-    * @param string|null $verifyContent 探测内容，DNS值或者文件内容，时间加uuid
+    * @param string|null $verifyContent 校验值，解析值或者文件内容。
     *
     * @return $this
     */
     public function setVerifyContent($verifyContent)
     {
         $this->container['verifyContent'] = $verifyContent;
+        return $this;
+    }
+
+    /**
+    * Gets fileVerifyDomains
+    *  文件校验域名列表。
+    *
+    * @return string[]|null
+    */
+    public function getFileVerifyDomains()
+    {
+        return $this->container['fileVerifyDomains'];
+    }
+
+    /**
+    * Sets fileVerifyDomains
+    *
+    * @param string[]|null $fileVerifyDomains 文件校验域名列表。
+    *
+    * @return $this
+    */
+    public function setFileVerifyDomains($fileVerifyDomains)
+    {
+        $this->container['fileVerifyDomains'] = $fileVerifyDomains;
         return $this;
     }
 

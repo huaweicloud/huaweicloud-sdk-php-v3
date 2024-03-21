@@ -21,7 +21,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID
+    * policyId  备份策略ID
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -37,7 +37,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID
+    * policyId  备份策略ID
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -74,7 +74,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID
+    * policyId  备份策略ID
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -90,7 +90,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID
+    * policyId  备份策略ID
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -106,7 +106,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enabled  策略是否启用，缺省值：true
-    * policyId  策略ID
+    * policyId  备份策略ID
     * operationDefinition  operationDefinition
     * trigger  trigger
     *
@@ -240,7 +240,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID
+    *  备份策略ID
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class UpdateBackupPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string $policyId 策略ID
+    * @param string $policyId 备份策略ID
     *
     * @return $this
     */

@@ -20,19 +20,20 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * vulId  漏洞ID
     * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
     * limit  每页条数
-    * offset  偏移
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * assetValue  资产重要性 important:重要 common：一般 test：测试
     * groupName  服务器组名称
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severityLevel  危险程度 ，Critical，High，Medium，Low
     * isAffectBusiness  是否影响业务
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
     *
     * @var string[]
     */
@@ -49,24 +50,26 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'handleStatus' => 'string',
             'severityLevel' => 'string',
-            'isAffectBusiness' => 'bool'
+            'isAffectBusiness' => 'bool',
+            'repairPriority' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * vulId  漏洞ID
     * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
     * limit  每页条数
-    * offset  偏移
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * assetValue  资产重要性 important:重要 common：一般 test：测试
     * groupName  服务器组名称
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severityLevel  危险程度 ，Critical，High，Medium，Low
     * isAffectBusiness  是否影响业务
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
         'groupName' => null,
         'handleStatus' => null,
         'severityLevel' => null,
-        'isAffectBusiness' => null
+        'isAffectBusiness' => null,
+        'repairPriority' => null
     ];
 
     /**
@@ -109,19 +113,20 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * vulId  漏洞ID
     * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
     * limit  每页条数
-    * offset  偏移
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * assetValue  资产重要性 important:重要 common：一般 test：测试
     * groupName  服务器组名称
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severityLevel  危险程度 ，Critical，High，Medium，Low
     * isAffectBusiness  是否影响业务
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
     *
     * @var string[]
     */
@@ -138,24 +143,26 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'handleStatus' => 'handle_status',
             'severityLevel' => 'severity_level',
-            'isAffectBusiness' => 'is_affect_business'
+            'isAffectBusiness' => 'is_affect_business',
+            'repairPriority' => 'repair_priority'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * vulId  漏洞ID
     * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
     * limit  每页条数
-    * offset  偏移
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * assetValue  资产重要性 important:重要 common：一般 test：测试
     * groupName  服务器组名称
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severityLevel  危险程度 ，Critical，High，Medium，Low
     * isAffectBusiness  是否影响业务
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
     *
     * @var string[]
     */
@@ -172,24 +179,26 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'handleStatus' => 'setHandleStatus',
             'severityLevel' => 'setSeverityLevel',
-            'isAffectBusiness' => 'setIsAffectBusiness'
+            'isAffectBusiness' => 'setIsAffectBusiness',
+            'repairPriority' => 'setRepairPriority'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     * vulId  漏洞ID
     * type  漏洞类型   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * hostName  受影响资产名称
-    * hostIp  受影响资产ip
+    * hostName  受影响主机名称
+    * hostIp  受影响主机ip
     * status  漏洞状态   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
     * limit  每页条数
-    * offset  偏移
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * assetValue  资产重要性 important:重要 common：一般 test：测试
     * groupName  服务器组名称
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severityLevel  危险程度 ，Critical，High，Medium，Low
     * isAffectBusiness  是否影响业务
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'handleStatus' => 'getHandleStatus',
             'severityLevel' => 'getSeverityLevel',
-            'isAffectBusiness' => 'getIsAffectBusiness'
+            'isAffectBusiness' => 'getIsAffectBusiness',
+            'repairPriority' => 'getRepairPriority'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
         $this->container['isAffectBusiness'] = isset($data['isAffectBusiness']) ? $data['isAffectBusiness'] : null;
+        $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
     }
 
     /**
@@ -368,6 +379,12 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 0)) {
                 $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -384,7 +401,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -396,7 +413,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业租户ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，“0”表示默认企业项目，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -456,7 +473,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  受影响资产名称
+    *  受影响主机名称
     *
     * @return string|null
     */
@@ -468,7 +485,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 受影响资产名称
+    * @param string|null $hostName 受影响主机名称
     *
     * @return $this
     */
@@ -480,7 +497,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  受影响资产ip
+    *  受影响主机ip
     *
     * @return string|null
     */
@@ -492,7 +509,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 受影响资产ip
+    * @param string|null $hostIp 受影响主机ip
     *
     * @return $this
     */
@@ -552,7 +569,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -564,7 +581,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */
@@ -691,6 +708,30 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     public function setIsAffectBusiness($isAffectBusiness)
     {
         $this->container['isAffectBusiness'] = $isAffectBusiness;
+        return $this;
+    }
+
+    /**
+    * Gets repairPriority
+    *  修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    *
+    * @return string|null
+    */
+    public function getRepairPriority()
+    {
+        return $this->container['repairPriority'];
+    }
+
+    /**
+    * Sets repairPriority
+    *
+    * @param string|null $repairPriority 修复优先级,包含如下 - Critical 紧急  - High 高 - Medium 中 - Low 低
+    *
+    * @return $this
+    */
+    public function setRepairPriority($repairPriority)
+    {
+        $this->container['repairPriority'] = $repairPriority;
         return $this;
     }
 

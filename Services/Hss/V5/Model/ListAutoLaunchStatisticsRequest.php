@@ -21,10 +21,10 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  自启动项名称
-    * type  自启动项类型
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  默认是0
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  自启动项名称
-    * type  自启动项类型
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  默认是0
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  自启动项名称
-    * type  自启动项类型
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  默认是0
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  自启动项名称
-    * type  自启动项类型
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  默认是0
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  自启动项名称
-    * type  自启动项类型
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  默认是0
+    * type  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @var string[]
     */
@@ -272,7 +272,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自启动项类型
+    *  自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 自启动项类型
+    * @param string|null $type 自启动项类型   - 0 ：自启动服务   - 1 ：定时任务   - 2 ：预加载动态库   - 3 ：Run注册表键   - 4 ：开机启动文件夹
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  默认10
+    *  每页显示数量，默认10
     *
     * @return int|null
     */
@@ -332,7 +332,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 默认10
+    * @param int|null $limit 每页显示数量，默认10
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  默认是0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class ListAutoLaunchStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 默认是0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */

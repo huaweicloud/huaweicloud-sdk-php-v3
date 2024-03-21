@@ -28,6 +28,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * status  漏洞状态，包含如下：   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'offset' => 'int',
             'handleStatus' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'repairPriority' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * status  漏洞状态，包含如下：   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'offset' => 'int32',
         'handleStatus' => null,
-        'status' => null
+        'status' => null,
+        'repairPriority' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * status  漏洞状态，包含如下：   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'offset' => 'offset',
             'handleStatus' => 'handle_status',
-            'status' => 'status'
+            'status' => 'status',
+            'repairPriority' => 'repair_priority'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * status  漏洞状态，包含如下：   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'handleStatus' => 'setHandleStatus',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'repairPriority' => 'setRepairPriority'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * status  漏洞状态，包含如下：   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+    * repairPriority  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'handleStatus' => 'getHandleStatus',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'repairPriority' => 'getRepairPriority'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
     }
 
     /**
@@ -285,6 +296,12 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) > 10)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
+                $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -489,6 +506,30 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets repairPriority
+    *  修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return string|null
+    */
+    public function getRepairPriority()
+    {
+        return $this->container['repairPriority'];
+    }
+
+    /**
+    * Sets repairPriority
+    *
+    * @param string|null $repairPriority 修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+    *
+    * @return $this
+    */
+    public function setRepairPriority($repairPriority)
+    {
+        $this->container['repairPriority'] = $repairPriority;
         return $this;
     }
 

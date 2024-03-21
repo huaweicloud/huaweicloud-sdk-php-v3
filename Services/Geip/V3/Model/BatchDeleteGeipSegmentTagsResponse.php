@@ -67,7 +67,7 @@ class BatchDeleteGeipSegmentTagsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'xRequestId' => 'x-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

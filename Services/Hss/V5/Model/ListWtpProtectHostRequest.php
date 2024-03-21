@@ -21,9 +21,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
@@ -31,7 +31,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  默认是0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @var string[]
     */
@@ -53,9 +53,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
@@ -63,7 +63,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  默认是0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
@@ -116,7 +116,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  默认是0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @var string[]
     */
@@ -138,9 +138,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
@@ -148,7 +148,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  默认是0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @var string[]
     */
@@ -170,9 +170,9 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region Id
-    * enterpriseProjectId  企业项目
+    * enterpriseProjectId  企业项目ID
     * hostName  服务器名称
-    * hostId  云服务器ID
+    * hostId  主机ID
     * publicIp  弹性公网IP
     * privateIp  私有IP
     * groupName  服务器组名称
@@ -180,7 +180,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  默认是0
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @var string[]
     */
@@ -394,7 +394,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  云服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 云服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  默认是0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @return int|null
     */
@@ -646,7 +646,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 默认是0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
     *
     * @return $this
     */

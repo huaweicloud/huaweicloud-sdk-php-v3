@@ -26,7 +26,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     * userGroupName  用户组名称
     * userHomeDir  用户home目录
     * loginIp  用户登录ip
-    * serviceType  登录的服务类型
+    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
     * servicePort  登录服务端口
     * loginMode  登录方式
     * loginLastTime  用户最后一次登录时间
@@ -68,7 +68,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     * userGroupName  用户组名称
     * userHomeDir  用户home目录
     * loginIp  用户登录ip
-    * serviceType  登录的服务类型
+    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
     * servicePort  登录服务端口
     * loginMode  登录方式
     * loginLastTime  用户最后一次登录时间
@@ -131,7 +131,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     * userGroupName  用户组名称
     * userHomeDir  用户home目录
     * loginIp  用户登录ip
-    * serviceType  登录的服务类型
+    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
     * servicePort  登录服务端口
     * loginMode  登录方式
     * loginLastTime  用户最后一次登录时间
@@ -173,7 +173,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     * userGroupName  用户组名称
     * userHomeDir  用户home目录
     * loginIp  用户登录ip
-    * serviceType  登录的服务类型
+    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
     * servicePort  登录服务端口
     * loginMode  登录方式
     * loginLastTime  用户最后一次登录时间
@@ -215,7 +215,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     * userGroupName  用户组名称
     * userHomeDir  用户home目录
     * loginIp  用户登录ip
-    * serviceType  登录的服务类型
+    * serviceType  服务类型，包含如下:   - system   - mysql   - redis
     * servicePort  登录服务端口
     * loginMode  登录方式
     * loginLastTime  用户最后一次登录时间
@@ -575,7 +575,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  登录的服务类型
+    *  服务类型，包含如下:   - system   - mysql   - redis
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class EventUserResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 登录的服务类型
+    * @param string|null $serviceType 服务类型，包含如下:   - system   - mysql   - redis
     *
     * @return $this
     */

@@ -2434,6 +2434,9 @@ class AomAsyncClient extends Client
         if ($localVarParams['promId'] !== null) {
             $queryParams['prom_id'] = $localVarParams['promId'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2956,6 +2959,9 @@ class AomAsyncClient extends Client
         }
         if ($localVarParams['promStatus'] !== null) {
             $queryParams['prom_status'] = $localVarParams['promStatus'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
 
         if ($multipart) {

@@ -24,8 +24,8 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * type  根据类型过滤
+    * fields  fields
+    * type  type
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * type  根据类型过滤
+    * fields  fields
+    * type  type
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * type  根据类型过滤
+    * fields  fields
+    * type  type
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * type  根据类型过滤
+    * fields  fields
+    * type  type
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     * offset  分页起始点
     * marker  分页起始点
     * pageReverse  翻页方向
-    * fields  只显示指定的字段
-    * type  根据类型过滤
+    * fields  fields
+    * type  type
     *
     * @var string[]
     */
@@ -353,7 +353,7 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -365,7 +365,7 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  根据类型过滤
+    *  type
     *
     * @return string[]|null
     */
@@ -389,7 +389,7 @@ class ListGeipResourceQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type 根据类型过滤
+    * @param string[]|null $type type
     *
     * @return $this
     */

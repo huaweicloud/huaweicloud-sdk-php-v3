@@ -20,7 +20,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * functionUrn  函数的URN（Uniform Resource Name），唯一标识函数。
+    * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * body  body
     *
     * @var string[]
@@ -172,12 +172,6 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
         if ($this->container['functionUrn'] === null) {
             $invalidProperties[] = "'functionUrn' can't be null";
         }
-            if ((mb_strlen($this->container['functionUrn']) > 269)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be smaller than or equal to 269.";
-            }
-            if ((mb_strlen($this->container['functionUrn']) < 1)) {
-                $invalidProperties[] = "invalid value for 'functionUrn', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -194,7 +188,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets functionUrn
-    *  函数的URN（Uniform Resource Name），唯一标识函数。
+    *  函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return string
     */
@@ -206,7 +200,7 @@ class UpdateFunctionAsyncInvokeConfigRequest implements ModelInterface, ArrayAcc
     /**
     * Sets functionUrn
     *
-    * @param string $functionUrn 函数的URN（Uniform Resource Name），唯一标识函数。
+    * @param string $functionUrn 函数的URN，详细解释见FunctionGraph函数模型的描述。
     *
     * @return $this
     */

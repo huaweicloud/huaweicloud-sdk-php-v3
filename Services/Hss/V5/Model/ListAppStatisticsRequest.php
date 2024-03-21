@@ -21,9 +21,9 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * appName  软件名称
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  偏移量，为页数*每页显示条数
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -39,9 +39,9 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * appName  软件名称
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  偏移量，为页数*每页显示条数
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -78,9 +78,9 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * appName  软件名称
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  偏移量，为页数*每页显示条数
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -96,9 +96,9 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * appName  软件名称
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  偏移量，为页数*每页显示条数
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -114,9 +114,9 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * appName  软件名称
-    * enterpriseProjectId  企业项目
-    * limit  默认10
-    * offset  偏移量，为页数*每页显示条数
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * limit  每页显示数量，默认10
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -272,7 +272,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  默认10
+    *  每页显示数量，默认10
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 默认10
+    * @param int|null $limit 每页显示数量，默认10
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，为页数*每页显示条数
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return int|null
     */
@@ -332,7 +332,7 @@ class ListAppStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，为页数*每页显示条数
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
     *
     * @return $this
     */

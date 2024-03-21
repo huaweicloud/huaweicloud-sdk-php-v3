@@ -29,7 +29,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * expiredNum  过期配额数
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
-    * totalNum  总数
+    * totalNum  配额总数
     * dataList  配额列表
     *
     * @var string[]
@@ -57,7 +57,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * expiredNum  过期配额数
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
-    * totalNum  总数
+    * totalNum  配额总数
     * dataList  配额列表
     *
     * @var string[]
@@ -106,7 +106,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * expiredNum  过期配额数
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
-    * totalNum  总数
+    * totalNum  配额总数
     * dataList  配额列表
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * expiredNum  过期配额数
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
-    * totalNum  总数
+    * totalNum  配额总数
     * dataList  配额列表
     *
     * @var string[]
@@ -162,7 +162,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     * expiredNum  过期配额数
     * freezeNum  冻结配额数
     * quotaStatisticsList  配额统计列表
-    * totalNum  总数
+    * totalNum  配额总数
     * dataList  配额列表
     *
     * @var string[]
@@ -514,7 +514,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  配额总数
     *
     * @return int|null
     */
@@ -526,7 +526,7 @@ class ListQuotasDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum 配额总数
     *
     * @return $this
     */

@@ -20,46 +20,82 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * hostId  主机ID
     * hostName  服务器名称
     * fileHash  文件哈希
     * filePath  文件路径
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * fileAttr  文件属性
-    * updateTime  更新时间，毫秒
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * privateIp  服务器私有IP
+    * publicIp  弹性公网IP地址
+    * assetValue  资产重要性
+    * updateTime  事件白名单更新时间，毫秒
+    * agentVersion  agent版本
+    * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    * eventName  事件名称
+    * agentEventInfo  agentEventInfo
+    * antivirusResultInfo  antivirusResultInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'osType' => 'string',
             'hostId' => 'string',
             'hostName' => 'string',
             'fileHash' => 'string',
             'filePath' => 'string',
-            'isolationStatus' => 'string',
             'fileAttr' => 'string',
-            'updateTime' => 'int'
+            'isolationStatus' => 'string',
+            'privateIp' => 'string',
+            'publicIp' => 'string',
+            'assetValue' => 'string',
+            'updateTime' => 'int',
+            'agentVersion' => 'string',
+            'isolateSource' => 'string',
+            'eventName' => 'string',
+            'agentEventInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\IsolateEventResponseInfo',
+            'antivirusResultInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\AntivirusResultDetailInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * hostId  主机ID
     * hostName  服务器名称
     * fileHash  文件哈希
     * filePath  文件路径
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * fileAttr  文件属性
-    * updateTime  更新时间，毫秒
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * privateIp  服务器私有IP
+    * publicIp  弹性公网IP地址
+    * assetValue  资产重要性
+    * updateTime  事件白名单更新时间，毫秒
+    * agentVersion  agent版本
+    * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    * eventName  事件名称
+    * agentEventInfo  agentEventInfo
+    * antivirusResultInfo  antivirusResultInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'osType' => null,
         'hostId' => null,
         'hostName' => null,
         'fileHash' => null,
         'filePath' => null,
-        'isolationStatus' => null,
         'fileAttr' => null,
-        'updateTime' => 'int64'
+        'isolationStatus' => null,
+        'privateIp' => null,
+        'publicIp' => null,
+        'assetValue' => null,
+        'updateTime' => 'int64',
+        'agentVersion' => null,
+        'isolateSource' => null,
+        'eventName' => null,
+        'agentEventInfo' => null,
+        'antivirusResultInfo' => null
     ];
 
     /**
@@ -85,68 +121,122 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * hostId  主机ID
     * hostName  服务器名称
     * fileHash  文件哈希
     * filePath  文件路径
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * fileAttr  文件属性
-    * updateTime  更新时间，毫秒
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * privateIp  服务器私有IP
+    * publicIp  弹性公网IP地址
+    * assetValue  资产重要性
+    * updateTime  事件白名单更新时间，毫秒
+    * agentVersion  agent版本
+    * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    * eventName  事件名称
+    * agentEventInfo  agentEventInfo
+    * antivirusResultInfo  antivirusResultInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'osType' => 'os_type',
             'hostId' => 'host_id',
             'hostName' => 'host_name',
             'fileHash' => 'file_hash',
             'filePath' => 'file_path',
-            'isolationStatus' => 'isolation_status',
             'fileAttr' => 'file_attr',
-            'updateTime' => 'update_time'
+            'isolationStatus' => 'isolation_status',
+            'privateIp' => 'private_ip',
+            'publicIp' => 'public_ip',
+            'assetValue' => 'asset_value',
+            'updateTime' => 'update_time',
+            'agentVersion' => 'agent_version',
+            'isolateSource' => 'isolate_source',
+            'eventName' => 'event_name',
+            'agentEventInfo' => 'agent_event_info',
+            'antivirusResultInfo' => 'antivirus_result_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * hostId  主机ID
     * hostName  服务器名称
     * fileHash  文件哈希
     * filePath  文件路径
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * fileAttr  文件属性
-    * updateTime  更新时间，毫秒
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * privateIp  服务器私有IP
+    * publicIp  弹性公网IP地址
+    * assetValue  资产重要性
+    * updateTime  事件白名单更新时间，毫秒
+    * agentVersion  agent版本
+    * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    * eventName  事件名称
+    * agentEventInfo  agentEventInfo
+    * antivirusResultInfo  antivirusResultInfo
     *
     * @var string[]
     */
     protected static $setters = [
+            'osType' => 'setOsType',
             'hostId' => 'setHostId',
             'hostName' => 'setHostName',
             'fileHash' => 'setFileHash',
             'filePath' => 'setFilePath',
-            'isolationStatus' => 'setIsolationStatus',
             'fileAttr' => 'setFileAttr',
-            'updateTime' => 'setUpdateTime'
+            'isolationStatus' => 'setIsolationStatus',
+            'privateIp' => 'setPrivateIp',
+            'publicIp' => 'setPublicIp',
+            'assetValue' => 'setAssetValue',
+            'updateTime' => 'setUpdateTime',
+            'agentVersion' => 'setAgentVersion',
+            'isolateSource' => 'setIsolateSource',
+            'eventName' => 'setEventName',
+            'agentEventInfo' => 'setAgentEventInfo',
+            'antivirusResultInfo' => 'setAntivirusResultInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * osType  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    * hostId  主机ID
     * hostName  服务器名称
     * fileHash  文件哈希
     * filePath  文件路径
-    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * fileAttr  文件属性
-    * updateTime  更新时间，毫秒
+    * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    * privateIp  服务器私有IP
+    * publicIp  弹性公网IP地址
+    * assetValue  资产重要性
+    * updateTime  事件白名单更新时间，毫秒
+    * agentVersion  agent版本
+    * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    * eventName  事件名称
+    * agentEventInfo  agentEventInfo
+    * antivirusResultInfo  antivirusResultInfo
     *
     * @var string[]
     */
     protected static $getters = [
+            'osType' => 'getOsType',
             'hostId' => 'getHostId',
             'hostName' => 'getHostName',
             'fileHash' => 'getFileHash',
             'filePath' => 'getFilePath',
-            'isolationStatus' => 'getIsolationStatus',
             'fileAttr' => 'getFileAttr',
-            'updateTime' => 'getUpdateTime'
+            'isolationStatus' => 'getIsolationStatus',
+            'privateIp' => 'getPrivateIp',
+            'publicIp' => 'getPublicIp',
+            'assetValue' => 'getAssetValue',
+            'updateTime' => 'getUpdateTime',
+            'agentVersion' => 'getAgentVersion',
+            'isolateSource' => 'getIsolateSource',
+            'eventName' => 'getEventName',
+            'agentEventInfo' => 'getAgentEventInfo',
+            'antivirusResultInfo' => 'getAntivirusResultInfo'
     ];
 
     /**
@@ -207,13 +297,22 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['fileHash'] = isset($data['fileHash']) ? $data['fileHash'] : null;
         $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
-        $this->container['isolationStatus'] = isset($data['isolationStatus']) ? $data['isolationStatus'] : null;
         $this->container['fileAttr'] = isset($data['fileAttr']) ? $data['fileAttr'] : null;
+        $this->container['isolationStatus'] = isset($data['isolationStatus']) ? $data['isolationStatus'] : null;
+        $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
+        $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
+        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['agentVersion'] = isset($data['agentVersion']) ? $data['agentVersion'] : null;
+        $this->container['isolateSource'] = isset($data['isolateSource']) ? $data['isolateSource'] : null;
+        $this->container['eventName'] = isset($data['eventName']) ? $data['eventName'] : null;
+        $this->container['agentEventInfo'] = isset($data['agentEventInfo']) ? $data['agentEventInfo'] : null;
+        $this->container['antivirusResultInfo'] = isset($data['antivirusResultInfo']) ? $data['antivirusResultInfo'] : null;
     }
 
     /**
@@ -224,6 +323,15 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['osType'] === null) {
+            $invalidProperties[] = "'osType' can't be null";
+        }
+            if ((mb_strlen($this->container['osType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['osType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['hostId'] === null) {
             $invalidProperties[] = "'hostId' can't be null";
         }
@@ -260,14 +368,38 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
             if (!preg_match("/^.*$/", $this->container['filePath'])) {
                 $invalidProperties[] = "invalid value for 'filePath', must be conform to the pattern /^.*$/.";
             }
-        if ($this->container['isolationStatus'] === null) {
-            $invalidProperties[] = "'isolationStatus' can't be null";
-        }
         if ($this->container['fileAttr'] === null) {
             $invalidProperties[] = "'fileAttr' can't be null";
         }
             if (!preg_match("/^.*$/", $this->container['fileAttr'])) {
                 $invalidProperties[] = "invalid value for 'fileAttr', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['isolationStatus'] === null) {
+            $invalidProperties[] = "'isolationStatus' can't be null";
+        }
+        if ($this->container['privateIp'] === null) {
+            $invalidProperties[] = "'privateIp' can't be null";
+        }
+            if ((mb_strlen($this->container['privateIp']) > 256)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be smaller than or equal to 256.";
+            }
+            if ((mb_strlen($this->container['privateIp']) < 1)) {
+                $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^.*$/", $this->container['privateIp'])) {
+                $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['publicIp'] === null) {
+            $invalidProperties[] = "'publicIp' can't be null";
+        }
+            if (!preg_match("/^.*$/", $this->container['publicIp'])) {
+                $invalidProperties[] = "invalid value for 'publicIp', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['assetValue'] === null) {
+            $invalidProperties[] = "'assetValue' can't be null";
+        }
+            if (!preg_match("/^.*$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^.*$/.";
             }
         if ($this->container['updateTime'] === null) {
             $invalidProperties[] = "'updateTime' can't be null";
@@ -278,6 +410,27 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
             if (($this->container['updateTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
             }
+        if ($this->container['agentVersion'] === null) {
+            $invalidProperties[] = "'agentVersion' can't be null";
+        }
+            if (!preg_match("/^.*$/", $this->container['agentVersion'])) {
+                $invalidProperties[] = "invalid value for 'agentVersion', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['isolateSource'] === null) {
+            $invalidProperties[] = "'isolateSource' can't be null";
+        }
+        if ($this->container['eventName'] === null) {
+            $invalidProperties[] = "'eventName' can't be null";
+        }
+            if (!preg_match("/^.*$/", $this->container['eventName'])) {
+                $invalidProperties[] = "invalid value for 'eventName', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['agentEventInfo'] === null) {
+            $invalidProperties[] = "'agentEventInfo' can't be null";
+        }
+        if ($this->container['antivirusResultInfo'] === null) {
+            $invalidProperties[] = "'antivirusResultInfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -293,8 +446,32 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets osType
+    *  操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *
+    * @return string
+    */
+    public function getOsType()
+    {
+        return $this->container['osType'];
+    }
+
+    /**
+    * Sets osType
+    *
+    * @param string $osType 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+    *
+    * @return $this
+    */
+    public function setOsType($osType)
+    {
+        $this->container['osType'] = $osType;
+        return $this;
+    }
+
+    /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string
     */
@@ -306,7 +483,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 服务器ID
+    * @param string $hostId 主机ID
     *
     * @return $this
     */
@@ -389,30 +566,6 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isolationStatus
-    *  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    *
-    * @return string
-    */
-    public function getIsolationStatus()
-    {
-        return $this->container['isolationStatus'];
-    }
-
-    /**
-    * Sets isolationStatus
-    *
-    * @param string $isolationStatus 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
-    *
-    * @return $this
-    */
-    public function setIsolationStatus($isolationStatus)
-    {
-        $this->container['isolationStatus'] = $isolationStatus;
-        return $this;
-    }
-
-    /**
     * Gets fileAttr
     *  文件属性
     *
@@ -437,8 +590,104 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isolationStatus
+    *  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    *
+    * @return string
+    */
+    public function getIsolationStatus()
+    {
+        return $this->container['isolationStatus'];
+    }
+
+    /**
+    * Sets isolationStatus
+    *
+    * @param string $isolationStatus 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+    *
+    * @return $this
+    */
+    public function setIsolationStatus($isolationStatus)
+    {
+        $this->container['isolationStatus'] = $isolationStatus;
+        return $this;
+    }
+
+    /**
+    * Gets privateIp
+    *  服务器私有IP
+    *
+    * @return string
+    */
+    public function getPrivateIp()
+    {
+        return $this->container['privateIp'];
+    }
+
+    /**
+    * Sets privateIp
+    *
+    * @param string $privateIp 服务器私有IP
+    *
+    * @return $this
+    */
+    public function setPrivateIp($privateIp)
+    {
+        $this->container['privateIp'] = $privateIp;
+        return $this;
+    }
+
+    /**
+    * Gets publicIp
+    *  弹性公网IP地址
+    *
+    * @return string
+    */
+    public function getPublicIp()
+    {
+        return $this->container['publicIp'];
+    }
+
+    /**
+    * Sets publicIp
+    *
+    * @param string $publicIp 弹性公网IP地址
+    *
+    * @return $this
+    */
+    public function setPublicIp($publicIp)
+    {
+        $this->container['publicIp'] = $publicIp;
+        return $this;
+    }
+
+    /**
+    * Gets assetValue
+    *  资产重要性
+    *
+    * @return string
+    */
+    public function getAssetValue()
+    {
+        return $this->container['assetValue'];
+    }
+
+    /**
+    * Sets assetValue
+    *
+    * @param string $assetValue 资产重要性
+    *
+    * @return $this
+    */
+    public function setAssetValue($assetValue)
+    {
+        $this->container['assetValue'] = $assetValue;
+        return $this;
+    }
+
+    /**
     * Gets updateTime
-    *  更新时间，毫秒
+    *  事件白名单更新时间，毫秒
     *
     * @return int
     */
@@ -450,13 +699,133 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int $updateTime 更新时间，毫秒
+    * @param int $updateTime 事件白名单更新时间，毫秒
     *
     * @return $this
     */
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets agentVersion
+    *  agent版本
+    *
+    * @return string
+    */
+    public function getAgentVersion()
+    {
+        return $this->container['agentVersion'];
+    }
+
+    /**
+    * Sets agentVersion
+    *
+    * @param string $agentVersion agent版本
+    *
+    * @return $this
+    */
+    public function setAgentVersion($agentVersion)
+    {
+        $this->container['agentVersion'] = $agentVersion;
+        return $this;
+    }
+
+    /**
+    * Gets isolateSource
+    *  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    *
+    * @return string
+    */
+    public function getIsolateSource()
+    {
+        return $this->container['isolateSource'];
+    }
+
+    /**
+    * Sets isolateSource
+    *
+    * @param string $isolateSource 隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
+    *
+    * @return $this
+    */
+    public function setIsolateSource($isolateSource)
+    {
+        $this->container['isolateSource'] = $isolateSource;
+        return $this;
+    }
+
+    /**
+    * Gets eventName
+    *  事件名称
+    *
+    * @return string
+    */
+    public function getEventName()
+    {
+        return $this->container['eventName'];
+    }
+
+    /**
+    * Sets eventName
+    *
+    * @param string $eventName 事件名称
+    *
+    * @return $this
+    */
+    public function setEventName($eventName)
+    {
+        $this->container['eventName'] = $eventName;
+        return $this;
+    }
+
+    /**
+    * Gets agentEventInfo
+    *  agentEventInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\IsolateEventResponseInfo
+    */
+    public function getAgentEventInfo()
+    {
+        return $this->container['agentEventInfo'];
+    }
+
+    /**
+    * Sets agentEventInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\IsolateEventResponseInfo $agentEventInfo agentEventInfo
+    *
+    * @return $this
+    */
+    public function setAgentEventInfo($agentEventInfo)
+    {
+        $this->container['agentEventInfo'] = $agentEventInfo;
+        return $this;
+    }
+
+    /**
+    * Gets antivirusResultInfo
+    *  antivirusResultInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\AntivirusResultDetailInfo
+    */
+    public function getAntivirusResultInfo()
+    {
+        return $this->container['antivirusResultInfo'];
+    }
+
+    /**
+    * Sets antivirusResultInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntivirusResultDetailInfo $antivirusResultInfo antivirusResultInfo
+    *
+    * @return $this
+    */
+    public function setAntivirusResultInfo($antivirusResultInfo)
+    {
+        $this->container['antivirusResultInfo'] = $antivirusResultInfo;
         return $this;
     }
 

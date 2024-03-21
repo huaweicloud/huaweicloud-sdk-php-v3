@@ -20,8 +20,8 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键
-    * value  标签值
+    * key  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
+    * value  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键
-    * value  标签值
+    * key  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
+    * value  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键
-    * value  标签值
+    * key  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
+    * value  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键
-    * value  标签值
+    * key  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
+    * value  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键
-    * value  标签值
+    * key  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
+    * value  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -172,26 +172,26 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-            if ((mb_strlen($this->container['key']) > 128)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['key']) > 36)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
             }
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^((?!\\s)(?!_sys_)[\\p{L}\\p{Z}\\p{N}_.:=+\\-@]*)(?<!\\s)$/.";
+            if (!preg_match("/^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/.";
             }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-            if ((mb_strlen($this->container['value']) > 255)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['value']) > 43)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
             }
             if ((mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([\\p{L}\\p{Z}\\p{N}_.:\/=+\\-@]*)$/.";
+            if (!preg_match("/^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^[^\\s=*,<>|\/][^=*,<>|\/\\s]*[^\\s=*,<>|\/]*$/.";
             }
         return $invalidProperties;
     }
@@ -209,7 +209,7 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Gets key
-    *  标签键
+    *  - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
     /**
     * Sets key
     *
-    * @param string $key 标签键
+    * @param string $key - 功能说明：标签名称 - 约束：   - 创建的预定义标签如果与已有的预定义标签完全相同，则会覆盖已有的预定义标签；若只有“键”相同，“值”不同，则为新创建的预定义标签。   - 键的长度最大36字符，由英文字母、数字、下划线、中划线、中文字符组成。   - 单个资源最多可以添加20个标签。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
 
     /**
     * Gets value
-    *  标签值
+    *  - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class CreateGlobalEipRequestBodyGlobalEipTags implements ModelInterface, ArrayAc
     /**
     * Sets value
     *
-    * @param string $value 标签值
+    * @param string $value - 功能说明：标签值 - 约束：   - 值的长度最大43字符，由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @return $this
     */

@@ -20,15 +20,15 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
     * hostId  host_id
     * appName  软件名称
-    * hostName  弹性服务器名称
+    * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  变更时间
+    * updateTime  软件更新时间
+    * recentScanTime  最近扫描时间
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
     * hostId  host_id
     * appName  软件名称
-    * hostName  弹性服务器名称
+    * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  变更时间
+    * updateTime  软件更新时间
+    * recentScanTime  最近扫描时间
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
     * hostId  host_id
     * appName  软件名称
-    * hostName  弹性服务器名称
+    * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  变更时间
+    * updateTime  软件更新时间
+    * recentScanTime  最近扫描时间
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
     * hostId  host_id
     * appName  软件名称
-    * hostName  弹性服务器名称
+    * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  变更时间
+    * updateTime  软件更新时间
+    * recentScanTime  最近扫描时间
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  agent_id
+    * agentId  Agent ID
     * variationType  the type of change   - add ：新建   - delete ：删除   - modify ：修改
     * hostId  host_id
     * appName  软件名称
-    * hostName  弹性服务器名称
+    * hostName  服务器名称
     * hostIp  服务器ip
     * version  版本号
-    * updateTime  更新时间
-    * recentScanTime  变更时间
+    * updateTime  软件更新时间
+    * recentScanTime  最近扫描时间
     *
     * @var string[]
     */
@@ -316,7 +316,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent_id
+    *  Agent ID
     *
     * @return string|null
     */
@@ -328,7 +328,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent_id
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  弹性服务器名称
+    *  服务器名称
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 弹性服务器名称
+    * @param string|null $hostName 服务器名称
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  软件更新时间
     *
     * @return int|null
     */
@@ -496,7 +496,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime 软件更新时间
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  变更时间
+    *  最近扫描时间
     *
     * @return int|null
     */
@@ -520,7 +520,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime 变更时间
+    * @param int|null $recentScanTime 最近扫描时间
     *
     * @return $this
     */

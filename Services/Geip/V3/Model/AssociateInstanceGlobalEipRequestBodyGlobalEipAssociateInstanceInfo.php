@@ -23,7 +23,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  projectId
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -43,7 +43,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  projectId
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -84,7 +84,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  projectId
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -104,7 +104,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  projectId
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -124,7 +124,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     * region  region
     * instanceType  支持绑定的实例类型
     * instanceId  实例ID
-    * projectId  projectId
+    * projectId  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     * serviceId  服务id
     * serviceType  服务类型
     *
@@ -237,8 +237,8 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
             if (!is_null($this->container['instanceId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
@@ -346,7 +346,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
 
     /**
     * Gets projectId
-    *  projectId
+    *  项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo implem
     /**
     * Sets projectId
     *
-    * @param string|null $projectId projectId
+    * @param string|null $projectId 项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
     *
     * @return $this
     */

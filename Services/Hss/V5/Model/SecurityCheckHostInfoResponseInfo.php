@@ -20,11 +20,11 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostPublicIp  服务器公网IP
     * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间
+    * scanTime  扫描时间(ms)
     * failedNum  风险项数量
     * passedNum  通过项数量
     *
@@ -42,11 +42,11 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostPublicIp  服务器公网IP
     * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间
+    * scanTime  扫描时间(ms)
     * failedNum  风险项数量
     * passedNum  通过项数量
     *
@@ -85,11 +85,11 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostPublicIp  服务器公网IP
     * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间
+    * scanTime  扫描时间(ms)
     * failedNum  风险项数量
     * passedNum  通过项数量
     *
@@ -107,11 +107,11 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostPublicIp  服务器公网IP
     * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间
+    * scanTime  扫描时间(ms)
     * failedNum  风险项数量
     * passedNum  通过项数量
     *
@@ -129,11 +129,11 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  服务器ID
+    * hostId  主机ID
     * hostName  服务器名称
     * hostPublicIp  服务器公网IP
     * hostPrivateIp  服务器私网IP
-    * scanTime  扫描时间
+    * scanTime  扫描时间(ms)
     * failedNum  风险项数量
     * passedNum  通过项数量
     *
@@ -282,7 +282,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  主机ID
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId 主机ID
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanTime
-    *  扫描时间
+    *  扫描时间(ms)
     *
     * @return int|null
     */
@@ -390,7 +390,7 @@ class SecurityCheckHostInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanTime
     *
-    * @param int|null $scanTime 扫描时间
+    * @param int|null $scanTime 扫描时间(ms)
     *
     * @return $this
     */

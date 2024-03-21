@@ -20,8 +20,8 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页条数
-    * offset  分页起始点
+    * limit  limit
+    * offset  offset
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页条数
-    * offset  分页起始点
+    * limit  limit
+    * offset  offset
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页条数
-    * offset  分页起始点
+    * limit  limit
+    * offset  offset
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页条数
-    * offset  分页起始点
+    * limit  limit
+    * offset  offset
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页条数
-    * offset  分页起始点
+    * limit  limit
+    * offset  offset
     * body  body
     *
     * @var string[]
@@ -196,7 +196,7 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets limit
-    *  每页条数
+    *  limit
     *
     * @return int[]|null
     */
@@ -208,7 +208,7 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets limit
     *
-    * @param int[]|null $limit 每页条数
+    * @param int[]|null $limit limit
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets offset
-    *  分页起始点
+    *  offset
     *
     * @return int[]|null
     */
@@ -232,7 +232,7 @@ class ListInternetBandwidthFilterTagsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets offset
     *
-    * @param int[]|null $offset 分页起始点
+    * @param int[]|null $offset offset
     *
     * @return $this
     */

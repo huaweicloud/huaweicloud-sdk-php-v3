@@ -21,7 +21,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  job_id
-    * fields  只显示指定的字段
+    * fields  fields
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  job_id
-    * fields  只显示指定的字段
+    * fields  fields
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  job_id
-    * fields  只显示指定的字段
+    * fields  fields
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  job_id
-    * fields  只显示指定的字段
+    * fields  fields
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  job_id
-    * fields  只显示指定的字段
+    * fields  fields
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  只显示指定的字段
+    *  fields
     *
     * @return string[]|null
     */
@@ -260,7 +260,7 @@ class ShowJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string[]|null $fields 只显示指定的字段
+    * @param string[]|null $fields fields
     *
     * @return $this
     */

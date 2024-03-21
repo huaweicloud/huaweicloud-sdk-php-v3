@@ -20,8 +20,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  账号名称
-    * num  账号数量
+    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * num  当前账号的主机数量
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  账号名称
-    * num  账号数量
+    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * num  当前账号的主机数量
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  账号名称
-    * num  账号数量
+    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * num  当前账号的主机数量
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  账号名称
-    * num  账号数量
+    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * num  当前账号的主机数量
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  账号名称
-    * num  账号数量
+    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * num  当前账号的主机数量
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  账号名称
+    *  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 账号名称
+    * @param string|null $userName 账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  账号数量
+    *  当前账号的主机数量
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 账号数量
+    * @param int|null $num 当前账号的主机数量
     *
     * @return $this
     */

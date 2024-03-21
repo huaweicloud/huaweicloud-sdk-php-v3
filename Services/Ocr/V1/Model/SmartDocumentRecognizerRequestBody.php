@@ -26,6 +26,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * table  是否进行表格识别。此处表格特指逻辑表格，通常具有M行N列的形式，且第一行或第一列为表头。若是，结果会以“table_result”这一关键字返回。
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
+    * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'kv' => 'bool',
             'table' => 'bool',
             'layout' => 'bool',
-            'returnExcel' => 'bool'
+            'returnExcel' => 'bool',
+            'form' => 'bool',
+            'kvMap' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * table  是否进行表格识别。此处表格特指逻辑表格，通常具有M行N列的形式，且第一行或第一列为表头。若是，结果会以“table_result”这一关键字返回。
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
+    * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         'kv' => null,
         'table' => null,
         'layout' => null,
-        'returnExcel' => null
+        'returnExcel' => null,
+        'form' => null,
+        'kvMap' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * table  是否进行表格识别。此处表格特指逻辑表格，通常具有M行N列的形式，且第一行或第一列为表头。若是，结果会以“table_result”这一关键字返回。
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
+    * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'kv' => 'kv',
             'table' => 'table',
             'layout' => 'layout',
-            'returnExcel' => 'return_excel'
+            'returnExcel' => 'return_excel',
+            'form' => 'form',
+            'kvMap' => 'kv_map'
     ];
 
     /**
@@ -107,6 +119,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * table  是否进行表格识别。此处表格特指逻辑表格，通常具有M行N列的形式，且第一行或第一列为表头。若是，结果会以“table_result”这一关键字返回。
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
+    * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'kv' => 'setKv',
             'table' => 'setTable',
             'layout' => 'setLayout',
-            'returnExcel' => 'setReturnExcel'
+            'returnExcel' => 'setReturnExcel',
+            'form' => 'setForm',
+            'kvMap' => 'setKvMap'
     ];
 
     /**
@@ -127,6 +143,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * table  是否进行表格识别。此处表格特指逻辑表格，通常具有M行N列的形式，且第一行或第一列为表头。若是，结果会以“table_result”这一关键字返回。
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
+    * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'kv' => 'getKv',
             'table' => 'getTable',
             'layout' => 'getLayout',
-            'returnExcel' => 'getReturnExcel'
+            'returnExcel' => 'getReturnExcel',
+            'form' => 'getForm',
+            'kvMap' => 'getKvMap'
     ];
 
     /**
@@ -203,6 +223,8 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         $this->container['table'] = isset($data['table']) ? $data['table'] : null;
         $this->container['layout'] = isset($data['layout']) ? $data['layout'] : null;
         $this->container['returnExcel'] = isset($data['returnExcel']) ? $data['returnExcel'] : null;
+        $this->container['form'] = isset($data['form']) ? $data['form'] : null;
+        $this->container['kvMap'] = isset($data['kvMap']) ? $data['kvMap'] : null;
     }
 
     /**
@@ -368,6 +390,54 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     public function setReturnExcel($returnExcel)
     {
         $this->container['returnExcel'] = $returnExcel;
+        return $this;
+    }
+
+    /**
+    * Gets form
+    *  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    *
+    * @return bool|null
+    */
+    public function getForm()
+    {
+        return $this->container['form'];
+    }
+
+    /**
+    * Sets form
+    *
+    * @param bool|null $form 是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    *
+    * @return $this
+    */
+    public function setForm($form)
+    {
+        $this->container['form'] = $form;
+        return $this;
+    }
+
+    /**
+    * Gets kvMap
+    *  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
+    *
+    * @return string|null
+    */
+    public function getKvMap()
+    {
+        return $this->container['kvMap'];
+    }
+
+    /**
+    * Sets kvMap
+    *
+    * @param string|null $kvMap 需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
+    *
+    * @return $this
+    */
+    public function setKvMap($kvMap)
+    {
+        $this->container['kvMap'] = $kvMap;
         return $this;
     }
 

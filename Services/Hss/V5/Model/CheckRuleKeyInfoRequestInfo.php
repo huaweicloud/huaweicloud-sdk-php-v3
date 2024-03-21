@@ -20,8 +20,8 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkName  基线名称
-    * checkRuleId  检查项ID
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
     * fixValues  用户键入的检查项修复参数数组
     *
@@ -36,8 +36,8 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkName  基线名称
-    * checkRuleId  检查项ID
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
     * fixValues  用户键入的检查项修复参数数组
     *
@@ -73,8 +73,8 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkName  基线名称
-    * checkRuleId  检查项ID
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
     * fixValues  用户键入的检查项修复参数数组
     *
@@ -89,8 +89,8 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkName  基线名称
-    * checkRuleId  检查项ID
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
     * fixValues  用户键入的检查项修复参数数组
     *
@@ -105,8 +105,8 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkName  基线名称
-    * checkRuleId  检查项ID
+    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
     * fixValues  用户键入的检查项修复参数数组
     *
@@ -225,7 +225,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  基线名称
+    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string|null $checkName 基线名称
+    * @param string|null $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleId
-    *  检查项ID
+    *  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleId
     *
-    * @param string|null $checkRuleId 检查项ID
+    * @param string|null $checkRuleId 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
     *
     * @return $this
     */
